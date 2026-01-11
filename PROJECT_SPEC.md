@@ -67,10 +67,13 @@
 ## 4. 技術要件と環境変数 (Technical Requirements)
 
 ### 4.1 必須環境変数 (Vercel / .env)
-*   `GOOGLE_API_KEY`: Gemini APIを利用するためのキー。
-*   `AI_MODEL_PRO`: 分析用メインモデル（例: `gemini-1.5-pro`）。
-*   `AI_MODEL_FLASH`: 翻訳・高速処理用モデル（例: `gemini-1.5-flash`）。
-*   `FRED_API_KEY`: 経済指標取得用。
+システムを正常に稼働させるため、Vercelの **Settings > Environment Variables** にて以下の5つを必ず設定してください。
+
+*   `GOOGLE_API_KEY`: Gemini APIキー (AI Studioで取得)。
+*   `FRED_API_KEY`: FRED APIキー (経済指標取得用)。
+*   `AI_MODEL_PRO`: 分析用メインモデル (推奨: `gemini-2.0-flash-exp` または `gemini-1.5-pro`)。
+*   `AI_MODEL_FLASH`: 翻訳・バックアップ用モデル (推奨: `gemini-1.5-flash`)。
+*   `NEXT_PUBLIC_GA_ID`: Google Analytics 4 測定ID (例: `G-XXXXXXXXXX`)。
 
 ### 4.2 依存ライブラリ (Dependencies)
 *   `yfinance`: 市場データ取得機能の中核。
