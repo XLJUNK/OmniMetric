@@ -125,7 +125,7 @@ export const DICTIONARY = {
         labels: {
             signal: "SIGNAL:",
             benchmark_mode: "BENCHMARK MODE",
-            about: "ABOUT PROJECT",
+            about: "SYSTEM INFO",
             legal: "LEGAL NOTICE",
             archive: "DAILY ARCHIVE",
             back_to_terminal: "BACK TO TERMINAL",
@@ -285,7 +285,7 @@ export const DICTIONARY = {
         labels: {
             signal: "シグナル:",
             benchmark_mode: "ベンチマークモード",
-            about: "ABOUT PROJECT",
+            about: "SYSTEM INFO",
             legal: "LEGAL NOTICE",
             archive: "DAILY ARCHIVE",
             back_to_terminal: "ターミナルに戻る",
@@ -415,7 +415,7 @@ export const DICTIONARY = {
         labels: {
             signal: "信号:",
             benchmark_mode: "基准模式",
-            about: "ABOUT PROJECT",
+            about: "SYSTEM INFO",
             legal: "LEGAL NOTICE",
             archive: "DAILY ARCHIVE",
             back_to_terminal: "返回终端",
@@ -545,7 +545,7 @@ export const DICTIONARY = {
         labels: {
             signal: "SEÑAL:",
             benchmark_mode: "MODO DE REFERENCIA",
-            about: "ABOUT PROJECT",
+            about: "SYSTEM INFO",
             legal: "LEGAL NOTICE",
             archive: "DAILY ARCHIVE",
             back_to_terminal: "VOLVER AL TERMINAL",
