@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-// 1. FIX RATE LIMITS: Disable Cache for Debugging/Instant Updates
-export const revalidate = 0;
+// 1. RE-ENABLE CACHING (1 Hour)
+// This strictly caches the response for 1 hour to prevent API drain and rate limits.
+export const revalidate = 3600;
 export const dynamic = 'force-dynamic';
 
 interface NewsItem {
@@ -11,6 +12,9 @@ interface NewsItem {
 
 const FALLBACK_MODELS = ["gemini-1.5-flash", "gemini-1.5-pro"];
 
+// Helper: Exponential Backoff Sleep
+const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+
 export async function GET(
     request: NextRequest
 ): Promise<NextResponse> {
@@ -18,9 +22,10 @@ export async function GET(
         const { searchParams } = new URL(request.url);
         const lang = searchParams.get('lang') || 'EN';
 
-        // 1. Fetch CNBC Top News (English Source) with NO CACHE
+        // 1. Fetch CNBC Top News (English Source)
+        // Using 'next: { revalidate: 3600 }' to align upstream fetch with route cache
         const FEED_URL = 'https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114';
-        const res = await fetch(FEED_URL, { cache: 'no-store' });
+        const res = await fetch(FEED_URL, { next: { revalidate: 3600 } });
         const text = await res.text();
 
         const items: NewsItem[] = [];
@@ -46,7 +51,7 @@ export async function GET(
                     process.env.GEMINI_KEY;
 
                 if (!apiKey) {
-                    console.error("Translation Critical Error: API Key Missing. Checked GEMINI_API_KEY and NEXT_PUBLIC_GEMINI_API_KEY.");
+                    console.error("Translation Critical Error: API Key Missing.");
                     throw new Error("API Key Missing");
                 }
 
@@ -55,51 +60,77 @@ export async function GET(
                 const modelsToTry = userModel ? [userModel, ...FALLBACK_MODELS] : FALLBACK_MODELS;
                 const uniqueModels = [...new Set(modelsToTry)];
 
-                const titles = items.map(i => i.title).join('\n');
+                const titles = items.map(i => i.title);
                 const targetLang = lang === 'JP' ? 'Japanese' : (lang === 'CN' ? 'Simplified Chinese' : (lang === 'ES' ? 'Spanish' : 'English'));
-                const prompt = `Translate these financial headlines into professional, concise ${targetLang}. Keep the tone institutional. Return detailed translation line by line. No bullet points, just the text lines.\n\n${titles}`;
+
+                // BATCH JSON PROMPT
+                const prompt = `Translate the following financial news headlines into ${targetLang}. 
+                Return strictly a raw JSON array of strings, e.g., ["translated_title_1", "translated_title_2"].
+                No markdown code blocks, no other text.
+                
+                Input: ${JSON.stringify(titles)}`;
 
                 let translationSuccess = false;
 
-                // FAIL-SAFE WRAPPER
+                // FAIL-SAFE WRAPPER WITH RETRIES
                 for (const model of uniqueModels) {
-                    try {
-                        const isBeta = model.includes("exp") || model.includes("2.0") || model.includes("preview");
-                        const apiVersion = isBeta ? "v1beta" : "v1";
-                        const geminiUrl = `https://generativelanguage.googleapis.com/${apiVersion}/models/${model}:generateContent?key=${apiKey}`;
+                    if (translationSuccess) break;
 
-                        const aiRes = await fetch(geminiUrl, {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({
-                                contents: [{ parts: [{ text: prompt }] }]
-                            })
-                        });
+                    const isBeta = model.includes("exp") || model.includes("2.0") || model.includes("preview");
+                    const apiVersion = isBeta ? "v1beta" : "v1";
+                    const geminiUrl = `https://generativelanguage.googleapis.com/${apiVersion}/models/${model}:generateContent?key=${apiKey}`;
 
-                        if (aiRes.ok) {
-                            const aiJson = await aiRes.json();
-                            const aiText = aiJson.candidates?.[0]?.content?.parts?.[0]?.text;
+                    // RETRY LOOP (3 Attempts)
+                    for (let attempt = 0; attempt < 3; attempt++) {
+                        try {
+                            const aiRes = await fetch(geminiUrl, {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({
+                                    contents: [{ parts: [{ text: prompt }] }]
+                                })
+                            });
 
-                            if (aiText) {
-                                const translatedLines = aiText.split('\n').map((l: string) => l.trim()).filter((l: string) => l.length > 0);
-                                if (translatedLines.length === items.length) {
-                                    for (let i = 0; i < items.length; i++) {
-                                        items[i].title = translatedLines[i];
+                            if (aiRes.ok) {
+                                const aiJson = await aiRes.json();
+                                let aiText = aiJson.candidates?.[0]?.content?.parts?.[0]?.text || "";
+
+                                // Clean up markdown if AI adds it despite instructions
+                                aiText = aiText.replace(/```json/g, '').replace(/```/g, '').trim();
+
+                                try {
+                                    const translatedArray = JSON.parse(aiText);
+                                    if (Array.isArray(translatedArray) && translatedArray.length === items.length) {
+                                        for (let i = 0; i < items.length; i++) {
+                                            items[i].title = translatedArray[i];
+                                        }
+                                        translationSuccess = true;
+                                        break; // Break retry loop
+                                    } else {
+                                        console.warn(`Translation Format Error [${model}]: Not an array or length mismatch.`);
                                     }
-                                    translationSuccess = true;
-                                    break;
+                                } catch (parseError) {
+                                    console.warn(`Translation Parse Error [${model}]: Unable to parse JSON response.`);
                                 }
+                            } else if (aiRes.status === 429) {
+                                console.warn(`Translation Rate Limited [${model}] (Attempt ${attempt + 1}/3). Waiting...`);
+                                // Exponential Backoff: 1s, 2s, 4s
+                                await sleep(1000 * Math.pow(2, attempt));
+                                continue; // Retry
+                            } else {
+                                console.error(`Translation Error [${model}]: Status ${aiRes.status}`);
+                                break; // Don't retry fatal 4xx/5xx errors on same model immediately
                             }
-                        } else {
-                            console.error(`Translation Error [${model}]: Status ${aiRes.status}`);
+                        } catch (innerError) {
+                            console.error(`Translation Network Error [${model}]:`, innerError);
+                            break;
                         }
-                    } catch (innerError) {
-                        console.error(`Translation Network Error [${model}]:`, innerError);
                     }
                 }
 
                 if (!translationSuccess) {
-                    console.error("Translation Failed: All models failed or rate limited.");
+                    console.error("Translation Failed: All models/retries failed. Returning English fallback.");
+                    // Fallback is implicit (original English items are returned)
                 }
 
             } catch (translationError) {
