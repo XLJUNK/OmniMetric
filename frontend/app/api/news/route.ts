@@ -1,16 +1,13 @@
-import { NextResponse } from 'next/server';
-// import Parser from 'rss-parser';
+import { NextRequest, NextResponse } from 'next/server';
 
-// Simple RSS fetcher
-export async function GET(): Promise<NextResponse> {
+export const dynamic = 'force-dynamic';
+
+export async function GET(
+    request: NextRequest
+): Promise<NextResponse> {
     try {
         // CNBC Top News
         const FEED_URL = 'https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114';
-
-        // We can use a library or just fetch text and regex it if library fails.
-        // Let's try simple fetch + regex to avoid 'rss-parser' dependency issues if not installed.
-        // Actually, user said "Fetch an RSS feed...". 
-        // I will use fetch and a simple regex for <title> and <link>.
 
         const res = await fetch(FEED_URL, { cache: 'no-store' });
         const text = await res.text();
@@ -19,10 +16,8 @@ export async function GET(): Promise<NextResponse> {
         const regex = /<item>[\s\S]*?<title>(.*?)<\/title>[\s\S]*?<link>(.*?)<\/link>[\s\S]*?<\/item>/g;
         let match;
 
-        // Safety cap
         let count = 0;
         while ((match = regex.exec(text)) !== null && count < 10) {
-            // Clean CDATA
             const title = match[1].replace('<![CDATA[', '').replace(']]>', '').trim();
             const link = match[2].replace('<![CDATA[', '').replace(']]>', '').trim();
             items.push({ title, link });
@@ -31,6 +26,7 @@ export async function GET(): Promise<NextResponse> {
 
         return NextResponse.json({ news: items });
     } catch (e) {
+        // Return fallback data on error, wrapped in NextResponse
         return NextResponse.json({
             news: [
                 { title: "Market data synchronization active...", link: "#" },
@@ -40,5 +36,3 @@ export async function GET(): Promise<NextResponse> {
         });
     }
 }
-
-export const dynamic = 'force-dynamic';

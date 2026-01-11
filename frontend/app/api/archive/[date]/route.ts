@@ -4,10 +4,11 @@ import path from 'path';
 
 export async function GET(
     request: NextRequest,
-    { params }: { params: Promise<{ date: string }> }
+    { params }: { params: Promise<any> }
 ): Promise<NextResponse> {
     try {
         const { date } = await params;
+
         const historyDir = path.join(process.cwd(), '..', 'backend', 'history');
         let archiveFile = path.join(historyDir, `${date}.json`);
 
@@ -18,8 +19,6 @@ export async function GET(
                 return NextResponse.json({ error: 'Archive not found' }, { status: 404 });
             }
             // Find closest date (using a simple alphabetical search since format is YYYY-MM-DD)
-            // We'll pick the one just before or just after if it's a gap.
-            // For now, let's just pick the latest one available that is less than or equal to date, or the first one.
             const target = `${date}.json`;
             let bestMatch = files[0];
             for (const f of files) {

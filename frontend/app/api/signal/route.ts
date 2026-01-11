@@ -1,11 +1,13 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
-export async function GET(): Promise<NextResponse> {
+export const dynamic = 'force-dynamic';
+
+export async function GET(
+    request: NextRequest
+): Promise<NextResponse> {
     try {
-        // Path to the backend output file
-        // Assumes directory structure: root/backend and root/frontend
         const filePath = path.join(process.cwd(), '../backend/current_signal.json');
 
         if (!fs.existsSync(filePath)) {
