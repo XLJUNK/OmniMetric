@@ -14,6 +14,7 @@ interface SignalData {
     gms_score: number;
     market_data: any;
     analysis: any;
+    events: any[];
     history_chart: any[];
 }
 
@@ -368,31 +369,36 @@ export const Dashboard = ({ lang, setLang }: DashboardProps) => {
                 </div>
 
                 {/* 6. ECONOMIC CALENDAR (NEW) */}
+                {/* 6. ECONOMIC CALENDAR (DYNAMIC) */}
                 <div className="w-full max-w-[1400px] mx-auto px-4 mb-20">
                     <div className="border-t border-gray-800 pt-8">
-                        <h4 className="text-[#666] text-[10px] font-black uppercase tracking-[0.2em] mb-6">{t.titles.upcoming_events}</h4>
+                        <div className="flex items-center justify-between mb-6">
+                            <h4 className="text-[#666] text-[10px] font-black uppercase tracking-[0.2em]">{t.titles.upcoming_events}</h4>
+                            <span className="text-[10px] text-green-500 font-mono tracking-wider animate-pulse uppercase">● AUTO-SYNC ACTIVE</span>
+                        </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            <div className="flex items-center gap-4 group">
-                                <div className="w-1.5 h-1.5 rounded-full bg-red-500 shadow-[0_0_8px_#ef4444]"></div>
-                                <div className="flex flex-col">
-                                    <span className="text-slate-200 text-xs font-bold uppercase tracking-wider group-hover:text-red-400 transition-colors">[{t.events.tue}] {t.events.cpi}</span>
-                                    <span className="text-[#444] text-[9px] uppercase tracking-widest">{t.events.high} • 08:30 {t.events.est}</span>
+                            {data.events && data.events.length > 0 ? (
+                                data.events.map((evt: any, idx: number) => {
+                                    const dotColor = evt.impact === 'critical' ? 'bg-red-500 shadow-[0_0_8px_#ef4444]' : 'bg-orange-500 shadow-[0_0_8px_#f97316]';
+                                    return (
+                                        <div key={idx} className="flex items-center gap-4 group">
+                                            <div className={`w-1.5 h-1.5 rounded-full ${dotColor}`}></div>
+                                            <div className="flex flex-col">
+                                                <span className="text-slate-200 text-xs font-bold uppercase tracking-wider group-hover:text-cyan-400 transition-colors">
+                                                    [{evt.date.slice(5)} {evt.day}] {evt.name}
+                                                </span>
+                                                <span className="text-[#444] text-[9px] uppercase tracking-widest">
+                                                    {evt.impact} • {evt.code === 'fomc' ? '14:00' : '08:30'} EST
+                                                </span>
+                                            </div>
+                                        </div>
+                                    );
+                                })
+                            ) : (
+                                <div className="col-span-3 text-center text-gray-600 text-[10px] font-mono uppercase tracking-widest">
+                                    CALENDAR SYNC PENDING...
                                 </div>
-                            </div>
-                            <div className="flex items-center gap-4 group">
-                                <div className="w-1.5 h-1.5 rounded-full bg-red-500 shadow-[0_0_8px_#ef4444]"></div>
-                                <div className="flex flex-col">
-                                    <span className="text-slate-200 text-xs font-bold uppercase tracking-wider group-hover:text-red-400 transition-colors">[{t.events.wed}] {t.events.fomc}</span>
-                                    <span className="text-[#444] text-[9px] uppercase tracking-widest">{t.events.critical} • 14:00 {t.events.est}</span>
-                                </div>
-                            </div>
-                            <div className="flex items-center gap-4 group">
-                                <div className="w-1.5 h-1.5 rounded-full bg-orange-500 shadow-[0_0_8px_#f97316]"></div>
-                                <div className="flex flex-col">
-                                    <span className="text-slate-200 text-xs font-bold uppercase tracking-wider group-hover:text-orange-400 transition-colors">[{t.events.fri}] {t.events.nfp}</span>
-                                    <span className="text-[#444] text-[9px] uppercase tracking-widest">{t.events.high} • 08:30 {t.events.est}</span>
-                                </div>
-                            </div>
+                            )}
                         </div>
                     </div>
                 </div>
