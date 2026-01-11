@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 // import Parser from 'rss-parser';
 
 // Simple RSS fetcher
-export async function GET() {
+export async function GET(): Promise<NextResponse> {
     try {
         // CNBC Top News
         const FEED_URL = 'https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114';

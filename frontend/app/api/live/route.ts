@@ -2,8 +2,8 @@ import { NextResponse } from 'next/server';
 import { exec } from 'child_process';
 import path from 'path';
 
-export async function GET() {
-    return new Promise((resolve) => {
+export async function GET(): Promise<NextResponse> {
+    return new Promise<NextResponse>((resolve) => {
         // Path to python script
         // Assuming we are in frontend/app/api/live/route.ts
         // backend is at ../../../../backend

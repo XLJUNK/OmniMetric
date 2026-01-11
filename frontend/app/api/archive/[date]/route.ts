@@ -5,7 +5,7 @@ import path from 'path';
 export async function GET(
     request: NextRequest,
     { params }: { params: Promise<{ date: string }> }
-) {
+): Promise<NextResponse> {
     try {
         const { date } = await params;
         const historyDir = path.join(process.cwd(), '..', 'backend', 'history');

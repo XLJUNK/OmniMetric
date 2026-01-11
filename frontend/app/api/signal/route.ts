@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
-export async function GET() {
+export async function GET(): Promise<NextResponse> {
     try {
         // Path to the backend output file
         // Assumes directory structure: root/backend and root/frontend
