@@ -2,9 +2,8 @@ name: OmniMetric SNS Bot
 
 on:
   schedule:
-    # 4 times daily (UTC): 00:00, 06:00, 12:00, 18:00
-    # Japan Time (UTC+9): 09:00, 15:00, 21:00, 03:00 (approx Market Open/Close times globally)
-    - cron: '0 0,6,12,18 * * *'
+    # Hourly Check for "Monitoring Mode" (Alerts) + Market Opens/Closes covered naturally
+    - cron: '0 * * * *'
   workflow_dispatch: # Manual trigger
 
 permissions:

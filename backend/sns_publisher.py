@@ -72,6 +72,10 @@ def format_posts(data, alert_reason=""):
     disclaimer_en = "No investment advice. Factual data only."
     disclaimer_jp = "投資助言ではありません。事実データのみを提供します。"
     
+    # UTM Tracking
+    utm = "?utm_source=twitter&utm_medium=social&utm_campaign=gms_auto_report"
+    tracked_url = f"{SITE_URL}{utm}"
+    
     # 1. English Post
     post_en = f"""{alert_prefix_en}{icon} {header_en}
 Signal Score: {score}/100
@@ -81,7 +85,7 @@ Signal Score: {score}/100
 • US 10Y: {tnx}%
 • HY Spread: {hy}%
 
-{SITE_URL}
+{tracked_url}
 #OmniMetric #Macro
 {disclaimer_en}"""
 
@@ -94,7 +98,7 @@ Signal Score: {score}/100
 • 米10年債: {tnx}%
 • HYスプレッド: {hy}%
 
-{SITE_URL}
+{tracked_url}
 #OmniMetric #米国株
 {disclaimer_jp}"""
 
@@ -106,7 +110,7 @@ Signal Score: {score}/100
 • 美债10年: {tnx}%
 • 信贷利差: {hy}%
 
-{SITE_URL}
+{tracked_url}
 #Macro
 非投资建议。"""
 
@@ -118,7 +122,7 @@ Puntuación: {score}/100
 • Bonos 10A: {tnx}%
 • Spread HY: {hy}%
 
-{SITE_URL}
+{tracked_url}
 #Finanzas
 No es consejo de inversión."""
 
