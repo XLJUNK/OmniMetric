@@ -16,8 +16,13 @@ import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://omnimetric.ai'), // Placeholder for production URL
-  title: "Global Macro Signal | Institutional Analytics",
+  title: "OmniMetric Terminal | Global Macro Signal",
   description: "AI駆動型金融・経済分析プラットフォーム",
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
+  },
   alternates: {
     canonical: '/',
     languages: {
