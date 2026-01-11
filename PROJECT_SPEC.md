@@ -1,13 +1,15 @@
 # Global Macro Signal (OmniMetric Terminal) - プロジェクト仕様書
+**Version 2.0.0 (As-Built)**
+**Last Updated:** 2026-01-12
 
 ## 1. プロジェクト概要 (Executive Summary)
 **Global Macro Signal (GMS)** は、機関投資家レベルの市場リスク分析を個人投資家に提供する、AI駆動型金融・経済分析プラットフォームです。「OmniMetric Terminal」というブランド名で展開され、Bloombergターミナルのような高度な視認性と、生成AIによる深い洞察を融合させています。
 
 ### 核心思想 (Core Philosophy)
 *   **Institutional Grade (機関投資家品質)**: 遊びのない、プロフェッショナルでミニマルなUI/UX。
-*   **Silent Execution (静寂なる実行)**: エラーをユーザーに見せない。徹底的なフォールバックと自己修復機能。
-*   **Resilient Intelligence (堅牢な知能)**: 単一のAIモデルに依存せず、複数のモデル（Gemini Pro/Flash）をティアリングして稼働率100%を目指す。
-*   **Mobile First Strategy**: 複雑な金融データを、モバイル端末でも「親指一本」で把握できる密度とレイアウトに最適化。
+*   **Silent Execution (静寂なる実行)**: エラーをユーザーに見せない。彻底的なフォールバックと自己修復機能。
+*   **Resilient Intelligence (堅牢な知能)**: 単一のAIモデルに依存せず、稼働率100%を目指す冗長構成。
+*   **Fact-Based Authority (客観的権威)**: 予測や助言を排除し、純粋なデータと事実のみを法的準拠の下で提供する。
 
 ---
 
@@ -15,31 +17,35 @@
 
 本システムは、**「静的解析と動的配信のハイブリッド」**構成を採用しています。
 
-### 2.1 Backend (Data Engine)
-*   **言語**: Python 3.x
-*   **役割**: 市場データの収集、GMSスコアの算出、AI分析の生成、JSONデータの永続化。
-*   **データソース**:
-    *   **Yahoo Finance**: 株価、コモディティ、VIX指数。
-    *   **FRED (St. Louis Fed)**: 米国債利回り、クレジットスプレッド、金融環境指数(NFCI)。
-*   **AI Engine**: `gms_engine.py`
-    *   **Tier 1 (Deep Insight)**: `Gemini 1.5 Pro` (または最新のPreviewモデル) - 定性的な市場分析を担当。
-    *   **Tier 2 (Fallback)**: `Gemini 1.5 Flash` - エラー時のバックアップ。
-    *   **Tier 3 (Static)**: アルゴリズムに基づく定型文生成（完全なオフライン時）。
+### 2.1 Backend (Data & SEO Engine)
+*   **言語**: Python 3.10
+*   **基盤**: GitHub Actions (Scheduled Workflows)
+*   **Core Scripts**:
+    *   `gms_engine.py`: 市場データ収集(Yahoo/FRED)、GMSスコア算出、AIレポート生成。
+    *   `sns_publisher.py`: Twitter/Blueskyへの自動投稿、緊急アラート(>5%変動)、固定ツイート管理。
+    *   `seo_monitor.py`: Google Search Console APIと連携し、トレンドキーワードを分析・抽出。
+*   **AI Engine**:
+    *   **Analysis**: `Gemini 1.5 Pro` - 深い定性的な市場分析。
+    *   **Translation**: `Gemini 1.5 Flash` - 高速かつ低コストな多言語処理。
 
 ### 2.2 Frontend (User Interface)
 *   **フレームワーク**: Next.js 15 (App Router)
 *   **スタイリング**: Tailwind CSS 4.0
 *   **ホスティング**: Vercel (Serverless / Edge Functions)
 *   **主な機能**:
-    *   **API Route (`/api/live`)**: バックエンドが生成したJSONを配信。PythonプロセスをVercel上で起動せず、静的ファイルの読み込みに特化することで高速化と安定性を実現。
-    *   **News Ticker (`/api/news`)**: 外部RSSフィードを取得し、リアルタイムでAI翻訳（EN -> JP/CN/ES）を行う。
-    *   **ISR (Incremental Static Regeneration)**: エンドポイントごとにキャッシュ戦略（1時間〜1分）を適用し、APIレート制限を回避。
+    *   **News Ticker (`/api/news`)**: 
+        *   Gemini 1.5 Flash を使用した「プロ翻訳者」モード。
+        *   JSON一括処理（Batch Processing）と指数バックオフ（Retry）によるAPI最適化。
+        *   1時間のISRキャッシュ (`revalidate=3600`) による負荷分散。
+    *   **Dynamic OGP (`/api/og`)**: リアルタイムの市場スコアを反映したSNS用画像を動的生成。
+    *   **Economic Calendar**: FREDおよびバックエンド算出データに基づく重要イベント表示。
 
 ### 2.3 Workflow (Automation)
-1.  **Trigger**: GitHub Actions（またはCron）が定期的にPythonスクリプトを実行。
-2.  **Process**: データ取得 -> スコア計算 -> AI分析 -> `current_signal.json` 生成。
-3.  **Deploy**: 生成されたJSONがリポジトリにコミット/プッシュされる。
-4.  **Serve**: Vercelが最新のJSONを読み込み、フロントエンドに反映。
+1.  **Monitor**: `update.yml`と`sns_bot.yml`が毎時起動。
+2.  **Optimize**: `seo_monitor.py`が検索トレンドを取得し、SNSハッシュタグを最適化。
+3.  **Publish**:
+    *   **Web**: `current_signal.json` を更新しVercelへデプロイ。
+    *   **SNS**: Twitter/Bluesky へ多言語で連動ポスト（緊急時は即時アラート）。
 
 ---
 
@@ -47,46 +53,60 @@
 
 ### 3.1 GMSスコア (Global Macro Score)
 市場のリスク許容度を 0〜100 で数値化。
-*   **0-40 (Red)**: Risk Contraction (リスク回避局面)。ディフェンシブ推奨。
+*   **0-40 (Red)**: Risk Contraction (リスク回避局面)。
 *   **40-60 (Yellow)**: Neutral (中立)。
-*   **60-100 (Blue)**: Risk Expansionary (リスク選好局面)。積極投資推奨。
+*   **60-100 (Blue)**: Risk Expansionary (リスク選好局面)。
 *   **計算ロジック**: VIX, MOVE指数, HY Credit Spread (最重要), NFCI, Market Breadth の加重平均。
 
-### 3.2 ニュースティッカー & AI翻訳
-*   CNBC等のRSSフィードを取得。
-*   **Intelligent Model Selection**: `Gemini Flash` モデルを使用し、高速に多言語（日・中・西）へ翻訳。
-*   **Silent Fallback**: AI翻訳が失敗/タイムアウトした場合、即座に原文（英語）を表示し、エラー画面を出さない。
+### 3.2 SEO & SNS連携システム
+*   **GSC Integration**: Google Search Consoleから流入キーワードを学習し、`trending_keywords.json`を生成。
+*   **Dynamic Hashtags**: SNS投稿時に、その時々で最も検索されている関連ワード（例: `#VIX`, `#Inflation`）を自動付与。
+*   **Emergency Alert**: GMSスコアまたはVIXが5%以上変動した場合、`🚨 EMERGENCY ALERT` を付与して投稿し、自動で固定ポスト化。
+*   **UTM Tracking**: 全投稿にGA4計測用パラメータを付与。
 
-### 3.3 モバイル最適化 (Mobile UX)
-*   **Vertical Stacking**: デスクトップでは横並びの指標カードを、モバイルでは縦積みに自動変形。
-*   **Decluttered Charts**: モバイルではX軸（日付）を非表示にし、トレンドラインと現在値のみを強調。
-*   **Ad Experience**: 収益性を維持しつつ、ユーザー体験を損なわない高さ制限（Max 60px）と「SPONSORED」ラベルの配置。
-
----
-
-## 4. 技術要件と環境変数 (Technical Requirements)
-
-### 4.1 必須環境変数 (Vercel / .env)
-システムを正常に稼働させるため、Vercelの **Settings > Environment Variables** にて以下の5つを必ず設定してください。
-
-*   `GOOGLE_API_KEY`: Gemini APIキー (AI Studioで取得)。
-*   `FRED_API_KEY`: FRED APIキー (経済指標取得用)。
-*   `AI_MODEL_PRO`: 分析用メインモデル (推奨: `gemini-2.0-flash-exp` または `gemini-1.5-pro`)。
-*   `AI_MODEL_FLASH`: 翻訳・バックアップ用モデル (推奨: `gemini-1.5-flash`)。
-*   `NEXT_PUBLIC_GA_ID`: Google Analytics 4 測定ID (例: `G-XXXXXXXXXX`)。
-
-### 4.2 依存ライブラリ (Dependencies)
-*   `yfinance`: 市場データ取得機能の中核。
-*   `google-generativeai`: Google AI Studioへのインターフェース。
-*   `next`: フロントエンドフレームワーク。
-*   `recharts` / `react-plotly.js`: 高度なチャート描画。
+### 3.3 ニュースティッカー & AI翻訳
+*   **Source**: CNBC等のRSSフィード。
+*   **Translation Logic**:
+    *   **Batching**: 全見出しを1リクエストのJSONとしてGeminiに送信。
+    *   **Professional Core**: 「Bloomberg端末の翻訳者」として、金融特有の言い回し（"Plunge", "Soar"等）を的確に訳出。
+    *   **Resilience**: 翻訳失敗時は即座に英語原文へフォールバック。
 
 ---
 
-## 5. 今後の拡張性 (Roadmap)
-*   **OAuth Integration**: ユーザー認証とポートフォリオ連携。
-*   **Alerting System**: GMSスコアの急変動時のメール/LINE通知。
-*   **Vector Search**: 過去の市場局面（Archive）からの類似検索機能。
+## 4. 技術要件と環境変数 (Environment Variables)
+
+システム稼働には以下の環境変数が必須です。
+
+### 4.1 Vercel (Frontend Production)
+| 変数名 | 説明 |
+| :--- | :--- |
+| `NEXT_PUBLIC_GEMINI_API_KEY` | フロントエンド翻訳用 (Must start with NEXT_PUBLIC_) |
+| `NEXT_PUBLIC_GA_ID` | Google Analytics 4 測定ID |
+| `AI_MODEL_FLASH` | 翻訳用モデル (`gemini-1.5-flash`) |
+
+### 4.2 GitHub Secrets (Backend Automation)
+| 変数名 | 説明 |
+| :--- | :--- |
+| `GEMINI_API_KEY` | 分析レポート生成用 |
+| `FRED_API_KEY` | 経済指標データ取得用 |
+| `TWITTER_API_KEY` | X API Key |
+| `TWITTER_API_SECRET` | X API Secret |
+| `TWITTER_ACCESS_TOKEN` | X Access Token |
+| `TWITTER_ACCESS_SECRET` | X Access Secret |
+| `BLUESKY_HANDLE` | Bluesky Handle (e.g. `example.bsky.social`) |
+| `BLUESKY_PASSWORD` | Bluesky App Password |
+| `GSC_CREDENTIALS_JSON` | Google Search Console Service Account Key (JSON content) |
+
+### 4.3 依存ライブラリ (Dependencies)
+*   **Frontend**: `next`, `react`, `tailwindcss`, `framer-motion`, `recharts`, `lucide-react`
+*   **Backend**: `yfinance`, `fredapi`, `google-generativeai`, `tweepy`, `atproto`, `google-api-python-client`
 
 ---
-*Document Version: 1.0.0 (2026-01-11)*
+
+## 5. 運用とメンテナンス (Operations)
+*   **SEO Monitoring**: `backend/seo_monitor.py` を定期実行し、検索トレンドの変化をSNS戦略に反映させる。
+*   **Legal Compliance**: 全SNS投稿とWeb表示において、投資助言に該当しないよう免責事項（Disclaimer）を常に明記する。
+*   **Cache Strategy**: ニュースAPIは1時間、GMSデータは静的JSONとして毎時更新することで、APIコストとサーバー負荷を最小化する。
+
+---
+*OmniMetric Terminal - Built for the Informed Investor.*
