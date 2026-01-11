@@ -315,6 +315,7 @@ def get_next_event_dates():
             "name": "FOMC RATE DECISION",
             "date": next_fomc.strftime("%Y-%m-%d"),
             "day": next_fomc.strftime("%a").upper(),
+            "time": "14:00 EST",
             "impact": "critical"
         })
 
@@ -340,6 +341,7 @@ def get_next_event_dates():
         "name": "NON-FARM PAYROLLS",
         "date": next_nfp.strftime("%Y-%m-%d"),
         "day": next_nfp.strftime("%a").upper(),
+        "time": "08:30 EST",
         "impact": "high"
     })
 
@@ -386,6 +388,7 @@ def get_next_event_dates():
             "name": "CPI INFLATION DATA",
             "date": next_cpi.strftime("%Y-%m-%d"),
             "day": next_cpi.strftime("%a").upper(),
+            "time": "08:30 EST",
             "impact": "high"
         })
     

@@ -385,10 +385,10 @@ export const Dashboard = ({ lang, setLang }: DashboardProps) => {
                                             <div className={`w-1.5 h-1.5 rounded-full ${dotColor}`}></div>
                                             <div className="flex flex-col">
                                                 <span className="text-slate-200 text-xs font-bold uppercase tracking-wider group-hover:text-cyan-400 transition-colors">
-                                                    [{evt.date.slice(5)} {evt.day}] {evt.name}
+                                                    [{evt.date.slice(5)} {evt.day}] {(t.events as any)[evt.code] || evt.name}
                                                 </span>
                                                 <span className="text-[#444] text-[9px] uppercase tracking-widest">
-                                                    {evt.impact} • {evt.code === 'fomc' ? '14:00' : '08:30'} EST
+                                                    {evt.impact} • {evt.time || 'TBA'}
                                                 </span>
                                             </div>
                                         </div>
