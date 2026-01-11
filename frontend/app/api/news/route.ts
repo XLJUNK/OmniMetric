@@ -42,7 +42,7 @@ export async function GET(
         // 2. AI Translation if not English
         if (lang !== 'EN' && items.length > 0) {
             try {
-                const apiKey = process.env.GOOGLE_API_KEY || process.env.GEMINI_API_KEY || process.env.GEMINI_KEY;
+                const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || process.env.GEMINI_KEY || process.env.NEXT_PUBLIC_GEMINI_API_KEY;
 
                 // Determine Model List
                 const userModel = process.env.AI_MODEL_FLASH || process.env.NEXT_PUBLIC_GEMINI_MODEL;
