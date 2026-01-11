@@ -34,7 +34,14 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    images: ['/api/og'],
+    images: [
+      {
+        url: '/api/og',
+        width: 1200,
+        height: 630,
+        alt: 'Global Macro Signal | Institutional Real-Time Analysis',
+      }
+    ],
   },
 };
 
