@@ -14,7 +14,7 @@ const FooterContent = () => {
     return (
         <footer className="w-full py-10 mt-12 border-t border-[#222] bg-black text-center">
             {/* Navigation Links */}
-            <div className="flex flex-row justify-center items-center gap-6 mb-6">
+            <div className="flex flex-row justify-center items-center gap-12 mb-8">
                 <Link href={`/about?lang=${lang}`} style={{ color: '#AAAAAA', textDecoration: 'none', textTransform: 'uppercase', fontSize: '11px', letterSpacing: '2px' }} className="hover:text-white">
                     [ SYSTEM INFO ]
                 </Link>
