@@ -7,6 +7,10 @@ interface NewsItem {
     link: string;
 }
 
+// Configuration
+const DEFAULT_MODELS = ["gemini-2.0-flash", "gemini-1.5-pro", "gemini-1.5-flash", "gemini-pro"];
+const API_VERSION = "v1beta"; // or v1 if preferred, but flash often needs beta
+
 export async function GET(
     request: NextRequest
 ): Promise<NextResponse> {
@@ -35,8 +39,15 @@ export async function GET(
         // 2. AI Translation if not English
         if (lang !== 'EN' && items.length > 0) {
             try {
-                // Try to get key from env (standard or gemini specific)
+                // Determine API Key
                 const apiKey = process.env.GOOGLE_API_KEY || process.env.GEMINI_API_KEY || process.env.GEMINI_KEY;
+
+                // Determine Model List (User Config -> Fallbacks)
+                const userModel = process.env.NEXT_PUBLIC_GEMINI_MODEL || process.env.GEMINI_MODEL;
+                const modelsToTry = userModel ? [userModel, ...DEFAULT_MODELS] : DEFAULT_MODELS;
+
+                // Deduplicate
+                const uniqueModels = [...new Set(modelsToTry)];
 
                 if (apiKey) {
                     const titles = items.map(i => i.title).join('\n');
@@ -44,47 +55,61 @@ export async function GET(
 
                     const prompt = `Translate these financial headlines into professional, concise ${targetLang}. Keep the tone institutional. Return detailed translation line by line. No bullet points, just the text lines.\n\n${titles}`;
 
-                    // Call Gemini API (REST)
-                    const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=${apiKey}`;
+                    let translationSuccess = false;
 
-                    const aiRes = await fetch(geminiUrl, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({
-                            contents: [{
-                                parts: [{ text: prompt }]
-                            }]
-                        })
-                    });
+                    // FAIL-SAFE WRAPPER (The Fallback Logic)
+                    for (const model of uniqueModels) {
+                        try {
+                            const geminiUrl = `https://generativelanguage.googleapis.com/${API_VERSION}/models/${model}:generateContent?key=${apiKey}`;
 
-                    if (aiRes.ok) {
-                        const aiJson = await aiRes.json();
-                        const aiText = aiJson.candidates?.[0]?.content?.parts?.[0]?.text;
+                            const aiRes = await fetch(geminiUrl, {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({
+                                    contents: [{
+                                        parts: [{ text: prompt }]
+                                    }]
+                                })
+                            });
 
-                        if (aiText) {
-                            const translatedLines = aiText.split('\n').map((l: string) => l.trim()).filter((l: string) => l.length > 0);
+                            if (aiRes.ok) {
+                                const aiJson = await aiRes.json();
+                                const aiText = aiJson.candidates?.[0]?.content?.parts?.[0]?.text;
 
-                            // Map back to items if length matches
-                            if (translatedLines.length === items.length) {
-                                for (let i = 0; i < items.length; i++) {
-                                    items[i].title = translatedLines[i];
+                                if (aiText) {
+                                    const translatedLines = aiText.split('\n').map((l: string) => l.trim()).filter((l: string) => l.length > 0);
+
+                                    // Verify integrity
+                                    if (translatedLines.length === items.length) {
+                                        for (let i = 0; i < items.length; i++) {
+                                            items[i].title = translatedLines[i];
+                                        }
+                                        translationSuccess = true;
+                                        break; // Success, exit loop
+                                    }
                                 }
+                            } else {
+                                console.warn(`Model ${model} failed: ${aiRes.status}`);
                             }
+                        } catch (innerError) {
+                            console.warn(`Model ${model} network error`, innerError);
                         }
-                    } else {
-                        console.error('Gemini API Error', await aiRes.text());
+                    }
+
+                    if (!translationSuccess) {
+                        console.error("All AI models failed to translate. Returning English.");
                     }
                 }
             } catch (translationError) {
-                console.error("Translation Failed:", translationError);
+                console.error("Translation Critical Failure:", translationError);
                 // Fallback to English (already in items)
             }
         }
 
         return NextResponse.json({ news: items });
     } catch (e) {
+        // Tier 3: Pre-defined Stable Fallback (here just static news)
         console.error("News Fetch Error:", e);
-        // Fail gracefully
         return NextResponse.json({
             news: [
                 { title: "Market data synchronization active...", link: "#" },

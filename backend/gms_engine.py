@@ -276,8 +276,7 @@ def calculate_gms_score(data):
     return int(max(0, min(100, score)))
 
 def generate_multilingual_report(data, score):
-    # Simulated for speed/reliability in this step, but ready for gemini
-    # Logic: Provide "Regime" based summary
+    # FALLBACK DEFAULTS (Tier 3)
     if score > 60:
         regime_en = "Risk Expansionary"
         regime_jp = "リスク拡張局面"
@@ -297,9 +296,55 @@ def generate_multilingual_report(data, score):
         "CN": f"市场机制：{regime_en} (评分 {score})。宏观条件有利于风险资产。",
         "ES": f"Régimen: {regime_en} (Puntuación {score}). Las condiciones favorecen los activos de riesgo."
     }
+
+    if not GEMINI_KEY:
+        print("GEMINI_API_KEY missing, using Quantitative Logic Fallback.")
+        return reports
+
+    # RESILIENT AI FACTORY (Multi-Model Try)
+    models_to_try = ["gemini-2.0-flash", "gemini-1.5-pro", "gemini-1.5-flash", "gemini-pro"]
     
-    # TODO: Real Gemini Integration goes here in Prod
-    return reports
+    try:
+        genai.configure(api_key=GEMINI_KEY)
+        
+        # Prepare Prompt
+        prompt = f"""
+        Act as a Goldman Sachs Chief Strategist.
+        Context:
+        - GMS Score: {score}/100
+        - VIX: {data.get('VIX', {}).get('price')}
+        - 10Y Yield: {data.get('TNX', {}).get('price')}
+        - Credit Spread: {data.get('HY_SPREAD', {}).get('price')}
+
+        Task: Write a 1-sentence market regime analysis in English, Japanese, Chinese, and Spanish.
+        Format JSON: {{ "EN": "...", "JP": "...", "CN": "...", "ES": "..." }}
+        """
+
+        # Tiered Execution
+        for model_name in models_to_try:
+            try:
+                print(f"Attempting generation with {model_name}...")
+                model = genai.GenerativeModel(model_name)
+                response = model.generate_content(prompt)
+                
+                # Cleanup JSON
+                text = response.text.replace('```json', '').replace('```', '').strip()
+                ai_reports = json.loads(text)
+                
+                # Verify keys
+                if "EN" in ai_reports and "JP" in ai_reports:
+                    print(f"Success with {model_name}")
+                    return ai_reports
+            except Exception as e:
+                print(f"Model {model_name} failed: {e}")
+                continue # Try next model
+        
+        print("All AI models failed. Using Fallback.")
+        return reports
+        
+    except Exception as e:
+        print(f"AI Generation Error: {e}")
+        return reports
 
 def update_signal():
     print("Running Institutional GMS Engine...")
