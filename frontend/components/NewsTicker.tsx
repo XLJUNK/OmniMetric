@@ -1,0 +1,78 @@
+'use client';
+
+import React, { useEffect, useState } from 'react';
+
+import { DICTIONARY, LangType } from '@/data/dictionary';
+
+// Marquee styles in pure Tailwind/CSS
+// We need a keyframe animation. We'll inject a style for it or use standard marquee if allowed.
+// But standard marquee tag is deprecated.
+// Best approach: CSS animation.
+
+export const NewsTicker = ({ lang }: { lang: LangType }) => {
+    const [news, setNews] = useState<{ title: string, link: string }[]>([]);
+    const t = DICTIONARY[lang];
+
+    useEffect(() => {
+        const fetchNews = async () => {
+            try {
+                const res = await fetch('/api/news');
+                const json = await res.json();
+                const decodedNews = (json.news || []).map((item: any) => ({
+                    ...item,
+                    title: item.title
+                        .replace(/&apos;/g, "'")
+                        .replace(/&amp;/g, "&")
+                        .replace(/&quot;/g, '"')
+                        .replace(/&lt;/g, "<")
+                        .replace(/&gt;/g, ">")
+                }));
+                setNews(decodedNews);
+            } catch (e) {
+                // Warning suppressed
+            }
+        };
+        fetchNews();
+        // Update every 5 mins
+        const interval = setInterval(fetchNews, 300000);
+        return () => clearInterval(interval);
+    }, []);
+
+    if (news.length === 0) return <div className="h-[30px] bg-black border-y border-[#222]"></div>;
+
+    return (
+        <div className="w-full bg-black border-y border-[#222] h-[30px] shadow-md z-10">
+            <div className="w-full max-w-[1500px] mx-auto h-full relative overflow-hidden flex items-center">
+                {/* LABEL */}
+                <div className="absolute left-0 top-0 bottom-0 bg-[#dc2626] text-white font-black text-[9px] px-4 z-20 flex items-center tracking-[0.2em] uppercase shrink-0">
+                    {t.titles.breaking_news}
+                </div>
+
+                {/* TICKER TRACK */}
+                <div className="flex whitespace-nowrap animate-marquee items-center h-full">
+                    {news.map((item, i) => (
+                        <span key={i} className="mx-12 text-[11px] font-mono font-bold text-yellow-400 uppercase flex items-center gap-3">
+                            <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full inline-block animate-pulse"></span>
+                            {item.title}
+                        </span>
+                    ))}
+                </div>
+            </div>
+
+            <style jsx>{`
+                @keyframes marquee {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(-100%); }
+                }
+                .animate-marquee {
+                    animation: marquee 40s linear infinite;
+                    padding-left: 100%; /* Start off screen */
+                    display: inline-block;
+                }
+                .animate-marquee:hover {
+                    animation-play-state: paused;
+                }
+            `}</style>
+        </div>
+    );
+};

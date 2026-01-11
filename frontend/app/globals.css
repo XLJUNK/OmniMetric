@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#__next-prerender-indicator {
+  display: none !important;
+}
+
+/* PERMANENT BRANDING ERADICATION: NEXT.JS DEV INDICATORS */
+[data-nextjs-static-indicator],
+.nextjs-static-indicator {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+:root {
+  --background: #0A0A0A;
+  --foreground: #E0E0E0;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Utilities */
+.glass-panel {
+  background: rgba(18, 18, 18, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid #2A2A2A;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #00A3BF, #00D4FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* AdSense Placeholder */
+.gms-ad-slot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100px;
+  background: rgba(18, 18, 18, 0.5);
+  border: 1px dashed #2A2A2A;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+/* CRITICAL: TERMINATE FRAMEWORK INDICATORS */
+.nextjs-static-indicator,
+[data-nextjs-toast],
+#nextjs-dev-indicator,
+[data-nextjs-static-indicator],
+#__next-prerender-indicator,
+.next-route-announcer,
+[data-nextjs-portal] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* ULTIMATUM: TOTAL BRANDING PURITY */
+[data-nextjs-static-indicator],
+.nextjs-static-indicator,
+#__next-prerender-indicator {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* MANDATORY CATCH-ALL INDICATOR KILL */
+* [class*="indicator"],
+* [class*="indicator"] * {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+/* SAFE NEXT.JS BRANDING ERADICATION */
+/* ABSOLUTE KILL OF THE "N" ICON AND ALL FRAMEWORK INDICATORS */
+[class*="indicator"],
+#__next-prerender-indicator,
+#nextjs-dev-indicator,
+.nextjs-static-indicator {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}
+
+/* FINAL EXECUTION: KILL ALL NEXTJS DEPLOYMENT INDICATORS */
+[data-nextjs-static-indicator],
+.nextjs-static-indicator,
+[data-nextjs-toast],
+#nextjs-dev-indicator,
+#__next-prerender-indicator {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}

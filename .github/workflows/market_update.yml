@@ -1,0 +1,48 @@
+name: Global Macro Signal Update
+
+on:
+  schedule:
+    # 30 minute offset to allow market data to settle
+    # Tokyo Close (15:00 JST -> 06:00 UTC) -> 06:30 UTC
+    - cron: '30 6 * * *'
+    # London Close (16:30 GMT -> 16:30 UTC) -> 17:00 UTC
+    - cron: '00 17 * * *'
+    # NY Close (16:00 EST -> 21:00 UTC) -> 21:30 UTC
+    - cron: '30 21 * * *'
+    # Hourly heartbeat
+    - cron: '0 * * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-signal:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Important for committing back
+
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v4
+
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Install Backend Dependencies
+      run: |
+        cd backend
+        pip install -r requirements.txt
+
+    - name: Run GMS Engine
+      env:
+        FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      run: |
+        cd backend
+        python gms_engine.py
+
+    - name: Commit and Push Changes
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "GMS Signal Update [Automated]"
+        file_pattern: 'backend/*.json'
