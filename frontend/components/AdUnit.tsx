@@ -25,10 +25,11 @@ export const AdUnit = () => {
     }, []);
 
     return (
-        <div style={{ minHeight: '100px', width: '100%', overflow: 'hidden' }}>
+        <div className="relative w-full h-full flex flex-col items-center justify-center overflow-hidden">
+            <span className="absolute top-0 right-1 text-[8px] font-mono text-gray-700 uppercase tracking-widest z-10">Sponsored</span>
             {/* Horizontal Display Unit */}
             <ins className="adsbygoogle"
-                style={{ display: 'block' }}
+                style={{ display: 'block', width: '100%', height: '100%' }}
                 data-ad-client="ca-pub-0000000000000000"
                 data-ad-slot="1234567890" // Placeholder slot
                 data-ad-format="auto"

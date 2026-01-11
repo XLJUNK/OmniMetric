@@ -260,13 +260,12 @@ export const Dashboard = ({ lang, setLang }: DashboardProps) => {
                 {/* 4. AD PLACEMENT (STRATEGIC SEPARATOR) */}
                 {/* 4. AD PLACEMENT (STRATEGIC SEPARATOR) */}
                 <div className="w-full max-w-[1400px] mx-auto px-4 mb-8">
-                    <div className="w-full min-h-[100px] bg-[#0c0c0c] border border-gray-800 rounded-lg flex items-center justify-center overflow-hidden relative">
+                    <div className="w-full h-[60px] md:h-[80px] bg-[#0c0c0c] border border-gray-800 rounded-lg flex items-center justify-center overflow-hidden relative">
                         <AdUnit />
                     </div>
                 </div>
 
-                {/* 5. DETAILED STRIP LAYOUT (UNIFIED SMART STRIPS) */}
-                <div className="flex flex-col gap-6 w-full max-w-[1400px] mx-auto px-4 pb-32">
+                <div className="flex flex-col gap-4 md:gap-6 w-full max-w-[1400px] mx-auto px-4 pb-32">
                     {allIndicators.map((item) => {
                         // LIVE OVERRIDE LOGIC
                         let val = item.val || { price: "---", change_percent: 0, trend: "FLAT", sparkline: [] };
@@ -290,7 +289,7 @@ export const Dashboard = ({ lang, setLang }: DashboardProps) => {
                         let chartColor = "#94a3b8"; // Default slate-400
                         let yRange: [number, number] | undefined = undefined;
 
-                        // FEARE INDICATORS LOOKUP
+                        // FEAR INDICATORS LOOKUP
                         if (item.key === "VIX") yRange = [10, 45];
                         if (item.key === "MOVE") yRange = [40, 140];
                         if (item.key === "HY_SPREAD") yRange = [2.0, 6.0];
@@ -326,18 +325,18 @@ export const Dashboard = ({ lang, setLang }: DashboardProps) => {
                         const startDate = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
 
                         return (
-                            <div key={item.key} className="bg-gradient-to-r from-[#0f172a] to-[#000] border border-[#222] rounded-xl flex items-center hover:border-sky-500/50 transition-all group overflow-hidden shadow-xl h-[120px]">
-                                {/* LEFT SECTION (20%): Identity & Price */}
-                                <div className="w-[20%] h-full py-5 px-6 flex flex-col justify-center border-r border-white/5 bg-black/20 relative">
-                                    <span className="text-sm text-gray-400 font-bold uppercase tracking-wide mb-1 truncate flex items-center gap-2">
+                            <div key={item.key} className="bg-gradient-to-r from-[#0f172a] to-[#000] border border-[#222] rounded-xl flex flex-col md:flex-row items-center hover:border-sky-500/50 transition-all group overflow-hidden shadow-xl h-auto md:h-[120px]">
+                                {/* LEFT SECTION (Identity & Price) */}
+                                <div className="w-full md:w-[20%] h-auto md:h-full py-3 px-4 md:py-5 md:px-6 flex flex-row md:flex-col justify-between md:justify-center items-center md:items-start border-b md:border-b-0 md:border-r border-white/5 bg-black/20 relative">
+                                    <span className="text-xs md:text-sm text-gray-400 font-bold uppercase tracking-wide mb-0 md:mb-1 truncate flex items-center gap-2">
                                         {item.label}
                                         {isLive && <span className="text-[8px] bg-sky-900/50 text-sky-400 px-1 rounded animate-pulse">{t.titles.delayed_tick}</span>}
                                     </span>
-                                    <span className="text-4xl font-black text-white font-mono tracking-tight glow-text">{val.price}</span>
+                                    <span className="text-2xl md:text-4xl font-black text-white font-mono tracking-tight glow-text">{val.price}</span>
                                 </div>
 
-                                {/* CENTER SECTION (60%): Chart */}
-                                <div className="w-[60%] h-full p-2 relative">
+                                {/* CENTER SECTION (Chart) */}
+                                <div className="w-full md:w-[60%] h-[80px] md:h-full p-2 relative order-3 md:order-2">
                                     <MetricChart
                                         data={(val.sparkline && val.sparkline.length > 0) ? val.sparkline : [1, 1, 1, 1, 1]}
                                         color={chartColor}
@@ -348,16 +347,20 @@ export const Dashboard = ({ lang, setLang }: DashboardProps) => {
                                     />
                                 </div>
 
-                                {/* RIGHT SECTION (20%): Signals & Metadata */}
-                                <div className="w-[20%] h-full py-5 px-6 flex flex-col justify-center items-end border-l border-white/5 bg-black/20">
-                                    <span className={`text-xl font-black font-mono mb-2 ${colorClass}`}>
+                                {/* RIGHT SECTION (Signals & Metadata) */}
+                                <div className="w-full md:w-[20%] h-auto md:h-full py-2 px-4 md:py-5 md:px-6 flex flex-row md:flex-col justify-between md:justify-center items-center md:items-end border-b md:border-b-0 md:border-l border-white/5 bg-black/20 order-2 md:order-3">
+                                    <span className={`text-lg md:text-xl font-black font-mono md:mb-2 ${colorClass}`}>
                                         {val.change_percent >= 0 ? "+" : ""}{val.change_percent}%
                                     </span>
-                                    <span className={`text-[10px] px-3 py-0.5 rounded font-black tracking-widest uppercase mb-3 ${colorClass.includes("red") ? "bg-red-500/10 text-red-500" : (colorClass.includes("green") ? "bg-green-500/10 text-green-500" : "bg-sky-500/10 text-sky-400")}`}>
-                                        {trend}
-                                    </span>
-                                    <span className="text-[10px] text-gray-600 font-mono uppercase tracking-wider truncate mb-1">{getBench(item.key)}</span>
-                                    <span className="text-[8px] text-[#444] font-mono tracking-wide">{t.attribution.src}</span>
+                                    <div className="flex items-center gap-2 md:flex-col md:items-end">
+                                        <span className={`text-[10px] px-3 py-0.5 rounded font-black tracking-widest uppercase md:mb-3 ${colorClass.includes("red") ? "bg-red-500/10 text-red-500" : (colorClass.includes("green") ? "bg-green-500/10 text-green-500" : "bg-sky-500/10 text-sky-400")}`}>
+                                            {trend}
+                                        </span>
+                                        <div className="hidden md:flex flex-col items-end">
+                                            <span className="text-[10px] text-gray-600 font-mono uppercase tracking-wider truncate mb-1">{getBench(item.key)}</span>
+                                            <span className="text-[8px] text-[#444] font-mono tracking-wide">{t.attribution.src}</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         );

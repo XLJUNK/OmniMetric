@@ -194,7 +194,7 @@ export const MetricChart = ({ data, color, currentPrice, startDate, endDate, yRa
             </div>
 
             {/* X-AXIS LABELS */}
-            <div className="flex justify-between items-center px-1 font-mono text-[8px] text-[#666] uppercase tracking-[0.2em] mt-[-10px]">
+            <div className="hidden md:flex justify-between items-center px-1 font-mono text-[8px] text-[#666] uppercase tracking-[0.2em] mt-[-10px]">
                 <span>{startDate}</span>
                 <span>{endDate}</span>
             </div>
