@@ -80,7 +80,6 @@ export async function GET() {
                         GMS
                     </div>
                     <div style={{
-                        color: '#fff',
                         fontSize: 40,
                         letterSpacing: '0.4em',
                         backgroundColor: '#06b6d4',
