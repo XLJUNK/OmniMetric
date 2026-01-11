@@ -1,9 +1,41 @@
 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="64" height="64" rx="8" fill="#1e293b"/>
-  <path d="M12 24L24 32L12 40" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="32" y="34" width="20" height="6" fill="#38bdf8" class="cursor"/>
-  <style>
-    .cursor { animation: blink 1s step-end infinite; }
-    @keyframes blink { 50% { opacity: 0; } }
-  </style>
+  <defs>
+    <radialGradient id="sphereGrad" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+    <radialGradient id="coreGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#00ffff"/>
+      <stop offset="50%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background Sphere -->
+  <circle cx="32" cy="32" r="32" fill="url(#sphereGrad)"/>
+  <circle cx="32" cy="32" r="31" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Concentric Rings (Cyan) -->
+  <circle cx="32" cy="32" r="24" stroke="#0ea5e9" stroke-width="0.5" opacity="0.4"/>
+  <circle cx="32" cy="32" r="16" stroke="#0ea5e9" stroke-width="0.5" opacity="0.6"/>
+  <circle cx="32" cy="32" r="8" stroke="#0ea5e9" stroke-width="1" opacity="0.8"/>
+  
+  <!-- Spiral Data Lines (White/Cyan) -->
+  <g opacity="0.7">
+    <path d="M32 32 C 32 20, 42 10, 50 4" stroke="white" stroke-width="0.5" stroke-linecap="round"/>
+    <path d="M32 32 C 44 32, 54 42, 60 50" stroke="white" stroke-width="0.5" stroke-linecap="round"/>
+    <path d="M32 32 C 32 44, 22 54, 14 60" stroke="white" stroke-width="0.5" stroke-linecap="round"/>
+    <path d="M32 32 C 20 32, 10 22, 4 14" stroke="white" stroke-width="0.5" stroke-linecap="round"/>
+    
+    <!-- Secondary Swirls -->
+    <path d="M32 32 Q 40 20 54 26" stroke="#38bdf8" stroke-width="0.5"/>
+    <path d="M32 32 Q 40 44 46 54" stroke="#38bdf8" stroke-width="0.5"/>
+    <path d="M32 32 Q 24 44 10 38" stroke="#38bdf8" stroke-width="0.5"/>
+    <path d="M32 32 Q 24 20 18 10" stroke="#38bdf8" stroke-width="0.5"/>
+  </g>
+
+  <!-- Core Glow -->
+  <circle cx="32" cy="32" r="10" fill="url(#coreGlow)" opacity="0.6"/>
+  <circle cx="32" cy="32" r="6" fill="#0ea5e9"/>
+  <circle cx="32" cy="32" r="3" fill="#ffffff" opacity="0.8"/>
 </svg>
