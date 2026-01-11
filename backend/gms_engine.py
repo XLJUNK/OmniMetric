@@ -445,6 +445,12 @@ def update_signal():
                 json.dump(payload, f, indent=4)
         except: pass
 
+        try:
+            with open(DATA_FILE, 'w') as f:
+                json.dump(payload, f, indent=4)
+        except Exception as e:
+            print(f"Error writing to DATA_FILE: {e}")
+
         return payload
 
     else:
