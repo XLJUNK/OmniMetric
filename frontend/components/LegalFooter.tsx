@@ -14,26 +14,35 @@ const FooterContent = () => {
     return (
         <footer className="w-full py-10 mt-12 border-t border-[#222] bg-black text-center">
             {/* Navigation Links */}
-            <div className="flex flex-row justify-center items-center gap-12 mb-8">
-                <Link href={`/about?lang=${lang}`} style={{ color: '#AAAAAA', textDecoration: 'none', textTransform: 'uppercase', fontSize: '11px', letterSpacing: '2px' }} className="hover:text-white">
+            <div className="flex flex-row justify-center items-center mb-10 tracking-[0.2em]">
+                <Link
+                    href={`/about?lang=${lang}`}
+                    className="text-[10px] text-gray-500 hover:text-cyan-400 transition-colors duration-300 uppercase px-4 py-2 hover:bg-white/5 rounded-sm"
+                >
                     {t.labels.about}
                 </Link>
 
-                <span className="mx-8 text-gray-600">|</span>
+                <span className="mx-8 text-gray-800 font-thin text-[10px]">|</span>
 
-                <Link href={`/legal?lang=${lang}`} style={{ color: '#AAAAAA', textDecoration: 'none', textTransform: 'uppercase', fontSize: '11px', letterSpacing: '2px' }} className="hover:text-white">
+                <Link
+                    href={`/legal?lang=${lang}`}
+                    className="text-[10px] text-gray-500 hover:text-cyan-400 transition-colors duration-300 uppercase px-4 py-2 hover:bg-white/5 rounded-sm"
+                >
                     {t.labels.legal}
                 </Link>
 
-                <span className="mx-8 text-gray-600">|</span>
+                <span className="mx-8 text-gray-800 font-thin text-[10px]">|</span>
 
-                <Link href={`/archive?lang=${lang}`} style={{ color: '#AAAAAA', textDecoration: 'none', textTransform: 'uppercase', fontSize: '11px', letterSpacing: '2px' }} className="hover:text-white">
+                <Link
+                    href={`/archive?lang=${lang}`}
+                    className="text-[10px] text-gray-500 hover:text-cyan-400 transition-colors duration-300 uppercase px-4 py-2 hover:bg-white/5 rounded-sm"
+                >
                     {t.labels.archive}
                 </Link>
             </div>
 
             {/* Legal Text */}
-            <p style={{ color: '#666', fontSize: '10px', lineHeight: '1.6', maxWidth: '800px', margin: '0 auto', padding: '0 20px' }}>
+            <p style={{ color: '#444', fontSize: '9px', lineHeight: '1.8', maxWidth: '800px', margin: '0 auto', padding: '0 20px', letterSpacing: '0.05em' }}>
                 {t.legal_text.t1}
             </p>
 
