@@ -26,6 +26,14 @@ jobs:
       run: |
         pip install -r backend/requirements.txt
 
+    - name: Run SEO Monitor (Update Keywords)
+      # Run this occasionally to freshen keywords. 
+      # Since we don't have GSC keys in secrets yet, this might fail if not handled gracefully.
+      # The script has a dry-run fallback.
+      continue-on-error: true
+      run: |
+        python backend/seo_monitor.py
+
     - name: Run SNS Publisher
       env:
         TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}

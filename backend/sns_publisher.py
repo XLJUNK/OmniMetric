@@ -45,6 +45,25 @@ def get_alert_status(current_data, history_data):
     
     return False, ""
 
+# ... (Existing Imports)
+
+# SEO KEYWORDS FILE
+KEYWORDS_FILE = os.path.join(SCRIPT_DIR, "trending_keywords.json")
+
+def load_seo_hashtags():
+    """Loads dynamic hashtags from GSC analysis."""
+    if not os.path.exists(KEYWORDS_FILE):
+        return "#OmniMetric #Macro" # Default
+    try:
+        with open(KEYWORDS_FILE, 'r') as f:
+            data = json.load(f)
+            tags = data.get("hashtags", [])
+            if tags:
+                return " ".join(tags)
+    except:
+        pass
+    return "#OmniMetric #Macro" # Fallback
+
 def format_posts(data, alert_reason=""):
     """
     Generates posts. Adds [EMERGENCY] tag if alert_reason is present.
@@ -76,6 +95,9 @@ def format_posts(data, alert_reason=""):
     utm = "?utm_source=twitter&utm_medium=social&utm_campaign=gms_auto_report"
     tracked_url = f"{SITE_URL}{utm}"
     
+    # SEO Hashtags
+    seo_tags = load_seo_hashtags()
+    
     # 1. English Post
     post_en = f"""{alert_prefix_en}{icon} {header_en}
 Signal Score: {score}/100
@@ -86,7 +108,7 @@ Signal Score: {score}/100
 • HY Spread: {hy}%
 
 {tracked_url}
-#OmniMetric #Macro
+{seo_tags}
 {disclaimer_en}"""
 
     # 2. Japanese Post
@@ -99,7 +121,7 @@ Signal Score: {score}/100
 • HYスプレッド: {hy}%
 
 {tracked_url}
-#OmniMetric #米国株
+{seo_tags} #米国株
 {disclaimer_jp}"""
 
     # 3. Chinese Post (Simplified)
@@ -111,7 +133,7 @@ Signal Score: {score}/100
 • 信贷利差: {hy}%
 
 {tracked_url}
-#Macro
+{seo_tags}
 非投资建议。"""
 
     # 4. Spanish Post
@@ -123,8 +145,10 @@ Puntuación: {score}/100
 • Spread HY: {hy}%
 
 {tracked_url}
-#Finanzas
+{seo_tags}
 No es consejo de inversión."""
+
+    return [post_en, post_jp, post_cn, post_es]
 
     return [post_en, post_jp, post_cn, post_es]
 
