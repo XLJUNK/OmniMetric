@@ -26,7 +26,7 @@ export const AdUnit = () => {
 
     return (
         <div className="relative w-full h-full flex flex-col items-center justify-center overflow-hidden">
-            <span className="absolute top-0 right-1 text-[8px] font-mono text-gray-700 uppercase tracking-widest z-10">Sponsored</span>
+            <span className="absolute top-0 right-1 text-[8px] font-mono text-[#222] uppercase tracking-widest z-10">Sponsored</span>
             {/* Horizontal Display Unit */}
             <ins className="adsbygoogle"
                 style={{ display: 'block', width: '100%', height: '100%' }}
