@@ -16,7 +16,7 @@ const FooterContent = () => {
             {/* Navigation Links */}
             <div className="flex flex-row justify-center items-center gap-6 mb-6">
                 <Link href={`/about?lang=${lang}`} style={{ color: '#AAAAAA', textDecoration: 'none', textTransform: 'uppercase', fontSize: '11px', letterSpacing: '2px' }} className="hover:text-white">
-                    {t.labels.about}
+                    [ SYSTEM INFO ]
                 </Link>
 
                 <span className="mx-8 text-gray-600">|</span>

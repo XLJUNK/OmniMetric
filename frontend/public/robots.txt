@@ -1,14 +1,11 @@
+# *
 User-agent: *
 Allow: /
-Disallow: /api/raw-data
-Disallow: /backend/
+Disallow: /api/
+Disallow: /admin/
 
-# Institutional protection for AI scrapers
-User-agent: CCBot
-Disallow: /
+# Host
+Host: https://omnimetric.ai
 
-User-agent: GPTBot
-Disallow: /
-
-User-agent: Google-Extended
-Disallow: /
+# Sitemaps
+Sitemap: https://omnimetric.ai/sitemap.xml
