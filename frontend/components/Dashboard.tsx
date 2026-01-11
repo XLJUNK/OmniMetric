@@ -261,7 +261,7 @@ export const Dashboard = ({ lang, setLang }: DashboardProps) => {
                 {/* 4. AD PLACEMENT (STRATEGIC SEPARATOR) */}
                 {/* 4. AD PLACEMENT (STRATEGIC SEPARATOR) */}
                 <div className="w-full max-w-[1400px] mx-auto px-4 mb-8">
-                    <div className="w-full h-[30px] bg-[#0c0c0c] border border-gray-800 rounded flex items-center justify-center overflow-hidden relative">
+                    <div className="w-full h-[30px] bg-[#0c0c0c] border border-gray-800 rounded flex items-center justify-center overflow-hidden relative" style={{ height: '30px', minHeight: '30px', maxHeight: '30px' }}>
                         <AdUnit />
                     </div>
                 </div>
