@@ -7,9 +7,12 @@ interface NewsItem {
     link: string;
 }
 
-// Configuration
-const DEFAULT_MODELS = ["gemini-2.0-flash", "gemini-1.5-pro", "gemini-1.5-flash", "gemini-pro"];
-const API_VERSION = "v1beta"; // or v1 if preferred, but flash often needs beta
+// Configuration: Tiered Model Logic
+// Primary: User Configured Flash (Speed)
+// Secondary: Stable Flash Alias
+// Tertiary: Proven Version
+const FALLBACK_MODELS = ["gemini-2.0-flash", "gemini-1.5-flash", "gemini-flash-latest"];
+const API_VERSION = "v1beta";
 
 export async function GET(
     request: NextRequest
@@ -42,9 +45,10 @@ export async function GET(
                 // Determine API Key
                 const apiKey = process.env.GOOGLE_API_KEY || process.env.GEMINI_API_KEY || process.env.GEMINI_KEY;
 
-                // Determine Model List (User Config -> Fallbacks)
-                const userModel = process.env.NEXT_PUBLIC_GEMINI_MODEL || process.env.GEMINI_MODEL;
-                const modelsToTry = userModel ? [userModel, ...DEFAULT_MODELS] : DEFAULT_MODELS;
+                // Determine Model List (Intelligence Tiering)
+                // Use AI_MODEL_FLASH for translation tasks (Speed priority)
+                const userModel = process.env.AI_MODEL_FLASH || process.env.NEXT_PUBLIC_GEMINI_MODEL;
+                const modelsToTry = userModel ? [userModel, ...FALLBACK_MODELS] : FALLBACK_MODELS;
 
                 // Deduplicate
                 const uniqueModels = [...new Set(modelsToTry)];
@@ -57,7 +61,7 @@ export async function GET(
 
                     let translationSuccess = false;
 
-                    // FAIL-SAFE WRAPPER (The Fallback Logic)
+                    // FAIL-SAFE WRAPPER
                     for (const model of uniqueModels) {
                         try {
                             const geminiUrl = `https://generativelanguage.googleapis.com/${API_VERSION}/models/${model}:generateContent?key=${apiKey}`;
@@ -102,13 +106,11 @@ export async function GET(
                 }
             } catch (translationError) {
                 console.error("Translation Critical Failure:", translationError);
-                // Fallback to English (already in items)
             }
         }
 
         return NextResponse.json({ news: items });
     } catch (e) {
-        // Tier 3: Pre-defined Stable Fallback (here just static news)
         console.error("News Fetch Error:", e);
         return NextResponse.json({
             news: [

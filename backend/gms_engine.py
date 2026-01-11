@@ -301,8 +301,16 @@ def generate_multilingual_report(data, score):
         print("GEMINI_API_KEY missing, using Quantitative Logic Fallback.")
         return reports
 
-    # RESILIENT AI FACTORY (Multi-Model Try)
-    models_to_try = ["gemini-2.0-flash", "gemini-1.5-pro", "gemini-1.5-flash", "gemini-pro"]
+    # INTELLIGENT MODEL SELECTION
+    # Primary: User Configured Pro (Deep Reasoning)
+    # Secondary: Stable Pro Alias
+    # Tertiary: Flash Latest (Fallback)
+    user_model = os.getenv("AI_MODEL_PRO")
+    fallback_models = ["gemini-2.0-pro-exp-02-05", "gemini-1.5-pro", "gemini-flash-latest"]
+    
+    models_to_try = [user_model] + fallback_models if user_model else fallback_models
+    # Deduplicate
+    models_to_try = list(dict.fromkeys(models_to_try))
     
     try:
         genai.configure(api_key=GEMINI_KEY)
