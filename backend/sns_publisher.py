@@ -60,7 +60,7 @@ def format_posts(data, alert_reason=""):
     elif score < 40: icon = "🔴"
     else: icon = "🟡"
 
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M EST")
+    timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
     
     header_en = "OmniMetric GMS Report"
     header_jp = "OmniMetric GMS レポート"
