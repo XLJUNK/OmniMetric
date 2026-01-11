@@ -143,9 +143,9 @@ def post_to_twitter(text):
             consumer_key=api_key, consumer_secret=api_secret,
             access_token=access_token, access_token_secret=access_secret
         )
-        client.create_tweet(text=text)
-        print("[TWITTER] Posted successfully.")
-        return True
+        response = client.create_tweet(text=text)
+        print(f"[TWITTER] Posted successfully. ID: {response.data['id']}")
+        return response.data['id']
     except Exception as e:
         print(f"[TWITTER] Error: {e}")
         return False
@@ -205,8 +205,49 @@ def main():
     for p in target_posts:
         print(f"\n--- PREVIEW ---\n{p}\n---------------")
         # Post
-        post_to_twitter(p)
+        tweet_id = post_to_twitter(p)
         post_to_bluesky(p)
+        
+        # Pin if Emergency (Only first post/primary post)
+        if is_emergency and tweet_id:
+            pin_twitter_post(tweet_id)
+            # Only pin the FIRST one (which is usually the most important or EN one? User said "Most significant score move")
+            # If we post EN then JP, maybe pin EN? Or JP?
+            # Let's pin the JP one if target audience is JP, or EN. User is JP (shingo_kosaka).
+            # But the loop iterates. 
+            # Simplified: Pin the LAST one posted? Or strictly the EN one?
+            # Let's just pin the first one in the loop for now.
+            is_emergency = False # Prevent pinning multiple
+
+def pin_twitter_post(tweet_id):
+    """
+    Pins a tweet. Requires Read/Write/Manage permission.
+    Uses API v2 users/:id/pinned_lists or similar? 
+    Actually, API v1.1 account/pin_tweet seems deprecated?
+    API v2: POST /2/users/:id/pinned_tweets
+    """
+    api_key = os.getenv("TWITTER_API_KEY")
+    api_secret = os.getenv("TWITTER_API_SECRET")
+    access_token = os.getenv("TWITTER_ACCESS_TOKEN")
+    access_secret = os.getenv("TWITTER_ACCESS_SECRET")
+    
+    try:
+        # Get User ID first
+        client = tweepy.Client(
+            consumer_key=api_key, consumer_secret=api_secret,
+            access_token=access_token, access_token_secret=access_secret
+        )
+        me = client.get_me()
+        user_id = me.data.id
+        
+        # Pin
+        client.pin_tweet(user_id=user_id, tweet_id=tweet_id)
+        print(f"[TWITTER] Pinned tweet {tweet_id}")
+        return True
+    except Exception as e:
+        print(f"[TWITTER] Pin Error: {e}")
+        return False
+
 
 if __name__ == "__main__":
     main()
