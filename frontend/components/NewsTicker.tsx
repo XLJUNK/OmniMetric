@@ -16,7 +16,7 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
     useEffect(() => {
         const fetchNews = async () => {
             try {
-                const res = await fetch('/api/news');
+                const res = await fetch(`/api/news?lang=${lang}`);
                 const json = await res.json();
                 const decodedNews = (json.news || []).map((item: any) => ({
                     ...item,
@@ -38,20 +38,20 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
         return () => clearInterval(interval);
     }, []);
 
-    if (news.length === 0) return <div className="h-[30px] bg-black border-y border-[#222]"></div>;
+    if (news.length === 0) return <div className="h-[40px] bg-black border-y border-[#222]"></div>;
 
     return (
-        <div className="w-full bg-black border-y border-[#222] h-[30px] shadow-md z-10">
+        <div className="w-full bg-black border-y border-[#222] h-[40px] shadow-md z-10">
             <div className="w-full max-w-[1500px] mx-auto h-full relative overflow-hidden flex items-center">
                 {/* LABEL */}
-                <div className="absolute left-0 top-0 bottom-0 bg-[#dc2626] text-white font-black text-[9px] px-4 z-20 flex items-center tracking-[0.2em] uppercase shrink-0">
+                <div className="absolute left-0 top-0 bottom-0 bg-[#dc2626] text-white font-black text-[10px] px-6 z-20 flex items-center tracking-[0.2em] uppercase shrink-0">
                     {t.titles.breaking_news}
                 </div>
 
                 {/* TICKER TRACK */}
                 <div className="flex whitespace-nowrap animate-marquee items-center h-full">
                     {news.map((item, i) => (
-                        <span key={i} className="mx-12 text-[11px] font-mono font-bold text-yellow-400 uppercase flex items-center gap-3">
+                        <span key={i} className="mx-12 text-[12px] font-mono font-bold text-yellow-400 uppercase flex items-center gap-3">
                             <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full inline-block animate-pulse"></span>
                             {item.title}
                         </span>
@@ -65,9 +65,10 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
                     100% { transform: translateX(-100%); }
                 }
                 .animate-marquee {
-                    animation: marquee 40s linear infinite;
+                    animation: marquee 60s linear infinite;
                     padding-left: 100%; /* Start off screen */
                     display: inline-block;
+                    line-height: 40px;
                 }
                 .animate-marquee:hover {
                     animation-play-state: paused;

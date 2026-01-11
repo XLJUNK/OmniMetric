@@ -240,11 +240,11 @@ export const Dashboard = ({ lang, setLang }: DashboardProps) => {
                                 />
                             </div>
                             <div className="flex flex-col justify-center">
-                                <div className="flex items-center gap-4 mb-6 opacity-40">
+                                <div className="flex items-center gap-4 mb-4">
                                     <Zap className="w-4 h-4 text-sky-500" />
-                                    <span className="text-[10px] font-black tracking-[0.4em] uppercase">{t.titles.institutional_analysis}</span>
+                                    <span className="text-[10px] font-black tracking-[0.3em] uppercase opacity-70 whitespace-nowrap">{t.titles.institutional_analysis}</span>
                                 </div>
-                                <p className="text-slate-200 text-[16px] font-mono leading-relaxed whitespace-pre-wrap italic">
+                                <p className="text-slate-200 text-[15px] font-mono leading-relaxed whitespace-pre-wrap italic pl-8 border-l border-white/5">
                                     {aiContent}
                                 </p>
                             </div>
