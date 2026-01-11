@@ -10,13 +10,25 @@ SITE_URL = 'https://omnimetric.net/' # Must match GSC property exactly
 OUTPUT_FILE = os.path.join(os.path.dirname(__file__), 'trending_keywords.json')
 
 def get_gsc_service():
-    if not os.path.exists(KEY_FILE):
-        print(f"[SEO] Error: Credentials file not found at {KEY_FILE}")
-        return None
-    
     scopes = ['https://www.googleapis.com/auth/webmasters.readonly']
-    creds = service_account.Credentials.from_service_account_file(KEY_FILE, scopes=scopes)
-    return build('webmasters', 'v3', credentials=creds)
+    
+    # 1. Try Environment Variable (GitHub Actions Secret)
+    env_creds = os.getenv("GSC_CREDENTIALS_JSON")
+    if env_creds:
+        try:
+            info = json.loads(env_creds)
+            creds = service_account.Credentials.from_service_account_info(info, scopes=scopes)
+            return build('webmasters', 'v3', credentials=creds)
+        except Exception as e:
+            print(f"[SEO] Error parsing env credentials: {e}")
+
+    # 2. Try Local File
+    if os.path.exists(KEY_FILE):
+        creds = service_account.Credentials.from_service_account_file(KEY_FILE, scopes=scopes)
+        return build('webmasters', 'v3', credentials=creds)
+    
+    print(f"[SEO] Error: No credentials found (Env or File).")
+    return None
 
 def fetch_top_keywords(service):
     """
