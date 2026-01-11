@@ -48,7 +48,7 @@ const FooterContent = () => {
 
             {/* Copyright */}
             <div className="mt-8 text-[#444] text-[10px] tracking-widest uppercase">
-                &copy; {t.legal_text.copyright}
+                &copy; {t.legal_text.copyright} {new Date().getFullYear()}
             </div>
         </footer>
     );
