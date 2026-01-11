@@ -41,6 +41,7 @@ export const metadata: Metadata = {
 import { LegalFooter } from "@/components/LegalFooter";
 import { CookieBanner } from "@/components/CookieBanner";
 import { GoogleAdSense } from "@/components/GoogleAdSense";
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 export default function RootLayout({
   children,
@@ -114,6 +115,7 @@ export default function RootLayout({
           <LegalFooter />
         </div>
         <Analytics />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ''} />
         <CookieBanner />
       </body>
     </html>
