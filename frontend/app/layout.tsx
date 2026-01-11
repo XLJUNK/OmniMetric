@@ -15,22 +15,22 @@ const geistMono = Geist_Mono({
 import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://omnimetric.ai'), // Placeholder for production URL
-  title: "OmniMetric Terminal | Global Macro Signal",
-  description: "AI駆動型金融・経済分析プラットフォーム",
+  metadataBase: new URL('https://omnimetric.net'),
+  title: "Global Macro Signal (OmniMetric Terminal) | AI-Driven Financial Insight",
+  description: "機関投資家品質の市場リスク分析を提供するAI駆動型金融・経済分析プラットフォーム。GMSスコアによりグローバルマクロのリスク許容度をリアルタイムで可視化します。",
   icons: {
     icon: '/icon.svg',
     shortcut: '/icon.svg',
     apple: '/icon.svg',
   },
   alternates: {
-    canonical: '/',
+    canonical: 'https://omnimetric.net',
     languages: {
-      'x-default': '/',
-      'en': '/?lang=EN',
-      'ja': '/?lang=JP',
-      'zh': '/?lang=CN',
-      'es': '/?lang=ES',
+      'x-default': 'https://omnimetric.net',
+      'en': 'https://omnimetric.net/?lang=EN',
+      'ja': 'https://omnimetric.net/?lang=JP',
+      'zh': 'https://omnimetric.net/?lang=CN',
+      'es': 'https://omnimetric.net/?lang=ES',
     },
   },
   openGraph: {
