@@ -7,7 +7,17 @@ import { LangType } from '@/data/dictionary';
 
 export const dynamic = 'force-dynamic';
 
+import React, { Suspense } from 'react';
+
 export default function ContactPage() {
+    return (
+        <Suspense fallback={<div className="min-h-screen bg-[#0A0A0A] flex items-center justify-center text-cyan-500 font-mono text-xs animate-pulse">CONNECTING TO SUPPORT SERVER...</div>}>
+            <ContactContent />
+        </Suspense>
+    );
+}
+
+function ContactContent() {
     const searchParams = useSearchParams();
     const lang = (searchParams.get('lang') as LangType) || 'EN';
     const isJP = lang === 'JP';
