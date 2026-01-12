@@ -1,32 +1,44 @@
+'use client';
+
 import { Metadata } from 'next';
-import { TerminalPage } from '@/components/TerminalPage';
+import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import { MessageSquare, AlertCircle } from 'lucide-react';
+import { LangType } from '@/data/dictionary';
 
 export const dynamic = 'force-dynamic';
 
-export const metadata: Metadata = {
-    title: "Contact | OmniMetric Terminal",
-    description: "Contact OmniMetric for technical support and feedback.",
-};
-
 export default function ContactPage() {
-    // Note: We can't use useSearchParams in a Server Component with metadata export
-    // So we'll make this dynamic and check lang on client side via script
+    const searchParams = useSearchParams();
+    const lang = (searchParams.get('lang') as LangType) || 'EN';
+    const isJP = lang === 'JP';
+
     return (
-        <TerminalPage pageKey="contact">
-            <ContactContent />
-        </TerminalPage>
-    );
+        <div className="min-h-screen bg-[#0A0A0A] text-[#E0E0E0] font-sans selection:bg-sky-500 selection:text-white">
+            <div className="max-w-[1400px] mx-auto px-6 py-12 md:py-20 lg:px-24">
+                {/* Breadcrumb */}
+                <div className="flex justify-between items-center mb-16 opacity-60">
+                    <Link href={`/?lang=${lang}`} className="flex items-center gap-3 group no-underline">
+                        <div className="w-8 h-8 rounded-full border border-sky-500/30 flex items-center justify-center group-hover:bg-sky-500/10 transition-all">
+                            <span className="text-sky-500 text-xs font-black">←</span>
+                        </div>
+                        <span className="text-xs font-mono tracking-widest text-slate-500 uppercase group-hover:text-sky-500 transition-colors">
+                            {isJP ? 'ターミナルに戻る' : 'Back to Terminal'}
+                        </span>
+                    </Link>
+                </div>
+            </TerminalPage>
+            );
 }
 
-function ContactContent() {
+            function ContactContent() {
     // Client-side language detection
     if (typeof window !== 'undefined') {
         const params = new URLSearchParams(window.location.search);
-        const lang = params.get('lang');
-        const isJP = lang === 'JP';
+            const lang = params.get('lang');
+            const isJP = lang === 'JP';
 
-        return (
+            return (
             <div className="max-w-3xl mx-auto space-y-8">
                 <div className="flex items-center gap-4 mb-8">
                     <MessageSquare className="w-8 h-8 text-cyan-500" />
@@ -175,17 +187,17 @@ function ContactContent() {
                     </p>
                 </div>
             </div>
-        );
+            );
     }
 
-    // Server-side fallback (English)
-    return (
-        <div className="max-w-3xl mx-auto space-y-8">
-            <div className="flex items-center gap-4 mb-8">
-                <MessageSquare className="w-8 h-8 text-cyan-500" />
-                <h1 className="text-3xl font-black tracking-tight text-white">Contact & Support</h1>
+            // Server-side fallback (English)
+            return (
+            <div className="max-w-3xl mx-auto space-y-8">
+                <div className="flex items-center gap-4 mb-8">
+                    <MessageSquare className="w-8 h-8 text-cyan-500" />
+                    <h1 className="text-3xl font-black tracking-tight text-white">Contact & Support</h1>
+                </div>
+                <p className="text-slate-400">Loading...</p>
             </div>
-            <p className="text-slate-400">Loading...</p>
-        </div>
-    );
+            );
 }
