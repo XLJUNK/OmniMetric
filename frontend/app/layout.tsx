@@ -142,7 +142,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <DynamicStructuredData />
-        <GoogleAdSense pId="1230621442620902" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1230621442620902"
+          crossOrigin="anonymous"
+        />
       </head>
       <body
         className={`${inter.variable} ${notoJP.variable} ${notoAR.variable} ${notoHI.variable} antialiased`}
