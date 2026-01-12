@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import { TerminalPage } from '@/components/TerminalPage';
 import { MessageSquare, AlertCircle } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
     title: "Contact | OmniMetric Terminal",
     description: "Contact OmniMetric for technical support and feedback.",

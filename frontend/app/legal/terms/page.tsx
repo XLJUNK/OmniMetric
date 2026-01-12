@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import { TerminalPage } from '@/components/TerminalPage';
 import { AlertTriangle } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
     title: "Terms of Service | OmniMetric Terminal",
     description: "Terms and Conditions, Disclaimers, and Usage Restrictions for OmniMetric.",

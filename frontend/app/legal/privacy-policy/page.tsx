@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import { TerminalPage } from '@/components/TerminalPage';
 import { Shield } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
     title: "Privacy Policy | OmniMetric Terminal",
     description: "Privacy Policy and Data Protection practices for OmniMetric.",
