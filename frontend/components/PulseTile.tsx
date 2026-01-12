@@ -128,33 +128,33 @@ export const PulseTile = ({ title, score, ticker, data, onClick, lang }: any) =>
 
             {/* CORNER 1: TOP-LEFT (Title) - PADDING 12px */}
             <div style={{ position: 'absolute', top: '12px', left: '12px', zIndex: 10, display: 'flex', flexDirection: 'column', pointerEvents: 'none' }}>
-                <h3 className="text-slate-200 text-[11px] font-black uppercase tracking-[0.1em] font-sans leading-tight">{title}</h3>
-                <span className="text-[9px] text-slate-500 font-mono tracking-wider">{ticker}</span>
+                <h3 className="text-slate-200 text-[10px] md:text-[11px] font-black uppercase tracking-[0.1em] font-sans leading-tight">{title}</h3>
+                <span className="text-[8px] md:text-[9px] text-slate-500 font-mono tracking-wider">{ticker}</span>
             </div>
 
             {/* CORNER 2: TOP-RIGHT (GMS Badge) - PADDING 12px */}
             <div style={{ position: 'absolute', top: '12px', right: '12px', zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'flex-end', pointerEvents: 'none' }}>
-                <div className={`px-2 py-0.5 border rounded-[2px] text-[10.5px] font-semibold tracking-[0.15em] font-sans bg-[#0A0A0A] shadow-sm ${gmsBadgeText} ${colorClassBorder}`}>
-                    GMS <span className="text-white ml-1">{score}</span>
+                <div className={`px-2 py-0.5 border rounded-[2px] text-[9px] md:text-[10.5px] font-semibold tracking-[0.15em] font-sans bg-[#0A0A0A] shadow-sm ${gmsBadgeText} ${colorClassBorder}`}>
+                    GMS <span className="text-white ml-0.5 md:ml-1">{score}</span>
                 </div>
             </div>
 
             {/* CORNER 3: BOTTOM-LEFT (Price 14px) - PADDING 12px */}
             <div style={{ position: 'absolute', bottom: '12px', left: '12px', zIndex: 10, display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', pointerEvents: 'none' }}>
                 <div className="flex items-center gap-2 mb-1">
-                    <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded border ${colorClassText} ${colorClassBg} ${colorClassBorder} tracking-wider`}>
+                    <span className={`text-[8px] md:text-[9px] font-bold px-1.5 py-0.5 rounded border ${colorClassText} ${colorClassBg} ${colorClassBorder} tracking-wider`}>
                         {badgeLabel}
                     </span>
                 </div>
                 <div className="flex items-baseline gap-2">
-                    <span className="text-[14px] font-bold font-sans tracking-tight text-white tabular-nums leading-none">
+                    <span className="text-[12px] md:text-[14px] font-bold font-sans tracking-tight text-white tabular-nums leading-none">
                         {(title === "Net Liquidity" || title === "US Net Liquidity")
                             ? (Math.abs(data?.price) >= 1000
                                 ? `$${(data?.price / 1000).toFixed(2)}T`
                                 : `$${Math.round(data?.price).toLocaleString()}B`)
                             : data?.price}
                     </span>
-                    <span className={`text-[10px] font-medium tabular-nums ml-2 ${isUp ? "text-emerald-400" : (data?.change_percent < 0 ? "text-rose-400" : "text-slate-400")}`}>
+                    <span className={`text-[9px] md:text-[10px] font-medium tabular-nums ml-1 md:ml-2 ${isUp ? "text-emerald-400" : (data?.change_percent < 0 ? "text-rose-400" : "text-slate-400")}`}>
                         {trendText}{data?.change_percent}%
                     </span>
                 </div>
@@ -163,8 +163,8 @@ export const PulseTile = ({ title, score, ticker, data, onClick, lang }: any) =>
             {/* CORNER 4: BOTTOM-RIGHT (Factors) - PADDING 12px */}
             <div style={{ position: 'absolute', bottom: '12px', right: '12px', zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'flex-end', pointerEvents: 'none' }}>
                 {factors.map((f, i) => (
-                    <div key={i} className="text-[10.5px] text-[#94A3B8] font-sans tracking-wider font-medium leading-tight drop-shadow-md bg-black/40 px-1 rounded backdrop-blur-[2px] mb-0.5">
-                        <span className="text-[9px] mr-1 opacity-70 text-slate-500">{f.label}:</span>{f.status}
+                    <div key={i} className="text-[9px] md:text-[10.5px] text-[#94A3B8] font-sans tracking-wider font-medium leading-tight drop-shadow-md bg-black/40 px-1 rounded backdrop-blur-[2px] mb-0.5">
+                        <span className="text-[8px] md:text-[9px] mr-1 opacity-70 text-slate-500">{f.label}:</span>{f.status}
                     </div>
                 ))}
             </div>
