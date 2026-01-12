@@ -76,7 +76,7 @@ function ArchiveDetailContent() {
                             <div className="w-4 h-4 rounded-full" style={{ backgroundColor: regimeColor }}></div>
                             <h2 className="text-3xl font-black italic uppercase italic tracking-tighter">{regimeLabel}</h2>
                         </div>
-                        <p className="text-[10px] text-sky-500/60 font-mono uppercase tracking-[0.2em]">{t.analysis_history || "Analysis History"}</p>
+                        <p className="text-[10px] text-sky-500/60 font-mono uppercase tracking-[0.2em]">{t.titles.analysis_history || "Analysis History"}</p>
                     </div>
                     <div className="flex items-center gap-6">
                         <div className="text-right">
