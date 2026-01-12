@@ -9,6 +9,7 @@ import { NewsTicker } from '@/components/NewsTicker';
 import { AdUnit } from '@/components/AdUnit';
 import { GMSHeaderSection } from '@/components/GMSHeaderSection';
 import { PulseTile } from '@/components/PulseTile';
+import { useDevice } from '@/hooks/useDevice';
 
 interface SignalData {
     last_updated: string;
@@ -27,6 +28,7 @@ export const MultiAssetSummary = () => {
     const [liveData, setLiveData] = useState<any>(null);
     const [isLangOpen, setIsLangOpen] = useState(false);
     const [showInfo, setShowInfo] = useState(false);
+    const { isMobile, isDesktop } = useDevice();
 
     const router = useRouter();
     const pathname = usePathname();
@@ -98,7 +100,7 @@ export const MultiAssetSummary = () => {
             {/* 5. Pulse Tiles (Sectors) - 4th Position (Indicators) */}
             <div className="max-w-[1600px] mx-auto w-full px-4 md:px-8 mb-12">
                 <h2 className="text-slate-500 text-[10px] font-black uppercase tracking-[0.2em] mb-6">Market Pulse</h2>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div className={`grid gap-4 md:gap-6 ${isMobile ? 'grid-cols-1' : 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4'}`}>
                     {/* ROW 1: THE MACRO TRINITY + SPY */}
                     <PulseTile title="Net Liquidity" score={data.gms_score} ticker="USD NET LIQ" data={getMarketData("NET_LIQUIDITY")} chartColor="#3b82f6" onClick={() => { }} lang={lang} />
                     <PulseTile title="MOVE Index" score={getSectorScore("BONDS")} ticker="^MOVE" data={getMarketData("MOVE")} chartColor="#a855f7" onClick={() => { }} lang={lang} />

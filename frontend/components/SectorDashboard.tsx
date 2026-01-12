@@ -10,6 +10,7 @@ import { NewsTicker } from '@/components/NewsTicker';
 import { AdUnit } from '@/components/AdUnit';
 import { GMSHeaderSection } from '@/components/GMSHeaderSection';
 import { PulseTile } from '@/components/PulseTile';
+import { useDevice } from '@/hooks/useDevice';
 
 interface SignalData {
     last_updated: string;
@@ -30,6 +31,7 @@ export const SectorDashboard = ({ sectorKey }: SectorDashboardProps) => {
     const [liveData, setLiveData] = useState<any>(null);
     const [isLangOpen, setIsLangOpen] = useState(false);
     const [showInfo, setShowInfo] = useState(false);
+    const { isMobile } = useDevice();
     const router = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();
@@ -125,7 +127,7 @@ export const SectorDashboard = ({ sectorKey }: SectorDashboardProps) => {
                 </div>
 
                 {/* 4. INDICATOR GRID (UNIFIED WITH PULSE TILE) */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <div className={`grid gap-4 md:gap-6 ${isMobile ? 'grid-cols-1' : 'grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'}`}>
                     {indicators.map((val) => {
                         // LIVE OVERRIDE
                         if (liveData && liveData[val.key]) {

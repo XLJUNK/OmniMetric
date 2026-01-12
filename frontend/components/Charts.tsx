@@ -44,9 +44,9 @@ export const RiskGauge = ({ score }: GaugeProps) => {
 
             {/* Labels */}
             <div className="flex justify-between px-1 mt-1 relative z-0">
-                <span className="text-[10px] font-bold text-[#ef4444] uppercase tracking-widest drop-shadow-sm">Defensive</span>
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest drop-shadow-sm">Neutral</span>
-                <span className="text-[10px] font-bold text-[#3b82f6] uppercase tracking-widest drop-shadow-sm">Accumulate</span>
+                <span className="text-[8px] sm:text-[10px] font-bold text-[#ef4444] uppercase tracking-widest drop-shadow-sm">Defensive</span>
+                <span className="text-[8px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-widest drop-shadow-sm">Neutral</span>
+                <span className="text-[8px] sm:text-[10px] font-bold text-[#3b82f6] uppercase tracking-widest drop-shadow-sm">Accumulate</span>
             </div>
         </div>
     );
@@ -92,7 +92,7 @@ export const HistoryChart = ({ data, lang = 'EN', color = '#0ea5e9' }: { data: H
                     ]}
                     layout={{
                         autosize: true,
-                        margin: { l: 25, r: 10, t: 10, b: 25 },
+                        margin: { l: 20, r: 5, t: 5, b: 20 },
                         paper_bgcolor: 'rgba(0,0,0,0)',
                         plot_bgcolor: 'rgba(0,0,0,0)',
                         showlegend: false,

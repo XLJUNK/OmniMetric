@@ -3,9 +3,11 @@
 import React from 'react';
 import { MetricChart } from '@/components/Charts';
 import { DICTIONARY, LangType } from '@/data/dictionary';
+import { useDevice } from '@/hooks/useDevice';
 
 // "Pulse" Tile Component - SHARED DEFINITION
 export const PulseTile = ({ title, score, ticker, data, onClick, lang }: any) => {
+    const { isMobile } = useDevice();
 
     // 1. RISK LOGIC
     let themeColor = "#94A3B8";
@@ -128,14 +130,14 @@ export const PulseTile = ({ title, score, ticker, data, onClick, lang }: any) =>
 
             {/* CORNER 1: TOP-LEFT (Title) - PADDING 12px */}
             <div style={{ position: 'absolute', top: '12px', left: '12px', zIndex: 10, display: 'flex', flexDirection: 'column', pointerEvents: 'none' }}>
-                <h3 className="text-slate-200 text-[11px] font-black uppercase tracking-[0.1em] font-sans leading-tight">{title}</h3>
-                <span className="text-[9px] text-slate-500 font-mono tracking-wider">{ticker}</span>
+                <h3 className={`text-slate-200 ${isMobile ? 'text-[10px]' : 'text-[11px]'} font-black uppercase tracking-[0.1em] font-sans leading-tight`}>{title}</h3>
+                <span className={`${isMobile ? 'text-[8px]' : 'text-[9px]'} text-slate-500 font-mono tracking-wider`}>{ticker}</span>
             </div>
 
             {/* CORNER 2: TOP-RIGHT (GMS Badge) - PADDING 12px */}
             <div style={{ position: 'absolute', top: '12px', right: '12px', zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'flex-end', pointerEvents: 'none' }}>
-                <div className={`px-2 py-0.5 border rounded-[2px] text-[10.5px] font-semibold tracking-[0.15em] font-sans bg-[#0A0A0A] shadow-sm ${gmsBadgeText} ${colorClassBorder}`}>
-                    GMS <span className="text-white ml-1">{score}</span>
+                <div className={`px-2 py-0.5 border rounded-[2px] ${isMobile ? 'text-[9px]' : 'text-[10.5px]'} font-semibold tracking-[0.15em] font-sans bg-[#0A0A0A] shadow-sm ${gmsBadgeText} ${colorClassBorder}`}>
+                    GMS <span className="text-white ml-0.5 md:ml-1">{score}</span>
                 </div>
             </div>
 
@@ -163,8 +165,8 @@ export const PulseTile = ({ title, score, ticker, data, onClick, lang }: any) =>
             {/* CORNER 4: BOTTOM-RIGHT (Factors) - PADDING 12px */}
             <div style={{ position: 'absolute', bottom: '12px', right: '12px', zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'flex-end', pointerEvents: 'none' }}>
                 {factors.map((f, i) => (
-                    <div key={i} className="text-[10.5px] text-[#94A3B8] font-sans tracking-wider font-medium leading-tight drop-shadow-md bg-black/40 px-1 rounded backdrop-blur-[2px] mb-0.5">
-                        <span className="text-[9px] mr-1 opacity-70 text-slate-500">{f.label}:</span>{f.status}
+                    <div key={i} className={`${isMobile ? 'text-[9px]' : 'text-[10.5px]'} text-[#94A3B8] font-sans tracking-wider font-medium leading-tight drop-shadow-md bg-black/40 px-1 rounded backdrop-blur-[2px] mb-0.5`}>
+                        <span className={`${isMobile ? 'text-[8px]' : 'text-[9px]'} mr-1 opacity-70 text-slate-500`}>{f.label}:</span>{f.status}
                     </div>
                 ))}
             </div>
