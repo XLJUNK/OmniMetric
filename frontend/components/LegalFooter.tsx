@@ -32,7 +32,7 @@ export const LegalFooter = () => {
             {/* 2. Legal Block */}
             <div className="max-w-[1600px] mx-auto py-8 px-4 text-center">
                 <div className="flex flex-col gap-4 items-center">
-                    <p className="text-[10px] leading-relaxed text-slate-600 max-w-4xl mx-auto font-medium">
+                    <p className="text-[10px] leading-relaxed text-slate-600 max-w-4xl mx-auto font-medium whitespace-pre-line">
                         {t.legal_text.t1} {t.legal_text.t2}
                     </p>
                     <div className="flex flex-col items-center gap-1 mt-2">
