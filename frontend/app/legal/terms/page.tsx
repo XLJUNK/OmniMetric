@@ -20,7 +20,7 @@ export default function TermsPage() {
                 <p className="text-sm text-slate-500 font-mono">Last Updated: January 12, 2026</p>
 
                 {/* TOP DISCLAIMER - CRITICAL */}
-                <section className="!border-2 !border-red-500 bg-red-950/20 !rounded-xl p-6 space-y-4">
+                <section id="terms" className="!border-2 !border-red-500 bg-red-950/20 !rounded-xl p-6 space-y-4">
                     <h2 className="text-xl font-black text-red-400 uppercase tracking-wide flex items-center gap-2">
                         <AlertTriangle className="w-6 h-6" />
                         CRITICAL DISCLAIMER

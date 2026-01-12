@@ -20,22 +20,20 @@ export default function PrivacyPage() {
                 <p className="text-sm text-slate-500 font-mono">Last Updated: January 12, 2026</p>
 
                 {/* Google AdSense Disclosure - CRITICAL FOR APPROVAL */}
-                <section className="bg-[#111] !border !border-yellow-500/30 !rounded-xl p-6 space-y-4">
+                <section id="privacy-policy" className="bg-[#111] !border !border-yellow-500/30 !rounded-xl p-6 space-y-4">
                     <h2 className="text-lg font-bold text-yellow-400 uppercase tracking-wide">
-                        🔔 Advertising & Cookie Notice
+                        🔔 Google AdSense & Cookie Policy
                     </h2>
                     <div className="space-y-3 text-sm text-slate-300 leading-relaxed">
-                        <p>
-                            OmniMetric uses <strong className="text-white">Google AdSense</strong>, a third-party advertising service, to display relevant advertisements to our users.
+                        <p className="font-medium text-white">
+                            当サイトは、Google等の第三者配信事業者がCookieを使用して、ユーザーが当サイトや他のサイトに過去にアクセスした際の情報に基づいて広告を配信することを許可しています。
                         </p>
                         <p>
-                            Google and its partners use <strong className="text-cyan-400">DoubleClick Cookies</strong> and similar tracking technologies to:
+                            OmniMetric uses <strong className="text-white">Google AdSense</strong>, a third-party advertising service managed by Google LLC.
                         </p>
-                        <ul className="list-disc pl-6 space-y-2 text-slate-400">
-                            <li>Serve ads based on your browsing history and interests</li>
-                            <li>Measure ad performance and engagement</li>
-                            <li>Personalize advertising content across websites you visit</li>
-                        </ul>
+                        <p>
+                            <strong className="text-cyan-400">Googleが広告Cookieを使用することにより、適切な広告をユーザーに表示できます。</strong> Google uses advertising cookies (DoubleClick DART Cookie) to enable the display of appropriate ads to users.
+                        </p>
                         <p className="pt-2">
                             <strong className="text-green-400">You can opt out of personalized advertising</strong> by visiting:
                         </p>

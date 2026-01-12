@@ -19,7 +19,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Critical Warning - No Investment Consultation */}
-                <section className="!border-2 !border-red-500 bg-red-950/20 !rounded-xl p-6">
+                <section id="contact" className="!border-2 !border-red-500 bg-red-950/20 !rounded-xl p-6">
                     <div className="flex items-start gap-3">
                         <AlertCircle className="w-6 h-6 text-red-400 flex-shrink-0 mt-1" />
                         <div className="space-y-2">
