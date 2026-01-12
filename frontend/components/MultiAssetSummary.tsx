@@ -10,6 +10,8 @@ import { AdUnit } from '@/components/AdUnit';
 import { GMSHeaderSection } from '@/components/GMSHeaderSection';
 import { PulseTile } from '@/components/PulseTile';
 import { useDevice } from '@/hooks/useDevice';
+import { Skeleton, SkeletonCard, SkeletonPulseTile } from '@/components/Skeleton';
+
 
 interface SignalData {
     last_updated: string;
@@ -43,7 +45,7 @@ export const MultiAssetSummary = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch('/api/signal');
+                const res = await fetch(`/api/signal?t=${Date.now()}`);
                 if (res.ok) {
                     const json = await res.json();
                     setData(json);
@@ -73,11 +75,41 @@ export const MultiAssetSummary = () => {
         return () => clearInterval(interval);
     }, []);
 
-    if (!t || !data) return <div className="min-h-screen bg-[#020617] flex items-center justify-center text-slate-500 font-mono text-xs animate-pulse">SYSTEM INITIALIZING...</div>;
+    if (!t || !data) return (
+        <div className="min-h-screen bg-[#0A0A0A] p-4 md:p-8 space-y-8">
+            <div className="max-w-[1600px] mx-auto space-y-8">
+                {/* Header Skeleton */}
+                <div className="flex justify-between items-start">
+                    <div className="space-y-2">
+                        <div className="h-8 w-64 skeleton" />
+                        <div className="h-4 w-48 skeleton opacity-50" />
+                    </div>
+                </div>
+                {/* Hero Section Skeleton */}
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                    <SkeletonCard />
+                    <div className="lg:col-span-2">
+                        <SkeletonCard />
+                    </div>
+                </div>
+                {/* Grid Skeleton */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    {[...Array(8)].map((_, i) => (
+                        <SkeletonPulseTile key={i} />
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+
 
     const getSectorScore = (key: string) => data.sector_scores?.[key] ?? 50;
     const getMarketData = (key: string) => {
-        let val = data.market_data[key] || { price: "SYNC", change_percent: 0, sparkline: [] };
+        let val = data.market_data[key] || {
+            price: t.status.market,
+            change_percent: 0,
+            sparkline: []
+        };
         if (liveData && liveData[key]) {
             val = { ...val, price: liveData[key].price, change_percent: liveData[key].change_percent };
         }
@@ -89,8 +121,7 @@ export const MultiAssetSummary = () => {
     const aiContent = (data?.analysis?.reports as any)?.[lang]
         || (data?.analysis?.reports as any)?.[lang?.toUpperCase()]
         || data?.analysis?.content
-        || (t?.chart as any)?.sync
-        || "Gathering Global Intelligence...";
+        || t.status.ai;
 
     return (
         <div className="w-full bg-[#0A0A0A] text-slate-200 font-sans min-h-screen flex flex-col pb-24 relative">

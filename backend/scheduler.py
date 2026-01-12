@@ -26,7 +26,10 @@ def run_scheduler():
     schedule.every().day.at("06:00").do(job)
     
     while True:
-        schedule.run_pending()
+        try:
+            schedule.run_pending()
+        except Exception as e:
+            print(f"[{datetime.now().strftime('%H:%M:%S')}] Scheduler Error: {e}")
         time.sleep(60)
 
 if __name__ == "__main__":

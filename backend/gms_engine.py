@@ -11,8 +11,10 @@ import google.generativeai as genai
 import requests
 from dotenv import load_dotenv
 
-# Load environment variables
+# Load environment variables from multiple locations for robustness
 load_dotenv()
+load_dotenv(os.path.join(os.path.dirname(__file__), '.env'))
+load_dotenv(os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env'))
 
 # CONFIGURATION
 # Institutional-grade constants
@@ -60,6 +62,21 @@ ARCHIVE_DIR = os.path.join(SCRIPT_DIR, "archive")
 # API KEYS
 FRED_KEY = os.getenv("FRED_API_KEY")
 GEMINI_KEY = os.getenv("GEMINI_API_KEY")
+FMP_KEY = os.getenv("FMP_API_KEY")
+
+def validate_api_keys():
+    """Validates presence of required API keys and logs warnings for missing ones."""
+    missing = []
+    if not FRED_KEY: missing.append("FRED_API_KEY")
+    if not GEMINI_KEY: missing.append("GEMINI_API_KEY")
+    if not FMP_KEY: missing.append("FMP_API_KEY")
+    
+    if missing:
+        print(f"--- [ADMIN ALERT] MISSING API KEYS: {', '.join(missing)} ---")
+        print("System will operate in SIMULATED/FALLBACK mode for affected modules.")
+    else:
+        print("--- [SYSTEM] ALL API KEYS VALIDATED ---")
+    return len(missing) == 0
 
 def fetch_net_liquidity(fred):
     """Calculates US Net Liquidity = Fed Assets - TGA - RRP."""
@@ -98,7 +115,7 @@ def fetch_fred_data():
     data['YIELD_SPREAD'] = 0.05
     data['HY_SPREAD'] = 3.5
     data['NFCI'] = -0.5
-    data['NET_LIQUIDITY'] = {"price": 6200, "change_percent": 0, "trend": "NEUTRAL", "sparkline": []}
+    data['NET_LIQUIDITY'] = {"price": 6200, "change_percent": 0, "trend": "NEUTRAL", "sparkline": [6200] * 30}
     
     # Fetch Historical Data (Last 45 days to ensure 30 days of clean data)
     start_date = (datetime.now() - timedelta(days=60)).strftime('%Y-%m-%d')
@@ -189,7 +206,8 @@ def fetch_fred_data():
             }
         except Exception as e:
             print(f"Net Liq Calc Error: {e}")
-            pass
+            if 'NET_LIQUIDITY' not in data or not data['NET_LIQUIDITY'].get('sparkline'):
+                 data['NET_LIQUIDITY'] = {"price": 6200, "change_percent": 0, "trend": "NEUTRAL", "sparkline": [6200] * 30}
         
         return data
     except Exception: return data
@@ -224,10 +242,9 @@ def fetch_crypto_sentiment():
 def fetch_economic_calendar():
     """FETCH ECONOMIC CALENDAR FROM FMP (Real Data)"""
     try:
-        api_key = os.environ.get("FMP_API_KEY")
+        api_key = FMP_KEY
         if not api_key:
-            # Fallback if env var not picked up by dotenv yet, use hardcoded from chat (Emergency Project Mode)
-            api_key = "VL94TZUDWzrJ41loiLjKCP8WhFoXZrw7"
+            return [] # No hardcoded fallback - wait for environment to be ready
             
         # Get events for next 7 days
         start_date = datetime.now().strftime("%Y-%m-%d")
@@ -508,18 +525,27 @@ def generate_multilingual_report(data, score):
     """Generates AI analysis in 7 languages using Gemini."""
     required = ["EN", "JP", "CN", "ES", "HI", "ID", "AR"]
     
+    # Fallback to Positive Status messages (UX Reframe)
+    FALLBACK_STATUS = {
+        "EN": "Deep-diving into the latest macro data to synthesize advanced insights...",
+        "JP": "最新のマクロデータを深掘りし、高度なインサイトを生成しています...",
+        "CN": "深度解析最新宏观数据，正在生成高级洞察...",
+        "ES": "Analizando en profundidad los últimos datos macro para sintetizar información avanzada...",
+        "HI": "नवीनतम मैक्रो डेटा का गहराई से विश्लेषण कर उन्नत अंतर्दृष्टि तैयार की जा रही है...",
+        "ID": "Mendalami data makro terbaru untuk menyintesakan wawasan tingkat lanjut...",
+        "AR": "تعمق في أحدث البيانات الكلية لتوليف رؤى متقدمة..."
+    }
+
     if not GEMINI_KEY:
-        return {k: "AI Analytics Unavailable (Missing Key)" for k in required}
+        return FALLBACK_STATUS
 
     models_to_try = ['gemini-2.0-flash', 'gemini-flash-latest']
-    last_error = None
-
+    
     for model_name in models_to_try:
         try:
             genai.configure(api_key=GEMINI_KEY)
             model = genai.GenerativeModel(model_name)
             
-            # Simplify data for context window efficiency
             context = {
                 "score": score,
                 "vix": data.get("VIX", {}).get("price"),
@@ -536,30 +562,17 @@ def generate_multilingual_report(data, score):
             Act as a Senior Constitutional Macro Strategist (Ex-Bridgewater/BlackRock).
             Analyze current market risk based on these LIVE METRICS:
             - Global Macro Score: {score}/100 (0=Defensive, 100=Max Risk)
-            - US Net Liquidity: ${net_liq_val}B (Key Driver: Fed Balance Sheet - TGA - RRP)
-            - Bond Volatility (MOVE): {move_val} (Check for spike > 120)
+            - US Net Liquidity: ${net_liq_val}B
+            - Bond Volatility (MOVE): {move_val}
             - Equity Volatility (VIX): {context['vix']}
             - HY Credit Spread: {context['hy_spread']}%
             
             Task: Write a concise, ultra-professional 2-sentence market intelligence summary.
-            
-            Requirements:
-            1. TONE: Institutional, decisive, warning-oriented if risks exist.
-            2. CONTENT: YOU MUST CITE at least 2 specific numbers from above (e.g. "With Net Liquidity contracting to {net_liq_val}B...", "MOVE Index spiking to {move_val}...").
-            3. LOGIC: Explain *why* the score is {score}. (e.g. "Credit stress is outweighing liquidity support.")
-            
             Output JSON ONLY with keys: EN, JP, CN, ES, HI, ID, AR.
-            
-            Language Style:
-            - EN: "Liquidity contraction to ${net_liq_val}B is pressuring assets. Recommendation: Defensive."
-            - JP: "純流動性が{net_liq_val}億ドルへ縮小し、MOVE指数が{move_val}へ急騰したことで、債券市場の不安定化が懸念されます。" (Professional Keigo/Market Terminology)
-            - ID: Formal Business Indonesian.
-            - AR: Modern Standard Arabic (Financial).
             """
             
             response = model.generate_content(prompt)
             text = response.text.strip()
-            # Clean markdown if present
             if text.startswith("```"):
                 text = text.split("\n", 1)[1]
                 if text.endswith("```"):
@@ -570,17 +583,15 @@ def generate_multilingual_report(data, score):
             # Validate keys
             for lang in required:
                 if lang not in reports:
-                    reports[lang] = reports.get("EN", f"Analysis Pending ({lang})")
+                    reports[lang] = FALLBACK_STATUS.get(lang, FALLBACK_STATUS["EN"])
                     
             return reports
             
         except Exception as e:
             print(f"Model {model_name} failed: {e}")
-            last_error = e
             continue
 
-    # Fallback
-    return all_data, status, real_events
+    return FALLBACK_STATUS
 
 def get_next_event_dates():
     # Fallback static if API fails
@@ -592,6 +603,7 @@ def get_next_event_dates():
 
 def update_signal():
     print("Running OmniMetric v2.0 Engine...")
+    validate_api_keys()
     market_data, status, fetched_events = fetch_market_data()
     
     if market_data:

@@ -42,8 +42,7 @@ export const GMSHeaderSection = ({ data, lang }: GMSHeaderProps) => {
     const aiContent = (data?.analysis?.reports as any)?.[lang]
         || (data?.analysis?.reports as any)?.[lang?.toUpperCase()]
         || data?.analysis?.content
-        || (t?.chart as any)?.sync
-        || "Gathering Global Intelligence...";
+        || t.status.ai;
 
     if (!data) return null;
 

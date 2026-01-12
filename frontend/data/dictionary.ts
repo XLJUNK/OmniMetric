@@ -1,7 +1,13 @@
+import MESSAGES from './messages.json';
+
 export type LangType = 'EN' | 'JP' | 'CN' | 'ES' | 'HI' | 'ID' | 'AR';
 
 export const DICTIONARY = {
     EN: {
+        status: {
+            ai: MESSAGES.ai_status.EN,
+            market: MESSAGES.market_data_status.EN
+        },
         titles: {
             risk_score: "Market Regime Indicator",
             insights: "OmniMetric: Quantitative Macro Insights",
@@ -191,6 +197,10 @@ export const DICTIONARY = {
         }
     },
     JP: {
+        status: {
+            ai: MESSAGES.ai_status.JP,
+            market: MESSAGES.market_data_status.JP
+        },
         titles: {
             risk_score: "市場局面分析 (Market Regime)",
             insights: "定量的マクロインサイト",
@@ -379,6 +389,10 @@ export const DICTIONARY = {
         }
     },
     CN: {
+        status: {
+            ai: MESSAGES.ai_status.CN,
+            market: MESSAGES.market_data_status.CN
+        },
         titles: {
             risk_score: "市场机制指标 (Market Regime)",
             insights: "量化宏观分析",
@@ -537,6 +551,10 @@ export const DICTIONARY = {
         }
     },
     ES: {
+        status: {
+            ai: MESSAGES.ai_status.ES,
+            market: MESSAGES.market_data_status.ES
+        },
         titles: {
             risk_score: "Indicador de Régimen de Mercado",
             insights: "Análisis Macro Cuantitativo",
@@ -695,6 +713,10 @@ export const DICTIONARY = {
         }
     },
     HI: {
+        status: {
+            ai: MESSAGES.ai_status.HI,
+            market: MESSAGES.market_data_status.HI
+        },
         titles: {
             risk_score: "बाज़ार व्यवस्था संकेतक (Market Regime)",
             insights: "मात्रात्मक मैक्रो अंतर्दृष्टि",
@@ -853,6 +875,10 @@ export const DICTIONARY = {
         }
     },
     ID: {
+        status: {
+            ai: MESSAGES.ai_status.ID,
+            market: MESSAGES.market_data_status.ID
+        },
         titles: {
             risk_score: "Indikator Rezim Pasar",
             insights: "Wawasan Makro Kuantitatif",
@@ -1005,6 +1031,10 @@ export const DICTIONARY = {
     },
     AR: {
         dir: "rtl",
+        status: {
+            ai: MESSAGES.ai_status.AR,
+            market: MESSAGES.market_data_status.AR
+        },
         titles: {
             risk_score: "مؤشر نظام السوق",
             live_stream: "الذكاء المباشر",

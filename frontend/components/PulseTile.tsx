@@ -149,7 +149,7 @@ export const PulseTile = ({ title, score, ticker, data, onClick, lang }: any) =>
                     </span>
                 </div>
                 <div className="flex items-baseline gap-2">
-                    <span className="text-[14px] font-bold font-sans tracking-tight text-white tabular-nums leading-none">
+                    <span className={`${typeof data?.price === 'string' && data?.price.length > 20 ? 'text-[9px]' : 'text-[14px]'} font-bold font-sans tracking-tight text-white tabular-nums leading-none`}>
                         {(title === "Net Liquidity" || title === "US Net Liquidity")
                             ? (Math.abs(data?.price) >= 1000
                                 ? `$${(data?.price / 1000).toFixed(2)}T`
