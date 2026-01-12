@@ -19,6 +19,7 @@ export const DICTIONARY = {
             breaking_news: "BREAKING NEWS",
             delayed_tick: "*15m DLY",
             methodology: "METHODOLOGY",
+            analysis_history: "Analysis History",
             live_stream: "LIVE INTELLIGENCE STREAM"
         },
         methodology: {
@@ -142,7 +143,7 @@ export const DICTIONARY = {
             benchmark_mode: "BENCHMARK MODE",
             about: "SYSTEM INFO",
             legal: "LEGAL NOTICE",
-            archive: "DAILY ARCHIVE",
+            archive: "CORRELATION HISTORY",
             back_to_terminal: "BACK TO TERMINAL",
             vix: "VIX (Equity Vol)",
             move: "MOVE (Bond Vol)",
@@ -183,8 +184,9 @@ export const DICTIONARY = {
                 usage_content: "Unauthorized automated scraping, data mining, or usage for AI training is strictly prohibited. Commercial usage requires a specific license. By using this terminal, you agree to these project-specific legal terms."
             },
             archive: {
-                title: "DAILY HISTORICAL ARCHIVE",
-                desc: "Select a date to view the terminal's historical macro regime and indicator state."
+                title: "SIGNAL CORRELATION HISTORY",
+                desc: "Objective replay of historical indicator states and the corresponding GMS algorithmic signal.",
+                disclaimer: "THIS DATA REPRESENTS HISTORICAL CORRELATIONS ONLY AND DOES NOT SUGGEST OR GUARANTEE FUTURE INVESTMENT RESULTS."
             }
         }
     },
@@ -206,6 +208,7 @@ export const DICTIONARY = {
             breaking_news: "速報（BREAKING）",
             delayed_tick: "*15分遅延",
             methodology: "算出ロジック (METHODOLOGY)",
+            analysis_history: "分析履歴 (Analysis History)",
             live_stream: "ライブ・インテリジェンス（LIVE INTELLIGENCE）"
         },
         methodology: {
@@ -311,7 +314,7 @@ export const DICTIONARY = {
         },
         sections: {
             s1: "第Iセクション: 市場ボラティリティと警戒感",
-            s2: "第IIセクション: 構造的信用リスクと予測",
+            s2: "第IIセクション: 構造的信用リスクと分析",
             s3: "第IIIセクション: 主要リファレンス指標"
         },
         chart: {
@@ -328,7 +331,7 @@ export const DICTIONARY = {
             benchmark_mode: "ベンチマークモード",
             about: "SYSTEM INFO",
             legal: "LEGAL NOTICE",
-            archive: "DAILY ARCHIVE",
+            archive: "相関履歴 (Signal Correlation History)",
             back_to_terminal: "ターミナルに戻る",
             vix: "VIX (株式ボラティリティ)",
             move: "MOVE (債券ボラティリティ)",
@@ -369,8 +372,9 @@ export const DICTIONARY = {
                 usage_content: "無断の自動スクレイピング、データマイニング、またはAI学習への利用は固く禁じられています。商用利用には特定のライセンスが必要です。本ターミナルを利用することで、これらのプロジェクト固有の法的条件に同意したものとみなされます。"
             },
             archive: {
-                title: "デイリー・ヒストリカル・アーカイブ",
-                desc: "過去の日付を選択して、当時のマクロ局面と指標の状態を確認できます。"
+                title: "シグナルと市場の相関履歴",
+                desc: "当時の各指標（ボラティリティ・流動性等）の客観的データと、それに基づき算出されたGMSスコアの履歴です。",
+                disclaimer: "本データは過去の相関を示すものであり、将来の投資成果を示唆または保証するものではない"
             }
         }
     },
@@ -392,6 +396,7 @@ export const DICTIONARY = {
             breaking_news: "突发新闻",
             delayed_tick: "*延迟15分",
             methodology: "方法论",
+            analysis_history: "分析历史 (Analysis History)",
             live_stream: "实时情报流"
         },
         methodology: {
@@ -467,7 +472,7 @@ export const DICTIONARY = {
         },
         sections: {
             s1: "第一部分：市场波动与恐惧",
-            s2: "第二部分：结构性信贷与预测",
+            s2: "第二部分：结构性信贷与分析",
             s3: "第三部分：参考基准"
         },
         chart: {
@@ -484,7 +489,7 @@ export const DICTIONARY = {
             benchmark_mode: "基准模式",
             about: "SYSTEM INFO",
             legal: "LEGAL NOTICE",
-            archive: "DAILY ARCHIVE",
+            archive: "相关性历史 (Correlation History)",
             back_to_terminal: "返回终端",
             vix: "VIX (股票波动率)",
             move: "MOVE (债券波动率)",
@@ -525,8 +530,9 @@ export const DICTIONARY = {
                 usage_content: "严禁未经授权的自动抓取、数据挖掘或用于 AI 训练。商业用途需要特定许可。使用本终端即表示您同意这些特定的法律条款。"
             },
             archive: {
-                title: "每日历史存档",
-                desc: "选择日期以查看终端的历史宏观机制和指标状态。"
+                title: "信号相关性历史",
+                desc: "客观重现历史指标状态以及相应的 GMS 算法信号。",
+                disclaimer: "此数据仅代表历史相关性，不暗示或保证未来的投资结果。"
             }
         }
     },
@@ -548,6 +554,7 @@ export const DICTIONARY = {
             breaking_news: "NOTICIAS DE ÚLTIMA HORA",
             delayed_tick: "*RETRASO 15m",
             methodology: "METODOLOGÍA",
+            analysis_history: "Historial de Análisis",
             live_stream: "FLUJO DE INTELIGENCIA EN VIVO"
         },
         methodology: {
@@ -623,7 +630,7 @@ export const DICTIONARY = {
         },
         sections: {
             s1: "SECCIÓN I: VOLATILIDAD Y TEMOR",
-            s2: "SECCIÓN II: CRÉDITO Y PRONÓSTICOS",
+            s2: "SECCIÓN II: CRÉDITO Y ANÁLISIS",
             s3: "SECCIÓN III: PUNTOS DE REFERENCIA"
         },
         chart: {
@@ -640,7 +647,7 @@ export const DICTIONARY = {
             benchmark_mode: "MODO DE REFERENCIA",
             about: "SYSTEM INFO",
             legal: "LEGAL NOTICE",
-            archive: "DAILY ARCHIVE",
+            archive: "HISTORIAL DE CORRELACIÓN",
             back_to_terminal: "VOLVER AL TERMINAL",
             vix: "VIX (Vol. Variable)",
             move: "MOVE (Vol. Bonos)",
@@ -681,8 +688,9 @@ export const DICTIONARY = {
                 usage_content: "Queda estrictamente prohibido el raspado automatizado y el entrenamiento de IA sin licencia comercial. Al usar esta terminal, acepta estos términos legales."
             },
             archive: {
-                title: "ARCHIVO HISTÓRICO DIARIO",
-                desc: "Seleccione una fecha para ver el régimen macro histórico y el estado de los indicadores de la terminal."
+                title: "HISTORIAL DE CORRELACIÓN DE SEÑALES",
+                desc: "Reproducción objetiva de los estados de los indicadores históricos y la señal algorítmica GMS correspondiente.",
+                disclaimer: "ESTOS DATOS REPRESENTAN ÚNICAMENTE CORRELACIONES HISTÓRICAS Y NO SUGIEREN NI GARANTIZAN RESULTADOS DE INVERSIÓN FUTUROS."
             }
         }
     },
@@ -703,7 +711,9 @@ export const DICTIONARY = {
             gms_score: "GMS स्कोर",
             breaking_news: "ताज़ा खबर (BREAKING)",
             delayed_tick: "*15 मिनट देरी",
-            methodology: "पद्धति (METHODOLOGY)"
+            methodology: "पद्धति (METHODOLOGY)",
+            analysis_history: "विश्लेषण इतिहास",
+            live_stream: "LIVE INTELLIGENCE STREAM"
         },
         methodology: {
             title: "GMS मात्रात्मक पद्धति",
@@ -778,7 +788,7 @@ export const DICTIONARY = {
         },
         sections: {
             s1: "खंड I: बाज़ार अस्थिरता",
-            s2: "खंड II: क्रेडिट और पूर्वानुमान",
+            s2: "खंड II: क्रेडिट और विश्लेषण",
             s3: "खंड III: संदर्भ बेंचमार्क"
         },
         chart: {
@@ -795,7 +805,7 @@ export const DICTIONARY = {
             benchmark_mode: "बेंचमार्क मोड",
             about: "SYSTEM INFO",
             legal: "LEGAL NOTICE",
-            archive: "DAILY ARCHIVE",
+            archive: "सहसंबंध इतिहास (Correlation History)",
             back_to_terminal: "टर्मिनल पर वापस",
             vix: "VIX (Equity Vol)",
             move: "MOVE (Bond Vol)",
@@ -836,8 +846,9 @@ export const DICTIONARY = {
                 usage_content: "अनधिकृत स्क्रैपिंग निषिद्ध है।"
             },
             archive: {
-                title: "दैनिक पुरालेख",
-                desc: "एक तारीख चुनें।"
+                title: "सिग्नल सहसंबंध इतिहास",
+                desc: "ऐतिहासिक संकेतक राज्यों और संबंधित GMS एल्गोरिथम सिग्नल का वस्तुनिष्ठ रीप्ले।",
+                disclaimer: "यह डेटा केवल ऐतिहासिक सहसंबंधों का प्रतिनिधित्व करता है और भविष्य के निवेश परिणामों का सुझाव या गारंटी नहीं देता है।"
             }
         }
     },
@@ -859,6 +870,7 @@ export const DICTIONARY = {
             breaking_news: "BERITA TERKINI",
             delayed_tick: "*Tunda 15m",
             methodology: "METODOLOGI",
+            analysis_history: "Riwayat Analisis",
             live_stream: "ALIRAN INTELIJEN LANGSUNG"
         },
         methodology: {
@@ -951,7 +963,7 @@ export const DICTIONARY = {
             benchmark_mode: "MODE TOLOK UKUR",
             about: "SYSTEM INFO",
             legal: "LEGAL NOTICE",
-            archive: "DAILY ARCHIVE",
+            archive: "RIWAYAT KORELASI",
             back_to_terminal: "KEMBALI KE TERMINAL",
             vix: "VIX (Vol Ekuitas)",
             move: "MOVE (Vol Obligasi)",
@@ -985,8 +997,9 @@ export const DICTIONARY = {
                 usage_content: "Scraping tidak sah dilarang."
             },
             archive: {
-                title: "ARSIP HARIAN",
-                desc: "Pilih tanggal."
+                title: "RIWAYAT KORELASI SINYAL",
+                desc: "Pemutaran ulang objektif dari status indikator historis dan sinyal algoritmik GMS yang sesuai.",
+                disclaimer: "DATA INI HANYA MEWAKILI KORELASI HISTORIS DAN TIDAK MENYARANKAN ATAU MENJAMIN HASIL INVESTASI DI MASA DEPAN."
             }
         }
     },
@@ -1009,7 +1022,8 @@ export const DICTIONARY = {
             gms_score: "درجة GMS",
             breaking_news: "أخبار عاجلة",
             delayed_tick: "*تأخير 15د",
-            methodology: "المنهجية (METHODOLOGY)"
+            methodology: "المنهجية (METHODOLOGY)",
+            analysis_history: "سجل التحليل"
         },
         methodology: {
             title: "منهجية GMS الكمية",
@@ -1101,7 +1115,7 @@ export const DICTIONARY = {
             benchmark_mode: "وضع المعيار",
             about: "SYSTEM INFO",
             legal: "LEGAL NOTICE",
-            archive: "DAILY ARCHIVE",
+            archive: "سجل الارتباط (Correlation History)",
             back_to_terminal: "عودة للمحطة",
             vix: "VIX (تقلب الأسهم)",
             move: "MOVE (تقلب السندات)",
@@ -1135,8 +1149,9 @@ export const DICTIONARY = {
                 usage_content: "يحظر الكشط غير المصرح به."
             },
             archive: {
-                title: "الأرشيف اليومي",
-                desc: "اختر تاريخاً."
+                title: "سجل ارتباط الإشارة",
+                desc: "إعادة عرض موضوعية لحالات المؤشرات التاريخية وإشارة GMS الخوارزمية المقابلة.",
+                disclaimer: "تمثل هذه البيانات الارتباطات التاريخية فقط ولا تقترح أو تضمن نتائج الاستثمار المستقبلية."
             }
         }
     }

@@ -60,6 +60,11 @@ function ArchiveDetailContent() {
     return (
         <TerminalPage pageKey="archive">
             <div className="space-y-16">
+                <div className="border-b border-white/10 pb-4">
+                    <h2 className="text-xl font-black text-white uppercase tracking-[0.2em]">{t.subpages.archive.title}</h2>
+                    <p className="text-[10px] text-slate-500 font-mono mt-1 uppercase tracking-widest leading-relaxed">Recorded Algorithmic Intelligence Snapshot</p>
+                </div>
+
                 {/* 1. HEADER SNAPSHOT */}
                 <div className="bg-[#111] border border-white/5 p-8 md:p-12 rounded-[2px] flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
                     <div className="space-y-4">
@@ -71,6 +76,7 @@ function ArchiveDetailContent() {
                             <div className="w-4 h-4 rounded-full" style={{ backgroundColor: regimeColor }}></div>
                             <h2 className="text-3xl font-black italic uppercase italic tracking-tighter">{regimeLabel}</h2>
                         </div>
+                        <p className="text-[10px] text-sky-500/60 font-mono uppercase tracking-[0.2em]">{t.analysis_history || "Analysis History"}</p>
                     </div>
                     <div className="flex items-center gap-6">
                         <div className="text-right">
@@ -94,7 +100,7 @@ function ArchiveDetailContent() {
                 {/* 3. INDICATOR GRID (Simplified 3-Column) */}
                 <div className="space-y-8">
                     <div className="flex items-center gap-4">
-                        <h3 className="text-xs font-black tracking-[0.4em] uppercase opacity-40">INDICATOR REPLAY</h3>
+                        <h3 className="text-xs font-black tracking-[0.4em] uppercase opacity-40">INDICATOR LOG (REPLAY)</h3>
                         <div className="flex-1 h-px bg-white/5"></div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -114,6 +120,13 @@ function ArchiveDetailContent() {
                             )
                         })}
                     </div>
+                </div>
+
+                {/* MANDATORY LEGAL DISCLAIMER */}
+                <div className="mt-24 pt-12 border-t border-white/5">
+                    <p className="text-[10px] md:text-xs font-black text-slate-500 tracking-widest leading-relaxed uppercase text-center max-w-2xl mx-auto italic">
+                        {t.subpages.archive.disclaimer}
+                    </p>
                 </div>
             </div>
         </TerminalPage>

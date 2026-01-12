@@ -9,6 +9,7 @@ from atproto import Client
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_FILE = os.path.join(SCRIPT_DIR, "current_signal.json")
 HISTORY_FILE = os.path.join(SCRIPT_DIR, "history.json")
+SUMMARY_FILE = os.path.join(SCRIPT_DIR, "archive", "summary.json")
 
 # URL for OGP
 SITE_URL = "https://omnimetric.net"
@@ -150,6 +151,49 @@ No es consejo de inversión."""
 
     return [post_en, post_jp, post_cn, post_es]
 
+def format_correlation_replay(data, history_data):
+    """
+    Generates a post looking back at a specific historical point (e.g., 7 days ago)
+    and comparing it to current market conditions.
+    """
+    if not history_data or len(history_data) < 8:
+        return None, None # Need at least 1 week of history
+
+    # Target: approx 7 entries ago (roughly 7 days if daily snapshots, or 7 hours).
+    # Since summary.json will be daily, 7 entries = 7 days.
+    past_entry = history_data[-7]
+    past_date = past_entry.get("date", "N/A")
+    past_score = past_entry.get("gms_score", 50)
+    past_spy = past_entry.get("spy_price", 0)
+
+    curr_spy = data.get("market_data", {}).get("SPY", {}).get("price", 0)
+    spy_diff = round(((curr_spy - past_spy) / past_spy) * 100, 2) if past_spy != 0 else 0
+    spy_trend_icon = "📉" if spy_diff < 0 else "📈"
+
+    timestamp = datetime.utcnow().strftime("%Y-%m-%d")
+    
+    # English Replay
+    post_en = f"""[Signal Correlation Replay] {timestamp}
+History Check: {past_date}
+• Historical GMS: {past_score}/100
+• S&P 500 Entry: ${past_spy}
+• S&P 500 Current: ${curr_spy} ({spy_trend_icon} {spy_diff}%)
+
+Validating algorithmic correlation between structural signals and market outcomes. 
+{SITE_URL} #OmniMetric #Quant"""
+
+    # Japanese Replay
+    post_jp = f"""【シグナル相関の検証】 {timestamp}
+1週間前（{past_date}）の記録:
+• 当時のGMSスコア: {past_score}/100
+• SPY終値: ${past_spy}
+• 現在のSPY: ${curr_spy} ({spy_trend_icon} {spy_diff}%)
+
+過去のアルゴリズム出力と実際の市場動向の相関を客観的に提示します。
+{SITE_URL} #米国株 #GMS"""
+
+    return post_en, post_jp
+
     return [post_en, post_jp, post_cn, post_es]
 
 def post_to_twitter(text):
@@ -196,6 +240,7 @@ def main():
     print("--- OMNIMETRIC SNS PUBLISHER ---")
     current_data = load_json(DATA_FILE)
     history_data = load_json(HISTORY_FILE)
+    summary_data = load_json(SUMMARY_FILE)
     
     if not current_data:
         print("Error: No data found.")
@@ -212,16 +257,19 @@ def main():
     # For now, let's just post. The "Emergency" logic just adds the tag.
     
     posts = format_posts(current_data, alert_reason)
-    
-    # Select language based on... random? Or post ALL in a thread?
-    # X/Twitter Rate limits are strict.
-    # Strategy: Post EN and JP mainly. Rotate others?
-    # User request: "Short text (JP/EN/CN/ES)" implicates ALL?
-    # Posting 4 separate tweets at once might be spammy.
-    # Let's post EN and JP as primary.
+
+    # 4. Correlation Replay (Experimental)
+    replay_en, replay_jp = format_correlation_replay(current_data, summary_data)
     
     # Priority: JP (User seems Japanese), EN (Global).
     target_posts = [posts[1], posts[0]] # JP, EN
+    
+    # If it's a "Daily Archive" run (we can check env var or logic), add replay
+    # For now, let's add replay to the list if available
+    if replay_jp and replay_en:
+        target_posts.append(replay_jp)
+        target_posts.append(replay_en)
+
     if is_emergency:
         # In emergency, post all
         target_posts = posts
