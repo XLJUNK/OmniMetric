@@ -147,7 +147,7 @@ export default function RootLayout({
         className={`${inter.variable} ${notoJP.variable} ${notoAR.variable} ${notoHI.variable} antialiased`}
         style={{ overflowX: 'hidden' }}
       >
-        <GoogleAdSense pId="0000000000000000" />
+        <GoogleAdSense pId="1230621442620902" />
 
         {/* APP ROOT CONTAINER: ROW Layout for Sidebar + Content */}
         <div className="omni-terminal-root relative min-h-screen flex bg-[#0a0a0a]">
