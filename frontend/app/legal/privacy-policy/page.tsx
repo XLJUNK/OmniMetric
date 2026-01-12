@@ -9,7 +9,17 @@ export const metadata: Metadata = {
     description: "Privacy Policy and Data Protection practices for OmniMetric.",
 };
 
+import React, { Suspense } from 'react';
+
 export default function PrivacyPage() {
+    return (
+        <Suspense fallback={<div className="min-h-screen bg-[#0A0A0A] flex items-center justify-center text-cyan-500 font-mono text-xs animate-pulse">LOADING PRIVACY PROTOCOLS...</div>}>
+            <PrivacyContent />
+        </Suspense>
+    );
+}
+
+function PrivacyContent() {
     return (
         <TerminalPage pageKey="legal">
             <div className="max-w-4xl space-y-8">

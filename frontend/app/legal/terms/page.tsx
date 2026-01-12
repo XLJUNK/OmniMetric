@@ -9,7 +9,17 @@ export const metadata: Metadata = {
     description: "Terms and Conditions, Disclaimers, and Usage Restrictions for OmniMetric.",
 };
 
+import React, { Suspense } from 'react';
+
 export default function TermsPage() {
+    return (
+        <Suspense fallback={<div className="min-h-screen bg-[#0A0A0A] flex items-center justify-center text-red-500 font-mono text-xs animate-pulse">LOADING TERMS & CONDITIONS...</div>}>
+            <TermsContent />
+        </Suspense>
+    );
+}
+
+function TermsContent() {
     return (
         <TerminalPage pageKey="legal">
             <div className="max-w-4xl space-y-8">
