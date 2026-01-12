@@ -1,63 +1,50 @@
 'use client';
 
-import React, { Suspense } from 'react';
-import { DICTIONARY, LangType } from '@/data/dictionary';
 import Link from 'next/link';
+import { LangType, DICTIONARY } from '@/data/dictionary';
 import { useSearchParams } from 'next/navigation';
 
-const FooterContent = () => {
+export const LegalFooter = () => {
     const searchParams = useSearchParams();
-    const lang = (searchParams.get('lang') as LangType) || 'JP';
+    const queryLang = searchParams.get('lang') as LangType;
+    const lang = (queryLang && DICTIONARY[queryLang]) ? queryLang : 'EN';
     const t = DICTIONARY[lang];
-    if (!t) return null;
 
     return (
-        <footer className="w-full py-10 mt-12 border-t border-[#222] bg-black text-center">
-            {/* Navigation Links */}
-            <div className="flex flex-row justify-center items-center mb-10 tracking-[0.2em]">
-                <Link
-                    href={`/about?lang=${lang}`}
-                    className="text-[10px] text-gray-500 hover:text-cyan-400 transition-colors duration-300 uppercase px-4 py-2 hover:bg-white/5 rounded-sm"
-                >
-                    {t.labels.about}
-                </Link>
-
-                <span className="mx-8 text-gray-800 font-thin text-[10px]">|</span>
-
-                <Link
-                    href={`/legal?lang=${lang}`}
-                    className="text-[10px] text-gray-500 hover:text-cyan-400 transition-colors duration-300 uppercase px-4 py-2 hover:bg-white/5 rounded-sm"
-                >
-                    {t.labels.legal}
-                </Link>
-
-                <span className="mx-8 text-gray-800 font-thin text-[10px]">|</span>
-
-                <Link
-                    href={`/archive?lang=${lang}`}
-                    className="text-[10px] text-gray-500 hover:text-cyan-400 transition-colors duration-300 uppercase px-4 py-2 hover:bg-white/5 rounded-sm"
-                >
-                    {t.labels.archive}
-                </Link>
+        <footer className="w-full bg-[#050505] border-t border-[#1E293B] mt-auto">
+            {/* 1. Retro Terminal Menu Bar */}
+            <div className="w-full bg-[#0a0a0a] border-b border-[#1E293B] py-2">
+                <div className="max-w-[1600px] mx-auto flex justify-center items-center gap-1 md:gap-4 px-4 text-[10px] md:text-xs font-black tracking-[0.2em] font-mono leading-none">
+                    <Link href={`/about?lang=${lang}`} className="text-slate-500 hover:text-sky-500 uppercase transition-colors">
+                        {t.labels.about}
+                    </Link>
+                    <span className="text-white/10">|</span>
+                    <Link href={`/legal?lang=${lang}`} className="text-slate-500 hover:text-sky-500 uppercase transition-colors">
+                        {t.labels.legal}
+                    </Link>
+                    <span className="text-white/10">|</span>
+                    <Link href={`/archive?lang=${lang}`} className="text-slate-500 hover:text-sky-500 uppercase transition-colors">
+                        {t.labels.archive}
+                    </Link>
+                </div>
             </div>
 
-            {/* Legal Text */}
-            <p style={{ color: '#444', fontSize: '9px', lineHeight: '1.8', maxWidth: '800px', margin: '0 auto', padding: '0 20px', letterSpacing: '0.05em' }}>
-                {t.legal_text.t1}
-            </p>
-
-            {/* Copyright */}
-            <div className="mt-8 text-[#444] text-[10px] tracking-widest uppercase">
-                &copy; {t.legal_text.copyright} {new Date().getFullYear()}
+            {/* 2. Legal Block */}
+            <div className="max-w-[1600px] mx-auto py-8 px-4 text-center">
+                <div className="flex flex-col gap-4 items-center">
+                    <p className="text-[10px] leading-relaxed text-slate-600 max-w-4xl mx-auto font-medium">
+                        {t.legal_text.t1} {t.legal_text.t2}
+                    </p>
+                    <div className="flex flex-col items-center gap-1 mt-2">
+                        <p className="text-[9px] text-slate-700 font-black tracking-widest uppercase">
+                            {t.legal_text?.copyright?.toUpperCase() || "POWERED BY OMNIMETRIC PROJECT 2026"}
+                        </p>
+                        <p className="text-[9px] text-slate-800 font-mono">
+                            {t.attribution?.src || "SOURCE: YAHOO FINANCE / FRED / CBOE"}
+                        </p>
+                    </div>
+                </div>
             </div>
         </footer>
-    );
-}
-
-export const LegalFooter = () => {
-    return (
-        <Suspense fallback={null}>
-            <FooterContent />
-        </Suspense>
     );
 };

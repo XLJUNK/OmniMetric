@@ -1,4 +1,4 @@
-export type LangType = 'EN' | 'JP' | 'CN' | 'ES';
+export type LangType = 'EN' | 'JP' | 'CN' | 'ES' | 'HI' | 'ID' | 'AR';
 
 export const DICTIONARY = {
     EN: {
@@ -11,30 +11,45 @@ export const DICTIONARY = {
             partner_ad: "Institutional Partner Placement",
             market_regime: "MARKET REGIME",
             risk_preference: "RISK PREFERENCE",
-            institutional_analysis: "Institutional AI Analysis",
+            institutional_analysis: "GMS Macro AI Analysis (Institutional Level)",
             sponsored: "SPONSORED",
             current_strategy: "CURRENT STRATEGY",
             upcoming_events: "UPCOMING RISK EVENTS",
             gms_score: "GMS SCORE",
             breaking_news: "BREAKING NEWS",
             delayed_tick: "*15m DLY",
-            methodology: "METHODOLOGY"
+            methodology: "METHODOLOGY",
+            live_stream: "LIVE INTELLIGENCE STREAM"
         },
         methodology: {
             title: "GMS QUANT METHODOLOGY",
             desc: "The GMS Score integrates market 'Fear', 'Credit Stress', and 'Momentum' into a proprietary 0-100 quantitative risk index.",
             zone_accumulate: "60-100: ACCUMULATE (Risk On)",
-            zone_accumulate_desc: "Expansion phase. Inflows to Equities, Commodities, and High Yield bonds suggested.",
+            zone_accumulate_desc: "Color: Blue. Expansion phase. Inflows to Equities, Commodities, and High Yield bonds suggested.",
             zone_neutral: "40-60: NEUTRAL (Trendless)",
-            zone_neutral_desc: "Volatility compression. Position adjustment phase.",
+            zone_neutral_desc: "Color: Slate. Volatility compression. Position adjustment phase.",
             zone_defensive: "0-40: DEFENSIVE (Risk Off)",
-            zone_defensive_desc: "Cash/Treasury dominance. Watch for panic selling and credit contraction.",
+            zone_defensive_desc: "Color: Red. Cash/Treasury dominance. Watch for panic selling and credit contraction.",
             inputs: "Inputs: VIX, MOVE, HY OAS, NFCI, SPY Momentum",
             scale_labels: {
-                panic: "Panic (0)",
+                panic: "Defensive (0)",
                 neutral: "Neutral (50)",
-                greed: "Greed (100)"
-            }
+                greed: "Accumulate (100)"
+            },
+            factors: { VOL: "VOL", MOM: "MOM", CRED: "CRED", SENT: "SENT", RATES: "RATES", BREADTH: "BREADTH", LIQ: "LIQ" },
+            factors_status: {
+                LOW: "LOW", HIGH: "HIGH",
+                ELEVATED: "ELEVATED", CRITICAL: "CRITICAL",
+                STABLE: "STABLE", FEAR: "FEAR", CALM: "CALM",
+                BULLISH: "BULLISH", BEARISH: "BEARISH",
+                RISING: "RISING", FALLING: "FALLING",
+                NEUTRAL: "NEUTRAL",
+                GREED: "GREED",
+                STRESS: "STRESS",
+                HEALTHY: "HEALTHY",
+                SKEWED: "SKEWED"
+            },
+            gms_tooltip_desc: "GMS Score is a quantitative risk indicator integrated by AI algorithms. The current score primarily reflects trends in [FACTOR1] and [FACTOR2].",
         },
         strategy: {
             accumulate: "ACCUMULATE",
@@ -93,7 +108,7 @@ export const DICTIONARY = {
                 benchmark: "Ref: >105 tightens global liquidity."
             },
             YIELD_SPREAD: {
-                def: "10Y-2Y Yield Spread.",
+                def: "10Y-3M Yield Spread.",
                 benchmark: "Ref: Inversion (<0) is a leading recession indicator."
             }
         },
@@ -133,11 +148,23 @@ export const DICTIONARY = {
             move: "MOVE (Bond Vol)",
             hy_spread: "HY Spread (OAS)",
             nfci: "NFCI (Financial Cond.)",
-            yield_spread: "10Y-2Y Yield Spread",
+            yield_spread: "10Y-3M Yield Spread",
             copper_gold: "Copper/Gold Ratio",
             dxy: "US Dollar Index",
             tnx: "US 10Y Yield",
-            spy: "S&P 500 (SPY)"
+            spy: "S&P 500 (SPY)",
+            summary: "SUMMARY",
+            stocks: "STOCKS",
+            crypto: "CRYPTO",
+            forex: "FOREX",
+            commodities: "COMMODITIES",
+            tickers: {
+                BTC: "Bitcoin", ETH: "Ethereum", SOL: "Solana",
+                GOLD: "Gold", OIL: "WTI Crude Oil", COPPER: "Copper", NATGAS: "Natural Gas",
+                USDJPY: "USD/JPY", EURUSD: "EUR/USD", USDINR: "USD/INR", USDSAR: "USD/SAR", DXY: "DXY Dollar Index",
+                SPY: "S&P 500", QQQ: "Nasdaq 100", IWM: "Russell 2000", RSP: "S&P 500 Equal Weight", HYG: "High Yield Bond", NIFTY: "Nifty 50",
+                VIX: "VIX Volatility", TNX: "US 10Y Yield", MOVE: "MOVE Index", CRYPTO_SENTIMENT: "Crypto Fear & Greed"
+            }
         },
         subpages: {
             about: {
@@ -171,14 +198,15 @@ export const DICTIONARY = {
             partner_ad: "広告掲載枠",
             market_regime: "市場局面分析",
             risk_preference: "リスク選好",
-            institutional_analysis: "機関投資家AI分析",
-            sponsored: "スポンサー",
-            current_strategy: "STRATEGIC BIAS",
-            upcoming_events: "今後のリスクイベント",
-            gms_score: "GMSスコア",
+            institutional_analysis: "GMSマクロAI分析（機関投資家レベル）",
+            sponsored: "SPONSORED",
+            current_strategy: "CURRENT STRATEGY",
+            upcoming_events: "UPCOMING RISK EVENTS",
+            gms_score: "GMS SCORE",
             breaking_news: "速報（BREAKING）",
             delayed_tick: "*15分遅延",
-            methodology: "算出ロジック (METHODOLOGY)"
+            methodology: "算出ロジック (METHODOLOGY)",
+            live_stream: "ライブ・インテリジェンス（LIVE INTELLIGENCE）"
         },
         methodology: {
             title: "GMS QUANT METHODOLOGY",
@@ -194,6 +222,19 @@ export const DICTIONARY = {
                 panic: "Panic (0)",
                 neutral: "Neutral (50)",
                 greed: "Greed (100)"
+            },
+            factors: { VOL: "ボラティリティ", MOM: "モメンタム", CRED: "信用リスク", SENT: "センチメント", RATES: "金利", BREADTH: "騰落", LIQ: "流動性" },
+            factors_status: {
+                LOW: "低", HIGH: "高",
+                ELEVATED: "上昇", CRITICAL: "危機的",
+                STABLE: "安定", FEAR: "恐怖", CALM: "凪",
+                BULLISH: "強気", BEARISH: "弱気",
+                RISING: "上昇", FALLING: "下落",
+                NEUTRAL: "中立",
+                GREED: "強欲",
+                STRESS: "ストレス",
+                HEALTHY: "健全",
+                SKEWED: "偏り"
             }
         },
         strategy: {
@@ -253,7 +294,7 @@ export const DICTIONARY = {
                 benchmark: "基準: 105超は世界的な流動性逼迫を招く。"
             },
             YIELD_SPREAD: {
-                def: "長短金利差 (10年-2年)。",
+                def: "長短金利差 (10年-3ヶ月)。",
                 benchmark: "基準: 逆イールド(マイナス)はリセッションの先行指標。"
             }
         },
@@ -293,11 +334,23 @@ export const DICTIONARY = {
             move: "MOVE (債券ボラティリティ)",
             hy_spread: "HYスプレッド (実質利回り差)",
             nfci: "NFCI (金融環境指数)",
-            yield_spread: "長短金利差 (10Y-2Y)",
+            yield_spread: "長短金利差 (10Y-3M)",
             copper_gold: "銅金比率",
             dxy: "ドルインデックス",
             tnx: "米国10年債利回り",
-            spy: "S&P 500 (米国株)"
+            spy: "S&P 500 (米国株)",
+            summary: "サマリー",
+            stocks: "株式市場",
+            crypto: "暗号資産",
+            forex: "為替・金利",
+            commodities: "コモディティ",
+            tickers: {
+                BTC: "ビットコイン", ETH: "イーサリアム", SOL: "ソラナ",
+                GOLD: "金 (Gold)", OIL: "WTI原油", COPPER: "銅", NATGAS: "天然ガス",
+                USDJPY: "ドル円", EURUSD: "ユーロドル", USDINR: "ドル/ルピー", USDSAR: "ドル/リヤル", DXY: "ドル指数",
+                SPY: "S&P 500", QQQ: "ナスダック100", IWM: "ラッセル2000", RSP: "S&P500均等加重", HYG: "ハイイールド債", NIFTY: "Nifty 50",
+                VIX: "VIX恐怖指数", TNX: "米国10年債利回り", MOVE: "MOVE債券恐怖指数", CRYPTO_SENTIMENT: "暗号資産恐怖指数 (F&G)"
+            }
         },
         subpages: {
             about: {
@@ -338,7 +391,8 @@ export const DICTIONARY = {
             gms_score: "GMS评分",
             breaking_news: "突发新闻",
             delayed_tick: "*延迟15分",
-            methodology: "方法论"
+            methodology: "方法论",
+            live_stream: "实时情报流"
         },
         methodology: {
             title: "GMS QUANT METHODOLOGY",
@@ -354,6 +408,19 @@ export const DICTIONARY = {
                 panic: "Panic (0)",
                 neutral: "Neutral (50)",
                 greed: "Greed (100)"
+            },
+            factors: { VOL: "波动", MOM: "动量", CRED: "信贷", SENT: "情绪", RATES: "利率", BREADTH: "广度", LIQ: "流动性" },
+            factors_status: {
+                LOW: "低", HIGH: "高",
+                ELEVATED: "升高", CRITICAL: "关键",
+                STABLE: "稳定", FEAR: "恐惧", CALM: "平静",
+                BULLISH: "看涨", BEARISH: "看跌",
+                RISING: "上升", FALLING: "下降",
+                NEUTRAL: "中立",
+                GREED: "贪婪",
+                STRESS: "压力",
+                HEALTHY: "健康",
+                SKEWED: "偏斜"
             }
         },
         strategy: {
@@ -427,7 +494,19 @@ export const DICTIONARY = {
             copper_gold: "铜金比率",
             dxy: "美元指数",
             tnx: "美国10年期收益率",
-            spy: "标普500 (SPY)"
+            spy: "标普500 (SPY)",
+            summary: "概要",
+            stocks: "股票",
+            crypto: "加密货币",
+            forex: "外汇",
+            commodities: "大宗商品",
+            tickers: {
+                BTC: "比特币", ETH: "以太坊", SOL: "索拉纳",
+                GOLD: "黄金", OIL: "WTI原油", COPPER: "铜", NATGAS: "天然气",
+                USDJPY: "美元/日元", EURUSD: "欧元/美元", USDINR: "美元/卢比", USDSAR: "美元/里亚尔", DXY: "美元指数",
+                SPY: "标普500", QQQ: "纳斯达克100", IWM: "罗素2000", RSP: "标普500等权", HYG: "高收益债", NIFTY: "Nifty 50",
+                VIX: "VIX恐慌指数", TNX: "美国10年期国债", MOVE: "MOVE指数", CRYPTO_SENTIMENT: "加密恐慌/贪婪指数"
+            }
         },
         subpages: {
             about: {
@@ -468,7 +547,8 @@ export const DICTIONARY = {
             gms_score: "PUNTUACIÓN GMS",
             breaking_news: "NOTICIAS DE ÚLTIMA HORA",
             delayed_tick: "*RETRASO 15m",
-            methodology: "METODOLOGÍA"
+            methodology: "METODOLOGÍA",
+            live_stream: "FLUJO DE INTELIGENCIA EN VIVO"
         },
         methodology: {
             title: "METODOLOGÍA CUANTITATIVA GMS",
@@ -484,6 +564,19 @@ export const DICTIONARY = {
                 panic: "Panic (0)",
                 neutral: "Neutral (50)",
                 greed: "Greed (100)"
+            },
+            factors: { VOL: "VOL", MOM: "MOM", CRED: "CRÉD", SENT: "SENT", RATES: "TIPOS", BREADTH: "AMPL", LIQ: "LIQ" },
+            factors_status: {
+                LOW: "BAJO", HIGH: "ALTO",
+                ELEVATED: "ELEV", CRITICAL: "CRÍT",
+                STABLE: "ESTAB", FEAR: "MIEDO", CALM: "CALMA",
+                BULLISH: "ALCISTA", BEARISH: "BAJISTA",
+                RISING: "ALZA", FALLING: "BAJA",
+                NEUTRAL: "NEUTRO",
+                GREED: "CODICIA",
+                STRESS: "ESTRÉS",
+                HEALTHY: "SANO",
+                SKEWED: "SESGO"
             }
         },
         strategy: {
@@ -557,7 +650,19 @@ export const DICTIONARY = {
             copper_gold: "Ratio Cobre/Oro",
             dxy: "Índice Dólar",
             tnx: "Rendimiento 10A",
-            spy: "S&P 500 (SPY)"
+            spy: "S&P 500 (SPY)",
+            summary: "RESUMEN",
+            stocks: "ACCIONES",
+            crypto: "CRIPTO",
+            forex: "DIVISAS",
+            commodities: "MATERIAS PRIMAS",
+            tickers: {
+                BTC: "Bitcoin", ETH: "Ethereum", SOL: "Solana",
+                GOLD: "Oro", OIL: "Petróleo WTI", COPPER: "Cobre", NATGAS: "Gas Natural",
+                USDJPY: "USD/JPY", EURUSD: "EUR/USD", USDINR: "USD/INR", USDSAR: "USD/SAR", DXY: "Índice Dólar",
+                SPY: "S&P 500", QQQ: "Nasdaq 100", IWM: "Russell 2000", RSP: "S&P 500 Equal Weight", HYG: "High Yield Bond", NIFTY: "Nifty 50",
+                VIX: "Volatilidad VIX", TNX: "Bono 10 Años", MOVE: "Índice MOVE", CRYPTO_SENTIMENT: "Índice Miedo/Codicia"
+            }
         },
         subpages: {
             about: {
@@ -578,6 +683,460 @@ export const DICTIONARY = {
             archive: {
                 title: "ARCHIVO HISTÓRICO DIARIO",
                 desc: "Seleccione una fecha para ver el régimen macro histórico y el estado de los indicadores de la terminal."
+            }
+        }
+    },
+    HI: {
+        titles: {
+            risk_score: "बाज़ार व्यवस्था संकेतक (Market Regime)",
+            insights: "मात्रात्मक मैक्रो अंतर्दृष्टि",
+            risk_factors: "संस्थागत डेटा ग्रिड",
+            legal: "कानूनी नोटिस",
+            delayed: "1 घंटा विलंब",
+            partner_ad: "संस्थागत भागीदार विज्ञापन",
+            market_regime: "बाज़ार व्यवस्था",
+            risk_preference: "ज़ोखिम वरीयता",
+            institutional_analysis: "GMS मैक्रो एआई विश्लेषण (संस्थागत स्तर)",
+            sponsored: "प्रायोजित",
+            current_strategy: "वर्तमान रणनीति",
+            upcoming_events: "आगामी जोखिम घटनाएँ",
+            gms_score: "GMS स्कोर",
+            breaking_news: "ताज़ा खबर (BREAKING)",
+            delayed_tick: "*15 मिनट देरी",
+            methodology: "पद्धति (METHODOLOGY)"
+        },
+        methodology: {
+            title: "GMS मात्रात्मक पद्धति",
+            desc: "GMS स्कोर बाज़ार के 'डर', 'क्रेडिट तनाव' और 'मोमेंटम' को 0-100 के स्वामित्व वाले मात्रात्मक जोखिम सूचकांक में एकीकृत करता है।",
+            zone_accumulate: "60-100: संचय (Risk On)",
+            zone_accumulate_desc: "विस्तार चरण। इक्विटी, कमोडिटी और हाई यील्ड बॉन्ड में निवेश का सुझाव।",
+            zone_neutral: "40-60: तटस्थ (Trendless)",
+            zone_neutral_desc: "अस्थिरता संपीड़न। स्थिति समायोजन चरण।",
+            zone_defensive: "0-40: रक्षात्मक (Risk Off)",
+            zone_defensive_desc: "नकदी/ट्रेजरी की प्रधानता। घबराहट में बिक्री और क्रेडिट संकुचन पर नज़र रखें।",
+            inputs: "Inputs: VIX, MOVE, HY OAS, NFCI, SPY Momentum",
+            scale_labels: {
+                panic: "Panic (0)",
+                neutral: "Neutral (50)",
+                greed: "Greed (100)"
+            },
+            factors: { VOL: "अस्थिरता", MOM: "वेग", CRED: "क्रेडिट", SENT: "भावना", RATES: "दरें", BREADTH: "विस्तार", LIQ: "तरलता" },
+            factors_status: {
+                LOW: "कम", HIGH: "उच्च",
+                ELEVATED: "उन्नत", CRITICAL: "नाजुक",
+                STABLE: "स्थिर", FEAR: "डर", CALM: "शांत",
+                BULLISH: "तेजी", BEARISH: "मंदी",
+                RISING: "बढ़ रहा", FALLING: "गिर रहा",
+                NEUTRAL: "तटस्थ",
+                GREED: "लालच",
+                STRESS: "तनाव",
+                HEALTHY: "स्वस्थ",
+                SKEWED: "विषम"
+            }
+        },
+        strategy: {
+            accumulate: "संचय (ACCUMULATE)",
+            neutral: "तटस्थ (NEUTRAL)",
+            defensive: "रक्षात्मक (DEFENSIVE)"
+        },
+        events: {
+            cpi: "CPI मुद्रास्फीति डेटा",
+            fomc: "FOMC दर निर्णय",
+            nfp: "नॉन-फार्म पेरोल",
+            high: "उच्च प्रभाव",
+            critical: "महत्वपूर्ण",
+            tue: "मंगल",
+            wed: "बुध",
+            fri: "शुक्र",
+            est: "EST"
+        },
+        attribution: {
+            src: "स्रोत: FRED/CBOE • अद्यतन: लाइव"
+        },
+        terms: {
+            VIX: { def: "अस्थिरता सूचकांक।", benchmark: "संदर्भ: >20 सावधानी।" },
+            MOVE: { def: "बॉन्ड बाज़ार अस्थिरता।", benchmark: "संदर्भ: >120 प्रणालीगत तनाव।" },
+            NFCI: { def: "वित्तीय स्थिति सूचकांक।", benchmark: "संदर्भ: सकारात्मक = तंग।" },
+            HY_SPREAD: { def: "हाई यील्ड स्प्रेड।", benchmark: "संदर्भ: >5% क्रेडिट तनाव।" },
+            COPPER_GOLD: { def: "तांबा/सोना अनुपात।", benchmark: "संदर्भ: बढ़ना = विस्तार।" },
+            BREADTH: { def: "बाज़ार की चौड़ाई (RSP vs SPY)।", benchmark: "संदर्भ: व्यापक भागीदारी स्वस्थ है।" },
+            SPY: { def: "S&P 500 ETF।", benchmark: "संदर्भ: अपट्रेंड = जोखिम चालू।" },
+            TNX: { def: "10-वर्षीय ट्रेजरी यील्ड।", benchmark: "संदर्भ: >4.5% मूल्यांकन पर दबाव।" },
+            DXY: { def: "अमेरिकी डॉलर सूचकांक।", benchmark: "संदर्भ: >105 तरलता को कसता है।" },
+            YIELD_SPREAD: { def: "यील्ड वक्र (10Y-2Y)।", benchmark: "संदर्भ: व्युत्क्रमण = मंदी।" }
+        },
+        legal_text: {
+            t1: "OmniMetric ('The Ultimate Asset Hub') केवल सूचनात्मक उद्देश्यों के लिए मात्रात्मक मैक्रो अंतर्दृष्टि प्रदान करता है। निवेश सलाह नहीं है।",
+            t2: "पिछला प्रदर्शन भविष्य के परिणामों का संकेत नहीं है।",
+            copyright: "Powered by OmniMetric Project"
+        },
+        regime: {
+            bull: "ज़ोखिम वरीयता",
+            neutral: "तटस्थ व्यवस्था",
+            bear: "ज़ोखिम से बचाव",
+            legend: "तेजी > 60 // मंदी < 40"
+        },
+        sections: {
+            s1: "खंड I: बाज़ार अस्थिरता",
+            s2: "खंड II: क्रेडिट और पूर्वानुमान",
+            s3: "खंड III: संदर्भ बेंचमार्क"
+        },
+        chart: {
+            trend: "30-दिवसीय टर्मिनल रुझान",
+            sync: "सिग्नल सिंक की प्रतीक्षा है...",
+            insight: "स्वामित्व अंतर्दृष्टि",
+            engine: "संस्थागत इंजन v5.0.1",
+            neutral_insight: "संस्थागत संगम की प्रतीक्षा है।",
+            bull_insight: "परिस्थितियाँ जोखिम वाली संपत्तियों के अनुकूल हैं।",
+            bear_insight: "रक्षात्मक मुद्रा की सलाह दी जाती है।"
+        },
+        labels: {
+            signal: "संकेत:",
+            benchmark_mode: "बेंचमार्क मोड",
+            about: "SYSTEM INFO",
+            legal: "LEGAL NOTICE",
+            archive: "DAILY ARCHIVE",
+            back_to_terminal: "टर्मिनल पर वापस",
+            vix: "VIX (Equity Vol)",
+            move: "MOVE (Bond Vol)",
+            hy_spread: "HY Spread (OAS)",
+            nfci: "NFCI (Cond.)",
+            yield_spread: "10Y-2Y Spread",
+            copper_gold: "Copper/Gold",
+            dxy: "Dollar Index",
+            tnx: "US 10Y Yield",
+            spy: "S&P 500 (SPY)",
+            summary: "सार",
+            stocks: "शेयर बाज़ार",
+            crypto: "क्रिप्टो",
+            forex: "विदेशी मुद्रा",
+            commodities: "कमोडिटीज",
+            tickers: {
+                BTC: "बिटकॉइन", ETH: "एथेरियम", SOL: "सोलाना",
+                GOLD: "सोना", OIL: "कच्चा तेल", COPPER: "तांबा", NATGAS: "प्राकृतिक गैस",
+                USDJPY: "USD/JPY", EURUSD: "EUR/USD", USDINR: "USD/INR", USDSAR: "USD/SAR", DXY: "डॉलर सूचकांक",
+                SPY: "S&P 500", QQQ: "नैस्डैक 100", IWM: "रसेल 2000", RSP: "S&P 500 Equal Weight", HYG: "High Yield Bond", NIFTY: "निफ्टी 50",
+                VIX: "VIX सूचकांक", TNX: "US 10Y Yield", MOVE: "MOVE Index", CRYPTO_SENTIMENT: "Crypto Fear & Greed"
+            }
+        },
+        subpages: {
+            about: {
+                title: "OMNIMETRIC के बारे में",
+                mission: "हमारा लक्ष्य",
+                mission_content: "OmniMetric बाज़ार पारदर्शिता के लिए समर्पित एक व्यक्तिगत क्वांट-मैक्रो प्रोजेक्ट है।",
+                tech: "क्वांट पद्धति",
+                tech_content: "GMS स्कोर की गणना क्रेडिट स्प्रेड और अस्थिरता सूचकांकों के भारित एल्गोरिथम विश्लेषण का उपयोग करके की जाती है।",
+                footer_note: "OmniMetric 100% स्वायत्त है।"
+            },
+            legal: {
+                title: "कानूनी नोटिस",
+                disclaimer: "अस्वीकरण",
+                disclaimer_content: "OmniMetric एक सूचना एग्रीगेटर है। निवेश सलाह नहीं है।",
+                usage: "उपयोग की शर्तें",
+                usage_content: "अनधिकृत स्क्रैपिंग निषिद्ध है।"
+            },
+            archive: {
+                title: "दैनिक पुरालेख",
+                desc: "एक तारीख चुनें।"
+            }
+        }
+    },
+    ID: {
+        titles: {
+            risk_score: "Indikator Rezim Pasar",
+            insights: "Wawasan Makro Kuantitatif",
+            risk_factors: "Grid Data Institusional",
+            legal: "PEMBERITAHUAN HUKUM",
+            delayed: "Tunda 1J",
+            partner_ad: "Penempatan Mitra Institusional",
+            market_regime: "REZIM PASAR",
+            risk_preference: "PREFERENSI RISIKO",
+            institutional_analysis: "Analisis AI Makro GMS (Tingkat Institusional)",
+            sponsored: "DISPONSORI",
+            current_strategy: "STRATEGI SAAT INI",
+            upcoming_events: "ACARA RISIKO MENDATANG",
+            gms_score: "SKOR GMS",
+            breaking_news: "BERITA TERKINI",
+            delayed_tick: "*Tunda 15m",
+            methodology: "METODOLOGI",
+            live_stream: "ALIRAN INTELIJEN LANGSUNG"
+        },
+        methodology: {
+            title: "METODOLOGI KUANTITATIF GMS",
+            desc: "Skor GMS mengintegrasikan 'Ketakutan', 'Stres Kredit', dan 'Momentum' pasar ke dalam indeks risiko kuantitatif 0-100.",
+            zone_accumulate: "60-100: AKUMULASI (Risk On)",
+            zone_accumulate_desc: "Fase ekspansi. Arus masuk ke Saham, Komoditas, dan Obligasi High Yield disarankan.",
+            zone_neutral: "40-60: NETRAL (Tanpa Tren)",
+            zone_neutral_desc: "Kompresi volatilitas. Fase penyesuaian posisi.",
+            zone_defensive: "0-40: DEFENSIF (Risk Off)",
+            zone_defensive_desc: "Dominasi Uang Tunai/Obligasi. Waspadai penjualan panik dan kontraksi kredit.",
+            inputs: "Inputs: VIX, MOVE, HY OAS, NFCI, SPY Momentum",
+            scale_labels: {
+                panic: "Panic (0)",
+                neutral: "Neutral (50)",
+                greed: "Greed (100)"
+            },
+            factors: { VOL: "VOL", MOM: "MOM", CRED: "KRED", SENT: "SENT", RATES: "BUNGA", BREADTH: "LUAS", LIQ: "LIKUID" },
+            factors_status: {
+                LOW: "RNDH", HIGH: "TGGI",
+                ELEVATED: "NAIK", CRITICAL: "KRITS",
+                STABLE: "STBL", FEAR: "TAKUT", CALM: "TENANG",
+                BULLISH: "NAIK", BEARISH: "TURUN",
+                RISING: "NAIK", FALLING: "TURUN",
+                NEUTRAL: "NETRAL",
+                GREED: "RAKUS",
+                STRESS: "STRES",
+                HEALTHY: "SEHAT",
+                SKEWED: "MIRING"
+            }
+        },
+        strategy: {
+            accumulate: "AKUMULASI",
+            neutral: "NETRAL",
+            defensive: "DEFENSIF"
+        },
+        events: {
+            cpi: "DATA INFLASI CPI",
+            fomc: "KEPUTUSAN SUKU BUNGA FOMC",
+            nfp: "NON-FARM PAYROLLS",
+            high: "DAMPAK TINGGI",
+            critical: "KRITIS",
+            tue: "SEL",
+            wed: "RAB",
+            fri: "JUM",
+            est: "EST"
+        },
+        attribution: {
+            src: "SUMBER: FRED/CBOE • PEMBARUAN: LANGSUNG"
+        },
+        terms: {
+            VIX: { def: "Indeks Volatilitas.", benchmark: "Ref: >20 Waspada." },
+            MOVE: { def: "Volatilitas Obligasi.", benchmark: "Ref: >120 Stres sistemik." },
+            NFCI: { def: "Indeks Kondisi Keuangan.", benchmark: "Ref: Positif = Ketat." },
+            HY_SPREAD: { def: "Spread High Yield.", benchmark: "Ref: >5% Stres kredit." },
+            COPPER_GOLD: { def: "Rasio Tembaga/Emas.", benchmark: "Ref: Naik = Ekspansi." },
+            BREADTH: { def: "Luas Pasar.", benchmark: "Ref: Partisipasi luas itu sehat." },
+            SPY: { def: "ETF S&P 500.", benchmark: "Ref: Tren naik = Risk On." },
+            TNX: { def: "Imbal Hasil 10 Tahun.", benchmark: "Ref: >4.5% menekan valuasi." },
+            DXY: { def: "Indeks Dolar AS.", benchmark: "Ref: >105 memperketat likuiditas." },
+            YIELD_SPREAD: { def: "Kurva Imbal Hasil.", benchmark: "Ref: Inversi = Resesi." }
+        },
+        legal_text: {
+            t1: "OmniMetric ('The Ultimate Asset Hub') menyediakan wawasan makro kuantitatif hanya untuk tujuan informasi. Tidak merupakan saran investasi.",
+            t2: "Kinerja masa lalu bukan indikasi hasil masa depan.",
+            copyright: "Powered by OmniMetric Project"
+        },
+        regime: {
+            bull: "Preferensi Risiko",
+            neutral: "Rezim Netral",
+            bear: "Penghindaran Risiko",
+            legend: "BULL > 60 // BEAR < 40"
+        },
+        sections: {
+            s1: "BAGIAN I: VOLATILITAS PASAR",
+            s2: "BAGIAN II: KREDIT STRUKTURAL",
+            s3: "BAGIAN III: TOLOK UKUR REFERENSI"
+        },
+        chart: {
+            trend: "Tren Terminal 30 Hari",
+            sync: "Menunggu Sinkronisasi Sinyal...",
+            insight: "Wawasan Kepemilikan",
+            engine: "Mesin Institusional v5.0.1",
+            neutral_insight: "Menunggu pertemuan institusional.",
+            bull_insight: "Kondisi menguntungkan aset risiko.",
+            bear_insight: "Sikap defensif disarankan."
+        },
+        labels: {
+            signal: "SINYAL:",
+            benchmark_mode: "MODE TOLOK UKUR",
+            about: "SYSTEM INFO",
+            legal: "LEGAL NOTICE",
+            archive: "DAILY ARCHIVE",
+            back_to_terminal: "KEMBALI KE TERMINAL",
+            vix: "VIX (Vol Ekuitas)",
+            move: "MOVE (Vol Obligasi)",
+            hy_spread: "Spread HY (OAS)",
+            nfci: "NFCI (Kondisi)",
+            yield_spread: "Spread 10Y-2Y",
+            copper_gold: "Tembaga/Emas",
+            dxy: "Indeks Dolar",
+            tnx: "Yield AS 10Y",
+            spy: "S&P 500 (SPY)",
+            summary: "RANGKUMAN",
+            stocks: "SAHAM",
+            crypto: "KRIPTO",
+            forex: "VALAS",
+            commodities: "KOMODITAS"
+        },
+        subpages: {
+            about: {
+                title: "TENTANG OMNIMETRIC",
+                mission: "Misi Kami",
+                mission_content: "OmniMetric adalah proyek makro-kuantitatif pribadi yang didedikasikan untuk transparansi pasar.",
+                tech: "Metodologi Kuantitatif",
+                tech_content: "Skor GMS dihitung menggunakan analisis algoritmik tertimbang dari spread kredit dan indeks volatilitas.",
+                footer_note: "OmniMetric 100% otonom."
+            },
+            legal: {
+                title: "PEMBERITAHUAN HUKUM",
+                disclaimer: "Penafian",
+                disclaimer_content: "OmniMetric adalah agregator informasi. Bukan saran investasi.",
+                usage: "Syarat Penggunaan",
+                usage_content: "Scraping tidak sah dilarang."
+            },
+            archive: {
+                title: "ARSIP HARIAN",
+                desc: "Pilih tanggal."
+            }
+        }
+    },
+    AR: {
+        dir: "rtl",
+        titles: {
+            risk_score: "مؤشر نظام السوق",
+            live_stream: "الذكاء المباشر",
+            insights: "رؤى كمية كلية",
+            risk_factors: "شبكة البيانات المؤسسية",
+            legal: "إشعار قانوني",
+            delayed: "تأخير 1 ساعة",
+            partner_ad: "إعلان شريك مؤسسي",
+            market_regime: "نظام السوق",
+            risk_preference: "تفضيل المخاطر",
+            institutional_analysis: "تحليل GMS الكلي بالذكاء الاصطناعي (مستوى مؤسسي)",
+            sponsored: "برعاية",
+            current_strategy: "الاستراتيجية الحالية",
+            upcoming_events: "أحداث المخاطر القادمة",
+            gms_score: "درجة GMS",
+            breaking_news: "أخبار عاجلة",
+            delayed_tick: "*تأخير 15د",
+            methodology: "المنهجية (METHODOLOGY)"
+        },
+        methodology: {
+            title: "منهجية GMS الكمية",
+            desc: "تدمج درجة GMS 'الخوف' و 'الضغط الائتماني' و 'الزخم' في السوق في مؤشر مخاطر كمي خاص من 0-100.",
+            zone_accumulate: "60-100: تجميع (مخاطر)",
+            zone_accumulate_desc: "مرحلة التوسع. يُقترح تدفق الأموال إلى الأسهم والسلع والسندات ذات العائد المرتفع.",
+            zone_neutral: "40-60: محايد (بلا اتجاه)",
+            zone_neutral_desc: "ضغط التقلبات. مرحلة تعديل المركز.",
+            zone_defensive: "0-40: دفاعي (تجنب المخاطر)",
+            zone_defensive_desc: "هيمنة النقد/السندات. راقب بيع الذعر وتقلص الائتمان.",
+            inputs: "Inputs: VIX, MOVE, HY OAS, NFCI, SPY Momentum",
+            scale_labels: {
+                panic: "Panic (0)",
+                neutral: "Neutral (50)",
+                greed: "Greed (100)"
+            },
+            factors: { VOL: "تقلب", MOM: "زخم", CRED: "ائتمان", SENT: "شعور", RATES: "فائدة", BREADTH: "اتساع", LIQ: "سيولة" },
+            factors_status: {
+                LOW: "منخفض", HIGH: "مرتفع",
+                ELEVATED: "مرتفع", CRITICAL: "حرج",
+                STABLE: "مستقر", FEAR: "خوف", CALM: "هدوء",
+                BULLISH: "صعودي", BEARISH: "هبوطي",
+                RISING: "صاعد", FALLING: "هابط",
+                NEUTRAL: "محايد",
+                GREED: "جشع",
+                STRESS: "ضغط",
+                HEALTHY: "صحي",
+                SKEWED: "منحرف"
+            }
+        },
+        strategy: {
+            accumulate: "تجميع",
+            neutral: "محايد",
+            defensive: "دفاعي"
+        },
+        events: {
+            cpi: "بيانات تضخم CPI",
+            fomc: "قرار سعر الفائدة FOMC",
+            nfp: "الوظائف غير الزراعية",
+            high: "تأثير عالي",
+            critical: "حرج",
+            tue: "الثلاثاء",
+            wed: "الأربعاء",
+            fri: "الجمعة",
+            est: "EST"
+        },
+        attribution: {
+            src: "المصدر: FRED/CBOE • تحديث: مباشر"
+        },
+        terms: {
+            VIX: { def: "مؤشر التقلب.", benchmark: "مرجع: >20 حذر." },
+            MOVE: { def: "تقلب سوق السندات.", benchmark: "مرجع: >120 إجهاد نظامي." },
+            NFCI: { def: "مؤشر الأوضاع المالية.", benchmark: "مرجع: إيجابي = مشدد." },
+            HY_SPREAD: { def: "فارق العائد المرتفع.", benchmark: "مرجع: >5% إجهاد ائتماني." },
+            COPPER_GOLD: { def: "نسبة النحاس/الذهب.", benchmark: "مرجع: ارتفاع = توسع." },
+            BREADTH: { def: "اتساع السوق.", benchmark: "مرجع: المشاركة الواسعة صحية." },
+            SPY: { def: "S&P 500 ETF.", benchmark: "مرجع: اتجاه صاعد = مخاطر." },
+            TNX: { def: "عائد سندات 10 سنوات.", benchmark: "مرجع: >4.5% يضغط على التقييمات." },
+            DXY: { def: "مؤشر الدولار الأمريكي.", benchmark: "مرجع: >105 يشدد السيولة." },
+            YIELD_SPREAD: { def: "منحنى العائد (10Y-2Y).", benchmark: "مرجع: انعكاس = ركود." }
+        },
+        legal_text: {
+            t1: "يوفر OmniMetric ('مركز الأصول النهائي') رؤى كلية كمية لأغراض إعلامية فقط. لا يشكل نصيحة استثمارية.",
+            t2: "الأداء السابق ليس مؤشراً على النتائج المستقبلية.",
+            copyright: "مدعوم من مشروع OmniMetric"
+        },
+        regime: {
+            bull: "تفضيل المخاطر",
+            neutral: "نظام محايد",
+            bear: "تجنب المخاطر",
+            legend: "صعود > 60 // هبوط < 40"
+        },
+        sections: {
+            s1: "القسم الأول: تقلبات السوق",
+            s2: "القسم الثاني: الائتمان الهيكلي",
+            s3: "القسم الثالث: المعايير المرجعية"
+        },
+        chart: {
+            trend: "اتجاه المحطة لمدة 30 يومًا",
+            sync: "في انتظار مزامنة الإشارة...",
+            insight: "رؤية خاصة",
+            engine: "المحرك المؤسسي v5.0.1",
+            neutral_insight: "في انتظار التوافق المؤسسي.",
+            bull_insight: "الظروف تفضل الأصول الخطرة.",
+            bear_insight: "يُنصح بموقف دفاعي."
+        },
+        labels: {
+            signal: "إشارة:",
+            benchmark_mode: "وضع المعيار",
+            about: "SYSTEM INFO",
+            legal: "LEGAL NOTICE",
+            archive: "DAILY ARCHIVE",
+            back_to_terminal: "عودة للمحطة",
+            vix: "VIX (تقلب الأسهم)",
+            move: "MOVE (تقلب السندات)",
+            hy_spread: "فارق HY (OAS)",
+            nfci: "NFCI (أوضاع)",
+            yield_spread: "فارق 10Y-2Y",
+            copper_gold: "نحاس/ذهب",
+            dxy: "مؤشر الدولار",
+            tnx: "عائد 10Y",
+            spy: "S&P 500 (SPY)",
+            summary: "ملخص",
+            stocks: "الأسهم",
+            crypto: "تشفير",
+            forex: "فوركس",
+            commodities: "سلع"
+        },
+        subpages: {
+            about: {
+                title: "حول OMNIMETRIC",
+                mission: "مهمتنا",
+                mission_content: "OmniMetric هو مشروع كمي كلي شخصي مخصص لشفافية السوق.",
+                tech: "المنهجية الكمية",
+                tech_content: "يتم حساب درجة GMS باستخدام تحليل خوارزمي مرجح لفوارق الائتمان ومؤشرات التقلب.",
+                footer_note: "OmniMetric مستقل بنسبة 100%."
+            },
+            legal: {
+                title: "إشعار قانوني",
+                disclaimer: "إخلاء مسؤولية",
+                disclaimer_content: "OmniMetric هو مجمع معلومات. ليس نصيحة استثمارية.",
+                usage: "شروط الاستخدام",
+                usage_content: "يحظر الكشط غير المصرح به."
+            },
+            archive: {
+                title: "الأرشيف اليومي",
+                desc: "اختر تاريخاً."
             }
         }
     }

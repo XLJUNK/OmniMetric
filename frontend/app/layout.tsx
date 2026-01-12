@@ -1,15 +1,31 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Noto_Sans_JP, Noto_Sans_Arabic, Noto_Sans_Devanagari } from "next/font/google";
 import "./globals.css";
+import React, { Suspense } from "react";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const notoJP = Noto_Sans_JP({
   subsets: ["latin"],
+  variable: "--font-noto-jp",
+  display: "swap",
+});
+
+const notoAR = Noto_Sans_Arabic({
+  subsets: ["arabic"],
+  variable: "--font-noto-ar",
+  display: "swap",
+});
+
+const notoHI = Noto_Sans_Devanagari({
+  subsets: ["devanagari"],
+  variable: "--font-noto-hi",
+  weight: ["400", "700"],
+  display: "swap",
 });
 
 import { Analytics } from '@vercel/analytics/react';
@@ -31,6 +47,9 @@ export const metadata: Metadata = {
       'ja': 'https://omnimetric.net/?lang=JP',
       'zh': 'https://omnimetric.net/?lang=CN',
       'es': 'https://omnimetric.net/?lang=ES',
+      'hi': 'https://omnimetric.net/?lang=HI',
+      'id': 'https://omnimetric.net/?lang=ID',
+      'ar': 'https://omnimetric.net/?lang=AR',
     },
   },
   openGraph: {
@@ -49,6 +68,9 @@ import { LegalFooter } from "@/components/LegalFooter";
 import { CookieBanner } from "@/components/CookieBanner";
 import { GoogleAdSense } from "@/components/GoogleAdSense";
 import { GoogleAnalytics } from '@next/third-parties/google';
+// MobileMenu removed as per user request (Sidebar is now responsive)
+import { Sidebar } from "@/components/Sidebar";
+import { AdUnit } from "@/components/AdUnit";
 
 export default function RootLayout({
   children,
@@ -96,31 +118,57 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${notoJP.variable} ${notoAR.variable} ${notoHI.variable} antialiased`}
         style={{ overflowX: 'hidden' }}
       >
         <GoogleAdSense pId="0000000000000000" />
-        <div className="omni-terminal-root relative min-h-screen flex flex-col">
-          <style dangerouslySetInnerHTML={{
-            __html: `
-            .nextjs-static-indicator, 
-            [data-nextjs-toast], 
-            #nextjs-dev-indicator,
-            [data-nextjs-static-indicator],
-            #__next-prerender-indicator,
-            .next-route-announcer,
-            [data-nextjs-portal] { 
-              display: none !important; 
-              opacity: 0 !important; 
-              visibility: hidden !important; 
-              pointer-events: none !important;
-            }
-          ` }} />
-          <main className="flex-grow">
-            {children}
-          </main>
-          <LegalFooter />
-        </div>
+
+        {/* APP ROOT CONTAINER: ROW Layout for Sidebar + Content */}
+        <div className="omni-terminal-root relative min-h-screen flex bg-[#0a0a0a]">
+
+          {/* DESKTOP SIDEBAR */}
+          <Suspense fallback={null}>
+            <Sidebar />
+          </Suspense>
+
+          {/* MAIN CONTENT AREA with Offset for Fixed Sidebar */}
+          <div className="flex-1 flex flex-col relative min-w-0 ml-[80px] transition-all duration-300">
+            {/* TOP AD BANNER (Desktop Only - Optional) */}
+            <div className="hidden md:flex justify-center py-4 bg-[#0a0a0a] border-b border-[#1E293B]">
+              <div className="w-[728px] h-[90px] bg-[#111]">
+                <AdUnit />
+              </div>
+            </div>
+
+            <style dangerouslySetInnerHTML={{
+              __html: `
+              .nextjs-static-indicator, 
+              [data-nextjs-toast], 
+              #nextjs-dev-indicator,
+              [data-nextjs-static-indicator],
+              #__next-prerender-indicator,
+              .next-route-announcer,
+              [data-nextjs-portal] { 
+                display: none !important; 
+                opacity: 0 !important; 
+                visibility: hidden !important; 
+                pointer-events: none !important;
+              }
+            ` }} />
+
+            <main className="flex-grow">
+              {children}
+            </main>
+
+            {/* Footer */}
+            <div>
+              <Suspense fallback={null}>
+                <LegalFooter />
+              </Suspense>
+            </div>
+          </div>
+        </div> {/* End of Application Root */}
+
         <Analytics />
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ''} />
         <CookieBanner />

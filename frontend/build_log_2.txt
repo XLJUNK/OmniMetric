@@ -1,0 +1,24 @@
+
+> frontend@0.1.0 build
+> next build
+
+笆ｲ Next.js 16.1.1 (Turbopack)
+- Environments: .env.local
+
+笞 The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+  Creating an optimized production build ...
+笨・Compiled successfully in 11.3s
+  Running TypeScript ...
+Failed to compile.
+
+./components/PulseTile.tsx:13:15
+Type error: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ EN: { titles: { risk_score: string; insights: string; risk_factors: string; legal: string; delayed: string; partner_ad: string; market_regime: string; risk_preference: string; institutional_analysis: string; ... 7 more ...; live_stream: string; }; ... 10 more ...; subpages: { ...; }; }; ... 5 more ...; AR: { ...; ...'.
+
+  11 |     let themeColor = "#94A3B8";
+  12 |     let badgeLabel = "NEUTRAL";
+> 13 |     const t = DICTIONARY[lang] || DICTIONARY['EN'];
+     |               ^
+  14 |
+  15 |     if (score >= 60) {
+  16 |         themeColor = "#3B82F6";
+Next.js build worker exited with code: 1 and signal: null

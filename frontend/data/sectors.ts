@@ -1,7 +1,7 @@
 export const SECTOR_CONFIG: Record<string, string[]> = {
-    STOCKS: ["VIX", "SPY", "TNX", "QQQ", "IWM", "RSP", "SPY_MOMENTUM", "BREADTH"],
-    CRYPTO: ["BTC", "ETH", "SOL"],
-    FOREX: ["DXY", "USDJPY", "EURUSD"],
+    STOCKS: ["SPY", "QQQ", "IWM", "VIX", "MOVE", "HY_SPREAD", "NFCI", "SPY_MOMENTUM", "BREADTH", "NIFTY"],
+    CRYPTO: ["BTC", "ETH", "SOL", "CRYPTO_SENTIMENT"],
+    FOREX: ["DXY", "USDJPY", "EURUSD", "USDINR", "USDSAR"],
     COMMODITIES: ["GOLD", "COPPER", "OIL", "NATGAS", "COPPER_GOLD"]
 };
 

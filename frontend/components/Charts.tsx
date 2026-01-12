@@ -4,59 +4,49 @@ import React from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, AreaChart, Area, XAxis, YAxis, Tooltip, LineChart, Line } from 'recharts';
 import { DICTIONARY } from '@/data/dictionary';
 
-// --- GAUGE COMPONENT (SPEEDOMETER) ---
+// --- RISK BAR COMPONENT (LINEAR GRADIENT) ---
 interface GaugeProps {
     score: number;
 }
+// --- REFINED RISK GAUGE: OVERLAY STYLE ---
 export const RiskGauge = ({ score }: GaugeProps) => {
-    // Needle logic
-    const rotation = (score / 100) * 180 - 90;
-
-    const data = [
-        { value: 40, color: '#ef4444' }, // Red (0-40)
-        { value: 30, color: '#eab308' }, // Yellow (40-70)
-        { value: 30, color: '#22c55e' }, // Green (70-100)
-    ];
+    // Clamp score
+    const pct = Math.min(100, Math.max(0, score));
 
     return (
-        <div className="h-32 w-48 relative flex justify-center items-end overflow-hidden mx-auto">
-            <ResponsiveContainer width="100%" height="200%">
-                <PieChart>
-                    <Pie
-                        data={data}
-                        cx="50%"
-                        cy="70%"
-                        startAngle={180}
-                        endAngle={0}
-                        innerRadius="70%"
-                        outerRadius="100%"
-                        paddingAngle={2}
-                        dataKey="value"
-                        stroke="none"
-                    >
-                        {data.map((entry, index) => (
-                            <Cell key={`cell-${index}`} fill={entry.color} />
-                        ))}
-                    </Pie>
-                </PieChart>
-            </ResponsiveContainer>
-
-            {/* Needle */}
-            <div className="absolute bottom-4 left-1/2 w-0 h-0" style={{ transform: `translateX(-50%)` }}>
+        <div className="w-full relative mt-2 mb-2">
+            {/* Gradient Bar (24px) */}
+            {/* Gradient Bar (26px) with Rounded-XL and Slate-800 Border - FORCE STYLE */}
+            <div className="w-full !rounded-xl !border !border-[#1E293B] !shadow-none !ring-0 relative overflow-hidden"
+                style={{ height: '26px' }}>
                 <div
-                    className="w-1 h-20 bg-white origin-bottom rounded-t-full absolute bottom-0 left-[-2px]"
+                    className="absolute inset-0 w-full h-full rounded-xl"
                     style={{
-                        transform: `rotate(${rotation}deg)`,
-                        transition: 'transform 1s ease-out',
-                        boxShadow: '0 0 10px rgba(0,0,0,0.5)'
+                        backgroundImage: 'linear-gradient(90deg, #ef4444 0%, #94a3b8 50%, #3b82f6 100%)'
                     }}
-                ></div>
-                <div className="w-4 h-4 bg-white rounded-full absolute bottom-[-8px] left-[-8px] shadow-lg"></div>
+                />
+
+
+                {/* MARKER - OVERLAY ON BAR */}
+                <div
+                    className="absolute top-1/2 transform -translate-y-1/2 -translate-x-1/2 flex flex-col items-center z-50 transition-all duration-700 ease-out pointer-events-none"
+                    style={{ left: `${pct}%` }}
+                >
+                    <div className="bg-[#1e293b] border border-slate-600 px-1.5 py-0.5 rounded shadow-xl mb-1">
+                        <span className="text-sm font-black text-slate-200 leading-none tabular-nums tracking-tighter">
+                            {Math.round(score)}
+                        </span>
+                    </div>
+                    {/* Arrow */}
+                    <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-slate-600 drop-shadow-sm"></div>
+                </div>
             </div>
 
-            {/* Value in center bottom */}
-            <div className="absolute bottom-0 text-center -mb-6 opacity-0">
-                {score}
+            {/* Labels */}
+            <div className="flex justify-between px-1 mt-1 relative z-0">
+                <span className="text-[10px] font-bold text-[#ef4444] uppercase tracking-widest drop-shadow-sm">Defensive</span>
+                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest drop-shadow-sm">Neutral</span>
+                <span className="text-[10px] font-bold text-[#3b82f6] uppercase tracking-widest drop-shadow-sm">Accumulate</span>
             </div>
         </div>
     );
@@ -80,11 +70,8 @@ export const HistoryChart = ({ data, lang = 'EN', color = '#0ea5e9' }: { data: H
         </div>
     );
 
-    // Filter to ensure final point is matched to the live score logic (63)
-    const chartDataValues = [...data];
-    if (chartDataValues.length > 0) {
-        chartDataValues[chartDataValues.length - 1].score = 63;
-    }
+    // Enable data to flow through without modification
+    const chartDataValues = [...(data || [])];
 
     return (
         <div className="h-full w-full flex flex-col pt-2">
@@ -95,9 +82,8 @@ export const HistoryChart = ({ data, lang = 'EN', color = '#0ea5e9' }: { data: H
                             x: chartDataValues.map(d => d.date),
                             y: chartDataValues.map(d => d.score),
                             type: 'scatter',
-                            mode: 'lines+markers',
-                            marker: { color: color, size: 4 },
-                            line: { color: color, width: 2, shape: 'spline' },
+                            mode: 'lines', // Removed markers for smoother look
+                            line: { color: color, width: 3, shape: 'spline', smoothing: 1.3 },
                             fill: 'tozeroy',
                             fillcolor: `${color}26`, // 15% Opacity
                             name: 'GMS',
@@ -125,7 +111,7 @@ export const HistoryChart = ({ data, lang = 'EN', color = '#0ea5e9' }: { data: H
                             showline: false,
                             tickfont: { color: '#475569', size: 8 }
                         },
-                        font: { family: 'JetBrains Mono, monospace' }
+                        font: { family: 'var(--font-inter), sans-serif' }
                     }}
                     config={{ displayModeBar: false, responsive: true }}
                     style={{ width: '100%', height: '100%' }}
@@ -151,52 +137,31 @@ interface MetricChartProps {
 export const MetricChart = ({ data, color, currentPrice, startDate, endDate, yRange }: MetricChartProps) => {
     if (!data || data.length === 0) return null;
 
-    const high = Math.max(...data).toFixed(2);
-    const low = Math.min(...data).toFixed(2);
+    // Convert array to object array for Recharts
+    const chartData = data.map((val, i) => ({ i, val }));
 
     return (
         <div className="h-full w-full relative flex flex-col">
             <div className="flex-grow">
-                <Plot
-                    data={[
-                        {
-                            y: data,
-                            type: 'scatter',
-                            mode: 'lines',
-                            fill: 'tozeroy',
-                            fillcolor: `${color}33`, // Rich 20% opacity gradient feeling
-                            line: { color: color, width: 2.5, shape: 'spline' },
-                            hoverinfo: 'y',
-                        }
-                    ]}
-                    layout={{
-                        autosize: true,
-                        margin: { l: 45, r: 0, t: 10, b: 10 },
-                        paper_bgcolor: 'rgba(0,0,0,0)',
-                        plot_bgcolor: 'rgba(0,0,0,0)',
-                        showlegend: false,
-                        xaxis: { showgrid: false, zeroline: false, showticklabels: false, visible: false },
-                        yaxis: {
-                            autorange: true,
-                            fixedrange: true,
-                            side: 'left', // User requested Unified LEFT
-                            tickfont: { size: 10, color: '#AAAAAA', family: 'monospace' },
-                            ticklen: 4, // Push numbers away
-                            tickcolor: '#333', // Subtle tick mark
-                            tickformat: '.2f',
-                            gridcolor: '#333333',
-                            zerolinecolor: '#444444'
-                        },
-                    }}
-                    config={{ displayModeBar: false, responsive: true }}
-                    style={{ width: '100%', height: '100%' }}
-                />
-            </div>
-
-            {/* X-AXIS LABELS */}
-            <div className="hidden md:flex justify-between items-center px-1 font-mono text-[8px] text-[#666] uppercase tracking-[0.2em] mt-[-10px]">
-                <span>{startDate}</span>
-                <span>{endDate}</span>
+                <ResponsiveContainer width="100%" height="100%">
+                    <AreaChart data={chartData}>
+                        <defs>
+                            <linearGradient id={`grad-${color}`} x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="5%" stopColor={color} stopOpacity={0.3} />
+                                <stop offset="95%" stopColor={color} stopOpacity={0} />
+                            </linearGradient>
+                        </defs>
+                        <YAxis domain={['auto', 'auto']} hide />
+                        <Area
+                            type="monotone"
+                            dataKey="val"
+                            stroke={color}
+                            fill={`url(#grad-${color})`}
+                            strokeWidth={2}
+                            isAnimationActive={false}
+                        />
+                    </AreaChart>
+                </ResponsiveContainer>
             </div>
         </div>
     );

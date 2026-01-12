@@ -134,18 +134,18 @@ export const Dashboard = ({ lang, setLang }: DashboardProps) => {
 
             <div className="max-w-[1600px] mx-auto p-4 md:p-8 space-y-12 relative w-full">
                 {/* HEADER */}
-                <header className="flex justify-between items-center border-b border-white/10 pb-4 relative z-20">
+                <header className="flex justify-between items-center border-b border-[#1E293B] pb-4 relative z-20">
                     <div className="flex items-center gap-3">
                         <Globe className="w-4 h-4 text-sky-500" />
                         <span className="text-slate-100 text-base font-black tracking-[0.15em] uppercase">OmniMetric Terminal</span>
                     </div>
                     <div className="flex items-center gap-6">
                         <div className="relative">
-                            <button onClick={() => setIsLangOpen(!isLangOpen)} className="flex items-center gap-2 text-[10px] font-bold text-slate-300 hover:text-white uppercase tracking-widest border border-white/10 px-3 py-1.5 rounded hover:bg-white/5 transition-colors">
+                            <button onClick={() => setIsLangOpen(!isLangOpen)} className="flex items-center gap-2 text-[10px] font-bold text-slate-300 hover:text-white uppercase tracking-widest border border-[#1E293B] px-3 py-1.5 rounded hover:bg-white/5 transition-colors">
                                 {lang} <ChevronDown className="w-3 h-3" />
                             </button>
                             {isLangOpen && (
-                                <div className="absolute top-full right-0 mt-2 w-32 bg-[#1e293b] border border-white/10 rounded shadow-xl overflow-hidden z-50">
+                                <div className="absolute top-full right-0 mt-2 w-32 bg-[#1e293b] border border-[#1E293B] rounded shadow-xl overflow-hidden z-50">
                                     {(Object.keys(DICTIONARY) as LangType[]).map((l) => (
                                         <button key={l} onClick={() => {
                                             // 1. Update URL to persist state
@@ -224,13 +224,13 @@ export const Dashboard = ({ lang, setLang }: DashboardProps) => {
 
                 {/* 3. AI INSIGHTS ENGINE */}
                 <div className="max-w-[1400px] mx-auto w-full px-4 mb-10 mt-8">
-                    <div className="bg-[#111] p-8 rounded-xl border border-white/5 shadow-2xl">
+                    <div className="bg-[#111] p-8 rounded-xl border border-[#1E293B] !shadow-none !ring-0 !outline-none">
                         <div className="flex justify-between items-center mb-8 pl-6 border-l-4 border-sky-500">
                             <h3 className="text-slate-100 text-[12px] font-black uppercase tracking-[0.4em]">{t.titles.insights}</h3>
                             <span className="text-[10px] text-sky-500 font-mono font-bold tracking-widest uppercase">CORE SYNC v1.0.0</span>
                         </div>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                            <div className="h-[280px] w-full bg-black/40 rounded-xl border border-white/5 p-6">
+                            <div className="h-[280px] w-full bg-black/40 rounded-xl border border-[#1E293B] p-6">
                                 <HistoryChart
                                     data={syncedChartData}
                                     lang={lang}
@@ -245,7 +245,7 @@ export const Dashboard = ({ lang, setLang }: DashboardProps) => {
                                     <Zap className="w-4 h-4 text-sky-500" />
                                     <span className="text-[10px] font-black tracking-[0.3em] uppercase opacity-70 whitespace-nowrap">{t.titles.institutional_analysis}</span>
                                 </div>
-                                <p className="text-slate-200 text-[15px] font-mono leading-relaxed whitespace-pre-wrap italic pl-8 border-l border-white/5">
+                                <p className="text-slate-200 text-[15px] font-mono leading-relaxed whitespace-pre-wrap italic pl-8 border-l border-[#1E293B]">
                                     {aiContent}
                                 </p>
                             </div>
@@ -326,9 +326,9 @@ export const Dashboard = ({ lang, setLang }: DashboardProps) => {
                         const startDate = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
 
                         return (
-                            <div key={item.key} className="bg-gradient-to-r from-[#0f172a] to-[#000] border border-[#222] rounded-xl flex flex-col md:flex-row items-center hover:border-sky-500/50 transition-all group overflow-hidden shadow-xl h-auto md:h-[120px]">
+                            <div key={item.key} className="bg-gradient-to-r from-[#0f172a] to-[#000] border border-[#222] rounded-xl flex flex-col md:flex-row items-center hover:border-sky-500/50 transition-all group overflow-hidden !shadow-none !ring-0 !outline-none h-auto md:h-[120px]">
                                 {/* LEFT SECTION (Identity & Price) */}
-                                <div className="w-full md:w-[20%] h-auto md:h-full py-3 px-4 md:py-5 md:px-6 flex flex-row md:flex-col justify-between md:justify-center items-center md:items-start border-b md:border-b-0 md:border-r border-white/5 bg-black/20 relative">
+                                <div className="w-full md:w-[20%] h-auto md:h-full py-3 px-4 md:py-5 md:px-6 flex flex-row md:flex-col justify-between md:justify-center items-center md:items-start border-b md:border-b-0 md:border-r border-[#1E293B] bg-black/20 relative">
                                     <span className="text-xs md:text-sm text-gray-400 font-bold uppercase tracking-wide mb-0 md:mb-1 truncate flex items-center gap-2">
                                         {item.label}
                                         {isLive && <span className="text-[8px] bg-sky-900/50 text-sky-400 px-1 rounded animate-pulse">{t.titles.delayed_tick}</span>}
@@ -349,7 +349,7 @@ export const Dashboard = ({ lang, setLang }: DashboardProps) => {
                                 </div>
 
                                 {/* RIGHT SECTION (Signals & Metadata) */}
-                                <div className="w-full md:w-[20%] h-auto md:h-full py-2 px-4 md:py-5 md:px-6 flex flex-row md:flex-col justify-between md:justify-center items-center md:items-end border-b md:border-b-0 md:border-l border-white/5 bg-black/20 order-2 md:order-3">
+                                <div className="w-full md:w-[20%] h-auto md:h-full py-2 px-4 md:py-5 md:px-6 flex flex-row md:flex-col justify-between md:justify-center items-center md:items-end border-b md:border-b-0 md:border-l border-[#1E293B] bg-black/20 order-2 md:order-3">
                                     <span className={`text-lg md:text-xl font-black font-mono md:mb-2 ${colorClass}`}>
                                         {val.change_percent >= 0 ? "+" : ""}{val.change_percent}%
                                     </span>

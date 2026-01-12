@@ -1,11 +1,13 @@
 'use client';
 import { Home, LineChart, Bitcoin, Banknote, Gem, Globe } from 'lucide-react';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { LangType } from '@/data/dictionary';
 
-export const MobileMenu = ({ lang }: { lang: LangType }) => {
+export const MobileMenu = () => {
     const pathname = usePathname();
     const router = useRouter();
+    const searchParams = useSearchParams();
+    const lang = (searchParams.get('lang') as LangType) || 'EN';
 
     const tabs = [
         { key: 'home', label: 'Summary', icon: Home, path: '/' },

@@ -65,7 +65,7 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
                     100% { transform: translateX(-100%); }
                 }
                 .animate-marquee {
-                    animation: marquee 60s linear infinite;
+                    animation: marquee 120s linear infinite;
                     padding-left: 100%; /* Start off screen */
                     display: inline-block;
                     line-height: 40px;

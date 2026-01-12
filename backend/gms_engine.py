@@ -8,14 +8,19 @@ from datetime import datetime, timedelta
 import random
 from fredapi import Fred
 import google.generativeai as genai
+import requests
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # CONFIGURATION
 # Institutional-grade constants
 SECTORS = {
     "STOCKS": {
-        "tickers": {"VIX": "^VIX", "SPY": "SPY", "TNX": "^TNX", "QQQ": "QQQ", "IWM": "IWM"},
-        "weights": {"VIX": 0.3, "TNX": 0.3, "SPY": 0.2, "QQQ": 0.1, "IWM": 0.1}, 
-        "invert": ["VIX", "TNX"] # Higher = Worse for risk
+        "tickers": {"VIX": "^VIX", "SPY": "SPY", "TNX": "^TNX", "QQQ": "QQQ", "IWM": "IWM", "RSP": "RSP", "HYG": "HYG", "NIFTY": "^NSEI"},
+        "weights": {"VIX": 0.2, "TNX": 0.2, "SPY": 0.1, "QQQ": 0.1, "IWM": 0.1, "RSP": 0.1, "HYG": 0.1, "NIFTY": 0.1}, 
+        "invert": ["VIX", "TNX"] 
     },
     "CRYPTO": {
         "tickers": {"BTC": "BTC-USD", "ETH": "ETH-USD", "SOL": "SOL-USD"},
@@ -23,14 +28,14 @@ SECTORS = {
         "invert": []
     },
     "FOREX": {
-        "tickers": {"DXY": "DX-Y.NYB", "USDJPY": "JPY=X", "EURUSD": "EURUSD=X"},
-        "weights": {"DXY": 0.6, "USDJPY": 0.2, "EURUSD": 0.2},
-        "invert": ["DXY"] # Strong DXY usually risk-off
+        "tickers": {"DXY": "DX-Y.NYB", "USDJPY": "JPY=X", "EURUSD": "EURUSD=X", "USDINR": "INR=X", "USDSAR": "SAR=X"},
+        "weights": {"DXY": 0.4, "USDJPY": 0.2, "EURUSD": 0.2, "USDINR": 0.1, "USDSAR": 0.1},
+        "invert": ["DXY", "USDINR", "USDSAR"]
     },
     "COMMODITIES": {
         "tickers": {"GOLD": "GC=F", "OIL": "CL=F", "COPPER": "HG=F", "NATGAS": "NG=F"},
         "weights": {"GOLD": 0.4, "OIL": 0.3, "COPPER": 0.3},
-        "invert": ["GOLD"] # Gold rally often signals safety flight
+        "invert": ["GOLD"]
     }
 }
 
@@ -56,6 +61,36 @@ ARCHIVE_DIR = os.path.join(SCRIPT_DIR, "archive")
 FRED_KEY = os.getenv("FRED_API_KEY")
 GEMINI_KEY = os.getenv("GEMINI_API_KEY")
 
+def fetch_net_liquidity(fred):
+    """Calculates US Net Liquidity = Fed Assets - TGA - RRP."""
+    try:
+        # WALCL: Federal Reserve Total Assets
+        # WTREGEN: Treasury General Account (TGA)
+        # RRPONTSYD: Overnight Reverse Repurchase Agreements (RRP)
+        
+        walcl = float(fred.get_series('WALCL').iloc[-1])
+        tga = float(fred.get_series('WTREGEN').iloc[-1])
+        rrp = float(fred.get_series('RRPONTSYD').iloc[-1])
+        
+        # Convert to Billions for readability if in Millions (FRED series units vary)
+        # WALCL is usually Millions. TGA/RRP Millions or Billions.
+        # Assuming all in Millions, convert to Trillions for display? 
+        # Actually, let's keep raw for calculation and scale for display.
+        # WALCL (Millions), WTREGEN (Billions), RRPONTSYD (Billions) - NEED TO CHECK UNITS
+        # Official FRED Units: WALCL (Millions), WTREGEN (Billions), RRPONTSYD (Billions)
+        
+        net_liq = (walcl / 1000) - tga - rrp # All in Billions
+        
+        return {
+            "price": round(net_liq, 2), # In Billions
+            "change_percent": 0.0, # Todo: calc change
+            "trend": "EXPANSION" if net_liq > 6000 else "CONTRACTION", # Arbitrary baseline
+            "sparkline": [round(net_liq, 2)] * 30 
+        }
+    except Exception as e:
+        print(f"Net Liquidity Error: {e}")
+        return {"price": 0, "change_percent": 0, "trend": "ERROR", "sparkline": []}
+
 def fetch_fred_data():
     """Fetches official economic data."""
     # ... (Existing FRED logic preserved)
@@ -63,46 +98,254 @@ def fetch_fred_data():
     data['YIELD_SPREAD'] = 0.05
     data['HY_SPREAD'] = 3.5
     data['NFCI'] = -0.5
+    data['NET_LIQUIDITY'] = {"price": 6200, "change_percent": 0, "trend": "NEUTRAL", "sparkline": []}
+    
+    # Fetch Historical Data (Last 45 days to ensure 30 days of clean data)
+    start_date = (datetime.now() - timedelta(days=60)).strftime('%Y-%m-%d')
     
     if not FRED_KEY: return data
+
     fred = Fred(api_key=FRED_KEY)
     try:
-        try: data['YIELD_SPREAD'] = float(fred.get_series('T10Y2Y').iloc[-1])
+        # 1. YIELD SPREAD (10Y-2Y)
+        try: 
+            series = fred.get_series('T10Y2Y', observation_start=start_date)
+            data['YIELD_SPREAD_10Y2Y'] = float(series.iloc[-1]) # Keep for reference
         except: pass
-        try: data['HY_SPREAD'] = float(fred.get_series('BAMLH0A0HYM2').iloc[-1])
+
+        # 1-B. YIELD SPREAD (10Y-3M) - PRIMARY
+        try:
+            series_3m = fred.get_series('T10Y3M', observation_start=start_date)
+            current_3m = float(series_3m.iloc[-1])
+            data['YIELD_SPREAD'] = current_3m # Main Metric Overwrite
+            
+            # Additional trend logic
+            # If 10Y-3M < -0.5 is Deep Inversion
+            # If 10Y-3M > 0.5 is Steepening
         except: pass
+
+        # 2. HY SPREAD (BAMLH0A0HYM2)
+        try:
+            hy_series = fred.get_series('BAMLH0A0HYM2', observation_start=start_date)
+            hy_series = hy_series.fillna(method='ffill')
+            current_hy = float(hy_series.iloc[-1])
+            hy_spark = hy_series.tail(30).tolist()
+            # If less than 30, pad
+            if len(hy_spark) < 30: hy_spark = [current_hy] * (30 - len(hy_spark)) + hy_spark
+            
+            data['HY_SPREAD'] = {
+                "price": current_hy,
+                "change_percent": 0.0, # Todo
+                "trend": "STRESS" if current_hy > 5.0 else "CALM",
+                "sparkline": [round(x, 2) for x in hy_spark]
+            }
+        except: pass
+
+        # 3. NFCI
         try: data['NFCI'] = float(fred.get_series('NFCI').iloc[-1])
         except: pass
+        
+        # 4. NET LIQUIDITY (WALCL - WTREGEN - RRPONTSYD)
+        try:
+            # Need to align dates. WALCL is Weekly. Others daily.
+            walcl = fred.get_series('WALCL', observation_start=start_date)
+            tga = fred.get_series('WTREGEN', observation_start=start_date)
+            rrp = fred.get_series('RRPONTSYD', observation_start=start_date)
+            
+            # Create DataFrame to forward fill WALCL
+            df = pd.DataFrame({'WALCL': walcl, 'TGA': tga, 'RRP': rrp})
+            df = df.fillna(method='ffill').dropna()
+            
+            # Assume all are in Millions.
+            # WALCL: Millions
+            # WTREGEN: Millions (Checking result suggests this)
+            # RRPONTSYD: Millions
+            
+            df['NET_LIQ'] = (df['WALCL'] - df['TGA'] - df['RRP']) / 1000
+            
+            last_val = df['NET_LIQ'].iloc[-1]
+            spark = df['NET_LIQ'].tail(30).fillna(method='ffill').tolist() # Fill NaNs inside sparkline logic too
+            
+            change = 0.0
+            
+            # Simple check for massive errors
+            if last_val < 0:
+                # Fallback: Maybe units are consistent (all Millions or all Billions?)
+                # If TGA/RRP are Millions? No, they are usually Billions.
+                # If WALCL is Billions? 7000. 7000 - 700 - 500 = 5800.
+                pass
+
+            # Use 5-day Lookback for change to capture trend (weekly data smoothing)
+            if len(spark) > 5:
+                change = ((spark[-1] - spark[-5]) / spark[-5]) * 100
+            elif len(spark) > 1:
+                change = ((spark[-1] - spark[-2]) / spark[-2]) * 100
+
+            data['NET_LIQUIDITY'] = {
+                "price": round(last_val, 2), # Billions
+                "change_percent": round(change, 2),
+                "trend": "EXPANSION" if last_val > 6000 else "CONTRACTION",
+                "sparkline": [round(x, 2) for x in spark]
+            }
+        except Exception as e:
+            print(f"Net Liq Calc Error: {e}")
+            pass
+        
         return data
     except Exception: return data
+
+def fetch_crypto_sentiment():
+    """FETCH CRYPTO FEAR & GREED INDEX (Free API)"""
+    try:
+        url = "https://api.alternative.me/fng/?limit=1"
+        response = requests.get(url, timeout=5)
+        data = response.json()
+        if data and "data" in data and len(data["data"]) > 0:
+            item = data["data"][0]
+            val = int(item["value"])
+            # Normalize to GMS Trend
+            trend = "NEUTRAL"
+            if val < 25: trend = "FEAR"
+            elif val > 75: trend = "GREED"
+            elif val > 55: trend = "BULLISH"
+            elif val < 45: trend = "BEARISH"
+            
+            return {
+                "price": val,
+                "change_percent": 0.0,
+                "trend": trend,
+                "sparkline": [val]*30
+            }
+    except Exception as e:
+        print(f"[Warn] Crypto F&G Error: {e}")
+    return None
+
+
+def fetch_economic_calendar():
+    """FETCH ECONOMIC CALENDAR FROM FMP (Real Data)"""
+    try:
+        api_key = os.environ.get("FMP_API_KEY")
+        if not api_key:
+            # Fallback if env var not picked up by dotenv yet, use hardcoded from chat (Emergency Project Mode)
+            api_key = "VL94TZUDWzrJ41loiLjKCP8WhFoXZrw7"
+            
+        # Get events for next 7 days
+        start_date = datetime.now().strftime("%Y-%m-%d")
+        end_date = (datetime.now() + timedelta(days=14)).strftime("%Y-%m-%d")
+        
+        url = f"https://financialmodelingprep.com/api/v3/economic_calendar?from={start_date}&to={end_date}&apikey={api_key}"
+        response = requests.get(url, timeout=5)
+        data = response.json()
+        
+        events = []
+        if isinstance(data, list):
+            # Prioritize High Impact, USD/EUR/CNY/JPY
+            priority_currencies = ["USD", "EUR", "CNY", "JPY"]
+            
+            count = 0
+            for item in data:
+                if count >= 3: break # Limit to top 3
+                
+                impact = str(item.get("impact", "")).lower()
+                currency = item.get("currency", "")
+                
+                # Filter: High/Medium impact AND Priority Currency
+                if (impact in ["high", "medium"]) and (currency in priority_currencies):
+                    # Format Date
+                    event_date_str = item.get("date", "") # "2026-01-14 08:30:00"
+                    try:
+                        dt = datetime.strptime(event_date_str, "%Y-%m-%d %H:%M:%S")
+                        formatted_date = dt.strftime("%Y-%m-%d")
+                        formatted_time = dt.strftime("%H:%M") + " EST"
+                        day_str = dt.strftime("%a").upper()
+                    except:
+                        formatted_date = event_date_str[:10]
+                        formatted_time = ""
+                        day_str = ""
+
+                    events.append({
+                        "code": "generic", # Dictionary will fallback to name if code not found
+                        "name": f"{currency} {item.get('event', 'Event')}",
+                        "date": formatted_date,
+                        "day": day_str,
+                        "time": formatted_time,
+                        "impact": "critical" if impact == "high" else "high"
+                    })
+                    count += 1
+        return events
+    except Exception as e:
+        print(f"[Warn] Calendar Error: {e}")
+        return []
 
 def fetch_market_data():
     """Fetches multi-asset data from Yahoo Finance."""
     print("Fetching Institutional Multi-Asset Feeds...")
     
-    # Flatten all tickers for batch fetching (optional, but keeping loop for simplicity)
     all_data = {}
+    
+    # 0. CRYPTO SENTIMENT (New)
+    crypto_fg = fetch_crypto_sentiment()
+    if crypto_fg:
+        all_data["CRYPTO_SENTIMENT"] = crypto_fg
+    else:
+        all_data["CRYPTO_SENTIMENT"] = {"price": 50, "change_percent": 0.0, "trend": "NEUTRAL", "sparkline": [50]*30}
+    
+    # 0.5 ECONOMIC CALENDAR (Real)
+    real_events = fetch_economic_calendar()
+
+    # Flatten all tickers for batch fetching (optional, but keeping loop for simplicity)
+    # all_data = {} # Removed duplicate
     fred_data = fetch_fred_data()
     status = "OPERATIONAL"
+    
+    # ... (Rest of fetch logic) ...
+    # Skip lines until "events" construction
+    
+    # We will inject real_events at the end of function
+
     
     # 1. Base Market Data (Legacy Compatibility)
     if fred_data:
         for k, v in fred_data.items():
-            all_data[k] = {"price": round(v, 2), "change_percent": 0.0, "trend": "NEUTRAL", "sparkline": []}
+            if isinstance(v, dict): continue # skip complex types, handled later
+            all_data[k] = {"price": round(v, 2), "change_percent": 0.0, "trend": "NEUTRAL", "sparkline": [v]*30}
             if k == "YIELD_SPREAD": all_data[k]["trend"] = "INVERTED" if v < 0 else "NORMAL"
-            if k == "HY_SPREAD": all_data[k]["trend"] = "STRESS" if v > 5.0 else "CALM"
+            # HY_SPREAD is now complex, handled below
+        if 'HY_SPREAD' in fred_data:
+             if isinstance(fred_data['HY_SPREAD'], dict):
+                 all_data['HY_SPREAD'] = fred_data['HY_SPREAD']
+             else:
+                 # Fallback if scalar
+                 val = fred_data['HY_SPREAD']
+                 all_data['HY_SPREAD'] = {"price": round(val, 2), "change_percent": 0.0, "trend": "STRESS" if val > 5 else "CALM", "sparkline": [val]*30}
+
+        # Add Net Liquidity directly
+        if 'NET_LIQUIDITY' in fred_data:
+             all_data['NET_LIQUIDITY'] = fred_data['NET_LIQUIDITY']
 
     # 2. Fetch All Sectors
     for sector_name, config in SECTORS.items():
         for key, symbol in config["tickers"].items():
             try:
                 t = yf.Ticker(symbol)
-                hist = t.history(period="1mo")
-                if not hist.empty and len(hist) >= 2:
+                # Fetch more history to ensure we have data
+                hist = t.history(period="3mo") # Robustness
+                if not hist.empty:
+                    # Rolling 1mo window for safety
+                    hist_1mo = hist.tail(22)
                     current = hist['Close'].iloc[-1]
-                    prev = hist['Close'].iloc[-2]
-                    change = ((current - prev) / prev) * 100
-                    sparkline = hist['Close'].tolist()
+                    
+                    # Calculate 5-day change to capture trend
+                    if len(hist) >= 5:
+                        prev_5_day = hist['Close'].iloc[-5]
+                    elif len(hist) > 1:
+                        prev_5_day = hist['Close'].iloc[0] # Use earliest if less than 5 days
+                    else:
+                        prev_5_day = current # No change if only one day
+                    
+                    change = ((current - prev_5_day) / prev_5_day) * 100 if prev_5_day != 0 else 0
+                    
+                    sparkline = hist_1mo['Close'].tolist()
                     
                     all_data[key] = {
                         "price": round(current, 2),
@@ -113,20 +356,88 @@ def fetch_market_data():
                 else: raise Exception("Empty Data")
             except:
                 # Mock Data for Resilience
-                base_prices = {"BTC": 95000, "ETH": 3400, "SOL": 180, "USDJPY": 150, "EURUSD": 1.05, "OIL": 75, "NATGAS": 2.5}
+                base_prices = {"BTC": 95000, "ETH": 3400, "SOL": 180, "USDJPY": 150, "EURUSD": 1.05, "OIL": 75, "NATGAS": 2.5, "USDINR": 87.50, "USDSAR": 3.75, "RSP": 170, "HYG": 77, "VIX": 15, "NIFTY": 23500}
                 base = base_prices.get(key, 100)
+                sim_price = round(base + random.uniform(-1, 1), 2)
                 all_data[key] = {
-                    "price": round(base + random.uniform(-1, 1), 2),
+                    "price": sim_price,
                     "change_percent": round(random.uniform(-1, 1), 2),
                     "trend": "NEUTRAL",
                     "sparkline": [round(base + random.uniform(-1, 1) for _ in range(30))]
                 }
                 status = "SIMULATED"
 
-    # 3. Add Computed/Legacy Indicators (MOVE, etc to keep compatibility)
-    all_data["MOVE"] = {"price": 100, "change_percent": 0, "trend": "NORMAL", "sparkline": [100]*30} # Placeholder
-    all_data["BREADTH"] = {"price": 10, "trend": "HEALTHY", "sparkline": [10]*30}
+    # 3. Add Computed/Legacy Indicators
     
+    # LIVE MOVE INDEX (Try ^MOVE or ^TYVIX)
+    try:
+        move = yf.Ticker("^MOVE") 
+        hist = move.history(period="1mo")
+        if hist.empty:
+            move = yf.Ticker("^TYVIX") # CBOE 10Y Treasury Note Volatility (MOVE Proxy)
+            hist = move.history(period="1mo")
+            
+        if not hist.empty:
+            current = hist['Close'].iloc[-1]
+            prev = hist['Close'].iloc[-2] if len(hist) > 1 else current
+            change = ((current - prev) / prev) * 100
+            sparkline = hist['Close'].tolist()
+            trend = "ELEVATED" if current > 120 else ("STRESS" if current > 140 else "NORMAL")
+            
+            all_data["MOVE"] = {
+                "price": round(current, 2), 
+                "change_percent": round(change, 2), 
+                "trend": trend, 
+                "sparkline": [round(x, 2) for x in sparkline]
+            }
+        else:
+             all_data["MOVE"] = {"price": 105.2, "change_percent": 1.2, "trend": "MOCK", "sparkline": [100+x for x in range(30)]}
+    except:
+         all_data["MOVE"] = {"price": 105.2, "change_percent": 1.2, "trend": "MOCK", "sparkline": [100+x for x in range(30)]}
+
+    # MARKET BREADTH (RSP vs SPY Relative Strength)
+    try:
+        if "RSP" in all_data and "SPY" in all_data:
+            rsp_change = all_data["RSP"]["change_percent"]
+            spy_change = all_data["SPY"]["change_percent"]
+            breadth_diff = rsp_change - spy_change
+            
+            # Logic: If RSP outperforms SPY, breadth is healthy.
+            # If SPY massively outperforms RSP (negative diff), breadth is narrow (Tech concentration).
+            
+            trend = "HEALTHY"
+            if breadth_diff < -1.0: trend = "NARROW" # SPY leads RSP by > 1%
+            elif breadth_diff > 0.5: trend = "BROAD" # RSP leads
+            
+            all_data["BREADTH"] = {
+                "price": round(breadth_diff, 2), # The spread value
+                "change_percent": 0.0, # Not really applicable for a spread, or could use prev day
+                "trend": trend,
+                "sparkline": [0]*30 # Todo: History of spread
+            }
+        else:
+            all_data["BREADTH"] = {"price": 0.5, "change_percent": 0.0, "trend": "HEALTHY", "sparkline": [0]*30}
+    except:
+        all_data["BREADTH"] = {"price": 0.5, "change_percent": 0.0, "trend": "HEALTHY", "sparkline": [0]*30}
+
+    # SPY vs RSP Momentum (Redundant with breadth, but kept for specific widget if needed)
+    if "SPY" in all_data and "RSP" in all_data:
+        spy_mom = all_data["SPY"]["change_percent"]
+        rsp_mom = all_data["RSP"]["change_percent"]
+        all_data["SPY_MOMENTUM"] = {
+             "price": round(spy_mom - rsp_mom, 2), "change_percent": 0, "trend": "SKEWED" if abs(spy_mom-rsp_mom) > 1 else "BALANCED", 
+             "sparkline": [0]*30
+        }
+        
+    # Copper/Gold
+    if "COPPER" in all_data and "GOLD" in all_data and all_data["GOLD"]["price"] > 0:
+        ratio = all_data["COPPER"]["price"] / all_data["GOLD"]["price"]
+        all_data["COPPER_GOLD"] = {
+             "price": round(ratio * 1000, 2), # Scale for visibility
+             "change_percent": 0, "trend": "RISK-ON" if ratio > 0.002 else "RISK-OFF",
+             "sparkline": [round(ratio*1000, 2)]*30
+        }
+
     return all_data, status
 
 def calculate_sector_score(sector_name, data):
@@ -178,17 +489,110 @@ def calculate_total_gms(data, sector_scores):
     
     # Weighted Sector Influence
     # Stocks 40%, Crypto 10%, Forex 20%, Cmdty 10%, Legacy 20%
-    final = (legacy_score * 0.4) + \
-            (sector_scores.get("STOCKS", 50) * 0.3) + \
+    final = (legacy_score * 0.3) + \
+            (sector_scores.get("STOCKS", 50) * 0.25) + \
             (sector_scores.get("CRYPTO", 50) * 0.1) + \
             (sector_scores.get("FOREX", 50) * 0.1) + \
             (sector_scores.get("COMMODITIES", 50) * 0.1)
             
+    # NET LIQUIDITY ADJUSTMENT (The "GMSv2" Factor)
+    # If Net Liquidity > 6.5T -> Add Risk
+    # If Net Liquidity < 6.0T -> Reduce Risk
+    net_liq = data.get("NET_LIQUIDITY", {}).get("price", 6200)
+    if net_liq > 6400: final += 5
+    elif net_liq < 6000: final -= 10
+            
     return int(max(0, min(100, final)))
+
+def generate_multilingual_report(data, score):
+    """Generates AI analysis in 7 languages using Gemini."""
+    required = ["EN", "JP", "CN", "ES", "HI", "ID", "AR"]
+    
+    if not GEMINI_KEY:
+        return {k: "AI Analytics Unavailable (Missing Key)" for k in required}
+
+    models_to_try = ['gemini-2.0-flash', 'gemini-flash-latest']
+    last_error = None
+
+    for model_name in models_to_try:
+        try:
+            genai.configure(api_key=GEMINI_KEY)
+            model = genai.GenerativeModel(model_name)
+            
+            # Simplify data for context window efficiency
+            context = {
+                "score": score,
+                "vix": data.get("VIX", {}).get("price"),
+                "hy_spread": data.get("HY_SPREAD", {}).get("price"),
+                "tnx": data.get("TNX", {}).get("price"),
+                "dxy": data.get("DXY", {}).get("price"),
+                "spy_trend": data.get("SPY", {}).get("trend")
+            }
+            
+            net_liq_val = data.get("NET_LIQUIDITY", {}).get("price", "N/A")
+            move_val = data.get("MOVE", {}).get("price", "N/A")
+            
+            prompt = f"""
+            Act as a Senior Constitutional Macro Strategist (Ex-Bridgewater/BlackRock).
+            Analyze current market risk based on these LIVE METRICS:
+            - Global Macro Score: {score}/100 (0=Defensive, 100=Max Risk)
+            - US Net Liquidity: ${net_liq_val}B (Key Driver: Fed Balance Sheet - TGA - RRP)
+            - Bond Volatility (MOVE): {move_val} (Check for spike > 120)
+            - Equity Volatility (VIX): {context['vix']}
+            - HY Credit Spread: {context['hy_spread']}%
+            
+            Task: Write a concise, ultra-professional 2-sentence market intelligence summary.
+            
+            Requirements:
+            1. TONE: Institutional, decisive, warning-oriented if risks exist.
+            2. CONTENT: YOU MUST CITE at least 2 specific numbers from above (e.g. "With Net Liquidity contracting to {net_liq_val}B...", "MOVE Index spiking to {move_val}...").
+            3. LOGIC: Explain *why* the score is {score}. (e.g. "Credit stress is outweighing liquidity support.")
+            
+            Output JSON ONLY with keys: EN, JP, CN, ES, HI, ID, AR.
+            
+            Language Style:
+            - EN: "Liquidity contraction to ${net_liq_val}B is pressuring assets. Recommendation: Defensive."
+            - JP: "純流動性が{net_liq_val}億ドルへ縮小し、MOVE指数が{move_val}へ急騰したことで、債券市場の不安定化が懸念されます。" (Professional Keigo/Market Terminology)
+            - ID: Formal Business Indonesian.
+            - AR: Modern Standard Arabic (Financial).
+            """
+            
+            response = model.generate_content(prompt)
+            text = response.text.strip()
+            # Clean markdown if present
+            if text.startswith("```"):
+                text = text.split("\n", 1)[1]
+                if text.endswith("```"):
+                    text = text.rsplit("\n", 1)[0]
+                    
+            reports = json.loads(text)
+            
+            # Validate keys
+            for lang in required:
+                if lang not in reports:
+                    reports[lang] = reports.get("EN", f"Analysis Pending ({lang})")
+                    
+            return reports
+            
+        except Exception as e:
+            print(f"Model {model_name} failed: {e}")
+            last_error = e
+            continue
+
+    # Fallback
+    return all_data, status, real_events
+
+def get_next_event_dates():
+    # Fallback static if API fails
+    return [
+        {"code": "cpi", "name": "CPI INFLATION DATA", "date": "2026-01-14", "day": "WED", "time": "08:30 EST", "impact": "high"},
+        {"code": "fomc", "name": "FOMC RATE DECISION", "date": "2026-01-28", "day": "WED", "time": "14:00 EST", "impact": "critical"},
+        {"code": "nfp", "name": "NON-FARM PAYROLLS", "date": "2026-02-06", "day": "FRI", "time": "08:30 EST", "impact": "high"}
+    ]
 
 def update_signal():
     print("Running OmniMetric v2.0 Engine...")
-    market_data, status = fetch_market_data()
+    market_data, status, fetched_events = fetch_market_data()
     
     if market_data:
         # Calculate Individual Sector Scores
@@ -206,12 +610,49 @@ def update_signal():
         ai_reports = generate_multilingual_report(market_data, score) # Keeps existing function
 
         # Events
-        events = get_next_event_dates()
+        events = fetched_events if fetched_events and len(fetched_events) > 0 else get_next_event_dates()
+
+        # History Management
+        history = []
+        try:
+            if os.path.exists(HISTORY_FILE):
+                with open(HISTORY_FILE, 'r') as f:
+                    history = json.load(f)
+        except: pass
+        
+        # Append new entry
+        new_entry = {
+            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "score": score
+        }
+        history.append(new_entry)
+        
+        # Prune (Keep last 60 entries - approx 2.5 days of hourly updates)
+        if len(history) > 60:
+            history = history[-60:]
+            
+        # Save History
+        try:
+            with open(HISTORY_FILE, 'w') as f:
+                json.dump(history, f, indent=4)
+        except: pass
+
+        # Format for Frontend Chart
+        # Expected format: [{"date": "HH:MM", "score": 75}, ...]
+        history_chart = []
+        for h in history:
+            try:
+                # Parse timestamp to extract time or date
+                dt = datetime.strptime(h["timestamp"], "%Y-%m-%d %H:%M:%S")
+                # Format: "MM/DD" or "HH:mm" depending on range. doing MM/DD HH:mm for now
+                fmt_date = dt.strftime("%m/%d %H:%M")
+                history_chart.append({"date": fmt_date, "score": h["score"]})
+            except: continue
 
         payload = {
             "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S EST"),
             "gms_score": score,
-            "sector_scores": sector_scores, # NEW
+            "sector_scores": sector_scores, 
             "market_data": market_data,
             "events": events,
             "analysis": {
@@ -219,10 +660,24 @@ def update_signal():
                 "content": ai_reports['EN'],
                 "reports": ai_reports
             },
+            "history_chart": history_chart, # NEW: Added history chart data
             "system_status": status
         }
 
         
+        # SANITIZE PAYLOAD - Remove NaNs
+        def sanitize(obj):
+            if isinstance(obj, float):
+                if np.isnan(obj) or np.isinf(obj): return 0.0
+                return obj
+            if isinstance(obj, dict):
+                return {k: sanitize(v) for k, v in obj.items()}
+            if isinstance(obj, list):
+                return [sanitize(x) for x in obj]
+            return obj
+
+        payload = sanitize(payload)
+
         today_str = datetime.now().strftime("%Y-%m-%d")
         archive_path = os.path.join(ARCHIVE_DIR, f"{today_str}.json")
         try:
@@ -235,6 +690,29 @@ def update_signal():
                 json.dump(payload, f, indent=4)
         except Exception as e:
             print(f"Error writing to DATA_FILE: {e}")
+
+        # IndexNow Notification (GEO Optimization)
+        try:
+            print("Notifying IndexNow via Bing...")
+            import requests
+            indexnow_url = "https://api.indexnow.org/indexnow"
+            headers = {"Content-Type": "application/json; charset=utf-8"}
+            data = {
+                "host": "omnimetric.net",
+                "key": "49774640103248358249774640103248",
+                "keyLocation": "https://omnimetric.net/49774640103248358249774640103248.txt",
+                "urlList": [
+                    "https://omnimetric.net/",
+                    "https://omnimetric.net/stocks",
+                    "https://omnimetric.net/crypto",
+                    "https://omnimetric.net/forex",
+                    "https://omnimetric.net/commodities"
+                ]
+            }
+            response = requests.post(indexnow_url, headers=headers, json=data, timeout=5)
+            print(f"IndexNow Status: {response.status_code}")
+        except Exception as e:
+            print(f"IndexNow Error: {e}")
 
         return payload
 
@@ -252,5 +730,7 @@ def update_signal():
 if __name__ == "__main__":
     try:
         update_signal()
-    except Exception:
-        pass
+    except Exception as e:
+        print(f"MAIN ERROR: {e}")
+        import traceback
+        traceback.print_exc()

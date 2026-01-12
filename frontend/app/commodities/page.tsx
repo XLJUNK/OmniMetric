@@ -1,9 +1,29 @@
-'use client';
 import { SectorDashboard } from '@/components/SectorDashboard';
-import { useState } from 'react';
-import { LangType } from '@/data/dictionary';
+import { Metadata } from 'next';
 
-export default function CommoditiesPage({ searchParams }: { searchParams: { lang?: string } }) {
-    const [lang, setLang] = useState<LangType>((searchParams?.lang as LangType) || 'EN');
-    return <SectorDashboard sectorKey="COMMODITIES" lang={lang} setLang={setLang} />;
+export const dynamic = 'force-dynamic';
+
+export const metadata: Metadata = {
+    title: "Commodities Market Analysis | OmniMetric",
+    description: "Real-time tracking of Gold, Oil, Copper, and Natural Gas. Supply chain and geopolitical risk integration.",
+};
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FinancialProduct",
+    "name": "OmniMetric Commodities Module",
+    "description": "Institutional grade commodities market analysis.",
+    "brand": "OmniMetric"
+};
+
+export default function CommoditiesPage() {
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <SectorDashboard sectorKey="COMMODITIES" />
+        </>
+    );
 }
