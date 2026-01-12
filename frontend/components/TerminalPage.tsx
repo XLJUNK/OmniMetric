@@ -7,7 +7,7 @@ import { DICTIONARY, LangType } from '@/data/dictionary';
 import { ChevronDown, Shield, Activity, Globe } from 'lucide-react';
 
 interface TerminalPageProps {
-    pageKey: 'about' | 'legal' | 'archive' | 'contact';
+    pageKey: 'about' | 'legal' | 'archive';
     children: React.ReactNode;
 }
 
