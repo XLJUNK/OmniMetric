@@ -13,9 +13,12 @@ export async function generateStaticParams() {
     if (!fs.existsSync(archiveDir)) return [];
 
     const files = fs.readdirSync(archiveDir);
-    return files.map((file) => ({
-        date: file.replace('.json', ''),
-    }));
+    // Only include YYYY-MM-DD.json files
+    return files
+        .filter(file => /^\d{4}-\d{2}-\d{2}\.json$/.test(file))
+        .map((file) => ({
+            date: file.replace('.json', ''),
+        }));
 }
 
 async function getReportData(date: string) {
@@ -30,7 +33,7 @@ export async function generateMetadata({ params }: { params: Promise<{ date: str
     const { date } = await params;
     const data = await getReportData(date);
 
-    if (!data) {
+    if (!data || !data.analysis) {
         return {
             title: 'Report Not Found | OmniMetric',
         };
@@ -59,7 +62,7 @@ export default async function AnalysisPage({ params }: { params: Promise<{ date:
     const { date } = await params;
     const data = await getReportData(date);
 
-    if (!data) return <div>Report not found</div>;
+    if (!data || !data.analysis) return <div>Report not found</div>;
 
     const jsonLd = {
         "@context": "https://schema.org",
