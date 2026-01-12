@@ -1,38 +1,161 @@
 import { Metadata } from 'next';
-import { Mail } from 'lucide-react';
+import { TerminalPage } from '@/components/TerminalPage';
+import { MessageSquare, AlertCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: "Contact | OmniMetric",
-    description: "Contact the OmniMetric Team.",
+    title: "Contact | OmniMetric Terminal",
+    description: "Contact OmniMetric for technical support and feedback.",
 };
 
 export default function ContactPage() {
     return (
-        <div className="max-w-4xl mx-auto p-8 text-slate-300 min-h-[60vh] flex flex-col items-center justify-center">
-            <h1 className="text-4xl font-black mb-8 text-white uppercase tracking-tighter">Contact Support</h1>
-
-            <div className="bg-[#111] border border-white/10 p-12 rounded-2xl flex flex-col items-center gap-6">
-                <div className="p-4 bg-white/5 rounded-full">
-                    <Mail className="w-8 h-8 text-sky-500" />
+        <TerminalPage pageKey="legal">
+            <div className="max-w-3xl mx-auto space-y-8">
+                <div className="flex items-center gap-4 mb-8">
+                    <MessageSquare className="w-8 h-8 text-cyan-500" />
+                    <h1 className="text-3xl font-black tracking-tight text-white">Contact & Support</h1>
                 </div>
 
-                <div className="text-center">
-                    <h2 className="text-xl font-bold text-white mb-2">General Inquiries</h2>
-                    <p className="text-slate-400 mb-4">
-                        For institutional licensing, API access, or general support.
+                {/* Critical Warning - No Investment Consultation */}
+                <section className="!border-2 !border-red-500 bg-red-950/20 !rounded-xl p-6">
+                    <div className="flex items-start gap-3">
+                        <AlertCircle className="w-6 h-6 text-red-400 flex-shrink-0 mt-1" />
+                        <div className="space-y-2">
+                            <h2 className="text-lg font-black text-red-400 uppercase">
+                                WE DO NOT PROVIDE INVESTMENT CONSULTATION
+                            </h2>
+                            <p className="text-sm text-red-200 leading-relaxed">
+                                OmniMetric is an <strong>informational platform only</strong>. We do not offer personalized investment advice, financial planning, portfolio recommendations, or individual trade suggestions. Any requests for investment consultation will not be answered.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Primary Contact Method */}
+                <section className="bg-[#111] !border !border-cyan-500/30 !rounded-xl p-8 text-center space-y-6">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-500/10 !rounded-full mb-2">
+                        <svg className="w-8 h-8 text-cyan-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h2 className="text-2xl font-black text-white mb-2">
+                            Primary Contact Channel
+                        </h2>
+                        <p className="text-sm text-slate-400 mb-4">
+                            For technical issues, data feedback, or general inquiries
+                        </p>
+                    </div>
+                    <div className="bg-black !border !border-slate-700 !rounded-lg p-6">
+                        <p className="text-xs text-slate-500 uppercase tracking-widest mb-2">
+                            Send a Direct Message on X (Twitter)
+                        </p>
+                        <a
+                            href="https://twitter.com/messages/compose?recipient_id=OmniMetric_GMS"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block text-2xl font-mono font-black text-cyan-400 hover:text-cyan-300 transition-colors"
+                        >
+                            @OmniMetric_GMS
+                        </a>
+                        <p className="text-xs text-slate-600 mt-3">
+                            Response time: 24-72 hours (business days)
+                        </p>
+                    </div>
+                </section>
+
+                {/* What We Can Help With */}
+                <section className="bg-[#111] !border !border-slate-800 !rounded-xl p-6 space-y-4">
+                    <h2 className="text-lg font-bold text-white uppercase tracking-wide">
+                        ✅ What We Can Help With
+                    </h2>
+                    <ul className="space-y-2 text-sm text-slate-300">
+                        <li className="flex items-start gap-2">
+                            <span className="text-green-400 mt-1">•</span>
+                            <span>Technical issues or bugs with the terminal</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                            <span className="text-green-400 mt-1">•</span>
+                            <span>Data accuracy concerns or anomalies</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                            <span className="text-green-400 mt-1">•</span>
+                            <span>Feature requests or suggestions</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                            <span className="text-green-400 mt-1">•</span>
+                            <span>API access or commercial licensing inquiries</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                            <span className="text-green-400 mt-1">•</span>
+                            <span>Press/media inquiries</span>
+                        </li>
+                    </ul>
+                </section>
+
+                {/* What We Don't Respond To */}
+                <section className="bg-[#111] !border !border-slate-800 !rounded-xl p-6 space-y-4">
+                    <h2 className="text-lg font-bold text-white uppercase tracking-wide">
+                        ❌ What We Don't Respond To
+                    </h2>
+                    <ul className="space-y-2 text-sm text-slate-400">
+                        <li className="flex items-start gap-2">
+                            <span className="text-red-400 mt-1">•</span>
+                            <span>Investment advice or "should I buy/sell" questions</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                            <span className="text-red-400 mt-1">•</span>
+                            <span>Portfolio reviews or personalized recommendations</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                            <span className="text-red-400 mt-1">•</span>
+                            <span>Predictions about specific stocks or assets</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                            <span className="text-red-400 mt-1">•</span>
+                            <span>Spam, promotional content, or irrelevant inquiries</span>
+                        </li>
+                    </ul>
+                </section>
+
+                {/* Alternative Resources */}
+                <section className="bg-[#111] !border !border-slate-800 !rounded-xl p-6 space-y-4">
+                    <h2 className="text-lg font-bold text-white uppercase tracking-wide">
+                        📚 Self-Service Resources
+                    </h2>
+                    <div className="space-y-2 text-sm text-slate-300">
+                        <p>
+                            Before contacting us, please check these resources:
+                        </p>
+                        <ul className="space-y-2 text-slate-400">
+                            <li className="flex items-start gap-2">
+                                <span className="text-sky-400 mt-1">→</span>
+                                <span>
+                                    <a href="/about" className="text-sky-400 hover:underline">About Us</a> - Learn how OmniMetric works
+                                </span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <span className="text-sky-400 mt-1">→</span>
+                                <span>
+                                    <a href="/legal/terms" className="text-sky-400 hover:underline">Terms of Service</a> - Usage guidelines and disclaimers
+                                </span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <span className="text-sky-400 mt-1">→</span>
+                                <span>
+                                    <a href="/legal/privacy-policy" className="text-sky-400 hover:underline">Privacy Policy</a> - Data collection practices
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <div className="pt-8 border-t border-slate-800 opacity-50">
+                    <p className="text-[10px] font-mono tracking-widest uppercase text-slate-600 text-center">
+                        Support Protocol: SNS-Based // No Email Forms // No Phone Support
                     </p>
-                    <a href="mailto:support@omnimetric.net" className="text-2xl font-mono font-bold text-sky-400 hover:text-sky-300">
-                        support@omnimetric.net
-                    </a>
-                </div>
-
-                <div className="w-full h-px bg-white/10 my-4"></div>
-
-                <div className="text-center">
-                    <p className="text-xs text-slate-500 uppercase tracking-widest">Response Time</p>
-                    <p className="text-sm font-bold text-white">Within 24 Hours (Business Days)</p>
                 </div>
             </div>
-        </div>
+        </TerminalPage>
     );
 }
