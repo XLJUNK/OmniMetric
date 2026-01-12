@@ -62,6 +62,22 @@ export const metadata: Metadata = {
       }
     ],
   },
+  other: {
+    // Academic Citation Metatags (for AI citation systems)
+    'citation_title': 'OmniMetric Global Macro Signal Index',
+    'citation_author': 'OmniMetric Project',
+    'citation_publication_date': new Date().toISOString().split('T')[0],
+    'citation_journal_title': 'OmniMetric Terminal',
+    'citation_online_date': new Date().toISOString().split('T')[0],
+    // Dublin Core Metadata
+    'DC.title': 'Global Macro Signal - Institutional Risk Index',
+    'DC.creator': 'OmniMetric AI',
+    'DC.subject': 'Financial Markets, Risk Analysis, Macro Economics',
+    'DC.description': 'Real-time algorithmic risk assessment integrating Net Liquidity, Volatility, and Credit Spreads',
+    'DC.type': 'Dataset',
+    'DC.format': 'application/json',
+    'DC.language': 'en',
+  },
 };
 
 import { LegalFooter } from "@/components/LegalFooter";
@@ -71,6 +87,7 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 // MobileMenu removed as per user request (Sidebar is now responsive)
 import { Sidebar } from "@/components/Sidebar";
 import { AdUnit } from "@/components/AdUnit";
+import { DynamicStructuredData } from "@/components/DynamicStructuredData";
 
 export default function RootLayout({
   children,
@@ -124,6 +141,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <DynamicStructuredData />
       </head>
       <body
         className={`${inter.variable} ${notoJP.variable} ${notoAR.variable} ${notoHI.variable} antialiased`}

@@ -180,6 +180,42 @@ export const GMSHeaderSection = ({ data, lang }: GMSHeaderProps) => {
                             Cite this analysis as: <span className="text-slate-500">OmniMetric Global Macro Signal ({new Date().toISOString().split('T')[0]}). Retrieving from omnimetric.net</span>
                         </p>
                     </div>
+
+                    {/* AIO: AnalysisNewsArticle Schema */}
+                    <script
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{
+                            __html: JSON.stringify({
+                                "@context": "https://schema.org",
+                                "@type": "AnalysisNewsArticle",
+                                "headline": `Global Market Outlook - ${new Date().toISOString().split('T')[0]}`,
+                                "description": "AI-driven institutional market risk analysis",
+                                "author": {
+                                    "@type": "Organization",
+                                    "name": "OmniMetric AI",
+                                    "url": "https://omnimetric.net"
+                                },
+                                "publisher": {
+                                    "@type": "Organization",
+                                    "name": "OmniMetric Project",
+                                    "url": "https://omnimetric.net",
+                                    "logo": {
+                                        "@type": "ImageObject",
+                                        "url": "https://omnimetric.net/icon.svg"
+                                    }
+                                },
+                                "datePublished": data.last_updated,
+                                "dateModified": data.last_updated,
+                                "articleBody": aiContent,
+                                "articleSection": "Financial Analysis",
+                                "inLanguage": lang,
+                                "about": {
+                                    "@type": "Thing",
+                                    "name": "Global Macro Economics"
+                                }
+                            })
+                        }}
+                    />
                 </div>
             </div>
 
