@@ -1,13 +1,34 @@
+import os
+import sys
 import schedule
 import time
 from gms_engine import update_signal
 from datetime import datetime
+
+PID_FILE = "scheduler.pid"
+
+def check_pid():
+    if os.path.exists(PID_FILE):
+        try:
+            with open(PID_FILE, 'r') as f:
+                old_pid = int(f.read().strip())
+            # Check if process actually exists
+            import psutil
+            if psutil.pid_exists(old_pid):
+                print(f"[FATAL] Scheduler already running (PID: {old_pid}). Exiting.")
+                sys.exit(1)
+        except (ValueError, ImportError):
+            pass
+    # Write current PID
+    with open(PID_FILE, 'w') as f:
+        f.write(str(os.getpid()))
 
 def job():
     print(f"[{datetime.now().strftime('%H:%M:%S')}] Scheduler triggered: Updating GMS Signal...")
     update_signal()
 
 def run_scheduler():
+    check_pid()
     print("GMS Scheduler System Initialized.")
     print("Targeting: Hourly Updates + Market Closes (Tok/Lon/NY).")
     

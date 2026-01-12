@@ -11,10 +11,8 @@ import google.generativeai as genai
 import requests
 from dotenv import load_dotenv
 
-# Load environment variables from multiple locations for robustness
+# Load environment variables
 load_dotenv()
-load_dotenv(os.path.join(os.path.dirname(__file__), '.env'))
-load_dotenv(os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env'))
 
 # CONFIGURATION
 # Institutional-grade constants
@@ -178,7 +176,7 @@ def fetch_fred_data():
             # WTREGEN: Millions (Checking result suggests this)
             # RRPONTSYD: Millions
             
-            df['NET_LIQ'] = (df['WALCL'] - df['TGA'] - df['RRP']) / 1000
+            df['NET_LIQ'] = (df['WALCL'] / 1000) - df['TGA'] - df['RRP']
             
             last_val = df['NET_LIQ'].iloc[-1]
             spark = df['NET_LIQ'].tail(30).fillna(method='ffill').tolist() # Fill NaNs inside sparkline logic too
@@ -215,12 +213,12 @@ def fetch_fred_data():
 def fetch_crypto_sentiment():
     """FETCH CRYPTO FEAR & GREED INDEX (Free API)"""
     try:
-        url = "https://api.alternative.me/fng/?limit=1"
+        url = "https://api.alternative.me/fng/?limit=30"
         response = requests.get(url, timeout=5)
         data = response.json()
         if data and "data" in data and len(data["data"]) > 0:
-            item = data["data"][0]
-            val = int(item["value"])
+            sparkline = [int(x["value"]) for x in reversed(data["data"])]
+            val = int(data["data"][0]["value"])
             # Normalize to GMS Trend
             trend = "NEUTRAL"
             if val < 25: trend = "FEAR"
@@ -230,9 +228,9 @@ def fetch_crypto_sentiment():
             
             return {
                 "price": val,
-                "change_percent": 0.0,
+                "change_percent": 0.0, # Could calc from sparkline
                 "trend": trend,
-                "sparkline": [val]*30
+                "sparkline": sparkline
             }
     except Exception as e:
         print(f"[Warn] Crypto F&G Error: {e}")
@@ -340,36 +338,46 @@ def fetch_market_data():
         if 'NET_LIQUIDITY' in fred_data:
              all_data['NET_LIQUIDITY'] = fred_data['NET_LIQUIDITY']
 
-    # 2. Fetch All Sectors
+    # 2. Fetch All Sectors using Batch for Speed
+    all_tickers = []
+    for sector_name, config in SECTORS.items():
+        all_tickers.extend(config["tickers"].values())
+    
+    # Also include MOVE and any other YF tickers
+    all_tickers.extend(["^MOVE", "SPY", "RSP"]) # Ensure these are included
+    all_tickers = list(set(all_tickers))
+
+    print(f"[YF] Batch fetching {len(all_tickers)} tickers...")
+    try:
+        batch_hist = yf.download(all_tickers, period="3mo", group_by='ticker', silent=True)
+    except:
+        batch_hist = None
+
     for sector_name, config in SECTORS.items():
         for key, symbol in config["tickers"].items():
             try:
-                t = yf.Ticker(symbol)
-                # Fetch more history to ensure we have data
-                hist = t.history(period="3mo") # Robustness
+                hist = batch_hist[symbol] if batch_hist is not None else yf.Ticker(symbol).history(period="3mo")
                 if not hist.empty:
-                    # Rolling 1mo window for safety
-                    hist_1mo = hist.tail(22)
-                    current = hist['Close'].iloc[-1]
+                    # Clear out potential MultiIndex issues
+                    if isinstance(hist.columns, pd.MultiIndex):
+                        hist = hist.droplevel(0, axis=1) if 'Close' in hist.columns.levels[0] else hist # redundant check
                     
-                    # Calculate 5-day change to capture trend
-                    if len(hist) >= 5:
-                        prev_5_day = hist['Close'].iloc[-5]
-                    elif len(hist) > 1:
-                        prev_5_day = hist['Close'].iloc[0] # Use earliest if less than 5 days
-                    else:
-                        prev_5_day = current # No change if only one day
-                    
-                    change = ((current - prev_5_day) / prev_5_day) * 100 if prev_5_day != 0 else 0
-                    
-                    sparkline = hist_1mo['Close'].tolist()
-                    
-                    all_data[key] = {
-                        "price": round(current, 2),
-                        "change_percent": round(change, 2),
-                        "trend": "UP" if change > 0 else "DOWN",
-                        "sparkline": [round(x, 2) for x in sparkline]
-                    }
+                    hist_close = hist['Close'].dropna()
+                    if not hist_close.empty:
+                        hist_1mo = hist_close.tail(22)
+                        current = hist_close.iloc[-1]
+                        
+                        # Calculate 5-day change
+                        prev_5_day = hist_close.iloc[-5] if len(hist_close) >= 5 else hist_close.iloc[0]
+                        change = ((current - prev_5_day) / prev_5_day) * 100 if prev_5_day != 0 else 0
+                        
+                        all_data[key] = {
+                            "price": round(current, 2),
+                            "change_percent": round(change, 2),
+                            "trend": "UP" if change > 0 else "DOWN",
+                            "sparkline": [round(x, 2) for x in hist_1mo.tolist()]
+                        }
+                    else: raise Exception("No close data")
                 else: raise Exception("Empty Data")
             except:
                 # Mock Data for Resilience
@@ -380,7 +388,7 @@ def fetch_market_data():
                     "price": sim_price,
                     "change_percent": round(random.uniform(-1, 1), 2),
                     "trend": "NEUTRAL",
-                    "sparkline": [round(base + random.uniform(-1, 1) for _ in range(30))]
+                    "sparkline": [round(base + random.uniform(-1, 1), 2) for _ in range(30)]
                 }
                 status = "SIMULATED"
 
@@ -426,11 +434,27 @@ def fetch_market_data():
             if breadth_diff < -1.0: trend = "NARROW" # SPY leads RSP by > 1%
             elif breadth_diff > 0.5: trend = "BROAD" # RSP leads
             
+            # Calculate Breadth History for Sparkline
+            try:
+                rsp_h = batch_hist["RSP"] if batch_hist is not None else yf.Ticker("RSP").history(period="1mo")
+                spy_h = batch_hist["SPY"] if batch_hist is not None else yf.Ticker("SPY").history(period="1mo")
+                
+                # Take Close prices and normalize
+                rsp_c = rsp_h['Close'].tail(22)
+                spy_c = spy_h['Close'].tail(22)
+                
+                # Percentage change relative to start of period to normalize
+                rsp_norm = (rsp_c / rsp_c.iloc[0]) * 100
+                spy_norm = (spy_c / spy_c.iloc[0]) * 100
+                breadth_spark = (rsp_norm - spy_norm).tolist()
+            except:
+                breadth_spark = [0]*30
+
             all_data["BREADTH"] = {
                 "price": round(breadth_diff, 2), # The spread value
-                "change_percent": 0.0, # Not really applicable for a spread, or could use prev day
+                "change_percent": 0.0,
                 "trend": trend,
-                "sparkline": [0]*30 # Todo: History of spread
+                "sparkline": [round(x, 2) for x in breadth_spark]
             }
         else:
             all_data["BREADTH"] = {"price": 0.5, "change_percent": 0.0, "trend": "HEALTHY", "sparkline": [0]*30}
@@ -729,20 +753,25 @@ def update_signal():
                 print(f"[AIO] CRITICAL EVENT: Score dropped to {score}. Triggering Fast Indexing...")
                  # IndexNow Notification (GEO Optimization)
                 try:
-                    print("Notifying IndexNow via Bing...")
-                    import requests
+                    indexing_host = os.getenv("INDEXNOW_HOST", "omnimetric.net")
+                    indexing_key = os.getenv("INDEXNOW_KEY")
+                    if not indexing_key:
+                        print("[AIO] Skipping IndexNow: Missing Key")
+                        return payload
+
+                    print(f"Notifying IndexNow via Bing for {indexing_host}...")
                     indexnow_url = "https://api.indexnow.org/indexnow"
                     headers = {"Content-Type": "application/json; charset=utf-8"}
                     data = {
-                        "host": "omnimetric.net",
-                        "key": "49774640103248358249774640103248",
-                        "keyLocation": "https://omnimetric.net/49774640103248358249774640103248.txt",
+                        "host": indexing_host,
+                        "key": indexing_key,
+                        "keyLocation": f"https://{indexing_host}/{indexing_key}.txt",
                         "urlList": [
-                            "https://omnimetric.net/",
-                            "https://omnimetric.net/stocks",
-                            "https://omnimetric.net/crypto",
-                            "https://omnimetric.net/forex",
-                            "https://omnimetric.net/commodities"
+                            f"https://{indexing_host}/",
+                            f"https://{indexing_host}/stocks",
+                            f"https://{indexing_host}/crypto",
+                            f"https://{indexing_host}/forex",
+                            f"https://{indexing_host}/commodities"
                         ]
                     }
                     response = requests.post(indexnow_url, headers=headers, json=data, timeout=5)
