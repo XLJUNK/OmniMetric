@@ -11,6 +11,7 @@ import { AdUnit } from '@/components/AdUnit';
 
 interface SignalData {
     last_updated: string;
+    last_successful_update?: string;
     gms_score: number;
     sector_scores?: Record<string, number>;
     market_data: any;
@@ -22,9 +23,10 @@ interface SignalData {
 interface GMSHeaderProps {
     data: SignalData;
     lang: LangType;
+    isSafeMode?: boolean;
 }
 
-export const GMSHeaderSection = ({ data, lang }: GMSHeaderProps) => {
+export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderProps) => {
     const [showInfo, setShowInfo] = useState(false);
     const [isLangOpen, setIsLangOpen] = useState(false);
     const { isMobile } = useDevice();
@@ -39,10 +41,12 @@ export const GMSHeaderSection = ({ data, lang }: GMSHeaderProps) => {
     };
 
     // AI Report Logic
-    const aiContent = (data?.analysis?.reports as any)?.[lang]
+    const aiContent = isSafeMode ? t.status.ai : (
+        (data?.analysis?.reports as any)?.[lang]
         || (data?.analysis?.reports as any)?.[lang?.toUpperCase()]
         || data?.analysis?.content
-        || t.status.ai;
+        || t.status.ai
+    );
 
     if (!data) return null;
 

@@ -15,6 +15,7 @@ import { Skeleton, SkeletonCard, SkeletonPulseTile } from '@/components/Skeleton
 
 interface SignalData {
     last_updated: string;
+    last_successful_update?: string;
     gms_score: number;
     sector_scores?: Record<string, number>;
     market_data: any;
@@ -103,13 +104,31 @@ export const MultiAssetSummary = () => {
     );
 
 
-    const getSectorScore = (key: string) => data.sector_scores?.[key] ?? 50;
+    const [isSafeMode, setIsSafeMode] = useState(false);
+    const getSectorScore = (key: string) => data?.sector_scores?.[key] ?? 50;
+
+    useEffect(() => {
+        if (!data || !data.last_successful_update) return;
+        const checkHealth = () => {
+            if (!data.last_successful_update) return;
+            const lastUpdate = new Date(data.last_successful_update.replace(' ', 'T'));
+            const diffMin = (new Date().getTime() - lastUpdate.getTime()) / 60000;
+            setIsSafeMode(diffMin > 5);
+        };
+        checkHealth();
+        const interval = setInterval(checkHealth, 30000);
+        return () => clearInterval(interval);
+    }, [data]);
+
     const getMarketData = (key: string) => {
-        let val = data.market_data[key] || {
+        let val = data?.market_data?.[key] || {
             price: t.status.market,
             change_percent: 0,
             sparkline: []
         };
+        if (isSafeMode) {
+            val = { ...val, price: t.status.market }; // Override with "Synchronizing..."
+        }
         if (liveData && liveData[key]) {
             val = { ...val, price: liveData[key].price, change_percent: liveData[key].change_percent };
         }
@@ -118,15 +137,17 @@ export const MultiAssetSummary = () => {
 
     // AI Report
     // Logic to select localized content with robust fallback
-    const aiContent = (data?.analysis?.reports as any)?.[lang]
+    const aiContent = isSafeMode ? t.status.ai : (
+        (data?.analysis?.reports as any)?.[lang]
         || (data?.analysis?.reports as any)?.[lang?.toUpperCase()]
         || data?.analysis?.content
-        || t.status.ai;
+        || t.status.ai
+    );
 
     return (
         <div className="w-full bg-[#0A0A0A] text-slate-200 font-sans min-h-screen flex flex-col pb-24 relative">
             {/* 1. Global Header Status & GMS Dashboard */}
-            <GMSHeaderSection data={data} lang={lang} />
+            <GMSHeaderSection data={data} lang={lang} isSafeMode={isSafeMode} />
 
             {/* 5. Pulse Tiles (Sectors) - 4th Position (Indicators) */}
             <div className="max-w-[1600px] mx-auto w-full px-4 md:px-8 mb-12">

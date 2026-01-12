@@ -539,40 +539,52 @@ def generate_multilingual_report(data, score):
     if not GEMINI_KEY:
         return FALLBACK_STATUS
 
-    models_to_try = ['gemini-2.0-flash', 'gemini-flash-latest']
+    context = {
+        "score": score,
+        "vix": data.get("VIX", {}).get("price"),
+        "hy_spread": data.get("HY_SPREAD", {}).get("price"),
+        "tnx": data.get("TNX", {}).get("price"),
+        "dxy": data.get("DXY", {}).get("price"),
+        "spy_trend": data.get("SPY", {}).get("trend")
+    }
+    
+    net_liq_val = data.get("NET_LIQUIDITY", {}).get("price", "N/A")
+    move_val = data.get("MOVE", {}).get("price", "N/A")
+    
+    prompt = f"""
+    Act as a Senior Constitutional Macro Strategist (Ex-Bridgewater/BlackRock).
+    Analyze current market risk based on these LIVE METRICS:
+    - Global Macro Score: {score}/100 (0=Defensive, 100=Max Risk)
+    - US Net Liquidity: ${net_liq_val}B
+    - Bond Volatility (MOVE): {move_val}
+    - Equity Volatility (VIX): {context['vix']}
+    - HY Credit Spread: {context['hy_spread']}%
+    
+    Task: Write a concise, ultra-professional 2-sentence market intelligence summary.
+    Output JSON ONLY with keys: EN, JP, CN, ES, HI, ID, AR.
+    """
+
+    models_to_try = ['gemini-2.0-flash', 'gemini-1.5-flash']
+    gateway_slug = os.getenv("VERCEL_AI_GATEWAY_SLUG", "omnimetric-gateway")
     
     for model_name in models_to_try:
         try:
-            genai.configure(api_key=GEMINI_KEY)
-            model = genai.GenerativeModel(model_name)
+            # Vercel AI Gateway URL for Google Gemini
+            url = f"https://gateway.vercel.ai/lp/{gateway_slug}/google/v1/models/{model_name}:generateContent?key={GEMINI_KEY}"
             
-            context = {
-                "score": score,
-                "vix": data.get("VIX", {}).get("price"),
-                "hy_spread": data.get("HY_SPREAD", {}).get("price"),
-                "tnx": data.get("TNX", {}).get("price"),
-                "dxy": data.get("DXY", {}).get("price"),
-                "spy_trend": data.get("SPY", {}).get("trend")
+            payload = {
+                "contents": [{
+                    "parts": [{"text": prompt}]
+                }]
             }
             
-            net_liq_val = data.get("NET_LIQUIDITY", {}).get("price", "N/A")
-            move_val = data.get("MOVE", {}).get("price", "N/A")
+            print(f"[AI GATEWAY] Routing {model_name} via Vercel...")
+            response = requests.post(url, json=payload, timeout=15)
+            response.raise_for_status()
             
-            prompt = f"""
-            Act as a Senior Constitutional Macro Strategist (Ex-Bridgewater/BlackRock).
-            Analyze current market risk based on these LIVE METRICS:
-            - Global Macro Score: {score}/100 (0=Defensive, 100=Max Risk)
-            - US Net Liquidity: ${net_liq_val}B
-            - Bond Volatility (MOVE): {move_val}
-            - Equity Volatility (VIX): {context['vix']}
-            - HY Credit Spread: {context['hy_spread']}%
+            result = response.json()
+            text = result['candidates'][0]['content']['parts'][0]['text'].strip()
             
-            Task: Write a concise, ultra-professional 2-sentence market intelligence summary.
-            Output JSON ONLY with keys: EN, JP, CN, ES, HI, ID, AR.
-            """
-            
-            response = model.generate_content(prompt)
-            text = response.text.strip()
             if text.startswith("```"):
                 text = text.split("\n", 1)[1]
                 if text.endswith("```"):
@@ -588,8 +600,10 @@ def generate_multilingual_report(data, score):
             return reports
             
         except Exception as e:
-            print(f"Model {model_name} failed: {e}")
+            print(f"Gateway transition for {model_name} failed: {e}")
             continue
+
+    return FALLBACK_STATUS
 
     return FALLBACK_STATUS
 
@@ -663,6 +677,7 @@ def update_signal():
 
         payload = {
             "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S EST"),
+            "last_successful_update": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             "gms_score": score,
             "sector_scores": sector_scores, 
             "market_data": market_data,

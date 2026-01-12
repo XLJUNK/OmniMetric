@@ -11,9 +11,11 @@ import { AdUnit } from '@/components/AdUnit';
 import { GMSHeaderSection } from '@/components/GMSHeaderSection';
 import { PulseTile } from '@/components/PulseTile';
 import { useDevice } from '@/hooks/useDevice';
+import { Skeleton, SkeletonCard, SkeletonPulseTile } from '@/components/Skeleton';
 
 interface SignalData {
     last_updated: string;
+    last_successful_update?: string;
     gms_score: number;
     sector_scores?: Record<string, number>;
     market_data: any;
@@ -29,6 +31,7 @@ interface SectorDashboardProps {
 export const SectorDashboard = ({ sectorKey }: SectorDashboardProps) => {
     const [data, setData] = useState<SignalData | null>(null);
     const [liveData, setLiveData] = useState<any>(null);
+    const [isSafeMode, setIsSafeMode] = useState(false);
     const [isLangOpen, setIsLangOpen] = useState(false);
     const [showInfo, setShowInfo] = useState(false);
     const { isMobile } = useDevice();
@@ -45,7 +48,7 @@ export const SectorDashboard = ({ sectorKey }: SectorDashboardProps) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch('/api/signal');
+                const res = await fetch(`/api/signal?t=${Date.now()}`);
                 if (res.ok) {
                     const json = await res.json();
                     setData(json);
@@ -59,10 +62,22 @@ export const SectorDashboard = ({ sectorKey }: SectorDashboardProps) => {
         return () => clearInterval(interval);
     }, []);
 
+    useEffect(() => {
+        if (!data || !data.last_successful_update) return;
+        const checkHealth = () => {
+            if (!data.last_successful_update) return;
+            const lastUpdate = new Date(data.last_successful_update.replace(' ', 'T'));
+            const diffMin = (new Date().getTime() - lastUpdate.getTime()) / 60000;
+            setIsSafeMode(diffMin > 5);
+        };
+        checkHealth();
+        const interval = setInterval(checkHealth, 30000);
+        return () => clearInterval(interval);
+    }, [data]);
+
     // LIVE DATA POLLING
     useEffect(() => {
         const fetchLive = async () => {
-            // Reusing main live endpoint for now, ideally filter server side but client filtering is fine for v2 prototype
             try {
                 const res = await fetch('/api/live');
                 if (res.ok) {
@@ -76,7 +91,10 @@ export const SectorDashboard = ({ sectorKey }: SectorDashboardProps) => {
         return () => clearInterval(interval);
     }, []);
 
-    if (!data) return <div className="min-h-screen bg-[#020617] flex items-center justify-center text-slate-500 font-mono text-xs animate-pulse">LOADING SECTOR DATA...</div>;
+    if (!data) return <div className="min-h-screen bg-[#0A0A0A] flex items-center justify-center text-slate-500 font-mono text-xs animate-pulse space-y-4 flex-col">
+        <SkeletonCard />
+        <span>LOADING SECTOR DATA...</span>
+    </div>;
 
     const t = DICTIONARY[lang];
     const sectorName = SECTOR_LABELS[sectorKey][lang];
@@ -91,13 +109,16 @@ export const SectorDashboard = ({ sectorKey }: SectorDashboardProps) => {
     // Filter Indicators
     const targetKeys = SECTOR_CONFIG[sectorKey] || [];
     const indicators = targetKeys.map(k => {
-        const item = data.market_data[k] || { price: 0, change_percent: 0, trend: "NEUTRAL", sparkline: [] };
+        const item = data.market_data[k] || { price: t.status.market, change_percent: 0, trend: "NEUTRAL", sparkline: [] };
+        if (isSafeMode) {
+            item.price = t.status.market; // Safe Mode override
+        }
         return { key: k, ...item };
     });
 
     return (
         <div className="w-full bg-[#0A0A0A] text-slate-200 font-sans min-h-screen flex flex-col">
-            <GMSHeaderSection data={data} lang={lang} />
+            <GMSHeaderSection data={data} lang={lang} isSafeMode={isSafeMode} />
             <div className="max-w-[1600px] mx-auto p-4 md:p-8 space-y-8 w-full">
 
                 {/* METHODOLOGY MODAL */}
