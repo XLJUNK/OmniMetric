@@ -6,7 +6,7 @@ export async function GET(
     request: NextRequest
 ): Promise<NextResponse> {
     try {
-        const archiveDir = path.join(process.cwd(), '..', 'backend', 'history');
+        const archiveDir = path.join(process.cwd(), '..', 'backend', 'archive');
 
         if (!fs.existsSync(archiveDir)) {
             return NextResponse.json({ dates: [] });

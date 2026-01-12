@@ -9,12 +9,12 @@ export async function GET(
     try {
         const { date } = await params;
 
-        const historyDir = path.join(process.cwd(), '..', 'backend', 'history');
-        let archiveFile = path.join(historyDir, `${date}.json`);
+        const archiveDir = path.join(process.cwd(), '..', 'backend', 'archive');
+        let archiveFile = path.join(archiveDir, `${date}.json`);
 
         // MANDATORY FALLBACK: If specific date missing, find nearest
         if (!fs.existsSync(archiveFile)) {
-            const files = fs.readdirSync(historyDir).filter(f => f.endsWith('.json')).sort();
+            const files = fs.readdirSync(archiveDir).filter(f => f.endsWith('.json')).sort();
             if (files.length === 0) {
                 return NextResponse.json({ error: 'Archive not found' }, { status: 404 });
             }
@@ -25,7 +25,7 @@ export async function GET(
                 if (f <= target) bestMatch = f;
                 else break;
             }
-            archiveFile = path.join(historyDir, bestMatch);
+            archiveFile = path.join(archiveDir, bestMatch);
         }
 
         const data = fs.readFileSync(archiveFile, 'utf8');
