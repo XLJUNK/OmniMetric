@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { LangType, DICTIONARY } from '@/data/dictionary';
 import { useSearchParams } from 'next/navigation';
+import { Zap } from 'lucide-react';
 
 export const LegalFooter = () => {
     const searchParams = useSearchParams();
@@ -11,36 +12,51 @@ export const LegalFooter = () => {
     const t = DICTIONARY[lang];
 
     return (
-        <footer className="w-full bg-[#050505] border-t border-[#1E293B] mt-auto">
-            {/* 1. Retro Terminal Menu Bar */}
-            <div className="w-full bg-[#0a0a0a] border-b border-[#1E293B] py-2">
-                <div className="max-w-[1600px] mx-auto flex justify-center items-center gap-1 md:gap-4 px-4 text-[10px] md:text-xs font-black tracking-[0.2em] font-mono leading-none">
-                    <Link href={`/about?lang=${lang}`} className="text-slate-500 hover:text-sky-500 uppercase transition-colors">
+        <footer className="w-full bg-[#050505] border-t border-slate-800 mt-auto">
+            {/* Minimal Link Bar */}
+            <div className="w-full bg-[#0a0a0a] border-b border-slate-800/50 py-2">
+                <div className="max-w-[1600px] mx-auto flex justify-center items-center gap-2 md:gap-4 px-4 text-[10px] font-mono tracking-wider">
+                    <Link href={`/about?lang=${lang}`} className="text-slate-400 hover:text-slate-200 uppercase transition-colors">
                         {t.labels.about}
                     </Link>
-                    <span className="text-white/10">|</span>
-                    <Link href={`/legal?lang=${lang}`} className="text-slate-500 hover:text-sky-500 uppercase transition-colors">
-                        {t.labels.legal}
+                    <span className="text-slate-800">|</span>
+                    <Link href={`/legal/privacy-policy?lang=${lang}`} className="text-slate-400 hover:text-slate-200 uppercase transition-colors">
+                        Privacy
                     </Link>
-                    <span className="text-white/10">|</span>
-                    <Link href={`/archive?lang=${lang}`} className="text-slate-500 hover:text-sky-500 uppercase transition-colors">
+                    <span className="text-slate-800">|</span>
+                    <Link href={`/legal/terms?lang=${lang}`} className="text-slate-400 hover:text-slate-200 uppercase transition-colors">
+                        Terms
+                    </Link>
+                    <span className="text-slate-800">|</span>
+                    <Link href={`/contact?lang=${lang}`} className="text-slate-400 hover:text-slate-200 uppercase transition-colors">
+                        Contact
+                    </Link>
+                    <span className="text-slate-800">|</span>
+                    <Link href={`/archive?lang=${lang}`} className="text-slate-400 hover:text-slate-200 uppercase transition-colors">
                         {t.labels.archive}
                     </Link>
                 </div>
             </div>
 
-            {/* 2. Legal Block */}
-            <div className="max-w-[1600px] mx-auto py-8 px-4 text-center">
-                <div className="flex flex-col gap-4 items-center">
-                    <p className="text-[10px] leading-relaxed text-slate-600 max-w-4xl mx-auto font-medium whitespace-pre-line">
+            {/* Compact Legal Block */}
+            <div className="max-w-[1600px] mx-auto py-6 px-4 text-center">
+                <div className="flex flex-col gap-3 items-center">
+                    <p className="text-[10px] leading-tight text-slate-500 max-w-4xl mx-auto whitespace-pre-line">
                         {t.legal_text.t1} {t.legal_text.t2}
                     </p>
-                    <div className="flex flex-col items-center gap-1 mt-2">
-                        <p className="text-[9px] text-slate-700 font-black tracking-widest uppercase">
-                            {t.legal_text?.copyright?.toUpperCase() || "POWERED BY OMNIMETRIC PROJECT 2026"}
-                        </p>
-                        <p className="text-[9px] text-slate-800 font-mono">
+
+                    {/* Attribution */}
+                    <div className="flex flex-col items-center gap-1 mt-1">
+                        <p className="text-[9px] text-slate-600 font-mono">
                             {t.attribution?.src || "SOURCE: YAHOO FINANCE / FRED / CBOE"}
+                        </p>
+                    </div>
+
+                    {/* Minimal Branding Signature */}
+                    <div className="flex items-center gap-1.5 mt-2 opacity-40">
+                        <Zap className="w-3 h-3 text-slate-600" />
+                        <p className="text-[9px] text-slate-700 font-bold tracking-widest uppercase">
+                            {t.legal_text?.copyright || "POWERED BY OMNIMETRIC PROJECT 2026"}
                         </p>
                     </div>
                 </div>
