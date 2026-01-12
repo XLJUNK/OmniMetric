@@ -41,7 +41,7 @@ export const LegalFooter = () => {
             {/* Compact Legal Block */}
             <div className="max-w-[1600px] mx-auto py-6 px-4 text-center">
                 <div className="flex flex-col gap-3 items-center">
-                    <p className="text-[10px] leading-tight text-slate-500 max-w-4xl mx-auto whitespace-pre-line">
+                    <p className="text-[10px] leading-[1.3] text-slate-500 max-w-4xl mx-auto whitespace-pre-line">
                         {t.legal_text.t1} {t.legal_text.t2}
                     </p>
 
