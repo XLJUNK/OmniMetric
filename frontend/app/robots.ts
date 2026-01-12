@@ -6,12 +6,12 @@ export default function robots(): MetadataRoute.Robots {
             {
                 userAgent: '*',
                 allow: '/',
-                disallow: ['/api/', '/_next/'],
+                disallow: ['/api/', '/private/'],
             },
             {
-                userAgent: ['GPTBot', 'OAI-SearchBot', 'PerplexityBot', 'CCBot', 'Google-Extended'],
+                userAgent: ['GPTBot', 'Google-Extended', 'CCBot', 'PerplexityBot', 'ClaudeBot', 'FacebookBot'],
                 allow: '/',
-            }
+            },
         ],
         sitemap: 'https://omnimetric.net/sitemap.xml',
     };

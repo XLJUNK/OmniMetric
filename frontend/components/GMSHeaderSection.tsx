@@ -161,14 +161,23 @@ export const GMSHeaderSection = ({ data, lang }: GMSHeaderProps) => {
 
                 {/* AI INSIGHT */}
                 {/* AI INSIGHT - FORCE STYLE OVERRIDE */}
-                <div className="lg:col-span-2 bg-[#111] !rounded-xl !border !border-[#1E293B] !ring-0 !outline-none !shadow-none p-6 flex flex-col relative overflow-hidden">
+                <div className="lg:col-span-2 bg-[#111] !rounded-xl !border !border-[#1E293B] !ring-0 !outline-none !shadow-none p-6 flex flex-col relative overflow-hidden group">
                     <div className="flex items-center gap-2 mb-6 border-b !border-[#1E293B] pb-4">
                         <Zap className="w-4 h-4 text-sky-500" />
-                        <h3 className="text-slate-400 text-[10px] font-semibold uppercase tracking-[0.2em]">OmniMetric AI-Driven Global Insights</h3>
+                        <h3 className="text-slate-400 text-[10px] font-semibold uppercase tracking-[0.2em] flex-grow">OmniMetric AI-Driven Global Insights</h3>
+                        <div className="hidden group-hover:flex items-center gap-1 opacity-50 text-[9px] text-slate-500 font-mono">
+                            <Info className="w-3 h-3" /> AI-Generated
+                        </div>
                     </div>
                     <div className="flex-grow flex items-center">
                         <p className="text-slate-300 text-sm md:text-lg leading-relaxed font-serif italic">
                             "{aiContent}"
+                        </p>
+                    </div>
+                    {/* AIO: Citation Footer */}
+                    <div className="mt-4 pt-3 border-t border-[#1E293B] flex justify-end">
+                        <p className="text-[9px] text-slate-600 font-mono select-all">
+                            Cite this analysis as: <span className="text-slate-500">OmniMetric Global Macro Signal ({new Date().toISOString().split('T')[0]}). Retrieving from omnimetric.net</span>
                         </p>
                     </div>
                 </div>

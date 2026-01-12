@@ -691,28 +691,42 @@ def update_signal():
         except Exception as e:
             print(f"Error writing to DATA_FILE: {e}")
 
-        # IndexNow Notification (GEO Optimization)
         try:
-            print("Notifying IndexNow via Bing...")
-            import requests
-            indexnow_url = "https://api.indexnow.org/indexnow"
-            headers = {"Content-Type": "application/json; charset=utf-8"}
-            data = {
-                "host": "omnimetric.net",
-                "key": "49774640103248358249774640103248",
-                "keyLocation": "https://omnimetric.net/49774640103248358249774640103248.txt",
-                "urlList": [
-                    "https://omnimetric.net/",
-                    "https://omnimetric.net/stocks",
-                    "https://omnimetric.net/crypto",
-                    "https://omnimetric.net/forex",
-                    "https://omnimetric.net/commodities"
-                ]
-            }
-            response = requests.post(indexnow_url, headers=headers, json=data, timeout=5)
-            print(f"IndexNow Status: {response.status_code}")
+            # TRIGGER FAST INDEXING IF SCORE CRASHES (Score < 40 and was >= 40)
+            # Find previous score
+            prev_score = 50
+            if len(history) >= 2:
+                 prev_score = history[-2]["score"]
+            
+            if score < 40 and prev_score >= 40:
+                print(f"[AIO] CRITICAL EVENT: Score dropped to {score}. Triggering Fast Indexing...")
+                 # IndexNow Notification (GEO Optimization)
+                try:
+                    print("Notifying IndexNow via Bing...")
+                    import requests
+                    indexnow_url = "https://api.indexnow.org/indexnow"
+                    headers = {"Content-Type": "application/json; charset=utf-8"}
+                    data = {
+                        "host": "omnimetric.net",
+                        "key": "49774640103248358249774640103248",
+                        "keyLocation": "https://omnimetric.net/49774640103248358249774640103248.txt",
+                        "urlList": [
+                            "https://omnimetric.net/",
+                            "https://omnimetric.net/stocks",
+                            "https://omnimetric.net/crypto",
+                            "https://omnimetric.net/forex",
+                            "https://omnimetric.net/commodities"
+                        ]
+                    }
+                    response = requests.post(indexnow_url, headers=headers, json=data, timeout=5)
+                    print(f"IndexNow Status: {response.status_code}")
+                except Exception as e:
+                    print(f"IndexNow Error: {e}")
+            else:
+                 print(f"[AIO] Score Normal ({score}). Skipping Fast Indexing.")
+
         except Exception as e:
-            print(f"IndexNow Error: {e}")
+            print(f"[AIO] Indexing Trigger Error: {e}")
 
         return payload
 
