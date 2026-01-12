@@ -142,12 +142,12 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <DynamicStructuredData />
+        <GoogleAdSense pId="1230621442620902" />
       </head>
       <body
         className={`${inter.variable} ${notoJP.variable} ${notoAR.variable} ${notoHI.variable} antialiased`}
         style={{ overflowX: 'hidden' }}
       >
-        <GoogleAdSense pId="1230621442620902" />
 
         {/* APP ROOT CONTAINER: ROW Layout for Sidebar + Content */}
         <div className="omni-terminal-root relative min-h-screen flex bg-[#0a0a0a]">
