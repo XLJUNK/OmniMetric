@@ -438,7 +438,7 @@ def fetch_market_data():
              "sparkline": [round(ratio*1000, 2)]*30
         }
 
-    return all_data, status
+    return all_data, status, real_events
 
 def calculate_sector_score(sector_name, data):
     """Calculates 0-100 score for a specific sector."""
