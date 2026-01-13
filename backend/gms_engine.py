@@ -11,8 +11,15 @@ import google.generativeai as genai
 import requests
 from dotenv import load_dotenv
 
-# Load environment variables
-load_dotenv()
+# Load environment variables from all possible locations
+load_dotenv() # CWD
+load_dotenv(os.path.join(os.path.dirname(__file__), '.env')) # backend/.env
+load_dotenv(os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env')) # root/.env
+
+# Update keys after loading
+FRED_KEY = os.getenv("FRED_API_KEY")
+GEMINI_KEY = os.getenv("GEMINI_API_KEY")
+FMP_KEY = os.getenv("FMP_API_KEY")
 
 # CONFIGURATION
 # Institutional-grade constants
@@ -162,27 +169,34 @@ def fetch_fred_data():
         
         # 4. NET LIQUIDITY (WALCL - WTREGEN - RRPONTSYD)
         try:
-            # Need to align dates. WALCL is Weekly. Others daily.
+            # Align dates. WALCL is Weekly. Others daily.
             walcl = fred.get_series('WALCL', observation_start=start_date)
             tga = fred.get_series('WTREGEN', observation_start=start_date)
             rrp = fred.get_series('RRPONTSYD', observation_start=start_date)
             
+            # Debug print series lengths
+            print(f"[FRED] WALCL: {len(walcl)}, TGA: {len(tga)}, RRP: {len(rrp)}")
+            
             # Create DataFrame to forward fill WALCL
             df = pd.DataFrame({'WALCL': walcl, 'TGA': tga, 'RRP': rrp})
+            print(f"[FRED] Pre-Clean rows: {len(df)}")
             df = df.fillna(method='ffill').dropna()
+            print(f"[FRED] Post-Clean rows: {len(df)}")
             
             # Assume all are in Millions.
             # WALCL: Millions
             # WTREGEN: Millions (Checking result suggests this)
             # RRPONTSYD: Millions
             
-            # Correct Logic: (Millions - Millions - Millions) / 1000 = Billions
-            df['NET_LIQ'] = (df['WALCL'] - df['TGA'] - df['RRP']) / 1000
+            # Correct Logic: WALCL (M), TGA (M), RRP (B)
+            # Result: Billions
+            df['NET_LIQ'] = (df['WALCL'] - df['TGA'] - (df['RRP'] * 1000)) / 1000
             
             last_val = df['NET_LIQ'].iloc[-1] if not df.empty else 6200.0
             if pd.isna(last_val): last_val = 6200.0 # Emergency fallback
             
             spark = df['NET_LIQ'].tail(30).fillna(6200.0).tolist()
+            print(f"[FRED] Net Liq Sparkline Calculated (Points: {len(spark)})")
             
             change = 0.0
             
@@ -591,35 +605,37 @@ def generate_multilingual_report(data, score):
     Output JSON ONLY with keys: EN, JP, CN, ES, HI, ID, AR.
     """
 
-    models_to_try = ['gemini-2.0-flash', 'gemini-1.5-flash']
-    gateway_slug = os.getenv("VERCEL_AI_GATEWAY_SLUG") # e.g. "my-workspace/my-gateway"
+    models_to_try = ['gemini-1.5-flash', 'gemini-1.5-pro', 'gemini-2.0-flash-lite']
+    gateway_slug = os.getenv("VERCEL_AI_GATEWAY_SLUG")
     
     for model_name in models_to_try:
         try:
             if gateway_slug:
-                # Vercel AI Gateway URL
-                # Format: https://gateway.vercel.ai/{workspace}/{gateway}/google/v1/...
+                # Use REST API for Gateway
                 url = f"https://gateway.vercel.ai/{gateway_slug}/google/v1/models/{model_name}:generateContent?key={GEMINI_KEY}"
+                payload = {"contents": [{"parts": [{"text": prompt}]}]}
+                print(f"[AI GATEWAY] Routing {model_name} via Vercel...")
+                response = requests.post(url, json=payload, timeout=15)
+                response.raise_for_status()
+                result = response.json()
+                text = result['candidates'][0]['content']['parts'][0]['text'].strip()
             else:
-                # Direct Google API
-                url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={GEMINI_KEY}"
+                # Use SDK for Direct Google API (More robust)
+                print(f"[AI DIRECT] {model_name} via Google SDK...")
+                genai.configure(api_key=GEMINI_KEY)
+                model = genai.GenerativeModel(model_name)
+                response = model.generate_content(prompt)
+                text = response.text.strip()
             
-            payload = {
-                "contents": [{
-                    "parts": [{"text": prompt}]
-                }]
-            }
+            # Robust JSON Parsing (Cleanup Markdown)
+            if "```json" in text:
+                text = text.split("```json")[1].split("```")[0].strip()
+            elif "```" in text:
+                text = text.split("```")[1].split("```")[0].strip()
             
-            print(f"[AI GATEWAY] Routing {model_name} via Vercel...")
-            response = requests.post(url, json=payload, timeout=15)
-            response.raise_for_status()
-            
-            if response.status_code != 200:
-                 print(f"[AI] Gateway Error ({response.status_code}): {response.text[:100]}")
-                 continue
-
-            result = response.json()
-            text = result['candidates'][0]['content']['parts'][0]['text'].strip()
+            reports = json.loads(text)
+            print(f"[AI SUCCESS] Generated reports for {list(reports.keys())}")
+            return reports
             
             if text.startswith("```"):
                 text = text.split("\n", 1)[1]
