@@ -27,18 +27,25 @@ async function main() {
     const prompt = getPrompt();
 
     try {
-        // STRICT: Official Vercel AI SDK Pattern with Gateway Helper
-        // Uses env: AI_GATEWAY_API_KEY, VERCEL_AI_GATEWAY_SLUG
+        // STRICT: Official Vercel AI SDK Pattern for Gateway
+        // slug and apiKey are automatically picked up from VERCEL_AI_GATEWAY_SLUG and AI_GATEWAY_API_KEY
+        // However, we ensure they are present or fallback to direct provider
         const result = await generateText({
-            model: gateway('google/gemini-2.0-flash'), // Automatic routing via official SDK
+            model: gateway('google:gemini-2.0-flash'), // Pattern: 'provider:model'
             prompt: prompt,
+            // Header for traceability
+            headers: {
+                'x-vercel-ai-gateway-provider': 'google',
+            }
         });
 
         // Output ONLY the raw text for Python to capture
         console.log(JSON.stringify({ text: result.text }));
 
-    } catch (error) {
-        console.error("AI Generation Failed:", error);
+    } catch (error: any) {
+        console.error("AI Generation Failed via Gateway:", error.message || error);
+        // If Gateway fails, we still want to try the direct provider within the script if possible
+        // but since Python has its own REST fallback, we exit to let Python handle it.
         process.exit(1);
     }
 }

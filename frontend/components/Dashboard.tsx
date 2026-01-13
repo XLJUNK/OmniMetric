@@ -83,13 +83,21 @@ export const Dashboard = ({ lang, setLang }: DashboardProps) => {
     let aiContent = data.analysis.content;
     if (lang === 'JP') {
         const jpReport = data.analysis.reports?.JP;
-        if (jpReport && jpReport.length > 10) {
+        if (jpReport && jpReport.length > 30) { // Increased threshold to avoid small placeholders
             aiContent = jpReport;
         } else {
             aiContent = `【OmniMetric 市場分析】\n\n統合リスクスコアは「${data.gms_score}」です。${data.gms_score > 60 ? "リスク拡張局面" : (data.gms_score < 40 ? "リスク収縮局面" : "警戒的待機局面")}に位置しています。`;
         }
     } else {
         aiContent = data.analysis.reports?.[lang] || data.analysis.content;
+    }
+
+    // CRITICAL: Purge placeholders and revalidation messages
+    const PLACEHOLDER_BLOCKLIST = ["高度なマクロデータを深掘りし", "再検証中", "Analyzing...", "深度解析最新", "正在重新验证"];
+    if (aiContent && typeof aiContent === 'string') {
+        if (PLACEHOLDER_BLOCKLIST.some(p => aiContent.includes(p))) {
+            aiContent = t.status.ai;
+        }
     }
 
     const score = data.gms_score;

@@ -158,7 +158,7 @@ def fetch_fred_data():
         # 2. HY SPREAD (BAMLH0A0HYM2)
         try:
             hy_series = fred.get_series('BAMLH0A0HYM2', observation_start=start_date)
-            hy_series = hy_series.fillna(method='ffill')
+            hy_series = hy_series.ffill()
             current_hy = float(hy_series.iloc[-1])
             hy_spark = hy_series.tail(30).tolist()
             # If less than 30, pad
@@ -188,12 +188,8 @@ def fetch_fred_data():
             
             # Create DataFrame to forward fill WALCL
             df = pd.DataFrame({'WALCL': walcl, 'TGA': tga, 'RRP': rrp})
-            df = df.fillna(method='ffill').dropna()
-            
-            # Assume all are in Millions.
-            # WALCL: Millions
-            # WTREGEN: Millions (Checking result suggests this)
-            # RRPONTSYD: Millions
+            # Ensure all values are numeric and fill NaNs with 0
+            df = df.apply(pd.to_numeric, errors='coerce').ffill().fillna(0)
             
             # Correct Logic: WALCL (M), TGA (M), RRP (B)
             # Result: Billions
@@ -654,12 +650,14 @@ def generate_multilingual_report(data, score):
             frontend_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "frontend")
 
             # Execute Node.js bridge from FRONTEND directory
+            # Explicitly pass environment (inheriting API keys)
             process = subprocess.run(
                 ["node", script_path, prompt],
                 capture_output=True,
                 text=True,
                 creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0,
                 check=False,
+                env=os.environ.copy(),
                 cwd=frontend_dir 
             )
 

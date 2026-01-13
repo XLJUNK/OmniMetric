@@ -86,14 +86,12 @@ export const MultiAssetSummary = () => {
         || t.status.ai
     );
 
-    // CRITICAL: Purge placeholders
-    const PLACEHOLDER_KEY_PHRASE = "高度なマクロデータを深掘りし"; // Part of the JP fallback
-    if (aiContent && (typeof aiContent === 'string') && aiContent.includes(PLACEHOLDER_KEY_PHRASE)) {
-        // If detected, fallback to generic safe message OR null to trigger "Market Analysis Unavailable" if we had one
-        // Better: Use the dictionary's default status or a hardcoded clean message.
-        // If safe mode is NOT on, we still want to show something nice.
-        // Let's use the dictionary's default "market status" if available, or a generic English/JP safe text.
-        aiContent = t.status.ai;
+    // CRITICAL: Purge placeholders and revalidation messages
+    const PLACEHOLDER_BLOCKLIST = ["高度なマクロデータを深掘りし", "再検証中", "Analyzing...", "深度解析最新", "正在重新验证"];
+    if (aiContent && typeof aiContent === 'string') {
+        if (PLACEHOLDER_BLOCKLIST.some(p => aiContent.includes(p))) {
+            aiContent = t.status.ai;
+        }
     }
 
     return (
