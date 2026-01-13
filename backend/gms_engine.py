@@ -824,6 +824,23 @@ def get_next_event_dates():
 
 def update_signal():
     print("Running OmniMetric v2.0 Engine...")
+    
+    # 1. Execution Control: 10-Minute Cool-down
+    try:
+        if os.path.exists(DATA_FILE):
+            with open(DATA_FILE, 'r') as f:
+                existing_data = json.load(f)
+                last_upd_str = existing_data.get("last_successful_update")
+                if last_upd_str:
+                    # Handle both space and T formats for safety
+                    last_upd_str = last_upd_str.replace(' ', 'T').replace('Z', '')
+                    last_upd_dt = datetime.fromisoformat(last_upd_str)
+                    if (datetime.utcnow() - last_upd_dt).total_seconds() < 600:
+                        print(f"[AIO] SKIPPING UPDATE: Recently updated ({last_upd_str}). Cool-down active.")
+                        return existing_data
+    except Exception as e:
+        print(f"[AIO] Cool-down check failed: {e}")
+
     validate_api_keys()
     market_data, status, fetched_events = fetch_market_data()
     
@@ -855,7 +872,7 @@ def update_signal():
         
         # Append new entry (UTC)
         new_entry = {
-            "timestamp": datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"),
+            "timestamp": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"), # ISO UTC
             "score": score
         }
         history.append(new_entry)
@@ -875,16 +892,16 @@ def update_signal():
         history_chart = []
         for h in history:
             try:
-                # Parse timestamp to extract time or date
-                dt = datetime.strptime(h["timestamp"], "%Y-%m-%d %H:%M:%S")
-                # Format: "MM/DD" or "HH:mm" depending on range. doing MM/DD HH:mm for now
+                # Parse ISO timestamp (handle both with and without Z)
+                ts = h["timestamp"].replace('Z', '')
+                dt = datetime.fromisoformat(ts)
                 fmt_date = dt.strftime("%m/%d %H:%M")
                 history_chart.append({"date": fmt_date, "score": h["score"]})
             except: continue
 
         payload = {
             "last_updated": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"), # ISO UTC
-            "last_successful_update": datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"), # UTC
+            "last_successful_update": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"), # ISO UTC
             "gms_score": score,
             "sector_scores": sector_scores, 
             "market_data": market_data,

@@ -54,9 +54,10 @@ export const useSignalData = () => {
         if (!data || !data.last_successful_update) return;
         const checkHealth = () => {
             if (!data.last_successful_update) return;
-            const lastUpdate = new Date(data.last_successful_update.replace(' ', 'T'));
+            // Parse ISO-8601 (handles T and Z correctly)
+            const lastUpdate = new Date(data.last_successful_update);
             const diffMin = (new Date().getTime() - lastUpdate.getTime()) / 60000;
-            setIsSafeMode(diffMin > 20); // Tolerance for 15m cycle + buffer
+            setIsSafeMode(diffMin > 25); // Increased tolerance to 25m to avoid flickers on 15m cycle
         };
         checkHealth();
         const interval = setInterval(checkHealth, 30000);

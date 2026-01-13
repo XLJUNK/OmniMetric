@@ -41,12 +41,24 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
     };
 
     // AI Report Logic
-    const aiContent = isSafeMode ? t.status.ai : (
+    let aiContent = isSafeMode ? t.status.ai : (
         (data?.analysis?.reports as any)?.[lang]
         || (data?.analysis?.reports as any)?.[lang?.toUpperCase()]
         || data?.analysis?.content
         || t.status.ai
     );
+
+    // CRITICAL: Purge placeholders and revalidation messages (Sync with Dashboard)
+    const PLACEHOLDER_BLOCKLIST = ["高度なマクロデータを深掘りし", "再検証中", "Analyzing...", "深度解析最新", "正在重新验证", "世界市場は主要な経済指標"];
+    if (aiContent && typeof aiContent === 'string') {
+        if (PLACEHOLDER_BLOCKLIST.some(p => aiContent.includes(p))) {
+            aiContent = t.status.ai;
+        }
+        // Safety check for very short placeholder text
+        if (lang === 'JP' && aiContent.length < 30 && aiContent === data?.analysis?.content) {
+            aiContent = t.status.ai;
+        }
+    }
 
     if (!data) return null;
 
