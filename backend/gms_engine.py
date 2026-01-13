@@ -12,6 +12,8 @@ import requests
 from dotenv import load_dotenv
 import subprocess
 import re
+import requests
+import xml.etree.ElementTree as ET
 
 # Load environment variables from all possible locations
 load_dotenv() # CWD
@@ -568,6 +570,21 @@ def calculate_total_gms(data, sector_scores):
             
     return int(max(0, min(100, final)))
 
+def fetch_breaking_news():
+    """Fetches top headline from CNBC for AI context."""
+    try:
+        FEED_URL = 'https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114'
+        res = requests.get(FEED_URL, timeout=10)
+        if res.status_code == 200:
+            root = ET.fromstring(res.text)
+            item = root.find('.//item')
+            if item is not None:
+                title = item.find('title').text
+                return title.strip()
+    except Exception as e:
+        print(f"[NEWS] Fetch failed: {e}")
+    return "Market data synchronization active."
+
 def generate_multilingual_report(data, score):
     """Generates AI analysis in 7 languages using Gemini."""
     required = ["EN", "JP", "CN", "ES", "HI", "ID", "AR"]
@@ -632,18 +649,36 @@ def generate_multilingual_report(data, score):
     except Exception as e:
         print(f"[AI SKIP ERROR] Failed to check cache: {e}")
 
+    breaking_news = fetch_breaking_news()
+
     prompt = f"""
-    Act as a Senior Constitutional Macro Strategist (Ex-Bridgewater/BlackRock).
-    Analyze current market risk based on these LIVE METRICS:
-    - Global Macro Score: {score}/100 (0=Defensive, 100=Max Risk)
-    - US Net Liquidity: ${net_liq_val}B
-    - Bond Volatility (MOVE): {move_val}
-    - Equity Volatility (VIX): {context['vix']}
-    - HY Credit Spread: {context['hy_spread']}%
-    
-    Task: Write a concise, ultra-professional 2-sentence market intelligence summary.
-    Output JSON ONLY with keys: EN, JP, CN, ES, HI, ID, AR.
-    """
+【AIインサイトのシステム・プロンプト v3.1：GMS中心・高密度要約モード】
+
+# Role
+You are a Senior Global Macro Strategist (ex-Goldman Sachs/BlackRock). 
+Provide high-density market intelligence for institutional investors.
+
+# Inputs
+- Current GMS Score: {score}/100
+- US Net Liquidity: ${net_liq_val}B
+- Bond Volatility (MOVE): {move_val}
+- Equity Volatility (VIX): {context['vix']}
+- HY Credit Spread: {context['hy_spread']}%
+- Breaking News Context: {breaking_news}
+
+# Constraints
+1. Focus on the GMS Score ({score}) first. Explain which component (Liquidity, Volatility, or Spreads) is the primary driver.
+2. Use cross-asset correlation logic (e.g., 'yield rise is pressure on growth').
+3. Reference the breaking news context to explain the current market sentiment.
+4. Physical Limit: 
+   - Japanese: Under 250 characters.
+   - English: Under 100 words.
+5. Strict Format (JSON with keys EN, JP, CN, ES, HI, ID, AR):
+
+【GMS: {score}】[One-sentence conclusion]
+【分析】[Condensed cross-asset correlation analysis]
+【速報影響】[Brief comment on the news impact]
+"""
 
     # Node.js Bridge Implementation with 429 Resilience
     # This ensures strict adherence to Vercel AI SDK authentication specs
@@ -714,6 +749,25 @@ def generate_multilingual_report(data, score):
                     text = text.split("```")[1].split("```")[0].strip()
                 
                 reports = json.loads(text)
+                
+                # Consolidate v3.1 multi-field structure if present
+                for lang in reports:
+                    val = reports[lang]
+                    if isinstance(val, dict):
+                        # Join keys into a single string for UI compatibility
+                        # Priority: GMS + Analysis + News impact
+                        parts = []
+                        if 'GMS' in val: parts.append(val['GMS'])
+                        elif 'score' in val: parts.append(f"【GMS: {val['score']}】")
+                        
+                        if 'Analysis' in val: parts.append(f"【分析】{val['Analysis']}")
+                        elif 'analysis' in val: parts.append(f"【分析】{val['analysis']}")
+                        
+                        if 'News impact' in val: parts.append(f"【速報影響】{val['News impact']}")
+                        elif 'Breaking News Impact' in val: parts.append(f"【速報影響】{val['Breaking News Impact']}")
+                        elif 'impact' in val: parts.append(f"【速報影響】{val['impact']}")
+                        
+                        reports[lang] = " ".join(parts)
                 
                 # Validate keys
                 for lang in required:
