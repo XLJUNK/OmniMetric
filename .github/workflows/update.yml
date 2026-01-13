@@ -35,4 +35,6 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add backend/*.json
           git commit -m "Auto-update market signal [skip ci]" || echo "No changes to commit"
-          git push
+          # Rebase to handle any concurrent manual pushes
+          git pull --rebase origin main
+          git push origin main

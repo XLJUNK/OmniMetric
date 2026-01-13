@@ -608,13 +608,20 @@ def generate_multilingual_report(data, score):
                 current = json.load(f)
                 last_upd_str = current.get("last_updated", "")
                 if last_upd_str:
-                    # Format: "2026-01-13 16:30:00 EST"
-                    last_upd_dt = datetime.strptime(last_upd_str.replace(" EST", ""), "%Y-%m-%d %H:%M:%S")
-                    if (datetime.now() - last_upd_dt).total_seconds() < 600: # 10 Minutes
-                        existing_reports = current.get("analysis", {}).get("reports")
-                        if existing_reports and all(lang in existing_reports for lang in required):
-                            print(f"[AI SKIP] Recent report exists (<10m). Reusing to save quota.")
-                            return existing_reports
+                    # Robust Parsing: Handle ISO 8601 or legacy "EST" format
+                    try:
+                        if "T" in last_upd_str:
+                            last_upd_dt = datetime.strptime(last_upd_str.replace("Z", ""), "%Y-%m-%dT%H:%M:%S")
+                        else:
+                            last_upd_dt = datetime.strptime(last_upd_str.replace(" EST", ""), "%Y-%m-%d %H:%M:%S")
+                        
+                        if (datetime.utcnow() - last_upd_dt).total_seconds() < 600: # 10 Minutes (Comparing UTC)
+                            existing_reports = current.get("analysis", {}).get("reports")
+                            if existing_reports and all(lang in existing_reports for lang in required):
+                                print(f"[AI SKIP] Recent report exists (<10m). Reusing to save quota.")
+                                return existing_reports
+                    except Exception as date_err:
+                        print(f"[AI SKIP DEBUG] Date parse skip: {date_err}")
     except Exception as e:
         print(f"[AI SKIP ERROR] Failed to check cache: {e}")
 
