@@ -43,6 +43,8 @@ export const MultiAssetSummary = () => {
         router.push(`${pathname}?lang=${l}`);
     };
 
+    const [isSafeMode, setIsSafeMode] = useState(false);
+
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -76,6 +78,19 @@ export const MultiAssetSummary = () => {
         return () => clearInterval(interval);
     }, []);
 
+    useEffect(() => {
+        if (!data || !data.last_successful_update) return;
+        const checkHealth = () => {
+            if (!data.last_successful_update) return;
+            const lastUpdate = new Date(data.last_successful_update.replace(' ', 'T'));
+            const diffMin = (new Date().getTime() - lastUpdate.getTime()) / 60000;
+            setIsSafeMode(diffMin > 5);
+        };
+        checkHealth();
+        const interval = setInterval(checkHealth, 30000);
+        return () => clearInterval(interval);
+    }, [data]);
+
     if (!t || !data) return (
         <div className="min-h-screen bg-[#0A0A0A] p-4 md:p-8 space-y-8">
             <div className="max-w-[1600px] mx-auto space-y-8">
@@ -103,22 +118,7 @@ export const MultiAssetSummary = () => {
         </div>
     );
 
-
-    const [isSafeMode, setIsSafeMode] = useState(false);
     const getSectorScore = (key: string) => data?.sector_scores?.[key] ?? 50;
-
-    useEffect(() => {
-        if (!data || !data.last_successful_update) return;
-        const checkHealth = () => {
-            if (!data.last_successful_update) return;
-            const lastUpdate = new Date(data.last_successful_update.replace(' ', 'T'));
-            const diffMin = (new Date().getTime() - lastUpdate.getTime()) / 60000;
-            setIsSafeMode(diffMin > 5);
-        };
-        checkHealth();
-        const interval = setInterval(checkHealth, 30000);
-        return () => clearInterval(interval);
-    }, [data]);
 
     const getMarketData = (key: string) => {
         let val = data?.market_data?.[key] || {
