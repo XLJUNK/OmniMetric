@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: { params: Promise<{ date: str
 
     return {
         title: `${score} - ${regime} | OmniMetric Market Analysis ${date}`,
-        description: data.analysis.content ? data.analysis.content.slice(0, 160) : "Institutional Global Macro Signal daily analysis report.",
+        description: typeof data.analysis.content === 'string' ? data.analysis.content.slice(0, 160) : "Institutional Global Macro Signal daily analysis report.",
         alternates: {
             languages: {
                 'en': `/analysis/${date}?lang=EN`,
@@ -70,7 +70,7 @@ export default async function AnalysisPage({ params }: { params: Promise<{ date:
         "headline": `Market Analysis: ${date} - GMS Score ${data.gms_score}`,
         "datePublished": date,
         "author": { "@type": "Organization", "name": "OmniMetric" },
-        "description": data.analysis.content
+        "description": typeof data.analysis.content === 'string' ? data.analysis.content : "Institutional Global Macro Signal daily analysis report."
     };
 
     return (
@@ -111,7 +111,7 @@ export default async function AnalysisPage({ params }: { params: Promise<{ date:
                                 <Shield className="w-4 h-4" /> Quantitative Analysis
                             </h2>
                             <div className="bg-slate-900/50 p-8 rounded border border-white/5 leading-relaxed text-slate-300 font-mono text-sm whitespace-pre-wrap">
-                                {data.analysis.content}
+                                {typeof data.analysis.content === 'string' ? data.analysis.content : JSON.stringify(data.analysis.content, null, 2)}
                             </div>
                         </section>
 

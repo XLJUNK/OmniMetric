@@ -1,25 +1,11 @@
 
 > frontend@0.1.0 build
-> next build
+> node scripts/verify-env.js && next build
 
-笆ｲ Next.js 16.1.1 (Turbopack)
-- Environments: .env.local
-
-笞 The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-  Creating an optimized production build ...
-笨・Compiled successfully in 28.3s
-  Running TypeScript ...
-Failed to compile.
-
-./app/archive/page.tsx:28:33
-Type error: Property 'archive' does not exist on type '{ about: { title: string; mission: string; mission_content: string; tech: string; tech_content: string; footer_note: string; }; legal: { title: string; disclaimer: string; disclaimer_content: string; usage: string; usage_content: string; }; archive: { ...; }; } | ... 5 more ... | { ...; }'.
-  Property 'archive' does not exist on type '{ about: { title: string; mission: string; mission_content: string; tech: string; tech_content: string; footer_note: string; }; legal: { title: string; disclaimer: string; zone_neutral: string; zone_neutral_desc: string; zone_defensive: string; zone_defensive_desc: string; inputs: string; scale_labels: { ...; }; }; ...'.
-
-  26 |
-  27 |     if (!t) return null;
-> 28 |     const pageData = t.subpages.archive;
-     |                                 ^
-  29 |
-  30 |     return (
-  31 |         <TerminalPage pageKey="archive">
-Next.js build worker exited with code: 1 and signal: null
+--- [DEPLOY GUARD] Checking environment variables... ---
+[CRITICAL ERROR] Missing required environment variables:
+ - FRED_API_KEY
+ - GEMINI_API_KEY
+ - FMP_API_KEY
+ - NEXT_PUBLIC_GEMINI_API_KEY
+Build blocked to prevent user-facing technical errors.
