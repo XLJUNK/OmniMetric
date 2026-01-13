@@ -33,8 +33,13 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          # 1. Sync with remote HEAD to avoid non-fast-forward on metadata
+          git fetch origin main
+          git reset --hard origin/main
+          # 2. Re-run engine on LATEST data (ensures we don't commit stale data)
+          python backend/gms_engine.py
+          # 3. Commit the fresh data
           git add backend/*.json
-          git commit -m "Auto-update market signal" || echo "No changes to commit"
-          # Rebase to handle any concurrent manual pushes
-          git pull --rebase origin main
+          git commit -m "Auto-update market signal [bot]" || echo "No changes to commit"
+          # 4. Push. If it takes >10s, it's likely a lock issue or concurrency, cron will retry.
           git push origin main
