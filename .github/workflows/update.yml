@@ -21,25 +21,23 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests yfinance google-generativeai fredapi pandas numpy lxml python-dotenv
           cd frontend && npm install
-      - name: Run update script
+      - name: Commit and push changes
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
           VERCEL_AI_GATEWAY_SLUG: ${{ secrets.VERCEL_AI_GATEWAY_SLUG }}
           AI_GATEWAY_API_KEY: ${{ secrets.AI_GATEWAY_API_KEY }}
-        run: python backend/gms_engine.py
-      - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          # 1. Sync with remote HEAD to avoid non-fast-forward on metadata
+          # 1. Sync with remote HEAD to ensure we are working on the latest branch
           git fetch origin main
           git reset --hard origin/main
-          # 2. Re-run engine on LATEST data (ensures we don't commit stale data)
+          # 2. Run engine on LATEST state
           python backend/gms_engine.py
           # 3. Commit the fresh data
           git add backend/*.json
           git commit -m "Auto-update market signal [bot]" || echo "No changes to commit"
-          # 4. Push. If it takes >10s, it's likely a lock issue or concurrency, cron will retry.
+          # 4. Push
           git push origin main

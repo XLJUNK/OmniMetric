@@ -62,13 +62,26 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
 
     // Technical Directive: Strictly enforce AI generation if API 200 OK.
     // Only use fallbacks for hard failures (missing content) or the initial sync.
-    const PLACEHOLDER_BLOCKLIST = ["深度解析最新", "正在重新验证", "世界市場は主要な経済指標"];
+    const PLACEHOLDER_BLOCKLIST = [
+        "深度解析最新",
+        "正在重新验证",
+        "世界市場は主要な経済指標",
+        "Deep-diving into",
+        "Mendalami data makro"
+    ];
+
     if (aiContent && typeof aiContent === 'string') {
         const isPlaceholder = PLACEHOLDER_BLOCKLIST.some(p => aiContent.includes(p));
-        // Technical Directive: Prioritize AI generation if API 200 OK.
-        // If it's a known generic boilerplate, swap to regime-specific dynamic fallback.
+
+        // If it's a known generic boilerplate OR too short OR missing, swap to regime-specific dynamic fallback.
+        // NOTE: We permit "Professional Fallbacks" from the backend (starting with 【GMS:) even if generation failed.
         if (isPlaceholder || isSafeMode || !aiRaw || aiRaw.length < 20) {
-            aiContent = getDynamicFallback();
+            // If the raw content is a professional fallback from the backend, we use it as is
+            if (aiRaw && aiRaw.includes("【GMS:")) {
+                aiContent = aiRaw;
+            } else {
+                aiContent = getDynamicFallback();
+            }
         }
     }
 

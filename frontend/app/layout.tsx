@@ -29,6 +29,7 @@ const notoHI = Noto_Sans_Devanagari({
 });
 
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://omnimetric.net'),
@@ -200,6 +201,7 @@ export default function RootLayout({
         </div> {/* End of Application Root */}
 
         <Analytics />
+        <SpeedInsights />
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ''} />
         <CookieBanner />
       </body>

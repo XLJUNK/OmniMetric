@@ -132,7 +132,7 @@ def fetch_fred_data():
     previous_data = {}
     try:
         if os.path.exists(DATA_FILE):
-            with open(DATA_FILE, 'r') as f:
+            with open(DATA_FILE, 'r', encoding='utf-8') as f:
                 saved = json.load(f)
                 previous_data = saved.get('market_data', {})
     except: pass
@@ -589,19 +589,22 @@ def generate_multilingual_report(data, score):
     """Generates AI analysis in 7 languages using Gemini."""
     required = ["EN", "JP", "CN", "ES", "HI", "ID", "AR"]
     
-    # Fallback to Positive Status messages (UX Reframe)
+    # Professional Fallback Status (Used only when all AI methods fail AND no cached report exists)
     FALLBACK_STATUS = {
-        "EN": "Deep-diving into the latest macro data to synthesize advanced insights...",
-        "JP": "世界市場は主要な経済指標と地政学リスクを織り込みながら推移しています。金利動向とボラティリティ指数を注視し、慎重なリスク管理を行うことが推奨されます。",
-        "CN": "深度解析最新宏观数据，正在生成高级洞察...",
-        "ES": "Analizando en profundidad los últimos datos macro para sintetizar información avanzada...",
-        "HI": "नवीनतम मैक्रो डेटा का गहराई से विश्लेषण कर उन्नत अंतर्दृष्टि तैयार की जा रही है...",
-        "ID": "Mendalami data makro terbaru untuk menyintesakan wawasan tingkat lanjut...",
-        "AR": "تعمق في أحدث البيانات الكلية لتوليف رؤى متقدمة..."
+        "EN": "【GMS: {score}】Institutional macro intelligence updated. Market regimes are currently pricing in key economic shifts with a focus on liquidity and volatility metrics.",
+        "JP": "【GMS: {score}】機関投資家向けマクロ指標が更新されました。市場は現在、流動性とボラティリティの指標を注視しながら、主要な経済環境の変化を織り込んでいます。",
+        "CN": "【GMS: {score}】机构宏观情报已更新。市场目前正在消化关键经济转变，重点关注流动性和波动性指标。",
+        "ES": "【GMS: {score}】Inteligencia macro institucional actualizada. Los regímenes de mercado están descontando actualmente cambios económicos clave.",
+        "HI": "【GMS: {score}】संस्थागत मैक्रो इंटेलिजेंस अपडेट किया गया। बाजार वर्तमान में प्रमुख आर्थिक बदलावों को देखते हुए तरलता और अस्थिरता मेट्रिक्स पर ध्यान केंद्रित कर रहा है。",
+        "ID": "【GMS: {score}】Intelijen makro institusional diperbarui. Rezim pasar saat ini memperhitungkan pergeseran ekonomi utama.",
+        "AR": "【GMS: {score}】تم تحديث الاستخبارات الكلية المؤسسية. تقوم أنظمة السوق حاليًا بتسعير التحولات الاقتصادية الرئيسية."
     }
+    
+    # Format fallback with current score
+    formatted_fallback = {lang: val.format(score=score) for lang, val in FALLBACK_STATUS.items()}
 
     if not GEMINI_KEY:
-        return FALLBACK_STATUS
+        return formatted_fallback
 
     context = {
         "score": score,
@@ -618,7 +621,7 @@ def generate_multilingual_report(data, score):
     # 0. RESOURCE SAVING: Check for recent valid report to reuse
     try:
         if os.path.exists(DATA_FILE):
-            with open(DATA_FILE, 'r') as f:
+            with open(DATA_FILE, 'r', encoding='utf-8') as f:
                 current = json.load(f)
                 last_upd_str = current.get("last_updated", "")
                 if last_upd_str:
@@ -882,9 +885,26 @@ Provide high-density, professional market intelligence for institutional investo
     except Exception as e:
         print(f"[AI DEEP CRITICAL] 1.0 Pro failed: {e}")
 
-    # Ultimate Fallback
-    print("[AI FAILURE] All methods failed. Using Static Fallback.")
-    return FALLBACK_STATUS
+    # Ultimate Fallback: Try to reuse ANY existing valid report from cache before using static text
+    try:
+        if os.path.exists(DATA_FILE):
+            with open(DATA_FILE, 'r', encoding='utf-8') as f:
+                current = json.load(f)
+                existing_reports = current.get("analysis", {}).get("reports")
+                if existing_reports and all(lang in existing_reports for lang in required):
+                    # Check if it's a placeholder
+                    is_placeholder = False
+                    for l, content in existing_reports.items():
+                         if any(p in content for p in ["世界市場は主要な経済指標", "Institutional macro intelligence updated"]):
+                             is_placeholder = True
+                             break
+                    if not is_placeholder:
+                        print("[AI FAILURE] All methods failed. Reusing last VALID cached report to ensure user experience.")
+                        return existing_reports
+    except: pass
+
+    print("[AI FAILURE] All methods failed and no valid cache exists. Using Static Fallback.")
+    return formatted_fallback
 
 def get_next_event_dates():
     # Fallback static if API fails
@@ -900,7 +920,7 @@ def update_signal():
     # 1. Execution Control: 10-Minute Cool-down
     try:
         if os.path.exists(DATA_FILE):
-            with open(DATA_FILE, 'r') as f:
+            with open(DATA_FILE, 'r', encoding='utf-8') as f:
                 existing_data = json.load(f)
                 last_upd_str = existing_data.get("last_successful_update")
                 if last_upd_str:
@@ -938,7 +958,7 @@ def update_signal():
         history = []
         try:
             if os.path.exists(HISTORY_FILE):
-                with open(HISTORY_FILE, 'r') as f:
+                with open(HISTORY_FILE, 'r', encoding='utf-8') as f:
                     history = json.load(f)
         except: pass
         
@@ -955,7 +975,7 @@ def update_signal():
             
         # Save History
         try:
-            with open(HISTORY_FILE, 'w') as f:
+            with open(HISTORY_FILE, 'w', encoding='utf-8') as f:
                 json.dump(history, f, indent=4)
         except: pass
 
@@ -1005,13 +1025,13 @@ def update_signal():
         today_str = datetime.utcnow().strftime("%Y-%m-%d")
         archive_path = os.path.join(ARCHIVE_DIR, f"{today_str}.json")
         try:
-            with open(archive_path, 'w') as f:
-                json.dump(payload, f, indent=4)
+            with open(archive_path, 'w', encoding='utf-8') as f:
+                json.dump(payload, f, indent=4, ensure_ascii=False)
         except: pass
 
         try:
-            with open(DATA_FILE, 'w') as f:
-                json.dump(payload, f, indent=4)
+            with open(DATA_FILE, 'w', encoding='utf-8') as f:
+                json.dump(payload, f, indent=4, ensure_ascii=False)
         except Exception as e:
             print(f"Error writing to DATA_FILE: {e}")
 
