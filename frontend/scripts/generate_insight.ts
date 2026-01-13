@@ -31,7 +31,7 @@ async function main() {
         // slug and apiKey are automatically picked up from VERCEL_AI_GATEWAY_SLUG and AI_GATEWAY_API_KEY
         // However, we ensure they are present or fallback to direct provider
         const result = await generateText({
-            model: gateway('google:gemini-2.0-flash'), // Pattern: 'provider:model'
+            model: gateway('google:gemini-1.5-flash'), // Pattern: 'provider:model'
             prompt: prompt,
             // Header for traceability
             headers: {

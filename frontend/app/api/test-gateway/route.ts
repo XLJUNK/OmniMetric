@@ -24,6 +24,9 @@ export async function GET(request: NextRequest) {
         const result = await generateText({
             model: gateway('google:gemini-1.5-flash'),
             prompt: "Return exactly: 'GATEWAY_UNIT_TEST_PASSED_200'",
+            headers: {
+                'x-vercel-ai-gateway-provider': 'google'
+            }
         });
 
         return NextResponse.json({
