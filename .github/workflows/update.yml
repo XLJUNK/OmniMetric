@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
@@ -23,8 +24,8 @@ jobs:
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          AI_MODEL_PRO: ${{ secrets.AI_MODEL_PRO }}
-          AI_MODEL_FLASH: ${{ secrets.AI_MODEL_FLASH }}
+          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
+          VERCEL_AI_GATEWAY_SLUG: ${{ secrets.VERCEL_AI_GATEWAY_SLUG }}
         run: python backend/gms_engine.py
       - name: Commit and push changes
         run: |

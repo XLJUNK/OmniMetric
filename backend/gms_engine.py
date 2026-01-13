@@ -174,14 +174,10 @@ def fetch_fred_data():
             tga = fred.get_series('WTREGEN', observation_start=start_date)
             rrp = fred.get_series('RRPONTSYD', observation_start=start_date)
             
-            # Debug print series lengths
-            print(f"[FRED] WALCL: {len(walcl)}, TGA: {len(tga)}, RRP: {len(rrp)}")
             
             # Create DataFrame to forward fill WALCL
             df = pd.DataFrame({'WALCL': walcl, 'TGA': tga, 'RRP': rrp})
-            print(f"[FRED] Pre-Clean rows: {len(df)}")
             df = df.fillna(method='ffill').dropna()
-            print(f"[FRED] Post-Clean rows: {len(df)}")
             
             # Assume all are in Millions.
             # WALCL: Millions
@@ -196,7 +192,6 @@ def fetch_fred_data():
             if pd.isna(last_val): last_val = 6200.0 # Emergency fallback
             
             spark = df['NET_LIQ'].tail(30).fillna(6200.0).tolist()
-            print(f"[FRED] Net Liq Sparkline Calculated (Points: {len(spark)})")
             
             change = 0.0
             
@@ -364,7 +359,6 @@ def fetch_market_data():
     all_tickers.extend(["^MOVE", "SPY", "RSP"]) # Ensure these are included
     all_tickers = list(set(all_tickers))
 
-    print(f"[YF] Batch fetching {len(all_tickers)} tickers...")
     try:
         batch_hist = yf.download(all_tickers, period="3mo", group_by='ticker', silent=True)
     except:
@@ -614,14 +608,14 @@ def generate_multilingual_report(data, score):
                 # Use REST API for Gateway
                 url = f"https://gateway.vercel.ai/{gateway_slug}/google/v1/models/{model_name}:generateContent?key={GEMINI_KEY}"
                 payload = {"contents": [{"parts": [{"text": prompt}]}]}
-                print(f"[AI GATEWAY] Routing {model_name} via Vercel...")
+                # Use REST API for Gateway
                 response = requests.post(url, json=payload, timeout=15)
                 response.raise_for_status()
                 result = response.json()
                 text = result['candidates'][0]['content']['parts'][0]['text'].strip()
             else:
                 # Use SDK for Direct Google API (More robust)
-                print(f"[AI DIRECT] {model_name} via Google SDK...")
+                # Use SDK for Direct Google API (More robust)
                 genai.configure(api_key=GEMINI_KEY)
                 model = genai.GenerativeModel(model_name)
                 response = model.generate_content(prompt)
@@ -634,7 +628,6 @@ def generate_multilingual_report(data, score):
                 text = text.split("```")[1].split("```")[0].strip()
             
             reports = json.loads(text)
-            print(f"[AI SUCCESS] Generated reports for {list(reports.keys())}")
             return reports
             
             if text.startswith("```"):

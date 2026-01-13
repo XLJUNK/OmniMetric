@@ -16,14 +16,6 @@ export function CookieBanner() {
 
     const loadScripts = () => {
         // Here we would load AdSense or Analytics if not already loaded via layout
-        // For Vercel Analytics, it handles its own consent usually, or we can control it if needed.
-        // AdSense example:
-        // const script = document.createElement('script');
-        // script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
-        // script.async = true;
-        // script.crossOrigin = "anonymous";
-        // document.body.appendChild(script);
-        console.log("Consent granted: Loading third-party scripts...");
     };
 
     const handleAccept = () => {

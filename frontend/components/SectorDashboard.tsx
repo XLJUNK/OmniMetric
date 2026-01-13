@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { Shield, Activity, Globe, Zap, Clock, ChevronDown, Check, TrendingUp, TrendingDown, Minus, Info, X } from 'lucide-react';
+import React, { useState } from 'react';
+import { Globe, ChevronDown, Check, TrendingUp, TrendingDown, Minus, Info, X } from 'lucide-react';
 import { RiskGauge, HistoryChart, MetricChart } from '@/components/Charts';
 import { DICTIONARY, LangType } from '@/data/dictionary';
 import { SECTOR_CONFIG, SECTOR_LABELS } from '@/data/sectors';
@@ -13,25 +13,14 @@ import { PulseTile } from '@/components/PulseTile';
 import { useDevice } from '@/hooks/useDevice';
 import { Skeleton, SkeletonCard, SkeletonPulseTile } from '@/components/Skeleton';
 
-interface SignalData {
-    last_updated: string;
-    last_successful_update?: string;
-    gms_score: number;
-    sector_scores?: Record<string, number>;
-    market_data: any;
-    analysis: any;
-    events: any[];
-    history_chart: any[];
-}
+import { useSignalData, SignalData } from '@/hooks/useSignalData';
 
 interface SectorDashboardProps {
     sectorKey: 'STOCKS' | 'CRYPTO' | 'FOREX' | 'COMMODITIES';
 }
 
 export const SectorDashboard = ({ sectorKey }: SectorDashboardProps) => {
-    const [data, setData] = useState<SignalData | null>(null);
-    const [liveData, setLiveData] = useState<any>(null);
-    const [isSafeMode, setIsSafeMode] = useState(false);
+    const { data, liveData, isSafeMode } = useSignalData();
     const [isLangOpen, setIsLangOpen] = useState(false);
     const [showInfo, setShowInfo] = useState(false);
     const { isMobile } = useDevice();
@@ -40,56 +29,9 @@ export const SectorDashboard = ({ sectorKey }: SectorDashboardProps) => {
     const searchParams = useSearchParams();
     const lang = (searchParams.get('lang') as LangType) || 'EN';
 
-    // Helper to change language via URL
     const setLang = (l: LangType) => {
         router.push(`${pathname}?lang=${l}`);
     };
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const res = await fetch(`/api/signal?t=${Date.now()}`);
-                if (res.ok) {
-                    const json = await res.json();
-                    setData(json);
-                }
-            } catch (e) {
-                console.error("Failed to fetch", e);
-            }
-        };
-        fetchData();
-        const interval = setInterval(fetchData, 60000);
-        return () => clearInterval(interval);
-    }, []);
-
-    useEffect(() => {
-        if (!data || !data.last_successful_update) return;
-        const checkHealth = () => {
-            if (!data.last_successful_update) return;
-            const lastUpdate = new Date(data.last_successful_update.replace(' ', 'T'));
-            const diffMin = (new Date().getTime() - lastUpdate.getTime()) / 60000;
-            setIsSafeMode(diffMin > 5);
-        };
-        checkHealth();
-        const interval = setInterval(checkHealth, 30000);
-        return () => clearInterval(interval);
-    }, [data]);
-
-    // LIVE DATA POLLING
-    useEffect(() => {
-        const fetchLive = async () => {
-            try {
-                const res = await fetch('/api/live');
-                if (res.ok) {
-                    const json = await res.json();
-                    setLiveData(json);
-                }
-            } catch (e) { }
-        };
-        fetchLive();
-        const interval = setInterval(fetchLive, 30000);
-        return () => clearInterval(interval);
-    }, []);
 
     if (!data) return <div className="min-h-screen bg-[#0A0A0A] flex items-center justify-center text-slate-500 font-mono text-xs animate-pulse space-y-4 flex-col">
         <SkeletonCard />

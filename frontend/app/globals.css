@@ -89,56 +89,17 @@ a {
   overflow: hidden;
 }
 
-/* CRITICAL: TERMINATE FRAMEWORK INDICATORS */
-.nextjs-static-indicator,
-[data-nextjs-toast],
-#nextjs-dev-indicator,
-[data-nextjs-static-indicator],
-#__next-prerender-indicator,
-.next-route-announcer,
-[data-nextjs-portal] {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-}
-
-/* ULTIMATUM: TOTAL BRANDING PURITY */
-[data-nextjs-static-indicator],
-.nextjs-static-indicator,
-#__next-prerender-indicator {
-  display: none !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-}
-
-/* MANDATORY CATCH-ALL INDICATOR KILL */
-* [class*="indicator"],
-* [class*="indicator"] * {
-  display: none !important;
-  opacity: 0 !important;
-}
-
-/* SAFE NEXT.JS BRANDING ERADICATION */
-/* ABSOLUTE KILL OF THE "N" ICON AND ALL FRAMEWORK INDICATORS */
-[class*="indicator"],
-#__next-prerender-indicator,
-#nextjs-dev-indicator,
-.nextjs-static-indicator {
-  display: none !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-  visibility: hidden !important;
-}
-
-/* FINAL EXECUTION: KILL ALL NEXTJS DEPLOYMENT INDICATORS */
-[data-nextjs-static-indicator],
+/* FRAMEWORK BRANDING ERADICATION: TOTAL PURITY */
 .nextjs-static-indicator,
 [data-nextjs-toast],
 [data-nextjs-toast-errors],
 #nextjs-dev-indicator,
-#__next-prerender-indicator {
+[data-nextjs-static-indicator],
+#__next-prerender-indicator,
+.next-route-announcer,
+[data-nextjs-portal],
+[class*="indicator"],
+[class*="indicator"] * {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;

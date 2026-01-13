@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { Shield, Activity, Globe, Zap, Clock, ChevronDown, Check, Info, X } from 'lucide-react';
+import React, { useState } from 'react';
+import { ChevronDown, Check, Info, X } from 'lucide-react';
 import { RiskGauge, HistoryChart, MetricChart } from '@/components/Charts';
 import { DICTIONARY, LangType } from '@/data/dictionary';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
@@ -13,22 +13,12 @@ import { useDevice } from '@/hooks/useDevice';
 import { Skeleton, SkeletonCard, SkeletonPulseTile } from '@/components/Skeleton';
 
 
-interface SignalData {
-    last_updated: string;
-    last_successful_update?: string;
-    gms_score: number;
-    sector_scores?: Record<string, number>;
-    market_data: any;
-    analysis: any;
-    events: any[];
-    history_chart: any[];
-}
+import { useSignalData, SignalData } from '@/hooks/useSignalData';
 
 // "Pulse" Tile Component removed (Moved to PulseTile.tsx)
 
 export const MultiAssetSummary = () => {
-    const [data, setData] = useState<SignalData | null>(null);
-    const [liveData, setLiveData] = useState<any>(null);
+    const { data, liveData, isSafeMode } = useSignalData();
     const [isLangOpen, setIsLangOpen] = useState(false);
     const [showInfo, setShowInfo] = useState(false);
     const { isMobile, isDesktop } = useDevice();
@@ -42,54 +32,6 @@ export const MultiAssetSummary = () => {
     const setLang = (l: LangType) => {
         router.push(`${pathname}?lang=${l}`);
     };
-
-    const [isSafeMode, setIsSafeMode] = useState(false);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const res = await fetch(`/api/signal?t=${Date.now()}`);
-                if (res.ok) {
-                    const json = await res.json();
-                    setData(json);
-                }
-            } catch (e) {
-                console.error(e);
-            }
-        };
-        fetchData();
-        const interval = setInterval(fetchData, 60000);
-        return () => clearInterval(interval);
-    }, []);
-
-    // LIVE DATA POLLING
-    useEffect(() => {
-        const fetchLive = async () => {
-            try {
-                const res = await fetch('/api/live');
-                if (res.ok) {
-                    const json = await res.json();
-                    setLiveData(json);
-                }
-            } catch (e) { }
-        };
-        fetchLive();
-        const interval = setInterval(fetchLive, 30000);
-        return () => clearInterval(interval);
-    }, []);
-
-    useEffect(() => {
-        if (!data || !data.last_successful_update) return;
-        const checkHealth = () => {
-            if (!data.last_successful_update) return;
-            const lastUpdate = new Date(data.last_successful_update.replace(' ', 'T'));
-            const diffMin = (new Date().getTime() - lastUpdate.getTime()) / 60000;
-            setIsSafeMode(diffMin > 5);
-        };
-        checkHealth();
-        const interval = setInterval(checkHealth, 30000);
-        return () => clearInterval(interval);
-    }, [data]);
 
     if (!t || !data) return (
         <div className="min-h-screen bg-[#0A0A0A] p-4 md:p-8 space-y-8">
