@@ -11,6 +11,7 @@ import google.generativeai as genai
 import requests
 from dotenv import load_dotenv
 import subprocess
+import re
 
 # Load environment variables from all possible locations
 load_dotenv() # CWD
@@ -614,8 +615,18 @@ def generate_multilingual_report(data, score):
                         if (datetime.utcnow() - last_upd_dt).total_seconds() < 600: # 10 Minutes (Comparing UTC)
                             existing_reports = current.get("analysis", {}).get("reports")
                             if existing_reports and all(lang in existing_reports for lang in required):
-                                print(f"[AI SKIP] Recent report exists (<10m). Reusing to save quota.")
-                                return existing_reports
+                                # CRITICAL: Do not skip if reports contain placeholders
+                                is_placeholder = False
+                                for lang, content in existing_reports.items():
+                                    if any(p in content for p in ["世界市場は主要な経済指標", "Deep-diving into", "深度解析"]):
+                                        is_placeholder = True
+                                        break
+                                
+                                if not is_placeholder:
+                                    print(f"[AI SKIP] Recent VALID report exists (<10m). Reusing.")
+                                    return existing_reports
+                                else:
+                                    print(f"[AI REFRESH] Existing report is a placeholder. Forcing fresh generation.")
                     except Exception as date_err:
                         print(f"[AI SKIP DEBUG] Date parse skip: {date_err}")
     except Exception as e:
@@ -655,6 +666,7 @@ def generate_multilingual_report(data, score):
                 ["node", script_path, prompt],
                 capture_output=True,
                 text=True,
+                encoding='utf-8', # Force UTF-8 for Windows resilience
                 creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0,
                 check=False,
                 env=os.environ.copy(),
@@ -663,9 +675,37 @@ def generate_multilingual_report(data, score):
 
             if process.returncode == 0:
                 # Parse output from Node.js
-                output_json = json.loads(process.stdout)
-                text = output_json.get("text", "").strip()
-                print(f"[AI SUCCESS] Generated via Node.js Bridge.")
+                stdout_content = process.stdout # Already decoded via encoding='utf-8'
+                # print(f"[AI BRIDGE DEBUG] Raw stdout: {stdout_content[:300]}...") # REMOVED: Caused encoding error on Windows term
+                
+                # Robust Extraction: Use Regex to find the JSON block
+                text = ""
+                # Search for {"text":"..."} anywhere in the output
+                match = re.search(r'\{"text":\s*".*?"\}', stdout_content, re.DOTALL)
+                if match:
+                    try:
+                        json_obj = json.loads(match.group(0))
+                        text = json_obj.get("text", "").strip()
+                    except: pass
+                
+                # Fallback: Split lines and check prefix (for cleaner logs)
+                if not text:
+                    for line in stdout_content.splitlines():
+                        if '{"text":' in line:
+                            try:
+                                # Try to find where the JSON starts
+                                start_idx = line.find('{"text":')
+                                json_part = line[start_idx:]
+                                json_obj = json.loads(json_part)
+                                text = json_obj.get("text", "").strip()
+                                break
+                            except: continue
+
+                if not text:
+                    print(f"[AI BRIDGE ERROR] Could not extract 'text' from bridge output via Regex or Line Split.")
+                    break
+
+                print(f"[AI SUCCESS] Extracted text via Node.js Bridge.")
                 
                 # Robust JSON Parsing (Cleanup Markdown)
                 if "```json" in text:
@@ -703,7 +743,7 @@ def generate_multilingual_report(data, score):
             print(f"[AI FALLBACK] Attempting Direct REST API (gemini-1.5-flash) - Attempt {attempt+1}...")
             headers = {"Content-Type": "application/json"}
             # API Endpoint for Gemini 1.5 Flash
-            url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_KEY}"
+            url = f"https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key={GEMINI_KEY}"
             
             payload = {
                 "contents": [{
@@ -711,8 +751,7 @@ def generate_multilingual_report(data, score):
                 }],
                 "generationConfig": {
                     "temperature": 0.7,
-                    "maxOutputTokens": 1000,
-                    "responseMimeType": "application/json"
+                    "maxOutputTokens": 1000
                 }
             }
             
