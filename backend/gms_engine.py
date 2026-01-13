@@ -68,6 +68,7 @@ ARCHIVE_DIR = os.path.join(SCRIPT_DIR, "archive")
 FRED_KEY = os.getenv("FRED_API_KEY")
 GEMINI_KEY = os.getenv("GEMINI_API_KEY")
 FMP_KEY = os.getenv("FMP_API_KEY")
+AI_GATEWAY_KEY = os.getenv("AI_GATEWAY_API_KEY")
 
 def validate_api_keys():
     """Validates presence of required API keys and logs warnings for missing ones."""
@@ -75,6 +76,7 @@ def validate_api_keys():
     if not FRED_KEY: missing.append("FRED_API_KEY")
     if not GEMINI_KEY: missing.append("GEMINI_API_KEY")
     if not FMP_KEY: missing.append("FMP_API_KEY")
+    if not AI_GATEWAY_KEY: missing.append("AI_GATEWAY_API_KEY")
     
     if missing:
         print(f"--- [ADMIN ALERT] MISSING API KEYS: {', '.join(missing)} ---")
@@ -599,17 +601,27 @@ def generate_multilingual_report(data, score):
     Output JSON ONLY with keys: EN, JP, CN, ES, HI, ID, AR.
     """
 
-    models_to_try = ['gemini-1.5-flash', 'gemini-1.5-pro', 'gemini-2.0-flash-lite']
+    models_to_try = ['gemini-2.0-flash', 'gemini-1.5-flash', 'gemini-1.5-pro']
     gateway_slug = os.getenv("VERCEL_AI_GATEWAY_SLUG")
     
     for model_name in models_to_try:
         try:
             if gateway_slug:
                 # Use REST API for Gateway
-                url = f"https://gateway.vercel.ai/{gateway_slug}/google/v1/models/{model_name}:generateContent?key={GEMINI_KEY}"
+                url = f"https://gateway.vercel.ai/{gateway_slug}/google/v1/models/{model_name}:generateContent"
+                headers = {
+                    "Content-Type": "application/json"
+                }
+                # Add Authorization if key is present
+                if AI_GATEWAY_KEY:
+                    headers["Authorization"] = f"Bearer {AI_GATEWAY_KEY}"
+                
+                # Append Gemini key to URL as required by Google REST API (Proxy)
+                full_url = f"{url}?key={GEMINI_KEY}"
+                
                 payload = {"contents": [{"parts": [{"text": prompt}]}]}
                 # Use REST API for Gateway
-                response = requests.post(url, json=payload, timeout=15)
+                response = requests.post(full_url, json=payload, headers=headers, timeout=15)
                 response.raise_for_status()
                 result = response.json()
                 text = result['candidates'][0]['content']['parts'][0]['text'].strip()
