@@ -5,14 +5,18 @@ import { gateway } from '@ai-sdk/gateway';
 export const dynamic = 'force-dynamic';
 
 export async function GET(request: NextRequest) {
-    const SLUG = process.env.VERCEL_AI_GATEWAY_SLUG;
+    const SLUG = process.env.VERCEL_AI_GATEWAY_SLUG || process.env.AI_GATEWAY_SLUG;
     const API_KEY = process.env.AI_GATEWAY_API_KEY;
 
     if (!SLUG || !API_KEY) {
         return NextResponse.json({
             status: "ERROR",
             message: "Environment variables missing in Vercel",
-            debug: { slug_found: !!SLUG, key_found: !!API_KEY }
+            debug: {
+                VERCEL_AI_GATEWAY_SLUG_found: !!process.env.VERCEL_AI_GATEWAY_SLUG,
+                AI_GATEWAY_SLUG_found: !!process.env.AI_GATEWAY_SLUG,
+                AI_GATEWAY_API_KEY_found: !!process.env.AI_GATEWAY_API_KEY
+            }
         });
     }
 
