@@ -99,31 +99,40 @@ def format_posts(data, alert_reason=""):
     # SEO Hashtags
     seo_tags = load_seo_hashtags()
     
+    analysis = data.get("analysis", {})
+    reports = analysis.get("reports", {})
+    
     # 1. English Post
+    ai_en = reports.get("EN", "")
+    if len(ai_en) > 160: ai_en = ai_en[:157] + "..." # Truncate for X
+    
     post_en = f"""{alert_prefix_en}{icon} {header_en}
 Signal Score: {score}/100
 
-[MARKET DATA] {timestamp}
-• VIX: {vix}
-• US 10Y: {tnx}%
+{ai_en}
+
+[MARKET DATA]
+• VIX: {vix} | US 10Y: {tnx}%
 • HY Spread: {hy}%
 
 {tracked_url}
-{seo_tags}
-{disclaimer_en}"""
+{seo_tags} {disclaimer_en}"""
 
     # 2. Japanese Post
+    ai_jp = reports.get("JP", "")
+    if len(ai_jp) > 120: ai_jp = ai_jp[:117] + "..." # Truncate for X
+    
     post_jp = f"""{alert_prefix_jp}{icon} {header_jp}
 市場スコア: {score}/100
 
-【最新データ】 {timestamp}
-• VIX指数: {vix}
-• 米10年債: {tnx}%
+{ai_jp}
+
+【重要指標】
+• VIX: {vix} | 米10年債: {tnx}%
 • HYスプレッド: {hy}%
 
 {tracked_url}
-{seo_tags} #米国株
-{disclaimer_jp}"""
+{seo_tags} #米国株 {disclaimer_jp}"""
 
     # 3. Chinese Post (Simplified)
     post_cn = f"""{icon} OmniMetric GMS 报告
