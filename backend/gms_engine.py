@@ -809,9 +809,9 @@ def update_signal():
                     history = json.load(f)
         except: pass
         
-        # Append new entry
+        # Append new entry (UTC)
         new_entry = {
-            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "timestamp": datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"),
             "score": score
         }
         history.append(new_entry)
@@ -839,8 +839,8 @@ def update_signal():
             except: continue
 
         payload = {
-            "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S EST"),
-            "last_successful_update": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "last_updated": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"), # ISO UTC
+            "last_successful_update": datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"), # UTC
             "gms_score": score,
             "sector_scores": sector_scores, 
             "market_data": market_data,
@@ -867,8 +867,9 @@ def update_signal():
             return obj
 
         payload = sanitize(payload)
-
-        today_str = datetime.now().strftime("%Y-%m-%d")
+        
+        # Archive using UTC date
+        today_str = datetime.utcnow().strftime("%Y-%m-%d")
         archive_path = os.path.join(ARCHIVE_DIR, f"{today_str}.json")
         try:
             with open(archive_path, 'w') as f:
@@ -927,7 +928,7 @@ def update_signal():
 
     else:
         return {
-            "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S EST"),
+            "last_updated": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
             "gms_score": 50,
             "market_data": {},
             "events": [],

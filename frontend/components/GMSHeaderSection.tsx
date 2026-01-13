@@ -129,7 +129,33 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
                                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                                 <span className="text-[9px] text-green-500 font-mono font-bold tracking-[0.2em] uppercase">System Operational • 12ms</span>
                             </div>
-                            <span className="text-[9px] text-slate-500 font-bold uppercase tracking-widest">{data.last_updated}</span>
+                            <span className="text-[9px] text-slate-500 font-bold uppercase tracking-widest">
+                                {(() => {
+                                    if (!data.last_updated) return "";
+                                    try {
+                                        const date = new Date(data.last_updated);
+                                        // Specific terminal localization logic
+                                        const options: Intl.DateTimeFormatOptions = {
+                                            month: '2-digit',
+                                            day: '2-digit',
+                                            hour: '2-digit',
+                                            minute: '2-digit',
+                                            hour12: false
+                                        };
+
+                                        if (lang === 'JP') {
+                                            // Force JST for Japan language
+                                            return date.toLocaleString('ja-JP', { ...options, timeZone: 'Asia/Tokyo' }) + " JST";
+                                        }
+
+                                        // Default to UTC for terminal feel or Browser Local
+                                        // Using UTC for consistency across global users
+                                        return date.toLocaleString('en-US', { ...options, timeZone: 'UTC' }) + " UTC";
+                                    } catch (e) {
+                                        return data.last_updated;
+                                    }
+                                })()}
+                            </span>
                         </div>
                     </div>
                 </div>
