@@ -176,10 +176,13 @@ def fetch_fred_data():
             # WTREGEN: Millions (Checking result suggests this)
             # RRPONTSYD: Millions
             
-            df['NET_LIQ'] = (df['WALCL'] / 1000) - df['TGA'] - df['RRP']
+            # Correct Logic: (Millions - Millions - Millions) / 1000 = Billions
+            df['NET_LIQ'] = (df['WALCL'] - df['TGA'] - df['RRP']) / 1000
             
-            last_val = df['NET_LIQ'].iloc[-1]
-            spark = df['NET_LIQ'].tail(30).fillna(method='ffill').tolist() # Fill NaNs inside sparkline logic too
+            last_val = df['NET_LIQ'].iloc[-1] if not df.empty else 6200.0
+            if pd.isna(last_val): last_val = 6200.0 # Emergency fallback
+            
+            spark = df['NET_LIQ'].tail(30).fillna(6200.0).tolist()
             
             change = 0.0
             
@@ -589,12 +592,17 @@ def generate_multilingual_report(data, score):
     """
 
     models_to_try = ['gemini-2.0-flash', 'gemini-1.5-flash']
-    gateway_slug = os.getenv("VERCEL_AI_GATEWAY_SLUG", "omnimetric-gateway")
+    gateway_slug = os.getenv("VERCEL_AI_GATEWAY_SLUG") # e.g. "my-workspace/my-gateway"
     
     for model_name in models_to_try:
         try:
-            # Vercel AI Gateway URL for Google Gemini
-            url = f"https://gateway.vercel.ai/lp/{gateway_slug}/google/v1/models/{model_name}:generateContent?key={GEMINI_KEY}"
+            if gateway_slug:
+                # Vercel AI Gateway URL
+                # Format: https://gateway.vercel.ai/{workspace}/{gateway}/google/v1/...
+                url = f"https://gateway.vercel.ai/{gateway_slug}/google/v1/models/{model_name}:generateContent?key={GEMINI_KEY}"
+            else:
+                # Direct Google API
+                url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={GEMINI_KEY}"
             
             payload = {
                 "contents": [{
@@ -606,6 +614,10 @@ def generate_multilingual_report(data, score):
             response = requests.post(url, json=payload, timeout=15)
             response.raise_for_status()
             
+            if response.status_code != 200:
+                 print(f"[AI] Gateway Error ({response.status_code}): {response.text[:100]}")
+                 continue
+
             result = response.json()
             text = result['candidates'][0]['content']['parts'][0]['text'].strip()
             
