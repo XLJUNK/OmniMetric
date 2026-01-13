@@ -14,7 +14,7 @@ export async function GET(
 
         const files = fs.readdirSync(archiveDir);
         const dates = files
-            .filter(file => file.endsWith('.json'))
+            .filter(file => file.endsWith('.json') && !['summary.json', 'performance_audit.json'].includes(file))
             .map(file => file.replace('.json', ''))
             .sort((a, b) => b.localeCompare(a)); // Newest first
 

@@ -43,14 +43,7 @@ function ArchiveListing() {
     return (
         <TerminalPage pageKey="archive">
             <div className="max-w-3xl space-y-12">
-                <div className="space-y-4">
-                    <h2 className="text-2xl font-black text-white uppercase tracking-tighter border-b border-white/10 pb-2">
-                        {pageData.title}
-                    </h2>
-                    <p className="text-slate-400 font-mono text-sm tracking-widest leading-relaxed uppercase">
-                        {pageData.desc}
-                    </p>
-                </div>
+                {/* Removed redundant title section to fix duplication */}
 
                 {/* PERFORMANCE AUDIT SECTION */}
                 <div className="bg-sky-500/5 border border-sky-500/20 rounded-xl overflow-hidden">

@@ -1,8 +1,37 @@
 {
-    "status": "insufficient_data",
-    "metrics": {},
-    "summaries": {},
+    "metrics": {
+        "avg_vix_defensive": 16.44,
+        "avg_vix_neutral": null,
+        "avg_vix_accumulate": 14.49,
+        "sample_count": 4,
+        "last_updated": "2026-01-13 22:29:12"
+    },
+    "summaries": {
+        "EN": "Collecting historical correlation data to validate algorithmic performance...",
+        "JP": "アルゴリズムの有効性を検証するため、過去の相関データを蓄積中です..."
+    },
     "history": [
+        {
+            "date": "2026-01-10",
+            "gms_score": 63,
+            "spy_price": 694.07,
+            "vix_price": 14.49,
+            "net_liquidity": null
+        },
+        {
+            "date": "2026-01-11",
+            "gms_score": 68,
+            "spy_price": 694.07,
+            "vix_price": 14.49,
+            "net_liquidity": null
+        },
+        {
+            "date": "2026-01-12",
+            "gms_score": 36,
+            "spy_price": 694.07,
+            "vix_price": 16.44,
+            "net_liquidity": 5777.45
+        },
         {
             "date": "2026-01-13",
             "gms_score": 36,
