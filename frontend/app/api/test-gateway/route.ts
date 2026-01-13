@@ -61,7 +61,10 @@ export async function GET(request: NextRequest) {
     } catch (error: any) {
         return NextResponse.json({
             status: "EXCEPTION",
-            error: error.message || error
+            error: error.message || String(error),
+            stack: error.stack,
+            cause: error.cause,
+            url_attempted: gatewayUrl
         });
     }
 }
