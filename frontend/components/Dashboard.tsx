@@ -42,7 +42,7 @@ export const Dashboard = ({ lang, setLang }: DashboardProps) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch('/api/signal');
+                const res = await fetch(`/api/signal?t=${Date.now()}`);
                 if (res.ok) {
                     const json = await res.json();
                     setData(json);
