@@ -1,11 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { generateText } from 'ai';
+import { createGoogleGenerativeAI } from '@ai-sdk/google';
 
 export const dynamic = 'force-dynamic';
 
 export async function GET(request: NextRequest) {
     const SLUG = process.env.VERCEL_AI_GATEWAY_SLUG || process.env.AI_GATEWAY_SLUG;
     const API_KEY = process.env.AI_GATEWAY_API_KEY;
-    const GEMINI_KEY = process.env.GEMINI_API_KEY;
 
     if (!SLUG || !API_KEY) {
         return NextResponse.json({
@@ -18,53 +19,30 @@ export async function GET(request: NextRequest) {
         });
     }
 
-    // Direct REST Pattern for Vercel AI Gateway (Gemini)
-    // https://gateway.ai.vercel.com/v1/public/{slug}/google/v1beta/models/{model}:generateContent
-    const gatewayUrl = `https://gateway.ai.vercel.com/v1/public/${SLUG}/google/v1beta/models/gemini-1.5-flash:generateContent`;
-
     try {
-        const response = await fetch(gatewayUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${API_KEY}`,
-                'x-vercel-ai-gateway-provider': 'google'
-            },
-            body: JSON.stringify({
-                contents: [{
-                    parts: [{ text: "Return exactly: 'GATEWAY_RAW_FETCH_PASSED_200'" }]
-                }],
-                generationConfig: {
-                    maxOutputTokens: 20
-                }
-            })
+        // Use the Google provider but point it at the Vercel AI Gateway URL
+        const google = createGoogleGenerativeAI({
+            baseURL: `https://gateway.ai.vercel.com/v1/public/${SLUG}/google/v1beta`,
+            apiKey: API_KEY, // The AI Gateway uses its own API key for Auth
         });
 
-        const data = await response.json();
+        const result = await generateText({
+            model: google('gemini-1.5-flash'),
+            prompt: "Return exactly: 'GATEWAY_SUCCESS_VERIFIED_200'",
+        });
 
-        if (response.ok) {
-            return NextResponse.json({
-                status: "SUCCESS",
-                result: data.candidates?.[0]?.content?.parts?.[0]?.text || "No text returned",
-                gateway_url: gatewayUrl,
-                data: data
-            });
-        } else {
-            return NextResponse.json({
-                status: "FAILURE",
-                error: "Gateway returned an error",
-                status_code: response.status,
-                details: data
-            });
-        }
+        return NextResponse.json({
+            status: "SUCCESS",
+            result: result.text,
+            gateway_slug: SLUG,
+            method: "custom_base_url"
+        });
 
     } catch (error: any) {
         return NextResponse.json({
-            status: "EXCEPTION",
+            status: "FAILURE",
             error: error.message || String(error),
-            stack: error.stack,
-            cause: error.cause,
-            url_attempted: gatewayUrl
+            details: error
         });
     }
 }
