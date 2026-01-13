@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 export const dynamic = 'force-dynamic';
-export const revalidate = 0;
+export const revalidate = 900; // 15 minutes revalidation at Edge level
 
 export async function GET(
     request: NextRequest
@@ -32,10 +32,10 @@ export async function GET(
         const fileContents = fs.readFileSync(filePath, 'utf8');
         const data = JSON.parse(fileContents);
 
-        // Forced Cache-Busting Headers
+        // Optimized Cache-Control: allow serving stale data while fetching fresh back-end updates
         return NextResponse.json(data, {
             headers: {
-                'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+                'Cache-Control': 'public, s-maxage=900, stale-while-revalidate=600',
                 'Pragma': 'no-cache',
                 'Expires': '0',
             }

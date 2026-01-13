@@ -614,101 +614,118 @@ def generate_multilingual_report(data, score):
     Output JSON ONLY with keys: EN, JP, CN, ES, HI, ID, AR.
     """
 
-    # Node.js Bridge Implementation
+    # Node.js Bridge Implementation with 429 Resilience
     # This ensures strict adherence to Vercel AI SDK authentication specs
-    try:
-        print(f"[AI BRIDGE] Calling Node.js bridge for Gemini 2.0 Flash...")
-        
-        # Prepare input payload for Node.js script
-        input_payload = json.dumps({"prompt": prompt})
-        
-        # Path to the compiled bridge script (relative to frontend dir)
-        script_path = "dist/generate_insight.js"
-        
-        # Frontend Directory
-        frontend_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "frontend")
+    for attempt in range(2): # 2 Retries for Node Bridge
+        try:
+            print(f"[AI BRIDGE] Calling Node.js bridge for Gemini 2.0 Flash (Attempt {attempt+1})...")
+            
+            # Prepare input payload for Node.js script
+            input_payload = json.dumps({"prompt": prompt})
+            
+            # Path to the compiled bridge script (relative to frontend dir)
+            script_path = "dist/generate_insight.js"
+            
+            # Frontend Directory
+            frontend_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "frontend")
 
-        # Execute Node.js bridge from FRONTEND directory
-        process = subprocess.run(
-            ["node", script_path, prompt],
-            capture_output=True,
-            text=True,
-            creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0,
-            check=False,
-            cwd=frontend_dir 
-        )
+            # Execute Node.js bridge from FRONTEND directory
+            process = subprocess.run(
+                ["node", script_path, prompt],
+                capture_output=True,
+                text=True,
+                creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0,
+                check=False,
+                cwd=frontend_dir 
+            )
 
-        if process.returncode == 0:
-            # Parse output from Node.js
-            output_json = json.loads(process.stdout)
-            text = output_json.get("text", "").strip()
-            print(f"[AI SUCCESS] Generated via Node.js Bridge.")
-            
-            # Robust JSON Parsing (Cleanup Markdown)
-            if "```json" in text:
-                text = text.split("```json")[1].split("```")[0].strip()
-            elif "```" in text:
-                text = text.split("```")[1].split("```")[0].strip()
-            
-            reports = json.loads(text)
-            
-            # Validate keys
-            for lang in required:
-                if lang not in reports:
-                    reports[lang] = FALLBACK_STATUS.get(lang, FALLBACK_STATUS["EN"])
-            
-            return reports
-        else:
-            print(f"[AI BRIDGE ERROR] Node.js process failed: {process.stderr}")
-            # Fall through to fallback
-            
-    except Exception as e:
-        print(f"[AI BRIDGE CRITICAL] Bridge execution failed: {e}")
-
-    # Fallback to Direct REST API (Bypassing local SDK issues)
-    # Using gemini-1.5-flash as the most stable REST target
-    try:
-        print("[AI FALLBACK] Attempting Direct REST API (gemini-1.5-flash)...")
-        headers = {"Content-Type": "application/json"}
-        # API Endpoint for Gemini 1.5 Flash
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_KEY}"
-        
-        payload = {
-            "contents": [{
-                "parts": [{"text": prompt}]
-            }],
-            "generationConfig": {
-                "temperature": 0.7,
-                "maxOutputTokens": 1000,
-                "responseMimeType": "application/json"
-            }
-        }
-        
-        response = requests.post(url, headers=headers, json=payload, timeout=30)
-        
-        if response.status_code == 200:
-            result = response.json()
-            # Extract text from Candidate 0
-            if 'candidates' in result and result['candidates']:
-                text = result['candidates'][0]['content']['parts'][0]['text']
-                print(f"[AI SUCCESS] Generated via REST API.")
+            if process.returncode == 0:
+                # Parse output from Node.js
+                output_json = json.loads(process.stdout)
+                text = output_json.get("text", "").strip()
+                print(f"[AI SUCCESS] Generated via Node.js Bridge.")
                 
-                # Clean Markdown if present
-                text = text.replace("```json", "").replace("```", "").strip()
+                # Robust JSON Parsing (Cleanup Markdown)
+                if "```json" in text:
+                    text = text.split("```json")[1].split("```")[0].strip()
+                elif "```" in text:
+                    text = text.split("```")[1].split("```")[0].strip()
                 
                 reports = json.loads(text)
+                
                 # Validate keys
                 for lang in required:
                     if lang not in reports:
                         reports[lang] = FALLBACK_STATUS.get(lang, FALLBACK_STATUS["EN"])
+                
                 return reports
             else:
-                 print(f"[AI REST ERROR] No candidates returned: {result}")
-        else:
-            print(f"[AI REST ERROR] Status {response.status_code}: {response.text}")
+                stderr_content = process.stderr
+                print(f"[AI BRIDGE ERROR] Node.js process failed: {stderr_content}")
+                
+                if "429" in stderr_content:
+                    print(f"[AI RATE LIMIT] 429 detected in Node Bridge. Waiting 30s...")
+                    time.sleep(30)
+                    continue
+                else:
+                    break # Critical other error: skip to fallback
+                
+        except Exception as e:
+            print(f"[AI BRIDGE CRITICAL] Bridge execution failed: {e}")
+            break # Skip to fallback
 
-    except Exception as e:
-        print(f"[AI REST CRITICAL] Request failed: {e}")
+    # Fallback to Direct REST API (Bypassing local SDK issues)
+    # Using gemini-1.5-flash as the most stable REST target with Retry
+    for attempt in range(2): 
+        try:
+            print(f"[AI FALLBACK] Attempting Direct REST API (gemini-1.5-flash) - Attempt {attempt+1}...")
+            headers = {"Content-Type": "application/json"}
+            # API Endpoint for Gemini 1.5 Flash
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_KEY}"
+            
+            payload = {
+                "contents": [{
+                    "parts": [{"text": prompt}]
+                }],
+                "generationConfig": {
+                    "temperature": 0.7,
+                    "maxOutputTokens": 1000,
+                    "responseMimeType": "application/json"
+                }
+            }
+            
+            response = requests.post(url, headers=headers, json=payload, timeout=30)
+            
+            if response.status_code == 200:
+                result = response.json()
+                # Extract text from Candidate 0
+                if 'candidates' in result and result['candidates']:
+                    text = result['candidates'][0]['content']['parts'][0]['text']
+                    print(f"[AI SUCCESS] Generated via REST API.")
+                    
+                    # Clean Markdown if present
+                    text = text.replace("```json", "").replace("```", "").strip()
+                    
+                    reports = json.loads(text)
+                    # Validate keys
+                    for lang in required:
+                        if lang not in reports:
+                            reports[lang] = FALLBACK_STATUS.get(lang, FALLBACK_STATUS["EN"])
+                    return reports
+                else:
+                     print(f"[AI REST ERROR] No candidates returned: {result}")
+                     break
+            elif response.status_code == 429:
+                print(f"[AI REST RATE LIMIT] 429 detected. Waiting 30s...")
+                time.sleep(30)
+                continue
+            else:
+                print(f"[AI REST ERROR] Status {response.status_code}: {response.text}")
+                break
+
+        except Exception as e:
+            print(f"[AI REST CRITICAL] Request failed: {e}")
+            break
 
     # Ultimate Fallback
     print("[AI FAILURE] All methods failed. Using Static Fallback.")

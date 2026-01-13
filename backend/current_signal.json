@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-01-13 15:17:48 EST",
-    "last_successful_update": "2026-01-13 15:17:48",
+    "last_updated": "2026-01-13 16:14:55 EST",
+    "last_successful_update": "2026-01-13 16:14:55",
     "gms_score": 39,
     "sector_scores": {
         "STOCKS": 50,
@@ -435,8 +435,8 @@
             ]
         },
         "NIFTY": {
-            "price": 25785.75,
-            "change_percent": -1.36,
+            "price": 25704.3,
+            "change_percent": -1.67,
             "trend": "DOWN",
             "sparkline": [
                 26046.95,
@@ -460,15 +460,14 @@
                 25876.85,
                 25683.3,
                 25790.25,
-                25785.75
+                25704.3
             ]
         },
         "BTC": {
-            "price": 91813.53,
-            "change_percent": 0.86,
+            "price": 91953.86,
+            "change_percent": 1.59,
             "trend": "UP",
             "sparkline": [
-                88490.02,
                 87414.0,
                 87611.96,
                 87234.74,
@@ -489,15 +488,15 @@
                 90513.1,
                 90386.65,
                 90827.46,
-                91813.53
+                91192.99,
+                91953.86
             ]
         },
         "ETH": {
-            "price": 3124.19,
-            "change_percent": 0.64,
+            "price": 3127.11,
+            "change_percent": 1.43,
             "trend": "UP",
             "sparkline": [
-                3006.07,
                 2963.37,
                 2945.59,
                 2903.58,
@@ -518,15 +517,15 @@
                 3083.05,
                 3082.4,
                 3118.89,
-                3124.19
+                3092.33,
+                3127.11
             ]
         },
         "SOL": {
-            "price": 139.92,
-            "change_percent": 1.17,
+            "price": 140.29,
+            "change_percent": 3.34,
             "trend": "UP",
             "sparkline": [
-                125.8,
                 123.86,
                 122.46,
                 119.95,
@@ -547,12 +546,13 @@
                 135.76,
                 135.73,
                 139.49,
-                139.92
+                139.14,
+                140.29
             ]
         },
         "DXY": {
-            "price": 99.0,
-            "change_percent": 0.32,
+            "price": 98.98,
+            "change_percent": 0.31,
             "trend": "UP",
             "sparkline": [
                 98.35,
@@ -576,12 +576,12 @@
                 98.93,
                 99.13,
                 98.86,
-                99.0
+                98.98
             ]
         },
         "USDJPY": {
-            "price": 158.89,
-            "change_percent": 1.41,
+            "price": 158.88,
+            "change_percent": 1.4,
             "trend": "UP",
             "sparkline": [
                 155.79,
@@ -605,12 +605,12 @@
                 156.73,
                 156.88,
                 158.15,
-                158.89
+                158.88
             ]
         },
         "EURUSD": {
             "price": 1.17,
-            "change_percent": -0.23,
+            "change_percent": -0.24,
             "trend": "DOWN",
             "sparkline": [
                 1.17,
@@ -638,8 +638,8 @@
             ]
         },
         "USDINR": {
-            "price": 90.24,
-            "change_percent": 0.09,
+            "price": 90.26,
+            "change_percent": 0.1,
             "trend": "UP",
             "sparkline": [
                 89.79,
@@ -663,7 +663,7 @@
                 89.86,
                 89.91,
                 90.24,
-                90.24
+                90.26
             ]
         },
         "USDSAR": {
@@ -696,8 +696,8 @@
             ]
         },
         "GOLD": {
-            "price": 4598.6,
-            "change_percent": 3.36,
+            "price": 4590.5,
+            "change_percent": 3.17,
             "trend": "UP",
             "sparkline": [
                 4285.5,
@@ -721,12 +721,12 @@
                 4449.7,
                 4490.3,
                 4604.3,
-                4598.6
+                4590.5
             ]
         },
         "OIL": {
-            "price": 59.84,
-            "change_percent": 6.88,
+            "price": 59.85,
+            "change_percent": 6.89,
             "trend": "UP",
             "sparkline": [
                 57.6,
@@ -750,12 +750,12 @@
                 57.76,
                 59.12,
                 59.5,
-                59.84
+                59.85
             ]
         },
         "COPPER": {
-            "price": 5.99,
-            "change_percent": 3.16,
+            "price": 5.98,
+            "change_percent": 2.99,
             "trend": "UP",
             "sparkline": [
                 5.43,
@@ -779,12 +779,12 @@
                 5.75,
                 5.86,
                 5.99,
-                5.99
+                5.98
             ]
         },
         "NATGAS": {
-            "price": 3.37,
-            "change_percent": -4.31,
+            "price": 3.35,
+            "change_percent": -4.91,
             "trend": "DOWN",
             "sparkline": [
                 4.23,
@@ -808,7 +808,7 @@
                 3.41,
                 3.17,
                 3.41,
-                3.37
+                3.35
             ]
         },
         "MOVE": {
@@ -978,10 +978,6 @@
         }
     },
     "history_chart": [
-        {
-            "date": "01/11 08:32",
-            "score": 68
-        },
         {
             "date": "01/11 10:10",
             "score": 68
@@ -1216,6 +1212,10 @@
         },
         {
             "date": "01/13 15:17",
+            "score": 39
+        },
+        {
+            "date": "01/13 16:14",
             "score": 39
         }
     ],
