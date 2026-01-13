@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { generateText } from 'ai';
+import { gateway } from '@ai-sdk/gateway';
 
 export const dynamic = 'force-dynamic';
 
@@ -10,52 +12,31 @@ export async function GET(request: NextRequest) {
         return NextResponse.json({ status: "ERROR", message: "Env missing" });
     }
 
-    const testResults: any = {};
+    const modelsToProbe = [
+        'google:gemini-1.5-flash',
+        'google:models/gemini-1.5-flash',
+        'google/gemini-1.5-flash',
+        'google/models/gemini-1.5-flash',
+        'gemini-1.5-flash'
+    ];
 
-    // Strategy: Try both lowercase and original SLUG (just in case)
-    const slugsToTest = [SLUG.toLowerCase(), SLUG];
+    const results: any[] = [];
 
-    for (const s of Array.from(new Set(slugsToTest))) {
-        const url = `https://gateway.ai.vercel.com/v1/public/${s}/google/v1beta/models/gemini-1.5-flash:generateContent`;
+    for (const m of modelsToProbe) {
         try {
-            const res = await fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Authorization': `Bearer ${API_KEY}`,
-                    'Content-Type': 'application/json',
-                    'x-vercel-ai-gateway-provider': 'google'
-                },
-                body: JSON.stringify({
-                    contents: [{ parts: [{ text: "Confirm connection." }] }],
-                    generationConfig: { maxOutputTokens: 10 }
-                })
+            const { text } = await generateText({
+                model: gateway(m as any),
+                prompt: "OK",
             });
-
-            const data = await res.json();
-            testResults[s] = {
-                status: res.status,
-                ok: res.ok,
-                data: data
-            };
-
-            if (res.ok) {
-                return NextResponse.json({
-                    status: "SUCCESS_IDENTIFIED",
-                    winner: s,
-                    results: testResults
-                });
-            }
+            results.push({ id: m, status: "SUCCESS", text });
         } catch (e: any) {
-            testResults[s] = { error: e.message };
+            results.push({ id: m, status: "FAILURE", error: e.message || "404?" });
         }
     }
 
     return NextResponse.json({
-        status: "FAILURE_PROBE",
-        results: testResults,
-        debug: {
-            provided_slug: SLUG,
-            key_exists: !!API_KEY
-        }
+        status: "PROBE_V2_COMPLETE",
+        results: results,
+        slug_used: SLUG
     });
 }
