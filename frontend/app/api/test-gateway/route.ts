@@ -11,37 +11,43 @@ export async function GET(request: NextRequest) {
     if (!SLUG || !API_KEY) {
         return NextResponse.json({
             status: "ERROR",
-            message: "Environment variables missing in Vercel",
-            debug: {
-                SLUG_found: !!SLUG,
-                API_KEY_found: !!API_KEY
-            }
+            message: "Environment variables missing"
         });
     }
 
-    try {
-        // Correct SDK Pattern with Gateway helper
-        const result = await generateText({
-            model: gateway('google:gemini-1.5-flash'),
-            prompt: "Return exactly: 'GATEWAY_SUCCESS_VERIFIED_FINAL'",
-            // Explicitly pass headers just in case the helper needs them
-            headers: {
-                'x-vercel-ai-gateway-provider': 'google',
-            }
-        });
+    const modelsToTest = [
+        'google:gemini-1.5-flash',
+        'google:gemini-1.5-flash-latest',
+        'google:models/gemini-1.5-flash',
+        'google:gemini-1.0-pro'
+    ];
 
-        return NextResponse.json({
-            status: "SUCCESS",
-            result: result.text,
-            gateway_slug: SLUG,
-            method: "sdk_gateway_helper"
-        });
+    const results: any[] = [];
 
-    } catch (error: any) {
-        return NextResponse.json({
-            status: "FAILURE",
-            error: error.message || String(error),
-            details: error
-        });
+    for (const modelId of modelsToTest) {
+        try {
+            console.log(`Probing model: ${modelId}`);
+            const { text } = await generateText({
+                model: gateway(modelId as any),
+                prompt: "Say 'OK'",
+                headers: {
+                    'x-vercel-ai-gateway-provider': 'google',
+                }
+            });
+            results.push({ modelId, status: "SUCCESS", response: text });
+        } catch (error: any) {
+            results.push({
+                modelId,
+                status: "FAILURE",
+                message: error.message || "Unknown error",
+                type: error.type || "N/A"
+            });
+        }
     }
+
+    return NextResponse.json({
+        status: "PROBE_COMPLETE",
+        results: results,
+        gateway_slug: SLUG
+    });
 }
