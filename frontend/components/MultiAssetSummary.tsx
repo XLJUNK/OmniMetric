@@ -77,22 +77,7 @@ export const MultiAssetSummary = () => {
         return val;
     };
 
-    // AI Report
-    // Logic to select localized content with robust fallback
-    let aiContent = isSafeMode ? t.status.ai : (
-        (data?.analysis?.reports as any)?.[lang]
-        || (data?.analysis?.reports as any)?.[lang?.toUpperCase()]
-        || data?.analysis?.content
-        || t.status.ai
-    );
-
-    // CRITICAL: Purge placeholders and revalidation messages
-    const PLACEHOLDER_BLOCKLIST = ["高度なマクロデータを深掘りし", "再検証中", "Analyzing...", "深度解析最新", "正在重新验证"];
-    if (aiContent && typeof aiContent === 'string') {
-        if (PLACEHOLDER_BLOCKLIST.some(p => aiContent.includes(p))) {
-            aiContent = t.status.ai;
-        }
-    }
+    // AI Insight is handled within GMSHeaderSection.
 
     return (
         <div className="w-full bg-[#0A0A0A] text-slate-200 font-sans min-h-screen flex flex-col pb-24 relative">

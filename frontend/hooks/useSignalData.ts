@@ -17,17 +17,24 @@ export const useSignalData = () => {
     const [data, setData] = useState<SignalData | null>(null);
     const [liveData, setLiveData] = useState<any>(null);
     const [isSafeMode, setIsSafeMode] = useState(false);
+    const [errorCount, setErrorCount] = useState(0);
 
+    // Primary Signal Data Fetching
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch(`/api/signal`);
+                // Timeout to prevent hanging UI
+                const res = await fetch(`/api/signal`, { signal: AbortSignal.timeout(5000) });
                 if (res.ok) {
                     const json = await res.json();
                     setData(json);
+                    setErrorCount(0);
+                } else {
+                    setErrorCount(prev => prev + 1);
                 }
             } catch (e) {
                 console.error("Signal Fetch Error:", e);
+                setErrorCount(prev => prev + 1);
             }
         };
         fetchData();
@@ -35,10 +42,11 @@ export const useSignalData = () => {
         return () => clearInterval(interval);
     }, []);
 
+    // Live Feed Fetching
     useEffect(() => {
         const fetchLive = async () => {
             try {
-                const res = await fetch('/api/live');
+                const res = await fetch('/api/live', { signal: AbortSignal.timeout(5000) });
                 if (res.ok) {
                     const json = await res.json();
                     setLiveData(json);
@@ -50,19 +58,20 @@ export const useSignalData = () => {
         return () => clearInterval(interval);
     }, []);
 
+    // Health Monitoring (Safe Mode trigger)
     useEffect(() => {
-        if (!data || !data.last_successful_update) return;
+        if (!data) return;
         const checkHealth = () => {
             if (!data.last_successful_update) return;
-            // Parse ISO-8601 (handles T and Z correctly)
             const lastUpdate = new Date(data.last_successful_update);
             const diffMin = (new Date().getTime() - lastUpdate.getTime()) / 60000;
-            setIsSafeMode(diffMin > 25); // Increased tolerance to 25m to avoid flickers on 15m cycle
+            // Trigger Safe Mode if data is >25m old OR we hit multiple fetch failures
+            setIsSafeMode(diffMin > 25 || errorCount >= 3);
         };
         checkHealth();
         const interval = setInterval(checkHealth, 30000);
         return () => clearInterval(interval);
-    }, [data]);
+    }, [data, errorCount]);
 
     return { data, liveData, isSafeMode };
 };

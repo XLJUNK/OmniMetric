@@ -652,11 +652,11 @@ def generate_multilingual_report(data, score):
     breaking_news = fetch_breaking_news()
 
     prompt = f"""
-【AIインサイトのシステム・プロンプト v3.1：GMS中心・高密度要約モード】
+【AIインサイトのシステム・プロンプト v3.2：スコア・センチメント完全同期モード】
 
 # Role
 You are a Senior Global Macro Strategist (ex-Goldman Sachs/BlackRock). 
-Provide high-density market intelligence for institutional investors.
+Provide high-density, professional market intelligence for institutional investors.
 
 # Inputs
 - Current GMS Score: {score}/100
@@ -666,18 +666,23 @@ Provide high-density market intelligence for institutional investors.
 - HY Credit Spread: {context['hy_spread']}%
 - Breaking News Context: {breaking_news}
 
-# Constraints
-1. Focus on the GMS Score ({score}) first. Explain which component (Liquidity, Volatility, or Spreads) is the primary driver.
-2. Use cross-asset correlation logic (e.g., 'yield rise is pressure on growth').
-3. Reference the breaking news context to explain the current market sentiment.
-4. Physical Limit: 
-   - Japanese: Under 250 characters.
-   - English: Under 100 words.
-5. Strict Format (JSON with keys EN, JP, CN, ES, HI, ID, AR):
-
-【GMS: {score}】[One-sentence conclusion]
-【分析】[Condensed cross-asset correlation analysis]
-【速報影響】[Brief comment on the news impact]
+# Strategy Constraints (CRITICAL)
+1. **Regime Alignment**: 
+   - If GMS <= 50: Use "Defensive" or "Cautionary" tone. **PROHIBIT** terms like "Risk-on" or "Bullish expansion".
+   - If GMS > 60: Focus on "Risk-on" and "Accumulation".
+2. **Causal Logic**: Do not just list data. Explain the "Why" (e.g., "Elevated MOVE index is directly tightening financial conditions, forcing a defensive pivot in Nasdaq...").
+3. **Sector Impact Density**: Explicitly mention specific assets/sectors (e.g., QQQ/Tech, BTC/Crypto, HY Bonds, Gold) that are most impacted by this score.
+4. **Physical Limit**:
+   - Japanese: Around 300 characters. Provide "depth" and "weight" in your sentences.
+   - English: Around 120 words.
+5. **Strict JSON Format** (Keys: EN, JP, CN, ES, HI, ID, AR):
+   {{
+     "LANG_CODE": {{
+       "GMS": "【GMS: {score}】[One-sentence professional conclusion]",
+       "Analysis": "[Detailed causal macro analysis including sector impacts]",
+       "News": "【速報影響】[Brief news impact analysis]"
+     }}
+   }}
 """
 
     # Node.js Bridge Implementation with 429 Resilience
@@ -750,12 +755,10 @@ Provide high-density market intelligence for institutional investors.
                 
                 reports = json.loads(text)
                 
-                # Consolidate v3.1 multi-field structure if present
+                # Consolidate v3.2 multi-field structure if present
                 for lang in reports:
                     val = reports[lang]
                     if isinstance(val, dict):
-                        # Join keys into a single string for UI compatibility
-                        # Priority: GMS + Analysis + News impact
                         parts = []
                         if 'GMS' in val: parts.append(val['GMS'])
                         elif 'score' in val: parts.append(f"【GMS: {val['score']}】")
@@ -763,7 +766,8 @@ Provide high-density market intelligence for institutional investors.
                         if 'Analysis' in val: parts.append(f"【分析】{val['Analysis']}")
                         elif 'analysis' in val: parts.append(f"【分析】{val['analysis']}")
                         
-                        if 'News impact' in val: parts.append(f"【速報影響】{val['News impact']}")
+                        if 'News' in val: parts.append(f"【速報影響】{val['News']}")
+                        elif 'News impact' in val: parts.append(f"【速報影響】{val['News impact']}")
                         elif 'Breaking News Impact' in val: parts.append(f"【速報影響】{val['Breaking News Impact']}")
                         elif 'impact' in val: parts.append(f"【速報影響】{val['impact']}")
                         
@@ -822,6 +826,20 @@ Provide high-density market intelligence for institutional investors.
                     text = text.replace("```json", "").replace("```", "").strip()
                     
                     reports = json.loads(text)
+                    
+                    # Consolidate v3.2 multi-field structure
+                    for lang in reports:
+                        val = reports[lang]
+                        if isinstance(val, dict):
+                            parts = []
+                            if 'GMS' in val: parts.append(val['GMS'])
+                            elif 'score' in val: parts.append(f"【GMS: {val['score']}】")
+                            if 'Analysis' in val: parts.append(f"【分析】{val['Analysis']}")
+                            elif 'analysis' in val: parts.append(f"【分析】{val['analysis']}")
+                            if 'News' in val: parts.append(f"【速報影響】{val['News']}")
+                            elif 'impact' in val: parts.append(f"【速報影響】{val['impact']}")
+                            reports[lang] = " ".join(parts)
+
                     # Validate keys
                     for lang in required:
                         if lang not in reports:

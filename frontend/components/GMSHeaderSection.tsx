@@ -8,6 +8,7 @@ import { useDevice } from '@/hooks/useDevice';
 import { useRouter } from 'next/navigation';
 import { NewsTicker } from '@/components/NewsTicker';
 import { AdUnit } from '@/components/AdUnit';
+import MESSAGES from '@/data/messages.json';
 
 interface SignalData {
     last_updated: string;
@@ -40,23 +41,34 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
         router.push(`${window.location.pathname}?${currentParams.toString()}`);
     };
 
-    // AI Report Logic
-    let aiContent = isSafeMode ? t.status.ai : (
-        (data?.analysis?.reports as any)?.[lang]
-        || (data?.analysis?.reports as any)?.[lang?.toUpperCase()]
-        || data?.analysis?.content
-        || t.status.ai
-    );
+    // 3 Dynamic Professional Fallbacks based on GMS Regime
+    const getDynamicFallback = () => {
+        const score = data?.gms_score || 50;
+        const statusObj = (MESSAGES as any).ai_status;
+        let regimeKey = "NEUTRAL";
+        if (score > 60) regimeKey = "RISK_ON";
+        else if (score < 40) regimeKey = "RISK_OFF";
 
-    // CRITICAL: Purge placeholders and revalidation messages (Sync with Dashboard)
-    const PLACEHOLDER_BLOCKLIST = ["高度なマクロデータを深掘りし", "再検証中", "Analyzing...", "深度解析最新", "正在重新验证", "世界市場は主要な経済指標"];
+        const fallback = statusObj[regimeKey]?.[lang] || statusObj[regimeKey]?.["EN"] || t.status.ai;
+        return fallback;
+    };
+
+    // AI Report Logic
+    let aiRaw = (data?.analysis?.reports as any)?.[lang]
+        || (data?.analysis?.reports as any)?.[lang?.toUpperCase()]
+        || data?.analysis?.content;
+
+    let aiContent = aiRaw || getDynamicFallback();
+
+    // Technical Directive: Strictly enforce AI generation if API 200 OK.
+    // Only use fallbacks for hard failures (missing content) or the initial sync.
+    const PLACEHOLDER_BLOCKLIST = ["深度解析最新", "正在重新验证", "世界市場は主要な経済指標"];
     if (aiContent && typeof aiContent === 'string') {
-        if (PLACEHOLDER_BLOCKLIST.some(p => aiContent.includes(p))) {
-            aiContent = t.status.ai;
-        }
-        // Safety check for very short placeholder text
-        if (lang === 'JP' && aiContent.length < 30 && aiContent === data?.analysis?.content) {
-            aiContent = t.status.ai;
+        const isPlaceholder = PLACEHOLDER_BLOCKLIST.some(p => aiContent.includes(p));
+        // Technical Directive: Prioritize AI generation if API 200 OK.
+        // If it's a known generic boilerplate, swap to regime-specific dynamic fallback.
+        if (isPlaceholder || isSafeMode || !aiRaw || aiRaw.length < 20) {
+            aiContent = getDynamicFallback();
         }
     }
 
