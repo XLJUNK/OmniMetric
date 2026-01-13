@@ -137,8 +137,8 @@ def fetch_fred_data():
                 previous_data = saved.get('market_data', {})
     except: pass
 
-    # Fetch Historical Data (Last 45 days to ensure 30 days of clean data)
-    start_date = (datetime.now() - timedelta(days=60)).strftime('%Y-%m-%d')
+    # Fetch Historical Data (Last 90 days to ensure clean data for weekly series)
+    start_date = (datetime.now() - timedelta(days=90)).strftime('%Y-%m-%d')
     
     if not FRED_KEY: return data
 
@@ -188,49 +188,57 @@ def fetch_fred_data():
             tga = fred.get_series('WTREGEN', observation_start=start_date)
             rrp = fred.get_series('RRPONTSYD', observation_start=start_date)
             
-            
             # Create DataFrame to forward fill WALCL
             df = pd.DataFrame({'WALCL': walcl, 'TGA': tga, 'RRP': rrp})
-            # Ensure all values are numeric and fill NaNs with 0
-            df = df.apply(pd.to_numeric, errors='coerce').ffill().fillna(0)
+            
+            # Resilience: Check if we have enough data to proceed
+            if df.empty or 'WALCL' not in df or df['WALCL'].dropna().empty:
+                raise Exception("Insufficient FRED data for Liquidity components")
+
+            # Ensure all values are numeric and fill NaNs. 
+            # We use ffill() so daily dates get the last weekly value.
+            # Then bfill() to fill any leading NaNs from different start dates.
+            df = df.apply(pd.to_numeric, errors='coerce').ffill().bfill().fillna(0)
             
             # Correct Logic: WALCL (M), TGA (M), RRP (B)
             # Result: Billions
             df['NET_LIQ'] = (df['WALCL'] - df['TGA'] - (df['RRP'] * 1000)) / 1000
             
-            last_val = df['NET_LIQ'].iloc[-1] if not df.empty else 6200.0
+            last_val = df['NET_LIQ'].iloc[-1]
             
-            # EMERGENCY: Check for NaN or 0
-            if pd.isna(last_val) or last_val == 0:
-                print("Net Liquidity Calculation failed (NaN detected). Using Fallback.")
-                if 'NET_LIQUIDITY' in previous_data and previous_data['NET_LIQUIDITY'].get('price', 0) > 0:
+            # EMERGENCY: Check for NaN or suspiciously low value (e.g. < 1000, as it should be ~5000+)
+            if pd.isna(last_val) or last_val < 1000:
+                print(f"Net Liquidity Calculation suspicious ({last_val}). Trying to recover from cache.")
+                if 'NET_LIQUIDITY' in previous_data and previous_data['NET_LIQUIDITY'].get('price', 0) > 1000:
                      data['NET_LIQUIDITY'] = previous_data['NET_LIQUIDITY']
-                     # Don't proceed to update with bad data
                      return data
                 else:
-                    last_val = 6200.0 # Hard fallback
+                    last_val = 6200.0 if not pd.isna(last_val) and last_val > 0 else 6200.0
 
-            spark = df['NET_LIQ'].tail(30).fillna(6200.0).tolist()
+            spark = df['NET_LIQ'].tail(30).tolist()
             
+            # Handle list with too few items
+            if len(spark) < 30:
+                spark = [last_val] * (30 - len(spark)) + spark
+
             change = 0.0
-            
-            # Use 5-day Lookback for change to capture trend (weekly data smoothing)
-            if len(spark) > 5:
+            if len(spark) > 5 and spark[-5] != 0:
                 change = ((spark[-1] - spark[-5]) / spark[-5]) * 100
-            elif len(spark) > 1:
+            elif len(spark) > 1 and spark[-2] != 0:
                 change = ((spark[-1] - spark[-2]) / spark[-2]) * 100
 
             data['NET_LIQUIDITY'] = {
                 "price": round(last_val, 2), # Billions
                 "change_percent": round(change, 2),
-                "trend": "EXPANSION" if last_val > 6000 else "CONTRACTION",
+                "trend": "EXPANSION" if last_val > 5500 else "CONTRACTION",
                 "sparkline": [round(x, 2) for x in spark]
             }
         except Exception as e:
             print(f"Net Liq Calc Error: {e}")
-            if 'NET_LIQUIDITY' in previous_data:
+            if 'NET_LIQUIDITY' in previous_data and previous_data['NET_LIQUIDITY'].get('price', 0) > 1000:
+                 print("Recovered Net Liquidity from cache.")
                  data['NET_LIQUIDITY'] = previous_data['NET_LIQUIDITY']
-            elif 'NET_LIQUIDITY' not in data or not data['NET_LIQUIDITY'].get('sparkline'):
+            else:
                  data['NET_LIQUIDITY'] = {"price": 6200, "change_percent": 0, "trend": "NEUTRAL", "sparkline": [6200] * 30}
         
         return data
