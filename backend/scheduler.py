@@ -29,22 +29,20 @@ def job():
 
 def run_scheduler():
     check_pid()
-    print("GMS Scheduler System Initialized.")
-    print("Targeting: Hourly Updates + Market Closes (Tok/Lon/NY).")
+    print("--- [SYSTEM] OMNIMETRIC SCHEDULER INITIALIZED ---")
+    print("Update Frequency: Every 10 Minutes")
+    print("Phase: Real-Time Market Monitoring")
     
     # Run immediately on startup
     job()
     
-    # Schedule hourly updates
-    schedule.every(1).hours.do(job)
+    # Schedule updates every 10 minutes
+    schedule.every(10).minutes.do(job)
     
-    # Market Closes (Approximate JST, can be refined)
-    # Tokyo Close: 15:00 JST
-    schedule.every().day.at("15:00").do(job)
-    # London Close: 01:30 JST (variable) - Simplified to 01:30
-    schedule.every().day.at("01:30").do(job)
-    # NY Close: 06:00 JST (variable) - Simplified to 06:00
-    schedule.every().day.at("06:00").do(job)
+    # Explicit Market Closes (Ensuring captures at key session breaks)
+    schedule.every().day.at("15:05").do(job) # Tokyo Close + buffer
+    schedule.every().day.at("01:35").do(job) # London Close + buffer
+    schedule.every().day.at("06:05").do(job) # NY Close + buffer
     
     while True:
         try:
