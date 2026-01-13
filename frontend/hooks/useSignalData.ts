@@ -21,7 +21,7 @@ export const useSignalData = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch(`/api/signal?t=${Date.now()}`);
+                const res = await fetch(`/api/signal`);
                 if (res.ok) {
                     const json = await res.json();
                     setData(json);
@@ -56,7 +56,7 @@ export const useSignalData = () => {
             if (!data.last_successful_update) return;
             const lastUpdate = new Date(data.last_successful_update.replace(' ', 'T'));
             const diffMin = (new Date().getTime() - lastUpdate.getTime()) / 60000;
-            setIsSafeMode(diffMin > 5);
+            setIsSafeMode(diffMin > 20); // Tolerance for 15m cycle + buffer
         };
         checkHealth();
         const interval = setInterval(checkHealth, 30000);

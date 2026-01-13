@@ -32,10 +32,10 @@ export async function GET(
         const fileContents = fs.readFileSync(filePath, 'utf8');
         const data = JSON.parse(fileContents);
 
-        // Optimized Cache-Control: allow serving stale data while fetching fresh back-end updates
+        // Optimized Cache-Control: Browser and Edge cache for 15 mins
         return NextResponse.json(data, {
             headers: {
-                'Cache-Control': 'public, s-maxage=900, stale-while-revalidate=600',
+                'Cache-Control': 'public, max-age=900, s-maxage=900, stale-while-revalidate=600',
                 'Pragma': 'no-cache',
                 'Expires': '0',
             }

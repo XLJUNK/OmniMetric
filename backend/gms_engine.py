@@ -601,6 +601,23 @@ def generate_multilingual_report(data, score):
     net_liq_val = data.get("NET_LIQUIDITY", {}).get("price", "N/A")
     move_val = data.get("MOVE", {}).get("price", "N/A")
     
+    # 0. RESOURCE SAVING: Check for recent valid report to reuse
+    try:
+        if os.path.exists(DATA_FILE):
+            with open(DATA_FILE, 'r') as f:
+                current = json.load(f)
+                last_upd_str = current.get("last_updated", "")
+                if last_upd_str:
+                    # Format: "2026-01-13 16:30:00 EST"
+                    last_upd_dt = datetime.strptime(last_upd_str.replace(" EST", ""), "%Y-%m-%d %H:%M:%S")
+                    if (datetime.now() - last_upd_dt).total_seconds() < 600: # 10 Minutes
+                        existing_reports = current.get("analysis", {}).get("reports")
+                        if existing_reports and all(lang in existing_reports for lang in required):
+                            print(f"[AI SKIP] Recent report exists (<10m). Reusing to save quota.")
+                            return existing_reports
+    except Exception as e:
+        print(f"[AI SKIP ERROR] Failed to check cache: {e}")
+
     prompt = f"""
     Act as a Senior Constitutional Macro Strategist (Ex-Bridgewater/BlackRock).
     Analyze current market risk based on these LIVE METRICS:
@@ -726,6 +743,28 @@ def generate_multilingual_report(data, score):
         except Exception as e:
             print(f"[AI REST CRITICAL] Request failed: {e}")
             break
+
+    # Deep Fallback to Gemini 1.0 Pro (If 1.5 fails)
+    try:
+        print(f"[AI DEEP FALLBACK] Attempting Direct REST API (gemini-1.0-pro)...")
+        headers = {"Content-Type": "application/json"}
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key={GEMINI_KEY}"
+        payload = {
+            "contents": [{"parts": [{"text": prompt + " Output JSON only."}]}]
+        }
+        response = requests.post(url, headers=headers, json=payload, timeout=20)
+        if response.status_code == 200:
+            result = response.json()
+            if 'candidates' in result and result['candidates']:
+                text = result['candidates'][0]['content']['parts'][0]['text']
+                # Try to parse JSON from pro output
+                if "```json" in text: text = text.split("```json")[1].split("```")[0].strip()
+                elif "```" in text: text = text.split("```")[1].split("```")[0].strip()
+                reports = json.loads(text)
+                print(f"[AI SUCCESS] Generated via 1.0 Pro.")
+                return reports
+    except Exception as e:
+        print(f"[AI DEEP CRITICAL] 1.0 Pro failed: {e}")
 
     # Ultimate Fallback
     print("[AI FAILURE] All methods failed. Using Static Fallback.")
