@@ -2256,3 +2256,104 @@ Required Output JSON structure:
 
 [2026-01-14 20:00:57] [AI BRIDGE] Received 1495 bytes of output. Head: [dotenv@17.2.3] injecting env (0) from ../.env -- tip: 🔑 add access controls to secrets: https://dot...
 [2026-01-14 20:00:57] [AI SUCCESS] Reports parsed and validated.
+[2026-01-14 20:33:31] [IN] FRED_RAW: { series_id: NFCI, val: -0.57258 }
+[2026-01-14 20:33:31] [FRED] Calculating Net Liquidity...
+[2026-01-14 20:33:32] [IN] FRED_RAW: { series: WALCL, last: 6573602.0 }
+[2026-01-14 20:33:32] [IN] FRED_RAW: { series: TGA, last: 796148.0 }
+[2026-01-14 20:33:32] [IN] FRED_RAW: { series: RRP, last: 3.223 }
+[2026-01-14 20:33:32] [FRED] Calculated Net Liquidity: 5774.231B (using WALCL=6573602.0)
+[2026-01-14 20:33:32] [OUT] CALC_LIQ: { price: 5774.23, chg: 3.18% }
+[2026-01-14 20:33:32] [IN] YF_QUERY: { count: 21, tickers: ['INR=X', 'IWM', 'BTC-USD', '^NSEI', 'NG=F']... }
+[2026-01-14 20:33:33] [IN] YF_RAW: { ticker: VIX, price: 16.99, chg: 9.97% }
+[2026-01-14 20:33:33] [IN] YF_RAW: { ticker: SPY, price: 690.08, chg: 0.08% }
+[2026-01-14 20:33:33] [IN] YF_RAW: { ticker: TNX, price: 4.14, chg: -1.03% }
+[2026-01-14 20:33:33] [IN] YF_RAW: { ticker: QQQ, price: 619.2, chg: -0.2% }
+[2026-01-14 20:33:33] [IN] YF_RAW: { ticker: IWM, price: 263.44, chg: 2.0% }
+[2026-01-14 20:33:34] [IN] YF_RAW: { ticker: RSP, price: 198.55, chg: 1.06% }
+[2026-01-14 20:33:34] [IN] YF_RAW: { ticker: HYG, price: 81.02, chg: 0.1% }
+[2026-01-14 20:33:34] [IN] YF_RAW: { ticker: NIFTY, price: 25665.6, chg: -0.82% }
+[2026-01-14 20:33:34] [IN] YF_RAW: { ticker: BTC, price: 97384.48, chg: 7.74% }
+[2026-01-14 20:33:34] [IN] YF_RAW: { ticker: ETH, price: 3368.53, chg: 9.28% }
+[2026-01-14 20:33:34] [IN] YF_RAW: { ticker: SOL, price: 147.0, chg: 8.3% }
+[2026-01-14 20:33:34] [IN] YF_RAW: { ticker: DXY, price: 99.1, chg: 0.17% }
+[2026-01-14 20:33:34] [IN] YF_RAW: { ticker: USDJPY, price: 158.5, chg: 1.13% }
+[2026-01-14 20:33:34] [IN] YF_RAW: { ticker: EURUSD, price: 1.16, chg: -0.26% }
+[2026-01-14 20:33:34] [IN] YF_RAW: { ticker: USDINR, price: 90.21, chg: 0.39% }
+[2026-01-14 20:33:35] [IN] YF_RAW: { ticker: USDSAR, price: 3.75, chg: 0.12% }
+[2026-01-14 20:33:35] [IN] YF_RAW: { ticker: GOLD, price: 4643.7, chg: 4.36% }
+[2026-01-14 20:33:35] [IN] YF_RAW: { ticker: OIL, price: 60.18, chg: 4.19% }
+[2026-01-14 20:33:35] [IN] YF_RAW: { ticker: COPPER, price: 6.09, chg: 5.98% }
+[2026-01-14 20:33:35] [IN] YF_RAW: { ticker: NATGAS, price: 3.08, chg: -9.48% }
+[2026-01-14 20:33:35] [GUARD] Data Integrity Audit: 100% Data Completion (All feeds successful).
+[2026-01-14 20:33:35] [GUARD] Market data acquisition: OPERATIONAL
+[2026-01-14 20:33:35] [OUT] CALC_SCORE: { sector: STOCKS, score: 55 }
+[2026-01-14 20:33:35] [OUT] CALC_SCORE: { sector: CRYPTO, score: 75 }
+[2026-01-14 20:33:35] [OUT] CALC_SCORE: { sector: FOREX, score: 35 }
+[2026-01-14 20:33:35] [OUT] CALC_SCORE: { sector: COMMODITIES, score: 55 }
+[2026-01-14 20:33:35] [OUT] SECTOR_SCORES: {"STOCKS": 55, "CRYPTO": 75, "FOREX": 35, "COMMODITIES": 55}
+[2026-01-14 20:33:35] [OUT] GMS_TOTAL: { score: 39 }
+[2026-01-14 20:33:35] [AI BRIDGE] GEMINI_API_KEY detected (Length: 39)
+[2026-01-14 20:33:36] [AI BATCH] Requesting 7-language analysis (Attempt 1)...
+[2026-01-14 20:33:36] [AI BRIDGE] Command: npx tsx scripts/generate_insight.ts 
+【GMS 15-Min Batch Analysis v4.0】
+Role: Global Macro Strategist.
+Task: Generate market analysis for 7 languages in ONE response.
+
+Data Inputs:
+- Total GMS Score: 39/100
+- Market Highlights:
+- CRYPTO_SENTIMENT: 48 (Chg: 0.0%)
+- YIELD_SPREAD: 0.51 (Chg: 0.0%)
+- HY_SPREAD: 2.74 (Chg: 0.0%)
+- NFCI: -0.57 (Chg: 0.0%)
+- NET_LIQUIDITY: 5774.23 (Chg: 3.18%)
+- VIX: 16.99 (Chg: 9.97%)
+- YIELD_SPREAD_10Y2Y: 0.65 (Chg: 0.0%)
+- US_10Y_YIELD: 4.19 (Chg: 0.0%)
+- REAL_INTEREST_RATE: 1.9 (Chg: 0.0%)
+- SPY: 690.08 (Chg: 0.08%)
+- TNX: 4.14 (Chg: -1.03%)
+- QQQ: 619.2 (Chg: -0.2%)
+- IWM: 263.44 (Chg: 2.0%)
+- RSP: 198.55 (Chg: 1.06%)
+- HYG: 81.02 (Chg: 0.1%)
+- NIFTY: 25665.6 (Chg: -0.82%)
+- BTC: 97384.48 (Chg: 7.74%)
+- ETH: 3368.53 (Chg: 9.28%)
+- SOL: 147.0 (Chg: 8.3%)
+- DXY: 99.1 (Chg: 0.17%)
+- USDJPY: 158.5 (Chg: 1.13%)
+- EURUSD: 1.16 (Chg: -0.26%)
+- USDINR: 90.21 (Chg: 0.39%)
+- USDSAR: 3.75 (Chg: 0.12%)
+- GOLD: 4643.7 (Chg: 4.36%)
+- OIL: 60.18 (Chg: 4.19%)
+- COPPER: 6.09 (Chg: 5.98%)
+- NATGAS: 3.08 (Chg: -9.48%)
+- MOVE: 60.79 (Chg: -3.35%)
+- BREADTH: 0.98 (Chg: 0.0%)
+- SPY_MOMENTUM: -0.98 (Chg: 0%)
+- COPPER_GOLD: 1.31 (Chg: 0%)
+
+- News: Why the stock market keeps shrugging as Trump sows more political chaos
+
+Constraints:
+1. Tone: Defensive if Score <= 50, Risk-On if Score > 60.
+2. Content: Analyze correlation (e.g., Rates vs Stocks, Liquidity vs Crypto).
+3. Length: STRICTLY under 250 characters per language.
+4. Format: Valid JSON only. No markdown, no extra text.
+
+Required Output JSON structure:
+{
+  "EN": "Summary text in English...",
+  "JP": "日本語の要約...",
+  "CN": "中文摘要...",
+  "ES": "Resumen en español...",
+  "HI": "हिंदी सारांश...",
+  "ID": "Ringkasan Bahasa Indonesia...",
+  "AR": "ملخص باللغة العربية..."
+}
+
+[2026-01-14 20:33:41] [AI BRIDGE] Received 1442 bytes of output. Head: [dotenv@17.2.3] injecting env (0) from ../.env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+[...
+[2026-01-14 20:33:41] [AI SUCCESS] Reports parsed and validated.
