@@ -16,6 +16,8 @@ import requests
 import xml.etree.ElementTree as ET
 import sys
 
+# Trigger AI generation with new secrets
+
 # Load environment variables from all possible locations
 load_dotenv() # CWD
 load_dotenv(os.path.join(os.path.dirname(__file__), '.env')) # backend/.env
@@ -684,20 +686,22 @@ def generate_multilingual_report(data, score):
     """Generates AI analysis in 7 languages using a SINGLE batch API call for efficiency."""
     required = ["EN", "JP", "CN", "ES", "HI", "ID", "AR"]
     
-    # Fallback to Positive Status messages (v2.1.0 Legacy Stability)
+    # Fallback to Positive Status messages (Professional Prefix for Frontend Bypass)
     FALLBACK_STATUS = {
-        "EN": "Deep-diving into the latest macro data to synthesize advanced insights...",
-        "JP": "世界市場は主要な経済指標と地政学リスクを織り込みながら推移しています。金利動向とボラティリティ指数を注視し、慎重なリスク管理を行うことが推奨されます。",
-        "CN": "深度解析最新宏观数据，正在生成高级洞察...",
-        "ES": "Analizando en profundidad los últimos datos macro para sintetizar información avanzada...",
-        "HI": "नवीनतम मैक्रो डेटा का गहराई से विश्लेषण कर उन्नत अंतर्दृष्टि तैयार की जा रही है...",
-        "ID": "Mendalami data makro terbaru untuk menyintesakan wawasan tingkat lanjut...",
-        "AR": "تعمق في أحدث البيانات الكلية لتوليف رؤى متقدمة..."
+        "EN": "【GMS: Analysis Sync】 Deep-diving into the latest macro data to synthesize advanced insights...",
+        "JP": "【GMS: 分析同期中】 世界市場は主要な経済指標と地政学リスクを織り込みながら推移しています。金利動向とボラティリティ指数を注視し、慎重なリスク管理を行うことが推奨されます。",
+        "CN": "【GMS: 分析同步】 深度解析最新宏观数据，正在生成高级洞察...",
+        "ES": "【GMS: Sincronización】 Analizando en profundidad los últimos datos macro para sintetizar información avanzada...",
+        "HI": "【GMS: विश्लेषण सिंक】 नवीनतम मैक्रो डेटा का गहराई से विश्लेषण कर उन्नत अंतर्दृष्टि तैयार की जा रही है...",
+        "ID": "【GMS: Sinkronisasi】 Mendalami data makro terbaru untuk menyintesakan wawasan tingkat lanjut...",
+        "AR": "【GMS: مزامنة التحليل】 تعمق في أحدث البيانات الكلية لتوليف رؤى متقدمة..."
     }
 
     if not GEMINI_KEY:
-        print("[AI] Warning: GEMINI_API_KEY missing. Using fallback status.")
+        log_diag("[AI BRIDGE CRITICAL] GEMINI_API_KEY is MISSING from environment.")
         return FALLBACK_STATUS
+    else:
+        log_diag(f"[AI BRIDGE] GEMINI_API_KEY detected (Length: {len(GEMINI_KEY)})")
 
     # Prepare high-density data summary for AI
     market_summary = ""
@@ -773,7 +777,7 @@ Required Output JSON structure:
 
             if process.returncode == 0:
                 stdout_content = process.stdout
-                log_diag(f"[AI BRIDGE] Received {len(stdout_content)} bytes of output.")
+                log_diag(f"[AI BRIDGE] Received {len(stdout_content)} bytes of output. Head: {stdout_content[:100].strip()}...")
                 
                 # Robust extraction: look for any JSON pattern in output
                 matches = list(re.finditer(r'\{"text":\s*"(.*?)"\}', stdout_content, re.DOTALL))
