@@ -379,6 +379,7 @@ def fetch_economic_calendar():
 def fetch_market_data():
     """Fetches multi-asset data from Yahoo Finance."""
     print("Fetching Institutional Multi-Asset Feeds...")
+    failed_indicators = []
     
     all_data = {}
     
@@ -387,6 +388,8 @@ def fetch_market_data():
     if crypto_fg:
         all_data["CRYPTO_SENTIMENT"] = crypto_fg
     else:
+        log_diag("[IN ERROR] Crypto Sentiment API failed.")
+        failed_indicators.append("CRYPTO_SENTIMENT")
         all_data["CRYPTO_SENTIMENT"] = {"price": 50, "change_percent": 0.0, "trend": "NEUTRAL", "sparkline": [50]*30}
     
     # 0.5 ECONOMIC CALENDAR (Real)
@@ -470,7 +473,9 @@ def fetch_market_data():
                         log_diag(f"[IN] YF_RAW: {{ ticker: {key}, price: {round(current, 2)}, chg: {round(change, 2)}% }}")
                     else: raise Exception("No close data")
                 else: raise Exception("Empty Data")
-            except:
+            except Exception as e:
+                log_diag(f"[IN ERROR] YFinance Fetch Failed for {key}: {e}")
+                failed_indicators.append(key)
                 # Mock Data for Resilience
                 base_prices = {"BTC": 95000, "ETH": 3400, "SOL": 180, "USDJPY": 150, "EURUSD": 1.05, "OIL": 75, "NATGAS": 2.5, "USDINR": 87.50, "USDSAR": 3.75, "RSP": 170, "HYG": 77, "VIX": 15, "NIFTY": 23500}
                 base = base_prices.get(key, 100)
@@ -569,6 +574,11 @@ def fetch_market_data():
              "change_percent": 0, "trend": "RISK-ON" if ratio > 0.002 else "RISK-OFF",
              "sparkline": [round(ratio*1000, 2)]*30
         }
+
+    if failed_indicators:
+        log_diag(f"[GUARD] Data Integrity Audit: {len(failed_indicators)} indicators failed/mocked: {', '.join(failed_indicators)}")
+    else:
+        log_diag("[GUARD] Data Integrity Audit: 100% Data Completion (All feeds successful).")
 
     return all_data, status, real_events
 
