@@ -26,3 +26,32 @@
 [2026-01-14 08:44:38] [OUT] CALC_SCORE: { sector: COMMODITIES, score: 55 }
 [2026-01-14 08:44:38] [OUT] SECTOR_SCORES: {"STOCKS": 50, "CRYPTO": 75, "FOREX": 35, "COMMODITIES": 55}
 [2026-01-14 08:44:38] [OUT] GMS_TOTAL: { score: 45 }
+[2026-01-14 09:16:32] [IN] YF_QUERY: { count: 21, tickers: ['EURUSD=X', 'GC=F', 'RSP', 'HG=F', '^VIX']... }
+[2026-01-14 09:16:33] [IN] YF_RAW: { ticker: VIX, price: 16.37, chg: 5.95% }
+[2026-01-14 09:16:33] [IN] YF_RAW: { ticker: SPY, price: 693.77, chg: 0.61% }
+[2026-01-14 09:16:33] [IN] YF_RAW: { ticker: TNX, price: 4.17, chg: 0.8% }
+[2026-01-14 09:16:33] [IN] YF_RAW: { ticker: QQQ, price: 626.24, chg: 0.36% }
+[2026-01-14 09:16:33] [IN] YF_RAW: { ticker: IWM, price: 261.35, chg: 2.3% }
+[2026-01-14 09:16:33] [IN] YF_RAW: { ticker: RSP, price: 197.78, chg: 1.53% }
+[2026-01-14 09:16:34] [IN] YF_RAW: { ticker: HYG, price: 81.04, chg: 0.2% }
+[2026-01-14 09:16:34] [IN] YF_RAW: { ticker: NIFTY, price: 25692.65, chg: -0.71% }
+[2026-01-14 09:16:34] [IN] YF_RAW: { ticker: BTC, price: 95032.13, chg: 5.14% }
+[2026-01-14 09:16:34] [IN] YF_RAW: { ticker: ETH, price: 3330.06, chg: 8.03% }
+[2026-01-14 09:16:34] [IN] YF_RAW: { ticker: SOL, price: 145.31, chg: 7.06% }
+[2026-01-14 09:16:34] [IN] YF_RAW: { ticker: DXY, price: 99.12, chg: 0.19% }
+[2026-01-14 09:16:34] [IN] YF_RAW: { ticker: USDJPY, price: 158.82, chg: 1.33% }
+[2026-01-14 09:16:34] [IN] YF_RAW: { ticker: EURUSD, price: 1.17, chg: -0.2% }
+[2026-01-14 09:16:34] [IN] YF_RAW: { ticker: USDINR, price: 90.14, chg: 0.31% }
+[2026-01-14 09:16:35] [IN] YF_RAW: { ticker: USDSAR, price: 3.75, chg: 0.12% }
+[2026-01-14 09:16:35] [IN] YF_RAW: { ticker: GOLD, price: 4642.7, chg: 4.34% }
+[2026-01-14 09:16:35] [IN] YF_RAW: { ticker: OIL, price: 60.59, chg: 4.9% }
+[2026-01-14 09:16:35] [IN] YF_RAW: { ticker: COPPER, price: 6.05, chg: 5.24% }
+[2026-01-14 09:16:35] [IN] YF_RAW: { ticker: NATGAS, price: 3.38, chg: -0.7% }
+[2026-01-14 09:16:35] [GUARD] Data Integrity Audit: 100% Data Completion (All feeds successful).
+[2026-01-14 09:16:35] [GUARD] Market data acquisition: OPERATIONAL
+[2026-01-14 09:16:35] [OUT] CALC_SCORE: { sector: STOCKS, score: 50 }
+[2026-01-14 09:16:35] [OUT] CALC_SCORE: { sector: CRYPTO, score: 75 }
+[2026-01-14 09:16:35] [OUT] CALC_SCORE: { sector: FOREX, score: 35 }
+[2026-01-14 09:16:35] [OUT] CALC_SCORE: { sector: COMMODITIES, score: 55 }
+[2026-01-14 09:16:35] [OUT] SECTOR_SCORES: {"STOCKS": 50, "CRYPTO": 75, "FOREX": 35, "COMMODITIES": 55}
+[2026-01-14 09:16:35] [OUT] GMS_TOTAL: { score: 45 }
