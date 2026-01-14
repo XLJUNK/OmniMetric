@@ -770,17 +770,38 @@ Provide high-density, professional market intelligence for institutional investo
                 for lang in reports:
                     val = reports[lang]
                     if isinstance(val, dict):
-                        parts = []
-                        if 'GMS' in val: parts.append(val['GMS'])
-                        elif 'score' in val: parts.append(f"【GMS: {val['score']}】")
+                        if 'GMS' in val: 
+                            tag = val['GMS']
+                            parts.append(tag)
+                        elif 'score' in val: 
+                            tag = f"【GMS: {val['score']}】"
+                            parts.append(tag)
                         
-                        if 'Analysis' in val: parts.append(f"【分析】{val['Analysis']}")
-                        elif 'analysis' in val: parts.append(f"【分析】{val['analysis']}")
+                        if 'Analysis' in val: 
+                            content = val['Analysis']
+                            tag = "【分析】"
+                            parts.append(content if content.startswith(tag) else f"{tag}{content}")
+                        elif 'analysis' in val: 
+                            content = val['analysis']
+                            tag = "【分析】"
+                            parts.append(content if content.startswith(tag) else f"{tag}{content}")
                         
-                        if 'News' in val: parts.append(f"【速報影響】{val['News']}")
-                        elif 'News impact' in val: parts.append(f"【速報影響】{val['News impact']}")
-                        elif 'Breaking News Impact' in val: parts.append(f"【速報影響】{val['Breaking News Impact']}")
-                        elif 'impact' in val: parts.append(f"【速報影響】{val['impact']}")
+                        if 'News' in val: 
+                            content = val['News']
+                            tag = "【速報影響】"
+                            parts.append(content if content.startswith(tag) else f"{tag}{content}")
+                        elif 'News impact' in val: 
+                            content = val['News impact']
+                            tag = "【速報影響】"
+                            parts.append(content if content.startswith(tag) else f"{tag}{content}")
+                        elif 'Breaking News Impact' in val: 
+                            content = val['Breaking News Impact']
+                            tag = "【速報影響】"
+                            parts.append(content if content.startswith(tag) else f"{tag}{content}")
+                        elif 'impact' in val: 
+                            content = val['impact']
+                            tag = "【速報影響】"
+                            parts.append(content if content.startswith(tag) else f"{tag}{content}")
                         
                         reports[lang] = " ".join(parts)
                 
@@ -843,12 +864,31 @@ Provide high-density, professional market intelligence for institutional investo
                         val = reports[lang]
                         if isinstance(val, dict):
                             parts = []
-                            if 'GMS' in val: parts.append(val['GMS'])
-                            elif 'score' in val: parts.append(f"【GMS: {val['score']}】")
-                            if 'Analysis' in val: parts.append(f"【分析】{val['Analysis']}")
-                            elif 'analysis' in val: parts.append(f"【分析】{val['analysis']}")
-                            if 'News' in val: parts.append(f"【速報影響】{val['News']}")
-                            elif 'impact' in val: parts.append(f"【速報影響】{val['impact']}")
+                            if 'GMS' in val: 
+                                tag = val['GMS']
+                                parts.append(tag)
+                            elif 'score' in val: 
+                                tag = f"【GMS: {val['score']}】"
+                                parts.append(tag)
+                                
+                            if 'Analysis' in val: 
+                                content = val['Analysis']
+                                tag = "【分析】"
+                                parts.append(content if content.startswith(tag) else f"{tag}{content}")
+                            elif 'analysis' in val: 
+                                content = val['analysis']
+                                tag = "【分析】"
+                                parts.append(content if content.startswith(tag) else f"{tag}{content}")
+                                
+                            if 'News' in val: 
+                                content = val['News']
+                                tag = "【速報影響】"
+                                parts.append(content if content.startswith(tag) else f"{tag}{content}")
+                            elif 'impact' in val: 
+                                content = val['impact']
+                                tag = "【速報影響】"
+                                parts.append(content if content.startswith(tag) else f"{tag}{content}")
+                            
                             reports[lang] = " ".join(parts)
 
                     # Validate keys
