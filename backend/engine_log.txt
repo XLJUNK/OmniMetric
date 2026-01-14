@@ -55,3 +55,102 @@
 [2026-01-14 09:16:35] [OUT] CALC_SCORE: { sector: COMMODITIES, score: 55 }
 [2026-01-14 09:16:35] [OUT] SECTOR_SCORES: {"STOCKS": 50, "CRYPTO": 75, "FOREX": 35, "COMMODITIES": 55}
 [2026-01-14 09:16:35] [OUT] GMS_TOTAL: { score: 45 }
+[2026-01-14 09:45:49] [IN] FRED_RAW: { series_id: NFCI, val: -0.5536 }
+[2026-01-14 09:45:49] [FRED] Calculating Net Liquidity...
+[2026-01-14 09:45:50] [IN] FRED_RAW: { series: WALCL, last: 6573602.0 }
+[2026-01-14 09:45:50] [IN] FRED_RAW: { series: TGA, last: 796148.0 }
+[2026-01-14 09:45:50] [IN] FRED_RAW: { series: RRP, last: 3.277 }
+[2026-01-14 09:45:50] [FRED] Calculated Net Liquidity: 5774.177B (using WALCL=6573602.0)
+[2026-01-14 09:45:50] [OUT] CALC_LIQ: { price: 5774.18, chg: 3.18% }
+[2026-01-14 09:45:50] [IN] YF_QUERY: { count: 21, tickers: ['^VIX', '^NSEI', 'HYG', '^MOVE', 'NG=F']... }
+[2026-01-14 09:45:51] [IN] YF_RAW: { ticker: VIX, price: 16.23, chg: 5.05% }
+[2026-01-14 09:45:51] [IN] YF_RAW: { ticker: SPY, price: 693.77, chg: 0.61% }
+[2026-01-14 09:45:51] [IN] YF_RAW: { ticker: TNX, price: 4.17, chg: 0.8% }
+[2026-01-14 09:45:51] [IN] YF_RAW: { ticker: QQQ, price: 626.24, chg: 0.36% }
+[2026-01-14 09:45:51] [IN] YF_RAW: { ticker: IWM, price: 261.35, chg: 2.3% }
+[2026-01-14 09:45:52] [IN] YF_RAW: { ticker: RSP, price: 197.78, chg: 1.53% }
+[2026-01-14 09:45:52] [IN] YF_RAW: { ticker: HYG, price: 81.04, chg: 0.2% }
+[2026-01-14 09:45:52] [IN] YF_RAW: { ticker: NIFTY, price: 25654.4, chg: -0.86% }
+[2026-01-14 09:45:52] [IN] YF_RAW: { ticker: BTC, price: 94965.48, chg: 5.07% }
+[2026-01-14 09:45:52] [IN] YF_RAW: { ticker: ETH, price: 3328.88, chg: 8.0% }
+[2026-01-14 09:45:53] [IN] YF_RAW: { ticker: SOL, price: 145.33, chg: 7.08% }
+[2026-01-14 09:45:53] [IN] YF_RAW: { ticker: DXY, price: 99.08, chg: 0.15% }
+[2026-01-14 09:45:53] [IN] YF_RAW: { ticker: USDJPY, price: 158.85, chg: 1.35% }
+[2026-01-14 09:45:53] [IN] YF_RAW: { ticker: EURUSD, price: 1.17, chg: -0.21% }
+[2026-01-14 09:45:53] [IN] YF_RAW: { ticker: USDINR, price: 90.21, chg: 0.39% }
+[2026-01-14 09:45:54] [IN] YF_RAW: { ticker: USDSAR, price: 3.75, chg: 0.12% }
+[2026-01-14 09:45:54] [IN] YF_RAW: { ticker: GOLD, price: 4638.8, chg: 4.25% }
+[2026-01-14 09:45:54] [IN] YF_RAW: { ticker: OIL, price: 60.41, chg: 4.59% }
+[2026-01-14 09:45:54] [IN] YF_RAW: { ticker: COPPER, price: 6.05, chg: 5.22% }
+[2026-01-14 09:45:54] [IN] YF_RAW: { ticker: NATGAS, price: 3.38, chg: -0.76% }
+[2026-01-14 09:45:54] [GUARD] Data Integrity Audit: 100% Data Completion (All feeds successful).
+[2026-01-14 09:45:54] [GUARD] Market data acquisition: OPERATIONAL
+[2026-01-14 09:45:54] [OUT] CALC_SCORE: { sector: STOCKS, score: 50 }
+[2026-01-14 09:45:54] [OUT] CALC_SCORE: { sector: CRYPTO, score: 75 }
+[2026-01-14 09:45:54] [OUT] CALC_SCORE: { sector: FOREX, score: 35 }
+[2026-01-14 09:45:54] [OUT] CALC_SCORE: { sector: COMMODITIES, score: 55 }
+[2026-01-14 09:45:54] [OUT] SECTOR_SCORES: {"STOCKS": 50, "CRYPTO": 75, "FOREX": 35, "COMMODITIES": 55}
+[2026-01-14 09:45:54] [OUT] GMS_TOTAL: { score: 38 }
+[2026-01-14 09:45:55] [AI BATCH] Requesting 7-language analysis (Attempt 1)...
+[2026-01-14 09:45:55] [AI BRIDGE] Command: npx tsx scripts/generate_insight.ts 
+【GMS 15-Min Batch Analysis v4.0】
+Role: Global Macro Strategist.
+Task: Generate market analysis for 7 languages in ONE response.
+
+Data Inputs:
+- Total GMS Score: 38/100
+- Market Highlights:
+- CRYPTO_SENTIMENT: 48 (Chg: 0.0%)
+- YIELD_SPREAD: 0.51 (Chg: 0.0%)
+- HY_SPREAD: 2.74 (Chg: 0.0%)
+- NFCI: -0.55 (Chg: 0.0%)
+- NET_LIQUIDITY: 5774.18 (Chg: 3.18%)
+- VIX: 16.23 (Chg: 5.05%)
+- YIELD_SPREAD_10Y2Y: 0.65 (Chg: 0.0%)
+- US_10Y_YIELD: 4.19 (Chg: 0.0%)
+- REAL_INTEREST_RATE: 1.9 (Chg: 0.0%)
+- SPY: 693.77 (Chg: 0.61%)
+- TNX: 4.17 (Chg: 0.8%)
+- QQQ: 626.24 (Chg: 0.36%)
+- IWM: 261.35 (Chg: 2.3%)
+- RSP: 197.78 (Chg: 1.53%)
+- HYG: 81.04 (Chg: 0.2%)
+- NIFTY: 25654.4 (Chg: -0.86%)
+- BTC: 94965.48 (Chg: 5.07%)
+- ETH: 3328.88 (Chg: 8.0%)
+- SOL: 145.33 (Chg: 7.08%)
+- DXY: 99.08 (Chg: 0.15%)
+- USDJPY: 158.85 (Chg: 1.35%)
+- EURUSD: 1.17 (Chg: -0.21%)
+- USDINR: 90.21 (Chg: 0.39%)
+- USDSAR: 3.75 (Chg: 0.12%)
+- GOLD: 4638.8 (Chg: 4.25%)
+- OIL: 60.41 (Chg: 4.59%)
+- COPPER: 6.05 (Chg: 5.22%)
+- NATGAS: 3.38 (Chg: -0.76%)
+- MOVE: 60.79 (Chg: -3.35%)
+- BREADTH: 0.92 (Chg: 0.0%)
+- SPY_MOMENTUM: -0.92 (Chg: 0%)
+- COPPER_GOLD: 1.3 (Chg: 0%)
+
+- News: Greenland and Denmark prepare for a White House showdown
+
+Constraints:
+1. Tone: Defensive if Score <= 50, Risk-On if Score > 60.
+2. Content: Analyze correlation (e.g., Rates vs Stocks, Liquidity vs Crypto).
+3. Length: STRICTLY under 250 characters per language.
+4. Format: Valid JSON only. No markdown, no extra text.
+
+Required Output JSON structure:
+{
+  "EN": "Summary text in English...",
+  "JP": "日本語の要約...",
+  "CN": "中文摘要...",
+  "ES": "Resumen en español...",
+  "HI": "हिंदी सारांश...",
+  "ID": "Ringkasan Bahasa Indonesia...",
+  "AR": "ملخص باللغة العربية..."
+}
+
+[2026-01-14 09:46:01] [AI BRIDGE] Received 1605 bytes of output.
+[2026-01-14 09:46:01] [AI SUCCESS] Reports parsed and validated.
