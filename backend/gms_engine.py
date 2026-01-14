@@ -66,13 +66,14 @@ LOG_FILE = os.path.join(SCRIPT_DIR, "engine_log.txt")
 
 def log_diag(msg):
     """Writes diagnostic messages to a file for bot upload."""
-    timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     line = f"[{timestamp}] {msg}\n"
     print(msg)
     try:
         with open(LOG_FILE, "a", encoding="utf-8") as f:
             f.write(line)
-    except: pass
+    except Exception as e:
+        print(f"FAILED TO WRITE LOG: {e}")
 
 # ... (Existing Directory Checks)
 DATA_FILE = os.path.join(SCRIPT_DIR, "current_signal.json")
@@ -247,35 +248,38 @@ def fetch_fred_data():
             # Result: Billions
             df['NET_LIQ'] = (df['WALCL'] - df['TGA'] - (df['RRP'] * 1000)) / 1000
             
-            last_val = df['NET_LIQ'].iloc[-1] if not df.empty else 6200.0
+            # Filter valid (non-zero, non-NaN) data for sparkline
+            valid_series = df['NET_LIQ'].dropna()
+            valid_series = valid_series[valid_series > 1000] # Physical guard for outlier/error
             
-            # EMERGENCY: Check for NaN or 0
-            if pd.isna(last_val) or last_val == 0:
-                log_diag("[FRED WARN] Net Liquidity calculation returned NaN/0. Using Cache.")
-                if 'NET_LIQUIDITY' in previous_data and previous_data['NET_LIQUIDITY'].get('price', 0) > 0:
-                     data['NET_LIQUIDITY'] = previous_data['NET_LIQUIDITY']
-                     return data
-                else:
-                    last_val = 6200.0 # Hard fallback
+            if valid_series.empty:
+                raise Exception("No valid calculation results within historical window")
 
-            spark = df['NET_LIQ'].tail(30).tolist()
-            if len(spark) < 30: spark = [last_val] * (30 - len(spark)) + spark
+            last_val = valid_series.iloc[-1]
+            log_diag(f"[FRED] Calculated Net Liquidity: {last_val}B (using WALCL={df['WALCL'].iloc[-1]})")
+
+            spark = valid_series.tail(30).tolist()
+            if len(spark) < 30: 
+                spark = [spark[0]] * (30 - len(spark)) + spark
             
+            # Recalculate change based on real variance
             change = 0.0
-            if len(spark) > 5:
-                change = ((spark[-1] - spark[-5]) / spark[-5]) * 100
+            if len(spark) > 1:
+                change = ((spark[-1] - spark[0]) / spark[0]) * 100
 
             data['NET_LIQUIDITY'] = {
                 "price": round(last_val, 2), # Billions
                 "change_percent": round(change, 2),
-                "trend": "EXPANSION" if last_val > 6000 else "CONTRACTION",
+                "trend": "EXPANSION" if last_val > 6100 else "CONTRACTION",
                 "sparkline": [round(x, 2) for x in spark]
             }
         except Exception as e:
-            log_diag(f"[FRED ERROR] Net Liquidity: {e}")
-            if 'NET_LIQUIDITY' in previous_data:
+            log_diag(f"[FRED ERROR] Net Liquidity calculation failed: {e}")
+            if 'NET_LIQUIDITY' in previous_data and previous_data['NET_LIQUIDITY'].get('price', 0) > 1000:
+                 log_diag("[FRED] Recovering Net Liquidity from previous valid state.")
                  data['NET_LIQUIDITY'] = previous_data['NET_LIQUIDITY']
             else:
+                 log_diag("[FRED] Critical failure: No previous data found for Net Liquidity. Using 6200B baseline.")
                  data['NET_LIQUIDITY'] = {"price": 6200, "change_percent": 0, "trend": "NEUTRAL", "sparkline": [6200] * 30}
         
         return data
@@ -699,13 +703,15 @@ Required Output JSON structure:
             script_path = "scripts/generate_insight.ts"
             frontend_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "frontend")
 
-            # Execute Node.js bridge from FRONTEND directory via local tsx (Absolute path fallback)
-            tsx_bin = os.path.join(frontend_dir, "node_modules", ".bin", "tsx")
-            if not os.path.exists(tsx_bin) and os.name != 'nt':
-                 tsx_bin = "npx tsx" # Fallback to npx
-
+            # Execute Node.js bridge from FRONTEND directory (Dual Path Resolution)
+            # Try npx tsx first (CI standard), then direct node on build if exists
+            
+            cmd = ["npx", "tsx", script_path, prompt]
+            
+            log_diag(f"[AI BRIDGE] Command: {' '.join(cmd)}")
+            
             process = subprocess.run(
-                [tsx_bin, script_path, prompt],
+                cmd,
                 capture_output=True,
                 text=True,
                 encoding='utf-8',
@@ -713,14 +719,27 @@ Required Output JSON structure:
                 check=False,
                 env=os.environ.copy(),
                 cwd=frontend_dir,
-                timeout=120 
+                timeout=120,
+                shell=(os.name == 'nt') # Mandatory for npx on Windows
             )
+
+            if process.returncode != 0:
+                log_diag(f"[AI BRIDGE WARN] Bridge execution failed (Code {process.returncode}). Trying direct node fallback...")
+                # Try locating the JS build if TS execution fails in CI
+                js_script = os.path.join(frontend_dir, "dist", "generate_insight.js")
+                if os.path.exists(js_script):
+                    cmd = ["node", js_script, prompt]
+                    process = subprocess.run(cmd, capture_output=True, text=True, encoding='utf-8', env=os.environ.copy(), cwd=frontend_dir, timeout=60)
 
             if process.returncode == 0:
                 stdout_content = process.stdout
-                match = re.search(r'\{"text":\s*"(.*?)"\}', stdout_content, re.DOTALL)
-                if match:
+                log_diag(f"[AI BRIDGE] Received {len(stdout_content)} bytes of output.")
+                
+                # Robust extraction: look for any JSON pattern in output
+                matches = list(re.finditer(r'\{"text":\s*"(.*?)"\}', stdout_content, re.DOTALL))
+                if matches:
                     try:
+                        match = matches[-1] # Take last match to avoid logging clutter
                         inner_text = match.group(1).replace('\\"', '"').replace('\\n', '\n')
                         if "```json" in inner_text:
                             inner_text = inner_text.split("```json")[1].split("```")[0].strip()
@@ -729,12 +748,16 @@ Required Output JSON structure:
                         
                         reports = json.loads(inner_text)
                         if all(lang in reports for lang in required):
-                            log_diag("[AI SUCCESS] Generated via Node Bridge.")
+                            log_diag("[AI SUCCESS] Reports parsed and validated.")
                             return reports
                     except Exception as e:
-                        log_diag(f"[AI ERROR] JSON Parse failed: {e}")
+                        log_diag(f"[AI ERROR] JSON parse failed: {e}")
+                else:
+                    log_diag(f"[AI ERROR] JSON pattern not found in output. Start of output: {stdout_content[:100]}...")
             else:
-                log_diag(f"[AI BRIDGE FAIL] Return Code {process.returncode}: {process.stderr}")
+                log_diag(f"[AI BRIDGE FAIL] Final Exit Code {process.returncode}")
+                if process.stderr:
+                    log_diag(f"[AI BRIDGE ERR STREAM] {process.stderr.strip()[:200]}")
                 
         except Exception as e:
             log_diag(f"[AI BRIDGE CRITICAL] {e}")
@@ -743,7 +766,7 @@ Required Output JSON structure:
     try:
         log_diag("[AI SDK] Attempting Direct Python SDK (google-generativeai)...")
         genai.configure(api_key=GEMINI_KEY)
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel('gemini-2.0-flash')
         response = model.generate_content(prompt)
         text = response.text
         if text:
@@ -760,7 +783,7 @@ Required Output JSON structure:
     for attempt in range(2): 
         try:
             log_diag(f"[AI REST] Attempting Direct REST (Attempt {attempt+1})...")
-            url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_KEY}"
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_KEY}"
             payload = {"contents": [{"parts": [{"text": prompt}]}]}
             response = requests.post(url, json=payload, timeout=30)
             if response.status_code == 200:
