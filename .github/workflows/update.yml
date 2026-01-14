@@ -4,6 +4,10 @@ on:
     - cron: '5,20,35,50 * * * *' # Every 15 minutes, offset by 5m (captures :00 indicator results)
   workflow_dispatch:
 
+concurrency:
+  group: update-signal
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest

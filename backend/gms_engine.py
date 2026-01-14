@@ -158,6 +158,32 @@ def fetch_fred_data():
         except: 
             if 'YIELD_SPREAD' in previous_data: data['YIELD_SPREAD'] = previous_data['YIELD_SPREAD']
 
+        # 1-C. US 10Y YIELD (DGS10)
+        try:
+            yield_10y = fred.get_series('DGS10', observation_start=start_date)
+            yield_10y = yield_10y.ffill()
+            current_yield = float(yield_10y.iloc[-1])
+            data['US_10Y_YIELD'] = {
+                "price": round(current_yield, 2),
+                "change_percent": 0.0, # Will calc if needed
+                "trend": "STABLE",
+                "sparkline": [round(x, 2) for x in yield_10y.tail(30).tolist()]
+            }
+        except: pass
+
+        # 1-D. US 10Y REAL INTEREST RATE (DFII10)
+        try:
+            real_rate = fred.get_series('DFII10', observation_start=start_date)
+            real_rate = real_rate.ffill()
+            current_real = float(real_rate.iloc[-1])
+            data['REAL_INTEREST_RATE'] = {
+                "price": round(current_real, 2),
+                "change_percent": 0.0,
+                "trend": "STABLE",
+                "sparkline": [round(x, 2) for x in real_rate.tail(30).tolist()]
+            }
+        except: pass
+
         # 2. HY SPREAD (BAMLH0A0HYM2)
         try:
             hy_series = fred.get_series('BAMLH0A0HYM2', observation_start=start_date)
@@ -371,6 +397,12 @@ def fetch_market_data():
         # Add Net Liquidity directly
         if 'NET_LIQUIDITY' in fred_data:
              all_data['NET_LIQUIDITY'] = fred_data['NET_LIQUIDITY']
+             
+        # Add new synced indicators
+        if 'US_10Y_YIELD' in fred_data:
+             all_data['US_10Y_YIELD'] = fred_data['US_10Y_YIELD']
+        if 'REAL_INTEREST_RATE' in fred_data:
+             all_data['REAL_INTEREST_RATE'] = fred_data['REAL_INTEREST_RATE']
 
     # 2. Fetch All Sectors using Batch for Speed
     all_tickers = []
@@ -594,223 +626,90 @@ def fetch_breaking_news():
     return "Market data synchronization active."
 
 def generate_multilingual_report(data, score):
-    """Generates AI analysis in 7 languages using Gemini."""
+    """Generates AI analysis in 7 languages using a SINGLE batch API call for efficiency."""
     required = ["EN", "JP", "CN", "ES", "HI", "ID", "AR"]
     
-    # Professional Fallback Status (Used only when all AI methods fail AND no cached report exists)
-    FALLBACK_STATUS = {
-        "EN": "【GMS: {score}】Institutional macro intelligence updated. Market regimes are currently pricing in key economic shifts with a focus on liquidity and volatility metrics.",
-        "JP": "【GMS: {score}】機関投資家向けマクロ指標が更新されました。市場は現在、流動性とボラティリティの指標を注視しながら、主要な経済環境の変化を織り込んでいます。",
-        "CN": "【GMS: {score}】机构宏观情报已更新。市场目前正在消化关键经济转变，重点关注流动性和波动性指标。",
-        "ES": "【GMS: {score}】Inteligencia macro institucional actualizada. Los regímenes de mercado están descontando actualmente cambios económicos clave.",
-        "HI": "【GMS: {score}】संस्थागत मैक्रो इंटेलिजेंस अपडेट किया गया। बाजार वर्तमान में प्रमुख आर्थिक बदलावों को देखते हुए तरलता और अस्थिरता मेट्रिक्स पर ध्यान केंद्रित कर रहा है。",
-        "ID": "【GMS: {score}】Intelijen makro institusional diperbarui. Rezim pasar saat ini memperhitungkan pergeseran ekonomi utama.",
-        "AR": "【GMS: {score}】تم تحديث الاستخبارات الكلية المؤسسية. تقوم أنظمة السوق حاليًا بتسعير التحولات الاقتصادية الرئيسية."
-    }
+    # Static Fallback - USED ONLY IF NO AI WORKS AND NO CACHE EXISTS
+    # BUT: We want to return None to trigger ATOMIC failure in the engine if possible.
     
-    # Format fallback with current score
-    formatted_fallback = {lang: val.format(score=score) for lang, val in FALLBACK_STATUS.items()}
-
     if not GEMINI_KEY:
-        return formatted_fallback
+        return None # Critical: No key, no analysis.
 
-    context = {
-        "score": score,
-        "vix": data.get("VIX", {}).get("price"),
-        "hy_spread": data.get("HY_SPREAD", {}).get("price"),
-        "tnx": data.get("TNX", {}).get("price"),
-        "dxy": data.get("DXY", {}).get("price"),
-        "spy_trend": data.get("SPY", {}).get("trend")
-    }
-    
-    net_liq_val = data.get("NET_LIQUIDITY", {}).get("price", "N/A")
-    move_val = data.get("MOVE", {}).get("price", "N/A")
-    
-    # 0. RESOURCE SAVING: Check for recent valid report to reuse
-    try:
-        if os.path.exists(DATA_FILE):
-            with open(DATA_FILE, 'r', encoding='utf-8') as f:
-                current = json.load(f)
-                last_upd_str = current.get("last_updated", "")
-                if last_upd_str:
-                    # Robust Parsing: Handle ISO 8601 or legacy "EST" format
-                    try:
-                        if "T" in last_upd_str:
-                            last_upd_dt = datetime.strptime(last_upd_str.replace("Z", ""), "%Y-%m-%dT%H:%M:%S")
-                        else:
-                            last_upd_dt = datetime.strptime(last_upd_str.replace(" EST", ""), "%Y-%m-%d %H:%M:%S")
-                        
-                        if (datetime.utcnow() - last_upd_dt).total_seconds() < 600: # 10 Minutes (Comparing UTC)
-                            existing_reports = current.get("analysis", {}).get("reports")
-                            if existing_reports and all(lang in existing_reports for lang in required):
-                                # CRITICAL: Do not skip if reports contain placeholders
-                                is_placeholder = False
-                                for lang, content in existing_reports.items():
-                                    if any(p in content for p in ["世界市場は主要な経済指標", "Deep-diving into", "深度解析"]):
-                                        is_placeholder = True
-                                        break
-                                
-                                if not is_placeholder:
-                                    print(f"[AI SKIP] Recent VALID report exists (<10m). Reusing.")
-                                    return existing_reports
-                                else:
-                                    print(f"[AI REFRESH] Existing report is a placeholder. Forcing fresh generation.")
-                    except Exception as date_err:
-                        print(f"[AI SKIP DEBUG] Date parse skip: {date_err}")
-    except Exception as e:
-        print(f"[AI SKIP ERROR] Failed to check cache: {e}")
+    # Prepare high-density data summary for AI
+    market_summary = ""
+    for k, v in data.items():
+        if isinstance(v, dict) and "price" in v:
+            market_summary += f"- {k}: {v['price']} (Chg: {v.get('change_percent', 0)}%)\n"
 
     breaking_news = fetch_breaking_news()
 
     prompt = f"""
-【AIインサイトのシステム・プロンプト v3.2：スコア・センチメント完全同期モード】
+【GMS 15-Min Batch Analysis v4.0】
+Role: Global Macro Strategist.
+Task: Generate market analysis for 7 languages in ONE response.
 
-# Role
-You are a Senior Global Macro Strategist (ex-Goldman Sachs/BlackRock). 
-Provide high-density, professional market intelligence for institutional investors.
+Data Inputs:
+- Total GMS Score: {score}/100
+- Market Highlights:
+{market_summary}
+- News: {breaking_news}
 
-# Inputs
-- Current GMS Score: {score}/100
-- US Net Liquidity: ${net_liq_val}B
-- Bond Volatility (MOVE): {move_val}
-- Equity Volatility (VIX): {context['vix']}
-- HY Credit Spread: {context['hy_spread']}%
-- Breaking News Context: {breaking_news}
+Constraints:
+1. Tone: Defensive if Score <= 50, Risk-On if Score > 60.
+2. Content: Analyze correlation (e.g., Rates vs Stocks, Liquidity vs Crypto).
+3. Length: STRICTLY under 250 characters per language.
+4. Format: Valid JSON only. No markdown, no extra text.
 
-# Strategy Constraints (CRITICAL)
-1. **Regime Alignment**: 
-   - If GMS <= 50: Use "Defensive" or "Cautionary" tone. **PROHIBIT** terms like "Risk-on" or "Bullish expansion".
-   - If GMS > 60: Focus on "Risk-on" and "Accumulation".
-2. **Causal Logic**: Do not just list data. Explain the "Why" (e.g., "Elevated MOVE index is directly tightening financial conditions, forcing a defensive pivot in Nasdaq...").
-3. **Sector Impact Density**: Explicitly mention specific assets/sectors (e.g., QQQ/Tech, BTC/Crypto, HY Bonds, Gold) that are most impacted by this score.
-4. **Physical Limit**:
-   - Japanese: Around 300 characters. Provide "depth" and "weight" in your sentences.
-   - English: Around 120 words.
-5. **Strict JSON Format** (Keys: EN, JP, CN, ES, HI, ID, AR):
-   {{
-     "LANG_CODE": {{
-       "GMS": "【GMS: {score}】[One-sentence professional conclusion]",
-       "Analysis": "[Detailed causal macro analysis including sector impacts]",
-       "News": "【速報影響】[Brief news impact analysis]"
-     }}
-   }}
+Required Output JSON structure:
+{{
+  "EN": "Summary text in English...",
+  "JP": "日本語の要約...",
+  "CN": "中文摘要...",
+  "ES": "Resumen en español...",
+  "HI": "हिंदी सारांश...",
+  "ID": "Ringkasan Bahasa Indonesia...",
+  "AR": "ملخص باللغة العربية..."
+}}
 """
 
-    # Node.js Bridge Implementation with 429 Resilience
-    # This ensures strict adherence to Vercel AI SDK authentication specs
-    for attempt in range(2): # 2 Retries for Node Bridge
+    for attempt in range(2): 
         try:
-            print(f"[AI BRIDGE] Calling Node.js bridge for Gemini 2.0 Flash (Attempt {attempt+1})...")
+            print(f"[AI BATCH] Requesting 7-language analysis (Attempt {attempt+1})...")
             
-            # Prepare input payload for Node.js script
-            input_payload = json.dumps({"prompt": prompt})
-            
-            # Path to the TS source bridge script (relative to frontend dir)
             script_path = "scripts/generate_insight.ts"
-            
-            # Frontend Directory
             frontend_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "frontend")
 
-            # Execute Node.js bridge from FRONTEND directory
-            # Explicitly pass environment (inheriting API keys)
             process = subprocess.run(
                 ["npx", "tsx", script_path, prompt],
                 capture_output=True,
                 text=True,
-                encoding='utf-8', # Force UTF-8 for Windows resilience
+                encoding='utf-8',
                 creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0,
                 check=False,
                 env=os.environ.copy(),
-                cwd=frontend_dir 
+                cwd=frontend_dir,
+                timeout=180 # 3-minute hard timeout for AI generation
             )
 
             if process.returncode == 0:
-                # Parse output from Node.js
-                stdout_content = process.stdout # Already decoded via encoding='utf-8'
-                # print(f"[AI BRIDGE DEBUG] Raw stdout: {stdout_content[:300]}...") # REMOVED: Caused encoding error on Windows term
+                stdout_content = process.stdout
                 
-                # Robust Extraction: Use Regex to find the JSON block
-                text = ""
-                # Search for {"text":"..."} anywhere in the output
-                match = re.search(r'\{"text":\s*".*?"\}', stdout_content, re.DOTALL)
+                # Extract JSON from potential wrapper
+                match = re.search(r'\{"text":\s*"(.*?)"\}', stdout_content, re.DOTALL)
                 if match:
                     try:
-                        json_obj = json.loads(match.group(0))
-                        text = json_obj.get("text", "").strip()
-                    except: pass
-                
-                # Fallback: Split lines and check prefix (for cleaner logs)
-                if not text:
-                    for line in stdout_content.splitlines():
-                        if '{"text":' in line:
-                            try:
-                                # Try to find where the JSON starts
-                                start_idx = line.find('{"text":')
-                                json_part = line[start_idx:]
-                                json_obj = json.loads(json_part)
-                                text = json_obj.get("text", "").strip()
-                                break
-                            except: continue
-
-                if not text:
-                    print(f"[AI BRIDGE ERROR] Could not extract 'text' from bridge output via Regex or Line Split.")
-                    break
-
-                print(f"[AI SUCCESS] Extracted text via Node.js Bridge.")
-                
-                # Robust JSON Parsing (Cleanup Markdown)
-                if "```json" in text:
-                    text = text.split("```json")[1].split("```")[0].strip()
-                elif "```" in text:
-                    text = text.split("```")[1].split("```")[0].strip()
-                
-                reports = json.loads(text)
-                
-                # Consolidate v3.2 multi-field structure if present
-                for lang in reports:
-                    val = reports[lang]
-                    if isinstance(val, dict):
-                        if 'GMS' in val: 
-                            tag = val['GMS']
-                            parts.append(tag)
-                        elif 'score' in val: 
-                            tag = f"【GMS: {val['score']}】"
-                            parts.append(tag)
+                        inner_text = match.group(1).replace('\\"', '"').replace('\\n', '\n')
+                        if "```json" in inner_text:
+                            inner_text = inner_text.split("```json")[1].split("```")[0].strip()
+                        elif "```" in inner_text:
+                            inner_text = inner_text.split("```")[1].split("```")[0].strip()
                         
-                        if 'Analysis' in val: 
-                            content = val['Analysis']
-                            tag = "【分析】"
-                            parts.append(content if content.startswith(tag) else f"{tag}{content}")
-                        elif 'analysis' in val: 
-                            content = val['analysis']
-                            tag = "【分析】"
-                            parts.append(content if content.startswith(tag) else f"{tag}{content}")
-                        
-                        if 'News' in val: 
-                            content = val['News']
-                            tag = "【速報影響】"
-                            parts.append(content if content.startswith(tag) else f"{tag}{content}")
-                        elif 'News impact' in val: 
-                            content = val['News impact']
-                            tag = "【速報影響】"
-                            parts.append(content if content.startswith(tag) else f"{tag}{content}")
-                        elif 'Breaking News Impact' in val: 
-                            content = val['Breaking News Impact']
-                            tag = "【速報影響】"
-                            parts.append(content if content.startswith(tag) else f"{tag}{content}")
-                        elif 'impact' in val: 
-                            content = val['impact']
-                            tag = "【速報影響】"
-                            parts.append(content if content.startswith(tag) else f"{tag}{content}")
-                        
-                        reports[lang] = " ".join(parts)
-                
-                # Validate keys
-                for lang in required:
-                    if lang not in reports:
-                        reports[lang] = FALLBACK_STATUS.get(lang, FALLBACK_STATUS["EN"])
-                
-                return reports
+                        reports = json.loads(inner_text)
+                        if all(lang in reports for lang in required):
+                            print(f"[AI SUCCESS] Batch report generated.")
+                            return reports
+                    except Exception as e:
+                        print(f"[AI ERROR] JSON Parse failed: {e}")
             else:
                 stderr_content = process.stderr
                 print(f"[AI BRIDGE ERROR] Node.js process failed: {stderr_content}")
@@ -824,7 +723,7 @@ Provide high-density, professional market intelligence for institutional investo
                 
         except Exception as e:
             print(f"[AI BRIDGE CRITICAL] Bridge execution failed: {e}")
-            break # Skip to fallback
+            break
 
     # Fallback to Direct REST API (Bypassing local SDK issues)
     # Using gemini-1.5-flash as the most stable REST target with Retry
@@ -951,8 +850,8 @@ Provide high-density, professional market intelligence for institutional investo
                         return existing_reports
     except: pass
 
-    print("[AI FAILURE] All methods failed and no valid cache exists. Using Static Fallback.")
-    return formatted_fallback
+    print("[AI FAILURE] All methods failed and no valid cache exists.")
+    return None # RETURN NONE TO TRIGGER ATOMIC FAILURE
 
 def get_next_event_dates():
     # Fallback static if API fails
@@ -997,9 +896,13 @@ def update_signal():
         score = calculate_total_gms(market_data, sector_scores)
         
         # AI Analysis (Pass context)
-        ai_reports = generate_multilingual_report(market_data, score) # Keeps existing function
-
-        # Events
+        ai_reports = generate_multilingual_report(market_data, score) 
+        
+        # ATOMIC GUARD: If AI reports missing (e.g. 429 or failure), do NOT commit/save
+        if ai_reports is None:
+            print("[CRITICAL] AI Analysis failed or hit 429. Aborting update for atomicity.")
+            import sys
+            sys.exit(1)
         events = fetched_events if fetched_events and len(fetched_events) > 0 else get_next_event_dates()
 
         # History Management
@@ -1129,15 +1032,9 @@ def update_signal():
         return payload
 
     else:
-        return {
-            "last_updated": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
-            "gms_score": 50,
-            "market_data": {},
-            "events": [],
-            "analysis": {"title": "Error", "content": "Data Unavailable"},
-            "history_chart": [],
-            "system_status": "ERROR"
-        }
+        print("[CRITICAL] Market data collection failed. Aborting update for atomicity.")
+        import sys
+        sys.exit(1)
 
 if __name__ == "__main__":
     try:
