@@ -705,8 +705,8 @@ Provide high-density, professional market intelligence for institutional investo
             # Prepare input payload for Node.js script
             input_payload = json.dumps({"prompt": prompt})
             
-            # Path to the compiled bridge script (relative to frontend dir)
-            script_path = "dist/generate_insight.js"
+            # Path to the TS source bridge script (relative to frontend dir)
+            script_path = "scripts/generate_insight.ts"
             
             # Frontend Directory
             frontend_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "frontend")
@@ -714,7 +714,7 @@ Provide high-density, professional market intelligence for institutional investo
             # Execute Node.js bridge from FRONTEND directory
             # Explicitly pass environment (inheriting API keys)
             process = subprocess.run(
-                ["node", script_path, prompt],
+                ["npx", "tsx", script_path, prompt],
                 capture_output=True,
                 text=True,
                 encoding='utf-8', # Force UTF-8 for Windows resilience
@@ -1018,6 +1018,7 @@ def update_signal():
         
         # SANITIZE PAYLOAD - Remove NaNs
         def sanitize(obj):
+            if obj is None: return 0.0
             if isinstance(obj, float):
                 if np.isnan(obj) or np.isinf(obj): return 0.0
                 return obj

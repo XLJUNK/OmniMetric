@@ -1,6 +1,7 @@
 import { generateText } from 'ai';
 import { gateway } from '@ai-sdk/gateway';
 import * as dotenv from 'dotenv';
+import * as fs from 'fs';
 import * as path from 'path';
 
 // Load environment variables strictly before any SDK calls
@@ -24,6 +25,20 @@ const getPrompt = () => {
 };
 
 async function main() {
+    // PHYSICAL GUARD: Prevent rapid consecutive calls (1 min cooldown)
+    const guardFile = path.resolve(__dirname, '../../.ai_guard');
+    const now = Date.now();
+    try {
+        if (fs.existsSync(guardFile)) {
+            const lastRun = parseInt(fs.readFileSync(guardFile, 'utf8'));
+            if (now - lastRun < 60000) {
+                console.warn(`[AI GUARD] Rapid call detected. Cooling down... (${Math.round((60000 - (now - lastRun)) / 1000)}s remaining)`);
+                process.exit(1);
+            }
+        }
+        fs.writeFileSync(guardFile, now.toString());
+    } catch (e) { }
+
     const prompt = getPrompt();
 
     try {

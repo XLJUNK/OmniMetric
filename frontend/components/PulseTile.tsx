@@ -151,13 +151,15 @@ export const PulseTile = ({ title, score, ticker, data, onClick, lang }: any) =>
                 <div className="flex items-baseline gap-2">
                     <span className={`${typeof data?.price === 'string' && data?.price.length > 20 ? 'text-[9px]' : 'text-[14px]'} font-bold font-sans tracking-tight text-white tabular-nums leading-none`}>
                         {(title === "Net Liquidity" || title === "US Net Liquidity")
-                            ? (Math.abs(data?.price || 0) >= 1000
-                                ? `$${((data?.price || 0) / 1000).toFixed(2)}T`
-                                : `$${Math.round(data?.price || 0).toLocaleString()}B`)
+                            ? (typeof data?.price === 'number'
+                                ? (Math.abs(data.price) >= 1000
+                                    ? `$${(data.price / 1000).toFixed(2)}T`
+                                    : `$${Math.round(data.price).toLocaleString()}B`)
+                                : (data?.price || "0.00"))
                             : (data?.price || "0.00")}
                     </span>
                     <span className={`text-[10px] font-medium tabular-nums ml-2 ${isUp ? "text-emerald-400" : (data?.change_percent < 0 ? "text-rose-400" : "text-slate-400")}`}>
-                        {trendText}{(data?.change_percent || 0)}%
+                        {trendText}{(typeof data?.change_percent === 'number' ? data.change_percent : 0)}%
                     </span>
                 </div>
             </div>
