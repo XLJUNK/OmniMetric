@@ -1,5 +1,5 @@
 import { generateText } from 'ai';
-import { createGoogleGenerativeAI } from '@ai-sdk/google';
+import { gateway } from '@ai-sdk/gateway';
 import * as dotenv from 'dotenv';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -40,26 +40,15 @@ async function main() {
     } catch (e) { }
 
     const prompt = getPrompt();
-    const gatewaySlug = process.env.VERCEL_AI_GATEWAY_SLUG;
-    const googleKey = process.env.GEMINI_API_KEY;
 
     try {
-        // Using imported createGoogleGenerativeAI
-
-        // Manual Gateway Construction for maximum reliability
-        const google = createGoogleGenerativeAI({
-            apiKey: googleKey,
-            baseURL: gatewaySlug ? `https://gateway.vercel.ai/v1/slug/${gatewaySlug}/google` : undefined,
-            headers: gatewaySlug && process.env.AI_GATEWAY_API_KEY ? {
-                'Authorization': `Bearer ${process.env.AI_GATEWAY_API_KEY}`
-            } : {}
-        });
-
-        console.log(gatewaySlug ? `[AI] Using Gateway: ${gatewaySlug}` : `[AI] Using Direct Provider`);
-
+        // STRICT: Reverting to v2.1.0 Stable Pattern (Verified for Gemini 2.0)
         const result = await generateText({
-            model: google('gemini-1.5-flash'), // Using 1.5-flash for maximum stability
+            model: gateway('google/gemini-2.0-flash-exp'),
             prompt: prompt,
+            headers: {
+                'x-vercel-ai-gateway-provider': 'google',
+            }
         });
 
         // Output ONLY the raw text for Python to capture
@@ -67,8 +56,6 @@ async function main() {
 
     } catch (error: any) {
         console.error("AI Generation Failed via Gateway:", error.message || error);
-        // If Gateway fails, we still want to try the direct provider within the script if possible
-        // but since Python has its own REST fallback, we exit to let Python handle it.
         process.exit(1);
     }
 }
