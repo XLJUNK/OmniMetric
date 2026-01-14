@@ -144,6 +144,16 @@ def fetch_fred_data():
 
     fred = Fred(api_key=FRED_KEY)
     try:
+        # 1-A. VIX Index (VIXCLS)
+        try:
+            print("[FRED] Fetching VIXCLS...")
+            vix = fred.get_series('VIXCLS', observation_start=start_date)
+            vix = vix.ffill()
+            data['VIX'] = float(vix.iloc[-1])
+        except Exception as e:
+            print(f"[FRED ERROR] VIX: {e}")
+            data['VIX'] = 15.0 # Safe default
+        
         # 1. YIELD SPREAD (10Y-2Y)
         try: 
             series = fred.get_series('T10Y2Y', observation_start=start_date)
@@ -633,7 +643,8 @@ def generate_multilingual_report(data, score):
     # BUT: We want to return None to trigger ATOMIC failure in the engine if possible.
     
     if not GEMINI_KEY:
-        return None # Critical: No key, no analysis.
+        print("[AI] ERROR: GEMINI_API_KEY is missing from environment.")
+        return None
 
     # Prepare high-density data summary for AI
     market_summary = ""
@@ -864,10 +875,10 @@ def update_signal():
                     last_upd_str = last_upd_str.replace(' ', 'T').replace('Z', '')
                     last_upd_dt = datetime.fromisoformat(last_upd_str)
                     if (datetime.utcnow() - last_upd_dt).total_seconds() < 600:
-                        print(f"[AIO] SKIPPING UPDATE: Recently updated ({last_upd_str}). Cool-down active.")
+                        print(f"[AIO] SKIP: Recently updated ({last_upd_dt}). Enforced 10m cool-down.")
                         return existing_data
     except Exception as e:
-        print(f"[AIO] Cool-down check failed: {e}")
+        print(f"[AIO] Cool-down check failed (Non-critical): {e}")
 
     validate_api_keys()
     market_data, status, fetched_events = fetch_market_data()
@@ -1027,8 +1038,13 @@ def update_signal():
 
 if __name__ == "__main__":
     try:
-        update_signal()
+        print(f"--- [START] Engine Run at {datetime.utcnow().isoformat()} ---")
+        result = update_signal()
+        print(f"--- [FINISH] Engine Run SUCCESS (Score: {result.get('gms_score', 'N/A')}) ---")
     except Exception as e:
-        print(f"MAIN ERROR: {e}")
+        print(f"--- [FATAL ERROR] ---")
+        print(f"Type: {type(e).__name__}")
+        print(f"Message: {str(e)}")
         import traceback
         traceback.print_exc()
+        sys.exit(1)

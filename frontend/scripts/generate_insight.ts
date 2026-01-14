@@ -1,5 +1,5 @@
 import { generateText } from 'ai';
-import { gateway } from '@ai-sdk/gateway';
+import { createGoogleGenerativeAI } from '@ai-sdk/google';
 import * as dotenv from 'dotenv';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -44,7 +44,7 @@ async function main() {
     const googleKey = process.env.GEMINI_API_KEY;
 
     try {
-        const { createGoogleGenerativeAI } = require('@ai-sdk/google');
+        // Using imported createGoogleGenerativeAI
 
         // Manual Gateway Construction for maximum reliability
         const google = createGoogleGenerativeAI({
