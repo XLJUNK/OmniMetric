@@ -171,15 +171,26 @@ def fetch_fred_data():
         
         # 1. YIELD SPREAD (10Y-2Y)
         try: 
-            series = fred.get_series('T10Y2Y', observation_start=start_date)
-            data['YIELD_SPREAD_10Y2Y'] = float(series.iloc[-1]) # Keep for reference
+            series = fred.get_series('T10Y2Y', observation_start=start_date).ffill()
+            current_val = float(series.iloc[-1])
+            data['YIELD_SPREAD_10Y2Y'] = {
+                "price": round(current_val, 2),
+                "change_percent": 0.0,
+                "trend": "NEUTRAL",
+                "sparkline": [round(x, 2) for x in series.tail(30).tolist()]
+            }
         except: pass
 
         # 1-B. YIELD SPREAD (10Y-3M) - PRIMARY
         try:
-            series_3m = fred.get_series('T10Y3M', observation_start=start_date)
+            series_3m = fred.get_series('T10Y3M', observation_start=start_date).ffill()
             current_3m = float(series_3m.iloc[-1])
-            data['YIELD_SPREAD'] = current_3m # Main Metric Overwrite
+            data['YIELD_SPREAD'] = {
+                "price": round(current_3m, 2),
+                "change_percent": 0.0,
+                "trend": "INVERTED" if current_3m < 0 else "NORMAL",
+                "sparkline": [round(x, 2) for x in series_3m.tail(30).tolist()]
+            }
         except: 
             if 'YIELD_SPREAD' in previous_data: data['YIELD_SPREAD'] = previous_data['YIELD_SPREAD']
 
@@ -229,9 +240,15 @@ def fetch_fred_data():
 
         # 3. NFCI
         try:
-            val = float(fred.get_series('NFCI').iloc[-1])
+            series_nfci = fred.get_series('NFCI', observation_start=start_date).ffill()
+            val = float(series_nfci.iloc[-1])
             log_diag(f"[IN] FRED_RAW: {{ series_id: NFCI, val: {val} }}")
-            data['NFCI'] = val
+            data['NFCI'] = {
+                "price": round(val, 2),
+                "change_percent": 0.0,
+                "trend": "CALM" if val < 0 else "STRESS",
+                "sparkline": [round(x, 2) for x in series_nfci.tail(30).tolist()]
+            }
         except: 
             if 'NFCI' in previous_data: data['NFCI'] = previous_data['NFCI']
         
@@ -409,10 +426,11 @@ def fetch_market_data():
     # 1. Base Market Data (Legacy Compatibility)
     if fred_data:
         for k, v in fred_data.items():
-            if isinstance(v, dict): continue # skip complex types, handled later
+            if isinstance(v, dict):
+                all_data[k] = v
+                continue 
+            # Fallback for remaining scalars if any
             all_data[k] = {"price": round(v, 2), "change_percent": 0.0, "trend": "NEUTRAL", "sparkline": [v]*30}
-            if k == "YIELD_SPREAD": all_data[k]["trend"] = "INVERTED" if v < 0 else "NORMAL"
-            # HY_SPREAD is now complex, handled below
         if 'HY_SPREAD' in fred_data:
              if isinstance(fred_data['HY_SPREAD'], dict):
                  all_data['HY_SPREAD'] = fred_data['HY_SPREAD']
