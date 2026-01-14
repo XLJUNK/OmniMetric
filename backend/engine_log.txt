@@ -1,0 +1,28 @@
+[2026-01-14 08:44:35] [IN] YF_QUERY: { count: 21, tickers: ['DX-Y.NYB', 'JPY=X', '^VIX', 'SPY', 'HG=F']... }
+[2026-01-14 08:44:36] [IN] YF_RAW: { ticker: VIX, price: 16.34, chg: 5.76% }
+[2026-01-14 08:44:36] [IN] YF_RAW: { ticker: SPY, price: 693.77, chg: 0.61% }
+[2026-01-14 08:44:36] [IN] YF_RAW: { ticker: TNX, price: 4.17, chg: 0.8% }
+[2026-01-14 08:44:36] [IN] YF_RAW: { ticker: QQQ, price: 626.24, chg: 0.36% }
+[2026-01-14 08:44:36] [IN] YF_RAW: { ticker: IWM, price: 261.35, chg: 2.3% }
+[2026-01-14 08:44:37] [IN] YF_RAW: { ticker: RSP, price: 197.78, chg: 1.53% }
+[2026-01-14 08:44:37] [IN] YF_RAW: { ticker: HYG, price: 81.04, chg: 0.2% }
+[2026-01-14 08:44:37] [IN] YF_RAW: { ticker: NIFTY, price: 25657.9, chg: -0.85% }
+[2026-01-14 08:44:37] [IN] YF_RAW: { ticker: BTC, price: 94951.81, chg: 5.05% }
+[2026-01-14 08:44:37] [IN] YF_RAW: { ticker: ETH, price: 3327.6, chg: 7.96% }
+[2026-01-14 08:44:37] [IN] YF_RAW: { ticker: SOL, price: 144.69, chg: 6.6% }
+[2026-01-14 08:44:37] [IN] YF_RAW: { ticker: DXY, price: 99.14, chg: 0.21% }
+[2026-01-14 08:44:37] [IN] YF_RAW: { ticker: USDJPY, price: 159.02, chg: 1.46% }
+[2026-01-14 08:44:37] [IN] YF_RAW: { ticker: EURUSD, price: 1.16, chg: -0.24% }
+[2026-01-14 08:44:37] [IN] YF_RAW: { ticker: USDINR, price: 90.22, chg: 0.39% }
+[2026-01-14 08:44:37] [IN] YF_RAW: { ticker: USDSAR, price: 3.75, chg: 0.12% }
+[2026-01-14 08:44:37] [IN] YF_RAW: { ticker: GOLD, price: 4636.6, chg: 4.2% }
+[2026-01-14 08:44:38] [IN] YF_RAW: { ticker: OIL, price: 60.62, chg: 4.95% }
+[2026-01-14 08:44:38] [IN] YF_RAW: { ticker: COPPER, price: 6.04, chg: 5.04% }
+[2026-01-14 08:44:38] [IN] YF_RAW: { ticker: NATGAS, price: 3.38, chg: -0.65% }
+[2026-01-14 08:44:38] [GUARD] Market data acquisition: OPERATIONAL
+[2026-01-14 08:44:38] [OUT] CALC_SCORE: { sector: STOCKS, score: 50 }
+[2026-01-14 08:44:38] [OUT] CALC_SCORE: { sector: CRYPTO, score: 75 }
+[2026-01-14 08:44:38] [OUT] CALC_SCORE: { sector: FOREX, score: 35 }
+[2026-01-14 08:44:38] [OUT] CALC_SCORE: { sector: COMMODITIES, score: 55 }
+[2026-01-14 08:44:38] [OUT] SECTOR_SCORES: {"STOCKS": 50, "CRYPTO": 75, "FOREX": 35, "COMMODITIES": 55}
+[2026-01-14 08:44:38] [OUT] GMS_TOTAL: { score: 45 }
