@@ -60,8 +60,21 @@ RISK_FACTORS = {
     "MOMENTUM": {"weight": 0.1, "invert": False}
 }
 
-# Determine script directory... (Existing code)
+# Determine script directory
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+LOG_FILE = os.path.join(SCRIPT_DIR, "engine_log.txt")
+
+def log_diag(msg):
+    """Writes diagnostic messages to a file for bot upload."""
+    timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+    line = f"[{timestamp}] {msg}\n"
+    print(msg)
+    try:
+        with open(LOG_FILE, "a", encoding="utf-8") as f:
+            f.write(line)
+    except: pass
+
+# ... (Existing Directory Checks)
 DATA_FILE = os.path.join(SCRIPT_DIR, "current_signal.json")
 HISTORY_FILE = os.path.join(SCRIPT_DIR, "history.json")
 ARCHIVE_DIR = os.path.join(SCRIPT_DIR, "archive")
@@ -219,6 +232,7 @@ def fetch_fred_data():
         
         # 4. NET LIQUIDITY (WALCL - WTREGEN - RRPONTSYD)
         try:
+            log_diag("[FRED] Calculating Net Liquidity...")
             # Align dates. WALCL is Weekly. Others daily.
             walcl = fred.get_series('WALCL', observation_start=start_date)
             tga = fred.get_series('WTREGEN', observation_start=start_date)
@@ -226,8 +240,8 @@ def fetch_fred_data():
             
             # Create DataFrame to forward fill WALCL
             df = pd.DataFrame({'WALCL': walcl, 'TGA': tga, 'RRP': rrp})
-            # Ensure all values are numeric and fill NaNs with 0
-            df = df.apply(pd.to_numeric, errors='coerce').ffill().fillna(0)
+            # Ensure all values are numeric and handle alignment
+            df = df.apply(pd.to_numeric, errors='coerce').ffill().bfill().fillna(0)
             
             # Correct Logic: WALCL (M), TGA (M), RRP (B)
             # Result: Billions
@@ -237,22 +251,19 @@ def fetch_fred_data():
             
             # EMERGENCY: Check for NaN or 0
             if pd.isna(last_val) or last_val == 0:
-                print("Net Liquidity Calculation failed (NaN detected). Using Fallback.")
+                log_diag("[FRED WARN] Net Liquidity calculation returned NaN/0. Using Cache.")
                 if 'NET_LIQUIDITY' in previous_data and previous_data['NET_LIQUIDITY'].get('price', 0) > 0:
                      data['NET_LIQUIDITY'] = previous_data['NET_LIQUIDITY']
                      return data
                 else:
                     last_val = 6200.0 # Hard fallback
 
-            spark = df['NET_LIQ'].tail(30).fillna(6200.0).tolist()
+            spark = df['NET_LIQ'].tail(30).tolist()
             if len(spark) < 30: spark = [last_val] * (30 - len(spark)) + spark
             
             change = 0.0
-            # Use 5-day Lookback for change to capture trend (weekly data smoothing)
             if len(spark) > 5:
                 change = ((spark[-1] - spark[-5]) / spark[-5]) * 100
-            elif len(spark) > 1:
-                change = ((spark[-1] - spark[-2]) / spark[-2]) * 100
 
             data['NET_LIQUIDITY'] = {
                 "price": round(last_val, 2), # Billions
@@ -261,10 +272,10 @@ def fetch_fred_data():
                 "sparkline": [round(x, 2) for x in spark]
             }
         except Exception as e:
-            print(f"Net Liq Calc Error: {e}")
+            log_diag(f"[FRED ERROR] Net Liquidity: {e}")
             if 'NET_LIQUIDITY' in previous_data:
                  data['NET_LIQUIDITY'] = previous_data['NET_LIQUIDITY']
-            elif 'NET_LIQUIDITY' not in data or not data['NET_LIQUIDITY'].get('sparkline'):
+            else:
                  data['NET_LIQUIDITY'] = {"price": 6200, "change_percent": 0, "trend": "NEUTRAL", "sparkline": [6200] * 30}
         
         return data
@@ -683,15 +694,18 @@ Required Output JSON structure:
 
     for attempt in range(2): 
         try:
-            print(f"[AI BATCH] Requesting 7-language analysis (Attempt {attempt+1})...")
+            log_diag(f"[AI BATCH] Requesting 7-language analysis (Attempt {attempt+1})...")
             
             script_path = "scripts/generate_insight.ts"
             frontend_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "frontend")
 
-            # Execute Node.js bridge from FRONTEND directory via npx tsx (ESM)
-            # This ensures we don't need a build step in the CI/CD environment
+            # Execute Node.js bridge from FRONTEND directory via local tsx (Absolute path fallback)
+            tsx_bin = os.path.join(frontend_dir, "node_modules", ".bin", "tsx")
+            if not os.path.exists(tsx_bin) and os.name != 'nt':
+                 tsx_bin = "npx tsx" # Fallback to npx
+
             process = subprocess.run(
-                ["npx", "tsx", script_path, prompt],
+                [tsx_bin, script_path, prompt],
                 capture_output=True,
                 text=True,
                 encoding='utf-8',
@@ -699,13 +713,11 @@ Required Output JSON structure:
                 check=False,
                 env=os.environ.copy(),
                 cwd=frontend_dir,
-                timeout=180 # 3-minute hard timeout for AI generation
+                timeout=120 
             )
 
             if process.returncode == 0:
                 stdout_content = process.stdout
-                
-                # Extract JSON from potential wrapper
                 match = re.search(r'\{"text":\s*"(.*?)"\}', stdout_content, re.DOTALL)
                 if match:
                     try:
@@ -717,120 +729,54 @@ Required Output JSON structure:
                         
                         reports = json.loads(inner_text)
                         if all(lang in reports for lang in required):
-                            print(f"[AI SUCCESS] Batch report generated.")
+                            log_diag("[AI SUCCESS] Generated via Node Bridge.")
                             return reports
                     except Exception as e:
-                        print(f"[AI ERROR] JSON Parse failed: {e}")
+                        log_diag(f"[AI ERROR] JSON Parse failed: {e}")
             else:
-                stderr_content = process.stderr
-                print(f"[AI BRIDGE ERROR] Node.js process failed: {stderr_content}")
-                
-                if "429" in stderr_content:
-                    print(f"[AI RATE LIMIT] 429 detected in Node Bridge. Waiting 30s...")
-                    time.sleep(30)
-                    continue
-                else:
-                    break # Critical other error: skip to fallback
+                log_diag(f"[AI BRIDGE FAIL] Return Code {process.returncode}: {process.stderr}")
                 
         except Exception as e:
-            print(f"[AI BRIDGE CRITICAL] Bridge execution failed: {e}")
-            break
+            log_diag(f"[AI BRIDGE CRITICAL] {e}")
 
-    # Fallback to Direct REST API (Bypassing local SDK issues)
-    # Using gemini-1.5-flash as the most stable REST target with Retry
+    # BACKSTOP: Direct Python SDK (High reliability in Action)
+    try:
+        log_diag("[AI SDK] Attempting Direct Python SDK (google-generativeai)...")
+        genai.configure(api_key=GEMINI_KEY)
+        model = genai.GenerativeModel('gemini-1.5-flash')
+        response = model.generate_content(prompt)
+        text = response.text
+        if text:
+            log_diag("[AI SUCCESS] Generated via Python SDK.")
+            text = text.replace("```json", "").replace("```", "").strip()
+            reports = json.loads(text)
+            for lang in required:
+                if lang not in reports: reports[lang] = FALLBACK_STATUS[lang]
+            return reports
+    except Exception as e:
+        log_diag(f"[AI SDK ERROR] {e}")
+
+    # Fallback to Direct REST API (Targeting Gemini 1.5 Flash at v1beta)
     for attempt in range(2): 
         try:
-            print(f"[AI FALLBACK] Attempting Direct REST API (gemini-1.5-flash) - Attempt {attempt+1}...")
-            headers = {"Content-Type": "application/json"}
-            # Use v1beta for better model coverage (gemini-1.5-flash)
+            log_diag(f"[AI REST] Attempting Direct REST (Attempt {attempt+1})...")
             url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_KEY}"
-            
-            payload = {
-                "contents": [{
-                    "parts": [{"text": prompt}]
-                }],
-                "generationConfig": {
-                    "temperature": 0.7,
-                    "maxOutputTokens": 1000
-                }
-            }
-            
-            response = requests.post(url, headers=headers, json=payload, timeout=30)
-            
+            payload = {"contents": [{"parts": [{"text": prompt}]}]}
+            response = requests.post(url, json=payload, timeout=30)
             if response.status_code == 200:
                 result = response.json()
-                # Extract text from Candidate 0
                 if 'candidates' in result and result['candidates']:
                     text = result['candidates'][0]['content']['parts'][0]['text']
-                    print(f"[AI SUCCESS] Generated via REST API.")
-                    
-                    # Clean Markdown if present
+                    log_diag("[AI SUCCESS] Generated via REST API.")
                     text = text.replace("```json", "").replace("```", "").strip()
-                    
                     reports = json.loads(text)
-                    
-                    # Local Fallback Map if keys are missing
-                    FALLBACK_MSG = "【GMS: {score}】Institutional macro intelligence updated. Market regimes are currently pricing in key economic shifts."
-                    local_fallbacks = {l: FALLBACK_MSG.format(score=score) for l in required}
-
-                    # Consolidate v3.2 multi-field structure
-                    for lang in reports:
-                        val = reports[lang]
-                        if isinstance(val, dict):
-                            parts = []
-                            tag_score = val.get('GMS') or val.get('score')
-                            if tag_score: parts.append(f"【GMS: {tag_score}】" if not str(tag_score).startswith('【') else str(tag_score))
-                            
-                            analysis = val.get('Analysis') or val.get('analysis')
-                            if analysis: parts.append(f"【分析】{analysis}" if not str(analysis).startswith('【分析】') else str(analysis))
-                            
-                            news = val.get('News') or val.get('impact')
-                            if news: parts.append(f"【速報影響】{news}" if not str(news).startswith('【速報影響】') else str(news))
-                            
-                            reports[lang] = " ".join(parts)
-
-                    # Validate keys and fill gaps
-                    final_reports = {}
                     for lang in required:
-                        final_reports[lang] = reports.get(lang) or local_fallbacks[lang]
-                    
-                    return final_reports
-                else:
-                     print(f"[AI REST ERROR] No candidates returned: {result}")
-                     break
-            elif response.status_code == 429:
-                print(f"[AI REST RATE LIMIT] 429 detected. Waiting 30s...")
-                time.sleep(30)
-                continue
+                        if lang not in reports: reports[lang] = FALLBACK_STATUS[lang]
+                    return reports
             else:
-                print(f"[AI REST ERROR] Status {response.status_code}: {response.text}")
-                break
-
+                log_diag(f"[AI REST FAIL] Status {response.status_code}: {response.text}")
         except Exception as e:
-            print(f"[AI REST CRITICAL] Request failed: {e}")
-            break
-
-    # Deep Fallback to Gemini 1.0 Pro (If 1.5 fails)
-    try:
-        print(f"[AI DEEP FALLBACK] Attempting Direct REST API (gemini-1.0-pro)...")
-        headers = {"Content-Type": "application/json"}
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key={GEMINI_KEY}"
-        payload = {
-            "contents": [{"parts": [{"text": prompt + " Output JSON only."}]}]
-        }
-        response = requests.post(url, headers=headers, json=payload, timeout=20)
-        if response.status_code == 200:
-            result = response.json()
-            if 'candidates' in result and result['candidates']:
-                text = result['candidates'][0]['content']['parts'][0]['text']
-                # Try to parse JSON from pro output
-                if "```json" in text: text = text.split("```json")[1].split("```")[0].strip()
-                elif "```" in text: text = text.split("```")[1].split("```")[0].strip()
-                reports = json.loads(text)
-                print(f"[AI SUCCESS] Generated via 1.0 Pro.")
-                return reports
-    except Exception as e:
-        print(f"[AI DEEP CRITICAL] 1.0 Pro failed: {e}")
+            log_diag(f"[AI REST CRITICAL] {e}")
 
     # Ultimate Fallback: Try to reuse ANY existing valid report from cache before using static text
     try:

@@ -40,8 +40,8 @@ jobs:
           git reset --hard origin/main
           # 2. Run engine on LATEST state
           python backend/gms_engine.py
-          # 3. Commit the fresh data
-          git add backend/*.json
+          # 3. Commit the fresh data and diagnostic logs
+          git add backend/*.json backend/*.txt
           git commit -m "Auto-update market signal [bot]" || echo "No changes to commit"
           # 4. Push
           git push origin main
