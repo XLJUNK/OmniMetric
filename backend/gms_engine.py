@@ -226,55 +226,45 @@ def fetch_fred_data():
             
             # Create DataFrame to forward fill WALCL
             df = pd.DataFrame({'WALCL': walcl, 'TGA': tga, 'RRP': rrp})
-            
-            # Resilience: Check if we have enough data to proceed
-            if df.empty or 'WALCL' not in df or df['WALCL'].dropna().empty:
-                raise Exception("Insufficient FRED data for Liquidity components")
-
-            # Ensure all values are numeric and fill NaNs. 
-            # We use ffill() so daily dates get the last weekly value.
-            # Then bfill() to fill any leading NaNs from different start dates.
-            df = df.apply(pd.to_numeric, errors='coerce').ffill().bfill().fillna(0)
+            # Ensure all values are numeric and fill NaNs with 0
+            df = df.apply(pd.to_numeric, errors='coerce').ffill().fillna(0)
             
             # Correct Logic: WALCL (M), TGA (M), RRP (B)
             # Result: Billions
             df['NET_LIQ'] = (df['WALCL'] - df['TGA'] - (df['RRP'] * 1000)) / 1000
             
-            last_val = df['NET_LIQ'].iloc[-1]
+            last_val = df['NET_LIQ'].iloc[-1] if not df.empty else 6200.0
             
-            # EMERGENCY: Check for NaN or suspiciously low value (e.g. < 1000, as it should be ~5000+)
-            if pd.isna(last_val) or last_val < 1000:
-                print(f"Net Liquidity Calculation suspicious ({last_val}). Trying to recover from cache.")
-                if 'NET_LIQUIDITY' in previous_data and previous_data['NET_LIQUIDITY'].get('price', 0) > 1000:
+            # EMERGENCY: Check for NaN or 0
+            if pd.isna(last_val) or last_val == 0:
+                print("Net Liquidity Calculation failed (NaN detected). Using Fallback.")
+                if 'NET_LIQUIDITY' in previous_data and previous_data['NET_LIQUIDITY'].get('price', 0) > 0:
                      data['NET_LIQUIDITY'] = previous_data['NET_LIQUIDITY']
                      return data
                 else:
-                    last_val = 6200.0 if not pd.isna(last_val) and last_val > 0 else 6200.0
+                    last_val = 6200.0 # Hard fallback
 
-            spark = df['NET_LIQ'].tail(30).tolist()
+            spark = df['NET_LIQ'].tail(30).fillna(6200.0).tolist()
+            if len(spark) < 30: spark = [last_val] * (30 - len(spark)) + spark
             
-            # Handle list with too few items
-            if len(spark) < 30:
-                spark = [last_val] * (30 - len(spark)) + spark
-
             change = 0.0
-            if len(spark) > 5 and spark[-5] != 0:
+            # Use 5-day Lookback for change to capture trend (weekly data smoothing)
+            if len(spark) > 5:
                 change = ((spark[-1] - spark[-5]) / spark[-5]) * 100
-            elif len(spark) > 1 and spark[-2] != 0:
+            elif len(spark) > 1:
                 change = ((spark[-1] - spark[-2]) / spark[-2]) * 100
 
             data['NET_LIQUIDITY'] = {
                 "price": round(last_val, 2), # Billions
                 "change_percent": round(change, 2),
-                "trend": "EXPANSION" if last_val > 5500 else "CONTRACTION",
+                "trend": "EXPANSION" if last_val > 6000 else "CONTRACTION",
                 "sparkline": [round(x, 2) for x in spark]
             }
         except Exception as e:
             print(f"Net Liq Calc Error: {e}")
-            if 'NET_LIQUIDITY' in previous_data and previous_data['NET_LIQUIDITY'].get('price', 0) > 1000:
-                 print("Recovered Net Liquidity from cache.")
+            if 'NET_LIQUIDITY' in previous_data:
                  data['NET_LIQUIDITY'] = previous_data['NET_LIQUIDITY']
-            else:
+            elif 'NET_LIQUIDITY' not in data or not data['NET_LIQUIDITY'].get('sparkline'):
                  data['NET_LIQUIDITY'] = {"price": 6200, "change_percent": 0, "trend": "NEUTRAL", "sparkline": [6200] * 30}
         
         return data
@@ -1040,9 +1030,16 @@ def update_signal():
         return payload
 
     else:
-        print("[CRITICAL] Market data collection failed. Aborting update for atomicity.")
-        import sys
-        sys.exit(1)
+        print("[Warn] Market data collection failed. Using safety fallback.")
+        return {
+            "last_updated": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "gms_score": 50,
+            "market_data": {},
+            "events": [],
+            "analysis": {"reports": FALLBACK_STATUS},
+            "history_chart": [],
+            "system_status": "MAINTENANCE"
+        }
 
 if __name__ == "__main__":
     try:

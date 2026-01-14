@@ -44,7 +44,7 @@ async function main() {
     try {
         // STRICT: Reverting to v2.1.0 Stable Pattern (Verified for Gemini 2.0)
         const result = await generateText({
-            model: gateway('google/gemini-2.0-flash-exp'),
+            model: gateway('google/gemini-2.0-flash'),
             prompt: prompt,
             headers: {
                 'x-vercel-ai-gateway-provider': 'google',
