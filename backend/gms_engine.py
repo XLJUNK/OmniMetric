@@ -688,6 +688,8 @@ Required Output JSON structure:
             script_path = "scripts/generate_insight.ts"
             frontend_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "frontend")
 
+            # Execute Node.js bridge from FRONTEND directory via npx tsx (ESM)
+            # This ensures we don't need a build step in the CI/CD environment
             process = subprocess.run(
                 ["npx", "tsx", script_path, prompt],
                 capture_output=True,
@@ -740,8 +742,8 @@ Required Output JSON structure:
         try:
             print(f"[AI FALLBACK] Attempting Direct REST API (gemini-1.5-flash) - Attempt {attempt+1}...")
             headers = {"Content-Type": "application/json"}
-            # API Endpoint for Gemini 1.5 Flash
-            url = f"https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key={GEMINI_KEY}"
+            # Use v1beta for better model coverage (gemini-1.5-flash)
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_KEY}"
             
             payload = {
                 "contents": [{
