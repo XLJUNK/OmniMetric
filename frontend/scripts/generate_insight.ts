@@ -40,18 +40,26 @@ async function main() {
     } catch (e) { }
 
     const prompt = getPrompt();
+    const gatewaySlug = process.env.VERCEL_AI_GATEWAY_SLUG;
+    const googleKey = process.env.GEMINI_API_KEY;
 
     try {
-        // STRICT: Official Vercel AI SDK Pattern for Gateway
-        // slug and apiKey are automatically picked up from VERCEL_AI_GATEWAY_SLUG and AI_GATEWAY_API_KEY
-        // However, we ensure they are present or fallback to direct provider
+        const { createGoogleGenerativeAI } = require('@ai-sdk/google');
+
+        // Manual Gateway Construction for maximum reliability
+        const google = createGoogleGenerativeAI({
+            apiKey: googleKey,
+            baseURL: gatewaySlug ? `https://gateway.vercel.ai/v1/slug/${gatewaySlug}/google` : undefined,
+            headers: gatewaySlug && process.env.AI_GATEWAY_API_KEY ? {
+                'Authorization': `Bearer ${process.env.AI_GATEWAY_API_KEY}`
+            } : {}
+        });
+
+        console.log(gatewaySlug ? `[AI] Using Gateway: ${gatewaySlug}` : `[AI] Using Direct Provider`);
+
         const result = await generateText({
-            model: gateway('google/gemini-2.0-flash'), // Verified winner from Model List probe
+            model: google('gemini-1.5-flash'), // Using 1.5-flash for maximum stability
             prompt: prompt,
-            // Header for traceability
-            headers: {
-                'x-vercel-ai-gateway-provider': 'google',
-            }
         });
 
         // Output ONLY the raw text for Python to capture

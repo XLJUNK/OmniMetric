@@ -758,43 +758,32 @@ Required Output JSON structure:
                     
                     reports = json.loads(text)
                     
+                    # Local Fallback Map if keys are missing
+                    FALLBACK_MSG = "【GMS: {score}】Institutional macro intelligence updated. Market regimes are currently pricing in key economic shifts."
+                    local_fallbacks = {l: FALLBACK_MSG.format(score=score) for l in required}
+
                     # Consolidate v3.2 multi-field structure
                     for lang in reports:
                         val = reports[lang]
                         if isinstance(val, dict):
                             parts = []
-                            if 'GMS' in val: 
-                                tag = val['GMS']
-                                parts.append(tag)
-                            elif 'score' in val: 
-                                tag = f"【GMS: {val['score']}】"
-                                parts.append(tag)
-                                
-                            if 'Analysis' in val: 
-                                content = val['Analysis']
-                                tag = "【分析】"
-                                parts.append(content if content.startswith(tag) else f"{tag}{content}")
-                            elif 'analysis' in val: 
-                                content = val['analysis']
-                                tag = "【分析】"
-                                parts.append(content if content.startswith(tag) else f"{tag}{content}")
-                                
-                            if 'News' in val: 
-                                content = val['News']
-                                tag = "【速報影響】"
-                                parts.append(content if content.startswith(tag) else f"{tag}{content}")
-                            elif 'impact' in val: 
-                                content = val['impact']
-                                tag = "【速報影響】"
-                                parts.append(content if content.startswith(tag) else f"{tag}{content}")
+                            tag_score = val.get('GMS') or val.get('score')
+                            if tag_score: parts.append(f"【GMS: {tag_score}】" if not str(tag_score).startswith('【') else str(tag_score))
+                            
+                            analysis = val.get('Analysis') or val.get('analysis')
+                            if analysis: parts.append(f"【分析】{analysis}" if not str(analysis).startswith('【分析】') else str(analysis))
+                            
+                            news = val.get('News') or val.get('impact')
+                            if news: parts.append(f"【速報影響】{news}" if not str(news).startswith('【速報影響】') else str(news))
                             
                             reports[lang] = " ".join(parts)
 
-                    # Validate keys
+                    # Validate keys and fill gaps
+                    final_reports = {}
                     for lang in required:
-                        if lang not in reports:
-                            reports[lang] = FALLBACK_STATUS.get(lang, FALLBACK_STATUS["EN"])
-                    return reports
+                        final_reports[lang] = reports.get(lang) or local_fallbacks[lang]
+                    
+                    return final_reports
                 else:
                      print(f"[AI REST ERROR] No candidates returned: {result}")
                      break
