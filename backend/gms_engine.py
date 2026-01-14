@@ -14,6 +14,7 @@ import subprocess
 import re
 import requests
 import xml.etree.ElementTree as ET
+import sys
 
 # Load environment variables from all possible locations
 load_dotenv() # CWD
@@ -227,7 +228,10 @@ def fetch_fred_data():
              if 'HY_SPREAD' in previous_data: data['HY_SPREAD'] = previous_data['HY_SPREAD']
 
         # 3. NFCI
-        try: data['NFCI'] = float(fred.get_series('NFCI').iloc[-1])
+        try:
+            val = float(fred.get_series('NFCI').iloc[-1])
+            log_diag(f"[IN] FRED_RAW: {{ series_id: NFCI, val: {val} }}")
+            data['NFCI'] = val
         except: 
             if 'NFCI' in previous_data: data['NFCI'] = previous_data['NFCI']
         
@@ -239,6 +243,10 @@ def fetch_fred_data():
             tga = fred.get_series('WTREGEN', observation_start=start_date)
             rrp = fred.get_series('RRPONTSYD', observation_start=start_date)
             
+            log_diag(f"[IN] FRED_RAW: {{ series: WALCL, last: {walcl.iloc[-1] if not walcl.empty else 'N/A'} }}")
+            log_diag(f"[IN] FRED_RAW: {{ series: TGA, last: {tga.iloc[-1] if not tga.empty else 'N/A'} }}")
+            log_diag(f"[IN] FRED_RAW: {{ series: RRP, last: {rrp.iloc[-1] if not rrp.empty else 'N/A'} }}")
+
             # Create DataFrame to forward fill WALCL
             df = pd.DataFrame({'WALCL': walcl, 'TGA': tga, 'RRP': rrp})
             # Ensure all values are numeric and handle alignment
@@ -273,6 +281,7 @@ def fetch_fred_data():
                 "trend": "EXPANSION" if last_val > 6100 else "CONTRACTION",
                 "sparkline": [round(x, 2) for x in spark]
             }
+            log_diag(f"[OUT] CALC_LIQ: {{ price: {round(last_val, 2)}, chg: {round(change, 2)}% }}")
         except Exception as e:
             log_diag(f"[FRED ERROR] Net Liquidity calculation failed: {e}")
             if 'NET_LIQUIDITY' in previous_data and previous_data['NET_LIQUIDITY'].get('price', 0) > 1000:
@@ -427,6 +436,7 @@ def fetch_market_data():
     # Also include MOVE and any other YF tickers
     all_tickers.extend(["^MOVE", "SPY", "RSP"]) # Ensure these are included
     all_tickers = list(set(all_tickers))
+    log_diag(f"[IN] YF_QUERY: {{ count: {len(all_tickers)}, tickers: {all_tickers[:5]}... }}")
 
     try:
         batch_hist = yf.download(all_tickers, period="3mo", group_by='ticker', silent=True)
@@ -457,6 +467,7 @@ def fetch_market_data():
                             "trend": "UP" if change > 0 else "DOWN",
                             "sparkline": [round(x, 2) for x in hist_1mo.tolist()]
                         }
+                        log_diag(f"[IN] YF_RAW: {{ ticker: {key}, price: {round(current, 2)}, chg: {round(change, 2)}% }}")
                     else: raise Exception("No close data")
                 else: raise Exception("Empty Data")
             except:
@@ -597,6 +608,7 @@ def calculate_sector_score(sector_name, data):
 
 def calculate_total_gms(data, sector_scores):
     """Calculates Final Global Macro Signal (0-100)."""
+    log_diag(f"[OUT] SECTOR_SCORES: {json.dumps(sector_scores)}")
     # Base: Legacy Logic + Component Average
     # Legacy Logic (VIX, HY, etc)
     legacy_score = 50
@@ -850,19 +862,20 @@ def update_signal():
         print(f"[AIO] Cool-down check failed (Non-critical): {e}")
 
     validate_api_keys()
+    # FETCH DATA
     market_data, status, fetched_events = fetch_market_data()
+    log_diag(f"[GUARD] Market data acquisition: {status}")
     
     if market_data:
-        # Calculate Individual Sector Scores
-        sector_scores = {
-            "STOCKS": calculate_sector_score("STOCKS", market_data),
-            "CRYPTO": calculate_sector_score("CRYPTO", market_data),
-            "FOREX": calculate_sector_score("FOREX", market_data),
-            "COMMODITIES": calculate_sector_score("COMMODITIES", market_data)
-        }
-        
-        # Total Score
+        # CALCULATE SCORES
+        sector_scores = {}
+        for sector in SECTORS.keys():
+            score = calculate_sector_score(sector, market_data)
+            sector_scores[sector] = score
+            log_diag(f"[OUT] CALC_SCORE: {{ sector: {sector}, score: {score} }}")
+            
         score = calculate_total_gms(market_data, sector_scores)
+        log_diag(f"[OUT] GMS_TOTAL: {{ score: {score} }}")
         
         # AI Analysis (Pass context)
         ai_reports = generate_multilingual_report(market_data, score) 
