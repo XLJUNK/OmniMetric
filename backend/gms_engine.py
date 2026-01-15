@@ -1053,6 +1053,8 @@ def update_signal():
             log_diag("[CRITICAL] AI Analysis returned None. Using Fallback Status to preserve site uptime.")
             ai_reports = FALLBACK_STATUS
         events = fetched_events if fetched_events and len(fetched_events) > 0 else get_next_event_dates()
+        # GLOBAL SAFEGUARD: Ensure events are sorted chronologically regardless of source
+        events.sort(key=lambda x: x["date"])
 
         # History Management
         history = []
