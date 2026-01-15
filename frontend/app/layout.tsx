@@ -151,7 +151,7 @@ export default function RootLayout({
           </Suspense>
 
           {/* MAIN CONTENT AREA with Offset for Fixed Sidebar (Hidden on Mobile) */}
-          <div className="flex-1 flex flex-col relative min-w-0 ml-0 lg:ml-[60px] transition-all duration-300 pt-[60px] lg:pt-0 pb-0">
+          <div className="flex-1 flex flex-col relative min-w-0 ml-0 md:ml-[60px] transition-all duration-300 pt-[60px] md:pt-0 pb-0">
             {/* TOP AD BANNER (Desktop Only - Optional) */}
             <div className="hidden md:flex justify-center py-4 bg-[#0a0a0a] border-b border-[#1E293B]">
               <div className="w-[728px] h-[90px] bg-[#111]">

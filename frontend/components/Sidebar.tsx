@@ -20,7 +20,7 @@ export const Sidebar = () => {
     ];
 
     return (
-        <aside className="fixed left-0 top-0 bottom-0 hidden lg:flex flex-col w-[60px] bg-[#0A0A0A] border-r border-[#1E293B] overflow-visible z-50">
+        <aside className="fixed left-0 top-0 bottom-0 hidden md:flex flex-col w-[60px] bg-[#0A0A0A] border-r border-[#1E293B] overflow-visible z-50">
             {/* Logo Area */}
             <div className="h-[60px] flex items-center justify-center border-b border-[#1E293B]">
                 <div className={`w-3 h-3 rounded-full ${pathname === '/' ? 'bg-sky-500 shadow-[0_0_8px_rgba(14,165,233,0.8)]' : 'bg-slate-600'}`}></div>
