@@ -819,7 +819,7 @@ Output JSON:
             # Execute Node.js bridge from FRONTEND directory (Dual Path Resolution)
             # Try npx tsx first (CI standard), then direct node on build if exists
             
-            cmd = ["npx", "tsx", script_path, prompt]
+            cmd = ["npx", "-y", "tsx", script_path, prompt]
             
             log_diag(f"[AI BRIDGE] Command: {' '.join(cmd)}")
             
