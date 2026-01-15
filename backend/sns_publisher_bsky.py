@@ -60,6 +60,8 @@ class BlueskyPublisher:
         
         analysis = data.get("analysis", {})
         reports = analysis.get("reports", {})
+        ai_insight = reports.get("EN", "")
+        
         # Shorten AI Insight for the "Analysis" section
         if len(ai_insight) > 80:
             ai_insight = ai_insight[:77] + "..."
