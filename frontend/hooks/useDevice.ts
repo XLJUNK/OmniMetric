@@ -11,18 +11,33 @@ export const useDevice = () => {
     });
 
     useEffect(() => {
-        const handleResize = () => {
-            const width = window.innerWidth;
-            setDevice({
-                isMobile: width < 768,
-                isTablet: width >= 768 && width < 1024,
-                isDesktop: width >= 1024,
-                width,
-            });
+        const getDeviceFromCookie = () => {
+            const match = document.cookie.match(/gms_device=([^;]+)/);
+            return match ? match[1] : null;
         };
 
-        // Set initial size
-        handleResize();
+        const initialDevice = getDeviceFromCookie();
+
+        const handleResize = () => {
+            const width = window.innerWidth;
+            const isMobile = width < 768;
+            const isTablet = width >= 768 && width < 1024;
+            const isDesktop = width >= 1024;
+
+            setDevice({ isMobile, isTablet, isDesktop, width });
+        };
+
+        if (initialDevice) {
+            setDevice(prev => ({
+                ...prev,
+                isMobile: initialDevice === 'mobile',
+                isTablet: initialDevice === 'tablet',
+                isDesktop: initialDevice === 'desktop',
+                width: window.innerWidth
+            }));
+        } else {
+            handleResize();
+        }
 
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);

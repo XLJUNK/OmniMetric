@@ -39,7 +39,13 @@ export function middleware(request: NextRequest) {
         return NextResponse.next();
     }
 
-    // 4. Accept-Language Header (First Visit) - COOKIE ONLY
+    // 4. Device Detection (Next-Gen Responsive Logic)
+    const ua = request.headers.get('user-agent') || '';
+    let deviceType = 'desktop';
+    if (/mobile/i.test(ua)) deviceType = 'mobile';
+    else if (/tablet/i.test(ua)) deviceType = 'tablet';
+
+    // 5. Accept-Language Header (First Visit) - COOKIE ONLY
     // We no longer REDIRECT if ?lang is missing, to allow Googlebot to index the root URL.
     // Instead, we just set the cookie and continue.
     const acceptLang = request.headers.get('accept-language');
@@ -51,11 +57,19 @@ export function middleware(request: NextRequest) {
         else if (acceptLang.includes('es')) detectedLang = 'ES';
     }
 
-    // Just set cookie if missing, no redirect
+    // Just set cookies if missing, no redirect
     const response = NextResponse.next();
+
+    // Pass device info via header for Server Components and cookie for Client Components
+    response.headers.set('x-device-type', deviceType);
+
     if (!request.cookies.get('gms_locale')) {
         response.cookies.set('gms_locale', detectedLang);
     }
+
+    // Always persist device info to avoid hydrations mismatch or flickering
+    response.cookies.set('gms_device', deviceType);
+
     return response;
 }
 
