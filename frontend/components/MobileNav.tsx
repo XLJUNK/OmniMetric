@@ -21,7 +21,7 @@ export const MobileNav = () => {
     ];
 
     return (
-        <nav className="fixed bottom-0 left-0 right-0 h-16 bg-[#0A0A0A]/80 backdrop-blur-lg border-t border-[#1E293B] flex xl:hidden items-center justify-around px-2 z-[9999]">
+        <nav className="fixed bottom-0 left-0 right-0 h-16 bg-[#0A0A0A]/80 backdrop-blur-lg border-t border-[#1E293B] flex md:hidden items-center justify-around px-2 z-[9999]">
             {tabs.map((tab) => {
                 const isActive = pathname === tab.path;
                 return (
