@@ -3365,3 +3365,381 @@ violations {
 [2026-01-15 02:54:16] [SNS] Twitter credentials missing. Skipping Stage 1.
 [2026-01-15 02:54:16] [SNS] Processing Serial SNS Broadcast: Stage 2 (Bluesky)
 [2026-01-15 02:54:16] [SNS_BSKY] Missing Bluesky credentials (BLUESKY_HANDLE / BLUESKY_PASSWORD).
+[2026-01-15 03:55:02] [FMP] Fetching calendar from: https://financialmodelingprep.com/stable/economic-calendar?from=2026-01-15&to=2026-03-01&apikey=REDACTED
+[2026-01-15 03:55:02] [FMP] Response status: 402
+[2026-01-15 03:55:02] [ERROR] Calendar Fetch Failed: Expecting value: line 1 column 1 (char 0)
+[2026-01-15 03:55:04] [IN] FRED_RAW: { series_id: NFCI, val: -0.57258 }
+[2026-01-15 03:55:04] [FRED] Calculating Net Liquidity...
+[2026-01-15 03:55:04] [IN] FRED_RAW: { series: WALCL, last: 6573602.0 }
+[2026-01-15 03:55:04] [IN] FRED_RAW: { series: TGA, last: 796148.0 }
+[2026-01-15 03:55:04] [IN] FRED_RAW: { series: RRP, last: 3.223 }
+[2026-01-15 03:55:04] [FRED] Calculated Net Liquidity: 5774.231B (using WALCL=6573602.0)
+[2026-01-15 03:55:04] [OUT] CALC_LIQ: { price: 5774.23, chg: 0.0% }
+[2026-01-15 03:55:04] [IN] YF_QUERY: { count: 21, tickers: ['DX-Y.NYB', 'GC=F', 'RSP', 'SAR=X', 'SPY']... }
+[2026-01-15 03:55:04] [IN] YF_RAW: { ticker: VIX, price: 16.75, chg: 4.82% }
+[2026-01-15 03:55:04] [IN] YF_RAW: { ticker: SPY, price: 690.36, chg: -0.49% }
+[2026-01-15 03:55:05] [IN] YF_RAW: { ticker: TNX, price: 4.14, chg: -0.74% }
+[2026-01-15 03:55:05] [IN] YF_RAW: { ticker: QQQ, price: 619.55, chg: -1.07% }
+[2026-01-15 03:55:05] [IN] YF_RAW: { ticker: IWM, price: 263.19, chg: 0.7% }
+[2026-01-15 03:55:05] [IN] YF_RAW: { ticker: RSP, price: 198.68, chg: 0.46% }
+[2026-01-15 03:55:05] [IN] YF_RAW: { ticker: HYG, price: 81.04, chg: 0.0% }
+[2026-01-15 03:55:05] [IN] YF_RAW: { ticker: NIFTY, price: 25665.6, chg: -0.26% }
+[2026-01-15 03:55:05] [IN] YF_RAW: { ticker: BTC, price: 95866.12, chg: 0.57% }
+[2026-01-15 03:55:05] [IN] YF_RAW: { ticker: ETH, price: 3283.38, chg: -1.17% }
+[2026-01-15 03:55:06] [IN] YF_RAW: { ticker: SOL, price: 143.39, chg: -1.36% }
+[2026-01-15 03:55:06] [IN] YF_RAW: { ticker: DXY, price: 99.12, chg: -0.01% }
+[2026-01-15 03:55:06] [IN] YF_RAW: { ticker: USDJPY, price: 158.53, chg: -0.41% }
+[2026-01-15 03:55:06] [IN] YF_RAW: { ticker: EURUSD, price: 1.16, chg: -0.01% }
+[2026-01-15 03:55:06] [IN] YF_RAW: { ticker: USDINR, price: 90.25, chg: -0.02% }
+[2026-01-15 03:55:06] [IN] YF_RAW: { ticker: USDSAR, price: 3.75, chg: 0.12% }
+[2026-01-15 03:55:06] [IN] YF_RAW: { ticker: GOLD, price: 4599.1, chg: 0.22% }
+[2026-01-15 03:55:06] [IN] YF_RAW: { ticker: OIL, price: 59.99, chg: -1.9% }
+[2026-01-15 03:55:06] [IN] YF_RAW: { ticker: COPPER, price: 5.95, chg: -0.41% }
+[2026-01-15 03:55:06] [IN] YF_RAW: { ticker: NATGAS, price: 3.1, chg: -9.33% }
+[2026-01-15 03:55:07] [GUARD] Data Integrity Audit: 100% Data Completion (All feeds successful).
+[2026-01-15 03:55:07] [GUARD] Market data acquisition: OPERATIONAL
+[2026-01-15 03:55:07] [OUT] CALC_SCORE: { sector: STOCKS, score: 55 }
+[2026-01-15 03:55:07] [OUT] CALC_SCORE: { sector: CRYPTO, score: 75 }
+[2026-01-15 03:55:07] [OUT] CALC_SCORE: { sector: FOREX, score: 35 }
+[2026-01-15 03:55:07] [OUT] CALC_SCORE: { sector: COMMODITIES, score: 55 }
+[2026-01-15 03:55:07] [OUT] SECTOR_SCORES: {"STOCKS": 55, "CRYPTO": 75, "FOREX": 35, "COMMODITIES": 55}
+[2026-01-15 03:55:07] [OUT] GMS_TOTAL: { score: 39 }
+[2026-01-15 03:55:07] [AI BRIDGE] GEMINI_API_KEY detected (Length: 39)
+[2026-01-15 03:55:07] [AI BATCH] Requesting 7-language analysis (Attempt 1)...
+[2026-01-15 03:55:07] [AI BRIDGE] Command: npx -y tsx scripts/generate_insight.ts 
+【AI Insight Protocol v5.3: Output Density Protocol】
+Role: Lead Economist at a top-tier investment bank (Bloomberg/Goldman style).
+Goal: Generate a high-density, strategic macro report.
+
+MASTER LANGUAGE PROTOCOL:
+1. First, generate the Japanese (JP) analysis as the "Gold Standard".
+2. Maintain the exact "Information Density" and "Logical Structure" of the JP version when translating/adapting to other languages.
+
+CHARACTER COUNT RANGE (STRICT):
+- REQUIRED RANGE: 200 to 250 characters per language.
+- "Low Density" (<200 chars) is an automatic FAILURE.
+- "Excessive length" (>250 chars) is an automatic FAILURE.
+- You must physically count and ensure every language falls within [200, 250].
+
+CONTENT "THREE PRINCIPLES" (MANDATORY):
+Each report MUST contain these 3 elements in a cohesive narrative:
+1. Current State Definition (現状の定義): Clearly define the current market regime based on GMS Score.
+2. Correlation & Causality (指標間の相関・因果): Explain the logical link between indicators (e.g., "Rising yields are pressuring tech multiples").
+3. Future Prediction (今後の予測): Provide a specific tactical outlook or trigger point.
+
+GMS Context:
+- Current GMS Score: 39/100
+- Market Matrix:
+- CRYPTO_SENTIMENT: 61 (Prev: 61, DailyChg: 0.0%)
+- YIELD_SPREAD: 0.48 (Prev: 0.48, DailyChg: 0.0%)
+- HY_SPREAD: 2.75 (Prev: 2.74, DailyChg: 0.36%)
+- NFCI: -0.57 (Prev: -0.57, DailyChg: 0.0%)
+- NET_LIQUIDITY: 5774.23 (Prev: 5774.18, DailyChg: 0.0%)
+- VIX: 16.75 (Prev: 15.98, DailyChg: 4.82%)
+- YIELD_SPREAD_10Y2Y: 0.64 (Prev: 0.64, DailyChg: 0.0%)
+- US_10Y_YIELD: 4.18 (Prev: 4.18, DailyChg: 0.0%)
+- REAL_INTEREST_RATE: 1.88 (Prev: 1.88, DailyChg: 0.0%)
+- SPY: 690.36 (Prev: 693.77, DailyChg: -0.49%)
+- TNX: 4.14 (Prev: 4.17, DailyChg: -0.74%)
+- QQQ: 619.55 (Prev: 626.24, DailyChg: -1.07%)
+- IWM: 263.19 (Prev: 261.35, DailyChg: 0.7%)
+- RSP: 198.68 (Prev: 197.78, DailyChg: 0.46%)
+- HYG: 81.04 (Prev: 81.04, DailyChg: 0.0%)
+- NIFTY: 25665.6 (Prev: 25732.3, DailyChg: -0.26%)
+- BTC: 95866.12 (Prev: 95321.78, DailyChg: 0.57%)
+- ETH: 3283.38 (Prev: 3322.1, DailyChg: -1.17%)
+- SOL: 143.39 (Prev: 145.36, DailyChg: -1.36%)
+- DXY: 99.12 (Prev: 99.13, DailyChg: -0.01%)
+- USDJPY: 158.53 (Prev: 159.18, DailyChg: -0.41%)
+- EURUSD: 1.16 (Prev: 1.16, DailyChg: -0.01%)
+- USDINR: 90.25 (Prev: 90.27, DailyChg: -0.02%)
+- USDSAR: 3.75 (Prev: 3.75, DailyChg: 0.12%)
+- GOLD: 4599.1 (Prev: 4589.2, DailyChg: 0.22%)
+- OIL: 59.99 (Prev: 61.15, DailyChg: -1.9%)
+- COPPER: 5.95 (Prev: 5.97, DailyChg: -0.41%)
+- NATGAS: 3.1 (Prev: 3.42, DailyChg: -9.33%)
+- MOVE: 58.11 (Prev: 58.11, DailyChg: 0.0%)
+- BREADTH: 1.01 (Prev: 1.01, DailyChg: 0.0%)
+- SPY_MOMENTUM: -1.01 (Prev: -1.01, DailyChg: 0.0%)
+- COPPER_GOLD: 1.29 (Prev: 1.29, DailyChg: 0.0%)
+
+- News: Iran briefly closes airspace as U.S. tensions rise, flights rerouted across region
+
+Regime Guide:
+- 0-40: DEFENSIVE (Risk-Off).
+- 40-60: NEUTRAL.
+- 60-100: ACCUMULATE (Risk-On).
+
+SELF-CENSORSHIP:
+Check each Value in the JSON. If any string is < 200 characters, rewrite it to be more descriptive and analytical until it passes the 200-character threshold.
+
+Output JSON:
+{
+  "JP": " (200-250文字: 現状、相関、予測を含む叙述文) ",
+  "EN": " (200-250 chars: Definition, Correlation, Prediction) ",
+  "CN": "...",
+  "ES": "...",
+  "HI": "...",
+  "ID": "...",
+  "AR": "..."
+}
+
+[2026-01-15 03:55:16] [AI BRIDGE WARN] Bridge execution failed (Code 1). Trying direct node fallback...
+[2026-01-15 03:55:16] [AI BRIDGE FAIL] Final Exit Code 1
+[2026-01-15 03:55:16] [AI BRIDGE ERR STREAM] node:internal/modules/cjs/loader:1210
+  throw err;
+  ^
+
+Error: Cannot find module 'ai'
+Require stack:
+- /home/runner/work/OmniMetric/OmniMetric/frontend/dist/generate_insight.js
+    at Module._resolve
+[2026-01-15 03:55:16] [AI BATCH] Requesting 7-language analysis (Attempt 2)...
+[2026-01-15 03:55:16] [AI BRIDGE] Command: npx -y tsx scripts/generate_insight.ts 
+【AI Insight Protocol v5.3: Output Density Protocol】
+Role: Lead Economist at a top-tier investment bank (Bloomberg/Goldman style).
+Goal: Generate a high-density, strategic macro report.
+
+MASTER LANGUAGE PROTOCOL:
+1. First, generate the Japanese (JP) analysis as the "Gold Standard".
+2. Maintain the exact "Information Density" and "Logical Structure" of the JP version when translating/adapting to other languages.
+
+CHARACTER COUNT RANGE (STRICT):
+- REQUIRED RANGE: 200 to 250 characters per language.
+- "Low Density" (<200 chars) is an automatic FAILURE.
+- "Excessive length" (>250 chars) is an automatic FAILURE.
+- You must physically count and ensure every language falls within [200, 250].
+
+CONTENT "THREE PRINCIPLES" (MANDATORY):
+Each report MUST contain these 3 elements in a cohesive narrative:
+1. Current State Definition (現状の定義): Clearly define the current market regime based on GMS Score.
+2. Correlation & Causality (指標間の相関・因果): Explain the logical link between indicators (e.g., "Rising yields are pressuring tech multiples").
+3. Future Prediction (今後の予測): Provide a specific tactical outlook or trigger point.
+
+GMS Context:
+- Current GMS Score: 39/100
+- Market Matrix:
+- CRYPTO_SENTIMENT: 61 (Prev: 61, DailyChg: 0.0%)
+- YIELD_SPREAD: 0.48 (Prev: 0.48, DailyChg: 0.0%)
+- HY_SPREAD: 2.75 (Prev: 2.74, DailyChg: 0.36%)
+- NFCI: -0.57 (Prev: -0.57, DailyChg: 0.0%)
+- NET_LIQUIDITY: 5774.23 (Prev: 5774.18, DailyChg: 0.0%)
+- VIX: 16.75 (Prev: 15.98, DailyChg: 4.82%)
+- YIELD_SPREAD_10Y2Y: 0.64 (Prev: 0.64, DailyChg: 0.0%)
+- US_10Y_YIELD: 4.18 (Prev: 4.18, DailyChg: 0.0%)
+- REAL_INTEREST_RATE: 1.88 (Prev: 1.88, DailyChg: 0.0%)
+- SPY: 690.36 (Prev: 693.77, DailyChg: -0.49%)
+- TNX: 4.14 (Prev: 4.17, DailyChg: -0.74%)
+- QQQ: 619.55 (Prev: 626.24, DailyChg: -1.07%)
+- IWM: 263.19 (Prev: 261.35, DailyChg: 0.7%)
+- RSP: 198.68 (Prev: 197.78, DailyChg: 0.46%)
+- HYG: 81.04 (Prev: 81.04, DailyChg: 0.0%)
+- NIFTY: 25665.6 (Prev: 25732.3, DailyChg: -0.26%)
+- BTC: 95866.12 (Prev: 95321.78, DailyChg: 0.57%)
+- ETH: 3283.38 (Prev: 3322.1, DailyChg: -1.17%)
+- SOL: 143.39 (Prev: 145.36, DailyChg: -1.36%)
+- DXY: 99.12 (Prev: 99.13, DailyChg: -0.01%)
+- USDJPY: 158.53 (Prev: 159.18, DailyChg: -0.41%)
+- EURUSD: 1.16 (Prev: 1.16, DailyChg: -0.01%)
+- USDINR: 90.25 (Prev: 90.27, DailyChg: -0.02%)
+- USDSAR: 3.75 (Prev: 3.75, DailyChg: 0.12%)
+- GOLD: 4599.1 (Prev: 4589.2, DailyChg: 0.22%)
+- OIL: 59.99 (Prev: 61.15, DailyChg: -1.9%)
+- COPPER: 5.95 (Prev: 5.97, DailyChg: -0.41%)
+- NATGAS: 3.1 (Prev: 3.42, DailyChg: -9.33%)
+- MOVE: 58.11 (Prev: 58.11, DailyChg: 0.0%)
+- BREADTH: 1.01 (Prev: 1.01, DailyChg: 0.0%)
+- SPY_MOMENTUM: -1.01 (Prev: -1.01, DailyChg: 0.0%)
+- COPPER_GOLD: 1.29 (Prev: 1.29, DailyChg: 0.0%)
+
+- News: Iran briefly closes airspace as U.S. tensions rise, flights rerouted across region
+
+Regime Guide:
+- 0-40: DEFENSIVE (Risk-Off).
+- 40-60: NEUTRAL.
+- 60-100: ACCUMULATE (Risk-On).
+
+SELF-CENSORSHIP:
+Check each Value in the JSON. If any string is < 200 characters, rewrite it to be more descriptive and analytical until it passes the 200-character threshold.
+
+Output JSON:
+{
+  "JP": " (200-250文字: 現状、相関、予測を含む叙述文) ",
+  "EN": " (200-250 chars: Definition, Correlation, Prediction) ",
+  "CN": "...",
+  "ES": "...",
+  "HI": "...",
+  "ID": "...",
+  "AR": "..."
+}
+
+[2026-01-15 03:55:17] [AI BRIDGE WARN] Bridge execution failed (Code 1). Trying direct node fallback...
+[2026-01-15 03:55:17] [AI BRIDGE FAIL] Final Exit Code 1
+[2026-01-15 03:55:17] [AI BRIDGE ERR STREAM] node:internal/modules/cjs/loader:1210
+  throw err;
+  ^
+
+Error: Cannot find module 'ai'
+Require stack:
+- /home/runner/work/OmniMetric/OmniMetric/frontend/dist/generate_insight.js
+    at Module._resolve
+[2026-01-15 03:55:17] [AI SDK] Attempting Direct Python SDK (google-generativeai)...
+[2026-01-15 03:55:18] [AI SDK ERROR] 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+Please retry in 41.955810579s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 41
+}
+]
+[2026-01-15 03:55:18] [AI REST] Attempting Direct REST (Attempt 1)...
+[2026-01-15 03:55:18] [AI REST FAIL] Status 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 41.86983468s.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Learn more about Gemini API quotas",
+            "url": "https://ai.google.dev/gemini-api/docs/rate-limits"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+        "violations": [
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count",
+            "quotaId": "GenerateContentInputTokensPerModelPerMinute-FreeTier",
+            "quotaDimensions": {
+              "location": "global",
+              "model": "gemini-2.0-flash"
+            }
+          },
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quotaId": "GenerateRequestsPerMinutePerProjectPerModel-FreeTier",
+            "quotaDimensions": {
+              "location": "global",
+              "model": "gemini-2.0-flash"
+            }
+          },
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quotaId": "GenerateRequestsPerDayPerProjectPerModel-FreeTier",
+            "quotaDimensions": {
+              "location": "global",
+              "model": "gemini-2.0-flash"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.RetryInfo",
+        "retryDelay": "41s"
+      }
+    ]
+  }
+}
+
+[2026-01-15 03:55:18] [AI REST] Attempting Direct REST (Attempt 2)...
+[2026-01-15 03:55:18] [AI REST FAIL] Status 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 41.778832604s.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Learn more about Gemini API quotas",
+            "url": "https://ai.google.dev/gemini-api/docs/rate-limits"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+        "violations": [
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count",
+            "quotaId": "GenerateContentInputTokensPerModelPerMinute-FreeTier",
+            "quotaDimensions": {
+              "location": "global",
+              "model": "gemini-2.0-flash"
+            }
+          },
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quotaId": "GenerateRequestsPerMinutePerProjectPerModel-FreeTier",
+            "quotaDimensions": {
+              "model": "gemini-2.0-flash",
+              "location": "global"
+            }
+          },
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quotaId": "GenerateRequestsPerDayPerProjectPerModel-FreeTier",
+            "quotaDimensions": {
+              "location": "global",
+              "model": "gemini-2.0-flash"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.RetryInfo",
+        "retryDelay": "41s"
+      }
+    ]
+  }
+}
+
+[2026-01-15 03:55:18] [SNS] Processing Serial SNS Broadcast: Stage 1 (Twitter)
+[2026-01-15 03:55:18] [SNS] Twitter credentials missing. Skipping Stage 1.
+[2026-01-15 03:55:18] [SNS] Twitter credentials missing. Skipping Stage 1.
+[2026-01-15 03:55:18] [SNS] Processing Serial SNS Broadcast: Stage 2 (Bluesky)
+[2026-01-15 03:55:18] [SNS_BSKY] Missing Bluesky credentials (BLUESKY_HANDLE / BLUESKY_PASSWORD).
