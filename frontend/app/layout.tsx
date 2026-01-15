@@ -125,7 +125,10 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <head>
+      <body
+        className={`${inter.variable} ${notoJP.variable} ${notoAR.variable} ${notoHI.variable} antialiased`}
+        style={{ overflowX: 'hidden' }}
+      >
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -136,11 +139,6 @@ export default function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1230621442620902"
           crossOrigin="anonymous"
         />
-      </head>
-      <body
-        className={`${inter.variable} ${notoJP.variable} ${notoAR.variable} ${notoHI.variable} antialiased`}
-        style={{ overflowX: 'hidden' }}
-      >
 
         {/* APP ROOT CONTAINER: ROW Layout for Sidebar + Content */}
         <div className="omni-terminal-root relative min-h-screen flex bg-[#0a0a0a]">
