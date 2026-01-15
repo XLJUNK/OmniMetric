@@ -815,9 +815,11 @@ Output JSON:
             
             script_path = "scripts/generate_insight.ts"
             frontend_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "frontend")
-
-            # Execute Node.js bridge from FRONTEND directory (Dual Path Resolution)
-            # Try npx tsx first (CI standard), then direct node on build if exists
+            
+            import shutil
+            if not shutil.which("npx"):
+                log_diag("[AI BRIDGE SKIP] 'npx' not found. Jumping to Python SDK fallback.")
+                break 
             
             cmd = ["npx", "-y", "tsx", script_path, prompt]
             
