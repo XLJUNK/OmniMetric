@@ -21,20 +21,24 @@ export const MobileNav = () => {
     ];
 
     return (
-        <nav className="fixed bottom-0 left-0 right-0 h-16 bg-[#0A0A0A]/80 backdrop-blur-lg border-t border-[#1E293B] flex md:hidden items-center justify-around px-2 z-[9999]">
+        <nav className="fixed top-0 left-0 right-0 h-[60px] bg-[#0A0A0A]/90 backdrop-blur-xl border-b border-[#1E293B] flex lg:hidden items-center justify-center gap-6 px-4 z-[9999] shadow-2xl">
             {tabs.map((tab) => {
                 const isActive = pathname === tab.path;
                 return (
                     <button
                         key={tab.key}
                         onClick={() => router.push(`${tab.path}?lang=${lang}`)}
-                        className={`flex flex-col items-center gap-1 flex-1 py-1 transition-colors ${isActive ? 'text-sky-500' : 'text-slate-500'
+                        className={`flex flex-col items-center gap-1 transition-colors relative ${isActive ? 'text-sky-500' : 'text-slate-500'
                             }`}
                     >
                         <tab.icon className={`w-5 h-5 ${isActive ? 'drop-shadow-[0_0_8px_rgba(14,165,233,0.5)]' : ''}`} />
-                        <span className="text-[10px] font-bold uppercase tracking-tighter truncate w-full text-center px-1">
+                        <span className="text-[9px] font-bold uppercase tracking-tighter truncate w-full text-center">
                             {tab.label}
                         </span>
+                        {/* Active Indicator Dot */}
+                        {isActive && (
+                            <span className="absolute -bottom-2 w-1 h-1 bg-sky-500 rounded-full shadow-[0_0_5px_rgba(14,165,233,0.8)]"></span>
+                        )}
                     </button>
                 );
             })}

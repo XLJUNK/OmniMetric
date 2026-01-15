@@ -1146,6 +1146,8 @@ def update_signal():
                 sns.publish_update(payload)
             except Exception as e:
                 print(f"[AIO] SNS Module Error: {e}")
+                import traceback
+                traceback.print_exc()
 
         except Exception as e:
             print(f"[AIO] Event Triggering Critical Error: {e}")
