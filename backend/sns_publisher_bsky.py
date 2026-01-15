@@ -91,7 +91,6 @@ class BlueskyPublisher:
                         self._log(f"Smart-skip: Current score ({current_score}) matches last posted score. Skipping.")
                         return True
         except Exception as e:
-        except Exception as e:
             self._log(f"State check failed: {e}", is_error=True)
         return False
 
@@ -99,7 +98,6 @@ class BlueskyPublisher:
         try:
             with open(self.state_file, 'w') as f:
                 json.dump({"last_bsky_score": score, "last_post_at": datetime.utcnow().isoformat()}, f)
-        except Exception as e:
         except Exception as e:
             self._log(f"Failed to update state file: {e}", is_error=True)
 
@@ -116,7 +114,6 @@ class BlueskyPublisher:
         bsky_pass = os.getenv("BLUESKY_PASSWORD")
         
         if not all([bsky_user, bsky_pass]):
-        if not all([bsky_user, bsky_pass]):
             self._log("Missing Bluesky credentials (BLUESKY_HANDLE / BLUESKY_PASSWORD).", is_error=True)
             return False
             
@@ -128,7 +125,6 @@ class BlueskyPublisher:
             self._log(f"Success: Posted GMS Score {score} to Bluesky.")
             self.update_state(score)
             return True
-        except Exception as e:
         except Exception as e:
             self._log(f"Error: {e}", is_error=True)
             return False

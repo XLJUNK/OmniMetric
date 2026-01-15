@@ -4249,3 +4249,257 @@ You are not permitted to perform this action.
 You are not permitted to perform this action.
 [2026-01-15 05:05:34] [SNS] Processing Serial SNS Broadcast: Stage 2 (Bluesky)
 [2026-01-15 05:05:35] [SNS_BSKY] Error: Response(success=False, status_code=400, content=XrpcError(error='InvalidRequest', message='Invalid app.bsky.feed.post record: Record/text must not be longer than 300 graphemes'), headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'cache-control': 'private', 'vary': 'Authorization, Accept-Encoding', 'ratelimit-limit': '3000', 'ratelimit-reset': '1768453835', 'ratelimit-remaining': '2998', 'ratelimit-policy': '3000;w=300', 'content-type': 'application/json; charset=utf-8', 'content-length': '123', 'etag': 'W/"7b-5OYjOucrkx456vG6nIBiH/VZWIA"', 'date': 'Thu, 15 Jan 2026 05:05:35 GMT', 'keep-alive': 'timeout=90', 'strict-transport-security': 'max-age=63072000'})
+[2026-01-15 05:13:42] [FMP] Fetching calendar from: https://financialmodelingprep.com/stable/economic-calendar?from=2026-01-15&to=2026-03-01&apikey=REDACTED
+[2026-01-15 05:13:42] [FMP] Response status: 402
+[2026-01-15 05:13:42] [ERROR] Calendar Fetch Failed: Expecting value: line 1 column 1 (char 0)
+[2026-01-15 05:13:44] [IN] FRED_RAW: { series_id: NFCI, val: -0.57258 }
+[2026-01-15 05:13:44] [FRED] Calculating Net Liquidity...
+[2026-01-15 05:13:44] [IN] FRED_RAW: { series: WALCL, last: 6573602.0 }
+[2026-01-15 05:13:44] [IN] FRED_RAW: { series: TGA, last: 796148.0 }
+[2026-01-15 05:13:44] [IN] FRED_RAW: { series: RRP, last: 3.223 }
+[2026-01-15 05:13:44] [FRED] Calculated Net Liquidity: 5774.231B (using WALCL=6573602.0)
+[2026-01-15 05:13:44] [OUT] CALC_LIQ: { price: 5774.23, chg: 0.0% }
+[2026-01-15 05:13:44] [IN] YF_QUERY: { count: 21, tickers: ['QQQ', 'RSP', 'NG=F', 'ETH-USD', '^NSEI']... }
+[2026-01-15 05:13:45] [IN] YF_RAW: { ticker: VIX, price: 16.75, chg: 4.82% }
+[2026-01-15 05:13:45] [IN] YF_RAW: { ticker: SPY, price: 690.36, chg: -0.49% }
+[2026-01-15 05:13:45] [IN] YF_RAW: { ticker: TNX, price: 4.14, chg: -0.74% }
+[2026-01-15 05:13:45] [IN] YF_RAW: { ticker: QQQ, price: 619.55, chg: -1.07% }
+[2026-01-15 05:13:45] [IN] YF_RAW: { ticker: IWM, price: 263.19, chg: 0.7% }
+[2026-01-15 05:13:45] [IN] YF_RAW: { ticker: RSP, price: 198.68, chg: 0.46% }
+[2026-01-15 05:13:45] [IN] YF_RAW: { ticker: HYG, price: 81.04, chg: 0.0% }
+[2026-01-15 05:13:46] [IN] YF_RAW: { ticker: NIFTY, price: 25665.6, chg: -0.26% }
+[2026-01-15 05:13:46] [IN] YF_RAW: { ticker: BTC, price: 96334.11, chg: 1.06% }
+[2026-01-15 05:13:46] [IN] YF_RAW: { ticker: ETH, price: 3307.92, chg: -0.43% }
+[2026-01-15 05:13:46] [IN] YF_RAW: { ticker: SOL, price: 144.44, chg: -0.63% }
+[2026-01-15 05:13:46] [IN] YF_RAW: { ticker: DXY, price: 99.17, chg: 0.04% }
+[2026-01-15 05:13:46] [IN] YF_RAW: { ticker: USDJPY, price: 158.53, chg: -0.41% }
+[2026-01-15 05:13:46] [IN] YF_RAW: { ticker: EURUSD, price: 1.16, chg: -0.01% }
+[2026-01-15 05:13:46] [IN] YF_RAW: { ticker: USDINR, price: 90.27, chg: -0.0% }
+[2026-01-15 05:13:46] [IN] YF_RAW: { ticker: USDSAR, price: 3.75, chg: 0.12% }
+[2026-01-15 05:13:46] [IN] YF_RAW: { ticker: GOLD, price: 4595.6, chg: -0.66% }
+[2026-01-15 05:13:46] [IN] YF_RAW: { ticker: OIL, price: 60.0, chg: -3.26% }
+[2026-01-15 05:13:46] [IN] YF_RAW: { ticker: COPPER, price: 5.95, chg: -0.92% }
+[2026-01-15 05:13:46] [IN] YF_RAW: { ticker: NATGAS, price: 3.1, chg: -0.67% }
+[2026-01-15 05:13:47] [GUARD] Data Integrity Audit: 100% Data Completion (All feeds successful).
+[2026-01-15 05:13:47] [GUARD] Market data acquisition: OPERATIONAL
+[2026-01-15 05:13:47] [OUT] CALC_SCORE: { sector: STOCKS, score: 55 }
+[2026-01-15 05:13:47] [OUT] CALC_SCORE: { sector: CRYPTO, score: 75 }
+[2026-01-15 05:13:47] [OUT] CALC_SCORE: { sector: FOREX, score: 35 }
+[2026-01-15 05:13:47] [OUT] CALC_SCORE: { sector: COMMODITIES, score: 55 }
+[2026-01-15 05:13:47] [OUT] SECTOR_SCORES: {"STOCKS": 55, "CRYPTO": 75, "FOREX": 35, "COMMODITIES": 55}
+[2026-01-15 05:13:47] [OUT] GMS_TOTAL: { score: 39 }
+[2026-01-15 05:13:47] [AI BRIDGE] GEMINI_API_KEY detected (Length: 39)
+[2026-01-15 05:13:47] [AI BATCH] Requesting 7-language analysis (Attempt 1)...
+[2026-01-15 05:13:47] [AI BRIDGE] Command: npx -y tsx scripts/generate_insight.ts 
+【AI Insight Protocol v5.3: Output Density Protocol】
+Role: Lead Economist at a top-tier investment bank (Bloomberg/Goldman style).
+Goal: Generate a high-density, strategic macro report.
+
+MASTER LANGUAGE PROTOCOL:
+1. First, generate the Japanese (JP) analysis as the "Gold Standard".
+2. Maintain the exact "Information Density" and "Logical Structure" of the JP version when translating/adapting to other languages.
+
+CHARACTER COUNT RANGE (STRICT):
+- REQUIRED RANGE: 200 to 250 characters per language.
+- "Low Density" (<200 chars) is an automatic FAILURE.
+- "Excessive length" (>250 chars) is an automatic FAILURE.
+- You must physically count and ensure every language falls within [200, 250].
+
+CONTENT "THREE PRINCIPLES" (MANDATORY):
+Each report MUST contain these 3 elements in a cohesive narrative:
+1. Current State Definition (現状の定義): Clearly define the current market regime based on GMS Score.
+2. Correlation & Causality (指標間の相関・因果): Explain the logical link between indicators (e.g., "Rising yields are pressuring tech multiples").
+3. Future Prediction (今後の予測): Provide a specific tactical outlook or trigger point.
+
+GMS Context:
+- Current GMS Score: 39/100
+- Market Matrix:
+- CRYPTO_SENTIMENT: 61 (Prev: 61, DailyChg: 0.0%)
+- YIELD_SPREAD: 0.48 (Prev: 0.48, DailyChg: 0.0%)
+- HY_SPREAD: 2.75 (Prev: 2.74, DailyChg: 0.36%)
+- NFCI: -0.57 (Prev: -0.57, DailyChg: 0.0%)
+- NET_LIQUIDITY: 5774.23 (Prev: 5774.18, DailyChg: 0.0%)
+- VIX: 16.75 (Prev: 15.98, DailyChg: 4.82%)
+- YIELD_SPREAD_10Y2Y: 0.64 (Prev: 0.64, DailyChg: 0.0%)
+- US_10Y_YIELD: 4.18 (Prev: 4.18, DailyChg: 0.0%)
+- REAL_INTEREST_RATE: 1.88 (Prev: 1.88, DailyChg: 0.0%)
+- SPY: 690.36 (Prev: 693.77, DailyChg: -0.49%)
+- TNX: 4.14 (Prev: 4.17, DailyChg: -0.74%)
+- QQQ: 619.55 (Prev: 626.24, DailyChg: -1.07%)
+- IWM: 263.19 (Prev: 261.35, DailyChg: 0.7%)
+- RSP: 198.68 (Prev: 197.78, DailyChg: 0.46%)
+- HYG: 81.04 (Prev: 81.04, DailyChg: 0.0%)
+- NIFTY: 25665.6 (Prev: 25732.3, DailyChg: -0.26%)
+- BTC: 96334.11 (Prev: 95321.78, DailyChg: 1.06%)
+- ETH: 3307.92 (Prev: 3322.1, DailyChg: -0.43%)
+- SOL: 144.44 (Prev: 145.36, DailyChg: -0.63%)
+- DXY: 99.17 (Prev: 99.13, DailyChg: 0.04%)
+- USDJPY: 158.53 (Prev: 159.18, DailyChg: -0.41%)
+- EURUSD: 1.16 (Prev: 1.16, DailyChg: -0.01%)
+- USDINR: 90.27 (Prev: 90.27, DailyChg: -0.0%)
+- USDSAR: 3.75 (Prev: 3.75, DailyChg: 0.12%)
+- GOLD: 4595.6 (Prev: 4626.3, DailyChg: -0.66%)
+- OIL: 60.0 (Prev: 62.02, DailyChg: -3.26%)
+- COPPER: 5.95 (Prev: 6.01, DailyChg: -0.92%)
+- NATGAS: 3.1 (Prev: 3.12, DailyChg: -0.67%)
+- MOVE: 58.11 (Prev: 58.11, DailyChg: 0.0%)
+- BREADTH: 1.01 (Prev: 1.01, DailyChg: 0.0%)
+- SPY_MOMENTUM: -1.01 (Prev: -1.01, DailyChg: 0.0%)
+- COPPER_GOLD: 1.29 (Prev: 1.29, DailyChg: 0.0%)
+
+- News: Iran reopens airspace after hours-long shutdown spooks airlines
+
+Regime Guide:
+- 0-40: DEFENSIVE (Risk-Off).
+- 40-60: NEUTRAL.
+- 60-100: ACCUMULATE (Risk-On).
+
+SELF-CENSORSHIP:
+Check each Value in the JSON. If any string is < 200 characters, rewrite it to be more descriptive and analytical until it passes the 200-character threshold.
+
+Output JSON:
+{
+  "JP": " (200-250文字: 現状、相関、予測を含む叙述文) ",
+  "EN": " (200-250 chars: Definition, Correlation, Prediction) ",
+  "CN": "...",
+  "ES": "...",
+  "HI": "...",
+  "ID": "...",
+  "AR": "..."
+}
+
+[2026-01-15 05:13:55] [AI BRIDGE] Received 2335 bytes of output. Head: [dotenv@17.2.3] injecting env (0) from ../.env -- tip: ⚙️  enable debug logging with { debug: true }...
+[2026-01-15 05:13:55] [AI SUCCESS] Reports parsed and validated.
+[2026-01-15 05:13:55] [SNS] Processing Serial SNS Broadcast: Stage 1 (Twitter)
+[2026-01-15 05:13:55] [SNS][TWITTER] Twitter Error: 403 Forbidden
+You are not permitted to perform this action.
+[2026-01-15 05:13:56] [SNS][TWITTER] Twitter Error: 403 Forbidden
+You are not permitted to perform this action.
+[2026-01-15 05:13:56] [SNS][BLUESKY] Bluesky Integration Error: expected an indented block after 'except' statement on line 93 (sns_publisher_bsky.py, line 94)
+[2026-01-15 05:41:50] [FMP] Fetching calendar from: https://financialmodelingprep.com/stable/economic-calendar?from=2026-01-15&to=2026-03-01&apikey=REDACTED
+[2026-01-15 05:41:50] [FMP] Response status: 402
+[2026-01-15 05:41:50] [ERROR] Calendar Fetch Failed: Expecting value: line 1 column 1 (char 0)
+[2026-01-15 05:41:51] [IN] FRED_RAW: { series_id: NFCI, val: -0.57258 }
+[2026-01-15 05:41:51] [FRED] Calculating Net Liquidity...
+[2026-01-15 05:41:51] [IN] FRED_RAW: { series: WALCL, last: 6573602.0 }
+[2026-01-15 05:41:51] [IN] FRED_RAW: { series: TGA, last: 796148.0 }
+[2026-01-15 05:41:51] [IN] FRED_RAW: { series: RRP, last: 3.223 }
+[2026-01-15 05:41:51] [FRED] Calculated Net Liquidity: 5774.231B (using WALCL=6573602.0)
+[2026-01-15 05:41:51] [OUT] CALC_LIQ: { price: 5774.23, chg: 0.0% }
+[2026-01-15 05:41:51] [IN] YF_QUERY: { count: 21, tickers: ['DX-Y.NYB', 'BTC-USD', 'IWM', 'JPY=X', 'ETH-USD']... }
+[2026-01-15 05:41:52] [IN] YF_RAW: { ticker: VIX, price: 16.75, chg: 4.82% }
+[2026-01-15 05:41:52] [IN] YF_RAW: { ticker: SPY, price: 690.36, chg: -0.49% }
+[2026-01-15 05:41:52] [IN] YF_RAW: { ticker: TNX, price: 4.14, chg: -0.74% }
+[2026-01-15 05:41:52] [IN] YF_RAW: { ticker: QQQ, price: 619.55, chg: -1.07% }
+[2026-01-15 05:41:52] [IN] YF_RAW: { ticker: IWM, price: 263.19, chg: 0.7% }
+[2026-01-15 05:41:52] [IN] YF_RAW: { ticker: RSP, price: 198.68, chg: 0.46% }
+[2026-01-15 05:41:53] [IN] YF_RAW: { ticker: HYG, price: 81.04, chg: 0.0% }
+[2026-01-15 05:41:53] [IN] YF_RAW: { ticker: NIFTY, price: 25665.6, chg: -0.26% }
+[2026-01-15 05:41:53] [IN] YF_RAW: { ticker: BTC, price: 96354.65, chg: 1.08% }
+[2026-01-15 05:41:53] [IN] YF_RAW: { ticker: ETH, price: 3307.77, chg: -0.43% }
+[2026-01-15 05:41:53] [IN] YF_RAW: { ticker: SOL, price: 144.48, chg: -0.6% }
+[2026-01-15 05:41:53] [IN] YF_RAW: { ticker: DXY, price: 99.15, chg: 0.02% }
+[2026-01-15 05:41:53] [IN] YF_RAW: { ticker: USDJPY, price: 158.51, chg: -0.42% }
+[2026-01-15 05:41:53] [IN] YF_RAW: { ticker: EURUSD, price: 1.16, chg: -0.03% }
+[2026-01-15 05:41:54] [IN] YF_RAW: { ticker: USDINR, price: 90.28, chg: 0.01% }
+[2026-01-15 05:41:54] [IN] YF_RAW: { ticker: USDSAR, price: 3.75, chg: 0.12% }
+[2026-01-15 05:41:54] [IN] YF_RAW: { ticker: GOLD, price: 4593.8, chg: -0.7% }
+[2026-01-15 05:41:54] [IN] YF_RAW: { ticker: OIL, price: 59.94, chg: -3.35% }
+[2026-01-15 05:41:54] [IN] YF_RAW: { ticker: COPPER, price: 5.95, chg: -1.06% }
+[2026-01-15 05:41:54] [IN] YF_RAW: { ticker: NATGAS, price: 3.11, chg: -0.35% }
+[2026-01-15 05:41:55] [GUARD] Data Integrity Audit: 100% Data Completion (All feeds successful).
+[2026-01-15 05:41:55] [GUARD] Market data acquisition: OPERATIONAL
+[2026-01-15 05:41:55] [OUT] CALC_SCORE: { sector: STOCKS, score: 55 }
+[2026-01-15 05:41:55] [OUT] CALC_SCORE: { sector: CRYPTO, score: 75 }
+[2026-01-15 05:41:55] [OUT] CALC_SCORE: { sector: FOREX, score: 35 }
+[2026-01-15 05:41:55] [OUT] CALC_SCORE: { sector: COMMODITIES, score: 55 }
+[2026-01-15 05:41:55] [OUT] SECTOR_SCORES: {"STOCKS": 55, "CRYPTO": 75, "FOREX": 35, "COMMODITIES": 55}
+[2026-01-15 05:41:55] [OUT] GMS_TOTAL: { score: 39 }
+[2026-01-15 05:41:55] [AI BRIDGE] GEMINI_API_KEY detected (Length: 39)
+[2026-01-15 05:41:55] [AI BATCH] Requesting 7-language analysis (Attempt 1)...
+[2026-01-15 05:41:55] [AI BRIDGE] Command: npx -y tsx scripts/generate_insight.ts 
+【AI Insight Protocol v5.3: Output Density Protocol】
+Role: Lead Economist at a top-tier investment bank (Bloomberg/Goldman style).
+Goal: Generate a high-density, strategic macro report.
+
+MASTER LANGUAGE PROTOCOL:
+1. First, generate the Japanese (JP) analysis as the "Gold Standard".
+2. Maintain the exact "Information Density" and "Logical Structure" of the JP version when translating/adapting to other languages.
+
+CHARACTER COUNT RANGE (STRICT):
+- REQUIRED RANGE: 200 to 250 characters per language.
+- "Low Density" (<200 chars) is an automatic FAILURE.
+- "Excessive length" (>250 chars) is an automatic FAILURE.
+- You must physically count and ensure every language falls within [200, 250].
+
+CONTENT "THREE PRINCIPLES" (MANDATORY):
+Each report MUST contain these 3 elements in a cohesive narrative:
+1. Current State Definition (現状の定義): Clearly define the current market regime based on GMS Score.
+2. Correlation & Causality (指標間の相関・因果): Explain the logical link between indicators (e.g., "Rising yields are pressuring tech multiples").
+3. Future Prediction (今後の予測): Provide a specific tactical outlook or trigger point.
+
+GMS Context:
+- Current GMS Score: 39/100
+- Market Matrix:
+- CRYPTO_SENTIMENT: 61 (Prev: 61, DailyChg: 0.0%)
+- YIELD_SPREAD: 0.48 (Prev: 0.48, DailyChg: 0.0%)
+- HY_SPREAD: 2.75 (Prev: 2.74, DailyChg: 0.36%)
+- NFCI: -0.57 (Prev: -0.57, DailyChg: 0.0%)
+- NET_LIQUIDITY: 5774.23 (Prev: 5774.18, DailyChg: 0.0%)
+- VIX: 16.75 (Prev: 15.98, DailyChg: 4.82%)
+- YIELD_SPREAD_10Y2Y: 0.64 (Prev: 0.64, DailyChg: 0.0%)
+- US_10Y_YIELD: 4.18 (Prev: 4.18, DailyChg: 0.0%)
+- REAL_INTEREST_RATE: 1.88 (Prev: 1.88, DailyChg: 0.0%)
+- SPY: 690.36 (Prev: 693.77, DailyChg: -0.49%)
+- TNX: 4.14 (Prev: 4.17, DailyChg: -0.74%)
+- QQQ: 619.55 (Prev: 626.24, DailyChg: -1.07%)
+- IWM: 263.19 (Prev: 261.35, DailyChg: 0.7%)
+- RSP: 198.68 (Prev: 197.78, DailyChg: 0.46%)
+- HYG: 81.04 (Prev: 81.04, DailyChg: 0.0%)
+- NIFTY: 25665.6 (Prev: 25732.3, DailyChg: -0.26%)
+- BTC: 96354.65 (Prev: 95321.78, DailyChg: 1.08%)
+- ETH: 3307.77 (Prev: 3322.1, DailyChg: -0.43%)
+- SOL: 144.48 (Prev: 145.36, DailyChg: -0.6%)
+- DXY: 99.15 (Prev: 99.13, DailyChg: 0.02%)
+- USDJPY: 158.51 (Prev: 159.18, DailyChg: -0.42%)
+- EURUSD: 1.16 (Prev: 1.16, DailyChg: -0.03%)
+- USDINR: 90.28 (Prev: 90.27, DailyChg: 0.01%)
+- USDSAR: 3.75 (Prev: 3.75, DailyChg: 0.12%)
+- GOLD: 4593.8 (Prev: 4626.3, DailyChg: -0.7%)
+- OIL: 59.94 (Prev: 62.02, DailyChg: -3.35%)
+- COPPER: 5.95 (Prev: 6.01, DailyChg: -1.06%)
+- NATGAS: 3.11 (Prev: 3.12, DailyChg: -0.35%)
+- MOVE: 58.11 (Prev: 58.11, DailyChg: 0.0%)
+- BREADTH: 1.01 (Prev: 1.01, DailyChg: 0.0%)
+- SPY_MOMENTUM: -1.01 (Prev: -1.01, DailyChg: 0.0%)
+- COPPER_GOLD: 1.3 (Prev: 1.3, DailyChg: 0.0%)
+
+- News: Iran reopens airspace after hours-long shutdown spooks airlines
+
+Regime Guide:
+- 0-40: DEFENSIVE (Risk-Off).
+- 40-60: NEUTRAL.
+- 60-100: ACCUMULATE (Risk-On).
+
+SELF-CENSORSHIP:
+Check each Value in the JSON. If any string is < 200 characters, rewrite it to be more descriptive and analytical until it passes the 200-character threshold.
+
+Output JSON:
+{
+  "JP": " (200-250文字: 現状、相関、予測を含む叙述文) ",
+  "EN": " (200-250 chars: Definition, Correlation, Prediction) ",
+  "CN": "...",
+  "ES": "...",
+  "HI": "...",
+  "ID": "...",
+  "AR": "..."
+}
+
+[2026-01-15 05:42:04] [AI BRIDGE] Received 2596 bytes of output. Head: [dotenv@17.2.3] injecting env (0) from ../.env -- tip: 🔐 prevent building .env in docker: https://do...
+[2026-01-15 05:42:04] [AI SUCCESS] Reports parsed and validated.
+[2026-01-15 05:42:04] [SNS] Processing Serial SNS Broadcast: Stage 1 (Twitter)
+[2026-01-15 05:42:04] [SNS][TWITTER] Twitter Error: 403 Forbidden
+You are not permitted to perform this action.
+[2026-01-15 05:42:04] [SNS][TWITTER] Twitter Error: 403 Forbidden
+You are not permitted to perform this action.
+[2026-01-15 05:42:04] [SNS][BLUESKY] Bluesky Integration Error: expected an indented block after 'except' statement on line 93 (sns_publisher_bsky.py, line 94)
