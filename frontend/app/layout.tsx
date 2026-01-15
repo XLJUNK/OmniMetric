@@ -177,11 +177,6 @@ export default function RootLayout({
               {children}
             </main>
 
-            {/* MOBILE NAVIGATION BAR (Bottom Static) */}
-            <Suspense fallback={null}>
-              <MobileNav />
-            </Suspense>
-
             {/* Footer */}
             <div>
               <Suspense fallback={null}>
@@ -189,6 +184,12 @@ export default function RootLayout({
               </Suspense>
             </div>
           </div>
+
+          {/* MOBILE NAVIGATION BAR (Fixed Viewport) - Moved outside transition container to fix stacking context */}
+          <Suspense fallback={null}>
+            <MobileNav />
+          </Suspense>
+
         </div> {/* End of Application Root */}
 
         <Analytics />

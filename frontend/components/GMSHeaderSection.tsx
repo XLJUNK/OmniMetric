@@ -317,7 +317,8 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
                     {(!data.events || data.events.length === 0) ? (
                         <div className="p-4 text-xs text-slate-600 font-mono">NO UPCOMING RISK EVENTS DETECTED.</div>
                     ) : (
-                        (data.events || []).slice(0, 3).map((evt, i) => (
+                        // SAFETY SORT: Ensure events are chronologically sorted (Fix for Localhost/Stale Data)
+                        ([...(data.events || [])].sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()).slice(0, 3)).map((evt, i) => (
                             <div key={i} className="flex flex-col border-b border-[#1E293B] last:border-0 py-3 px-4 hover:bg-white/5 transition-colors">
                                 <div className="flex items-center gap-3">
                                     <span className={`text-xs font-bold font-mono ${evt.impact === 'CRITICAL' ? 'text-red-500' : 'text-slate-300'}`}>
@@ -336,6 +337,6 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
             <div className="max-w-[1600px] mx-auto w-full px-4 md:px-8 mb-8">
                 <AdUnit />
             </div>
-        </div>
+        </div >
     );
 };
