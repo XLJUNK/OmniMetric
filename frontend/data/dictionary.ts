@@ -139,7 +139,7 @@ export const DICTIONARY = {
             trend: "30-Day Terminal Trend",
             sync: "Awaiting Signal Sync...",
             insight: "Proprietary Insight",
-            engine: "Institutional Engine v5.0.1",
+            engine: "Institutional Engine v5.2.0",
             neutral_insight: "Awaiting institutional confluence.",
             bull_insight: "Conditions favor risk assets. Momentum confirming expansion.",
             bear_insight: "Defensive posture advised. Elevated structural stress detected."
@@ -331,7 +331,7 @@ export const DICTIONARY = {
             trend: "過去30日間のターミナルトレンド",
             sync: "シグナル同期待機中...",
             insight: "独占的インサイト",
-            engine: "機関投資家向けエンジン v5.0.1",
+            engine: "機関投資家向けエンジン v5.2.0",
             neutral_insight: "機関投資家の合意形成を待機中。",
             bull_insight: "リスク資産に追い風。モメンタムは拡張を継続。",
             bear_insight: "防衛的ポジションを推奨。構造的ストレスを検出。"
@@ -493,7 +493,7 @@ export const DICTIONARY = {
             trend: "30天终端趋势",
             sync: "正在等待信号同步...",
             insight: "独家见解",
-            engine: "机构版版本 v5.0.1",
+            engine: "机构版版本 v5.2.0",
             neutral_insight: "等待机构达成共识。",
             bull_insight: "条件有利于风险资产。动量确认扩张。",
             bear_insight: "建议采取防御性姿态。检测到结构性压力。"
@@ -655,7 +655,7 @@ export const DICTIONARY = {
             trend: "Tendencia de Terminal de 30 Días",
             sync: "Esperando sincronización de señal...",
             insight: "Información Propietaria",
-            engine: "Motor Institucional v5.0.1",
+            engine: "Motor Institucional v5.2.0",
             neutral_insight: "Esperando confluencia institucional.",
             bull_insight: "Las condiciones favorecen los activos de riesgo.",
             bear_insight: "Se recomienda una postura defensiva."
@@ -817,7 +817,7 @@ export const DICTIONARY = {
             trend: "30-दिवसीय टर्मिनल रुझान",
             sync: "सिग्नल सिंक की प्रतीक्षा है...",
             insight: "स्वामित्व अंतर्दृष्टि",
-            engine: "संस्थागत इंजन v5.0.1",
+            engine: "संस्थागत इंजन v5.2.0",
             neutral_insight: "संस्थागत संगम की प्रतीक्षा है।",
             bull_insight: "परिस्थितियाँ जोखिम वाली संपत्तियों के अनुकूल हैं।",
             bear_insight: "रक्षात्मक मुद्रा की सलाह दी जाती है।"
@@ -979,7 +979,7 @@ export const DICTIONARY = {
             trend: "Tren Terminal 30 Hari",
             sync: "Menunggu Sinkronisasi Sinyal...",
             insight: "Wawasan Kepemilikan",
-            engine: "Mesin Institusional v5.0.1",
+            engine: "Mesin Institusional v5.2.0",
             neutral_insight: "Menunggu pertemuan institusional.",
             bull_insight: "Kondisi menguntungkan aset risiko.",
             bear_insight: "Sikap defensif disarankan."
@@ -1135,7 +1135,7 @@ export const DICTIONARY = {
             trend: "اتجاه المحطة لمدة 30 يومًا",
             sync: "في انتظار مزامنة الإشارة...",
             insight: "رؤية خاصة",
-            engine: "المحرك المؤسسي v5.0.1",
+            engine: "المحرك المؤسسي v5.2.0",
             neutral_insight: "في انتظار التوافق المؤسسي.",
             bull_insight: "الظروف تفضل الأصول الخطرة.",
             bear_insight: "يُنصح بموقف دفاعي."

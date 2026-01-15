@@ -39,7 +39,9 @@ export function middleware(request: NextRequest) {
         return NextResponse.next();
     }
 
-    // 4. Accept-Language Header (First Visit)
+    // 4. Accept-Language Header (First Visit) - COOKIE ONLY
+    // We no longer REDIRECT if ?lang is missing, to allow Googlebot to index the root URL.
+    // Instead, we just set the cookie and continue.
     const acceptLang = request.headers.get('accept-language');
     let detectedLang = DEFAULT_LOCALE;
 
@@ -49,17 +51,12 @@ export function middleware(request: NextRequest) {
         else if (acceptLang.includes('es')) detectedLang = 'ES';
     }
 
-    // Redirect to add ?lang=XX on first visit
-    // Only if query param is missing
-    if (!queryLang) {
-        const url = request.nextUrl.clone();
-        url.searchParams.set('lang', detectedLang);
-        const response = NextResponse.redirect(url);
+    // Just set cookie if missing, no redirect
+    const response = NextResponse.next();
+    if (!request.cookies.get('gms_locale')) {
         response.cookies.set('gms_locale', detectedLang);
-        return response;
     }
-
-    return NextResponse.next();
+    return response;
 }
 
 export const config = {

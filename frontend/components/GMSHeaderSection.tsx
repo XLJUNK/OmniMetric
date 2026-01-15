@@ -73,9 +73,10 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
     if (aiContent && typeof aiContent === 'string') {
         const isPlaceholder = PLACEHOLDER_BLOCKLIST.some(p => aiContent.includes(p));
 
-        // If it's a known generic boilerplate OR too short OR missing, swap to regime-specific dynamic fallback.
+        // If it's a known generic boilerplate OR missing, swap to regime-specific dynamic fallback.
         // NOTE: We permit "Professional Fallbacks" from the backend (starting with 【GMS:) even if generation failed.
-        if (isPlaceholder || isSafeMode || !aiRaw || aiRaw.length < 20) {
+        // Also, we keep valid analysis (length > 20) even in SafeMode to avoid transient flickering.
+        if (isPlaceholder || !aiRaw || aiRaw.length < 20) {
             // If the raw content is a professional fallback from the backend, we use it as is
             if (aiRaw && aiRaw.includes("【GMS:")) {
                 aiContent = aiRaw;
@@ -93,12 +94,18 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
             {showInfo && (
                 <div className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setShowInfo(false)}>
                     <div className="bg-[#111] border border-slate-800 rounded-xl w-full max-w-2xl p-6 shadow-2xl relative" onClick={e => e.stopPropagation()}>
-                        <button className="absolute top-4 right-4 text-slate-400 hover:text-white" onClick={() => setShowInfo(false)}>
-                            <X className="w-6 h-6" />
-                        </button>
-                        <h2 className="text-2xl font-black text-white uppercase tracking-tighter mb-4 border-b border-slate-800 pb-2">
-                            {t.methodology.title}
-                        </h2>
+                        <div className="flex justify-between items-start mb-4 border-b border-slate-800 pb-2">
+                            <h2 className="text-2xl font-black text-white uppercase tracking-tighter">
+                                {t.methodology.title}
+                            </h2>
+                            <button
+                                className="text-slate-400 hover:text-white transition-colors p-1"
+                                onClick={() => setShowInfo(false)}
+                                aria-label="Close"
+                            >
+                                <X className="w-6 h-6" />
+                            </button>
+                        </div>
                         <div className="space-y-6 text-sm text-slate-300 font-mono">
                             <p>{t.methodology.desc}</p>
 
@@ -229,21 +236,21 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
 
                 {/* AI INSIGHT */}
                 {/* AI INSIGHT - FORCE STYLE OVERRIDE */}
-                <div className="lg:col-span-2 bg-[#111] !rounded-xl !border !border-[#1E293B] !ring-0 !outline-none !shadow-none p-6 flex flex-col relative overflow-hidden group">
-                    <div className="flex items-center gap-2 mb-6 border-b !border-[#1E293B] pb-4">
+                <div className="lg:col-span-2 bg-[#111] !rounded-xl !border !border-[#1E293B] !ring-0 !outline-none !shadow-none p-6 flex flex-col relative overflow-hidden group min-h-[220px]">
+                    <div className="flex items-center gap-2 mb-4 border-b !border-[#1E293B] pb-3">
                         <Zap className="w-4 h-4 text-sky-500" />
                         <h3 className="text-slate-400 text-[10px] font-semibold uppercase tracking-[0.2em] flex-grow">OmniMetric AI-Driven Global Insights</h3>
                         <div className="hidden group-hover:flex items-center gap-1 opacity-50 text-[9px] text-slate-500 font-mono">
                             <Info className="w-3 h-3" /> AI-Generated
                         </div>
                     </div>
-                    <div className="flex-grow flex items-center">
-                        <p className="text-slate-300 text-sm md:text-lg leading-relaxed font-serif italic">
+                    <div className="flex-grow flex items-start mt-2">
+                        <p className="text-slate-300 text-sm md:text-base lg:text-lg leading-relaxed font-serif italic">
                             "{aiContent}"
                         </p>
                     </div>
                     {/* AIO: Citation Footer */}
-                    <div className="mt-4 pt-3 border-t border-[#1E293B] flex justify-end">
+                    <div className="mt-6 pt-3 border-t border-[#1E293B] flex justify-end">
                         <p className="text-[9px] text-slate-600 font-mono select-all">
                             Cite this analysis as: <span className="text-slate-500">OmniMetric Global Macro Signal ({new Date().toISOString().split('T')[0]}). Retrieving from omnimetric.net</span>
                         </p>

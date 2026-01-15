@@ -3,10 +3,15 @@ import { Metadata } from 'next';
 
 export const dynamic = 'force-dynamic';
 
-export const metadata: Metadata = {
-    title: "Commodities Market Analysis | OmniMetric",
-    description: "Real-time tracking of Gold, Oil, Copper, and Natural Gas. Supply chain and geopolitical risk integration.",
-};
+import { getMultilingualMetadata } from '@/data/seo';
+
+export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
+    const s = await searchParams;
+    return getMultilingualMetadata('/commodities', s.lang || 'EN',
+        "Commodities Market Analysis | OmniMetric",
+        "Real-time tracking of Gold, Oil, Copper, and Natural Gas. Supply chain and geopolitical risk integration."
+    );
+}
 
 const jsonLd = {
     "@context": "https://schema.org",

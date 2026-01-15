@@ -4,6 +4,10 @@ on:
   schedule:
     # Hourly Check for "Monitoring Mode" (Alerts) + Market Opens/Closes covered naturally
     - cron: '0 * * * *'
+  workflow_run:
+    workflows: ["Global Macro Signal Update"]
+    types:
+      - completed
   workflow_dispatch: # Manual trigger
 
 permissions:

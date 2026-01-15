@@ -65,8 +65,8 @@ export const useSignalData = () => {
             if (!data.last_successful_update) return;
             const lastUpdate = new Date(data.last_successful_update);
             const diffMin = (new Date().getTime() - lastUpdate.getTime()) / 60000;
-            // Trigger Safe Mode if data is >25m old OR we hit multiple fetch failures
-            setIsSafeMode(diffMin > 25 || errorCount >= 3);
+            // Trigger Safe Mode if data is >45m old OR we hit multiple fetch failures
+            setIsSafeMode(diffMin > 45 || errorCount >= 3);
         };
         checkHealth();
         const interval = setInterval(checkHealth, 30000);

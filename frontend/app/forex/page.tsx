@@ -3,10 +3,15 @@ import { Metadata } from 'next';
 
 export const dynamic = 'force-dynamic';
 
-export const metadata: Metadata = {
-    title: "Forex & Rates Analysis | OmniMetric",
-    description: "Global currency and interest rate market intelligence. USD, JPY, EUR analysis and yield curve monitoring.",
-};
+import { getMultilingualMetadata } from '@/data/seo';
+
+export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
+    const s = await searchParams;
+    return getMultilingualMetadata('/forex', s.lang || 'EN',
+        "Forex & Rates Analysis | OmniMetric",
+        "Global currency and interest rate market intelligence. USD, JPY, EUR analysis and yield curve monitoring."
+    );
+}
 
 const jsonLd = {
     "@context": "https://schema.org",

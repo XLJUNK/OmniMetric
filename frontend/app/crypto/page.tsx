@@ -3,10 +3,15 @@ import { Metadata } from 'next';
 
 export const dynamic = 'force-dynamic';
 
-export const metadata: Metadata = {
-    title: "Crypto Assets Analysis | OmniMetric",
-    description: "Institutional risk monitoring for Bitcoin, Ethereum, and Solana. Advanced volatility and correlation metrics.",
-};
+import { getMultilingualMetadata } from '@/data/seo';
+
+export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
+    const s = await searchParams;
+    return getMultilingualMetadata('/crypto', s.lang || 'EN',
+        "Crypto Assets Analysis | OmniMetric",
+        "Institutional risk monitoring for Bitcoin, Ethereum, and Solana. Advanced volatility and correlation metrics."
+    );
+}
 
 const jsonLd = {
     "@context": "https://schema.org",

@@ -67,12 +67,18 @@ export const SectorDashboard = ({ sectorKey }: SectorDashboardProps) => {
                 {showInfo && (
                     <div className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setShowInfo(false)}>
                         <div className="bg-[#111] border border-[#1E293B] rounded-xl w-full max-w-2xl p-6 shadow-2xl relative" onClick={e => e.stopPropagation()}>
-                            <button className="absolute top-4 right-4 text-slate-400 hover:text-white" onClick={() => setShowInfo(false)}>
-                                <X className="w-6 h-6" />
-                            </button>
-                            <h2 className="text-2xl font-black text-white uppercase tracking-tighter mb-4 border-b border-[#1E293B] pb-2">
-                                {t.methodology.title}
-                            </h2>
+                            <div className="flex justify-between items-start mb-4 border-b border-[#1E293B] pb-2">
+                                <h2 className="text-2xl font-black text-white uppercase tracking-tighter">
+                                    {t.methodology.title}
+                                </h2>
+                                <button
+                                    className="text-slate-400 hover:text-white transition-colors p-1"
+                                    onClick={() => setShowInfo(false)}
+                                    aria-label="Close"
+                                >
+                                    <X className="w-6 h-6" />
+                                </button>
+                            </div>
                             <div className="space-y-6 text-sm text-slate-300 font-mono">
                                 <p>{t.methodology.desc}</p>
                                 {/* Removed repetitive logic for brevity since GMSHeaderSection handles much of this context now */}

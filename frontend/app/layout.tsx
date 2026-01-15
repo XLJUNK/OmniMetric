@@ -40,19 +40,6 @@ export const metadata: Metadata = {
     shortcut: '/icon.svg',
     apple: '/icon.svg',
   },
-  alternates: {
-    canonical: 'https://omnimetric.net',
-    languages: {
-      'x-default': 'https://omnimetric.net',
-      'en': 'https://omnimetric.net/?lang=EN',
-      'ja': 'https://omnimetric.net/?lang=JP',
-      'zh': 'https://omnimetric.net/?lang=CN',
-      'es': 'https://omnimetric.net/?lang=ES',
-      'hi': 'https://omnimetric.net/?lang=HI',
-      'id': 'https://omnimetric.net/?lang=ID',
-      'ar': 'https://omnimetric.net/?lang=AR',
-    },
-  },
   openGraph: {
     images: [
       {

@@ -2,10 +2,15 @@ import { SectorDashboard } from '@/components/SectorDashboard';
 import { Metadata } from 'next';
 export const dynamic = 'force-dynamic';
 
-export const metadata: Metadata = {
-    title: "Global Stocks Analysis | OmniMetric",
-    description: "Real-time institutional analysis of global equity markets including S&P 500, NASDAQ, and VIX volatility index.",
-};
+import { getMultilingualMetadata } from '@/data/seo';
+
+export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
+    const s = await searchParams;
+    return getMultilingualMetadata('/stocks', s.lang || 'EN',
+        "Global Stocks Analysis | OmniMetric",
+        "Real-time institutional analysis of global equity markets including S&P 500, NASDAQ, and VIX volatility index."
+    );
+}
 
 const jsonLd = {
     "@context": "https://schema.org",

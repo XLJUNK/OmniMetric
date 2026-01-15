@@ -70,8 +70,35 @@ export const HistoryChart = ({ data, lang = 'EN', color = '#0ea5e9' }: { data: H
         </div>
     );
 
-    // Enable data to flow through without modification
-    const chartDataValues = [...(data || [])];
+    // Localize and format dates
+    const normalizedLang = lang?.toUpperCase();
+    const isJP = normalizedLang === 'JP';
+
+    const chartDataValues = [...(data || [])].map(d => {
+        try {
+            const date = new Date(d.date);
+            // If the date is invalid (already formatted), return as is
+            if (isNaN(date.getTime())) return d;
+
+            const formatter = new Intl.DateTimeFormat('en-US', {
+                month: '2-digit', day: '2-digit',
+                hour: '2-digit', minute: '2-digit',
+                hour12: false,
+                timeZone: isJP ? 'Asia/Tokyo' : 'UTC'
+            });
+            const parts = formatter.formatToParts(date);
+            const m = parts.find(p => p.type === 'month')?.value;
+            const day = parts.find(p => p.type === 'day')?.value;
+            const h = parts.find(p => p.type === 'hour')?.value;
+            const min = parts.find(p => p.type === 'minute')?.value;
+            return {
+                ...d,
+                date: `${m}/${day} ${h}:${min}`
+            };
+        } catch (e) {
+            return d;
+        }
+    });
 
     return (
         <div className="h-full w-full flex flex-col pt-2">
