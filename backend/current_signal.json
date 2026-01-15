@@ -1,12 +1,12 @@
 {
-    "last_updated": "2026-01-15T21:50:09Z",
-    "last_successful_update": "2026-01-15T21:50:09Z",
-    "gms_score": 37,
+    "last_updated": "2026-01-15T22:35:13Z",
+    "last_successful_update": "2026-01-15T22:35:13Z",
+    "gms_score": 38,
     "sector_scores": {
         "STOCKS": 50,
         "CRYPTO": 75,
         "FOREX": 35,
-        "COMMODITIES": 40
+        "COMMODITIES": 55
     },
     "market_data": {
         "CRYPTO_SENTIMENT": {
@@ -47,11 +47,10 @@
             ]
         },
         "YIELD_SPREAD": {
-            "price": 0.48,
+            "price": 0.49,
             "change_percent": 0.0,
             "trend": "NORMAL",
             "sparkline": [
-                0.4,
                 0.43,
                 0.44,
                 0.45,
@@ -80,7 +79,8 @@
                 0.56,
                 0.52,
                 0.51,
-                0.48
+                0.48,
+                0.49
             ]
         },
         "HY_SPREAD": {
@@ -213,11 +213,10 @@
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
-            "price": 0.64,
+            "price": 0.61,
             "change_percent": 0.0,
             "trend": "NEUTRAL",
             "sparkline": [
-                0.59,
                 0.58,
                 0.6,
                 0.57,
@@ -246,7 +245,8 @@
                 0.64,
                 0.65,
                 0.65,
-                0.64
+                0.64,
+                0.61
             ]
         },
         "US_10Y_YIELD": {
@@ -541,10 +541,10 @@
             ]
         },
         "BTC": {
-            "price": 95519.91,
+            "price": 95701.88,
             "prev_price": 96929.33,
-            "daily_chg": -1.45,
-            "change_percent": 5.17,
+            "daily_chg": -1.27,
+            "change_percent": 5.37,
             "trend": "DOWN",
             "sparkline": [
                 87234.74,
@@ -568,14 +568,14 @@
                 91192.99,
                 95321.78,
                 96929.33,
-                95519.91
+                95701.88
             ]
         },
         "ETH": {
-            "price": 3299.74,
+            "price": 3308.02,
             "prev_price": 3354.72,
-            "daily_chg": -1.64,
-            "change_percent": 5.8,
+            "daily_chg": -1.39,
+            "change_percent": 6.06,
             "trend": "DOWN",
             "sparkline": [
                 2903.58,
@@ -599,14 +599,14 @@
                 3092.33,
                 3322.1,
                 3354.72,
-                3299.74
+                3308.02
             ]
         },
         "SOL": {
-            "price": 142.06,
+            "price": 142.35,
             "prev_price": 146.75,
-            "daily_chg": -3.2,
-            "change_percent": 1.84,
+            "daily_chg": -3.0,
+            "change_percent": 2.05,
             "trend": "DOWN",
             "sparkline": [
                 119.95,
@@ -630,7 +630,7 @@
                 139.14,
                 145.36,
                 146.75,
-                142.06
+                142.35
             ]
         },
         "DXY": {
@@ -665,10 +665,10 @@
             ]
         },
         "USDJPY": {
-            "price": 158.65,
+            "price": 158.59,
             "prev_price": 159.18,
-            "daily_chg": -0.33,
-            "change_percent": 1.13,
+            "daily_chg": -0.37,
+            "change_percent": 1.09,
             "trend": "DOWN",
             "sparkline": [
                 155.89,
@@ -692,7 +692,7 @@
                 158.15,
                 157.99,
                 159.18,
-                158.65
+                158.59
             ]
         },
         "EURUSD": {
@@ -789,10 +789,10 @@
             ]
         },
         "GOLD": {
-            "price": 4618.0,
+            "price": 4620.5,
             "prev_price": 4626.3,
-            "daily_chg": -0.18,
-            "change_percent": 2.84,
+            "daily_chg": -0.13,
+            "change_percent": 2.9,
             "trend": "DOWN",
             "sparkline": [
                 4306.7,
@@ -816,14 +816,14 @@
                 4604.3,
                 4589.2,
                 4626.3,
-                4618.0
+                4620.5
             ]
         },
         "OIL": {
-            "price": 59.11,
+            "price": 59.17,
             "prev_price": 62.02,
-            "daily_chg": -4.69,
-            "change_percent": -0.02,
+            "daily_chg": -4.6,
+            "change_percent": 0.08,
             "trend": "DOWN",
             "sparkline": [
                 56.82,
@@ -847,14 +847,14 @@
                 59.5,
                 61.15,
                 62.02,
-                59.11
+                59.17
             ]
         },
         "COPPER": {
             "price": 5.99,
             "prev_price": 6.01,
-            "daily_chg": -0.34,
-            "change_percent": 2.27,
+            "daily_chg": -0.29,
+            "change_percent": 2.32,
             "trend": "DOWN",
             "sparkline": [
                 5.34,
@@ -884,8 +884,8 @@
         "NATGAS": {
             "price": 3.14,
             "prev_price": 3.12,
-            "daily_chg": 0.74,
-            "change_percent": -0.82,
+            "daily_chg": 0.77,
+            "change_percent": -0.79,
             "trend": "UP",
             "sparkline": [
                 4.01,
@@ -1071,22 +1071,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS at 37 indicates defensive positioning. Oil's sharp decline signals risk-off. Despite stable US 10Y yields, steady Copper/Gold ratio hints at risk appetite. Taiwan's US chip investment supports the sector, but global slowdown concerns weigh. Lower VIX offers short-term stability. Watch for $60 oil break: further risk-off and recession signal.",
+        "content": "GMS at 38, Defensive stance. Oil's sharp decline alongside stable US 10Y yield at 4.15% fuels stagflation concerns. Subdued VIX indicates persistent risk aversion. Taiwan's U.S. chip investment boosts semis. SPY at 692, TNX at 4.16. Oil breach below $60 triggers recession fears, deeper risk-off.",
         "reports": {
-            "JP": "GMS37はディフェンシブ領域。原油急落がリスクオフを示唆。米10年債利回りは膠着も、銅/金比率安定はリスク選好の兆し。台湾の対米投資は半導体セクター支援だが、世界経済減速懸念が重石。VIX低下は短期的な安定。原油価格が60ドル割れで、更なるリスクオフ加速と景気後退シグナルに警戒。",
-            "EN": "GMS at 37 indicates defensive positioning. Oil's sharp decline signals risk-off. Despite stable US 10Y yields, steady Copper/Gold ratio hints at risk appetite. Taiwan's US chip investment supports the sector, but global slowdown concerns weigh. Lower VIX offers short-term stability. Watch for $60 oil break: further risk-off and recession signal.",
-            "CN": "GMS为37，表明防御姿态。原油价格暴跌预示风险厌恶情绪。尽管美国10年期国债收益率稳定，但铜金比率的稳定暗示风险偏好。台湾对美国芯片的投资支持该行业，但全球经济放缓的担忧挥之不去。VIX指数下跌提供短期稳定。关注60美元的油价突破点：可能引发进一步的避险情绪和衰退信号。",
-            "ES": "GMS en 37 indica posicionamiento defensivo. La fuerte caída del petróleo señala aversión al riesgo. A pesar de los rendimientos estables de los bonos del Tesoro estadounidense a 10 años, la relación cobre/oro estable apunta al apetito por el riesgo. La inversión taiwanesa en chips estadounidenses apoya el sector, pero las preocupaciones sobre la desaceleración mundial pesan. La baja del VIX ofrece estabilidad a corto plazo. Vigilar la ruptura del petróleo a 60 dólares: mayor aversión al riesgo y señal de recesión.",
-            "HI": "जीएमएस 37 पर रक्षात्मक रुख दर्शाता है। तेल में तेज गिरावट जोखिम से बचने का संकेत है। स्थिर अमेरिकी 10-वर्षीय उपज के बावजूद, स्थिर कॉपर/गोल्ड अनुपात जोखिम भूख का संकेत देता है। ताइवान का अमेरिकी चिप निवेश इस क्षेत्र का समर्थन करता है, लेकिन वैश्विक मंदी की चिंताएं बनी हुई हैं। निचला वीआईएक्स अल्पकालिक स्थिरता प्रदान करता है। 60 डॉलर तेल ब्रेक पर नजर रखें: आगे जोखिम से बचाव और मंदी का संकेत।",
-            "ID": "GMS di 37 menunjukkan posisi defensif. Penurunan tajam harga minyak menandakan penghindaran risiko. Terlepas dari imbal hasil US 10Y yang stabil, rasio Tembaga/Emas yang stabil mengisyaratkan selera risiko. Investasi chip AS Taiwan mendukung sektor ini, tetapi kekhawatiran perlambatan global membebani. VIX yang lebih rendah menawarkan stabilitas jangka pendek. Awasi penembusan harga minyak $60: risiko penghindaran lebih lanjut dan sinyal resesi.",
-            "AR": "يشير مؤشر GMS عند 37 إلى وضع دفاعي. يشير الانخفاض الحاد في أسعار النفط إلى النفور من المخاطرة. على الرغم من استقرار عوائد سندات الخزانة الأمريكية لأجل 10 سنوات، فإن نسبة النحاس/الذهب المستقرة تلمح إلى الإقبال على المخاطرة. يدعم استثمار تايوان في رقائق الولايات المتحدة هذا القطاع، لكن المخاوف بشأن التباطؤ العالمي تلوح في الأفق. يقدم مؤشر VIX الأقل استقرارًا على المدى القصير. راقب اختراق النفط عند 60 دولارًا: المزيد من النفور من المخاطرة وإشارة إلى الركود."
+            "JP": "GMS38でディフェンシブ。原油急落と米10年債利回り4.15%で、スタグフレーション懸念が台頭。VIX低下もリスク回避姿勢続く。米中貿易協定で台湾の対米投資拡大、半導体関連に恩恵。SPYは692。TNXは4.16。原油60ドル割れなら、景気後退シグナルとして警戒、更なるリスクオフへ。",
+            "EN": "GMS at 38, Defensive stance. Oil's sharp decline alongside stable US 10Y yield at 4.15% fuels stagflation concerns. Subdued VIX indicates persistent risk aversion. Taiwan's U.S. chip investment boosts semis. SPY at 692, TNX at 4.16. Oil breach below $60 triggers recession fears, deeper risk-off.",
+            "CN": "GMS为38，防御态势。油价暴跌，而美国10年期国债收益率稳定在4.15%，加剧滞胀担忧。VIX走低表明避险情绪持续。中国台湾对美芯片投资提振半导体板块。SPY为692，TNX为4.16。油价跌破60美元将引发衰退担忧，加剧避险。",
+            "ES": "GMS en 38, postura defensiva. La fuerte caída del petróleo junto con el rendimiento estable del Tesoro estadounidense a 10 años en 4.15% alimenta los temores de estanflación. El VIX moderado indica aversión al riesgo persistente. Inversión de Taiwán en chips de EE. UU. impulsa a los semiconductores. SPY en 692, TNX en 4.16. Una caída del petróleo por debajo de $60 genera temores de recesión, mayor aversión al riesgo.",
+            "HI": "जीएमएस 38 पर, रक्षात्मक रुख। तेल की कीमतों में भारी गिरावट और 4.15% पर स्थिर अमेरिकी 10-वर्षीय उपज ने मंदी की आशंकाओं को बढ़ावा दिया। शांत VIX निरंतर जोखिम से बचने का संकेत देता है। ताइवान का अमेरिकी चिप निवेश सेमीकंडक्टरों को बढ़ावा देता है। SPY 692 पर, TNX 4.16 पर। तेल का $60 से नीचे गिरना मंदी के डर को बढ़ाता है, और अधिक जोखिम से बचाव।",
+            "ID": "GMS di 38, sikap Defensif. Penurunan tajam harga minyak bersamaan dengan imbal hasil US 10Y yang stabil di 4.15% memicu kekhawatiran stagflasi. VIX yang tenang mengindikasikan penghindaran risiko yang berkelanjutan. Investasi chip Taiwan di AS mendorong sektor semi-konduktor. SPY di 692, TNX di 4.16. Penembusan harga minyak di bawah $60 memicu kekhawatiran resesi, penghindaran risiko yang lebih dalam.",
+            "AR": "مؤشر GMS عند 38، موقف دفاعي. الانخفاض الحاد في أسعار النفط جنبًا إلى جنب مع استقرار عائدات سندات الخزانة الأمريكية لأجل 10 سنوات عند 4.15٪ يغذي المخاوف من الركود التضخمي. مؤشر VIX المنخفض يشير إلى استمرار النفور من المخاطرة. استثمار تايوان في صناعة الرقائق الأمريكية يعزز أشباه الموصلات. SPY عند 692، و TNX عند 4.16. اختراق النفط دون 60 دولارًا يثير مخاوف الركود، وتعميق النفور من المخاطرة."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-13T19:46:03Z",
-            "score": 45
-        },
         {
             "date": "2026-01-13T19:58:13Z",
             "score": 45
@@ -1322,6 +1318,10 @@
         {
             "date": "2026-01-15T21:50:09Z",
             "score": 37
+        },
+        {
+            "date": "2026-01-15T22:35:13Z",
+            "score": 38
         }
     ],
     "system_status": "OPERATIONAL"
