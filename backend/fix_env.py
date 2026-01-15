@@ -1,7 +1,12 @@
 
 import os
 
-KEY = "AIzaSyCKim9M0XLBkN8SCiEpFlHr8BeUK2F1Ox4"
+KEY = os.getenv("GEMINI_API_KEY")
+
+if not KEY:
+    print("\x1b[31m[CRITICAL ERROR] No GEMINI_API_KEY found in process environment.\x1b[0m")
+    print("Please set the environment variable first (e.g., $env:GEMINI_API_KEY='your_key' in PowerShell).")
+    exit(1)
 ENV_PATH = ".env"
 
 print("--- FIXING .ENV ---")
