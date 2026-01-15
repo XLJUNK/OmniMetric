@@ -14,11 +14,10 @@ export const RiskGauge = ({ score }: GaugeProps) => {
     const pct = Math.min(100, Math.max(0, score));
 
     return (
-        <div className="w-full relative mt-2 mb-2">
-            {/* Gradient Bar (24px) */}
+        <div className="w-full relative mt-2 mb-2 gms-container">
             {/* Gradient Bar (26px) with Rounded-XL and Slate-800 Border - FORCE STYLE */}
             <div className="w-full !rounded-xl !border !border-[#1E293B] !shadow-none !ring-0 relative overflow-hidden"
-                style={{ height: '26px' }}>
+                style={{ height: '1.625rem' }}>
                 <div
                     className="absolute inset-0 w-full h-full rounded-xl"
                     style={{
@@ -33,7 +32,7 @@ export const RiskGauge = ({ score }: GaugeProps) => {
                     style={{ left: `${pct}%` }}
                 >
                     <div className="bg-[#1e293b] border border-slate-600 px-1.5 py-0.5 rounded shadow-xl mb-1">
-                        <span className="text-sm font-black text-slate-200 leading-none tabular-nums tracking-tighter">
+                        <span className="text-[0.75rem] font-black text-slate-200 leading-none tabular-nums tracking-tighter">
                             {Math.round(score)}
                         </span>
                     </div>
@@ -44,9 +43,9 @@ export const RiskGauge = ({ score }: GaugeProps) => {
 
             {/* Labels */}
             <div className="flex justify-between px-1 mt-1 relative z-0">
-                <span className="text-[8px] sm:text-[10px] font-bold text-[#ef4444] uppercase tracking-widest drop-shadow-sm">Defensive</span>
-                <span className="text-[8px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-widest drop-shadow-sm">Neutral</span>
-                <span className="text-[8px] sm:text-[10px] font-bold text-[#3b82f6] uppercase tracking-widest drop-shadow-sm">Accumulate</span>
+                <span className="text-fluid-xs font-bold text-[#ef4444] uppercase tracking-widest drop-shadow-sm">Defensive</span>
+                <span className="text-fluid-xs font-bold text-slate-400 uppercase tracking-widest drop-shadow-sm">Neutral</span>
+                <span className="text-fluid-xs font-bold text-[#3b82f6] uppercase tracking-widest drop-shadow-sm">Accumulate</span>
             </div>
         </div>
     );

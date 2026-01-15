@@ -147,3 +147,70 @@ a {
   background-size: 200% 100%;
   animation: skeleton-glow 2s linear infinite;
 }
+
+/* --- v2.4.0 Next-Gen Responsive Utilities --- */
+
+/* Container Query Base */
+.gms-container {
+  container-type: inline-size;
+  width: 100%;
+}
+
+/* Fluid Typography */
+.text-fluid-xs {
+  font-size: clamp(0.7rem, 1.5vw, 0.875rem);
+}
+
+.text-fluid-sm {
+  font-size: clamp(0.875rem, 1.8vw, 1rem);
+}
+
+.text-fluid-base {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.text-fluid-lg {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+}
+
+.text-fluid-xl {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+/* PulseTile Adaptivity via @container */
+@container (max-width: 320px) {
+  .pulse-tile-content {
+    padding: 8px !important;
+  }
+
+  .pulse-tile-title {
+    font-size: 0.75rem !important;
+  }
+
+  .pulse-tile-price {
+    font-size: 0.875rem !important;
+  }
+}
+
+@container (min-width: 600px) {
+  .pulse-tile-grid-shift {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1rem !important;
+  }
+}
+
+/* AI Insight Accordion & Mobile Clarity */
+.ai-insight-accordion {
+  transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.ai-insight-collapsed {
+  max-height: 3rem;
+  /* Approx. 1 line of text */
+}
+
+.ai-insight-expanded {
+  max-height: 500px;
+}

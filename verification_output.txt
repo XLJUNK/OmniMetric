@@ -1,0 +1,144 @@
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\backend\gms_engine.py:10: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+--- [AI PROTOCOL v5.3 AUDIT] ---
+Generating report for score 75...
+[AI BRIDGE] GEMINI_API_KEY detected (Length: 39)
+[AI BATCH] Requesting 7-language analysis (Attempt 1)...
+[AI BRIDGE] Command: npx tsx scripts/generate_insight.ts 
+�yAI Insight Protocol v5.3: Output Density Protocol�z
+Role: Lead Economist at a top-tier investment bank (Bloomberg/Goldman style).
+Goal: Generate a high-density, strategic macro report.
+
+MASTER LANGUAGE PROTOCOL:
+1. First, generate the Japanese (JP) analysis as the "Gold Standard".
+2. Maintain the exact "Information Density" and "Logical Structure" of the JP version when translating/adapting to other languages.
+
+CHARACTER COUNT RANGE (STRICT):
+- REQUIRED RANGE: 200 to 250 characters per language.
+- "Low Density" (<200 chars) is an automatic FAILURE.
+- "Excessive length" (>250 chars) is an automatic FAILURE.
+- You must physically count and ensure every language falls within [200, 250].
+
+CONTENT "THREE PRINCIPLES" (MANDATORY):
+Each report MUST contain these 3 elements in a cohesive narrative:
+1. Current State Definition (����̒�`): Clearly define the current market regime based on GMS Score.
+2. Correlation & Causality (�w�W�Ԃ̑��ցE����): Explain the logical link between indicators (e.g., "Rising yields are pressuring tech multiples").
+3. Future Prediction (����̗\��): Provide a specific tactical outlook or trigger point.
+
+GMS Context:
+- Current GMS Score: 75/100
+- Market Matrix:
+- SPY: 500 (Prev: 490, DailyChg: 2.0%)
+- BTC: 60000 (Prev: 58000, DailyChg: 3.4%)
+
+- News: Why the stock market keeps shrugging as Trump sows more political chaos
+
+Regime Guide:
+- 0-40: DEFENSIVE (Risk-Off).
+- 40-60: NEUTRAL.
+- 60-100: ACCUMULATE (Risk-On).
+
+SELF-CENSORSHIP:
+Check each Value in the JSON. If any string is < 200 characters, rewrite it to be more descriptive and analytical until it passes the 200-character threshold.
+
+Output JSON:
+{
+  "JP": " (200-250����: ����A���ցA�\�����܂ޏ��q��) ",
+  "EN": " (200-250 chars: Definition, Correlation, Prediction) ",
+  "CN": "...",
+  "ES": "...",
+  "HI": "...",
+  "ID": "...",
+  "AR": "..."
+}
+
+[AI BRIDGE WARN] Bridge execution failed (Code 1). Trying direct node fallback...
+[AI BRIDGE CRITICAL] 'cp932' codec can't encode character '\u2699' in position 104: illegal multibyte sequence
+[AI BATCH] Requesting 7-language analysis (Attempt 2)...
+[AI BRIDGE] Command: npx tsx scripts/generate_insight.ts 
+�yAI Insight Protocol v5.3: Output Density Protocol�z
+Role: Lead Economist at a top-tier investment bank (Bloomberg/Goldman style).
+Goal: Generate a high-density, strategic macro report.
+
+MASTER LANGUAGE PROTOCOL:
+1. First, generate the Japanese (JP) analysis as the "Gold Standard".
+2. Maintain the exact "Information Density" and "Logical Structure" of the JP version when translating/adapting to other languages.
+
+CHARACTER COUNT RANGE (STRICT):
+- REQUIRED RANGE: 200 to 250 characters per language.
+- "Low Density" (<200 chars) is an automatic FAILURE.
+- "Excessive length" (>250 chars) is an automatic FAILURE.
+- You must physically count and ensure every language falls within [200, 250].
+
+CONTENT "THREE PRINCIPLES" (MANDATORY):
+Each report MUST contain these 3 elements in a cohesive narrative:
+1. Current State Definition (����̒�`): Clearly define the current market regime based on GMS Score.
+2. Correlation & Causality (�w�W�Ԃ̑��ցE����): Explain the logical link between indicators (e.g., "Rising yields are pressuring tech multiples").
+3. Future Prediction (����̗\��): Provide a specific tactical outlook or trigger point.
+
+GMS Context:
+- Current GMS Score: 75/100
+- Market Matrix:
+- SPY: 500 (Prev: 490, DailyChg: 2.0%)
+- BTC: 60000 (Prev: 58000, DailyChg: 3.4%)
+
+- News: Why the stock market keeps shrugging as Trump sows more political chaos
+
+Regime Guide:
+- 0-40: DEFENSIVE (Risk-Off).
+- 40-60: NEUTRAL.
+- 60-100: ACCUMULATE (Risk-On).
+
+SELF-CENSORSHIP:
+Check each Value in the JSON. If any string is < 200 characters, rewrite it to be more descriptive and analytical until it passes the 200-character threshold.
+
+Output JSON:
+{
+  "JP": " (200-250����: ����A���ցA�\�����܂ޏ��q��) ",
+  "EN": " (200-250 chars: Definition, Correlation, Prediction) ",
+  "CN": "...",
+  "ES": "...",
+  "HI": "...",
+  "ID": "...",
+  "AR": "..."
+}
+
+[AI BRIDGE CRITICAL] 'cp932' codec can't encode character '\u2705' in position 103: illegal multibyte sequence
+[AI SDK] Attempting Direct Python SDK (google-generativeai)...
+[AI SDK ERROR] 403 Your API key was reported as leaked. Please use another API key.
+[AI REST] Attempting Direct REST (Attempt 1)...
+[AI REST FAIL] Status 403: {
+  "error": {
+    "code": 403,
+    "message": "Your API key was reported as leaked. Please use another API key.",
+    "status": "PERMISSION_DENIED"
+  }
+}
+
+[AI REST] Attempting Direct REST (Attempt 2)...
+[AI REST FAIL] Status 403: {
+  "error": {
+    "code": 403,
+    "message": "Your API key was reported as leaked. Please use another API key.",
+    "status": "PERMISSION_DENIED"
+  }
+}
+
+[AI FAILURE] All methods failed. Reusing last VALID cached report to ensure user experience.
+[EN] Count: 333 | Preview: GMS at 39 signals defensive positioning. VIX's ris...
+ - Status: FAIL (Out of v5.3 range 200-250)
+[JP] Count: 159 | Preview: GMS39�̃f�B�t�F���V�u�ȏ󋵉��ŁAVIX�㏸�ƕč������ቺ�̘����̓��X�N����������B��/����...
+ - Status: FAIL (Out of v5.3 range 200-250)
+Traceback (most recent call last):
+  File "C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\backend\verify_prompt.py", line 51, in <module>
+    verify_protocol_v5_3()
+  File "C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\backend\verify_prompt.py", line 34, in verify_protocol_v5_3
+    print(f"[{lang}] Count: {count} | Preview: {preview}")
+UnicodeEncodeError: 'cp932' codec can't encode character '\u4e3a' in position 30: illegal multibyte sequence

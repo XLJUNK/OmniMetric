@@ -60,11 +60,9 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
 
     let aiContent = aiRaw || getDynamicFallback();
 
-    // Technical Directive: Strictly enforce AI generation if API 200 OK.
-    // Only use fallbacks for hard failures (missing content) or the initial sync.
     const PLACEHOLDER_BLOCKLIST = [
         "深度解析最新",
-        "正在重新验证",
+        "正在重新検証",
         "世界市場は主要な経済指標",
         "Deep-diving into",
         "Mendalami data makro"
@@ -72,12 +70,7 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
 
     if (aiContent && typeof aiContent === 'string') {
         const isPlaceholder = PLACEHOLDER_BLOCKLIST.some(p => aiContent.includes(p));
-
-        // If it's a known generic boilerplate OR missing, swap to regime-specific dynamic fallback.
-        // NOTE: We permit "Professional Fallbacks" from the backend (starting with 【GMS:) even if generation failed.
-        // Also, we keep valid analysis (length > 20) even in SafeMode to avoid transient flickering.
         if (isPlaceholder || !aiRaw || aiRaw.length < 20) {
-            // If the raw content is a professional fallback from the backend, we use it as is
             if (aiRaw && aiRaw.includes("【GMS:")) {
                 aiContent = aiRaw;
             } else {
@@ -86,10 +79,13 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
         }
     }
 
+    // Mobile Accordion State
+    const [isAIExpanded, setIsAIExpanded] = useState(false);
+
     if (!data) return null;
 
     return (
-        <div className="w-full">
+        <div className="w-full gms-container">
             {/* METHODOLOGY MODAL */}
             {showInfo && (
                 <div className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setShowInfo(false)}>
@@ -208,10 +204,7 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
             {/* 2. Primary GMS Score & AI Insight */}
             <div className="max-w-[1600px] mx-auto w-full p-4 md:p-6 grid grid-cols-1 lg:grid-cols-3 gap-4">
                 {/* GMS SCORE CARD */}
-                {/* GMS SCORE CARD - FORCE STYLE OVERRIDE */}
                 <div className="lg:col-span-1 bg-[#111] !rounded-xl !border !border-[#1E293B] !ring-0 !outline-none !shadow-none p-4 flex flex-col items-center gap-4 relative overflow-visible group">
-                    {/* Removed Gradient Overlay for Flat Matte Look */}
-
                     {/* RISK GAUGE & INFO */}
                     <div className="w-full px-1 pt-2 pb-6">
                         <div className="flex justify-end mb-1.5">
@@ -235,24 +228,38 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
                 </div>
 
                 {/* AI INSIGHT */}
-                {/* AI INSIGHT - FORCE STYLE OVERRIDE */}
-                <div className="lg:col-span-2 bg-[#111] !rounded-xl !border !border-[#1E293B] !ring-0 !outline-none !shadow-none p-6 flex flex-col relative overflow-hidden group min-h-[220px]">
+                <div className="lg:col-span-2 bg-[#111] !rounded-xl !border !border-[#1E293B] !ring-0 !outline-none !shadow-none p-6 flex flex-col relative overflow-hidden group min-h-[14rem]">
                     <div className="flex items-center gap-2 mb-4 border-b !border-[#1E293B] pb-3">
-                        <Zap className="w-4 h-4 text-sky-500" />
+                        <Zap className="w-3.5 h-3.5 text-sky-500" />
                         <h3 className="text-slate-400 text-[10px] font-semibold uppercase tracking-[0.2em] flex-grow">OmniMetric AI-Driven Global Insights</h3>
-                        <div className="hidden group-hover:flex items-center gap-1 opacity-50 text-[9px] text-slate-500 font-mono">
+                        <div className="hidden sm:flex items-center gap-1 opacity-50 text-[9px] text-slate-500 font-mono">
                             <Info className="w-3 h-3" /> AI-Generated
                         </div>
                     </div>
-                    <div className="flex-grow flex items-start mt-2">
-                        <p className="text-slate-300 text-sm md:text-base lg:text-lg leading-relaxed font-serif italic">
+
+                    <div
+                        className={`ai-insight-accordion flex-grow mt-2 ${!isAIExpanded && isMobile ? 'ai-insight-collapsed cursor-pointer' : 'ai-insight-expanded'}`}
+                        onClick={() => isMobile && setIsAIExpanded(!isAIExpanded)}
+                    >
+                        <p className="text-slate-300 text-fluid-base leading-relaxed font-serif italic">
                             "{aiContent}"
                         </p>
                     </div>
+
+                    {isMobile && (
+                        <button
+                            onClick={() => setIsAIExpanded(!isAIExpanded)}
+                            className="mt-2 text-[10px] font-black uppercase tracking-widest text-sky-500 flex items-center gap-1"
+                        >
+                            {isAIExpanded ? 'Read Less' : 'Read Full Analysis'}
+                            <ChevronDown className={`w-3 h-3 transition-transform ${isAIExpanded ? 'rotate-180' : ''}`} />
+                        </button>
+                    )}
+
                     {/* AIO: Citation Footer */}
                     <div className="mt-6 pt-3 border-t border-[#1E293B] flex justify-end">
-                        <p className="text-[9px] text-slate-600 font-mono select-all">
-                            Cite this analysis as: <span className="text-slate-500">OmniMetric Global Macro Signal ({new Date().toISOString().split('T')[0]}). Retrieving from omnimetric.net</span>
+                        <p className="text-[0.56rem] text-slate-600 font-mono select-all">
+                            Cite: <span className="text-slate-500">OmniMetric GMS ({new Date().toISOString().split('T')[0]}) @ omnimetric.net</span>
                         </p>
                     </div>
 

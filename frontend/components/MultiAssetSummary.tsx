@@ -68,6 +68,13 @@ export const MultiAssetSummary = () => {
             change_percent: 0,
             sparkline: []
         };
+
+        // --- v2.4.0 PERFORMANCE OPTIMIZATION ---
+        // Slice sparkline points on mobile to reduce SVG path complexity & improve LCP
+        if (isMobile && Array.isArray(val.sparkline)) {
+            val = { ...val, sparkline: val.sparkline.slice(-10) };
+        }
+
         if (isSafeMode) {
             val = { ...val, price: t.status.market }; // Override with "Synchronizing..."
         }

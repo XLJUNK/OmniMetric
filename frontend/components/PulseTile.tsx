@@ -99,80 +99,82 @@ export const PulseTile = ({ title, score, ticker, data, onClick, lang }: any) =>
         factors[1] = { label: "...", status: "" };
     }
 
-    // 4. LAYOUT RENDER - INLINE STYLES FOR SAFETY
+    // 4. LAYOUT RENDER - INLINE STYLES FOR SAFETY but classes for @container
     return (
-        <div
-            onClick={onClick}
-            className="group transition-all hover:border-[#1E293B] select-none"
-            style={{
-                position: 'relative',
-                height: '180px',
-                width: '100%',
-                border: '1px solid #1E293B', // SLATE-800 (Stealth Pro)
-                borderRadius: '12px',
-                overflow: 'hidden',
-                backgroundColor: '#0A0A0A',
-                cursor: 'pointer'
-            }}
-        >
+        <div className="gms-container">
+            <div
+                onClick={onClick}
+                className="group transition-all hover:border-[#1E293B] select-none pulse-tile-content"
+                style={{
+                    position: 'relative',
+                    height: '11.25rem', // 180px -> 11.25rem
+                    width: '100%',
+                    border: '1px solid #1E293B',
+                    borderRadius: '0.75rem',
+                    overflow: 'hidden',
+                    backgroundColor: '#0A0A0A',
+                    cursor: 'pointer'
+                }}
+            >
 
-            {/* CHART LAYER: ABSOLUTE CENTER (Inset 20px) */}
-            <div style={{ position: 'absolute', top: '20px', left: '20px', right: '20px', bottom: '20px', opacity: 0.8, zIndex: 0 }}>
-                <div className="w-full h-full flex items-center justify-center">
-                    <MetricChart
-                        data={data?.sparkline || []}
-                        color={themeColor}
-                        currentPrice=""
-                        startDate="" endDate=""
-                    />
-                </div>
-            </div>
-
-            {/* CORNER 1: TOP-LEFT (Title) - PADDING 12px */}
-            <div style={{ position: 'absolute', top: '12px', left: '12px', zIndex: 10, display: 'flex', flexDirection: 'column', pointerEvents: 'none' }}>
-                <h3 className={`text-slate-200 ${isMobile ? 'text-[10px]' : 'text-[11px]'} font-black uppercase tracking-[0.1em] font-sans leading-tight`}>{title}</h3>
-                <span className={`${isMobile ? 'text-[8px]' : 'text-[9px]'} text-slate-500 font-mono tracking-wider`}>{ticker}</span>
-            </div>
-
-            {/* CORNER 2: TOP-RIGHT (GMS Badge) - PADDING 12px */}
-            <div style={{ position: 'absolute', top: '12px', right: '12px', zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'flex-end', pointerEvents: 'none' }}>
-                <div className={`px-2 py-0.5 border rounded-[2px] ${isMobile ? 'text-[9px]' : 'text-[10.5px]'} font-semibold tracking-[0.15em] font-sans bg-[#0A0A0A] shadow-sm ${gmsBadgeText} ${colorClassBorder}`}>
-                    GMS <span className="text-white ml-0.5 md:ml-1">{score}</span>
-                </div>
-            </div>
-
-            {/* CORNER 3: BOTTOM-LEFT (Price 14px) - PADDING 12px */}
-            <div style={{ position: 'absolute', bottom: '12px', left: '12px', zIndex: 10, display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', pointerEvents: 'none' }}>
-                <div className="flex items-center gap-2 mb-1">
-                    <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded border ${colorClassText} ${colorClassBg} ${colorClassBorder} tracking-wider`}>
-                        {badgeLabel}
-                    </span>
-                </div>
-                <div className="flex items-baseline gap-2">
-                    <span className={`${typeof data?.price === 'string' && data?.price.length > 20 ? 'text-[9px]' : 'text-[14px]'} font-bold font-sans tracking-tight text-white tabular-nums leading-none`}>
-                        {(title === "Net Liquidity" || title === "US Net Liquidity")
-                            ? (typeof data?.price === 'number'
-                                ? (Math.abs(data.price) >= 1000
-                                    ? `$${(data.price / 1000).toFixed(2)}T`
-                                    : `$${Math.round(data.price).toLocaleString()}B`)
-                                : (data?.price || "0.00"))
-                            : (data?.price || "0.00")}
-                    </span>
-                    <span className={`text-[10px] font-medium tabular-nums ml-2 ${isUp ? "text-emerald-400" : (data?.change_percent < 0 ? "text-rose-400" : "text-slate-400")}`}>
-                        {trendText}{(typeof data?.change_percent === 'number' ? data.change_percent : 0)}%
-                    </span>
-                </div>
-            </div>
-
-            {/* CORNER 4: BOTTOM-RIGHT (Factors) - PADDING 12px */}
-            <div style={{ position: 'absolute', bottom: '12px', right: '12px', zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'flex-end', pointerEvents: 'none' }}>
-                {factors.map((f, i) => (
-                    <div key={i} className={`${isMobile ? 'text-[9px]' : 'text-[10.5px]'} text-[#94A3B8] font-sans tracking-wider font-medium leading-tight drop-shadow-md bg-black/40 px-1 rounded backdrop-blur-[2px] mb-0.5`}>
-                        <span className={`${isMobile ? 'text-[8px]' : 'text-[9px]'} mr-1 opacity-70 text-slate-500`}>{f.label}:</span>{f.status}
+                {/* CHART LAYER: ABSOLUTE CENTER (Inset 1.25rem) */}
+                <div style={{ position: 'absolute', top: '1.25rem', left: '1.25rem', right: '1.25rem', bottom: '1.25rem', opacity: 0.8, zIndex: 0 }}>
+                    <div className="w-full h-full flex items-center justify-center">
+                        <MetricChart
+                            data={data?.sparkline || []}
+                            color={themeColor}
+                            currentPrice=""
+                            startDate="" endDate=""
+                        />
                     </div>
-                ))}
-            </div>
+                </div>
 
+                {/* CORNER 1: TOP-LEFT (Title) - PADDING 0.75rem */}
+                <div style={{ position: 'absolute', top: '0.75rem', left: '0.75rem', zIndex: 10, display: 'flex', flexDirection: 'column', pointerEvents: 'none' }}>
+                    <h3 className={`text-slate-200 pulse-tile-title font-black uppercase tracking-[0.1em] font-sans leading-tight text-fluid-xs`}>{title}</h3>
+                    <span className="text-[0.5rem] sm:text-[0.56rem] text-slate-500 font-mono tracking-wider">{ticker}</span>
+                </div>
+
+                {/* CORNER 2: TOP-RIGHT (GMS Badge) - PADDING 0.75rem */}
+                <div style={{ position: 'absolute', top: '0.75rem', right: '0.75rem', zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'flex-end', pointerEvents: 'none' }}>
+                    <div className={`px-2 py-0.5 border rounded-[2px] text-[0.56rem] sm:text-[0.65rem] font-semibold tracking-[0.15em] font-sans bg-[#0A0A0A] shadow-sm ${gmsBadgeText} ${colorClassBorder}`}>
+                        GMS <span className="text-white ml-0.5 md:ml-1">{score}</span>
+                    </div>
+                </div>
+
+                {/* CORNER 3: BOTTOM-LEFT (Price) - PADDING 0.75rem */}
+                <div style={{ position: 'absolute', bottom: '0.75rem', left: '0.75rem', zIndex: 10, display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', pointerEvents: 'none' }}>
+                    <div className="flex items-center gap-2 mb-1">
+                        <span className={`text-[0.56rem] font-bold px-1.5 py-0.5 rounded border ${colorClassText} ${colorClassBg} ${colorClassBorder} tracking-wider`}>
+                            {badgeLabel}
+                        </span>
+                    </div>
+                    <div className="flex items-baseline gap-2">
+                        <span className={`${typeof data?.price === 'string' && data?.price.length > 20 ? 'text-[0.56rem]' : 'text-[0.875rem]'} pulse-tile-price font-bold font-sans tracking-tight text-white tabular-nums leading-none`}>
+                            {(title === "Net Liquidity" || title === "US Net Liquidity")
+                                ? (typeof data?.price === 'number'
+                                    ? (Math.abs(data.price) >= 1000
+                                        ? `$${(data.price / 1000).toFixed(2)}T`
+                                        : `$${Math.round(data.price).toLocaleString()}B`)
+                                    : (data?.price || "0.00"))
+                                : (data?.price || "0.00")}
+                        </span>
+                        <span className={`text-[0.625rem] font-medium tabular-nums ml-2 ${isUp ? "text-emerald-400" : (data?.change_percent < 0 ? "text-rose-400" : "text-slate-400")}`}>
+                            {trendText}{(typeof data?.change_percent === 'number' ? data.change_percent : 0)}%
+                        </span>
+                    </div>
+                </div>
+
+                {/* CORNER 4: BOTTOM-RIGHT (Factors) - PADDING 0.75rem */}
+                <div style={{ position: 'absolute', bottom: '0.75rem', right: '0.75rem', zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'flex-end', pointerEvents: 'none' }}>
+                    {factors.map((f, i) => (
+                        <div key={i} className={`text-[0.56rem] sm:text-[0.65rem] text-[#94A3B8] font-sans tracking-wider font-medium leading-tight drop-shadow-md bg-black/40 px-1 rounded backdrop-blur-[2px] mb-0.5`}>
+                            <span className="text-[0.5rem] sm:text-[0.56rem] mr-1 opacity-70 text-slate-500">{f.label}:</span>{f.status}
+                        </div>
+                    ))}
+                </div>
+
+            </div>
         </div>
     );
-}
+};

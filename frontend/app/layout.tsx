@@ -74,6 +74,7 @@ import { GoogleAdSense } from "@/components/GoogleAdSense";
 import { GoogleAnalytics } from '@next/third-parties/google';
 // MobileMenu removed as per user request (Sidebar is now responsive)
 import { Sidebar } from "@/components/Sidebar";
+import { MobileNav } from "@/components/MobileNav";
 import { AdUnit } from "@/components/AdUnit";
 import { DynamicStructuredData } from "@/components/DynamicStructuredData";
 
@@ -149,8 +150,8 @@ export default function RootLayout({
             <Sidebar />
           </Suspense>
 
-          {/* MAIN CONTENT AREA with Offset for Fixed Sidebar */}
-          <div className="flex-1 flex flex-col relative min-w-0 ml-[80px] transition-all duration-300">
+          {/* MAIN CONTENT AREA with Offset for Fixed Sidebar (Hidden on Mobile) */}
+          <div className="flex-1 flex flex-col relative min-w-0 ml-0 xl:ml-[60px] transition-all duration-300 pb-20 xl:pb-0">
             {/* TOP AD BANNER (Desktop Only - Optional) */}
             <div className="hidden md:flex justify-center py-4 bg-[#0a0a0a] border-b border-[#1E293B]">
               <div className="w-[728px] h-[90px] bg-[#111]">
@@ -177,6 +178,11 @@ export default function RootLayout({
             <main className="flex-grow">
               {children}
             </main>
+
+            {/* MOBILE NAVIGATION BAR (Bottom Static) */}
+            <Suspense fallback={null}>
+              <MobileNav />
+            </Suspense>
 
             {/* Footer */}
             <div>

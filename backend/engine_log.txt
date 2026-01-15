@@ -2448,3 +2448,542 @@ Output JSON:
 [2026-01-15 09:50:12] [SNS] Twitter credentials missing. Skipping Stage 1.
 [2026-01-15 09:50:12] [SNS] Processing Serial SNS Broadcast: Stage 2 (Bluesky)
 [2026-01-15 09:50:12] [SNS_BSKY] Missing Bluesky credentials (BLUESKY_HANDLE / BLUESKY_PASSWORD).
+[2026-01-15 10:10:44] [AI BRIDGE] GEMINI_API_KEY detected (Length: 39)
+[2026-01-15 10:10:46] [AI BATCH] Requesting 7-language analysis (Attempt 1)...
+[2026-01-15 10:10:46] [AI BRIDGE] Command: npx tsx scripts/generate_insight.ts 
+【AI Insight Protocol v5.3: Output Density Protocol】
+Role: Lead Economist at a top-tier investment bank (Bloomberg/Goldman style).
+Goal: Generate a high-density, strategic macro report.
+
+MASTER LANGUAGE PROTOCOL:
+1. First, generate the Japanese (JP) analysis as the "Gold Standard".
+2. Maintain the exact "Information Density" and "Logical Structure" of the JP version when translating/adapting to other languages.
+
+CHARACTER COUNT RANGE (STRICT):
+- REQUIRED RANGE: 200 to 250 characters per language.
+- "Low Density" (<200 chars) is an automatic FAILURE.
+- "Excessive length" (>250 chars) is an automatic FAILURE.
+- You must physically count and ensure every language falls within [200, 250].
+
+CONTENT "THREE PRINCIPLES" (MANDATORY):
+Each report MUST contain these 3 elements in a cohesive narrative:
+1. Current State Definition (現状の定義): Clearly define the current market regime based on GMS Score.
+2. Correlation & Causality (指標間の相関・因果): Explain the logical link between indicators (e.g., "Rising yields are pressuring tech multiples").
+3. Future Prediction (今後の予測): Provide a specific tactical outlook or trigger point.
+
+GMS Context:
+- Current GMS Score: 75/100
+- Market Matrix:
+- SPY: 500 (Prev: 490, DailyChg: 2.0%)
+- BTC: 60000 (Prev: 58000, DailyChg: 3.4%)
+
+- News: Why the stock market keeps shrugging as Trump sows more political chaos
+
+Regime Guide:
+- 0-40: DEFENSIVE (Risk-Off).
+- 40-60: NEUTRAL.
+- 60-100: ACCUMULATE (Risk-On).
+
+SELF-CENSORSHIP:
+Check each Value in the JSON. If any string is < 200 characters, rewrite it to be more descriptive and analytical until it passes the 200-character threshold.
+
+Output JSON:
+{
+  "JP": " (200-250文字: 現状、相関、予測を含む叙述文) ",
+  "EN": " (200-250 chars: Definition, Correlation, Prediction) ",
+  "CN": "...",
+  "ES": "...",
+  "HI": "...",
+  "ID": "...",
+  "AR": "..."
+}
+
+[2026-01-15 10:11:08] [AI BRIDGE] Received 876 bytes of output. Head: [dotenv@17.2.3] injecting env (0) from ..\.env -- tip: ⚙️  enable debug logging with { debug: true }...
+[2026-01-15 10:11:08] [AI ERROR] JSON parse failed: Expecting value: line 1 column 1 (char 0)
+[2026-01-15 10:11:08] [AI BATCH] Requesting 7-language analysis (Attempt 2)...
+[2026-01-15 10:11:08] [AI BRIDGE] Command: npx tsx scripts/generate_insight.ts 
+【AI Insight Protocol v5.3: Output Density Protocol】
+Role: Lead Economist at a top-tier investment bank (Bloomberg/Goldman style).
+Goal: Generate a high-density, strategic macro report.
+
+MASTER LANGUAGE PROTOCOL:
+1. First, generate the Japanese (JP) analysis as the "Gold Standard".
+2. Maintain the exact "Information Density" and "Logical Structure" of the JP version when translating/adapting to other languages.
+
+CHARACTER COUNT RANGE (STRICT):
+- REQUIRED RANGE: 200 to 250 characters per language.
+- "Low Density" (<200 chars) is an automatic FAILURE.
+- "Excessive length" (>250 chars) is an automatic FAILURE.
+- You must physically count and ensure every language falls within [200, 250].
+
+CONTENT "THREE PRINCIPLES" (MANDATORY):
+Each report MUST contain these 3 elements in a cohesive narrative:
+1. Current State Definition (現状の定義): Clearly define the current market regime based on GMS Score.
+2. Correlation & Causality (指標間の相関・因果): Explain the logical link between indicators (e.g., "Rising yields are pressuring tech multiples").
+3. Future Prediction (今後の予測): Provide a specific tactical outlook or trigger point.
+
+GMS Context:
+- Current GMS Score: 75/100
+- Market Matrix:
+- SPY: 500 (Prev: 490, DailyChg: 2.0%)
+- BTC: 60000 (Prev: 58000, DailyChg: 3.4%)
+
+- News: Why the stock market keeps shrugging as Trump sows more political chaos
+
+Regime Guide:
+- 0-40: DEFENSIVE (Risk-Off).
+- 40-60: NEUTRAL.
+- 60-100: ACCUMULATE (Risk-On).
+
+SELF-CENSORSHIP:
+Check each Value in the JSON. If any string is < 200 characters, rewrite it to be more descriptive and analytical until it passes the 200-character threshold.
+
+Output JSON:
+{
+  "JP": " (200-250文字: 現状、相関、予測を含む叙述文) ",
+  "EN": " (200-250 chars: Definition, Correlation, Prediction) ",
+  "CN": "...",
+  "ES": "...",
+  "HI": "...",
+  "ID": "...",
+  "AR": "..."
+}
+
+[2026-01-15 10:11:11] [AI BRIDGE WARN] Bridge execution failed (Code 1). Trying direct node fallback...
+[2026-01-15 10:11:20] [AI BRIDGE] Received 2622 bytes of output. Head: [dotenv@17.2.3] injecting env (0) from ..\.env -- tip: 🔄 add secrets lifecycle management: https://d...
+[2026-01-15 10:11:20] [AI SUCCESS] Reports parsed and validated.
+[2026-01-15 10:34:36] [AI BRIDGE] GEMINI_API_KEY detected (Length: 39)
+[2026-01-15 10:34:37] [AI BATCH] Requesting 7-language analysis (Attempt 1)...
+[2026-01-15 10:34:37] [AI BRIDGE] Command: npx tsx scripts/generate_insight.ts 
+【AI Insight Protocol v5.3: Output Density Protocol】
+Role: Lead Economist at a top-tier investment bank (Bloomberg/Goldman style).
+Goal: Generate a high-density, strategic macro report.
+
+MASTER LANGUAGE PROTOCOL:
+1. First, generate the Japanese (JP) analysis as the "Gold Standard".
+2. Maintain the exact "Information Density" and "Logical Structure" of the JP version when translating/adapting to other languages.
+
+CHARACTER COUNT RANGE (STRICT):
+- REQUIRED RANGE: 200 to 250 characters per language.
+- "Low Density" (<200 chars) is an automatic FAILURE.
+- "Excessive length" (>250 chars) is an automatic FAILURE.
+- You must physically count and ensure every language falls within [200, 250].
+
+CONTENT "THREE PRINCIPLES" (MANDATORY):
+Each report MUST contain these 3 elements in a cohesive narrative:
+1. Current State Definition (現状の定義): Clearly define the current market regime based on GMS Score.
+2. Correlation & Causality (指標間の相関・因果): Explain the logical link between indicators (e.g., "Rising yields are pressuring tech multiples").
+3. Future Prediction (今後の予測): Provide a specific tactical outlook or trigger point.
+
+GMS Context:
+- Current GMS Score: 75/100
+- Market Matrix:
+- SPY: 500 (Prev: 490, DailyChg: 2.0%)
+- BTC: 60000 (Prev: 58000, DailyChg: 3.4%)
+
+- News: Why the stock market keeps shrugging as Trump sows more political chaos
+
+Regime Guide:
+- 0-40: DEFENSIVE (Risk-Off).
+- 40-60: NEUTRAL.
+- 60-100: ACCUMULATE (Risk-On).
+
+SELF-CENSORSHIP:
+Check each Value in the JSON. If any string is < 200 characters, rewrite it to be more descriptive and analytical until it passes the 200-character threshold.
+
+Output JSON:
+{
+  "JP": " (200-250文字: 現状、相関、予測を含む叙述文) ",
+  "EN": " (200-250 chars: Definition, Correlation, Prediction) ",
+  "CN": "...",
+  "ES": "...",
+  "HI": "...",
+  "ID": "...",
+  "AR": "..."
+}
+
+[2026-01-15 10:34:57] [AI BRIDGE] Received 796 bytes of output. Head: [dotenv@17.2.3] injecting env (0) from ..\.env -- tip: ⚙️  enable debug logging with { debug: true }...
+[2026-01-15 10:34:57] [AI ERROR] JSON parse failed: Expecting value: line 1 column 1 (char 0)
+[2026-01-15 10:34:57] [AI BATCH] Requesting 7-language analysis (Attempt 2)...
+[2026-01-15 10:34:57] [AI BRIDGE] Command: npx tsx scripts/generate_insight.ts 
+【AI Insight Protocol v5.3: Output Density Protocol】
+Role: Lead Economist at a top-tier investment bank (Bloomberg/Goldman style).
+Goal: Generate a high-density, strategic macro report.
+
+MASTER LANGUAGE PROTOCOL:
+1. First, generate the Japanese (JP) analysis as the "Gold Standard".
+2. Maintain the exact "Information Density" and "Logical Structure" of the JP version when translating/adapting to other languages.
+
+CHARACTER COUNT RANGE (STRICT):
+- REQUIRED RANGE: 200 to 250 characters per language.
+- "Low Density" (<200 chars) is an automatic FAILURE.
+- "Excessive length" (>250 chars) is an automatic FAILURE.
+- You must physically count and ensure every language falls within [200, 250].
+
+CONTENT "THREE PRINCIPLES" (MANDATORY):
+Each report MUST contain these 3 elements in a cohesive narrative:
+1. Current State Definition (現状の定義): Clearly define the current market regime based on GMS Score.
+2. Correlation & Causality (指標間の相関・因果): Explain the logical link between indicators (e.g., "Rising yields are pressuring tech multiples").
+3. Future Prediction (今後の予測): Provide a specific tactical outlook or trigger point.
+
+GMS Context:
+- Current GMS Score: 75/100
+- Market Matrix:
+- SPY: 500 (Prev: 490, DailyChg: 2.0%)
+- BTC: 60000 (Prev: 58000, DailyChg: 3.4%)
+
+- News: Why the stock market keeps shrugging as Trump sows more political chaos
+
+Regime Guide:
+- 0-40: DEFENSIVE (Risk-Off).
+- 40-60: NEUTRAL.
+- 60-100: ACCUMULATE (Risk-On).
+
+SELF-CENSORSHIP:
+Check each Value in the JSON. If any string is < 200 characters, rewrite it to be more descriptive and analytical until it passes the 200-character threshold.
+
+Output JSON:
+{
+  "JP": " (200-250文字: 現状、相関、予測を含む叙述文) ",
+  "EN": " (200-250 chars: Definition, Correlation, Prediction) ",
+  "CN": "...",
+  "ES": "...",
+  "HI": "...",
+  "ID": "...",
+  "AR": "..."
+}
+
+[2026-01-15 10:35:00] [AI BRIDGE WARN] Bridge execution failed (Code 1). Trying direct node fallback...
+[2026-01-15 10:35:10] [AI BRIDGE] Received 2920 bytes of output. Head: [dotenv@17.2.3] injecting env (0) from ..\.env -- tip: ⚙️  suppress all logs with { quiet: true }
+[d...
+[2026-01-15 10:35:10] [AI SUCCESS] Reports parsed and validated.
+[2026-01-15 10:38:11] [AI BRIDGE] GEMINI_API_KEY detected (Length: 39)
+[2026-01-15 10:38:13] [AI BATCH] Requesting 7-language analysis (Attempt 1)...
+[2026-01-15 10:38:13] [AI BRIDGE] Command: npx tsx scripts/generate_insight.ts 
+【AI Insight Protocol v5.3: Output Density Protocol】
+Role: Lead Economist at a top-tier investment bank (Bloomberg/Goldman style).
+Goal: Generate a high-density, strategic macro report.
+
+MASTER LANGUAGE PROTOCOL:
+1. First, generate the Japanese (JP) analysis as the "Gold Standard".
+2. Maintain the exact "Information Density" and "Logical Structure" of the JP version when translating/adapting to other languages.
+
+CHARACTER COUNT RANGE (STRICT):
+- REQUIRED RANGE: 200 to 250 characters per language.
+- "Low Density" (<200 chars) is an automatic FAILURE.
+- "Excessive length" (>250 chars) is an automatic FAILURE.
+- You must physically count and ensure every language falls within [200, 250].
+
+CONTENT "THREE PRINCIPLES" (MANDATORY):
+Each report MUST contain these 3 elements in a cohesive narrative:
+1. Current State Definition (現状の定義): Clearly define the current market regime based on GMS Score.
+2. Correlation & Causality (指標間の相関・因果): Explain the logical link between indicators (e.g., "Rising yields are pressuring tech multiples").
+3. Future Prediction (今後の予測): Provide a specific tactical outlook or trigger point.
+
+GMS Context:
+- Current GMS Score: 75/100
+- Market Matrix:
+- SPY: 500 (Prev: 490, DailyChg: 2.0%)
+- BTC: 60000 (Prev: 58000, DailyChg: 3.4%)
+
+- News: Why the stock market keeps shrugging as Trump sows more political chaos
+
+Regime Guide:
+- 0-40: DEFENSIVE (Risk-Off).
+- 40-60: NEUTRAL.
+- 60-100: ACCUMULATE (Risk-On).
+
+SELF-CENSORSHIP:
+Check each Value in the JSON. If any string is < 200 characters, rewrite it to be more descriptive and analytical until it passes the 200-character threshold.
+
+Output JSON:
+{
+  "JP": " (200-250文字: 現状、相関、予測を含む叙述文) ",
+  "EN": " (200-250 chars: Definition, Correlation, Prediction) ",
+  "CN": "...",
+  "ES": "...",
+  "HI": "...",
+  "ID": "...",
+  "AR": "..."
+}
+
+[2026-01-15 10:38:34] [AI BRIDGE] Received 1202 bytes of output. Head: [dotenv@17.2.3] injecting env (0) from ..\.env -- tip: 🔐 prevent committing .env to code: https://do...
+[2026-01-15 10:38:34] [AI ERROR] JSON parse failed: Expecting value: line 1 column 1 (char 0)
+[2026-01-15 10:38:34] [AI BATCH] Requesting 7-language analysis (Attempt 2)...
+[2026-01-15 10:38:34] [AI BRIDGE] Command: npx tsx scripts/generate_insight.ts 
+【AI Insight Protocol v5.3: Output Density Protocol】
+Role: Lead Economist at a top-tier investment bank (Bloomberg/Goldman style).
+Goal: Generate a high-density, strategic macro report.
+
+MASTER LANGUAGE PROTOCOL:
+1. First, generate the Japanese (JP) analysis as the "Gold Standard".
+2. Maintain the exact "Information Density" and "Logical Structure" of the JP version when translating/adapting to other languages.
+
+CHARACTER COUNT RANGE (STRICT):
+- REQUIRED RANGE: 200 to 250 characters per language.
+- "Low Density" (<200 chars) is an automatic FAILURE.
+- "Excessive length" (>250 chars) is an automatic FAILURE.
+- You must physically count and ensure every language falls within [200, 250].
+
+CONTENT "THREE PRINCIPLES" (MANDATORY):
+Each report MUST contain these 3 elements in a cohesive narrative:
+1. Current State Definition (現状の定義): Clearly define the current market regime based on GMS Score.
+2. Correlation & Causality (指標間の相関・因果): Explain the logical link between indicators (e.g., "Rising yields are pressuring tech multiples").
+3. Future Prediction (今後の予測): Provide a specific tactical outlook or trigger point.
+
+GMS Context:
+- Current GMS Score: 75/100
+- Market Matrix:
+- SPY: 500 (Prev: 490, DailyChg: 2.0%)
+- BTC: 60000 (Prev: 58000, DailyChg: 3.4%)
+
+- News: Why the stock market keeps shrugging as Trump sows more political chaos
+
+Regime Guide:
+- 0-40: DEFENSIVE (Risk-Off).
+- 40-60: NEUTRAL.
+- 60-100: ACCUMULATE (Risk-On).
+
+SELF-CENSORSHIP:
+Check each Value in the JSON. If any string is < 200 characters, rewrite it to be more descriptive and analytical until it passes the 200-character threshold.
+
+Output JSON:
+{
+  "JP": " (200-250文字: 現状、相関、予測を含む叙述文) ",
+  "EN": " (200-250 chars: Definition, Correlation, Prediction) ",
+  "CN": "...",
+  "ES": "...",
+  "HI": "...",
+  "ID": "...",
+  "AR": "..."
+}
+
+[2026-01-15 10:38:37] [AI BRIDGE WARN] Bridge execution failed (Code 1). Trying direct node fallback...
+[2026-01-15 10:38:47] [AI BRIDGE] Received 2470 bytes of output. Head: [dotenv@17.2.3] injecting env (0) from ..\.env -- tip: ✅ audit secrets and track compliance: https:/...
+[2026-01-15 10:38:47] [AI SUCCESS] Reports parsed and validated.
+[2026-01-15 10:44:44] [AI BRIDGE] GEMINI_API_KEY detected (Length: 39)
+[2026-01-15 10:44:45] [AI BATCH] Requesting 7-language analysis (Attempt 1)...
+[2026-01-15 10:44:45] [AI BRIDGE] Command: npx tsx scripts/generate_insight.ts 
+【AI Insight Protocol v5.3: Output Density Protocol】
+Role: Lead Economist at a top-tier investment bank (Bloomberg/Goldman style).
+Goal: Generate a high-density, strategic macro report.
+
+MASTER LANGUAGE PROTOCOL:
+1. First, generate the Japanese (JP) analysis as the "Gold Standard".
+2. Maintain the exact "Information Density" and "Logical Structure" of the JP version when translating/adapting to other languages.
+
+CHARACTER COUNT RANGE (STRICT):
+- REQUIRED RANGE: 200 to 250 characters per language.
+- "Low Density" (<200 chars) is an automatic FAILURE.
+- "Excessive length" (>250 chars) is an automatic FAILURE.
+- You must physically count and ensure every language falls within [200, 250].
+
+CONTENT "THREE PRINCIPLES" (MANDATORY):
+Each report MUST contain these 3 elements in a cohesive narrative:
+1. Current State Definition (現状の定義): Clearly define the current market regime based on GMS Score.
+2. Correlation & Causality (指標間の相関・因果): Explain the logical link between indicators (e.g., "Rising yields are pressuring tech multiples").
+3. Future Prediction (今後の予測): Provide a specific tactical outlook or trigger point.
+
+GMS Context:
+- Current GMS Score: 75/100
+- Market Matrix:
+- SPY: 500 (Prev: 490, DailyChg: 2.0%)
+- BTC: 60000 (Prev: 58000, DailyChg: 3.4%)
+
+- News: Why the stock market keeps shrugging as Trump sows more political chaos
+
+Regime Guide:
+- 0-40: DEFENSIVE (Risk-Off).
+- 40-60: NEUTRAL.
+- 60-100: ACCUMULATE (Risk-On).
+
+SELF-CENSORSHIP:
+Check each Value in the JSON. If any string is < 200 characters, rewrite it to be more descriptive and analytical until it passes the 200-character threshold.
+
+Output JSON:
+{
+  "JP": " (200-250文字: 現状、相関、予測を含む叙述文) ",
+  "EN": " (200-250 chars: Definition, Correlation, Prediction) ",
+  "CN": "...",
+  "ES": "...",
+  "HI": "...",
+  "ID": "...",
+  "AR": "..."
+}
+
+[2026-01-15 10:45:04] [AI BRIDGE] Received 1044 bytes of output. Head: [dotenv@17.2.3] injecting env (0) from ..\.env -- tip: 🔐 prevent building .env in docker: https://do...
+[2026-01-15 10:45:04] [AI ERROR] JSON parse failed: Expecting value: line 1 column 1 (char 0)
+[2026-01-15 10:45:04] [AI BATCH] Requesting 7-language analysis (Attempt 2)...
+[2026-01-15 10:45:04] [AI BRIDGE] Command: npx tsx scripts/generate_insight.ts 
+【AI Insight Protocol v5.3: Output Density Protocol】
+Role: Lead Economist at a top-tier investment bank (Bloomberg/Goldman style).
+Goal: Generate a high-density, strategic macro report.
+
+MASTER LANGUAGE PROTOCOL:
+1. First, generate the Japanese (JP) analysis as the "Gold Standard".
+2. Maintain the exact "Information Density" and "Logical Structure" of the JP version when translating/adapting to other languages.
+
+CHARACTER COUNT RANGE (STRICT):
+- REQUIRED RANGE: 200 to 250 characters per language.
+- "Low Density" (<200 chars) is an automatic FAILURE.
+- "Excessive length" (>250 chars) is an automatic FAILURE.
+- You must physically count and ensure every language falls within [200, 250].
+
+CONTENT "THREE PRINCIPLES" (MANDATORY):
+Each report MUST contain these 3 elements in a cohesive narrative:
+1. Current State Definition (現状の定義): Clearly define the current market regime based on GMS Score.
+2. Correlation & Causality (指標間の相関・因果): Explain the logical link between indicators (e.g., "Rising yields are pressuring tech multiples").
+3. Future Prediction (今後の予測): Provide a specific tactical outlook or trigger point.
+
+GMS Context:
+- Current GMS Score: 75/100
+- Market Matrix:
+- SPY: 500 (Prev: 490, DailyChg: 2.0%)
+- BTC: 60000 (Prev: 58000, DailyChg: 3.4%)
+
+- News: Why the stock market keeps shrugging as Trump sows more political chaos
+
+Regime Guide:
+- 0-40: DEFENSIVE (Risk-Off).
+- 40-60: NEUTRAL.
+- 60-100: ACCUMULATE (Risk-On).
+
+SELF-CENSORSHIP:
+Check each Value in the JSON. If any string is < 200 characters, rewrite it to be more descriptive and analytical until it passes the 200-character threshold.
+
+Output JSON:
+{
+  "JP": " (200-250文字: 現状、相関、予測を含む叙述文) ",
+  "EN": " (200-250 chars: Definition, Correlation, Prediction) ",
+  "CN": "...",
+  "ES": "...",
+  "HI": "...",
+  "ID": "...",
+  "AR": "..."
+}
+
+[2026-01-15 10:45:06] [AI BRIDGE WARN] Bridge execution failed (Code 1). Trying direct node fallback...
+[2026-01-15 10:45:15] [AI BRIDGE] Received 2455 bytes of output. Head: [dotenv@17.2.3] injecting env (0) from ..\.env -- tip: ⚙️  write to custom object with { processEnv:...
+[2026-01-15 10:45:15] [AI SUCCESS] Reports parsed and validated.
+[2026-01-15 10:45:42] [AI BRIDGE] GEMINI_API_KEY detected (Length: 39)
+[2026-01-15 10:45:44] [AI BATCH] Requesting 7-language analysis (Attempt 1)...
+[2026-01-15 10:45:44] [AI BRIDGE] Command: npx tsx scripts/generate_insight.ts 
+【AI Insight Protocol v5.3: Output Density Protocol】
+Role: Lead Economist at a top-tier investment bank (Bloomberg/Goldman style).
+Goal: Generate a high-density, strategic macro report.
+
+MASTER LANGUAGE PROTOCOL:
+1. First, generate the Japanese (JP) analysis as the "Gold Standard".
+2. Maintain the exact "Information Density" and "Logical Structure" of the JP version when translating/adapting to other languages.
+
+CHARACTER COUNT RANGE (STRICT):
+- REQUIRED RANGE: 200 to 250 characters per language.
+- "Low Density" (<200 chars) is an automatic FAILURE.
+- "Excessive length" (>250 chars) is an automatic FAILURE.
+- You must physically count and ensure every language falls within [200, 250].
+
+CONTENT "THREE PRINCIPLES" (MANDATORY):
+Each report MUST contain these 3 elements in a cohesive narrative:
+1. Current State Definition (現状の定義): Clearly define the current market regime based on GMS Score.
+2. Correlation & Causality (指標間の相関・因果): Explain the logical link between indicators (e.g., "Rising yields are pressuring tech multiples").
+3. Future Prediction (今後の予測): Provide a specific tactical outlook or trigger point.
+
+GMS Context:
+- Current GMS Score: 75/100
+- Market Matrix:
+- SPY: 500 (Prev: 490, DailyChg: 2.0%)
+- BTC: 60000 (Prev: 58000, DailyChg: 3.4%)
+
+- News: Why the stock market keeps shrugging as Trump sows more political chaos
+
+Regime Guide:
+- 0-40: DEFENSIVE (Risk-Off).
+- 40-60: NEUTRAL.
+- 60-100: ACCUMULATE (Risk-On).
+
+SELF-CENSORSHIP:
+Check each Value in the JSON. If any string is < 200 characters, rewrite it to be more descriptive and analytical until it passes the 200-character threshold.
+
+Output JSON:
+{
+  "JP": " (200-250文字: 現状、相関、予測を含む叙述文) ",
+  "EN": " (200-250 chars: Definition, Correlation, Prediction) ",
+  "CN": "...",
+  "ES": "...",
+  "HI": "...",
+  "ID": "...",
+  "AR": "..."
+}
+
+[2026-01-15 10:45:48] [AI BRIDGE WARN] Bridge execution failed (Code 1). Trying direct node fallback...
+[2026-01-15 10:45:56] [AI BRIDGE CRITICAL] 'cp932' codec can't encode character '\u2699' in position 104: illegal multibyte sequence
+[2026-01-15 10:45:56] [AI BATCH] Requesting 7-language analysis (Attempt 2)...
+[2026-01-15 10:45:56] [AI BRIDGE] Command: npx tsx scripts/generate_insight.ts 
+【AI Insight Protocol v5.3: Output Density Protocol】
+Role: Lead Economist at a top-tier investment bank (Bloomberg/Goldman style).
+Goal: Generate a high-density, strategic macro report.
+
+MASTER LANGUAGE PROTOCOL:
+1. First, generate the Japanese (JP) analysis as the "Gold Standard".
+2. Maintain the exact "Information Density" and "Logical Structure" of the JP version when translating/adapting to other languages.
+
+CHARACTER COUNT RANGE (STRICT):
+- REQUIRED RANGE: 200 to 250 characters per language.
+- "Low Density" (<200 chars) is an automatic FAILURE.
+- "Excessive length" (>250 chars) is an automatic FAILURE.
+- You must physically count and ensure every language falls within [200, 250].
+
+CONTENT "THREE PRINCIPLES" (MANDATORY):
+Each report MUST contain these 3 elements in a cohesive narrative:
+1. Current State Definition (現状の定義): Clearly define the current market regime based on GMS Score.
+2. Correlation & Causality (指標間の相関・因果): Explain the logical link between indicators (e.g., "Rising yields are pressuring tech multiples").
+3. Future Prediction (今後の予測): Provide a specific tactical outlook or trigger point.
+
+GMS Context:
+- Current GMS Score: 75/100
+- Market Matrix:
+- SPY: 500 (Prev: 490, DailyChg: 2.0%)
+- BTC: 60000 (Prev: 58000, DailyChg: 3.4%)
+
+- News: Why the stock market keeps shrugging as Trump sows more political chaos
+
+Regime Guide:
+- 0-40: DEFENSIVE (Risk-Off).
+- 40-60: NEUTRAL.
+- 60-100: ACCUMULATE (Risk-On).
+
+SELF-CENSORSHIP:
+Check each Value in the JSON. If any string is < 200 characters, rewrite it to be more descriptive and analytical until it passes the 200-character threshold.
+
+Output JSON:
+{
+  "JP": " (200-250文字: 現状、相関、予測を含む叙述文) ",
+  "EN": " (200-250 chars: Definition, Correlation, Prediction) ",
+  "CN": "...",
+  "ES": "...",
+  "HI": "...",
+  "ID": "...",
+  "AR": "..."
+}
+
+[2026-01-15 10:46:14] [AI BRIDGE CRITICAL] 'cp932' codec can't encode character '\u2705' in position 103: illegal multibyte sequence
+[2026-01-15 10:46:14] [AI SDK] Attempting Direct Python SDK (google-generativeai)...
+[2026-01-15 10:46:15] [AI SDK ERROR] 403 Your API key was reported as leaked. Please use another API key.
+[2026-01-15 10:46:15] [AI REST] Attempting Direct REST (Attempt 1)...
+[2026-01-15 10:46:16] [AI REST FAIL] Status 403: {
+  "error": {
+    "code": 403,
+    "message": "Your API key was reported as leaked. Please use another API key.",
+    "status": "PERMISSION_DENIED"
+  }
+}
+
+[2026-01-15 10:46:16] [AI REST] Attempting Direct REST (Attempt 2)...
+[2026-01-15 10:46:18] [AI REST FAIL] Status 403: {
+  "error": {
+    "code": 403,
+    "message": "Your API key was reported as leaked. Please use another API key.",
+    "status": "PERMISSION_DENIED"
+  }
+}
+
