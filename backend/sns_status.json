@@ -1,12 +1,12 @@
 {
     "TWITTER": {
-        "timestamp": "2026-01-15T05:42:04.462758",
+        "timestamp": "2026-01-15T07:01:48.896590",
         "status": "FAILURE",
-        "message": "Twitter Error: 403 Forbidden\nYou are not permitted to perform this action."
+        "message": "Twitter Error: 429 Too Many Requests\nToo Many Requests"
     },
     "BLUESKY": {
-        "timestamp": "2026-01-15T05:42:04.465475",
+        "timestamp": "2026-01-15T07:01:49.543934",
         "status": "FAILURE",
-        "message": "Bluesky Integration Error: expected an indented block after 'except' statement on line 93 (sns_publisher_bsky.py, line 94)"
+        "message": "Error: Response(success=False, status_code=400, content=XrpcError(error='InvalidRequest', message='Invalid app.bsky.feed.post record: Record/text must not be longer than 300 graphemes'), headers={'x-powered-by': 'Express', 'access-control-allow-origin': '*', 'cache-control': 'private', 'vary': 'Authorization, Accept-Encoding', 'ratelimit-limit': '3000', 'ratelimit-reset': '1768460809', 'ratelimit-remaining': '2998', 'ratelimit-policy': '3000;w=300', 'content-type': 'application/json; charset=utf-8', 'content-length': '123', 'etag': 'W/\"7b-5OYjOucrkx456vG6nIBiH/VZWIA\"', 'date': 'Thu, 15 Jan 2026 07:01:49 GMT', 'keep-alive': 'timeout=90', 'strict-transport-security': 'max-age=63072000'})"
     }
 }
