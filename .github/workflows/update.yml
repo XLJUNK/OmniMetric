@@ -26,7 +26,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests yfinance google-generativeai fredapi pandas numpy lxml python-dotenv
+          pip install requests yfinance google-generativeai fredapi pandas numpy lxml python-dotenv tweepy atproto
       - name: Sync and Run Engine
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
