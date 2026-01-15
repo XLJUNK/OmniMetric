@@ -8,13 +8,44 @@ class SNSPublisher:
     def __init__(self, site_url="https://omnimetric.net", log_callback=None):
         self.site_url = site_url
         self.log_callback = log_callback
+        # This file tracks the last successful score to prevent duplicates
         self.state_file = os.path.join(os.path.dirname(__file__), "sns_last_post.json")
+        # This file tracks the detailed STATUS of the last attempt (Success/Fail/Error) for debugging
+        self.status_log_file = os.path.join(os.path.dirname(__file__), "sns_status.json")
 
-    def _log(self, message):
+    def _write_status(self, platform, status, message=None):
+        """Writes the latest attempt status to a JSON file for Git tracking."""
+        try:
+            current_status = {}
+            if os.path.exists(self.status_log_file):
+                with open(self.status_log_file, 'r') as f:
+                    current_status = json.load(f)
+            
+            current_status[platform] = {
+                "timestamp": datetime.utcnow().isoformat(),
+                "status": status,
+                "message": message or "OK"
+            }
+            
+            with open(self.status_log_file, 'w') as f:
+                json.dump(current_status, f, indent=4)
+        except Exception as e:
+            print(f"Failed to write status log: {e}")
+
+    def _log(self, message, is_error=False, platform="SYSTEM"):
+        # Console Output for CI
+        prefix = f"[SNS][{platform}]" if platform != "SYSTEM" else "[SNS]"
+        print(f"{prefix} {message}")
+        
+        # File Callback (if used)
         if self.log_callback:
-            self.log_callback(f"[SNS] {message}")
-        else:
-            print(f"[SNS] {message}")
+            self.log_callback(f"{prefix} {message}")
+
+        # Update Status File if it's a significant event (Error or Success)
+        if is_error:
+            self._write_status(platform, "FAILURE", message)
+        elif "Success:" in message:
+            self._write_status(platform, "SUCCESS", message)
 
     def format_post(self, data):
         """
@@ -78,10 +109,11 @@ class SNSPublisher:
                     state = json.load(f)
                     last_score = state.get("last_twitter_score")
                     if last_score == current_score:
-                        self._log(f"Smart-skip: Current score ({current_score}) matches last posted Twitter score. Skipping.")
+                        self._log(f"Smart-skip: Current score ({current_score}) matches last posted Twitter score. Skipping.", platform="TWITTER")
+                        self._write_status("TWITTER", "SKIPPED", f"Score {current_score} unchanged")
                         return True
         except Exception as e:
-            self._log(f"State check failed: {e}")
+            self._log(f"State check failed: {e}", is_error=True, platform="TWITTER")
         return False
 
     def update_state(self, score):
@@ -113,7 +145,7 @@ class SNSPublisher:
         score = data.get("gms_score", 50)
         
         if self.should_skip(score):
-            self._log("Skipping Stage 1 (Twitter) - No score change.")
+            self._log("Skipping Stage 1 (Twitter) - No score change.", platform="TWITTER")
             results["TW_SKIP"] = True
         else:
             results["TW_JP"] = self.post_to_twitter(posts["JP"])
@@ -128,7 +160,7 @@ class SNSPublisher:
             bsky_pub = BlueskyPublisher(log_callback=self.log_callback)
             results["BSKY"] = bsky_pub.publish(data)
         except Exception as e:
-            self._log(f"Bluesky Integration Error: {e}")
+            self._log(f"Bluesky Integration Error: {e}", is_error=True, platform="BLUESKY")
             results["BSKY"] = False
         
         return results
@@ -140,7 +172,7 @@ class SNSPublisher:
         access_secret = os.getenv("TWITTER_ACCESS_SECRET")
         
         if not all([api_key, api_secret, access_token, access_secret]):
-            self._log("Twitter credentials missing. Skipping Stage 1.")
+            self._log("Twitter credentials missing. Skipping Stage 1.", is_error=True, platform="TWITTER")
             return False
 
         try:
@@ -149,10 +181,10 @@ class SNSPublisher:
                 access_token=access_token, access_token_secret=access_secret
             )
             response = client.create_tweet(text=text)
-            self._log(f"Posted to Twitter. ID: {response.data['id']}")
+            self._log(f"Success: Posted to Twitter. ID: {response.data['id']}", platform="TWITTER")
             return response.data['id']
         except Exception as e:
-            self._log(f"Twitter Error: {e}")
+            self._log(f"Twitter Error: {e}", is_error=True, platform="TWITTER")
             return False
 
     # post_to_bluesky legacy method removed in favor of sns_publisher_bsky.py

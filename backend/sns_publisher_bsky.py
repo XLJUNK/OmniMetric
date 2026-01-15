@@ -8,12 +8,38 @@ class BlueskyPublisher:
         self.site_url = site_url
         self.log_callback = log_callback
         self.state_file = os.path.join(os.path.dirname(__file__), "sns_last_post.json")
+        self.status_log_file = os.path.join(os.path.dirname(__file__), "sns_status.json")
 
-    def _log(self, message):
+    def _write_status(self, status, message=None):
+        """Writes the latest attempt status to a JSON file."""
+        try:
+            current_status = {}
+            if os.path.exists(self.status_log_file):
+                with open(self.status_log_file, 'r') as f:
+                    current_status = json.load(f)
+            
+            # Merge Bluesky status
+            current_status["BLUESKY"] = {
+                "timestamp": datetime.utcnow().isoformat(),
+                "status": status,
+                "message": message or "OK"
+            }
+            
+            with open(self.status_log_file, 'w') as f:
+                json.dump(current_status, f, indent=4)
+        except Exception as e:
+            print(f"[SNS_BSKY] Failed to write status log: {e}")
+
+    def _log(self, message, is_error=False):
+        prefix = "[SNS_BSKY]"
+        print(f"{prefix} {message}")
         if self.log_callback:
-            self.log_callback(f"[SNS_BSKY] {message}")
-        else:
-            print(f"[SNS_BSKY] {message}")
+            self.log_callback(f"{prefix} {message}")
+        
+        if is_error:
+            self._write_status("FAILURE", message)
+        elif "Success:" in message:
+            self._write_status("SUCCESS", message)
 
     def get_regime_name(self, score):
         if score > 60: return "ACCUMULATE (Risk-On)"
@@ -65,7 +91,8 @@ class BlueskyPublisher:
                         self._log(f"Smart-skip: Current score ({current_score}) matches last posted score. Skipping.")
                         return True
         except Exception as e:
-            self._log(f"State check failed: {e}")
+        except Exception as e:
+            self._log(f"State check failed: {e}", is_error=True)
         return False
 
     def update_state(self, score):
@@ -73,7 +100,8 @@ class BlueskyPublisher:
             with open(self.state_file, 'w') as f:
                 json.dump({"last_bsky_score": score, "last_post_at": datetime.utcnow().isoformat()}, f)
         except Exception as e:
-            self._log(f"Failed to update state file: {e}")
+        except Exception as e:
+            self._log(f"Failed to update state file: {e}", is_error=True)
 
     def publish(self, data):
         """Main entry point for Bluesky publishing."""
@@ -88,7 +116,8 @@ class BlueskyPublisher:
         bsky_pass = os.getenv("BLUESKY_PASSWORD")
         
         if not all([bsky_user, bsky_pass]):
-            self._log("Missing Bluesky credentials (BLUESKY_HANDLE / BLUESKY_PASSWORD).")
+        if not all([bsky_user, bsky_pass]):
+            self._log("Missing Bluesky credentials (BLUESKY_HANDLE / BLUESKY_PASSWORD).", is_error=True)
             return False
             
         try:
@@ -100,7 +129,8 @@ class BlueskyPublisher:
             self.update_state(score)
             return True
         except Exception as e:
-            self._log(f"Error: {e}")
+        except Exception as e:
+            self._log(f"Error: {e}", is_error=True)
             return False
 
 if __name__ == "__main__":
