@@ -1,12 +1,12 @@
 {
     "TWITTER": {
-        "timestamp": "2026-01-15T08:07:29.700917",
+        "timestamp": "2026-01-15T08:17:35.434936",
         "status": "FAILURE",
-        "message": "Twitter Error: 429 Too Many Requests\nToo Many Requests"
+        "message": "Twitter Error: 403 Forbidden\nYou are not permitted to perform this action."
     },
     "BLUESKY": {
-        "timestamp": "2026-01-15T08:07:29.703642",
-        "status": "FAILURE",
-        "message": "Bluesky Integration Error: local variable 'ai_insight' referenced before assignment"
+        "timestamp": "2026-01-15T08:17:36.247828",
+        "status": "SUCCESS",
+        "message": "Success: Posted GMS Score 39 to Bluesky."
     }
 }
