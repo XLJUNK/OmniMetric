@@ -63,20 +63,15 @@ class BlueskyPublisher:
         ai_insight = reports.get("EN", "")
         
         # Shorten AI Insight for the "Analysis" section
-        if len(ai_insight) > 160:
-            ai_insight = ai_insight[:157] + "..."
+        if len(ai_insight) > 120:
+            ai_insight = ai_insight[:117] + "..."
 
-        # Professional Template (v2.3.0)
+        # Compact Professional Template (v2.4.0)
         template = (
-            f"【GMS Signal Report】\n"
-            f"Global Regime: {regime}\n"
-            f"(Score: {score}/100)\n\n"
+            f"【GMS Signal】{regime} ({score}/100)\n\n"
             f"Analysis: {ai_insight}\n\n"
-            f"Sector Breakdown:\n"
-            f"Stocks: {stocks}\n"
-            f"Crypto: {crypto}\n"
-            f"Commodities: {commodities}\n\n"
-            f"Live Terminal: {self.site_url} #OmniMetric #Macro #BlueskyFinance"
+            f"Sectors: Stocks {stocks} | Crypto {crypto} | Cmdty {commodities}\n"
+            f"Live: {self.site_url} #OmniMetric #Macro"
         )
         return template
 
