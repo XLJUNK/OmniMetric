@@ -130,15 +130,15 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
 
             {/* 1. Global Header Status */}
             <div className="max-w-[1600px] mx-auto w-full px-4 md:px-6 py-2 border-b border-slate-800 relative z-10 bg-[#0A0A0A]">
-                <div className={`flex justify-between relative z-50 ${isMobile ? 'flex-col items-center gap-6 mb-4' : 'flex-row items-start mb-6'}`}>
-                    <div className={`pointer-events-auto cursor-pointer ${isMobile ? 'text-center' : 'text-left'}`} onClick={() => router.push(`/?lang=${lang}`)}>
-                        <h1 className={`${isMobile ? 'text-xl' : 'text-2xl md:text-3xl'} font-black tracking-tighter text-white mb-0 leading-none hover:text-sky-500 transition-colors`}>OMNIMETRIC TERMINAL</h1>
-                        <h2 className={`${isMobile ? 'text-[10px]' : 'text-sm md:text-base'} font-bold text-sky-500 tracking-[0.2em] uppercase mt-1`}>Global Macro Signal (GMS)</h2>
+                <div className="flex justify-between relative z-50 flex-col items-center gap-6 mb-4 sm:flex-row sm:items-start sm:mb-6 sm:gap-0">
+                    <div className="pointer-events-auto cursor-pointer text-center sm:text-left" onClick={() => router.push(`/?lang=${lang}`)}>
+                        <h1 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tighter text-white mb-0 leading-none hover:text-sky-500 transition-colors">OMNIMETRIC TERMINAL</h1>
+                        <h2 className="text-[10px] sm:text-sm md:text-base font-bold text-sky-500 tracking-[0.2em] uppercase mt-1">Global Macro Signal (GMS)</h2>
                     </div>
 
-                    <div className={`flex flex-col ${isMobile ? 'items-center w-full' : 'items-end'} pointer-events-auto transition-all duration-300`}>
+                    <div className="flex flex-col items-center w-full sm:items-end sm:w-auto pointer-events-auto transition-all duration-300">
                         {/* LANGUAGE SWITCHER */}
-                        <div className={`relative z-[10000] ${isMobile ? 'mb-4' : 'mb-0'} pointer-events-auto`}>
+                        <div className="relative z-[10000] mb-4 sm:mb-0 pointer-events-auto">
                             <button
                                 onClick={() => setIsLangOpen(!isLangOpen)}
                                 className="flex items-center gap-2 h-6 px-3 bg-[#1e293b] border border-[#fef3c7]/30 text-[#fef3c7] text-[10px] font-bold uppercase tracking-widest rounded hover:bg-white/10 transition-colors shadow-lg"
@@ -146,7 +146,7 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
                                 {lang} <ChevronDown className="w-3 h-3" />
                             </button>
                             {isLangOpen && (
-                                <div className={`absolute top-full mt-1 w-24 bg-[#1e293b] border border-[#fef3c7]/30 rounded shadow-xl overflow-hidden z-[10001] pointer-events-auto ring-1 ring-[#fef3c7]/20 ${isMobile ? 'right-1/2 translate-x-1/2' : 'right-0'}`}>
+                                <div className="absolute top-full mt-1 w-24 bg-[#1e293b] border border-[#fef3c7]/30 rounded shadow-xl overflow-hidden z-[10001] pointer-events-auto ring-1 ring-[#fef3c7]/20 left-1/2 -translate-x-1/2 sm:left-auto sm:right-0 sm:translate-x-0">
                                     {(Object.keys(DICTIONARY) as LangType[]).map((l) => (
                                         <button
                                             key={l}
@@ -164,7 +164,7 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
                         </div>
 
                         {/* STATUS, DATE */}
-                        <div className={`flex flex-col ${isMobile ? 'items-center' : 'items-end'} gap-1 ${isMobile ? 'mt-2' : 'mt-10'}`}>
+                        <div className="flex flex-col items-center sm:items-end gap-1 mt-2 sm:mt-10">
                             <div className="flex items-center gap-2">
                                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                                 <span className="text-[9px] text-green-500 font-mono font-bold tracking-[0.2em] uppercase">System Operational • 12ms</span>

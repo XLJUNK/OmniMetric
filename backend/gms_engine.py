@@ -437,9 +437,14 @@ def fetch_economic_calendar():
                     })
 
             major_codes = ["cpi", "fomc", "nfp"]
+            # 1. Prioritize Majors for inclusion (Selection)
             events.sort(key=lambda x: (0 if x["code"] in major_codes else 1, x["date"]))
             final_events = events[:5]
-            log_diag(f"[SUCCESS] Calendar fetched: {len(final_events)} significant events found (Majors: {sum(1 for e in final_events if e['code'] != 'generic')})")
+            
+            # 2. Strict Date Sort for Display (User Requirement: Chronological Order)
+            final_events.sort(key=lambda x: x["date"])
+            
+            log_diag(f"[SUCCESS] Calendar fetched: {len(final_events)} events (Sorted Chronologically)")
             return final_events
         else:
             log_diag(f"[ERROR] Calendar Fetch Failed: Unexpected response format (Not a list). Data: {str(data)[:100]}")
@@ -1156,11 +1161,28 @@ def update_signal():
 
     else:
         print("[Warn] Market data collection failed. Writing SAFETY FALLBACK to preserve Heart-beat.")
+        
+        # Try to load previous data to preserve cache (User Request: Show cached numbers)
+        cached_market_data = {}
+        cached_sector_scores = {}
+        cached_sys_score = 50
+        
+        try:
+            if os.path.exists(DATA_FILE):
+                with open(DATA_FILE, 'r', encoding='utf-8') as f:
+                    old_json = json.load(f)
+                    cached_market_data = old_json.get('market_data', {})
+                    cached_sector_scores = old_json.get('sector_scores', {})
+                    cached_sys_score = old_json.get('gms_score', 50)
+        except Exception as ex:
+             print(f"[Warn] Failed to load cache for fallback: {ex}")
+
         payload = {
             "last_updated": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
             "last_successful_update": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"), 
-            "gms_score": 50,
-            "market_data": {},
+            "gms_score": cached_sys_score,
+            "sector_scores": cached_sector_scores,
+            "market_data": cached_market_data,
             "events": get_next_event_dates(),
             "analysis": {
                 "title": "Global Market Outlook (Maintenance)",

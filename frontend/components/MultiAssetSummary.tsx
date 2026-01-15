@@ -76,7 +76,10 @@ export const MultiAssetSummary = () => {
         }
 
         if (isSafeMode) {
-            val = { ...val, price: t.status.market }; // Override with "Synchronizing..."
+            // ONLY override if we don't have valid numerical data (Cache priority)
+            if (typeof val.price !== 'number') {
+                val = { ...val, price: t.status.market };
+            }
         }
         if (liveData && liveData[key]) {
             val = { ...val, price: liveData[key].price, change_percent: liveData[key].change_percent };
