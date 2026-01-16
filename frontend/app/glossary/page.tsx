@@ -11,6 +11,14 @@ import { DynamicStructuredData } from '@/components/DynamicStructuredData';
 import { AdSenseSlot } from '@/components/AdSenseSlot';
 
 export default function GlossaryPage() {
+    return (
+        <React.Suspense fallback={<div className="min-h-screen bg-[#020617] flex items-center justify-center text-sky-500 font-mono text-xs animate-pulse">LOADING GLOSSARY INDEX...</div>}>
+            <GlossaryContent />
+        </React.Suspense>
+    );
+}
+
+function GlossaryContent() {
     const searchParams = useSearchParams();
     const router = useRouter();
     const queryLang = searchParams.get('lang') as LangType;
