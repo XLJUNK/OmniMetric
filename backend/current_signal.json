@@ -1,12 +1,12 @@
 {
-    "last_updated": "2026-01-16T09:38:19Z",
-    "last_successful_update": "2026-01-16T09:38:19Z",
-    "gms_score": 39,
+    "last_updated": "2026-01-16T10:38:54Z",
+    "last_successful_update": "2026-01-16T10:38:54Z",
+    "gms_score": 37,
     "sector_scores": {
         "STOCKS": 55,
         "CRYPTO": 75,
         "FOREX": 25,
-        "COMMODITIES": 60
+        "COMMODITIES": 40
     },
     "market_data": {
         "CRYPTO_SENTIMENT": {
@@ -181,10 +181,10 @@
             ]
         },
         "VIX": {
-            "price": 15.5,
+            "price": 15.54,
             "prev_price": 15.84,
-            "daily_chg": -2.15,
-            "change_percent": 2.51,
+            "daily_chg": -1.89,
+            "change_percent": 2.78,
             "trend": "DOWN",
             "sparkline": [
                 16.48,
@@ -208,7 +208,7 @@
                 15.98,
                 16.75,
                 15.84,
-                15.5
+                15.54
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
@@ -509,10 +509,10 @@
             ]
         },
         "NIFTY": {
-            "price": 25691.0,
+            "price": 25694.35,
             "prev_price": 25665.6,
-            "daily_chg": 0.1,
-            "change_percent": 0.03,
+            "daily_chg": 0.11,
+            "change_percent": 0.04,
             "trend": "UP",
             "sparkline": [
                 25860.1,
@@ -536,15 +536,15 @@
                 25790.25,
                 25732.3,
                 25665.6,
-                25691.0
+                25694.35
             ]
         },
         "BTC": {
-            "price": 95618.12,
+            "price": 95350.62,
             "prev_price": 95551.19,
-            "daily_chg": 0.07,
-            "change_percent": 4.85,
-            "trend": "UP",
+            "daily_chg": -0.21,
+            "change_percent": 4.56,
+            "trend": "DOWN",
             "sparkline": [
                 87301.43,
                 87802.16,
@@ -567,14 +567,14 @@
                 95321.78,
                 96929.33,
                 95551.19,
-                95618.12
+                95350.62
             ]
         },
         "ETH": {
-            "price": 3308.51,
+            "price": 3298.68,
             "prev_price": 3317.1,
-            "daily_chg": -0.26,
-            "change_percent": 6.99,
+            "daily_chg": -0.56,
+            "change_percent": 6.67,
             "trend": "DOWN",
             "sparkline": [
                 2925.75,
@@ -598,14 +598,14 @@
                 3322.1,
                 3354.72,
                 3317.1,
-                3308.51
+                3298.68
             ]
         },
         "SOL": {
-            "price": 142.98,
+            "price": 142.8,
             "prev_price": 142.33,
-            "daily_chg": 0.45,
-            "change_percent": 2.76,
+            "daily_chg": 0.33,
+            "change_percent": 2.63,
             "trend": "UP",
             "sparkline": [
                 122.2,
@@ -629,14 +629,14 @@
                 145.36,
                 146.75,
                 142.33,
-                142.98
+                142.8
             ]
         },
         "DXY": {
-            "price": 99.27,
+            "price": 99.26,
             "prev_price": 99.32,
-            "daily_chg": -0.05,
-            "change_percent": 0.42,
+            "daily_chg": -0.06,
+            "change_percent": 0.41,
             "trend": "DOWN",
             "sparkline": [
                 98.15,
@@ -660,14 +660,14 @@
                 99.13,
                 99.13,
                 99.32,
-                99.27
+                99.26
             ]
         },
         "USDJPY": {
-            "price": 158.14,
+            "price": 158.1,
             "prev_price": 158.4,
-            "daily_chg": -0.17,
-            "change_percent": -0.01,
+            "daily_chg": -0.19,
+            "change_percent": -0.03,
             "trend": "DOWN",
             "sparkline": [
                 155.01,
@@ -691,14 +691,14 @@
                 157.99,
                 159.18,
                 158.4,
-                158.14
+                158.1
             ]
         },
         "EURUSD": {
             "price": 1.16,
             "prev_price": 1.16,
-            "daily_chg": -0.26,
-            "change_percent": -0.07,
+            "daily_chg": -0.23,
+            "change_percent": -0.03,
             "trend": "DOWN",
             "sparkline": [
                 1.18,
@@ -726,10 +726,10 @@
             ]
         },
         "USDINR": {
-            "price": 90.8,
+            "price": 90.82,
             "prev_price": 90.18,
-            "daily_chg": 0.68,
-            "change_percent": 0.63,
+            "daily_chg": 0.7,
+            "change_percent": 0.64,
             "trend": "UP",
             "sparkline": [
                 90.78,
@@ -753,7 +753,7 @@
                 90.13,
                 90.27,
                 90.18,
-                90.8
+                90.82
             ]
         },
         "USDSAR": {
@@ -788,10 +788,10 @@
             ]
         },
         "GOLD": {
-            "price": 4603.8,
+            "price": 4613.7,
             "prev_price": 4616.3,
-            "daily_chg": -0.27,
-            "change_percent": -0.01,
+            "daily_chg": -0.06,
+            "change_percent": 0.2,
             "trend": "DOWN",
             "sparkline": [
                 4304.5,
@@ -815,7 +815,7 @@
                 4589.2,
                 4626.3,
                 4616.3,
-                4603.8
+                4613.7
             ]
         },
         "OIL": {
@@ -850,10 +850,10 @@
             ]
         },
         "COPPER": {
-            "price": 5.88,
+            "price": 5.9,
             "prev_price": 5.95,
-            "daily_chg": -1.15,
-            "change_percent": -1.76,
+            "daily_chg": -0.83,
+            "change_percent": -1.45,
             "trend": "DOWN",
             "sparkline": [
                 5.29,
@@ -877,14 +877,14 @@
                 5.97,
                 6.01,
                 5.95,
-                5.88
+                5.9
             ]
         },
         "NATGAS": {
             "price": 3.17,
             "prev_price": 3.13,
-            "daily_chg": 1.47,
-            "change_percent": -6.89,
+            "daily_chg": 1.44,
+            "change_percent": -6.92,
             "trend": "UP",
             "sparkline": [
                 3.89,
@@ -1070,22 +1070,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS at 39 signals a defensive regime. Rising oil prices fuel inflation, capping the US 10Y yield at 4.15%. A copper/gold ratio of 1.28 suggests recession risks. TSMC's US investment boosts long-term supply chains but offers limited short-term relief. VIX dip is temporary; SPY 692 is key resistance. Break below accelerates risk-off.",
+        "content": "GMS at 37 indicates a defensive stance. Rising oil prices fuel inflation concerns, boosting rate hike expectations. A US 10-year yield above 4.2% could trigger a stock market correction. Widening HY spreads signal caution. Recommend short-term risk aversion.",
         "reports": {
-            "JP": "GMS39はディフェンシブ領域。原油上昇はインフレ圧力を高め、米10年債利回り4.15%が重石。銅/金比1.28は景気後退を示唆。TSMCの対米投資拡大は長期的な供給網強化だが、短期的には限定的。VIX低下は一時的緩和、SPY692が抵抗線、下抜けでリスクオフ加速。",
-            "EN": "GMS at 39 signals a defensive regime. Rising oil prices fuel inflation, capping the US 10Y yield at 4.15%. A copper/gold ratio of 1.28 suggests recession risks. TSMC's US investment boosts long-term supply chains but offers limited short-term relief. VIX dip is temporary; SPY 692 is key resistance. Break below accelerates risk-off.",
-            "CN": "GMS 值为39，表明防御性市场。油价上涨加剧通胀压力，美国 10 年期国债收益率上限为 4.15%。铜金比为 1.28，表明存在经济衰退风险。台积电在美国的投资促进了长期供应链，但短期内提供的缓解有限。VIX 下降是暂时的；标普 500 指数 692 是关键阻力位。跌破该水平将加速避险情绪。",
-            "ES": "Un GMS de 39 señala un régimen defensivo. El aumento del precio del petróleo alimenta la inflación, limitando el rendimiento del bono estadounidense a 10 años al 4,15%. Un ratio cobre/oro de 1,28 sugiere riesgos de recesión. La inversión de TSMC en EE.UU. impulsa las cadenas de suministro a largo plazo, pero ofrece un alivio limitado a corto plazo. La caída del VIX es temporal; SPY 692 es resistencia clave. Una ruptura por debajo acelera la aversión al riesgo.",
-            "HI": "जीएमएस 39 पर एक रक्षात्मक शासन का संकेत देता है। बढ़ती तेल की कीमतें मुद्रास्फीति को बढ़ावा देती हैं, जो अमेरिका के 10 साल के यील्ड को 4.15% पर सीमित करती हैं। 1.28 का तांबा/सोना अनुपात मंदी के जोखिम का सुझाव देता है। टीएसएमसी का अमेरिकी निवेश दीर्घकालिक आपूर्ति श्रृंखलाओं को बढ़ावा देता है लेकिन अल्पकालिक राहत प्रदान करता है। वीआईएक्स गिरावट अस्थायी है; एसपीवाई 692 प्रमुख प्रतिरोध है। नीचे ब्रेक जोखिम से बचने को तेज करता है।",
-            "ID": "GMS pada 39 menandakan rezim defensif. Kenaikan harga minyak memicu inflasi, membatasi imbal hasil US 10Y pada 4,15%. Rasio tembaga/emas sebesar 1,28 menunjukkan risiko resesi. Investasi TSMC di AS meningkatkan rantai pasokan jangka panjang tetapi menawarkan bantuan jangka pendek yang terbatas. Penurunan VIX bersifat sementara; SPY 692 adalah resistensi utama. Penembusan di bawah mempercepat penghindaran risiko.",
-            "AR": "يشير GMS عند 39 إلى نظام دفاعي. يؤدي ارتفاع أسعار النفط إلى تأجيج التضخم، مما يحد من عائدات سندات الخزانة الأمريكية لأجل 10 سنوات عند 4.15%. تشير نسبة النحاس/الذهب البالغة 1.28 إلى مخاطر الركود. يعزز استثمار TSMC في الولايات المتحدة سلاسل التوريد طويلة الأجل ولكنه يوفر ارتياحًا محدودًا على المدى القصير. انخفاض مؤشر VIX مؤقت؛ SPY 692 هو مقاومة رئيسية. الاختراق أدناه يسرع النفور من المخاطرة."
+            "JP": "GMS37でディフェンシブ領域。原油高はインフレ圧力を高め、利上げ観測を刺激。米10年債利回りが4.2%を超えると、株式市場は調整局面入りか。ハイイールド債スプレッド拡大も警戒信号。短期的なリスク回避姿勢を推奨。",
+            "EN": "GMS at 37 indicates a defensive stance. Rising oil prices fuel inflation concerns, boosting rate hike expectations. A US 10-year yield above 4.2% could trigger a stock market correction. Widening HY spreads signal caution. Recommend short-term risk aversion.",
+            "CN": "GMS为37表明防御姿态。油价上涨加剧通胀担忧，推高加息预期。若美国10年期国债收益率超过4.2%，可能引发股市回调。高收益债券息差扩大预示风险。建议短期规避风险。",
+            "ES": "GMS en 37 indica una postura defensiva. El aumento de los precios del petróleo alimenta las preocupaciones sobre la inflación, impulsando las expectativas de subidas de tipos. Un rendimiento del Tesoro estadounidense a 10 años superior al 4,2% podría desencadenar una corrección del mercado de valores. La ampliación de los diferenciales HY señala cautela. Recomendar aversión al riesgo a corto plazo.",
+            "HI": "जीएमएस 37 पर रक्षात्मक रुख दर्शाता है। बढ़ते तेल की कीमतें मुद्रास्फीति की चिंताओं को बढ़ाती हैं, जिससे ब्याज दर में बढ़ोतरी की उम्मीदें बढ़ जाती हैं। 4.2% से ऊपर का अमेरिकी 10-वर्षीय उपज शेयर बाजार में सुधार को गति प्रदान कर सकता है। उच्च उपज प्रसार को चौड़ा करने से सावधानी का संकेत मिलता है। अल्पकालिक जोखिम से बचने की सलाह देते हैं।",
+            "ID": "GMS di 37 menunjukkan sikap defensif. Kenaikan harga minyak memicu kekhawatiran inflasi, meningkatkan ekspektasi kenaikan suku bunga. Imbal hasil US 10 tahun di atas 4.2% dapat memicu koreksi pasar saham. Melebarnya spread HY menandakan kehati-hatian. Merekomendasikan penghindaran risiko jangka pendek.",
+            "AR": "يشير GMS عند 37 إلى موقف دفاعي. تؤدي أسعار النفط المرتفعة إلى تغذية المخاوف بشأن التضخم، مما يعزز توقعات رفع أسعار الفائدة. قد يؤدي عائد السندات الأمريكية لأجل 10 سنوات أعلى من 4.2% إلى تحفيز تصحيح سوق الأسهم. اتساع فروق عائدات السندات عالية المخاطر يشير إلى الحذر. نوصي بتجنب المخاطرة على المدى القصير."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-14T05:59:09Z",
-            "score": 45
-        },
         {
             "date": "2026-01-14T06:49:41Z",
             "score": 45
@@ -1321,6 +1317,10 @@
         {
             "date": "2026-01-16T09:38:19Z",
             "score": 39
+        },
+        {
+            "date": "2026-01-16T10:38:54Z",
+            "score": 37
         }
     ],
     "system_status": "OPERATIONAL"
