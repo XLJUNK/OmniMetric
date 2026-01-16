@@ -1,11 +1,11 @@
 {
-    "last_updated": "2026-01-16T11:30:46Z",
-    "last_successful_update": "2026-01-16T11:30:46Z",
-    "gms_score": 37,
+    "last_updated": "2026-01-16T11:48:53Z",
+    "last_successful_update": "2026-01-16T11:48:53Z",
+    "gms_score": 38,
     "sector_scores": {
         "STOCKS": 55,
         "CRYPTO": 75,
-        "FOREX": 25,
+        "FOREX": 35,
         "COMMODITIES": 40
     },
     "market_data": {
@@ -181,10 +181,10 @@
             ]
         },
         "VIX": {
-            "price": 15.5,
+            "price": 15.49,
             "prev_price": 15.84,
-            "daily_chg": -2.15,
-            "change_percent": 2.51,
+            "daily_chg": -2.21,
+            "change_percent": 2.45,
             "trend": "DOWN",
             "sparkline": [
                 16.48,
@@ -208,7 +208,7 @@
                 15.98,
                 16.75,
                 15.84,
-                15.5
+                15.49
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
@@ -540,10 +540,10 @@
             ]
         },
         "BTC": {
-            "price": 95299.07,
+            "price": 95287.86,
             "prev_price": 95551.19,
-            "daily_chg": -0.26,
-            "change_percent": 4.5,
+            "daily_chg": -0.28,
+            "change_percent": 4.49,
             "trend": "DOWN",
             "sparkline": [
                 87301.43,
@@ -567,14 +567,14 @@
                 95321.78,
                 96929.33,
                 95551.19,
-                95299.07
+                95287.86
             ]
         },
         "ETH": {
-            "price": 3299.05,
+            "price": 3297.98,
             "prev_price": 3317.1,
-            "daily_chg": -0.54,
-            "change_percent": 6.69,
+            "daily_chg": -0.58,
+            "change_percent": 6.65,
             "trend": "DOWN",
             "sparkline": [
                 2925.75,
@@ -598,14 +598,14 @@
                 3322.1,
                 3354.72,
                 3317.1,
-                3299.05
+                3297.98
             ]
         },
         "SOL": {
-            "price": 142.97,
+            "price": 142.92,
             "prev_price": 142.33,
-            "daily_chg": 0.45,
-            "change_percent": 2.76,
+            "daily_chg": 0.42,
+            "change_percent": 2.72,
             "trend": "UP",
             "sparkline": [
                 122.2,
@@ -629,13 +629,13 @@
                 145.36,
                 146.75,
                 142.33,
-                142.97
+                142.92
             ]
         },
         "DXY": {
-            "price": 99.22,
+            "price": 99.21,
             "prev_price": 99.32,
-            "daily_chg": -0.1,
+            "daily_chg": -0.11,
             "change_percent": 0.36,
             "trend": "DOWN",
             "sparkline": [
@@ -660,14 +660,14 @@
                 99.13,
                 99.13,
                 99.32,
-                99.22
+                99.21
             ]
         },
         "USDJPY": {
-            "price": 158.1,
+            "price": 158.05,
             "prev_price": 158.4,
-            "daily_chg": -0.19,
-            "change_percent": -0.03,
+            "daily_chg": -0.22,
+            "change_percent": -0.06,
             "trend": "DOWN",
             "sparkline": [
                 155.01,
@@ -691,14 +691,14 @@
                 157.99,
                 159.18,
                 158.4,
-                158.1
+                158.05
             ]
         },
         "EURUSD": {
             "price": 1.16,
             "prev_price": 1.16,
-            "daily_chg": -0.2,
-            "change_percent": -0.01,
+            "daily_chg": -0.18,
+            "change_percent": 0.01,
             "trend": "DOWN",
             "sparkline": [
                 1.18,
@@ -726,10 +726,10 @@
             ]
         },
         "USDINR": {
-            "price": 90.76,
+            "price": 90.74,
             "prev_price": 90.18,
-            "daily_chg": 0.64,
-            "change_percent": 0.58,
+            "daily_chg": 0.62,
+            "change_percent": 0.56,
             "trend": "UP",
             "sparkline": [
                 90.78,
@@ -753,7 +753,7 @@
                 90.13,
                 90.27,
                 90.18,
-                90.76
+                90.74
             ]
         },
         "USDSAR": {
@@ -788,11 +788,11 @@
             ]
         },
         "GOLD": {
-            "price": 4613.2,
+            "price": 4616.7,
             "prev_price": 4616.3,
-            "daily_chg": -0.07,
-            "change_percent": 0.19,
-            "trend": "DOWN",
+            "daily_chg": 0.01,
+            "change_percent": 0.27,
+            "trend": "UP",
             "sparkline": [
                 4304.5,
                 4347.5,
@@ -815,7 +815,7 @@
                 4589.2,
                 4626.3,
                 4616.3,
-                4613.2
+                4616.7
             ]
         },
         "OIL": {
@@ -852,8 +852,8 @@
         "COPPER": {
             "price": 5.91,
             "prev_price": 5.95,
-            "daily_chg": -0.66,
-            "change_percent": -1.28,
+            "daily_chg": -0.59,
+            "change_percent": -1.2,
             "trend": "DOWN",
             "sparkline": [
                 5.29,
@@ -881,10 +881,10 @@
             ]
         },
         "NATGAS": {
-            "price": 3.18,
+            "price": 3.17,
             "prev_price": 3.13,
-            "daily_chg": 1.66,
-            "change_percent": -6.72,
+            "daily_chg": 1.37,
+            "change_percent": -6.98,
             "trend": "UP",
             "sparkline": [
                 3.89,
@@ -908,7 +908,7 @@
                 3.42,
                 3.12,
                 3.13,
-                3.18
+                3.17
             ]
         },
         "MOVE": {
@@ -1070,22 +1070,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS at 37 signals defensive positioning. Rising oil prices fuel inflation concerns, driving up US 10Y yields and pressuring growth multiples. Outperformance in IWM suggests a shift towards value. VIX dip hints at short-term upside, but remain cautious until GMS exceeds 40.",
+        "content": "Defensive market (GMS 38) driven by higher oil and US yields, fueling risk-off sentiment. VIX decline is temporary. USDJPY may test 159. SPY breaking 680, signaling deteriorating earnings, could trigger a stronger risk aversion phase.",
         "reports": {
-            "JP": "GMS37はディフェンシブ領域。原油高がインフレ懸念を再燃させ、米10年債利回りの上昇を誘発。これがグロース株のマルチプルを圧迫し、小型株(IWM)への選好を示唆。VIXの低下は短期的な調整余地を示唆も、GMSが40を超えるまでは慎重姿勢を維持。",
-            "EN": "GMS at 37 signals defensive positioning. Rising oil prices fuel inflation concerns, driving up US 10Y yields and pressuring growth multiples. Outperformance in IWM suggests a shift towards value. VIX dip hints at short-term upside, but remain cautious until GMS exceeds 40.",
-            "CN": "当前GMS为37，市场处于防御状态。油价上涨加剧通胀担忧，推动美国10年期国债收益率上升，从而压制成长股估值。IWM表现突出表明资金转向价值股。VIX下跌暗示短期可能反弹，但在GMS超过40之前保持谨慎。",
-            "ES": "GMS en 37 indica una postura defensiva. El aumento del precio del petróleo alimenta las preocupaciones inflacionarias, impulsando al alza los rendimientos del bono estadounidense a 10 años y presionando los múltiplos de crecimiento. IWM sugiere un cambio hacia valor. La caída del VIX sugiere un alza a corto plazo, pero manténgase cauteloso hasta que el GMS supere 40.",
-            "HI": "जीएमएस 37 पर रक्षात्मक स्थिति का संकेत देता है। तेल की बढ़ती कीमतें मुद्रास्फीति की चिंताओं को बढ़ाती हैं, जिससे अमेरिकी 10वाई उपज में वृद्धि होती है और विकास गुणकों पर दबाव पड़ता है। आईडब्ल्यूएम मूल्य की ओर बदलाव का सुझाव देता है। वीआईएक्स गिरावट अल्पकालिक उल्टा संकेत देती है, लेकिन जीएमएस 40 से अधिक होने तक सतर्क रहें।",
-            "ID": "GMS di 37 menandakan posisi defensif. Kenaikan harga minyak memicu kekhawatiran inflasi, mendorong imbal hasil US 10Y naik dan menekan kelipatan pertumbuhan. IWM menunjukkan pergeseran ke nilai. Penurunan VIX mengisyaratkan kenaikan jangka pendek, tetapi tetap hati-hati sampai GMS melebihi 40.",
-            "AR": "تشير GMS عند 37 إلى وضع دفاعي. تؤدي أسعار النفط المرتفعة إلى تأجيج المخاوف من التضخم، مما يدفع عائدات السندات الأمريكية لأجل 10 سنوات إلى الارتفاع والضغط على مضاعفات النمو. يشير IWM إلى تحول نحو القيمة. يشير انخفاض مؤشر VIX إلى اتجاه صعودي قصير الأجل، لكن كن حذرًا حتى تتجاوز GMS 40."
+            "JP": "GMS38でディフェンシブな市場環境。原油高と米国債利回り上昇が重なり、リスクオフ圧力が継続。VIX低下は一時的。USDJPYは159突破を試す可能性。企業業績悪化示唆でSPYは680割れれば、リスク回避姿勢が強まる展開を想定。",
+            "EN": "Defensive market (GMS 38) driven by higher oil and US yields, fueling risk-off sentiment. VIX decline is temporary. USDJPY may test 159. SPY breaking 680, signaling deteriorating earnings, could trigger a stronger risk aversion phase.",
+            "CN": "GMS 38显示防御性市场，油价和美债收益率上涨加剧避险情绪。VIX下跌是暂时的。美元兑日元可能试探159。若标普跌破680，预示盈利恶化，可能引发更强烈的风险规避。",
+            "ES": "Mercado defensivo (GMS 38) impulsado por el alza del petróleo y los rendimientos de EE. UU., alimentando la aversión al riesgo. La caída del VIX es temporal. El USDJPY podría probar los 159. La ruptura del SPY en 680, señal de deterioro de las ganancias, podría desencadenar una fase de mayor aversión al riesgo.",
+            "HI": "उच्च तेल और अमेरिकी यील्ड द्वारा संचालित रक्षात्मक बाजार (जीएमएस 38), जोखिम से बचने की भावना को बढ़ावा दे रहा है। VIX में गिरावट अस्थायी है। USDJPY 159 का परीक्षण कर सकता है। SPY का 680 तोड़ना, कमाई में गिरावट का संकेत देना, एक मजबूत जोखिम से बचने के चरण को ट्रिगर कर सकता है।",
+            "ID": "Pasar defensif (GMS 38) didorong oleh minyak dan imbal hasil AS yang lebih tinggi, memicu sentimen penghindaran risiko. Penurunan VIX bersifat sementara. USDJPY dapat menguji 159. SPY menembus 680, menandakan penurunan pendapatan, dapat memicu fase penghindaran risiko yang lebih kuat.",
+            "AR": "سوق دفاعي (GMS 38) مدفوع بارتفاع أسعار النفط وعائدات سندات الخزانة الأمريكية، مما يغذي عزوفًا عن المخاطرة. انخفاض مؤشر VIX مؤقت. قد يختبر الدولار الأمريكي مقابل الين الياباني مستوى 159. قد يؤدي كسر مؤشر SPY لمستوى 680، مما يشير إلى تدهور الأرباح، إلى إطلاق مرحلة أقوى من النفور من المخاطرة."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-14T07:16:01Z",
-            "score": 45
-        },
         {
             "date": "2026-01-14T07:42:33Z",
             "score": 45
@@ -1321,6 +1317,10 @@
         {
             "date": "2026-01-16T11:30:46Z",
             "score": 37
+        },
+        {
+            "date": "2026-01-16T11:48:53Z",
+            "score": 38
         }
     ],
     "system_status": "OPERATIONAL"
