@@ -1,12 +1,12 @@
 {
-    "last_updated": "2026-01-16T11:48:53Z",
-    "last_successful_update": "2026-01-16T11:48:53Z",
-    "gms_score": 38,
+    "last_updated": "2026-01-16T13:05:25Z",
+    "last_successful_update": "2026-01-16T13:05:25Z",
+    "gms_score": 40,
     "sector_scores": {
         "STOCKS": 55,
         "CRYPTO": 75,
-        "FOREX": 35,
-        "COMMODITIES": 40
+        "FOREX": 30,
+        "COMMODITIES": 60
     },
     "market_data": {
         "CRYPTO_SENTIMENT": {
@@ -181,10 +181,10 @@
             ]
         },
         "VIX": {
-            "price": 15.49,
+            "price": 15.68,
             "prev_price": 15.84,
-            "daily_chg": -2.21,
-            "change_percent": 2.45,
+            "daily_chg": -1.01,
+            "change_percent": 3.7,
             "trend": "DOWN",
             "sparkline": [
                 16.48,
@@ -208,7 +208,7 @@
                 15.98,
                 16.75,
                 15.84,
-                15.49
+                15.68
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
@@ -540,10 +540,10 @@
             ]
         },
         "BTC": {
-            "price": 95287.86,
+            "price": 95404.45,
             "prev_price": 95551.19,
-            "daily_chg": -0.28,
-            "change_percent": 4.49,
+            "daily_chg": -0.15,
+            "change_percent": 4.62,
             "trend": "DOWN",
             "sparkline": [
                 87301.43,
@@ -567,14 +567,14 @@
                 95321.78,
                 96929.33,
                 95551.19,
-                95287.86
+                95404.45
             ]
         },
         "ETH": {
-            "price": 3297.98,
+            "price": 3305.96,
             "prev_price": 3317.1,
-            "daily_chg": -0.58,
-            "change_percent": 6.65,
+            "daily_chg": -0.34,
+            "change_percent": 6.91,
             "trend": "DOWN",
             "sparkline": [
                 2925.75,
@@ -598,14 +598,14 @@
                 3322.1,
                 3354.72,
                 3317.1,
-                3297.98
+                3305.96
             ]
         },
         "SOL": {
-            "price": 142.92,
+            "price": 143.54,
             "prev_price": 142.33,
-            "daily_chg": 0.42,
-            "change_percent": 2.72,
+            "daily_chg": 0.85,
+            "change_percent": 3.17,
             "trend": "UP",
             "sparkline": [
                 122.2,
@@ -629,14 +629,14 @@
                 145.36,
                 146.75,
                 142.33,
-                142.92
+                143.54
             ]
         },
         "DXY": {
-            "price": 99.21,
+            "price": 99.27,
             "prev_price": 99.32,
-            "daily_chg": -0.11,
-            "change_percent": 0.36,
+            "daily_chg": -0.05,
+            "change_percent": 0.42,
             "trend": "DOWN",
             "sparkline": [
                 98.15,
@@ -660,14 +660,14 @@
                 99.13,
                 99.13,
                 99.32,
-                99.21
+                99.27
             ]
         },
         "USDJPY": {
-            "price": 158.05,
+            "price": 158.11,
             "prev_price": 158.4,
-            "daily_chg": -0.22,
-            "change_percent": -0.06,
+            "daily_chg": -0.18,
+            "change_percent": -0.02,
             "trend": "DOWN",
             "sparkline": [
                 155.01,
@@ -691,14 +691,14 @@
                 157.99,
                 159.18,
                 158.4,
-                158.05
+                158.11
             ]
         },
         "EURUSD": {
             "price": 1.16,
             "prev_price": 1.16,
-            "daily_chg": -0.18,
-            "change_percent": 0.01,
+            "daily_chg": -0.2,
+            "change_percent": -0.01,
             "trend": "DOWN",
             "sparkline": [
                 1.18,
@@ -726,10 +726,10 @@
             ]
         },
         "USDINR": {
-            "price": 90.74,
+            "price": 90.72,
             "prev_price": 90.18,
-            "daily_chg": 0.62,
-            "change_percent": 0.56,
+            "daily_chg": 0.6,
+            "change_percent": 0.54,
             "trend": "UP",
             "sparkline": [
                 90.78,
@@ -753,14 +753,14 @@
                 90.13,
                 90.27,
                 90.18,
-                90.74
+                90.72
             ]
         },
         "USDSAR": {
             "price": 3.75,
             "prev_price": 3.75,
             "daily_chg": 0.1,
-            "change_percent": 0.01,
+            "change_percent": 0.0,
             "trend": "UP",
             "sparkline": [
                 3.75,
@@ -788,11 +788,11 @@
             ]
         },
         "GOLD": {
-            "price": 4616.7,
+            "price": 4602.9,
             "prev_price": 4616.3,
-            "daily_chg": 0.01,
-            "change_percent": 0.27,
-            "trend": "UP",
+            "daily_chg": -0.29,
+            "change_percent": -0.03,
+            "trend": "DOWN",
             "sparkline": [
                 4304.5,
                 4347.5,
@@ -815,14 +815,14 @@
                 4589.2,
                 4626.3,
                 4616.3,
-                4616.7
+                4602.9
             ]
         },
         "OIL": {
-            "price": 59.82,
+            "price": 59.84,
             "prev_price": 59.19,
-            "daily_chg": 1.06,
-            "change_percent": 0.54,
+            "daily_chg": 1.1,
+            "change_percent": 0.57,
             "trend": "UP",
             "sparkline": [
                 55.27,
@@ -846,14 +846,14 @@
                 61.15,
                 62.02,
                 59.19,
-                59.82
+                59.84
             ]
         },
         "COPPER": {
-            "price": 5.91,
+            "price": 5.87,
             "prev_price": 5.95,
-            "daily_chg": -0.59,
-            "change_percent": -1.2,
+            "daily_chg": -1.34,
+            "change_percent": -1.95,
             "trend": "DOWN",
             "sparkline": [
                 5.29,
@@ -877,14 +877,14 @@
                 5.97,
                 6.01,
                 5.95,
-                5.91
+                5.87
             ]
         },
         "NATGAS": {
-            "price": 3.17,
+            "price": 3.16,
             "prev_price": 3.13,
-            "daily_chg": 1.37,
-            "change_percent": -6.98,
+            "daily_chg": 1.09,
+            "change_percent": -7.25,
             "trend": "UP",
             "sparkline": [
                 3.89,
@@ -908,7 +908,7 @@
                 3.42,
                 3.12,
                 3.13,
-                3.17
+                3.16
             ]
         },
         "MOVE": {
@@ -1070,22 +1070,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "Defensive market (GMS 38) driven by higher oil and US yields, fueling risk-off sentiment. VIX decline is temporary. USDJPY may test 159. SPY breaking 680, signaling deteriorating earnings, could trigger a stronger risk aversion phase.",
+        "content": "Neutral GMS of 40. Rising oil prices are fueling inflation, pushing up US 10Y yields. This is compressing growth stock multiples, especially impacting QQQ. Despite a falling VIX, risk-off signals persist. A US 10Y yield above 4.2% risks accelerated equity selling.",
         "reports": {
-            "JP": "GMS38でディフェンシブな市場環境。原油高と米国債利回り上昇が重なり、リスクオフ圧力が継続。VIX低下は一時的。USDJPYは159突破を試す可能性。企業業績悪化示唆でSPYは680割れれば、リスク回避姿勢が強まる展開を想定。",
-            "EN": "Defensive market (GMS 38) driven by higher oil and US yields, fueling risk-off sentiment. VIX decline is temporary. USDJPY may test 159. SPY breaking 680, signaling deteriorating earnings, could trigger a stronger risk aversion phase.",
-            "CN": "GMS 38显示防御性市场，油价和美债收益率上涨加剧避险情绪。VIX下跌是暂时的。美元兑日元可能试探159。若标普跌破680，预示盈利恶化，可能引发更强烈的风险规避。",
-            "ES": "Mercado defensivo (GMS 38) impulsado por el alza del petróleo y los rendimientos de EE. UU., alimentando la aversión al riesgo. La caída del VIX es temporal. El USDJPY podría probar los 159. La ruptura del SPY en 680, señal de deterioro de las ganancias, podría desencadenar una fase de mayor aversión al riesgo.",
-            "HI": "उच्च तेल और अमेरिकी यील्ड द्वारा संचालित रक्षात्मक बाजार (जीएमएस 38), जोखिम से बचने की भावना को बढ़ावा दे रहा है। VIX में गिरावट अस्थायी है। USDJPY 159 का परीक्षण कर सकता है। SPY का 680 तोड़ना, कमाई में गिरावट का संकेत देना, एक मजबूत जोखिम से बचने के चरण को ट्रिगर कर सकता है।",
-            "ID": "Pasar defensif (GMS 38) didorong oleh minyak dan imbal hasil AS yang lebih tinggi, memicu sentimen penghindaran risiko. Penurunan VIX bersifat sementara. USDJPY dapat menguji 159. SPY menembus 680, menandakan penurunan pendapatan, dapat memicu fase penghindaran risiko yang lebih kuat.",
-            "AR": "سوق دفاعي (GMS 38) مدفوع بارتفاع أسعار النفط وعائدات سندات الخزانة الأمريكية، مما يغذي عزوفًا عن المخاطرة. انخفاض مؤشر VIX مؤقت. قد يختبر الدولار الأمريكي مقابل الين الياباني مستوى 159. قد يؤدي كسر مؤشر SPY لمستوى 680، مما يشير إلى تدهور الأرباح، إلى إطلاق مرحلة أقوى من النفور من المخاطرة."
+            "JP": "現状はGMS40で中立。原油上昇はインフレ圧力となり、米10年債利回りを押し上げている。これがグロース株の倍率を圧迫し、特にQQQへの影響大。VIX低下にもかかわらず、リスクオフの兆候。米10年債利回り4.2%超えで、株売り加速のリスク。",
+            "EN": "Neutral GMS of 40. Rising oil prices are fueling inflation, pushing up US 10Y yields. This is compressing growth stock multiples, especially impacting QQQ. Despite a falling VIX, risk-off signals persist. A US 10Y yield above 4.2% risks accelerated equity selling.",
+            "CN": "当前GMS为40，市场中性。油价上涨加剧通胀，推高美国10年期国债收益率。这压缩了成长股的估值倍数，尤其对QQQ产生影响。尽管VIX下降，但避险信号依然存在。美国10年期国债收益率突破4.2%存在加速股票抛售的风险。",
+            "ES": "GMS neutral de 40. El aumento del precio del petróleo alimenta la inflación, impulsando los rendimientos del Tesoro estadounidense a 10 años. Esto comprime los múltiplos de las acciones de crecimiento, impactando especialmente al QQQ. A pesar de la caída del VIX, persisten señales de aversión al riesgo. Un rendimiento del Tesoro estadounidense a 10 años superior al 4.2% implica un riesgo de aceleración de las ventas de acciones.",
+            "HI": "वर्तमान जीएमएस 40 के साथ तटस्थ है। तेल की बढ़ती कीमतें मुद्रास्फीति को बढ़ावा दे रही हैं, जिससे अमेरिकी 10 वर्षीय उपज बढ़ रही है। इससे विकास स्टॉक मल्टीपल सिकुड़ रहे हैं, विशेष रूप से क्यूक्यूक्यू पर प्रभाव पड़ रहा है। गिरते वीआईएक्स के बावजूद, जोखिम-प्रतिकूल संकेत बने हुए हैं। अमेरिकी 10 वर्षीय उपज 4.2% से ऊपर होने पर इक्विटी बेचने में तेजी का जोखिम है।",
+            "ID": "GMS netral di 40. Harga minyak naik memicu inflasi, mendorong imbal hasil US 10Y naik. Ini menekan kelipatan saham pertumbuhan, terutama berdampak pada QQQ. Meskipun VIX turun, sinyal risk-off tetap ada. Imbal hasil US 10Y di atas 4.2% berisiko mempercepat aksi jual ekuitas.",
+            "AR": "مؤشر إدارة المخاطر العالمي محايد عند 40. ارتفاع أسعار النفط يغذي التضخم، مما يدفع عائدات سندات الخزانة الأمريكية لأجل 10 سنوات إلى الارتفاع. وهذا يضغط على مضاعفات أسهم النمو، مما يؤثر بشكل خاص على مؤشر كيو كيو كيو. على الرغم من انخفاض مؤشر فيكس، إلا أن إشارات النفور من المخاطرة لا تزال قائمة. عائد سندات الخزانة الأمريكية لأجل 10 سنوات أعلى من 4.2٪ ينطوي على خطر تسارع بيع الأسهم."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-14T07:42:33Z",
-            "score": 45
-        },
         {
             "date": "2026-01-14T07:58:06Z",
             "score": 45
@@ -1321,6 +1317,10 @@
         {
             "date": "2026-01-16T11:48:53Z",
             "score": 38
+        },
+        {
+            "date": "2026-01-16T13:05:25Z",
+            "score": 40
         }
     ],
     "system_status": "OPERATIONAL"
