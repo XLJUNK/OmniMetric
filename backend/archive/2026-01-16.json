@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-01-16T21:49:12Z",
-    "last_successful_update": "2026-01-16T21:49:12Z",
+    "last_updated": "2026-01-16T22:34:23Z",
+    "last_successful_update": "2026-01-16T22:34:23Z",
     "gms_score": 36,
     "sector_scores": {
         "STOCKS": 45,
@@ -47,11 +47,10 @@
             ]
         },
         "YIELD_SPREAD": {
-            "price": 0.49,
+            "price": 0.57,
             "change_percent": 0.0,
             "trend": "NORMAL",
             "sparkline": [
-                0.43,
                 0.44,
                 0.45,
                 0.44,
@@ -80,7 +79,8 @@
                 0.52,
                 0.51,
                 0.48,
-                0.49
+                0.49,
+                0.57
             ]
         },
         "HY_SPREAD": {
@@ -212,11 +212,10 @@
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
-            "price": 0.61,
+            "price": 0.65,
             "change_percent": 0.0,
             "trend": "NEUTRAL",
             "sparkline": [
-                0.58,
                 0.6,
                 0.57,
                 0.59,
@@ -245,7 +244,8 @@
                 0.65,
                 0.65,
                 0.64,
-                0.61
+                0.61,
+                0.65
             ]
         },
         "US_10Y_YIELD": {
@@ -540,10 +540,10 @@
             ]
         },
         "BTC": {
-            "price": 95477.23,
+            "price": 95333.34,
             "prev_price": 95551.19,
-            "daily_chg": -0.08,
-            "change_percent": 4.7,
+            "daily_chg": -0.23,
+            "change_percent": 4.54,
             "trend": "DOWN",
             "sparkline": [
                 87301.43,
@@ -567,14 +567,14 @@
                 95321.78,
                 96929.33,
                 95551.19,
-                95477.23
+                95333.34
             ]
         },
         "ETH": {
-            "price": 3292.95,
+            "price": 3287.07,
             "prev_price": 3317.1,
-            "daily_chg": -0.73,
-            "change_percent": 6.49,
+            "daily_chg": -0.91,
+            "change_percent": 6.3,
             "trend": "DOWN",
             "sparkline": [
                 2925.75,
@@ -598,14 +598,14 @@
                 3322.1,
                 3354.72,
                 3317.1,
-                3292.95
+                3287.07
             ]
         },
         "SOL": {
-            "price": 145.09,
+            "price": 144.75,
             "prev_price": 142.33,
-            "daily_chg": 1.94,
-            "change_percent": 4.28,
+            "daily_chg": 1.7,
+            "change_percent": 4.03,
             "trend": "UP",
             "sparkline": [
                 122.2,
@@ -629,7 +629,7 @@
                 145.36,
                 146.75,
                 142.33,
-                145.09
+                144.75
             ]
         },
         "DXY": {
@@ -664,10 +664,10 @@
             ]
         },
         "USDJPY": {
-            "price": 158.12,
+            "price": 158.09,
             "prev_price": 158.4,
-            "daily_chg": -0.18,
-            "change_percent": -0.02,
+            "daily_chg": -0.2,
+            "change_percent": -0.04,
             "trend": "DOWN",
             "sparkline": [
                 155.01,
@@ -691,14 +691,14 @@
                 157.99,
                 159.18,
                 158.4,
-                158.12
+                158.09
             ]
         },
         "EURUSD": {
             "price": 1.16,
             "prev_price": 1.16,
-            "daily_chg": -0.38,
-            "change_percent": -0.18,
+            "daily_chg": -0.37,
+            "change_percent": -0.17,
             "trend": "DOWN",
             "sparkline": [
                 1.18,
@@ -788,10 +788,10 @@
             ]
         },
         "GOLD": {
-            "price": 4598.6,
+            "price": 4601.1,
             "prev_price": 4616.3,
-            "daily_chg": -0.38,
-            "change_percent": -0.12,
+            "daily_chg": -0.33,
+            "change_percent": -0.07,
             "trend": "DOWN",
             "sparkline": [
                 4304.5,
@@ -815,14 +815,14 @@
                 4589.2,
                 4626.3,
                 4616.3,
-                4598.6
+                4601.1
             ]
         },
         "OIL": {
-            "price": 59.29,
+            "price": 59.22,
             "prev_price": 59.19,
-            "daily_chg": 0.17,
-            "change_percent": -0.35,
+            "daily_chg": 0.05,
+            "change_percent": -0.47,
             "trend": "UP",
             "sparkline": [
                 55.27,
@@ -846,14 +846,14 @@
                 61.15,
                 62.02,
                 59.19,
-                59.29
+                59.22
             ]
         },
         "COPPER": {
             "price": 5.85,
             "prev_price": 5.95,
-            "daily_chg": -1.71,
-            "change_percent": -2.31,
+            "daily_chg": -1.67,
+            "change_percent": -2.28,
             "trend": "DOWN",
             "sparkline": [
                 5.29,
@@ -881,10 +881,10 @@
             ]
         },
         "NATGAS": {
-            "price": 3.1,
+            "price": 3.11,
             "prev_price": 3.13,
-            "daily_chg": -0.83,
-            "change_percent": -9.01,
+            "daily_chg": -0.61,
+            "change_percent": -8.8,
             "trend": "DOWN",
             "sparkline": [
                 3.89,
@@ -908,7 +908,7 @@
                 3.42,
                 3.12,
                 3.13,
-                3.1
+                3.11
             ]
         },
         "MOVE": {
@@ -1070,22 +1070,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS at 36 indicates a defensive regime. Tightening HY spreads suggest limited risk-on, but falling oil and copper prices raise recession concerns. With stable US 10Y yields, USDJPY remains elevated. A USDJPY breach above 159 could trigger intervention and Yen strength.",
+        "content": "GMS at 36 signals defensive positioning. Limited HY spread compression reflects a cautious low-rate environment. Stagnant copper/gold ratio suggests dampened risk appetite. SPY pressured as US 10Y yield holds at 4.17%. Low VIX masks rising oil risks. Rising TNX could trigger accelerated risk-off.",
         "reports": {
-            "JP": "GMS36はディフェンシブ領域。ハイイールド債スプレッド縮小は限定的リスクオンを示唆も、原油と銅の価格下落が景気後退懸念を高める。米10年債利回りが膠着する中、ドル円は高止まり。USDJPYが159円を超えれば、介入警戒水準に達し、円高に転換する可能性。",
-            "EN": "GMS at 36 indicates a defensive regime. Tightening HY spreads suggest limited risk-on, but falling oil and copper prices raise recession concerns. With stable US 10Y yields, USDJPY remains elevated. A USDJPY breach above 159 could trigger intervention and Yen strength.",
-            "CN": "GMS 36表明防御态势。高收益债息差收窄显示有限的风险偏好，但石油和铜价下跌加剧衰退担忧。美国10年期国债收益率稳定，美元兑日元保持高位。USDJPY突破159可能触发干预，日元走强。",
-            "ES": "Un GMS de 36 señala un régimen defensivo. La reducción de los diferenciales HY sugiere un limitado apetito por el riesgo, pero la caída de los precios del petróleo y el cobre aumenta las preocupaciones de recesión. Con rendimientos estables del Tesoro a 10 años, el USDJPY se mantiene elevado. Una ruptura del USDJPY por encima de 159 podría desencadenar una intervención y fortalecer el Yen.",
-            "HI": "जीएमएस 36 रक्षात्मक स्थिति दर्शाता है। एचवाई स्प्रेड में कमी सीमित जोखिम-ऑन का सुझाव देती है, लेकिन तेल और तांबे की कीमतें गिरने से मंदी की चिंता बढ़ जाती है। अमेरिकी 10वाई उपज स्थिर रहने के साथ, यूएसडीजेपीवाई ऊंचा बना हुआ है। यूएसडीजेपीवाई का 159 से ऊपर उल्लंघन हस्तक्षेप और येन की मजबूती को ट्रिगर कर सकता है।",
-            "ID": "GMS di 36 menunjukkan rezim defensif. Penyempitan spread HY menunjukkan risk-on terbatas, tetapi penurunan harga minyak dan tembaga meningkatkan kekhawatiran resesi. Dengan imbal hasil US 10Y yang stabil, USDJPY tetap tinggi. Penembusan USDJPY di atas 159 dapat memicu intervensi dan penguatan Yen.",
-            "AR": "تشير درجة GMS البالغة 36 إلى وضع دفاعي. يشير تضييق فروق عائدات السندات عالية المخاطر إلى إقبال محدود على المخاطرة، لكن انخفاض أسعار النفط والنحاس يثير مخاوف من الركود. مع استقرار عوائد سندات الخزانة الأمريكية لأجل 10 سنوات، يظل الدولار الأمريكي مقابل الين الياباني مرتفعًا. قد يؤدي تجاوز الدولار الأمريكي مقابل الين الياباني مستوى 159 إلى تدخل وتقوية الين."
+            "JP": "GMS36でディフェンシブ。低金利環境下、ハイイールド債スプレッド縮小は限定的。銅/金レシオ停滞が示すように、リスク選好は鈍化。米10年債利回り4.17%維持が重石となり、SPYは軟調。VIXは低水準も、原油価格上昇は警戒。TNX上昇がトリガーとなり、リスクオフ加速の可能性。",
+            "EN": "GMS at 36 signals defensive positioning. Limited HY spread compression reflects a cautious low-rate environment. Stagnant copper/gold ratio suggests dampened risk appetite. SPY pressured as US 10Y yield holds at 4.17%. Low VIX masks rising oil risks. Rising TNX could trigger accelerated risk-off.",
+            "CN": "GMS为36，表明防御态势。高收益债利差收窄幅度有限，反映出低利率环境下市场的谨慎态度。铜金比停滞不前，表明风险偏好减弱。美国10年期国债收益率维持在4.17%，对标普500指数构成压力。VIX虽低，但原油价格上涨构成风险。美国国债收益率上升可能引发加速避险。",
+            "ES": "GMS en 36 señala posicionamiento defensivo. La limitada compresión del diferencial HY refleja cautela en un entorno de bajos tipos. El ratio cobre/oro estancado sugiere un apetito de riesgo atenuado. SPY presionado con el rendimiento del bono EEUU a 10 años en 4.17%. VIX bajo enmascara riesgos del petróleo. El aumento de TNX podría acelerar la aversión al riesgo.",
+            "HI": "जीएमएस 36 पर रक्षात्मक स्थिति का संकेत देता है। सीमित HY स्प्रेड संकुचन एक सतर्क कम दर वाले वातावरण को दर्शाता है। स्थिर तांबा/सोना अनुपात जोखिम लेने की भूख में कमी का सुझाव देता है। अमेरिकी 10 वर्षीय उपज 4.17% पर बने रहने से SPY पर दबाव। कम VIX बढ़ते तेल जोखिमों को छुपाता है। बढ़ता TNX त्वरित जोखिम-बंद को ट्रिगर कर सकता है।",
+            "ID": "GMS di 36 menandakan posisi defensif. Kompresi spread HY terbatas mencerminkan lingkungan suku bunga rendah yang hati-hati. Rasio tembaga/emas yang stagnan menunjukkan selera risiko yang meredup. SPY tertekan karena imbal hasil US 10Y bertahan di 4.17%. VIX rendah menutupi risiko minyak yang meningkat. Kenaikan TNX dapat memicu penghindaran risiko yang dipercepat.",
+            "AR": "يشير GMS عند 36 إلى تمركز دفاعي. يعكس انضغاط فروق عوائد السندات عالية المخاطر المحدود بيئة حذرة ذات معدل فائدة منخفض. تشير نسبة النحاس/الذهب الراكدة إلى ضعف الإقبال على المخاطرة. SPY تحت الضغط مع استمرار عائد سندات الخزانة الأمريكية لمدة 10 سنوات عند 4.17٪. VIX منخفض يخفي مخاطر ارتفاع أسعار النفط. قد يؤدي ارتفاع TNX إلى تسريع النفور من المخاطرة."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-14T14:49:35Z",
-            "score": 39
-        },
         {
             "date": "2026-01-15T00:50:12Z",
             "score": 39
@@ -1320,6 +1316,10 @@
         },
         {
             "date": "2026-01-16T21:49:12Z",
+            "score": 36
+        },
+        {
+            "date": "2026-01-16T22:34:23Z",
             "score": 36
         }
     ],
