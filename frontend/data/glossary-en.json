@@ -1,0 +1,362 @@
+[
+    {
+        "id": "net-liquidity",
+        "category": "Liquidity",
+        "term": "Net Liquidity",
+        "definition": "The measure of actual liquidity supplied to the market, calculated by subtracting the Treasury General Account (TGA) and Reverse Repo (RRP) balances from the Fed's Balance Sheet.",
+        "market_impact": {
+            "up": "Price appreciation in risk assets (stocks, crypto). Creates an environment tolerant of PER expansion.",
+            "down": "Increased market volatility. Valuation adjustments likely, especially in growth stocks."
+        },
+        "context_2026": "In 2026, with the end of QT and adjustments to Digital Fiat Currency (CBDC) reserves, qualitative changes in quantitative policy are in focus. The fluctuation of this real liquidity determines market resilience more than simple interest rates.",
+        "gms_relevance": "Extremely High. Forms the baseline of the GMS Score and functions as a fundamental variable measuring the market's 'buying power'.",
+        "seo_keywords": [
+            "Net Liquidity",
+            "Fed Balance Sheet",
+            "Liquidity Driven Market",
+            "Reverse Repo Balance"
+        ]
+    },
+    {
+        "id": "vix",
+        "category": "Sentiment",
+        "term": "VIX (Fear Index)",
+        "definition": "A measure of expected 30-day volatility based on S&P 500 option prices. Quantifies investor psychological anxiety.",
+        "market_impact": {
+            "up": "Investor risk-off. Rapid spikes signal panic selling, but extreme highs can suggest a buying opportunity (selling climax).",
+            "down": "Investor optimism. Stable levels encourage carry trades and leveraged investment."
+        },
+        "context_2026": "With AI-driven ultra-high-speed algorithmic trading now mainstream, VIX spikes tend to be short-lived ('spike transience'). Also heavily influenced by Zero-Day Options (0DTE).",
+        "gms_relevance": "High. Used as an inverse correlation indicator to detect reversals in risk tolerance. Algorithms significantly lower the score when above 20.",
+        "seo_keywords": [
+            "VIX Index",
+            "Volatility",
+            "Fear Index",
+            "Market Sentiment"
+        ]
+    },
+    {
+        "id": "real-interest-rate",
+        "category": "Interest Rates",
+        "term": "Real Interest Rate",
+        "definition": "Nominal interest rate (e.g., 10Y Yield) minus expected inflation rate. The true cost of borrowing money.",
+        "market_impact": {
+            "up": "Headwind for Gold, Bitcoin, and high-PER tech stocks. Factor for a stronger Dollar.",
+            "down": "Boosts asset prices. Accelerates risk money inflow into AI startups and other sectors."
+        },
+        "context_2026": "AI-driven boosts to potential growth rates have raised the neutral real interest rate (r-star). Understanding the 'New Normal' of stock rallies amidst positive real interest rates is key in 2026.",
+        "gms_relevance": "High. Functions as the discount rate. A primary weighting factor measuring valuation appropriateness in the GMS Score.",
+        "seo_keywords": [
+            "Real Interest Rate",
+            "10Y Yield",
+            "Expected Inflation",
+            "TIPS"
+        ]
+    },
+    {
+        "id": "gms-score",
+        "category": "Proprietary",
+        "term": "GMS Score",
+        "definition": "A comprehensive market leading indicator calculated proprietarily by OmniMetric, integrating liquidity, fundamentals, SNS sentiment, and AI demand forecasts.",
+        "market_impact": {
+            "up": "Improvement in overall market expected value. Increased advantage for trend-following strategies.",
+            "down": "Warning of potential pullback risk. Recommends hedging or increasing cash ratios."
+        },
+        "context_2026": "Utilizing the latest LLM engines (including Gemini 3) in 2026. A next-gen compass synchronizing qualitative SNS info with economic stats in real-time to eliminate information asymmetry.",
+        "gms_relevance": "Core Indicator. All other items are positioned as components to construct this score.",
+        "seo_keywords": [
+            "GMS Score",
+            "OmniMetric",
+            "Macro Indicator",
+            "AI Market Prediction"
+        ]
+    },
+    {
+        "id": "cpi",
+        "category": "Inflation",
+        "term": "CPI (Consumer Price Index)",
+        "definition": "Measures price changes in goods and services purchased by consumers. Has the most direct impact on central bank monetary policy.",
+        "market_impact": {
+            "up": "Stock declines and Dollar strength due to rate hike/tightening fears. Risk of reflation.",
+            "down": "Stock rallies and Dollar weakness on rate cut hopes. Progress in disinflation is welcomed."
+        },
+        "context_2026": "In 2026, attention is on the expanding contribution of new service sectors like 'AI Agent Subscription Costs' and 'Robotaxi Fares', rather than energy prices.",
+        "gms_relevance": "Medium. Becoming a lagging indicator, so weighted lower in the GMS Score than leading indicators like PCE or employment data.",
+        "seo_keywords": [
+            "CPI",
+            "Consumer Price Index",
+            "Inflation Rate",
+            "2026 Economy"
+        ]
+    },
+    {
+        "id": "pce-price-index",
+        "category": "Inflation",
+        "term": "PCE (Personal Consumption Expenditures Price Index)",
+        "definition": "The Fed's preferred inflation metric. Reflects changes in consumer spending patterns and covers a broader range of price movements than CPI.",
+        "market_impact": {
+            "up": "Strengthens Fed hawkishness, leading to higher terminal rates. Weighs on tech stocks.",
+            "down": "Raises hopes for a Fed dovish pivot, giving general market relief."
+        },
+        "context_2026": "Decreasing rent ratios and deflationary pressure in 'intangible asset services' due to AI productivity gains contribute to PCE stability. Holds the key to the Fed achieving its 2% target.",
+        "gms_relevance": "High. Adopted as higher-precision input data than CPI for predicting policy rate changes.",
+        "seo_keywords": [
+            "PCE Price Index",
+            "Fed",
+            "Monetary Policy",
+            "Deflationary Pressure"
+        ]
+    },
+    {
+        "id": "non-farm-payrolls",
+        "category": "Labor Market",
+        "term": "Non-Farm Payrolls (NFP)",
+        "definition": "The most important monthly indicator of US economic health. Labor market strength underpins consumption.",
+        "market_impact": {
+            "up": "Proof of a strong economy, but overheating can lead to temporary stock declines due to rate hike fears (Good is Bad).",
+            "down": "Stock declines due to slowdown/recession fears, or rallies on early rate cut hopes."
+        },
+        "context_2026": "AI adoption has intensified labor mobility. 'White-collar re-employment rates' and 'Wage growth for AI-skilled workers' now influence market reactions more than simple employment numbers.",
+        "gms_relevance": "High. The engine measuring economic health. Directly linked to GMS Score recession risk assessment.",
+        "seo_keywords": [
+            "Non-Farm Payrolls",
+            "NFP",
+            "Labor Market",
+            "Recession"
+        ]
+    },
+    {
+        "id": "yield-curve-10y2y",
+        "category": "Bonds",
+        "term": "Yield Curve Inversion (10Y-2Y)",
+        "definition": "A phenomenon where the 10-year Treasury yield falls below the 2-year yield. Historically a leading indicator of recession.",
+        "market_impact": {
+            "up": "(Steepening) Expectations of economic recovery, or reflation. Positive for financial stocks.",
+            "down": "(Flattening/Deepening Inversion) Sign of recession. Medium to long-term risk-off."
+        },
+        "context_2026": "After resolving a long-standing inversion (steepening), 2026 stands at a crossroads: has the economy returned to cruising speed, or is it falling into stagflation?",
+        "gms_relevance": "Medium. Due to structural changes in bond supply/demand, its predictive accuracy has waned, so it's evaluated in combination with other indicators.",
+        "seo_keywords": [
+            "Yield Inversion",
+            "Yield Curve",
+            "10Y2Y",
+            "Recession"
+        ]
+    },
+    {
+        "id": "ff-rate",
+        "category": "Interest Rates",
+        "term": "Fed Funds Rate (FF Rate)",
+        "definition": "The US policy interest rate. The source of all interest rates, governing global capital flows.",
+        "market_impact": {
+            "up": "Stronger Dollar, lower asset prices, increased corporate debt burden.",
+            "down": "Weaker Dollar, risk-on markets, vitalization of the housing market."
+        },
+        "context_2026": "With the rise of the neutral rate (r-star), a return to the zero-interest era of the 2010s is not expected. Revenue models that work in a 'world with interest' (maintained at 3-4%) are required.",
+        "gms_relevance": "Extremely High. Direct input for discount rate. Affects 'Leverage Recommendation' in the GMS Score.",
+        "seo_keywords": [
+            "FF Rate",
+            "Policy Rate",
+            "Rate Hike",
+            "Rate Cut"
+        ]
+    },
+    {
+        "id": "ai-demand-forecast-index",
+        "category": "Technology",
+        "term": "AI Demand Forecast Index (OmniMetric Proprietary)",
+        "definition": "A next-gen leading economic indicator integrating data center capex, GPU lead times, and LLM token consumption.",
+        "market_impact": {
+            "up": "Strong buy signal for semiconductor, energy, and tech sectors. Expansion of capex.",
+            "down": "Fears of AI bubble burst. Suggests lower capital efficiency due to over-investment."
+        },
+        "context_2026": "AI is no longer just a sector story but a macro variable defining productivity across all industries. A decline in this index foreshadows a drop in GDP growth quarters later.",
+        "gms_relevance": "High. Valued in the 2026 GMS Score as a 'New Leading Indicator' replacing the traditional ISM Manufacturing PMI.",
+        "seo_keywords": [
+            "AI Demand",
+            "Data Center Investment",
+            "Semiconductors",
+            "GPU Lead Time"
+        ]
+    },
+    {
+        "id": "semi-inventory-cycle",
+        "category": "Technology",
+        "term": "Semiconductor Inventory Cycle",
+        "definition": "Semiconductor maker Book-to-Bill ratio. Reflects the demand cycle from IT devices to AI servers and EVs.",
+        "market_impact": {
+            "up": "Bottoming out is a prime buying opportunity for tech stocks. Peaking suggests profit-taking time.",
+            "down": "Turning point from over-demand to over-supply. Early sign of economic slowdown."
+        },
+        "context_2026": "The spread of Edge AI (AI processing on phones/PCs) has shortened and intensified the cycle. 2026 marks the end of inventory correction for general chips and a transition to next-gen standards.",
+        "gms_relevance": "Medium. Used for Sector Rotation prediction in the GMS Score.",
+        "seo_keywords": [
+            "Semiconductor Cycle",
+            "Book-to-Bill",
+            "Inventory Correction",
+            "Edge AI"
+        ]
+    },
+    {
+        "id": "cbdc-adoption-rate",
+        "category": "Liquidity",
+        "term": "CBDC Adoption Rate",
+        "definition": "Circulation and usage rate of digital currencies issued by major central banks. Measures settlement speed and currency programmability.",
+        "market_impact": {
+            "up": "Faster capital circulation. Improved transmission speed of monetary policy. Threat to existing banking sector.",
+            "down": "Credit concerns due to privacy issues or system failures. Lower trust in fiat (flight to Gold/BTC)."
+        },
+        "context_2026": "In 2026, major central banks begin full CBDC operations. This enables direct distribution of 'Helicopter Money', noting increased difficulty in inflation control.",
+        "gms_relevance": "Medium. Incorporated into GMS Score as a variable for Money Velocity.",
+        "seo_keywords": [
+            "CBDC",
+            "Digital Yen",
+            "Digital Dollar",
+            "Central Bank Digital Currency"
+        ]
+    },
+    {
+        "id": "move-index",
+        "category": "Sentiment",
+        "term": "MOVE Index (Bond VIX)",
+        "definition": "Expected volatility of the US Treasury market calculated from bond options.",
+        "market_impact": {
+            "up": "Increased uncertainty in rate outlook. Negative for mortgages and corporate bond markets. Volatile Dollar.",
+            "down": "Stable rates encourage capital inflow to risk assets. Activation of carry trades."
+        },
+        "context_2026": "With Fed forward guidance shifting to an AI-driven interactive model, calmness in this index is an essential condition for market stability.",
+        "gms_relevance": "Medium. Used in combination with VIX for multi-asset risk assessment.",
+        "seo_keywords": [
+            "MOVE Index",
+            "Bond Volatility",
+            "Interest Rate Fluctuation",
+            "US Treasuries"
+        ]
+    },
+    {
+        "id": "fear-and-greed-index",
+        "category": "Sentiment",
+        "term": "Fear & Greed Index",
+        "definition": "Quantifies market enthusiasm (0-100) from multiple data points like stock momentum, volatility, and junk bond demand.",
+        "market_impact": {
+            "up": "(Greed) Bull market, but over 80 indicates high risk of pullback due to overheating.",
+            "down": "(Fear) Bear market, but under 20 suggests a technical rebound due to overselling is near."
+        },
+        "context_2026": "Algorithmic contrarian trading has become common, making recovery from Extreme Fear extremely fast. A mandatory indicator for short-term swing trading.",
+        "gms_relevance": "Medium. Contributes as a 'Contrarian Momentum' component in the GMS Score.",
+        "seo_keywords": [
+            "Fear and Greed Index",
+            "Market Psychology",
+            "Overheating",
+            "Oversold"
+        ]
+    },
+    {
+        "id": "copper-gold-ratio",
+        "category": "Commodities",
+        "term": "Copper/Gold Ratio",
+        "definition": "Copper price divided by Gold price. Ascends during expansion, declines during recession. A leading economic indicator.",
+        "market_impact": {
+            "up": "Revitalization of global manufacturing and infrastructure investment. Risk-on.",
+            "down": "Shift to defensive assets (Gold). Stagnation or rising geopolitical risk."
+        },
+        "context_2026": "Structural copper shortages are evident due to the transition to a decarbonized/electrified society (AI Data Centers/EVs). More of an 'Energy Transition Progress Index' than a simple economic indicator now.",
+        "gms_relevance": "Medium. Alternative indicator measuring the 'thermal energy' of the real economy.",
+        "seo_keywords": [
+            "Copper Gold Ratio",
+            "Commodity Market",
+            "Dr. Copper",
+            "Infrastructure Investment"
+        ]
+    },
+    {
+        "id": "m2-money-supply",
+        "category": "Liquidity",
+        "term": "M2 Money Supply",
+        "definition": "Total supply of currency including cash, deposits, and MMFs. Long-term driver of inflation and asset prices.",
+        "market_impact": {
+            "up": "Medium/Long-term inflation pressure. Currency depreciation (weaker Dollar) and asset inflation.",
+            "down": "Deflationary pressure. Contraction of economic activity. Formation of stock market top."
+        },
+        "context_2026": "Note that money is moving from bank deposits to on-chain assets (stablecoins), so traditional M2 stats alone no longer capture the full liquidity picture.",
+        "gms_relevance": "Medium. Supplementary data for liquidity analysis. Checked for divergence from Net Liquidity.",
+        "seo_keywords": [
+            "M2",
+            "Money Supply",
+            "Currency Supply",
+            "Stablecoins"
+        ]
+    },
+    {
+        "id": "ism-manufacturing-pmi",
+        "category": "Economy",
+        "term": "ISM Manufacturing PMI",
+        "definition": "Survey of purchasing managers in the US manufacturing sector. Above 50 indicates expansion, below 50 contraction.",
+        "market_impact": {
+            "up": "Manufacturing revival, expectations of profit growth. Tailwind for value stocks.",
+            "down": "Manufacturing decline, recession fears. Shift to defensive stocks."
+        },
+        "context_2026": "Automation via 'Smart Factories' implies 'New Orders' and 'Input Prices (AI Energy Costs)' are gaining importance over employment components.",
+        "gms_relevance": "Medium. Used as a 'Confirmation Indicator' to verify traditional business cycles.",
+        "seo_keywords": [
+            "ISM Manufacturing PMI",
+            "PMI",
+            "Business Cycle",
+            "Manufacturing"
+        ]
+    },
+    {
+        "id": "sovereign-credit-spread",
+        "category": "Bonds",
+        "term": "Sovereign Credit Spread",
+        "definition": "Yield difference between US Treasuries and other sovereign bonds (or corporate bonds). Sensitivity to market credit risk.",
+        "market_impact": {
+            "up": "(Widening) Risk-off. Capital flight from emerging markets or corporate default fears.",
+            "down": "(Narrowing) Risk-on. Improved global investment appetite. Inflow to high-yield assets."
+        },
+        "context_2026": "With more nations holding massive debt, CDS (Credit Default Swaps) on US Treasuries themselves have become a new key indicator measuring eligibility as risk-free assets.",
+        "gms_relevance": "Medium. Captures signs of systemic risk and calculates downside risk for the GMS Score.",
+        "seo_keywords": [
+            "Credit Spread",
+            "Default Risk",
+            "Treasury Yield",
+            "CDS"
+        ]
+    },
+    {
+        "id": "ai-productivity-multiplier",
+        "category": "Technology",
+        "term": "AI Productivity Multiplier (OmniMetric Proprietary)",
+        "definition": "Calculates the growth in GDP contribution per unit hour due to AI adoption. Used to correct potential growth rates.",
+        "market_impact": {
+            "up": "Economic growth without inflation. Enables sustained stock rallies even under high real interest rates.",
+            "down": "Slowing returns on AI investment. Stagflation fears due to stalled productivity gains."
+        },
+        "context_2026": "In 2026, over 30% of all industries are autonomous via AI Agents. This multiplier is a leading indicator predicting future corporate profit margins.",
+        "gms_relevance": "High. Maximum rating in the GMS Score 'Growth' category as a factor raising the long-term market ceiling.",
+        "seo_keywords": [
+            "AI Productivity",
+            "Potential Growth Rate",
+            "Productivity Revolution",
+            "2026 GDP"
+        ]
+    },
+    {
+        "id": "rrp-balance",
+        "category": "Liquidity",
+        "term": "Reverse Repo (RRP) Balance",
+        "definition": "Balance of excess funds deposited by MMFs and others at the Fed. A buffer of 'standby funds' that can flow back into the market.",
+        "market_impact": {
+            "up": "Absorption of liquidity from the market. Neutral to negative for stocks.",
+            "down": "Release of liquidity to the market. Strong support factor for risk assets (liquidity supply)."
+        },
+        "context_2026": "How the RRP balance, which plummeted from 2024-2025, moves under the new 2026 regulatory environment determines market tail risk.",
+        "gms_relevance": "High. Essential variable for calculating Net Liquidity. Low balances indicate reduced market resilience.",
+        "seo_keywords": [
+            "Reverse Repo",
+            "RRP",
+            "Fed",
+            "Standby Funds"
+        ]
+    }
+]

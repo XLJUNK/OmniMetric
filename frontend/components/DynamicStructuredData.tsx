@@ -13,9 +13,20 @@ interface MarketData {
     last_updated: string;
 }
 
-export const DynamicStructuredData = () => {
+export const DynamicStructuredData = ({ data: externalData }: { data?: any }) => {
     const [data, setData] = useState<MarketData | null>(null);
 
+    // If external data is provided, use it directly (Static Mode)
+    if (externalData) {
+        return (
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(externalData) }}
+            />
+        );
+    }
+
+    // Otherwise, fetch market data (Dashboard Mode)
     useEffect(() => {
         const fetchData = async () => {
             try {

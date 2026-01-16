@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Home, LineChart, Bitcoin, Banknote, Gem } from 'lucide-react';
+import { Home, LineChart, Bitcoin, Banknote, Gem, BookOpen } from 'lucide-react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { LangType, DICTIONARY } from '@/data/dictionary';
 
@@ -18,6 +18,7 @@ export const MobileNav = () => {
         { key: 'crypto', label: t.labels.crypto || 'Crypto', icon: Bitcoin, path: '/crypto' },
         { key: 'forex', label: t.labels.forex || 'Forex', icon: Banknote, path: '/forex' },
         { key: 'cmdty', label: t.labels.commodities || 'Cmdty', icon: Gem, path: '/commodities' },
+        { key: 'wiki', label: t.labels.wiki || 'Wiki', icon: BookOpen, path: '/glossary' },
     ];
 
     return (
@@ -28,11 +29,11 @@ export const MobileNav = () => {
                     <button
                         key={tab.key}
                         onClick={() => router.push(`${tab.path}?lang=${lang}`)}
-                        className={`flex flex-col items-center gap-1 transition-colors relative ${isActive ? 'text-sky-500' : 'text-slate-500'
+                        className={`flex flex-col items-center justify-center gap-0.5 h-full transition-colors relative ${isActive ? 'text-sky-500' : 'text-slate-500'
                             }`}
                     >
                         <tab.icon className={`w-5 h-5 ${isActive ? 'drop-shadow-[0_0_8px_rgba(14,165,233,0.5)]' : ''}`} />
-                        <span className="text-[9px] font-bold uppercase tracking-tighter truncate w-full text-center">
+                        <span className="text-[9px] font-bold uppercase tracking-tighter truncate w-full text-center leading-none">
                             {tab.label}
                         </span>
                         {/* Active Indicator Dot */}

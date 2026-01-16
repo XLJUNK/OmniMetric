@@ -5,6 +5,7 @@ import { Shield, Activity, Globe, Zap, Clock, ChevronDown, Check, TrendingUp, Tr
 import { RiskGauge, HistoryChart, MetricChart } from '@/components/Charts';
 import { DICTIONARY, LangType } from '@/data/dictionary';
 import { useRouter, usePathname } from 'next/navigation';
+import Link from 'next/link'; /* IMP: Added Link */
 import { NewsTicker } from '@/components/NewsTicker';
 import { AdUnit } from '@/components/AdUnit';
 
@@ -339,6 +340,10 @@ export const Dashboard = ({ lang, setLang }: DashboardProps) => {
                                 <div className="w-full md:w-[20%] h-auto md:h-full py-3 px-4 md:py-5 md:px-6 flex flex-row md:flex-col justify-between md:justify-center items-center md:items-start border-b md:border-b-0 md:border-r border-[#1E293B] bg-black/20 relative">
                                     <span className="text-xs md:text-sm text-gray-400 font-bold uppercase tracking-wide mb-0 md:mb-1 truncate flex items-center gap-2">
                                         {item.label}
+                                        {/* INFO ICON LINK */}
+                                        <Link href={`/glossary#${item.key.toLowerCase().replace('_', '-')}`} className="opacity-30 hover:opacity-100 hover:text-sky-500 transition-opacity">
+                                            <Info className="w-3 h-3" />
+                                        </Link>
                                         {isLive && <span className="text-[8px] bg-sky-900/50 text-sky-400 px-1 rounded animate-pulse">{t.titles.delayed_tick}</span>}
                                     </span>
                                     <span className="text-2xl md:text-4xl font-black text-white font-mono tracking-tight glow-text">{val.price}</span>

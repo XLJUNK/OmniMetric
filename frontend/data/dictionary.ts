@@ -165,6 +165,7 @@ export const DICTIONARY = {
             crypto: "CRYPTO",
             forex: "FOREX",
             commodities: "COMMODITIES",
+            wiki: "WIKI",
             tickers: {
                 BTC: "Bitcoin", ETH: "Ethereum", SOL: "Solana",
                 GOLD: "Gold", OIL: "WTI Crude Oil", COPPER: "Copper", NATGAS: "Natural Gas",
@@ -357,6 +358,7 @@ export const DICTIONARY = {
             crypto: "暗号資産",
             forex: "為替・金利",
             commodities: "コモディティ",
+            wiki: "用語集",
             tickers: {
                 BTC: "ビットコイン", ETH: "イーサリアム", SOL: "ソラナ",
                 GOLD: "金 (Gold)", OIL: "WTI原油", COPPER: "銅", NATGAS: "天然ガス",
@@ -519,6 +521,7 @@ export const DICTIONARY = {
             crypto: "加密货币",
             forex: "外汇",
             commodities: "大宗商品",
+            wiki: "百科",
             tickers: {
                 BTC: "比特币", ETH: "以太坊", SOL: "索拉纳",
                 GOLD: "黄金", OIL: "WTI原油", COPPER: "铜", NATGAS: "天然气",
@@ -681,6 +684,7 @@ export const DICTIONARY = {
             crypto: "CRIPTO",
             forex: "DIVISAS",
             commodities: "MATERIAS PRIMAS",
+            wiki: "WIKI",
             tickers: {
                 BTC: "Bitcoin", ETH: "Ethereum", SOL: "Solana",
                 GOLD: "Oro", OIL: "Petróleo WTI", COPPER: "Cobre", NATGAS: "Gas Natural",
@@ -843,6 +847,7 @@ export const DICTIONARY = {
             crypto: "क्रिप्टो",
             forex: "विदेशी मुद्रा",
             commodities: "कमोडिटीज",
+            wiki: "विकी",
             tickers: {
                 BTC: "बिटकॉइन", ETH: "एथेरियम", SOL: "सोलाना",
                 GOLD: "सोना", OIL: "कच्चा तेल", COPPER: "तांबा", NATGAS: "प्राकृतिक गैस",
@@ -1004,7 +1009,8 @@ export const DICTIONARY = {
             stocks: "SAHAM",
             crypto: "KRIPTO",
             forex: "VALAS",
-            commodities: "KOMODITAS"
+            commodities: "KOMODITAS",
+            wiki: "WIKI"
         },
         subpages: {
             about: {
@@ -1160,7 +1166,8 @@ export const DICTIONARY = {
             stocks: "الأسهم",
             crypto: "تشفير",
             forex: "فوركس",
-            commodities: "سلع"
+            commodities: "سلع",
+            wiki: "ويكي"
         },
         subpages: {
             about: {

@@ -782,6 +782,11 @@ CHARACTER COUNT RANGE (STRICT):
 - "Excessive length" (>250 chars) is an automatic FAILURE.
 - You must physically count and ensure every language falls within [200, 250].
 
+*** NEGATIVE CONSTRAINTS (CRITICAL) ***
+- DO NOT include the character count in the output (e.g., "(230 chars)", "（245文字）").
+- DO NOT include any metadata or parenthetical notes about the generation.
+- OUTPUT ONLY the clean, professional report text.
+
 CONTENT "THREE PRINCIPLES" (MANDATORY):
 Each report MUST contain these 3 elements in a cohesive narrative:
 1. Current State Definition (現状の定義): Clearly define the current market regime based on GMS Score.
@@ -800,7 +805,7 @@ Regime Guide:
 - 60-100: ACCUMULATE (Risk-On).
 
 SELF-CENSORSHIP:
-Check each Value in the JSON. If any string is < 200 characters, rewrite it to be more descriptive and analytical until it passes the 200-character threshold.
+Check each Value in the JSON. If any string is < 200 characters, rewrite it to be more descriptive and analytical until it passes the 200-character threshold. Remove any trailing character counts.
 
 Output JSON:
 {{
@@ -813,6 +818,16 @@ Output JSON:
   "AR": "..."
 }}
 """
+
+    def sanitize_insight_text(text):
+        """Removes noise like (249 characters) or （249文字） from the end."""
+        if not text: return text
+        # Remove Japanese style: （249文字） or (249文字)
+        text = re.sub(r'[（\(]?\d+文字[）\)]?$', '', text.strip())
+        # Remove English style: (249 chars) or (249 characters)
+        text = re.sub(r'\(\d+ chars?\)$', '', text.strip(), flags=re.IGNORECASE)
+        text = re.sub(r'\(\d+ characters?\)$', '', text.strip(), flags=re.IGNORECASE)
+        return text.strip()
 
     for attempt in range(2): 
         try:
@@ -868,6 +883,10 @@ Output JSON:
                         
                         reports = json.loads(inner_text)
                         if all(lang in reports for lang in required):
+                            # SANITIZE
+                            for k, v in reports.items():
+                                reports[k] = sanitize_insight_text(v)
+                            
                             log_diag("[AI SUCCESS] Reports parsed and validated.")
                             return reports
                     except Exception as e:
@@ -895,6 +914,7 @@ Output JSON:
             reports = json.loads(text)
             for lang in required:
                 if lang not in reports: reports[lang] = FALLBACK_STATUS[lang]
+                else: reports[lang] = sanitize_insight_text(reports[lang]) # SANITIZE
             return reports
     except Exception as e:
         log_diag(f"[AI SDK ERROR] {e}")
@@ -915,6 +935,7 @@ Output JSON:
                     reports = json.loads(text)
                     for lang in required:
                         if lang not in reports: reports[lang] = FALLBACK_STATUS[lang]
+                        else: reports[lang] = sanitize_insight_text(reports[lang]) # SANITIZE
                     return reports
             else:
                 log_diag(f"[AI REST FAIL] Status {response.status_code}: {response.text}")
@@ -1155,6 +1176,14 @@ def update_signal():
                 print(f"[AIO] SNS Module Error: {e}")
                 import traceback
                 traceback.print_exc()
+
+            # 3. Performance Audit (Archive & Summary)
+            try:
+                import performance_analyzer
+                log_diag("[AIO] Running Performance Audit...")
+                performance_analyzer.main()
+            except Exception as e:
+                print(f"[AIO] Performance Audit Error: {e}")
 
         except Exception as e:
             print(f"[AIO] Event Triggering Critical Error: {e}")

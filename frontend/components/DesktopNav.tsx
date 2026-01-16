@@ -28,6 +28,7 @@ export const DesktopNav = ({ lang: defaultLang }: { lang: LangType }) => {
         { key: 'crypto', label: t.labels.crypto || 'CRYPTO', path: '/crypto' },
         { key: 'forex', label: t.labels.forex || 'FOREX', path: '/forex' },
         { key: 'cmdty', label: t.labels.commodities || 'COMMODITIES', path: '/commodities' },
+        { key: 'wiki', label: t.labels.wiki || 'WIKI', path: '/glossary' },
     ];
 
     return (

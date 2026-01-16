@@ -1,5 +1,5 @@
 'use client';
-import { Home, LineChart, Bitcoin, Banknote, Gem, ChevronRight } from 'lucide-react';
+import { Home, LineChart, Bitcoin, Banknote, Gem, ChevronRight, BookOpen } from 'lucide-react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { LangType, DICTIONARY } from '@/data/dictionary';
 
@@ -17,6 +17,7 @@ export const Sidebar = () => {
         { key: 'crypto', label: t.labels.crypto || 'Crypto', icon: Bitcoin, path: '/crypto' },
         { key: 'forex', label: t.labels.forex || 'Forex', icon: Banknote, path: '/forex' },
         { key: 'cmdty', label: t.labels.commodities || 'Cmdty', icon: Gem, path: '/commodities' },
+        { key: 'wiki', label: t.labels.wiki || 'Wiki', icon: BookOpen, path: '/glossary' },
     ];
 
     return (
