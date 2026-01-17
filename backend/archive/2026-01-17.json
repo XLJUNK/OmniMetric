@@ -1,10 +1,10 @@
 {
-    "last_updated": "2026-01-17T15:30:29Z",
-    "last_successful_update": "2026-01-17T15:30:29Z",
-    "gms_score": 34,
+    "last_updated": "2026-01-17T15:47:01Z",
+    "last_successful_update": "2026-01-17T15:47:01Z",
+    "gms_score": 36,
     "sector_scores": {
         "STOCKS": 45,
-        "CRYPTO": 50,
+        "CRYPTO": 65,
         "FOREX": 40,
         "COMMODITIES": 45
     },
@@ -540,11 +540,11 @@
             ]
         },
         "BTC": {
-            "price": 95483.92,
+            "price": 95531.84,
             "prev_price": 95525.12,
-            "daily_chg": -0.04,
-            "change_percent": 0.17,
-            "trend": "DOWN",
+            "daily_chg": 0.01,
+            "change_percent": 0.22,
+            "trend": "UP",
             "sparkline": [
                 87802.16,
                 87835.84,
@@ -567,14 +567,14 @@
                 96929.33,
                 95551.19,
                 95525.12,
-                95483.92
+                95531.84
             ]
         },
         "ETH": {
-            "price": 3317.75,
+            "price": 3326.24,
             "prev_price": 3295.48,
-            "daily_chg": 0.68,
-            "change_percent": -0.13,
+            "daily_chg": 0.93,
+            "change_percent": 0.12,
             "trend": "UP",
             "sparkline": [
                 2948.0,
@@ -598,14 +598,14 @@
                 3354.72,
                 3317.1,
                 3295.48,
-                3317.75
+                3326.24
             ]
         },
         "SOL": {
-            "price": 143.74,
+            "price": 143.93,
             "prev_price": 144.86,
-            "daily_chg": -0.78,
-            "change_percent": -1.12,
+            "daily_chg": -0.64,
+            "change_percent": -0.99,
             "trend": "DOWN",
             "sparkline": [
                 124.65,
@@ -629,7 +629,7 @@
                 146.75,
                 142.33,
                 144.86,
-                143.74
+                143.93
             ]
         },
         "DXY": {
@@ -1070,22 +1070,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS at 34 indicates defensive positioning. Oil gains, contrasted by Copper's decline, reflect growth concerns driving risk-off sentiment. Sustained US 10Y yield at 4.17% may trigger equity correction due to weakened corporate earnings. Low VIX suggests complacency.",
+        "content": "GMS score of 36 signals defensive positioning. Limited oil gains and copper's decline hint at economic slowdown, fueling risk-off sentiment. As the 10-year yield hovers around 4.2%, a VIX spike above 58 could push SPY below 680.",
         "reports": {
-            "JP": "GMS34でディフェンシブ領域。原油上昇も銅価格下落が示すように、成長鈍化懸念がリスクオフを誘発。米10年債利回り4.17%で膠着状態続くなら、企業業績悪化から株式市場は調整局面入りか。VIXも低水準で油断禁物。",
-            "EN": "GMS at 34 indicates defensive positioning. Oil gains, contrasted by Copper's decline, reflect growth concerns driving risk-off sentiment. Sustained US 10Y yield at 4.17% may trigger equity correction due to weakened corporate earnings. Low VIX suggests complacency.",
-            "CN": "GMS 34表明防御态势。原油上涨与铜价下跌对比，反映增长担忧驱动避险情绪。美国10年期国债收益率维持在4.17%可能引发股市调整，因企业盈利疲软。VIX低位预示市场存在自满情绪，需警惕风险。",
-            "ES": "GMS en 34, posicionamiento defensivo. El alza del petróleo, contrastada con la caída del cobre, refleja temores de crecimiento que impulsan la aversión al riesgo. El rendimiento del bono del Tesoro estadounidense a 10 años en 4.17% podría desencadenar una corrección bursátil.",
-            "HI": "जीएमएस 34 पर रक्षात्मक स्थिति का संकेत देता है। तेल में वृद्धि, तांबे की गिरावट के विपरीत, विकास संबंधी चिंताओं को दर्शाती है जो जोखिम-बंद भावना को बढ़ा रही है। 4.17% पर लगातार अमेरिकी 10वाई उपज कमजोर कॉर्पोरेट आय के कारण इक्विटी सुधार को ट्रिगर कर सकती है।",
-            "ID": "GMS di 34 mengindikasikan posisi defensif. Kenaikan harga minyak, kontras dengan penurunan tembaga, mencerminkan kekhawatiran pertumbuhan yang mendorong sentimen risk-off. Yield US 10Y yang bertahan di 4.17% dapat memicu koreksi ekuitas akibat pendapatan perusahaan yang melemah.",
-            "AR": "مؤشر GMS عند 34 يشير إلى تمركز دفاعي. ارتفاع النفط، على عكس انخفاض النحاس، يعكس مخاوف النمو التي تدفع إلى الابتعاد عن المخاطرة. استمرار عائد سندات الخزانة الأمريكية لأجل 10 سنوات عند 4.17% قد يؤدي إلى تصحيح في سوق الأسهم بسبب ضعف أرباح الشركات."
+            "JP": "GMSスコア36はディフェンシブ領域を示唆。原油上昇は限定的で、銅価格下落が示す景気減速懸念からリスクオフ姿勢が継続。米10年債利回りが4.2%近辺で膠着する中、VIXの上昇は警戒サイン。58を上回れば、SPYは680を割り込む可能性。",
+            "EN": "GMS score of 36 signals defensive positioning. Limited oil gains and copper's decline hint at economic slowdown, fueling risk-off sentiment. As the 10-year yield hovers around 4.2%, a VIX spike above 58 could push SPY below 680.",
+            "CN": "当前GMS评分36表明市场处于防御态势。原油涨幅有限和铜价下跌暗示经济放缓，加剧了避险情绪。十年期国债收益率徘徊在4.2%附近，VIX若突破58，可能导致标普500指数跌破680点。",
+            "ES": "Un GMS de 36 señala una postura defensiva. El alza limitada del petróleo y la caída del cobre sugieren una desaceleración económica, alimentando la aversión al riesgo. Con el rendimiento a 10 años cerca de 4.2%, un VIX sobre 58 podría llevar al SPY por debajo de 680.",
+            "HI": "जीएमएस स्कोर 36 रक्षात्मक स्थिति का संकेत देता है। तेल में सीमित वृद्धि और तांबे की गिरावट आर्थिक मंदी का संकेत देते हैं, जिससे जोखिम से बचने की भावना बढ़ रही है। 10-वर्षीय उपज 4.2% के आसपास रहने के साथ, 58 से ऊपर का VIX स्पाय को 680 से नीचे धकेल सकता है।",
+            "ID": "Skor GMS 36 menandakan posisi defensif. Kenaikan minyak terbatas dan penurunan tembaga mengisyaratkan perlambatan ekonomi, memicu sentimen risk-off. Dengan imbal hasil 10 tahun di sekitar 4.2%, lonjakan VIX di atas 58 dapat mendorong SPY di bawah 680.",
+            "AR": "تشير نتيجة GMS البالغة 36 إلى تمركز دفاعي. يشير الارتفاع المحدود في أسعار النفط وانخفاض النحاس إلى تباطؤ اقتصادي، مما يغذي النفور من المخاطرة. مع بقاء عائد السندات لمدة 10 سنوات حول 4.2%، قد يؤدي ارتفاع مؤشر VIX فوق 58 إلى دفع SPY إلى ما دون 680."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-15T21:33:09Z",
-            "score": 37
-        },
         {
             "date": "2026-01-15T21:50:09Z",
             "score": 37
@@ -1321,6 +1317,10 @@
         {
             "date": "2026-01-17T15:30:29Z",
             "score": 34
+        },
+        {
+            "date": "2026-01-17T15:47:01Z",
+            "score": 36
         }
     ],
     "system_status": "OPERATIONAL"
