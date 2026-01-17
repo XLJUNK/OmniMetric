@@ -21,7 +21,7 @@ export const Sidebar = () => {
     ];
 
     return (
-        <aside className="fixed left-0 top-0 bottom-0 hidden md:flex flex-col w-[60px] bg-[#0A0A0A] border-r border-[#1E293B] overflow-visible z-50">
+        <aside className="fixed start-0 top-0 bottom-0 hidden md:flex flex-col w-[60px] bg-[#0A0A0A] border-e border-[#1E293B] overflow-visible z-50">
             {/* Logo Area */}
             <div className="h-[60px] flex items-center justify-center border-b border-[#1E293B]">
                 <div className={`w-3 h-3 rounded-full ${pathname === '/' ? 'bg-sky-500 shadow-[0_0_8px_rgba(14,165,233,0.8)]' : 'bg-slate-600'}`}></div>
@@ -55,7 +55,7 @@ export const Sidebar = () => {
 
                             {/* Tooltip (Label) - TYPOGRAPHY MASTERPIECE */}
                             <div
-                                className="absolute left-full top-1/2 -translate-y-1/2 ml-4 px-3 py-2 bg-black border border-[#333] !text-[#F1F5F9] text-[10.5px] font-semibold tracking-[0.15em] uppercase rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap shadow-[0_4px_20px_rgba(0,0,0,1)] z-[9999]"
+                                className="absolute ltr:left-full rtl:right-full top-1/2 -translate-y-1/2 ms-4 px-3 py-2 bg-black border border-[#333] !text-[#F1F5F9] text-[10.5px] font-semibold tracking-[0.15em] uppercase rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap shadow-[0_4px_20px_rgba(0,0,0,1)] z-[9999]"
                                 style={{ color: '#F1F5F9' }}
                             >
                                 {tab.label}

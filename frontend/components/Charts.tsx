@@ -7,29 +7,39 @@ import { DICTIONARY } from '@/data/dictionary';
 // --- RISK BAR COMPONENT (LINEAR GRADIENT) ---
 interface GaugeProps {
     score: number;
+    lang?: string;
 }
 // --- REFINED RISK GAUGE: OVERLAY STYLE ---
-export const RiskGauge = ({ score }: GaugeProps) => {
+export const RiskGauge = ({ score, lang = 'EN' }: GaugeProps) => {
     // Clamp score
     const pct = Math.min(100, Math.max(0, score));
+    const isRTL = lang === 'AR';
 
     return (
         <div className="w-full relative mt-2 mb-2 gms-container">
-            {/* Gradient Bar (26px) with Rounded-XL and Slate-800 Border - FORCE STYLE */}
-            <div className="w-full !rounded-xl !border !border-[#1E293B] !shadow-none !ring-0 relative overflow-hidden"
-                style={{ height: '1.625rem' }}>
+            {/* Gradient Bar Wrapper (Height Fixed) */}
+            <div className="relative w-full" style={{ height: '1.625rem' }}>
+                {/* 1. The Gradient Background (Overflow Hidden for Rounded Corners) */}
+                <div className="absolute inset-0 w-full h-full !rounded-xl !border !border-[#1E293B] overflow-hidden">
+                    <div
+                        className="absolute inset-0 w-full h-full"
+                        style={{
+                            backgroundImage: isRTL
+                                ? 'linear-gradient(90deg, #3b82f6 0%, #94a3b8 50%, #ef4444 100%)' // Blue(Acc) -> Red(Def) (Right is Def)
+                                : 'linear-gradient(90deg, #ef4444 0%, #94a3b8 50%, #3b82f6 100%)'
+                        }}
+                    />
+                </div>
+
+                {/* 2. The Marker (Outside overflow-hidden, so it acts as an overlay) */}
                 <div
-                    className="absolute inset-0 w-full h-full rounded-xl"
+                    className="absolute top-1/2 flex flex-col items-center z-50 transition-all duration-700 ease-out pointer-events-none"
                     style={{
-                        backgroundImage: 'linear-gradient(90deg, #ef4444 0%, #94a3b8 50%, #3b82f6 100%)'
+                        left: isRTL ? 'auto' : `${pct}%`,
+                        right: isRTL ? `${pct}%` : 'auto',
+                        transform: 'translateY(-50%) translateX(calc(50% * var(--dir)))',
+                        ['--dir' as any]: isRTL ? 1 : -1
                     }}
-                />
-
-
-                {/* MARKER - OVERLAY ON BAR */}
-                <div
-                    className="absolute top-1/2 transform -translate-y-1/2 -translate-x-1/2 flex flex-col items-center z-50 transition-all duration-700 ease-out pointer-events-none"
-                    style={{ left: `${pct}%` }}
                 >
                     <div className="bg-[#1e293b] border border-slate-600 px-1.5 py-0.5 rounded shadow-xl mb-1">
                         <span className="text-[0.75rem] font-black text-slate-200 leading-none tabular-nums tracking-tighter">
@@ -42,7 +52,7 @@ export const RiskGauge = ({ score }: GaugeProps) => {
             </div>
 
             {/* Labels */}
-            <div className="flex justify-between px-1 mt-1 relative z-0">
+            <div className={`flex justify-between px-1 mt-1 relative z-0`}>
                 <span className="text-fluid-xs font-bold text-[#ef4444] uppercase tracking-widest drop-shadow-sm">Defensive</span>
                 <span className="text-fluid-xs font-bold text-slate-400 uppercase tracking-widest drop-shadow-sm">Neutral</span>
                 <span className="text-fluid-xs font-bold text-[#3b82f6] uppercase tracking-widest drop-shadow-sm">Accumulate</span>

@@ -33,7 +33,7 @@ export const DesktopNav = ({ lang: defaultLang }: { lang: LangType }) => {
 
     return (
         <div className="hidden md:block w-full border-b border-slate-800 bg-[#050505] sticky top-0 z-50 shadow-md">
-            <div className={`max-w-[1600px] mx-auto flex items-center justify-start gap-1 ${lang === 'AR' ? 'flex-row-reverse' : ''}`}>
+            <div className="max-w-[1600px] mx-auto flex items-center justify-start gap-1">
                 {navItems.map((item) => {
                     const isActive = pathname === item.path;
                     return (

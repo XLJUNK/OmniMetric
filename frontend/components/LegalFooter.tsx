@@ -46,6 +46,10 @@ export const LegalFooter = () => {
                     <p className="text-[10px] leading-[1.3] text-slate-500 max-w-4xl mx-auto whitespace-pre-line">
                         {t.legal_text.t1} {t.legal_text.t2}
                     </p>
+                    {/* Partner Disclaimer */}
+                    <p className="text-[10px] leading-[1.3] text-slate-600 max-w-4xl mx-auto whitespace-pre-line opacity-80">
+                        {(t as any).partner?.disclaimer}
+                    </p>
 
                     {/* Attribution */}
                     <div className="flex flex-col items-center gap-1 mt-1">

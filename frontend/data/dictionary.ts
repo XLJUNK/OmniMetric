@@ -8,6 +8,13 @@ export const DICTIONARY = {
             ai: MESSAGES.ai_status.EN,
             market: MESSAGES.market_data_status.EN
         },
+        partner: {
+            badge: "TradingView Official Partner",
+            title: "Get $15 Credit: Save on your new TradingView plan. Experience world-class charting starting from OmniMetric.",
+            action: "Start Analysis (Get $15 Credit)",
+            disclaimer: "OmniMetric is an official partner of TradingView. Benefits apply via our referral links. Please invest at your own risk.",
+            link_text: "Analyze on TradingView ($15 Bonus)"
+        },
         titles: {
             risk_score: "Market Regime Indicator",
             insights: "OmniMetric: Quantitative Macro Insights",
@@ -202,6 +209,13 @@ export const DICTIONARY = {
             ai: MESSAGES.ai_status.JP,
             market: MESSAGES.market_data_status.JP
         },
+        partner: {
+            badge: "TradingView Official Partner",
+            title: "15ドルの特典を獲得：TradingViewの有料プランが割引に。世界最高峰のチャートで分析を極めよう。",
+            action: "分析を開始する（15ドルの特典付き）",
+            disclaimer: "当サイトはTradingViewの公式パートナーです。紹介リンク経由の登録で特典が適用されます。投資判断は自己責任で行ってください。",
+            link_text: "TradingViewで分析（15ドルの特典）"
+        },
         titles: {
             risk_score: "市場局面分析 (Market Regime)",
             insights: "定量的マクロインサイト",
@@ -395,6 +409,13 @@ export const DICTIONARY = {
             ai: MESSAGES.ai_status.CN,
             market: MESSAGES.market_data_status.CN
         },
+        partner: {
+            badge: "TradingView 官方合作伙伴",
+            title: "获得 $15 奖励：节省您的 TradingView 新计划费用。从 OmniMetric 开始体验世界级的图表分析。",
+            action: "开始分析 (获得 $15 奖励)",
+            disclaimer: "OmniMetric 是 TradingView 的官方合作伙伴。通过我们的推荐链接注册可享受优惠。投资请自担风险。",
+            link_text: "在 TradingView 上分析（获得 $15 奖励）"
+        },
         titles: {
             risk_score: "市场机制指标 (Market Regime)",
             insights: "量化宏观分析",
@@ -557,6 +578,13 @@ export const DICTIONARY = {
         status: {
             ai: MESSAGES.ai_status.ES,
             market: MESSAGES.market_data_status.ES
+        },
+        partner: {
+            badge: "Socio Oficial de TradingView",
+            title: "Obtenga $15 de Crédito: Ahorre en su nuevo plan TradingView. Experimente gráficos de clase mundial desde OmniMetric.",
+            action: "Iniciar Análisis (Obtener $15)",
+            disclaimer: "OmniMetric es socio oficial de TradingView. Los beneficios aplican a través de nuestros enlaces de referencia. Invierta bajo su propio riesgo.",
+            link_text: "Analizar en TradingView (Bono de $15)"
         },
         titles: {
             risk_score: "Indicador de Régimen de Mercado",
@@ -721,6 +749,13 @@ export const DICTIONARY = {
             ai: MESSAGES.ai_status.HI,
             market: MESSAGES.market_data_status.HI
         },
+        partner: {
+            badge: "TradingView आधिकारिक भागीदार",
+            title: "$15 का क्रेडिट प्राप्त करें: अपनी नई TradingView योजना पर बचत करें। OmniMetric के साथ विश्व स्तरीय चार्टिंग का अनुभव करें।",
+            action: "विश्लेषण शुरू करें ($15 क्रेडिट प्राप्त करें)",
+            disclaimer: "OmniMetric TradingView का आधिकारिक भागीदार है। लाभ हमारे रेफरल लिंक के माध्यम से लागू होते हैं। कृपया अपने जोखिम पर निवेश करें।",
+            link_text: "TradingView पर विश्लेषण ($15 बोनस)"
+        },
         titles: {
             risk_score: "बाज़ार व्यवस्था संकेतक (Market Regime)",
             insights: "मात्रात्मक मैक्रो अंतर्दृष्टि",
@@ -884,6 +919,13 @@ export const DICTIONARY = {
             ai: MESSAGES.ai_status.ID,
             market: MESSAGES.market_data_status.ID
         },
+        partner: {
+            badge: "Mitra Resmi TradingView",
+            title: "Dapatkan Kredit $15: Hemat pada paket TradingView baru Anda. Nikmati charting kelas dunia mulai dari OmniMetric.",
+            action: "Mulai Analisis (Dapatkan $15)",
+            disclaimer: "OmniMetric adalah mitra resmi TradingView. Manfaat berlaku melalui tautan referensi kami. Harap berinvestasi dengan risiko Anda sendiri.",
+            link_text: "Analisis di TradingView (Bonus $15)"
+        },
         titles: {
             risk_score: "Indikator Rezim Pasar",
             insights: "Wawasan Makro Kuantitatif",
@@ -1040,6 +1082,13 @@ export const DICTIONARY = {
         status: {
             ai: MESSAGES.ai_status.AR,
             market: MESSAGES.market_data_status.AR
+        },
+        partner: {
+            badge: "شريك رسمي لـ TradingView",
+            title: "احصل على رصيد 15 دولارًا: وفر في خطة TradingView الجديدة. جرب الرسوم البيانية عالمية المستوى من OmniMetric.",
+            action: "ابدأ التحليل (احصل على 15 دولارًا)",
+            disclaimer: "OmniMetric هو شريك رسمي لـ TradingView. تطبق المزايا عبر روابط الإحالة الخاصة بنا. يرجى الاستثمار على مسؤوليتك الخاصة.",
+            link_text: "تحليل على TradingView (مكافأة 15 دولارًا)"
         },
         titles: {
             risk_score: "مؤشر نظام السوق",
