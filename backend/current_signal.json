@@ -1,10 +1,10 @@
 {
-    "last_updated": "2026-01-17T06:45:44Z",
-    "last_successful_update": "2026-01-17T06:45:44Z",
-    "gms_score": 37,
+    "last_updated": "2026-01-17T07:29:42Z",
+    "last_successful_update": "2026-01-17T07:29:42Z",
+    "gms_score": 32,
     "sector_scores": {
         "STOCKS": 45,
-        "CRYPTO": 75,
+        "CRYPTO": 25,
         "FOREX": 40,
         "COMMODITIES": 45
     },
@@ -540,13 +540,12 @@
             ]
         },
         "BTC": {
-            "price": 95276.78,
-            "prev_price": 95551.19,
-            "daily_chg": -0.29,
-            "change_percent": 4.48,
+            "price": 95134.09,
+            "prev_price": 95525.12,
+            "daily_chg": -0.41,
+            "change_percent": -0.2,
             "trend": "DOWN",
             "sparkline": [
-                87301.43,
                 87802.16,
                 87835.84,
                 87138.14,
@@ -567,17 +566,17 @@
                 95321.78,
                 96929.33,
                 95551.19,
-                95276.78
+                95525.12,
+                95134.09
             ]
         },
         "ETH": {
-            "price": 3290.66,
-            "prev_price": 3317.1,
-            "daily_chg": -0.8,
-            "change_percent": 6.41,
+            "price": 3290.41,
+            "prev_price": 3295.48,
+            "daily_chg": -0.15,
+            "change_percent": -0.95,
             "trend": "DOWN",
             "sparkline": [
-                2925.75,
                 2948.0,
                 2948.57,
                 2934.54,
@@ -598,17 +597,17 @@
                 3322.1,
                 3354.72,
                 3317.1,
-                3290.66
+                3295.48,
+                3290.41
             ]
         },
         "SOL": {
-            "price": 143.95,
-            "prev_price": 142.33,
-            "daily_chg": 1.14,
-            "change_percent": 3.46,
-            "trend": "UP",
+            "price": 143.75,
+            "prev_price": 144.86,
+            "daily_chg": -0.77,
+            "change_percent": -1.11,
+            "trend": "DOWN",
             "sparkline": [
-                122.2,
                 124.65,
                 125.2,
                 123.13,
@@ -629,7 +628,8 @@
                 145.36,
                 146.75,
                 142.33,
-                143.95
+                144.86,
+                143.75
             ]
         },
         "DXY": {
@@ -1070,22 +1070,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS score of 37 signals a defensive market. Rising oil prices fuel inflation fears, driving up long-term yields. While tightening HY spreads suggest risk appetite, falling copper prices hint at economic slowdown. Stable VIX masks underlying fragility; breach of GMS 40 could trigger risk-on.",
+        "content": "GMS score of 32 signals a defensive stance. Rising oil but falling copper highlights growth concerns. Higher US 10Y yields strengthen the dollar, pressuring EM currencies. Low VIX contrasts with widening credit spreads, tilting towards risk-off. SPY breaking 685 could trigger further downside.",
         "reports": {
-            "JP": "GMSスコア37はディフェンシブ領域。原油高はインフレ懸念を再燃させ、長期金利上昇を招く。ハイイールド債スプレッド縮小はリスク選好を示すも、銅価格下落が景気減速を示唆。VIX低位安定は市場の平静を装うが、GMS40突破でリスクオンへ転換の可能性。",
-            "EN": "GMS score of 37 signals a defensive market. Rising oil prices fuel inflation fears, driving up long-term yields. While tightening HY spreads suggest risk appetite, falling copper prices hint at economic slowdown. Stable VIX masks underlying fragility; breach of GMS 40 could trigger risk-on.",
-            "CN": "GMS评分37预示防御型市场。油价上涨加剧通胀担忧，推高长期收益率。虽然高收益债息差收窄表明风险偏好，但铜价下跌暗示经济放缓。VIX稳定掩盖潜在脆弱性；突破GMS 40可能触发风险偏好。",
-            "ES": "Un GMS de 37 indica un mercado defensivo. El alza del petróleo alimenta temores inflacionarios, impulsando los rendimientos a largo plazo. La reducción de los diferenciales HY sugiere apetito por riesgo, pero la caída del cobre insinúa desaceleración económica. VIX estable enmascara fragilidad subyacente; superar GMS 40 activaría el riesgo.",
-            "HI": "जीएमएस स्कोर 37 एक रक्षात्मक बाजार का संकेत देता है। बढ़ते तेल की कीमतें मुद्रास्फीति की आशंकाओं को बढ़ावा देती हैं, जिससे लंबी अवधि की पैदावार बढ़ती है। जबकि तंग एचवाई स्प्रेड जोखिम की भूख का सुझाव देते हैं, गिरती तांबे की कीमतें आर्थिक मंदी का संकेत देती हैं। स्थिर वीआईएक्स अंतर्निहित नाजुकता को छुपाता है; जीएमएस 40 का उल्लंघन जोखिम को बढ़ा सकता है।",
-            "ID": "Skor GMS 37 menandakan pasar defensif. Kenaikan harga minyak memicu kekhawatiran inflasi, mendorong imbal hasil jangka panjang naik. Sementara penyempitan spread HY menunjukkan selera risiko, penurunan harga tembaga mengisyaratkan perlambatan ekonomi. VIX yang stabil menutupi kerapuhan yang mendasarinya; pelanggaran GMS 40 dapat memicu risk-on.",
-            "AR": "تشير نتيجة GMS البالغة 37 إلى سوق دفاعي. يؤدي ارتفاع أسعار النفط إلى تأجيج المخاوف من التضخم، مما يدفع عوائد السندات طويلة الأجل إلى الارتفاع. في حين أن تضييق فروق عوائد السندات عالية المخاطر يشير إلى الإقبال على المخاطرة، إلا أن انخفاض أسعار النحاس يلمح إلى تباطؤ اقتصادي. يخفي مؤشر VIX المستقر هشاشة كامنة؛ قد يؤدي تجاوز GMS 40 إلى إطلاق الإقبال على المخاطرة."
+            "JP": "GMSスコア32はディフェンシブ領域。原油上昇も銅価格下落が示す通り、景気減速懸念が根強い。米10年債利回り上昇はドル高を招き、新興国通貨には重石。VIXは低位安定も、クレジットスプレッド拡大でリスクオフへ傾斜、SPYは685を割れば一段安か。",
+            "EN": "GMS score of 32 signals a defensive stance. Rising oil but falling copper highlights growth concerns. Higher US 10Y yields strengthen the dollar, pressuring EM currencies. Low VIX contrasts with widening credit spreads, tilting towards risk-off. SPY breaking 685 could trigger further downside.",
+            "CN": "GMS评分32表明防御态势。油价上涨但铜价下跌突显增长担忧。美国10年期国债收益率上升提振美元，给新兴市场货币带来压力。低VIX与信贷息差扩大形成对比，倾向于规避风险。若SPY跌破685，可能引发进一步下行。",
+            "ES": "Un GMS de 32 indica una postura defensiva. El alza del petróleo, pero la caída del cobre, resaltan la preocupación por el crecimiento. El aumento de los rendimientos del Tesoro estadounidense a 10 años fortalece el dólar, presionando a las divisas EM. Un VIX bajo contrasta con el ensanchamiento de los diferenciales de crédito, inclinándose hacia la aversión al riesgo. Si el SPY rompe 685, podría desencadenar nuevas caídas.",
+            "HI": "जीएमएस स्कोर 32 रक्षात्मक रुख का संकेत देता है। तेल की बढ़ती कीमतें लेकिन तांबे की गिरती कीमतें विकास संबंधी चिंताओं को उजागर करती हैं। यूएस 10वाई यील्ड बढ़ने से डॉलर मजबूत होता है, जिससे ईएम मुद्राओं पर दबाव पड़ता है। कम वीआईएक्स क्रेडिट स्प्रेड को व्यापक बनाने के विपरीत है, जो जोखिम से बचने की ओर झुकता है। यदि एसपीवाई 685 को तोड़ता है तो और अधिक नुकसान हो सकता है।",
+            "ID": "Skor GMS 32 menandakan sikap defensif. Kenaikan harga minyak tetapi penurunan harga tembaga menyoroti kekhawatiran pertumbuhan. Kenaikan imbal hasil US 10Y memperkuat dolar, menekan mata uang EM. VIX rendah kontras dengan pelebaran spread kredit, condong ke penghindaran risiko. SPY menembus 685 dapat memicu penurunan lebih lanjut.",
+            "AR": "تشير درجة GMS البالغة 32 إلى موقف دفاعي. ارتفاع أسعار النفط ولكن انخفاض أسعار النحاس يسلط الضوء على المخاوف بشأن النمو. يؤدي ارتفاع عوائد سندات الخزانة الأمريكية لأجل 10 سنوات إلى تعزيز الدولار، مما يضغط على عملات الأسواق الناشئة. يتناقض مؤشر VIX المنخفض مع اتساع فروق الائتمان، مما يميل نحو النفور من المخاطرة. قد يؤدي كسر SPY لمستوى 685 إلى مزيد من الانخفاض."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-15T09:39:10Z",
-            "score": 39
-        },
         {
             "date": "2026-01-15T10:38:48Z",
             "score": 38
@@ -1321,6 +1317,10 @@
         {
             "date": "2026-01-17T06:45:44Z",
             "score": 37
+        },
+        {
+            "date": "2026-01-17T07:29:42Z",
+            "score": 32
         }
     ],
     "system_status": "OPERATIONAL"
