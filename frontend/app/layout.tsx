@@ -125,6 +125,10 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        {/* @ts-expect-error: Impact.com requires non-standard 'value' attribute */}
+        <meta name="impact-site-verification" value="077c2f6e-dfc6-4a7e-a10e-65c42ed1337e" />
+      </head>
       <body
         className={`${inter.variable} ${notoJP.variable} ${notoAR.variable} ${notoHI.variable} antialiased`}
         style={{ overflowX: 'hidden' }}
@@ -149,7 +153,7 @@ export default function RootLayout({
           </Suspense>
 
           {/* MAIN CONTENT AREA with Offset for Fixed Sidebar (Hidden on Mobile) */}
-          <div className="flex-1 flex flex-col relative min-w-0 ml-0 md:ml-[60px] transition-all duration-300 pt-[54px] md:pt-0 pb-0">
+          <div className="flex-1 flex flex-col relative min-w-0 md:ms-[60px] transition-all duration-300 pt-[54px] md:pt-0 pb-0">
             {/* TOP AD BANNER (Desktop Only - Optional) */}
             <div className="hidden md:flex justify-center py-4 bg-[#0a0a0a] border-b border-[#1E293B]">
               <div className="w-[728px] h-[90px] bg-[#111]">
