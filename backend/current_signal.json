@@ -1,10 +1,10 @@
 {
-    "last_updated": "2026-01-17T15:47:01Z",
-    "last_successful_update": "2026-01-17T15:47:01Z",
-    "gms_score": 36,
+    "last_updated": "2026-01-17T16:35:38Z",
+    "last_successful_update": "2026-01-17T16:35:38Z",
+    "gms_score": 34,
     "sector_scores": {
         "STOCKS": 45,
-        "CRYPTO": 65,
+        "CRYPTO": 50,
         "FOREX": 40,
         "COMMODITIES": 45
     },
@@ -540,11 +540,11 @@
             ]
         },
         "BTC": {
-            "price": 95531.84,
+            "price": 95367.39,
             "prev_price": 95525.12,
-            "daily_chg": 0.01,
-            "change_percent": 0.22,
-            "trend": "UP",
+            "daily_chg": -0.17,
+            "change_percent": 0.05,
+            "trend": "DOWN",
             "sparkline": [
                 87802.16,
                 87835.84,
@@ -567,14 +567,14 @@
                 96929.33,
                 95551.19,
                 95525.12,
-                95531.84
+                95367.39
             ]
         },
         "ETH": {
-            "price": 3326.24,
+            "price": 3314.69,
             "prev_price": 3295.48,
-            "daily_chg": 0.93,
-            "change_percent": 0.12,
+            "daily_chg": 0.58,
+            "change_percent": -0.22,
             "trend": "UP",
             "sparkline": [
                 2948.0,
@@ -598,14 +598,14 @@
                 3354.72,
                 3317.1,
                 3295.48,
-                3326.24
+                3314.69
             ]
         },
         "SOL": {
-            "price": 143.93,
+            "price": 143.95,
             "prev_price": 144.86,
-            "daily_chg": -0.64,
-            "change_percent": -0.99,
+            "daily_chg": -0.63,
+            "change_percent": -0.97,
             "trend": "DOWN",
             "sparkline": [
                 124.65,
@@ -629,7 +629,7 @@
                 146.75,
                 142.33,
                 144.86,
-                143.93
+                143.95
             ]
         },
         "DXY": {
@@ -1070,22 +1070,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS score of 36 signals defensive positioning. Limited oil gains and copper's decline hint at economic slowdown, fueling risk-off sentiment. As the 10-year yield hovers around 4.2%, a VIX spike above 58 could push SPY below 680.",
+        "content": "GMS at 34 signals defensive positioning. Rising oil hints at renewed inflation, pressuring long-term yields higher. Low VIX belies copper's drop, signaling growth concerns. US 10Y yield breaches 4.2%, triggering risk-off; SPY has room to fall to 680.",
         "reports": {
-            "JP": "GMSスコア36はディフェンシブ領域を示唆。原油上昇は限定的で、銅価格下落が示す景気減速懸念からリスクオフ姿勢が継続。米10年債利回りが4.2%近辺で膠着する中、VIXの上昇は警戒サイン。58を上回れば、SPYは680を割り込む可能性。",
-            "EN": "GMS score of 36 signals defensive positioning. Limited oil gains and copper's decline hint at economic slowdown, fueling risk-off sentiment. As the 10-year yield hovers around 4.2%, a VIX spike above 58 could push SPY below 680.",
-            "CN": "当前GMS评分36表明市场处于防御态势。原油涨幅有限和铜价下跌暗示经济放缓，加剧了避险情绪。十年期国债收益率徘徊在4.2%附近，VIX若突破58，可能导致标普500指数跌破680点。",
-            "ES": "Un GMS de 36 señala una postura defensiva. El alza limitada del petróleo y la caída del cobre sugieren una desaceleración económica, alimentando la aversión al riesgo. Con el rendimiento a 10 años cerca de 4.2%, un VIX sobre 58 podría llevar al SPY por debajo de 680.",
-            "HI": "जीएमएस स्कोर 36 रक्षात्मक स्थिति का संकेत देता है। तेल में सीमित वृद्धि और तांबे की गिरावट आर्थिक मंदी का संकेत देते हैं, जिससे जोखिम से बचने की भावना बढ़ रही है। 10-वर्षीय उपज 4.2% के आसपास रहने के साथ, 58 से ऊपर का VIX स्पाय को 680 से नीचे धकेल सकता है।",
-            "ID": "Skor GMS 36 menandakan posisi defensif. Kenaikan minyak terbatas dan penurunan tembaga mengisyaratkan perlambatan ekonomi, memicu sentimen risk-off. Dengan imbal hasil 10 tahun di sekitar 4.2%, lonjakan VIX di atas 58 dapat mendorong SPY di bawah 680.",
-            "AR": "تشير نتيجة GMS البالغة 36 إلى تمركز دفاعي. يشير الارتفاع المحدود في أسعار النفط وانخفاض النحاس إلى تباطؤ اقتصادي، مما يغذي النفور من المخاطرة. مع بقاء عائد السندات لمدة 10 سنوات حول 4.2%، قد يؤدي ارتفاع مؤشر VIX فوق 58 إلى دفع SPY إلى ما دون 680."
+            "JP": "GMS34でディフェンシブ領域。原油上昇はインフレ圧力再燃を示唆、長期金利上昇の可能性を高める。VIXは低水準だが、 Copper下落は景気減速懸念を示唆。米10年債利回り4.2%超えでリスクオフ加速、SPYは680まで下落余地。",
+            "EN": "GMS at 34 signals defensive positioning. Rising oil hints at renewed inflation, pressuring long-term yields higher. Low VIX belies copper's drop, signaling growth concerns. US 10Y yield breaches 4.2%, triggering risk-off; SPY has room to fall to 680.",
+            "CN": "GMS 34表明防御姿态。原油上涨暗示通胀抬头，长期收益率承压。VIX虽低，但铜价下跌预示增长担忧。美国10年期国债收益率突破4.2%，引发避险情绪；标普500指数可能跌至680点。",
+            "ES": "GMS en 34 indica posicionamiento defensivo. El alza del petróleo sugiere inflación renovada, presionando al alza los rendimientos a largo plazo. VIX bajo, pero la caída del cobre señala preocupaciones de crecimiento. El rendimiento del bono del Tesoro a 10 años supera el 4.2%, disparando la aversión al riesgo; el SPY podría caer hasta 680.",
+            "HI": "जीएमएस 34 पर रक्षात्मक स्थिति का संकेत देता है। बढ़ते तेल से मुद्रास्फीति के नवीनीकरण का संकेत मिलता है, जो लंबी अवधि की पैदावार को ऊपर की ओर दबाव डालता है। कम वीआईएक्स तांबे की गिरावट को छुपाता है, जो विकास संबंधी चिंताओं का संकेत है। अमेरिकी 10वाई उपज 4.2% को पार कर गई, जिससे जोखिम से बचाव शुरू हो गया; एसपीवाई में 680 तक गिरने की जगह है।",
+            "ID": "GMS di 34 menandakan posisi defensif. Kenaikan harga minyak mengindikasikan inflasi yang diperbarui, menekan imbal hasil jangka panjang lebih tinggi. VIX rendah menyembunyikan penurunan tembaga, menandakan kekhawatiran pertumbuhan. Imbal hasil US 10Y menembus 4.2%, memicu penghindaran risiko; SPY memiliki ruang untuk jatuh ke 680.",
+            "AR": "مؤشر إدارة الأصول العالمية عند 34 يشير إلى تمركز دفاعي. ارتفاع أسعار النفط يلمح إلى تجدد التضخم، مما يضغط على عوائد السندات طويلة الأجل للارتفاع. مؤشر التقلب منخفض ولكنه يخفي انخفاض النحاس، مما يشير إلى مخاوف النمو. تجاوز عائد سندات الخزانة الأمريكية لأجل 10 سنوات مستوى 4.2%، مما أدى إلى إطلاق العزوف عن المخاطرة؛ مؤشر إس آند بي لديه مجال للانخفاض إلى 680."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-15T21:50:09Z",
-            "score": 37
-        },
         {
             "date": "2026-01-15T22:35:13Z",
             "score": 38
@@ -1321,6 +1317,10 @@
         {
             "date": "2026-01-17T15:47:01Z",
             "score": 36
+        },
+        {
+            "date": "2026-01-17T16:35:38Z",
+            "score": 34
         }
     ],
     "system_status": "OPERATIONAL"
