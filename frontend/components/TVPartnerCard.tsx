@@ -13,6 +13,7 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
     // 1. Language & Dictionary Logic
     // Fallback to EN if language is not supported or dictionary entry is missing
     const t = DICTIONARY[lang] || DICTIONARY['EN'];
+    const isRTL = lang === 'AR';
 
     // Robust fallback logic for partner data
     let p = (t as any).partner;
@@ -90,8 +91,8 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
                 rel="noopener noreferrer"
                 className="group block w-full mt-4 bg-gradient-to-r from-[#131722] to-[#0A0A0A] border border-[#1E293B] hover:border-sky-500/50 rounded-lg p-3 transition-all duration-300"
             >
-                <div className="flex items-center justify-between gap-3">
-                    <div className="flex items-center gap-2">
+                <div className={`flex items-center justify-between gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                    <div className={`flex items-center gap-2 ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                         {/* TradingView Logo Icon / Branding */}
                         <div className="w-8 h-8 rounded bg-white flex items-center justify-center shrink-0">
                             <svg viewBox="0 0 24 24" className="w-5 h-5 text-black fill-current">
@@ -102,12 +103,12 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
                         </div>
                         <div>
                             <span className="block text-[9px] font-bold text-sky-500 uppercase tracking-wider">{p.badge}</span>
-                            <span className="block text-xs font-bold text-slate-200 group-hover:text-white transition-colors">
+                            <span className={`block text-xs font-bold text-slate-200 group-hover:text-white transition-colors ${isRTL ? 'font-arabic' : ''}`}>
                                 {offerText}
                             </span>
                         </div>
                     </div>
-                    <ExternalLink className="w-4 h-4 text-slate-500 group-hover:text-sky-500 transition-colors" />
+                    <ExternalLink className={`w-4 h-4 text-slate-500 group-hover:text-sky-500 transition-colors ${isRTL ? 'rotate-180' : ''}`} />
                 </div>
             </a>
         );
@@ -118,16 +119,16 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
             {/* Background Gradient Effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-            <div className="relative z-10 p-5 md:p-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div className={`relative z-10 p-5 md:p-6 flex flex-col sm:flex-row items-center justify-between gap-6 ${isRTL ? 'sm:flex-row-reverse' : ''}`}>
 
                 {/* Visual / Text Side */}
-                <div className="flex-1 space-y-3 text-center sm:text-left">
+                <div className={`flex-1 space-y-3 text-center ${isRTL ? 'sm:text-right' : 'sm:text-left'}`}>
                     <div className="inline-flex items-center gap-2 px-2 py-1 rounded bg-[#2A2E39] border border-[#434651]">
                         <span className="w-1.5 h-1.5 rounded-full bg-sky-500 animate-pulse"></span>
                         <span className="text-[10px] font-bold text-slate-200 uppercase tracking-widest">{p.badge}</span>
                     </div>
 
-                    <h3 className="text-sm md:text-base font-bold text-white leading-relaxed max-w-xl">
+                    <h3 className={`text-sm md:text-base font-bold text-white leading-relaxed max-w-xl ${isRTL ? 'font-arabic' : ''}`}>
                         {p.title}
                     </h3>
                 </div>

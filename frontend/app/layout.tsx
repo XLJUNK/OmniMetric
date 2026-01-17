@@ -77,6 +77,7 @@ import { Sidebar } from "@/components/Sidebar";
 import { MobileNav } from "@/components/MobileNav";
 import { AdUnit } from "@/components/AdUnit";
 import { DynamicStructuredData } from "@/components/DynamicStructuredData";
+import { ClientDirectionProvider } from "@/components/ClientDirectionProvider";
 
 export default function RootLayout({
   children,
@@ -137,6 +138,9 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <Suspense fallback={null}>
+          <ClientDirectionProvider />
+        </Suspense>
         <DynamicStructuredData />
         <script
           async

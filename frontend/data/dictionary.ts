@@ -1085,7 +1085,7 @@ export const DICTIONARY = {
         },
         partner: {
             badge: "شريك رسمي لـ TradingView",
-            title: "احصل على رصيد 15 دولارًا: وفر في خطة TradingView الجديدة. جرب الرسوم البيانية عالمية المستوى من OmniMetric.",
+            title: "!OmniMetric الجديدة. جرب الرسوم البيانية عالمية المستوى من TradingView واحصل على رصيد 15 دولارًا؛ وفر في خطتك.",
             action: "ابدأ التحليل (احصل على 15 دولارًا)",
             disclaimer: "OmniMetric هو شريك رسمي لـ TradingView. تطبق المزايا عبر روابط الإحالة الخاصة بنا. يرجى الاستثمار على مسؤوليتك الخاصة.",
             link_text: "تحليل على TradingView (مكافأة 15 دولارًا)"

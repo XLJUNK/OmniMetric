@@ -25,6 +25,7 @@ const config: Config = {
             fontFamily: {
                 sans: ['var(--font-inter)', 'sans-serif'],
                 mono: ['var(--font-roboto-mono)', 'monospace'],
+                arabic: ['var(--font-noto-ar)', 'sans-serif'],
             },
             animation: {
                 'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',

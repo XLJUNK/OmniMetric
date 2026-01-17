@@ -131,7 +131,7 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
 
             {/* 1. Global Header Status */}
             <div className="max-w-[1600px] mx-auto w-full px-4 md:px-6 py-2 border-b border-slate-800 relative z-50 bg-[#0A0A0A]">
-                <div className="flex justify-between relative z-50 flex-col items-center gap-6 mb-4 sm:flex-row sm:items-start sm:mb-6 sm:gap-0 rtl:flex-row-reverse">
+                <div className="flex justify-between relative z-50 flex-col items-center gap-6 mb-4 sm:flex-row sm:items-start sm:mb-6 sm:gap-0">
                     <div className="pointer-events-auto cursor-pointer text-center sm:text-left rtl:sm:text-right" onClick={() => router.push(`/?lang=${lang}`)}>
                         <h1 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tighter text-white mb-0 leading-none hover:text-sky-500 transition-colors">OMNIMETRIC TERMINAL</h1>
                         <h2 className="text-[10px] sm:text-sm md:text-base font-bold text-sky-500 tracking-[0.2em] uppercase mt-1">Global Macro Signal (GMS)</h2>
@@ -191,7 +191,7 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
 
                                         // Default to UTC for terminal feel or Browser Local
                                         // Using UTC for consistency across global users
-                                        return date.toLocaleString('en-US', { ...options, timeZone: 'UTC' }) + " UTC";
+                                        return <span dir="ltr">{date.toLocaleString('en-US', { ...options, timeZone: 'UTC' }) + " UTC"}</span>;
                                     } catch (e) {
                                         return data.last_updated;
                                     }
@@ -242,7 +242,7 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
                         className={`ai-insight-accordion flex-grow mt-2 ${!isAIExpanded && isMobile ? 'ai-insight-collapsed cursor-pointer' : 'ai-insight-expanded'}`}
                         onClick={() => isMobile && setIsAIExpanded(!isAIExpanded)}
                     >
-                        <p className="text-slate-300 text-fluid-base leading-relaxed font-serif italic">
+                        <p className="text-slate-300 text-fluid-base leading-relaxed font-serif italic rtl:font-arabic rtl:not-italic rtl:text-right">
                             "{aiContent}"
                         </p>
                     </div>
@@ -326,11 +326,11 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
                         // SAFETY SORT: Ensure events are chronologically sorted (Fix for Localhost/Stale Data)
                         ([...(data.events || [])].sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()).slice(0, 3)).map((evt, i) => (
                             <div key={i} className="flex flex-col border-b border-[#1E293B] last:border-0 py-3 px-4 hover:bg-white/5 transition-colors">
-                                <div className="flex items-center gap-3 rtl:flex-row-reverse">
-                                    <span className={`text-xs font-bold font-mono ${evt.impact === 'CRITICAL' ? 'text-red-500' : 'text-slate-300'}`}>
+                                <div className="flex items-center gap-2 rtl:flex-row-reverse rtl:justify-end">
+                                    <span dir="ltr" className={`text-xs font-bold font-mono whitespace-nowrap ${evt.impact === 'CRITICAL' ? 'text-red-500' : 'text-slate-300'}`}>
                                         [{evt.date}]
                                     </span>
-                                    <span className="text-sm font-bold text-slate-200 uppercase tracking-wide rtl:text-right flex-grow">
+                                    <span className="text-sm font-bold text-slate-200 uppercase tracking-wide rtl:text-right">
                                         {(t.events as any)?.[evt.code] || evt.name}
                                     </span>
                                 </div>
