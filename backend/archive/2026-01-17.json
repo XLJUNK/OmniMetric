@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-01-17T22:49:13Z",
-    "last_successful_update": "2026-01-17T22:49:13Z",
+    "last_updated": "2026-01-17T23:29:20Z",
+    "last_successful_update": "2026-01-17T23:29:20Z",
     "gms_score": 32,
     "sector_scores": {
         "STOCKS": 45,
@@ -540,10 +540,10 @@
             ]
         },
         "BTC": {
-            "price": 95025.48,
+            "price": 95118.41,
             "prev_price": 95525.12,
-            "daily_chg": -0.52,
-            "change_percent": -0.31,
+            "daily_chg": -0.43,
+            "change_percent": -0.21,
             "trend": "DOWN",
             "sparkline": [
                 87802.16,
@@ -567,14 +567,14 @@
                 96929.33,
                 95551.19,
                 95525.12,
-                95025.48
+                95118.41
             ]
         },
         "ETH": {
-            "price": 3298.65,
+            "price": 3305.34,
             "prev_price": 3295.48,
-            "daily_chg": 0.1,
-            "change_percent": -0.71,
+            "daily_chg": 0.3,
+            "change_percent": -0.5,
             "trend": "UP",
             "sparkline": [
                 2948.0,
@@ -598,14 +598,14 @@
                 3354.72,
                 3317.1,
                 3295.48,
-                3298.65
+                3305.34
             ]
         },
         "SOL": {
-            "price": 143.64,
+            "price": 143.68,
             "prev_price": 144.86,
-            "daily_chg": -0.84,
-            "change_percent": -1.19,
+            "daily_chg": -0.82,
+            "change_percent": -1.16,
             "trend": "DOWN",
             "sparkline": [
                 124.65,
@@ -629,7 +629,7 @@
                 146.75,
                 142.33,
                 144.86,
-                143.64
+                143.68
             ]
         },
         "DXY": {
@@ -1070,22 +1070,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS at 32 signals defensive positioning. 10yr Treasury yield holding at 4.17% caps small-cap (IWM) upside. Copper's underperformance vs Gold confirms risk-off sentiment. Oil's modest gain is capped by geopolitical risks. Low VIX reflects stability. SPY below 690 suggests further downside risk.",
+        "content": "Defensive market regime at GMS 32. US 10yr yield stuck at 4.17%, sustaining high rates. Copper's price decline signals growth concerns, potentially intensifying the flight to safety. A VIX breach of 16 could accelerate risk-off, driving equities lower.",
         "reports": {
-            "JP": "GMS32はディフェンシブ領域。米10年債利回りが4.17%で膠着、高金利が小型株(IWM)の回復を抑制。銅価格下落と金価格上昇の乖離はリスクオフを示唆。原油価格は小幅上昇も、地政学的リスクで上値抑制。VIXも低水準維持、市場は安定を織り込む。SPYが690割れで一段安の可能性。",
-            "EN": "GMS at 32 signals defensive positioning. 10yr Treasury yield holding at 4.17% caps small-cap (IWM) upside. Copper's underperformance vs Gold confirms risk-off sentiment. Oil's modest gain is capped by geopolitical risks. Low VIX reflects stability. SPY below 690 suggests further downside risk.",
-            "CN": "GMS为32，预示防御性态势。10年期美债收益率维持在4.17%压制小型股(IWM)上涨空间。铜价表现逊于黄金，确认避险情绪。油价小幅上涨受地缘政治风险限制。VIX处于低位反映市场稳定。SPY跌破690预示下行风险。",
-            "ES": "GMS en 32 señala posicionamiento defensivo. El rendimiento del Tesoro a 10 años se mantiene en 4.17%, limitando el alza de las small caps (IWM). El bajo rendimiento del cobre frente al oro confirma la aversión al riesgo. El modesto aumento del petróleo está limitado por los riesgos geopolíticos. VIX bajo refleja estabilidad. SPY por debajo de 690 sugiere más riesgo a la baja.",
-            "HI": "जीएमएस 32 पर रक्षात्मक स्थिति का संकेत देता है। 10 वर्षीय ट्रेजरी यील्ड 4.17% पर बना हुआ है, जो स्मॉल-कैप (आईडब्ल्यूएम) के अपसाइड को सीमित करता है। सोने के मुकाबले तांबे का कम प्रदर्शन जोखिम से बचाव की भावना की पुष्टि करता है। तेल में मामूली बढ़त भू-राजनीतिक जोखिमों से सीमित है। कम वीआईएक्स स्थिरता को दर्शाता है। एसपीवाई 690 से नीचे आगे गिरावट का जोखिम बताता है।",
-            "ID": "GMS di 32 menandakan posisi defensif. Imbal hasil Treasury 10 tahun bertahan di 4.17% membatasi kenaikan small-cap (IWM). Kinerja tembaga yang lebih rendah vs Emas menegaskan sentimen risk-off. Kenaikan moderat harga minyak dibatasi oleh risiko geopolitik. VIX rendah mencerminkan stabilitas. SPY di bawah 690 menunjukkan risiko penurunan lebih lanjut.",
-            "AR": "يشير مؤشر GMS عند 32 إلى تمركز دفاعي. عائد سندات الخزانة لمدة 10 سنوات ثابت عند 4.17% يحد من ارتفاع الشركات الصغيرة (IWM). الأداء الضعيف للنحاس مقابل الذهب يؤكد معنويات النفور من المخاطرة. الزيادة الطفيفة في أسعار النفط مقيدة بالمخاطر الجيوسياسية. مؤشر VIX المنخفض يعكس الاستقرار. يشير SPY دون 690 إلى مزيد من المخاطر السلبية."
+            "JP": "GMS32でディフェンシブな市場。米10年債利回りが4.17%で膠着し、高金利が継続。銅価格下落が示す景気減速懸念から、安全資産への逃避が強まる可能性。VIXが16を突破すれば、リスクオフが加速し、株価下落に繋がると予想。",
+            "EN": "Defensive market regime at GMS 32. US 10yr yield stuck at 4.17%, sustaining high rates. Copper's price decline signals growth concerns, potentially intensifying the flight to safety. A VIX breach of 16 could accelerate risk-off, driving equities lower.",
+            "CN": "GMS 32，市场防御态势。美国10年期国债收益率稳定在4.17%，维持高利率环境。铜价下跌预示经济增长担忧，或加剧避险情绪。VIX突破16可能加速风险规避，导致股市下跌。关注地缘政治风险对市场情绪的影响。",
+            "ES": "Mercado defensivo con GMS en 32. El rendimiento del bono estadounidense a 10 años se mantiene en 4.17%, sosteniendo tasas altas. La caída del cobre señala preocupaciones de crecimiento, intensificando la huida hacia la seguridad. VIX sobre 16 aceleraría la aversión al riesgo, bajando las acciones.",
+            "HI": "जीएमएस 32 पर रक्षात्मक बाजार व्यवस्था। अमेरिकी 10-वर्षीय उपज 4.17% पर अटकी हुई है, जो उच्च दरों को बनाए रखती है। तांबे की कीमत में गिरावट विकास संबंधी चिंताओं का संकेत देती है, जिससे सुरक्षा की ओर पलायन तेज हो सकता है। 16 का वीआईएक्स उल्लंघन जोखिम को कम कर सकता है, इक्विटी को कम कर सकता है।",
+            "ID": "Rezim pasar defensif pada GMS 32. Imbal hasil US 10yr stagnan di 4.17%, mempertahankan suku bunga tinggi. Penurunan harga tembaga mengindikasikan kekhawatiran pertumbuhan, yang berpotensi meningkatkan pelarian ke aset aman. Penembusan VIX 16 dapat mempercepat penghindaran risiko, mendorong ekuitas lebih rendah.",
+            "AR": "نظام السوق الدفاعي عند GMS 32. استقرار عائد سندات الخزانة الأمريكية لمدة 10 سنوات عند 4.17%، مما يحافظ على ارتفاع أسعار الفائدة. يشير انخفاض أسعار النحاس إلى مخاوف النمو، مما قد يزيد من حدة الاتجاه نحو الأصول الآمنة. قد يؤدي اختراق مؤشر VIX لمستوى 16 إلى تسريع النفور من المخاطرة، مما يدفع الأسهم إلى الانخفاض."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-16T09:38:19Z",
-            "score": 39
-        },
         {
             "date": "2026-01-16T10:38:54Z",
             "score": 37
@@ -1320,6 +1316,10 @@
         },
         {
             "date": "2026-01-17T22:49:13Z",
+            "score": 32
+        },
+        {
+            "date": "2026-01-17T23:29:20Z",
             "score": 32
         }
     ],
