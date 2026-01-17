@@ -9,6 +9,7 @@ import { GlossaryTerm, GlossaryData } from '@/types/glossary';
 import { ArrowUp, ArrowDown, BookOpen, Quote, Hash, Link as LinkIcon, ChevronRight } from 'lucide-react';
 import { DynamicStructuredData } from '@/components/DynamicStructuredData';
 import { AdSenseSlot } from '@/components/AdSenseSlot';
+import { TVPartnerCard } from '@/components/TVPartnerCard';
 
 export default function GlossaryPage() {
     return (
@@ -134,7 +135,7 @@ function GlossaryContent() {
                     </header>
 
                     <div className="space-y-20">
-                        {categories.map((cat, index) => (
+                        {categories.map((cat, categoryIndex) => (
                             <React.Fragment key={cat}>
                                 <section className="scroll-mt-24">
                                     <h2 className="text-2xl font-black text-white uppercase tracking-wider mb-8 flex items-center gap-3">
@@ -143,100 +144,113 @@ function GlossaryContent() {
                                     </h2>
 
                                     <div className="grid grid-cols-1 gap-6">
-                                        {groupedData[cat].map((item) => (
-                                            <article
-                                                key={item.id}
-                                                id={item.id}
-                                                className="group relative bg-[#0A0A0A] border border-[#1E293B] rounded-xl overflow-hidden hover:border-sky-500/50 transition-all duration-300 scroll-mt-32"
-                                            >
-                                                {/* Header Gradient Line */}
-                                                <div className="h-1 w-full bg-gradient-to-r from-[#1E293B] via-[#1E293B] to-transparent group-hover:from-sky-500 group-hover:via-emerald-500 transition-all duration-500"></div>
+                                        {groupedData[cat].map((item, index) => (
+                                            <React.Fragment key={item.id}>
+                                                <article
+                                                    id={item.id}
+                                                    className="group relative bg-[#0A0A0A] border border-[#1E293B] rounded-xl overflow-hidden hover:border-sky-500/50 transition-all duration-300 scroll-mt-32"
+                                                >
+                                                    {/* Header Gradient Line */}
+                                                    <div className="h-1 w-full bg-gradient-to-r from-[#1E293B] via-[#1E293B] to-transparent group-hover:from-sky-500 group-hover:via-emerald-500 transition-all duration-500"></div>
 
-                                                <div className="p-6 md:p-8">
-                                                    {/* Title Row */}
-                                                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-                                                        <h3 className="text-xl md:text-2xl font-bold text-slate-100 flex items-center gap-3">
-                                                            {item.term}
-                                                            <a href={`#${item.id}`} className="text-slate-700 hover:text-sky-500 transition-colors opacity-0 group-hover:opacity-100">
-                                                                <LinkIcon className="w-4 h-4" />
-                                                            </a>
-                                                        </h3>
-                                                        <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#111] border border-[#333] rounded-full text-[10px] font-mono text-slate-400 uppercase tracking-wider">
-                                                            <Hash className="w-3 h-3 text-slate-600" />
-                                                            {item.id.replace(/-/g, ' ')}
-                                                        </span>
-                                                    </div>
+                                                    <div className="p-6 md:p-8">
+                                                        {/* Title Row */}
+                                                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                                                            <h3 className="text-xl md:text-2xl font-bold text-slate-100 flex items-center gap-3">
+                                                                {item.term}
+                                                                <a href={`#${item.id}`} className="text-slate-700 hover:text-sky-500 transition-colors opacity-0 group-hover:opacity-100">
+                                                                    <LinkIcon className="w-4 h-4" />
+                                                                </a>
+                                                            </h3>
+                                                            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#111] border border-[#333] rounded-full text-[10px] font-mono text-slate-400 uppercase tracking-wider">
+                                                                <Hash className="w-3 h-3 text-slate-600" />
+                                                                {item.id.replace(/-/g, ' ')}
+                                                            </span>
+                                                        </div>
 
-                                                    {/* Definition */}
-                                                    <p className="text-slate-300 leading-relaxed mb-8 text-sm md:text-base border-l-2 border-slate-700 pl-4">
-                                                        {item.definition}
-                                                    </p>
+                                                        {/* Definition */}
+                                                        <p className="text-slate-300 leading-relaxed mb-8 text-sm md:text-base border-l-2 border-slate-700 pl-4">
+                                                            {item.definition}
+                                                        </p>
 
-                                                    <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
+                                                        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
 
-                                                        {/* Market Impact (Left Col) */}
-                                                        <div className="space-y-4">
-                                                            <h4 className="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] mb-2">{isJa ? "市場への影響" : "Market Reaction"}</h4>
+                                                            {/* Market Impact (Left Col) */}
+                                                            <div className="space-y-4">
+                                                                <h4 className="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] mb-2">{isJa ? "市場への影響" : "Market Reaction"}</h4>
 
-                                                            <div className="pl-4 border-l border-[#222] space-y-4">
-                                                                {/* UP */}
-                                                                <div className="flex flex-col gap-1">
-                                                                    <div className="flex items-center gap-2">
-                                                                        <div className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center border border-blue-500/30">
-                                                                            <ArrowUp className="w-3 h-3 text-blue-400" />
+                                                                <div className="pl-4 border-l border-[#222] space-y-4">
+                                                                    {/* UP */}
+                                                                    <div className="flex flex-col gap-1">
+                                                                        <div className="flex items-center gap-2">
+                                                                            <div className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center border border-blue-500/30">
+                                                                                <ArrowUp className="w-3 h-3 text-blue-400" />
+                                                                            </div>
+                                                                            <span className="text-blue-400 font-bold text-xs uppercase tracking-wide">
+                                                                                {isJa ? "上昇時:" : "RISING:"}
+                                                                            </span>
                                                                         </div>
-                                                                        <span className="text-blue-400 font-bold text-xs uppercase tracking-wide">
-                                                                            {isJa ? "上昇時:" : "RISING:"}
+                                                                        <span className="text-slate-400 text-xs leading-relaxed block pl-7">
+                                                                            {item.market_impact.up}
                                                                         </span>
                                                                     </div>
-                                                                    <span className="text-slate-400 text-xs leading-relaxed block pl-7">
-                                                                        {item.market_impact.up}
-                                                                    </span>
-                                                                </div>
 
-                                                                {/* DOWN */}
-                                                                <div className="flex flex-col gap-1">
-                                                                    <div className="flex items-center gap-2">
-                                                                        <div className="w-5 h-5 rounded-full bg-red-500/10 flex items-center justify-center border border-red-500/30">
-                                                                            <ArrowDown className="w-3 h-3 text-red-400" />
+                                                                    {/* DOWN */}
+                                                                    <div className="flex flex-col gap-1">
+                                                                        <div className="flex items-center gap-2">
+                                                                            <div className="w-5 h-5 rounded-full bg-red-500/10 flex items-center justify-center border border-red-500/30">
+                                                                                <ArrowDown className="w-3 h-3 text-red-400" />
+                                                                            </div>
+                                                                            <span className="text-red-400 font-bold text-xs uppercase tracking-wide">
+                                                                                {isJa ? "下落時:" : "FALLING:"}
+                                                                            </span>
                                                                         </div>
-                                                                        <span className="text-red-400 font-bold text-xs uppercase tracking-wide">
-                                                                            {isJa ? "下落時:" : "FALLING:"}
+                                                                        <span className="text-slate-400 text-xs leading-relaxed block pl-7">
+                                                                            {item.market_impact.down}
                                                                         </span>
                                                                     </div>
-                                                                    <span className="text-slate-400 text-xs leading-relaxed block pl-7">
-                                                                        {item.market_impact.down}
-                                                                    </span>
                                                                 </div>
+
+                                                                {/* NEW: Subtle Text Link after Market Impact */}
+                                                                <div className="mt-4 pl-4 border-l border-[#222]">
+                                                                    <TVPartnerCard lang={lang} variant="text-link" />
+                                                                </div>
+                                                            </div>
+
+                                                            {/* Context 2026 (Right Col) */}
+                                                            <div className="bg-sky-950/10 border border-sky-900/20 rounded-lg p-5 relative">
+                                                                <h4 className="text-[10px] font-bold text-sky-500 uppercase tracking-[0.2em] mb-3 flex items-center gap-2 relative z-10">
+                                                                    <span className="w-1.5 h-1.5 rounded-full bg-sky-500 animate-pulse"></span>
+                                                                    Context 2026
+                                                                </h4>
+                                                                <p className="text-sky-200/80 text-xs md:text-sm font-serif italic leading-relaxed relative z-10 pl-2 border-l-2 border-sky-500/30">
+                                                                    "{item.context_2026}"
+                                                                </p>
                                                             </div>
                                                         </div>
 
-                                                        {/* Context 2026 (Right Col) */}
-                                                        <div className="bg-sky-950/10 border border-sky-900/20 rounded-lg p-5 relative">
-                                                            {/* Removed large background Quote icon as per user request to prevent overlap */}
-                                                            <h4 className="text-[10px] font-bold text-sky-500 uppercase tracking-[0.2em] mb-3 flex items-center gap-2 relative z-10">
-                                                                <span className="w-1.5 h-1.5 rounded-full bg-sky-500 animate-pulse"></span>
-                                                                Context 2026
-                                                            </h4>
-                                                            <p className="text-sky-200/80 text-xs md:text-sm font-serif italic leading-relaxed relative z-10 pl-2 border-l-2 border-sky-500/30">
-                                                                "{item.context_2026}"
-                                                            </p>
+                                                        {/* Footer Relevance */}
+                                                        <div className="mt-6 pt-4 border-t border-[#1E293B] flex items-center gap-2 text-[10px] text-slate-500 font-mono uppercase tracking-tight">
+                                                            <span className="font-bold text-slate-400">GMS Relevance:</span>
+                                                            {item.gms_relevance}
                                                         </div>
-                                                    </div>
 
-                                                    {/* Footer Relevance */}
-                                                    <div className="mt-6 pt-4 border-t border-[#1E293B] flex items-center gap-2 text-[10px] text-slate-500 font-mono uppercase tracking-tight">
-                                                        <span className="font-bold text-slate-400">GMS Relevance:</span>
-                                                        {item.gms_relevance}
                                                     </div>
+                                                </article>
 
-                                                </div>
-                                            </article>
+                                                {/* Strategic Partner Card Injection (Every 5 terms) */}
+                                                {(index + 1) % 5 === 0 && (
+                                                    <div className="py-2">
+                                                        <TVPartnerCard lang={lang} variant="default" />
+                                                    </div>
+                                                )}
+                                            </React.Fragment>
                                         ))}
                                     </div>
                                 </section>
+
                                 {/* DYNAMIC AD INSERTION (After 3rd Category) */}
-                                {index === 2 && (
+                                {categoryIndex === 2 && (
                                     <div className="py-8" key="mid-ad">
                                         <AdSenseSlot variant="responsive" />
                                     </div>
@@ -253,7 +267,7 @@ function GlossaryContent() {
                     {/* BOTTOM SPACE */}
                     <div className="h-32"></div>
                 </main>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 }

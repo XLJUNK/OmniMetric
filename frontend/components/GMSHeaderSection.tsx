@@ -9,6 +9,7 @@ import { useRouter } from 'next/navigation';
 import { NewsTicker } from '@/components/NewsTicker';
 import { AdUnit } from '@/components/AdUnit';
 import MESSAGES from '@/data/messages.json';
+import { TVPartnerCard } from '@/components/TVPartnerCard';
 
 interface SignalData {
     last_updated: string;
@@ -129,9 +130,9 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
             )}
 
             {/* 1. Global Header Status */}
-            <div className="max-w-[1600px] mx-auto w-full px-4 md:px-6 py-2 border-b border-slate-800 relative z-10 bg-[#0A0A0A]">
-                <div className="flex justify-between relative z-50 flex-col items-center gap-6 mb-4 sm:flex-row sm:items-start sm:mb-6 sm:gap-0">
-                    <div className="pointer-events-auto cursor-pointer text-center sm:text-left" onClick={() => router.push(`/?lang=${lang}`)}>
+            <div className="max-w-[1600px] mx-auto w-full px-4 md:px-6 py-2 border-b border-slate-800 relative z-50 bg-[#0A0A0A]">
+                <div className="flex justify-between relative z-50 flex-col items-center gap-6 mb-4 sm:flex-row sm:items-start sm:mb-6 sm:gap-0 rtl:flex-row-reverse">
+                    <div className="pointer-events-auto cursor-pointer text-center sm:text-left rtl:sm:text-right" onClick={() => router.push(`/?lang=${lang}`)}>
                         <h1 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tighter text-white mb-0 leading-none hover:text-sky-500 transition-colors">OMNIMETRIC TERMINAL</h1>
                         <h2 className="text-[10px] sm:text-sm md:text-base font-bold text-sky-500 tracking-[0.2em] uppercase mt-1">Global Macro Signal (GMS)</h2>
                     </div>
@@ -143,7 +144,7 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
                                 onClick={() => setIsLangOpen(!isLangOpen)}
                                 className="flex items-center gap-2 h-6 px-3 bg-[#1e293b] border border-[#fef3c7]/30 text-[#fef3c7] text-[10px] font-bold uppercase tracking-widest rounded hover:bg-white/10 transition-colors shadow-lg"
                             >
-                                {lang} <ChevronDown className="w-3 h-3" />
+                                {lang} <ChevronDown className="w-3 h-3 rtl:mr-2" />
                             </button>
                             {isLangOpen && (
                                 <div className="absolute top-full mt-1 w-24 bg-[#1e293b] border border-[#fef3c7]/30 rounded shadow-xl overflow-hidden z-[10001] pointer-events-auto ring-1 ring-[#fef3c7]/20 left-1/2 -translate-x-1/2 sm:left-auto sm:right-0 sm:translate-x-0">
@@ -164,7 +165,7 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
                         </div>
 
                         {/* STATUS, DATE */}
-                        <div className="flex flex-col items-center sm:items-end gap-1 mt-2 sm:mt-10">
+                        <div className="flex flex-col items-center sm:items-end rtl:sm:items-start gap-1 mt-2 sm:mt-10">
                             <div className="flex items-center gap-2">
                                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                                 <span className="text-[9px] text-green-500 font-mono font-bold tracking-[0.2em] uppercase">System Operational • 12ms</span>
@@ -207,7 +208,7 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
                 <div className="lg:col-span-1 bg-[#111] !rounded-xl !border !border-[#1E293B] !ring-0 !outline-none !shadow-none p-4 flex flex-col items-center gap-4 relative overflow-visible group">
                     {/* RISK GAUGE & INFO */}
                     <div className="w-full px-1 pt-2 pb-6">
-                        <div className="flex justify-end mb-1.5">
+                        <div className="flex justify-end rtl:justify-start mb-1.5">
                             <button
                                 className="text-[9px] font-mono font-bold tracking-widest text-slate-500 hover:text-white transition-colors cursor-pointer border border-[#1E293B] px-2 py-0.5 rounded hover:bg-white/5"
                                 onClick={() => setShowInfo(true)}
@@ -215,7 +216,7 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
                                 [ What's GMS ]
                             </button>
                         </div>
-                        <RiskGauge score={data.gms_score} />
+                        <RiskGauge score={data.gms_score} lang={lang} />
                     </div>
 
                     <div className="w-full h-[110px] z-10">
@@ -301,6 +302,11 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
                 </div>
             </div>
 
+            {/* PARTNER BANNER (Strategic Placement: Below AI Insight) */}
+            <div className="max-w-[1600px] mx-auto w-full px-4 md:px-6 mb-8">
+                <TVPartnerCard lang={lang} />
+            </div>
+
             {/* 3. News (Live Intelligence Stream) */}
             <div className="max-w-[1600px] mx-auto w-full px-4 md:px-6 mb-4">
                 <div className="bg-[#0f172a] border border-[#1E293B] rounded-xl overflow-hidden">
@@ -320,11 +326,11 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
                         // SAFETY SORT: Ensure events are chronologically sorted (Fix for Localhost/Stale Data)
                         ([...(data.events || [])].sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()).slice(0, 3)).map((evt, i) => (
                             <div key={i} className="flex flex-col border-b border-[#1E293B] last:border-0 py-3 px-4 hover:bg-white/5 transition-colors">
-                                <div className="flex items-center gap-3">
+                                <div className="flex items-center gap-3 rtl:flex-row-reverse">
                                     <span className={`text-xs font-bold font-mono ${evt.impact === 'CRITICAL' ? 'text-red-500' : 'text-slate-300'}`}>
                                         [{evt.date}]
                                     </span>
-                                    <span className="text-sm font-bold text-slate-200 uppercase tracking-wide">
+                                    <span className="text-sm font-bold text-slate-200 uppercase tracking-wide rtl:text-right flex-grow">
                                         {(t.events as any)?.[evt.code] || evt.name}
                                     </span>
                                 </div>
