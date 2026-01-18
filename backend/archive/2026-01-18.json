@@ -1,10 +1,10 @@
 {
-    "last_updated": "2026-01-18T18:40:35Z",
-    "last_successful_update": "2026-01-18T18:40:35Z",
-    "gms_score": 32,
+    "last_updated": "2026-01-18T19:25:35Z",
+    "last_successful_update": "2026-01-18T19:25:35Z",
+    "gms_score": 30,
     "sector_scores": {
         "STOCKS": 45,
-        "CRYPTO": 40,
+        "CRYPTO": 25,
         "FOREX": 25,
         "COMMODITIES": 45
     },
@@ -540,10 +540,10 @@
             ]
         },
         "BTC": {
-            "price": 95321.29,
+            "price": 95387.98,
             "prev_price": 95099.92,
-            "daily_chg": 0.23,
-            "change_percent": -1.66,
+            "daily_chg": 0.3,
+            "change_percent": -1.59,
             "trend": "UP",
             "sparkline": [
                 87835.84,
@@ -567,14 +567,14 @@
                 95551.19,
                 95525.12,
                 95099.92,
-                95321.29
+                95387.98
             ]
         },
         "ETH": {
-            "price": 3357.4,
+            "price": 3351.87,
             "prev_price": 3308.86,
-            "daily_chg": 1.47,
-            "change_percent": 0.08,
+            "daily_chg": 1.3,
+            "change_percent": -0.09,
             "trend": "UP",
             "sparkline": [
                 2948.57,
@@ -598,14 +598,14 @@
                 3317.1,
                 3295.48,
                 3308.86,
-                3357.4
+                3351.87
             ]
         },
         "SOL": {
-            "price": 142.57,
+            "price": 142.8,
             "prev_price": 143.73,
-            "daily_chg": -0.8,
-            "change_percent": -2.85,
+            "daily_chg": -0.65,
+            "change_percent": -2.7,
             "trend": "DOWN",
             "sparkline": [
                 125.2,
@@ -629,7 +629,7 @@
                 142.33,
                 144.86,
                 143.73,
-                142.57
+                142.8
             ]
         },
         "DXY": {
@@ -664,10 +664,10 @@
             ]
         },
         "USDJPY": {
-            "price": 157.82,
+            "price": 157.79,
             "prev_price": 158.6,
-            "daily_chg": -0.49,
-            "change_percent": -0.11,
+            "daily_chg": -0.51,
+            "change_percent": -0.13,
             "trend": "DOWN",
             "sparkline": [
                 154.78,
@@ -691,14 +691,14 @@
                 159.18,
                 158.4,
                 158.6,
-                157.82
+                157.79
             ]
         },
         "EURUSD": {
             "price": 1.16,
             "prev_price": 1.16,
-            "daily_chg": -0.07,
-            "change_percent": -0.57,
+            "daily_chg": -0.23,
+            "change_percent": -0.73,
             "trend": "DOWN",
             "sparkline": [
                 1.17,
@@ -1070,22 +1070,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS at 32 signals defensive positioning. Stagnant 4.17% US 10-year yield, tightening HY spreads, and declining copper prices suggest recessionary concerns. Trump's tariff threat on Europe adds to the risk. VIX at 15.86 reflects caution. SPY hovers at 691.66; break below 4.10% triggers risk-off.",
+        "content": "GMS 30 signals defensive stance. Oil strength, copper weakness hint at recession risks. US 10Y yield stuck at 4.17% as Trump's Greenland bid and tariff threats fuel risk-off. Watch VIX spike, JPY strength. A 4.25% yield breach signals further equity downside.",
         "reports": {
-            "JP": "GMS32はディフェンシブ領域。米10年債利回りが4.17%で膠着する中、ハイイールド債スプレッドは縮小傾向も、銅価格の下落は景気後退懸念を示唆。トランプ発言も重なり、グリーンランド取引不成立なら対欧関税リスクが25%に上昇。VIXも15.86で警戒水準。SPYは691.66で停滞、4.10%割れでリスクオフ加速。",
-            "EN": "GMS at 32 signals defensive positioning. Stagnant 4.17% US 10-year yield, tightening HY spreads, and declining copper prices suggest recessionary concerns. Trump's tariff threat on Europe adds to the risk. VIX at 15.86 reflects caution. SPY hovers at 691.66; break below 4.10% triggers risk-off.",
-            "CN": "GMS为32，表明防御姿态。美国10年期国债收益率稳定在4.17%，高收益债券息差收窄，但铜价下跌暗示衰退担忧。特朗普对欧洲的关税威胁加剧风险。VIX为15.86，反映谨慎情绪。标普500指数在691.66附近徘徊；跌破4.10%将触发避险情绪。",
-            "ES": "GMS en 32 señala una postura defensiva. El rendimiento del bono estadounidense a 10 años se mantiene en 4.17%, los diferenciales de HY se reducen, pero la caída del precio del cobre sugiere preocupaciones de recesión. La amenaza arancelaria de Trump a Europa aumenta el riesgo. VIX en 15.86 refleja cautela. SPY ronda los 691.66; la ruptura por debajo de 4.10% activa la aversión al riesgo.",
-            "HI": "जीएमएस 32 पर रक्षात्मक स्थिति का संकेत देता है। स्थिर 4.17% अमेरिकी 10-वर्षीय उपज, तंग एचवाई स्प्रेड और तांबे की कीमतों में गिरावट मंदी की चिंताओं का सुझाव देते हैं। यूरोप पर ट्रम्प के टैरिफ खतरे से जोखिम बढ़ गया है। वीआईएक्स 15.86 पर सावधानी दर्शाता है। एसपीवाई 691.66 पर मंडराता है; 4.10% से नीचे का ब्रेक जोखिम को दूर करता है।",
-            "ID": "GMS di 32 menandakan posisi defensif. Imbal hasil AS 10-tahun stagnan di 4.17%, spread HY yang mengetat, dan harga tembaga yang menurun menunjukkan kekhawatiran resesi. Ancaman tarif Trump terhadap Eropa menambah risiko. VIX di 15.86 mencerminkan kehati-hatian. SPY melayang di 691.66; menembus di bawah 4.10% memicu penghindaran risiko.",
-            "AR": "يشير مؤشر GMS عند 32 إلى وضع دفاعي. استقرار عائدات سندات الخزانة الأمريكية لأجل 10 سنوات عند 4.17%، وتضييق فروق عائدات السندات عالية المخاطر، وانخفاض أسعار النحاس يشير إلى مخاوف بشأن الركود. تهديد ترامب بفرض تعريفات على أوروبا يزيد من المخاطر. مؤشر VIX عند 15.86 يعكس الحذر. يحوم مؤشر SPY عند 691.66؛ الاختراق تحت 4.10% يؤدي إلى النفور من المخاطرة."
+            "JP": "GMSスコア30はディフェンシブ領域を示唆。原油高と銅安は景気後退の兆候か。米10年債利回りが4.17%で膠着する中、トランプ政権によるグリーンランド購入提案と対欧関税発言がリスクオフ心理を煽る。VIXの上昇と円高に注意。4.25%の利回り突破で更なる株価下落を警戒。",
+            "EN": "GMS 30 signals defensive stance. Oil strength, copper weakness hint at recession risks. US 10Y yield stuck at 4.17% as Trump's Greenland bid and tariff threats fuel risk-off. Watch VIX spike, JPY strength. A 4.25% yield breach signals further equity downside.",
+            "CN": "GMS评分30预示防御姿态。原油走强、铜价疲软暗示经济衰退风险。美国10年期国债收益率停留在4.17%，特朗普的格陵兰提议和关税威胁加剧避险情绪。关注VIX飙升、日元走强。收益率突破4.25%将预示股市进一步下行。",
+            "ES": "Un GMS de 30 indica una postura defensiva. La fortaleza del petróleo y la debilidad del cobre sugieren riesgos de recesión. El rendimiento del bono del Tesoro estadounidense a 10 años se mantiene en el 4.17% mientras que la oferta de Trump por Groenlandia y las amenazas arancelarias alimentan la aversión al riesgo. Vigilar el alza del VIX y la fortaleza del JPY. La superación del 4.25% en el rendimiento señala una mayor caída de la renta variable.",
+            "HI": "जीएमएस 30 डिफेंसिव रुख का संकेत देता है। तेल की मजबूती, तांबे की कमजोरी मंदी के जोखिम का संकेत देती है। ट्रंप के ग्रीनलैंड बोली और टैरिफ खतरों ने जोखिम को बढ़ावा दिया क्योंकि अमेरिकी 10वाई यील्ड 4.17% पर अटका। VIX में उछाल, JPY की मजबूती पर नजर रखें। 4.25% यील्ड उल्लंघन इक्विटी गिरावट का संकेत देता है।",
+            "ID": "GMS 30 menandakan sikap defensif. Kekuatan minyak, kelemahan tembaga mengisyaratkan risiko resesi. Imbal hasil US 10Y macet di 4.17% karena tawaran Greenland Trump dan ancaman tarif memicu penghindaran risiko. Perhatikan lonjakan VIX, penguatan JPY. Pelanggaran imbal hasil 4.25% menandakan penurunan ekuitas lebih lanjut.",
+            "AR": "يشير مؤشر GMS البالغ 30 إلى موقف دفاعي. يشير ارتفاع النفط وضعف النحاس إلى مخاطر الركود. ظل عائد سندات الخزانة الأمريكية لمدة 10 سنوات عالقًا عند 4.17٪ حيث غذت محاولة ترامب لشراء جرينلاند وتهديدات التعريفات النفور من المخاطرة. راقب ارتفاع مؤشر VIX وقوة الين الياباني. يشير تجاوز العائد 4.25٪ إلى مزيد من الانخفاض في الأسهم."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-17T05:33:19Z",
-            "score": 37
-        },
         {
             "date": "2026-01-17T05:49:33Z",
             "score": 37
@@ -1321,6 +1317,10 @@
         {
             "date": "2026-01-18T18:40:35Z",
             "score": 32
+        },
+        {
+            "date": "2026-01-18T19:25:35Z",
+            "score": 30
         }
     ],
     "system_status": "OPERATIONAL"
