@@ -1,11 +1,11 @@
 {
-    "last_updated": "2026-01-18T15:30:21Z",
-    "last_successful_update": "2026-01-18T15:30:21Z",
-    "gms_score": 32,
+    "last_updated": "2026-01-18T15:46:56Z",
+    "last_successful_update": "2026-01-18T15:46:56Z",
+    "gms_score": 31,
     "sector_scores": {
         "STOCKS": 45,
         "CRYPTO": 25,
-        "FOREX": 40,
+        "FOREX": 35,
         "COMMODITIES": 45
     },
     "market_data": {
@@ -540,10 +540,10 @@
             ]
         },
         "BTC": {
-            "price": 95017.35,
+            "price": 95072.39,
             "prev_price": 95099.92,
-            "daily_chg": -0.09,
-            "change_percent": -1.97,
+            "daily_chg": -0.03,
+            "change_percent": -1.92,
             "trend": "DOWN",
             "sparkline": [
                 87835.84,
@@ -567,14 +567,14 @@
                 95551.19,
                 95525.12,
                 95099.92,
-                95017.35
+                95072.39
             ]
         },
         "ETH": {
-            "price": 3330.76,
+            "price": 3333.0,
             "prev_price": 3308.86,
-            "daily_chg": 0.66,
-            "change_percent": -0.71,
+            "daily_chg": 0.73,
+            "change_percent": -0.65,
             "trend": "UP",
             "sparkline": [
                 2948.57,
@@ -598,7 +598,7 @@
                 3317.1,
                 3295.48,
                 3308.86,
-                3330.76
+                3333.0
             ]
         },
         "SOL": {
@@ -726,13 +726,12 @@
             ]
         },
         "USDINR": {
-            "price": 90.36,
-            "prev_price": 90.18,
-            "daily_chg": 0.2,
-            "change_percent": 0.14,
+            "price": 90.66,
+            "prev_price": 90.36,
+            "daily_chg": 0.33,
+            "change_percent": 0.59,
             "trend": "UP",
             "sparkline": [
-                90.78,
                 90.95,
                 90.41,
                 90.26,
@@ -753,15 +752,16 @@
                 90.13,
                 90.27,
                 90.18,
-                90.36
+                90.36,
+                90.66
             ]
         },
         "USDSAR": {
             "price": 3.75,
             "prev_price": 3.75,
-            "daily_chg": -0.0,
-            "change_percent": -0.1,
-            "trend": "DOWN",
+            "daily_chg": 0.11,
+            "change_percent": 0.12,
+            "trend": "UP",
             "sparkline": [
                 3.75,
                 3.75,
@@ -771,8 +771,8 @@
                 3.75,
                 3.75,
                 3.75,
-                3.75,
                 3.74,
+                3.75,
                 3.75,
                 3.75,
                 3.75,
@@ -1070,22 +1070,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "Defensive market (GMS 32). Rising oil contrasts with falling copper, signaling global slowdown fears. US 10yr yield stuck at 4.17%, geopolitical risks weigh. Greenland tariff news amplifies risk-off. VIX slightly up. Maintain defensive stance, shift neutral above GMS 40.",
+        "content": "GMS at 31 signals a defensive market. Higher oil prices fuel inflation, with US 10Y yield stuck at 4.17%. Copper/Gold ratio at 1.27 suggests risk aversion. Trump's tariffs threaten European growth, pushing USDJPY to 158.6. VIX at 15.86 is stable, but geopolitical risks loom. US yields above 4% raise equity correction risks.",
         "reports": {
-            "JP": "GMS32で守備的市場。原油上昇も銅下落が示す通り、世界経済の減速懸念が根強い。米10年債利回りは4.17%で膠着、地政学リスクが重石。グリーンランド関税報道がリスクオフを増幅。VIXも小幅上昇。当面はディフェンシブ姿勢を維持、GMS40超えで中立へ移行。",
-            "EN": "Defensive market (GMS 32). Rising oil contrasts with falling copper, signaling global slowdown fears. US 10yr yield stuck at 4.17%, geopolitical risks weigh. Greenland tariff news amplifies risk-off. VIX slightly up. Maintain defensive stance, shift neutral above GMS 40.",
-            "CN": "防御型市场（GMS 32）。油价上涨与铜价下跌形成对比，表明全球经济放缓的担忧情绪强烈。美国10年期国债收益率维持在4.17%，地缘政治风险构成压力。格陵兰关税消息加剧避险情绪。VIX略有上升。维持防御姿态，GMS超过40转向中性。",
-            "ES": "Mercado defensivo (GMS 32). El aumento del petróleo contrasta con la caída del cobre, lo que indica temores de desaceleración global. El rendimiento del bono estadounidense a 10 años se mantiene en 4.17%, los riesgos geopolíticos pesan. Las noticias sobre aranceles a Groenlandia amplifican la aversión al riesgo. VIX ligeramente al alza. Mantener una postura defensiva, cambiar a neutral por encima de GMS 40.",
-            "HI": "रक्षात्मक बाजार (जीएमएस 32)। बढ़ते तेल के विपरीत तांबे की गिरावट वैश्विक मंदी के डर का संकेत देती है। अमेरिकी 10 साल की उपज 4.17% पर अटकी हुई है, भू-राजनीतिक जोखिमों का दबाव है। ग्रीनलैंड टैरिफ समाचार जोखिम से बचने को बढ़ाता है। वीआईएक्स मामूली रूप से ऊपर। रक्षात्मक रुख बनाए रखें, जीएमएस 40 से ऊपर तटस्थ में बदलाव करें।",
-            "ID": "Pasar defensif (GMS 32). Kenaikan harga minyak kontras dengan penurunan tembaga, menandakan kekhawatiran perlambatan global. Imbal hasil US 10yr bertahan di 4.17%, risiko geopolitik membebani. Berita tarif Greenland memperkuat penghindaran risiko. VIX sedikit naik. Pertahankan sikap defensif, beralih netral di atas GMS 40.",
-            "AR": "سوق دفاعي (مؤشر GMS عند 32). ارتفاع النفط يتناقض مع انخفاض النحاس، مما يشير إلى مخاوف من تباطؤ عالمي. عائد سندات الخزانة الأمريكية لأجل 10 سنوات ثابت عند 4.17٪، والمخاطر الجيوسياسية تلقي بثقلها. أخبار الرسوم الجمركية على جرينلاند تزيد من النفور من المخاطرة. مؤشر VIX مرتفع قليلاً. الحفاظ على موقف دفاعي، والتحول إلى الحياد فوق GMS 40."
+            "JP": "GMS31で守備的市場。原油高はインフレ圧力を増し、米10年債利回りは4.17%で膠着。銅/金比は1.27でリスク回避を示唆。トランプ関税が欧州の成長を抑制し、ドル円は158.6へ。VIXは15.86で安定も、地政学的リスクが重石。4%超えの米国債利回り定着で株価調整リスク。",
+            "EN": "GMS at 31 signals a defensive market. Higher oil prices fuel inflation, with US 10Y yield stuck at 4.17%. Copper/Gold ratio at 1.27 suggests risk aversion. Trump's tariffs threaten European growth, pushing USDJPY to 158.6. VIX at 15.86 is stable, but geopolitical risks loom. US yields above 4% raise equity correction risks.",
+            "CN": "GMS为31，市场防御态势明显。油价上涨加剧通胀压力，美国10年期国债收益率维持在4.17%。铜金比为1.27，表明避险情绪升温。特朗普关税政策威胁欧洲经济增长，美元兑日元升至158.6。VIX稳定在15.86，但地缘政治风险隐现。美债收益率超过4%，增加股市调整风险。",
+            "ES": "El GMS en 31 indica un mercado defensivo. Los precios más altos del petróleo alimentan la inflación, con el rendimiento del Tesoro estadounidense a 10 años estancado en el 4,17%. La relación cobre/oro en 1,27 sugiere aversión al riesgo. Los aranceles de Trump amenazan el crecimiento europeo, empujando el USDJPY a 158,6. El VIX en 15,86 es estable, pero los riesgos geopolíticos son inminentes. Los rendimientos estadounidenses por encima del 4% aumentan los riesgos de corrección de la renta variable.",
+            "HI": "जीएमएस 31 पर रक्षात्मक बाजार का संकेत देता है। उच्च तेल की कीमतें मुद्रास्फीति को बढ़ावा देती हैं, अमेरिकी 10वाई उपज 4.17% पर अटकी हुई है। कॉपर/गोल्ड अनुपात 1.27 पर जोखिम से बचने का सुझाव देता है। ट्रम्प के टैरिफ यूरोपीय विकास को खतरे में डालते हैं, जिससे यूएसडीजेपीवाई 158.6 तक पहुंच जाता है। वीआईएक्स 15.86 पर स्थिर है, लेकिन भू-राजनीतिक जोखिम मंडरा रहे हैं। 4% से ऊपर की अमेरिकी उपज इक्विटी सुधार जोखिमों को बढ़ाती है।",
+            "ID": "GMS di 31 menandakan pasar defensif. Harga minyak yang lebih tinggi memicu inflasi, dengan imbal hasil US 10Y terjebak pada 4,17%. Rasio Tembaga/Emas pada 1,27 menunjukkan penghindaran risiko. Tarif Trump mengancam pertumbuhan Eropa, mendorong USDJPY ke 158,6. VIX pada 15,86 stabil, tetapi risiko geopolitik membayangi. Imbal hasil AS di atas 4% meningkatkan risiko koreksi ekuitas.",
+            "AR": "يشير مؤشر GMS عند 31 إلى سوق دفاعي. أسعار النفط المرتفعة تغذي التضخم، مع بقاء عائدات سندات الخزانة الأمريكية لمدة 10 سنوات عالقة عند 4.17٪. تشير نسبة النحاس / الذهب عند 1.27 إلى النفور من المخاطرة. تهدد تعريفات ترامب النمو الأوروبي، مما يدفع الدولار ين إلى 158.6. مؤشر VIX عند 15.86 مستقر، لكن المخاطر الجيوسياسية تلوح في الأفق. عوائد السندات الأمريكية التي تزيد عن 4٪ تزيد من مخاطر تصحيح الأسهم."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-16T23:30:32Z",
-            "score": 36
-        },
         {
             "date": "2026-01-16T23:47:26Z",
             "score": 36
@@ -1321,6 +1317,10 @@
         {
             "date": "2026-01-18T15:30:21Z",
             "score": 32
+        },
+        {
+            "date": "2026-01-18T15:46:56Z",
+            "score": 31
         }
     ],
     "system_status": "OPERATIONAL"
