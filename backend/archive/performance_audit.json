@@ -1,10 +1,10 @@
 {
     "metrics": {
-        "avg_vix_defensive": 16.33,
+        "avg_vix_defensive": 16.26,
         "avg_vix_neutral": null,
         "avg_vix_accumulate": 14.49,
-        "sample_count": 8,
-        "last_updated": "2026-01-17 23:46:43"
+        "sample_count": 9,
+        "last_updated": "2026-01-18 02:36:13"
     },
     "summaries": {
         "EN": "Collecting historical correlation data to validate algorithmic performance...",
@@ -63,6 +63,13 @@
         {
             "date": "2026-01-17",
             "gms_score": 37,
+            "spy_price": 691.66,
+            "vix_price": 15.86,
+            "net_liquidity": 5801.3
+        },
+        {
+            "date": "2026-01-18",
+            "gms_score": 32,
             "spy_price": 691.66,
             "vix_price": 15.86,
             "net_liquidity": 5801.3
