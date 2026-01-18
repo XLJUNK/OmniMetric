@@ -1,11 +1,11 @@
 {
-    "last_updated": "2026-01-18T17:47:05Z",
-    "last_successful_update": "2026-01-18T17:47:05Z",
-    "gms_score": 31,
+    "last_updated": "2026-01-18T18:40:35Z",
+    "last_successful_update": "2026-01-18T18:40:35Z",
+    "gms_score": 32,
     "sector_scores": {
         "STOCKS": 45,
-        "CRYPTO": 25,
-        "FOREX": 35,
+        "CRYPTO": 40,
+        "FOREX": 25,
         "COMMODITIES": 45
     },
     "market_data": {
@@ -540,10 +540,10 @@
             ]
         },
         "BTC": {
-            "price": 95169.03,
+            "price": 95321.29,
             "prev_price": 95099.92,
-            "daily_chg": 0.07,
-            "change_percent": -1.82,
+            "daily_chg": 0.23,
+            "change_percent": -1.66,
             "trend": "UP",
             "sparkline": [
                 87835.84,
@@ -567,14 +567,14 @@
                 95551.19,
                 95525.12,
                 95099.92,
-                95169.03
+                95321.29
             ]
         },
         "ETH": {
-            "price": 3334.26,
+            "price": 3357.4,
             "prev_price": 3308.86,
-            "daily_chg": 0.77,
-            "change_percent": -0.61,
+            "daily_chg": 1.47,
+            "change_percent": 0.08,
             "trend": "UP",
             "sparkline": [
                 2948.57,
@@ -598,14 +598,14 @@
                 3317.1,
                 3295.48,
                 3308.86,
-                3334.26
+                3357.4
             ]
         },
         "SOL": {
-            "price": 142.07,
+            "price": 142.57,
             "prev_price": 143.73,
-            "daily_chg": -1.15,
-            "change_percent": -3.19,
+            "daily_chg": -0.8,
+            "change_percent": -2.85,
             "trend": "DOWN",
             "sparkline": [
                 125.2,
@@ -629,7 +629,7 @@
                 142.33,
                 144.86,
                 143.73,
-                142.07
+                142.57
             ]
         },
         "DXY": {
@@ -664,13 +664,12 @@
             ]
         },
         "USDJPY": {
-            "price": 158.6,
-            "prev_price": 158.4,
-            "daily_chg": 0.12,
-            "change_percent": 0.28,
-            "trend": "UP",
+            "price": 157.82,
+            "prev_price": 158.6,
+            "daily_chg": -0.49,
+            "change_percent": -0.11,
+            "trend": "DOWN",
             "sparkline": [
-                155.01,
                 154.78,
                 155.49,
                 155.59,
@@ -691,17 +690,17 @@
                 157.99,
                 159.18,
                 158.4,
-                158.6
+                158.6,
+                157.82
             ]
         },
         "EURUSD": {
             "price": 1.16,
             "prev_price": 1.16,
-            "daily_chg": -0.32,
-            "change_percent": -0.13,
+            "daily_chg": -0.07,
+            "change_percent": -0.57,
             "trend": "DOWN",
             "sparkline": [
-                1.18,
                 1.17,
                 1.17,
                 1.17,
@@ -720,6 +719,7 @@
                 1.17,
                 1.16,
                 1.17,
+                1.16,
                 1.16,
                 1.16,
                 1.16
@@ -759,8 +759,8 @@
         "USDSAR": {
             "price": 3.75,
             "prev_price": 3.75,
-            "daily_chg": 0.11,
-            "change_percent": 0.12,
+            "daily_chg": 0.08,
+            "change_percent": 0.09,
             "trend": "UP",
             "sparkline": [
                 3.75,
@@ -1070,22 +1070,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS at 31 indicates defensive positioning. Narrowing HY spreads suggest risk appetite, but stagnant copper/gold ratio and Trump's tariffs pose headwinds. US 10Y yield at 4.25% is key resistance; break above accelerates risk-off.",
+        "content": "GMS at 32 signals defensive positioning. Stagnant 4.17% US 10-year yield, tightening HY spreads, and declining copper prices suggest recessionary concerns. Trump's tariff threat on Europe adds to the risk. VIX at 15.86 reflects caution. SPY hovers at 691.66; break below 4.10% triggers risk-off.",
         "reports": {
-            "JP": "GMS31はディフェンシブ領域。高利回り債スプレッド縮小はリスク選好の兆しだが、銅/金レシオの停滞とトランプ関税が重石。4.25%の米10年債利回りが抵抗線、突破ならリスクオフ加速。",
-            "EN": "GMS at 31 indicates defensive positioning. Narrowing HY spreads suggest risk appetite, but stagnant copper/gold ratio and Trump's tariffs pose headwinds. US 10Y yield at 4.25% is key resistance; break above accelerates risk-off.",
-            "CN": "当前GMS为31，市场处于防御状态。高收益债券利差收窄暗示风险偏好，但铜金比停滞和特朗普关税构成阻力。美国10年期国债收益率4.25%是关键阻力位，突破则加速避险。",
-            "ES": "GMS en 31 indica una postura defensiva. La reducción de los diferenciales de HY sugiere apetito por el riesgo, pero el estancamiento del ratio cobre/oro y los aranceles de Trump suponen un lastre. El rendimiento del bono estadounidense a 10 años en el 4,25% es una resistencia clave; la ruptura al alza acelera la aversión al riesgo.",
-            "HI": "जीएमएस 31 पर रक्षात्मक स्थिति का संकेत देता है। संकीर्ण एचवाई स्प्रेड जोखिम भूख का सुझाव देते हैं, लेकिन तांबा/सोना अनुपात का ठहराव और ट्रम्प के टैरिफ प्रतिकूल परिस्थितियों का निर्माण करते हैं। यूएस 10वाई यील्ड 4.25% पर महत्वपूर्ण प्रतिरोध है; ऊपर की ओर ब्रेक जोखिम को बढ़ाता है।",
-            "ID": "GMS di 31 mengindikasikan posisi defensif. Penyempitan spread HY menunjukkan selera risiko, tetapi rasio tembaga/emas yang stagnan dan tarif Trump menjadi penghambat. Imbal hasil US 10Y di 4.25% adalah resistensi utama; penembusan di atas mempercepat penghindaran risiko.",
-            "AR": "مؤشر GMS عند 31 يشير إلى وضع دفاعي. تضييق فروق عوائد السندات عالية المخاطر يشير إلى شهية للمخاطرة، لكن ركود نسبة النحاس/الذهب وتعريفات ترامب تشكل رياحًا معاكسة. عائد سندات الخزانة الأمريكية لأجل 10 سنوات عند 4.25٪ يمثل مقاومة رئيسية؛ الاختراق فوقه يسرع النفور من المخاطرة."
+            "JP": "GMS32はディフェンシブ領域。米10年債利回りが4.17%で膠着する中、ハイイールド債スプレッドは縮小傾向も、銅価格の下落は景気後退懸念を示唆。トランプ発言も重なり、グリーンランド取引不成立なら対欧関税リスクが25%に上昇。VIXも15.86で警戒水準。SPYは691.66で停滞、4.10%割れでリスクオフ加速。",
+            "EN": "GMS at 32 signals defensive positioning. Stagnant 4.17% US 10-year yield, tightening HY spreads, and declining copper prices suggest recessionary concerns. Trump's tariff threat on Europe adds to the risk. VIX at 15.86 reflects caution. SPY hovers at 691.66; break below 4.10% triggers risk-off.",
+            "CN": "GMS为32，表明防御姿态。美国10年期国债收益率稳定在4.17%，高收益债券息差收窄，但铜价下跌暗示衰退担忧。特朗普对欧洲的关税威胁加剧风险。VIX为15.86，反映谨慎情绪。标普500指数在691.66附近徘徊；跌破4.10%将触发避险情绪。",
+            "ES": "GMS en 32 señala una postura defensiva. El rendimiento del bono estadounidense a 10 años se mantiene en 4.17%, los diferenciales de HY se reducen, pero la caída del precio del cobre sugiere preocupaciones de recesión. La amenaza arancelaria de Trump a Europa aumenta el riesgo. VIX en 15.86 refleja cautela. SPY ronda los 691.66; la ruptura por debajo de 4.10% activa la aversión al riesgo.",
+            "HI": "जीएमएस 32 पर रक्षात्मक स्थिति का संकेत देता है। स्थिर 4.17% अमेरिकी 10-वर्षीय उपज, तंग एचवाई स्प्रेड और तांबे की कीमतों में गिरावट मंदी की चिंताओं का सुझाव देते हैं। यूरोप पर ट्रम्प के टैरिफ खतरे से जोखिम बढ़ गया है। वीआईएक्स 15.86 पर सावधानी दर्शाता है। एसपीवाई 691.66 पर मंडराता है; 4.10% से नीचे का ब्रेक जोखिम को दूर करता है।",
+            "ID": "GMS di 32 menandakan posisi defensif. Imbal hasil AS 10-tahun stagnan di 4.17%, spread HY yang mengetat, dan harga tembaga yang menurun menunjukkan kekhawatiran resesi. Ancaman tarif Trump terhadap Eropa menambah risiko. VIX di 15.86 mencerminkan kehati-hatian. SPY melayang di 691.66; menembus di bawah 4.10% memicu penghindaran risiko.",
+            "AR": "يشير مؤشر GMS عند 32 إلى وضع دفاعي. استقرار عائدات سندات الخزانة الأمريكية لأجل 10 سنوات عند 4.17%، وتضييق فروق عائدات السندات عالية المخاطر، وانخفاض أسعار النحاس يشير إلى مخاوف بشأن الركود. تهديد ترامب بفرض تعريفات على أوروبا يزيد من المخاطر. مؤشر VIX عند 15.86 يعكس الحذر. يحوم مؤشر SPY عند 691.66؛ الاختراق تحت 4.10% يؤدي إلى النفور من المخاطرة."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-17T04:41:03Z",
-            "score": 37
-        },
         {
             "date": "2026-01-17T05:33:19Z",
             "score": 37
@@ -1321,6 +1317,10 @@
         {
             "date": "2026-01-18T17:47:05Z",
             "score": 31
+        },
+        {
+            "date": "2026-01-18T18:40:35Z",
+            "score": 32
         }
     ],
     "system_status": "OPERATIONAL"
