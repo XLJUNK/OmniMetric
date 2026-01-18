@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-01-18T05:52:43Z",
-    "last_successful_update": "2026-01-18T05:52:43Z",
+    "last_updated": "2026-01-18T06:46:45Z",
+    "last_successful_update": "2026-01-18T06:46:45Z",
     "gms_score": 32,
     "sector_scores": {
         "STOCKS": 45,
@@ -540,13 +540,12 @@
             ]
         },
         "BTC": {
-            "price": 95166.2,
-            "prev_price": 95525.12,
-            "daily_chg": -0.38,
-            "change_percent": -0.16,
-            "trend": "DOWN",
+            "price": 95164.62,
+            "prev_price": 95099.92,
+            "daily_chg": 0.07,
+            "change_percent": -1.82,
+            "trend": "UP",
             "sparkline": [
-                87802.16,
                 87835.84,
                 87138.14,
                 88430.13,
@@ -567,17 +566,17 @@
                 96929.33,
                 95551.19,
                 95525.12,
-                95166.2
+                95099.92,
+                95164.62
             ]
         },
         "ETH": {
-            "price": 3314.71,
-            "prev_price": 3295.48,
-            "daily_chg": 0.58,
-            "change_percent": -0.22,
+            "price": 3314.21,
+            "prev_price": 3308.86,
+            "daily_chg": 0.16,
+            "change_percent": -1.21,
             "trend": "UP",
             "sparkline": [
-                2948.0,
                 2948.57,
                 2934.54,
                 2971.42,
@@ -598,17 +597,17 @@
                 3354.72,
                 3317.1,
                 3295.48,
-                3314.71
+                3308.86,
+                3314.21
             ]
         },
         "SOL": {
-            "price": 142.77,
-            "prev_price": 144.86,
-            "daily_chg": -1.44,
-            "change_percent": -1.78,
+            "price": 142.67,
+            "prev_price": 143.73,
+            "daily_chg": -0.73,
+            "change_percent": -2.78,
             "trend": "DOWN",
             "sparkline": [
-                124.65,
                 125.2,
                 123.13,
                 124.93,
@@ -629,7 +628,8 @@
                 146.75,
                 142.33,
                 144.86,
-                142.77
+                143.73,
+                142.67
             ]
         },
         "DXY": {
@@ -1070,22 +1070,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "Defensive market at GMS 32. Rising oil prices fuel inflation concerns, pressuring long-term yields. Trade friction news between the US and Europe accelerates risk-off sentiment. VIX spike suggests near-term volatility. SPY below $690 triggers further downside.",
+        "content": "GMS at 32 indicates a defensive stance. Rising oil and falling copper signal recession fears, driving risk-off sentiment. US 10Y yield is stuck at 4.17%, with geopolitical risks fueling a flight to safety. VIX stable at 15.86 but Trump's words could trigger spikes. SOL weakness a warning. 251 chars",
         "reports": {
-            "JP": "GMS32でディフェンシブな市場。原油上昇はインフレ懸念を高め、長期金利上昇圧力に。米欧間の貿易摩擦激化報道もリスクオフを加速。VIX上昇が示唆するように、短期的なボラティリティ上昇に警戒。SPY<$690が下落トレンド入りのトリガー。",
-            "EN": "Defensive market at GMS 32. Rising oil prices fuel inflation concerns, pressuring long-term yields. Trade friction news between the US and Europe accelerates risk-off sentiment. VIX spike suggests near-term volatility. SPY below $690 triggers further downside.",
-            "CN": "GMS 32表明防御性市场。原油价格上涨加剧通胀担忧，对长期收益率构成压力。美欧贸易摩擦消息加速避险情绪。VIX指数飙升预示短期波动。标普500指数跌破690美元将引发进一步下行趋势。",
-            "ES": "Mercado defensivo con un GMS de 32. El alza del petróleo alimenta la inflación y presiona los rendimientos a largo plazo. Las tensiones comerciales entre EE.UU. y Europa aceleran la aversión al riesgo. VIX elevado sugiere volatilidad a corto plazo. SPY por debajo de $690 activa una mayor caída.",
-            "HI": "जीएमएस 32 पर रक्षात्मक बाजार। बढ़ते तेल की कीमतें मुद्रास्फीति की चिंताओं को बढ़ाती हैं, जिससे दीर्घकालिक उपज पर दबाव पड़ता है। अमेरिका और यूरोप के बीच व्यापार घर्षण की खबरों से जोखिम से बचने की भावना तेज होती है। वीआईएक्स स्पाइक निकट-अवधि की अस्थिरता का सुझाव देता है। एसपीवाई $690 से नीचे और गिरावट को ट्रिगर करता है।",
-            "ID": "Pasar defensif pada GMS 32. Kenaikan harga minyak memicu kekhawatiran inflasi, menekan imbal hasil jangka panjang. Berita gesekan perdagangan antara AS dan Eropa mempercepat sentimen risk-off. Lonjakan VIX menunjukkan volatilitas jangka pendek. SPY di bawah $690 memicu penurunan lebih lanjut.",
-            "AR": "سوق دفاعي عند GMS 32. ارتفاع أسعار النفط يغذي المخاوف التضخمية، مما يضغط على عوائد السندات طويلة الأجل. أخبار الاحتكاكات التجارية بين الولايات المتحدة وأوروبا تسرع النفور من المخاطرة. ارتفاع مؤشر VIX يشير إلى تقلبات قصيرة الأجل. SPY دون 690 دولارًا يؤدي إلى مزيد من الانخفاض."
+            "JP": "GMS32でディフェンシブ。原油高と銅安が示す景気後退懸念がリスクオフを誘発。米10年債利回りは4.17%で膠着、地政学的リスクの高まりが債券への逃避を促す。VIXは15.86で安定も、トランプ発言次第で急騰の可能性。SOL下落は警戒信号。",
+            "EN": "GMS at 32 indicates a defensive stance. Rising oil and falling copper signal recession fears, driving risk-off sentiment. US 10Y yield is stuck at 4.17%, with geopolitical risks fueling a flight to safety. VIX stable at 15.86 but Trump's words could trigger spikes. SOL weakness a warning. 251 chars",
+            "CN": "GMS为32，表明防御姿态。原油上涨和铜价下跌预示着衰退担忧，从而引发避险情绪。美国10年期国债收益率停留在4.17%，地缘政治风险助长了避险情绪。VIX稳定在15.86，但特朗普的言论可能引发飙升。SOL疲软是一个警告信号。251字",
+            "ES": "GMS en 32 indica una postura defensiva. El alza del petróleo y la caída del cobre señalan temores de recesión, impulsando la aversión al riesgo. El rendimiento del bono estadounidense a 10 años se estanca en 4.17%, con riesgos geopolíticos que alimentan una huida hacia la seguridad. VIX estable en 15.86, pero las palabras de Trump podrían provocar picos. La debilidad de SOL es una advertencia. 254 chars",
+            "HI": "जीएमएस 32 पर रक्षात्मक रुख दर्शाता है। तेल की बढ़ती कीमतें और तांबे की गिरती कीमतें मंदी की आशंका का संकेत दे रही हैं, जिससे जोखिम से बचने की भावना बढ़ रही है। अमेरिकी 10-वर्षीय उपज 4.17% पर अटकी हुई है, भू-राजनीतिक जोखिम सुरक्षा के लिए उड़ान को बढ़ावा दे रहे हैं। वीआईएक्स 15.86 पर स्थिर है लेकिन ट्रम्प के शब्द वृद्धि को ट्रिगर कर सकते हैं। एसओएल की कमजोरी एक चेतावनी है।255 कैर",
+            "ID": "GMS di 32 mengindikasikan sikap defensif. Kenaikan harga minyak dan penurunan tembaga menandakan kekhawatiran resesi, mendorong sentimen risk-off. Imbal hasil US 10Y stagnan di 4.17%, dengan risiko geopolitik memicu pelarian ke aset aman. VIX stabil di 15.86 tetapi perkataan Trump dapat memicu lonjakan. Kelemahan SOL adalah peringatan. 253 karakter",
+            "AR": "يشير مؤشر GMS عند 32 إلى موقف دفاعي. ارتفاع أسعار النفط وانخفاض أسعار النحاس يشيران إلى مخاوف من الركود، مما يدفع إلى الابتعاد عن المخاطرة. استقر عائد سندات الخزانة الأمريكية لمدة 10 سنوات عند 4.17٪، مع وجود مخاطر جيوسياسية تغذي الهروب إلى الملاذ الآمن. مؤشر VIX مستقر عند 15.86 لكن كلمات ترامب قد تؤدي إلى ارتفاعات. ضعف SOL هو تحذير. 254 حرفا"
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-16T14:37:14Z",
-            "score": 35
-        },
         {
             "date": "2026-01-16T15:35:52Z",
             "score": 38
@@ -1320,6 +1316,10 @@
         },
         {
             "date": "2026-01-18T05:52:43Z",
+            "score": 32
+        },
+        {
+            "date": "2026-01-18T06:46:45Z",
             "score": 32
         }
     ],
