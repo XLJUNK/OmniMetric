@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-01-18T10:50:53Z",
-    "last_successful_update": "2026-01-18T10:50:53Z",
+    "last_updated": "2026-01-18T11:25:52Z",
+    "last_successful_update": "2026-01-18T11:25:52Z",
     "gms_score": 32,
     "sector_scores": {
         "STOCKS": 45,
@@ -540,11 +540,11 @@
             ]
         },
         "BTC": {
-            "price": 95131.92,
+            "price": 95086.77,
             "prev_price": 95099.92,
-            "daily_chg": 0.03,
-            "change_percent": -1.85,
-            "trend": "UP",
+            "daily_chg": -0.01,
+            "change_percent": -1.9,
+            "trend": "DOWN",
             "sparkline": [
                 87835.84,
                 87138.14,
@@ -567,14 +567,14 @@
                 95551.19,
                 95525.12,
                 95099.92,
-                95131.92
+                95086.77
             ]
         },
         "ETH": {
-            "price": 3322.27,
+            "price": 3319.49,
             "prev_price": 3308.86,
-            "daily_chg": 0.41,
-            "change_percent": -0.97,
+            "daily_chg": 0.32,
+            "change_percent": -1.05,
             "trend": "UP",
             "sparkline": [
                 2948.57,
@@ -598,14 +598,14 @@
                 3317.1,
                 3295.48,
                 3308.86,
-                3322.27
+                3319.49
             ]
         },
         "SOL": {
-            "price": 142.41,
+            "price": 142.27,
             "prev_price": 143.73,
-            "daily_chg": -0.92,
-            "change_percent": -2.96,
+            "daily_chg": -1.01,
+            "change_percent": -3.06,
             "trend": "DOWN",
             "sparkline": [
                 125.2,
@@ -629,7 +629,7 @@
                 142.33,
                 144.86,
                 143.73,
-                142.41
+                142.27
             ]
         },
         "DXY": {
@@ -1070,22 +1070,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS at 32 indicates a defensive market. Despite tightening HY spreads, elevated 10Y yields pressure tech multiples. Rising geopolitical risks drive flight to safety; limited oil price gains suggest weak demand. Low VIX implies persistent risk aversion. SPY support at $685. US-Europe tensions over Greenland are a concern.",
+        "content": "GMS at 32 signals a defensive market. Stable US 10-year yields contrast with narrowing HY spreads, hinting at risk appetite. Falling copper prices suggest economic slowdown, while rising oil indicates supply concerns. Low VIX implies market calm. Rising DXY exerts dollar pressure. Consider portfolio adjustments above GMS 40 given geopolitical risks.",
         "reports": {
-            "JP": "GMS32でディフェンシブ領域。高利回り債スプレッド縮小も、米国10年債利回りは高止まり、テクノロジー株の重石。地政学的リスク増大で安全資産へシフト。原油価格上昇も限定的。VIXも低水準で、リスク回避姿勢続く。SPYは685ドルが下値支持線。グリーンランドを巡る米欧間の緊張激化が懸念材料。",
-            "EN": "GMS at 32 indicates a defensive market. Despite tightening HY spreads, elevated 10Y yields pressure tech multiples. Rising geopolitical risks drive flight to safety; limited oil price gains suggest weak demand. Low VIX implies persistent risk aversion. SPY support at $685. US-Europe tensions over Greenland are a concern.",
-            "CN": "GMS为32，表明市场处于防御状态。尽管高收益债券利差收窄，但美国10年期国债收益率居高不下，给科技股带来压力。地缘政治风险上升推动避险需求；油价涨幅有限表明需求疲软。VIX较低意味着持续的风险规避。标普500指数支撑位在685美元。美国与欧洲在格陵兰问题上的紧张关系令人担忧。",
-            "ES": "El GMS en 32 indica un mercado defensivo. A pesar de la reducción de los diferenciales de alto rendimiento, los elevados rendimientos del bono a 10 años de EE. UU. presionan los múltiplos de las tecnológicas. El aumento de los riesgos geopolíticos impulsa la búsqueda de seguridad; las limitadas ganancias del petróleo sugieren una demanda débil. El bajo VIX implica una persistente aversión al riesgo. Soporte del SPY en $685. Las tensiones entre EE. UU. y Europa por Groenlandia son preocupantes.",
-            "HI": "जीएमएस 32 पर रक्षात्मक बाजार का संकेत देता है। एचवाई स्प्रेड कम होने के बावजूद, 10वाई यील्ड बढ़ने से टेक मल्टीपल पर दबाव पड़ता है। भू-राजनीतिक जोखिम बढ़ने से सुरक्षा की तलाश बढ़ जाती है; तेल की कीमतों में सीमित वृद्धि कमजोर मांग का संकेत देती है। कम वीआईएक्स लगातार जोखिम से बचने का संकेत देता है। एसपीवाई के लिए समर्थन $685 पर। ग्रीनलैंड को लेकर अमेरिका-यूरोप तनाव चिंता का विषय है।",
-            "ID": "GMS di 32 mengindikasikan pasar defensif. Meskipun spread HY menyempit, imbal hasil 10Y yang tinggi menekan kelipatan teknologi. Meningkatnya risiko geopolitik mendorong pelarian ke aset aman; kenaikan harga minyak yang terbatas menunjukkan permintaan yang lemah. VIX rendah menyiratkan penghindaran risiko yang terus-menerus. Dukungan SPY pada $685. Ketegangan AS-Eropa atas Greenland menjadi perhatian.",
-            "AR": "تشير نقاط مؤشر إدارة المخاطر العالمي البالغة 32 إلى سوق دفاعي. على الرغم من ضيق فروق عوائد السندات عالية المخاطر، فإن ارتفاع عوائد سندات الخزانة لأجل 10 سنوات يضغط على مضاعفات أسهم التكنولوجيا. تزيد المخاطر الجيوسياسية المتصاعدة من الاتجاه نحو الملاذات الآمنة؛ تشير مكاسب أسعار النفط المحدودة إلى ضعف الطلب. يشير مؤشر التقلب المنخفض إلى استمرار النفور من المخاطرة. دعم مؤشر إس آند بي 500 عند 685 دولارًا. التوترات بين الولايات المتحدة وأوروبا بشأن جرينلاند تبعث على القلق."
+            "JP": "GMS32はディフェンシブ領域。米10年債利回り横ばいも、HYスプレッド縮小はリスク選好の兆し。銅価格下落は景気減速を示唆、原油上昇は供給懸念か。VIXは低位安定、市場の落ち着き示す。DXY上昇はドル高圧力。地政学リスク考慮し、GMS40超えでポートフォリオ調整を検討。",
+            "EN": "GMS at 32 signals a defensive market. Stable US 10-year yields contrast with narrowing HY spreads, hinting at risk appetite. Falling copper prices suggest economic slowdown, while rising oil indicates supply concerns. Low VIX implies market calm. Rising DXY exerts dollar pressure. Consider portfolio adjustments above GMS 40 given geopolitical risks.",
+            "CN": "GMS为32，表明市场处于防御状态。美国10年期国债收益率稳定，但高收益债券息差收窄，暗示风险偏好。铜价下跌表明经济放缓，而油价上涨表明供应担忧。低VIX表明市场平静。美元指数上涨带来美元升值压力。鉴于地缘政治风险，考虑在GMS超过40时调整投资组合。",
+            "ES": "GMS en 32 indica un mercado defensivo. Los rendimientos estables del Tesoro estadounidense a 10 años contrastan con la reducción de los diferenciales de HY, lo que sugiere apetito por el riesgo. La caída de los precios del cobre sugiere una desaceleración económica, mientras que el aumento del petróleo indica problemas de suministro. El VIX bajo implica calma en el mercado. El aumento del DXY ejerce presión sobre el dólar. Considere ajustes de cartera por encima de GMS 40 dadas las tensiones geopolíticas.",
+            "HI": "जीएमएस 32 पर रक्षात्मक बाजार का संकेत देता है। स्थिर अमेरिकी 10-वर्षीय उपज संकीर्ण HY स्प्रेड के विपरीत है, जो जोखिम की भूख का संकेत देता है। तांबे की गिरती कीमतें आर्थिक मंदी का सुझाव देती हैं, जबकि बढ़ता तेल आपूर्ति चिंताओं को दर्शाता है। कम VIX बाजार की शांति का अर्थ है। बढ़ता DXY डॉलर पर दबाव डालता है। भू-राजनीतिक जोखिमों को देखते हुए, जीएमएस 40 से ऊपर होने पर पोर्टफोलियो समायोजन पर विचार करें।",
+            "ID": "GMS di 32 menandakan pasar yang defensif. Imbal hasil AS 10-tahun yang stabil kontras dengan penyempitan spread HY, mengisyaratkan selera risiko. Harga tembaga yang turun menunjukkan perlambatan ekonomi, sementara kenaikan minyak mengindikasikan kekhawatiran pasokan. VIX rendah menyiratkan ketenangan pasar. Kenaikan DXY memberikan tekanan dolar. Pertimbangkan penyesuaian portofolio di atas GMS 40 mengingat risiko geopolitik.",
+            "AR": "يشير مؤشر GMS عند 32 إلى سوق دفاعي. تتناقض عوائد سندات الخزانة الأمريكية المستقرة لأجل 10 سنوات مع الفروق الضيقة في عوائد السندات عالية المخاطر، مما يشير إلى الإقبال على المخاطرة. يشير انخفاض أسعار النحاس إلى تباطؤ اقتصادي، بينما يشير ارتفاع أسعار النفط إلى مخاوف بشأن العرض. يشير مؤشر VIX المنخفض إلى هدوء السوق. يمارس ارتفاع مؤشر الدولار DXY ضغطًا على الدولار. ضع في اعتبارك تعديلات المحفظة أعلى من GMS 40 نظرًا للمخاطر الجيوسياسية."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-16T19:44:32Z",
-            "score": 36
-        },
         {
             "date": "2026-01-16T20:33:06Z",
             "score": 36
@@ -1320,6 +1316,10 @@
         },
         {
             "date": "2026-01-18T10:50:53Z",
+            "score": 32
+        },
+        {
+            "date": "2026-01-18T11:25:52Z",
             "score": 32
         }
     ],
