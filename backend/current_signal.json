@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-01-18T14:30:09Z",
-    "last_successful_update": "2026-01-18T14:30:09Z",
+    "last_updated": "2026-01-18T14:47:31Z",
+    "last_successful_update": "2026-01-18T14:47:31Z",
     "gms_score": 32,
     "sector_scores": {
         "STOCKS": 45,
@@ -540,11 +540,11 @@
             ]
         },
         "BTC": {
-            "price": 95122.8,
+            "price": 95092.88,
             "prev_price": 95099.92,
-            "daily_chg": 0.02,
-            "change_percent": -1.86,
-            "trend": "UP",
+            "daily_chg": -0.01,
+            "change_percent": -1.89,
+            "trend": "DOWN",
             "sparkline": [
                 87835.84,
                 87138.14,
@@ -567,14 +567,14 @@
                 95551.19,
                 95525.12,
                 95099.92,
-                95122.8
+                95092.88
             ]
         },
         "ETH": {
-            "price": 3336.57,
+            "price": 3329.7,
             "prev_price": 3308.86,
-            "daily_chg": 0.84,
-            "change_percent": -0.54,
+            "daily_chg": 0.63,
+            "change_percent": -0.75,
             "trend": "UP",
             "sparkline": [
                 2948.57,
@@ -598,14 +598,14 @@
                 3317.1,
                 3295.48,
                 3308.86,
-                3336.57
+                3329.7
             ]
         },
         "SOL": {
-            "price": 142.44,
+            "price": 142.23,
             "prev_price": 143.73,
-            "daily_chg": -0.89,
-            "change_percent": -2.94,
+            "daily_chg": -1.04,
+            "change_percent": -3.08,
             "trend": "DOWN",
             "sparkline": [
                 125.2,
@@ -629,7 +629,7 @@
                 142.33,
                 144.86,
                 143.73,
-                142.44
+                142.23
             ]
         },
         "DXY": {
@@ -1070,22 +1070,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS score of 32 signals defensive positioning. Divergence between rising oil and falling copper reflects geopolitical risk aversion following Trump's tariff threats. This uncertainty caps bond yields. Monitor VIX; breach of 40 warrants heightened risk-off stance.",
+        "content": "GMS at 32 signals defensive stance. Rising oil and US 10Y yields fuel risk-off sentiment. Stable copper/gold ratio offset by Trump's tariff news, increasing uncertainty. Rising VIX pressures SPY towards correction. Breach of 685 triggers further downside.",
         "reports": {
-            "JP": "GMSスコア32はディフェンシブ領域を示唆。原油上昇と銅価格下落の乖離は、地政学的リスクへの警戒感を反映。トランプ政権の関税発言が不確実性を高め、債券利回り上昇を抑制。VIXの上昇を注視し、40を超えた場合、リスクオフ戦略を強化する。",
-            "EN": "GMS score of 32 signals defensive positioning. Divergence between rising oil and falling copper reflects geopolitical risk aversion following Trump's tariff threats. This uncertainty caps bond yields. Monitor VIX; breach of 40 warrants heightened risk-off stance.",
-            "CN": "当前GMS评分32表明市场处于防御状态。原油价格上涨与铜价下跌之间的背离反映了特朗普关税威胁引发的地缘政治风险规避情绪。这种不确定性抑制了债券收益率。关注VIX，若突破40则需加强避险策略。",
-            "ES": "Un GMS de 32 indica una postura defensiva. La divergencia entre el alza del petróleo y la caída del cobre refleja aversión al riesgo geopolítico tras las amenazas arancelarias de Trump. Esta incertidumbre limita el rendimiento de los bonos. Vigilar el VIX; superar 40 justifica una postura más defensiva.",
-            "HI": "जीएमएस स्कोर 32 रक्षात्मक स्थिति का संकेत देता है। ट्रम्प के टैरिफ खतरों के बाद बढ़ते तेल और गिरते तांबे के बीच का अंतर भू-राजनीतिक जोखिम से बचने को दर्शाता है। यह अनिश्चितता बॉन्ड यील्ड को सीमित करती है। वीआईएक्स पर नजर रखें; 40 का उल्लंघन जोखिम से बचने के रुख को सही ठहराता है।",
-            "ID": "Skor GMS 32 menandakan posisi defensif. Perbedaan antara kenaikan harga minyak dan penurunan harga tembaga mencerminkan penghindaran risiko geopolitik setelah ancaman tarif Trump. Ketidakpastian ini membatasi imbal hasil obligasi. Pantau VIX; pelanggaran 40 menjamin sikap risk-off yang lebih tinggi.",
-            "AR": "تشير نتيجة GMS البالغة 32 إلى تمركز دفاعي. يعكس التباعد بين ارتفاع النفط وانخفاض النحاس النفور من المخاطر الجيوسياسية بعد تهديدات ترامب بالتعريفات الجمركية. هذا الغموض يحد من عوائد السندات. مراقبة مؤشر VIX؛ تجاوز 40 يستدعي موقفًا أكثر نفورًا من المخاطرة."
+            "JP": "GMS32はディフェンシブ領域を示唆。原油高と米10年債利回り上昇がリスク回避を誘発。銅/金レシオは安定も、トランプ関税報道が不確実性を増大。VIX上昇と相まって、SPYは調整局面へ。685を下回れば、一段安も。",
+            "EN": "GMS at 32 signals defensive stance. Rising oil and US 10Y yields fuel risk-off sentiment. Stable copper/gold ratio offset by Trump's tariff news, increasing uncertainty. Rising VIX pressures SPY towards correction. Breach of 685 triggers further downside.",
+            "CN": "GMS指数32表明防御态势。原油和美国10年期国债收益率上升加剧避险情绪。铜金比稳定，但特朗普关税消息增加不确定性。VIX上升打压SPY，或将调整。跌破685或引发进一步下跌。",
+            "ES": "GMS en 32 señala postura defensiva. El aumento del petróleo y los rendimientos del Tesoro estadounidense a 10 años alimentan la aversión al riesgo. La estabilidad cobre/oro se ve contrarrestada por las noticias arancelarias de Trump, que aumentan la incertidumbre. El aumento del VIX presiona al SPY hacia la corrección. La ruptura de 685 desencadena una mayor caída.",
+            "HI": "जीएमएस 32 पर रक्षात्मक रुख का संकेत देता है। बढ़ते तेल और अमेरिकी 10 वर्षीय उपज जोखिम-बंद भावना को बढ़ावा देते हैं। स्थिर तांबा/सोना अनुपात ट्रम्प की टैरिफ खबरों से ऑफसेट होता है, जिससे अनिश्चितता बढ़ती है। बढ़ता VIX SPY को सुधार की ओर दबाता है। 685 का उल्लंघन और गिरावट को ट्रिगर करता है।",
+            "ID": "GMS di 32 menandakan sikap defensif. Kenaikan harga minyak dan imbal hasil US 10Y memicu sentimen risk-off. Rasio tembaga/emas yang stabil diimbangi oleh berita tarif Trump, meningkatkan ketidakpastian. VIX yang meningkat menekan SPY menuju koreksi. Penembusan 685 memicu penurunan lebih lanjut.",
+            "AR": "مؤشر GMS عند 32 يشير إلى موقف دفاعي. ارتفاع أسعار النفط وعائدات سندات الخزانة الأمريكية لأجل 10 سنوات يغذي النفور من المخاطرة. استقرار نسبة النحاس/الذهب يقابله أخبار تعريفات ترامب، مما يزيد من حالة عدم اليقين. ارتفاع مؤشر VIX يضغط على SPY نحو التصحيح. اختراق 685 يؤدي إلى مزيد من الانخفاض."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-16T22:34:23Z",
-            "score": 36
-        },
         {
             "date": "2026-01-16T22:51:52Z",
             "score": 36
@@ -1320,6 +1316,10 @@
         },
         {
             "date": "2026-01-18T14:30:09Z",
+            "score": 32
+        },
+        {
+            "date": "2026-01-18T14:47:31Z",
             "score": 32
         }
     ],
