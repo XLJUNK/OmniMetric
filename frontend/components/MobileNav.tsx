@@ -1,15 +1,14 @@
 'use client';
 import React from 'react';
 import { Home, LineChart, Bitcoin, Banknote, Gem, Globe, ScrollText, Activity } from 'lucide-react';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { LangType, DICTIONARY } from '@/data/dictionary';
+import { usePathname, useRouter } from 'next/navigation';
+import { DICTIONARY } from '@/data/dictionary';
+import { useCurrentLang } from '@/hooks/useCurrentLang';
 
 export const MobileNav = () => {
     const pathname = usePathname();
     const router = useRouter();
-    const searchParams = useSearchParams();
-    const queryLang = searchParams.get('lang') as LangType;
-    const lang = queryLang && DICTIONARY[queryLang] ? queryLang : 'EN';
+    const lang = useCurrentLang();
     const t = DICTIONARY[lang];
 
     const tabs = [
@@ -24,23 +23,26 @@ export const MobileNav = () => {
     ];
 
     return (
-        <nav className="fixed top-0 left-0 right-0 h-[54px] bg-[#0A0A0A]/95 backdrop-blur-xl border-b border-[#1E293B] flex md:hidden items-center justify-evenly px-2 z-[9999] shadow-2xl">
+        <nav className="fixed top-0 left-0 right-0 h-[54px] bg-[#0A0A0A]/95 backdrop-blur-xl border-b border-[#1E293B] flex md:hidden items-center justify-between px-1 z-[9999] shadow-2xl overflow-x-hidden">
             {tabs.map((tab) => {
                 const isActive = pathname === tab.path;
                 return (
                     <button
                         key={tab.key}
                         onClick={() => router.push(`${tab.path}?lang=${lang}`)}
-                        className={`flex flex-col items-center justify-center gap-0.5 h-full transition-colors relative ${isActive ? 'text-sky-500' : 'text-slate-500'
+                        className={`group flex flex-col items-center justify-center flex-1 min-w-0 px-0 h-full transition-colors relative ${isActive ? 'text-sky-500' : 'text-slate-500'
                             }`}
                     >
-                        <tab.icon className={`w-5 h-5 ${isActive ? 'drop-shadow-[0_0_8px_rgba(14,165,233,0.5)]' : ''}`} />
-                        <span className="text-[9px] font-bold uppercase tracking-tighter truncate w-full text-center leading-none">
+                        {/* Invisible Touch Target Expansion */}
+                        <span className="absolute -inset-2 z-[-1]" />
+
+                        <tab.icon className={`w-4 h-4 mb-0.5 ${isActive ? 'drop-shadow-[0_0_8px_rgba(14,165,233,0.5)]' : ''}`} />
+                        <span className="text-[9px] font-bold uppercase tracking-tighter truncate w-full text-center leading-none px-0.5">
                             {tab.label}
                         </span>
                         {/* Active Indicator Dot */}
                         {isActive && (
-                            <span className="absolute -bottom-2 w-1 h-1 bg-sky-500 rounded-full shadow-[0_0_5px_rgba(14,165,233,0.8)]"></span>
+                            <span className="absolute bottom-1 w-1 h-1 bg-sky-500 rounded-full shadow-[0_0_5px_rgba(14,165,233,0.8)]"></span>
                         )}
                     </button>
                 );

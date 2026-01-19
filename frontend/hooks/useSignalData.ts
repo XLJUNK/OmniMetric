@@ -13,8 +13,8 @@ export interface SignalData {
     history_chart: any[];
 }
 
-export const useSignalData = () => {
-    const [data, setData] = useState<SignalData | null>(null);
+export const useSignalData = (initialData?: SignalData | null) => {
+    const [data, setData] = useState<SignalData | null>(initialData || null);
     const [liveData, setLiveData] = useState<any>(null);
     const [isSafeMode, setIsSafeMode] = useState(false);
     const [errorCount, setErrorCount] = useState(0);

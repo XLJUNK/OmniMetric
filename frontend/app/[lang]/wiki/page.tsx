@@ -6,6 +6,7 @@ import { BookOpen, Activity, Quote, Hash } from 'lucide-react';
 import { Metadata } from 'next';
 import { AdSenseSlot } from '@/components/AdSenseSlot';
 import { ClientDirectionProvider } from '@/components/ClientDirectionProvider';
+import { WikiSearch } from '@/components/WikiSearch';
 
 // Enable Static Params for all languages defined in dictionary
 export async function generateStaticParams() {
@@ -95,6 +96,13 @@ export default async function WikiIndexPage({ params }: Props) {
                         The complete knowledge base for the 2026 Macro-Economic Landscape.
                     </p>
                 </header>
+
+                {/* Client-Side Search */}
+                <WikiSearch
+                    items={wikiData}
+                    lang={normalizedLang}
+                    placeholder={DICTIONARY[normalizedLang].labels.search_placeholder || "Search Knowledge Base..."}
+                />
 
                 <div className="grid grid-cols-1 gap-16">
                     {['glossary', 'technical', 'maxim'].map((type) => (

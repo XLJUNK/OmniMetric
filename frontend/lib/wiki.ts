@@ -34,6 +34,7 @@ export interface WikiItem {
     type: WikiType;
     category: string;
     title: string;
+    tags: string[];
     data: any; // The raw object from JSON
 }
 
@@ -58,6 +59,7 @@ export const getWikiData = (lang: LangType) => {
         type: 'glossary' as WikiType,
         category: item.category,
         title: item.term,
+        tags: item.seo_keywords || [],
         data: item
     }));
 
@@ -73,13 +75,17 @@ export const getWikiData = (lang: LangType) => {
             const targetCat = techTarget[catIdx];
             const targetInd = targetCat?.indicators[indIdx];
 
-            if (targetInd) {
+            // Fallback to EN if target missing
+            const finalInd = targetInd || ind;
+
+            if (finalInd) {
                 technical.push({
                     slug: slugify(ind.name), // Always use EN name for slug
                     type: 'technical' as WikiType,
-                    category: targetCat.category,
-                    title: targetInd.name,
-                    data: targetInd
+                    category: targetCat?.category || cat.category,
+                    title: finalInd.name,
+                    tags: finalInd.seo_keywords || [],
+                    data: finalInd
                 });
             }
         });
@@ -95,13 +101,16 @@ export const getWikiData = (lang: LangType) => {
             const targetCat = maxTarget[catIdx];
             const targetQuote = targetCat?.quotes[quoteIdx];
 
-            if (targetQuote) {
+            const finalQuote = targetQuote || quote;
+
+            if (finalQuote) {
                 maxims.push({
                     slug: quote.id,
                     type: 'maxim' as WikiType,
-                    category: targetCat.category,
-                    title: `"${targetQuote.text}"`, // Use quote text as title
-                    data: targetQuote
+                    category: targetCat?.category || cat.category,
+                    title: `"${finalQuote.text}"`,
+                    tags: [finalQuote.attribution || ''],
+                    data: finalQuote
                 });
             }
         });

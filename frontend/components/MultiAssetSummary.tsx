@@ -17,8 +17,12 @@ import { useSignalData, SignalData } from '@/hooks/useSignalData';
 
 // "Pulse" Tile Component removed (Moved to PulseTile.tsx)
 
-export const MultiAssetSummary = () => {
-    const { data, liveData, isSafeMode } = useSignalData();
+interface MultiAssetSummaryProps {
+    initialData?: SignalData | null;
+}
+
+export const MultiAssetSummary = ({ initialData }: MultiAssetSummaryProps) => {
+    const { data, liveData, isSafeMode } = useSignalData(initialData);
     const [isLangOpen, setIsLangOpen] = useState(false);
     const [showInfo, setShowInfo] = useState(false);
     const { isMobile, isDesktop } = useDevice();

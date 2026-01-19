@@ -181,7 +181,8 @@ export const DICTIONARY = {
                 USDJPY: "USD/JPY", EURUSD: "EUR/USD", USDINR: "USD/INR", USDSAR: "USD/SAR", DXY: "DXY Dollar Index",
                 SPY: "S&P 500", QQQ: "Nasdaq 100", IWM: "Russell 2000", RSP: "S&P 500 Equal Weight", HYG: "High Yield Bond", NIFTY: "Nifty 50",
                 VIX: "VIX Volatility", TNX: "US 10Y Yield", MOVE: "MOVE Index", CRYPTO_SENTIMENT: "Crypto Fear & Greed"
-            }
+            },
+            search_placeholder: "Search Knowledge Base..."
         },
         subpages: {
             about: {
@@ -383,7 +384,8 @@ export const DICTIONARY = {
                 USDJPY: "ドル円", EURUSD: "ユーロドル", USDINR: "ドル/ルピー", USDSAR: "ドル/リヤル", DXY: "ドル指数",
                 SPY: "S&P 500", QQQ: "ナスダック100", IWM: "ラッセル2000", RSP: "S&P500均等加重", HYG: "ハイイールド債", NIFTY: "Nifty 50",
                 VIX: "VIX恐怖指数", TNX: "米国10年債利回り", MOVE: "MOVE債券恐怖指数", CRYPTO_SENTIMENT: "暗号資産恐怖指数 (F&G)"
-            }
+            },
+            search_placeholder: "マクロ知識ベースを検索..."
         },
         subpages: {
             about: {
@@ -555,7 +557,8 @@ export const DICTIONARY = {
                 USDJPY: "美元/日元", EURUSD: "欧元/美元", USDINR: "美元/卢比", USDSAR: "美元/里亚尔", DXY: "美元指数",
                 SPY: "标普500", QQQ: "纳斯达克100", IWM: "罗素2000", RSP: "标普500等权", HYG: "高收益债", NIFTY: "Nifty 50",
                 VIX: "VIX恐慌指数", TNX: "美国10年期国债", MOVE: "MOVE指数", CRYPTO_SENTIMENT: "加密恐慌/贪婪指数"
-            }
+            },
+            search_placeholder: "搜索宏观知识库..."
         },
         subpages: {
             about: {
@@ -727,7 +730,8 @@ export const DICTIONARY = {
                 USDJPY: "USD/JPY", EURUSD: "EUR/USD", USDINR: "USD/INR", USDSAR: "USD/SAR", DXY: "Índice Dólar",
                 SPY: "S&P 500", QQQ: "Nasdaq 100", IWM: "Russell 2000", RSP: "S&P 500 Equal Weight", HYG: "High Yield Bond", NIFTY: "Nifty 50",
                 VIX: "Volatilidad VIX", TNX: "Bono 10 Años", MOVE: "Índice MOVE", CRYPTO_SENTIMENT: "Índice Miedo/Codicia"
-            }
+            },
+            search_placeholder: "Buscar..."
         },
         subpages: {
             about: {

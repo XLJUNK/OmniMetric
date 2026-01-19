@@ -1,5 +1,6 @@
 import { MultiAssetSummary } from '@/components/MultiAssetSummary';
 import { Metadata } from 'next';
+import { getSignalData } from '@/lib/signal';
 
 export const dynamic = 'force-dynamic';
 
@@ -25,14 +26,16 @@ const jsonLd = {
   }
 };
 
-export default function Home() {
+export default async function Home() {
+  const initialData = getSignalData();
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <MultiAssetSummary />
+      <MultiAssetSummary initialData={initialData} />
     </>
   );
 }

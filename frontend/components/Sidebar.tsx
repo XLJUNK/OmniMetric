@@ -1,14 +1,13 @@
 'use client';
 import { Home, LineChart, Bitcoin, Banknote, Gem, ChevronRight, BookOpen } from 'lucide-react';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { LangType, DICTIONARY } from '@/data/dictionary';
+import { usePathname, useRouter } from 'next/navigation';
+import { DICTIONARY } from '@/data/dictionary';
+import { useCurrentLang } from '@/hooks/useCurrentLang';
 
 export const Sidebar = () => {
     const pathname = usePathname();
     const router = useRouter();
-    const searchParams = useSearchParams();
-    const queryLang = searchParams.get('lang') as LangType;
-    const lang = queryLang && DICTIONARY[queryLang] ? queryLang : 'EN';
+    const lang = useCurrentLang();
     const t = DICTIONARY[lang];
 
     const tabs = [

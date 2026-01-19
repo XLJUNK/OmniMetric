@@ -139,7 +139,7 @@ export const PulseTile = ({ title, score, ticker, data, onClick, lang, wikiSlug 
                             <Link
                                 href={`/${(lang || 'EN').toLowerCase()}/wiki/${wikiSlug}`}
                                 onClick={(e) => e.stopPropagation()}
-                                className={`text-slate-600 transition-colors p-0.5 rounded-full ${score >= 60 ? 'hover:text-blue-400 hover:bg-blue-400/10' : (score < 40 ? 'hover:text-rose-400 hover:bg-rose-400/10' : 'hover:text-slate-300 hover:bg-slate-700/50')}`}
+                                className={`text-slate-600 transition-colors p-0.5 rounded-full relative after:absolute after:-inset-4 after:content-[''] ${score >= 60 ? 'hover:text-blue-400 hover:bg-blue-400/10' : (score < 40 ? 'hover:text-rose-400 hover:bg-rose-400/10' : 'hover:text-slate-300 hover:bg-slate-700/50')}`}
                                 title="Open Macro Wiki Definition"
                             >
                                 <Info className="w-3 h-3 md:w-3.5 md:h-3.5" />
