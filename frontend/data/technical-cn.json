@@ -1,0 +1,177 @@
+[
+    {
+        "category": "趋势指标 (Trend Indicators)",
+        "indicators": [
+            {
+                "name": "Moving Average (移动平均线 SMA/EMA)",
+                "description": "价格趋势的基准线。",
+                "usage": "价格在均线上方=上升趋势。价格在均线下方=下降趋势。"
+            },
+            {
+                "name": "Bollinger Bands (布林带)",
+                "description": "衡量相对于波动率的价格；'挤压'预示着大动作。",
+                "usage": "价格触及上轨=超买。触及下轨=超卖。挤压=即将突破。"
+            },
+            {
+                "name": "Ichimoku Cloud (一目均衡表)",
+                "description": "全面的趋势跟踪系统 (Kumo)。",
+                "usage": "价格在云上方=看涨。在云下方=看跌。云层厚度表示支撑/阻力强度。"
+            },
+            {
+                "name": "ADX (平均趋向指数)",
+                "description": "衡量趋势的强度，无论方向如何。",
+                "usage": "ADX > 25 = 强趋势。ADX < 20 = 弱趋势/盘整。"
+            },
+            {
+                "name": "Parabolic SAR (抛物线转向指标)",
+                "description": "识别趋势市场中的潜在反转点。",
+                "usage": "点在蜡烛下方=上升趋势。点在蜡烛上方=下降趋势。"
+            },
+            {
+                "name": "SuperTrend (超级趋势)",
+                "description": "基于ATR的简化趋势跟踪指标。",
+                "usage": "价格下方的绿线=买入信号。价格上方的红线=卖出信号。"
+            },
+            {
+                "name": "MACD (平滑异同移动平均线)",
+                "description": "衡量趋势强度和动量变化。",
+                "usage": "信号线交叉=入场/出场信号。柱状图显示动量强度。"
+            }
+        ]
+    },
+    {
+        "category": "波动率指标 (Volatility Indicators)",
+        "indicators": [
+            {
+                "name": "ATR (平均真实波幅)",
+                "description": "衡量市场波动率并设定止损的黄金标准。",
+                "usage": "高ATR=高波动率。用于计算止损距离。"
+            },
+            {
+                "name": "Keltner Channels (肯特纳通道)",
+                "description": "基于波动率的包络线，类似于布林带但使用ATR。",
+                "usage": "价格收于通道外=强劲趋势延续。"
+            },
+            {
+                "name": "Chaikin Volatility (蔡金波动率)",
+                "description": "比较最高价和最低价之间的价差。",
+                "usage": "波动率上升通常标志着广泛的派发（顶部）或恐慌（底部）。"
+            },
+            {
+                "name": "Standard Deviation (标准差)",
+                "description": "衡量价格离散度的数学基础。",
+                "usage": "高标准差=高风险（高波动）。低标准差=盘整。"
+            }
+        ]
+    },
+    {
+        "category": "动量与震荡指标 (Momentum & Oscillators)",
+        "indicators": [
+            {
+                "name": "RSI (相对强弱指数)",
+                "description": "识别超买或超卖情况。",
+                "usage": "> 70 = 超买（卖出风险）。< 30 = 超卖（买入机会）。"
+            },
+            {
+                "name": "Stochastic Oscillator (随机指标)",
+                "description": "将收盘价与其一段时间内的价格范围进行比较。",
+                "usage": "> 80 = 超买。< 20 = 超卖。交叉信号表示反转。"
+            },
+            {
+                "name": "CCI (商品通道指数)",
+                "description": "衡量偏离统计平均值的程度。",
+                "usage": "> +100 = 强上升趋势。< -100 = 强下降趋势。"
+            },
+            {
+                "name": "Williams %R (威廉指标)",
+                "description": "衡量超买/超卖水平的动量指标。",
+                "usage": "0 至 -20 = 超买。-80 至 -100 = 超卖。"
+            },
+            {
+                "name": "Rate of Change (ROC)",
+                "description": "衡量价格百分比变化的纯动量指标。",
+                "usage": "正值且上升=加速。负值=减速。"
+            },
+            {
+                "name": "Money Flow Index (MFI)",
+                "description": "显示买卖压力的“成交量加权RSI”。",
+                "usage": "> 80 = 超买（成交量确认）。< 20 = 超卖。"
+            }
+        ]
+    },
+    {
+        "category": "成交量与流动性 (Volume & Liquidity)",
+        "indicators": [
+            {
+                "name": "On-Balance Volume (OBV)",
+                "description": "使用成交量流向预测股价变化。",
+                "usage": "OBV上升确认上升趋势。背离（价格上涨，OBV下跌）警告反转。"
+            },
+            {
+                "name": "VWAP (成交量加权平均价)",
+                "description": "机构平均价格基准。",
+                "usage": "机构倾向于在VWAP下方买入，上方卖出。日内支撑/阻力。"
+            },
+            {
+                "name": "Volume Profile (成交量分布)",
+                "description": "显示特定价格水平的交易活动（价值区域）。",
+                "usage": "控制点 (POC) 充当价格磁铁。"
+            },
+            {
+                "name": "Chaikin Money Flow (CMF)",
+                "description": "衡量一段时间内的资金流量。",
+                "usage": "大于0 = 买入压力。小于0 = 卖出压力。"
+            },
+            {
+                "name": "Accumulation/Distribution Line (A/D线)",
+                "description": "评估资金流入和流出资产的累积流量。",
+                "usage": "A/D线上升而价格持平 = 吸筹（看涨）。"
+            }
+        ]
+    },
+    {
+        "category": "数学与结构 (Mathematical & Structural)",
+        "indicators": [
+            {
+                "name": "Fibonacci Retracement (斐波那契回调)",
+                "description": "识别战略支撑和阻力位。",
+                "usage": "关键水平：38.2%，50%，61.8%（黄金分割）充当支撑/阻力。"
+            },
+            {
+                "name": "Pivot Points (枢轴点)",
+                "description": "用于识别支撑和阻力的预测指标。",
+                "usage": "根据前一日的高、低、收盘价计算。用于日内交易目标。"
+            },
+            {
+                "name": "Linear Regression Slope (线性回归斜率)",
+                "description": "使用统计数据衡量价格变化的速度。",
+                "usage": "陡峭的正斜率=强劲趋势。平坦=震荡。"
+            },
+            {
+                "name": "Fractals (分形)",
+                "description": "基于重复模式识别反转点。",
+                "usage": "向上分形标记潜在顶部。向下分形标记潜在底部。"
+            },
+            {
+                "name": "Z-Score (Z分数)",
+                "description": "衡量价格距离平均值有多少个标准差。",
+                "usage": "高正Z分数=统计上的昂贵。高负值=便宜。"
+            },
+            {
+                "name": "Correlation Coefficient (相关系数)",
+                "description": "分析两种不同资产的关联走势。",
+                "usage": "+1 = 完全正相关。-1 = 负相关。0 = 无相关。"
+            },
+            {
+                "name": "Market Breadth (市场宽度)",
+                "description": "分析上涨与下跌股票的数量。",
+                "usage": "宽度扩大确认健康的牛市。"
+            },
+            {
+                "name": "Maximum Adverse Excursion (MAE)",
+                "description": "衡量交易期间的最大未实现损失。",
+                "usage": "用于交易后分析以优化止损设置。"
+            }
+        ]
+    }
+]

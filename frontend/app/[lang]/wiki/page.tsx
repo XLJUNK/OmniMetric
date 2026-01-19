@@ -1,0 +1,139 @@
+import React from 'react';
+import Link from 'next/link';
+import { LangType, DICTIONARY } from '@/data/dictionary';
+import { getWikiData, WikiItem } from '@/lib/wiki';
+import { BookOpen, Activity, Quote, Hash } from 'lucide-react';
+import { Metadata } from 'next';
+import { AdSenseSlot } from '@/components/AdSenseSlot';
+import { ClientDirectionProvider } from '@/components/ClientDirectionProvider';
+
+// Enable Static Params for all languages defined in dictionary
+export async function generateStaticParams() {
+    return Object.keys(DICTIONARY).map((lang) => ({
+        lang: lang.toLowerCase(),
+    }));
+}
+
+type Props = {
+    params: Promise<{ lang: string }>;
+};
+
+// Helper for metadata
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { lang } = await params;
+    const normalizedLang = lang.toUpperCase() as LangType;
+
+    // Hreflang generation
+    const languages = Object.keys(DICTIONARY).map(l => l.toLowerCase());
+    const alternates = languages.reduce((acc, l) => {
+        acc[l] = `https://omnimetric.net/${l}/wiki`;
+        return acc;
+    }, {} as Record<string, string>);
+
+    return {
+        title: `OmniMetric Wiki Index (${normalizedLang})`,
+        description: 'Comprehensive detailed index of Macro Economic Terms, Technical Indicators, and Investment Maxims.',
+        alternates: {
+            languages: alternates,
+            canonical: `https://omnimetric.net/${lang}/wiki`
+        }
+    };
+}
+
+export default async function WikiIndexPage({ params }: Props) {
+    const { lang } = await params;
+    const normalizedLang = (lang.toUpperCase()) as LangType;
+    const isRTL = normalizedLang === 'AR';
+    const wikiData = getWikiData(normalizedLang);
+
+    // Group by Type -> Category
+    const grouped: Record<string, Record<string, WikiItem[]>> = {
+        glossary: {},
+        technical: {},
+        maxim: {}
+    };
+
+    wikiData.forEach(item => {
+        if (!grouped[item.type][item.category]) {
+            grouped[item.type][item.category] = [];
+        }
+        grouped[item.type][item.category].push(item);
+    });
+
+    const getSectionTitle = (type: string) => {
+        switch (type) {
+            case 'glossary': return DICTIONARY[normalizedLang].labels.wiki || 'Macro Wiki';
+            case 'technical': return DICTIONARY[normalizedLang].labels.technical || 'Technical';
+            case 'maxim': return DICTIONARY[normalizedLang].labels.maxims || 'Investment Maxims';
+            default: return type;
+        }
+    };
+
+    const getIcon = (type: string) => {
+        switch (type) {
+            case 'glossary': return <BookOpen className="w-5 h-5 text-emerald-400" />;
+            case 'technical': return <Activity className="w-5 h-5 text-purple-400" />;
+            case 'maxim': return <Quote className="w-5 h-5 text-sky-400" />;
+        }
+    };
+
+    return (
+        <div className="min-h-screen bg-[#020617] text-slate-200 font-sans pb-20">
+            {/* Note: DesktopNav is global, but its lang switcher might point to ?lang=. 
+                 We might need a separate language switcher here or rely on user knowing manually. 
+                 Ideally, the layout should handle this, but for now we focus on the page content. */}
+
+            <div className="max-w-[1200px] mx-auto p-4 md:p-12 lg:p-16">
+                <header className={`mb-12 border-b border-[#1E293B] pb-8 ${isRTL ? 'text-right' : 'text-left'}`}>
+                    <div className={`flex items-center gap-3 mb-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                        <Hash className="w-8 h-8 text-sky-500" />
+                        <h1 className="text-3xl md:text-5xl font-black text-white tracking-tight uppercase">
+                            OmniMetric <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-purple-400">Wiki Index</span>
+                        </h1>
+                    </div>
+                    <p className="text-slate-400 font-mono text-sm ml-1">
+                        The complete knowledge base for the 2026 Macro-Economic Landscape.
+                    </p>
+                </header>
+
+                <div className="grid grid-cols-1 gap-16">
+                    {['glossary', 'technical', 'maxim'].map((type) => (
+                        <section key={type} className="space-y-6">
+                            <div className={`flex items-center gap-3 border-b border-[#1E293B] pb-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                                {getIcon(type)}
+                                <h2 className="text-2xl font-black text-slate-100 uppercase tracking-widest">
+                                    {getSectionTitle(type)}
+                                </h2>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {Object.entries(grouped[type]).map(([category, items]) => (
+                                    <div key={category} className="bg-[#0A0A0A] border border-[#1E293B] rounded-lg p-6 hover:border-sky-500/30 transition-colors">
+                                        <h3 className={`text-sm font-bold text-slate-500 uppercase tracking-wider mb-4 border-b border-[#222] pb-2 ${isRTL ? 'text-right' : 'text-left'}`}>
+                                            {category}
+                                        </h3>
+                                        <ul className="space-y-2">
+                                            {items.map(item => (
+                                                <li key={item.slug} className={`flex ${isRTL ? 'justify-end' : 'justify-start'}`}>
+                                                    <Link
+                                                        href={`/${normalizedLang.toLowerCase()}/wiki/${item.slug}`}
+                                                        className={`text-sm text-slate-300 hover:text-sky-400 transition-colors truncate block max-w-full ${isRTL ? 'text-right' : 'text-left'}`}
+                                                    >
+                                                        {item.title}
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                ))}
+                            </div>
+
+                            {/* Ad after Glossary */}
+                            {type === 'glossary' && <div className="py-4"><AdSenseSlot variant="responsive" /></div>}
+                        </section>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+}

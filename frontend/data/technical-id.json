@@ -1,0 +1,177 @@
+[
+    {
+        "category": "Indikator Tren",
+        "indicators": [
+            {
+                "name": "Moving Average (SMA/EMA)",
+                "description": "Garis dasar untuk tren harga.",
+                "usage": "Harga di atas SMA = Tren Naik. Harga di bawah SMA = Tren Turun."
+            },
+            {
+                "name": "Bollinger Bands",
+                "description": "Mengukur harga relatif terhadap volatilitas; 'squeeze' (penyempitan) menandakan pergerakan besar.",
+                "usage": "Harga menyentuh pita atas = Jenuh Beli. Pita bawah = Jenuh Jual. Squeeze = Penembusan (Breakout) akan terjadi."
+            },
+            {
+                "name": "Ichimoku Cloud",
+                "description": "Sistem mengikuti tren Jepang yang komprehensif (Kumo).",
+                "usage": "Harga di atas Awan = Bullish. Di bawah Awan = Bearish. Ketebalan awan menunjukkan kekuatan dukungan/resistensi."
+            },
+            {
+                "name": "ADX (Average Directional Index)",
+                "description": "Mengukur kekuatan tren terlepas dari arahnya.",
+                "usage": "ADX > 25 = Tren Kuat. ADX < 20 = Tren Lemah/Mendatar."
+            },
+            {
+                "name": "Parabolic SAR",
+                "description": "Mengidentifikasi potensi pembalikan di pasar yang sedang tren.",
+                "usage": "Titik di bawah lilin = Tren Naik. Titik di atas lilin = Tren Turun."
+            },
+            {
+                "name": "SuperTrend",
+                "description": "Indikator mengikuti tren yang disederhanakan berdasarkan ATR.",
+                "usage": "Garis hijau di bawah harga = Sinyal Beli. Garis merah di atas harga = Sinyal Jual."
+            },
+            {
+                "name": "MACD",
+                "description": "Mengukur kekuatan tren dan pergeseran momentum.",
+                "usage": "Persilangan garis sinyal = Sinyal Masuk/Keluar. Histogram menunjukkan kekuatan momentum."
+            }
+        ]
+    },
+    {
+        "category": "Indikator Volatilitas",
+        "indicators": [
+            {
+                "name": "ATR (Average True Range)",
+                "description": "Standar emas untuk mengukur volatilitas pasar dan menetapkan stop.",
+                "usage": "ATR Tinggi = Volatilitas Tinggi. Digunakan untuk menghitung jarak Stop Loss."
+            },
+            {
+                "name": "Keltner Channels",
+                "description": "Amplop berbasis volatilitas mirip dengan Bollinger Bands tetapi menggunakan ATR.",
+                "usage": "Harga ditutup di luar saluran = Kelanjutan tren yang kuat."
+            },
+            {
+                "name": "Chaikin Volatility",
+                "description": "Membandingkan selisih antara harga tinggi dan rendah.",
+                "usage": "Meningkatnya volatilitas sering kali menandai distribusi luas (puncak) atau kepanikan (dasar)."
+            },
+            {
+                "name": "Standard Deviation",
+                "description": "Dasar matematis untuk mengukur dispersi harga.",
+                "usage": "Deviasi Standar Tinggi = Risiko Tinggi (Volatilitas Tinggi). Rendah = Konsolidasi."
+            }
+        ]
+    },
+    {
+        "category": "Momentum & Osilator",
+        "indicators": [
+            {
+                "name": "RSI (Relative Strength Index)",
+                "description": "Mengidentifikasi kondisi jenuh beli atau jenuh jual.",
+                "usage": "> 70 = Jenuh Beli (Risiko Jual). < 30 = Jenuh Jual (Peluang Beli)."
+            },
+            {
+                "name": "Stochastic Oscillator",
+                "description": "Membandingkan harga penutupan dengan kisaran harganya dari waktu ke waktu.",
+                "usage": "> 80 = Jenuh Beli. < 20 = Jenuh Jual. Persilangan menandakan pembalikan."
+            },
+            {
+                "name": "CCI (Commodity Channel Index)",
+                "description": "Mengukur penyimpangan dari rata-rata statistik.",
+                "usage": "> +100 = Tren Naik Kuat. < -100 = Tren Turun Kuat."
+            },
+            {
+                "name": "Williams %R",
+                "description": "Indikator momentum yang mengukur level jenuh beli/jenuh jual.",
+                "usage": "0 hingga -20 = Jenuh Beli. -80 hingga -100 = Jenuh Jual."
+            },
+            {
+                "name": "Rate of Change (ROC)",
+                "description": "Momentum murni yang mengukur persentase perubahan harga.",
+                "usage": "Positif dan meningkat = Akselerasi. Negatif = Deselerasi."
+            },
+            {
+                "name": "Money Flow Index (MFI)",
+                "description": "'RSI tertimbang volume' yang menunjukkan tekanan beli/jual.",
+                "usage": "> 80 = Jenuh Beli (Volume terkonfirmasi). < 20 = Jenuh Jual."
+            }
+        ]
+    },
+    {
+        "category": "Volume & Likuiditas",
+        "indicators": [
+            {
+                "name": "On-Balance Volume (OBV)",
+                "description": "Menggunakan aliran volume untuk memprediksi perubahan harga saham.",
+                "usage": "OBV naik mengonfirmasi tren naik. Divergensi (Harga naik, OBV turun) memperingatkan pembalikan."
+            },
+            {
+                "name": "VWAP (Volume Weighted Average Price)",
+                "description": "Tolok ukur institusional untuk harga rata-rata.",
+                "usage": "Institusi membeli di bawah VWAP dan menjual di atas VWAP. Dukungan/resistensi intraday."
+            },
+            {
+                "name": "Volume Profile",
+                "description": "Menunjukkan aktivitas perdagangan pada tingkat harga tertentu (Area Nilai).",
+                "usage": "Point of Control (POC) bertindak sebagai magnet bagi harga."
+            },
+            {
+                "name": "Chaikin Money Flow (CMF)",
+                "description": "Mengukur jumlah Volume Aliran Uang selama periode tertentu.",
+                "usage": "Di atas 0 = Tekanan Beli. Di bawah 0 = Tekanan Jual."
+            },
+            {
+                "name": "Accumulation/Distribution Line",
+                "description": "Mengevaluasi aliran kumulatif uang masuk dan keluar dari aset.",
+                "usage": "Garis A/D naik sementara harga datar = Akumulasi (Bullish)."
+            }
+        ]
+    },
+    {
+        "category": "Matematis & Struktural",
+        "indicators": [
+            {
+                "name": "Fibonacci Retracement",
+                "description": "Mengidentifikasi tingkat dukungan dan resistensi strategis.",
+                "usage": "Level kunci: 38.2%, 50%, 61.8% (Rasio Emas) bertindak sebagai dukungan/resistensi."
+            },
+            {
+                "name": "Pivot Points",
+                "description": "Indikator prediktif yang digunakan untuk mengidentifikasi dukungan dan resistensi.",
+                "usage": "Dihitung dari Tinggi, Rendah, Tutup hari sebelumnya. Digunakan untuk target perdagangan harian."
+            },
+            {
+                "name": "Linear Regression Slope",
+                "description": "Mengukur kecepatan perubahan harga menggunakan statistik.",
+                "usage": "Kemiringan positif curam = Tren kuat. Kemiringan datar = Chop (Mendatar)."
+            },
+            {
+                "name": "Fractals",
+                "description": "Mengidentifikasi titik pembalikan berdasarkan pola berulang.",
+                "usage": "Fraktal naik menandai potensi puncak. Fraktal turun menandai potensi dasar."
+            },
+            {
+                "name": "Z-Score",
+                "description": "Mengukur berapa banyak deviasi standar harga dari rata-rata.",
+                "usage": "Skor-Z positif tinggi = Mahal secara statistik. Negatif tinggi = Murah."
+            },
+            {
+                "name": "Correlation Coefficient",
+                "description": "Menganalisis bagaimana dua aset berbeda bergerak dalam kaitannya satu sama lain.",
+                "usage": "+1 = Korelasi sempurna. -1 = Korelasi terbalik. 0 = Tidak ada korelasi."
+            },
+            {
+                "name": "Market Breadth",
+                "description": "Menganalisis jumlah saham yang naik vs. turun.",
+                "usage": "Keluasan yang meningkat mengonfirmasi pasar bull yang sehat."
+            },
+            {
+                "name": "Maximum Adverse Excursion (MAE)",
+                "description": "Mengukur kerugian terbesar yang belum direalisasi selama perdagangan.",
+                "usage": "Digunakan untuk analisis pasca-perdagangan untuk mengoptimalkan penempatan stop-loss."
+            }
+        ]
+    }
+]

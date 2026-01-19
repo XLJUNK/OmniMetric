@@ -1,0 +1,177 @@
+[
+    {
+        "category": "Trend Indicators (トレンド：方向性の把握)",
+        "indicators": [
+            {
+                "name": "Moving Average (移動平均線 SMA/EMA)",
+                "description": "価格トレンドの基準線。",
+                "usage": "価格が平均線より上＝上昇トレンド。下＝下降トレンド。"
+            },
+            {
+                "name": "Bollinger Bands (ボリンジャーバンド)",
+                "description": "ボラティリティに対する価格の相対位置を測定。「スクイーズ」は大きな動きの前兆。",
+                "usage": "価格が上のバンドに接触＝買われすぎ。下＝売られすぎ。スクイーズ＝ブレイクアウト間近。"
+            },
+            {
+                "name": "Ichimoku Cloud (一目均衡表)",
+                "description": "包括的な日本のトレンドフォローシステム（雲）。",
+                "usage": "価格が雲より上＝強気。下＝弱気。雲の厚さは支持/抵抗の強さを示す。"
+            },
+            {
+                "name": "ADX (平均方向性指数)",
+                "description": "方向に関係なくトレンドの「強さ」を測定する。",
+                "usage": "ADX > 25 ＝ 強いトレンド。ADX < 20 ＝ トレンドレス（レンジ）。"
+            },
+            {
+                "name": "Parabolic SAR (パラボリックSAR)",
+                "description": "トレンド相場での反転ポイントを特定する。",
+                "usage": "ドットがローソク足の下＝上昇トレンド。上＝下降トレンド。"
+            },
+            {
+                "name": "SuperTrend (スーパートレンド)",
+                "description": "ATRに基づいたシンプルなトレンドフォロー指標。",
+                "usage": "価格の下に緑の線＝買いシグナル。価格の上に赤の線＝売りシグナル。"
+            },
+            {
+                "name": "MACD (マックディー)",
+                "description": "トレンドの強さとモメンタムの変化を測定。",
+                "usage": "シグナル線のクロス＝エントリー/エグジット。ヒストグラムは勢いを示す。"
+            }
+        ]
+    },
+    {
+        "category": "Volatility Indicators (ボラティリティ：振れ幅の測定)",
+        "indicators": [
+            {
+                "name": "ATR (Average True Range)",
+                "description": "市場のボラティリティを測定し、ストップロスを設定するためのゴールドスタンダード。",
+                "usage": "高いATR＝高ボラティリティ。ストップロスの距離計算に使用される。"
+            },
+            {
+                "name": "Keltner Channels (ケルトナーチャネル)",
+                "description": "ボリンジャーバンドに似ているが、ATRを使用した封筒型指標。",
+                "usage": "価格がチャネルの外で引ける＝強いトレンド継続。"
+            },
+            {
+                "name": "Chaikin Volatility (チャイキンボラティリティ)",
+                "description": "高値と安値の幅（スプレッド）を比較する。",
+                "usage": "ボラティリティの上昇は、しばしば広範な分散（天井）やパニック（底）を示す。"
+            },
+            {
+                "name": "Standard Deviation (標準偏差)",
+                "description": "価格のばらつきを測定するための数学的基盤。",
+                "usage": "高い標準偏差＝高リスク（ボラティリティ大）。低い＝保ち合い。"
+            }
+        ]
+    },
+    {
+        "category": "Momentum & Oscillators (モメンタム：勢いと過熱感)",
+        "indicators": [
+            {
+                "name": "RSI (相対力指数)",
+                "description": "買われすぎや売られすぎの状態を特定する。",
+                "usage": "70以上＝買われすぎ（売りリスク）。30以下＝売られすぎ（買い機会）。"
+            },
+            {
+                "name": "Stochastic Oscillator (ストキャスティクス)",
+                "description": "終値を一定期間の価格レンジと比較する。",
+                "usage": "80以上＝買われすぎ。20以下＝売られすぎ。クロスオーバーは反転シグナル。"
+            },
+            {
+                "name": "CCI (商品チャネル指数)",
+                "description": "統計的平均からの乖離を測定する。",
+                "usage": "+100以上＝強い上昇トレンド。-100以下＝強い下降トレンド。"
+            },
+            {
+                "name": "Williams %R (ウィリアムズ%R)",
+                "description": "買われすぎ/売られすぎのレベルを測定するモメンタム指標。",
+                "usage": "0〜-20＝買われすぎ。-80〜-100＝売られすぎ。"
+            },
+            {
+                "name": "Rate of Change (ROC)",
+                "description": "価格の変化率を測定する純粋なモメンタム指標。",
+                "usage": "プラスで上昇中＝加速。マイナス＝減速。"
+            },
+            {
+                "name": "Money Flow Index (MFI)",
+                "description": "買い/売りの圧力を示す「出来高加重RSI」。",
+                "usage": "80以上＝買われすぎ（出来高伴う）。20以下＝売られすぎ。"
+            }
+        ]
+    },
+    {
+        "category": "Volume & Liquidity (出来高：エネルギーの確認)",
+        "indicators": [
+            {
+                "name": "On-Balance Volume (OBV)",
+                "description": "株価の変化を予測するために出来高の流れを使用する。",
+                "usage": "OBV上昇は上昇トレンドを確認。ダイバージェンス（価格上昇、OBV下落）は反転警告。"
+            },
+            {
+                "name": "VWAP (出来高加重平均価格)",
+                "description": "平均価格の機関投資家ベンチマーク。",
+                "usage": "機関はVWAP以下で買い、VWAP以上で売る傾向がある。デイトレードの支持/抵抗。"
+            },
+            {
+                "name": "Volume Profile (価格帯別出来高)",
+                "description": "特定の価格レベルでの取引活動を示す（バリューエリア）。",
+                "usage": "POC（ポイント・オブ・コントロール）は価格のマグネットとして機能する。"
+            },
+            {
+                "name": "Chaikin Money Flow (CMF)",
+                "description": "一定期間のマネーフロー出来高を測定する。",
+                "usage": "0以上＝買い圧力。0以下＝売り圧力。"
+            },
+            {
+                "name": "Accumulation/Distribution Line (A/Dライン)",
+                "description": "資産への資金の流入と流出の累積を評価する。",
+                "usage": "価格が横ばいなのにA/Dラインが上昇＝蓄積（強気）。"
+            }
+        ]
+    },
+    {
+        "category": "Mathematical & Structural (構造と統計)",
+        "indicators": [
+            {
+                "name": "Fibonacci Retracement (フィボナッチ)",
+                "description": "戦略的な支持線と抵抗線を特定する。",
+                "usage": "主要レベル：38.2%、50%、61.8%（黄金比）が支持/抵抗として機能。"
+            },
+            {
+                "name": "Pivot Points (ピボットポイント)",
+                "description": "支持と抵抗を特定するために使用される先行指標。",
+                "usage": "前日の高値・安値・終値から計算。デイトレードのターゲットに使用。"
+            },
+            {
+                "name": "Linear Regression Slope (線形回帰スロープ)",
+                "description": "統計を使用して価格変動の速度を測定する。",
+                "usage": "急な正の傾き＝強いトレンド。平坦＝レンジ相場。"
+            },
+            {
+                "name": "Fractals (フラクタル)",
+                "description": "反復的なパターンに基づいて反転ポイントを特定する。",
+                "usage": "上向きフラクタルは潜在的な天井。下向きは底を示す。"
+            },
+            {
+                "name": "Z-Score (Zスコア)",
+                "description": "価格が平均から何標準偏差離れているかを測定。",
+                "usage": "高い正のZスコア＝統計的に割高。高い負＝割安。"
+            },
+            {
+                "name": "Correlation Coefficient (相関係数)",
+                "description": "2つの異なる資産が互いにどのように動くかを分析。",
+                "usage": "+1＝完全相関。-1＝逆相関。0＝無相関。"
+            },
+            {
+                "name": "Market Breadth (市場の裾野)",
+                "description": "値上がり銘柄数と値下がり銘柄数を分析。",
+                "usage": "ブレドスの拡大は健全な強気相場を確認する。"
+            },
+            {
+                "name": "Maximum Adverse Excursion (MAE)",
+                "description": "トレード中の最大含み損を測定。",
+                "usage": "ストップロスの配置を最適化するための事後分析に使用。"
+            }
+        ]
+    }
+]

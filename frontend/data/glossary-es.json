@@ -1,0 +1,362 @@
+[
+    {
+        "id": "net-liquidity",
+        "category": "Liquidez",
+        "term": "Liquidez Neta",
+        "definition": "La medida de liquidez real suministrada al mercado, calculada restando la Cuenta General del Tesoro (TGA) y los saldos de Repos Inversos (RRP) del Balance General de la Fed.",
+        "market_impact": {
+            "up": "Apreciación de precios en activos de riesgo (acciones, cripto). Crea un entorno tolerante a la expansión del PER.",
+            "down": "Aumento de la volatilidad del mercado. Ajustes de valoración probables, especialmente en acciones de crecimiento."
+        },
+        "context_2026": "En 2026, con el fin del QT y los ajustes a las reservas de Moneda Digital (CBDC), los cambios cualitativos en la política cuantitativa están en el foco. La fluctuación de esta liquidez real determina la resistencia del mercado más que las tasas de interés simples.",
+        "gms_relevance": "Extremadamente Alta. Forma la línea base del Puntuación GMS y funciona como una variable fundamental midiendo el 'poder adquisitivo' del mercado.",
+        "seo_keywords": [
+            "Liquidez Neta",
+            "Balance de la Fed",
+            "Mercado Impulsado por Liquidez",
+            "Saldo de Repo Inverso"
+        ]
+    },
+    {
+        "id": "vix",
+        "category": "Sentimiento",
+        "term": "VIX (Índice del Miedo)",
+        "definition": "Una medida de volatilidad esperada a 30 días basada en los precios de opciones del S&P 500. Cuantifica la ansiedad psicológica del inversor.",
+        "market_impact": {
+            "up": "Aversión al riesgo del inversor. Picos rápidos señalan ventas de pánico, pero máximos extremos pueden sugerir una oportunidad de compra (clímax de venta).",
+            "down": "Optimismo del inversor. Niveles estables fomentan operaciones de carry trade e inversión apalancada."
+        },
+        "context_2026": "Con el trading algorítmico de ultra alta velocidad impulsado por IA ahora generalizado, los picos del VIX tienden a ser de corta duración ('transitoriedad de picos'). También muy influenciado por Opciones de Cero Días (0DTE).",
+        "gms_relevance": "Alta. Usado como indicador de correlación inversa para detectar reversiones en la tolerancia al riesgo. Los algoritmos bajan significativamente la puntuación cuando está por encima de 20.",
+        "seo_keywords": [
+            "Índice VIX",
+            "Volatilidad",
+            "Índice del Miedo",
+            "Sentimiento del Mercado"
+        ]
+    },
+    {
+        "id": "real-interest-rate",
+        "category": "Tasas de Interés",
+        "term": "Tasa de Interés Real",
+        "definition": "Tasa de interés nominal (ej. Rendimiento a 10 años) menos tasa de inflación esperada. El costo verdadero de pedir dinero prestado.",
+        "market_impact": {
+            "up": "Viento en contra para Oro, Bitcoin y acciones tecnológicas de alto PER. Factor para un Dólar más fuerte.",
+            "down": "Impulsa precios de activos. Acelera el flujo de dinero de riesgo hacia startups de IA y otros sectores."
+        },
+        "context_2026": "Los impulsos impulsados por la IA a las tasas de crecimiento potencial han elevado la tasa de interés real neutral (r-star). Entender la 'Nueva Normalidad' de los repuntes bursátiles en medio de tasas de interés reales positivas es clave en 2026.",
+        "gms_relevance": "Alta. Funciona como la tasa de descuento. Un factor de ponderación primario midiendo la idoneidad de valoración en la Puntuación GMS.",
+        "seo_keywords": [
+            "Tasa de Interés Real",
+            "Rendimiento a 10 Años",
+            "Inflación Esperada",
+            "TIPS"
+        ]
+    },
+    {
+        "id": "gms-score",
+        "category": "Propietario",
+        "term": "Puntuación GMS",
+        "definition": "Un indicador líder de mercado integral calculado de forma propietaria por OmniMetric, integrando liquidez, fundamentales, sentimiento de SNS y pronósticos de demanda de IA.",
+        "market_impact": {
+            "up": "Mejora en el valor esperado general del mercado. Mayor ventaja para estrategias de seguimiento de tendencias.",
+            "down": "Advertencia de riesgo potencial de retroceso. Recomienda cobertura o aumentar ratios de efectivo."
+        },
+        "context_2026": "Utilizando los últimos motores LLM (incluyendo Gemini 3) en 2026. Una brújula de próxima generación sincronizando información cualitativa de SNS con estadísticas económicas en tiempo real para eliminar la asimetría de información.",
+        "gms_relevance": "Indicador Central. Todos los demás elementos se posicionan como componentes para construir esta puntuación.",
+        "seo_keywords": [
+            "Puntuación GMS",
+            "OmniMetric",
+            "Indicador Macro",
+            "Predicción de Mercado IA"
+        ]
+    },
+    {
+        "id": "cpi",
+        "category": "Inflación",
+        "term": "CPI (Índice de Precios al Consumidor)",
+        "definition": "Mide cambios de precios en bienes y servicios comprados por consumidores. Tiene el impacto más directo en la política monetaria del banco central.",
+        "market_impact": {
+            "up": "Caídas en acciones y fortaleza del Dólar debido a temores de alza de tasas/ajuste. Riesgo de reflación.",
+            "down": "Repuntes en acciones y debilidad del Dólar por esperanzas de recorte de tasas. El progreso en desinflación es bienvenido."
+        },
+        "context_2026": "En 2026, la atención se centra en la contribución expansiva de nuevos sectores de servicios como 'Costos de Suscripción de Agentes IA' y 'Tarifas de Robotaxi', en lugar de los precios de la energía.",
+        "gms_relevance": "Media. Convirtiéndose en un indicador rezagado, por lo que se pondera menos en la Puntuación GMS que indicadores adelantados como PCE o datos de empleo.",
+        "seo_keywords": [
+            "CPI",
+            "Índice de Precios al Consumidor",
+            "Tasa de Inflación",
+            "Economía 2026"
+        ]
+    },
+    {
+        "id": "pce-price-index",
+        "category": "Inflación",
+        "term": "PCE (Índice de Precios de Gastos de Consumo Personal)",
+        "definition": "La métrica de inflación preferida por la Fed. Refleja cambios en patrones de gasto del consumidor y cubre una gama más amplia de movimientos de precios que el CPI.",
+        "market_impact": {
+            "up": "Fortalece la postura agresiva de la Fed, llevando a tasas terminales más altas. Pesa sobre acciones tecnológicas.",
+            "down": "Aumenta esperanzas de un giro moderado de la Fed, dando alivio general al mercado."
+        },
+        "context_2026": "La disminución de ratios de alquiler y la presión deflacionaria en 'servicios de activos intangibles' debido a ganancias de productividad de IA contribuyen a la estabilidad del PCE. Tiene la clave para que la Fed logre su objetivo del 2%.",
+        "gms_relevance": "Alta. Adoptado como datos de entrada de mayor precisión que el CPI para predecir cambios en la tasa de política.",
+        "seo_keywords": [
+            "Índice de Precios PCE",
+            "Fed",
+            "Política Monetaria",
+            "Presión Deflacionaria"
+        ]
+    },
+    {
+        "id": "non-farm-payrolls",
+        "category": "Mercado Laboral",
+        "term": "Non-Farm Payrolls (NFP)",
+        "definition": "El indicador mensual más importante de la salud económica de EE.UU. La fortaleza del mercado laboral sustenta el consumo.",
+        "market_impact": {
+            "up": "Prueba de una economía fuerte, pero el sobrecalentamiento puede llevar a caídas temporales en acciones debido a temores de alza de tasas (Bueno es Malo).",
+            "down": "Caídas en acciones debido a temores de desaceleración/recesión, o repuntes por esperanzas de recorte de tasas anticipado."
+        },
+        "context_2026": "La adopción de IA ha intensificado la movilidad laboral. Las 'tasas de reempleo de cuello blanco' y el 'crecimiento salarial para trabajadores cualificados en IA' ahora influyen en las reacciones del mercado más que números de empleo simples.",
+        "gms_relevance": "Alta. El motor que mide la salud económica. Vinculado directamente a la evaluación de riesgo de recesión de la Puntuación GMS.",
+        "seo_keywords": [
+            "Nóminas No Agrícolas",
+            "NFP",
+            "Mercado Laboral",
+            "Recesión"
+        ]
+    },
+    {
+        "id": "yield-curve-10y2y",
+        "category": "Bonos",
+        "term": "Inversión de la Curva de Tipos (10A-2A)",
+        "definition": "Un fenómeno donde el rendimiento del Tesoro a 10 años cae por debajo del rendimiento a 2 años. Históricamente un indicador adelantado de recesión.",
+        "market_impact": {
+            "up": "(Empinamiento) Expectativas de recuperación económica o reflación. Positivo para acciones financieras.",
+            "down": "(Aplanamiento/Profundización de Inversión) Señal de recesión. Aversión al riesgo a medio y largo plazo."
+        },
+        "context_2026": "Después de resolver una larga inversión (empinamiento), 2026 se encuentra en una encrucijada: ¿ha vuelto la economía a la velocidad de crucero, o está cayendo en estanflación?",
+        "gms_relevance": "Media. Debido a cambios estructurales en la oferta/demanda de bonos, su precisión predictiva ha disminuido, por lo que se evalúa en combinación con otros indicadores.",
+        "seo_keywords": [
+            "Inversión de Rendimiento",
+            "Curva de Tipos",
+            "10A2A",
+            "Recesión"
+        ]
+    },
+    {
+        "id": "ff-rate",
+        "category": "Tasas de Interés",
+        "term": "Tasa de Fondos de la Fed (FF Rate)",
+        "definition": "La tasa de interés de política de EE.UU. La fuente de todas las tasas de interés, gobernando los flujos de capital global.",
+        "market_impact": {
+            "up": "Dólar más fuerte, precios de activos más bajos, mayor carga de deuda corporativa.",
+            "down": "Dólar más débil, mercados de riesgo, vitalización del mercado inmobiliario."
+        },
+        "context_2026": "Con el aumento de la tasa neutral (r-star), no se espera un retorno a la era de interés cero de la década de 2010. Se requieren modelos de ingresos que funcionen en un 'mundo con interés' (mantenido en 3-4%).",
+        "gms_relevance": "Extremadamente Alta. Entrada directa para la tasa de descuento. Afecta la 'Recomendación de Apalancamiento' en la Puntuación GMS.",
+        "seo_keywords": [
+            "Tasa FF",
+            "Tasa de Política",
+            "Alza de Tasas",
+            "Recorte de Tasas"
+        ]
+    },
+    {
+        "id": "ai-demand-forecast-index",
+        "category": "Tecnología",
+        "term": "Índice de Pronóstico de Demanda IA (Propietario OmniMetric)",
+        "definition": "Un indicador económico adelantado de próxima generación que integra capex de centros de datos, tiempos de entrega de GPU y consumo de tokens LLM.",
+        "market_impact": {
+            "up": "Fuerte señal de compra para sectores de semiconductores, energía y tecnología. Expansión de capex.",
+            "down": "Temores de estallido de burbuja IA. Sugiere menor eficiencia de capital debido a sobreinversión."
+        },
+        "context_2026": "La IA ya no es solo una historia sectorial sino una variable macro que define la productividad en todas las industrias. Una caída en este índice presagia una caída en el crecimiento del PIB trimestres después.",
+        "gms_relevance": "Alta. Valorado en la Puntuación GMS 2026 como un 'Nuevo Indicador Adelantado' reemplazando al tradicional PMI Manufacturero ISM.",
+        "seo_keywords": [
+            "Demanda IA",
+            "Inversión en Centros de Datos",
+            "Semiconductores",
+            "Tiempo de Entrega GPU"
+        ]
+    },
+    {
+        "id": "semi-inventory-cycle",
+        "category": "Tecnología",
+        "term": "Ciclo de Inventario de Semiconductores",
+        "definition": "Ratio Book-to-Bill de fabricantes de semiconductores. Refleja el ciclo de demanda desde dispositivos TI hasta servidores IA y VE.",
+        "market_impact": {
+            "up": "Tocar fondo es una oportunidad de compra principal para acciones tecnológicas. Alcanzar el pico sugiere tiempo de toma de ganancias.",
+            "down": "Punto de inflexión de sobredemanda a sobreoferta. Señal temprana de desaceleración económica."
+        },
+        "context_2026": "La difusión de Edge AI (procesamiento IA en teléfonos/PC) ha acortado e intensificado el ciclo. 2026 marca el fin de la corrección de inventario para chips generales y una transición a estándares de próxima generación.",
+        "gms_relevance": "Media. Usado para predicción de Rotación Sectorial en la Puntuación GMS.",
+        "seo_keywords": [
+            "Ciclo de Semiconductores",
+            "Book-to-Bill",
+            "Corrección de Inventario",
+            "Edge AI"
+        ]
+    },
+    {
+        "id": "cbdc-adoption-rate",
+        "category": "Liquidez",
+        "term": "Tasa de Adopción de CBDC",
+        "definition": "Tasa de circulación y uso de monedas digitales emitidas por bancos centrales principales. Mide velocidad de liquidación y programabilidad de la moneda.",
+        "market_impact": {
+            "up": "Circulación de capital más rápida. Velocidad de transmisión de política monetaria mejorada. Amenaza al sector bancario existente.",
+            "down": "Preocupaciones crediticias por problemas de privacidad o fallos del sistema. Menor confianza en fiat (huida a Oro/BTC)."
+        },
+        "context_2026": "En 2026, los principales bancos centrales comienzan operaciones completas de CBDC. Esto permite distribución directa de 'Helicopter Money', noting mayor dificultad en control de inflación.",
+        "gms_relevance": "Media. Incorporado en Puntuación GMS como variable para Velocidad del Dinero.",
+        "seo_keywords": [
+            "CBDC",
+            "Yen Digital",
+            "Dólar Digital",
+            "Moneda Digital Banco Central"
+        ]
+    },
+    {
+        "id": "move-index",
+        "category": "Sentimiento",
+        "term": "Índice MOVE (Bond VIX)",
+        "definition": "Volatilidad esperada del mercado del Tesoro de EE.UU. calculada a partir de opciones de bonos.",
+        "market_impact": {
+            "up": "Mayor incertidumbre en perspectiva de tasas. Negativo para hipotecas y mercados de bonos corporativos. Dólar volátil.",
+            "down": "Tasas estables fomentan flujo de capital a activos de riesgo. Activación de carry trades."
+        },
+        "context_2026": "Con la orientación futura de la Fed cambiando a un modelo interactivo impulsado por IA, la calma en este índice es una condición esencial para la estabilidad del mercado.",
+        "gms_relevance": "Media. Usado en combinación con VIX para evaluación de riesgo multiactivo.",
+        "seo_keywords": [
+            "Índice MOVE",
+            "Volatilidad de Bonos",
+            "Fluctuación Tasa de Interés",
+            "Tesoro EE.UU."
+        ]
+    },
+    {
+        "id": "fear-and-greed-index",
+        "category": "Sentimiento",
+        "term": "Índice de Miedo y Codicia",
+        "definition": "Cuantifica el entusiasmo del mercado (0-100) desde múltiples puntos de datos como momento de acciones, volatilidad y demanda de bonos basura.",
+        "market_impact": {
+            "up": "(Codicia) Mercado alcista, pero por encima de 80 indica alto riesgo de retroceso por sobrecalentamiento.",
+            "down": "(Miedo) Mercado bajista, pero por debajo de 20 sugiere un rebote técnico inminente debido a sobreventa."
+        },
+        "context_2026": "El trading contrario algorítmico se ha vuelto común, haciendo que la recuperación del Miedo Extremo sea extremadamente rápida. Indicador obligatorio para swing trading a corto plazo.",
+        "gms_relevance": "Media. Contribuye como componente de 'Momento Contrario' en la Puntuación GMS.",
+        "seo_keywords": [
+            "Índice Miedo y Codicia",
+            "Psicología de Mercado",
+            "Sobrecalentamiento",
+            "Sobreventa"
+        ]
+    },
+    {
+        "id": "copper-gold-ratio",
+        "category": "Materias Primas",
+        "term": "Ratio Cobre/Oro",
+        "definition": "Precio del Cobre dividido por precio del Oro. Asciende durante expansión, declina durante recesión. Un indicador económico adelantado.",
+        "market_impact": {
+            "up": "Revitalización de manufactura global e inversión en infraestructura. Risk-on.",
+            "down": "Cambio a activos defensivos (Oro). Estancamiento o creciente riesgo geopolítico."
+        },
+        "context_2026": "La escasez estructural de cobre es evidente debido a la transición a una sociedad descarbonizada/electrificada (Centros de Datos IA/VE). Más un 'Índice de Progreso de Transición Energética' que un simple indicador económico ahora.",
+        "gms_relevance": "Media. Indicador alternativo midiendo la 'energía térmica' de la economía real.",
+        "seo_keywords": [
+            "Ratio Cobre Oro",
+            "Mercado de Materias Primas",
+            "Dr. Cobre",
+            "Inversión Infraestructura"
+        ]
+    },
+    {
+        "id": "m2-money-supply",
+        "category": "Liquidez",
+        "term": "Oferta Monetaria M2",
+        "definition": "Suministro total de moneda incluyendo efectivo, depósitos y MMFs. Impulsor a largo plazo de inflación y precios de activos.",
+        "market_impact": {
+            "up": "Presión inflacionaria a medio/largo plazo. Depreciación de moneda (Dólar más débil) e inflación de activos.",
+            "down": "Presión deflacionaria. Contracción de actividad económica. Formación de techo bursátil."
+        },
+        "context_2026": "Tenga en cuenta que el dinero se está moviendo de depósitos bancarios a activos on-chain (stablecoins), por lo que las estadísticas tradicionales de M2 ya no capturan la imagen completa de liquidez.",
+        "gms_relevance": "Media. Datos suplementarios para análisis de liquidez. Verificado por divergencia con Liquidez Neta.",
+        "seo_keywords": [
+            "M2",
+            "Oferta Monetaria",
+            "Suministro de Moneda",
+            "Stablecoins"
+        ]
+    },
+    {
+        "id": "ism-manufacturing-pmi",
+        "category": "Economía",
+        "term": "PMI Manufacturero ISM",
+        "definition": "Encuesta de gerentes de compras en el sector manufacturero de EE.UU. Sobre 50 indica expansión, bajo 50 contracción.",
+        "market_impact": {
+            "up": "Renacimiento manufacturero, expectativas de crecimiento de ganancias. Viento de cola para acciones de valor.",
+            "down": "Declive manufacturero, temores de recesión. Cambio a acciones defensivas."
+        },
+        "context_2026": "La automatización vía 'Fábricas Inteligentes' implica que 'Nuevos Pedidos' y 'Precios de Insumos (Costos Energía IA)' están ganando importancia sobre componentes de empleo.",
+        "gms_relevance": "Media. Usado como 'Indicador de Confirmación' para verificar ciclos económicos tradicionales.",
+        "seo_keywords": [
+            "PMI Manufacturero ISM",
+            "PMI",
+            "Ciclo Económico",
+            "Manufactura"
+        ]
+    },
+    {
+        "id": "sovereign-credit-spread",
+        "category": "Bonos",
+        "term": "Spread de Crédito Soberano",
+        "definition": "Diferencia de rendimiento entre Tesoros de EE.UU. y otros bonos soberanos (o bonos corporativos). Sensibilidad al riesgo de crédito de mercado.",
+        "market_impact": {
+            "up": "(Ensanchamiento) Risk-off. Fuga de capital de mercados emergentes o temores de impago corporativo.",
+            "down": "(Estrechamiento) Risk-on. Apetito de inversión global mejorado. Flujo a activos de alto rendimiento."
+        },
+        "context_2026": "Con más naciones sosteniendo deuda masiva, CDS (Credit Default Swaps) sobre los propios Tesoros de EE.UU. se han convertido en un nuevo indicador clave midiendo elegibilidad como activos libres de riesgo.",
+        "gms_relevance": "Media. Captura signos de riesgo sistémico y calcula riesgo a la baja para la Puntuación GMS.",
+        "seo_keywords": [
+            "Spread de Crédito",
+            "Riesgo de Impago",
+            "Rendimiento Tesoro",
+            "CDS"
+        ]
+    },
+    {
+        "id": "ai-productivity-multiplier",
+        "category": "Tecnología",
+        "term": "Multiplicador de Productividad IA (Propietario OmniMetric)",
+        "definition": "Calcula el crecimiento en contribución al PIB por unidad de hora debido a adopción de IA. Usado para corregir tasas de crecimiento potencial.",
+        "market_impact": {
+            "up": "Crecimiento económico sin inflación. Permite repuntes bursátiles sostenidos incluso bajo altas tasas de interés reales.",
+            "down": "Retornos decrecientes en inversión IA. Temores de estanflación debido a ganancias de productividad estancadas."
+        },
+        "context_2026": "En 2026, más del 30% de todas las industrias son autónomas vía Agentes IA. Este multiplicador es un indicador adelantado prediciendo márgenes de beneficio corporativo futuros.",
+        "gms_relevance": "Alta. Calificación máxima en categoría 'Crecimiento' de Puntuación GMS como factor elevando el techo de mercado a largo plazo.",
+        "seo_keywords": [
+            "Productividad IA",
+            "Tasa Crecimiento Potencial",
+            "Revolución Productividad",
+            "PIB 2026"
+        ]
+    },
+    {
+        "id": "rrp-balance",
+        "category": "Liquidez",
+        "term": "Saldo de Repo Inverso (RRP)",
+        "definition": "Saldo de fondos en exceso depositados por MMFs y otros en la Fed. Un amortiguador de 'fondos en espera' que pueden fluir de vuelta al mercado.",
+        "market_impact": {
+            "up": "Absorción de liquidez del mercado. Neutral a negativo para acciones.",
+            "down": "Liberación de liquidez al mercado. Fuerte factor de soporte para activos de riesgo (suministro de liquidez)."
+        },
+        "context_2026": "Cómo se mueve el saldo RRP, que se desplomó desde 2024-2025, bajo el nuevo entorno regulatorio de 2026 determina el riesgo de cola del mercado.",
+        "gms_relevance": "Alta. Variable esencial para calcular Liquidez Neta. Saldos bajos indican resistencia de mercado reducida.",
+        "seo_keywords": [
+            "Repo Inverso",
+            "RRP",
+            "Fed",
+            "Fondos en Espera"
+        ]
+    }
+]

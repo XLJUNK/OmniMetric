@@ -29,6 +29,8 @@ export const DesktopNav = ({ lang: defaultLang }: { lang: LangType }) => {
         { key: 'forex', label: t.labels.forex || 'FOREX', path: '/forex' },
         { key: 'cmdty', label: t.labels.commodities || 'COMMODITIES', path: '/commodities' },
         { key: 'wiki', label: t.labels.wiki || 'WIKI', path: '/glossary' },
+        { key: 'technical', label: t.labels.technical || 'TECHNICAL', path: '/technical' },
+        { key: 'maxims', label: t.labels.maxims || 'MAXIMS', path: '/maxims' },
     ];
 
     return (

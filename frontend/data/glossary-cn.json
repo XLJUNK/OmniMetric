@@ -1,0 +1,362 @@
+[
+    {
+        "id": "net-liquidity",
+        "category": "Liquidity",
+        "term": "Net Liquidity (净流动性)",
+        "definition": "衡量实际提供给市场的流动性，通过将美联储资产负债表减去财政部一般账户 (TGA) 和逆回购 (RRP) 余额计算得出。",
+        "market_impact": {
+            "up": "风险资产（股票、加密货币）价格上涨。创造了容忍市盈率扩张的环境。",
+            "down": "市场波动性增加。估值调整的可能性大，尤其是成长型股票。"
+        },
+        "context_2026": "在2026年，随着QT的结束和数字法币 (CBDC) 储备的调整，量化政策的质变成为焦点。这种实际流动性的波动比单纯的利率更能决定市场的韧性。",
+        "gms_relevance": "极高。构成GMS评分的基线，并作为衡量市场“购买力”的基本变量。",
+        "seo_keywords": [
+            "净流动性",
+            "美联储资产负债表",
+            "流动性驱动市场",
+            "逆回购余额"
+        ]
+    },
+    {
+        "id": "vix",
+        "category": "Sentiment",
+        "term": "VIX (恐慌指数)",
+        "definition": "基于标准普尔500指数期权价格的预期30天波动率。量化投资者的心理焦虑。",
+        "market_impact": {
+            "up": "投资者风险规避。快速飙升预示恐慌性抛售，但极端高位可能暗示买入机会（抛售高潮）。",
+            "down": "投资者乐观。稳定的水平鼓励套利交易和杠杆投资。"
+        },
+        "context_2026": "随着AI驱动的超高速算法交易成为主流，VIX的飙升往往是短暂的（“尖峰瞬变”）。也深受零日当期权 (0DTE) 的影响。",
+        "gms_relevance": "高。用作负相关指标，以检测风险承受能力的逆转。当高于20时，算法会显着降低评分。",
+        "seo_keywords": [
+            "VIX指数",
+            "波动率",
+            "恐慌指数",
+            "市场情绪"
+        ]
+    },
+    {
+        "id": "real-interest-rate",
+        "category": "Interest Rates",
+        "term": "Real Interest Rate (实际利率)",
+        "definition": "名义利率（如10年期国债收益率）减去预期通胀率。借钱的真实成本。",
+        "market_impact": {
+            "up": "黄金、比特币和高市盈率科技股的逆风。美元走强的因素。",
+            "down": "推高资产价格。加速风险资金流入AI初创企业和其他领域。"
+        },
+        "context_2026": "AI驱动的潜在增长率提升提高了中性实际利率 (r-star)。理解2026年正实际利率下股市反弹的“新常态”是关键。",
+        "gms_relevance": "高。作为贴现率。GMS评分中衡量估值合理性的主要加权因子。",
+        "seo_keywords": [
+            "实际利率",
+            "10年期收益率",
+            "预期通胀",
+            "TIPS"
+        ]
+    },
+    {
+        "id": "gms-score",
+        "category": "Proprietary",
+        "term": "GMS Score (GMS评分)",
+        "definition": "由OmniMetric独家计算的综合市场领先指标，整合了流动性、基本面、SNS情绪和AI需求预测。",
+        "market_impact": {
+            "up": "整体市场预期价值的改善。增加了趋势跟踪策略的优势。",
+            "down": "潜在回调风险的警告。建议对冲或增加现金比例。"
+        },
+        "context_2026": "利用最新的LLM引擎（包括Gemini 3）。作为下一代指南针，实时同步定性SNS信息与经济统计数据，消除信息不对称。",
+        "gms_relevance": "核心指标。所有其他项目都定位为构建此评分的组件。",
+        "seo_keywords": [
+            "GMS评分",
+            "OmniMetric",
+            "宏观指标",
+            "AI市场预测"
+        ]
+    },
+    {
+        "id": "cpi",
+        "category": "Inflation",
+        "term": "CPI (消费者物价指数)",
+        "definition": "衡量消费者购买的商品和服务的价格变化。对央行货币政策有最直接的影响。",
+        "market_impact": {
+            "up": "由于加息/紧缩担忧，股市下跌，美元走强。再通胀风险。",
+            "down": "由于降息希望，股市反弹，美元走弱。欢迎反通胀的进展。"
+        },
+        "context_2026": "2026年，关注点在于“AI代理订阅费”和“Robotaxi票价”等新服务部门的扩大贡献，而不是能源价格。",
+        "gms_relevance": "中。正成为滞后指标，因此在GMS评分中的权重低于PCE或就业数据等领先指标。",
+        "seo_keywords": [
+            "CPI",
+            "消费者物价指数",
+            "通胀率",
+            "2026年经济"
+        ]
+    },
+    {
+        "id": "pce-price-index",
+        "category": "Inflation",
+        "term": "PCE (个人消费支出价格指数)",
+        "definition": "美联储首选的通胀指标。反映消费者支出模式的变化，覆盖范围比CPI更广。",
+        "market_impact": {
+            "up": "加强美联储鹰派立场，导致更高的终端利率。打压科技股。",
+            "down": "提高美联储鸽派转向的希望，给市场带来普遍缓解。"
+        },
+        "context_2026": "由于AI生产力提升带来的“无形资产服务”租金比率下降和通缩压力有助于PCE稳定。是美联储实现2%目标的关键。",
+        "gms_relevance": "高。作为比CPI更高精度的输入数据，用于预测政策利率变化。",
+        "seo_keywords": [
+            "PCE价格指数",
+            "美联储",
+            "货币政策",
+            "通缩压力"
+        ]
+    },
+    {
+        "id": "non-farm-payrolls",
+        "category": "Labor Market",
+        "term": "Non-Farm Payrolls (非农就业数据 NFP)",
+        "definition": "美国经济健康状况最重要的月度指标。劳动力市场的力量支撑消费。",
+        "market_impact": {
+            "up": "强劲经济的证明，但过热可能因加息担忧导致股市暂时下跌（好消息即坏消息）。",
+            "down": "因放缓/衰退担忧导致股市下跌，或因提前降息希望而反弹。"
+        },
+        "context_2026": "AI的应用加剧了劳动力流动性。“白领再就业率”和“AI技能工人的工资增长”现在比单纯的就业人数更能影响市场反应。",
+        "gms_relevance": "高。衡量经济健康的引擎。直接通过GMS评分评估衰退风险。",
+        "seo_keywords": [
+            "非农就业数据",
+            "NFP",
+            "劳动力市场",
+            "衰退"
+        ]
+    },
+    {
+        "id": "yield-curve-10y2y",
+        "category": "Bonds",
+        "term": "Yield Curve Inversion (收益率曲线倒挂 10Y-2Y)",
+        "definition": "10年期国债收益率低于2年期收益率的现象。历史上是衰退的领先指标。",
+        "market_impact": {
+            "up": "（陡峭化）经济复苏预期，或再通胀。对金融股有利。",
+            "down": "（平坦化/加深倒挂）衰退迹象。中长期风险规避。"
+        },
+        "context_2026": "在解决长期的倒挂（陡峭化）后，2026年正处于十字路口：经济是否恢复了巡航速度，还是陷入滞胀？",
+        "gms_relevance": "中。由于债券供需的结构性变化，其预测准确性已减弱，因此与其他指标结合评估。",
+        "seo_keywords": [
+            "收益率倒挂",
+            "收益率曲线",
+            "10Y2Y",
+            "衰退"
+        ]
+    },
+    {
+        "id": "ff-rate",
+        "category": "Interest Rates",
+        "term": "Fed Funds Rate (联邦基金利率)",
+        "definition": "美国的政策利率。所有利率的源头，控制全球资本流动。",
+        "market_impact": {
+            "up": "美元走强，资产价格下跌，企业债务负担增加。",
+            "down": "美元走弱，风险资产市场活跃，住房市场复苏。"
+        },
+        "context_2026": "随着中性利率 (r-star) 的上升，预计不会回到2010年代的零利率时代。需要适应“有利率世界”（维持在3-4%）的收入模型。",
+        "gms_relevance": "极高。贴现率的直接输入。影响GMS评分中的“杠杆建议”。",
+        "seo_keywords": [
+            "FF利率",
+            "政策利率",
+            "加息",
+            "降息"
+        ]
+    },
+    {
+        "id": "ai-demand-forecast-index",
+        "category": "Technology",
+        "term": "AI Demand Forecast Index (AI需求预测指数)",
+        "definition": "整合数据中心资本支出、GPU交付时间和LLM代币消耗的下一代领先经济指标。",
+        "market_impact": {
+            "up": "半导体、能源和科技板块的强烈买入信号。资本支出扩张。",
+            "down": "AI泡沫破裂的担忧。暗示过度投资导致的资本效率降低。"
+        },
+        "context_2026": "AI不再仅仅是一个行业故事，而是一个定义所有行业生产力的宏观变量。该指数的下降预示着随后几个季度的GDP增长下降。",
+        "gms_relevance": "高。在2026年GMS评分中作为取代传统ISM制造业PMI的“新领先指标”受到重视。",
+        "seo_keywords": [
+            "AI需求",
+            "数据中心投资",
+            "半导体",
+            "GPU交付时间"
+        ]
+    },
+    {
+        "id": "semi-inventory-cycle",
+        "category": "Technology",
+        "term": "Semiconductor Inventory Cycle (半导体库存周期)",
+        "definition": "半导体制造商的订单出货比。反映从IT设备到AI服务器和电动汽车的需求周期。",
+        "market_impact": {
+            "up": "触底是科技股的最佳买入机会。见顶建议获利了结。",
+            "down": "从供不应求到供过于求的转折点。经济放缓的早期迹象。"
+        },
+        "context_2026": "边缘AI（手机/PC上的AI处理）的普及缩短并加剧了周期。2026年标志着通用芯片库存修正的结束和向下一代标准的过渡。",
+        "gms_relevance": "中。用于GMS评分中的板块轮动预测。",
+        "seo_keywords": [
+            "半导体周期",
+            "订单出货比",
+            "库存修正",
+            "边缘AI"
+        ]
+    },
+    {
+        "id": "cbdc-adoption-rate",
+        "category": "Liquidity",
+        "term": "CBDC Adoption Rate (CBDC采用率)",
+        "definition": "主要央行发行的数字货币的流通和使用率。衡量结算速度和货币可编程性。",
+        "market_impact": {
+            "up": "资本流通加快。货币政策传导速度提高。现有银行业的威胁。",
+            "down": "隐私问题或系统故障导致的信贷担忧。对法币的信任降低（逃向黄金/BTC）。"
+        },
+        "context_2026": "2026年，主要央行开始全面运营CBDC。这使得直接分发“直升机撒钱”成为可能，同时也注意到通胀控制难度的增加。",
+        "gms_relevance": "中。作为货币流通速度的变量纳入GMS评分。",
+        "seo_keywords": [
+            "CBDC",
+            "数字日元",
+            "数字美元",
+            "央行数字货币"
+        ]
+    },
+    {
+        "id": "move-index",
+        "category": "Sentiment",
+        "term": "MOVE Index (债券波动率)",
+        "definition": "根据债券期权计算的美国国债市场的预期波动率。",
+        "market_impact": {
+            "up": "利率前景的不确定性增加。对抵押贷款和企业债券市场不利。美元波动。",
+            "down": "利率稳定鼓励资金流入风险资产。套利交易活跃。"
+        },
+        "context_2026": "随着美联储前瞻性指引转向AI驱动的交互模型，该指数的平静是市场稳定的必要条件。",
+        "gms_relevance": "中。与VIX结合使用，用于多资产风险评估。",
+        "seo_keywords": [
+            "MOVE指数",
+            "债券波动率",
+            "利率波动",
+            "美国国债"
+        ]
+    },
+    {
+        "id": "fear-and-greed-index",
+        "category": "Sentiment",
+        "term": "Fear & Greed Index (恐惧与贪婪指数)",
+        "definition": "通过股票动量、波动率和垃圾债券需求等多个数据点量化市场热情 (0-100)。",
+        "market_impact": {
+            "up": "（贪婪）牛市，但超过80表明因过热导致回调的高风险。",
+            "down": "（恐惧）熊市，但低于20表明由于超卖即将出现技术性反弹。"
+        },
+        "context_2026": "算法逆向交易已变得普遍，使得从极度恐惧中恢复的速度非常快。短线波段交易的必选指标。",
+        "gms_relevance": "中。在GMS评分中作为“逆向动量”组件做出贡献。",
+        "seo_keywords": [
+            "恐惧与贪婪指数",
+            "市场心理",
+            "过热",
+            "超卖"
+        ]
+    },
+    {
+        "id": "copper-gold-ratio",
+        "category": "Commodities",
+        "term": "Copper/Gold Ratio (铜金比率)",
+        "definition": "铜价除以金价。扩张期上升，衰退期下降。领先经济指标。",
+        "market_impact": {
+            "up": "全球制造业和基础设施投资复苏。风险偏好上升。",
+            "down": "转向防御性资产（黄金）。停滞或地缘政治风险上升。"
+        },
+        "context_2026": "由于向脱碳/电气化社会（AI数据中心/电动汽车）的过渡，结构性铜短缺显而易见。现在与其说是一个简单的经济指标，不如说是一个“能源转型进展指数”。",
+        "gms_relevance": "中。衡量实体经济“热能”的替代指标。",
+        "seo_keywords": [
+            "铜金比",
+            "商品市场",
+            "铜博士",
+            "基础设施投资"
+        ]
+    },
+    {
+        "id": "m2-money-supply",
+        "category": "Liquidity",
+        "term": "M2 Money Supply (M2货币供应量)",
+        "definition": "货币总供应量，包括现金、存款和MMF。通货膨胀和资产价格的长期驱动因素。",
+        "market_impact": {
+            "up": "中长期通胀压力。货币贬值（美元走弱）和资产通胀。",
+            "down": "通缩压力。经济活动收缩。股市顶部的形成。"
+        },
+        "context_2026": "注意资金正从银行存款转移到链上资产（稳定币），因此仅靠传统M2统计无法捕捉全部流动性图景。",
+        "gms_relevance": "中。流动性分析的补充数据。检查与净流动性的背离。",
+        "seo_keywords": [
+            "M2",
+            "货币供应",
+            "货币供给",
+            "稳定币"
+        ]
+    },
+    {
+        "id": "ism-manufacturing-pmi",
+        "category": "Economy",
+        "term": "ISM Manufacturing PMI (ISM制造业PMI)",
+        "definition": "美国制造业采购经理人调查。高于50表示扩张，低于50表示收缩。",
+        "market_impact": {
+            "up": "制造业复苏，利润增长预期。价值股的顺风。",
+            "down": "制造业下滑，衰退担忧。转向防御性股票。"
+        },
+        "context_2026": "通过“智能工厂”实现的自动化意味着“新订单”和“投入价格（AI能源成本）”比就业组件更重要。",
+        "gms_relevance": "中。用作“确认指标”以验证传统商业周期。",
+        "seo_keywords": [
+            "ISM制造业PMI",
+            "PMI",
+            "商业周期",
+            "制造业"
+        ]
+    },
+    {
+        "id": "sovereign-credit-spread",
+        "category": "Bonds",
+        "term": "Sovereign Credit Spread (主权信用利差)",
+        "definition": "美国国债与其他主权债券（或公司债券）之间的收益率差。对市场信用风险的敏感度。",
+        "market_impact": {
+            "up": "（扩大）风险规避。资本从新兴市场外逃或企业违约担忧。",
+            "down": "（收窄）风险偏好。全球投资意愿改善。资金流入高收益资产。"
+        },
+        "context_2026": "随着越来越多的国家持有巨额债务，针对美国国债本身的CDS（信用违约互换）已成为衡量无风险资产资格的新关键指标。",
+        "gms_relevance": "中。捕捉系统性风险迹象并计算GMS评分的下行风险。",
+        "seo_keywords": [
+            "信用利差",
+            "违约风险",
+            "国债收益率",
+            "CDS"
+        ]
+    },
+    {
+        "id": "ai-productivity-multiplier",
+        "category": "Technology",
+        "term": "AI Productivity Multiplier (AI生产力乘数)",
+        "definition": "计算因采用AI而带来的单位小时GDP贡献增长。用于修正潜在增长率。",
+        "market_impact": {
+            "up": "无通胀的经济增长。即使在高实际利率下也能维持股市反弹。",
+            "down": "AI投资回报放缓。因生产力增长停滞导致的滞胀担忧。"
+        },
+        "context_2026": "2026年，超过30%的行业通过AI代理实现自主化。该乘数是预测未来企业利润率的领先指标。",
+        "gms_relevance": "高。在GMS评分“增长”类别中获得最高评级，作为提高长期市场上限的因素。",
+        "seo_keywords": [
+            "AI生产力",
+            "潜在增长率",
+            "生产力革命",
+            "2026年GDP"
+        ]
+    },
+    {
+        "id": "rrp-balance",
+        "category": "Liquidity",
+        "term": "Reverse Repo Balance (逆回购余额 RRP)",
+        "definition": "MMF和其他机构存放在美联储的超额资金余额。“备用资金”的缓冲，可以流回市场。",
+        "market_impact": {
+            "up": "从市场吸收流动性。对股市中性偏负面。",
+            "down": "向市场释放流动性。风险资产的强力支撑因素（流动性供应）。"
+        },
+        "context_2026": "在2024-2025年暴跌的RRP余额在2026年新监管环境下的变动决定了市场尾部风险。",
+        "gms_relevance": "高。计算净流动性的重要变量。低余额表明市场韧性降低。",
+        "seo_keywords": [
+            "逆回购",
+            "RRP",
+            "美联储",
+            "备用资金"
+        ]
+    }
+]

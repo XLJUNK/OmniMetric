@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Home, LineChart, Bitcoin, Banknote, Gem, BookOpen } from 'lucide-react';
+import { Home, LineChart, Bitcoin, Banknote, Gem, Globe, ScrollText, Activity } from 'lucide-react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { LangType, DICTIONARY } from '@/data/dictionary';
 
@@ -18,7 +18,9 @@ export const MobileNav = () => {
         { key: 'crypto', label: t.labels.crypto || 'Crypto', icon: Bitcoin, path: '/crypto' },
         { key: 'forex', label: t.labels.forex || 'Forex', icon: Banknote, path: '/forex' },
         { key: 'cmdty', label: t.labels.commodities || 'Cmdty', icon: Gem, path: '/commodities' },
-        { key: 'wiki', label: t.labels.wiki || 'Wiki', icon: BookOpen, path: '/glossary' },
+        { key: 'technical', label: t.labels.technical || 'Technical', icon: Activity, path: '/technical' },
+        { key: 'wiki', label: t.labels.wiki || 'Wiki', icon: Globe, path: '/glossary' },
+        { key: 'maxims', label: t.labels.maxims || 'Maxims', icon: ScrollText, path: '/maxims' },
     ];
 
     return (

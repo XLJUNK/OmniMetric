@@ -1,0 +1,192 @@
+import React from 'react';
+import { DICTIONARY, LangType } from '@/data/dictionary';
+import { Quote } from 'lucide-react';
+import { AdSenseSlot } from '@/components/AdSenseSlot';
+import { DynamicStructuredData } from '@/components/DynamicStructuredData';
+import { Metadata } from 'next';
+
+// Import all language data
+import maximsDataEn from '@/data/maxims-en.json';
+import maximsDataJa from '@/data/maxims-ja.json';
+import maximsDataCn from '@/data/maxims-cn.json';
+import maximsDataEs from '@/data/maxims-es.json';
+import maximsDataHi from '@/data/maxims-hi.json';
+import maximsDataId from '@/data/maxims-id.json';
+import maximsDataAr from '@/data/maxims-ar.json';
+
+interface Maxim {
+    id: string;
+    text: string;
+    attribution: string;
+    meaning: string;
+}
+
+interface MaximCategory {
+    category: string;
+    quotes: Maxim[];
+}
+
+// Helper to get lang
+async function getLang(searchParams: Promise<{ lang?: string }>): Promise<LangType> {
+    const { lang } = await searchParams;
+    const queryLang = lang as LangType;
+    return queryLang && DICTIONARY[queryLang] ? queryLang : 'EN';
+}
+
+const getPageTitle = (l: LangType) => {
+    switch (l) {
+        case 'JP': return "投資格言";
+        case 'CN': return "投资格言";
+        case 'ES': return "Máximas de Inversión";
+        case 'HI': return "निवेश के सिद्धांत";
+        case 'ID': return "Prinsip Investasi";
+        case 'AR': return "حكم الاستثمار";
+        default: return "Investment Maxims";
+    }
+};
+
+const getPageDesc = (l: LangType) => {
+    switch (l) {
+        case 'JP': return "市場の荒波を乗り越えるための、先人たちの知恵と規律。50の投資格言。";
+        case 'CN': return "前人应对市场风浪的智慧与纪律。50条投资格言。";
+        case 'ES': return "Sabiduría y disciplina de los maestros para navegar los ciclos del mercado.";
+        case 'HI': return "बाजार के उतार-चढ़ाव को समझने के लिए विशेषज्ञों का ज्ञान और अनुशासन।";
+        case 'ID': return "Kebijaksanaan dan disiplin dari para ahli untuk menavigasi siklus pasar.";
+        case 'AR': return "حكمة وانضباط من الخبراء للتنقل في دورات السوق.";
+        default: return "Wisdom and discipline from the masters to navigate typical market cycles. 50 Investment Maxims.";
+    }
+};
+
+export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
+    const lang = await getLang(searchParams);
+    return {
+        title: `${getPageTitle(lang)} - OmniMetric`,
+        description: getPageDesc(lang),
+        alternates: {
+            canonical: `https://omnimetric.net/maxims${lang !== 'EN' ? `?lang=${lang}` : ''}`,
+        }
+    };
+}
+
+export default async function MaximsPage({ searchParams }: { searchParams: Promise<{ lang?: string }> }) {
+    const lang = await getLang(searchParams);
+    const isRTL = lang === 'AR';
+
+    // Choose data source based on language
+    let maximsData: MaximCategory[];
+    switch (lang) {
+        case 'JP': maximsData = maximsDataJa; break;
+        case 'CN': maximsData = maximsDataCn; break;
+        case 'ES': maximsData = maximsDataEs; break;
+        case 'HI': maximsData = maximsDataHi; break;
+        case 'ID': maximsData = maximsDataId; break;
+        case 'AR': maximsData = maximsDataAr; break;
+        case 'EN':
+        default: maximsData = maximsDataEn; break;
+    }
+
+    // JSON-LD Generation
+    const breadcrumbJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "OmniMetric", "item": "https://omnimetric.net" },
+            { "@type": "ListItem", "position": 2, "name": getPageTitle(lang), "item": "https://omnimetric.net/maxims" }
+        ]
+    };
+
+    // Flatten quotes for JSON-LD "hasPart" or similar
+    const allQuotes = maximsData.flatMap(cat => cat.quotes.map(q => ({
+        "@type": "Quotation",
+        "text": q.text,
+        "author": {
+            "@type": "Person",
+            "name": q.attribution
+        },
+        "description": q.meaning
+    })));
+
+    return (
+        <div className="min-h-screen bg-[#020617] text-slate-200 font-sans selection:bg-sky-500/30 pb-20">
+            {/* Inject JSON-LD */}
+            <DynamicStructuredData data={breadcrumbJsonLd} />
+            <DynamicStructuredData data={{
+                "@context": "https://schema.org",
+                "@type": "CollectionPage",
+                "name": `OmniMetric ${getPageTitle(lang)}`,
+                "description": getPageDesc(lang),
+                "hasPart": allQuotes
+            }} />
+
+            <div className="max-w-[1200px] mx-auto p-4 md:p-12 lg:p-16">
+
+                <header className={`mb-16 border-b border-[#1E293B] pb-8 text-center ${isRTL ? 'md:text-right' : 'md:text-left'}`}>
+                    <h1 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-4 uppercase">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-emerald-400">{getPageTitle(lang)}</span>
+                    </h1>
+                    <p className={`text-slate-400 font-mono text-sm md:text-base max-w-3xl leading-relaxed ${isRTL ? 'ml-auto' : ''}`}>
+                        {getPageDesc(lang)}
+                    </p>
+                </header>
+
+                <div className="space-y-16">
+                    {maximsData.map((category, catIndex) => (
+                        <section key={catIndex} className="scroll-mt-24">
+                            <h2 className={`text-xl md:text-2xl font-black text-white uppercase tracking-wider mb-8 flex items-center gap-3 ${isRTL ? 'border-r-4 pr-4 text-right' : 'border-l-4 pl-4'} border-sky-500`}>
+                                {category.category}
+                            </h2>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                {category.quotes.map((maxim) => (
+                                    <article
+                                        key={maxim.id}
+                                        className="group relative bg-[#0A0A0A] border border-[#1E293B] rounded-xl overflow-hidden hover:border-sky-500/50 transition-all duration-300 flex flex-col"
+                                    >
+                                        <div className="p-6 md:p-8 flex-1 flex flex-col">
+                                            {/* Icon */}
+                                            <div className={`mb-4 ${isRTL ? 'text-right' : ''}`}>
+                                                <Quote className={`w-8 h-8 text-sky-900/50 fill-current group-hover:text-sky-500/20 transition-colors ${isRTL ? 'transform -scale-x-100' : ''}`} />
+                                            </div>
+
+                                            {/* Text */}
+                                            <blockquote className={`text-lg md:text-xl font-bold text-slate-100 mb-4 leading-snug ${isRTL ? 'text-right' : ''}`}>
+                                                "{maxim.text}"
+                                            </blockquote>
+
+                                            {/* Attribution */}
+                                            <div className={`mt-auto pt-4 border-t border-[#1E293B] flex items-center ${isRTL ? '' : 'justify-between'}`}>
+                                                <span className="text-xs font-mono text-sky-400 font-bold uppercase tracking-wider">
+                                                    — {maxim.attribution}
+                                                </span>
+                                            </div>
+
+                                            {/* Meaning / Context */}
+                                            <div className={`mt-4 bg-[#111] p-3 rounded text-xs text-slate-400 leading-relaxed border border-[#222] ${isRTL ? 'text-right' : ''}`}>
+                                                <span className={`font-bold text-slate-500 ${isRTL ? 'ml-1' : 'mr-1'}`}>KEY:</span>
+                                                {maxim.meaning}
+                                            </div>
+                                        </div>
+                                    </article>
+                                ))}
+                            </div>
+
+                            {/* Ad Insertion after specific categories if needed */}
+                            {catIndex === 1 && (
+                                <div className="py-12">
+                                    <AdSenseSlot variant="responsive" />
+                                </div>
+                            )}
+                        </section>
+                    ))}
+                </div>
+
+                <div className="mt-20 pt-8 border-t border-[#1E293B] text-center">
+                    <p className="text-slate-600 text-xs font-mono">
+                        OMNIMETRIC INVESTMENT WISDOM DATABASE
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    );
+}

@@ -1,0 +1,362 @@
+[
+    {
+        "id": "net-liquidity",
+        "category": "Likuiditas",
+        "term": "Likuiditas Bersih",
+        "definition": "Ukuran likuiditas aktual yang dipasok ke pasar, dihitung dengan mengurangi saldo Rekening Umum Keuangan (TGA) dan Reverse Repo (RRP) dari Neraca The Fed.",
+        "market_impact": {
+            "up": "Apresiasi harga pada aset berisiko (saham, kripto). Menciptakan lingkungan yang toleran terhadap ekspansi PER.",
+            "down": "Peningkatan volatilitas pasar. Penyesuaian valuasi mungkin terjadi, terutama pada saham pertumbuhan."
+        },
+        "context_2026": "Pada tahun 2026, dengan berakhirnya QT dan penyesuaian cadangan Mata Uang Digital (CBDC), perubahan kualitatif dalam kebijakan kuantitatif menjadi fokus. Fluktuasi likuiditas riil ini menentukan ketahanan pasar lebih dari sekadar suku bunga sederhana.",
+        "gms_relevance": "Sangat Tinggi. Membentuk garis dasar Skor GMS dan berfungsi sebagai variabel fundamental yang mengukur 'daya beli' pasar.",
+        "seo_keywords": [
+            "Likuiditas Bersih",
+            "Neraca The Fed",
+            "Pasar Berbasis Likuiditas",
+            "Saldo Reverse Repo"
+        ]
+    },
+    {
+        "id": "vix",
+        "category": "Sentimen",
+        "term": "VIX (Indeks Ketakutan)",
+        "definition": "Ukuran volatilitas 30 hari yang diharapkan berdasarkan harga opsi S&P 500. Mengukur kecemasan psikologis investor.",
+        "market_impact": {
+            "up": "Investor menghindari risiko. Lonjakan cepat menandakan penjualan panik, tetapi level tertinggi ekstrem dapat menyarankan peluang beli (klimaks penjualan).",
+            "down": "Optimisme investor. Level stabil mendorong perdagangan carry trade dan investasi dengan leverage."
+        },
+        "context_2026": "Dengan perdagangan algoritmik kecepatan ultra-tinggi berbasis AI yang kini menjadi arus utama, lonjakan VIX cenderung berumur pendek ('spike transience'). Juga sangat dipengaruhi oleh Opsi Nol-Hari (0DTE).",
+        "gms_relevance": "Tinggi. Digunakan sebagai indikator korelasi terbalik untuk mendeteksi pembalikan toleransi risiko. Algoritma menurunkan skor secara signifikan saat di atas 20.",
+        "seo_keywords": [
+            "Indeks VIX",
+            "Volatilitas",
+            "Indeks Ketakutan",
+            "Sentimen Pasar"
+        ]
+    },
+    {
+        "id": "real-interest-rate",
+        "category": "Suku Bunga",
+        "term": "Suku Bunga Riil",
+        "definition": "Suku bunga nominal (misalnya, Imbal Hasil 10 Tahun) dikurangi tingkat inflasi yang diharapkan. Biaya sebenarnya dari meminjam uang.",
+        "market_impact": {
+            "up": "Angin sakal bagi Emas, Bitcoin, dan saham teknologi PER tinggi. Faktor penguat Dolar.",
+            "down": "Mendorong harga aset. Mempercepat aliran uang risiko ke startup AI dan sektor lainnya."
+        },
+        "context_2026": "Dorongan berbasis AI terhadap tingkat pertumbuhan potensial telah menaikkan suku bunga riil netral (r-star). Memahami 'Normal Baru' reli saham di tengah suku bunga riil positif adalah kunci di tahun 2026.",
+        "gms_relevance": "Tinggi. Berfungsi sebagai tingkat diskonto. Faktor pembobot utama yang mengukur kesesuaian valuasi dalam Skor GMS.",
+        "seo_keywords": [
+            "Suku Bunga Riil",
+            "Imbal Hasil 10 Tahun",
+            "Inflasi yang Diharapkan",
+            "TIPS"
+        ]
+    },
+    {
+        "id": "gms-score",
+        "category": "Hak Milik",
+        "term": "Skor GMS",
+        "definition": "Indikator utama pasar komprehensif yang dihitung secara eksklusif oleh OmniMetric, mengintegrasikan likuiditas, fundamental, sentimen SNS, dan prakiraan permintaan AI.",
+        "market_impact": {
+            "up": "Peningkatan nilai pasar keseluruhan yang diharapkan. Keuntungan meningkat bagi strategi mengikuti tren.",
+            "down": "Peringatan potensi risiko penurunan. Merekomendasikan lindung nilai atau meningkatkan rasio uang tunai."
+        },
+        "context_2026": "Memanfaatkan mesin LLM terbaru (termasuk Gemini 3) pada tahun 2026. Kompas generasi berikutnya yang menyinkronkan info SNS kualitatif dengan statistik ekonomi secara real-time untuk menghilangkan asimetri informasi.",
+        "gms_relevance": "Indikator Inti. Semua item lainnya diposisikan sebagai komponen untuk membangun skor ini.",
+        "seo_keywords": [
+            "Skor GMS",
+            "OmniMetric",
+            "Indikator Makro",
+            "Prediksi Pasar AI"
+        ]
+    },
+    {
+        "id": "cpi",
+        "category": "Inflasi",
+        "term": "CPI (Indeks Harga Konsumen)",
+        "definition": "Mengukur perubahan harga barang dan jasa yang dibeli oleh konsumen. Memiliki dampak paling langsung pada kebijakan moneter bank sentral.",
+        "market_impact": {
+            "up": "Penurunan saham dan penguatan Dolar karena kekhawatiran kenaikan suku bunga/pengetatan. Risiko reflasi.",
+            "down": "Reli saham dan pelemahan Dolar karena harapan pemangkasan suku bunga. Kemajuan dalam disinflasi disambut baik."
+        },
+        "context_2026": "Pada tahun 2026, perhatian tertuju pada kontribusi yang meluas dari sektor layanan baru seperti 'Biaya Langganan Agen AI' dan 'Tarif Robotaxi', daripada harga energi.",
+        "gms_relevance": "Sedang. Menjadi indikator tertinggal, sehingga diberi bobot lebih rendah dalam Skor GMS dibandingkan indikator utama seperti PCE atau data ketenagakerjaan.",
+        "seo_keywords": [
+            "CPI",
+            "Indeks Harga Konsumen",
+            "Tingkat Inflasi",
+            "Ekonomi 2026"
+        ]
+    },
+    {
+        "id": "pce-price-index",
+        "category": "Inflasi",
+        "term": "PCE (Indeks Harga Pengeluaran Konsumsi Pribadi)",
+        "definition": "Metrik inflasi yang disukai The Fed. Mencerminkan perubahan pola pengeluaran konsumen dan mencakup rentang pergerakan harga yang lebih luas daripada CPI.",
+        "market_impact": {
+            "up": "Memperkuat sikap hawkish The Fed, mengarah ke suku bunga terminal yang lebih tinggi. Memberatkan saham teknologi.",
+            "down": "Meningkatkan harapan poros dovish The Fed, memberikan kelegaan pasar secara umum."
+        },
+        "context_2026": "Penurunan rasio sewa dan tekanan deflasi pada 'layanan aset tidak berwujud' akibat keuntungan produktivitas AI berkontribusi pada stabilitas PCE. Kunci bagi The Fed untuk mencapai target 2%.",
+        "gms_relevance": "Tinggi. diadopsi sebagai data input presisi lebih tinggi daripada CPI untuk memprediksi perubahan suku bunga kebijakan.",
+        "seo_keywords": [
+            "Indeks Harga PCE",
+            "The Fed",
+            "Kebijakan Moneter",
+            "Tekanan Deflasi"
+        ]
+    },
+    {
+        "id": "non-farm-payrolls",
+        "category": "Pasar Tenaga Kerja",
+        "term": "Data Pekerjaan Non-Pertanian (NFP)",
+        "definition": "Indikator bulanan terpenting kesehatan ekonomi AS. Kekuatan pasar tenaga kerja menopang konsumsi.",
+        "market_impact": {
+            "up": "Bukti ekonomi yang kuat, tetapi overheating dapat menyebabkan penurunan saham sementara karena ketakutan kenaikan suku bunga (Baik adalah Buruk).",
+            "down": "Penurunan saham karena ketakutan perlambatan/resesi, atau reli karena harapan pemangkasan suku bunga awal."
+        },
+        "context_2026": "Adopsi AI telah mengintensifkan mobilitas tenaga kerja. 'Tingkat penyerapan kembali pekerja kerah putih' dan 'Pertumbuhan upah untuk pekerja terampil AI' sekarang memengaruhi reaksi pasar lebih dari sekadar angka pekerjaan sederhana.",
+        "gms_relevance": "Tinggi. Mesin yang mengukur kesehatan ekonomi. Terhubung langsung dengan penilaian risiko resesi Skor GMS.",
+        "seo_keywords": [
+            "Non-Farm Payrolls",
+            "NFP",
+            "Pasar Tenaga Kerja",
+            "Resesi"
+        ]
+    },
+    {
+        "id": "yield-curve-10y2y",
+        "category": "Obligasi",
+        "term": "Inversi Kurva Imbal Hasil (10Y-2Y)",
+        "definition": "Fenomena di mana imbal hasil Treasury 10 tahun turun di bawah imbal hasil 2 tahun. Secara historis merupakan indikator utama resesi.",
+        "market_impact": {
+            "up": "(Steepening) Ekspektasi pemulihan ekonomi, atau reflasi. Positif bagi saham keuangan.",
+            "down": "(Flattening/Pembalikan Mendalam) Tanda resesi. Penghindaran risiko jangka menengah hingga panjang."
+        },
+        "context_2026": "Setelah menyelesaikan inversi jangka panjang (steepening), 2026 berada di persimpangan jalan: apakah ekonomi telah kembali ke kecepatan jelajah, atau jatuh ke dalam stagflasi?",
+        "gms_relevance": "Sedang. Karena perubahan struktural dalam penawaran/permintaan obligasi, akurasi prediksinya telah berkurang, sehingga dievaluasi dalam kombinasi dengan indikator lain.",
+        "seo_keywords": [
+            "Inversi Imbal Hasil",
+            "Kurva Imbal Hasil",
+            "10Y2Y",
+            "Resesi"
+        ]
+    },
+    {
+        "id": "ff-rate",
+        "category": "Suku Bunga",
+        "term": "Suku Bunga Dana The Fed (FF Rate)",
+        "definition": "Suku bunga kebijakan AS. Sumber dari semua suku bunga, mengatur arus modal global.",
+        "market_impact": {
+            "up": "Dolar lebih kuat, harga aset lebih rendah, beban utang perusahaan meningkat.",
+            "down": "Dolar lebih lemah, pasar berisiko, vitalisasi pasar perumahan."
+        },
+        "context_2026": "Dengan kenaikan suku bunga netral (r-star), kembalinya era suku bunga nol tahun 2010-an tidak diharapkan. Model pendapatan yang bekerja di 'dunia dengan bunga' (dipertahankan pada 3-4%) diperlukan.",
+        "gms_relevance": "Sangat Tinggi. Input langsung untuk tingkat diskonto. Memengaruhi 'Rekomendasi Leverage' dalam Skor GMS.",
+        "seo_keywords": [
+            "FF Rate",
+            "Suku Bunga Kebijakan",
+            "Kenaikan Suku Bunga",
+            "Pemangkasan Suku Bunga"
+        ]
+    },
+    {
+        "id": "ai-demand-forecast-index",
+        "category": "Teknologi",
+        "term": "Indeks Prakiraan Permintaan AI (OmniMetric Proprietary)",
+        "definition": "Indikator ekonomi utama generasi berikutnya yang mengintegrasikan capex pusat data, waktu tunggu GPU, dan konsumsi token LLM.",
+        "market_impact": {
+            "up": "Sinyal beli kuat untuk sektor semikonduktor, energi, dan teknologi. Ekspansi capex.",
+            "down": "Ketakutan meletusnya gelembung AI. Menunjukkan efisiensi modal yang lebih rendah karena investasi berlebihan."
+        },
+        "context_2026": "AI bukan lagi sekadar cerita sektor tetapi variabel makro yang mendefinisikan produktivitas di semua industri. Penurunan indeks ini meramalkan penurunan pertumbuhan PDB beberapa kuartal kemudian.",
+        "gms_relevance": "Tinggi. Dinilai dalam Skor GMS 2026 sebagai 'Indikator Utama Baru' menggantikan ISM Manufacturing PMI tradisional.",
+        "seo_keywords": [
+            "Permintaan AI",
+            "Investasi Pusat Data",
+            "Semikonduktor",
+            "Waktu Tunggu GPU"
+        ]
+    },
+    {
+        "id": "semi-inventory-cycle",
+        "category": "Teknologi",
+        "term": "Siklus Inventaris Semikonduktor",
+        "definition": "Rasio Book-to-Bill pembuat semikonduktor. Mencerminkan siklus permintaan dari perangkat TI ke server AI dan EV.",
+        "market_impact": {
+            "up": "Mencapai dasar adalah peluang beli utama untuk saham teknologi. Memuncak menunjukkan waktu ambil untung.",
+            "down": "Titik balik dari permintaan berlebih ke pasokan berlebih. Tanda awal perlambatan ekonomi."
+        },
+        "context_2026": "Penyebaran Edge AI (pemrosesan AI di ponsel/PC) telah memperpendek dan mengintensifkan siklus. 2026 menandai akhir dari koreksi inventaris untuk chip umum dan transisi ke standar generasi berikutnya.",
+        "gms_relevance": "Sedang. Digunakan untuk prediksi Rotasi Sektor dalam Skor GMS.",
+        "seo_keywords": [
+            "Siklus Semikonduktor",
+            "Book-to-Bill",
+            "Koreksi Inventaris",
+            "Edge AI"
+        ]
+    },
+    {
+        "id": "cbdc-adoption-rate",
+        "category": "Likuiditas",
+        "term": "Tingkat Adopsi CBDC",
+        "definition": "Tingkat sirkulasi dan penggunaan mata uang digital yang diterbitkan oleh bank sentral utama. Mengukur kecepatan penyelesaian dan programabilitas mata uang.",
+        "market_impact": {
+            "up": "Sirkulasi modal lebih cepat. Peningkatan kecepatan transmisi kebijakan moneter. Ancaman bagi sektor perbankan yang ada.",
+            "down": "Kekhawatiran kredit karena masalah privasi atau kegagalan sistem. Kepercayaan yang lebih rendah pada fiat (pelarian ke Emas/BTC)."
+        },
+        "context_2026": "Pada tahun 2026, bank sentral utama memulai operasi CBDC penuh. Ini memungkinkan distribusi langsung 'Uang Helikopter', mencatat peningkatan kesulitan dalam pengendalian inflasi.",
+        "gms_relevance": "Sedang. Dimasukkan ke dalam Skor GMS sebagai variabel untuk Kecepatan Uang.",
+        "seo_keywords": [
+            "CBDC",
+            "Yen Digital",
+            "Dolar Digital",
+            "Mata Uang Digital Bank Sentral"
+        ]
+    },
+    {
+        "id": "move-index",
+        "category": "Sentimen",
+        "term": "Indeks MOVE (VIX Obligasi)",
+        "definition": "Volatilitas yang diharapkan dari pasar Treasury AS dihitung dari opsi obligasi.",
+        "market_impact": {
+            "up": "Ketidakpastian yang meningkat dalam prospek suku bunga. Negatif untuk pasar hipotek dan obligasi korporasi. Dolar yang fluktuatif.",
+            "down": "Suku bunga stabil mendorong aliran modal ke aset berisiko. Aktivasi carry trade."
+        },
+        "context_2026": "Dengan panduan ke depan The Fed beralih ke model interaktif berbasis AI, ketenangan dalam indeks ini adalah kondisi penting untuk stabilitilitas pasar.",
+        "gms_relevance": "Sedang. Digunakan dalam kombinasi dengan VIX untuk penilaian risiko multi-aset.",
+        "seo_keywords": [
+            "Indeks MOVE",
+            "Volatilitas Obligasi",
+            "Fluktuasi Suku Bunga",
+            "Treasury AS"
+        ]
+    },
+    {
+        "id": "fear-and-greed-index",
+        "category": "Sentimen",
+        "term": "Indeks Ketakutan & Keserakahan",
+        "definition": "Mengkuantifikasi antusiasme pasar (0-100) dari berbagai titik data seperti momentum saham, volatilitas, dan permintaan obligasi sampah.",
+        "market_impact": {
+            "up": "(Keserakahan) Pasar bullish, tetapi di atas 80 menunjukkan risiko tinggi pullback karena overheating.",
+            "down": "(Ketakutan) Pasar bearish, tetapi di bawah 20 menyarankan rebound teknis karena overselling sudah dekat."
+        },
+        "context_2026": "Perdagangan kontrarian algoritmik telah menjadi umum, membuat pemulihan dari Ketakutan Ekstrem sangat cepat. Indikator wajib untuk perdagangan swing jangka pendek.",
+        "gms_relevance": "Sedang. Berkontribusi sebagai komponen 'Momentum Kontrarian' dalam Skor GMS.",
+        "seo_keywords": [
+            "Indeks Ketakutan dan Keserakahan",
+            "Psikologi Pasar",
+            "Overheating",
+            "Oversold"
+        ]
+    },
+    {
+        "id": "copper-gold-ratio",
+        "category": "Komoditas",
+        "term": "Rasio Tembaga/Emas",
+        "definition": "Harga tembaga dibagi harga Emas. Naik selama ekspansi, turun selama resesi. Indikator ekonomi utama.",
+        "market_impact": {
+            "up": "Revitalisasi investasi manufaktur dan infrastruktur global. Risk-on.",
+            "down": "Peralihan ke aset defensif (Emas). Stagnasi atau peningkatan risiko geopolitik."
+        },
+        "context_2026": "Kekurangan tembaga struktural terbukti karena transisi ke masyarakat dekarbonisasi/listrik (Pusat Data AI/EV). Lebih merupakan 'Indeks Kemajuan Transisi Energi' daripada indikator ekonomi sederhana sekarang.",
+        "gms_relevance": "Sedang. Indikator alternatif yang mengukur 'energi termal' ekonomi riil.",
+        "seo_keywords": [
+            "Rasio Tembaga Emas",
+            "Pasar Komoditas",
+            "Dr. Copper",
+            "Investasi Infrastruktur"
+        ]
+    },
+    {
+        "id": "m2-money-supply",
+        "category": "Likuiditas",
+        "term": "Pasokan Uang M2",
+        "definition": "Total pasokan mata uang termasuk uang tunai, deposito, dan MMF. Pendorong jangka panjang inflasi dan harga aset.",
+        "market_impact": {
+            "up": "Tekanan inflasi jangka menengah/panjang. Depresiasi mata uang (Dolar lebih lemah) dan inflasi aset.",
+            "down": "Tekanan deflasi. Kontraksi aktivitas ekonomi. Pembentukan puncak pasar saham."
+        },
+        "context_2026": "Perlu dicatat bahwa uang berpindah dari deposito bank ke aset on-chain (stablecoin), jadi statistik M2 tradisional saja tidak lagi menangkap gambaran likuiditas penuh.",
+        "gms_relevance": "Sedang. Data pelengkap untuk analisis likuiditas. Diperiksa untuk divergensi dari Likuiditas Bersih.",
+        "seo_keywords": [
+            "M2",
+            "Pasokan Uang",
+            "Suplai Mata Uang",
+            "Stablecoin"
+        ]
+    },
+    {
+        "id": "ism-manufacturing-pmi",
+        "category": "Ekonomi",
+        "term": "ISM Manufacturing PMI",
+        "definition": "Survei manajer pembelian di sektor manufaktur AS. Di atas 50 menunjukkan ekspansi, di bawah 50 kontraksi.",
+        "market_impact": {
+            "up": "Kebangkitan manufaktur, ekspektasi pertumbuhan laba. Angin segar bagi saham nilai.",
+            "down": "Penurunan manufaktur, ketakutan resesi. Beralih ke saham defensif."
+        },
+        "context_2026": "Otomatisasi melalui 'Smart Factories' menyiratkan bahwa 'Pesanan Baru' dan 'Harga Input (Biaya Energi AI)' mendapatkan pentingnya dibandingkan komponen ketenagakerjaan.",
+        "gms_relevance": "Sedang. Digunakan sebagai 'Indikator Konfirmasi' untuk memverifikasi siklus bisnis tradisional.",
+        "seo_keywords": [
+            "ISM Manufacturing PMI",
+            "PMI",
+            "Siklus Bisnis",
+            "Manufaktur"
+        ]
+    },
+    {
+        "id": "sovereign-credit-spread",
+        "category": "Obligasi",
+        "term": "Spread Kredit Pemerintah",
+        "definition": "Selisih imbal hasil antara Treasury AS dan obligasi pemerintah lainnya (atau obligasi perusahaan). Sensitivitas terhadap risiko kredit pasar.",
+        "market_impact": {
+            "up": "(Melebar) Penghindaran risiko. Pelarian modal dari pasar berkembang atau ketakutan gagal bayar perusahaan.",
+            "down": "(Menyempit) Pengambilan risiko. Peningkatan selera investasi global. Aliran masuk ke aset imbal hasil tinggi."
+        },
+        "context_2026": "Dengan lebih banyak negara memegang utang besar, CDS (Credit Default Swaps) pada Treasury AS sendiri telah menjadi indikator utama baru yang mengukur kelayakan sebagai aset bebas risiko.",
+        "gms_relevance": "Sedang. Menangkap tanda-tanda risiko sistemik dan menghitung risiko penurunan untuk Skor GMS.",
+        "seo_keywords": [
+            "Spread Kredit",
+            "Risiko Gagal Bayar",
+            "Imbal Hasil Treasury",
+            "CDS"
+        ]
+    },
+    {
+        "id": "ai-productivity-multiplier",
+        "category": "Teknologi",
+        "term": "Pengganda Produktivitas AI (OmniMetric Proprietary)",
+        "definition": "Menghitung pertumbuhan kontribusi PDB per jam unit karena adopsi AI. Digunakan untuk mengoreksi tingkat pertumbuhan potensial.",
+        "market_impact": {
+            "up": "Pertumbuhan ekonomi tanpa inflasi. Memungkinkan reli saham berkelanjutan bahkan di bawah suku bunga riil tinggi.",
+            "down": "Pengembalian investasi AI melambat. Ketakutan stagflasi karena keuntungan produktivitas yang macet."
+        },
+        "context_2026": "Pada tahun 2026, lebih dari 30% dari semua industri bersifat otonom melalui Agen AI. Pengganda ini adalah indikator utama yang memprediksi margin keuntungan perusahaan masa depan.",
+        "gms_relevance": "Tinggi. Peringkat maksimum dalam kategori 'Pertumbuhan' Skor GMS sebagai faktor yang meningkatkan plafon pasar jangka panjang.",
+        "seo_keywords": [
+            "Produktivitas AI",
+            "Tingkat Pertumbuhan Potensial",
+            "Revolusi Produktivitas",
+            "PDB 2026"
+        ]
+    },
+    {
+        "id": "rrp-balance",
+        "category": "Likuiditas",
+        "term": "Saldo Reverse Repo (RRP)",
+        "definition": "Saldo dana berlebih yang disetorkan oleh MMF dan lainnya di The Fed. Penyangga 'dana siaga' yang dapat mengalir kembali ke pasar.",
+        "market_impact": {
+            "up": "Penyerapan likuiditas dari pasar. Netral hingga negatif bagi saham.",
+            "down": "Pelepasan likuiditas ke pasar. Faktor pendukung kuat bagi aset berisiko (pasokan likuiditas)."
+        },
+        "context_2026": "Bagaimana saldo RRP, yang anjlok dari 2024-2025, bergerak di bawah lingkungan regulasi baru 2026 menentukan risiko ekor pasar.",
+        "gms_relevance": "Tinggi. Variabel penting untuk menghitung Likuiditas Bersih. Saldo rendah menunjukkan penurunan ketahanan pasar.",
+        "seo_keywords": [
+            "Reverse Repo",
+            "RRP",
+            "The Fed",
+            "Dana Siaga"
+        ]
+    }
+]

@@ -4,9 +4,11 @@ import React from 'react';
 import { MetricChart } from '@/components/Charts';
 import { DICTIONARY, LangType } from '@/data/dictionary';
 import { useDevice } from '@/hooks/useDevice';
+import { Info } from 'lucide-react';
+import Link from 'next/link';
 
 // "Pulse" Tile Component - SHARED DEFINITION
-export const PulseTile = ({ title, score, ticker, data, onClick, lang }: any) => {
+export const PulseTile = ({ title, score, ticker, data, onClick, lang, wikiSlug }: any) => {
     const { isMobile } = useDevice();
 
     // 1. RISK LOGIC
@@ -131,13 +133,39 @@ export const PulseTile = ({ title, score, ticker, data, onClick, lang }: any) =>
 
                 {/* CORNER 1: TOP-LEFT (Title) - PADDING 0.75rem */}
                 <div style={{ position: 'absolute', top: '0.75rem', left: '0.75rem', zIndex: 10, display: 'flex', flexDirection: 'column', pointerEvents: 'none' }}>
-                    <h3 className={`text-slate-200 pulse-tile-title font-black uppercase tracking-[0.1em] font-sans leading-tight text-fluid-xs`}>{title}</h3>
+                    <div className="flex items-center gap-1.5 pointer-events-auto">
+                        <h3 className={`text-slate-200 pulse-tile-title font-black uppercase tracking-[0.1em] font-sans leading-tight text-fluid-xs`}>{title}</h3>
+                        {wikiSlug && (
+                            <Link
+                                href={`/${(lang || 'EN').toLowerCase()}/wiki/${wikiSlug}`}
+                                onClick={(e) => e.stopPropagation()}
+                                className={`text-slate-600 transition-colors p-0.5 rounded-full ${score >= 60 ? 'hover:text-blue-400 hover:bg-blue-400/10' : (score < 40 ? 'hover:text-rose-400 hover:bg-rose-400/10' : 'hover:text-slate-300 hover:bg-slate-700/50')}`}
+                                title="Open Macro Wiki Definition"
+                            >
+                                <Info className="w-3 h-3 md:w-3.5 md:h-3.5" />
+                            </Link>
+                        )}
+                    </div>
                     <span className="text-[0.5rem] sm:text-[0.56rem] text-slate-500 font-mono tracking-wider">{ticker}</span>
                 </div>
 
-                {/* CORNER 2: TOP-RIGHT (GMS Badge) - PADDING 0.75rem */}
-                <div style={{ position: 'absolute', top: '0.75rem', right: '0.75rem', zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'flex-end', pointerEvents: 'none' }}>
-                    <div className={`px-2 py-0.5 border rounded-[2px] text-[0.56rem] sm:text-[0.65rem] font-semibold tracking-[0.15em] font-sans bg-[#0A0A0A] shadow-sm ${gmsBadgeText} ${colorClassBorder}`}>
+                {/* CORNER 2: TOP-RIGHT (GMS Badge + Info Icon) - PADDING 0.75rem */}
+                <div style={{ position: 'absolute', top: '0.75rem', right: '0.75rem', zIndex: 10, display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '0.5rem' }}>
+                    {wikiSlug && (
+                        <a
+                            href={`https://en.wikipedia.org/wiki/${wikiSlug}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-slate-500 hover:text-blue-400 transition-colors"
+                            style={{ pointerEvents: 'auto' }} // Ensure pointer events are enabled for the link
+                            onClick={(e) => e.stopPropagation()} // Prevent tile click when info icon is clicked
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                            </svg>
+                        </a>
+                    )}
+                    <div className={`px-2 py-0.5 border rounded-[2px] text-[0.56rem] sm:text-[0.65rem] font-semibold tracking-[0.15em] font-sans bg-[#0A0A0A] shadow-sm ${gmsBadgeText} ${colorClassBorder}`} style={{ pointerEvents: 'none' }}>
                         GMS <span className="text-white ml-0.5 md:ml-1">{score}</span>
                     </div>
                 </div>

@@ -1,0 +1,177 @@
+[
+    {
+        "category": "Indicadores de Tendencia",
+        "indicators": [
+            {
+                "name": "Media Móvil (SMA/EMA)",
+                "description": "La línea base para las tendencias de precios.",
+                "usage": "Precio sobre SMA = Tendencia Alcista. Precio bajo SMA = Tendencia Bajista."
+            },
+            {
+                "name": "Bandas de Bollinger",
+                "description": "Mide el precio relativo a la volatilidad; la 'compresión' indica grandes movimientos.",
+                "usage": "Precio tocando banda superior = Sobrecompra. Banda inferior = Sobreventa. Compresión = Ruptura inminente."
+            },
+            {
+                "name": "Nube Ichimoku",
+                "description": "Un sistema integral japonés de seguimiento de tendencias (Kumo).",
+                "usage": "Precio sobre la Nube = Alcista. Bajo la Nube = Bajista. El grosor indica fuerza de soporte/resistencia."
+            },
+            {
+                "name": "ADX (Índice Direccional Promedio)",
+                "description": "Mide la fuerza de una tendencia sin importar la dirección.",
+                "usage": "ADX > 25 = Tendencia Fuerte. ADX < 20 = Tendencia Débil/Rango."
+            },
+            {
+                "name": "Parabolic SAR",
+                "description": "Identifica posibles reversiones en mercados con tendencia.",
+                "usage": "Puntos bajo la vela = Tendencia Alcista. Puntos sobre la vela = Tendencia Bajista."
+            },
+            {
+                "name": "SuperTrend",
+                "description": "Indicador simplificado de seguimiento de tendencias basado en ATR.",
+                "usage": "Línea verde bajo el precio = Señal de Compra. Línea roja sobre el precio = Señal de Venta."
+            },
+            {
+                "name": "MACD",
+                "description": "Mide la fuerza de la tendencia y los cambios de momento.",
+                "usage": "Cruce de línea de señal = Señal de Entrada/Salida. Histograma muestra fuerza del momento."
+            }
+        ]
+    },
+    {
+        "category": "Indicadores de Volatilidad",
+        "indicators": [
+            {
+                "name": "ATR (Rango Verdadero Promedio)",
+                "description": "El estándar de oro para medir la volatilidad del mercado y establecer stops.",
+                "usage": "ATR alto = Alta volatilidad. Usado para calcular distancia de Stop Loss."
+            },
+            {
+                "name": "Canales de Keltner",
+                "description": "Sobres basados en volatilidad similares a las Bandas de Bollinger pero usan ATR.",
+                "usage": "Cierre de precio fuera del canal = Continuación de tendencia fuerte."
+            },
+            {
+                "name": "Volatilidad de Chaikin",
+                "description": "Compara el diferencial entre precios altos y bajos.",
+                "usage": "El aumento de volatilidad a menudo marca distribución amplia (techos) o pánico (suelos)."
+            },
+            {
+                "name": "Desviación Estándar",
+                "description": "La base matemática para medir la dispersión de precios.",
+                "usage": "Desviación alta = Alto riesgo (Alta volatilidad). Desviación baja = Consolidación."
+            }
+        ]
+    },
+    {
+        "category": "Momento y Osciladores",
+        "indicators": [
+            {
+                "name": "RSI (Índice de Fuerza Relativa)",
+                "description": "Identifica condiciones de sobrecompra o sobreventa.",
+                "usage": "> 70 = Sobrecompra (Riesgo de venta). < 30 = Sobreventa (Oportunidad de compra)."
+            },
+            {
+                "name": "Oscilador Estocástico",
+                "description": "Compara un precio de cierre con su rango de precios a lo largo del tiempo.",
+                "usage": "> 80 = Sobrecompra. < 20 = Sobreventa. Cruces señalan reversiones."
+            },
+            {
+                "name": "CCI (Índice de Canal de Materias Primas)",
+                "description": "Mide desviaciones de la media estadística.",
+                "usage": "> +100 = Fuerte Tendencia Alcista. < -100 = Fuerte Tendencia Bajista."
+            },
+            {
+                "name": "Williams %R",
+                "description": "Indicador de momento que mide niveles de sobrecompra/sobreventa.",
+                "usage": "0 a -20 = Sobrecompra. -80 a -100 = Sobreventa."
+            },
+            {
+                "name": "Tasa de Cambio (ROC)",
+                "description": "Momento puro que mide el cambio porcentual en el precio.",
+                "usage": "Positivo y en aumento = Aceleración. Negativo = Desaceleración."
+            },
+            {
+                "name": "Índice de Flujo de Dinero (MFI)",
+                "description": "Un 'RSI ponderado por volumen' que muestra presión de compra/venta.",
+                "usage": "> 80 = Sobrecompra (Confirmado por volumen). < 20 = Sobreventa."
+            }
+        ]
+    },
+    {
+        "category": "Volumen y Liquidez",
+        "indicators": [
+            {
+                "name": "On-Balance Volume (OBV)",
+                "description": "Usa el flujo de volumen para predecir cambios en el precio de las acciones.",
+                "usage": "OBV en aumento confirma tendencia alcista. Divergencia advierte reversión."
+            },
+            {
+                "name": "VWAP (Precio Promedio Ponderado por Volumen)",
+                "description": "El punto de referencia institucional para el precio promedio.",
+                "usage": "Instituciones compran bajo VWAP y venden sobre VWAP. Soporte/resistencia intradía."
+            },
+            {
+                "name": "Perfil de Volumen",
+                "description": "Muestra actividad de trading a niveles de precio específicos (Área de Valor).",
+                "usage": "Punto de Control (POC) actúa como un imán para el precio."
+            },
+            {
+                "name": "Flujo de Dinero de Chaikin (CMF)",
+                "description": "Mide la cantidad de Volumen de Flujo de Dinero durante un período.",
+                "usage": "Sobre 0 = Presión de Compra. Bajo 0 = Presión de Venta."
+            },
+            {
+                "name": "Línea de Acumulación/Distribución",
+                "description": "Evalúa el flujo acumulativo de dinero hacia dentro y fuera de un activo.",
+                "usage": "Línea A/D subiendo con precio plano = Acumulación (Alcista)."
+            }
+        ]
+    },
+    {
+        "category": "Matemático y Estructural",
+        "indicators": [
+            {
+                "name": "Retroceso de Fibonacci",
+                "description": "Identifica niveles estratégicos de soporte y resistencia.",
+                "usage": "Niveles clave: 38.2%, 50%, 61.8% (Proporción Áurea) actúan como soporte/resistencia."
+            },
+            {
+                "name": "Puntos Pivote",
+                "description": "Indicadores predictivos usados para identificar soporte y resistencia.",
+                "usage": "Calculado a partir del Alto, Bajo, Cierre del día anterior. Usado para objetivos intradía."
+            },
+            {
+                "name": "Pendiente de Regresión Lineal",
+                "description": "Mide la velocidad del cambio de precio usando estadísticas.",
+                "usage": "Pendiente positiva pronunciada = Tendencia fuerte. Pendiente plana = Rango."
+            },
+            {
+                "name": "Fractales",
+                "description": "Identifica puntos de reversión basados en patrones repetitivos.",
+                "usage": "Fractal hacia arriba marca un techo potencial. Hacia abajo marca un suelo."
+            },
+            {
+                "name": "Z-Score",
+                "description": "Mide cuántas desviaciones estándar está un precio de la media.",
+                "usage": "Z-score positivo alto = Estadísticamente caro. Negativo alto = Barato."
+            },
+            {
+                "name": "Coeficiente de Correlación",
+                "description": "Analiza cómo se mueven dos activos diferentes en relación uno con el otro.",
+                "usage": "+1 = Correlación perfecta. -1 = Correlación inversa. 0 = Sin correlación."
+            },
+            {
+                "name": "Amplitud de Mercado",
+                "description": "Analiza el número de acciones que suben vs. las que bajan.",
+                "usage": "Amplitud creciente confirma un mercado alcista saludable."
+            },
+            {
+                "name": "Excursión Adversa Máxima (MAE)",
+                "description": "Mide la mayor pérdida no realizada durante una operación.",
+                "usage": "Usado para análisis post-operación para optimizar colocación de stop-loss."
+            }
+        ]
+    }
+]

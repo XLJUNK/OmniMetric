@@ -1,0 +1,177 @@
+[
+    {
+        "category": "Trend Indicators",
+        "indicators": [
+            {
+                "name": "Moving Average (SMA/EMA)",
+                "description": "The baseline for price trends.",
+                "usage": "Price above SMA = Uptrend. Price below SMA = Downtrend."
+            },
+            {
+                "name": "Bollinger Bands",
+                "description": "Measures price relative to volatility; 'squeeze' indicates big moves.",
+                "usage": "Price touching upper band = Overbought. Lower band = Oversold. Squeeze = Breakout impending."
+            },
+            {
+                "name": "Ichimoku Cloud",
+                "description": "A comprehensive Japanese trend-following system (Kumo).",
+                "usage": "Price above Cloud = Bullish. Below Cloud = Bearish. Cloud thickness indicates support/resistance strength."
+            },
+            {
+                "name": "ADX (Average Directional Index)",
+                "description": "Measures the strength of a trend regardless of direction.",
+                "usage": "ADX > 25 = Strong trend. ADX < 20 = Weak trend/Ranging."
+            },
+            {
+                "name": "Parabolic SAR",
+                "description": "Identifies potential reversals in trending markets.",
+                "usage": "Dots below candle = Uptrend. Dots above candle = Downtrend."
+            },
+            {
+                "name": "SuperTrend",
+                "description": "A simplified trend-following indicator based on ATR.",
+                "usage": "Green line below price = Global Buy signal. Red line above price = Sell signal."
+            },
+            {
+                "name": "MACD",
+                "description": "Gauges trend strength and momentum shifts.",
+                "usage": "Signal line crossover = Entry/Exit signal. Histograms show momentum strength."
+            }
+        ]
+    },
+    {
+        "category": "Volatility Indicators",
+        "indicators": [
+            {
+                "name": "ATR (Average True Range)",
+                "description": "The gold standard for measuring market volatility and setting stops.",
+                "usage": "High ATR = High volatility. Used to calculate Stop Loss distance."
+            },
+            {
+                "name": "Keltner Channels",
+                "description": "Volatility-based envelopes similar to Bollinger Bands but uses ATR.",
+                "usage": "Price closing outside channel = Strong trend continuation."
+            },
+            {
+                "name": "Chaikin Volatility",
+                "description": "Compares the spread between high and low prices.",
+                "usage": "Rising volatility often marks widespread distribution (tops) or panic (bottoms)."
+            },
+            {
+                "name": "Standard Deviation",
+                "description": "The mathematical foundation for measuring price dispersion.",
+                "usage": "High Std Dev = High volatility (Risk). Low Std Dev = Consolidation."
+            }
+        ]
+    },
+    {
+        "category": "Momentum & Oscillators",
+        "indicators": [
+            {
+                "name": "RSI (Relative Strength Index)",
+                "description": "Identifies overbought or oversold conditions.",
+                "usage": "> 70 = Overbought (Sell risk). < 30 = Oversold (Buy opportunity)."
+            },
+            {
+                "name": "Stochastic Oscillator",
+                "description": "Compares a closing price to its price range over time.",
+                "usage": "> 80 = Overbought. < 20 = Oversold. Crossovers signal reversals."
+            },
+            {
+                "name": "CCI (Commodity Channel Index)",
+                "description": "Measures deviations from the statistical mean.",
+                "usage": "> +100 = Strong Uptrend. < -100 = Strong Downtrend."
+            },
+            {
+                "name": "Williams %R",
+                "description": "A momentum indicator that measures overbought/oversold levels.",
+                "usage": "0 to -20 = Overbought. -80 to -100 = Oversold."
+            },
+            {
+                "name": "Rate of Change (ROC)",
+                "description": "Pure momentum measuring the percentage change in price.",
+                "usage": "Positive and rising = Acceleration. Negative = Deceleration."
+            },
+            {
+                "name": "Money Flow Index (MFI)",
+                "description": "A 'Volume-weighted RSI' that shows buying/selling pressure.",
+                "usage": "> 80 = Overbought (Volume confirmed). < 20 = Oversold."
+            }
+        ]
+    },
+    {
+        "category": "Volume & Liquidity",
+        "indicators": [
+            {
+                "name": "On-Balance Volume (OBV)",
+                "description": "Uses volume flow to predict changes in stock price.",
+                "usage": "Rising OBV confirms uptrend. Divergence (Price up, OBV down) warns of reversal."
+            },
+            {
+                "name": "VWAP (Volume Weighted Average Price)",
+                "description": "The institutional benchmark for average price.",
+                "usage": "Institutions buy below VWAP and sell above VWAP. Used as intraday support/resistance."
+            },
+            {
+                "name": "Volume Profile",
+                "description": "Shows trading activity at specific price levels (Value Area).",
+                "usage": "Point of Control (POC) acts as a magnet for price."
+            },
+            {
+                "name": "Chaikin Money Flow (CMF)",
+                "description": "Measures the amount of Money Flow Volume over a period.",
+                "usage": "Above 0 = Buying Pressure. Below 0 = Selling Pressure."
+            },
+            {
+                "name": "Accumulation/Distribution Line",
+                "description": "Evaluates the cumulative flow of money into and out of an asset.",
+                "usage": "A/D Line rising while price is flat = Accumulation (Bullish)."
+            }
+        ]
+    },
+    {
+        "category": "Mathematical & Structural",
+        "indicators": [
+            {
+                "name": "Fibonacci Retracement",
+                "description": "Identifies strategic support and resistance levels.",
+                "usage": "Key levels: 38.2%, 50%, 61.8% (Golden Ratio) act as support/resistance."
+            },
+            {
+                "name": "Pivot Points",
+                "description": "Predictive indicators used to identify support and resistance.",
+                "usage": "calculated from previous day's High, Low, Close. Used for day trading targets."
+            },
+            {
+                "name": "Linear Regression Slope",
+                "description": "Measures the velocity of price change using statistics.",
+                "usage": "Steep positive slope = Strong trend. Flat slope = Chop."
+            },
+            {
+                "name": "Fractals",
+                "description": "Identifies reversal points based on repetitive patterns.",
+                "usage": "Up fractal marks a potential top. Down fractal marks a potential bottom."
+            },
+            {
+                "name": "Z-Score",
+                "description": "Measures how many standard deviations a price is from the mean.",
+                "usage": "High positive Z-score = Statistically expensive. High negative = Cheap."
+            },
+            {
+                "name": "Correlation Coefficient",
+                "description": "Analyzes how two different assets move in relation to each other.",
+                "usage": "+1 = Perfect correlation. -1 = Inverse correlation. 0 = No correlation."
+            },
+            {
+                "name": "Market Breadth",
+                "description": "Analyzes the number of advancing vs. declining stocks.",
+                "usage": "Rising breadth confirms a healthy bull market."
+            },
+            {
+                "name": "Maximum Adverse Excursion (MAE)",
+                "description": "Measures the largest unrealized loss during a trade.",
+                "usage": "Used for post-trade analysis to optimize stop-loss placement."
+            }
+        ]
+    }
+]
