@@ -23,7 +23,7 @@ export const MobileNav = () => {
     ];
 
     return (
-        <nav className="fixed top-0 left-0 right-0 h-[54px] bg-[#0A0A0A]/95 backdrop-blur-xl border-b border-[#1E293B] flex md:hidden items-center justify-between w-full z-[9999] shadow-2xl overflow-x-hidden">
+        <nav className="fixed top-0 left-0 right-0 h-[48px] bg-[#0A0A0A]/95 backdrop-blur-xl border-b border-[#1E293B] flex md:hidden items-center justify-between w-full z-[9999] shadow-2xl overflow-x-hidden">
             {tabs.map((tab) => {
                 const isActive = pathname === tab.path;
                 return (
@@ -34,15 +34,15 @@ export const MobileNav = () => {
                             }`}
                     >
                         {/* Invisible Touch Target Expansion */}
-                        <span className="absolute -inset-2 z-[-1]" />
+                        <span className="absolute -inset-1 z-[-1]" />
 
-                        <tab.icon className={`w-4 h-4 mb-0.5 ${isActive ? 'drop-shadow-[0_0_8px_rgba(14,165,233,0.5)]' : ''}`} />
-                        <span className="text-[9px] font-bold uppercase tracking-tighter truncate w-full text-center leading-none px-0.5">
+                        <tab.icon className={`w-3.5 h-3.5 mb-0.5 ${isActive ? 'drop-shadow-[0_0_8px_rgba(14,165,233,0.5)]' : ''}`} />
+                        <span className="text-[8px] font-bold uppercase tracking-tighter truncate w-full text-center leading-none px-0.5 scale-90 origin-center">
                             {tab.label}
                         </span>
                         {/* Active Indicator Dot */}
                         {isActive && (
-                            <span className="absolute bottom-1 w-1 h-1 bg-sky-500 rounded-full shadow-[0_0_5px_rgba(14,165,233,0.8)]"></span>
+                            <span className="absolute bottom-0.5 w-0.5 h-0.5 bg-sky-500 rounded-full shadow-[0_0_5px_rgba(14,165,233,0.8)]"></span>
                         )}
                     </button>
                 );
