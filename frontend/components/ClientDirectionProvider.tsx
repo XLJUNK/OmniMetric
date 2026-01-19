@@ -1,22 +1,22 @@
 'use client';
 
-import { useSearchParams } from 'next/navigation';
+import { DICTIONARY } from '@/data/dictionary';
+import { useCurrentLang } from '@/hooks/useCurrentLang';
 import { useEffect } from 'react';
 
 export const ClientDirectionProvider = () => {
-    const searchParams = useSearchParams();
-    const lang = searchParams.get('lang');
+    const lang = useCurrentLang();
 
     useEffect(() => {
         // ONLY Switch to RTL if lang is explicitly 'AR'
         if (lang === 'AR') {
             document.documentElement.dir = 'rtl';
             document.documentElement.lang = 'ar';
-            document.body.classList.add('font-arabic'); // Helper for applying Arabic font
+            document.body.classList.add('font-arabic');
         } else {
-            // Default to LTR for ALL other languages (including EN, JP, CN, etc.)
+            // Default to LTR for ALL other languages
             document.documentElement.dir = 'ltr';
-            document.documentElement.lang = lang || 'en';
+            document.documentElement.lang = lang?.toLowerCase() || 'en';
             document.body.classList.remove('font-arabic');
         }
     }, [lang]);

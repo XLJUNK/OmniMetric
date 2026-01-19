@@ -41,7 +41,7 @@ export const Sidebar = () => {
                         >
                             {/* Active Indicator (Dot) - Subtle */}
                             {isActive && (
-                                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 bg-sky-500 rounded-r-full shadow-[0_0_10px_rgba(14,165,233,0.8)]"></div>
+                                <div className="absolute inset-y-1/2 -translate-y-1/2 w-1 h-6 bg-sky-500 rounded-full shadow-[0_0_10px_rgba(14,165,233,0.8)] start-0"></div>
                             )}
 
                             {/* Icon - OPTIMIZED COLOR PALETTE */}

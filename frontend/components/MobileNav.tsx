@@ -21,7 +21,6 @@ export const MobileNav = () => {
         { key: 'wiki', label: t.labels.wiki || 'Wiki', icon: Globe, path: '/glossary' },
         { key: 'maxims', label: t.labels.maxims || 'Maxims', icon: ScrollText, path: '/maxims' },
     ];
-
     return (
         <nav className="fixed top-0 left-0 right-0 h-[48px] bg-[#000000]/95 backdrop-blur-xl border-b border-[#1E293B] md:hidden w-full z-[9999] shadow-2xl overflow-hidden">
             <div className="grid grid-cols-8 h-full w-full items-center px-0">

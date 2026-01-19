@@ -221,21 +221,22 @@ def fetch_fred_data():
 
         # 1-C. US 10Y YIELD (DGS10)
         try:
-            yield_10y = fred.get_series('DGS10', observation_start=start_date)
-            yield_10y = yield_10y.ffill()
+            yield_10y = fred.get_series('DGS10', observation_start=start_date).ffill()
             current_yield = float(yield_10y.iloc[-1])
             data['US_10Y_YIELD'] = {
                 "price": round(current_yield, 2),
-                "change_percent": 0.0, # Will calc if needed
+                "change_percent": 0.0,
                 "trend": "STABLE",
                 "sparkline": [round(x, 2) for x in yield_10y.tail(30).tolist()]
             }
-        except: pass
+            log_diag(f"[IN] FRED_RAW: {{ series: DGS10, price: {round(current_yield, 2)} }}")
+        except Exception as e:
+            log_diag(f"[FRED ERROR] US 10Y Yield fetch failed: {e}")
+            if 'US_10Y_YIELD' in previous_data: data['US_10Y_YIELD'] = previous_data['US_10Y_YIELD']
 
         # 1-D. US 10Y REAL INTEREST RATE (DFII10)
         try:
-            real_rate = fred.get_series('DFII10', observation_start=start_date)
-            real_rate = real_rate.ffill()
+            real_rate = fred.get_series('DFII10', observation_start=start_date).ffill()
             current_real = float(real_rate.iloc[-1])
             data['REAL_INTEREST_RATE'] = {
                 "price": round(current_real, 2),
@@ -243,7 +244,27 @@ def fetch_fred_data():
                 "trend": "STABLE",
                 "sparkline": [round(x, 2) for x in real_rate.tail(30).tolist()]
             }
-        except: pass
+            log_diag(f"[IN] FRED_RAW: {{ series: DFII10, price: {round(current_real, 2)} }}")
+        except Exception as e:
+            log_diag(f"[FRED ERROR] Real Interest Rate fetch failed: {e}")
+            if 'REAL_INTEREST_RATE' in previous_data: data['REAL_INTEREST_RATE'] = previous_data['REAL_INTEREST_RATE']
+        
+
+
+        # 1-E. 10-YEAR BREAKEVEN INFLATION_RATE (T10YIE)
+        try:
+            breakeven = fred.get_series('T10YIE', observation_start=start_date).ffill()
+            current_be = float(breakeven.iloc[-1])
+            data['BREAKEVEN_INFLATION'] = {
+                "price": round(current_be, 2),
+                "change_percent": 0.0,
+                "trend": "RISING" if current_be > 2.5 else "STABLE",
+                "sparkline": [round(x, 2) for x in breakeven.tail(30).tolist()]
+            }
+            log_diag(f"[IN] FRED_RAW: {{ series: T10YIE, price: {round(current_be, 2)} }}")
+        except Exception as e:
+            log_diag(f"[FRED ERROR] Breakeven Inflation fetch failed: {e}")
+            if 'BREAKEVEN_INFLATION' in previous_data: data['BREAKEVEN_INFLATION'] = previous_data['BREAKEVEN_INFLATION']
 
         # 2. HY SPREAD (BAMLH0A0HYM2)
         try:
@@ -508,6 +529,8 @@ def fetch_market_data():
              all_data['US_10Y_YIELD'] = fred_data['US_10Y_YIELD']
         if 'REAL_INTEREST_RATE' in fred_data:
              all_data['REAL_INTEREST_RATE'] = fred_data['REAL_INTEREST_RATE']
+        if 'BREAKEVEN_INFLATION' in fred_data:
+             all_data['BREAKEVEN_INFLATION'] = fred_data['BREAKEVEN_INFLATION']
 
     # 2. Fetch All Sectors using Batch for Speed
     all_tickers = []
@@ -790,8 +813,8 @@ CHARACTER COUNT RANGE (STRICT):
 CONTENT "THREE PRINCIPLES" (MANDATORY):
 Each report MUST contain these 3 elements in a cohesive narrative:
 1. Current State Definition (現状の定義): Clearly define the current market regime based on GMS Score.
-2. Correlation & Causality (指標間の相関・因果): Explain the logical link between indicators (e.g., "Rising yields are pressuring tech multiples").
-3. Future Prediction (今後の予測): Provide a specific tactical outlook or trigger point.
+2. Correlation & Causality (指標間の相関・因果): Explain the logical link between indicators. MANDATORY: Connect Real Interest Rates (実質金利), Breakeven Inflation (期待インフレ), and Copper/Gold Ratio (景気の先行指標) to current equity/crypto trends.
+3. Future Prediction (今後の予測): Provide a specific tactical outlook or trigger point based on yield levels or liquidity shifts.
 
 GMS Context:
 - Current GMS Score: {score}/100

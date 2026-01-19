@@ -358,5 +358,204 @@
             "The Fed",
             "Dana Siaga"
         ]
+    },
+    {
+        "id": "us10y-yield",
+        "category": "Suku Bunga",
+        "term": "Imbal Hasil Treasury 10-Tahun AS",
+        "definition": "Imbal hasil pada obligasi pemerintah AS 10-tahun. Ini adalah landasan pasar keuangan global dan patokan untuk semua biaya pinjaman.",
+        "market_impact": {
+            "up": "Biaya pinjaman yang lebih tinggi bagi perusahaan dan konsumen. Menekan valuasi ekuitas, terutama di sektor teknologi.",
+            "down": "Beban bunga yang lebih rendah dan efek stimulasi pada ekonomi. Angin segar bagi ekuitas dan aset berdurasi panjang."
+        },
+        "context_2026": "Berfungsi sebagai jangkar tingkat diskonto global. Dalam lingkungan makro 2026, 'premi jangka' telah kembali ke wilayah positif, membuat tingkat imbal hasil di atas 4,5% menjadi ambang kritis bagi aset risiko.",
+        "gms_relevance": "Sangat Tinggi. Variabel utama dalam Skor GMS yang mengukur stres tingkat bebas risiko.",
+        "seo_keywords": [
+            "Yield 10Y AS",
+            "Obligasi Treasury",
+            "Suku Bunga Patokan",
+            "Tingkat Bebas Risiko"
+        ]
+    },
+    {
+        "id": "breakeven-inflation",
+        "category": "Inflasi",
+        "term": "Inflasi Impas 10-Tahun",
+        "definition": "Ekspektasi pasar terhadap rata-rata inflasi tahunan selama 10 tahun ke depan, yang berasal dari perbedaan antara imbal hasil nominal dan TIPS.",
+        "market_impact": {
+            "up": "Menandakan tekanan inflasi. Menyarankan jalur kebijakan Fed yang lebih ketat (Hawkish). Bagus bagi komoditas, buruk bagi saham pertumbuhan.",
+            "down": "Menandakan tren disinflasi. Memungkinkan Fed yang lebih longgar (Dovish). Positif bagi harga obligasi dan aset pertumbuhan."
+        },
+        "context_2026": "Memantau stabilitas ekspektasi inflasi jangka panjang. Vital untuk memverifikasi apakah bank sentral telah mencapai 'soft landing' dalam ekonomi yang diotomatiskan AI.",
+        "gms_relevance": "Tinggi. Digunakan untuk menghitung suku bunga riil dan menilai komponen 'Rezim Inflasi' dari skor.",
+        "seo_keywords": [
+            "Inflasi Impas",
+            "Ekspektasi Inflasi",
+            "TIPS",
+            "Prediksi Makro"
+        ]
+    },
+    {
+        "id": "dxy-index",
+        "category": "Forex",
+        "term": "Indeks Dolar AS (DXY)",
+        "definition": "Ukuran nilai dolar AS relatif terhadap sekeranjang mata uang asing dari mitra dagang AS.",
+        "market_impact": {
+            "up": "Biasanya menandakan stres likuiditas global y sentimen risk-off. Negatif bagi pasar negara berkembang dan komoditas.",
+            "down": "Menandakan likuiditas dolar yang melimpah y sentimen risk-on. Mendorong perdagangan global y pendapatan perusahaan multinasional."
+        },
+        "context_2026": "Teori 'Dollar Smile' masih mendominasi. Dalam lingkungan makro 2026, DXY bertindak sebagai 'Katup Pengaman' bagi mesin keuangan global.",
+        "gms_relevance": "Tinggi. Berfungsi sebagai proksi untuk 'Stres Liquidity Global' dalam matriks multi-aset.",
+        "seo_keywords": [
+            "DXY",
+            "Indeks Dolar",
+            "Forex",
+            "Pasar Mata Uang",
+            "Liquidity Global"
+        ]
+    },
+    {
+        "id": "sp500-index",
+        "category": "Ekuitas",
+        "term": "Indeks S&P 500 (SPY)",
+        "definition": "Indeks pasar saham yang melacak kinerja saham dari 500 perusahaan terbesar yang terdaftar di bursa efek di Amerika Serikat.",
+        "market_impact": {
+            "up": "Representasi dari optimisme ekonomi yang luas y selera risiko.",
+            "down": "Mencerminkan kontraksi pendapatan, kekhawatiran resesi, atau risiko sistemik."
+        },
+        "context_2026": "Indeks ini semakin didominasi oleh raksasa yang terintegrasi AI. Era 'Magnificent AI' telah mendefinisikan ulang norma P/E tradisional.",
+        "gms_relevance": "Patokan Target. Skor GMS bertujuan untuk memprediksi tepi depan y belakang pergerakan indeks ini.",
+        "seo_keywords": [
+            "S&P 500",
+            "SPY",
+            "Patokan Pasar Saham",
+            "Wall Street"
+        ]
+    },
+    {
+        "id": "market-breadth",
+        "category": "Ekuitas",
+        "term": "Luas Pasar (Market Breadth)",
+        "definition": "Rasio S&P 500 berbobot sama terhadap S&P 500 berbobot kapitalisasi pasar (RSP/SPY). Mengukur kesehatan y tingkat partisipasi dari sebuah reli.",
+        "market_impact": {
+            "up": "Partisipasi berbasis luas. Menunjukkan pasar bullish yang sehat y berkelanjutan di berbagai sektor.",
+            "down": "Kepemimpinan yang sempit (biasanya hanya beberapa raksasa teknologi). Menandakan potensi kerapuhan pada tingkat indeks keseluruhan."
+        },
+        "context_2026": "Mengidentifikasi apakah reli AI 'meluas' ke saham berkapitalisasi menengah y sektor industri adalah pendorong alfa utama pada tahun 2026.",
+        "gms_relevance": "Menengah. Digunakan untuk mendeteksi perubahan dalam 'Kualitas y Partisipasi' yang disembunyikan oleh harga indeks sederhana.",
+        "seo_keywords": [
+            "Market Breadth",
+            "Equal-Weighted",
+            "RSP",
+            "Partisipasi Saham"
+        ]
+    },
+    {
+        "id": "copper-price",
+        "category": "Komoditas",
+        "term": "Harga Tembaga (Doctor Copper)",
+        "definition": "Logam dasar industri yang sering dipandang sebagai proksi untuk kesehatan ekonomi global karena penggunaannya yang luas dalam manufaktur y konstruksi.",
+        "market_impact": {
+            "up": "Tanda-tanda aktivitas industri global yang kuat. Positif bagi sektor-sektor yang berorientasi pada pertumbuhan.",
+            "down": "Menandakan potensi pelambatan dalam CAPEX global y manufaktur. Pertanda kelemahan ekonomi."
+        },
+        "context_2026": "Dengan ekspansi besar-besaran pusat data AI y elektrifikasi, tembaga sekarang menjadi 'Minyak Era Digital'.",
+        "gms_relevance": "Menengah. Berfungsi sebagai indikator 'Energi Termal Ekonomi Riil' dalam tumpukan komoditas.",
+        "seo_keywords": [
+            "Harga Tembaga",
+            "Dr. Copper",
+            "Logam Industri",
+            "Indikator Ekonomi"
+        ]
+    },
+    {
+        "id": "gold-price",
+        "category": "Komoditas",
+        "term": "Harga Emas",
+        "definition": "Aset aman (safe-haven) utama y penyimpan nilai. Ini berfungsi sebagai lindung nilai terhadap inflasi y devaluasi mata uang.",
+        "market_impact": {
+            "up": "Menandakan ketakutan, inflasi tinggi, atau melemahnya mata uang kertas. Negatif bagi suku bunga riil.",
+            "down": "Sentimen risk-on. Menandakan kepercayaan pada sistem keuangan y kenaikan imbal hasil riil."
+        },
+        "context_2026": "Emas tetap menjadi 'Anti-Dolar'. Di dunia dengan utang negara yang melonjak, pembelian emas bank sentral berada pada level tertinggi sepanjang masa pada tahun 2026.",
+        "gms_relevance": "Menengah. Digunakan sebagai 'Variabel Asuransi' untuk mengukur tingkat kepercayaan sistemik dalam model GMS.",
+        "seo_keywords": [
+            "Harga Emas",
+            "Safe Haven",
+            "Lindung Nilai Inflasi",
+            "Logam Mulia"
+        ]
+    },
+    {
+        "id": "bitcoin",
+        "category": "Kripto",
+        "term": "Bitcoin (BTC)",
+        "definition": "Mata uang kripto terdesentralisasi pertama. Sering disebut 'Digital Gold' y merupakan indikator utama dari sentimen risiko beta tinggi.",
+        "market_impact": {
+            "up": "Sentimen risk-on maksimal. Mencerminkan likuiditas yang melimpah y permintaan spekulatif.",
+            "down": "Fase penghentian leverage (deleveraging). Menandakan kemunduran dalam likuiditas spekulatif y meningkatnya sentimen risk-off."
+        },
+        "context_2026": "Adopsi institusional melalui ETF telah selesai. BTC sekarang menjadi komponen tetap dalam model alokasi aset makro global.",
+        "gms_relevance": "Tinggi. Berfungsi sebagai 'Termometer Liquidity'. Sensitivitas harga BTC terhadap perubahan likuiditas neto adalah sinyal utama.",
+        "seo_keywords": [
+            "Bitcoin",
+            "BTC",
+            "Emas Digital",
+            "Makro Kripto"
+        ]
+    },
+    {
+        "id": "ethereum",
+        "category": "Kripto",
+        "term": "Ethereum (ETH)",
+        "definition": "Blockchain sumber terbuka terdesentralisasi dengan fungsionalitas kontrak pintar. Bertindak sebagai proksi untuk 'Internet Finance'.",
+        "market_impact": {
+            "up": "Ekspansi aktivitas on-chain y likuiditas terdesentralisasi.",
+            "down": "Kontraksi ekonomi terdesentralisasi y biaya gas yang lebih tinggi / hambatan jaringan."
+        },
+        "context_2026": "ETH adalah lapisan infrastruktur untuk 'Uang yang Dapat Diprogram'. Pada tahun 2026, korelasinya dengan permintaan komputasi agen AI meningkat.",
+        "gms_relevance": "Menengah. Mengukur 'Sisi Utilitas' dari siklus likuiditas kripto.",
+        "seo_keywords": [
+            "Ethereum",
+            "ETH",
+            "Kontrak Pintar",
+            "Likuiditas On-chain"
+        ]
+    },
+    {
+        "id": "wti-oil",
+        "category": "Komoditas",
+        "term": "Minyak Mentah WTI",
+        "definition": "Patokan untuk harga energi global. Mencerminkan ekspektasi pertumbuhan global y premi risiko geopolitik.",
+        "market_impact": {
+            "up": "Permintaan ekspansi ekonomi, atau guncangan pasokan. Harga minyak yang tinggi dapat menjadi 'pajak' inflasi bagi konsumen.",
+            "down": "Kehancuran permintaan atau kelebihan pasokan. Biasanya dikaitkan dengan pelambatan ekonomi."
+        },
+        "context_2026": "Tarik ulur antara permintaan energi berbasis AI y transisi ke energi terbarukan terus berlanjut. Produksi energi yang efisien adalah pengelola pertumbuhan 2026.",
+        "gms_relevance": "Menengah. Variabel kunci dalam komponen 'Energi y Pertumbuhan' dari model GMS.",
+        "seo_keywords": [
+            "Minyak WTI",
+            "Minyak Mentah",
+            "Harga Energi",
+            "Perdagangan Komoditas"
+        ]
+    },
+    {
+        "id": "macro-strategy",
+        "category": "Strategi",
+        "term": "Strategi Indikator Makro (The 16)",
+        "definition": "Seleksi strategis OmniMetric dari 16 indikator multi-aset yang dirancang untuk menangkap interaksi Suku Bunga, Liquidity, Risiko, y Ekonomi Riil.",
+        "market_impact": {
+            "up": "Pandangan holistik terhadap sistem keuangan global.",
+            "down": "Menghindari 'titik buta informasi' yang umum dalam analisis aset tunggal."
+        },
+        "context_2026": "Dalam pasar yang sangat sensitif, melihat satu indikator saja berbahaya. Kami menyinkronkan ke-16 titik menjadi satu narasi GMS tunggal.",
+        "gms_relevance": "Dasar. Menjelaskan mengapa dasbor kami terstruktur sebagai 'Menara Kontrol' 4x4.",
+        "seo_keywords": [
+            "Strategi Makro",
+            "Kerangka Investasi",
+            "Analisis Multi-aset",
+            "Kerangka GMS"
+        ]
     }
 ]

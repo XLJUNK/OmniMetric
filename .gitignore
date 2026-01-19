@@ -3,8 +3,23 @@ backend/__pycache__/
 backend/*.pyc
 .env
 .DS_Store
+# Dependencies
+node_modules/
 backend/venv/
+venv/
 frontend/node_modules/
+
+# Python
+*.pyc
+__pycache__/
+
+# Next.js / Build
+.next/
+dist/
+build/
+
+# Logs
 *.log
 *.txt
-.next/
+!**/requirements.txt
+

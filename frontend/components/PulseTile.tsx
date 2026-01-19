@@ -56,23 +56,31 @@ export const PulseTile = ({ title, score, ticker, data, onClick, lang, wikiSlug 
         factorKeys = ["VOL", "SENT"];
         f1_status = score > 60 ? "LOW" : "HIGH";
         f2_status = score > 60 ? "CALM" : "FEAR";
-    } else if (title === "S&P 500" || title === "Bitcoin" || title === "Ethereum" || title === "Solana") {
+    } else if (title === "S&P 500" || title === "Bitcoin" || title === "Ethereum" || title === "Solana" || title === "BTC" || title === "ETH" || title === "BTC-USD" || title === "ETH-USD") {
         factorKeys = ["MOM", "VOL"];
         f1_status = isUp ? "BULLISH" : "BEARISH";
         f2_status = "STABLE";
-    } else if (title === "US 10Y" || title === "DXY" || title === "USD/JPY" || title === "USD/INR" || title === "USD/SAR") {
+    } else if (title === "US 10Y" || title === "DXY" || title === "USD/JPY" || title === "USD/INR" || title === "USD/SAR" || title === "US 10Y Yield" || title === "US10Y") {
         factorKeys = ["RATES", "CRED"];
         f1_status = isUp ? "RISING" : "FALLING";
         f2_status = "STABLE";
-    } else if (title === "Gold" || title === "WTI Oil") {
+    } else if (title === "Gold" || title === "WTI Oil" || title === "Copper" || title === "Oil") {
         factorKeys = ["VOL", "MOM"];
         f1_status = isUp ? "BULLISH" : "BEARISH";
         f2_status = score > 50 ? "LOW" : "HIGH";
-    } else if (title === "Net Liquidity" || title === "US Net Liquidity") {
+    } else if (title === "Real Rates 10Y" || title === "Real Interest Rate") {
+        factorKeys = ["RATES", "MACRO"];
+        f1_status = isUp ? "RISING" : "FALLING";
+        f2_status = "STABLE";
+    } else if (title === "Breakeven 10Y" || title === "10Y BEI") {
+        factorKeys = ["INFL", "EXP"];
+        f1_status = isUp ? "RISING" : "FALLING";
+        f2_status = "STABLE";
+    } else if (title === "Net Liquidity" || title === "US Net Liquidity" || title === "Net Liq") {
         factorKeys = ["LIQ", "MOM"];
         f1_status = score > 60 ? "STABLE" : "STRESS";
         f2_status = isUp ? "RISING" : "FALLING";
-    } else if (title === "MOVE Index" || title === "Bond Vol (MOVE)") {
+    } else if (title === "MOVE Index" || title === "Bond Vol (MOVE)" || title === "MOVE") {
         factorKeys = ["VOL", "RATES"];
         f1_status = score < 50 ? "ELEVATED" : "CALM";
         f2_status = isUp ? "RISING" : "STABLE";
@@ -80,6 +88,14 @@ export const PulseTile = ({ title, score, ticker, data, onClick, lang, wikiSlug 
         factorKeys = ["CRED", "SENT"];
         f1_status = score < 40 ? "STRESS" : "HEALTHY";
         f2_status = isUp ? "WIDENING" : "TIGHTENING";
+    } else if (title === "Yield Curve 10Y-3M" || title === "10Y-3M") {
+        factorKeys = ["CRED", "MACRO"];
+        f1_status = isUp ? "STABLE" : "STRESS";
+        f2_status = "SKEWED";
+    } else if (title === "Market Breadth" || title === "Breadth") {
+        factorKeys = ["BREADTH", "MOM"];
+        f1_status = isUp ? "HEALTHY" : "WEAK";
+        f2_status = "STABLE";
     } else {
         // Fallback for generic assets
         factorKeys = ["MOM", "VOL"];
@@ -178,8 +194,8 @@ export const PulseTile = ({ title, score, ticker, data, onClick, lang, wikiSlug 
                         </span>
                     </div>
                     <div className="flex items-baseline gap-2">
-                        <span className={`${typeof data?.price === 'string' && data?.price.length > 20 ? 'text-[0.56rem]' : 'text-[0.875rem]'} pulse-tile-price font-bold font-sans tracking-tight text-white tabular-nums leading-none`}>
-                            {(title === "Net Liquidity" || title === "US Net Liquidity")
+                        <span className={`${(typeof data?.price === 'string' && data?.price.length > 20) ? 'text-[0.56rem]' : 'text-[1.125rem]'} pulse-tile-price font-bold font-sans tracking-tight text-white tabular-nums leading-none`}>
+                            {(title === "Net Liquidity" || title === "US Net Liquidity" || title === "Net Liq")
                                 ? (typeof data?.price === 'number'
                                     ? (Math.abs(data.price) >= 1000
                                         ? `$${(data.price / 1000).toFixed(2)}T`
@@ -187,7 +203,7 @@ export const PulseTile = ({ title, score, ticker, data, onClick, lang, wikiSlug 
                                     : (data?.price || "0.00"))
                                 : (data?.price || "0.00")}
                         </span>
-                        <span className={`text-[0.625rem] font-medium tabular-nums ml-2 ${isUp ? "text-emerald-400" : (data?.change_percent < 0 ? "text-rose-400" : "text-slate-400")}`}>
+                        <span className={`text-[0.75rem] font-medium tabular-nums ml-1 ${isUp ? "text-emerald-400" : (data?.change_percent < 0 ? "text-rose-400" : "text-slate-400")}`}>
                             {trendText}{(typeof data?.change_percent === 'number' ? data.change_percent : 0)}%
                         </span>
                     </div>
@@ -196,7 +212,7 @@ export const PulseTile = ({ title, score, ticker, data, onClick, lang, wikiSlug 
                 {/* CORNER 4: BOTTOM-RIGHT (Factors) - PADDING 0.75rem */}
                 <div style={{ position: 'absolute', bottom: '0.75rem', right: '0.75rem', zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'flex-end', pointerEvents: 'none' }}>
                     {factors.map((f, i) => (
-                        <div key={i} className={`text-[0.56rem] sm:text-[0.65rem] text-[#94A3B8] font-sans tracking-wider font-medium leading-tight drop-shadow-md bg-black/40 px-1 rounded backdrop-blur-[2px] mb-0.5`}>
+                        <div key={i} className={`text-[0.56rem] sm:text-[0.65rem] text-[#94A3B8] font-sans tracking-wider font-medium leading-tight drop-shadow-md bg-black/50 px-1.5 py-0.5 rounded backdrop-blur-[2px] mb-0.5`}>
                             <span className="text-[0.5rem] sm:text-[0.56rem] mr-1 opacity-70 text-slate-500">{f.label}:</span>{f.status}
                         </div>
                     ))}

@@ -25,37 +25,77 @@ def update_summary():
     
     summary = load_json(SUMMARY_FILE) or []
     
-    # HEALING LOGIC: If summary is empty or missing days, rebuild from archives
+    # HEALING & EXPANSION LOGIC
     if os.path.exists(ARCHIVE_DIR):
         archive_files = [f for f in os.listdir(ARCHIVE_DIR) if f.endswith('.json') and f not in ['summary.json', 'performance_audit.json']]
         for f in archive_files:
             date_str = f.replace('.json', '')
-            if not any(item['date'] == date_str for item in summary):
-                print(f"Healing summary with data from {date_str}")
+            # Check if we need to heal/expand this entry
+            existing_entry = next((item for item in summary if item['date'] == date_str), None)
+            
+            # If missing OR missing new indicator keys (like move_price), re-process
+            if not existing_entry or "move_price" not in existing_entry:
+                print(f"Healing/Expanding summary with data from {date_str}")
                 data = load_json(os.path.join(ARCHIVE_DIR, f))
                 if data:
-                    summary.append({
+                    market_data = data.get("market_data", {})
+                    new_item = {
                         "date": date_str,
                         "gms_score": data.get("gms_score"),
-                        "spy_price": data.get("market_data", {}).get("SPY", {}).get("price"),
-                        "vix_price": data.get("market_data", {}).get("VIX", {}).get("price"),
-                        "net_liquidity": data.get("market_data", {}).get("NET_LIQUIDITY", {}).get("price")
-                    })
+                        # Strategic 16 Accumulation
+                        "net_liquidity": market_data.get("NET_LIQUIDITY", {}).get("price"),
+                        "move_price": market_data.get("MOVE", {}).get("price"),
+                        "real_rate": market_data.get("REAL_INTEREST_RATE", {}).get("price"),
+                        "breakeven_inflation": market_data.get("BREAKEVEN_INFLATION", {}).get("price"),
+                        "dxy_price": market_data.get("DXY", {}).get("price"),
+                        "hy_spread": market_data.get("HY_SPREAD", {}).get("price"),
+                        "nfci_price": market_data.get("NFCI", {}).get("price"),
+                        "breadth_spread": market_data.get("BREADTH", {}).get("price"),
+                        "gold_price": market_data.get("GOLD", {}).get("price"),
+                        "btc_price": market_data.get("BTC", {}).get("price"),
+                        "copper_gold_ratio": market_data.get("COPPER_GOLD", {}).get("price"),
+                        "vix_price": market_data.get("VIX", {}).get("price"),
+                        "spy_price": market_data.get("SPY", {}).get("price"),
+                        "qqq_price": market_data.get("QQQ", {}).get("price"),
+                        "iwm_price": market_data.get("IWM", {}).get("price"),
+                        "crypto_sentiment": market_data.get("CRYPTO_SENTIMENT", {}).get("price")
+                    }
+                    if existing_entry:
+                        summary.remove(existing_entry)
+                    summary.append(new_item)
     
     # Sort by date
     summary.sort(key=lambda x: x['date'])
 
     today_str = datetime.now().strftime("%Y-%m-%d")
-    if current_data and not any(item['date'] == today_str for item in summary):
+    if current_data:
+        # Update or Add today's entry
+        market_data = current_data.get("market_data", {})
         new_entry = {
             "date": today_str,
             "gms_score": current_data.get("gms_score"),
-            "spy_price": current_data.get("market_data", {}).get("SPY", {}).get("price"),
-            "vix_price": current_data.get("market_data", {}).get("VIX", {}).get("price"),
-            "net_liquidity": current_data.get("market_data", {}).get("NET_LIQUIDITY", {}).get("price")
+            "net_liquidity": market_data.get("NET_LIQUIDITY", {}).get("price"),
+            "move_price": market_data.get("MOVE", {}).get("price"),
+            "real_rate": market_data.get("REAL_INTEREST_RATE", {}).get("price"),
+            "breakeven_inflation": market_data.get("BREAKEVEN_INFLATION", {}).get("price"),
+            "dxy_price": market_data.get("DXY", {}).get("price"),
+            "hy_spread": market_data.get("HY_SPREAD", {}).get("price"),
+            "nfci_price": market_data.get("NFCI", {}).get("price"),
+            "breadth_spread": market_data.get("BREADTH", {}).get("price"),
+            "gold_price": market_data.get("GOLD", {}).get("price"),
+            "btc_price": market_data.get("BTC", {}).get("price"),
+            "copper_gold_ratio": market_data.get("COPPER_GOLD", {}).get("price"),
+            "vix_price": market_data.get("VIX", {}).get("price"),
+            "spy_price": market_data.get("SPY", {}).get("price"),
+            "qqq_price": market_data.get("QQQ", {}).get("price"),
+            "iwm_price": market_data.get("IWM", {}).get("price"),
+            "crypto_sentiment": market_data.get("CRYPTO_SENTIMENT", {}).get("price")
         }
+        
+        # Remove existing if any
+        summary = [item for item in summary if item['date'] != today_str]
         summary.append(new_entry)
-        print(f"Added current entry for {today_str}.")
+        print(f"Upserted current entry for {today_str}.")
     
     save_json(SUMMARY_FILE, summary)
     return summary

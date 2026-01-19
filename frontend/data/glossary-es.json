@@ -358,5 +358,204 @@
             "Fed",
             "Fondos en Espera"
         ]
+    },
+    {
+        "id": "us10y-yield",
+        "category": "Tasas de Interés",
+        "term": "Rendimiento del Tesoro de EE. UU. a 10 años",
+        "definition": "El rendimiento de los bonos del gobierno de EE. UU. a 10 años. Es la piedra angular de los mercados financieros globales y el referente para todos los costos de endeudamiento.",
+        "market_impact": {
+            "up": "Mayores costos de endeudamiento para empresas y consumidores. Presiona las valoraciones de las acciones, especialmente en el sector tecnológico.",
+            "down": "Menor carga de intereses y efecto estimulante en la economía. Viento a favor para las acciones y los activos de larga duración."
+        },
+        "context_2026": "Sirve como ancla de la tasa de descuento global. En el entorno macro de 2026, la 'prima de plazo' ha vuelto a territorio positivo, lo que hace que los niveles de rendimiento por encima del 4.5% sean un umbral crítico para los activos de riesgo.",
+        "gms_relevance": "Extremadamente Alta. Una variable principal en el GMS Score que mide el estrés de la tasa libre de riesgo.",
+        "seo_keywords": [
+            "Rendimiento EE. UU. 10Y",
+            "Bonos del Tesoro",
+            "Tasa de Referencia",
+            "Tasa Libre de Riesgo"
+        ]
+    },
+    {
+        "id": "breakeven-inflation",
+        "category": "Inflación",
+        "term": "Inflación de Equilibrio a 10 años",
+        "definition": "La expectativa del mercado de la inflación anual promedio durante los próximos 10 años, derivada de la diferencia entre los rendimientos nominales y los TIPS.",
+        "market_impact": {
+            "up": "Señala presión inflacionaria. Sugiere una trayectoria de política de la Fed más restrictiva (hawkish). Bueno para las materias primas, malo para las acciones de crecimiento.",
+            "down": "Señala tendencias desinflacionarias. Permite una Fed más flexible (dovish). Positivo para los precios de los bonos y los activos de crecimiento."
+        },
+        "context_2026": "Monitorea la estabilidad de las expectativas de inflación a largo plazo. Vital para verificar si los bancos centrales han logrado un 'aterrizaje suave' en una economía automatizada por IA.",
+        "gms_relevance": "Alta. Se utiliza para calcular las tasas reales y evaluar el componente de 'Régimen de Inflación' de la puntuación.",
+        "seo_keywords": [
+            "Inflación de Equilibrio",
+            "Expectativas de Inflación",
+            "TIPS",
+            "Pronóstico Macro"
+        ]
+    },
+    {
+        "id": "dxy-index",
+        "category": "Forex",
+        "term": "Índice del Dólar Estadounidarse (DXY)",
+        "definition": "Una medida del valor del dólar estadounidense en relación con una canasta de monedas extranjeras de los socios comerciales de EE. UU.",
+        "market_impact": {
+            "up": "Usualmente señala estrés de liquidez global y sentimiento de aversión al riesgo (risk-off). Negativo para los mercados emergentes y las materias primas.",
+            "down": "Señala abundante liquidez de dólares y sentimiento de apetito por el riesgo (risk-on). Impulsa el comercio global y las ganancias de las empresas multinacionales."
+        },
+        "context_2026": "La teoría de la 'Sonrisa del Dólar' sigue dominando. En el entorno macro de 2026, el DXY actúa como una 'Válvula de Seguridad' para la maquinaria financiera global.",
+        "gms_relevance": "Alta. Funciona como un proxy para el 'Estrés de Liquidez Global' en la matriz multi-activo.",
+        "seo_keywords": [
+            "DXY",
+            "Índice del Dólar",
+            "Forex",
+            "Mercado de Divisas",
+            "Liquidez Global"
+        ]
+    },
+    {
+        "id": "sp500-index",
+        "category": "Acciones",
+        "term": "Índice S&P 500 (SPY)",
+        "definition": "Un índice del mercado de valores que sigue el rendimiento de las 500 empresas más grandes que cotizan en las bolsas de valores de los Estados Unidos.",
+        "market_impact": {
+            "up": "Representativo del optimismo económico general y del apetito por el riesgo.",
+            "down": "Refleja la contracción de las ganancias, temores de recesión o riesgo sistémico."
+        },
+        "context_2026": "El índice está cada vez más dominado por gigantes integrados por IA. La era de la 'IA Magnífica' ha redefinido las normas tradicionales de la relación P/E.",
+        "gms_relevance": "Referente de Objetivo. El GMS Score tiene como objetivo predecir los bordes de avance y retroceso de los movimientos de este índice.",
+        "seo_keywords": [
+            "S&P 500",
+            "SPY",
+            "Referente del Mercado de Valores",
+            "Wall Street"
+        ]
+    },
+    {
+        "id": "market-breadth",
+        "category": "Acciones",
+        "term": "Amplitud del Mercado (Market Breadth)",
+        "definition": "La relación entre el S&P 500 equiponderado y el S&P 500 ponderado por capitalización de mercado (RSP/SPY). Mide la salud y el nivel de participación de un rally.",
+        "market_impact": {
+            "up": "Participación de base amplia. Indica un mercado alcista saludable y sostenible en múltiples sectores.",
+            "down": "Liderazgo estrecho (usualmente solo unos pocos gigantes tecnológicos). Señala fragilidad potencial en el nivel general del índice."
+        },
+        "context_2026": "Identificar si el rally de IA se está 'ampliando' a las empresas de mediana capitalización y a los sectores industriales es el principal motor de alfa en 2026.",
+        "gms_relevance": "Media. Se utiliza para detectar cambios en la 'Calidad y Participación' que los precios de los índices simples ocultan.",
+        "seo_keywords": [
+            "Amplitud del Mercado",
+            "Equiponderado",
+            "RSP",
+            "Participación Accionaria"
+        ]
+    },
+    {
+        "id": "copper-price",
+        "category": "Materias Primas",
+        "term": "Precio del Cobre (Doctor Cobre)",
+        "definition": "Un metal base industrial que a menudo se ve como un proxy de la salud económica mundial debido a su uso generalizado en la fabricación y la construcción.",
+        "market_impact": {
+            "up": "Signos de una robusta actividad industrial global. Positivo para los sectores orientados al crecimiento.",
+            "down": "Señala una posible desaceleración en el CAPEX global y la fabricación. Precursor de la debilidad económica."
+        },
+        "context_2026": "Con la expansión masiva de los centros de datos de IA y la electrificación, el cobre es ahora el 'Petróleo de la Era Digital'.",
+        "gms_relevance": "Media. Funciona como un indicador de 'Energía Térmica de la Economía Real' en la pila de materias primas.",
+        "seo_keywords": [
+            "Precio del Cobre",
+            "Dr. Cobre",
+            "Metales Industriales",
+            "Indicador Económico"
+        ]
+    },
+    {
+        "id": "gold-price",
+        "category": "Materias Primas",
+        "term": "Precio del Oro",
+        "definition": "El activo refugio definitivo y una reserva de valor. Sirve como cobertura contra la inflación y la devaluación de la moneda.",
+        "market_impact": {
+            "up": "Señala miedo, alta inflación o debilitamiento de las monedas de papel. Negativo para las tasas reales.",
+            "down": "Apetito de riesgo (risk-on). Señala confianza en el sistema financiero y aumento de los rendimientos reales."
+        },
+        "context_2026": "El oro sigue siendo el 'Anti-Dólar'. En un mundo de deuda soberana en aumento, las compras de oro de los bancos centrales están en máximos históricos en 2026.",
+        "gms_relevance": "Media. Se utiliza como una 'Variable de Seguro' para medir el nivel de confianza sistémica en el modelo GMS.",
+        "seo_keywords": [
+            "Precio del Oro",
+            "Refugio Seguro",
+            "Cobertura contra la Inflación",
+            "Metales Preciosos"
+        ]
+    },
+    {
+        "id": "bitcoin",
+        "category": "Cripto",
+        "term": "Bitcoin (BTC)",
+        "definition": "La primera criptomoneda descentralizada. A menudo se le llama 'Oro Digital' y es un indicador principal del sentimiento de riesgo de alta beta.",
+        "market_impact": {
+            "up": "Máximo apetito de riesgo (risk-on). Refleja una liquidez abundante y demanda especulativa.",
+            "down": "Fase de desapalancamiento. Señala un retroceso en la liquidez especulativa y un aumento de la aversión al riesgo."
+        },
+        "context_2026": "La adopción institucional a través de ETF está completa. El BTC es ahora un elemento permanente en los modelos de asignación de activos macro globales.",
+        "gms_relevance": "Alta. Funciona como un 'Termómetro de Liquidez'. La sensibilidad del precio de BTC a los cambios en la liquidez neta es una señal clave.",
+        "seo_keywords": [
+            "Bitcoin",
+            "BTC",
+            "Oro Digital",
+            "Macro Cripto"
+        ]
+    },
+    {
+        "id": "ethereum",
+        "category": "Cripto",
+        "term": "Ethereum (ETH)",
+        "definition": "Una cadena de bloques de código abierto descentralizada con funcionalidad de contrato inteligente. Actúa como un proxy para el 'Internet de las Finanzas'.",
+        "market_impact": {
+            "up": "Expansión de la actividad en cadena y la liquidez descentralizada.",
+            "down": "Contracción de la economía descentralizada y tarifas de gas más altas / cuellos de botella en la red."
+        },
+        "context_2026": "ETH es la capa de infraestructura para el 'Dinero Programable'. En 2026, su correlación con la demanda de computación de agentes de IA está aumentando.",
+        "gms_relevance": "Media. Mide el 'Lado de la Utilidad' del ciclo de liquidez cripto.",
+        "seo_keywords": [
+            "Ethereum",
+            "ETH",
+            "Contratos Inteligentes",
+            "Liquidez en Cadena"
+        ]
+    },
+    {
+        "id": "wti-oil",
+        "category": "Materias Primas",
+        "term": "Petróleo Crudo WTI",
+        "definition": "Un referente para los precios globales de la energía. Refleja las expectativas de crecimiento global y las primas de riesgo geopolítico.",
+        "market_impact": {
+            "up": "Demanda por expansión económica, o choques de oferta. Los altos precios del petróleo pueden ser un 'impuesto' inflacionario para los consumidores.",
+            "down": "Destrucción de la demanda o exceso de oferta. Usualmente asociado con desaceleraciones económicas."
+        },
+        "context_2026": "Continúa el tira y afloja entre la demanda de energía impulsada por la IA y la transición a las energías renovables. La producción de energía eficiente es el regulador del crecimiento de 2026.",
+        "gms_relevance": "Media. Una variable clave en el componente de 'Energía y Crecimiento' del modelo GMS.",
+        "seo_keywords": [
+            "Petróleo WTI",
+            "Petróleo Crudo",
+            "Precios de la Energía",
+            "Comercio de Materias Primas"
+        ]
+    },
+    {
+        "id": "macro-strategy",
+        "category": "Estrategia",
+        "term": "Estrategia de Indicadores Macro (Los 16)",
+        "definition": "La selección estratégica de OmniMetric de 16 indicadores multi-activo diseñados para capturar la interacción de Tasas, Liquidez, Riesgo y la Economía Real.",
+        "market_impact": {
+            "up": "Una visión holística del sistema financiero global.",
+            "down": "Evita los 'puntos ciegos de información' comunes en el análisis de un solo activo."
+        },
+        "context_2026": "En un mercado hipersensible, mirar un solo indicador es peligroso. Sincronizamos los 16 puntos en una sola narrativa GMS.",
+        "gms_relevance": "Fundamental. Explica por qué nuestro panel está estructurado como una 'Torre de Control' de 4x4.",
+        "seo_keywords": [
+            "Estrategia Macro",
+            "Marco de Inversión",
+            "Análisis Multi-Activo",
+            "Marco GMS"
+        ]
     }
 ]

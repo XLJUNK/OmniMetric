@@ -358,5 +358,204 @@
             "Fed",
             "Standby Funds"
         ]
+    },
+    {
+        "id": "us10y-yield",
+        "category": "Interest Rates",
+        "term": "US 10-Year Treasury Yield",
+        "definition": "The yield on 10-year US government bonds. It is the cornerstone of global financial markets and the benchmark for all borrowing costs.",
+        "market_impact": {
+            "up": "Higher borrowing costs for companies and consumers. Pressures equity valuations, especially in the tech sector.",
+            "down": "Lower interest burden and stimulating effect on the economy. Tailwind for equities and long-duration assets."
+        },
+        "context_2026": "Serves as the global discount rate anchor. In 2026, the 'term premium' has returned to positive territory, making yield levels above 4.5% a critical threshold for risk assets.",
+        "gms_relevance": "Extremely High. A primary variable in the GMS Score measuring risk-free rate stress.",
+        "seo_keywords": [
+            "US 10Y Yield",
+            "Treasury Bonds",
+            "Benchmark Rate",
+            "Risk-Free Rate"
+        ]
+    },
+    {
+        "id": "breakeven-inflation",
+        "category": "Inflation",
+        "term": "10-Year Breakeven Inflation",
+        "definition": "The market's expectation of average annual inflation over the next 10 years, derived from the difference between nominal and tips yields.",
+        "market_impact": {
+            "up": "Signals inflationary pressure. Suggests a hawkish Fed policy path. Good for commodities, bad for growth stocks.",
+            "down": "Signals disinflationary trends. Allows for a more dovish Fed. Positive for bond prices and growth assets."
+        },
+        "context_2026": "Monitors the stability of long-term inflation expectations. Vital for verifying if central banks have achieved a 'soft landing' in an AI-automated economy.",
+        "gms_relevance": "High. Used to calculate real rates and assess the 'Inflation Regime' component of the score.",
+        "seo_keywords": [
+            "Breakeven Inflation",
+            "Inflation Expectations",
+            "TIPS",
+            "Macro Forecast"
+        ]
+    },
+    {
+        "id": "dxy-index",
+        "category": "Forex",
+        "term": "US Dollar Index (DXY)",
+        "definition": "A measure of the value of the U.S. dollar relative to a basket of foreign currencies from U.S. trade partners.",
+        "market_impact": {
+            "up": "Usually signals global liquidity stress and risk-off sentiment. Negative for emerging markets and commodities.",
+            "down": "Signals ample dollar liquidity and risk-on sentiment. Boosts global trade and multi-national company earnings."
+        },
+        "context_2026": "The 'Dollar Smile' theory remains dominant. In the 2026 macro environment, DXY acts as a 'Safety Valve' for the global financial machine.",
+        "gms_relevance": "High. Functions as a proxy for 'Global Liquidity Stress' in the multi-asset matrix.",
+        "seo_keywords": [
+            "DXY",
+            "Dollar Index",
+            "Forex",
+            "Currency Market",
+            "Global Liquidity"
+        ]
+    },
+    {
+        "id": "sp500-index",
+        "category": "Equities",
+        "term": "S&P 500 Index (SPY)",
+        "definition": "A stock market index tracking the stock performance of 500 of the largest companies listed on stock exchanges in the United States.",
+        "market_impact": {
+            "up": "Representative of broad economic optimism and risk appetite.",
+            "down": "Reflects earnings contraction, recession fears, or systemic risk."
+        },
+        "context_2026": "The index is increasingly dominated by AI-integrated giants. The 'Magnificent AI' era has redefined traditional P/E ratio norms.",
+        "gms_relevance": "Target Benchmark. The GMS Score aims to predict the leading and trailing edges of this index's movements.",
+        "seo_keywords": [
+            "S&P 500",
+            "SPY",
+            "Stock Market Benchmark",
+            "Wall Street"
+        ]
+    },
+    {
+        "id": "market-breadth",
+        "category": "Equities",
+        "term": "Market Breadth (RSP/SPY)",
+        "definition": "The ratio between the Equal-weighted S&P 500 and the Market-cap weighted S&P 500. It measures the health and participation level of a rally.",
+        "market_impact": {
+            "up": "Broad-based participation. Indicates a healthy, sustainable bull market across multiple sectors.",
+            "down": "Narrow leadership (usually just a few tech giants). Signals potential fragility in the overall index level."
+        },
+        "context_2026": "Identifying whether the AI rally is 'broadening out' to mid-caps and industrial sectors is the primary alpha-driver in 2026.",
+        "gms_relevance": "Medium. Used to detect 'Quality and Participation' shifts that simple index prices hide.",
+        "seo_keywords": [
+            "Market Breadth",
+            "Equal Weight",
+            "RSP",
+            "Stock Participation"
+        ]
+    },
+    {
+        "id": "copper-price",
+        "category": "Commodities",
+        "term": "Copper (Doctor Copper)",
+        "definition": "An industrial base metal that is often seen as a proxy for global economic health due to its widespread use in manufacturing and construction.",
+        "market_impact": {
+            "up": "Signs of robust global industrial activity. Positive for growth-oriented sectors.",
+            "down": "Signals potential slowdown in global CAPEX and manufacturing. Precursor to economic weakness."
+        },
+        "context_2026": "With the massive expansion of AI data centers and electrification, Copper is now the 'Oil of the Digital Age'.",
+        "gms_relevance": "Medium. Functions as a 'Real Economy Thermal Energy' indicator in the Commodities stack.",
+        "seo_keywords": [
+            "Copper Price",
+            "Dr. Copper",
+            "Industrial Metals",
+            "Economic Indicator"
+        ]
+    },
+    {
+        "id": "gold-price",
+        "category": "Commodities",
+        "term": "Gold",
+        "definition": "The ultimate safe-haven asset and a store of value. It serves as a hedge against inflation and currency debasement.",
+        "market_impact": {
+            "up": "Signals fear, high inflation, or weakening of paper currencies. Negative for real rates.",
+            "down": "Risk-on appetite. Signals confidence in the financial system and rising real yields."
+        },
+        "context_2026": "Gold remains the 'Anti-Dollar'. In a world of ballooning sovereign debt, Central Bank gold purchases are at record highs in 2026.",
+        "gms_relevance": "Medium. Used as an 'Insurance Variable' to measure the systemic trust level in the GMS model.",
+        "seo_keywords": [
+            "Gold Price",
+            "Safe Haven",
+            "Inflation Hedge",
+            "Precious Metals"
+        ]
+    },
+    {
+        "id": "bitcoin",
+        "category": "Crypto",
+        "term": "Bitcoin (BTC)",
+        "definition": "The first decentralized cryptocurrency. Often referred to as 'Digital Gold' and a leading indicator for high-beta risk sentiment.",
+        "market_impact": {
+            "up": "Maximum risk-on appetite. Reflects ample liquidity and speculative demand.",
+            "down": "Deleveraging phase. Signals a pull-back in speculative liquidity and rising risk aversion."
+        },
+        "context_2026": "Institutional adoption via ETFs is complete. BTC is now a permanent fixture in global macro asset allocation models.",
+        "gms_relevance": "High. Functions as a 'Liquidity Thermometer'. BTC price sensitivity to Net Liquidity changes is a key signal.",
+        "seo_keywords": [
+            "Bitcoin",
+            "BTC",
+            "Digital Gold",
+            "Crypto Macro"
+        ]
+    },
+    {
+        "id": "ethereum",
+        "category": "Crypto",
+        "term": "Ethereum (ETH)",
+        "definition": "A decentralized, open-source blockchain with smart contract functionality. Acts as a proxy for the 'Internet of Finance'.",
+        "market_impact": {
+            "up": "Expansion of on-chain activity and decentralized liquidity.",
+            "down": "Contraction of the decentralized economy and higher gas fees / network bottlenecks."
+        },
+        "context_2026": "ETH is the infrastructure layer for 'Programmable Money'. In 2026, its correlation with AI agent computing demand is increasing.",
+        "gms_relevance": "Medium. Measures the 'Utility Side' of the crypto liquidity cycle.",
+        "seo_keywords": [
+            "Ethereum",
+            "ETH",
+            "Smart Contracts",
+            "On-chain Liquidity"
+        ]
+    },
+    {
+        "id": "wti-oil",
+        "category": "Commodities",
+        "term": "WTI Crude Oil",
+        "definition": "A benchmark for global energy prices. Reflects global growth expectations and geopolitical risk premiums.",
+        "market_impact": {
+            "up": "Economic expansion demand, or supply shocks. High oil prices can be inflationary 'tax' on consumers.",
+            "down": "Demand destruction or oversupply. Usually associated with economic slowdowns."
+        },
+        "context_2026": "The tug-of-war continues between AI-driven energy demand and the transition to renewables. Efficient energy production is the 2026 growth governor.",
+        "gms_relevance": "Medium. A key variable in the 'Energy and Growth' component of the GMS model.",
+        "seo_keywords": [
+            "WTI Oil",
+            "Crude Oil",
+            "Energy Prices",
+            "Commodity Trading"
+        ]
+    },
+    {
+        "id": "macro-strategy",
+        "category": "Strategy",
+        "term": "Macro-Indicator Strategy (The 16)",
+        "definition": "OmniMetric's strategic selection of 16 multi-asset indicators designed to capture the interplay of Rates, Liquidity, Risk, and the Real Economy.",
+        "market_impact": {
+            "up": "A holistic view of the global financial system.",
+            "down": "Avoids 'Information Blind Spots' common in single-asset analysis."
+        },
+        "context_2026": "In a hypersensitive market, looking at one indicator is dangerous. We synchronize all 16 dots into a single GMS narrative.",
+        "gms_relevance": "Foundational. Explains why our dashboard is structured as a 4x4 'Control Tower'.",
+        "seo_keywords": [
+            "Macro Strategy",
+            "Investment Framework",
+            "Multi-Asset Analysis",
+            "GMS Framework"
+        ]
     }
 ]

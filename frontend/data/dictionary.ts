@@ -50,7 +50,7 @@ export const DICTIONARY = {
                 neutral: "Neutral (50)",
                 greed: "Accumulate (100)"
             },
-            factors: { VOL: "VOL", MOM: "MOM", CRED: "CRED", SENT: "SENT", RATES: "RATES", BREADTH: "BREADTH", LIQ: "LIQ" },
+            factors: { VOL: "VOL", MOM: "MOM", CRED: "CRED", SENT: "SENT", RATES: "RATES", BREADTH: "BREADTH", LIQ: "LIQ", INFL: "INFL", EXP: "EXP", MACRO: "MACRO" },
             factors_status: {
                 LOW: "LOW", HIGH: "HIGH",
                 ELEVATED: "ELEVATED", CRITICAL: "CRITICAL",
@@ -100,6 +100,22 @@ export const DICTIONARY = {
             HY_SPREAD: {
                 def: "High Yield Option-Adjusted Spread.",
                 benchmark: "Ref: <3.5% (Healthy Risk Appetite), >5.0% (Credit Stress)."
+            },
+            REAL_INTEREST_RATE: {
+                def: "10-Year Real Interest Rate (TIPS).",
+                benchmark: "Ref: Rising real rates pressure risk assets."
+            },
+            BREAKEVEN_INFLATION: {
+                def: "10-Year Breakeven Inflation Rate.",
+                benchmark: "Ref: Inflation expectations derived from TIPS/Treasury spread."
+            },
+            NET_LIQUIDITY: {
+                def: "US Net Liquidity Proxy (Fed Balance Sheet adjusted).",
+                benchmark: "Ref: Expansion supports asset prices, Contraction is a headwind."
+            },
+            CRYPTO_SENTIMENT: {
+                def: "Crypto Fear & Greed Index.",
+                benchmark: "Ref: <20 (Extreme Fear), >80 (Extreme Greed)."
             },
             COPPER_GOLD: {
                 def: "Copper/Gold Ratio. Proxy for Global Growth vs Safety.",
@@ -254,7 +270,7 @@ export const DICTIONARY = {
                 neutral: "Neutral (50)",
                 greed: "Greed (100)"
             },
-            factors: { VOL: "ボラティリティ", MOM: "モメンタム", CRED: "信用リスク", SENT: "センチメント", RATES: "金利", BREADTH: "騰落", LIQ: "流動性" },
+            factors: { VOL: "ボラティリティ", MOM: "モメンタム", CRED: "信用リスク", SENT: "センチメント", RATES: "金利", BREADTH: "騰落", LIQ: "流動性", INFL: "物価", EXP: "期待", MACRO: "マクロ" },
             factors_status: {
                 LOW: "低", HIGH: "高",
                 ELEVATED: "上昇", CRITICAL: "危機的",
@@ -299,6 +315,22 @@ export const DICTIONARY = {
             NFCI: {
                 def: "シカゴ連銀金融環境指数。",
                 benchmark: "基準: プラスは引き締め(弱気)、マイナスは緩和(強気)を示す。"
+            },
+            REAL_INTEREST_RATE: {
+                def: "米国10年実質金利 (TIPS)。",
+                benchmark: "基準: 上昇は株式などリスク資産のバリュエーションを圧迫。"
+            },
+            BREAKEVEN_INFLATION: {
+                def: "米国10年期待インフレ率 (ブレークイーブン・インフレ率)。",
+                benchmark: "基準: 期待インフレの低下はデフレ懸念、急昇は stagflation 懸念。"
+            },
+            NET_LIQUIDITY: {
+                def: "FRB純流動性プロキシ（米ドル建・10億ドル単位）。",
+                benchmark: "基準: 増加(拡大)はアセット価格の追い風、減少(収縮)は向かい風。"
+            },
+            CRYPTO_SENTIMENT: {
+                def: "仮想通貨 恐怖＆強欲指数 (Fear & Greed Index)。",
+                benchmark: "基準: 20以下は総悲観、80以上は過熱を意味する。"
             },
             HY_SPREAD: {
                 def: "ハイイールド債スプレッド (OAS)。企業の信用リスク。",
@@ -457,7 +489,7 @@ export const DICTIONARY = {
                 neutral: "Neutral (50)",
                 greed: "Greed (100)"
             },
-            factors: { VOL: "波动", MOM: "动量", CRED: "信贷", SENT: "情绪", RATES: "利率", BREADTH: "广度", LIQ: "流动性" },
+            factors: { VOL: "波动", MOM: "动量", CRED: "信贷", SENT: "情绪", RATES: "利率", BREADTH: "广度", LIQ: "流动性", INFL: "通胀", EXP: "预期", MACRO: "宏观" },
             factors_status: {
                 LOW: "低", HIGH: "高",
                 ELEVATED: "升高", CRITICAL: "关键",
@@ -554,9 +586,10 @@ export const DICTIONARY = {
             tickers: {
                 BTC: "比特币", ETH: "以太坊", SOL: "索拉纳",
                 GOLD: "黄金", OIL: "WTI原油", COPPER: "铜", NATGAS: "天然气",
-                USDJPY: "美元/日元", EURUSD: "欧元/美元", USDINR: "美元/卢比", USDSAR: "美元/里亚尔", DXY: "美元指数",
-                SPY: "标普500", QQQ: "纳斯达克100", IWM: "罗素2000", RSP: "标普500等权", HYG: "高收益债", NIFTY: "Nifty 50",
-                VIX: "VIX恐慌指数", TNX: "美国10年期国债", MOVE: "MOVE指数", CRYPTO_SENTIMENT: "加密恐慌/贪婪指数"
+                USDJPY: "美元/日元", EURUSD: "欧元/美元", USDINR: "美元/卢比", USDSAR: "美元/里亚尔", DXY: "DXY Dollar Index",
+                SPY: "S&P 500", QQQ: "Nasdaq 100", IWM: "罗素2000", RSP: "S&P 500等权", HYG: "高收益债", NIFTY: "Nifty 50",
+                VIX: "VIX恐慌指数", TNX: "美国10年期国债", MOVE: "MOVE指数", CRYPTO_SENTIMENT: "加密恐慌/贪婪指数",
+                REAL_INTEREST_RATE: "10年期实质利率", BREAKEVEN_INFLATION: "10年期预期通胀率"
             },
             search_placeholder: "搜索宏观知识库..."
         },
@@ -630,7 +663,7 @@ export const DICTIONARY = {
                 neutral: "Neutral (50)",
                 greed: "Greed (100)"
             },
-            factors: { VOL: "VOL", MOM: "MOM", CRED: "CRÉD", SENT: "SENT", RATES: "TIPOS", BREADTH: "AMPL", LIQ: "LIQ" },
+            factors: { VOL: "VOL", MOM: "MOM", CRED: "CRÉD", SENT: "SENT", RATES: "TIPOS", BREADTH: "AMPL", LIQ: "LIQ", INFL: "INFL", EXP: "EXP", MACRO: "MACRO" },
             factors_status: {
                 LOW: "BAJO", HIGH: "ALTO",
                 ELEVATED: "ELEV", CRITICAL: "CRÍT",
@@ -729,7 +762,8 @@ export const DICTIONARY = {
                 GOLD: "Oro", OIL: "Petróleo WTI", COPPER: "Cobre", NATGAS: "Gas Natural",
                 USDJPY: "USD/JPY", EURUSD: "EUR/USD", USDINR: "USD/INR", USDSAR: "USD/SAR", DXY: "Índice Dólar",
                 SPY: "S&P 500", QQQ: "Nasdaq 100", IWM: "Russell 2000", RSP: "S&P 500 Equal Weight", HYG: "High Yield Bond", NIFTY: "Nifty 50",
-                VIX: "Volatilidad VIX", TNX: "Bono 10 Años", MOVE: "Índice MOVE", CRYPTO_SENTIMENT: "Índice Miedo/Codicia"
+                VIX: "Volatilidad VIX", TNX: "Bono 10 Años", MOVE: "Índice MOVE", CRYPTO_SENTIMENT: "Índice Miedo/Codicia",
+                REAL_INTEREST_RATE: "Tasa Real 10A", BREAKEVEN_INFLATION: "Inflación Implícita 10A"
             },
             search_placeholder: "Buscar..."
         },
@@ -803,7 +837,7 @@ export const DICTIONARY = {
                 neutral: "Neutral (50)",
                 greed: "Greed (100)"
             },
-            factors: { VOL: "अस्थिरता", MOM: "वेग", CRED: "क्रेडिट", SENT: "भावना", RATES: "दरें", BREADTH: "विस्तार", LIQ: "तरलता" },
+            factors: { VOL: "अस्थिरता", MOM: "वेग", CRED: "क्रेडिट", SENT: "भावना", RATES: "दरें", BREADTH: "विस्तार", LIQ: "तरलता", INFL: "मुद्रास्फीति", EXP: "प्रत्याशा", MACRO: "मैक्रो" },
             factors_status: {
                 LOW: "कम", HIGH: "उच्च",
                 ELEVATED: "उन्नत", CRITICAL: "नाजुक",
@@ -902,7 +936,8 @@ export const DICTIONARY = {
                 GOLD: "सोना", OIL: "कच्चा तेल", COPPER: "तांबा", NATGAS: "प्राकृतिक गैस",
                 USDJPY: "USD/JPY", EURUSD: "EUR/USD", USDINR: "USD/INR", USDSAR: "USD/SAR", DXY: "डॉलर सूचकांक",
                 SPY: "S&P 500", QQQ: "नैस्डैक 100", IWM: "रसेल 2000", RSP: "S&P 500 Equal Weight", HYG: "High Yield Bond", NIFTY: "निफ्टी 50",
-                VIX: "VIX सूचकांक", TNX: "US 10Y Yield", MOVE: "MOVE Index", CRYPTO_SENTIMENT: "Crypto Fear & Greed"
+                VIX: "VIX सूचकांक", TNX: "US 10Y Yield", MOVE: "MOVE Index", CRYPTO_SENTIMENT: "Crypto Fear & Greed",
+                REAL_INTEREST_RATE: "10Y वास्तविक दर", BREAKEVEN_INFLATION: "10Y ब्रेकइवन मुद्रास्फीति"
             },
             search_placeholder: "खोज..."
         },
@@ -976,7 +1011,7 @@ export const DICTIONARY = {
                 neutral: "Neutral (50)",
                 greed: "Greed (100)"
             },
-            factors: { VOL: "VOL", MOM: "MOM", CRED: "KRED", SENT: "SENT", RATES: "BUNGA", BREADTH: "LUAS", LIQ: "LIKUID" },
+            factors: { VOL: "VOL", MOM: "MOM", CRED: "KRED", SENT: "SENT", RATES: "BUNGA", BREADTH: "LUAS", LIQ: "LIKUID", INFL: "INFL", EXP: "EXP", MACRO: "MAKRO" },
             factors_status: {
                 LOW: "RNDH", HIGH: "TGGI",
                 ELEVATED: "NAIK", CRITICAL: "KRITS",
@@ -1145,7 +1180,7 @@ export const DICTIONARY = {
                 neutral: "Neutral (50)",
                 greed: "Greed (100)"
             },
-            factors: { VOL: "تقلب", MOM: "زخم", CRED: "ائتمان", SENT: "شعور", RATES: "فائدة", BREADTH: "اتساع", LIQ: "سيولة" },
+            factors: { VOL: "تقلب", MOM: "زخم", CRED: "ائتمان", SENT: "شعور", RATES: "فائدة", BREADTH: "اتساع", LIQ: "سيولة", INFL: "تضخم", EXP: "توقع", MACRO: "كلي" },
             factors_status: {
                 LOW: "منخفض", HIGH: "مرتفع",
                 ELEVATED: "مرتفع", CRITICAL: "حرج",
