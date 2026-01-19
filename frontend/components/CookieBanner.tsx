@@ -18,9 +18,7 @@ export function CookieBanner() {
         }
     }, []);
 
-    const loadScripts = () => {
-        // Here we would load AdSense or Analytics if not already loaded via layout
-    };
+
 
     const handleAccept = () => {
         localStorage.setItem('cookie_consent', 'granted');
