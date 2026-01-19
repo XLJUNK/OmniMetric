@@ -5,9 +5,13 @@ import React, { useEffect, useState } from 'react';
 export function CookieBanner() {
     const [isVisible, setIsVisible] = useState(false);
 
+    const loadScripts = () => {
+        // Here we would load AdSense or Analytics if not already loaded via layout
+    };
+
     useEffect(() => {
         const consent = localStorage.getItem('cookie_consent');
-        if (consent !== 'granted' && consent !== 'denied') {
+        if (!consent) {
             setIsVisible(true);
         } else if (consent === 'granted') {
             loadScripts();

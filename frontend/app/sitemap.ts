@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const paths = ['', '/stocks', '/crypto', '/forex', '/commodities'];
     const legalPaths = ['/legal/privacy-policy', '/legal/terms', '/legal/disclaimer', '/contact', '/about', '/archive'];
 
-    let entries: MetadataRoute.Sitemap = [];
+    const entries: MetadataRoute.Sitemap = [];
 
     // 1. Core Pages (Query Param Style: ?lang=XX)
     paths.forEach(path => {

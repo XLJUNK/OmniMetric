@@ -55,7 +55,7 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false }: GMSHeaderPr
     };
 
     // AI Report Logic
-    let aiRaw = (data?.analysis?.reports as any)?.[lang]
+    const aiRaw = (data?.analysis?.reports as any)?.[lang]
         || (data?.analysis?.reports as any)?.[lang?.toUpperCase()]
         || data?.analysis?.content;
 

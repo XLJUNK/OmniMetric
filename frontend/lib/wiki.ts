@@ -68,7 +68,7 @@ export const getWikiData = (lang: LangType) => {
     const techEn = technicalEn;
     const techTarget = technicalMap[lang] || technicalEn;
 
-    let technical: WikiItem[] = [];
+    const technical: WikiItem[] = [];
     techEn.forEach((cat: any, catIdx: number) => {
         cat.indicators.forEach((ind: any, indIdx: number) => {
             // Get target language item using indices
@@ -95,7 +95,7 @@ export const getWikiData = (lang: LangType) => {
     const maxEn = maximsEn;
     const maxTarget = maximsMap[lang] || maximsEn;
 
-    let maxims: WikiItem[] = [];
+    const maxims: WikiItem[] = [];
     maxEn.forEach((cat: any, catIdx: number) => {
         cat.quotes.forEach((quote: any, quoteIdx: number) => {
             const targetCat = maxTarget[catIdx];

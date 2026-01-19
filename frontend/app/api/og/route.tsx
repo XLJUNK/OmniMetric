@@ -20,9 +20,9 @@ export async function GET() {
     // OGP images are often cached, so real-time < 1s isn't required.
 
     // Let's try to fetch the LIVE data if possible.
-    let score = "??";
-    let regime = "SYSTEM ONLINE";
-    let status = "SYNCING...";
+    const score = "??";
+    const regime = "SYSTEM ONLINE";
+    const status = "SYNCING...";
 
     try {
         // This fetch might fail in local dev if not running, but works in potential prod if pointing to self.
