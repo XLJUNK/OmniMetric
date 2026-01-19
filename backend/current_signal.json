@@ -1,11 +1,11 @@
 {
-    "last_updated": "2026-01-19T19:46:22Z",
-    "last_successful_update": "2026-01-19T19:46:22Z",
-    "gms_score": 29,
+    "last_updated": "2026-01-19T20:35:42Z",
+    "last_successful_update": "2026-01-19T20:35:42Z",
+    "gms_score": 27,
     "sector_scores": {
         "STOCKS": 40,
         "CRYPTO": 25,
-        "FOREX": 55,
+        "FOREX": 35,
         "COMMODITIES": 25
     },
     "market_data": {
@@ -540,10 +540,10 @@
             ]
         },
         "BTC": {
-            "price": 93061.83,
+            "price": 93130.45,
             "prev_price": 93634.43,
-            "daily_chg": -0.61,
-            "change_percent": -2.61,
+            "daily_chg": -0.54,
+            "change_percent": -2.53,
             "trend": "DOWN",
             "sparkline": [
                 87138.14,
@@ -567,14 +567,14 @@
                 95525.12,
                 95099.92,
                 93634.43,
-                93061.83
+                93130.45
             ]
         },
         "ETH": {
-            "price": 3216.6,
+            "price": 3216.16,
             "prev_price": 3281.16,
-            "daily_chg": -1.97,
-            "change_percent": -3.03,
+            "daily_chg": -1.98,
+            "change_percent": -3.04,
             "trend": "DOWN",
             "sparkline": [
                 2934.54,
@@ -598,14 +598,14 @@
                 3295.48,
                 3308.86,
                 3281.16,
-                3216.6
+                3216.16
             ]
         },
         "SOL": {
-            "price": 134.47,
+            "price": 134.94,
             "prev_price": 138.0,
-            "daily_chg": -2.56,
-            "change_percent": -5.53,
+            "daily_chg": -2.21,
+            "change_percent": -5.19,
             "trend": "DOWN",
             "sparkline": [
                 123.13,
@@ -629,15 +629,15 @@
                 144.86,
                 143.73,
                 138.0,
-                134.47
+                134.94
             ]
         },
         "DXY": {
-            "price": 99.03,
+            "price": 99.39,
             "prev_price": 99.39,
-            "daily_chg": -0.36,
-            "change_percent": -0.1,
-            "trend": "DOWN",
+            "daily_chg": 0.0,
+            "change_percent": 0.27,
+            "trend": "UP",
             "sparkline": [
                 98.37,
                 98.43,
@@ -660,14 +660,14 @@
                 99.13,
                 99.32,
                 99.39,
-                99.03
+                99.39
             ]
         },
         "USDJPY": {
-            "price": 158.09,
+            "price": 158.12,
             "prev_price": 158.6,
-            "daily_chg": -0.32,
-            "change_percent": 0.07,
+            "daily_chg": -0.3,
+            "change_percent": 0.08,
             "trend": "DOWN",
             "sparkline": [
                 154.78,
@@ -691,7 +691,7 @@
                 159.18,
                 158.4,
                 158.6,
-                158.09
+                158.12
             ]
         },
         "EURUSD": {
@@ -1070,22 +1070,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "Defensive stance at GMS 29. VIX spike and rising natural gas signal risk-off. US 10Y yield holds steady but elevated. Copper/Gold ratio unchanged, limiting inflation concerns. Powell's court appearance adds policy uncertainty; SPY could test 680 if caution prevails.",
+        "content": "GMS at 27 signals a defensive regime. Lower oil prices suggest moderating inflation, pressuring long-term yields. VIX spike reflects risk-off sentiment, driving US equities lower. Fed personnel lawsuit adds uncertainty. TNX breaching 4.2% points to further equity downside.",
         "reports": {
-            "JP": "GMS29でディフェンシブ。VIX上昇と原油高はリスクオフを示唆。米10年債利回りは現状維持だが、高水準が続く。銅/金レシオは変わらず、インフレ圧力は限定的。パウエル議長の動向に注目し、金融政策の不透明感が続く場合、SPYは680まで下落する可能性。",
-            "EN": "Defensive stance at GMS 29. VIX spike and rising natural gas signal risk-off. US 10Y yield holds steady but elevated. Copper/Gold ratio unchanged, limiting inflation concerns. Powell's court appearance adds policy uncertainty; SPY could test 680 if caution prevails.",
-            "CN": "GMS 29，防御态势。VIX 飙升和天然气价格上涨预示风险规避情绪。美国 10 年期国债收益率保持稳定但仍处于高位。铜金比率不变，通胀担忧有限。鲍威尔出庭增加政策不确定性；若谨慎情绪占主导，标普 500 指数可能跌至 680 点。",
-            "ES": "Postura defensiva con GMS 29. El aumento del VIX y el alza del gas natural señalan aversión al riesgo. El rendimiento del bono estadounidense a 10 años se mantiene estable pero elevado. La relación cobre/oro no cambia, limitando las preocupaciones sobre la inflación. La comparecencia de Powell añade incertidumbre política; el SPY podría probar los 680 si prevalece la cautela.",
-            "HI": "जीएमएस 29 पर रक्षात्मक रुख। वीआईएक्स में वृद्धि और प्राकृतिक गैस में वृद्धि जोखिम से बचने का संकेत देते हैं। अमेरिकी 10वाई उपज स्थिर है लेकिन ऊंचा है। कॉपर/गोल्ड अनुपात अपरिवर्तित, मुद्रास्फीति की चिंताओं को सीमित करता है। पॉवेल की अदालत में पेशी नीति अनिश्चितता को बढ़ाती है; यदि सावधानी बरती जाती है तो एसपीवाई 680 का परीक्षण कर सकता है।",
-            "ID": "Posisi defensif pada GMS 29. Lonjakan VIX dan kenaikan gas alam menandakan penghindaran risiko. Imbal hasil US 10Y stabil tetapi tinggi. Rasio Tembaga/Emas tidak berubah, membatasi kekhawatiran inflasi. Kemunculan Powell di pengadilan menambah ketidakpastian kebijakan; SPY dapat menguji 680 jika kehati-hatian berlaku.",
-            "AR": "موقف دفاعي عند GMS 29. ارتفاع مؤشر VIX وارتفاع الغاز الطبيعي يشيران إلى النفور من المخاطرة. استقرار عائدات سندات الخزانة الأمريكية لأجل 10 سنوات ولكنه لا يزال مرتفعا. نسبة النحاس / الذهب دون تغيير، مما يحد من المخاوف بشأن التضخم. يضيف ظهور باول في المحكمة حالة من عدم اليقين بشأن السياسة؛ قد يختبر SPY 680 إذا ساد الحذر."
+            "JP": "GMS27はディフェンシブ領域。原油安はインフレ鈍化を示唆、長期金利低下圧力に。VIX上昇はリスクオフ姿勢を反映、米株下落を招く。FRB高官人事訴訟も不透明感を増幅。TNXが4.2%突破で、株価は一段安へ。",
+            "EN": "GMS at 27 signals a defensive regime. Lower oil prices suggest moderating inflation, pressuring long-term yields. VIX spike reflects risk-off sentiment, driving US equities lower. Fed personnel lawsuit adds uncertainty. TNX breaching 4.2% points to further equity downside.",
+            "CN": "GMS为27，预示防御态势。油价下跌暗示通胀放缓，对长期收益率构成下行压力。VIX飙升反映避险情绪，导致美股下跌。美联储人事诉讼增加不确定性。TNX突破4.2%，预示股市将进一步下行。",
+            "ES": "GMS en 27 indica un régimen defensivo. Los precios más bajos del petróleo sugieren una moderación de la inflación, presionando los rendimientos a largo plazo. El aumento del VIX refleja aversión al riesgo, impulsando la caída de las acciones estadounidenses. La demanda judicial del personal de la Fed agrega incertidumbre. TNX superando el 4,2% apunta a una mayor caída de las acciones.",
+            "HI": "जीएमएस 27 पर रक्षात्मक शासन का संकेत देता है। तेल की कम कीमतें मुद्रास्फीति को कम करने का सुझाव देती हैं, जिससे दीर्घावधि की उपज पर दबाव पड़ता है। वीआईएक्स स्पाइक जोखिम से बचने की भावना को दर्शाता है, जिससे अमेरिकी इक्विटी में गिरावट आती है। फेड कर्मियों का मुकदमा अनिश्चितता जोड़ता है। टीएनएक्स का 4.2% से अधिक टूटना आगे इक्विटी गिरावट की ओर इशारा करता है।",
+            "ID": "GMS di 27 menandakan rezim defensif. Harga minyak yang lebih rendah menunjukkan inflasi yang moderat, menekan imbal hasil jangka panjang. Lonjakan VIX mencerminkan sentimen risk-off, mendorong ekuitas AS lebih rendah. Gugatan personel Fed menambah ketidakpastian. TNX menembus 4.2% menunjukkan potensi penurunan ekuitas lebih lanjut.",
+            "AR": "مؤشر GMS عند 27 يشير إلى وضع دفاعي. انخفاض أسعار النفط يشير إلى تراجع التضخم، مما يضغط على عوائد السندات طويلة الأجل. ارتفاع مؤشر VIX يعكس عزوفًا عن المخاطرة، مما يدفع الأسهم الأمريكية للانخفاض. دعوى قضائية بشأن موظفي الاحتياطي الفيدرالي تزيد من حالة عدم اليقين. تجاوز مؤشر TNX مستوى 4.2٪ يشير إلى مزيد من الهبوط في سوق الأسهم."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-18T08:38:31Z",
-            "score": 32
-        },
         {
             "date": "2026-01-18T09:32:00Z",
             "score": 32
@@ -1321,6 +1317,10 @@
         {
             "date": "2026-01-19T19:46:22Z",
             "score": 29
+        },
+        {
+            "date": "2026-01-19T20:35:42Z",
+            "score": 27
         }
     ],
     "system_status": "OPERATIONAL"
