@@ -1,11 +1,11 @@
 {
-    "last_updated": "2026-01-19T02:05:33Z",
-    "last_successful_update": "2026-01-19T02:05:33Z",
-    "gms_score": 30,
+    "last_updated": "2026-01-19T02:33:18Z",
+    "last_successful_update": "2026-01-19T02:33:18Z",
+    "gms_score": 28,
     "sector_scores": {
         "STOCKS": 45,
         "CRYPTO": 25,
-        "FOREX": 45,
+        "FOREX": 25,
         "COMMODITIES": 25
     },
     "market_data": {
@@ -540,10 +540,10 @@
             ]
         },
         "BTC": {
-            "price": 92457.21,
+            "price": 92467.95,
             "prev_price": 95099.92,
-            "daily_chg": -2.78,
-            "change_percent": -4.61,
+            "daily_chg": -2.77,
+            "change_percent": -4.6,
             "trend": "DOWN",
             "sparkline": [
                 87835.84,
@@ -567,14 +567,14 @@
                 95551.19,
                 95525.12,
                 95099.92,
-                92457.21
+                92467.95
             ]
         },
         "ETH": {
-            "price": 3201.34,
+            "price": 3209.22,
             "prev_price": 3308.86,
-            "daily_chg": -3.25,
-            "change_percent": -4.57,
+            "daily_chg": -3.01,
+            "change_percent": -4.34,
             "trend": "DOWN",
             "sparkline": [
                 2948.57,
@@ -598,14 +598,14 @@
                 3317.1,
                 3295.48,
                 3308.86,
-                3201.34
+                3209.22
             ]
         },
         "SOL": {
-            "price": 133.63,
+            "price": 133.7,
             "prev_price": 143.73,
-            "daily_chg": -7.02,
-            "change_percent": -8.94,
+            "daily_chg": -6.97,
+            "change_percent": -8.89,
             "trend": "DOWN",
             "sparkline": [
                 125.2,
@@ -629,14 +629,14 @@
                 142.33,
                 144.86,
                 143.73,
-                133.63
+                133.7
             ]
         },
         "DXY": {
-            "price": 99.13,
+            "price": 99.24,
             "prev_price": 99.39,
-            "daily_chg": -0.26,
-            "change_percent": -0.0,
+            "daily_chg": -0.15,
+            "change_percent": 0.11,
             "trend": "DOWN",
             "sparkline": [
                 98.37,
@@ -660,14 +660,14 @@
                 99.13,
                 99.32,
                 99.39,
-                99.13
+                99.24
             ]
         },
         "USDJPY": {
-            "price": 157.74,
+            "price": 157.83,
             "prev_price": 158.6,
-            "daily_chg": -0.54,
-            "change_percent": -0.16,
+            "daily_chg": -0.48,
+            "change_percent": -0.1,
             "trend": "DOWN",
             "sparkline": [
                 154.78,
@@ -691,14 +691,14 @@
                 159.18,
                 158.4,
                 158.6,
-                157.74
+                157.83
             ]
         },
         "EURUSD": {
             "price": 1.16,
             "prev_price": 1.16,
-            "daily_chg": 0.14,
-            "change_percent": -0.36,
+            "daily_chg": 0.13,
+            "change_percent": -0.37,
             "trend": "UP",
             "sparkline": [
                 1.17,
@@ -726,10 +726,10 @@
             ]
         },
         "USDINR": {
-            "price": 90.66,
+            "price": 90.68,
             "prev_price": 90.36,
-            "daily_chg": 0.33,
-            "change_percent": 0.58,
+            "daily_chg": 0.36,
+            "change_percent": 0.61,
             "trend": "UP",
             "sparkline": [
                 90.95,
@@ -753,7 +753,7 @@
                 90.27,
                 90.18,
                 90.36,
-                90.66
+                90.68
             ]
         },
         "USDSAR": {
@@ -1070,22 +1070,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS at 30 signals defensive market conditions. Stagnant US 10Y yield at 4.17% sustains higher rates. Copper/Gold ratio at 1.27 confirms risk-off sentiment, exacerbated by Trump's tariff threats. VIX at 15.86 suggests SPY breakdown below 680 could accelerate to 670. High volatility ahead.",
+        "content": "GMS at 28 indicates defensive posture. HY spread compression suggests limited risk-on, but BTC/ETH declines raise caution. Trump's tariff threats add geopolitical risk, increasing volatility (VIX). Continued TNX ascent will pressure SPY, testing support levels. Prepare for downside scenarios.",
         "reports": {
-            "JP": "GMS30で市場はディフェンシブ。米10年債利回りが4.17%で膠着し、高金利が継続。銅/金比率1.27はリスクオフを示唆。トランプ関税報道も重石。VIX15.86から、SPYが680割れで調整加速か。下値抵抗線は670近辺。高ボラティリティに警戒。",
-            "EN": "GMS at 30 signals defensive market conditions. Stagnant US 10Y yield at 4.17% sustains higher rates. Copper/Gold ratio at 1.27 confirms risk-off sentiment, exacerbated by Trump's tariff threats. VIX at 15.86 suggests SPY breakdown below 680 could accelerate to 670. High volatility ahead.",
-            "CN": "当前GMS为30，市场处于防御状态。美国10年期国债收益率稳定在4.17%维持高利率。铜金比率为1.27，表明避险情绪，特朗普的关税威胁加剧了这一情绪。VIX为15.86，暗示标普500指数跌破680可能加速跌向670。预计波动性将加剧。",
-            "ES": "El GMS en 30 indica condiciones de mercado defensivas. El rendimiento estancado del bono estadounidense a 10 años en 4.17% mantiene tasas altas. La relación cobre/oro en 1.27 confirma la aversión al riesgo, exacerbada por las amenazas arancelarias de Trump. VIX en 15.86 sugiere que SPY rompa por debajo de 680 y se acelere a 670. Alta volatilidad por delante.",
-            "HI": "जीएमएस 30 पर रक्षात्मक बाजार की स्थितियों का संकेत देता है। 4.17% पर स्थिर अमेरिकी 10वाई उपज उच्च दरों को बनाए रखती है। 1.27 पर कॉपर/गोल्ड अनुपात जोखिम से बचने की भावना की पुष्टि करता है, जो ट्रम्प के टैरिफ खतरों से बढ़ गया है। 15.86 पर वीआईएक्स का सुझाव है कि एसएंडपी 680 से नीचे टूट सकता है और 670 तक तेज हो सकता है। आगे उच्च अस्थिरता।",
-            "ID": "GMS di 30 menandakan kondisi pasar defensif. Yield US 10Y yang stagnan di 4.17% mempertahankan suku bunga tinggi. Rasio Tembaga/Emas di 1.27 menegaskan sentimen risk-off, diperburuk oleh ancaman tarif Trump. VIX di 15.86 menunjukkan penembusan SPY di bawah 680 dapat berakselerasi ke 670. Volatilitas tinggi di depan.",
-            "AR": "يشير مؤشر GMS عند 30 إلى ظروف سوق دفاعية. استقرار عائدات سندات الخزانة الأمريكية لأجل 10 سنوات عند 4.17% يحافظ على ارتفاع معدلات الفائدة. نسبة النحاس/الذهب عند 1.27 تؤكد النفور من المخاطرة، والذي تفاقم بسبب تهديدات ترامب بالتعريفات الجمركية. مؤشر VIX عند 15.86 يشير إلى أن اختراق مؤشر SPY تحت مستوى 680 قد يتسارع إلى 670. تقلبات عالية في المستقبل."
+            "JP": "GMSスコア28はディフェンシブ領域を示唆。ハイイールド債スプレッド縮小は限定的リスクオンを示唆するも、BTCやETHの下落が警戒感を誘発。地政学的リスクの高まり（トランプ氏の関税発言）も重石となり、VIX上昇が示唆するボラティリティ増大に注意。TNX上昇が継続すれば、SPYへの更なる下押し圧力となる可能性。",
+            "EN": "GMS at 28 indicates defensive posture. HY spread compression suggests limited risk-on, but BTC/ETH declines raise caution. Trump's tariff threats add geopolitical risk, increasing volatility (VIX). Continued TNX ascent will pressure SPY, testing support levels. Prepare for downside scenarios.",
+            "CN": "GMS为28，表明防御姿态。高收益债券息差收窄暗示有限的风险偏好，但BTC/ETH下跌引发谨慎。特朗普的关税威胁增加地缘政治风险，VIX暗示波动性加大。TNX持续攀升将对SPY构成压力，测试支撑位。为下行情景做好准备。",
+            "ES": "Un GMS de 28 indica una postura defensiva. La compresión del diferencial HY sugiere un limitado apetito por el riesgo, pero las caídas de BTC/ETH generan cautela. Las amenazas arancelarias de Trump añaden riesgo geopolítico, aumentando la volatilidad (VIX). El ascenso continuo de TNX presionará al SPY.",
+            "HI": "जीएमएस 28 पर रक्षात्मक रुख दर्शाता है। एचवाई स्प्रेड संकुचन सीमित जोखिम-ऑन का सुझाव देता है, लेकिन बीटीसी/ईटीएच में गिरावट सावधानी बढ़ाती है। ट्रम्प के टैरिफ खतरे भू-राजनीतिक जोखिम को बढ़ाते हैं, अस्थिरता (VIX) को बढ़ाते हैं। टीएनएक्स का निरंतर आरोहण एसपीवाई पर दबाव डालेगा।",
+            "ID": "GMS di 28 mengindikasikan posisi defensif. Kompresi spread HY menunjukkan risk-on terbatas, tetapi penurunan BTC/ETH meningkatkan kewaspadaan. Ancaman tarif Trump menambah risiko geopolitik, meningkatkan volatilitas (VIX). Kenaikan TNX berkelanjutan akan menekan SPY.",
+            "AR": "مؤشر GMS عند 28 يشير إلى وضع دفاعي. انضغاط فروق عائدات السندات عالية المخاطر يشير إلى إقبال محدود على المخاطرة، لكن انخفاضات BTC/ETH تثير الحذر. تهديدات ترامب بالتعريفات الجمركية تزيد من المخاطر الجيوسياسية، مما يزيد التقلبات (VIX). استمرار صعود TNX سيضغط على SPY."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-17T11:26:15Z",
-            "score": 32
-        },
         {
             "date": "2026-01-17T11:45:02Z",
             "score": 32
@@ -1321,6 +1317,10 @@
         {
             "date": "2026-01-19T02:05:33Z",
             "score": 30
+        },
+        {
+            "date": "2026-01-19T02:33:18Z",
+            "score": 28
         }
     ],
     "system_status": "OPERATIONAL"
