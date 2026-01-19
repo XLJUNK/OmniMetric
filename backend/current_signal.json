@@ -1,11 +1,11 @@
 {
-    "last_updated": "2026-01-19T04:42:28Z",
-    "last_successful_update": "2026-01-19T04:42:28Z",
-    "gms_score": 27,
+    "last_updated": "2026-01-19T05:01:29Z",
+    "last_successful_update": "2026-01-19T05:01:29Z",
+    "gms_score": 29,
     "sector_scores": {
         "STOCKS": 40,
         "CRYPTO": 25,
-        "FOREX": 25,
+        "FOREX": 45,
         "COMMODITIES": 25
     },
     "market_data": {
@@ -509,10 +509,10 @@
             ]
         },
         "NIFTY": {
-            "price": 25533.75,
+            "price": 25523.2,
             "prev_price": 25694.35,
-            "daily_chg": -0.63,
-            "change_percent": -0.99,
+            "daily_chg": -0.67,
+            "change_percent": -1.04,
             "trend": "DOWN",
             "sparkline": [
                 25818.55,
@@ -536,14 +536,14 @@
                 25732.3,
                 25665.6,
                 25694.35,
-                25533.75
+                25523.2
             ]
         },
         "BTC": {
-            "price": 92603.47,
+            "price": 92674.09,
             "prev_price": 95099.92,
-            "daily_chg": -2.63,
-            "change_percent": -4.46,
+            "daily_chg": -2.55,
+            "change_percent": -4.39,
             "trend": "DOWN",
             "sparkline": [
                 87835.84,
@@ -567,14 +567,14 @@
                 95551.19,
                 95525.12,
                 95099.92,
-                92603.47
+                92674.09
             ]
         },
         "ETH": {
-            "price": 3210.05,
+            "price": 3212.19,
             "prev_price": 3308.86,
-            "daily_chg": -2.99,
-            "change_percent": -4.31,
+            "daily_chg": -2.92,
+            "change_percent": -4.25,
             "trend": "DOWN",
             "sparkline": [
                 2948.57,
@@ -598,14 +598,14 @@
                 3317.1,
                 3295.48,
                 3308.86,
-                3210.05
+                3212.19
             ]
         },
         "SOL": {
-            "price": 133.73,
+            "price": 133.77,
             "prev_price": 143.73,
-            "daily_chg": -6.96,
-            "change_percent": -8.88,
+            "daily_chg": -6.93,
+            "change_percent": -8.85,
             "trend": "DOWN",
             "sparkline": [
                 125.2,
@@ -629,14 +629,14 @@
                 142.33,
                 144.86,
                 143.73,
-                133.73
+                133.77
             ]
         },
         "DXY": {
-            "price": 99.15,
+            "price": 99.13,
             "prev_price": 99.39,
-            "daily_chg": -0.24,
-            "change_percent": 0.02,
+            "daily_chg": -0.26,
+            "change_percent": 0.0,
             "trend": "DOWN",
             "sparkline": [
                 98.37,
@@ -660,14 +660,14 @@
                 99.13,
                 99.32,
                 99.39,
-                99.15
+                99.13
             ]
         },
         "USDJPY": {
-            "price": 157.86,
+            "price": 157.79,
             "prev_price": 158.6,
-            "daily_chg": -0.46,
-            "change_percent": -0.08,
+            "daily_chg": -0.51,
+            "change_percent": -0.12,
             "trend": "DOWN",
             "sparkline": [
                 154.78,
@@ -691,14 +691,14 @@
                 159.18,
                 158.4,
                 158.6,
-                157.86
+                157.79
             ]
         },
         "EURUSD": {
             "price": 1.16,
             "prev_price": 1.16,
-            "daily_chg": 0.2,
-            "change_percent": -0.3,
+            "daily_chg": 0.24,
+            "change_percent": -0.25,
             "trend": "UP",
             "sparkline": [
                 1.17,
@@ -726,10 +726,10 @@
             ]
         },
         "USDINR": {
-            "price": 90.77,
+            "price": 90.84,
             "prev_price": 90.36,
-            "daily_chg": 0.46,
-            "change_percent": 0.71,
+            "daily_chg": 0.53,
+            "change_percent": 0.79,
             "trend": "UP",
             "sparkline": [
                 90.95,
@@ -753,7 +753,7 @@
                 90.27,
                 90.18,
                 90.36,
-                90.77
+                90.84
             ]
         },
         "USDSAR": {
@@ -788,10 +788,10 @@
             ]
         },
         "GOLD": {
-            "price": 4595.4,
+            "price": 4670.7,
             "prev_price": 4588.4,
-            "daily_chg": 0.15,
-            "change_percent": 0.14,
+            "daily_chg": 1.79,
+            "change_percent": 1.78,
             "trend": "UP",
             "sparkline": [
                 4347.5,
@@ -815,7 +815,7 @@
                 4626.3,
                 4616.3,
                 4588.4,
-                4595.4
+                4670.7
             ]
         },
         "OIL": {
@@ -850,10 +850,10 @@
             ]
         },
         "COPPER": {
-            "price": 5.83,
+            "price": 5.9,
             "prev_price": 5.79,
-            "daily_chg": 0.73,
-            "change_percent": -2.33,
+            "daily_chg": 1.96,
+            "change_percent": -1.14,
             "trend": "UP",
             "sparkline": [
                 5.36,
@@ -877,7 +877,7 @@
                 6.01,
                 5.95,
                 5.79,
-                5.83
+                5.9
             ]
         },
         "NATGAS": {
@@ -1005,40 +1005,40 @@
             ]
         },
         "COPPER_GOLD": {
-            "price": 1.27,
+            "price": 1.26,
             "change_percent": 0,
             "trend": "RISK-OFF",
             "sparkline": [
-                1.27,
-                1.27,
-                1.27,
-                1.27,
-                1.27,
-                1.27,
-                1.27,
-                1.27,
-                1.27,
-                1.27,
-                1.27,
-                1.27,
-                1.27,
-                1.27,
-                1.27,
-                1.27,
-                1.27,
-                1.27,
-                1.27,
-                1.27,
-                1.27,
-                1.27,
-                1.27,
-                1.27,
-                1.27,
-                1.27,
-                1.27,
-                1.27,
-                1.27,
-                1.27
+                1.26,
+                1.26,
+                1.26,
+                1.26,
+                1.26,
+                1.26,
+                1.26,
+                1.26,
+                1.26,
+                1.26,
+                1.26,
+                1.26,
+                1.26,
+                1.26,
+                1.26,
+                1.26,
+                1.26,
+                1.26,
+                1.26,
+                1.26,
+                1.26,
+                1.26,
+                1.26,
+                1.26,
+                1.26,
+                1.26,
+                1.26,
+                1.26,
+                1.26,
+                1.26
             ]
         }
     },
@@ -1070,22 +1070,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS at 27 indicates defensive positioning. Stable but elevated US 10Y yields are a headwind. Limited HY spread compression suggests continued risk aversion. Trump's tariff threats worsen sentiment. VIX stability masks geopolitical risk. A GMS breach above 30 is a key trigger for risk-on.",
+        "content": "GMS at 29 signals defensive posture. Stable US 10Y yield is countered by falling oil prices and Trump's tariff threats. Tighter HY spreads offer some support, but stagnant Copper/Gold ratio weighs. Geopolitical risks drive flight to safety; SPY target $685.",
         "reports": {
-            "JP": "GMS27はディフェンシブ領域。米10年債利回りは安定も、高水準維持が重石。HYスプレッド縮小は限定的で、リスク回避姿勢が継続。トランプ発言も市場心理悪化要因。VIXは低位安定も、地政学リスク警戒で一段高も。目先はGMS30超えがリスクオン転換の試金石。",
-            "EN": "GMS at 27 indicates defensive positioning. Stable but elevated US 10Y yields are a headwind. Limited HY spread compression suggests continued risk aversion. Trump's tariff threats worsen sentiment. VIX stability masks geopolitical risk. A GMS breach above 30 is a key trigger for risk-on.",
-            "CN": "GMS为27，表明防御态势。美国10年期国债收益率稳定但高企构成阻力。高收益债券息差收窄有限，表明风险厌恶情绪持续。特朗普的关税威胁加剧市场情绪恶化。VIX稳定掩盖地缘政治风险。GMS突破30是风险偏好转变的关键触发点。",
-            "ES": "El GMS en 27 indica posicionamiento defensivo. Los rendimientos estables pero elevados del Tesoro estadounidense a 10 años son un obstáculo. La limitada compresión del diferencial HY sugiere una continua aversión al riesgo. Las amenazas arancelarias de Trump empeoran el sentimiento. La estabilidad del VIX enmascara el riesgo geopolítico. Un GMS por encima de 30 es un factor clave para el riesgo.",
-            "HI": "जीएमएस 27 पर रक्षात्मक स्थिति का संकेत देता है। स्थिर लेकिन उच्च अमेरिकी 10-वर्षीय उपज एक बाधा है। सीमित एचवाई स्प्रेड संकुचन निरंतर जोखिम से बचने का सुझाव देता है। ट्रम्प के टैरिफ खतरे भावना को खराब करते हैं। वीआईएक्स स्थिरता भू-राजनीतिक जोखिम को छुपाती है। जीएमएस 30 से ऊपर का उल्लंघन जोखिम के लिए एक महत्वपूर्ण ट्रिगर है।",
-            "ID": "GMS di 27 mengindikasikan posisi defensif. Imbal hasil US 10Y yang stabil namun tinggi menjadi penghalang. Kompresi spread HY yang terbatas menunjukkan penghindaran risiko yang berkelanjutan. Ancaman tarif Trump memperburuk sentimen. Stabilitas VIX menutupi risiko geopolitik. GMS di atas 30 adalah pemicu utama untuk risk-on.",
-            "AR": "يشير GMS عند 27 إلى تمركز دفاعي. تمثل عوائد سندات الخزانة الأمريكية لأجل 10 سنوات المستقرة والمرتفعة رياحًا معاكسة. يشير انضغاط فروق أسعار السندات عالية المخاطر المحدود إلى استمرار النفور من المخاطرة. تهديدات ترامب بالتعريفات الجمركية تزيد من تفاقم المعنويات. يخفي استقرار مؤشر VIX المخاطر الجيوسياسية. يمثل تجاوز مؤشر GMS مستوى 30 محفزًا رئيسيًا للإقبال على المخاطرة."
+            "JP": "GMS29はディフェンシブ領域。米長期金利は安定も、原油安とトランプ関税発言が重石。高利回り債スプレッド縮小は支援材料だが、銅/金レシオは停滞。地政学リスク顕在化で安全資産へ資金シフト加速、SPYは685ドルが下値目処。",
+            "EN": "GMS at 29 signals defensive posture. Stable US 10Y yield is countered by falling oil prices and Trump's tariff threats. Tighter HY spreads offer some support, but stagnant Copper/Gold ratio weighs. Geopolitical risks drive flight to safety; SPY target $685.",
+            "CN": "GMS值为29，市场处于防御状态。美国10年期国债收益率稳定，但油价下跌和特朗普关税言论构成下行压力。高收益债券息差收窄提供部分支撑，但铜金比停滞不前。地缘政治风险驱动避险情绪，标普500目标价685美元。",
+            "ES": "GMS en 29 señala postura defensiva. El rendimiento estable del Tesoro estadounidense a 10 años se ve contrarrestado por la caída de los precios del petróleo y las amenazas arancelarias de Trump. Los diferenciales HY más ajustados ofrecen apoyo, pero la relación Cobre/Oro estancada pesa. Riesgos geopolíticos impulsan la huida hacia la seguridad; objetivo del SPY $685.",
+            "HI": "जीएमएस 29 पर रक्षात्मक मुद्रा का संकेत देता है। स्थिर अमेरिकी 10वाई उपज को तेल की कीमतों में गिरावट और ट्रम्प के टैरिफ खतरों से विरोध किया जाता है। सख्त एचवाई स्प्रेड कुछ समर्थन प्रदान करते हैं, लेकिन स्थिर कॉपर/गोल्ड अनुपात का वजन होता है। भू-राजनीतिक जोखिम सुरक्षा के लिए उड़ान चलाते हैं; एसपीवाई लक्ष्य $685।",
+            "ID": "GMS di 29 menandakan sikap defensif. Imbal hasil US 10Y yang stabil diimbangi oleh penurunan harga minyak dan ancaman tarif Trump. Spread HY yang lebih ketat menawarkan beberapa dukungan, tetapi rasio Tembaga/Emas yang stagnan membebani. Risiko geopolitik mendorong pelarian ke tempat aman; target SPY $685.",
+            "AR": "مؤشر GMS عند 29 يشير إلى وضع دفاعي. استقرار عائدات سندات الخزانة الأمريكية لأجل 10 سنوات يقابله انخفاض أسعار النفط وتهديدات ترامب بالتعريفات الجمركية. تقلص فروق عائدات السندات عالية المخاطر يقدم بعض الدعم، لكن جمود نسبة النحاس/الذهب يلقي بثقله. المخاطر الجيوسياسية تدفع إلى الملاذ الآمن؛ هدف SPY هو 685 دولارًا."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-17T14:30:53Z",
-            "score": 34
-        },
         {
             "date": "2026-01-17T14:48:09Z",
             "score": 34
@@ -1321,6 +1317,10 @@
         {
             "date": "2026-01-19T04:42:28Z",
             "score": 27
+        },
+        {
+            "date": "2026-01-19T05:01:29Z",
+            "score": 29
         }
     ],
     "system_status": "OPERATIONAL"
