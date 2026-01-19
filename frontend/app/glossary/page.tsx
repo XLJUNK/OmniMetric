@@ -4,6 +4,8 @@ import { GlossaryTerm } from '@/types/glossary';
 import { DynamicStructuredData } from '@/components/DynamicStructuredData';
 import { GlossaryClient } from '@/components/GlossaryClient';
 import { Metadata } from 'next';
+import { WikiSearch } from '@/components/WikiSearch';
+import { getWikiData } from '@/lib/wiki';
 
 // Import all language data
 import glossaryDataJa from '@/data/glossary-ja.json';
@@ -111,6 +113,8 @@ export default async function GlossaryPage({ searchParams }: { searchParams: Pro
                 data={currentGlossaryData}
                 pageTitle={getPageTitle(lang)}
                 pageDesc={getPageDesc(lang)}
+                searchItems={getWikiData(lang)}
+                searchPlaceholder={DICTIONARY[lang].labels.search_placeholder}
             />
         </div>
     );

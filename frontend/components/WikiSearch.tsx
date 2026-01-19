@@ -54,25 +54,31 @@ export const WikiSearch = ({ items, lang, placeholder }: WikiSearchProps) => {
     };
 
     return (
-        <div ref={wrapperRef} className="relative w-full max-w-2xl mx-auto mb-12">
-            <div className={`relative flex items-center bg-[#1e293b]/50 border border-slate-700 rounded-lg focus-within:border-sky-500 focus-within:ring-1 focus-within:ring-sky-500 transition-all ${isRTL ? 'flex-row-reverse' : ''}`}>
-                <Search className={`w-5 h-5 text-slate-400 absolute ${isRTL ? 'right-4' : 'left-4'}`} />
+        <div ref={wrapperRef} className="relative w-full flex justify-end mb-8 z-[40]">
+            <div className={`relative flex items-center bg-[#050505] border border-slate-800 rounded-lg focus-within:border-sky-500 focus-within:ring-1 focus-within:ring-sky-500 focus-within:shadow-[0_0_20px_rgba(14,165,233,0.15)] transition-all ${isRTL ? 'flex-row-reverse' : ''}`}>
                 <input
                     type="text"
                     value={query}
                     onChange={handleSearch}
-                    placeholder={placeholder || "Search Terms, Indicators, Maxims..."}
-                    className={`w-full bg-transparent border-none text-white placeholder-slate-500 focus:ring-0 py-3 ${isRTL ? 'pr-12 pl-10 text-right' : 'pl-12 pr-10 text-left'}`}
+                    placeholder={placeholder || "Search..."}
+                    className={`appearance-none relative z-10 w-72 h-12 border-none text-base !text-white caret-white placeholder-slate-500 focus:ring-0 px-4 ${isRTL ? 'text-right' : 'text-left'}`}
+                    style={{ color: '#ffffff', backgroundColor: 'transparent' }}
+                    autoComplete="off"
                     onFocus={() => setIsOpen(true)}
                 />
-                {query && (
-                    <button
-                        onClick={clearSearch}
-                        className={`absolute ${isRTL ? 'left-3' : 'right-3'} text-slate-400 hover:text-white`}
-                    >
-                        <X className="w-4 h-4" />
-                    </button>
-                )}
+
+                {/* Icons Container (Flex Sibling - No Overlap) */}
+                <div className={`flex items-center gap-2 ${isRTL ? 'pl-4' : 'pr-4'}`}>
+                    {query && (
+                        <button
+                            onClick={clearSearch}
+                            className="flex items-center justify-center w-8 h-8 rounded-full hover:bg-slate-800 text-slate-500 hover:text-white transition-colors"
+                        >
+                            <X className="w-5 h-5" />
+                        </button>
+                    )}
+                    <Search className="w-6 h-6 text-sky-500 select-none" />
+                </div>
             </div>
 
             {/* Results Dropdown */}

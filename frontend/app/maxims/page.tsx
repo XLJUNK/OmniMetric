@@ -4,6 +4,8 @@ import { Quote } from 'lucide-react';
 import { AdSenseSlot } from '@/components/AdSenseSlot';
 import { DynamicStructuredData } from '@/components/DynamicStructuredData';
 import { Metadata } from 'next';
+import { WikiSearch } from '@/components/WikiSearch';
+import { getWikiData } from '@/lib/wiki';
 
 // Import all language data
 import maximsDataEn from '@/data/maxims-en.json';
@@ -120,7 +122,7 @@ export default async function MaximsPage({ searchParams }: { searchParams: Promi
 
             <div className="max-w-[1200px] mx-auto p-4 md:p-12 lg:p-16">
 
-                <header className={`mb-16 border-b border-[#1E293B] pb-8 text-center ${isRTL ? 'md:text-right' : 'md:text-left'}`}>
+                <header className={`mb-8 border-b border-[#1E293B] pb-8 text-center ${isRTL ? 'md:text-right' : 'md:text-left'}`}>
                     <h1 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-4 uppercase">
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-emerald-400">{getPageTitle(lang)}</span>
                     </h1>
@@ -129,6 +131,15 @@ export default async function MaximsPage({ searchParams }: { searchParams: Promi
                     </p>
                 </header>
 
+                {/* Search Bar Integration */}
+                <div className="mb-12">
+                    <WikiSearch
+                        items={getWikiData(lang)}
+                        lang={lang}
+                        placeholder={DICTIONARY[lang].labels.search_placeholder}
+                    />
+                </div>
+
                 <div className="space-y-16">
                     {maximsData.map((category, catIndex) => (
                         <section key={catIndex} className="scroll-mt-24">
@@ -136,39 +147,40 @@ export default async function MaximsPage({ searchParams }: { searchParams: Promi
                                 {category.category}
                             </h2>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 {category.quotes.map((maxim) => (
-                                    <article
-                                        key={maxim.id}
-                                        className="group relative bg-[#0A0A0A] border border-[#1E293B] rounded-xl overflow-hidden hover:border-sky-500/50 transition-all duration-300 flex flex-col"
-                                    >
-                                        <div className="p-6 md:p-8 flex-1 flex flex-col">
-                                            {/* Icon */}
-                                            <div className={`mb-4 ${isRTL ? 'text-right' : ''}`}>
-                                                <Quote className={`w-8 h-8 text-sky-900/50 fill-current group-hover:text-sky-500/20 transition-colors ${isRTL ? 'transform -scale-x-100' : ''}`} />
-                                            </div>
+                                    <li key={maxim.id} className="h-full">
+                                        <article
+                                            className="h-full group relative bg-[#0A0A0A] border border-[#1E293B] rounded-xl overflow-hidden hover:border-sky-500/50 transition-all duration-300 flex flex-col"
+                                        >
+                                            <div className="p-6 md:p-8 flex-1 flex flex-col">
+                                                {/* Icon */}
+                                                <div className={`mb-4 ${isRTL ? 'text-right' : ''}`}>
+                                                    <Quote className={`w-8 h-8 text-sky-900/50 fill-current group-hover:text-sky-500/20 transition-colors ${isRTL ? 'transform -scale-x-100' : ''}`} />
+                                                </div>
 
-                                            {/* Text */}
-                                            <blockquote className={`text-lg md:text-xl font-bold text-slate-100 mb-4 leading-snug ${isRTL ? 'text-right' : ''}`}>
-                                                "{maxim.text}"
-                                            </blockquote>
+                                                {/* Text */}
+                                                <blockquote className={`text-lg md:text-xl font-bold text-slate-100 mb-4 leading-snug ${isRTL ? 'text-right' : ''}`}>
+                                                    "{maxim.text}"
+                                                </blockquote>
 
-                                            {/* Attribution */}
-                                            <div className={`mt-auto pt-4 border-t border-[#1E293B] flex items-center ${isRTL ? '' : 'justify-between'}`}>
-                                                <span className="text-xs font-mono text-sky-400 font-bold uppercase tracking-wider">
-                                                    — {maxim.attribution}
-                                                </span>
-                                            </div>
+                                                {/* Attribution */}
+                                                <div className={`mt-auto pt-4 border-t border-[#1E293B] flex items-center ${isRTL ? '' : 'justify-between'}`}>
+                                                    <span className="text-xs font-mono text-sky-400 font-bold uppercase tracking-wider">
+                                                        — {maxim.attribution}
+                                                    </span>
+                                                </div>
 
-                                            {/* Meaning / Context */}
-                                            <div className={`mt-4 bg-[#111] p-3 rounded text-xs text-slate-400 leading-relaxed border border-[#222] ${isRTL ? 'text-right' : ''}`}>
-                                                <span className={`font-bold text-slate-500 ${isRTL ? 'ml-1' : 'mr-1'}`}>KEY:</span>
-                                                {maxim.meaning}
+                                                {/* Meaning / Context */}
+                                                <div className={`mt-4 bg-[#111] p-3 rounded text-xs text-slate-400 leading-relaxed border border-[#222] ${isRTL ? 'text-right' : ''}`}>
+                                                    <span className={`font-bold text-slate-500 ${isRTL ? 'ml-1' : 'mr-1'}`}>KEY:</span>
+                                                    {maxim.meaning}
+                                                </div>
                                             </div>
-                                        </div>
-                                    </article>
+                                        </article>
+                                    </li>
                                 ))}
-                            </div>
+                            </ul>
 
                             {/* Ad Insertion after specific categories if needed */}
                             {catIndex === 1 && (

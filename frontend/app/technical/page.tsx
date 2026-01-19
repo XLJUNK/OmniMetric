@@ -3,6 +3,8 @@ import { DICTIONARY, LangType } from '@/data/dictionary';
 import { Activity } from 'lucide-react';
 import { DynamicStructuredData } from '@/components/DynamicStructuredData';
 import { Metadata } from 'next';
+import { WikiSearch } from '@/components/WikiSearch';
+import { getWikiData } from '@/lib/wiki';
 
 // Import all language data
 import technicalDataEn from '@/data/technical-en.json';
@@ -119,7 +121,7 @@ export default async function TechnicalPage({ searchParams }: { searchParams: Pr
 
             <div className="max-w-[1200px] mx-auto p-4 md:p-12 lg:p-16">
 
-                <header className={`mb-16 border-b border-[#1E293B] pb-8 text-center ${isRTL ? 'md:text-right' : 'md:text-left'}`}>
+                <header className={`mb-8 border-b border-[#1E293B] pb-8 text-center ${isRTL ? 'md:text-right' : 'md:text-left'}`}>
                     <h1 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-4 uppercase">
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
                             {getPageTitle(lang)}
@@ -129,6 +131,15 @@ export default async function TechnicalPage({ searchParams }: { searchParams: Pr
                         {getPageDesc(lang)}
                     </p>
                 </header>
+
+                {/* Search Bar Integration */}
+                <div className="mb-12">
+                    <WikiSearch
+                        items={getWikiData(lang)}
+                        lang={lang}
+                        placeholder={DICTIONARY[lang].labels.search_placeholder}
+                    />
+                </div>
 
                 <div className="space-y-16">
                     {technicalData.map((category, catIndex) => (

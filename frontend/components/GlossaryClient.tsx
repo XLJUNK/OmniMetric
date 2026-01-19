@@ -3,18 +3,22 @@
 import React, { useEffect } from 'react';
 import { LangType } from '@/data/dictionary';
 import { GlossaryTerm } from '@/types/glossary';
+import { WikiItem } from '@/lib/wiki';
 import { ArrowUp, ArrowDown, BookOpen, Hash, Link as LinkIcon } from 'lucide-react';
 import { AdSenseSlot } from '@/components/AdSenseSlot';
 import { TVPartnerCard } from '@/components/TVPartnerCard';
+import { WikiSearch } from '@/components/WikiSearch';
 
 interface GlossaryClientProps {
     lang: LangType;
     data: GlossaryTerm[];
     pageTitle: string;
     pageDesc: string;
+    searchItems: WikiItem[];
+    searchPlaceholder?: string;
 }
 
-export const GlossaryClient = ({ lang, data, pageTitle, pageDesc }: GlossaryClientProps) => {
+export const GlossaryClient = ({ lang, data, pageTitle, pageDesc, searchItems, searchPlaceholder }: GlossaryClientProps) => {
     const isRTL = lang === 'AR';
     const isJa = lang === 'JP';
 
@@ -86,6 +90,14 @@ export const GlossaryClient = ({ lang, data, pageTitle, pageDesc }: GlossaryClie
                         {pageDesc}
                     </p>
                 </header>
+
+                <div className="mb-20">
+                    <WikiSearch
+                        items={searchItems}
+                        lang={lang}
+                        placeholder={searchPlaceholder}
+                    />
+                </div>
 
                 <div className="space-y-20">
                     {categories.map((cat, categoryIndex) => (
