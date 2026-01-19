@@ -30,20 +30,24 @@ export const MobileNav = () => {
                     // Full labels allowing resize/wrap - No Truncation
                     const label = tab.label;
 
+                    // Size Logic: AR needs larger text, others smaller
+                    const isAR = lang === 'AR';
+                    const textSizeClass = isAR ? 'text-[9px]' : 'text-[7px]';
+
                     return (
                         <button
                             key={tab.key}
                             onClick={() => router.push(`${tab.path}?lang=${lang}`)}
-                            className={`group flex flex-col items-center justify-center w-full h-full transition-all relative p-0.5 ${isActive ? 'opacity-100' : 'opacity-70 hover:opacity-100'}`}
+                            className={`group flex flex-col items-center justify-center w-full h-full transition-all relative p-0.5`}
                         >
-                            {/* Icon: Always Blue (#007AFF) */}
+                            {/* Icon: Active=Blue (#007AFF), Inactive=Bright Gray (slate-400) */}
                             <tab.icon
-                                className={`w-3.5 h-3.5 mb-0.5 text-[#007AFF] ${isActive ? 'drop-shadow-[0_0_10px_#007AFF] fill-[#007AFF]/20' : ''}`}
+                                className={`w-3.5 h-3.5 mb-0.5 transition-colors ${isActive ? 'text-[#007AFF] drop-shadow-[0_0_10px_#007AFF] fill-[#007AFF]/20' : 'text-slate-400'}`}
                                 strokeWidth={2}
                             />
 
-                            {/* Text: Always Blue, Wrapped, No Truncation */}
-                            <span className={`text-[7.5px] font-bold uppercase tracking-tight text-center leading-[0.85] w-full text-[#007AFF] whitespace-normal break-words px-0 ${isActive ? 'drop-shadow-[0_0_5px_#007AFF]' : ''}`}>
+                            {/* Text: Active=Blue, Inactive=Bright Gray. Wrapped, No Truncation */}
+                            <span className={`${textSizeClass} font-bold uppercase tracking-tight text-center leading-[0.85] w-full whitespace-normal break-words px-0 transition-colors ${isActive ? 'text-[#007AFF] drop-shadow-[0_0_5px_#007AFF]' : 'text-slate-400'}`}>
                                 {label}
                             </span>
                         </button>
