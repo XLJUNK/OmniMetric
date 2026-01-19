@@ -1070,6 +1070,7 @@ export const DICTIONARY = {
             wiki: "WIKI MAKRO",
 
 
+            maxims: "PETUAH EMAS",
             technical: "TEKNIKAL",
             search_placeholder: "Cari..."
         },
