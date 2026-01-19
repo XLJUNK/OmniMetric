@@ -903,7 +903,8 @@ export const DICTIONARY = {
                 USDJPY: "USD/JPY", EURUSD: "EUR/USD", USDINR: "USD/INR", USDSAR: "USD/SAR", DXY: "डॉलर सूचकांक",
                 SPY: "S&P 500", QQQ: "नैस्डैक 100", IWM: "रसेल 2000", RSP: "S&P 500 Equal Weight", HYG: "High Yield Bond", NIFTY: "निफ्टी 50",
                 VIX: "VIX सूचकांक", TNX: "US 10Y Yield", MOVE: "MOVE Index", CRYPTO_SENTIMENT: "Crypto Fear & Greed"
-            }
+            },
+            search_placeholder: "खोज..."
         },
         subpages: {
             about: {
@@ -1067,8 +1068,10 @@ export const DICTIONARY = {
             forex: "VALAS",
             commodities: "KOMODITAS",
             wiki: "WIKI MAKRO",
-            maxims: "PETUAH EMAS",
-            technical: "TEKNIKAL"
+
+
+            technical: "TEKNIKAL",
+            search_placeholder: "Cari..."
         },
         subpages: {
             about: {
@@ -1234,7 +1237,9 @@ export const DICTIONARY = {
             commodities: "سلع",
             wiki: "الماكرو",
             maxims: "درر",
-            technical: "فني"
+
+            technical: "فني",
+            search_placeholder: "بحث..."
         },
         subpages: {
             about: {
