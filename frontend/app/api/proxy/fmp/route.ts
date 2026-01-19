@@ -11,6 +11,11 @@ export async function GET(request: NextRequest) {
         return NextResponse.json({ error: 'Missing params' }, { status: 400 });
     }
 
+    // SSRF Prevention: Validate symbol format (Alphanumeric, dot, caret, dash only)
+    if (!/^[a-zA-Z0-9^.-]+$/.test(symbol)) {
+        return NextResponse.json({ error: 'Invalid symbol format' }, { status: 400 });
+    }
+
     const url = `https://financialmodelingprep.com/api/v3/quote/${symbol}?apikey=${api_key}`;
 
     try {
