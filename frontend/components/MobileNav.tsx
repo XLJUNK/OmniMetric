@@ -23,42 +23,49 @@ export const MobileNav = () => {
     ];
 
     return (
-        <nav className="fixed top-0 left-0 right-0 h-[48px] bg-[#0A0A0A]/95 backdrop-blur-xl border-b border-[#1E293B] flex md:hidden items-center justify-between w-full z-[9999] shadow-2xl overflow-hidden">
-            {tabs.map((tab) => {
-                const isActive = pathname === tab.path;
-                // Compact Label Logic for Mobile
-                let label = tab.label;
-                if (lang === 'EN') {
-                    if (tab.key === 'technical') label = 'Tech';
-                    if (tab.key === 'commodities') label = 'Cmdty';
-                    if (tab.key === 'stocks') label = 'Stock';
-                    if (tab.key === 'crypto') label = 'Crypt';
-                    if (tab.key === 'forex') label = 'Forex';
-                    if (tab.key === 'maxims') label = 'Maxim';
-                    if (tab.key === 'home') label = 'Home';
-                }
+        <nav className="fixed top-0 left-0 right-0 h-[48px] bg-[#000000]/95 backdrop-blur-xl border-b border-[#1E293B] md:hidden w-full z-[9999] shadow-2xl overflow-hidden">
+            <div className="grid grid-cols-8 h-full w-full items-center px-0">
+                {tabs.map((tab) => {
+                    const isActive = pathname === tab.path;
+                    let label = tab.label;
 
-                return (
-                    <button
-                        key={tab.key}
-                        onClick={() => router.push(`${tab.path}?lang=${lang}`)}
-                        className={`group flex flex-col items-center justify-center flex-1 min-w-0 h-full transition-colors relative ${isActive ? 'text-sky-500' : 'text-slate-500'
-                            }`}
-                    >
-                        {/* Invisible Touch Target Expansion */}
-                        <span className="absolute -inset-1 z-[-1]" />
+                    // Ultra-Compact Labels for 8-col Layout (Mobile)
+                    if (lang === 'EN') {
+                        if (tab.key === 'technical') label = 'Tech';
+                        if (tab.key === 'commodities') label = 'Cmdty';
+                        if (tab.key === 'stocks') label = 'Stock';
+                        if (tab.key === 'crypto') label = 'Crypt';
+                        if (tab.key === 'forex') label = 'Forex';
+                        if (tab.key === 'maxims') label = 'Maxim';
+                        if (tab.key === 'home') label = 'Home';
+                    } else if (lang === 'ES') {
+                        if (tab.key === 'commodities') label = 'M.Pri'; // Materias Primas -> M.Pri
+                        if (tab.key === 'technical') label = 'Técn.';
+                        if (tab.key === 'crypto') label = 'Cripto';
+                        if (tab.key === 'stocks') label = 'Acción'; // Acciones -> Acción
+                        if (tab.key === 'home') label = 'Inicio';
+                    }
 
-                        <tab.icon className={`w-3.5 h-3.5 mb-0.5 ${isActive ? 'drop-shadow-[0_0_8px_rgba(14,165,233,0.5)]' : ''}`} />
-                        <span className="text-[9px] font-bold uppercase tracking-tight truncate w-full text-center leading-none px-0 transform scale-[0.8] origin-center">
-                            {label}
-                        </span>
-                        {/* Active Indicator Dot */}
-                        {isActive && (
-                            <span className="absolute bottom-0.5 w-0.5 h-0.5 bg-sky-500 rounded-full shadow-[0_0_5px_rgba(14,165,233,0.8)]"></span>
-                        )}
-                    </button>
-                );
-            })}
+                    return (
+                        <button
+                            key={tab.key}
+                            onClick={() => router.push(`${tab.path}?lang=${lang}`)}
+                            className={`group flex flex-col items-center justify-center w-full h-full transition-all relative ${isActive ? 'text-[#007AFF]' : 'text-slate-500'
+                                }`}
+                        >
+                            <tab.icon className={`w-3.5 h-3.5 mb-0.5 ${isActive ? 'drop-shadow-[0_0_8px_rgba(0,122,255,0.6)]' : ''}`} />
+                            <span className="text-[8.5px] font-bold uppercase tracking-tighter truncate w-full text-center leading-[0.9] px-0 transform scale-[0.9] origin-center">
+                                {label}
+                            </span>
+
+                            {/* Brand Blue Line Indicator */}
+                            {isActive && (
+                                <span className="absolute top-0 w-full h-[2px] bg-[#007AFF] shadow-[0_0_6px_#007AFF]"></span>
+                            )}
+                        </button>
+                    );
+                })}
+            </div>
         </nav>
     );
 };
