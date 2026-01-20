@@ -11,11 +11,15 @@ import { GMSHeaderSection } from '@/components/GMSHeaderSection';
 import { PulseTile } from '@/components/PulseTile';
 import { useDevice } from '@/hooks/useDevice';
 import { Skeleton, SkeletonCard, SkeletonPulseTile } from '@/components/Skeleton';
-
-
+import { useTheme } from "@/components/ThemeProvider";
 import { useSignalData, SignalData } from '@/hooks/useSignalData';
+import { ToastNotification } from '@/components/ToastNotification';
+import dynamic from 'next/dynamic';
 
-// "Pulse" Tile Component removed (Moved to PulseTile.tsx)
+const TerminalSettings = dynamic(() => import('@/components/TerminalSettings').then(mod => mod.TerminalSettings), {
+    ssr: false,
+    loading: () => null
+});
 
 interface MultiAssetSummaryProps {
     initialData?: SignalData | null;
@@ -37,32 +41,8 @@ export const MultiAssetSummary = ({ initialData }: MultiAssetSummaryProps) => {
         router.push(`${pathname}?lang=${l}`);
     };
 
-    if (!t || !data) return (
-        <div className="min-h-screen bg-[#0A0A0A] p-4 md:p-8 space-y-8">
-            <div className="max-w-[1600px] mx-auto space-y-8">
-                {/* Header Skeleton */}
-                <div className="flex justify-between items-start">
-                    <div className="space-y-2">
-                        <div className="h-8 w-64 skeleton" />
-                        <div className="h-4 w-48 skeleton opacity-50" />
-                    </div>
-                </div>
-                {/* Hero Section Skeleton */}
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-                    <SkeletonCard />
-                    <div className="lg:col-span-2">
-                        <SkeletonCard />
-                    </div>
-                </div>
-                {/* Grid Skeleton */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {[...Array(8)].map((_, i) => (
-                        <SkeletonPulseTile key={i} />
-                    ))}
-                </div>
-            </div>
-        </div>
-    );
+    // Correctly call the hook
+    const { theme, toggleTheme } = useTheme();
 
     // --- STRATEGIC DASHBOARD STATE ---
     const DEFAULT_ORDER = [
@@ -73,11 +53,85 @@ export const MultiAssetSummary = ({ initialData }: MultiAssetSummaryProps) => {
     ];
 
     const [tiles, setTiles] = useState<string[]>([]);
+    const [hiddenTiles, setHiddenTiles] = useState<string[]>([]);
+    const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+    const [toast, setToast] = useState({ msg: '', show: false });
+    const hasConfigChanged = React.useRef(false);
 
     React.useEffect(() => {
-        // Hydration-safe tile initialization
+        // 1. Initial Render: Default
         setTiles(DEFAULT_ORDER);
+
+        // 2. Hydration: Load Custom Config
+        try {
+            const saved = localStorage.getItem('gms_terminal_config_v1');
+            if (saved) {
+                const config = JSON.parse(saved);
+                if (config.visibleTiles && Array.isArray(config.visibleTiles)) {
+                    setTiles(config.visibleTiles);
+                }
+                if (config.hiddenTiles && Array.isArray(config.hiddenTiles)) {
+                    setHiddenTiles(config.hiddenTiles);
+                }
+                // Theme is now handled by ThemeProvider, but we sync mainly for tile state
+            }
+        } catch (e) {
+            console.error("Failed to load terminal config", e);
+        }
     }, []);
+
+    const saveConfig = (visible: string[], hidden: string[]) => {
+        hasConfigChanged.current = true;
+        // Note: Theme is saved by ThemeProvider separately in the same key or managed there.
+        // For compatibility, we can still save it here if needed, but ThemeProvider should handle it.
+        // To avoid conflicts, we'll read the current config, update tiles, and save back.
+        try {
+            const saved = localStorage.getItem('gms_terminal_config_v1');
+            const currentConfig = saved ? JSON.parse(saved) : {};
+
+            localStorage.setItem('gms_terminal_config_v1', JSON.stringify({
+                ...currentConfig,
+                visibleTiles: visible,
+                hiddenTiles: hidden,
+                version: 1
+            }));
+        } catch (e) { /* ignore */ }
+    };
+
+    const handleUpdateConfig = (visible: string[], hidden: string[]) => {
+        setTiles(visible);
+        setHiddenTiles(hidden);
+        saveConfig(visible, hidden);
+    };
+
+    // handleToggleTheme REMOVED: Use toggleTheme from context directly or pass it
+
+    const handleReset = () => {
+        setTiles(DEFAULT_ORDER);
+        setHiddenTiles([]);
+        // We do NOT reset theme here to avoid jarring UX, or we can if requested.
+        // Converting to "Default Layout" usually implies tiles. 
+        // If we want to reset tiles only:
+        try {
+            const saved = localStorage.getItem('gms_terminal_config_v1');
+            if (saved) {
+                const config = JSON.parse(saved);
+                delete config.visibleTiles;
+                delete config.hiddenTiles;
+                localStorage.setItem('gms_terminal_config_v1', JSON.stringify(config));
+            }
+        } catch (e) { }
+
+        setToast({ msg: 'Restored Default Layout', show: true });
+    };
+
+    const handleCloseSettings = () => {
+        setIsSettingsOpen(false);
+        if (hasConfigChanged.current) {
+            setToast({ msg: 'Terminal Layout Saved', show: true });
+            hasConfigChanged.current = false;
+        }
+    };
 
     const getSectorScore = (key: string) => data?.sector_scores?.[key] ?? 50;
 
@@ -106,30 +160,48 @@ export const MultiAssetSummary = ({ initialData }: MultiAssetSummaryProps) => {
     // Card Renderer Helper
     const renderTile = (id: string) => {
         switch (id) {
-            case "US10Y": return <PulseTile key={id} title="US10Y" score={getSectorScore("BONDS")} ticker="^TNX" data={getMarketData("TNX")} chartColor="#0ea5e9" onClick={() => { }} lang={lang} wikiSlug="us10y-yield" />;
-            case "10Y BEI": return <PulseTile key={id} title="10Y BEI" score={getSectorScore("BONDS")} ticker="US 10Y BEI" data={getMarketData("BREAKEVEN_INFLATION")} chartColor="#f43f5e" onClick={() => { }} lang={lang} wikiSlug="breakeven-inflation" />;
-            case "Real Interest Rate": return <PulseTile key={id} title="Real Interest Rate" score={getSectorScore("BONDS")} ticker="US REAL 10Y" data={getMarketData("REAL_INTEREST_RATE")} chartColor="#8b5cf6" onClick={() => { }} lang={lang} wikiSlug="real-interest-rate" />;
-            case "DXY": return <PulseTile key={id} title="DXY" score={getSectorScore("FOREX")} ticker="DX-Y.NYB" data={getMarketData("DXY")} chartColor="#22c55e" onClick={() => router.push(`/forex?lang=${lang}`)} lang={lang} wikiSlug="dxy-index" />;
-            case "VIX": return <PulseTile key={id} title="VIX" score={getSectorScore("STOCKS")} ticker="^VIX" data={getMarketData("VIX")} chartColor="#ef4444" onClick={() => router.push(`/stocks?lang=${lang}`)} lang={lang} wikiSlug="vix" />;
-            case "MOVE": return <PulseTile key={id} title="MOVE" score={getSectorScore("BONDS")} ticker="^MOVE" data={getMarketData("MOVE")} chartColor="#a855f7" onClick={() => { }} lang={lang} wikiSlug="move-index" />;
-            case "HY Spread": return <PulseTile key={id} title="HY Spread" score={getSectorScore("BONDS")} ticker="HY OAS" data={getMarketData("HY_SPREAD")} chartColor="#f97316" onClick={() => { }} lang={lang} wikiSlug="sovereign-credit-spread" />;
-            case "S&P 500": return <PulseTile key={id} title="S&P 500" score={getSectorScore("STOCKS")} ticker="SPY" data={getMarketData("SPY")} chartColor="#3b82f6" onClick={() => router.push(`/stocks?lang=${lang}`)} lang={lang} wikiSlug="sp500-index" />;
-            case "Net Liq": return <PulseTile key={id} title="Net Liq" score={data.gms_score} ticker="USD NET LIQ" data={getMarketData("NET_LIQUIDITY")} chartColor="#3b82f6" onClick={() => { }} lang={lang} wikiSlug="net-liquidity" />;
-            case "10Y-3M": return <PulseTile key={id} title="10Y-3M" score={getSectorScore("BONDS")} ticker="10Y-3M" data={getMarketData("YIELD_SPREAD")} chartColor="#64748b" onClick={() => { }} lang={lang} wikiSlug="yield-curve-10y2y" />;
-            case "Breadth": return <PulseTile key={id} title="Breadth" score={getSectorScore("STOCKS")} ticker="RSP/SPY" data={getMarketData("BREADTH")} chartColor="#6366f1" onClick={() => router.push(`/stocks?lang=${lang}`)} lang={lang} wikiSlug="market-breadth" />;
-            case "Copper": return <PulseTile key={id} title="Copper" score={getSectorScore("COMMODITIES")} ticker="HG=F" data={getMarketData("COPPER")} chartColor="#f97316" onClick={() => router.push(`/commodities?lang=${lang}`)} lang={lang} wikiSlug="copper-price" />;
-            case "Gold": return <PulseTile key={id} title="Gold" score={getSectorScore("COMMODITIES")} ticker="GC=F" data={getMarketData("GOLD")} chartColor="#eab308" onClick={() => router.push(`/commodities?lang=${lang}`)} lang={lang} wikiSlug="gold-price" />;
-            case "BTC": return <PulseTile key={id} title="BTC" score={getSectorScore("CRYPTO")} ticker="BTC-USD" data={getMarketData("BTC")} chartColor="#f59e0b" onClick={() => router.push(`/crypto?lang=${lang}`)} lang={lang} wikiSlug="bitcoin" />;
-            case "ETH": return <PulseTile key={id} title="ETH" score={getSectorScore("CRYPTO")} ticker="ETH-USD" data={getMarketData("ETH")} chartColor="#a855f7" onClick={() => router.push(`/crypto?lang=${lang}`)} lang={lang} wikiSlug="ethereum" />;
-            case "Oil": return <PulseTile key={id} title="Oil" score={getSectorScore("COMMODITIES")} ticker="CL=F" data={getMarketData("OIL")} chartColor="#ef4444" onClick={() => router.push(`/commodities?lang=${lang}`)} lang={lang} wikiSlug="wti-oil" />;
+            case "US10Y": return <PulseTile key={id} title="US10Y" score={getSectorScore("BONDS")} ticker="^TNX" data={getMarketData("TNX")} chartColor="#0ea5e9" onClick={() => { }} lang={lang} wikiSlug="us10y-yield" theme={theme} />;
+            case "10Y BEI": return <PulseTile key={id} title="10Y BEI" score={getSectorScore("BONDS")} ticker="US 10Y BEI" data={getMarketData("BREAKEVEN_INFLATION")} chartColor="#f43f5e" onClick={() => { }} lang={lang} wikiSlug="breakeven-inflation" theme={theme} />;
+            case "Real Interest Rate": return <PulseTile key={id} title="Real Interest Rate" score={getSectorScore("BONDS")} ticker="US REAL 10Y" data={getMarketData("REAL_INTEREST_RATE")} chartColor="#8b5cf6" onClick={() => { }} lang={lang} wikiSlug="real-interest-rate" theme={theme} />;
+            case "DXY": return <PulseTile key={id} title="DXY" score={getSectorScore("FOREX")} ticker="DX-Y.NYB" data={getMarketData("DXY")} chartColor="#22c55e" onClick={() => router.push(`/forex?lang=${lang}`)} lang={lang} wikiSlug="dxy-index" theme={theme} />;
+            case "VIX": return <PulseTile key={id} title="VIX" score={getSectorScore("STOCKS")} ticker="^VIX" data={getMarketData("VIX")} chartColor="#ef4444" onClick={() => router.push(`/stocks?lang=${lang}`)} lang={lang} wikiSlug="vix" theme={theme} />;
+            case "MOVE": return <PulseTile key={id} title="MOVE" score={getSectorScore("BONDS")} ticker="^MOVE" data={getMarketData("MOVE")} chartColor="#a855f7" onClick={() => { }} lang={lang} wikiSlug="move-index" theme={theme} />;
+            case "HY Spread": return <PulseTile key={id} title="HY Spread" score={getSectorScore("BONDS")} ticker="HY OAS" data={getMarketData("HY_SPREAD")} chartColor="#f97316" onClick={() => { }} lang={lang} wikiSlug="sovereign-credit-spread" theme={theme} />;
+            case "S&P 500": return <PulseTile key={id} title="S&P 500" score={getSectorScore("STOCKS")} ticker="SPY" data={getMarketData("SPY")} chartColor="#3b82f6" onClick={() => router.push(`/stocks?lang=${lang}`)} lang={lang} wikiSlug="sp500-index" theme={theme} />;
+            case "Net Liq": return <PulseTile key={id} title="Net Liq" score={data!.gms_score} ticker="USD NET LIQ" data={getMarketData("NET_LIQUIDITY")} chartColor="#3b82f6" onClick={() => { }} lang={lang} wikiSlug="net-liquidity" theme={theme} />;
+            case "10Y-3M": return <PulseTile key={id} title="10Y-3M" score={getSectorScore("BONDS")} ticker="10Y-3M" data={getMarketData("YIELD_SPREAD")} chartColor="#64748b" onClick={() => { }} lang={lang} wikiSlug="yield-curve-10y2y" theme={theme} />;
+            case "Breadth": return <PulseTile key={id} title="Breadth" score={getSectorScore("STOCKS")} ticker="RSP/SPY" data={getMarketData("BREADTH")} chartColor="#6366f1" onClick={() => router.push(`/stocks?lang=${lang}`)} lang={lang} wikiSlug="market-breadth" theme={theme} />;
+            case "Copper": return <PulseTile key={id} title="Copper" score={getSectorScore("COMMODITIES")} ticker="HG=F" data={getMarketData("COPPER")} chartColor="#f97316" onClick={() => router.push(`/commodities?lang=${lang}`)} lang={lang} wikiSlug="copper-price" theme={theme} />;
+            case "Gold": return <PulseTile key={id} title="Gold" score={getSectorScore("COMMODITIES")} ticker="GC=F" data={getMarketData("GOLD")} chartColor="#eab308" onClick={() => router.push(`/commodities?lang=${lang}`)} lang={lang} wikiSlug="gold-price" theme={theme} />;
+            case "BTC": return <PulseTile key={id} title="BTC" score={getSectorScore("CRYPTO")} ticker="BTC-USD" data={getMarketData("BTC")} chartColor="#f59e0b" onClick={() => router.push(`/crypto?lang=${lang}`)} lang={lang} wikiSlug="bitcoin" theme={theme} />;
+            case "ETH": return <PulseTile key={id} title="ETH" score={getSectorScore("CRYPTO")} ticker="ETH-USD" data={getMarketData("ETH")} chartColor="#a855f7" onClick={() => router.push(`/crypto?lang=${lang}`)} lang={lang} wikiSlug="ethereum" theme={theme} />;
+            case "Oil": return <PulseTile key={id} title="Oil" score={getSectorScore("COMMODITIES")} ticker="CL=F" data={getMarketData("OIL")} chartColor="#ef4444" onClick={() => router.push(`/commodities?lang=${lang}`)} lang={lang} wikiSlug="wti-oil" theme={theme} />;
             default: return null;
         }
     };
 
+    const getFormattedDate = () => {
+        if (!data?.last_updated) return "CONNECTING...";
+        try {
+            const date = new Date(data!.last_updated);
+            const options: Intl.DateTimeFormatOptions = {
+                month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false
+            };
+            if (lang === 'JP') return date.toLocaleString('ja-JP', { ...options, timeZone: 'Asia/Tokyo' }) + " JST";
+            return date.toLocaleString('en-US', { ...options, timeZone: 'UTC' }) + " UTC";
+        } catch { return data.last_updated; }
+    };
+
     return (
-        <div className="w-full bg-[#0A0A0A] text-slate-200 font-sans min-h-screen flex flex-col pb-24 relative">
+        <div className={`w-full font-sans min-h-screen flex flex-col pb-24 relative transition-colors duration-300`}>
             {/* 1. Global Header Status & GMS Dashboard */}
-            <GMSHeaderSection data={data} lang={lang} isSafeMode={isSafeMode} />
+            <GMSHeaderSection
+                data={data!}
+                lang={lang}
+                isSafeMode={isSafeMode}
+                onOpenSettings={() => setIsSettingsOpen(true)}
+                theme={theme}
+            />
 
             {/* 5. Pulse Tiles (Sectors) - 4th Position (Indicators) */}
             <div className="max-w-[1600px] mx-auto w-full px-4 md:px-8 mb-12">
@@ -147,6 +219,27 @@ export const MultiAssetSummary = ({ initialData }: MultiAssetSummaryProps) => {
                 {/* Legal Footer inserted here to ensure it appears on Summary page */}
             </div>
 
+            <TerminalSettings
+                isOpen={isSettingsOpen}
+                onClose={handleCloseSettings}
+                currentTiles={tiles.length > 0 ? tiles : DEFAULT_ORDER}
+                hiddenTiles={hiddenTiles}
+                onUpdate={handleUpdateConfig}
+                onReset={handleReset}
+                isDark={theme === 'dark'}
+                onToggleTheme={toggleTheme}
+                lang={lang}
+                systemInfo={{
+                    lastUpdated: getFormattedDate(),
+                    status: "SYSTEM OPERATIONAL",
+                    latency: "12MS"
+                }}
+            />
+            <ToastNotification
+                message={toast.msg}
+                isVisible={toast.show}
+                onClose={() => setToast({ ...toast, show: false })}
+            />
         </div >
     );
 };

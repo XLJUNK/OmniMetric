@@ -28,21 +28,29 @@ export const DynamicStructuredData = ({ data: externalData }: { data?: any }) =>
 
     // Otherwise, fetch market data (Dashboard Mode)
     useEffect(() => {
+        const controller = new AbortController();
         const fetchData = async () => {
             try {
-                const res = await fetch('/api/signal');
+                const res = await fetch('/api/signal', { signal: controller.signal });
                 if (res.ok) {
                     const json = await res.json();
-                    setData(json);
+                    if (!controller.signal.aborted) {
+                        setData(json);
+                    }
                 }
-            } catch (e) {
-                console.error('Failed to fetch structured data:', e);
+            } catch (e: any) {
+                if (e.name !== 'AbortError' && e.name !== 'TimeoutError') {
+                    // Silent fail for structured data to avoid console spam during dev
+                }
             }
         };
 
         fetchData();
         const interval = setInterval(fetchData, 60000); // Update every 60s
-        return () => clearInterval(interval);
+        return () => {
+            controller.abort();
+            clearInterval(interval);
+        };
     }, []);
 
     if (!data) return null;

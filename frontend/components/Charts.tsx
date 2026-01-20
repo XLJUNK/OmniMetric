@@ -20,7 +20,7 @@ export const RiskGauge = ({ score, lang = 'EN' }: GaugeProps) => {
             {/* Gradient Bar Wrapper (Height Fixed) */}
             <div className="relative w-full" style={{ height: '1.625rem' }}>
                 {/* 1. The Gradient Background (Overflow Hidden for Rounded Corners) */}
-                <div className="absolute inset-0 w-full h-full !rounded-xl !border !border-[#1E293B] overflow-hidden">
+                <div className="absolute inset-0 w-full h-full !rounded-xl !border border-slate-300 dark:border-[#1E293B] overflow-hidden">
                     <div
                         className="absolute inset-0 w-full h-full"
                         style={{
@@ -41,13 +41,13 @@ export const RiskGauge = ({ score, lang = 'EN' }: GaugeProps) => {
                         ['--dir' as any]: isRTL ? 1 : -1
                     }}
                 >
-                    <div className="bg-[#1e293b] border border-slate-600 px-1.5 py-0.5 rounded shadow-xl mb-1">
-                        <span className="text-[0.75rem] font-black text-slate-200 leading-none tabular-nums tracking-tighter">
+                    <div className="bg-[#1e293b] border border-[#1e293b] px-1.5 py-0.5 rounded shadow-xl mb-1 transition-colors duration-300">
+                        <span className="text-[0.75rem] font-black text-white leading-none tabular-nums tracking-tighter" style={{ color: '#FFFFFF' }}>
                             {Math.round(score)}
                         </span>
                     </div>
                     {/* Arrow */}
-                    <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-slate-600 drop-shadow-sm"></div>
+                    <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-[#1e293b] drop-shadow-sm transition-colors duration-300"></div>
                 </div>
             </div>
 

@@ -44,7 +44,7 @@ export const TerminalSettings = ({
     hiddenTiles,
     onUpdate,
     onReset,
-    isDark = true,
+    isDark,
     onToggleTheme,
     lang = 'EN',
     systemInfo

@@ -70,9 +70,9 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
                 className="group inline-flex items-center gap-2 text-xs font-bold text-slate-500 hover:text-sky-500 transition-colors"
                 title={p.title}
             >
-                <div className="w-5 h-5 rounded bg-[#131722] flex items-center justify-center shrink-0 border border-slate-700 group-hover:border-sky-500 transition-colors">
+                <div className="w-5 h-5 rounded bg-slate-100 dark:bg-[#131722] flex items-center justify-center shrink-0 border border-slate-200 dark:border-slate-700 group-hover:border-sky-500 transition-colors">
                     {/* Tiny TV Icon representation */}
-                    <svg viewBox="0 0 24 24" className="w-3 h-3 text-white fill-current">
+                    <svg viewBox="0 0 24 24" className="w-3 h-3 text-slate-900 dark:text-white fill-current">
                         <path d="M12 0L0 12h5v12h14V12h5L12 0zm0 4.8l7.2 7.2h-2.4v9.6H7.2V12H4.8L12 4.8z" />
                         <path d="M21 12L12 3 3 12h4v8h10v-8h4z" />
                     </svg>
@@ -89,12 +89,12 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
                 href={affiliateUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group block w-full mt-4 bg-gradient-to-r from-[#131722] to-[#0A0A0A] border border-[#1E293B] hover:border-sky-500/50 rounded-lg p-3 transition-all duration-300"
+                className="group block w-full mt-4 bg-white dark:bg-gradient-to-r dark:from-[#131722] dark:to-[#0A0A0A] border border-slate-200 dark:border-[#1E293B] hover:border-sky-500/50 rounded-lg p-3 transition-all duration-300 shadow-sm dark:shadow-none"
             >
                 <div className={`flex items-center justify-between gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
                     <div className={`flex items-center gap-2 ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                         {/* TradingView Logo Icon / Branding */}
-                        <div className="w-8 h-8 rounded bg-white flex items-center justify-center shrink-0">
+                        <div className="w-8 h-8 rounded bg-slate-100 dark:bg-white flex items-center justify-center shrink-0">
                             <svg viewBox="0 0 24 24" className="w-5 h-5 text-black fill-current">
                                 <path d="M12 0L0 12h5v12h14V12h5L12 0zm0 4.8l7.2 7.2h-2.4v9.6H7.2V12H4.8L12 4.8z" />
                                 <path d="M4 16h16v2H4zM4 19h16v1H4z" fill="none" />
@@ -103,19 +103,19 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
                         </div>
                         <div>
                             <span className="block text-[9px] font-bold text-sky-500 uppercase tracking-wider">{p.badge}</span>
-                            <span className={`block text-xs font-bold text-slate-200 group-hover:text-white transition-colors ${isRTL ? 'font-arabic' : ''}`}>
+                            <span className={`block text-xs font-bold text-slate-700 dark:text-slate-200 group-hover:text-sky-600 dark:group-hover:text-white transition-colors ${isRTL ? 'font-arabic' : ''}`}>
                                 {offerText}
                             </span>
                         </div>
                     </div>
-                    <ExternalLink className={`w-4 h-4 text-slate-500 group-hover:text-sky-500 transition-colors ${isRTL ? 'rotate-180' : ''}`} />
+                    <ExternalLink className={`w-4 h-4 text-slate-400 dark:text-slate-500 group-hover:text-sky-500 transition-colors ${isRTL ? 'rotate-180' : ''}`} />
                 </div>
             </a>
         );
     }
 
     return (
-        <div className="w-full relative group overflow-hidden bg-[#131722] border border-[#1E293B] rounded-xl hover:border-sky-500/30 transition-all duration-300">
+        <div className="w-full relative group overflow-hidden bg-white dark:bg-[#131722] border border-slate-200 dark:border-[#1E293B] rounded-xl hover:border-sky-500/30 transition-all duration-300 shadow-sm dark:shadow-none">
             {/* Background Gradient Effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
@@ -123,12 +123,12 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
 
                 {/* Visual / Text Side */}
                 <div className={`flex-1 space-y-3 text-center ${isRTL ? 'sm:text-right' : 'sm:text-left'}`}>
-                    <div className="inline-flex items-center gap-2 px-2 py-1 rounded bg-[#2A2E39] border border-[#434651]">
+                    <div className="inline-flex items-center gap-2 px-2 py-1 rounded bg-slate-100 dark:bg-[#2A2E39] border border-slate-200 dark:border-[#434651]">
                         <span className="w-1.5 h-1.5 rounded-full bg-sky-500 animate-pulse"></span>
-                        <span className="text-[10px] font-bold text-slate-200 uppercase tracking-widest">{p.badge}</span>
+                        <span className="text-[10px] font-bold text-slate-600 dark:text-slate-200 uppercase tracking-widest">{p.badge}</span>
                     </div>
 
-                    <h3 className={`text-sm md:text-base font-bold text-white leading-relaxed max-w-xl ${isRTL ? 'font-arabic' : ''}`}>
+                    <h3 className={`text-sm md:text-base font-bold text-slate-900 dark:text-white leading-relaxed max-w-xl ${isRTL ? 'font-arabic' : ''}`}>
                         {p.title}
                     </h3>
                 </div>
@@ -139,7 +139,8 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
                         href={affiliateUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-[#2962FF] hover:bg-[#1E53E5] text-white font-bold rounded-lg transition-all shadow-lg shadow-blue-900/20 hover:shadow-blue-900/40 text-sm"
+                        className="flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-[#2962FF] hover:bg-[#1E53E5] !text-white font-bold rounded-lg transition-all shadow-lg shadow-blue-900/20 hover:shadow-blue-900/40 text-sm"
+                        style={{ color: '#FFFFFF' }}
                     >
                         <Zap className="w-4 h-4 fill-current" />
                         {p.action}

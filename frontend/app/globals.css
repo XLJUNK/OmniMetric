@@ -16,8 +16,15 @@
 }
 
 :root {
+  --background: #F1F5F9;
+  --foreground: #0f172a;
+  --border-color: #e2e8f0;
+}
+
+:root.dark {
   --background: #0A0A0A;
   --foreground: #E0E0E0;
+  --border-color: #1E293B;
 }
 
 body {
@@ -29,14 +36,14 @@ body {
 
 @layer base {
   hr {
-    @apply border-[#1E293B];
+    border-color: var(--border-color);
   }
 
   /* Force default border color global override if not specified */
   *,
   ::before,
   ::after {
-    border-color: #1E293B;
+    border-color: var(--border-color);
   }
 }
 
@@ -73,6 +80,7 @@ a {
 .text-gradient {
   background: linear-gradient(to right, #00A3BF, #00D4FF);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 

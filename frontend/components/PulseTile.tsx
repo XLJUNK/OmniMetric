@@ -8,7 +8,7 @@ import { Info } from 'lucide-react';
 import Link from 'next/link';
 
 // "Pulse" Tile Component - SHARED DEFINITION
-export const PulseTile = ({ title, score, ticker, data, onClick, lang, wikiSlug }: any) => {
+export const PulseTile = ({ title, score, ticker, data, onClick, lang, wikiSlug, theme = 'dark' }: any) => {
     const { isMobile } = useDevice();
 
     // 1. RISK LOGIC
@@ -127,11 +127,12 @@ export const PulseTile = ({ title, score, ticker, data, onClick, lang, wikiSlug 
                     position: 'relative',
                     height: '11.25rem', // 180px -> 11.25rem
                     width: '100%',
-                    border: '1px solid #1E293B',
+                    border: theme === 'dark' ? '1px solid #1E293B' : '1px solid #E2E8F0',
                     borderRadius: '0.75rem',
                     overflow: 'hidden',
-                    backgroundColor: '#0A0A0A',
-                    cursor: 'pointer'
+                    backgroundColor: theme === 'dark' ? '#0A0A0A' : '#ffffff',
+                    cursor: 'pointer',
+                    boxShadow: theme === 'dark' ? 'none' : '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)'
                 }}
             >
 
@@ -150,7 +151,7 @@ export const PulseTile = ({ title, score, ticker, data, onClick, lang, wikiSlug 
                 {/* CORNER 1: TOP-LEFT (Title) - PADDING 0.75rem */}
                 <div style={{ position: 'absolute', top: '0.75rem', left: '0.75rem', zIndex: 10, display: 'flex', flexDirection: 'column', pointerEvents: 'none' }}>
                     <div className="flex items-center gap-1.5 pointer-events-auto">
-                        <h3 className={`text-slate-200 pulse-tile-title font-black uppercase tracking-[0.1em] font-sans leading-tight text-fluid-xs`}>{title}</h3>
+                        <h3 className={`${theme === 'dark' ? 'text-slate-200' : 'text-slate-800'} pulse-tile-title font-black uppercase tracking-[0.1em] font-sans leading-tight text-fluid-xs`}>{title}</h3>
                         {wikiSlug && (
                             <Link
                                 href={`/${(lang || 'EN').toLowerCase()}/wiki/${wikiSlug}`}
@@ -181,8 +182,8 @@ export const PulseTile = ({ title, score, ticker, data, onClick, lang, wikiSlug 
                             </svg>
                         </a>
                     )}
-                    <div className={`px-2 py-0.5 border rounded-[2px] text-[0.56rem] sm:text-[0.65rem] font-semibold tracking-[0.15em] font-sans bg-[#0A0A0A] shadow-sm ${gmsBadgeText} ${colorClassBorder}`} style={{ pointerEvents: 'none' }}>
-                        GMS <span className="text-white ml-0.5 md:ml-1">{score}</span>
+                    <div className={`px-2 py-0.5 border rounded-[2px] text-[0.56rem] sm:text-[0.65rem] font-semibold tracking-[0.15em] font-sans shadow-sm ${gmsBadgeText} ${colorClassBorder} ${theme === 'dark' ? 'bg-[#0A0A0A]' : 'bg-white'}`} style={{ pointerEvents: 'none' }}>
+                        GMS <span className={`${theme === 'dark' ? 'text-white' : 'text-slate-900'} ml-0.5 md:ml-1`}>{score}</span>
                     </div>
                 </div>
 
@@ -194,7 +195,7 @@ export const PulseTile = ({ title, score, ticker, data, onClick, lang, wikiSlug 
                         </span>
                     </div>
                     <div className="flex items-baseline gap-2">
-                        <span className={`${(typeof data?.price === 'string' && data?.price.length > 20) ? 'text-[0.56rem]' : 'text-[1.125rem]'} pulse-tile-price font-bold font-sans tracking-tight text-white tabular-nums leading-none`}>
+                        <span className={`${(typeof data?.price === 'string' && data?.price.length > 20) ? 'text-[0.56rem]' : 'text-[1.125rem]'} pulse-tile-price font-bold font-sans tracking-tight ${theme === 'dark' ? 'text-white' : 'text-slate-900'} tabular-nums leading-none`}>
                             {(title === "Net Liquidity" || title === "US Net Liquidity" || title === "Net Liq")
                                 ? (typeof data?.price === 'number'
                                     ? (Math.abs(data.price) >= 1000

@@ -8,6 +8,18 @@ export const DICTIONARY = {
             ai: MESSAGES.ai_status.EN,
             market: MESSAGES.market_data_status.EN
         },
+        settings: {
+            title: "Terminal Config",
+            subtitle: "CUSTOMIZE YOUR WORKSPACE",
+            theme_title: "Theme Interface",
+            dark_mode: "DARK MODE",
+            light_mode: "LIGHT MODE",
+            active_modules: "Active Modules",
+            reset: "RESET",
+            disabled_modules: "Disabled Modules",
+            last_updated: "Last Updated",
+            system_operational: "SYSTEM OPERATIONAL"
+        },
         partner: {
             badge: "TradingView Official Partner",
             title: "Get $15 Credit: Save on your new TradingView plan. Experience world-class charting starting from OmniMetric.",
@@ -228,6 +240,18 @@ export const DICTIONARY = {
             ai: MESSAGES.ai_status.JP,
             market: MESSAGES.market_data_status.JP
         },
+        settings: {
+            title: "ターミナル設定",
+            subtitle: "ワークスペースのカスタマイズ",
+            theme_title: "テーマ設定",
+            dark_mode: "ダークモード",
+            light_mode: "ライトモード",
+            active_modules: "有効なモジュール",
+            reset: "リセット",
+            disabled_modules: "無効なモジュール",
+            last_updated: "最終更新",
+            system_operational: "システム稼働中"
+        },
         partner: {
             badge: "TradingView Official Partner",
             title: "15ドルの特典を獲得：TradingViewの有料プランが割引に。世界最高峰のチャートで分析を極めよう。",
@@ -447,6 +471,18 @@ export const DICTIONARY = {
             ai: MESSAGES.ai_status.CN,
             market: MESSAGES.market_data_status.CN
         },
+        settings: {
+            title: "终端配置",
+            subtitle: "自定义您的工作区",
+            theme_title: "主题界面",
+            dark_mode: "深色模式",
+            light_mode: "浅色模式",
+            active_modules: "活动模块",
+            reset: "重置",
+            disabled_modules: "禁用模块",
+            last_updated: "最后更新",
+            system_operational: "系统运行正常"
+        },
         partner: {
             badge: "TradingView 官方合作伙伴",
             title: "获得 $15 奖励：节省您的 TradingView 新计划费用。从 OmniMetric 开始体验世界级的图表分析。",
@@ -620,6 +656,18 @@ export const DICTIONARY = {
         status: {
             ai: MESSAGES.ai_status.ES,
             market: MESSAGES.market_data_status.ES
+        },
+        settings: {
+            title: "Configuración de Terminal",
+            subtitle: "PERSONALIZA TU ESPACIO",
+            theme_title: "Interfaz de Tema",
+            dark_mode: "MODO OSCURO",
+            light_mode: "MODO CLARO",
+            active_modules: "Módulos Activos",
+            reset: "REINICIAR",
+            disabled_modules: "Módulos Desactivados",
+            last_updated: "Última Actualización",
+            system_operational: "SISTEMA OPERATIVO"
         },
         partner: {
             badge: "Socio Oficial de TradingView",
@@ -795,6 +843,18 @@ export const DICTIONARY = {
             ai: MESSAGES.ai_status.HI,
             market: MESSAGES.market_data_status.HI
         },
+        settings: {
+            title: "टर्मिनल कॉन्फ़िगरेशन",
+            subtitle: "अपने कार्यस्थान को अनुकूलित करें",
+            theme_title: "थीम इंटरफ़ेस",
+            dark_mode: "डार्क मोड",
+            light_mode: "लाइट मोड",
+            active_modules: "सक्रिय मॉड्यूल",
+            reset: "रीसेट",
+            disabled_modules: "अक्षम मॉड्यूल",
+            last_updated: "अंतिम अद्यतन",
+            system_operational: "सिस्टम चालू"
+        },
         partner: {
             badge: "TradingView आधिकारिक भागीदार",
             title: "$15 का क्रेडिट प्राप्त करें: अपनी नई TradingView योजना पर बचत करें। OmniMetric के साथ विश्व स्तरीय चार्टिंग का अनुभव करें।",
@@ -969,6 +1029,18 @@ export const DICTIONARY = {
             ai: MESSAGES.ai_status.ID,
             market: MESSAGES.market_data_status.ID
         },
+        settings: {
+            title: "Konfigurasi Terminal",
+            subtitle: "SESUAIKAN RUANG KERJA ANDA",
+            theme_title: "Antarmuka Tema",
+            dark_mode: "MODE GELAP",
+            light_mode: "MODE TERANG",
+            active_modules: "Modul Aktif",
+            reset: "RESET",
+            disabled_modules: "Modul Dinonaktifkan",
+            last_updated: "Terakhir Diperbarui",
+            system_operational: "SISTEM BEROPERASI"
+        },
         partner: {
             badge: "Mitra Resmi TradingView",
             title: "Dapatkan Kredit $15: Hemat pada paket TradingView baru Anda. Nikmati charting kelas dunia mulai dari OmniMetric.",
@@ -1137,6 +1209,18 @@ export const DICTIONARY = {
         status: {
             ai: MESSAGES.ai_status.AR,
             market: MESSAGES.market_data_status.AR
+        },
+        settings: {
+            title: "تكوين المحطة",
+            subtitle: "تخصيص مساحة العمل الخاصة بك",
+            theme_title: "واجهة الموضوع",
+            dark_mode: "الوضع الداكن",
+            light_mode: "الوضع الفاتح",
+            active_modules: "الوحدات النشطة",
+            reset: "إعادة ضبط",
+            disabled_modules: "الوحدات المعطلة",
+            last_updated: "آخر تحديث",
+            system_operational: "النظام يعمل"
         },
         partner: {
             badge: "شريك رسمي لـ TradingView",

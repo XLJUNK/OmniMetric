@@ -14,27 +14,27 @@ export const LegalFooter = () => {
     const { isMobile } = useDevice();
 
     return (
-        <footer className="w-full bg-[#050505] border-t border-slate-800 mt-auto">
+        <footer className="w-full bg-slate-50 dark:bg-[#050505] border-t border-slate-200 dark:border-slate-800 mt-auto transition-colors duration-300">
             {/* Minimal Link Bar */}
-            <div className="w-full bg-[#0a0a0a] border-b border-slate-800/50 py-3">
+            <div className="w-full bg-slate-100 dark:bg-[#0a0a0a] border-b border-slate-200 dark:border-slate-800/50 py-3">
                 <div className={`max-w-[1600px] mx-auto flex flex-wrap justify-center items-center gap-x-4 gap-y-3 px-4 text-[10px] font-mono tracking-wider`}>
-                    <Link href={`/about?lang=${lang}`} className="text-slate-400 hover:text-slate-200 uppercase transition-colors px-2 py-1">
+                    <Link href={`/about?lang=${lang}`} className="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-slate-200 uppercase transition-colors px-2 py-1">
                         {t.labels.about}
                     </Link>
-                    {!isMobile && <span className="text-slate-800">|</span>}
-                    <Link href={`/legal/privacy-policy?lang=${lang}`} className="text-slate-400 hover:text-slate-200 uppercase transition-colors px-2 py-1">
+                    {!isMobile && <span className="text-slate-300 dark:text-slate-800">|</span>}
+                    <Link href={`/legal/privacy-policy?lang=${lang}`} className="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-slate-200 uppercase transition-colors px-2 py-1">
                         Privacy
                     </Link>
-                    {!isMobile && <span className="text-slate-800">|</span>}
-                    <Link href={`/legal/terms?lang=${lang}`} className="text-slate-400 hover:text-slate-200 uppercase transition-colors px-2 py-1">
+                    {!isMobile && <span className="text-slate-300 dark:text-slate-800">|</span>}
+                    <Link href={`/legal/terms?lang=${lang}`} className="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-slate-200 uppercase transition-colors px-2 py-1">
                         Terms
                     </Link>
-                    {!isMobile && <span className="text-slate-800">|</span>}
-                    <Link href={`/contact?lang=${lang}`} className="text-slate-400 hover:text-slate-200 uppercase transition-colors px-2 py-1">
+                    {!isMobile && <span className="text-slate-300 dark:text-slate-800">|</span>}
+                    <Link href={`/contact?lang=${lang}`} className="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-slate-200 uppercase transition-colors px-2 py-1">
                         Contact
                     </Link>
-                    {!isMobile && <span className="text-slate-800">|</span>}
-                    <Link href={`/archive?lang=${lang}`} className="text-slate-400 hover:text-slate-200 uppercase transition-colors px-2 py-1">
+                    {!isMobile && <span className="text-slate-300 dark:text-slate-800">|</span>}
+                    <Link href={`/archive?lang=${lang}`} className="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-slate-200 uppercase transition-colors px-2 py-1">
                         {t.labels.archive}
                     </Link>
                 </div>

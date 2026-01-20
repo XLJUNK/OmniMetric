@@ -20,9 +20,9 @@ export const Sidebar = () => {
     ];
 
     return (
-        <aside className="fixed start-0 top-0 bottom-0 hidden md:flex flex-col w-[60px] bg-[#0A0A0A] border-e border-[#1E293B] overflow-visible z-50">
+        <aside className="fixed start-0 top-0 bottom-0 hidden md:flex flex-col w-[60px] bg-white dark:bg-[#0A0A0A] border-e border-slate-200 dark:border-[#1E293B] overflow-visible z-50 transition-colors duration-300">
             {/* Logo Area */}
-            <div className="h-[60px] flex items-center justify-center border-b border-[#1E293B]">
+            <div className="h-[60px] flex items-center justify-center border-b border-slate-200 dark:border-[#1E293B]">
                 <div className={`w-3 h-3 rounded-full ${pathname === '/' ? 'bg-sky-500 shadow-[0_0_8px_rgba(14,165,233,0.8)]' : 'bg-slate-600'}`}></div>
             </div>
 
@@ -35,8 +35,8 @@ export const Sidebar = () => {
                             key={tab.key}
                             onClick={() => router.push(`${tab.path}?lang=${lang}`)}
                             className={`group relative flex items-center justify-center p-3 rounded-lg transition-all duration-300 border border-transparent ${isActive
-                                ? 'bg-[#333] border-[#555] shadow-lg'
-                                : 'bg-transparent hover:bg-[#222] hover:border-[#333]'
+                                ? 'bg-slate-100 dark:bg-[#333] border-slate-200 dark:border-[#555] shadow-sm dark:shadow-lg'
+                                : 'bg-transparent hover:bg-slate-50 dark:hover:bg-[#222] hover:border-slate-200 dark:hover:border-[#333]'
                                 }`}
                         >
                             {/* Active Indicator (Dot) - Subtle */}
@@ -47,8 +47,8 @@ export const Sidebar = () => {
                             {/* Icon - OPTIMIZED COLOR PALETTE */}
                             <tab.icon
                                 className={`w-[20px] h-[20px] transition-all duration-300 ${isActive
-                                    ? 'text-[#F1F5F9]'
-                                    : 'text-[#94A3B8] group-hover:text-sky-500'
+                                    ? 'text-sky-600 dark:text-[#F1F5F9]'
+                                    : 'text-slate-400 dark:text-[#94A3B8] group-hover:text-sky-500'
                                     }`}
                             />
 
@@ -65,7 +65,7 @@ export const Sidebar = () => {
             </nav>
 
             {/* Footer / Status Indicator */}
-            <div className="h-[60px] flex items-center justify-center border-t border-[#1E293B]">
+            <div className="h-[60px] flex items-center justify-center border-t border-slate-200 dark:border-[#1E293B]">
                 <div className="w-1.5 h-1.5 rounded-full bg-emerald-500/50"></div>
             </div>
         </aside>
