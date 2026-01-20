@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-01-19T22:53:08Z",
-    "last_successful_update": "2026-01-19T22:53:08Z",
+    "last_updated": "2026-01-19T23:46:24Z",
+    "last_successful_update": "2026-01-19T23:46:24Z",
     "gms_score": 27,
     "sector_scores": {
         "STOCKS": 40,
@@ -178,6 +178,43 @@
                 5799.3,
                 5800.52,
                 5801.3
+            ]
+        },
+        "BREAKEVEN_INFLATION": {
+            "price": 2.33,
+            "change_percent": 0.0,
+            "trend": "STABLE",
+            "sparkline": [
+                2.26,
+                2.26,
+                2.25,
+                2.25,
+                2.26,
+                2.25,
+                2.23,
+                2.24,
+                2.24,
+                2.24,
+                2.23,
+                2.24,
+                2.24,
+                2.24,
+                2.23,
+                2.22,
+                2.24,
+                2.25,
+                2.25,
+                2.25,
+                2.26,
+                2.27,
+                2.27,
+                2.27,
+                2.28,
+                2.29,
+                2.3,
+                2.29,
+                2.29,
+                2.33
             ]
         },
         "VIX": {
@@ -540,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 92775.12,
+            "price": 92603.2,
             "prev_price": 93634.43,
-            "daily_chg": -0.92,
-            "change_percent": -2.91,
+            "daily_chg": -1.1,
+            "change_percent": -3.09,
             "trend": "DOWN",
             "sparkline": [
                 87138.14,
@@ -567,14 +604,14 @@
                 95525.12,
                 95099.92,
                 93634.43,
-                92775.12
+                92603.2
             ]
         },
         "ETH": {
-            "price": 3198.07,
+            "price": 3190.07,
             "prev_price": 3281.16,
-            "daily_chg": -2.53,
-            "change_percent": -3.59,
+            "daily_chg": -2.78,
+            "change_percent": -3.83,
             "trend": "DOWN",
             "sparkline": [
                 2934.54,
@@ -598,14 +635,14 @@
                 3295.48,
                 3308.86,
                 3281.16,
-                3198.07
+                3190.07
             ]
         },
         "SOL": {
-            "price": 133.32,
+            "price": 133.64,
             "prev_price": 138.0,
-            "daily_chg": -3.39,
-            "change_percent": -6.33,
+            "daily_chg": -3.15,
+            "change_percent": -6.1,
             "trend": "DOWN",
             "sparkline": [
                 123.13,
@@ -629,7 +666,7 @@
                 144.86,
                 143.73,
                 138.0,
-                133.32
+                133.64
             ]
         },
         "DXY": {
@@ -664,10 +701,10 @@
             ]
         },
         "USDJPY": {
-            "price": 158.09,
+            "price": 158.21,
             "prev_price": 158.6,
-            "daily_chg": -0.32,
-            "change_percent": 0.07,
+            "daily_chg": -0.24,
+            "change_percent": 0.14,
             "trend": "DOWN",
             "sparkline": [
                 154.78,
@@ -691,14 +728,14 @@
                 159.18,
                 158.4,
                 158.6,
-                158.09
+                158.21
             ]
         },
         "EURUSD": {
-            "price": 1.17,
+            "price": 1.16,
             "prev_price": 1.16,
-            "daily_chg": 0.36,
-            "change_percent": -0.14,
+            "daily_chg": 0.29,
+            "change_percent": -0.21,
             "trend": "UP",
             "sparkline": [
                 1.17,
@@ -722,7 +759,7 @@
                 1.16,
                 1.16,
                 1.16,
-                1.17
+                1.16
             ]
         },
         "USDINR": {
@@ -788,10 +825,10 @@
             ]
         },
         "GOLD": {
-            "price": 4676.7,
+            "price": 4674.4,
             "prev_price": 4588.4,
-            "daily_chg": 1.92,
-            "change_percent": 1.91,
+            "daily_chg": 1.87,
+            "change_percent": 1.86,
             "trend": "UP",
             "sparkline": [
                 4347.5,
@@ -815,14 +852,14 @@
                 4626.3,
                 4616.3,
                 4588.4,
-                4676.7
+                4674.4
             ]
         },
         "OIL": {
-            "price": 59.43,
+            "price": 59.4,
             "prev_price": 59.44,
-            "daily_chg": -0.02,
-            "change_percent": -2.81,
+            "daily_chg": -0.07,
+            "change_percent": -2.86,
             "trend": "DOWN",
             "sparkline": [
                 55.94,
@@ -846,7 +883,7 @@
                 62.02,
                 59.19,
                 59.44,
-                59.43
+                59.4
             ]
         },
         "COPPER": {
@@ -881,10 +918,10 @@
             ]
         },
         "NATGAS": {
-            "price": 3.57,
+            "price": 3.58,
             "prev_price": 3.1,
-            "daily_chg": 14.95,
-            "change_percent": 4.33,
+            "daily_chg": 15.4,
+            "change_percent": 4.74,
             "trend": "UP",
             "sparkline": [
                 4.02,
@@ -908,7 +945,7 @@
                 3.12,
                 3.13,
                 3.1,
-                3.57
+                3.58
             ]
         },
         "MOVE": {
@@ -1070,26 +1107,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS score of 27 signals a defensive regime. Rising VIX and high oil prices weigh on sentiment. While US 10Y yields remain stable, elevated real rates pressure equities. Copper/Gold ratio is high, but risk-off sentiment could trigger correction. Monitor Powell's comments.",
+        "content": "GMS at 27 indicates a defensive stance. Rising real rates pressure risk assets. Higher copper/gold ratio is capped by stable breakeven inflation, limiting equity gains. US 10Y yield at 4.2% is key resistance; breach signals liquidity drain and correction. BTC below $90k triggers caution.",
         "reports": {
-            "JP": "GMSスコア27はディフェンシブ領域。VIX上昇と原油高が重石。米10年債利回りは膠着も、実質金利高止まりで株価は軟調。銅/金レシオは高水準維持も、リスク回避姿勢が鮮明化すれば調整も。パウエルFRB議長の動向注視、株価下落トリガーとなり得る。",
-            "EN": "GMS score of 27 signals a defensive regime. Rising VIX and high oil prices weigh on sentiment. While US 10Y yields remain stable, elevated real rates pressure equities. Copper/Gold ratio is high, but risk-off sentiment could trigger correction. Monitor Powell's comments.",
-            "CN": "GMS评分27表明防御性市场。VIX上升和原油高位压制市场情绪。美国10年期国债收益率稳定，但实际利率高企打压股市。铜金比率虽高，避险情绪或引发调整。关注鲍威尔动向，可能成为股市下跌的催化剂。",
-            "ES": "Un GMS de 27 indica un régimen defensivo. El aumento del VIX y los altos precios del petróleo pesan sobre el sentimiento. Aunque el rendimiento del Tesoro a 10 años se mantiene estable, las tasas reales elevadas presionan a las acciones. Ratio Cobre/Oro alto, pero la aversión al riesgo podría desencadenar una corrección. Atentos a Powell.",
-            "HI": "जीएमएस स्कोर 27 एक रक्षात्मक व्यवस्था का संकेत देता है। बढ़ता हुआ वीआईएक्स और उच्च तेल की कीमतें भावनाओं पर भार डालती हैं। जबकि अमेरिकी 10वाई उपज स्थिर बनी हुई है, उच्च वास्तविक दरें इक्विटी पर दबाव डालती हैं। कॉपर/गोल्ड अनुपात अधिक है, लेकिन जोखिम से बचने की भावना सुधार को ट्रिगर कर सकती है। पॉवेल की टिप्पणियों पर ध्यान रखें।",
-            "ID": "Skor GMS 27 menandakan rezim defensif. Kenaikan VIX dan harga minyak yang tinggi membebani sentimen. Meskipun imbal hasil US 10Y tetap stabil, suku bunga riil yang tinggi menekan ekuitas. Rasio Tembaga/Emas tinggi, tetapi sentimen risk-off dapat memicu koreksi. Pantau komentar Powell.",
-            "AR": "تشير نتيجة GMS البالغة 27 إلى نظام دفاعي. ارتفاع مؤشر VIX وارتفاع أسعار النفط يثقلان المعنويات. في حين أن عوائد سندات الخزانة الأمريكية لأجل 10 سنوات لا تزال مستقرة، فإن أسعار الفائدة الحقيقية المرتفعة تضغط على الأسهم. نسبة النحاس/الذهب مرتفعة، لكن النفور من المخاطرة قد يؤدي إلى تصحيح. راقب تعليقات باول."
+            "JP": "GMSスコア27はディフェンシブ領域。実質金利上昇はリスク資産圧迫。銅/金レシオ上昇も、期待インフレ低位安定で株高限定的。米10年債利回り4.2%が上値抵抗線。ここを突破で流動性相場終焉、大幅調整へ。BTCは90000ドル割れで警戒。",
+            "EN": "GMS at 27 indicates a defensive stance. Rising real rates pressure risk assets. Higher copper/gold ratio is capped by stable breakeven inflation, limiting equity gains. US 10Y yield at 4.2% is key resistance; breach signals liquidity drain and correction. BTC below $90k triggers caution.",
+            "CN": "GMS 27表明防御姿态。实际利率上升压制风险资产。铜金比走高受制于盈亏平衡通胀稳定，限制股市涨幅。美10年期国债收益率4.2%是关键阻力位；突破预示流动性紧缩和回调。比特币跌破9万美元值得警惕。",
+            "ES": "El GMS en 27 indica una postura defensiva. El aumento de las tasas reales presiona los activos de riesgo. El aumento del ratio cobre/oro está limitado por una inflación de equilibrio estable, limitando las ganancias de las acciones. El rendimiento del bono del Tesoro estadounidense a 10 años en el 4.2% es una resistencia clave; la ruptura señala una fuga de liquidez y una corrección. BTC por debajo de $ 90k genera cautela.",
+            "HI": "जीएमएस 27 रक्षात्मक रुख का संकेत देता है। बढ़ती वास्तविक दरें जोखिम वाली संपत्तियों पर दबाव डालती हैं। स्थिर ब्रेकइवन मुद्रास्फीति से तांबा/सोना अनुपात में वृद्धि सीमित है, जिससे इक्विटी लाभ सीमित होता है। अमेरिकी 10-वर्षीय उपज 4.2% पर प्रमुख प्रतिरोध है; उल्लंघन तरलता की कमी और सुधार का संकेत देता है। $90k से नीचे BTC सावधानी बरतने का संकेत देता है।",
+            "ID": "GMS pada 27 mengindikasikan sikap defensif. Kenaikan suku bunga riil menekan aset berisiko. Rasio tembaga/emas yang lebih tinggi dibatasi oleh inflasi impas yang stabil, membatasi keuntungan ekuitas. Yield US 10Y di 4.2% adalah resistensi utama; pelanggaran sinyal pengurasan likuiditas dan koreksi. BTC di bawah $90 ribu memicu kehati-hatian.",
+            "AR": "يشير مؤشر GMS عند 27 إلى موقف دفاعي. ارتفاع أسعار الفائدة الحقيقية يضغط على الأصول الخطرة. ارتفاع نسبة النحاس/الذهب مقيد بالتضخم المستقر عند نقطة التعادل، مما يحد من مكاسب الأسهم. يعتبر عائد سندات الخزانة الأمريكية لأجل 10 سنوات بنسبة 4.2٪ مقاومة رئيسية؛ الاختراق يشير إلى استنزاف السيولة وتصحيح. عملة البيتكوين دون 90 ألف دولار تثير الحذر."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-18T11:44:54Z",
-            "score": 32
-        },
-        {
-            "date": "2026-01-18T12:58:44Z",
-            "score": 32
-        },
         {
             "date": "2026-01-18T13:37:47Z",
             "score": 32
@@ -1320,6 +1349,14 @@
         },
         {
             "date": "2026-01-19T22:53:08Z",
+            "score": 27
+        },
+        {
+            "date": "2026-01-19T23:38:45Z",
+            "score": 27
+        },
+        {
+            "date": "2026-01-19T23:46:24Z",
             "score": 27
         }
     ],

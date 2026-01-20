@@ -166,7 +166,7 @@ function AboutContent() {
                 {/* Footer */}
                 <div className="pt-8 border-t border-slate-800 opacity-50">
                     <p className="text-[10px] font-mono tracking-widest uppercase text-slate-600">
-                        {isJP ? 'システム状態: 運用中 // バージョン 2.0 // 更新日' : 'System Status: Operational // Version 2.0 // Updated'} {new Date().toISOString().split('T')[0]}
+                        {isJP ? 'システム状態: 運用中 (OmniMetric Project) // バージョン 2.0 // 更新日' : 'System Status: Operational (OmniMetric Project) // Version 2.0 // Updated'} {new Date().toISOString().split('T')[0]}
                     </p>
                 </div>
             </div>

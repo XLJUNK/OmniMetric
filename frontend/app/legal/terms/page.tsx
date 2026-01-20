@@ -147,10 +147,37 @@ function TermsContent() {
                     </p>
                 </section>
 
+                {/* No Support & Severability - NEW */}
+                <section className="bg-[#111] !border !border-slate-800 !rounded-xl p-6 space-y-4">
+                    <h2 className="text-lg font-bold text-white uppercase tracking-wide">
+                        5. Operational Policies
+                    </h2>
+                    <div className="space-y-4 text-sm text-slate-300">
+                        <div>
+                            <h3 className="text-slate-400 font-bold mb-1">No Support Obligation</h3>
+                            <p>
+                                OmniMetric Project is under no obligation to provide individual support, consulting, or responses to inquiries. Use of the Service does not create a professional-client relationship.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 className="text-slate-400 font-bold mb-1">Right to Terminate</h3>
+                            <p>
+                                We reserve the right to block access to any user or IP address, without notice, for violating these Terms (including scraping of data).
+                            </p>
+                        </div>
+                        <div>
+                            <h3 className="text-slate-400 font-bold mb-1">Severability</h3>
+                            <p>
+                                If any provision of these Terms is found to be unenforceable, the remaining provisions will remain in full force and effect.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
                 {/* Modifications to Terms */}
                 <section className="bg-[#111] !border !border-slate-800 !rounded-xl p-6 space-y-4">
                     <h2 className="text-lg font-bold text-white uppercase tracking-wide">
-                        5. Modifications to Terms
+                        6. Modifications to Terms
                     </h2>
                     <p className="text-sm text-slate-300">
                         We reserve the right to modify these Terms at any time. Changes will be posted on this page with an updated "Last Updated" date. Continued use of OmniMetric after changes constitutes acceptance of the new Terms.
@@ -160,7 +187,7 @@ function TermsContent() {
                 {/* Governing Law */}
                 <section className="bg-[#111] !border !border-slate-800 !rounded-xl p-6 space-y-4">
                     <h2 className="text-lg font-bold text-white uppercase tracking-wide">
-                        6. Governing Law
+                        7. Governing Law
                     </h2>
                     <p className="text-sm text-slate-300">
                         These Terms shall be governed by and construed in accordance with applicable international digital commerce laws. Disputes will be resolved through arbitration or the courts of the jurisdiction where the OmniMetric Project is registered.
@@ -170,7 +197,7 @@ function TermsContent() {
                 {/* Contact */}
                 <section className="bg-[#111] !border !border-slate-800 !rounded-xl p-6">
                     <h2 className="text-lg font-bold text-white uppercase tracking-wide mb-3">
-                        7. Contact
+                        8. Contact
                     </h2>
                     <p className="text-sm text-slate-300">
                         For legal inquiries or licensing requests, contact us via Direct Message on X (Twitter):{' '}

@@ -63,6 +63,13 @@ function ContactContent() {
                         </div>
                     </section>
 
+                    {/* No Reply Obligation Disclaimer - NEW */}
+                    <div className="text-center px-4">
+                        <p className="text-xs text-slate-500 font-mono border-b border-slate-800 pb-2 inline-block">
+                            {isJP ? '重要：すべてのメッセージを確認しますが、返信の義務は負いません。個別の回答が必要な投資相談等には一切応じられません。' : 'IMPORTANT: We review all messages but are under no obligation to reply. We do not respond to individual investment inquiries.'}
+                        </p>
+                    </div>
+
                     {/* Primary Contact */}
                     <section className="bg-[#111] !border !border-cyan-500/30 !rounded-xl p-8 text-center space-y-6">
                         <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-500/10 rounded-full mb-2">
@@ -152,7 +159,7 @@ function ContactContent() {
 
                     <div className="pt-8 border-t border-slate-800 opacity-50">
                         <p className="text-[10px] font-mono tracking-widest uppercase text-slate-600 text-center">
-                            {isJP ? 'サポートプロトコル: SNSベース // メールフォームなし // 電話サポートなし' : 'Support Protocol: SNS-Based // No Email Forms // No Phone Support'}
+                            {isJP ? 'サポートプロトコル: SNS（X/Bluesky）DMのみ // メールフォーム・電話対応なし' : 'Support Protocol: SNS (X/Bluesky) DM Only // No Email Forms // No Phone Support'}
                         </p>
                     </div>
                 </div>

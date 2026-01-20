@@ -18,14 +18,13 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
             try {
                 const res = await fetch(`/api/news?lang=${lang}`);
                 const json = await res.json();
+                const decodeEntities = (str: string) => {
+                    const entities: any = { '&apos;': "'", '&amp;': "&", '&quot;': '"', '&lt;': "<", '&gt;': ">" };
+                    return str.replace(/&(apos|amp|quot|lt|gt);/g, match => entities[match] || match);
+                };
                 const decodedNews = (json.news || []).map((item: any) => ({
                     ...item,
-                    title: item.title
-                        .replace(/&apos;/g, "'")
-                        .replace(/&amp;/g, "&")
-                        .replace(/&quot;/g, '"')
-                        .replace(/&lt;/g, "<")
-                        .replace(/&gt;/g, ">")
+                    title: decodeEntities(item.title)
                 }));
                 setNews(decodedNews);
             } catch (e) {

@@ -4948,3 +4948,510 @@ Output JSON:
 [2026-01-19 22:28:35] [SNS] Processing Serial SNS Broadcast: Stage 2 (Bluesky)
 [2026-01-19 22:28:35] [SNS_BSKY] Missing Bluesky credentials (BLUESKY_HANDLE / BLUESKY_PASSWORD).
 [2026-01-19 22:28:35] [AIO] Running Performance Audit...
+[2026-01-20 08:37:56] [FMP] Fetching calendar from: https://financialmodelingprep.com/stable/economic-calendar?from=2026-01-20&to=2026-03-06&apikey=REDACTED
+[2026-01-20 08:37:58] [FMP] Response status: 402
+[2026-01-20 08:37:58] [ERROR] Calendar Fetch Failed: Expecting value: line 1 column 1 (char 0)
+[2026-01-20 08:38:00] [IN] FRED_RAW: { series: DGS10, price: 4.17 }
+[2026-01-20 08:38:05] [IN] FRED_RAW: { series: DFII10, price: 1.88 }
+[2026-01-20 08:38:05] [IN] FRED_RAW: { series: T10YIE, price: 2.33 }
+[2026-01-20 08:38:07] [IN] FRED_RAW: { series_id: NFCI, val: -0.57258 }
+[2026-01-20 08:38:07] [FRED] Calculating Net Liquidity...
+[2026-01-20 08:38:08] [IN] FRED_RAW: { series: WALCL, last: 6581700.0 }
+[2026-01-20 08:38:08] [IN] FRED_RAW: { series: TGA, last: 779175.0 }
+[2026-01-20 08:38:08] [IN] FRED_RAW: { series: RRP, last: 1.222 }
+[2026-01-20 08:38:08] [FRED] Calculated Net Liquidity: 5801.303B (using WALCL=6581700.0)
+[2026-01-20 08:38:08] [OUT] CALC_LIQ: { price: 5801.3, chg: 0.01% }
+[2026-01-20 08:38:08] [IN] YF_QUERY: { count: 21, tickers: ['SPY', 'EURUSD=X', 'CL=F', 'INR=X', 'HYG']... }
+[2026-01-20 08:38:10] [IN] YF_RAW: { ticker: VIX, price: 18.84, chg: 18.79% }
+[2026-01-20 08:38:10] [IN] YF_RAW: { ticker: SPY, price: 691.66, chg: -0.08% }
+[2026-01-20 08:38:10] [IN] YF_RAW: { ticker: TNX, price: 4.23, chg: 1.71% }
+[2026-01-20 08:38:10] [IN] YF_RAW: { ticker: QQQ, price: 621.26, chg: -0.08% }
+[2026-01-20 08:38:10] [IN] YF_RAW: { ticker: IWM, price: 265.76, chg: 0.09% }
+[2026-01-20 08:38:10] [IN] YF_RAW: { ticker: RSP, price: 199.05, chg: -0.26% }
+[2026-01-20 08:38:11] [IN] YF_RAW: { ticker: HYG, price: 81.09, chg: 0.06% }
+[2026-01-20 08:38:11] [IN] YF_RAW: { ticker: NIFTY, price: 25585.5, chg: -0.42% }
+[2026-01-20 08:38:11] [IN] YF_RAW: { ticker: BTC, price: 92603.98, chg: -1.1% }
+[2026-01-20 08:38:11] [IN] YF_RAW: { ticker: ETH, price: 3191.1, chg: -2.74% }
+[2026-01-20 08:38:11] [IN] YF_RAW: { ticker: SOL, price: 133.68, chg: -3.13% }
+[2026-01-20 08:38:11] [IN] YF_RAW: { ticker: DXY, price: 99.39, chg: 0.0% }
+[2026-01-20 08:38:11] [IN] YF_RAW: { ticker: USDJPY, price: 158.19, chg: -0.25% }
+[2026-01-20 08:38:12] [IN] YF_RAW: { ticker: EURUSD, price: 1.16, chg: 0.29% }
+[2026-01-20 08:38:12] [IN] YF_RAW: { ticker: USDINR, price: 90.85, chg: 0.54% }
+[2026-01-20 08:38:12] [IN] YF_RAW: { ticker: USDSAR, price: 3.75, chg: 0.11% }
+[2026-01-20 08:38:12] [IN] YF_RAW: { ticker: GOLD, price: 4671.1, chg: 1.8% }
+[2026-01-20 08:38:12] [IN] YF_RAW: { ticker: OIL, price: 59.36, chg: -0.13% }
+[2026-01-20 08:38:12] [IN] YF_RAW: { ticker: COPPER, price: 5.9, chg: 1.98% }
+[2026-01-20 08:38:12] [IN] YF_RAW: { ticker: NATGAS, price: 3.58, chg: 15.4% }
+[2026-01-20 08:38:13] [GUARD] Data Integrity Audit: 100% Data Completion (All feeds successful).
+[2026-01-20 08:38:13] [GUARD] Market data acquisition: OPERATIONAL
+[2026-01-20 08:38:13] [OUT] CALC_SCORE: { sector: STOCKS, score: 40 }
+[2026-01-20 08:38:13] [OUT] CALC_SCORE: { sector: CRYPTO, score: 25 }
+[2026-01-20 08:38:13] [OUT] CALC_SCORE: { sector: FOREX, score: 35 }
+[2026-01-20 08:38:13] [OUT] CALC_SCORE: { sector: COMMODITIES, score: 25 }
+[2026-01-20 08:38:13] [OUT] SECTOR_SCORES: {"STOCKS": 40, "CRYPTO": 25, "FOREX": 35, "COMMODITIES": 25}
+[2026-01-20 08:38:13] [OUT] GMS_TOTAL: { score: 27 }
+[2026-01-20 08:38:13] [AI BRIDGE] GEMINI_API_KEY detected (Length: 39)
+[2026-01-20 08:38:14] [AI BATCH] Requesting 7-language analysis (Attempt 1)...
+[2026-01-20 08:38:14] [AI BRIDGE] Command: npx -y tsx scripts/generate_insight.ts 
+【AI Insight Protocol v5.3: Output Density Protocol】
+Role: Lead Economist at a top-tier investment bank (Bloomberg/Goldman style).
+Goal: Generate a high-density, strategic macro report.
+
+MASTER LANGUAGE PROTOCOL:
+1. First, generate the Japanese (JP) analysis as the "Gold Standard".
+2. Maintain the exact "Information Density" and "Logical Structure" of the JP version when translating/adapting to other languages.
+
+CHARACTER COUNT RANGE (STRICT):
+- REQUIRED RANGE: 200 to 250 characters per language.
+- "Low Density" (<200 chars) is an automatic FAILURE.
+- "Excessive length" (>250 chars) is an automatic FAILURE.
+- You must physically count and ensure every language falls within [200, 250].
+
+*** NEGATIVE CONSTRAINTS (CRITICAL) ***
+- DO NOT include the character count in the output (e.g., "(230 chars)", "（245文字）").
+- DO NOT include any metadata or parenthetical notes about the generation.
+- OUTPUT ONLY the clean, professional report text.
+
+CONTENT "THREE PRINCIPLES" (MANDATORY):
+Each report MUST contain these 3 elements in a cohesive narrative:
+1. Current State Definition (現状の定義): Clearly define the current market regime based on GMS Score.
+2. Correlation & Causality (指標間の相関・因果): Explain the logical link between indicators. MANDATORY: Connect Real Interest Rates (実質金利), Breakeven Inflation (期待インフレ), and Copper/Gold Ratio (景気の先行指標) to current equity/crypto trends.
+3. Future Prediction (今後の予測): Provide a specific tactical outlook or trigger point based on yield levels or liquidity shifts.
+
+GMS Context:
+- Current GMS Score: 27/100
+- Market Matrix:
+- CRYPTO_SENTIMENT: 44 (Prev: 44, DailyChg: 0.0%)
+- YIELD_SPREAD: 0.57 (Prev: 0.57, DailyChg: 0.0%)
+- HY_SPREAD: 2.71 (Prev: 2.76, DailyChg: -1.81%)
+- NFCI: -0.57 (Prev: -0.57, DailyChg: 0.0%)
+- NET_LIQUIDITY: 5801.3 (Prev: 5800.52, DailyChg: 0.01%)
+- VIX: 18.84 (Prev: 15.86, DailyChg: 18.79%)
+- YIELD_SPREAD_10Y2Y: 0.65 (Prev: 0.65, DailyChg: 0.0%)
+- US_10Y_YIELD: 4.17 (Prev: 4.17, DailyChg: 0.0%)
+- REAL_INTEREST_RATE: 1.88 (Prev: 1.88, DailyChg: 0.0%)
+- BREAKEVEN_INFLATION: 2.33 (Prev: 2.33, DailyChg: 0.0%)
+- SPY: 691.66 (Prev: 692.24, DailyChg: -0.08%)
+- TNX: 4.23 (Prev: 4.16, DailyChg: 1.71%)
+- QQQ: 621.26 (Prev: 621.78, DailyChg: -0.08%)
+- IWM: 265.76 (Prev: 265.51, DailyChg: 0.09%)
+- RSP: 199.05 (Prev: 199.56, DailyChg: -0.26%)
+- HYG: 81.09 (Prev: 81.04, DailyChg: 0.06%)
+- NIFTY: 25585.5 (Prev: 25694.35, DailyChg: -0.42%)
+- BTC: 92603.98 (Prev: 93634.43, DailyChg: -1.1%)
+- ETH: 3191.1 (Prev: 3281.16, DailyChg: -2.74%)
+- SOL: 133.68 (Prev: 138.0, DailyChg: -3.13%)
+- DXY: 99.39 (Prev: 99.39, DailyChg: 0.0%)
+- USDJPY: 158.19 (Prev: 158.6, DailyChg: -0.25%)
+- EURUSD: 1.16 (Prev: 1.16, DailyChg: 0.29%)
+- USDINR: 90.85 (Prev: 90.36, DailyChg: 0.54%)
+- USDSAR: 3.75 (Prev: 3.75, DailyChg: 0.11%)
+- GOLD: 4671.1 (Prev: 4588.4, DailyChg: 1.8%)
+- OIL: 59.36 (Prev: 59.44, DailyChg: -0.13%)
+- COPPER: 5.9 (Prev: 5.79, DailyChg: 1.98%)
+- NATGAS: 3.58 (Prev: 3.1, DailyChg: 15.4%)
+- MOVE: 58.05 (Prev: 58.05, DailyChg: 0.0%)
+- BREADTH: 1.14 (Prev: 1.14, DailyChg: 0.0%)
+- SPY_MOMENTUM: -1.14 (Prev: -1.14, DailyChg: 0.0%)
+- COPPER_GOLD: 1.26 (Prev: 1.26, DailyChg: 0.0%)
+
+- News: Dow set to fall more than 300 points on Trump’s new tariff threat over Greenland: Live updates
+
+Regime Guide:
+- 0-40: DEFENSIVE (Risk-Off).
+- 40-60: NEUTRAL.
+- 60-100: ACCUMULATE (Risk-On).
+
+SELF-CENSORSHIP:
+Check each Value in the JSON. If any string is < 200 characters, rewrite it to be more descriptive and analytical until it passes the 200-character threshold. Remove any trailing character counts.
+
+Output JSON:
+{
+  "JP": " (200-250文字: 現状、相関、予測を含む叙述文) ",
+  "EN": " (200-250 chars: Definition, Correlation, Prediction) ",
+  "CN": "...",
+  "ES": "...",
+  "HI": "...",
+  "ID": "...",
+  "AR": "..."
+}
+
+[2026-01-20 08:38:36] [AI BRIDGE] Received 824 bytes of output. Head: [dotenv@17.2.3] injecting env (0) from ..\.env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+[...
+[2026-01-20 08:38:36] [AI ERROR] JSON parse failed: Expecting value: line 1 column 1 (char 0)
+[2026-01-20 08:38:36] [AI BATCH] Requesting 7-language analysis (Attempt 2)...
+[2026-01-20 08:38:36] [AI BRIDGE] Command: npx -y tsx scripts/generate_insight.ts 
+【AI Insight Protocol v5.3: Output Density Protocol】
+Role: Lead Economist at a top-tier investment bank (Bloomberg/Goldman style).
+Goal: Generate a high-density, strategic macro report.
+
+MASTER LANGUAGE PROTOCOL:
+1. First, generate the Japanese (JP) analysis as the "Gold Standard".
+2. Maintain the exact "Information Density" and "Logical Structure" of the JP version when translating/adapting to other languages.
+
+CHARACTER COUNT RANGE (STRICT):
+- REQUIRED RANGE: 200 to 250 characters per language.
+- "Low Density" (<200 chars) is an automatic FAILURE.
+- "Excessive length" (>250 chars) is an automatic FAILURE.
+- You must physically count and ensure every language falls within [200, 250].
+
+*** NEGATIVE CONSTRAINTS (CRITICAL) ***
+- DO NOT include the character count in the output (e.g., "(230 chars)", "（245文字）").
+- DO NOT include any metadata or parenthetical notes about the generation.
+- OUTPUT ONLY the clean, professional report text.
+
+CONTENT "THREE PRINCIPLES" (MANDATORY):
+Each report MUST contain these 3 elements in a cohesive narrative:
+1. Current State Definition (現状の定義): Clearly define the current market regime based on GMS Score.
+2. Correlation & Causality (指標間の相関・因果): Explain the logical link between indicators. MANDATORY: Connect Real Interest Rates (実質金利), Breakeven Inflation (期待インフレ), and Copper/Gold Ratio (景気の先行指標) to current equity/crypto trends.
+3. Future Prediction (今後の予測): Provide a specific tactical outlook or trigger point based on yield levels or liquidity shifts.
+
+GMS Context:
+- Current GMS Score: 27/100
+- Market Matrix:
+- CRYPTO_SENTIMENT: 44 (Prev: 44, DailyChg: 0.0%)
+- YIELD_SPREAD: 0.57 (Prev: 0.57, DailyChg: 0.0%)
+- HY_SPREAD: 2.71 (Prev: 2.76, DailyChg: -1.81%)
+- NFCI: -0.57 (Prev: -0.57, DailyChg: 0.0%)
+- NET_LIQUIDITY: 5801.3 (Prev: 5800.52, DailyChg: 0.01%)
+- VIX: 18.84 (Prev: 15.86, DailyChg: 18.79%)
+- YIELD_SPREAD_10Y2Y: 0.65 (Prev: 0.65, DailyChg: 0.0%)
+- US_10Y_YIELD: 4.17 (Prev: 4.17, DailyChg: 0.0%)
+- REAL_INTEREST_RATE: 1.88 (Prev: 1.88, DailyChg: 0.0%)
+- BREAKEVEN_INFLATION: 2.33 (Prev: 2.33, DailyChg: 0.0%)
+- SPY: 691.66 (Prev: 692.24, DailyChg: -0.08%)
+- TNX: 4.23 (Prev: 4.16, DailyChg: 1.71%)
+- QQQ: 621.26 (Prev: 621.78, DailyChg: -0.08%)
+- IWM: 265.76 (Prev: 265.51, DailyChg: 0.09%)
+- RSP: 199.05 (Prev: 199.56, DailyChg: -0.26%)
+- HYG: 81.09 (Prev: 81.04, DailyChg: 0.06%)
+- NIFTY: 25585.5 (Prev: 25694.35, DailyChg: -0.42%)
+- BTC: 92603.98 (Prev: 93634.43, DailyChg: -1.1%)
+- ETH: 3191.1 (Prev: 3281.16, DailyChg: -2.74%)
+- SOL: 133.68 (Prev: 138.0, DailyChg: -3.13%)
+- DXY: 99.39 (Prev: 99.39, DailyChg: 0.0%)
+- USDJPY: 158.19 (Prev: 158.6, DailyChg: -0.25%)
+- EURUSD: 1.16 (Prev: 1.16, DailyChg: 0.29%)
+- USDINR: 90.85 (Prev: 90.36, DailyChg: 0.54%)
+- USDSAR: 3.75 (Prev: 3.75, DailyChg: 0.11%)
+- GOLD: 4671.1 (Prev: 4588.4, DailyChg: 1.8%)
+- OIL: 59.36 (Prev: 59.44, DailyChg: -0.13%)
+- COPPER: 5.9 (Prev: 5.79, DailyChg: 1.98%)
+- NATGAS: 3.58 (Prev: 3.1, DailyChg: 15.4%)
+- MOVE: 58.05 (Prev: 58.05, DailyChg: 0.0%)
+- BREADTH: 1.14 (Prev: 1.14, DailyChg: 0.0%)
+- SPY_MOMENTUM: -1.14 (Prev: -1.14, DailyChg: 0.0%)
+- COPPER_GOLD: 1.26 (Prev: 1.26, DailyChg: 0.0%)
+
+- News: Dow set to fall more than 300 points on Trump’s new tariff threat over Greenland: Live updates
+
+Regime Guide:
+- 0-40: DEFENSIVE (Risk-Off).
+- 40-60: NEUTRAL.
+- 60-100: ACCUMULATE (Risk-On).
+
+SELF-CENSORSHIP:
+Check each Value in the JSON. If any string is < 200 characters, rewrite it to be more descriptive and analytical until it passes the 200-character threshold. Remove any trailing character counts.
+
+Output JSON:
+{
+  "JP": " (200-250文字: 現状、相関、予測を含む叙述文) ",
+  "EN": " (200-250 chars: Definition, Correlation, Prediction) ",
+  "CN": "...",
+  "ES": "...",
+  "HI": "...",
+  "ID": "...",
+  "AR": "..."
+}
+
+[2026-01-20 08:38:38] [AI BRIDGE WARN] Bridge execution failed (Code 1). Trying direct node fallback...
+[2026-01-20 08:38:45] [AI BRIDGE] Received 2359 bytes of output. Head: [dotenv@17.2.3] injecting env (0) from ..\.env -- tip: ⚙️  specify custom .env file path with { path...
+[2026-01-20 08:38:45] [AI SUCCESS] Reports parsed and validated.
+[2026-01-20 08:38:45] [SNS] Processing Serial SNS Broadcast: Stage 1 (Twitter)
+[2026-01-20 08:38:45] [SNS][TWITTER] Twitter credentials missing. Skipping Stage 1.
+[2026-01-20 08:38:45] [SNS][TWITTER] Twitter credentials missing. Skipping Stage 1.
+[2026-01-20 08:38:45] [SNS] Processing Serial SNS Broadcast: Stage 2 (Bluesky)
+[2026-01-20 08:38:45] [SNS_BSKY] Smart-skip: Current score (27) matches last posted score. Skipping.
+[2026-01-20 08:38:45] [AIO] Running Performance Audit...
+[2026-01-20 08:44:44] [FMP] Fetching calendar from: https://financialmodelingprep.com/stable/economic-calendar?from=2026-01-20&to=2026-03-06&apikey=REDACTED
+[2026-01-20 08:44:47] [FMP] Response status: 402
+[2026-01-20 08:44:47] [ERROR] Calendar Fetch Failed: Expecting value: line 1 column 1 (char 0)
+[2026-01-20 08:44:49] [IN] FRED_RAW: { series: DGS10, price: 4.17 }
+[2026-01-20 08:44:50] [IN] FRED_RAW: { series: DFII10, price: 1.88 }
+[2026-01-20 08:44:50] [FRED] Fetching T10YIE (Breakeven Inflation)...
+[2026-01-20 08:44:50] [IN] FRED_RAW: { series: T10YIE, price: 2.33 }
+[2026-01-20 08:44:55] [IN] FRED_RAW: { series_id: NFCI, val: -0.57258 }
+[2026-01-20 08:44:55] [FRED] Calculating Net Liquidity...
+[2026-01-20 08:44:56] [IN] FRED_RAW: { series: WALCL, last: 6581700.0 }
+[2026-01-20 08:44:56] [IN] FRED_RAW: { series: TGA, last: 779175.0 }
+[2026-01-20 08:44:56] [IN] FRED_RAW: { series: RRP, last: 1.222 }
+[2026-01-20 08:44:56] [FRED] Calculated Net Liquidity: 5801.303B (using WALCL=6581700.0)
+[2026-01-20 08:44:56] [OUT] CALC_LIQ: { price: 5801.3, chg: 0.01% }
+[2026-01-20 08:44:56] [IN] YF_QUERY: { count: 21, tickers: ['^NSEI', 'SAR=X', '^TNX', 'HYG', 'SPY']... }
+[2026-01-20 08:44:57] [IN] YF_RAW: { ticker: VIX, price: 18.84, chg: 18.79% }
+[2026-01-20 08:44:57] [IN] YF_RAW: { ticker: SPY, price: 691.66, chg: -0.08% }
+[2026-01-20 08:44:57] [IN] YF_RAW: { ticker: TNX, price: 4.23, chg: 1.71% }
+[2026-01-20 08:44:57] [IN] YF_RAW: { ticker: QQQ, price: 621.26, chg: -0.08% }
+[2026-01-20 08:44:57] [IN] YF_RAW: { ticker: IWM, price: 265.76, chg: 0.09% }
+[2026-01-20 08:44:58] [IN] YF_RAW: { ticker: RSP, price: 199.05, chg: -0.26% }
+[2026-01-20 08:44:58] [IN] YF_RAW: { ticker: HYG, price: 81.09, chg: 0.06% }
+[2026-01-20 08:44:58] [IN] YF_RAW: { ticker: NIFTY, price: 25585.5, chg: -0.42% }
+[2026-01-20 08:44:58] [IN] YF_RAW: { ticker: BTC, price: 92603.2, chg: -1.1% }
+[2026-01-20 08:44:58] [IN] YF_RAW: { ticker: ETH, price: 3190.07, chg: -2.78% }
+[2026-01-20 08:44:58] [IN] YF_RAW: { ticker: SOL, price: 133.64, chg: -3.15% }
+[2026-01-20 08:44:58] [IN] YF_RAW: { ticker: DXY, price: 99.39, chg: 0.0% }
+[2026-01-20 08:44:59] [IN] YF_RAW: { ticker: USDJPY, price: 158.21, chg: -0.24% }
+[2026-01-20 08:44:59] [IN] YF_RAW: { ticker: EURUSD, price: 1.16, chg: 0.29% }
+[2026-01-20 08:44:59] [IN] YF_RAW: { ticker: USDINR, price: 90.85, chg: 0.54% }
+[2026-01-20 08:44:59] [IN] YF_RAW: { ticker: USDSAR, price: 3.75, chg: 0.11% }
+[2026-01-20 08:44:59] [IN] YF_RAW: { ticker: GOLD, price: 4674.4, chg: 1.87% }
+[2026-01-20 08:44:59] [IN] YF_RAW: { ticker: OIL, price: 59.4, chg: -0.07% }
+[2026-01-20 08:45:00] [IN] YF_RAW: { ticker: COPPER, price: 5.91, chg: 2.02% }
+[2026-01-20 08:45:00] [IN] YF_RAW: { ticker: NATGAS, price: 3.58, chg: 15.4% }
+[2026-01-20 08:45:00] [GUARD] Data Integrity Audit: 100% Data Completion (All feeds successful).
+[2026-01-20 08:45:00] [GUARD] Market data acquisition: OPERATIONAL
+[2026-01-20 08:45:00] [OUT] CALC_SCORE: { sector: STOCKS, score: 40 }
+[2026-01-20 08:45:00] [OUT] CALC_SCORE: { sector: CRYPTO, score: 25 }
+[2026-01-20 08:45:00] [OUT] CALC_SCORE: { sector: FOREX, score: 35 }
+[2026-01-20 08:45:00] [OUT] CALC_SCORE: { sector: COMMODITIES, score: 25 }
+[2026-01-20 08:45:00] [OUT] SECTOR_SCORES: {"STOCKS": 40, "CRYPTO": 25, "FOREX": 35, "COMMODITIES": 25}
+[2026-01-20 08:45:00] [OUT] GMS_TOTAL: { score: 27 }
+[2026-01-20 08:45:00] [AI BRIDGE] GEMINI_API_KEY detected (Length: 39)
+[2026-01-20 08:45:02] [AI BATCH] Requesting 7-language analysis (Attempt 1)...
+[2026-01-20 08:45:02] [AI BRIDGE] Command: npx -y tsx scripts/generate_insight.ts 
+【AI Insight Protocol v5.3: Output Density Protocol】
+Role: Lead Economist at a top-tier investment bank (Bloomberg/Goldman style).
+Goal: Generate a high-density, strategic macro report.
+
+MASTER LANGUAGE PROTOCOL:
+1. First, generate the Japanese (JP) analysis as the "Gold Standard".
+2. Maintain the exact "Information Density" and "Logical Structure" of the JP version when translating/adapting to other languages.
+
+CHARACTER COUNT RANGE (STRICT):
+- REQUIRED RANGE: 200 to 250 characters per language.
+- "Low Density" (<200 chars) is an automatic FAILURE.
+- "Excessive length" (>250 chars) is an automatic FAILURE.
+- You must physically count and ensure every language falls within [200, 250].
+
+*** NEGATIVE CONSTRAINTS (CRITICAL) ***
+- DO NOT include the character count in the output (e.g., "(230 chars)", "（245文字）").
+- DO NOT include any metadata or parenthetical notes about the generation.
+- OUTPUT ONLY the clean, professional report text.
+
+CONTENT "THREE PRINCIPLES" (MANDATORY):
+Each report MUST contain these 3 elements in a cohesive narrative:
+1. Current State Definition (現状の定義): Clearly define the current market regime based on GMS Score.
+2. Correlation & Causality (指標間の相関・因果): Explain the logical link between indicators. MANDATORY: Connect Real Interest Rates (実質金利), Breakeven Inflation (期待インフレ), and Copper/Gold Ratio (景気の先行指標) to current equity/crypto trends.
+3. Future Prediction (今後の予測): Provide a specific tactical outlook or trigger point based on yield levels or liquidity shifts.
+
+GMS Context:
+- Current GMS Score: 27/100
+- Market Matrix:
+- CRYPTO_SENTIMENT: 44 (Prev: 44, DailyChg: 0.0%)
+- YIELD_SPREAD: 0.57 (Prev: 0.57, DailyChg: 0.0%)
+- HY_SPREAD: 2.71 (Prev: 2.76, DailyChg: -1.81%)
+- NFCI: -0.57 (Prev: -0.57, DailyChg: 0.0%)
+- NET_LIQUIDITY: 5801.3 (Prev: 5800.52, DailyChg: 0.01%)
+- BREAKEVEN_INFLATION: 2.33 (Prev: 2.33, DailyChg: 0.0%)
+- VIX: 18.84 (Prev: 15.86, DailyChg: 18.79%)
+- YIELD_SPREAD_10Y2Y: 0.65 (Prev: 0.65, DailyChg: 0.0%)
+- US_10Y_YIELD: 4.17 (Prev: 4.17, DailyChg: 0.0%)
+- REAL_INTEREST_RATE: 1.88 (Prev: 1.88, DailyChg: 0.0%)
+- SPY: 691.66 (Prev: 692.24, DailyChg: -0.08%)
+- TNX: 4.23 (Prev: 4.16, DailyChg: 1.71%)
+- QQQ: 621.26 (Prev: 621.78, DailyChg: -0.08%)
+- IWM: 265.76 (Prev: 265.51, DailyChg: 0.09%)
+- RSP: 199.05 (Prev: 199.56, DailyChg: -0.26%)
+- HYG: 81.09 (Prev: 81.04, DailyChg: 0.06%)
+- NIFTY: 25585.5 (Prev: 25694.35, DailyChg: -0.42%)
+- BTC: 92603.2 (Prev: 93634.43, DailyChg: -1.1%)
+- ETH: 3190.07 (Prev: 3281.16, DailyChg: -2.78%)
+- SOL: 133.64 (Prev: 138.0, DailyChg: -3.15%)
+- DXY: 99.39 (Prev: 99.39, DailyChg: 0.0%)
+- USDJPY: 158.21 (Prev: 158.6, DailyChg: -0.24%)
+- EURUSD: 1.16 (Prev: 1.16, DailyChg: 0.29%)
+- USDINR: 90.85 (Prev: 90.36, DailyChg: 0.54%)
+- USDSAR: 3.75 (Prev: 3.75, DailyChg: 0.11%)
+- GOLD: 4674.4 (Prev: 4588.4, DailyChg: 1.87%)
+- OIL: 59.4 (Prev: 59.44, DailyChg: -0.07%)
+- COPPER: 5.91 (Prev: 5.79, DailyChg: 2.02%)
+- NATGAS: 3.58 (Prev: 3.1, DailyChg: 15.4%)
+- MOVE: 58.05 (Prev: 58.05, DailyChg: 0.0%)
+- BREADTH: 1.14 (Prev: 1.14, DailyChg: 0.0%)
+- SPY_MOMENTUM: -1.14 (Prev: -1.14, DailyChg: 0.0%)
+- COPPER_GOLD: 1.26 (Prev: 1.26, DailyChg: 0.0%)
+
+- News: Dow set to fall more than 300 points on Trump’s new tariff threat over Greenland: Live updates
+
+Regime Guide:
+- 0-40: DEFENSIVE (Risk-Off).
+- 40-60: NEUTRAL.
+- 60-100: ACCUMULATE (Risk-On).
+
+SELF-CENSORSHIP:
+Check each Value in the JSON. If any string is < 200 characters, rewrite it to be more descriptive and analytical until it passes the 200-character threshold. Remove any trailing character counts.
+
+Output JSON:
+{
+  "JP": " (200-250文字: 現状、相関、予測を含む叙述文) ",
+  "EN": " (200-250 chars: Definition, Correlation, Prediction) ",
+  "CN": "...",
+  "ES": "...",
+  "HI": "...",
+  "ID": "...",
+  "AR": "..."
+}
+
+[2026-01-20 08:45:21] [AI BRIDGE] Received 841 bytes of output. Head: [dotenv@17.2.3] injecting env (0) from ..\.env -- tip: 🔄 add secrets lifecycle management: https://d...
+[2026-01-20 08:45:21] [AI ERROR] JSON parse failed: Expecting value: line 1 column 1 (char 0)
+[2026-01-20 08:45:21] [AI BATCH] Requesting 7-language analysis (Attempt 2)...
+[2026-01-20 08:45:21] [AI BRIDGE] Command: npx -y tsx scripts/generate_insight.ts 
+【AI Insight Protocol v5.3: Output Density Protocol】
+Role: Lead Economist at a top-tier investment bank (Bloomberg/Goldman style).
+Goal: Generate a high-density, strategic macro report.
+
+MASTER LANGUAGE PROTOCOL:
+1. First, generate the Japanese (JP) analysis as the "Gold Standard".
+2. Maintain the exact "Information Density" and "Logical Structure" of the JP version when translating/adapting to other languages.
+
+CHARACTER COUNT RANGE (STRICT):
+- REQUIRED RANGE: 200 to 250 characters per language.
+- "Low Density" (<200 chars) is an automatic FAILURE.
+- "Excessive length" (>250 chars) is an automatic FAILURE.
+- You must physically count and ensure every language falls within [200, 250].
+
+*** NEGATIVE CONSTRAINTS (CRITICAL) ***
+- DO NOT include the character count in the output (e.g., "(230 chars)", "（245文字）").
+- DO NOT include any metadata or parenthetical notes about the generation.
+- OUTPUT ONLY the clean, professional report text.
+
+CONTENT "THREE PRINCIPLES" (MANDATORY):
+Each report MUST contain these 3 elements in a cohesive narrative:
+1. Current State Definition (現状の定義): Clearly define the current market regime based on GMS Score.
+2. Correlation & Causality (指標間の相関・因果): Explain the logical link between indicators. MANDATORY: Connect Real Interest Rates (実質金利), Breakeven Inflation (期待インフレ), and Copper/Gold Ratio (景気の先行指標) to current equity/crypto trends.
+3. Future Prediction (今後の予測): Provide a specific tactical outlook or trigger point based on yield levels or liquidity shifts.
+
+GMS Context:
+- Current GMS Score: 27/100
+- Market Matrix:
+- CRYPTO_SENTIMENT: 44 (Prev: 44, DailyChg: 0.0%)
+- YIELD_SPREAD: 0.57 (Prev: 0.57, DailyChg: 0.0%)
+- HY_SPREAD: 2.71 (Prev: 2.76, DailyChg: -1.81%)
+- NFCI: -0.57 (Prev: -0.57, DailyChg: 0.0%)
+- NET_LIQUIDITY: 5801.3 (Prev: 5800.52, DailyChg: 0.01%)
+- BREAKEVEN_INFLATION: 2.33 (Prev: 2.33, DailyChg: 0.0%)
+- VIX: 18.84 (Prev: 15.86, DailyChg: 18.79%)
+- YIELD_SPREAD_10Y2Y: 0.65 (Prev: 0.65, DailyChg: 0.0%)
+- US_10Y_YIELD: 4.17 (Prev: 4.17, DailyChg: 0.0%)
+- REAL_INTEREST_RATE: 1.88 (Prev: 1.88, DailyChg: 0.0%)
+- SPY: 691.66 (Prev: 692.24, DailyChg: -0.08%)
+- TNX: 4.23 (Prev: 4.16, DailyChg: 1.71%)
+- QQQ: 621.26 (Prev: 621.78, DailyChg: -0.08%)
+- IWM: 265.76 (Prev: 265.51, DailyChg: 0.09%)
+- RSP: 199.05 (Prev: 199.56, DailyChg: -0.26%)
+- HYG: 81.09 (Prev: 81.04, DailyChg: 0.06%)
+- NIFTY: 25585.5 (Prev: 25694.35, DailyChg: -0.42%)
+- BTC: 92603.2 (Prev: 93634.43, DailyChg: -1.1%)
+- ETH: 3190.07 (Prev: 3281.16, DailyChg: -2.78%)
+- SOL: 133.64 (Prev: 138.0, DailyChg: -3.15%)
+- DXY: 99.39 (Prev: 99.39, DailyChg: 0.0%)
+- USDJPY: 158.21 (Prev: 158.6, DailyChg: -0.24%)
+- EURUSD: 1.16 (Prev: 1.16, DailyChg: 0.29%)
+- USDINR: 90.85 (Prev: 90.36, DailyChg: 0.54%)
+- USDSAR: 3.75 (Prev: 3.75, DailyChg: 0.11%)
+- GOLD: 4674.4 (Prev: 4588.4, DailyChg: 1.87%)
+- OIL: 59.4 (Prev: 59.44, DailyChg: -0.07%)
+- COPPER: 5.91 (Prev: 5.79, DailyChg: 2.02%)
+- NATGAS: 3.58 (Prev: 3.1, DailyChg: 15.4%)
+- MOVE: 58.05 (Prev: 58.05, DailyChg: 0.0%)
+- BREADTH: 1.14 (Prev: 1.14, DailyChg: 0.0%)
+- SPY_MOMENTUM: -1.14 (Prev: -1.14, DailyChg: 0.0%)
+- COPPER_GOLD: 1.26 (Prev: 1.26, DailyChg: 0.0%)
+
+- News: Dow set to fall more than 300 points on Trump’s new tariff threat over Greenland: Live updates
+
+Regime Guide:
+- 0-40: DEFENSIVE (Risk-Off).
+- 40-60: NEUTRAL.
+- 60-100: ACCUMULATE (Risk-On).
+
+SELF-CENSORSHIP:
+Check each Value in the JSON. If any string is < 200 characters, rewrite it to be more descriptive and analytical until it passes the 200-character threshold. Remove any trailing character counts.
+
+Output JSON:
+{
+  "JP": " (200-250文字: 現状、相関、予測を含む叙述文) ",
+  "EN": " (200-250 chars: Definition, Correlation, Prediction) ",
+  "CN": "...",
+  "ES": "...",
+  "HI": "...",
+  "ID": "...",
+  "AR": "..."
+}
+
+[2026-01-20 08:45:22] [AI BRIDGE WARN] Bridge execution failed (Code 1). Trying direct node fallback...
+[2026-01-20 08:46:22] [AI BRIDGE CRITICAL] Command '['node', 'C:\\Users\\shingo_kosaka.ARGOGRAPHICS\\Desktop\\GlobalMacroSignal\\frontend\\dist\\generate_insight.js', '\n【AI Insight Protocol v5.3: Output Density Protocol】\nRole: Lead Economist at a top-tier investment bank (Bloomberg/Goldman style).\nGoal: Generate a high-density, strategic macro report.\n\nMASTER LANGUAGE PROTOCOL:\n1. First, generate the Japanese (JP) analysis as the "Gold Standard".\n2. Maintain the exact "Information Density" and "Logical Structure" of the JP version when translating/adapting to other languages.\n\nCHARACTER COUNT RANGE (STRICT):\n- REQUIRED RANGE: 200 to 250 characters per language.\n- "Low Density" (<200 chars) is an automatic FAILURE.\n- "Excessive length" (>250 chars) is an automatic FAILURE.\n- You must physically count and ensure every language falls within [200, 250].\n\n*** NEGATIVE CONSTRAINTS (CRITICAL) ***\n- DO NOT include the character count in the output (e.g., "(230 chars)", "（245文字）").\n- DO NOT include any metadata or parenthetical notes about the generation.\n- OUTPUT ONLY the clean, professional report text.\n\nCONTENT "THREE PRINCIPLES" (MANDATORY):\nEach report MUST contain these 3 elements in a cohesive narrative:\n1. Current State Definition (現状の定義): Clearly define the current market regime based on GMS Score.\n2. Correlation & Causality (指標間の相関・因果): Explain the logical link between indicators. MANDATORY: Connect Real Interest Rates (実質金利), Breakeven Inflation (期待インフレ), and Copper/Gold Ratio (景気の先行指標) to current equity/crypto trends.\n3. Future Prediction (今後の予測): Provide a specific tactical outlook or trigger point based on yield levels or liquidity shifts.\n\nGMS Context:\n- Current GMS Score: 27/100\n- Market Matrix:\n- CRYPTO_SENTIMENT: 44 (Prev: 44, DailyChg: 0.0%)\n- YIELD_SPREAD: 0.57 (Prev: 0.57, DailyChg: 0.0%)\n- HY_SPREAD: 2.71 (Prev: 2.76, DailyChg: -1.81%)\n- NFCI: -0.57 (Prev: -0.57, DailyChg: 0.0%)\n- NET_LIQUIDITY: 5801.3 (Prev: 5800.52, DailyChg: 0.01%)\n- BREAKEVEN_INFLATION: 2.33 (Prev: 2.33, DailyChg: 0.0%)\n- VIX: 18.84 (Prev: 15.86, DailyChg: 18.79%)\n- YIELD_SPREAD_10Y2Y: 0.65 (Prev: 0.65, DailyChg: 0.0%)\n- US_10Y_YIELD: 4.17 (Prev: 4.17, DailyChg: 0.0%)\n- REAL_INTEREST_RATE: 1.88 (Prev: 1.88, DailyChg: 0.0%)\n- SPY: 691.66 (Prev: 692.24, DailyChg: -0.08%)\n- TNX: 4.23 (Prev: 4.16, DailyChg: 1.71%)\n- QQQ: 621.26 (Prev: 621.78, DailyChg: -0.08%)\n- IWM: 265.76 (Prev: 265.51, DailyChg: 0.09%)\n- RSP: 199.05 (Prev: 199.56, DailyChg: -0.26%)\n- HYG: 81.09 (Prev: 81.04, DailyChg: 0.06%)\n- NIFTY: 25585.5 (Prev: 25694.35, DailyChg: -0.42%)\n- BTC: 92603.2 (Prev: 93634.43, DailyChg: -1.1%)\n- ETH: 3190.07 (Prev: 3281.16, DailyChg: -2.78%)\n- SOL: 133.64 (Prev: 138.0, DailyChg: -3.15%)\n- DXY: 99.39 (Prev: 99.39, DailyChg: 0.0%)\n- USDJPY: 158.21 (Prev: 158.6, DailyChg: -0.24%)\n- EURUSD: 1.16 (Prev: 1.16, DailyChg: 0.29%)\n- USDINR: 90.85 (Prev: 90.36, DailyChg: 0.54%)\n- USDSAR: 3.75 (Prev: 3.75, DailyChg: 0.11%)\n- GOLD: 4674.4 (Prev: 4588.4, DailyChg: 1.87%)\n- OIL: 59.4 (Prev: 59.44, DailyChg: -0.07%)\n- COPPER: 5.91 (Prev: 5.79, DailyChg: 2.02%)\n- NATGAS: 3.58 (Prev: 3.1, DailyChg: 15.4%)\n- MOVE: 58.05 (Prev: 58.05, DailyChg: 0.0%)\n- BREADTH: 1.14 (Prev: 1.14, DailyChg: 0.0%)\n- SPY_MOMENTUM: -1.14 (Prev: -1.14, DailyChg: 0.0%)\n- COPPER_GOLD: 1.26 (Prev: 1.26, DailyChg: 0.0%)\n\n- News: Dow set to fall more than 300 points on Trump’s new tariff threat over Greenland: Live updates\n\nRegime Guide:\n- 0-40: DEFENSIVE (Risk-Off).\n- 40-60: NEUTRAL.\n- 60-100: ACCUMULATE (Risk-On).\n\nSELF-CENSORSHIP:\nCheck each Value in the JSON. If any string is < 200 characters, rewrite it to be more descriptive and analytical until it passes the 200-character threshold. Remove any trailing character counts.\n\nOutput JSON:\n{\n  "JP": " (200-250文字: 現状、相関、予測を含む叙述文) ",\n  "EN": " (200-250 chars: Definition, Correlation, Prediction) ",\n  "CN": "...",\n  "ES": "...",\n  "HI": "...",\n  "ID": "...",\n  "AR": "..."\n}\n']' timed out after 60 seconds
+[2026-01-20 08:46:22] [AI SDK] Attempting Direct Python SDK (google-generativeai)...
+[2026-01-20 08:46:22] [AI SDK ERROR] 400 API key expired. Please renew the API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key expired. Please renew the API key."
+]
+[2026-01-20 08:46:22] [AI REST] Attempting Direct REST (Attempt 1)...
+[2026-01-20 08:46:23] [AI REST FAIL] Status 400: {
+  "error": {
+    "code": 400,
+    "message": "API key expired. Please renew the API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key expired. Please renew the API key."
+      }
+    ]
+  }
+}
+
+[2026-01-20 08:46:23] [AI REST] Attempting Direct REST (Attempt 2)...
+[2026-01-20 08:46:24] [AI REST FAIL] Status 400: {
+  "error": {
+    "code": 400,
+    "message": "API key expired. Please renew the API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key expired. Please renew the API key."
+      }
+    ]
+  }
+}
+
+[2026-01-20 08:46:24] [SNS] Processing Serial SNS Broadcast: Stage 1 (Twitter)
+[2026-01-20 08:46:24] [SNS][TWITTER] Twitter credentials missing. Skipping Stage 1.
+[2026-01-20 08:46:24] [SNS][TWITTER] Twitter credentials missing. Skipping Stage 1.
+[2026-01-20 08:46:24] [SNS] Processing Serial SNS Broadcast: Stage 2 (Bluesky)
+[2026-01-20 08:46:24] [SNS_BSKY] Smart-skip: Current score (27) matches last posted score. Skipping.
+[2026-01-20 08:46:24] [AIO] Running Performance Audit...

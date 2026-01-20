@@ -81,7 +81,16 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 LOG_FILE = os.path.join(SCRIPT_DIR, "engine_log.txt")
 
 def log_diag(msg):
-    """Writes diagnostic messages to a file for bot upload."""
+    """Writes diagnostic messages to a file for bot upload, ensuring sensitive data is redacted."""
+    if not isinstance(msg, str):
+        msg = str(msg)
+    
+    # Centralized Redaction: Scrub all known API keys
+    sensitive_keys = [FRED_KEY, GEMINI_KEY, FMP_KEY, AI_GATEWAY_KEY]
+    for key in filter(None, sensitive_keys):
+        if key in msg:
+            msg = msg.replace(key, "REDACTED")
+            
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     line = f"[{timestamp}] {msg}\n"
     print(msg)
@@ -157,6 +166,7 @@ def fetch_fred_data():
     data['HY_SPREAD'] = 3.5
     data['NFCI'] = -0.5
     data['NET_LIQUIDITY'] = {"price": 6200, "change_percent": 0, "trend": "NEUTRAL", "sparkline": [6200] * 30}
+    data['BREAKEVEN_INFLATION'] = {"price": 2.30, "change_percent": 0, "trend": "STABLE", "sparkline": [2.30] * 30}
     
     # Try to load previous data for fallbacks
     previous_data = {}
@@ -253,18 +263,25 @@ def fetch_fred_data():
 
         # 1-E. 10-YEAR BREAKEVEN INFLATION_RATE (T10YIE)
         try:
+            log_diag("[FRED] Fetching T10YIE (Breakeven Inflation)...")
             breakeven = fred.get_series('T10YIE', observation_start=start_date).ffill()
-            current_be = float(breakeven.iloc[-1])
-            data['BREAKEVEN_INFLATION'] = {
-                "price": round(current_be, 2),
-                "change_percent": 0.0,
-                "trend": "RISING" if current_be > 2.5 else "STABLE",
-                "sparkline": [round(x, 2) for x in breakeven.tail(30).tolist()]
-            }
-            log_diag(f"[IN] FRED_RAW: {{ series: T10YIE, price: {round(current_be, 2)} }}")
+            if not breakeven.empty:
+                current_be = float(breakeven.iloc[-1])
+                data['BREAKEVEN_INFLATION'] = {
+                    "price": round(current_be, 2),
+                    "change_percent": 0.0,
+                    "trend": "RISING" if current_be > 2.5 else "STABLE",
+                    "sparkline": [round(x, 2) for x in breakeven.tail(30).tolist()]
+                }
+                log_diag(f"[IN] FRED_RAW: {{ series: T10YIE, price: {round(current_be, 2)} }}")
+            else:
+                log_diag("[FRED WARN] T10YIE series is empty. Falling back.")
+                if 'BREAKEVEN_INFLATION' in previous_data: 
+                    data['BREAKEVEN_INFLATION'] = previous_data['BREAKEVEN_INFLATION']
         except Exception as e:
             log_diag(f"[FRED ERROR] Breakeven Inflation fetch failed: {e}")
-            if 'BREAKEVEN_INFLATION' in previous_data: data['BREAKEVEN_INFLATION'] = previous_data['BREAKEVEN_INFLATION']
+            if 'BREAKEVEN_INFLATION' in previous_data: 
+                data['BREAKEVEN_INFLATION'] = previous_data['BREAKEVEN_INFLATION']
 
         # 2. HY SPREAD (BAMLH0A0HYM2)
         try:

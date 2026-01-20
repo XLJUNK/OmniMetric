@@ -91,7 +91,7 @@ function PrivacyContent() {
                             </ul>
                         </div>
                         <p className="text-xs text-slate-500 pt-2">
-                            We do <strong>NOT</strong> collect Personally Identifiable Information (PII) such as email addresses, names, or payment details.
+                            This site is personally operated and has <strong>NO infrastructure</strong> to collect, store, or manage Personally Identifiable Information (PII) such as email addresses, real names, or payment details.
                         </p>
                     </div>
                 </section>
@@ -105,7 +105,7 @@ function PrivacyContent() {
                         <div>
                             <h3 className="text-sky-400 font-bold mb-2">Google AdSense</h3>
                             <p className="text-slate-400">
-                                Third-party vendors, including Google, use cookies to serve ads based on your prior visits to OmniMetric and other websites. This enables Google and its partners to deliver relevant advertising across the internet.
+                                Third-party vendors, including Google, use cookies to serve ads based on your prior visits to OmniMetric and other websites. Other third-party vendors or ad networks may also use cookies to serve ads on OmniMetric.
                             </p>
                         </div>
                         <div>
@@ -139,7 +139,7 @@ function PrivacyContent() {
                         4. Your Rights
                     </h2>
                     <ul className="list-disc pl-6 space-y-2 text-sm text-slate-300">
-                        <li><strong>Opt-out of personalized ads:</strong> Visit Google Ads Settings (link above)</li>
+                        <li><strong>Opt-out of personalized ads:</strong> Visit <a href="https://www.google.com/settings/ads" className="text-sky-400 hover:underline">Google Ads Settings</a> or <a href="http://www.aboutads.info/choices/" className="text-sky-400 hover:underline">www.aboutads.info</a></li>
                         <li><strong>Block cookies:</strong> Configure your browser settings to reject cookies</li>
                         <li><strong>Do Not Track:</strong> We respect browser DNT signals where applicable</li>
                     </ul>
