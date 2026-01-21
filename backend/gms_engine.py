@@ -67,13 +67,13 @@ RISK_FACTORS = {
 
 # Fallback to Positive Status messages (Professional Prefix for Frontend Bypass)
 FALLBACK_STATUS = {
-    "EN": "【GMS: Analysis Sync】 Deep-diving into the latest macro data to synthesize advanced insights...",
+    "EN": "【GMS: Analysis Sync】 Current macro indicators suggest the market is approaching a critical inflection point, with volatility compression and expansion alternating ahead of key economic data releases. Fluctuations in currency pairs and US Treasury yields are counteracting liquidity support, potentially creating distortions through capital concentration in specific assets. Investors should monitor key volatility levels and real interest rate trends to prepare for sudden sentiment shifts.",
     "JP": "【GMS: 分析同期中】 現在のGMS指標は市場が重要な局面にあることを示唆しており、主要な経済指標の発表を前にボラティリティの収縮と拡大が交錯する展開となっています。ドル円の変動や米10年債利回りの推移が流動性の下支えを相殺し、特定資産への資金集中が市場の歪みを生み出している可能性があります。投資家はボラティリティ指数の節目と実質金利の動向を注視し、急激なセンチメントの変化に備えるべきでしょう。",
-    "CN": "【GMS: 分析同步】 深度解析最新宏观数据，正在生成高级洞察...",
-    "ES": "【GMS: Sincronización】 Analizando en profundidad los últimos datos macro para sintetizar información avanzada...",
-    "HI": "【GMS: विश्लेषण सिंक】 नवीनतम मैक्रो डेटा का गहराई से विश्लेषण कर उन्नत अंतर्दृष्टि तैयार की जा रही है...",
-    "ID": "【GMS: Sinkronisasi】 Mendalami data makro terbaru untuk menyintesakan wawasan tingkat lanjut...",
-    "AR": "【GMS: مزامنة التحليل】 تعمق في أحدث البيانات الكلية لتوليف رؤى متقدمة..."
+    "CN": "【GMS: 分析同步】 当前GMS指标显示市场正处于关键转折点，在主要经济数据发布前，波动率呈现收缩与扩张交织的态势。汇率波动与美债收益率的走势正在抵消流动性支撑，特定资产的资金集中可能正在制造市场扭曲。投资者应密切关注波动率指数的关键点位及实际利率动向，以应对市场情绪的突发变化。",
+    "ES": "【GMS: Sincronización】 Los indicadores macro actuales sugieren que el mercado se acerca a un punto de inflexión crítico, con la compresión y expansión de la volatilidad alternándose ante la publicación de datos clave. Las fluctuaciones en las divisas y los rendimientos del Tesoro están contrarrestando el soporte de liquidez, creando posibles distorsiones. Los inversores deben vigilar los niveles de volatilidad y las tasas de interés reales para prepararse ante cambios repentinos en el sentimiento.",
+    "HI": "【GMS: विश्लेषण सिंक】 वर्तमान मैक्रो संकेतक सुझाव देते हैं कि बाजार एक महत्वपूर्ण मोड़ पर है, जहां प्रमुख आर्थिक आंकड़ों के जारी होने से पहले अस्थिरता में संकुचन और विस्तार हो रहा है। मुद्रा में उतार-चढ़ाव और अमेरिकी ट्रेजरी यील्ड तरलता समर्थन का मुकाबला कर रहे हैं, जिससे बाजार में विकृतियां पैदा हो सकती हैं। निवेशकों को अचानक भावना परिवर्तन के लिए तैयार रहने के लिए प्रमुख अस्थिरता स्तरों और वास्तविक ब्याज दर के रुझानों पर कड़ी नजर रखनी चाहिए।",
+    "ID": "【GMS: Sinkronisasi】 Indikator makro saat ini menunjukkan pasar sedang mendekati titik balik kritis, dengan kompresi dan ekspansi volatilitas silih berganti menjelang rilis data ekonomi utama. Fluktuasi mata uang dan imbal hasil Treasury AS menyeimbangkan dukungan likuiditas, berpotensi menciptakan distorsi melalui konsentrasi modal. Investor harus memantau tingkat volatilitas utama dan tren suku bunga riil untuk bersiap menghadapi perubahan sentimen yang tiba-tiba。",
+    "AR": "【GMS: مزامنة التحليل】 تشير المؤشرات الكلية الحالية إلى أن السوق يقترب من نقطة تحول حاسمة، مع تناوب انكماش وتوسع التقلبات قبل إصدار البيانات الاقتصادية الرئيسية. تعمل التقلبات في العملات وعوائد الخزانة الأمريكية على مواجهة دعم السيولة، مما قد يخلق تشوهات من خلال تركيز رأس المال. يجب على المستثمرين مراقبة مستويات التقلب الرئيسية واتجاهات أسعار الفائدة الحقيقية للاستعداد لتحولات مفاجئة في المعنويات。"
 }
 
 # Determine script directory
