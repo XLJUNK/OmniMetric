@@ -837,6 +837,7 @@ You are the centralized brain of the OmniMetric Terminal. You do not act as a si
 2. Maintain the exact "Information Density" and "Logical Structure" when translating.
 3. OUTPUT ONLY the clean, professional report text in JSON format.
 4. CHARACTER COUNT RANGE (STRICT): 200 to 250 characters per language.
+   - UNDER 150 CHARACTERS IS A CRITICAL FAILURE.
 
 *** NEGATIVE CONSTRAINTS (CRITICAL) ***
 - DO NOT include the character count in the output.
@@ -929,12 +930,22 @@ Output JSON:
                         
                         reports = json.loads(inner_text)
                         if all(lang in reports for lang in required):
-                            # SANITIZE
+                            # SANITIZE & VALIDATE LENGTH
+                            valid = True
                             for k, v in reports.items():
-                                reports[k] = sanitize_insight_text(v)
+                                sanitized = sanitize_insight_text(v)
+                                reports[k] = sanitized
+                                if len(sanitized) < 100:
+                                    log_diag(f"[AI GUARD] {k} Report too short ({len(sanitized)} chars). Rejecting batch.")
+                                    valid = False
+                                    break
                             
-                            log_diag("[AI SUCCESS] Reports parsed and validated.")
-                            return reports
+                            if valid:
+                                log_diag("[AI SUCCESS] Reports parsed and validated.")
+                                return reports
+                            else:
+                                log_diag("[AI FAIL] Validation failed (Quality Guard). Using Fallback.")
+                                return FALLBACK_STATUS
                     except Exception as e:
                         log_diag(f"[AI ERROR] JSON parse failed: {e}")
                 else:
