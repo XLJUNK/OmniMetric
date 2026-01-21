@@ -60,13 +60,13 @@ function ArchiveDetailContent() {
     return (
         <TerminalPage pageKey="archive">
             <div className="space-y-16">
-                <div className="border-b border-white/10 pb-4">
-                    <h2 className="text-xl font-black text-white uppercase tracking-[0.2em]">{t.subpages.archive.title}</h2>
+                <div className="border-b border-slate-200 dark:border-white/10 pb-4">
+                    <h2 className="text-xl font-black text-slate-900 dark:text-white uppercase tracking-[0.2em]">{t.subpages.archive.title}</h2>
                     <p className="text-[10px] text-slate-500 font-mono mt-1 uppercase tracking-widest leading-relaxed">Recorded Algorithmic Intelligence Snapshot</p>
                 </div>
 
                 {/* 1. HEADER SNAPSHOT */}
-                <div className="bg-[#111] border border-white/5 p-8 md:p-12 rounded-[2px] flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+                <div className="bg-white dark:bg-[#111] border border-slate-200 dark:border-white/5 p-8 md:p-12 rounded-[2px] flex flex-col md:flex-row justify-between items-start md:items-center gap-8 shadow-sm dark:shadow-none">
                     <div className="space-y-4">
                         <div className="flex items-center gap-3">
                             <Clock className="w-4 h-4 text-slate-500" />
@@ -87,12 +87,12 @@ function ArchiveDetailContent() {
                 </div>
 
                 {/* 2. INSIGHTS BOX */}
-                <div className="bg-sky-500/5 border border-sky-500/20 p-8 rounded-[2px] space-y-4">
+                <div className="bg-sky-50 dark:bg-sky-500/5 border border-sky-200 dark:border-sky-500/20 p-8 rounded-[2px] space-y-4">
                     <div className="flex items-center gap-3">
                         <Shield className="w-4 h-4 text-sky-500" />
                         <span className="text-[10px] font-black tracking-[0.4em] uppercase text-sky-500">ARCHIVED INTELLIGENCE</span>
                     </div>
-                    <p className="text-lg text-slate-300 font-medium leading-relaxed italic">
+                    <p className="text-lg text-slate-700 dark:text-slate-300 font-medium leading-relaxed italic">
                         {data.analysis?.reports?.[lang] || data.analysis?.content}
                     </p>
                 </div>
@@ -101,20 +101,20 @@ function ArchiveDetailContent() {
                 <div className="space-y-8">
                     <div className="flex items-center gap-4">
                         <h3 className="text-xs font-black tracking-[0.4em] uppercase opacity-40">INDICATOR LOG (REPLAY)</h3>
-                        <div className="flex-1 h-px bg-white/5"></div>
+                        <div className="flex-1 h-px bg-slate-200 dark:bg-white/5"></div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         {Object.entries(data.market_data).map(([key, val]: [string, any]) => {
                             const term = (t.terms as any)[key] || { def: key, benchmark: "" };
                             return (
-                                <div key={key} className="bg-[#0e0e0e] border border-white/5 p-6 rounded-[2px] space-y-4 hover:border-white/10 transition-all">
+                                <div key={key} className="bg-white dark:bg-[#0e0e0e] border border-slate-200 dark:border-white/5 p-6 rounded-[2px] space-y-4 hover:border-sky-300 dark:hover:border-white/10 transition-all shadow-sm dark:shadow-none">
                                     <div className="flex justify-between items-start">
                                         <span className="text-[10px] font-black tracking-widest text-slate-500 uppercase">{key}</span>
-                                        <span className="text-xl font-bold font-mono tracking-tighter">{val.price}</span>
+                                        <span className="text-xl font-bold font-mono tracking-tighter text-slate-900 dark:text-white">{val.price}</span>
                                     </div>
                                     <div className="space-y-1">
-                                        <p className="text-[10px] text-slate-400 leading-tight uppercase line-clamp-2">{term.def}</p>
-                                        <p className="text-[7px] text-sky-500/40 font-mono font-bold uppercase">{term.benchmark}</p>
+                                        <p className="text-[10px] text-slate-500 dark:text-slate-400 leading-tight uppercase line-clamp-2">{term.def}</p>
+                                        <p className="text-[7px] text-sky-600/60 dark:text-sky-500/40 font-mono font-bold uppercase">{term.benchmark}</p>
                                     </div>
                                 </div>
                             )
@@ -123,7 +123,7 @@ function ArchiveDetailContent() {
                 </div>
 
                 {/* MANDATORY LEGAL DISCLAIMER */}
-                <div className="mt-24 pt-12 border-t border-white/5">
+                <div className="mt-24 pt-12 border-t border-slate-200 dark:border-white/5">
                     <p className="text-[10px] md:text-xs font-black text-slate-500 tracking-widest leading-relaxed uppercase text-center max-w-2xl mx-auto italic">
                         {t.subpages.archive.disclaimer}
                     </p>
@@ -135,7 +135,7 @@ function ArchiveDetailContent() {
 
 export default function ArchiveDetailPage() {
     return (
-        <Suspense fallback={<div className="min-h-screen bg-[#0A0A0A] flex items-center justify-center text-sky-500 font-mono text-xs animate-pulse">RECONSTRUCTING MARKET STATE...</div>}>
+        <Suspense fallback={<div className="min-h-screen bg-white dark:bg-[#0A0A0A] flex items-center justify-center text-sky-500 font-mono text-xs animate-pulse">RECONSTRUCTING MARKET STATE...</div>}>
             <ArchiveDetailContent />
         </Suspense>
     );

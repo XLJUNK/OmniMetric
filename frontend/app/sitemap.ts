@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const lowerLangs = languages.map(l => l.toLowerCase());
 
     const paths = ['', '/stocks', '/crypto', '/forex', '/commodities'];
-    const legalPaths = ['/legal/privacy-policy', '/legal/terms', '/legal/disclaimer', '/contact', '/about', '/archive'];
+    const legalPaths = ['/legal/disclaimer', '/contact', '/about', '/archive'];
 
     const entries: MetadataRoute.Sitemap = [];
 
@@ -31,6 +31,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
                 lastModified: new Date(),
                 changeFrequency: 'monthly',
                 priority: 0.5,
+            });
+        });
+    });
+
+    // 2.5 Legal Pages (Directory Style - New Multilingual)
+    const legalDynamicPaths = ['/legal/privacy-policy', '/legal/terms'];
+    legalDynamicPaths.forEach(path => {
+        lowerLangs.forEach(lang => {
+            entries.push({
+                url: `${baseUrl}/${lang}${path}`,
+                lastModified: new Date(),
+                changeFrequency: 'monthly',
+                priority: 0.6,
             });
         });
     });

@@ -7,6 +7,7 @@ import { Metadata } from 'next';
 import { AdSenseSlot } from '@/components/AdSenseSlot';
 import { ClientDirectionProvider } from '@/components/ClientDirectionProvider';
 import { WikiSearch } from '@/components/WikiSearch';
+import { LanguageSelector } from '@/components/LanguageSelector';
 
 // Enable Static Params for all languages defined in dictionary
 export async function generateStaticParams() {
@@ -78,6 +79,10 @@ export default async function WikiIndexPage({ params }: Props) {
         }
     };
 
+    // ... (existing imports)
+
+    // ...
+
     return (
         <div className="min-h-screen bg-[#020617] text-slate-200 font-sans pb-20">
             {/* Note: DesktopNav is global, but its lang switcher might point to ?lang=. 
@@ -86,11 +91,14 @@ export default async function WikiIndexPage({ params }: Props) {
 
             <div className="max-w-[1200px] mx-auto p-4 md:p-12 lg:p-16">
                 <header className={`mb-12 border-b border-[#1E293B] pb-8 ${isRTL ? 'text-right' : 'text-left'}`}>
-                    <div className={`flex items-center gap-3 mb-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                        <Hash className="w-8 h-8 text-sky-500" />
-                        <h1 className="text-3xl md:text-5xl font-black text-white tracking-tight uppercase">
-                            OmniMetric <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-purple-400">Wiki Index</span>
-                        </h1>
+                    <div className={`flex justify-between items-start mb-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                        <div className={`flex items-center gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                            <Hash className="w-8 h-8 text-sky-500" />
+                            <h1 className="text-3xl md:text-5xl font-black text-white tracking-tight uppercase">
+                                OmniMetric <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-purple-400">Wiki Index</span>
+                            </h1>
+                        </div>
+                        <LanguageSelector currentLang={normalizedLang} mode="path" isDark={true} />
                     </div>
                     <p className="text-slate-400 font-mono text-sm ml-1">
                         The complete knowledge base for the 2026 Macro-Economic Landscape.

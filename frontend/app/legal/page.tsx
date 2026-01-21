@@ -21,8 +21,8 @@ function LegalContent() {
                         <div className="w-1.5 h-4 bg-red-500"></div>
                         <h2 className="text-xs font-black tracking-[0.4em] uppercase">{pageData.disclaimer}</h2>
                     </div>
-                    <div className="bg-[#111] border-l-2 border-red-500/50 p-8">
-                        <p className="text-lg text-slate-300 font-medium leading-relaxed italic">
+                    <div className="bg-white dark:bg-[#111] border-l-2 border-red-500/50 p-8 shadow-sm dark:shadow-none">
+                        <p className="text-lg text-slate-700 dark:text-slate-300 font-medium leading-relaxed italic">
                             {pageData.disclaimer_content}
                         </p>
                     </div>
@@ -34,14 +34,14 @@ function LegalContent() {
                         <h2 className="text-xs font-black tracking-[0.4em] uppercase">{pageData.usage}</h2>
                     </div>
                     <div className="space-y-4">
-                        <p className="text-base text-slate-400 leading-relaxed font-mono whitespace-pre-line">
+                        <p className="text-base text-slate-600 dark:text-slate-400 leading-relaxed font-mono whitespace-pre-line">
                             {pageData.usage_content}
                         </p>
                     </div>
                 </section>
 
-                <div className="pt-12 border-t border-white/5 opacity-40">
-                    <p className="text-[10px] font-mono tracking-widest uppercase">
+                <div className="pt-12 border-t border-slate-200 dark:border-white/5 opacity-40">
+                    <p className="text-[10px] font-mono tracking-widest uppercase text-slate-500 dark:text-slate-400">
                         Jurisdiction: Institutional Digital Domain // Compliance ID: OMNI-2026-X
                     </p>
                 </div>
@@ -52,7 +52,7 @@ function LegalContent() {
 
 export default function LegalPage() {
     return (
-        <Suspense fallback={<div className="min-h-screen bg-[#0A0A0A] flex items-center justify-center text-sky-500 font-mono text-xs animate-pulse">LOADING COMPLIANCE CORE...</div>}>
+        <Suspense fallback={<div className="min-h-screen bg-white dark:bg-[#0A0A0A] flex items-center justify-center text-sky-500 font-mono text-xs animate-pulse">LOADING COMPLIANCE CORE...</div>}>
             <LegalContent />
         </Suspense>
     );

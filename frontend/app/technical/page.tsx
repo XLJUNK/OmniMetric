@@ -5,6 +5,7 @@ import { DynamicStructuredData } from '@/components/DynamicStructuredData';
 import { Metadata } from 'next';
 import { WikiSearch } from '@/components/WikiSearch';
 import { getWikiData } from '@/lib/wiki';
+import { LanguageSelector } from '@/components/LanguageSelector';
 
 // Import all language data
 import technicalDataEn from '@/data/technical-en.json';
@@ -68,6 +69,18 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
     };
 }
 
+const getSubtitle = (l: LangType) => {
+    switch (l) {
+        case 'JP': return 'テクニカル';
+        case 'CN': return '技术';
+        case 'ES': return 'Técnico';
+        case 'HI': return 'तकनीकी';
+        case 'ID': return 'Teknis';
+        case 'AR': return 'تقني';
+        default: return 'Technical';
+    }
+};
+
 export default async function TechnicalPage({ searchParams }: { searchParams: Promise<{ lang?: string }> }) {
     const lang = await getLang(searchParams);
     const isJa = lang === 'JP';
@@ -108,7 +121,7 @@ export default async function TechnicalPage({ searchParams }: { searchParams: Pr
     })));
 
     return (
-        <div className="min-h-screen bg-[#020617] text-slate-200 font-sans selection:bg-sky-500/30 pb-20">
+        <div className="min-h-screen bg-slate-50 dark:bg-[#020617] text-slate-800 dark:text-slate-200 font-sans selection:bg-sky-500/30 pb-20">
             {/* Inject JSON-LD */}
             <DynamicStructuredData data={breadcrumbJsonLd} />
             <DynamicStructuredData data={{
@@ -121,13 +134,15 @@ export default async function TechnicalPage({ searchParams }: { searchParams: Pr
 
             <div className="max-w-[1200px] mx-auto p-4 md:p-12 lg:p-16">
 
-                <header className={`mb-8 border-b border-[#1E293B] pb-8 text-center ${isRTL ? 'md:text-right' : 'md:text-left'}`}>
-                    <h1 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-4 uppercase">
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-                            {getPageTitle(lang)}
-                        </span>
-                    </h1>
-                    <p className={`text-slate-400 font-mono text-sm md:text-base max-w-3xl leading-relaxed ${isRTL ? 'ml-auto' : ''}`}>
+                <header className={`mb-12 border-b border-slate-200 dark:border-[#1E293B] pb-8 ${isRTL ? 'text-right' : 'text-left'}`}>
+                    <div className={`flex justify-between items-start mb-4`}>
+                        <h1 className={`text-3xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight uppercase flex flex-col gap-1`}>
+                            <span className="text-xl md:text-2xl text-slate-400 dark:text-slate-500 tracking-widest">{DICTIONARY[lang].labels.technical}</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">{getPageTitle(lang)}</span>
+                        </h1>
+                        <LanguageSelector currentLang={lang} />
+                    </div>
+                    <p className={`text-slate-600 dark:text-slate-400 font-mono text-sm md:text-base max-w-3xl leading-relaxed ${isRTL ? 'ml-auto' : ''}`}>
                         {getPageDesc(lang)}
                     </p>
                 </header>
@@ -144,7 +159,7 @@ export default async function TechnicalPage({ searchParams }: { searchParams: Pr
                 <div className="space-y-16">
                     {technicalData.map((category, catIndex) => (
                         <section key={catIndex} className="scroll-mt-24">
-                            <h2 className={`text-xl md:text-2xl font-black text-white uppercase tracking-wider mb-8 flex items-center gap-3 ${isRTL ? 'border-r-4 pr-4 text-right' : 'border-l-4 pl-4'} border-purple-500`}>
+                            <h2 className={`text-xl md:text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-8 flex items-center gap-3 ${isRTL ? 'border-r-4 pr-4 text-right' : 'border-l-4 pl-4'} border-purple-500`}>
                                 {category.category}
                             </h2>
 
@@ -152,25 +167,25 @@ export default async function TechnicalPage({ searchParams }: { searchParams: Pr
                                 {category.indicators.map((indicator, index) => (
                                     <div
                                         key={index}
-                                        className="group relative bg-[#0A0A0A] border border-[#1E293B] hover:border-purple-500/50 transition-colors duration-300 rounded-xl overflow-hidden shadow-lg hover:shadow-purple-500/10"
+                                        className="group relative bg-white dark:bg-[#0A0A0A] border border-slate-200 dark:border-[#1E293B] hover:border-purple-500/50 transition-colors duration-300 rounded-xl overflow-hidden shadow-lg hover:shadow-purple-500/10"
                                     >
                                         <div className="p-6 flex flex-col h-full">
                                             <div className={`flex items-start justify-between mb-4`}>
-                                                <h3 className={`font-bold text-lg text-slate-100 group-hover:text-purple-400 transition-colors ${isRTL ? 'text-right' : ''}`}>
+                                                <h3 className={`font-bold text-lg text-slate-800 dark:text-slate-100 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors ${isRTL ? 'text-right' : ''}`}>
                                                     {indicator.name}
                                                 </h3>
-                                                <Activity className={`w-5 h-5 text-slate-600 group-hover:text-purple-500 transition-colors flex-shrink-0 ${isRTL ? 'ml-0 mr-3' : 'ml-3'}`} />
+                                                <Activity className={`w-5 h-5 text-slate-400 dark:text-slate-600 group-hover:text-purple-500 transition-colors flex-shrink-0 ${isRTL ? 'ml-0 mr-3' : 'ml-3'}`} />
                                             </div>
 
-                                            <p className={`text-sm text-slate-400 leading-relaxed mb-6 flex-grow ${isRTL ? 'text-right' : ''}`}>
+                                            <p className={`text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 flex-grow ${isRTL ? 'text-right' : ''}`}>
                                                 {indicator.description}
                                             </p>
 
-                                            <div className={`mt-auto pt-4 border-t border-[#1E293B] bg-[#111111] -mx-6 -mb-6 p-4 ${isRTL ? 'text-right' : ''}`}>
-                                                <p className="text-xs font-mono text-purple-400 mb-1 font-bold uppercase tracking-wider">
+                                            <div className={`mt-auto pt-4 border-t border-slate-100 dark:border-[#1E293B] bg-slate-50 dark:bg-[#111111] -mx-6 -mb-6 p-4 ${isRTL ? 'text-right' : ''}`}>
+                                                <p className="text-xs font-mono text-purple-600 dark:text-purple-400 mb-1 font-bold uppercase tracking-wider">
                                                     {isJa ? '見方・基準' : (lang === 'CN' ? '用法 / 基准' : (lang === 'ES' ? 'USO / REFERENCIA' : (lang === 'AR' ? 'الاستخدام / المعيار' : (lang === 'HI' ? 'उपयोग / मानदंड' : (lang === 'ID' ? 'PENGGUNAAN / TOLOK UKUR' : 'USAGE / BENCHMARK')))))}
                                                 </p>
-                                                <p className="text-xs text-slate-300 font-medium">
+                                                <p className="text-xs text-slate-700 dark:text-slate-300 font-medium">
                                                     {indicator.usage}
                                                 </p>
                                             </div>
@@ -182,7 +197,7 @@ export default async function TechnicalPage({ searchParams }: { searchParams: Pr
                     ))}
                 </div>
 
-                <footer className="mt-20 pt-8 border-t border-[#1E293B] text-center">
+                <footer className="mt-20 pt-8 border-t border-slate-200 dark:border-[#1E293B] text-center">
                     <p className="text-slate-500 text-xs uppercase tracking-widest font-mono">
                         OmniMetric Technical Analysis Library
                     </p>

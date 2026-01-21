@@ -6,10 +6,13 @@ import { DICTIONARY, LangType } from '@/data/dictionary';
 import { useDevice } from '@/hooks/useDevice';
 import { Info } from 'lucide-react';
 import Link from 'next/link';
+import { useTheme } from '@/components/ThemeProvider';
 
 // "Pulse" Tile Component - SHARED DEFINITION
-export const PulseTile = ({ title, score, ticker, data, onClick, lang, wikiSlug, theme = 'dark' }: any) => {
+export const PulseTile = ({ title, score, ticker, data, onClick, lang, wikiSlug, theme: propTheme }: any) => {
     const { isMobile } = useDevice();
+    const { theme: contextTheme } = useTheme();
+    const theme = propTheme || contextTheme;
 
     // 1. RISK LOGIC
     let themeColor = "#94A3B8";

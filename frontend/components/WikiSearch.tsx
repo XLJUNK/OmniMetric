@@ -55,14 +55,13 @@ export const WikiSearch = ({ items, lang, placeholder }: WikiSearchProps) => {
 
     return (
         <div ref={wrapperRef} className="relative w-full flex justify-end mb-8 z-[40]">
-            <div className={`relative flex items-center bg-[#050505] border border-slate-800 rounded-lg focus-within:border-sky-500 focus-within:ring-1 focus-within:ring-sky-500 focus-within:shadow-[0_0_20px_rgba(14,165,233,0.15)] transition-all ${isRTL ? 'flex-row-reverse' : ''}`}>
+            <div className={`relative flex items-center bg-white dark:bg-[#050505] border border-slate-200 dark:border-slate-800 rounded-lg focus-within:border-sky-500 focus-within:ring-1 focus-within:ring-sky-500 focus-within:shadow-[0_0_20px_rgba(14,165,233,0.15)] transition-all ${isRTL ? 'flex-row-reverse' : ''}`}>
                 <input
                     type="text"
                     value={query}
                     onChange={handleSearch}
                     placeholder={placeholder || "Search..."}
-                    className={`appearance-none relative z-10 w-72 h-12 border-none text-base !text-white caret-white placeholder-slate-500 focus:ring-0 px-4 ${isRTL ? 'text-right' : 'text-left'}`}
-                    style={{ color: '#ffffff', backgroundColor: 'transparent' }}
+                    className={`appearance-none relative z-10 w-72 h-12 border-none text-base text-slate-900 wiki-search-input caret-sky-500 placeholder-slate-400 dark:placeholder-slate-500 focus:ring-0 px-4 bg-transparent outline-none ${isRTL ? 'text-right' : 'text-left'}`}
                     autoComplete="off"
                     onFocus={() => setIsOpen(true)}
                 />
@@ -72,7 +71,7 @@ export const WikiSearch = ({ items, lang, placeholder }: WikiSearchProps) => {
                     {query && (
                         <button
                             onClick={clearSearch}
-                            className="flex items-center justify-center w-8 h-8 rounded-full hover:bg-slate-800 text-slate-500 hover:text-white transition-colors"
+                            className="flex items-center justify-center w-8 h-8 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-white transition-colors"
                         >
                             <X className="w-5 h-5" />
                         </button>
@@ -83,19 +82,21 @@ export const WikiSearch = ({ items, lang, placeholder }: WikiSearchProps) => {
 
             {/* Results Dropdown */}
             {isOpen && query.length >= 2 && (
-                <div className="absolute top-full left-0 right-0 mt-2 bg-[#0A0A0A] border border-slate-700 rounded-lg shadow-2xl z-[50] overflow-hidden max-h-[60vh] overflow-y-auto">
+                <div
+                    className="absolute top-full left-0 right-0 mt-2 wiki-search-dropdown rounded-lg shadow-2xl z-[9999] overflow-hidden max-h-[60vh] overflow-y-auto isolate"
+                >
                     {filteredItems.length > 0 ? (
                         <ul>
                             {filteredItems.map(item => (
-                                <li key={item.slug} className="border-b border-slate-800 last:border-0">
+                                <li key={item.slug} className="border-b border-slate-100 dark:border-slate-800 last:border-0">
                                     <Link
                                         href={`/${lang.toLowerCase()}/wiki/${item.slug}`}
-                                        className={`block p-4 hover:bg-slate-800 transition-colors ${isRTL ? 'text-right' : 'text-left'}`}
+                                        className={`block p-4 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors ${isRTL ? 'text-right' : 'text-left'}`}
                                         onClick={() => setIsOpen(false)}
                                     >
                                         <div className={`flex items-center justify-between ${isRTL ? 'flex-row-reverse' : ''}`}>
-                                            <span className="font-bold text-slate-200">{item.title}</span>
-                                            <span className="text-xs text-slate-500 uppercase tracking-wider bg-slate-900 px-2 py-0.5 rounded border border-slate-800">
+                                            <span className="font-bold text-slate-800 dark:text-slate-200">{item.title}</span>
+                                            <span className="text-xs text-slate-500 uppercase tracking-wider bg-slate-100 dark:bg-slate-900 px-2 py-0.5 rounded border border-slate-200 dark:border-slate-800">
                                                 {item.type}
                                             </span>
                                         </div>

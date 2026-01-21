@@ -95,15 +95,19 @@ export const TerminalSettings = ({
 
             {/* Bottom Sheet */}
             <div
-                className={`fixed bottom-0 left-0 right-0 bg-[#0F172A] border-t border-slate-800 rounded-t-[2rem] z-[9991] shadow-2xl transition-transform duration-300 ease-out transform flex flex-col max-h-[85vh] ${isOpen ? 'translate-y-0' : 'translate-y-full'}`}
+                className={`fixed bottom-0 left-0 right-0 border-t border-slate-800 rounded-t-[2rem] z-[9991] shadow-2xl transition-transform duration-300 ease-out transform flex flex-col max-h-[85vh] ${isOpen ? 'translate-y-0' : 'translate-y-full'}`}
+                style={{ backgroundColor: '#0F172A' }}
             >
                 {/* Handle Bar */}
                 <div className="w-full h-8 flex items-center justify-center flex-shrink-0" onClick={onClose}>
-                    <div className="w-12 h-1.5 bg-slate-700 rounded-full" />
+                    <div className="w-12 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full" />
                 </div>
 
                 {/* Header */}
-                <div className="px-6 py-2 flex justify-between items-center bg-[#0F172A] z-10 border-b border-slate-800/50">
+                <div
+                    className="px-6 py-2 flex justify-between items-center z-10 border-b border-slate-800"
+                    style={{ backgroundColor: '#0F172A' }}
+                >
                     <div className="flex flex-col">
                         <h2 className="text-sm font-black text-[#FEF3C7] tracking-widest uppercase mb-0.5 sm:text-base">{t.title}</h2>
                         <span className="text-[9px] text-[#FEF3C7]/70 font-mono leading-none">{t.subtitle}</span>
@@ -141,8 +145,8 @@ export const TerminalSettings = ({
                             {/* Light Mode Button */}
                             <button
                                 className={`relative flex items-center justify-center gap-2 p-3 rounded-xl transition-all duration-300 group ${!isDark
-                                    ? 'bg-[#E2E8F0] border-2 border-[#3B82F6] shadow-[0_0_15px_rgba(59,130,246,0.5)] scale-[1.02]'
-                                    : 'bg-[#475569] border border-slate-600 hover:bg-[#64748B]'
+                                    ? 'bg-white border-2 border-[#3B82F6] shadow-[0_0_15px_rgba(59,130,246,0.3)] scale-[1.02]'
+                                    : 'bg-slate-100 dark:bg-[#475569] border border-slate-200 dark:border-slate-600 hover:bg-slate-200 dark:hover:bg-[#64748B]'
                                     }`}
                                 onClick={onToggleTheme}
                                 title="Switch to Light Mode"
@@ -163,14 +167,14 @@ export const TerminalSettings = ({
                     <div className="space-y-2">
                         <div className="flex justify-between items-end">
                             <h3 className="text-[10px] font-bold text-[#FEF3C7] uppercase tracking-widest pl-1">{t.active_modules} ({currentTiles.length})</h3>
-                            <button onClick={onReset} className="text-[9px] flex items-center gap-1 bg-[#FEF3C7] text-black font-bold hover:bg-[#FEF3C7]/80 transition-colors px-2 py-0.5 rounded shadow-[0_0_10px_rgba(254,243,199,0.2)]">
+                            <button onClick={onReset} className="text-[9px] flex items-center gap-1 bg-[#FEF3C7] text-black font-bold hover:bg-[#FEF3C7]/80 transition-colors px-2 py-0.5 rounded shadow-sm">
                                 <RotateCcw className="w-3 h-3" /> {t.reset}
                             </button>
                         </div>
 
-                        <div className="space-y-1 bg-black/20 p-1.5 rounded-xl border border-slate-800/50 min-h-[100px]">
+                        <div className="space-y-1 bg-[#020617] p-1.5 rounded-xl border border-slate-800 min-h-[100px]">
                             {currentTiles.map((id, index) => (
-                                <div key={id} className="flex items-center gap-2 bg-[#1E293B] p-1 rounded-lg border border-slate-700/50 group hover:border-[#FEF3C7]/30 transition-colors">
+                                <div key={id} className="flex items-center gap-2 bg-[#1E293B] p-1 rounded-lg border border-slate-700/50 group hover:border-[#FEF3C7]/30 transition-colors shadow-none">
                                     <div className="text-[#FEF3C7]/50 cursor-grab active:cursor-grabbing pl-1">
                                         <GripVertical className="w-3 h-3" />
                                     </div>
@@ -211,7 +215,7 @@ export const TerminalSettings = ({
                     {/* 3. Hidden Tiles */}
                     {hiddenTiles.length > 0 && (
                         <div className="space-y-2 pb-4">
-                            <h3 className="text-xs font-bold text-slate-600 uppercase tracking-widest pl-1">{t.disabled_modules} ({hiddenTiles.length})</h3>
+                            <h3 className="text-xs font-bold text-slate-500 uppercase tracking-widest pl-1">{t.disabled_modules} ({hiddenTiles.length})</h3>
                             <div className="space-y-1 opacity-60 hover:opacity-100 transition-opacity">
                                 {hiddenTiles.map(id => (
                                     <div key={id} className="flex items-center gap-2 bg-[#111] p-1 rounded-lg border border-slate-800 border-dashed">
@@ -232,8 +236,8 @@ export const TerminalSettings = ({
 
                     {/* 4. System Info (Moved from Header) */}
                     {systemInfo && (
-                        <div className={`mt-auto pt-4 border-t ${isDark ? 'border-slate-800' : 'border-slate-200'}`}>
-                            <div className={`p-2 rounded-lg flex items-center justify-between ${isDark ? 'bg-slate-900/50' : 'bg-slate-50'}`}>
+                        <div className="mt-auto pt-4 border-t border-slate-800">
+                            <div className="p-2 rounded-lg flex items-center justify-between bg-slate-900">
                                 <span className="text-[9px] uppercase tracking-widest text-[#FEF3C7]/70">{t.last_updated}</span>
                                 <span className="font-mono text-[10px] text-[#FEF3C7]">
                                     {getFormattedDate(systemInfo.lastUpdated)} JST

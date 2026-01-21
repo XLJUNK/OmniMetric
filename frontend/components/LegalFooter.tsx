@@ -3,15 +3,14 @@
 import Link from 'next/link';
 import { LangType, DICTIONARY } from '@/data/dictionary';
 import { useDevice } from '@/hooks/useDevice';
-import { useSearchParams } from 'next/navigation';
+import { useCurrentLang } from '@/hooks/useCurrentLang';
 import { Zap } from 'lucide-react';
 
 export const LegalFooter = () => {
-    const searchParams = useSearchParams();
-    const queryLang = searchParams.get('lang') as LangType;
-    const lang = (queryLang && DICTIONARY[queryLang]) ? queryLang : 'EN';
+    const lang = useCurrentLang();
     const t = DICTIONARY[lang];
     const { isMobile } = useDevice();
+    const lowerLang = lang.toLowerCase();
 
     return (
         <footer className="w-full bg-slate-50 dark:bg-[#050505] border-t border-slate-200 dark:border-slate-800 mt-auto transition-colors duration-300">
@@ -22,11 +21,11 @@ export const LegalFooter = () => {
                         {t.labels.about}
                     </Link>
                     {!isMobile && <span className="text-slate-300 dark:text-slate-800">|</span>}
-                    <Link href={`/legal/privacy-policy?lang=${lang}`} className="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-slate-200 uppercase transition-colors px-2 py-1">
+                    <Link href={`/${lowerLang}/legal/privacy-policy`} className="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-slate-200 uppercase transition-colors px-2 py-1">
                         Privacy
                     </Link>
                     {!isMobile && <span className="text-slate-300 dark:text-slate-800">|</span>}
-                    <Link href={`/legal/terms?lang=${lang}`} className="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-slate-200 uppercase transition-colors px-2 py-1">
+                    <Link href={`/${lowerLang}/legal/terms`} className="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-slate-200 uppercase transition-colors px-2 py-1">
                         Terms
                     </Link>
                     {!isMobile && <span className="text-slate-300 dark:text-slate-800">|</span>}

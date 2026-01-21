@@ -53,9 +53,9 @@ export const AdUnit = () => {
     }, []);
 
     return (
-        <div className="relative w-full min-h-[90px] flex items-center justify-center overflow-hidden !bg-transparent !shadow-none !ring-0 !outline-none border-y border-[#1E293B] my-2">
+        <div className="relative w-full min-h-[90px] flex items-center justify-center overflow-hidden !bg-transparent !shadow-none !ring-0 !outline-none border-y border-slate-200 dark:border-[#1E293B] my-2">
             <div className="absolute top-1 right-2 z-10 opacity-30 hover:opacity-100 transition-opacity">
-                <span className="text-[8px] font-mono text-slate-500 uppercase tracking-widest">ADS</span>
+                <span className="text-[8px] font-mono text-slate-400 dark:text-slate-500 uppercase tracking-widest">ADS</span>
             </div>
 
             {/* Horizontal Display Unit */}

@@ -38,10 +38,10 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
     }, []);
 
     const isRTL = lang === 'AR';
-    if (news.length === 0) return <div className="h-[40px] bg-black border-y border-[#222]"></div>;
+    if (news.length === 0) return <div className="h-[40px] bg-slate-50 dark:bg-black border-y border-slate-200 dark:border-[#222]"></div>;
 
     return (
-        <div className="w-full bg-black border-y border-[#222] h-[40px] shadow-md z-10" dir={isRTL ? 'rtl' : 'ltr'}>
+        <div className="w-full bg-slate-50 dark:bg-black border-y border-slate-200 dark:border-[#222] h-[40px] shadow-md z-10" dir={isRTL ? 'rtl' : 'ltr'}>
             <div className="w-full max-w-[1500px] mx-auto h-full relative overflow-hidden flex items-center">
                 {/* LABEL */}
                 <div className={`absolute ${isRTL ? 'right-0' : 'left-0'} top-0 bottom-0 bg-[#dc2626] text-white font-black text-[10px] px-6 z-20 flex items-center tracking-[0.2em] uppercase shrink-0`}>
@@ -51,7 +51,7 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
                 {/* TICKER TRACK */}
                 <div className={`flex whitespace-nowrap ${isRTL ? 'animate-marquee-rtl' : 'animate-marquee'} items-center h-full`}>
                     {news.map((item, i) => (
-                        <span key={i} className={`${isRTL ? 'ms-12' : 'me-12'} text-[12px] font-mono font-bold text-yellow-400 uppercase flex items-center gap-3`}>
+                        <span key={i} className={`${isRTL ? 'ms-12' : 'me-12'} text-[12px] font-mono font-bold text-yellow-300 dark:text-yellow-400 uppercase flex items-center gap-3`}>
                             <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full inline-block animate-pulse"></span>
                             {item.title}
                         </span>

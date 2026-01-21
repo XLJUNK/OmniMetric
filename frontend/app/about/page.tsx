@@ -23,7 +23,7 @@ function AboutContent() {
                             {isJP ? 'オムニ・メトリックについて' : 'About OmniMetric'}
                         </h1>
                     </div>
-                    <p className="text-xl text-slate-300 leading-relaxed">
+                    <p className="text-xl text-slate-700 dark:text-slate-300 leading-relaxed">
                         {isJP
                             ? '個人投資家向けAI駆動型マクロ分析ターミナル'
                             : 'AI-Driven Institutional Macro Analysis Terminal for Retail Investors'}
@@ -38,23 +38,23 @@ function AboutContent() {
                             {isJP ? 'オムニ・メトリックとは？' : 'What is OmniMetric?'}
                         </h2>
                     </div>
-                    <div className="bg-[#111] !border !border-slate-800 !rounded-xl p-8 space-y-4">
-                        <p className="text-base text-slate-300 leading-relaxed">
+                    <div className="bg-white dark:bg-[#111] !border !border-slate-200 dark:!border-slate-800 !rounded-xl p-8 space-y-4 shadow-sm dark:shadow-none">
+                        <p className="text-base text-slate-700 dark:text-slate-300 leading-relaxed">
                             {isJP
                                 ? 'オムニ・メトリックは、機関投資家級の金融データをAIで解析し、個人投資家向けに実用的なインサイトへ変換する'
                                 : 'OmniMetric is an '}
-                            <strong className="text-white">
+                            <strong className="text-slate-900 dark:text-white">
                                 {isJP ? 'AI駆動型マクロ経済分析ターミナル' : 'AI-driven macro economic analysis terminal'}
                             </strong>
                             {isJP
                                 ? 'です。'
                                 : ' that transforms institutional-grade financial data into actionable insights for retail investors.'}
                         </p>
-                        <p className="text-base text-slate-300 leading-relaxed">
+                        <p className="text-base text-slate-700 dark:text-slate-300 leading-relaxed">
                             {isJP
                                 ? 'ヘッドラインや意見に焦点を当てた従来の金融ニュースサイトとは異なり、リアルタイム市場データを高度なアルゴリズムで処理し、独自の'
                                 : 'Unlike traditional financial news sites that focus on headlines and opinions, we process real-time market data through sophisticated algorithms to generate our proprietary '}
-                            <strong className="text-cyan-400">
+                            <strong className="text-cyan-600 dark:text-cyan-400">
                                 {isJP ? 'グローバル・マクロ・シグナル（GMS）スコア' : 'Global Macro Signal (GMS) Score'}
                             </strong>
                             {isJP
@@ -73,31 +73,31 @@ function AboutContent() {
                         </h2>
                     </div>
                     <div className="grid gap-4">
-                        <div className="bg-[#111] !border !border-slate-800 !rounded-xl p-6">
-                            <h3 className="text-sm font-bold text-yellow-400 mb-3 uppercase tracking-wide">
+                        <div className="bg-white dark:bg-[#111] !border !border-slate-200 dark:!border-slate-800 !rounded-xl p-6 shadow-sm dark:shadow-none">
+                            <h3 className="text-sm font-bold text-yellow-600 dark:text-yellow-400 mb-3 uppercase tracking-wide">
                                 {isJP ? '📊 機関投資家級データソース' : '📊 Institutional-Grade Data Sources'}
                             </h3>
-                            <p className="text-sm text-slate-400 leading-relaxed">
+                            <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                                 {isJP
                                     ? '純流動性（連邦準備制度資産 - TGA - RRP）、MOVE指数（債券ボラティリティ）、ハイイールド・クレジット・スプレッドなど、通常はヘッジファンドや機関投資家が使用する指標を分析します。'
                                     : 'We analyze Net Liquidity (Federal Reserve Balance Sheet - TGA - RRP), MOVE Index (bond volatility), and High Yield Credit Spreads—metrics typically reserved for hedge funds and institutional investors.'}
                             </p>
                         </div>
-                        <div className="bg-[#111] !border !border-slate-800 !rounded-xl p-6">
-                            <h3 className="text-sm font-bold text-sky-400 mb-3 uppercase tracking-wide">
+                        <div className="bg-white dark:bg-[#111] !border !border-slate-200 dark:!border-slate-800 !rounded-xl p-6 shadow-sm dark:shadow-none">
+                            <h3 className="text-sm font-bold text-sky-600 dark:text-sky-400 mb-3 uppercase tracking-wide">
                                 {isJP ? '🤖 AIによるリアルタイム分析' : '🤖 AI-Powered Real-Time Analysis'}
                             </h3>
-                            <p className="text-sm text-slate-400 leading-relaxed">
+                            <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                                 {isJP
                                     ? '独自のアルゴリズムが、FRED、CBOE、Yahoo Finance等のソースから60秒ごとにデータを処理し、Google Gemini搭載の多言語AIインサイトを生成します。'
                                     : 'Our proprietary algorithms process data from FRED, CBOE, Yahoo Finance, and alternative sources every 60 seconds, generating multilingual AI insights powered by Google Gemini.'}
                             </p>
                         </div>
-                        <div className="bg-[#111] !border !border-slate-800 !rounded-xl p-6">
-                            <h3 className="text-sm font-bold text-green-400 mb-3 uppercase tracking-wide">
+                        <div className="bg-white dark:bg-[#111] !border !border-slate-200 dark:!border-slate-800 !rounded-xl p-6 shadow-sm dark:shadow-none">
+                            <h3 className="text-sm font-bold text-green-600 dark:text-green-400 mb-3 uppercase tracking-wide">
                                 {isJP ? '🎯 定量的リスクスコアリング' : '🎯 Quantitative Risk Scoring'}
                             </h3>
-                            <p className="text-sm text-slate-400 leading-relaxed">
+                            <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                                 {isJP
                                     ? 'GMSスコアは主観的な意見を排除し、グローバル市場リスクレベルをデータ駆動型かつ客観的にリアルタイムで評価します。'
                                     : 'The GMS Score eliminates subjective opinions, providing a data-driven, objective assessment of global market risk levels in real-time.'}
@@ -131,16 +131,16 @@ function AboutContent() {
                             {isJP ? '技術とデータソース' : 'Technology & Data Sources'}
                         </h2>
                     </div>
-                    <div className="bg-[#111] !border !border-slate-800 !rounded-xl p-6 space-y-3">
-                        <div className="grid grid-cols-2 gap-4 text-xs text-slate-400 font-mono">
-                            <div><span className="text-slate-600">{isJP ? 'フロントエンド:' : 'Frontend:'}</span> Next.js 15 + TypeScript</div>
-                            <div><span className="text-slate-600">{isJP ? 'バックエンド:' : 'Backend:'}</span> Python + FastAPI</div>
-                            <div><span className="text-slate-600">{isJP ? 'AIエンジン:' : 'AI Engine:'}</span> Google Gemini 2.0 Flash</div>
-                            <div><span className="text-slate-600">{isJP ? 'データパイプライン:' : 'Data Pipeline:'}</span> {isJP ? 'リアルタイムREST API' : 'Real-time REST APIs'}</div>
+                    <div className="bg-white dark:bg-[#111] !border !border-slate-200 dark:!border-slate-800 !rounded-xl p-6 space-y-3 shadow-sm dark:shadow-none">
+                        <div className="grid grid-cols-2 gap-4 text-xs text-slate-500 dark:text-slate-400 font-mono">
+                            <div><span className="text-slate-700 dark:text-slate-600">{isJP ? 'フロントエンド:' : 'Frontend:'}</span> Next.js 15 + TypeScript</div>
+                            <div><span className="text-slate-700 dark:text-slate-600">{isJP ? 'バックエンド:' : 'Backend:'}</span> Python + FastAPI</div>
+                            <div><span className="text-slate-700 dark:text-slate-600">{isJP ? 'AIエンジン:' : 'AI Engine:'}</span> Google Gemini 2.0 Flash</div>
+                            <div><span className="text-slate-700 dark:text-slate-600">{isJP ? 'データパイプライン:' : 'Data Pipeline:'}</span> {isJP ? 'リアルタイムREST API' : 'Real-time REST APIs'}</div>
                         </div>
-                        <div className="pt-4 border-t border-slate-800">
-                            <p className="text-xs text-slate-500 uppercase tracking-wider mb-2">{isJP ? 'データソース:' : 'Data Sources:'}</p>
-                            <p className="text-sm text-slate-400">
+                        <div className="pt-4 border-t border-slate-200 dark:border-slate-800">
+                            <p className="text-xs text-slate-600 dark:text-slate-500 uppercase tracking-wider mb-2">{isJP ? 'データソース:' : 'Data Sources:'}</p>
+                            <p className="text-sm text-slate-600 dark:text-slate-400">
                                 {isJP
                                     ? '連邦準備経済データ（FRED）、CBOE市場ボラティリティ指数、Yahoo Finance、Financial Modeling Prep、Alternative.me暗号通貨恐怖と欲望指数'
                                     : 'Federal Reserve Economic Data (FRED), CBOE Market Volatility Indices, Yahoo Finance, Financial Modeling Prep, Alternative.me Crypto Fear & Greed'}

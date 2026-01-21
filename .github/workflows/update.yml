@@ -56,6 +56,10 @@ jobs:
           git fetch origin main
           git reset --hard origin/main
           python backend/gms_engine.py
+          
+          # SKILL COMPLIANCE CHECK (Blocks commit if failed)
+          python scripts/verify_skills.py
+          
           git add backend/current_signal.json backend/history.json backend/archive/*.json backend/sns_status.json backend/sns_last_post.json
           git commit -m "Auto-update market signal [bot]" || echo "No changes to commit"
           git push origin main

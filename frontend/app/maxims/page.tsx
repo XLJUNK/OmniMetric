@@ -6,6 +6,7 @@ import { DynamicStructuredData } from '@/components/DynamicStructuredData';
 import { Metadata } from 'next';
 import { WikiSearch } from '@/components/WikiSearch';
 import { getWikiData } from '@/lib/wiki';
+import { LanguageSelector } from '@/components/LanguageSelector';
 
 // Import all language data
 import maximsDataEn from '@/data/maxims-en.json';
@@ -70,6 +71,18 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
     };
 }
 
+const getSubtitle = (l: LangType) => {
+    switch (l) {
+        case 'JP': return '投資金言';
+        case 'CN': return '投资名言';
+        case 'ES': return 'Máximas de Inversión';
+        case 'HI': return 'निवेश सूत्र';
+        case 'ID': return 'Maxim Investasi';
+        case 'AR': return 'حكم الاستثمار';
+        default: return 'Investment Maxims';
+    }
+};
+
 export default async function MaximsPage({ searchParams }: { searchParams: Promise<{ lang?: string }> }) {
     const lang = await getLang(searchParams);
     const isRTL = lang === 'AR';
@@ -109,7 +122,7 @@ export default async function MaximsPage({ searchParams }: { searchParams: Promi
     })));
 
     return (
-        <div className="min-h-screen bg-[#020617] text-slate-200 font-sans selection:bg-sky-500/30 pb-20">
+        <div className="min-h-screen bg-slate-50 dark:bg-[#020617] text-slate-800 dark:text-slate-200 font-sans selection:bg-sky-500/30 pb-20">
             {/* Inject JSON-LD */}
             <DynamicStructuredData data={breadcrumbJsonLd} />
             <DynamicStructuredData data={{
@@ -122,11 +135,15 @@ export default async function MaximsPage({ searchParams }: { searchParams: Promi
 
             <div className="max-w-[1200px] mx-auto p-4 md:p-12 lg:p-16">
 
-                <header className={`mb-8 border-b border-[#1E293B] pb-8 text-center ${isRTL ? 'md:text-right' : 'md:text-left'}`}>
-                    <h1 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-4 uppercase">
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-emerald-400">{getPageTitle(lang)}</span>
-                    </h1>
-                    <p className={`text-slate-400 font-mono text-sm md:text-base max-w-3xl leading-relaxed ${isRTL ? 'ml-auto' : ''}`}>
+                <header className={`mb-12 border-b border-slate-200 dark:border-[#1E293B] pb-8 ${isRTL ? 'text-right' : 'text-left'}`}>
+                    <div className={`flex justify-between items-start mb-4`}>
+                        <h1 className={`text-3xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight uppercase flex flex-col gap-1`}>
+                            <span className="text-xl md:text-2xl text-slate-400 dark:text-slate-500 tracking-widest">{DICTIONARY[lang].labels.maxims}</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-emerald-400">{getPageTitle(lang)}</span>
+                        </h1>
+                        <LanguageSelector currentLang={lang} />
+                    </div>
+                    <p className={`text-slate-600 dark:text-slate-400 font-mono text-sm md:text-base max-w-3xl leading-relaxed ${isRTL ? 'ml-auto' : ''}`}>
                         {getPageDesc(lang)}
                     </p>
                 </header>
@@ -143,7 +160,7 @@ export default async function MaximsPage({ searchParams }: { searchParams: Promi
                 <div className="space-y-16">
                     {maximsData.map((category, catIndex) => (
                         <section key={catIndex} className="scroll-mt-24">
-                            <h2 className={`text-xl md:text-2xl font-black text-white uppercase tracking-wider mb-8 flex items-center gap-3 ${isRTL ? 'border-r-4 pr-4 text-right' : 'border-l-4 pl-4'} border-sky-500`}>
+                            <h2 className={`text-xl md:text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-8 flex items-center gap-3 ${isRTL ? 'border-r-4 pr-4 text-right' : 'border-l-4 pl-4'} border-sky-500`}>
                                 {category.category}
                             </h2>
 
@@ -151,29 +168,29 @@ export default async function MaximsPage({ searchParams }: { searchParams: Promi
                                 {category.quotes.map((maxim) => (
                                     <li key={maxim.id} className="h-full">
                                         <article
-                                            className="h-full group relative bg-[#0A0A0A] border border-[#1E293B] rounded-xl overflow-hidden hover:border-sky-500/50 transition-all duration-300 flex flex-col"
+                                            className="h-full group relative bg-white dark:bg-[#0A0A0A] border border-slate-200 dark:border-[#1E293B] rounded-xl overflow-hidden hover:border-sky-500/50 transition-all duration-300 flex flex-col shadow-sm dark:shadow-none"
                                         >
                                             <div className="p-6 md:p-8 flex-1 flex flex-col">
                                                 {/* Icon */}
                                                 <div className={`mb-4 ${isRTL ? 'text-right' : ''}`}>
-                                                    <Quote className={`w-8 h-8 text-sky-900/50 fill-current group-hover:text-sky-500/20 transition-colors ${isRTL ? 'transform -scale-x-100' : ''}`} />
+                                                    <Quote className={`w-8 h-8 text-sky-500/10 dark:text-sky-900/50 fill-current group-hover:text-sky-500/20 transition-colors ${isRTL ? 'transform -scale-x-100' : ''}`} />
                                                 </div>
 
                                                 {/* Text */}
-                                                <blockquote className={`text-lg md:text-xl font-bold text-slate-100 mb-4 leading-snug ${isRTL ? 'text-right' : ''}`}>
+                                                <blockquote className={`text-lg md:text-xl font-bold text-slate-800 dark:text-slate-100 mb-4 leading-snug ${isRTL ? 'text-right' : ''}`}>
                                                     "{maxim.text}"
                                                 </blockquote>
 
                                                 {/* Attribution */}
-                                                <div className={`mt-auto pt-4 border-t border-[#1E293B] flex items-center ${isRTL ? '' : 'justify-between'}`}>
-                                                    <span className="text-xs font-mono text-sky-400 font-bold uppercase tracking-wider">
+                                                <div className={`mt-auto pt-4 border-t border-slate-100 dark:border-[#1E293B] flex items-center ${isRTL ? '' : 'justify-between'}`}>
+                                                    <span className="text-xs font-mono text-sky-600 dark:text-sky-400 font-bold uppercase tracking-wider">
                                                         — {maxim.attribution}
                                                     </span>
                                                 </div>
 
                                                 {/* Meaning / Context */}
-                                                <div className={`mt-4 bg-[#111] p-3 rounded text-xs text-slate-400 leading-relaxed border border-[#222] ${isRTL ? 'text-right' : ''}`}>
-                                                    <span className={`font-bold text-slate-500 ${isRTL ? 'ml-1' : 'mr-1'}`}>KEY:</span>
+                                                <div className={`mt-4 bg-slate-50 dark:bg-[#111] p-3 rounded text-xs text-slate-600 dark:text-slate-400 leading-relaxed border border-slate-200 dark:border-[#222] ${isRTL ? 'text-right' : ''}`}>
+                                                    <span className={`font-bold text-slate-400 dark:text-slate-500 ${isRTL ? 'ml-1' : 'mr-1'}`}>KEY:</span>
                                                     {maxim.meaning}
                                                 </div>
                                             </div>
@@ -192,7 +209,7 @@ export default async function MaximsPage({ searchParams }: { searchParams: Promi
                     ))}
                 </div>
 
-                <div className="mt-20 pt-8 border-t border-[#1E293B] text-center">
+                <div className="mt-20 pt-8 border-t border-slate-200 dark:border-[#1E293B] text-center">
                     <p className="text-slate-600 text-xs font-mono">
                         OMNIMETRIC INVESTMENT WISDOM DATABASE
                     </p>

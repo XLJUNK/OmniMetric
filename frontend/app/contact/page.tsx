@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { MessageSquare, AlertCircle } from 'lucide-react';
 import { LangType } from '@/data/dictionary';
+import { LanguageSelector } from '@/components/LanguageSelector';
 
 export const dynamic = 'force-dynamic';
 
@@ -11,7 +12,7 @@ import React, { Suspense } from 'react';
 
 export default function ContactPage() {
     return (
-        <Suspense fallback={<div className="min-h-screen bg-[#0A0A0A] flex items-center justify-center text-cyan-500 font-mono text-xs animate-pulse">CONNECTING TO SUPPORT SERVER...</div>}>
+        <Suspense fallback={<div className="min-h-screen bg-white dark:bg-[#0A0A0A] flex items-center justify-center text-cyan-500 font-mono text-xs animate-pulse">CONNECTING TO SUPPORT SERVER...</div>}>
             <ContactContent />
         </Suspense>
     );
@@ -23,25 +24,18 @@ function ContactContent() {
     const isJP = lang === 'JP';
 
     return (
-        <div className="min-h-screen bg-[#0A0A0A] text-[#E0E0E0] font-sans selection:bg-sky-500 selection:text-white">
+        <div className="min-h-screen bg-slate-50 dark:bg-[#0A0A0A] text-slate-800 dark:text-[#E0E0E0] font-sans selection:bg-cyan-100 dark:selection:bg-sky-500 selection:text-cyan-900 dark:selection:text-white">
             <div className="max-w-[1400px] mx-auto px-6 py-12 md:py-20 lg:px-24">
-                {/* Breadcrumb */}
-                <div className="flex justify-between items-center mb-16 opacity-60">
-                    <Link href={`/?lang=${lang}`} className="flex items-center gap-3 group no-underline">
-                        <div className="w-8 h-8 rounded-full border border-sky-500/30 flex items-center justify-center group-hover:bg-sky-500/10 transition-all">
-                            <span className="text-sky-500 text-xs font-black">←</span>
-                        </div>
-                        <span className="text-xs font-mono tracking-widest text-slate-500 uppercase group-hover:text-sky-500 transition-colors">
-                            {isJP ? 'ターミナルに戻る' : 'Back to Terminal'}
-                        </span>
-                    </Link>
+                {/* Breadcrumb / Top Nav */}
+                <div className="flex justify-end items-center mb-16 opacity-100">
+                    <LanguageSelector currentLang={lang} mode="query" />
                 </div>
 
                 {/* Main Content */}
                 <div className="max-w-3xl mx-auto space-y-8">
                     <div className="flex items-center gap-4 mb-8">
                         <MessageSquare className="w-8 h-8 text-cyan-500" />
-                        <h1 className="text-3xl font-black tracking-tight text-white">
+                        <h1 className="text-3xl font-black tracking-tight text-slate-900 dark:text-white">
                             {isJP ? 'お問い合わせとサポート' : 'Contact & Support'}
                         </h1>
                     </div>
@@ -51,10 +45,10 @@ function ContactContent() {
                         <div className="flex items-start gap-3">
                             <AlertCircle className="w-6 h-6 text-red-400 flex-shrink-0 mt-1" />
                             <div className="space-y-2">
-                                <h2 className="text-lg font-black text-red-400 uppercase">
+                                <h2 className="text-lg font-black text-red-600 dark:text-red-400 uppercase">
                                     {isJP ? '投資コンサルティングは提供しておりません' : 'WE DO NOT PROVIDE INVESTMENT CONSULTATION'}
                                 </h2>
-                                <p className="text-sm text-red-200 leading-relaxed">
+                                <p className="text-sm text-red-800 dark:text-red-200 leading-relaxed">
                                     {isJP
                                         ? 'オムニ・メトリックは情報プラットフォームのみです。個別の投資助言、財務計画、ポートフォリオの推奨事項、個別の取引提案は提供していません。投資コンサルティングに関するリクエストには返答いたしません。'
                                         : 'OmniMetric is an informational platform only. We do not offer personalized investment advice, financial planning, portfolio recommendations, or individual trade suggestions. Any requests for investment consultation will not be answered.'}
@@ -71,21 +65,21 @@ function ContactContent() {
                     </div>
 
                     {/* Primary Contact */}
-                    <section className="bg-[#111] !border !border-cyan-500/30 !rounded-xl p-8 text-center space-y-6">
+                    <section className="bg-white dark:bg-[#111] !border !border-cyan-500/30 !rounded-xl p-8 text-center space-y-6 shadow-sm dark:shadow-none">
                         <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-500/10 rounded-full mb-2">
-                            <svg className="w-8 h-8 text-cyan-400" fill="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-8 h-8 text-cyan-600 dark:text-cyan-400" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                             </svg>
                         </div>
                         <div>
-                            <h2 className="text-2xl font-black text-white mb-2">
+                            <h2 className="text-2xl font-black text-slate-900 dark:text-white mb-2">
                                 {isJP ? '主要連絡チャネル' : 'Primary Contact Channel'}
                             </h2>
-                            <p className="text-sm text-slate-400 mb-4">
+                            <p className="text-sm text-slate-600 dark:text-slate-400 mb-4">
                                 {isJP ? '技術的な問題、データフィードバック、または一般的なお問い合わせ' : 'For technical issues, data feedback, or general inquiries'}
                             </p>
                         </div>
-                        <div className="bg-black !border !border-slate-700 !rounded-lg p-6">
+                        <div className="bg-slate-50 dark:bg-black !border !border-slate-200 dark:!border-slate-700 !rounded-lg p-6">
                             <p className="text-xs text-slate-500 uppercase tracking-widest mb-2">
                                 {isJP ? 'X（Twitter）でダイレクトメッセージを送信' : 'Send a Direct Message on X (Twitter)'}
                             </p>
@@ -93,7 +87,7 @@ function ContactContent() {
                                 href="https://twitter.com/OmniMetric_GMS"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-block text-2xl font-mono font-black text-cyan-400 hover:text-cyan-300 transition-colors"
+                                className="inline-block text-2xl font-mono font-black text-cyan-600 dark:text-cyan-400 hover:text-cyan-500 dark:hover:text-cyan-300 transition-colors"
                             >
                                 @OmniMetric_GMS
                             </a>
@@ -104,11 +98,11 @@ function ContactContent() {
                     </section>
 
                     {/* What We Can Help With */}
-                    <section className="bg-[#111] !border !border-slate-800 !rounded-xl p-6 space-y-4">
-                        <h2 className="text-lg font-bold text-white uppercase tracking-wide">
+                    <section className="bg-white dark:bg-[#111] !border !border-slate-200 dark:!border-slate-800 !rounded-xl p-6 space-y-4 shadow-sm dark:shadow-none">
+                        <h2 className="text-lg font-bold text-slate-900 dark:text-white uppercase tracking-wide">
                             {isJP ? '✅ 対応可能な内容' : '✅ What We Can Help With'}
                         </h2>
-                        <ul className="space-y-2 text-sm text-slate-300">
+                        <ul className="space-y-2 text-sm text-slate-700 dark:text-slate-300">
                             <li className="flex items-start gap-2">
                                 <span className="text-green-400 mt-1">•</span>
                                 <span>{isJP ? 'ターミナルの技術的問題やバグ' : 'Technical issues or bugs with the terminal'}</span>
@@ -133,11 +127,11 @@ function ContactContent() {
                     </section>
 
                     {/* What We Don't Respond To */}
-                    <section className="bg-[#111] !border !border-slate-800 !rounded-xl p-6 space-y-4">
-                        <h2 className="text-lg font-bold text-white uppercase tracking-wide">
+                    <section className="bg-white dark:bg-[#111] !border !border-slate-200 dark:!border-slate-800 !rounded-xl p-6 space-y-4 shadow-sm dark:shadow-none">
+                        <h2 className="text-lg font-bold text-slate-900 dark:text-white uppercase tracking-wide">
                             {isJP ? '❌ 対応できない内容' : '❌ What We Don\'t Respond To'}
                         </h2>
-                        <ul className="space-y-2 text-sm text-slate-400">
+                        <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
                             <li className="flex items-start gap-2">
                                 <span className="text-red-400 mt-1">•</span>
                                 <span>{isJP ? '投資助言または「買うべきか/売るべきか」の質問' : 'Investment advice or "should I buy/sell" questions'}</span>
@@ -157,7 +151,7 @@ function ContactContent() {
                         </ul>
                     </section>
 
-                    <div className="pt-8 border-t border-slate-800 opacity-50">
+                    <div className="pt-8 border-t border-slate-200 dark:border-slate-800 opacity-50">
                         <p className="text-[10px] font-mono tracking-widest uppercase text-slate-600 text-center">
                             {isJP ? 'サポートプロトコル: SNS（X/Bluesky）DMのみ // メールフォーム・電話対応なし' : 'Support Protocol: SNS (X/Bluesky) DM Only // No Email Forms // No Phone Support'}
                         </p>

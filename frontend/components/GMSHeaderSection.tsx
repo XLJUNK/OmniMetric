@@ -6,6 +6,7 @@ import { RiskGauge, HistoryChart } from '@/components/Charts';
 import { DICTIONARY, LangType } from '@/data/dictionary';
 import { useDevice } from '@/hooks/useDevice';
 import { useRouter } from 'next/navigation';
+import { useTheme } from '@/components/ThemeProvider';
 import { NewsTicker } from '@/components/NewsTicker';
 import { AdUnit } from '@/components/AdUnit';
 import MESSAGES from '@/data/messages.json';
@@ -30,10 +31,11 @@ interface GMSHeaderProps {
     theme?: 'dark' | 'light';
 }
 
-export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSettings, theme = 'dark' }: GMSHeaderProps) => {
+export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSettings }: GMSHeaderProps) => {
     const [showInfo, setShowInfo] = useState(false);
     const [isLangOpen, setIsLangOpen] = useState(false);
     const { isMobile } = useDevice();
+    const { theme } = useTheme();
     const router = useRouter();
     const t = DICTIONARY[lang];
 
@@ -147,22 +149,23 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
                         <div className="relative z-[10000]">
                             <button
                                 onClick={() => setIsLangOpen(!isLangOpen)}
-                                className={`flex items-center gap-2 h-7 px-3 text-[10px] font-bold uppercase tracking-widest rounded transition-all bg-transparent ${theme === 'dark'
-                                    ? 'text-[#FEF3C7] hover:text-white hover:bg-white/5 border border-transparent'
-                                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100 border border-transparent'
+                                className={`flex items-center gap-2 h-7 px-3 text-[10px] font-bold uppercase tracking-widest rounded transition-all outline-none focus:outline-none appearance-none hover:opacity-80 border border-transparent ${theme === 'dark'
+                                    ? 'text-[#FEF3C7]'
+                                    : 'text-black'
                                     }`}
+                                style={{ backgroundColor: theme === 'dark' ? '#000000' : '#F1F5F9' }}
                             >
                                 {lang} <ChevronDown className="w-3 h-3" />
                             </button>
                             {isLangOpen && (
-                                <div className={`absolute top-full right-0 mt-1 w-24 border rounded shadow-xl overflow-hidden z-[10001] pointer-events-auto ring-1 ${theme === 'dark' ? 'bg-[#0A0A0A] border-[#FEF3C7]/20 ring-0' : 'bg-white border-slate-200 ring-slate-200'}`}>
+                                <div className="absolute top-full right-0 mt-1 w-24 rounded-md overflow-hidden z-[10001] pointer-events-auto bg-white dark:bg-black border border-neutral-200 dark:border-neutral-800 outline-none shadow-lg flex flex-col p-1" style={{ backgroundColor: theme === 'dark' ? '#000000' : '#FFFFFF', opacity: 1 }}>
                                     {(Object.keys(DICTIONARY) as LangType[]).map((l) => (
                                         <button
                                             key={l}
                                             onClick={() => { setLang(l); setIsLangOpen(false); }}
-                                            className={`block w-full text-left px-3 py-2 text-[10px] uppercase transition-colors border-b last:border-0 ${lang === l
-                                                ? (theme === 'dark' ? 'bg-[#FEF3C7] text-black font-black border-[#FEF3C7]' : 'bg-slate-200 text-slate-900 font-bold border-slate-300')
-                                                : (theme === 'dark' ? 'bg-[#0A0A0A] text-[#FEF3C7] font-bold border-[#FEF3C7]/10 hover:bg-[#FEF3C7]/10' : 'bg-white text-slate-600 border-slate-100 hover:bg-slate-100 hover:text-slate-900')
+                                            className={`block w-full text-left px-3 py-2 text-[10px] uppercase transition-colors outline-none focus:outline-none appearance-none border-none rounded ${lang === l
+                                                ? 'bg-neutral-900 dark:bg-white text-white dark:text-black font-black'
+                                                : `bg-transparent font-bold ${theme === 'dark' ? 'text-[#FEF3C7] hover:bg-neutral-900 hover:text-white' : 'text-neutral-500 hover:bg-neutral-100 hover:text-neutral-900'}`
                                                 }`}
                                         >
                                             {l}
@@ -176,7 +179,8 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
                         {onOpenSettings && (
                             <button
                                 onClick={onOpenSettings}
-                                className={`flex items-center justify-center p-0 h-7 w-7 rounded border border-transparent transition-all bg-transparent ${theme === 'dark' ? 'text-[#FEF3C7] hover:text-white hover:bg-white/5' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'}`}
+                                className="flex items-center justify-center p-0 h-7 w-7 rounded border border-transparent transition-all bg-transparent hover:bg-neutral-100 dark:hover:bg-neutral-800 dark:border-neutral-800"
+                                style={{ color: theme === 'dark' ? '#FEF3C7' : '#525252' }}
                                 title="Customize Terminal"
                             >
                                 <Settings className="w-4 h-4" />
@@ -223,7 +227,7 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
                     </div>
 
                     <div className="flex-grow mt-2">
-                        <p className="text-slate-700 dark:text-slate-300 text-fluid-base leading-relaxed font-serif italic rtl:font-arabic rtl:not-italic rtl:text-right">
+                        <p className={`text-slate-700 dark:text-slate-300 text-fluid-base leading-relaxed font-serif italic rtl:font-arabic rtl:not-italic rtl:text-right ${lang === 'AR' ? 'text-lg leading-loose' : ''}`}>
                             "{aiContent}"
                         </p>
                     </div>
@@ -280,7 +284,7 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
 
             {/* 3. News (Live Intelligence Stream) */}
             <div className="max-w-[1600px] mx-auto w-full px-4 md:px-6 mb-4">
-                <div className="bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-[#1E293B] rounded-xl overflow-hidden">
+                <div className="bg-white dark:bg-[#111] border border-slate-200 dark:border-[#1E293B] rounded-xl overflow-hidden">
                     <div className="bg-slate-100 dark:bg-black/40 px-6 py-4 border-b border-slate-200 dark:border-[#1E293B]">
                         <h3 className="text-slate-400 text-[10px] font-black uppercase tracking-[0.2em]">{(t.titles as any).live_stream || "LIVE INTELLIGENCE STREAM"}</h3>
                     </div>

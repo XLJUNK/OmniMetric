@@ -33,7 +33,7 @@ export const SectorDashboard = ({ sectorKey }: SectorDashboardProps) => {
         router.push(`${pathname}?lang=${l}`);
     };
 
-    if (!data) return <div className="min-h-screen bg-[#0A0A0A] flex items-center justify-center text-slate-500 font-mono text-xs animate-pulse space-y-4 flex-col">
+    if (!data) return <div className="min-h-screen bg-slate-50 dark:bg-[#0A0A0A] flex items-center justify-center text-slate-500 font-mono text-xs animate-pulse space-y-4 flex-col">
         <SkeletonCard />
         <span>LOADING SECTOR DATA...</span>
     </div>;
@@ -59,27 +59,27 @@ export const SectorDashboard = ({ sectorKey }: SectorDashboardProps) => {
     });
 
     return (
-        <div className="w-full bg-[#0A0A0A] text-slate-200 font-sans min-h-screen flex flex-col">
+        <div className="w-full bg-slate-50 dark:bg-[#0A0A0A] text-slate-800 dark:text-slate-200 font-sans min-h-screen flex flex-col">
             <GMSHeaderSection data={data} lang={lang} isSafeMode={isSafeMode} />
             <div className="max-w-[1600px] mx-auto p-4 md:p-8 space-y-8 w-full">
 
                 {/* METHODOLOGY MODAL */}
                 {showInfo && (
                     <div className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setShowInfo(false)}>
-                        <div className="bg-[#111] border border-[#1E293B] rounded-xl w-full max-w-2xl p-6 shadow-2xl relative" onClick={e => e.stopPropagation()}>
-                            <div className="flex justify-between items-start mb-4 border-b border-[#1E293B] pb-2">
-                                <h2 className="text-2xl font-black text-white uppercase tracking-tighter">
+                        <div className="bg-white dark:bg-[#111] border border-slate-200 dark:border-[#1E293B] rounded-xl w-full max-w-2xl p-6 shadow-2xl relative" onClick={e => e.stopPropagation()}>
+                            <div className="flex justify-between items-start mb-4 border-b border-slate-100 dark:border-[#1E293B] pb-2">
+                                <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tighter">
                                     {t.methodology.title}
                                 </h2>
                                 <button
-                                    className="text-slate-400 hover:text-white transition-colors p-1"
+                                    className="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors p-1"
                                     onClick={() => setShowInfo(false)}
                                     aria-label="Close"
                                 >
                                     <X className="w-6 h-6" />
                                 </button>
                             </div>
-                            <div className="space-y-6 text-sm text-slate-300 font-mono">
+                            <div className="space-y-6 text-sm text-slate-600 dark:text-slate-300 font-mono">
                                 <p>{t.methodology.desc}</p>
                                 {/* Removed repetitive logic for brevity since GMSHeaderSection handles much of this context now */}
                             </div>
@@ -88,9 +88,9 @@ export const SectorDashboard = ({ sectorKey }: SectorDashboardProps) => {
                 )}
 
                 {/* SECTION HEADER */}
-                <div className="flex items-center gap-3 border-b border-[#1E293B] pb-4 mb-8">
+                <div className="flex items-center gap-3 border-b border-slate-200 dark:border-[#1E293B] pb-4 mb-8">
                     <Globe className="w-5 h-5 text-sky-500" />
-                    <h2 className="text-xl font-black text-white uppercase tracking-tighter hover:text-sky-400 transition-colors">
+                    <h2 className="text-xl font-black text-slate-800 dark:text-white uppercase tracking-tighter hover:text-sky-400 transition-colors">
                         OMNIMETRIC / {sectorName}
                     </h2>
                 </div>

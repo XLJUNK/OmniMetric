@@ -30,8 +30,46 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-inter), var(--font-noto-jp), var(--font-noto-ar), var(--font-noto-hi), sans-serif;
+  /* Global Font Stack: EN -> CN -> JP -> Generic */
+  font-family: var(--font-inter), "PingFang SC", "Hiragino Sans", "Microsoft YaHei", "Yu Gothic", var(--font-noto-jp), var(--font-noto-ar), var(--font-noto-hi), sans-serif;
   overflow-x: hidden;
+}
+
+/* Chinese (Simplified/Traditional) Specific Overrides */
+:lang(zh-CN),
+:lang(zh),
+:lang(zh-TW) {
+  font-family: var(--font-inter), "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+/* Fix "Fake Italic" for Chinese - Force Normal or Bold */
+:lang(zh-CN) .italic,
+:lang(zh) .italic,
+:lang(zh-TW) .italic {
+  font-style: normal !important;
+  font-weight: 700;
+  /* Use bold for emphasis instead of italic */
+}
+
+/* Ensure Japanese uses correct font stack explicitly */
+/* Bloomberg Style: Prioritize Noto Sans JP over Hiragino for that "institutional" look */
+:lang(ja) {
+  font-family: var(--font-inter), var(--font-noto-jp), "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+  font-weight: 400;
+  /* Ensure consistent reading weight */
+}
+
+/* Hindi: Prioritize Noto Sans Devanagari */
+:lang(hi) {
+  font-family: var(--font-noto-hi), "Mangal", "Nirmala UI", sans-serif;
+  line-height: 1.6;
+  /* Devanagari scripts often need slightly more height */
+}
+
+/* Arabic: Prioritize Noto Sans Arabic (RTL handled by dir attribute) */
+:lang(ar) {
+  font-family: var(--font-noto-ar), "Tahoma", "Arial", sans-serif;
+  /* Font size boost removed to prevent layout breakage - applied locally if needed */
 }
 
 @layer base {
@@ -85,16 +123,24 @@ a {
 }
 
 /* AdSense Placeholder */
+/* AdSense Placeholder */
 .gms-ad-slot {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   min-height: 100px;
-  background: rgba(18, 18, 18, 0.5);
-  border: 1px dashed #2A2A2A;
+  background: rgba(255, 255, 255, 0.5);
+  /* Default Light */
+  border: 1px dashed #e2e8f0;
   margin: 1rem 0;
   overflow: hidden;
+}
+
+:is(.dark .gms-ad-slot) {
+  background: rgba(18, 18, 18, 0.5);
+  /* Dark Mode */
+  border: 1px dashed #2A2A2A;
 }
 
 /* FRAMEWORK BRANDING ERADICATION: TOTAL PURITY */
@@ -221,4 +267,23 @@ a {
 
 .ai-insight-expanded {
   max-height: 500px;
+}
+
+/* Forced Opacity Override for WikiSearch Dropdown */
+.wiki-search-dropdown {
+  background-color: #ffffff !important;
+  opacity: 1 !important;
+  isolation: isolate;
+}
+
+:is(.dark .wiki-search-dropdown) {
+  background-color: #000000 !important;
+  border: 1px solid #333 !important;
+}
+
+/* Forced Text Color for WikiSearch Input */
+:is(.dark .wiki-search-input) {
+  color: #ffffff !important;
+  caret-color: #0ea5e9 !important;
+  /* Sky-500 */
 }

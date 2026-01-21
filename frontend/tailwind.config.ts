@@ -24,7 +24,14 @@ const config: Config = {
                 }
             },
             fontFamily: {
-                sans: ['var(--font-inter)', 'sans-serif'],
+                sans: [
+                    'var(--font-inter)',
+                    'PingFang SC',
+                    'Hiragino Sans',
+                    'Microsoft YaHei',
+                    'Yu Gothic',
+                    'sans-serif'
+                ],
                 mono: ['var(--font-roboto-mono)', 'monospace'],
                 arabic: ['var(--font-noto-ar)', 'sans-serif'],
             },

@@ -16,8 +16,18 @@ export const ClientDirectionProvider = () => {
         } else {
             // Default to LTR for ALL other languages
             document.documentElement.dir = 'ltr';
-            document.documentElement.lang = lang?.toLowerCase() || 'en';
             document.body.classList.remove('font-arabic');
+
+            // Map internal LangType to BCP 47 standard for CSS :lang() selectors
+            const langMap: Record<string, string> = {
+                'CN': 'zh-CN',
+                'JP': 'ja',
+                'EN': 'en',
+                'ES': 'es',
+                'HI': 'hi',
+                'ID': 'id'
+            };
+            document.documentElement.lang = langMap[lang as string] || 'en';
         }
     }, [lang]);
 
