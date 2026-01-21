@@ -200,7 +200,6 @@ export const MultiAssetSummary = ({ initialData }: MultiAssetSummaryProps) => {
                 lang={lang}
                 isSafeMode={isSafeMode}
                 onOpenSettings={() => setIsSettingsOpen(true)}
-                theme={theme}
             />
 
             {/* 5. Pulse Tiles (Sectors) - 4th Position (Indicators) */}

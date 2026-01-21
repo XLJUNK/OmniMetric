@@ -12,7 +12,7 @@ import requests
 from dotenv import load_dotenv
 import subprocess
 import re
-import requests
+
 import xml.etree.ElementTree as ET
 import sys
 from seo_monitor import SEOMonitor
@@ -86,7 +86,7 @@ def log_diag(msg):
         msg = str(msg)
     
     # Centralized Redaction: Scrub all known API keys
-    sensitive_keys = [FRED_KEY, GEMINI_KEY, FMP_KEY, AI_GATEWAY_KEY]
+    sensitive_keys = [FRED_KEY, GEMINI_KEY, FMP_KEY]
     for key in filter(None, sensitive_keys):
         if key in msg:
             msg = msg.replace(key, "REDACTED")
@@ -111,7 +111,7 @@ ARCHIVE_DIR = os.path.join(SCRIPT_DIR, "archive")
 FRED_KEY = os.getenv("FRED_API_KEY")
 GEMINI_KEY = os.getenv("GEMINI_API_KEY")
 FMP_KEY = os.getenv("FMP_API_KEY")
-AI_GATEWAY_KEY = os.getenv("AI_GATEWAY_API_KEY")
+
 
 def validate_api_keys():
     """Validates presence of required API keys and logs warnings for missing ones."""
@@ -119,7 +119,7 @@ def validate_api_keys():
     if not FRED_KEY: missing.append("FRED_API_KEY")
     if not GEMINI_KEY: missing.append("GEMINI_API_KEY")
     if not FMP_KEY: missing.append("FMP_API_KEY")
-    if not AI_GATEWAY_KEY: missing.append("AI_GATEWAY_API_KEY")
+
     
     if missing:
         print(f"--- [ADMIN ALERT] MISSING API KEYS: {', '.join(missing)} ---")

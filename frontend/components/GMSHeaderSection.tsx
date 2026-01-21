@@ -28,7 +28,6 @@ interface GMSHeaderProps {
     lang: LangType;
     isSafeMode?: boolean;
     onOpenSettings?: () => void;
-    theme?: 'dark' | 'light';
 }
 
 export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSettings }: GMSHeaderProps) => {
