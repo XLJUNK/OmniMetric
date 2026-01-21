@@ -140,18 +140,18 @@ class SNSPublisher:
         posts = self.format_post(data)
         results = {}
         
-        # 1. Post to Twitter (X) - 2 languages
-        self._log("Processing Serial SNS Broadcast: Stage 1 (Twitter)")
-        score = data.get("gms_score", 50)
-        
-        if self.should_skip(score):
-            self._log("Skipping Stage 1 (Twitter) - No score change.", platform="TWITTER")
-            results["TW_SKIP"] = True
-        else:
-            results["TW_JP"] = self.post_to_twitter(posts["JP"])
-            results["TW_EN"] = self.post_to_twitter(posts["EN"])
-            if results["TW_JP"] or results["TW_EN"]:
-                self.update_state(score)
+        # 1. Post to Twitter (X) - 2 languages (PAUSED / User Request)
+        self._log("Stage 1 (Twitter) is currently DISABLED per user request.")
+        results["TW_SKIP"] = True
+        # score = data.get("gms_score", 50)
+        # if self.should_skip(score):
+        #     self._log("Skipping Stage 1 (Twitter) - No score change.", platform="TWITTER")
+        #     results["TW_SKIP"] = True
+        # else:
+        #     results["TW_JP"] = self.post_to_twitter(posts["JP"])
+        #     results["TW_EN"] = self.post_to_twitter(posts["EN"])
+        #     if results["TW_JP"] or results["TW_EN"]:
+        #         self.update_state(score)
         
         # 2. Post to Bluesky - Stage 2 (Smart-skip inside)
         try:
