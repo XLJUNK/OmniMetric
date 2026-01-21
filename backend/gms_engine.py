@@ -836,8 +836,12 @@ You are the centralized brain of the OmniMetric Terminal. You do not act as a si
 1. First, generate the Japanese (JP) analysis as the "Gold Standard".
 2. Maintain the exact "Information Density" and "Logical Structure" when translating.
 3. OUTPUT ONLY the clean, professional report text in JSON format.
-4. CHARACTER COUNT RANGE (STRICT): 200 to 250 characters per language.
-   - UNDER 150 CHARACTERS IS A CRITICAL FAILURE.
+4.   - MANDATORY STRUCTURE: You must write exactly 5 long, detailed sentences for each language.
+   - MANDATORY STRUCTURE: You must write exactly 5 long, detailed sentences for each language.
+   - CHARACTER COUNT RANGE (STRICT): 250 to 300 characters per language.
+   - UNDER 220 CHARACTERS IS A CRITICAL FAILURE.
+   - Focus on logical cause-and-effect: (e.g., 'The 26% spike in VIX combined with contracting Net Liquidity is forcing valuation compression in SPY...')
+   - Focus on logical cause-and-effect: (e.g., 'The 26% spike in VIX combined with contracting Net Liquidity is forcing valuation compression in SPY...')
 
 *** NEGATIVE CONSTRAINTS (CRITICAL) ***
 - DO NOT include the character count in the output.
