@@ -1030,11 +1030,11 @@ Output JSON:
             log_diag(f"[AI BRIDGE CRITICAL] {e}")
 
     # VERCEL AI GATEWAY - RESILIENCE PROTOCOL (PRIMARY)
-    # Priority: 3-Pro > 3-Flash > 2.5/2.0
+    # Priority: 3-Pro > 3-Flash > 2.0-Flash
     models = [
-        "google/gemini-3-pro-preview",
-        "google/gemini-3-flash",
-        "google/gemini-2.0-flash-001" # Fallback to reliable 2.0 as 2.5 might be unstable
+        "gemini-2.0-flash-001", # Start with the most reliable one to fix immediate issue
+        "gemini-1.5-pro",
+        "gemini-1.5-flash"
     ]
 
     gateway_slug = os.getenv("VERCEL_AI_GATEWAY_SLUG", "omni-metric")
@@ -1042,16 +1042,19 @@ Output JSON:
     for model_name in models:
         log_diag(f"[AI GATEWAY] Attempting Model: {model_name}...")
         
-        # Exponential Backoff Loop (Max 3 Retries) - Anti-429
-        for attempt in range(3):
+        # Reduced Retries for speed (Max 2 Attempts)
+        for attempt in range(2):
             try:
-                # Calculate Backoff: 2s, 4s, 8s
+                # Calculate Backoff: 1s, 2s
                 if attempt > 0:
-                    wait_time = 2 * (2 ** (attempt - 1))
+                    wait_time = attempt
                     log_diag(f"[AI GATEWAY] Rate Limit Guard: Backing off for {wait_time}s...")
                     time.sleep(wait_time)
 
-                url = f"https://gateway.ai.vercel.com/v1/{gateway_slug}/{model_name}:generateContent"
+                # URL: Upstream is models/{model}:generateContent
+                # Vercel Proxy: /v1/{slug}/google/models/{model}:generateContent
+                # Trying standard Google path mapping
+                url = f"https://gateway.ai.vercel.com/v1/{gateway_slug}/google/models/{model_name}:generateContent"
                 
                 headers = {
                     "Content-Type": "application/json",
@@ -1065,8 +1068,8 @@ Output JSON:
                 
                 payload = {"contents": [{"parts": [{"text": prompt}]}]}
                 
-                # Timeout extended for Pro models
-                response = requests.post(proxy_url, json=payload, headers=headers, timeout=60)
+                # Timeout Reduced to 25s to allow fallback
+                response = requests.post(proxy_url, json=payload, headers=headers, timeout=25)
                 
                 if response.status_code == 200:
                     result = response.json()
@@ -1086,7 +1089,7 @@ Output JSON:
                              break 
                 
                 elif response.status_code == 429:
-                    log_diag(f"[AI GATEWAY 429] Rate Limit on {model_name} (Attempt {attempt+1}/3).")
+                    log_diag(f"[AI GATEWAY 429] Rate Limit on {model_name} (Attempt {attempt+1}/2).")
                     continue # Trigger Backoff and Retry
                 
                 else:
