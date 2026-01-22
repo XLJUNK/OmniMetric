@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-01-22T13:12:09Z",
-    "last_successful_update": "2026-01-22T13:12:09Z",
+    "last_updated": "2026-01-22T14:25:53Z",
+    "last_successful_update": "2026-01-22T14:25:53Z",
     "gms_score": 32,
     "sector_scores": {
         "STOCKS": 40,
@@ -123,7 +123,7 @@
             ]
         },
         "NFCI": {
-            "price": -0.57,
+            "price": -0.59,
             "change_percent": 0.0,
             "trend": "CALM",
             "sparkline": [
@@ -136,9 +136,10 @@
                 -0.52,
                 -0.52,
                 -0.53,
-                -0.54,
+                -0.55,
                 -0.56,
-                -0.57
+                -0.58,
+                -0.59
             ]
         },
         "NET_LIQUIDITY": {
@@ -218,10 +219,10 @@
             ]
         },
         "VIX": {
-            "price": 16.15,
+            "price": 15.99,
             "prev_price": 16.9,
-            "daily_chg": -4.44,
-            "change_percent": 1.96,
+            "daily_chg": -5.38,
+            "change_percent": 0.95,
             "trend": "DOWN",
             "sparkline": [
                 14.91,
@@ -245,7 +246,7 @@
                 15.86,
                 20.09,
                 16.9,
-                16.15
+                15.99
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
@@ -391,13 +392,12 @@
             ]
         },
         "TNX": {
-            "price": 4.25,
-            "prev_price": 4.3,
-            "daily_chg": -0.98,
-            "change_percent": 2.73,
-            "trend": "DOWN",
+            "price": 4.27,
+            "prev_price": 4.25,
+            "daily_chg": 0.33,
+            "change_percent": 2.57,
+            "trend": "UP",
             "sparkline": [
-                4.12,
                 4.15,
                 4.17,
                 4.17,
@@ -418,7 +418,8 @@
                 4.16,
                 4.23,
                 4.3,
-                4.25
+                4.25,
+                4.27
             ]
         },
         "QQQ": {
@@ -577,10 +578,10 @@
             ]
         },
         "BTC": {
-            "price": 89950.22,
+            "price": 89415.39,
             "prev_price": 89376.96,
-            "daily_chg": 0.64,
-            "change_percent": -3.93,
+            "daily_chg": 0.04,
+            "change_percent": -4.51,
             "trend": "UP",
             "sparkline": [
                 88731.98,
@@ -604,15 +605,15 @@
                 92553.59,
                 88310.91,
                 89376.96,
-                89950.22
+                89415.39
             ]
         },
         "ETH": {
-            "price": 2991.53,
+            "price": 2968.24,
             "prev_price": 2978.9,
-            "daily_chg": 0.42,
-            "change_percent": -8.83,
-            "trend": "UP",
+            "daily_chg": -0.36,
+            "change_percent": -9.54,
+            "trend": "DOWN",
             "sparkline": [
                 3000.39,
                 3124.42,
@@ -635,15 +636,15 @@
                 3186.62,
                 2935.61,
                 2978.9,
-                2991.53
+                2968.24
             ]
         },
         "SOL": {
-            "price": 129.97,
+            "price": 129.12,
             "prev_price": 129.38,
-            "daily_chg": 0.46,
-            "change_percent": -5.81,
-            "trend": "UP",
+            "daily_chg": -0.2,
+            "change_percent": -6.43,
+            "trend": "DOWN",
             "sparkline": [
                 126.76,
                 132.13,
@@ -666,14 +667,14 @@
                 133.34,
                 125.71,
                 129.38,
-                129.97
+                129.12
             ]
         },
         "DXY": {
-            "price": 98.69,
+            "price": 98.62,
             "prev_price": 98.76,
-            "daily_chg": -0.07,
-            "change_percent": -0.64,
+            "daily_chg": -0.14,
+            "change_percent": -0.7,
             "trend": "DOWN",
             "sparkline": [
                 98.6,
@@ -697,14 +698,14 @@
                 99.39,
                 98.64,
                 98.76,
-                98.69
+                98.62
             ]
         },
         "USDJPY": {
-            "price": 158.76,
+            "price": 158.64,
             "prev_price": 158.16,
-            "daily_chg": 0.38,
-            "change_percent": 0.11,
+            "daily_chg": 0.3,
+            "change_percent": 0.03,
             "trend": "UP",
             "sparkline": [
                 157.68,
@@ -728,14 +729,14 @@
                 157.54,
                 158.18,
                 158.16,
-                158.76
+                158.64
             ]
         },
         "EURUSD": {
             "price": 1.17,
             "prev_price": 1.17,
-            "daily_chg": -0.16,
-            "change_percent": 0.87,
+            "daily_chg": -0.11,
+            "change_percent": 0.91,
             "trend": "DOWN",
             "sparkline": [
                 1.17,
@@ -763,10 +764,10 @@
             ]
         },
         "USDINR": {
-            "price": 91.56,
+            "price": 91.6,
             "prev_price": 91.12,
-            "daily_chg": 0.48,
-            "change_percent": 1.32,
+            "daily_chg": 0.52,
+            "change_percent": 1.37,
             "trend": "UP",
             "sparkline": [
                 89.57,
@@ -790,7 +791,7 @@
                 90.7,
                 90.9,
                 91.12,
-                91.56
+                91.6
             ]
         },
         "USDSAR": {
@@ -825,10 +826,10 @@
             ]
         },
         "GOLD": {
-            "price": 4821.9,
+            "price": 4827.2,
             "prev_price": 4831.8,
-            "daily_chg": -0.2,
-            "change_percent": 4.45,
+            "daily_chg": -0.1,
+            "change_percent": 4.57,
             "trend": "DOWN",
             "sparkline": [
                 4361.4,
@@ -852,14 +853,14 @@
                 4588.4,
                 4759.6,
                 4831.8,
-                4821.9
+                4827.2
             ]
         },
         "OIL": {
-            "price": 59.44,
+            "price": 59.96,
             "prev_price": 60.62,
-            "daily_chg": -1.95,
-            "change_percent": 0.42,
+            "daily_chg": -1.09,
+            "change_percent": 1.3,
             "trend": "DOWN",
             "sparkline": [
                 56.66,
@@ -883,14 +884,14 @@
                 59.44,
                 60.34,
                 60.62,
-                59.44
+                59.96
             ]
         },
         "COPPER": {
-            "price": 5.73,
+            "price": 5.75,
             "prev_price": 5.73,
-            "daily_chg": 0.02,
-            "change_percent": -3.66,
+            "daily_chg": 0.38,
+            "change_percent": -3.3,
             "trend": "UP",
             "sparkline": [
                 5.44,
@@ -914,14 +915,14 @@
                 5.79,
                 5.77,
                 5.73,
-                5.73
+                5.75
             ]
         },
         "NATGAS": {
-            "price": 5.24,
+            "price": 5.31,
             "prev_price": 4.88,
-            "daily_chg": 7.47,
-            "change_percent": 67.49,
+            "daily_chg": 8.92,
+            "change_percent": 69.76,
             "trend": "UP",
             "sparkline": [
                 3.98,
@@ -945,7 +946,7 @@
                 3.1,
                 3.91,
                 4.88,
-                5.24
+                5.31
             ]
         },
         "MOVE": {
@@ -1105,22 +1106,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "【GMS: Analysis Sync】 Current macro indicators suggest the market is approaching a critical inflection point, with volatility compression and expansion alternating ahead of key economic data releases. Fluctuations in currency pairs and US Treasury yields are counteracting liquidity support, potentially creating distortions through capital concentration in specific assets. Investors should monitor key volatility levels and real interest rate trends to prepare for sudden sentiment shifts.",
+        "content": "Despite the VIX decline, widening high-yield spreads signal a flight to safety, reinforcing risk-off sentiment. While the US 10-year yield remains stable, high real interest rates continue to pressure growth stocks. Crude oil is flat, but natural gas prices surged, amplifying inflation concerns. A slight decrease in net liquidity is accelerating the equity market correction. A GMS score of 26 justifies a defensive investment stance.",
         "reports": {
-            "EN": "【GMS: Analysis Sync】 Current macro indicators suggest the market is approaching a critical inflection point, with volatility compression and expansion alternating ahead of key economic data releases. Fluctuations in currency pairs and US Treasury yields are counteracting liquidity support, potentially creating distortions through capital concentration in specific assets. Investors should monitor key volatility levels and real interest rate trends to prepare for sudden sentiment shifts.",
-            "JP": "【GMS: 分析同期中】 現在のGMS指標は市場が重要な局面にあることを示唆しており、主要な経済指標の発表を前にボラティリティの収縮と拡大が交錯する展開となっています。ドル円の変動や米10年債利回りの推移が流動性の下支えを相殺し、特定資産への資金集中が市場の歪みを生み出している可能性があります。投資家はボラティリティ指数の節目と実質金利の動向を注視し、急激なセンチメントの変化に備えるべきでしょう。",
-            "CN": "【GMS: 分析同步】 当前GMS指标显示市场正处于关键转折点，在主要经济数据发布前，波动率呈现收缩与扩张交织的态势。汇率波动与美债收益率的走势正在抵消流动性支撑，特定资产的资金集中可能正在制造市场扭曲。投资者应密切关注波动率指数的关键点位及实际利率动向，以应对市场情绪的突发变化。",
-            "ES": "【GMS: Sincronización】 Los indicadores macro actuales sugieren que el mercado se acerca a un punto de inflexión crítico, con la compresión y expansión de la volatilidad alternándose ante la publicación de datos clave. Las fluctuaciones en las divisas y los rendimientos del Tesoro están contrarrestando el soporte de liquidez, creando posibles distorsiones. Los inversores deben vigilar los niveles de volatilidad y las tasas de interés reales para prepararse ante cambios repentinos en el sentimiento.",
-            "HI": "【GMS: विश्लेषण सिंक】 वर्तमान मैक्रो संकेतक सुझाव देते हैं कि बाजार एक महत्वपूर्ण मोड़ पर है, जहां प्रमुख आर्थिक आंकड़ों के जारी होने से पहले अस्थिरता में संकुचन और विस्तार हो रहा है। मुद्रा में उतार-चढ़ाव और अमेरिकी ट्रेजरी यील्ड तरलता समर्थन का मुकाबला कर रहे हैं, जिससे बाजार में विकृतियां पैदा हो सकती हैं। निवेशकों को अचानक भावना परिवर्तन के लिए तैयार रहने के लिए प्रमुख अस्थिरता स्तरों और वास्तविक ब्याज दर के रुझानों पर कड़ी नजर रखनी चाहिए।",
-            "ID": "【GMS: Sinkronisasi】 Indikator makro saat ini menunjukkan pasar sedang mendekati titik balik kritis, dengan kompresi dan ekspansi volatilitas silih berganti menjelang rilis data ekonomi utama. Fluktuasi mata uang dan imbal hasil Treasury AS menyeimbangkan dukungan likuiditas, berpotensi menciptakan distorsi melalui konsentrasi modal. Investor harus memantau tingkat volatilitas utama dan tren suku bunga riil untuk bersiap menghadapi perubahan sentimen yang tiba-tiba。",
-            "AR": "【GMS: مزامنة التحليل】 تشير المؤشرات الكلية الحالية إلى أن السوق يقترب من نقطة تحول حاسمة، مع تناوب انكماش وتوسع التقلبات قبل إصدار البيانات الاقتصادية الرئيسية. تعمل التقلبات في العملات وعوائد الخزانة الأمريكية على مواجهة دعم السيولة، مما قد يخلق تشوهات من خلال تركيز رأس المال. يجب على المستثمرين مراقبة مستويات التقلب الرئيسية واتجاهات أسعار الفائدة الحقيقية للاستعداد لتحولات مفاجئة في المعنويات。"
+            "JP": "VIXの低下にもかかわらず、ハイイールド・スプレッドが拡大し、安全資産への逃避が示唆され、リスクオフ心理が強まっています。米10年債利回りは安定していますが、実質金利は高止まりしており、成長株への圧力は継続しています。原油価格はほぼ横ばいですが、天然ガス価格が急騰し、インフレ懸念を高めています。ネット流動性のわずかな減少が、株式市場の調整を加速させています。GMSスコア26は、ディフェンシブな投資姿勢を正当化します。",
+            "EN": "Despite the VIX decline, widening high-yield spreads signal a flight to safety, reinforcing risk-off sentiment. While the US 10-year yield remains stable, high real interest rates continue to pressure growth stocks. Crude oil is flat, but natural gas prices surged, amplifying inflation concerns. A slight decrease in net liquidity is accelerating the equity market correction. A GMS score of 26 justifies a defensive investment stance.",
+            "CN": "尽管VIX指数下降，但高收益债券息差扩大，表明资金正在涌向安全资产，强化了避险情绪。 虽然美国10年期国债收益率保持稳定，但实际利率仍然很高，继续给成长型股票带来压力。 原油价格持平，但天然气价格飙升，加剧了通胀担忧。净流动性略有下降，加速了股市的调整。 GMS得分为26，证明采取防御性投资姿态是合理的。",
+            "ES": "A pesar de la caída del VIX, la ampliación de los diferenciales de alto rendimiento señalan una huida hacia la seguridad, reforzando el sentimiento de aversión al riesgo. Si bien el rendimiento del bono estadounidense a 10 años se mantiene estable, las altas tasas de interés reales continúan presionando a las acciones de crecimiento. El petróleo crudo se mantiene estable, pero los precios del gas natural se dispararon, amplificando las preocupaciones sobre la inflación. Una ligera disminución en la liquidez neta está acelerando la corrección del mercado de valores. Una puntuación GMS de 26 justifica una postura de inversión defensiva.",
+            "HI": "VIX में गिरावट के बावजूद, उच्च-उपज स्प्रेड का विस्तार सुरक्षा के लिए उड़ान का संकेत देता है, जिससे जोखिम-बंद भावना मजबूत होती है। जबकि अमेरिकी 10-वर्षीय उपज स्थिर बनी हुई है, उच्च वास्तविक ब्याज दरें विकास शेयरों पर दबाव डालती रहती हैं। कच्चा तेल सपाट है, लेकिन प्राकृतिक गैस की कीमतें बढ़ गईं, जिससे मुद्रास्फीति की चिंता बढ़ गई। निवल तरलता में थोड़ी कमी इक्विटी बाजार में सुधार को गति दे रही है। 26 का जीएमएस स्कोर रक्षात्मक निवेश रुख को सही ठहराता है।",
+            "ID": "Meskipun VIX menurun, pelebaran spread high-yield menandakan pelarian ke aset aman, memperkuat sentimen risk-off. Sementara imbal hasil obligasi AS 10-tahun tetap stabil, suku bunga riil yang tinggi terus menekan saham pertumbuhan. Minyak mentah datar, tetapi harga gas alam melonjak, memperkuat kekhawatiran inflasi. Sedikit penurunan likuiditas bersih mempercepat koreksi pasar saham. Skor GMS 26 membenarkan sikap investasi defensif.",
+            "AR": "على الرغم من انخفاض مؤشر VIX، فإن اتساع فروق عائدات السندات عالية المخاطر يشير إلى الهروب إلى الأصول الآمنة، مما يعزز المشاعر المعادية للمخاطرة. في حين أن عائد السندات الأمريكية لأجل 10 سنوات لا يزال مستقرًا، فإن أسعار الفائدة الحقيقية المرتفعة تستمر في الضغط على أسهم النمو. النفط الخام ثابت، لكن أسعار الغاز الطبيعي ارتفعت، مما أدى إلى تضخيم المخاوف بشأن التضخم. انخفاض طفيف في صافي السيولة يسرع تصحيح سوق الأسهم. درجة GMS البالغة 26 تبرر اتخاذ موقف استثماري دفاعي."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-19T16:44:30Z",
-            "score": 29
-        },
         {
             "date": "2026-01-19T17:35:07Z",
             "score": 29
@@ -1355,6 +1352,10 @@
         },
         {
             "date": "2026-01-22T13:12:09Z",
+            "score": 32
+        },
+        {
+            "date": "2026-01-22T14:25:53Z",
             "score": 32
         }
     ],
