@@ -996,6 +996,12 @@ Output JSON:
                     stdout_content = process.stdout
                     log_diag(f"[AI BRIDGE] Received {len(stdout_content)} bytes of output. Head: {stdout_content[:100].strip()}...")
                     
+                    # LOGGING: Output Audit (Bridge)
+                    try:
+                        with open(os.path.join(SCRIPT_DIR, "logs", "latest_raw_response.json"), "w", encoding="utf-8") as f:
+                            f.write(stdout_content)
+                    except: pass
+                    
                     # Define required languages
                     required = ["JP", "EN", "CN", "ES", "HI", "ID", "AR"]
 
