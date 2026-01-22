@@ -66,6 +66,19 @@ export const metadata: Metadata = {
     'DC.format': 'application/json',
     'DC.language': 'en',
   },
+  alternates: {
+    canonical: 'https://omnimetric.net',
+    languages: {
+      'en': 'https://omnimetric.net',
+      'ja': 'https://omnimetric.net?lang=JP',
+      'zh-CN': 'https://omnimetric.net?lang=CN',
+      'es': 'https://omnimetric.net?lang=ES',
+      'hi': 'https://omnimetric.net?lang=HI',
+      'id': 'https://omnimetric.net?lang=ID',
+      'ar': 'https://omnimetric.net?lang=AR',
+      'x-default': 'https://omnimetric.net',
+    }
+  }
 };
 
 import { LegalFooter } from "@/components/LegalFooter";

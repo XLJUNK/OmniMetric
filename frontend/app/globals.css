@@ -30,16 +30,22 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  /* Global Font Stack: EN -> CN -> JP -> Generic */
-  font-family: var(--font-inter), "PingFang SC", "Hiragino Sans", "Microsoft YaHei", "Yu Gothic", var(--font-noto-jp), var(--font-noto-ar), var(--font-noto-hi), sans-serif;
+  /* Global Font Stack: EN -> Multi-Lang -> Generic */
+  font-family: var(--font-inter),
+    "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    var(--font-noto-jp), var(--font-noto-ar), var(--font-noto-hi),
+    sans-serif;
   overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Chinese (Simplified/Traditional) Specific Overrides */
 :lang(zh-CN),
 :lang(zh),
 :lang(zh-TW) {
-  font-family: var(--font-inter), "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: var(--font-inter), "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  line-height: 1.6;
 }
 
 /* Fix "Fake Italic" for Chinese - Force Normal or Bold */

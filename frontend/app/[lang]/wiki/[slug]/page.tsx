@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { LangType, DICTIONARY } from '@/data/dictionary';
-import { getWikiItem, getAllSlugs, WikiItem } from '@/lib/wiki';
+import { getWikiItem, getAllSlugs, WikiItem, getWikiData } from '@/lib/wiki';
 import { DynamicStructuredData } from '@/components/DynamicStructuredData';
 import { AdSenseSlot } from '@/components/AdSenseSlot';
 import { ArrowLeft, Share2, TrendingUp, BookOpen, Quote, Activity, Home, ChevronRight } from 'lucide-react';
@@ -27,6 +27,28 @@ type Props = {
     params: Promise<{ lang: string; slug: string }>;
 };
 
+// Localized SEO helper
+function getLocalizedSEODescription(item: WikiItem, lang: string): string {
+    const title = item.title;
+    const descriptions: Record<string, string> = {
+        en: `What is ${title}? Understand this macro indicator's impact on 2026 market risk and institutional strategies.`,
+        jp: `${title}とは何か？市場の強気・弱気を左右する重要指標。2026年の投資環境における役割を詳解。`,
+        cn: `什么是${title}？深入探讨该宏观指标对2026年市场风险和机构投资策略的影响。`,
+        es: `¿Qué es ${title}? Comprenda el impacto de este indicador macro en el riesgo de mercado de 2026.`,
+        hi: `${title} क्या है? 2026 के बाजार जोखिम और संस्थागत रणनीतियों पर इसके प्रभाव को समझें।`,
+        id: `Apa itu ${title}? Pahami dampak indikator makro ini terhadap risiko pasar 2026 dan strategi investasi.`,
+        ar: `ما هو ${title}؟ افهم تأثير هذا المؤشر الماكرو على مخاطر السوق لعام 2026 واستراتيجيات المؤسسات.`
+    };
+    return descriptions[lang.toLowerCase()] || descriptions['en'];
+}
+
+function getContentDescription(item: WikiItem, lang: LangType): string {
+    if (item.type === 'glossary') return item.data.definition;
+    if (item.type === 'technical') return item.data.description;
+    if (item.type === 'maxim') return item.data.meaning;
+    return "";
+}
+
 // Metadata
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { lang, slug } = await params;
@@ -42,21 +64,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         return acc;
     }, {} as Record<string, string>);
 
+    // x-default and standard mapping
+    alternates['x-default'] = `https://omnimetric.net/en/wiki/${slug}`;
+    alternates['ja'] = alternates['jp'];
+    alternates['zh-CN'] = alternates['cn'];
+
     return {
-        title: `${item.title} - ${JSON.stringify(item.type).toUpperCase()} | OmniMetric`,
-        description: getContentDescription(item, normalizedLang).slice(0, 160),
+        title: `${item.title} - ${item.type.toUpperCase()} | OmniMetric`,
+        description: getLocalizedSEODescription(item, lang).slice(0, 120),
         alternates: {
             languages: alternates,
             canonical: `https://omnimetric.net/${lang}/wiki/${slug}`
         }
     };
-}
-
-function getContentDescription(item: WikiItem, lang: LangType): string {
-    if (item.type === 'glossary') return item.data.definition;
-    if (item.type === 'technical') return item.data.description;
-    if (item.type === 'maxim') return item.data.meaning;
-    return "";
 }
 
 export default async function WikiDetailPage({ params }: Props) {
@@ -67,7 +87,7 @@ export default async function WikiDetailPage({ params }: Props) {
     const item = getWikiItem(slug, normalizedLang);
     if (!item) notFound();
 
-    // JSON-LD
+    // JSON-LD Article
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
@@ -78,15 +98,54 @@ export default async function WikiDetailPage({ params }: Props) {
         "description": getContentDescription(item, normalizedLang)
     };
 
+    // JSON-LD Breadcrumbs
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://omnimetric.net"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Wiki",
+                "item": `https://omnimetric.net/${lang}/wiki`
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": item.category,
+                "item": `https://omnimetric.net/${lang}/wiki#${item.category}`
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "name": item.title,
+                "item": `https://omnimetric.net/${lang}/wiki/${slug}`
+            }
+        ]
+    };
+
+    // Related Items logic
+    const allItems = getWikiData(normalizedLang);
+    const related = allItems
+        .filter((i: WikiItem) => i.slug !== slug && (i.category === item.category || i.type === item.type))
+        .slice(0, 3);
+
     return (
         <div className="min-h-screen bg-[#020617] text-slate-200 font-sans pb-20">
             <DynamicStructuredData data={articleSchema} />
+            <DynamicStructuredData data={breadcrumbSchema} />
 
             {/* Navigation Bar for Wiki */}
             <div className="bg-[#050505] border-b border-slate-800 sticky top-0 z-40 px-4 h-14 flex items-center justify-between">
-                <Link href={`/${lang}/wiki`} className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors text-sm font-mono">
+                <Link href={`/${lang}/wiki`} className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors text-sm font-mono uppercase tracking-tighter">
                     <ArrowLeft className="w-4 h-4" />
-                    BACK TO INDEX
+                    INDEX
                 </Link>
             </div>
 
@@ -95,22 +154,15 @@ export default async function WikiDetailPage({ params }: Props) {
 
                     {/* Header */}
                     <header className={`space-y-6 border-b border-[#1E293B] pb-8 ${isRTL ? 'text-right' : 'text-left'}`}>
-                        {/* Improved Breadcrumbs */}
-                        <nav aria-label="Breadcrumb" className={`flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-500 mb-6 flex-wrap ${isRTL ? 'flex-row-reverse' : ''}`}>
-                            <Link href={`/${lang.toLowerCase()}/wiki`} className="hover:text-sky-400 transition-colors flex items-center gap-1">
-                                <Home className="w-3 h-3" />
-                                <span>Wiki</span>
-                            </Link>
-
-                            <ChevronRight className={`w-3 h-3 text-slate-700 ${isRTL ? 'rotate-180' : ''}`} />
-
-                            <Link href={`/${lang.toLowerCase()}/wiki#${item.category}`} className="hover:text-sky-400 transition-colors">
-                                {item.type}
-                            </Link>
-
-                            <ChevronRight className={`w-3 h-3 text-slate-700 ${isRTL ? 'rotate-180' : ''}`} />
-
-                            <span className="text-sky-500">{item.category}</span>
+                        {/* Improved Breadcrumbs (Visual) */}
+                        <nav aria-label="Breadcrumb" className={`flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 mb-6 flex-wrap ${isRTL ? 'flex-row-reverse' : ''}`}>
+                            <Link href={`/`} className="hover:text-sky-400 transition-colors">Home</Link>
+                            <ChevronRight className={`w-3 h-3 text-slate-800 ${isRTL ? 'rotate-180' : ''}`} />
+                            <Link href={`/${lang.toLowerCase()}/wiki`} className="hover:text-sky-400 transition-colors">Wiki</Link>
+                            <ChevronRight className={`w-3 h-3 text-slate-800 ${isRTL ? 'rotate-180' : ''}`} />
+                            <Link href={`/${lang.toLowerCase()}/wiki#${item.category}`} className="hover:text-sky-400 transition-colors">{item.category}</Link>
+                            <ChevronRight className={`w-3 h-3 text-slate-800 ${isRTL ? 'rotate-180' : ''}`} />
+                            <span className="text-sky-500">{item.title}</span>
                         </nav>
                         <h1 className="text-3xl md:text-5xl font-black text-white leading-tight">
                             {item.title}
@@ -205,7 +257,24 @@ export default async function WikiDetailPage({ params }: Props) {
 
                 </article>
 
+                {/* Related Strategy Knowledge (Internal Linking) */}
                 <div className="mt-20 pt-12 border-t border-[#1E293B]">
+                    <h3 className={`text-xs font-bold text-slate-500 uppercase tracking-widest mb-8 ${isRTL ? 'text-right' : ''}`}>Related Strategy Knowledge</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {related.map(r => (
+                            <Link key={r.slug} href={`/${lang.toLowerCase()}/wiki/${r.slug}`} className="group block">
+                                <div className="p-6 bg-[#0A0A0A] border border-[#1E293B] group-hover:border-sky-500/50 transition-all h-full flex flex-col justify-between">
+                                    <h4 className="text-sm font-bold text-slate-200 group-hover:text-sky-400 transition-colors mb-2">
+                                        {r.title}
+                                    </h4>
+                                    <p className="text-[10px] text-slate-500 font-mono uppercase italic">{r.category}</p>
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="mt-12 pt-12 border-t border-[#1E293B]">
                     <AdSenseSlot variant="responsive" />
                 </div>
             </main>

@@ -11,7 +11,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     const entries: MetadataRoute.Sitemap = [];
 
-    // 1. Core Pages (Query Param Style: ?lang=XX)
+    // Helper to generate alternates for a path (query-param style or directory style)
+    const getAlternates = (path: string, type: 'query' | 'path') => {
+        const languagesMap: Record<string, string> = {};
+
+        if (type === 'path') {
+            lowerLangs.forEach(lang => {
+                languagesMap[lang] = `${baseUrl}/${lang}${path}`;
+            });
+            // Map common aliases
+            languagesMap['ja'] = languagesMap['jp'];
+            languagesMap['zh-CN'] = languagesMap['cn'];
+            languagesMap['x-default'] = `${baseUrl}/en${path}`;
+        } else {
+            languages.forEach(lang => {
+                const l = lang.toLowerCase();
+                languagesMap[l] = `${baseUrl}${path}?lang=${lang}`;
+            });
+            languagesMap['ja'] = languagesMap['jp'];
+            languagesMap['zh-CN'] = languagesMap['cn'];
+            languagesMap['x-default'] = `${baseUrl}${path}?lang=EN`;
+        }
+        return { languages: languagesMap };
+    };
+
+    // 1. Core Pages (Query Param Style)
     paths.forEach(path => {
         languages.forEach(lang => {
             entries.push({
@@ -19,6 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
                 lastModified: new Date(),
                 changeFrequency: 'hourly',
                 priority: path === '' ? 1.0 : 0.9,
+                alternates: getAlternates(path, 'query'),
             });
         });
     });
@@ -31,6 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
                 lastModified: new Date(),
                 changeFrequency: 'monthly',
                 priority: 0.5,
+                alternates: getAlternates(path, 'query'),
             });
         });
     });
@@ -44,6 +70,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
                 lastModified: new Date(),
                 changeFrequency: 'monthly',
                 priority: 0.6,
+                alternates: getAlternates(path, 'path'),
             });
         });
     });
@@ -55,18 +82,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
             lastModified: new Date(),
             changeFrequency: 'daily',
             priority: 0.8,
+            alternates: getAlternates('/wiki', 'path'),
         });
     });
 
     // 4. Wiki Detail Pages (Directory Style: /jp/wiki/slug)
     const slugs = getAllSlugs();
     slugs.forEach(slug => {
+        const subPath = `/wiki/${slug}`;
         lowerLangs.forEach(lang => {
             entries.push({
-                url: `${baseUrl}/${lang}/wiki/${slug}`,
+                url: `${baseUrl}/${lang}${subPath}`,
                 lastModified: new Date(),
                 changeFrequency: 'weekly',
                 priority: 0.7,
+                alternates: getAlternates(subPath, 'path'),
             });
         });
     });

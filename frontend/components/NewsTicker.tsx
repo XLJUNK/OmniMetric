@@ -1,16 +1,15 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-
+import Link from 'next/link';
 import { DICTIONARY, LangType } from '@/data/dictionary';
 
-// Marquee styles in pure Tailwind/CSS
-// We need a keyframe animation. We'll inject a style for it or use standard marquee if allowed.
-// But standard marquee tag is deprecated.
-// Best approach: CSS animation.
+// Professional stack approach (v5.5 UI Optimization)
+// Purpose: Instant situational awareness via "simultaneity of information"
 
 export const NewsTicker = ({ lang }: { lang: LangType }) => {
-    const [news, setNews] = useState<{ title: string, link: string }[]>([]);
+    const [news, setNews] = useState<{ title: string, link: string, isoDate?: string }[]>([]);
+    const [now, setNow] = useState(Date.now());
     const t = DICTIONARY[lang];
 
     useEffect(() => {
@@ -26,64 +25,102 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
                     ...item,
                     title: decodeEntities(item.title)
                 }));
-                setNews(decodedNews);
+                // Strictly take top 3 for the vertical stack
+                setNews(decodedNews.slice(0, 3));
             } catch (e) {
-                // Warning suppressed
+                // Fail silently to maintain terminal aesthetic
             }
         };
         fetchNews();
-        // Update every 5 mins
+        // Update news feed every 5 mins to ensure fresh data
         const interval = setInterval(fetchNews, 300000);
         return () => clearInterval(interval);
+    }, [lang]);
+
+    // Keep "now" current every minute to refresh relative timestamps
+    useEffect(() => {
+        const timer = setInterval(() => setNow(Date.now()), 60000);
+        return () => clearInterval(timer);
     }, []);
 
     const isRTL = lang === 'AR';
-    if (news.length === 0) return <div className="h-[40px] bg-slate-50 dark:bg-black border-y border-slate-200 dark:border-[#222]"></div>;
+
+    // Skeleton container with fixed height matching final render to prevent CLS
+    if (news.length === 0) {
+        return (
+            <div className="w-full bg-white dark:bg-[#050505] border-y border-slate-200 dark:border-white/5 min-h-[102px] flex flex-col divide-y divide-slate-100 dark:divide-white/5 overflow-hidden">
+                {[1, 2, 3].map((v) => (
+                    <div key={v} className="h-[34px] bg-slate-50/50 dark:bg-white/[0.02]"></div>
+                ))}
+            </div>
+        );
+    }
+
+    // Dynamic relative time logic for high-density "Bloomberg" feel
+    const getRelativeTime = (isoDate?: string) => {
+        if (!isoDate) return "RECENT";
+
+        const past = new Date(isoDate).getTime();
+        const diffSeconds = Math.floor((now - past) / 1000);
+
+        if (diffSeconds < 60) return "Just now";
+
+        const diffMinutes = Math.floor(diffSeconds / 60);
+        if (diffMinutes < 60) return `${diffMinutes}m ago`;
+
+        const diffHours = Math.floor(diffMinutes / 60);
+        if (diffHours < 24) return `${diffHours}h ago`;
+
+        return "RECENT";
+    };
 
     return (
-        <div className="w-full bg-slate-50 dark:bg-black border-y border-slate-200 dark:border-[#222] h-[40px] shadow-md z-10" dir={isRTL ? 'rtl' : 'ltr'}>
-            <div className="w-full max-w-[1500px] mx-auto h-full relative overflow-hidden flex items-center">
-                {/* LABEL */}
-                <div className={`absolute ${isRTL ? 'right-0' : 'left-0'} top-0 bottom-0 bg-[#dc2626] text-white font-black text-[10px] px-6 z-20 flex items-center tracking-[0.2em] uppercase shrink-0`}>
-                    {t.titles.breaking_news}
-                </div>
+        <div className="w-full bg-white dark:bg-[#050505] border-y border-slate-200 dark:border-white/5 shadow-2xl relative z-10 select-none" dir={isRTL ? 'rtl' : 'ltr'}>
+            <div className={`flex flex-col divide-y divide-slate-100 dark:divide-white/5 min-h-[102px]`}>
+                {news.map((item, i) => (
+                    <Link
+                        key={i}
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group flex items-center justify-between h-[40px] px-3 md:px-5 hover:bg-slate-50 dark:hover:bg-white/[0.03] transition-all cursor-pointer border-l-2 border-transparent hover:border-red-600/80"
+                        style={{ textDecoration: 'none', color: 'inherit' }}
+                    >
+                        <div
+                            className={`flex items-center overflow-hidden flex-1 ${isRTL ? 'flex-row-reverse' : 'flex-row'}`}
+                            style={{ gap: '20px' }}
+                        >
+                            {/* LIVE BADGE - Designer Red Gradient - Professional Look */}
+                            <div
+                                className="shrink-0 flex items-center gap-1.5 px-2.5 py-0.5 rounded-[2px] shadow-sm border border-red-700/30"
+                                style={{
+                                    background: 'linear-gradient(135deg, #ef4444 0%, #991b1b 100%)',
+                                    minWidth: '76px',
+                                    justifyContent: 'center'
+                                }}
+                            >
+                                <span className="w-1 h-1 bg-white rounded-full animate-pulse shadow-[0_0_4px_rgba(255,255,255,0.8)]"></span>
+                                <span className="text-[9px] md:text-[10px] font-black text-white tracking-[0.05em] uppercase whitespace-nowrap">
+                                    {i === 0 ? "LIVE" : "BREAKING"}
+                                </span>
+                            </div>
 
-                {/* TICKER TRACK */}
-                <div className={`flex whitespace-nowrap ${isRTL ? 'animate-marquee-rtl' : 'animate-marquee'} items-center h-full`}>
-                    {news.map((item, i) => (
-                        <span key={i} className={`${isRTL ? 'ms-12' : 'me-12'} text-[12px] font-mono font-bold text-yellow-300 dark:text-yellow-400 uppercase flex items-center gap-3`}>
-                            <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full inline-block animate-pulse"></span>
-                            {item.title}
+                            {/* TITLE - Institutional Slate - Theme Responsive */}
+                            <span
+                                className={`text-[11px] md:text-xs font-bold truncate group-hover:text-red-700 dark:group-hover:text-white transition-colors tracking-tight flex-1 ${isRTL ? 'text-right pr-2 font-arabic' : 'text-left'} !text-slate-700 dark:!text-slate-200`}
+                                style={{ color: 'var(--foreground)' }}
+                            >
+                                {item.title}
+                            </span>
+                        </div>
+
+                        {/* TIMESTAMP - Right-aligned metadata */}
+                        <span className={`shrink-0 text-[9px] md:text-[10px] font-mono font-medium text-slate-400 dark:text-slate-500 group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-colors ${isRTL ? 'mr-4' : 'ml-4'}`}>
+                            {getRelativeTime(item.isoDate)}
                         </span>
-                    ))}
-                </div>
+                    </Link>
+                ))}
             </div>
-
-            <style jsx>{`
-                @keyframes marquee {
-                    0% { transform: translateX(0); }
-                    100% { transform: translateX(-100%); }
-                }
-                @keyframes marquee-rtl {
-                    0% { transform: translateX(0); }
-                    100% { transform: translateX(100%); }
-                }
-                .animate-marquee {
-                    animation: marquee 120s linear infinite;
-                    padding-left: 100%; /* Start off screen */
-                    display: inline-block;
-                    line-height: 40px;
-                }
-                .animate-marquee-rtl {
-                    animation: marquee-rtl 120s linear infinite;
-                    padding-right: 100%; /* Start off screen */
-                    display: inline-block;
-                    line-height: 40px;
-                }
-                .animate-marquee:hover, .animate-marquee-rtl:hover {
-                    animation-play-state: paused;
-                }
-            `}</style>
         </div>
     );
 };

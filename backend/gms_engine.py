@@ -980,18 +980,31 @@ Output JSON:
     except Exception as e:
         log_diag(f"[AI SDK ERROR] {e}")
 
-    # Fallback to Direct REST API (Targeting Gemini 1.5 Flash at v1beta)
+    # Fallback to Vercel AI Gateway Proxy (Targeting Gemini 2.0 Flash)
     for attempt in range(2): 
         try:
-            log_diag(f"[AI REST] Attempting Direct REST (Attempt {attempt+1})...")
-            url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_KEY}"
+            log_diag(f"[AI GATEWAY] Attempting Vercel AI Gateway (Attempt {attempt+1})...")
+            # Using Vercel AI Gateway Proxy URL
+            gateway_slug = os.getenv("VERCEL_AI_GATEWAY_SLUG", "omni-metric")
+            url = f"https://gateway.ai.vercel.com/v1/{gateway_slug}/google/v1beta/models/gemini-2.0-flash:generateContent"
+            
+            headers = {
+                "Content-Type": "application/json",
+                "x-vercel-ai-gateway-provider": "google",
+                "x-vercel-ai-gateway-cache": "enable",
+                "x-vercel-ai-gateway-cache-ttl": "3600"
+            }
+            # Note: The GEMINI_API_KEY is transmitted as a secret in the background if BYOK or passed via param
+            # In Vercel's standard proxy, we still append the key or use it in the path as per their Google mapping
+            proxy_url = f"{url}?key={GEMINI_KEY}"
+            
             payload = {"contents": [{"parts": [{"text": prompt}]}]}
-            response = requests.post(url, json=payload, timeout=30)
+            response = requests.post(proxy_url, json=payload, headers=headers, timeout=30)
             if response.status_code == 200:
                 result = response.json()
                 if 'candidates' in result and result['candidates']:
                     text = result['candidates'][0]['content']['parts'][0]['text']
-                    log_diag("[AI SUCCESS] Generated via REST API.")
+                    log_diag("[AI SUCCESS] Generated via Vercel AI Gateway.")
                     text = text.replace("```json", "").replace("```", "").strip()
                     reports = json.loads(text)
                     for lang in required:
@@ -999,9 +1012,9 @@ Output JSON:
                         else: reports[lang] = sanitize_insight_text(reports[lang]) # SANITIZE
                     return reports
             else:
-                log_diag(f"[AI REST FAIL] Status {response.status_code}: {response.text}")
+                log_diag(f"[AI GATEWAY FAIL] Status {response.status_code}: {response.text}")
         except Exception as e:
-            log_diag(f"[AI REST CRITICAL] {e}")
+            log_diag(f"[AI GATEWAY CRITICAL] {e}")
 
     # Ultimate Fallback: Try to reuse ANY existing valid report from cache before using static text
     try:

@@ -41,13 +41,16 @@ async function main() {
 
     const prompt = getPrompt();
 
+    const gatewaySlug = process.env.VERCEL_AI_GATEWAY_SLUG || 'omni-metric';
+
     try {
-        // STRICT: Reverting to v2.1.0 Stable Pattern (Verified for Gemini 2.0)
         const result = await generateText({
-            model: gateway('google/gemini-2.0-flash'),
+            model: gateway.languageModel('google/gemini-2.0-flash'),
             prompt: prompt,
             headers: {
                 'x-vercel-ai-gateway-provider': 'google',
+                'x-vercel-ai-gateway-cache': 'enable',
+                'x-vercel-ai-gateway-cache-ttl': '3600',
             }
         });
 

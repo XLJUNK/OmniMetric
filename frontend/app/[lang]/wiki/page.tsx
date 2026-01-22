@@ -8,6 +8,7 @@ import { AdSenseSlot } from '@/components/AdSenseSlot';
 import { ClientDirectionProvider } from '@/components/ClientDirectionProvider';
 import { WikiSearch } from '@/components/WikiSearch';
 import { LanguageSelector } from '@/components/LanguageSelector';
+import { DynamicStructuredData } from '@/components/DynamicStructuredData';
 
 // Enable Static Params for all languages defined in dictionary
 export async function generateStaticParams() {
@@ -18,6 +19,16 @@ export async function generateStaticParams() {
 
 type Props = {
     params: Promise<{ lang: string }>;
+};
+
+const WIKI_DESCRIPTIONS: Record<string, string> = {
+    en: "Global Macro Knowledge Base: Comprehensive index of economic indicators, technical analysis, and market maxims.",
+    jp: "グローバルマクロ知識ベース：経済指標、テクニカル分析、投資金言を網羅。投資家のための定量的マクロ事典。",
+    cn: "全球宏观知识库：涵盖经济指标、技术分析和投资金言的全面索引，助力量化投资决策。",
+    es: "Base de conocimientos macro global: índice completo de indicadores económicos, análisis técnico y máximas de inversión.",
+    hi: "ग्लोबल मैक्रो नॉलेज बेस: आर्थिक संकेतकों, तकनीकी विश्लेषण और निवेश सिद्धांतों का व्यापक सूचकांक।",
+    id: "Basis Pengetahuan Makro Global: Indeks komprehensif indikator ekonomi, analisis teknis, dan maksim investasi.",
+    ar: "قاعدة المعرفة الكليّة العالمية: فهرس شامل للمؤشرات الاقتصادية والتحليل الفني وحكم الاستثمار."
 };
 
 // Helper for metadata
@@ -32,9 +43,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         return acc;
     }, {} as Record<string, string>);
 
+    // Add x-default
+    alternates['x-default'] = `https://omnimetric.net/en/wiki`;
+    // Map standard codes
+    alternates['ja'] = alternates['jp'];
+    alternates['zh-CN'] = alternates['cn'];
+
     return {
         title: `OmniMetric Wiki Index (${normalizedLang})`,
-        description: 'Comprehensive detailed index of Macro Economic Terms, Technical Indicators, and Investment Maxims.',
+        description: WIKI_DESCRIPTIONS[lang.toLowerCase()] || WIKI_DESCRIPTIONS['en'],
         alternates: {
             languages: alternates,
             canonical: `https://omnimetric.net/${lang}/wiki`
@@ -45,6 +62,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function WikiIndexPage({ params }: Props) {
     const { lang } = await params;
     const normalizedLang = (lang.toUpperCase()) as LangType;
+
+    // Breadcrumbs JSON-LD
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": `https://omnimetric.net`
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Wiki",
+                "item": `https://omnimetric.net/${lang}/wiki`
+            }
+        ]
+    };
     const isRTL = normalizedLang === 'AR';
     const wikiData = getWikiData(normalizedLang);
 
@@ -86,6 +123,7 @@ export default async function WikiIndexPage({ params }: Props) {
     return (
         <Suspense fallback={null}>
             <div className="min-h-screen bg-[#020617] text-slate-200 font-sans pb-20">
+                <DynamicStructuredData data={breadcrumbSchema} />
                 {/* Note: DesktopNav is global, but its lang switcher might point to ?lang=. 
                      We might need a separate language switcher here or rely on user knowing manually. 
                      Ideally, the layout should handle this, but for now we focus on the page content. */}
