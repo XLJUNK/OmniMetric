@@ -993,14 +993,14 @@ Output JSON:
                     process = subprocess.run(cmd, capture_output=True, text=True, encoding='utf-8', env=os.environ.copy(), cwd=frontend_dir, timeout=60)
 
                 if process.returncode == 0:
-                stdout_content = process.stdout
-                log_diag(f"[AI BRIDGE] Received {len(stdout_content)} bytes of output. Head: {stdout_content[:100].strip()}...")
-                
-                # Define required languages
-                required = ["JP", "EN", "CN", "ES", "HI", "ID", "AR"]
+                    stdout_content = process.stdout
+                    log_diag(f"[AI BRIDGE] Received {len(stdout_content)} bytes of output. Head: {stdout_content[:100].strip()}...")
+                    
+                    # Define required languages
+                    required = ["JP", "EN", "CN", "ES", "HI", "ID", "AR"]
 
-                # Robust extraction: look for any JSON pattern in output
-                matches = list(re.finditer(r'\{"text":\s*"(.*?)"\}', stdout_content, re.DOTALL))
+                    # Robust extraction: look for any JSON pattern in output
+                    matches = list(re.finditer(r'\{"text":\s*"(.*?)"\}', stdout_content, re.DOTALL))
                 if matches:
                     try:
                         match = matches[-1] # Take last match to avoid logging clutter
