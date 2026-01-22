@@ -34,7 +34,8 @@ def test_gateway():
     headers = {
         "Content-Type": "application/json",
         "x-vercel-ai-gateway-provider": "google",
-        "x-vercel-ai-gateway-cache": "disable" # Disable cache for true test
+        "x-vercel-ai-gateway-cache": "disable",
+        "User-Agent": "OmniMetric-Verifier/1.0"
     }
     
     # 4. Payload
