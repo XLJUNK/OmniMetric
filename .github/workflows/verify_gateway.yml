@@ -22,3 +22,15 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           VERCEL_AI_GATEWAY_SLUG: ${{ secrets.VERCEL_AI_GATEWAY_SLUG }}
         run: python scripts/test_vercel_gateway.py
+
+      - name: Debug with Curl
+        if: always()
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          VERCEL_AI_GATEWAY_SLUG: ${{ secrets.VERCEL_AI_GATEWAY_SLUG }}
+        run: |
+          echo "Testing Connectivity with Curl..."
+          curl -v -X POST "https://gateway.ai.vercel.com/v1/$VERCEL_AI_GATEWAY_SLUG/google/models/gemini-2.0-flash-001:generateContent?key=$GEMINI_API_KEY" \
+          -H "Content-Type: application/json" \
+          -H "x-vercel-ai-gateway-provider: google" \
+          -d '{"contents": [{"parts": [{"text": "Hello"}]}]}'
