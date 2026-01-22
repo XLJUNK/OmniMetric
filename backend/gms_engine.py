@@ -1120,6 +1120,33 @@ Output JSON:
     except Exception as e:
         log_diag(f"[AI SDK ERROR] {e}")
 
+    # BACKSTOP 2: Direct REST API (No SDK, No Gateway) - RESTORED from v4.3.3
+    # This is the most primitive and robust method, bypassing SDK gRPC issues.
+    try:
+        log_diag("[AI REST] Attempting Raw REST API (generativelanguage.googleapis)...")
+        api_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_KEY}"
+        headers = {'Content-Type': 'application/json'}
+        payload = {"contents": [{"parts": [{"text": prompt}]}]}
+        
+        response = requests.post(api_url, headers=headers, json=payload, timeout=30)
+        
+        if response.status_code == 200:
+            result = response.json()
+            if 'candidates' in result and result['candidates']:
+                text = result['candidates'][0]['content']['parts'][0]['text']
+                log_diag("[AI SUCCESS] Generated via Raw REST API.")
+                text = text.replace("```json", "").replace("```", "").strip()
+                reports = json.loads(text)
+                for lang in required:
+                     if lang not in reports: reports[lang] = FALLBACK_STATUS[lang]
+                     else: reports[lang] = sanitize_insight_text(reports[lang])
+                return reports
+        else:
+            log_diag(f"[AI REST FAIL] {response.status_code}: {response.text}")
+
+    except Exception as e:
+        log_diag(f"[AI REST EXCEPTION] {e}")
+
     # SMART CACHE FALLBACK (Implementation)
     # If all models failed, try to load the last valid report from Archive
     valid_cache = get_last_valid_analysis()
