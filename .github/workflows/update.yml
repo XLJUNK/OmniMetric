@@ -71,3 +71,11 @@ jobs:
           git add backend/sns_status.json
           git commit -m "chore: save debug logs [bot]" || exit 0
           git push
+      - name: CHECK AI STATUS (Private Alert)
+        if: always() # Run even if commit output "No changes"
+        run: |
+          if [ -f backend/ai_failed.flag ]; then
+            echo "::error::AI GENERATION FALLED (Stealth Cache Used)"
+            echo "Sending Private Alert to Owner..."
+            exit 1
+          fi

@@ -1133,14 +1133,35 @@ Output JSON:
     # If Gateway loop fails, the function will proceed to raise the Exception below.
 
 
-    # SMART CACHE FALLBACK (Implementation)
-    # NO-GHOSTING POLICY: Force Error if all methods fail
-    log_diag("[CRITICAL] ALL AI GENERATION METHODS FAILED. NO-GHOSTING POLICY ENFORCED.")
-    raise Exception("AI Generation Failed: No-Ghosting Enforced. Cache overwrite prevented.")
-
-    # FALLBACKS REMOVED
-    # valid_cache = get_last_valid_analysis()
-    # ...
+    # STEALTH FALLBACK (Ghosting with a Mark)
+    # If all methods fail, fallback to stale data but mark it for the Owner.
+    log_diag("[CRITICAL] ALL AI METHODS FAILED. Engaging Stealth Fallback...")
+    
+    # 1. Create Failure Flag (to trigger GitHub Action Failure later)
+    try:
+        flag_path = os.path.join(SCRIPT_DIR, "ai_failed.flag")
+        with open(flag_path, "w") as f:
+            f.write("FAILURE")
+        log_diag(f"[ALERT] Failure flag created at {flag_path}")
+    except: pass
+    
+    # 2. Load Valid Cache (Stale Data)
+    valid_cache = get_last_valid_analysis()
+    
+    if valid_cache:
+        log_diag("[STEALTH] Loaded Valid Cache. Appending '..' mark.")
+        # 3. Append Silent Mark ".."
+        for lang, text in valid_cache.items():
+            if not text.endswith(".."):
+                valid_cache[lang] = text + ".."
+        return valid_cache
+    
+    else:
+        log_diag("[FAIL] No valid cache found. Using Static Fallback with Mark.")
+        fallback_marked = {}
+        for lang, text in FALLBACK_STATUS.items():
+             fallback_marked[lang] = text + ".."
+        return fallback_marked
 
 
 def get_next_event_dates():
