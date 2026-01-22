@@ -1029,25 +1029,7 @@ Output JSON:
         except Exception as e:
             log_diag(f"[AI BRIDGE CRITICAL] {e}")
 
-    # BACKSTOP: Direct Python SDK (High reliability in Action)
-    try:
-        log_diag("[AI SDK] Attempting Direct Python SDK (google-generativeai)...")
-        genai.configure(api_key=GEMINI_KEY)
-        model = genai.GenerativeModel('gemini-2.0-flash')
-        response = model.generate_content(prompt)
-        text = response.text
-        if text:
-            log_diag("[AI SUCCESS] Generated via Python SDK.")
-            text = text.replace("```json", "").replace("```", "").strip()
-            reports = json.loads(text)
-            for lang in required:
-                if lang not in reports: reports[lang] = FALLBACK_STATUS[lang]
-                else: reports[lang] = sanitize_insight_text(reports[lang]) # SANITIZE
-            return reports
-    except Exception as e:
-        log_diag(f"[AI SDK ERROR] {e}")
-
-    # VERCEL AI GATEWAY - RESILIENCE PROTOCOL (Gemini 3 Series + Downgrade)
+    # VERCEL AI GATEWAY - RESILIENCE PROTOCOL (PRIMARY)
     # Priority: 3-Pro > 3-Flash > 2.5/2.0
     models = [
         "google/gemini-3-pro-preview",
@@ -1090,7 +1072,7 @@ Output JSON:
                     result = response.json()
                     if 'candidates' in result and result['candidates']:
                         text = result['candidates'][0]['content']['parts'][0]['text']
-                        log_diag(f"[AI SUCCESS] Generated via {model_name}.")
+                        log_diag(f"[AI SUCCESS] Generated via {model_name} (Gateway).")
                         text = text.replace("```json", "").replace("```", "").strip()
                         reports = json.loads(text)
                         
@@ -1101,8 +1083,6 @@ Output JSON:
                             return reports
                         else:
                              log_diag(f"[AI INVALID] {model_name} returned incomplete JSON.")
-                             # Do NOT retry same model for structural failure, move to next model? 
-                             # Or treat as error? Let's move to next model by breaking inner loop.
                              break 
                 
                 elif response.status_code == 429:
@@ -1117,6 +1097,25 @@ Output JSON:
             except Exception as e:
                 log_diag(f"[AI GATEWAY EXCEPTION] {e}")
                 break # Move to next model
+
+    # BACKSTOP: Direct Python SDK (BACKUP)
+    # Only runs if Gateway loop finished without returning
+    try:
+        log_diag("[AI SDK] Gateway failed. Attempting Direct Python SDK Backstop...")
+        genai.configure(api_key=GEMINI_KEY)
+        model = genai.GenerativeModel('gemini-2.0-flash')
+        response = model.generate_content(prompt)
+        text = response.text
+        if text:
+            log_diag("[AI SUCCESS] Generated via Python SDK (Backstop).")
+            text = text.replace("```json", "").replace("```", "").strip()
+            reports = json.loads(text)
+            for lang in required:
+                if lang not in reports: reports[lang] = FALLBACK_STATUS[lang]
+                else: reports[lang] = sanitize_insight_text(reports[lang]) # SANITIZE
+            return reports
+    except Exception as e:
+        log_diag(f"[AI SDK ERROR] {e}")
 
     # SMART CACHE FALLBACK (Implementation)
     # If all models failed, try to load the last valid report from Archive
