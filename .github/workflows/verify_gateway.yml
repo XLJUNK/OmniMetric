@@ -1,6 +1,10 @@
-name: Verify Vercel AI Gateway
 on:
   workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'scripts/test_vercel_gateway.py'
+      - '.github/workflows/verify_gateway.yml'
 
 jobs:
   test_gateway:
