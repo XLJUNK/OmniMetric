@@ -27,7 +27,7 @@ const jsonLd = {
 };
 
 export default async function Home() {
-  const initialData = getSignalData();
+  const initialData = await getSignalData();
 
   return (
     <>
