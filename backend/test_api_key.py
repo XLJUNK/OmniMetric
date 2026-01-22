@@ -51,7 +51,7 @@ else:
                     print(f"Response Format Error: {json.dumps(data, indent=2)}")
             else:
                 print(f"Model {m} Failed: {response.status_code}")
-                # print(f"Details: {response.text}") # reduce noise
+                print(f"Details: {response.text}") # reduce noise
 
         except Exception as e:
             print(f">>> CRITICAL: Connection failed: {e}")

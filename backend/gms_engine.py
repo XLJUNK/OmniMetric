@@ -17,6 +17,7 @@ import xml.etree.ElementTree as ET
 import sys
 from seo_monitor import SEOMonitor
 from sns_publisher import SNSPublisher
+import fetch_news
 
 # Trigger AI generation with new secrets
 
@@ -111,6 +112,13 @@ ARCHIVE_DIR = os.path.join(SCRIPT_DIR, "archive")
 FRED_KEY = os.getenv("FRED_API_KEY")
 GEMINI_KEY = os.getenv("GEMINI_API_KEY")
 FMP_KEY = os.getenv("FMP_API_KEY")
+
+# MOCK MODE Detection (Skill 04 requirement)
+IS_MOCK_MODE = not bool(GEMINI_KEY)
+if IS_MOCK_MODE:
+    print("\n" + "="*60)
+    print("[OmniMetric-Dev] API Key missing. Falling back to multi-language cache logs.")
+    print("="*60 + "\n")
 
 
 def validate_api_keys():
@@ -787,8 +795,25 @@ def fetch_breaking_news():
 
 def generate_multilingual_report(data, score):
     """Generates AI analysis in 7 languages using a SINGLE batch API call for efficiency."""
-    required = ["EN", "JP", "CN", "ES", "HI", "ID", "AR"]
+    # Prepare high-density data summary for AI v5.2
+    # Include current, previous, and daily change for context
     
+    if IS_MOCK_MODE:
+        # Hybrid Cache-Fallback (Requirement 2)
+        try:
+            if os.path.exists(DATA_FILE):
+                with open(DATA_FILE, 'r', encoding='utf-8') as f:
+                    old_data = json.load(f)
+                    cached_reports = old_data.get("analysis", {}).get("reports")
+                    if cached_reports:
+                        log_diag("[GUARD] Using cached multi-language reports (Mock Mode)")
+                        return cached_reports
+        except Exception as e:
+            log_diag(f"[GUARD] Cache read failed in Mock Mode: {e}")
+        
+        log_diag("[GUARD] No cache found. Using static FALLBACK_STATUS.")
+        return FALLBACK_STATUS
+
     if not GEMINI_KEY:
         log_diag("[AI BRIDGE CRITICAL] GEMINI_API_KEY is MISSING from environment.")
         return FALLBACK_STATUS
@@ -1105,8 +1130,8 @@ def get_next_event_dates():
         }
     ]
 
-def update_signal():
-    print("Running OmniMetric v2.0 Engine...")
+def update_signal(force_news=False):
+    print(f"Running OmniMetric v2.0 Engine (Force News: {force_news})...")
     
     # 1. Execution Control: 10-Minute Cool-down
     try:
@@ -1142,6 +1167,30 @@ def update_signal():
         
         # AI Analysis (Pass context)
         ai_reports = generate_multilingual_report(market_data, score) 
+        
+        # News Intelligence (New: Pre-translated & Cached)
+        intelligence = None
+        if (force_news or not os.path.exists(DATA_FILE)) and not IS_MOCK_MODE:
+            try:
+                intelligence = fetch_news.get_news_payload()
+            except Exception as e:
+                log_diag(f"[AIO] News fetch failed: {e}")
+        else:
+            # Preserve existing intelligence if not forcing refresh OR in MOCK mode
+            try:
+                with open(DATA_FILE, 'r', encoding='utf-8') as f:
+                    old_data = json.load(f)
+                    intelligence = old_data.get("intelligence")
+                    
+                # If intelligence is missing and NOT in mock mode, try to fetch it
+                if not intelligence and not IS_MOCK_MODE:
+                    intelligence = fetch_news.get_news_payload()
+                elif not intelligence and IS_MOCK_MODE:
+                    log_diag("[GUARD] Mock Mode: No news cache found.")
+            except:
+                if not IS_MOCK_MODE:
+                    intelligence = fetch_news.get_news_payload()
+
         
         # ATOMIC GUARD: If AI reports missing (e.g. 429 or failure), do NOT commit/save
         if ai_reports is None:
@@ -1197,6 +1246,7 @@ def update_signal():
                 "reports": ai_reports
             },
             "history_chart": history_chart, # NEW: Added history chart data
+            "intelligence": intelligence, # NEW: Cached news
             "system_status": status
         }
 
@@ -1295,6 +1345,7 @@ def update_signal():
                 "reports": FALLBACK_STATUS
             },
             "history_chart": [],
+            "intelligence": old_json.get("intelligence") if 'old_json' in locals() else None,
             "system_status": "MAINTENANCE"
         }
         try:

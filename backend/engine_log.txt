@@ -6188,3 +6188,298 @@ Output JSON:
 [2026-01-21 23:21:00] [SNS] Processing Serial SNS Broadcast: Stage 2 (Bluesky)
 [2026-01-21 23:21:00] [SNS_BSKY] Missing Bluesky credentials (BLUESKY_HANDLE / BLUESKY_PASSWORD).
 [2026-01-21 23:21:00] [AIO] Running Performance Audit...
+[2026-01-22 15:54:57] [FMP] Fetching calendar from: https://financialmodelingprep.com/stable/economic-calendar?from=2026-01-22&to=2026-03-08&apikey=REDACTED
+[2026-01-22 15:54:59] [FMP] Response status: 402
+[2026-01-22 15:54:59] [ERROR] Calendar Fetch Failed: Expecting value: line 1 column 1 (char 0)
+[2026-01-22 15:55:01] [IN] FRED_RAW: { series: DGS10, price: 4.3 }
+[2026-01-22 15:55:02] [IN] FRED_RAW: { series: DFII10, price: 1.97 }
+[2026-01-22 15:55:02] [FRED] Fetching T10YIE (Breakeven Inflation)...
+[2026-01-22 15:55:02] [IN] FRED_RAW: { series: T10YIE, price: 2.34 }
+[2026-01-22 15:55:04] [IN] FRED_RAW: { series_id: NFCI, val: -0.57258 }
+[2026-01-22 15:55:04] [FRED] Calculating Net Liquidity...
+[2026-01-22 15:55:05] [IN] FRED_RAW: { series: WALCL, last: 6581700.0 }
+[2026-01-22 15:55:05] [IN] FRED_RAW: { series: TGA, last: 779175.0 }
+[2026-01-22 15:55:05] [IN] FRED_RAW: { series: RRP, last: 3.344 }
+[2026-01-22 15:55:05] [FRED] Calculated Net Liquidity: 5799.181B (using WALCL=6581700.0)
+[2026-01-22 15:55:05] [OUT] CALC_LIQ: { price: 5799.18, chg: 0.0% }
+[2026-01-22 15:55:05] [IN] YF_QUERY: { count: 21, tickers: ['RSP', 'SAR=X', 'SPY', 'BTC-USD', 'HYG']... }
+[2026-01-22 15:55:07] [IN] YF_RAW: { ticker: VIX, price: 16.9, chg: -15.88% }
+[2026-01-22 15:55:07] [IN] YF_RAW: { ticker: SPY, price: 685.4, chg: 1.15% }
+[2026-01-22 15:55:07] [IN] YF_RAW: { ticker: TNX, price: 4.25, chg: -0.98% }
+[2026-01-22 15:55:07] [IN] YF_RAW: { ticker: QQQ, price: 616.28, chg: 1.35% }
+[2026-01-22 15:55:07] [IN] YF_RAW: { ticker: IWM, price: 267.79, chg: 1.98% }
+[2026-01-22 15:55:07] [IN] YF_RAW: { ticker: RSP, price: 199.4, chg: 1.69% }
+[2026-01-22 15:55:08] [IN] YF_RAW: { ticker: HYG, price: 81.12, chg: 0.3% }
+[2026-01-22 15:55:08] [IN] YF_RAW: { ticker: NIFTY, price: 25247.25, chg: 0.36% }
+[2026-01-22 15:55:08] [IN] YF_RAW: { ticker: BTC, price: 90097.94, chg: 0.81% }
+[2026-01-22 15:55:08] [IN] YF_RAW: { ticker: ETH, price: 3019.22, chg: 1.35% }
+[2026-01-22 15:55:08] [IN] YF_RAW: { ticker: SOL, price: 130.21, chg: 0.64% }
+[2026-01-22 15:55:08] [IN] YF_RAW: { ticker: DXY, price: 98.8, chg: 0.04% }
+[2026-01-22 15:55:09] [IN] YF_RAW: { ticker: USDJPY, price: 158.8, chg: 0.4% }
+[2026-01-22 15:55:09] [IN] YF_RAW: { ticker: EURUSD, price: 1.17, chg: -0.33% }
+[2026-01-22 15:55:09] [IN] YF_RAW: { ticker: USDINR, price: 91.61, chg: 0.54% }
+[2026-01-22 15:55:09] [IN] YF_RAW: { ticker: USDSAR, price: 3.75, chg: 0.11% }
+[2026-01-22 15:55:09] [IN] YF_RAW: { ticker: GOLD, price: 4825.4, chg: -0.13% }
+[2026-01-22 15:55:09] [IN] YF_RAW: { ticker: OIL, price: 60.53, chg: -0.15% }
+[2026-01-22 15:55:09] [IN] YF_RAW: { ticker: COPPER, price: 5.81, chg: 1.46% }
+[2026-01-22 15:55:10] [IN] YF_RAW: { ticker: NATGAS, price: 5.28, chg: 8.31% }
+[2026-01-22 15:55:10] [GUARD] Data Integrity Audit: 100% Data Completion (All feeds successful).
+[2026-01-22 15:55:10] [GUARD] Market data acquisition: OPERATIONAL
+[2026-01-22 15:55:10] [OUT] CALC_SCORE: { sector: STOCKS, score: 40 }
+[2026-01-22 15:55:10] [OUT] CALC_SCORE: { sector: CRYPTO, score: 25 }
+[2026-01-22 15:55:10] [OUT] CALC_SCORE: { sector: FOREX, score: 65 }
+[2026-01-22 15:55:10] [OUT] CALC_SCORE: { sector: COMMODITIES, score: 40 }
+[2026-01-22 15:55:10] [OUT] SECTOR_SCORES: {"STOCKS": 40, "CRYPTO": 25, "FOREX": 65, "COMMODITIES": 40}
+[2026-01-22 15:55:10] [OUT] GMS_TOTAL: { score: 32 }
+[2026-01-22 15:55:10] [AI BRIDGE] GEMINI_API_KEY detected (Length: 39)
+[2026-01-22 15:55:12] [AI BATCH] Requesting 7-language analysis (Attempt 1)...
+[2026-01-22 15:55:12] [AI BRIDGE] Command: npx -y tsx scripts/generate_insight.ts 
+【AI Insight Protocol v5.4: The Council of Three】
+You are the centralized brain of the OmniMetric Terminal. You do not act as a single writer, but as a "Council of Three" specialized agents working in unison.
+
+### THE COUNCIL (Your Internal personas):
+1. [SKILL_01] QUANTITATIVE ANALYST (The Data):
+   - Focus: Fisher Equation (Nominal = Real + Inflation), Net Liquidity flows, Volatility (VIX/MOVE).
+   - Logic: Identify correlational breakdowns (e.g., "Stocks rising despite falling liquidity").
+   - Constraint: Trust only the math and 0.1% variances. NO subjective opinion.
+
+2. [SKILL_02] MACRO STRATEGIST (The Context):
+   - Focus: MacroWiki Definitions, Historical Parallels (1970s Inflation, 2008 GFC, 2020 Pivot).
+   - Logic: Translate the Quant's numbers into "Market Meaning". Use terms like "Cost of Capital," "Valuation Compression," "Safety Flight."
+   - Goal: Connect the data to the "Why".
+
+3. [SKILL_03] CHIEF OF STAFF (The Voice):
+   - Focus: Synthesis & Multi-cultural Adaptation.
+   - Logic: Synthesize the debate between Quant & Strategist into a unified, calm, and professional narrative.
+   - Action: Draft the "Gold Standard" JP text, then "trans-create" (not just translate) for other regions.
+
+### COGNITIVE PROCESS (Simulate this internally):
+1. Quant decomposes the Yield Spread and Net Liquidity changes.
+2. Strategist finds the historical precedent for this specific data pattern.
+3. Chief of Staff synthesizes the final message.
+
+### OUTPUT PROTOCOL (Mandatory):
+1. First, generate the Japanese (JP) analysis as the "Gold Standard".
+2. Maintain the exact "Information Density" and "Logical Structure" when translating.
+3. OUTPUT ONLY the clean, professional report text in JSON format.
+4.   - MANDATORY STRUCTURE: You must write exactly 5 long, detailed sentences for each language.
+   - MANDATORY STRUCTURE: You must write exactly 5 long, detailed sentences for each language.
+   - CHARACTER COUNT RANGE (STRICT): 250 to 300 characters per language.
+   - UNDER 220 CHARACTERS IS A CRITICAL FAILURE.
+   - Focus on logical cause-and-effect: (e.g., 'The 26% spike in VIX combined with contracting Net Liquidity is forcing valuation compression in SPY...')
+   - Focus on logical cause-and-effect: (e.g., 'The 26% spike in VIX combined with contracting Net Liquidity is forcing valuation compression in SPY...')
+
+*** NEGATIVE CONSTRAINTS (CRITICAL) ***
+- DO NOT include the character count in the output.
+- DO NOT include any metadata or parenthetical notes.
+
+Market Context:
+- Current GMS Score: 32/100
+- Market Matrix:
+- CRYPTO_SENTIMENT: 20 (Prev: 20, DailyChg: 0.0%)
+- YIELD_SPREAD: 0.56 (Prev: 0.56, DailyChg: 0.0%)
+- HY_SPREAD: 2.73 (Prev: 2.65, DailyChg: 3.02%)
+- NFCI: -0.57 (Prev: -0.57, DailyChg: 0.0%)
+- NET_LIQUIDITY: 5799.18 (Prev: 5799.02, DailyChg: 0.0%)
+- BREAKEVEN_INFLATION: 2.34 (Prev: 2.34, DailyChg: 0.0%)
+- VIX: 16.9 (Prev: 20.09, DailyChg: -15.88%)
+- YIELD_SPREAD_10Y2Y: 0.66 (Prev: 0.66, DailyChg: 0.0%)
+- US_10Y_YIELD: 4.3 (Prev: 4.3, DailyChg: 0.0%)
+- REAL_INTEREST_RATE: 1.97 (Prev: 1.97, DailyChg: 0.0%)
+- SPY: 685.4 (Prev: 677.58, DailyChg: 1.15%)
+- TNX: 4.25 (Prev: 4.3, DailyChg: -0.98%)
+- QQQ: 616.28 (Prev: 608.06, DailyChg: 1.35%)
+- IWM: 267.79 (Prev: 262.58, DailyChg: 1.98%)
+- RSP: 199.4 (Prev: 196.08, DailyChg: 1.69%)
+- HYG: 81.12 (Prev: 80.88, DailyChg: 0.3%)
+- NIFTY: 25247.25 (Prev: 25157.5, DailyChg: 0.36%)
+- BTC: 90097.94 (Prev: 89376.96, DailyChg: 0.81%)
+- ETH: 3019.22 (Prev: 2978.9, DailyChg: 1.35%)
+- SOL: 130.21 (Prev: 129.38, DailyChg: 0.64%)
+- DXY: 98.8 (Prev: 98.76, DailyChg: 0.04%)
+- USDJPY: 158.8 (Prev: 158.16, DailyChg: 0.4%)
+- EURUSD: 1.17 (Prev: 1.17, DailyChg: -0.33%)
+- USDINR: 91.61 (Prev: 91.12, DailyChg: 0.54%)
+- USDSAR: 3.75 (Prev: 3.75, DailyChg: 0.11%)
+- GOLD: 4825.4 (Prev: 4831.8, DailyChg: -0.13%)
+- OIL: 60.53 (Prev: 60.62, DailyChg: -0.15%)
+- COPPER: 5.81 (Prev: 5.73, DailyChg: 1.46%)
+- NATGAS: 5.28 (Prev: 4.88, DailyChg: 8.31%)
+- MOVE: 59.56 (Prev: 59.56, DailyChg: 0.0%)
+- BREADTH: 1.08 (Prev: 1.08, DailyChg: 0.0%)
+- SPY_MOMENTUM: -1.08 (Prev: -1.08, DailyChg: 0.0%)
+- COPPER_GOLD: 1.2 (Prev: 1.2, DailyChg: 0.0%)
+
+- News: Trump interview: President tells CNBC 'We have a concept of a deal' over Greenland
+
+Regime Guide:
+- 0-40: DEFENSIVE (Risk-Off).
+- 40-60: NEUTRAL.
+- 60-100: ACCUMULATE (Risk-On).
+
+Output JSON:
+{
+  "JP": "...",
+  "EN": "...",
+  "CN": "...",
+  "ES": "...",
+  "HI": "...",
+  "ID": "...",
+  "AR": "..."
+}
+
+[2026-01-22 15:55:20] [AI BRIDGE] Received 651 bytes of output. Head: [dotenv@17.2.3] injecting env (0) from ..\.env -- tip: 👥 sync secrets across teammates & machines: h...
+[2026-01-22 15:55:20] [AI ERROR] JSON parse failed: Expecting value: line 1 column 1 (char 0)
+[2026-01-22 15:55:20] [AI BATCH] Requesting 7-language analysis (Attempt 2)...
+[2026-01-22 15:55:20] [AI BRIDGE] Command: npx -y tsx scripts/generate_insight.ts 
+【AI Insight Protocol v5.4: The Council of Three】
+You are the centralized brain of the OmniMetric Terminal. You do not act as a single writer, but as a "Council of Three" specialized agents working in unison.
+
+### THE COUNCIL (Your Internal personas):
+1. [SKILL_01] QUANTITATIVE ANALYST (The Data):
+   - Focus: Fisher Equation (Nominal = Real + Inflation), Net Liquidity flows, Volatility (VIX/MOVE).
+   - Logic: Identify correlational breakdowns (e.g., "Stocks rising despite falling liquidity").
+   - Constraint: Trust only the math and 0.1% variances. NO subjective opinion.
+
+2. [SKILL_02] MACRO STRATEGIST (The Context):
+   - Focus: MacroWiki Definitions, Historical Parallels (1970s Inflation, 2008 GFC, 2020 Pivot).
+   - Logic: Translate the Quant's numbers into "Market Meaning". Use terms like "Cost of Capital," "Valuation Compression," "Safety Flight."
+   - Goal: Connect the data to the "Why".
+
+3. [SKILL_03] CHIEF OF STAFF (The Voice):
+   - Focus: Synthesis & Multi-cultural Adaptation.
+   - Logic: Synthesize the debate between Quant & Strategist into a unified, calm, and professional narrative.
+   - Action: Draft the "Gold Standard" JP text, then "trans-create" (not just translate) for other regions.
+
+### COGNITIVE PROCESS (Simulate this internally):
+1. Quant decomposes the Yield Spread and Net Liquidity changes.
+2. Strategist finds the historical precedent for this specific data pattern.
+3. Chief of Staff synthesizes the final message.
+
+### OUTPUT PROTOCOL (Mandatory):
+1. First, generate the Japanese (JP) analysis as the "Gold Standard".
+2. Maintain the exact "Information Density" and "Logical Structure" when translating.
+3. OUTPUT ONLY the clean, professional report text in JSON format.
+4.   - MANDATORY STRUCTURE: You must write exactly 5 long, detailed sentences for each language.
+   - MANDATORY STRUCTURE: You must write exactly 5 long, detailed sentences for each language.
+   - CHARACTER COUNT RANGE (STRICT): 250 to 300 characters per language.
+   - UNDER 220 CHARACTERS IS A CRITICAL FAILURE.
+   - Focus on logical cause-and-effect: (e.g., 'The 26% spike in VIX combined with contracting Net Liquidity is forcing valuation compression in SPY...')
+   - Focus on logical cause-and-effect: (e.g., 'The 26% spike in VIX combined with contracting Net Liquidity is forcing valuation compression in SPY...')
+
+*** NEGATIVE CONSTRAINTS (CRITICAL) ***
+- DO NOT include the character count in the output.
+- DO NOT include any metadata or parenthetical notes.
+
+Market Context:
+- Current GMS Score: 32/100
+- Market Matrix:
+- CRYPTO_SENTIMENT: 20 (Prev: 20, DailyChg: 0.0%)
+- YIELD_SPREAD: 0.56 (Prev: 0.56, DailyChg: 0.0%)
+- HY_SPREAD: 2.73 (Prev: 2.65, DailyChg: 3.02%)
+- NFCI: -0.57 (Prev: -0.57, DailyChg: 0.0%)
+- NET_LIQUIDITY: 5799.18 (Prev: 5799.02, DailyChg: 0.0%)
+- BREAKEVEN_INFLATION: 2.34 (Prev: 2.34, DailyChg: 0.0%)
+- VIX: 16.9 (Prev: 20.09, DailyChg: -15.88%)
+- YIELD_SPREAD_10Y2Y: 0.66 (Prev: 0.66, DailyChg: 0.0%)
+- US_10Y_YIELD: 4.3 (Prev: 4.3, DailyChg: 0.0%)
+- REAL_INTEREST_RATE: 1.97 (Prev: 1.97, DailyChg: 0.0%)
+- SPY: 685.4 (Prev: 677.58, DailyChg: 1.15%)
+- TNX: 4.25 (Prev: 4.3, DailyChg: -0.98%)
+- QQQ: 616.28 (Prev: 608.06, DailyChg: 1.35%)
+- IWM: 267.79 (Prev: 262.58, DailyChg: 1.98%)
+- RSP: 199.4 (Prev: 196.08, DailyChg: 1.69%)
+- HYG: 81.12 (Prev: 80.88, DailyChg: 0.3%)
+- NIFTY: 25247.25 (Prev: 25157.5, DailyChg: 0.36%)
+- BTC: 90097.94 (Prev: 89376.96, DailyChg: 0.81%)
+- ETH: 3019.22 (Prev: 2978.9, DailyChg: 1.35%)
+- SOL: 130.21 (Prev: 129.38, DailyChg: 0.64%)
+- DXY: 98.8 (Prev: 98.76, DailyChg: 0.04%)
+- USDJPY: 158.8 (Prev: 158.16, DailyChg: 0.4%)
+- EURUSD: 1.17 (Prev: 1.17, DailyChg: -0.33%)
+- USDINR: 91.61 (Prev: 91.12, DailyChg: 0.54%)
+- USDSAR: 3.75 (Prev: 3.75, DailyChg: 0.11%)
+- GOLD: 4825.4 (Prev: 4831.8, DailyChg: -0.13%)
+- OIL: 60.53 (Prev: 60.62, DailyChg: -0.15%)
+- COPPER: 5.81 (Prev: 5.73, DailyChg: 1.46%)
+- NATGAS: 5.28 (Prev: 4.88, DailyChg: 8.31%)
+- MOVE: 59.56 (Prev: 59.56, DailyChg: 0.0%)
+- BREADTH: 1.08 (Prev: 1.08, DailyChg: 0.0%)
+- SPY_MOMENTUM: -1.08 (Prev: -1.08, DailyChg: 0.0%)
+- COPPER_GOLD: 1.2 (Prev: 1.2, DailyChg: 0.0%)
+
+- News: Trump interview: President tells CNBC 'We have a concept of a deal' over Greenland
+
+Regime Guide:
+- 0-40: DEFENSIVE (Risk-Off).
+- 40-60: NEUTRAL.
+- 60-100: ACCUMULATE (Risk-On).
+
+Output JSON:
+{
+  "JP": "...",
+  "EN": "...",
+  "CN": "...",
+  "ES": "...",
+  "HI": "...",
+  "ID": "...",
+  "AR": "..."
+}
+
+[2026-01-22 15:55:23] [AI BRIDGE WARN] Bridge execution failed (Code 1). Trying direct node fallback...
+[2026-01-22 15:55:33] [AI BRIDGE] Received 3853 bytes of output. Head: [dotenv@17.2.3] injecting env (0) from ..\.env -- tip: ⚙️  suppress all logs with { quiet: true }
+[d...
+[2026-01-22 15:55:33] [AI ERROR] JSON parse failed: Invalid \escape: line 2 column 95 (char 96)
+[2026-01-22 15:55:33] [AI SDK] Attempting Direct Python SDK (google-generativeai)...
+[2026-01-22 15:55:34] [AI SDK ERROR] 400 API key expired. Please renew the API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key expired. Please renew the API key."
+]
+[2026-01-22 15:55:34] [AI GATEWAY] Attempting Vercel AI Gateway (Attempt 1)...
+[2026-01-22 15:55:35] [AI GATEWAY CRITICAL] HTTPSConnectionPool(host='gateway.ai.vercel.com', port=443): Max retries exceeded with url: /v1/omni-metric/google/v1beta/models/gemini-2.0-flash:generateContent?key=REDACTED (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-01-22 15:55:35] [AI GATEWAY] Attempting Vercel AI Gateway (Attempt 2)...
+[2026-01-22 15:55:37] [AI GATEWAY CRITICAL] HTTPSConnectionPool(host='gateway.ai.vercel.com', port=443): Max retries exceeded with url: /v1/omni-metric/google/v1beta/models/gemini-2.0-flash:generateContent?key=REDACTED (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-01-22 15:55:39] [SNS] Stage 1 (Twitter) is currently DISABLED per user request.
+[2026-01-22 15:55:39] [SNS] Processing Serial SNS Broadcast: Stage 2 (Bluesky)
+[2026-01-22 15:55:39] [SNS_BSKY] Missing Bluesky credentials (BLUESKY_HANDLE / BLUESKY_PASSWORD).
+[2026-01-22 15:55:39] [AIO] Running Performance Audit...
+[2026-01-22 16:00:02] [ERROR] Calendar Fetch Failed: FMP_API_KEY is missing.
+[2026-01-22 16:00:02] [IN] YF_QUERY: { count: 21, tickers: ['RSP', 'ETH-USD', 'GC=F', 'NG=F', 'BTC-USD']... }
+[2026-01-22 16:00:04] [IN] YF_RAW: { ticker: VIX, price: 16.9, chg: -15.88% }
+[2026-01-22 16:00:04] [IN] YF_RAW: { ticker: SPY, price: 685.4, chg: 1.15% }
+[2026-01-22 16:00:05] [IN] YF_RAW: { ticker: TNX, price: 4.25, chg: -0.98% }
+[2026-01-22 16:00:05] [IN] YF_RAW: { ticker: QQQ, price: 616.28, chg: 1.35% }
+[2026-01-22 16:00:05] [IN] YF_RAW: { ticker: IWM, price: 267.79, chg: 1.98% }
+[2026-01-22 16:00:05] [IN] YF_RAW: { ticker: RSP, price: 199.4, chg: 1.69% }
+[2026-01-22 16:00:05] [IN] YF_RAW: { ticker: HYG, price: 81.12, chg: 0.3% }
+[2026-01-22 16:00:06] [IN] YF_RAW: { ticker: NIFTY, price: 25254.9, chg: 0.39% }
+[2026-01-22 16:00:06] [IN] YF_RAW: { ticker: BTC, price: 90099.25, chg: 0.81% }
+[2026-01-22 16:00:06] [IN] YF_RAW: { ticker: ETH, price: 3017.02, chg: 1.28% }
+[2026-01-22 16:00:06] [IN] YF_RAW: { ticker: SOL, price: 130.2, chg: 0.64% }
+[2026-01-22 16:00:07] [IN] YF_RAW: { ticker: DXY, price: 98.81, chg: 0.05% }
+[2026-01-22 16:00:07] [IN] YF_RAW: { ticker: USDJPY, price: 158.8, chg: 0.4% }
+[2026-01-22 16:00:07] [IN] YF_RAW: { ticker: EURUSD, price: 1.17, chg: -0.31% }
+[2026-01-22 16:00:07] [IN] YF_RAW: { ticker: USDINR, price: 91.6, chg: 0.53% }
+[2026-01-22 16:00:07] [IN] YF_RAW: { ticker: USDSAR, price: 3.75, chg: 0.11% }
+[2026-01-22 16:00:07] [IN] YF_RAW: { ticker: GOLD, price: 4824.0, chg: -0.16% }
+[2026-01-22 16:00:08] [IN] YF_RAW: { ticker: OIL, price: 60.59, chg: -0.05% }
+[2026-01-22 16:00:08] [IN] YF_RAW: { ticker: COPPER, price: 5.81, chg: 1.35% }
+[2026-01-22 16:00:08] [IN] YF_RAW: { ticker: NATGAS, price: 5.3, chg: 8.82% }
+[2026-01-22 16:00:09] [GUARD] Data Integrity Audit: 100% Data Completion (All feeds successful).
+[2026-01-22 16:00:09] [GUARD] Market data acquisition: OPERATIONAL
+[2026-01-22 16:00:09] [OUT] CALC_SCORE: { sector: STOCKS, score: 40 }
+[2026-01-22 16:00:09] [OUT] CALC_SCORE: { sector: CRYPTO, score: 25 }
+[2026-01-22 16:00:09] [OUT] CALC_SCORE: { sector: FOREX, score: 65 }
+[2026-01-22 16:00:09] [OUT] CALC_SCORE: { sector: COMMODITIES, score: 40 }
+[2026-01-22 16:00:09] [OUT] SECTOR_SCORES: {"STOCKS": 40, "CRYPTO": 25, "FOREX": 65, "COMMODITIES": 40}
+[2026-01-22 16:00:09] [OUT] GMS_TOTAL: { score: 39 }
+[2026-01-22 16:00:09] [GUARD] Using cached multi-language reports (Mock Mode)
+[2026-01-22 16:00:09] [SNS] Stage 1 (Twitter) is currently DISABLED per user request.
+[2026-01-22 16:00:09] [SNS] Processing Serial SNS Broadcast: Stage 2 (Bluesky)
+[2026-01-22 16:00:09] [SNS_BSKY] Missing Bluesky credentials (BLUESKY_HANDLE / BLUESKY_PASSWORD).
+[2026-01-22 16:00:09] [AIO] Running Performance Audit...

@@ -36,8 +36,12 @@ def run_scheduler():
     # Run immediately on startup
     job()
     
-    # Schedule updates every 10 minutes
+    # Schedule updates every 10 minutes (Market Data only)
     schedule.every(10).minutes.do(job)
+    
+    # News-intensive updates (at 05 and 35 mins)
+    schedule.every().hour.at(":05").do(lambda: update_signal(force_news=True))
+    schedule.every().hour.at(":35").do(lambda: update_signal(force_news=True))
     
     # Explicit Market Closes (Ensuring captures at key session breaks)
     schedule.every().day.at("15:05").do(job) # Tokyo Close + buffer
