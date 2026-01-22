@@ -938,6 +938,12 @@ Output JSON:
   "AR": "..."
 }}
 """
+    prompt_log_path = os.path.join(SCRIPT_DIR, "logs", "latest_prompt.txt")
+    try:
+        with open(prompt_log_path, "w", encoding="utf-8") as f:
+            f.write(prompt)
+    except Exception as e:
+        log_diag(f"[LOG ERROR] Failed to save prompt: {e}")
 
     def sanitize_insight_text(text):
         """Removes noise like (249 characters) or （249文字） from the end."""
@@ -1079,6 +1085,13 @@ Output JSON:
                 
                 if response.status_code == 200:
                     result = response.json()
+                    
+                    # LOGGING: Output Audit
+                    try:
+                        with open(os.path.join(SCRIPT_DIR, "logs", "latest_raw_response.json"), "w", encoding="utf-8") as f:
+                            json.dump(result, f, indent=2, ensure_ascii=False)
+                    except: pass
+                    
                     if 'candidates' in result and result['candidates']:
                         text = result['candidates'][0]['content']['parts'][0]['text']
                         log_diag(f"[AI SUCCESS] Generated via {model_name} (Gateway).")
@@ -1107,80 +1120,19 @@ Output JSON:
                 log_diag(f"[AI GATEWAY EXCEPTION] {e}")
                 break # Move to next model
 
-    # BACKSTOP: Direct Python SDK (BACKUP)
-    # Only runs if Gateway loop finished without returning
-    try:
-        log_diag("[AI SDK] Gateway failed. Attempting Direct Python SDK Backstop...")
-        genai.configure(api_key=GEMINI_KEY)
-        model = genai.GenerativeModel('gemini-2.0-flash')
-        response = model.generate_content(prompt)
-        text = response.text
-        if text:
-            log_diag("[AI SUCCESS] Generated via Python SDK (Backstop).")
-            text = text.replace("```json", "").replace("```", "").strip()
-            reports = json.loads(text)
-            for lang in required:
-                if lang not in reports: reports[lang] = FALLBACK_STATUS[lang]
-                else: reports[lang] = sanitize_insight_text(reports[lang]) # SANITIZE
-            return reports
-    except Exception as e:
-        log_diag(f"[AI SDK ERROR] {e}")
+    # BACKSTOPS REMOVED: Strict Gateway Enforcement
+    # If Gateway loop fails, the function will proceed to raise the Exception below.
 
-    # BACKSTOP 2: Direct REST API (No SDK, No Gateway) - RESTORED from v4.3.3
-    # This is the most primitive and robust method, bypassing SDK gRPC issues.
-    try:
-        log_diag("[AI REST] Attempting Raw REST API (generativelanguage.googleapis)...")
-        api_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_KEY}"
-        headers = {'Content-Type': 'application/json'}
-        payload = {"contents": [{"parts": [{"text": prompt}]}]}
-        
-        response = requests.post(api_url, headers=headers, json=payload, timeout=30)
-        
-        if response.status_code == 200:
-            result = response.json()
-            if 'candidates' in result and result['candidates']:
-                text = result['candidates'][0]['content']['parts'][0]['text']
-                log_diag("[AI SUCCESS] Generated via Raw REST API.")
-                text = text.replace("```json", "").replace("```", "").strip()
-                reports = json.loads(text)
-                for lang in required:
-                     if lang not in reports: reports[lang] = FALLBACK_STATUS[lang]
-                     else: reports[lang] = sanitize_insight_text(reports[lang])
-                return reports
-        else:
-            log_diag(f"[AI REST FAIL] {response.status_code}: {response.text}")
-
-    except Exception as e:
-        log_diag(f"[AI REST EXCEPTION] {e}")
 
     # SMART CACHE FALLBACK (Implementation)
-    # If all models failed, try to load the last valid report from Archive
-    valid_cache = get_last_valid_analysis()
-    if valid_cache:
-        log_diag("[AI RESILIENCE] All generations failed. Serving Smart Cache (Last Valid Analysis).")
-        return valid_cache
+    # NO-GHOSTING POLICY: Force Error if all methods fail
+    log_diag("[CRITICAL] ALL AI GENERATION METHODS FAILED. NO-GHOSTING POLICY ENFORCED.")
+    raise Exception("AI Generation Failed: No-Ghosting Enforced. Cache overwrite prevented.")
 
+    # FALLBACKS REMOVED
+    # valid_cache = get_last_valid_analysis()
+    # ...
 
-    # Ultimate Fallback: Try to reuse ANY existing valid report from cache before using static text
-    try:
-        if os.path.exists(DATA_FILE):
-            with open(DATA_FILE, 'r', encoding='utf-8') as f:
-                current = json.load(f)
-                existing_reports = current.get("analysis", {}).get("reports")
-                if existing_reports and all(lang in existing_reports for lang in required):
-                    # Check if it's a placeholder
-                    is_placeholder = False
-                    for l, content in existing_reports.items():
-                         if any(p in content for p in ["世界市場は主要な経済指標", "Institutional macro intelligence updated"]):
-                             is_placeholder = True
-                             break
-                    if not is_placeholder:
-                        print("[AI FAILURE] All methods failed. Reusing last VALID cached report to ensure user experience.")
-                        return existing_reports
-    except: pass
-
-    print("[AI FAILURE] All methods failed and no valid cache exists. Reverting to base status messages.")
-    return FALLBACK_STATUS
 
 def get_next_event_dates():
     """Smart Fallback: Dynamically calculates the next major economic event dates."""
