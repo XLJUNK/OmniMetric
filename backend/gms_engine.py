@@ -848,6 +848,11 @@ def generate_multilingual_report(data, score):
 
     if not GEMINI_KEY:
         log_diag("[AI BRIDGE CRITICAL] GEMINI_API_KEY is MISSING from environment.")
+        # FALLBACK TO SMART CACHE
+        valid_cache = get_last_valid_analysis()
+        if valid_cache:
+            log_diag("[SMART CACHE] Using cached analysis due to missing API Key.")
+            return valid_cache
         return FALLBACK_STATUS
     else:
         log_diag(f"[AI BRIDGE] GEMINI_API_KEY detected (Length: {len(GEMINI_KEY)})")
@@ -1007,6 +1012,10 @@ Output JSON:
                                 return reports
                             else:
                                 log_diag("[AI FAIL] Validation failed (Quality Guard). Using Fallback.")
+                                valid_cache = get_last_valid_analysis()
+                                if valid_cache:
+                                    log_diag("[SMART CACHE] Using cached analysis due to Validation Failure.")
+                                    return valid_cache
                                 return FALLBACK_STATUS
                     except Exception as e:
                         log_diag(f"[AI ERROR] JSON parse failed: {e}")
@@ -1418,7 +1427,7 @@ def update_signal(force_news=False):
             "analysis": {
                 "title": "Global Market Outlook (Maintenance)",
                 "content": "Market data synchronization active. Visualizing baseline indicators...",
-                "reports": FALLBACK_STATUS
+                "reports": get_last_valid_analysis() or FALLBACK_STATUS
             },
             "history_chart": [],
             "intelligence": old_json.get("intelligence") if 'old_json' in locals() else None,
