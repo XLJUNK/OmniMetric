@@ -793,25 +793,57 @@ def fetch_breaking_news():
         print(f"[NEWS] Fetch failed: {e}")
     return "Market data synchronization active."
 
+def get_last_valid_analysis():
+    """
+    scans backend/archive/ for the most recent valid report.
+    Valid = Does not contain 'Analysis Sync' or 'Market data sync' phrases.
+    """
+    try:
+        if not os.path.exists(ARCHIVE_DIR): return None
+        
+        files = sorted([f for f in os.listdir(ARCHIVE_DIR) if f.endswith('.json')], reverse=True)
+        # Scan last 7 days max
+        for fname in files[:7]:
+            path = os.path.join(ARCHIVE_DIR, fname)
+            try:
+                with open(path, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    reports = data.get("analysis", {}).get("reports")
+                    if not reports: continue
+                    
+                    # Check Validity (Check EN text for known fallback strings)
+                    en_text = reports.get("EN", "")
+                    if "Analysis Sync" in en_text or "Market data synchronization" in en_text:
+                        continue # Invalid/Fallback content
+                        
+                    # Also check JP just in case
+                    jp_text = reports.get("JP", "")
+                    if "分析同期中" in jp_text:
+                        continue
+                        
+                    log_diag(f"[SMART CACHE] Found valid report from {fname}")
+                    return reports
+            except:
+                continue
+    except Exception as e:
+        log_diag(f"[SMART CACHE ERROR] {e}")
+    return None
+
+
 def generate_multilingual_report(data, score):
     """Generates AI analysis in 7 languages using a SINGLE batch API call for efficiency."""
     # Prepare high-density data summary for AI v5.2
     # Include current, previous, and daily change for context
     
+
     if IS_MOCK_MODE:
         # Hybrid Cache-Fallback (Requirement 2)
-        try:
-            if os.path.exists(DATA_FILE):
-                with open(DATA_FILE, 'r', encoding='utf-8') as f:
-                    old_data = json.load(f)
-                    cached_reports = old_data.get("analysis", {}).get("reports")
-                    if cached_reports:
-                        log_diag("[GUARD] Using cached multi-language reports (Mock Mode)")
-                        return cached_reports
-        except Exception as e:
-            log_diag(f"[GUARD] Cache read failed in Mock Mode: {e}")
+        valid_cache = get_last_valid_analysis()
+        if valid_cache:
+            log_diag("[GUARD] Using Smart Cache (Mock Mode)")
+            return valid_cache
         
-        log_diag("[GUARD] No cache found. Using static FALLBACK_STATUS.")
+        log_diag("[GUARD] No valid cache found. Using static FALLBACK_STATUS.")
         return FALLBACK_STATUS
 
     if not GEMINI_KEY:
@@ -819,6 +851,7 @@ def generate_multilingual_report(data, score):
         return FALLBACK_STATUS
     else:
         log_diag(f"[AI BRIDGE] GEMINI_API_KEY detected (Length: {len(GEMINI_KEY)})")
+
 
     # Prepare high-density data summary for AI v5.2
     # Include current, previous, and daily change for context
@@ -1005,41 +1038,84 @@ Output JSON:
     except Exception as e:
         log_diag(f"[AI SDK ERROR] {e}")
 
-    # Fallback to Vercel AI Gateway Proxy (Targeting Gemini 2.0 Flash)
-    for attempt in range(2): 
-        try:
-            log_diag(f"[AI GATEWAY] Attempting Vercel AI Gateway (Attempt {attempt+1})...")
-            # Using Vercel AI Gateway Proxy URL
-            gateway_slug = os.getenv("VERCEL_AI_GATEWAY_SLUG", "omni-metric")
-            url = f"https://gateway.ai.vercel.com/v1/{gateway_slug}/google/v1beta/models/gemini-2.0-flash:generateContent"
-            
-            headers = {
-                "Content-Type": "application/json",
-                "x-vercel-ai-gateway-provider": "google",
-                "x-vercel-ai-gateway-cache": "enable",
-                "x-vercel-ai-gateway-cache-ttl": "3600"
-            }
-            # Note: The GEMINI_API_KEY is transmitted as a secret in the background if BYOK or passed via param
-            # In Vercel's standard proxy, we still append the key or use it in the path as per their Google mapping
-            proxy_url = f"{url}?key={GEMINI_KEY}"
-            
-            payload = {"contents": [{"parts": [{"text": prompt}]}]}
-            response = requests.post(proxy_url, json=payload, headers=headers, timeout=30)
-            if response.status_code == 200:
-                result = response.json()
-                if 'candidates' in result and result['candidates']:
-                    text = result['candidates'][0]['content']['parts'][0]['text']
-                    log_diag("[AI SUCCESS] Generated via Vercel AI Gateway.")
-                    text = text.replace("```json", "").replace("```", "").strip()
-                    reports = json.loads(text)
-                    for lang in required:
-                        if lang not in reports: reports[lang] = FALLBACK_STATUS[lang]
-                        else: reports[lang] = sanitize_insight_text(reports[lang]) # SANITIZE
-                    return reports
-            else:
-                log_diag(f"[AI GATEWAY FAIL] Status {response.status_code}: {response.text}")
-        except Exception as e:
-            log_diag(f"[AI GATEWAY CRITICAL] {e}")
+    # VERCEL AI GATEWAY - RESILIENCE PROTOCOL (Gemini 3 Series + Downgrade)
+    # Priority: 3-Pro > 3-Flash > 2.5/2.0
+    models = [
+        "google/gemini-3-pro-preview",
+        "google/gemini-3-flash",
+        "google/gemini-2.0-flash-001" # Fallback to reliable 2.0 as 2.5 might be unstable
+    ]
+
+    gateway_slug = os.getenv("VERCEL_AI_GATEWAY_SLUG", "omni-metric")
+    
+    for model_name in models:
+        log_diag(f"[AI GATEWAY] Attempting Model: {model_name}...")
+        
+        # Exponential Backoff Loop (Max 3 Retries) - Anti-429
+        for attempt in range(3):
+            try:
+                # Calculate Backoff: 2s, 4s, 8s
+                if attempt > 0:
+                    wait_time = 2 * (2 ** (attempt - 1))
+                    log_diag(f"[AI GATEWAY] Rate Limit Guard: Backing off for {wait_time}s...")
+                    time.sleep(wait_time)
+
+                url = f"https://gateway.ai.vercel.com/v1/{gateway_slug}/{model_name}:generateContent"
+                
+                headers = {
+                    "Content-Type": "application/json",
+                    "x-vercel-ai-gateway-provider": "google",
+                    "x-vercel-ai-gateway-cache": "enable",
+                    "x-vercel-ai-gateway-cache-ttl": "3600"
+                }
+                
+                # Proxy URL Construction
+                proxy_url = f"{url}?key={GEMINI_KEY}"
+                
+                payload = {"contents": [{"parts": [{"text": prompt}]}]}
+                
+                # Timeout extended for Pro models
+                response = requests.post(proxy_url, json=payload, headers=headers, timeout=60)
+                
+                if response.status_code == 200:
+                    result = response.json()
+                    if 'candidates' in result and result['candidates']:
+                        text = result['candidates'][0]['content']['parts'][0]['text']
+                        log_diag(f"[AI SUCCESS] Generated via {model_name}.")
+                        text = text.replace("```json", "").replace("```", "").strip()
+                        reports = json.loads(text)
+                        
+                        # Validate Keys
+                        if all(lang in reports for lang in required):
+                            for lang in required:
+                                reports[lang] = sanitize_insight_text(reports[lang]) 
+                            return reports
+                        else:
+                             log_diag(f"[AI INVALID] {model_name} returned incomplete JSON.")
+                             # Do NOT retry same model for structural failure, move to next model? 
+                             # Or treat as error? Let's move to next model by breaking inner loop.
+                             break 
+                
+                elif response.status_code == 429:
+                    log_diag(f"[AI GATEWAY 429] Rate Limit on {model_name} (Attempt {attempt+1}/3).")
+                    continue # Trigger Backoff and Retry
+                
+                else:
+                    log_diag(f"[AI GATEWAY FAIL] Status {response.status_code}: {response.text}")
+                    # Non-429 error (e.g. 500 or 404). Do not retry same model endlessly.
+                    break # Move to next model immediately (Downgrade)
+
+            except Exception as e:
+                log_diag(f"[AI GATEWAY EXCEPTION] {e}")
+                break # Move to next model
+
+    # SMART CACHE FALLBACK (Implementation)
+    # If all models failed, try to load the last valid report from Archive
+    valid_cache = get_last_valid_analysis()
+    if valid_cache:
+        log_diag("[AI RESILIENCE] All generations failed. Serving Smart Cache (Last Valid Analysis).")
+        return valid_cache
+
 
     # Ultimate Fallback: Try to reuse ANY existing valid report from cache before using static text
     try:
