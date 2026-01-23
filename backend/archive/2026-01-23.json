@@ -1,9 +1,9 @@
 {
-    "last_updated": "2026-01-23T20:40:24Z",
-    "last_successful_update": "2026-01-23T20:40:24Z",
-    "gms_score": 33,
+    "last_updated": "2026-01-23T21:26:13Z",
+    "last_successful_update": "2026-01-23T21:26:13Z",
+    "gms_score": 32,
     "sector_scores": {
-        "STOCKS": 40,
+        "STOCKS": 35,
         "CRYPTO": 25,
         "FOREX": 55,
         "COMMODITIES": 55
@@ -218,10 +218,10 @@
             ]
         },
         "VIX": {
-            "price": 15.73,
+            "price": 16.01,
             "prev_price": 15.64,
-            "daily_chg": 0.58,
-            "change_percent": -0.82,
+            "daily_chg": 2.37,
+            "change_percent": 0.95,
             "trend": "UP",
             "sparkline": [
                 14.08,
@@ -245,7 +245,7 @@
                 20.09,
                 16.9,
                 15.64,
-                15.73
+                16.01
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
@@ -290,7 +290,6 @@
             "change_percent": 0.0,
             "trend": "STABLE",
             "sparkline": [
-                4.14,
                 4.19,
                 4.18,
                 4.15,
@@ -319,15 +318,15 @@
                 4.24,
                 4.24,
                 4.3,
+                4.26,
                 4.26
             ]
         },
         "REAL_INTEREST_RATE": {
-            "price": 1.92,
+            "price": 1.95,
             "change_percent": 0.0,
             "trend": "STABLE",
             "sparkline": [
-                1.89,
                 1.93,
                 1.93,
                 1.92,
@@ -356,15 +355,16 @@
                 1.91,
                 1.91,
                 1.97,
-                1.92
+                1.92,
+                1.95
             ]
         },
         "SPY": {
-            "price": 688.62,
+            "price": 689.13,
             "prev_price": 688.98,
-            "daily_chg": -0.05,
-            "change_percent": -0.44,
-            "trend": "DOWN",
+            "daily_chg": 0.02,
+            "change_percent": -0.37,
+            "trend": "UP",
             "sparkline": [
                 684.83,
                 687.96,
@@ -387,7 +387,7 @@
                 677.58,
                 685.4,
                 688.98,
-                688.62
+                689.13
             ]
         },
         "TNX": {
@@ -422,10 +422,10 @@
             ]
         },
         "QQQ": {
-            "price": 621.95,
+            "price": 622.72,
             "prev_price": 620.76,
-            "daily_chg": 0.19,
-            "change_percent": 0.11,
+            "daily_chg": 0.32,
+            "change_percent": 0.23,
             "trend": "UP",
             "sparkline": [
                 619.21,
@@ -449,11 +449,11 @@
                 608.06,
                 616.28,
                 620.76,
-                621.95
+                622.72
             ]
         },
         "IWM": {
-            "price": 264.79,
+            "price": 264.8,
             "prev_price": 269.79,
             "daily_chg": -1.85,
             "change_percent": -0.36,
@@ -480,14 +480,14 @@
                 262.58,
                 267.79,
                 269.79,
-                264.79
+                264.8
             ]
         },
         "RSP": {
-            "price": 198.45,
+            "price": 198.77,
             "prev_price": 199.66,
-            "daily_chg": -0.61,
-            "change_percent": -0.3,
+            "daily_chg": -0.45,
+            "change_percent": -0.14,
             "trend": "DOWN",
             "sparkline": [
                 193.54,
@@ -511,14 +511,14 @@
                 196.08,
                 199.4,
                 199.66,
-                198.45
+                198.77
             ]
         },
         "HYG": {
-            "price": 81.08,
+            "price": 81.14,
             "prev_price": 81.18,
-            "daily_chg": -0.12,
-            "change_percent": -0.01,
+            "daily_chg": -0.05,
+            "change_percent": 0.06,
             "trend": "DOWN",
             "sparkline": [
                 80.43,
@@ -542,7 +542,7 @@
                 80.88,
                 81.12,
                 81.18,
-                81.08
+                81.14
             ]
         },
         "NIFTY": {
@@ -577,11 +577,11 @@
             ]
         },
         "BTC": {
-            "price": 89301.76,
+            "price": 89521.8,
             "prev_price": 89462.45,
-            "daily_chg": -0.18,
-            "change_percent": -3.51,
-            "trend": "DOWN",
+            "daily_chg": 0.07,
+            "change_percent": -3.28,
+            "trend": "UP",
             "sparkline": [
                 89944.7,
                 90603.19,
@@ -604,14 +604,14 @@
                 88310.91,
                 89376.96,
                 89462.45,
-                89301.76
+                89521.8
             ]
         },
         "ETH": {
-            "price": 2933.61,
+            "price": 2947.17,
             "prev_price": 2949.63,
-            "daily_chg": -0.54,
-            "change_percent": -7.94,
+            "daily_chg": -0.08,
+            "change_percent": -7.51,
             "trend": "DOWN",
             "sparkline": [
                 3124.42,
@@ -635,14 +635,14 @@
                 2935.61,
                 2978.9,
                 2949.63,
-                2933.61
+                2947.17
             ]
         },
         "SOL": {
-            "price": 127.08,
+            "price": 127.34,
             "prev_price": 128.29,
-            "daily_chg": -0.94,
-            "change_percent": -4.69,
+            "daily_chg": -0.74,
+            "change_percent": -4.5,
             "trend": "DOWN",
             "sparkline": [
                 132.13,
@@ -666,14 +666,14 @@
                 125.71,
                 129.38,
                 128.29,
-                127.08
+                127.34
             ]
         },
         "DXY": {
-            "price": 97.51,
+            "price": 97.46,
             "prev_price": 98.36,
-            "daily_chg": -0.87,
-            "change_percent": -1.89,
+            "daily_chg": -0.92,
+            "change_percent": -1.95,
             "trend": "DOWN",
             "sparkline": [
                 98.29,
@@ -697,14 +697,14 @@
                 98.64,
                 98.76,
                 98.36,
-                97.51
+                97.46
             ]
         },
         "USDJPY": {
-            "price": 155.88,
+            "price": 155.71,
             "prev_price": 158.46,
-            "daily_chg": -1.62,
-            "change_percent": -1.05,
+            "daily_chg": -1.74,
+            "change_percent": -1.16,
             "trend": "DOWN",
             "sparkline": [
                 156.88,
@@ -728,14 +728,14 @@
                 158.18,
                 158.16,
                 158.46,
-                155.88
+                155.71
             ]
         },
         "EURUSD": {
             "price": 1.18,
             "prev_price": 1.17,
-            "daily_chg": 1.25,
-            "change_percent": 1.67,
+            "daily_chg": 1.36,
+            "change_percent": 1.78,
             "trend": "UP",
             "sparkline": [
                 1.18,
@@ -763,10 +763,10 @@
             ]
         },
         "USDINR": {
-            "price": 91.66,
+            "price": 91.61,
             "prev_price": 91.54,
-            "daily_chg": 0.13,
-            "change_percent": 1.05,
+            "daily_chg": 0.09,
+            "change_percent": 1.01,
             "trend": "UP",
             "sparkline": [
                 89.6,
@@ -790,7 +790,7 @@
                 90.9,
                 91.12,
                 91.54,
-                91.66
+                91.61
             ]
         },
         "USDSAR": {
@@ -825,10 +825,10 @@
             ]
         },
         "GOLD": {
-            "price": 4981.5,
+            "price": 4982.4,
             "prev_price": 4908.8,
-            "daily_chg": 1.48,
-            "change_percent": 8.57,
+            "daily_chg": 1.5,
+            "change_percent": 8.59,
             "trend": "UP",
             "sparkline": [
                 4444.6,
@@ -852,14 +852,14 @@
                 4759.6,
                 4831.8,
                 4908.8,
-                4981.5
+                4982.4
             ]
         },
         "OIL": {
-            "price": 61.13,
+            "price": 61.25,
             "prev_price": 59.36,
-            "daily_chg": 2.98,
-            "change_percent": 2.84,
+            "daily_chg": 3.18,
+            "change_percent": 3.05,
             "trend": "UP",
             "sparkline": [
                 58.01,
@@ -883,14 +883,14 @@
                 60.34,
                 60.62,
                 59.36,
-                61.13
+                61.25
             ]
         },
         "COPPER": {
             "price": 5.94,
             "prev_price": 5.74,
-            "daily_chg": 3.4,
-            "change_percent": 2.57,
+            "daily_chg": 3.42,
+            "change_percent": 2.6,
             "trend": "UP",
             "sparkline": [
                 5.44,
@@ -920,8 +920,8 @@
         "NATGAS": {
             "price": 3.61,
             "prev_price": 5.05,
-            "daily_chg": -28.46,
-            "change_percent": 16.31,
+            "daily_chg": -28.42,
+            "change_percent": 16.37,
             "trend": "DOWN",
             "sparkline": [
                 3.96,
@@ -950,10 +950,9 @@
         },
         "MOVE": {
             "price": 56.5,
-            "change_percent": -5.13,
+            "change_percent": 0.01,
             "trend": "NORMAL",
             "sparkline": [
-                61.17,
                 59.48,
                 58.5,
                 59.21,
@@ -972,39 +971,39 @@
                 58.05,
                 66.67,
                 59.56,
+                56.5,
                 56.5
             ]
         },
         "BREADTH": {
-            "price": 0.14,
+            "price": 0.23,
             "change_percent": 0.0,
             "trend": "HEALTHY",
             "sparkline": [
                 0.0,
-                0.01,
-                0.05,
-                0.24,
-                0.2,
-                0.09,
-                0.58,
-                0.84,
-                1.47,
-                0.64,
-                1.52,
+                0.04,
+                0.23,
+                0.19,
+                0.07,
+                0.56,
+                0.83,
                 1.45,
-                1.38,
-                1.58,
-                2.55,
-                2.73,
-                2.55,
-                3.06,
-                3.64,
-                3.25,
-                2.68
+                0.63,
+                1.5,
+                1.43,
+                1.37,
+                1.57,
+                2.53,
+                2.71,
+                2.53,
+                3.04,
+                3.62,
+                3.23,
+                2.75
             ]
         },
         "SPY_MOMENTUM": {
-            "price": -0.14,
+            "price": -0.23,
             "change_percent": 0,
             "trend": "BALANCED",
             "sparkline": [
@@ -1106,22 +1105,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS 33 signals a defensive regime as stagnant liquidity and falling small-caps reveal fragility. High real rates of 1.92% drive credit stress and valuation compression. Rising Gold and Yen confirm a safety flight amid systemic fears. Sticky yields and thin breadth mirror past liquidity crises. Prioritize capital preservation.",
+        "content": "GMS 33 signals a defensive regime as stagnant liquidity and falling small-caps reveal fragility. High real rates of 1.92% drive credit stress and valuation compression. Rising Gold and Yen confirm a safety flight amid systemic fears. Sticky yields and thin breadth mirror past liquidity crises. Prioritize capital preservation...",
         "reports": {
-            "JP": "現在のGMSスコア33は完全な防衛局面を示しており、純流動性の停滞と中小型株指数の大幅な下落が市場の脆弱性を露呈させています。プライベートクレジットの崩壊リスクが浮上する中、1.92％という高い実質金利が資本コストを押し上げ、バリュエーションの圧縮を強要しています。円高進行とゴールドの上昇は典型的な安全資産への逃避を反映しており、ドル指数の低下にもかかわらず市場の警戒感は非常に高い水準にあります。10年債利回りが4.26％に固執する一方で、市場の幅広さを欠いた現在の価格形成は過去の流動性枯渇局面と酷似しており注意を要します。モメンタムが低下傾向にあるため、投資家は資本保全を最優先し、シャドーバンキング部門のシステミックリスクを注視すべき局面と言えます。",
-            "EN": "GMS 33 signals a defensive regime as stagnant liquidity and falling small-caps reveal fragility. High real rates of 1.92% drive credit stress and valuation compression. Rising Gold and Yen confirm a safety flight amid systemic fears. Sticky yields and thin breadth mirror past liquidity crises. Prioritize capital preservation.",
-            "CN": "GMS指数33表明市场全面进入防御阶段，流动性停滞与小盘股指数下跌暴露了系统的脆弱性。随着私募信贷风险升温，1.92%的高实际利率正在推高资本成本并被迫令市场进行估值压缩。日元与黄金的走强反映了典型的避险资金流向，尽管美元指数走低，但市场警惕性依然极高。10年期收益率维持在4.26%，而广度指标恶化预示流动性枯竭，这与历史衰退前期高度相似。由于动能持续减弱，投资者应优先保全资本，并严密监控影子银行部门可能出现的连锁反应。",
-            "ES": "GMS 33 indica un régimen defensivo con liquidez estancada y caída de acciones. Tasas reales de 1.92% elevan costos y fuerzan compresión de valor. Oro y yen al alza confirman refugio ante riesgos de crédito. Rendimientos y baja amplitud sugieren agotamiento sistémico. Priorice preservar capital y vigilar la banca en la sombra.",
-            "HI": "जीएमएस 33 रक्षात्मक शासन का संकेत देता है जहां तरलता स्थिर है और छोटे कैप गिर रहे हैं। 1.92% की उच्च वास्तविक दरें पूंजी लागत को बढ़ाती हैं और मूल्यांकन में कमी लाती हैं। सोना और येन में वृद्धि सुरक्षा की उड़ान की पुष्टि करती है। कम चौड़ाई तरलता की थकावट को दर्शाती है। अब पूंजी संरक्षण पर ध्यान दें।",
-            "ID": "Skor GMS 33 menandakan rezim defensif dengan likuiditas stagnan dan saham kecil melemah. Suku bunga riil 1,92% menaikkan biaya modal dan memaksa kompresi valuasi. Kenaikan emas dan yen mencerminkan pelarian ke aset aman. Lebar pasar yang sempit menunjukkan kelelahan likuiditas. Prioritaskan pelestarian modal sekarang.",
-            "AR": "يشير GMS 33 إلى نظام دفاعي مع ركود السيولة وانخفاض الأسهم. ترفع المعدلات الحقيقية بنسبة 1.92% تكاليف رأس المال وتضغط على التقييمات. يعكس ارتفاع الذهب والين الهروب إلى الأمان بسبب مخاطر الائتمان. تشير العوائد وضيق عرض السوق إلى نضوب السيولة. يجب الحفاظ على رأس المال ومراقبة مخاطر الظل بجدية."
+            "JP": "現在のGMSスコア33は完全な防衛局面を示しており、純流動性の停滞と中小型株指数の大幅な下落が市場の脆弱性を露呈させています。プライベートクレジットの崩壊リスクが浮上する中、1.92％という高い実質金利が資本コストを押し上げ、バリュエーションの圧縮を強要しています。円高進行とゴールドの上昇は典型的な安全資産への逃避を反映しており、ドル指数の低下にもかかわらず市場の警戒感は非常に高い水準にあります。10年債利回りが4.26％に固執する一方で、市場の幅広さを欠いた現在の価格形成は過去の流動性枯渇局面と酷似しており注意を要します。モメンタムが低下傾向にあるため、投資家は資本保全を最優先し、シャドーバンキング部門のシステミックリスクを注視すべき局面と言えます。..",
+            "EN": "GMS 33 signals a defensive regime as stagnant liquidity and falling small-caps reveal fragility. High real rates of 1.92% drive credit stress and valuation compression. Rising Gold and Yen confirm a safety flight amid systemic fears. Sticky yields and thin breadth mirror past liquidity crises. Prioritize capital preservation...",
+            "CN": "GMS指数33表明市场全面进入防御阶段，流动性停滞与小盘股指数下跌暴露了系统的脆弱性。随着私募信贷风险升温，1.92%的高实际利率正在推高资本成本并被迫令市场进行估值压缩。日元与黄金的走强反映了典型的避险资金流向，尽管美元指数走低，但市场警惕性依然极高。10年期收益率维持在4.26%，而广度指标恶化预示流动性枯竭，这与历史衰退前期高度相似。由于动能持续减弱，投资者应优先保全资本，并严密监控影子银行部门可能出现的连锁反应。..",
+            "ES": "GMS 33 indica un régimen defensivo con liquidez estancada y caída de acciones. Tasas reales de 1.92% elevan costos y fuerzan compresión de valor. Oro y yen al alza confirman refugio ante riesgos de crédito. Rendimientos y baja amplitud sugieren agotamiento sistémico. Priorice preservar capital y vigilar la banca en la sombra...",
+            "HI": "जीएमएस 33 रक्षात्मक शासन का संकेत देता है जहां तरलता स्थिर है और छोटे कैप गिर रहे हैं। 1.92% की उच्च वास्तविक दरें पूंजी लागत को बढ़ाती हैं और मूल्यांकन में कमी लाती हैं। सोना और येन में वृद्धि सुरक्षा की उड़ान की पुष्टि करती है। कम चौड़ाई तरलता की थकावट को दर्शाती है। अब पूंजी संरक्षण पर ध्यान दें।..",
+            "ID": "Skor GMS 33 menandakan rezim defensif dengan likuiditas stagnan dan saham kecil melemah. Suku bunga riil 1,92% menaikkan biaya modal dan memaksa kompresi valuasi. Kenaikan emas dan yen mencerminkan pelarian ke aset aman. Lebar pasar yang sempit menunjukkan kelelahan likuiditas. Prioritaskan pelestarian modal sekarang...",
+            "AR": "يشير GMS 33 إلى نظام دفاعي مع ركود السيولة وانخفاض الأسهم. ترفع المعدلات الحقيقية بنسبة 1.92% تكاليف رأس المال وتضغط على التقييمات. يعكس ارتفاع الذهب والين الهروب إلى الأمان بسبب مخاطر الائتمان. تشير العوائد وضيق عرض السوق إلى نضوب السيولة. يجب الحفاظ على رأس المال ومراقبة مخاطر الظل بجدية..."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-22T19:51:40Z",
-            "score": 34
-        },
         {
             "date": "2026-01-22T20:40:17Z",
             "score": 33
@@ -1357,6 +1352,10 @@
         {
             "date": "2026-01-23T20:40:24Z",
             "score": 33
+        },
+        {
+            "date": "2026-01-23T21:26:13Z",
+            "score": 32
         }
     ],
     "intelligence": 0.0,
