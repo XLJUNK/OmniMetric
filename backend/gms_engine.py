@@ -437,8 +437,8 @@ def fetch_economic_calendar():
         start_date = datetime.now().strftime("%Y-%m-%d")
         end_date = (datetime.now() + timedelta(days=45)).strftime("%Y-%m-%d")
         
-        # FMP Stable is the current recommended endpoint for Economic Calendar
-        url = f"https://financialmodelingprep.com/stable/economic-calendar?from={start_date}&to={end_date}&apikey={api_key}"
+        # FMP v3 Endpoint (Standard)
+        url = f"https://financialmodelingprep.com/api/v3/economic_calendar?from={start_date}&to={end_date}&apikey={api_key}"
         log_diag(f"[FMP] Fetching calendar from: {url.replace(api_key, 'REDACTED')}")
         response = requests.get(url, timeout=10)
         log_diag(f"[FMP] Response status: {response.status_code}")
@@ -457,7 +457,15 @@ def fetch_economic_calendar():
             log_diag(f"[ERROR] Calendar Fetch Failed (JSON Parse): {e}. Response: {response.text[:100]}")
             return []
             
-        log_diag(f"[FMP] Data items: {len(data) if isinstance(data, list) else 'N/A'}")
+        if isinstance(data, dict) and "Error Message" in data:
+            log_diag(f"[ERROR] Calendar Fetch Failed: API Error: {data['Error Message']}")
+            return []
+            
+        if not isinstance(data, list):
+            log_diag(f"[ERROR] Calendar Fetch Failed: Unexpected format (Not a list). Data: {str(data)[:100]}")
+            return []
+
+        log_diag(f"[FMP] Data items: {len(data)}")
         
         events = []
         if isinstance(data, list):
