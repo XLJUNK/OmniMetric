@@ -1,9 +1,9 @@
 {
-    "last_updated": "2026-01-23T13:08:30Z",
-    "last_successful_update": "2026-01-23T13:08:30Z",
-    "gms_score": 36,
+    "last_updated": "2026-01-23T13:53:07Z",
+    "last_successful_update": "2026-01-23T13:53:07Z",
+    "gms_score": 34,
     "sector_scores": {
-        "STOCKS": 50,
+        "STOCKS": 40,
         "CRYPTO": 25,
         "FOREX": 65,
         "COMMODITIES": 55
@@ -218,10 +218,10 @@
             ]
         },
         "VIX": {
-            "price": 15.75,
+            "price": 15.94,
             "prev_price": 15.64,
-            "daily_chg": 0.7,
-            "change_percent": -0.69,
+            "daily_chg": 1.92,
+            "change_percent": 0.5,
             "trend": "UP",
             "sparkline": [
                 14.08,
@@ -245,7 +245,7 @@
                 20.09,
                 16.9,
                 15.64,
-                15.75
+                15.94
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
@@ -391,13 +391,12 @@
             ]
         },
         "TNX": {
-            "price": 4.25,
+            "price": 4.24,
             "prev_price": 4.25,
-            "daily_chg": -0.09,
-            "change_percent": 2.14,
+            "daily_chg": -0.24,
+            "change_percent": 0.19,
             "trend": "DOWN",
             "sparkline": [
-                4.15,
                 4.17,
                 4.17,
                 4.14,
@@ -418,7 +417,8 @@
                 4.23,
                 4.3,
                 4.25,
-                4.25
+                4.25,
+                4.24
             ]
         },
         "QQQ": {
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 89183.47,
+            "price": 89224.8,
             "prev_price": 89462.45,
-            "daily_chg": -0.31,
-            "change_percent": -3.64,
+            "daily_chg": -0.27,
+            "change_percent": -3.6,
             "trend": "DOWN",
             "sparkline": [
                 89944.7,
@@ -604,14 +604,14 @@
                 88310.91,
                 89376.96,
                 89462.45,
-                89183.47
+                89224.8
             ]
         },
         "ETH": {
-            "price": 2932.62,
+            "price": 2928.7,
             "prev_price": 2949.63,
-            "daily_chg": -0.58,
-            "change_percent": -7.97,
+            "daily_chg": -0.71,
+            "change_percent": -8.09,
             "trend": "DOWN",
             "sparkline": [
                 3124.42,
@@ -635,14 +635,14 @@
                 2935.61,
                 2978.9,
                 2949.63,
-                2932.62
+                2928.7
             ]
         },
         "SOL": {
-            "price": 127.1,
+            "price": 127.02,
             "prev_price": 128.29,
-            "daily_chg": -0.93,
-            "change_percent": -4.68,
+            "daily_chg": -0.99,
+            "change_percent": -4.74,
             "trend": "DOWN",
             "sparkline": [
                 132.13,
@@ -666,13 +666,13 @@
                 125.71,
                 129.38,
                 128.29,
-                127.1
+                127.02
             ]
         },
         "DXY": {
-            "price": 98.3,
+            "price": 98.31,
             "prev_price": 98.36,
-            "daily_chg": -0.06,
+            "daily_chg": -0.05,
             "change_percent": -1.09,
             "trend": "DOWN",
             "sparkline": [
@@ -697,14 +697,14 @@
                 98.64,
                 98.76,
                 98.36,
-                98.3
+                98.31
             ]
         },
         "USDJPY": {
-            "price": 158.19,
+            "price": 158.24,
             "prev_price": 158.46,
-            "daily_chg": -0.17,
-            "change_percent": 0.42,
+            "daily_chg": -0.14,
+            "change_percent": 0.44,
             "trend": "DOWN",
             "sparkline": [
                 156.88,
@@ -728,14 +728,14 @@
                 158.18,
                 158.16,
                 158.46,
-                158.19
+                158.24
             ]
         },
         "EURUSD": {
             "price": 1.17,
             "prev_price": 1.17,
-            "daily_chg": 0.63,
-            "change_percent": 1.05,
+            "daily_chg": 0.57,
+            "change_percent": 0.99,
             "trend": "UP",
             "sparkline": [
                 1.18,
@@ -825,10 +825,10 @@
             ]
         },
         "GOLD": {
-            "price": 4940.8,
+            "price": 4933.9,
             "prev_price": 4908.8,
-            "daily_chg": 0.65,
-            "change_percent": 7.68,
+            "daily_chg": 0.51,
+            "change_percent": 7.53,
             "trend": "UP",
             "sparkline": [
                 4444.6,
@@ -852,14 +852,14 @@
                 4759.6,
                 4831.8,
                 4908.8,
-                4940.8
+                4933.9
             ]
         },
         "OIL": {
-            "price": 60.44,
+            "price": 60.51,
             "prev_price": 59.36,
-            "daily_chg": 1.82,
-            "change_percent": 1.68,
+            "daily_chg": 1.94,
+            "change_percent": 1.8,
             "trend": "UP",
             "sparkline": [
                 58.01,
@@ -883,14 +883,14 @@
                 60.34,
                 60.62,
                 59.36,
-                60.44
+                60.51
             ]
         },
         "COPPER": {
-            "price": 5.93,
+            "price": 5.89,
             "prev_price": 5.74,
-            "daily_chg": 3.31,
-            "change_percent": 2.49,
+            "daily_chg": 2.59,
+            "change_percent": 1.77,
             "trend": "UP",
             "sparkline": [
                 5.44,
@@ -914,14 +914,14 @@
                 5.77,
                 5.73,
                 5.74,
-                5.93
+                5.89
             ]
         },
         "NATGAS": {
-            "price": 3.5,
+            "price": 3.58,
             "prev_price": 5.05,
-            "daily_chg": -30.64,
-            "change_percent": 12.76,
+            "daily_chg": -29.08,
+            "change_percent": 15.31,
             "trend": "DOWN",
             "sparkline": [
                 3.96,
@@ -945,7 +945,7 @@
                 3.91,
                 4.88,
                 5.05,
-                3.5
+                3.58
             ]
         },
         "MOVE": {
@@ -1041,40 +1041,40 @@
             ]
         },
         "COPPER_GOLD": {
-            "price": 1.2,
+            "price": 1.19,
             "change_percent": 0,
             "trend": "RISK-OFF",
             "sparkline": [
-                1.2,
-                1.2,
-                1.2,
-                1.2,
-                1.2,
-                1.2,
-                1.2,
-                1.2,
-                1.2,
-                1.2,
-                1.2,
-                1.2,
-                1.2,
-                1.2,
-                1.2,
-                1.2,
-                1.2,
-                1.2,
-                1.2,
-                1.2,
-                1.2,
-                1.2,
-                1.2,
-                1.2,
-                1.2,
-                1.2,
-                1.2,
-                1.2,
-                1.2,
-                1.2
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19
             ]
         }
     },
@@ -1106,22 +1106,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "While Treasury yields remain stable, a slight VIX increase coupled with rising oil prices is heightening market uncertainty. As US monetary tightening persists, the narrowing gap between nominal and real interest rates is increasing corporate borrowing costs. Tightening HY spreads suggest risk appetite, but lackluster liquidity growth warrants caution. The rise in copper prices reflects global recovery hopes, while the steep drop in natural gas prices reveals energy market instability. The market continues to trade around a GMS score of 36, suggesting a lack of clear direction.",
+        "content": "With a rising VIX and slightly increasing Net Liquidity, the market remains in defensive territory with a GMS score of 34. The yield spread is stable, but tightening HY spreads suggest a slight shift in risk appetite. Rising oil prices hint at inflationary pressures, potentially influencing the Fed's policy. Nominal rates reflect real rates and expected inflation, while breakeven inflation remains stable. These factors combined heighten volatility and uncertainty in equity markets.",
         "reports": {
-            "JP": "米国債利回りは安定していますが、小幅なVIX上昇と原油価格の上昇が重なり、市場の不確実性を高めています。米国の金融引き締め政策が続く中、名目金利と実質金利の差が縮小し、企業の資金調達コストが増加しています。ハイイールド債のスプレッド縮小は、リスク選好の兆候を示唆しますが、流動性の伸び悩みは警戒感も必要です。銅価格の上昇は、世界経済の回復期待を反映していますが、天然ガス価格の急落はエネルギー市場の不安定性を示しています。市場は引き続きGMSスコア36で推移しており、方向感に欠ける展開が予想されます。",
-            "EN": "While Treasury yields remain stable, a slight VIX increase coupled with rising oil prices is heightening market uncertainty. As US monetary tightening persists, the narrowing gap between nominal and real interest rates is increasing corporate borrowing costs. Tightening HY spreads suggest risk appetite, but lackluster liquidity growth warrants caution. The rise in copper prices reflects global recovery hopes, while the steep drop in natural gas prices reveals energy market instability. The market continues to trade around a GMS score of 36, suggesting a lack of clear direction.",
-            "CN": "尽管美国国债收益率保持稳定，但VIX略有上升以及石油价格上涨加剧了市场不确定性。随着美国货币紧缩政策的持续，名义利率与实际利率之间的差距缩小，增加了企业借贷成本。高收益债券利差收窄表明风险偏好，但流动性增长乏力需要谨慎。铜价上涨反映了全球经济复苏的希望，而天然气价格的急剧下跌则揭示了能源市场的不稳定性。市场继续在GMS评分36左右波动，表明缺乏明确的方向。",
-            "ES": "Aunque los rendimientos de los bonos del Tesoro se mantienen estables, un ligero aumento en el VIX, junto con el alza en los precios del petróleo, está intensificando la incertidumbre del mercado. A medida que persiste el ajuste monetario en EE. UU., la brecha cada vez menor entre las tasas de interés nominales y reales está incrementando los costos de endeudamiento corporativo. La reducción de los diferenciales de los bonos de alto rendimiento sugiere apetito por el riesgo, pero el escaso crecimiento de la liquidez exige cautela. El aumento en los precios del cobre refleja las esperanzas de recuperación global, mientras que la fuerte caída en los precios del gas natural revela inestabilidad en el mercado energético. El mercado continúa cotizando en torno a una puntuación GMS de 36, lo que sugiere una falta de dirección clara.",
-            "HI": "राजकोषीय पैदावार स्थिर रहने के बावजूद, वीआईएक्स में मामूली वृद्धि के साथ तेल की कीमतों में बढ़ोतरी बाजार की अनिश्चितता को बढ़ा रही है। अमेरिका की मौद्रिक सख्ती जारी रहने से, नाममात्र और वास्तविक ब्याज दरों के बीच का अंतर कम हो रहा है, जिससे कॉर्पोरेट उधार लागत बढ़ रही है। उच्च उपज बांडों का कम होता प्रसार जोखिम भूख का सुझाव देता है, लेकिन नकदी की सुस्त वृद्धि सावधानी बरतने का संकेत देती है। तांबे की कीमतों में वृद्धि वैश्विक सुधार की उम्मीदों को दर्शाती है, जबकि प्राकृतिक गैस की कीमतों में भारी गिरावट ऊर्जा बाजार की अस्थिरता को उजागर करती है। बाजार जीएमएस स्कोर 36 के आसपास कारोबार करना जारी रखता है, जो स्पष्ट दिशा की कमी का सुझाव देता है।",
-            "ID": "Meskipun imbal hasil Treasury tetap stabil, sedikit peningkatan VIX ditambah dengan kenaikan harga minyak meningkatkan ketidakpastian pasar. Seiring berlanjutnya pengetatan moneter AS, menyempitnya kesenjangan antara suku bunga nominal dan riil meningkatkan biaya pinjaman perusahaan. Penyempitan spread HY menunjukkan selera risiko, tetapi pertumbuhan likuiditas yang kurang memuaskan memerlukan kehati-hatian. Kenaikan harga tembaga mencerminkan harapan pemulihan global, sementara penurunan tajam harga gas alam mengungkapkan ketidakstabilan pasar energi. Pasar terus diperdagangkan di sekitar skor GMS 36, menunjukkan kurangnya arah yang jelas.",
-            "AR": "بينما تظل عوائد سندات الخزانة مستقرة، فإن الزيادة الطفيفة في مؤشر VIX جنبًا إلى جنب مع ارتفاع أسعار النفط تزيد من حالة عدم اليقين في السوق. مع استمرار التشديد النقدي في الولايات المتحدة، فإن الفجوة المتضائلة بين أسعار الفائدة الاسمية والحقيقية تزيد من تكاليف الاقتراض للشركات. يشير تضييق فروق عائدات السندات عالية المخاطر إلى الإقبال على المخاطرة، لكن النمو الباهت للسيولة يستدعي الحذر. يعكس الارتفاع في أسعار النحاس آمال الانتعاش العالمي، بينما يكشف الانخفاض الحاد في أسعار الغاز الطبيعي عن عدم الاستقرار في سوق الطاقة. يستمر السوق في التداول حول درجة GMS البالغة 36، مما يشير إلى نقص في التوجه الواضح."
+            "JP": "VIXが上昇し、ネット流動性がわずかに増加する中、市場はGMSスコア34で防衛的な領域に留まっています。イールドスプレッドは安定していますが、ハイイールド債のスプレッドは縮小しており、リスク選好にわずかな変化が見られます。原油価格の上昇はインフレ圧力を示唆し、FRBの政策に影響を与える可能性があります。名目金利は実質金利と予想インフレ率を反映していますが、ブレークイーブンインフレ率は安定しています。これらの要因が組み合わさり、株式市場の変動性と不確実性を高めています。",
+            "EN": "With a rising VIX and slightly increasing Net Liquidity, the market remains in defensive territory with a GMS score of 34. The yield spread is stable, but tightening HY spreads suggest a slight shift in risk appetite. Rising oil prices hint at inflationary pressures, potentially influencing the Fed's policy. Nominal rates reflect real rates and expected inflation, while breakeven inflation remains stable. These factors combined heighten volatility and uncertainty in equity markets.",
+            "CN": "随着VIX上升和净流动性略有增加，市场GMS评分维持在34，仍处于防御区域。收益率差保持稳定，但高收益债券利差收窄表明风险偏好略有转变。石油价格上涨暗示通胀压力，可能影响美联储政策。名义利率反映实际利率和预期通胀，盈亏平衡通胀率保持稳定。这些因素共同加剧了股票市场的波动性和不确定性。",
+            "ES": "Con un VIX en aumento y una ligera subida en la liquidez neta, el mercado se mantiene en terreno defensivo con una puntuación GMS de 34. El diferencial de rendimiento es estable, pero el estrechamiento de los diferenciales de alto rendimiento sugiere un ligero cambio en el apetito por el riesgo. El alza de los precios del petróleo apunta a presiones inflacionarias, que podrían influir en la política de la Fed. Las tasas nominales reflejan las tasas reales y la inflación esperada, mientras que la inflación de equilibrio se mantiene estable. Estos factores combinados aumentan la volatilidad y la incertidumbre en los mercados de valores.",
+            "HI": "बढ़ते VIX और थोड़ी बढ़ती नेट लिक्विडिटी के साथ, बाजार 34 के GMS स्कोर के साथ रक्षात्मक क्षेत्र में बना हुआ है। यील्ड स्प्रेड स्थिर है, लेकिन सिकुड़ते HY स्प्रेड जोखिम की भूख में थोड़ा बदलाव दिखाते हैं। बढ़ते तेल की कीमतें मुद्रास्फीति के दबाव का संकेत देती हैं, जो संभावित रूप से फेड की नीति को प्रभावित कर सकती हैं। नाममात्र दरें वास्तविक दरों और अपेक्षित मुद्रास्फीति को दर्शाती हैं, जबकि ब्रेकइवन मुद्रास्फीति स्थिर बनी हुई है। ये कारक मिलकर इक्विटी बाजारों में अस्थिरता और अनिश्चितता को बढ़ाते हैं।",
+            "ID": "Dengan VIX yang meningkat dan Net Likuiditas yang sedikit meningkat, pasar tetap berada di wilayah defensif dengan skor GMS 34. Selisih yield stabil, tetapi penyempitan selisih HY menunjukkan sedikit pergeseran dalam selera risiko. Kenaikan harga minyak mengisyaratkan tekanan inflasi, yang berpotensi memengaruhi kebijakan The Fed. Tingkat nominal mencerminkan tingkat riil dan perkiraan inflasi, sementara inflasi impas tetap stabil. Faktor-faktor ini bersama-sama meningkatkan volatilitas dan ketidakpastian di pasar ekuitas.",
+            "AR": "مع ارتفاع مؤشر فيكس وزيادة طفيفة في صافي السيولة، تظل السوق في منطقة دفاعية مع تسجيل مؤشر إدارة الأصول العالمية 34 نقطة. يظل فارق العائد مستقرًا، لكن تضييق فروق عائدات السندات عالية المخاطر يشير إلى تحول طفيف في الإقبال على المخاطرة. يشير ارتفاع أسعار النفط إلى ضغوط تضخمية، مما قد يؤثر على سياسة الاحتياطي الفيدرالي. تعكس المعدلات الاسمية المعدلات الحقيقية والتضخم المتوقع، في حين يظل التضخم التعادلي مستقرًا. وتزيد هذه العوامل مجتمعة من التقلبات وعدم اليقين في أسواق الأسهم."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-21T14:20:59Z",
-            "score": 26
-        },
         {
             "date": "2026-01-22T06:55:39Z",
             "score": 32
@@ -1357,43 +1353,12 @@
         {
             "date": "2026-01-23T13:08:30Z",
             "score": 36
+        },
+        {
+            "date": "2026-01-23T13:53:07Z",
+            "score": 34
         }
     ],
-    "intelligence": {
-        "news": [
-            {
-                "title": "Stock futures slip as Wall Street takes a breath after two-day rally: Live updates",
-                "link": "https://www.cnbc.com/2026/01/22/stock-market-today-live-updates.html",
-                "isoDate": "2026-01-23T12:47:59Z"
-            },
-            {
-                "title": "Wall Street braced for a private credit meltdown. The risk of one is rising",
-                "link": "https://www.cnbc.com/2026/01/23/wall-street-private-credit-risk-rising.html",
-                "isoDate": "2026-01-23T12:48:57Z"
-            },
-            {
-                "title": "What obesity drugmakers see next in the market: More pills, easier access and drug combinations",
-                "link": "https://www.cnbc.com/2026/01/23/weight-loss-glp-1-drugs-next-steps-for-eli-lilly-novo-nordisk-pfizer.html",
-                "isoDate": "2026-01-23T12:50:24Z"
-            },
-            {
-                "title": "Stocks making the biggest moves premarket: Intel, Nvidia, Life360, Capital One & more",
-                "link": "https://www.cnbc.com/2026/01/23/stocks-making-the-biggest-moves-premarket-intc-nvda-slm-cof.html",
-                "isoDate": "2026-01-23T12:58:13Z"
-            },
-            {
-                "title": "Intel’s earnings beat couldn’t offset a weaker-than-expected outlook. Here’s what analysts are saying",
-                "link": "https://www.cnbc.com/2026/01/23/intels-earnings-beat-couldnt-offset-a-weaker-than-expected-outlook-heres-what-analysts-are-saying.html",
-                "isoDate": "2026-01-23T12:47:16Z"
-            },
-            {
-                "title": "Trump withdraws 'Board of Peace' invitation to Carney in widening rift with Canada",
-                "link": "https://www.cnbc.com/2026/01/23/trump-withdraws-board-of-peace-invitation-to-carney-in-widening-rift-with-canada.html",
-                "isoDate": "2026-01-23T12:54:41Z"
-            }
-        ],
-        "translations": {},
-        "last_updated": "2026-01-23T13:08:30.630916Z"
-    },
+    "intelligence": 0.0,
     "system_status": "OPERATIONAL"
 }
