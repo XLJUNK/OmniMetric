@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-01-23T00:18:33Z",
-    "last_successful_update": "2026-01-23T00:18:33Z",
+    "last_updated": "2026-01-23T00:27:39Z",
+    "last_successful_update": "2026-01-23T00:27:39Z",
     "gms_score": 35,
     "sector_scores": {
         "STOCKS": 50,
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 89435.6,
+            "price": 89518.27,
             "prev_price": 89376.96,
-            "daily_chg": 0.07,
-            "change_percent": -4.48,
+            "daily_chg": 0.16,
+            "change_percent": -4.4,
             "trend": "UP",
             "sparkline": [
                 88731.98,
@@ -604,14 +604,14 @@
                 92553.59,
                 88310.91,
                 89376.96,
-                89435.6
+                89518.27
             ]
         },
         "ETH": {
-            "price": 2949.4,
+            "price": 2949.98,
             "prev_price": 2978.9,
-            "daily_chg": -0.99,
-            "change_percent": -10.11,
+            "daily_chg": -0.97,
+            "change_percent": -10.09,
             "trend": "DOWN",
             "sparkline": [
                 3000.39,
@@ -635,14 +635,14 @@
                 3186.62,
                 2935.61,
                 2978.9,
-                2949.4
+                2949.98
             ]
         },
         "SOL": {
-            "price": 128.26,
+            "price": 128.25,
             "prev_price": 129.38,
-            "daily_chg": -0.86,
-            "change_percent": -7.05,
+            "daily_chg": -0.87,
+            "change_percent": -7.06,
             "trend": "DOWN",
             "sparkline": [
                 126.76,
@@ -666,7 +666,7 @@
                 133.34,
                 125.71,
                 129.38,
-                128.26
+                128.25
             ]
         },
         "DXY": {
@@ -701,10 +701,10 @@
             ]
         },
         "USDJPY": {
-            "price": 158.48,
+            "price": 158.47,
             "prev_price": 158.46,
-            "daily_chg": 0.02,
-            "change_percent": 0.6,
+            "daily_chg": 0.01,
+            "change_percent": 0.59,
             "trend": "UP",
             "sparkline": [
                 156.88,
@@ -728,14 +728,14 @@
                 158.18,
                 158.16,
                 158.46,
-                158.48
+                158.47
             ]
         },
         "EURUSD": {
             "price": 1.18,
             "prev_price": 1.17,
-            "daily_chg": 0.69,
-            "change_percent": 1.11,
+            "daily_chg": 0.7,
+            "change_percent": 1.12,
             "trend": "UP",
             "sparkline": [
                 1.18,
@@ -825,10 +825,10 @@
             ]
         },
         "GOLD": {
-            "price": 4960.5,
+            "price": 4957.7,
             "prev_price": 4831.8,
-            "daily_chg": 2.66,
-            "change_percent": 7.46,
+            "daily_chg": 2.61,
+            "change_percent": 7.4,
             "trend": "UP",
             "sparkline": [
                 4361.4,
@@ -852,14 +852,14 @@
                 4588.4,
                 4759.6,
                 4831.8,
-                4960.5
+                4957.7
             ]
         },
         "OIL": {
-            "price": 59.6,
+            "price": 59.63,
             "prev_price": 60.62,
-            "daily_chg": -1.68,
-            "change_percent": 0.69,
+            "daily_chg": -1.63,
+            "change_percent": 0.74,
             "trend": "DOWN",
             "sparkline": [
                 56.66,
@@ -883,14 +883,14 @@
                 59.44,
                 60.34,
                 60.62,
-                59.6
+                59.63
             ]
         },
         "COPPER": {
             "price": 5.81,
             "prev_price": 5.73,
-            "daily_chg": 1.39,
-            "change_percent": -2.34,
+            "daily_chg": 1.37,
+            "change_percent": -2.35,
             "trend": "UP",
             "sparkline": [
                 5.44,
@@ -918,10 +918,10 @@
             ]
         },
         "NATGAS": {
-            "price": 4.91,
+            "price": 4.94,
             "prev_price": 4.88,
-            "daily_chg": 0.8,
-            "change_percent": 57.1,
+            "daily_chg": 1.42,
+            "change_percent": 58.06,
             "trend": "UP",
             "sparkline": [
                 3.98,
@@ -945,7 +945,7 @@
                 3.1,
                 3.91,
                 4.88,
-                4.91
+                4.94
             ]
         },
         "MOVE": {
@@ -1106,22 +1106,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "Despite a lower VIX suggesting market stability, the GMS score remains at 35, indicating continued risk aversion. Declining oil prices contribute to easing inflation, while rising copper prices signal increased economic activity. The US 10-year yield is stable at 4.26%, but the real interest rate remains high at 1.92%. USDJPY is elevated at 158.48, raising concerns about corporate earnings. The Fed's inflation gauge at 2.8% misses targets, impacting monetary policy.",
+        "content": "Despite the VIX decline and lower oil prices, rising copper suggests persistent inflation, potentially delaying the Fed's pivot. Real rates exceeding nominal GDP growth exert downward pressure on risk assets, especially high P/E stocks. Stable yield spreads mitigate recession risk but signal prolonged tightening. Slight net liquidity increase supports market stability, yet a GMS score of 35 warrants caution. Gold's rise reflects safety flight and inflation hedge demand.",
         "reports": {
-            "JP": "VIXの低下は市場の安定を示唆するも、GMSスコアは依然として35でリスク回避姿勢が継続。原油価格の下落はインフレ緩和に寄与する一方、銅価格の上昇は経済活動の活発化を示唆。米10年債利回りは4.26%で安定も、実質金利は1.92%と高水準を維持。ドル円は158.48と高止まり、企業収益への影響が懸念される。FEDのインフレ指標は2.8%と目標を下回り、金融政策への影響が注目される。",
-            "EN": "Despite a lower VIX suggesting market stability, the GMS score remains at 35, indicating continued risk aversion. Declining oil prices contribute to easing inflation, while rising copper prices signal increased economic activity. The US 10-year yield is stable at 4.26%, but the real interest rate remains high at 1.92%. USDJPY is elevated at 158.48, raising concerns about corporate earnings. The Fed's inflation gauge at 2.8% misses targets, impacting monetary policy.",
-            "CN": "尽管VIX指数下降表明市场趋于稳定，但GMS评分仍为35，表明市场持续规避风险。油价下跌有助于缓解通货膨胀，而铜价上涨则表明经济活动增加。美国10年期国债收益率稳定在4.26%，但实际利率仍维持在1.92%的高位。美元兑日元汇率维持在158.48的高位，引发了对企业盈利的担忧。美联储的通胀指标为2.8%，未达到目标，影响货币政策。",
-            "ES": "A pesar de que un VIX más bajo sugiere estabilidad del mercado, el puntaje GMS se mantiene en 35, lo que indica una continua aversión al riesgo. La caída de los precios del petróleo contribuye a aliviar la inflación, mientras que el aumento de los precios del cobre señala una mayor actividad económica. El rendimiento del Tesoro de EE. UU. a 10 años se mantiene estable en 4.26%, pero la tasa de interés real sigue siendo alta en 1.92%. El USDJPY es alto en 158.48, lo que genera preocupaciones sobre las ganancias corporativas. El indicador de inflación de la Fed en 2.8% no cumple los objetivos, impactando la política monetaria.",
-            "HI": "कम वीआईएक्स बाजार स्थिरता का सुझाव दे रहा है, फिर भी जीएमएस स्कोर 35 पर है, जो निरंतर जोखिम से बचने का संकेत देता है। तेल की कीमतों में गिरावट से मुद्रास्फीति को कम करने में मदद मिलती है, जबकि तांबे की कीमतों में वृद्धि से आर्थिक गतिविधि बढ़ने का संकेत मिलता है। अमेरिकी 10-वर्षीय उपज 4.26% पर स्थिर है, लेकिन वास्तविक ब्याज दर 1.92% पर उच्च बनी हुई है। यूएसडीजेपीवाई 158.48 पर ऊंचा है, जिससे कॉर्पोरेट आय के बारे में चिंताएं बढ़ रही हैं। फेड का मुद्रास्फीति गेज 2.8% पर लक्ष्यों से चूक गया, जिससे मौद्रिक नीति प्रभावित हुई।",
-            "ID": "Meskipun VIX yang lebih rendah menunjukkan stabilitas pasar, skor GMS tetap di 35, mengindikasikan penghindaran risiko yang berkelanjutan. Penurunan harga minyak berkontribusi pada pelonggaran inflasi, sementara kenaikan harga tembaga menandakan peningkatan aktivitas ekonomi. Imbal hasil obligasi AS 10 tahun stabil di 4.26%, tetapi suku bunga riil tetap tinggi di 1.92%. USDJPY tinggi di 158.48, meningkatkan kekhawatiran tentang pendapatan perusahaan. Pengukur inflasi The Fed di 2.8% meleset dari target, memengaruhi kebijakan moneter.",
-            "AR": "على الرغم من أن مؤشر فيكس الأقل يشير إلى استقرار السوق، إلا أن درجة GMS لا تزال عند 35، مما يشير إلى استمرار النفور من المخاطرة. انخفاض أسعار النفط يساهم في تخفيف التضخم، في حين أن ارتفاع أسعار النحاس يشير إلى زيادة النشاط الاقتصادي. استقرار عائد السندات الأمريكية لأجل 10 سنوات عند 4.26٪، لكن سعر الفائدة الحقيقي لا يزال مرتفعا عند 1.92٪. ارتفاع الدولار الأمريكي مقابل الين الياباني عند 158.48، مما يثير مخاوف بشأن أرباح الشركات. مقياس التضخم الصادر عن بنك الاحتياطي الفيدرالي عند 2.8٪ يبتعد عن الأهداف، مما يؤثر على السياسة النقدية."
+            "JP": "VIXの低下と原油安にもかかわらず、銅価格の上昇はインフレ圧力の持続を示唆し、FRBの金融政策転換を遅らせる可能性があります。名目GDP成長率を上回る実質金利は、リスク資産への下方圧力を増大させ、特に高PER株のバリュエーションを抑制します。イールドスプレッドの安定は、景気後退リスクを緩和する一方、金融引き締め政策の長期化を示唆します。ネット流動性のわずかな増加は、市場の安定を支えますが、GMSスコアが35であることから、依然として慎重な姿勢が求められます。金価格の上昇は、安全資産への逃避とインフレヘッジの需要を反映しています。",
+            "EN": "Despite the VIX decline and lower oil prices, rising copper suggests persistent inflation, potentially delaying the Fed's pivot. Real rates exceeding nominal GDP growth exert downward pressure on risk assets, especially high P/E stocks. Stable yield spreads mitigate recession risk but signal prolonged tightening. Slight net liquidity increase supports market stability, yet a GMS score of 35 warrants caution. Gold's rise reflects safety flight and inflation hedge demand.",
+            "CN": "尽管VIX下降和油价下跌，铜价上涨表明通胀持续，可能推迟美联储的转向。实际利率超过名义GDP增长对风险资产构成下行压力，尤其是高市盈率股票。稳定的收益率利差缓解了经济衰退风险，但也预示着紧缩政策将持续。净流动性的略微增加支持了市场稳定，但GMS评分为35表明仍需谨慎。黄金的上涨反映了避险需求和对冲通胀的需求。",
+            "ES": "A pesar de la caída del VIX y los precios más bajos del petróleo, el aumento del cobre sugiere una inflación persistente, lo que podría retrasar el giro de la Fed. Las tasas reales que superan el crecimiento del PIB nominal ejercen presión a la baja sobre los activos de riesgo, especialmente las acciones con PER altos. Los diferenciales de rendimiento estables mitigan el riesgo de recesión, pero señalan un ajuste prolongado. El ligero aumento de la liquidez neta apoya la estabilidad del mercado, pero una puntuación GMS de 35 justifica la cautela. El alza del oro refleja la demanda de refugio seguro y la cobertura contra la inflación.",
+            "HI": "VIX में गिरावट और तेल की कीमतों में कमी के बावजूद, बढ़ती हुई तांबे की कीमतें निरंतर मुद्रास्फीति का संकेत देती हैं, जो फेड के धुरी को संभावित रूप से विलंबित कर सकती हैं। नाममात्र जीडीपी विकास से अधिक वास्तविक दरें जोखिम वाली परिसंपत्तियों पर नीचे की ओर दबाव डालती हैं, विशेष रूप से उच्च पी/ई स्टॉक। स्थिर उपज स्प्रेड मंदी के जोखिम को कम करते हैं लेकिन लंबे समय तक कसने का संकेत देते हैं। मामूली शुद्ध तरलता वृद्धि बाजार की स्थिरता का समर्थन करती है, फिर भी 35 का GMS स्कोर सावधानी बरतने का वारंट करता है। सोने में वृद्धि सुरक्षा उड़ान और मुद्रास्फीति बचाव की मांग को दर्शाती है।",
+            "ID": "Meskipun VIX menurun dan harga minyak lebih rendah, kenaikan tembaga menunjukkan inflasi yang berkelanjutan, yang berpotensi menunda pivot The Fed. Tingkat riil yang melebihi pertumbuhan PDB nominal memberikan tekanan ke bawah pada aset berisiko, terutama saham P/E tinggi. Spread imbal hasil yang stabil mengurangi risiko resesi, tetapi menandakan pengetatan yang berkepanjangan. Kenaikan likuiditas bersih yang sedikit mendukung stabilitas pasar, tetapi skor GMS sebesar 35 memerlukan kehati-hatian. Kenaikan emas mencerminkan permintaan safe haven dan lindung nilai inflasi.",
+            "AR": "على الرغم من انخفاض مؤشر VIX وانخفاض أسعار النفط، يشير ارتفاع النحاس إلى تضخم مستمر، مما قد يؤخر تحول بنك الاحتياطي الفيدرالي. تمارس المعدلات الحقيقية التي تتجاوز نمو الناتج المحلي الإجمالي الاسمي ضغطًا هبوطيًا على الأصول الخطرة، وخاصةً الأسهم ذات السعر إلى العائد المرتفع. تعمل فروق العائد المستقرة على تخفيف خطر الركود ولكنها تشير إلى تشديد مطول. تدعم الزيادة الطفيفة في السيولة الصافية استقرار السوق، لكن درجة GMS البالغة 35 تبرر الحذر. يعكس ارتفاع الذهب الإقبال على الملاذ الآمن والطلب على التحوط من التضخم."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-20T05:41:01Z",
-            "score": 29
-        },
         {
             "date": "2026-01-20T06:54:01Z",
             "score": 29
@@ -1356,6 +1352,10 @@
         },
         {
             "date": "2026-01-23T00:18:33Z",
+            "score": 35
+        },
+        {
+            "date": "2026-01-23T00:27:39Z",
             "score": 35
         }
     ],
