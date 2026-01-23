@@ -1051,43 +1051,56 @@ Output JSON:
                     # Define required languages
                     required = ["JP", "EN", "CN", "ES", "HI", "ID", "AR"]
 
-                    # Robust extraction: look for any JSON pattern in output
-                    matches = list(re.finditer(r'\{"text":\s*"(.*?)"\}', stdout_content, re.DOTALL))
-                if matches:
+                    
+                    # Robust JSON Extraction (Replaces fragile Regex)
                     try:
-                        match = matches[-1] # Take last match to avoid logging clutter
-                        inner_text = match.group(1).replace('\\"', '"').replace('\\n', '\n')
-                        if "```json" in inner_text:
-                            inner_text = inner_text.split("```json")[1].split("```")[0].strip()
-                        elif "```" in inner_text:
-                            inner_text = inner_text.split("```")[1].split("```")[0].strip()
-                        
-                        reports = json.loads(inner_text)
-                        if all(lang in reports for lang in required):
-                            # SANITIZE & VALIDATE LENGTH
-                            valid = True
-                            for k, v in reports.items():
-                                sanitized = sanitize_insight_text(v)
-                                reports[k] = sanitized
-                                if len(sanitized) < 100:
-                                    log_diag(f"[AI GUARD] {k} Report too short ({len(sanitized)} chars). Rejecting batch.")
-                                    valid = False
-                                    break
+                        # 1. Clean Output (Remove dotenv noise)
+                        lines = stdout_content.splitlines()
+                        clean_lines = [line for line in lines if not line.strip().startswith("[") and not line.strip().startswith("Note:")]
+                        clean_stdout = "\n".join(clean_lines)
+
+                        # 2. Find JSON boundaries
+                        json_start = clean_stdout.find('{')
+                        json_end = clean_stdout.rfind('}') + 1
+
+                        if json_start != -1 and json_end > json_start:
+                            final_json_str = clean_stdout[json_start:json_end]
+                            wrapper = json.loads(final_json_str)
                             
-                            if valid:
-                                log_diag("[AI SUCCESS] Reports parsed and validated.")
-                                return reports
-                            else:
-                                log_diag("[AI FAIL] Validation failed (Quality Guard). Using Fallback.")
-                                valid_cache = get_last_valid_analysis()
-                                if valid_cache:
-                                    log_diag("[SMART CACHE] Using cached analysis due to Validation Failure.")
-                                    return valid_cache
-                                return FALLBACK_STATUS
+                            if "text" in wrapper:
+                                inner_text = wrapper["text"]
+                                # Clean markdown code blocks if present
+                                if "```json" in inner_text:
+                                    inner_text = inner_text.split("```json")[1].split("```")[0].strip()
+                                elif "```" in inner_text:
+                                    inner_text = inner_text.split("```")[1].split("```")[0].strip()
+                                
+                                reports = json.loads(inner_text)
+                                if all(lang in reports for lang in required):
+                                    # SANITIZE & VALIDATE LENGTH (Existing logic)
+                                    valid = True
+                                    for k, v in reports.items():
+                                        sanitized = sanitize_insight_text(v)
+                                        reports[k] = sanitized
+                                        if len(sanitized) < 100:
+                                            log_diag(f"[AI GUARD] {k} Report too short ({len(sanitized)} chars). Rejecting batch.")
+                                            valid = False
+                                            break
+                                    
+                                    if valid:
+                                        log_diag("[AI SUCCESS] Reports parsed and validated via Bridge.")
+                                        return reports
+                                    else:
+                                        log_diag("[AI FAIL] Validation failed (Quality Guard). Using Fallback.")
+                                        valid_cache = get_last_valid_analysis()
+                                        if valid_cache:
+                                            return valid_cache
+                                        return FALLBACK_STATUS
+                        else:
+                            log_diag(f"[AI ERROR] No JSON braces found in cleaned output.")
+
                     except Exception as e:
-                        log_diag(f"[AI ERROR] JSON parse failed: {e}")
-                else:
-                    log_diag(f"[AI ERROR] JSON pattern not found in output. Start of output: {stdout_content[:100]}...")
+                        log_diag(f"[AI ERROR] Bridge JSON parse failed: {e}")
             else:
                 log_diag(f"[AI BRIDGE FAIL] Final Exit Code {process.returncode}")
                 if process.stderr:
