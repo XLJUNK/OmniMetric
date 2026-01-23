@@ -46,16 +46,34 @@ export async function GET(request: Request) {
         }
 
         let fontOptions = {};
+
+        // Timeout Wrapper
+        const fetchWithTimeout = (url: string, ms: number) => {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), ms);
+            return fetch(url, { signal: controller.signal })
+                .then(res => { clearTimeout(timeoutId); return res; })
+                .catch(err => { clearTimeout(timeoutId); throw err; });
+        };
+
         try {
-            const fontData = await fetch(new URL(fontUrl)).then((res) => res.arrayBuffer());
-            if (fontData.byteLength > 0) {
-                const fontName = fontFamily.split('"')[1];
-                fontOptions = {
-                    fonts: [{ name: fontName, data: fontData, style: 'normal', weight: 700 }]
-                };
+            // 3000ms Timeout to prevent Edge Function Freeze
+            const response = await fetchWithTimeout(fontUrl, 3000);
+            if (response.ok) {
+                const fontData = await response.arrayBuffer();
+                if (fontData.byteLength > 0) {
+                    const fontName = fontFamily.split('"')[1];
+                    fontOptions = {
+                        fonts: [{ name: fontName, data: fontData, style: 'normal', weight: 700 }]
+                    };
+                }
+            } else {
+                console.warn(`Font fetch failed: ${response.status}`);
+                fontFamily = 'sans-serif'; // Fallback
             }
         } catch (e) {
-            console.warn(`Font load failed for ${lang}`, e);
+            console.warn(`Font load Exception for ${lang}:`, e);
+            fontFamily = 'sans-serif'; // Fallback
         }
 
         return new ImageResponse(
