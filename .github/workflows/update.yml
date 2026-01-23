@@ -58,12 +58,6 @@ jobs:
           
           # PATH DEBUGGING
           echo "Current Directory: $(pwd)"
-          echo "Listing root:"
-          ls -F
-          echo "Listing backend:"
-          ls -F backend/
-          echo "Listing frontend/scripts:"
-          ls -F frontend/scripts/
           
           python backend/gms_engine.py
           
@@ -73,7 +67,11 @@ jobs:
           # SKILL COMPLIANCE CHECK (Blocks commit if failed)
           python scripts/verify_skills.py
           
-          git add backend/current_signal.json backend/history.json backend/archive/*.json backend/sns_status.json backend/sns_last_post.json
+          # FRONTEND SYNC: Copy signal to frontend/data for import
+          mkdir -p frontend/data
+          cp backend/current_signal.json frontend/data/current_signal.json
+          
+          git add backend/current_signal.json backend/history.json backend/archive/*.json backend/sns_status.json backend/sns_last_post.json frontend/data/current_signal.json
           git commit -m "Auto-update market signal [bot]" || echo "No changes to commit"
           git push origin main
           
