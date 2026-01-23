@@ -76,6 +76,12 @@ jobs:
           git add backend/current_signal.json backend/history.json backend/archive/*.json backend/sns_status.json backend/sns_last_post.json
           git commit -m "Auto-update market signal [bot]" || echo "No changes to commit"
           git push origin main
+          
+          # VISIBILITY: Always show logs
+          echo "=== NEWS DEBUG LOG ==="
+          cat backend/news_debug.log || echo "No news log found"
+          echo "=== ENGINE LOG ==="
+          cat backend/engine_log.txt || echo "No engine log found"
 
       - name: Ping IndexNow
         if: success()

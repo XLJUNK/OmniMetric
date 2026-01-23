@@ -1147,7 +1147,7 @@ Output JSON:
 
                 # URL: Upstream is models/{model}:generateContent
                 # Vercel Proxy: /v1/{slug}/google/models/{model}:generateContent
-                # Trying standard Google path mapping
+                # Standard Google path mapping for Gemini 3
                 url = f"https://gateway.ai.vercel.com/v1/{gateway_slug}/google/models/{model_name}:generateContent"
                 
                 headers = {
