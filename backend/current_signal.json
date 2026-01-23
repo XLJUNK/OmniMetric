@@ -1,9 +1,9 @@
 {
-    "last_updated": "2026-01-23T20:40:24Z",
-    "last_successful_update": "2026-01-23T20:40:24Z",
-    "gms_score": 33,
+    "last_updated": "2026-01-23T21:33:32Z",
+    "last_successful_update": "2026-01-23T21:33:32Z",
+    "gms_score": 32,
     "sector_scores": {
-        "STOCKS": 40,
+        "STOCKS": 35,
         "CRYPTO": 25,
         "FOREX": 55,
         "COMMODITIES": 55
@@ -218,10 +218,10 @@
             ]
         },
         "VIX": {
-            "price": 15.73,
+            "price": 16.09,
             "prev_price": 15.64,
-            "daily_chg": 0.58,
-            "change_percent": -0.82,
+            "daily_chg": 2.88,
+            "change_percent": 1.45,
             "trend": "UP",
             "sparkline": [
                 14.08,
@@ -245,7 +245,7 @@
                 20.09,
                 16.9,
                 15.64,
-                15.73
+                16.09
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
@@ -290,7 +290,6 @@
             "change_percent": 0.0,
             "trend": "STABLE",
             "sparkline": [
-                4.14,
                 4.19,
                 4.18,
                 4.15,
@@ -319,15 +318,15 @@
                 4.24,
                 4.24,
                 4.3,
+                4.26,
                 4.26
             ]
         },
         "REAL_INTEREST_RATE": {
-            "price": 1.92,
+            "price": 1.95,
             "change_percent": 0.0,
             "trend": "STABLE",
             "sparkline": [
-                1.89,
                 1.93,
                 1.93,
                 1.92,
@@ -356,15 +355,16 @@
                 1.91,
                 1.91,
                 1.97,
-                1.92
+                1.92,
+                1.95
             ]
         },
         "SPY": {
-            "price": 688.62,
+            "price": 689.23,
             "prev_price": 688.98,
-            "daily_chg": -0.05,
-            "change_percent": -0.44,
-            "trend": "DOWN",
+            "daily_chg": 0.04,
+            "change_percent": -0.35,
+            "trend": "UP",
             "sparkline": [
                 684.83,
                 687.96,
@@ -387,7 +387,7 @@
                 677.58,
                 685.4,
                 688.98,
-                688.62
+                689.23
             ]
         },
         "TNX": {
@@ -422,10 +422,10 @@
             ]
         },
         "QQQ": {
-            "price": 621.95,
+            "price": 622.72,
             "prev_price": 620.76,
-            "daily_chg": 0.19,
-            "change_percent": 0.11,
+            "daily_chg": 0.32,
+            "change_percent": 0.23,
             "trend": "UP",
             "sparkline": [
                 619.21,
@@ -449,11 +449,11 @@
                 608.06,
                 616.28,
                 620.76,
-                621.95
+                622.72
             ]
         },
         "IWM": {
-            "price": 264.79,
+            "price": 264.81,
             "prev_price": 269.79,
             "daily_chg": -1.85,
             "change_percent": -0.36,
@@ -480,14 +480,14 @@
                 262.58,
                 267.79,
                 269.79,
-                264.79
+                264.81
             ]
         },
         "RSP": {
-            "price": 198.45,
+            "price": 198.77,
             "prev_price": 199.66,
-            "daily_chg": -0.61,
-            "change_percent": -0.3,
+            "daily_chg": -0.45,
+            "change_percent": -0.14,
             "trend": "DOWN",
             "sparkline": [
                 193.54,
@@ -511,14 +511,14 @@
                 196.08,
                 199.4,
                 199.66,
-                198.45
+                198.77
             ]
         },
         "HYG": {
-            "price": 81.08,
+            "price": 81.14,
             "prev_price": 81.18,
-            "daily_chg": -0.12,
-            "change_percent": -0.01,
+            "daily_chg": -0.05,
+            "change_percent": 0.06,
             "trend": "DOWN",
             "sparkline": [
                 80.43,
@@ -542,7 +542,7 @@
                 80.88,
                 81.12,
                 81.18,
-                81.08
+                81.14
             ]
         },
         "NIFTY": {
@@ -577,11 +577,11 @@
             ]
         },
         "BTC": {
-            "price": 89301.76,
+            "price": 89513.09,
             "prev_price": 89462.45,
-            "daily_chg": -0.18,
-            "change_percent": -3.51,
-            "trend": "DOWN",
+            "daily_chg": 0.06,
+            "change_percent": -3.29,
+            "trend": "UP",
             "sparkline": [
                 89944.7,
                 90603.19,
@@ -604,14 +604,14 @@
                 88310.91,
                 89376.96,
                 89462.45,
-                89301.76
+                89513.09
             ]
         },
         "ETH": {
-            "price": 2933.61,
+            "price": 2946.81,
             "prev_price": 2949.63,
-            "daily_chg": -0.54,
-            "change_percent": -7.94,
+            "daily_chg": -0.1,
+            "change_percent": -7.53,
             "trend": "DOWN",
             "sparkline": [
                 3124.42,
@@ -635,14 +635,14 @@
                 2935.61,
                 2978.9,
                 2949.63,
-                2933.61
+                2946.81
             ]
         },
         "SOL": {
-            "price": 127.08,
+            "price": 127.34,
             "prev_price": 128.29,
-            "daily_chg": -0.94,
-            "change_percent": -4.69,
+            "daily_chg": -0.74,
+            "change_percent": -4.5,
             "trend": "DOWN",
             "sparkline": [
                 132.13,
@@ -666,14 +666,14 @@
                 125.71,
                 129.38,
                 128.29,
-                127.08
+                127.34
             ]
         },
         "DXY": {
-            "price": 97.51,
+            "price": 97.47,
             "prev_price": 98.36,
-            "daily_chg": -0.87,
-            "change_percent": -1.89,
+            "daily_chg": -0.9,
+            "change_percent": -1.93,
             "trend": "DOWN",
             "sparkline": [
                 98.29,
@@ -697,14 +697,14 @@
                 98.64,
                 98.76,
                 98.36,
-                97.51
+                97.47
             ]
         },
         "USDJPY": {
-            "price": 155.88,
+            "price": 155.69,
             "prev_price": 158.46,
-            "daily_chg": -1.62,
-            "change_percent": -1.05,
+            "daily_chg": -1.74,
+            "change_percent": -1.17,
             "trend": "DOWN",
             "sparkline": [
                 156.88,
@@ -728,14 +728,14 @@
                 158.18,
                 158.16,
                 158.46,
-                155.88
+                155.69
             ]
         },
         "EURUSD": {
             "price": 1.18,
             "prev_price": 1.17,
-            "daily_chg": 1.25,
-            "change_percent": 1.67,
+            "daily_chg": 1.39,
+            "change_percent": 1.81,
             "trend": "UP",
             "sparkline": [
                 1.18,
@@ -763,10 +763,10 @@
             ]
         },
         "USDINR": {
-            "price": 91.66,
+            "price": 91.64,
             "prev_price": 91.54,
-            "daily_chg": 0.13,
-            "change_percent": 1.05,
+            "daily_chg": 0.11,
+            "change_percent": 1.03,
             "trend": "UP",
             "sparkline": [
                 89.6,
@@ -790,7 +790,7 @@
                 90.9,
                 91.12,
                 91.54,
-                91.66
+                91.64
             ]
         },
         "USDSAR": {
@@ -825,9 +825,9 @@
             ]
         },
         "GOLD": {
-            "price": 4981.5,
+            "price": 4981.8,
             "prev_price": 4908.8,
-            "daily_chg": 1.48,
+            "daily_chg": 1.49,
             "change_percent": 8.57,
             "trend": "UP",
             "sparkline": [
@@ -852,14 +852,14 @@
                 4759.6,
                 4831.8,
                 4908.8,
-                4981.5
+                4981.8
             ]
         },
         "OIL": {
-            "price": 61.13,
+            "price": 61.27,
             "prev_price": 59.36,
-            "daily_chg": 2.98,
-            "change_percent": 2.84,
+            "daily_chg": 3.22,
+            "change_percent": 3.08,
             "trend": "UP",
             "sparkline": [
                 58.01,
@@ -883,14 +883,14 @@
                 60.34,
                 60.62,
                 59.36,
-                61.13
+                61.27
             ]
         },
         "COPPER": {
             "price": 5.94,
             "prev_price": 5.74,
-            "daily_chg": 3.4,
-            "change_percent": 2.57,
+            "daily_chg": 3.42,
+            "change_percent": 2.6,
             "trend": "UP",
             "sparkline": [
                 5.44,
@@ -918,10 +918,10 @@
             ]
         },
         "NATGAS": {
-            "price": 3.61,
+            "price": 3.62,
             "prev_price": 5.05,
-            "daily_chg": -28.46,
-            "change_percent": 16.31,
+            "daily_chg": -28.21,
+            "change_percent": 16.73,
             "trend": "DOWN",
             "sparkline": [
                 3.96,
@@ -945,15 +945,14 @@
                 3.91,
                 4.88,
                 5.05,
-                3.61
+                3.62
             ]
         },
         "MOVE": {
             "price": 56.5,
-            "change_percent": -5.13,
+            "change_percent": 0.01,
             "trend": "NORMAL",
             "sparkline": [
-                61.17,
                 59.48,
                 58.5,
                 59.21,
@@ -972,39 +971,39 @@
                 58.05,
                 66.67,
                 59.56,
+                56.5,
                 56.5
             ]
         },
         "BREADTH": {
-            "price": 0.14,
+            "price": 0.21,
             "change_percent": 0.0,
             "trend": "HEALTHY",
             "sparkline": [
                 0.0,
-                0.01,
-                0.05,
-                0.24,
-                0.2,
-                0.09,
-                0.58,
-                0.84,
-                1.47,
-                0.64,
-                1.52,
+                0.04,
+                0.23,
+                0.19,
+                0.07,
+                0.56,
+                0.83,
                 1.45,
-                1.38,
-                1.58,
-                2.55,
-                2.73,
-                2.55,
-                3.06,
-                3.64,
-                3.25,
-                2.68
+                0.63,
+                1.5,
+                1.43,
+                1.37,
+                1.57,
+                2.53,
+                2.71,
+                2.53,
+                3.04,
+                3.62,
+                3.23,
+                2.74
             ]
         },
         "SPY_MOMENTUM": {
-            "price": -0.14,
+            "price": -0.21,
             "change_percent": 0,
             "trend": "BALANCED",
             "sparkline": [
@@ -1106,22 +1105,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS 33 signals a defensive regime as stagnant liquidity and falling small-caps reveal fragility. High real rates of 1.92% drive credit stress and valuation compression. Rising Gold and Yen confirm a safety flight amid systemic fears. Sticky yields and thin breadth mirror past liquidity crises. Prioritize capital preservation.",
+        "content": "GMS fell to 32, signaling a defensive shift as risks rise. VIX rose 2.88% while IWM dropped, hitting asset valuations. Stagnant liquidity drove a 1.49% gold surge into safety. Deteriorating momentum forces a test of key support levels. Stay risk-off until net liquidity shows a real recovery.",
         "reports": {
-            "JP": "現在のGMSスコア33は完全な防衛局面を示しており、純流動性の停滞と中小型株指数の大幅な下落が市場の脆弱性を露呈させています。プライベートクレジットの崩壊リスクが浮上する中、1.92％という高い実質金利が資本コストを押し上げ、バリュエーションの圧縮を強要しています。円高進行とゴールドの上昇は典型的な安全資産への逃避を反映しており、ドル指数の低下にもかかわらず市場の警戒感は非常に高い水準にあります。10年債利回りが4.26％に固執する一方で、市場の幅広さを欠いた現在の価格形成は過去の流動性枯渇局面と酷似しており注意を要します。モメンタムが低下傾向にあるため、投資家は資本保全を最優先し、シャドーバンキング部門のシステミックリスクを注視すべき局面と言えます。",
-            "EN": "GMS 33 signals a defensive regime as stagnant liquidity and falling small-caps reveal fragility. High real rates of 1.92% drive credit stress and valuation compression. Rising Gold and Yen confirm a safety flight amid systemic fears. Sticky yields and thin breadth mirror past liquidity crises. Prioritize capital preservation.",
-            "CN": "GMS指数33表明市场全面进入防御阶段，流动性停滞与小盘股指数下跌暴露了系统的脆弱性。随着私募信贷风险升温，1.92%的高实际利率正在推高资本成本并被迫令市场进行估值压缩。日元与黄金的走强反映了典型的避险资金流向，尽管美元指数走低，但市场警惕性依然极高。10年期收益率维持在4.26%，而广度指标恶化预示流动性枯竭，这与历史衰退前期高度相似。由于动能持续减弱，投资者应优先保全资本，并严密监控影子银行部门可能出现的连锁反应。",
-            "ES": "GMS 33 indica un régimen defensivo con liquidez estancada y caída de acciones. Tasas reales de 1.92% elevan costos y fuerzan compresión de valor. Oro y yen al alza confirman refugio ante riesgos de crédito. Rendimientos y baja amplitud sugieren agotamiento sistémico. Priorice preservar capital y vigilar la banca en la sombra.",
-            "HI": "जीएमएस 33 रक्षात्मक शासन का संकेत देता है जहां तरलता स्थिर है और छोटे कैप गिर रहे हैं। 1.92% की उच्च वास्तविक दरें पूंजी लागत को बढ़ाती हैं और मूल्यांकन में कमी लाती हैं। सोना और येन में वृद्धि सुरक्षा की उड़ान की पुष्टि करती है। कम चौड़ाई तरलता की थकावट को दर्शाती है। अब पूंजी संरक्षण पर ध्यान दें।",
-            "ID": "Skor GMS 33 menandakan rezim defensif dengan likuiditas stagnan dan saham kecil melemah. Suku bunga riil 1,92% menaikkan biaya modal dan memaksa kompresi valuasi. Kenaikan emas dan yen mencerminkan pelarian ke aset aman. Lebar pasar yang sempit menunjukkan kelelahan likuiditas. Prioritaskan pelestarian modal sekarang.",
-            "AR": "يشير GMS 33 إلى نظام دفاعي مع ركود السيولة وانخفاض الأسهم. ترفع المعدلات الحقيقية بنسبة 1.92% تكاليف رأس المال وتضغط على التقييمات. يعكس ارتفاع الذهب والين الهروب إلى الأمان بسبب مخاطر الائتمان. تشير العوائد وضيق عرض السوق إلى نضوب السيولة. يجب الحفاظ على رأس المال ومراقبة مخاطر الظل بجدية."
+            "JP": "GMSスコアが32へ低下し下落ベクトルが強まる中、市場はプライベートクレジットの崩壊リスクを背景に深い警戒局面へ突入しています。VIXが16.09へ上昇しIWMが1.85%急落した事実は、資本コストの増大がリスク資産の価格を圧迫している証拠です。正味流動性が停滞する中でゴールドが1.49%上昇したことは、投資家がボラティリティを回避し安全資産へ逃避していることを示します。クレジット市場の潜在的脆弱性と実質金利の維持が重なり、テクニカルなサポートレベルを試す下押し圧力が一段と強まっています。モメンタムの悪化を考慮すると、流動性の改善が見られない限り、現在は防御的戦略を優先すべき時期と言えます。",
+            "EN": "GMS fell to 32, signaling a defensive shift as risks rise. VIX rose 2.88% while IWM dropped, hitting asset valuations. Stagnant liquidity drove a 1.49% gold surge into safety. Deteriorating momentum forces a test of key support levels. Stay risk-off until net liquidity shows a real recovery.",
+            "CN": "随着GMS评分降至32点且下行矢量不断增强，当前市场因私募信贷领域的潜在崩溃风险而进入深度防御模式。VIX指数上升2.88%与IWM下跌1.85%的客观现象，共同证明了资本成本升高正严重挤压风险资产的估值空间。在净流动性增长陷入长期停滞的宏观背景下，黄金价格上涨1.49%反映了全球投资者向安全资产转移的明确趋势。信用市场的潜在脆弱性与实际利率的维持相互交织，导致市场正面临回测关键技术支撑位的巨大压力。鉴于当前动量持续恶化且整体流动性未见好转，建议投资者在现阶段应优先采取防御性策略以规避风险。",
+            "ES": "GMS bajó a 32 por riesgos de crédito crecientes. VIX subió 2.88% e IWM cayó por altos costos de capital. El oro subió 1.49% ante la liquidez estancada actual. El impulso cae y presiona los niveles de soporte técnico. Sea cauteloso hasta que mejore la liquidez neta del sistema.",
+            "HI": "जीएमएस 32 पर है, जो बढ़ते ऋण जोखिम को दर्शाता है। विक्स 2.88% बढ़ा और आईडब्ल्यूएम गिरने से दबाव बढ़ गया। तरलता की कमी से सोने में 1.49% की बढ़त देखी गई। गिरता मोमेंटम अब तकनीकी समर्थन स्तरों का परीक्षण करेगा। तरलता सुधरने तक सतर्क रहें और सुरक्षात्मक रुख अपनाएं।",
+            "ID": "GMS turun ke 32 karena risiko kredit meningkat. VIX naik 2.88% dan IWM jatuh menekan valuasi pasar. Likuiditas stagnan mendorong emas naik 1.49% ke keamanan. Momentum buruk memaksa pasar uji level dukungan teknis. Tetap defensif hingga likuiditas bersih sistem membaik.",
+            "AR": "انخفض جي إم إس لـ 32 بسبب مخاطر الائتمان المتزايدة. زاد فيكس 2.88% مما ضغط على أسعار الأصول الصغيرة. دفع ركود السيولة الذهب للصعود بنسبة 1.49% كأمان. يختبر الزخم المتدهور مستويات الدعم الفنية الهامة حالياً. حافظ على استراتيجية دفاعية حتى تتوفر السيولة الصافية."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-22T19:51:40Z",
-            "score": 34
-        },
         {
             "date": "2026-01-22T20:40:17Z",
             "score": 33
@@ -1357,6 +1352,10 @@
         {
             "date": "2026-01-23T20:40:24Z",
             "score": 33
+        },
+        {
+            "date": "2026-01-23T21:33:32Z",
+            "score": 32
         }
     ],
     "intelligence": {
@@ -1364,85 +1363,85 @@
             {
                 "title": "Wall Street braced for a private credit meltdown. The risk of one is rising",
                 "link": "https://www.cnbc.com/2026/01/23/wall-street-private-credit-risk-rising.html",
-                "isoDate": "2026-01-23T20:40:25.089646Z"
+                "isoDate": "2026-01-23T21:33:35.147331Z"
             },
             {
                 "title": "Sen. Warren blasts CFPB director for undermining Trump's credit card affordability push",
                 "link": "https://www.cnbc.com/2026/01/23/warren-cfpb-director-letter-undermining-trump-credit-card-affordability.html",
-                "isoDate": "2026-01-23T20:40:25.091605Z"
+                "isoDate": "2026-01-23T21:33:35.149320Z"
             },
             {
                 "title": "Trump's push for Greenland mineral rights could block China's access to rare earths",
                 "link": "https://www.cnbc.com/2026/01/23/trump-greenland-china-rare-earth-mineral.html",
-                "isoDate": "2026-01-23T20:40:25.091628Z"
+                "isoDate": "2026-01-23T21:33:35.149341Z"
             },
             {
                 "title": "Databricks obtains $1.8 billion in additional debt ahead of IPO",
                 "link": "https://www.cnbc.com/2026/01/23/databricks-obtains-1point8-billion-in-additional-debt-ahead-of-ipo.html",
-                "isoDate": "2026-01-23T20:40:25.091641Z"
+                "isoDate": "2026-01-23T21:33:35.149355Z"
             },
             {
-                "title": "Intel stock drops 17% as manufacturing troubles overshadow earnings beat",
+                "title": "Intel stock drops 17%, its worst day since 2024, as manufacturing troubles overshadow earnings beat",
                 "link": "https://www.cnbc.com/2026/01/23/intel-stock-earnings-q4-2025-supply.html",
-                "isoDate": "2026-01-23T20:40:25.091653Z"
+                "isoDate": "2026-01-23T21:33:35.149366Z"
             },
             {
                 "title": "Megacap earnings next week could lift a stock market that’s broadening out. Here’s what’s ahead",
                 "link": "https://www.cnbc.com/2026/01/23/stock-market-next-week-outlook-for-jan-26-30-2026.html",
-                "isoDate": "2026-01-23T20:40:25.091665Z"
+                "isoDate": "2026-01-23T21:33:35.149378Z"
             }
         ],
         "translations": {
             "JP": [
-                "ウォール街はプライベートクレジットの崩壊に備えていた。そのリスクが高まっている。",
-                "ウォーレン上院議員、トランプ氏のクレジットカード負担軽減策を妨害したとしてCFPB局長を非難。",
-                "トランプ氏によるグリーンランドの鉱物資源権益獲得の動き、中国のレアアースへのアクセスを阻止する可能性。",
-                "データブリックス、IPOを前に18億ドルの追加債務を調達。",
-                "インテル株が17%下落、製造上の問題が好調な決算を打ち消す。",
-                "来週のメガキャップ決算が、広がりを見せる株式市場を押し上げる可能性。今後の見通し。"
+                "ウォール街はプライベートクレジットの崩壊に備えていた。そのリスクが高まっている",
+                "ウォーレン上院議員、トランプ氏のクレジットカード負担軽減策を妨害したとしてCFPB局長を非難",
+                "トランプ氏のグリーンランド鉱物資源権益獲得への動き、中国のレアアースへのアクセスを阻止する可能性",
+                "データブリックス、IPOを前に18億ドルの追加負債を調達",
+                "インテル株が17%下落、製造上の問題が好決算をかき消し、2024年以降で最悪の一日に",
+                "来週のメガキャップ決算が、広がりを見せる株式市場を押し上げる可能性。今後の見通しはこちら"
             ],
             "CN": [
-                "华尔街曾为私人信贷崩溃做准备，而此类风险正在上升。",
-                "沃伦参议员抨击CFPB局长破坏特朗普的信用卡负担能力推行计划。",
-                "特朗普推动格陵兰岛矿产权益，可能阻断中国获取稀土的渠道。",
-                "Databricks 在 IPO 前获得 18 亿美元追加债务。",
-                "英特尔股价下跌 17%，制造难题掩盖了超预期的业绩。",
-                "下周的大型股业绩可能提振正在扩大的股市。以下是未来展望。"
+                "华尔街曾为私人信贷崩溃做准备，而如今崩溃风险正在上升",
+                "沃伦参议员抨击CFPB局长削弱特朗普推动的信用卡负担能力计划",
+                "特朗普对格陵兰岛矿产权的争取可能阻断中国获取稀土的渠道",
+                "Databricks在IPO前获得18亿美元追加债务",
+                "英特尔股价大跌17%，创2024年以来最惨单日表现，制造问题掩盖了收益超预期的利好",
+                "下周大型科技股业绩有望提振正在扩大的股市。以下是未来展望"
             ],
             "ES": [
-                "Wall Street se preparó para un colapso del crédito privado. El riesgo de que ocurra está aumentando.",
-                "La senadora Warren critica al director de la CFPB por socavar la iniciativa de Trump sobre la asequibilidad de las tarjetas de crédito.",
-                "La presión de Trump por los derechos minerales de Groenlandia podría bloquear el acceso de China a las tierras raras.",
-                "Databricks obtiene 1.800 millones de dólares en deuda adicional antes de su salida a bolsa.",
-                "Las acciones de Intel caen un 17% mientras los problemas de fabricación empañan unos resultados que superaron las expectativas.",
-                "Los resultados de las megacapitalizadas de la próxima semana podrían impulsar un mercado de valores que se está ampliando. Esto es lo que se avecina."
+                "Wall Street se preparó para un colapso del crédito privado. El riesgo de que ocurra está aumentando",
+                "La senadora Warren critica al director de la CFPB por socavar el plan de Trump para la asequibilidad de las tarjetas de crédito",
+                "El impulso de Trump por los derechos minerales en Groenlandia podría bloquear el acceso de China a las tierras raras",
+                "Databricks obtiene 1.800 millones de dólares en deuda adicional antes de su salida a bolsa",
+                "Las acciones de Intel caen un 17%, su peor día desde 2024, mientras los problemas de fabricación empañan unos beneficios superiores a los previstos",
+                "Los resultados de las megacaps la próxima semana podrían impulsar un mercado bursátil que se está ampliando. Esto es lo que nos espera"
             ],
             "HI": [
-                "वॉल स्ट्रीट प्राइवेट क्रेडिट मेल्टडाउन के लिए तैयार था। इसका जोखिम अब बढ़ रहा है।",
-                "सीनेटर वॉरेन ने ट्रंप के क्रेडिट कार्ड सामर्थ्य प्रयास को कमजोर करने के लिए CFPB निदेशक की आलोचना की।",
-                "ग्रीनलैंड खनिज अधिकारों के लिए ट्रंप का प्रयास चीन की दुर्लभ मृदा (rare earths) तक पहुंच को रोक सकता है।",
-                "Databricks ने IPO से पहले $1.8 बिलियन का अतिरिक्त ऋण प्राप्त किया।",
-                "इंटेल के शेयर में 17% की गिरावट, विनिर्माण समस्याओं ने बेहतर कमाई के आंकड़ों को फीका किया।",
-                "अगले हफ्ते मेगाकैप की कमाई उस शेयर बाजार को ऊपर उठा सकती है जो व्यापक हो रहा है। यहाँ आगे क्या है।"
+                "वॉल स्ट्रीट निजी ऋण संकट के लिए तैयार था। अब इसका जोखिम बढ़ रहा है",
+                "सेन. वारेन ने ट्रंप के क्रेडिट कार्ड सामर्थ्य अभियान को कमजोर करने के लिए CFPB निदेशक की आलोचना की",
+                "ग्रीनलैंड खनिज अधिकारों के लिए ट्रंप का प्रयास चीन की दुर्लभ मृदा (rare earths) तक पहुंच को रोक सकता है",
+                "Databricks ने IPO से पहले 1.8 अरब डॉलर का अतिरिक्त ऋण प्राप्त किया",
+                "इंटेल का शेयर 17% गिरा, 2024 के बाद का सबसे खराब दिन, विनिर्माण समस्याओं ने बेहतर आय परिणामों को फीका किया",
+                "अगले सप्ताह मेगाकैप कंपनियों की कमाई शेयर बाजार को ऊपर उठा सकती है जो अब विस्तार ले रहा है। यहाँ जानें आगे क्या है"
             ],
             "ID": [
-                "Wall Street bersiap menghadapi keruntuhan kredit swasta. Risikonya kini sedang meningkat.",
-                "Sen. Warren mengecam direktur CFPB karena merusak upaya Trump dalam keterjangkauan kartu kredit.",
-                "Upaya Trump untuk hak mineral Greenland dapat menghalangi akses Tiongkok ke tanah jarang.",
-                "Databricks memperoleh utang tambahan senilai $1,8 miliar menjelang IPO.",
-                "Saham Intel anjlok 17% karena masalah manufaktur menutupi kinerja laba yang melampaui estimasi.",
-                "Laba perusahaan megacap minggu depan dapat mendongkrak pasar saham yang sedang meluas. Inilah yang akan terjadi selanjutnya."
+                "Wall Street bersiap menghadapi keruntuhan kredit swasta. Risikonya kini semakin meningkat",
+                "Sen. Warren mengecam direktur CFPB karena merusak upaya keterjangkauan kartu kredit Trump",
+                "Upaya Trump untuk hak mineral Greenland dapat memblokir akses Tiongkok ke tanah jarang",
+                "Databricks memperoleh tambahan utang sebesar $1,8 miliar menjelang IPO",
+                "Saham Intel anjlok 17%, hari terburuknya sejak 2024, karena masalah manufaktur membayangi laporan laba yang melampaui estimasi",
+                "Laba perusahaan megacap minggu depan dapat mendongkrak pasar saham yang tengah meluas. Inilah yang akan terjadi selanjutnya"
             ],
             "AR": [
-                "وول ستريت تستعد لانهيار الائتمان الخاص. وخطر حدوثه آخذ في الازدياد.",
-                "السناتور وارن تهاجم مدير مكتب الحماية المالية للمستهلك لتقويضه مساعي ترامب لتعزيز القدرة على تحمل تكاليف البطاقات الائتمانية.",
-                "مساعي ترامب للحصول على حقوق المعادن في جرينلاند قد تعيق وصول الصين إلى الأتربة النادرة.",
-                "\"داتا بريكس\" تحصل على ديون إضافية بقيمة 1.8 مليار دولار قبل الطرح العام الأولي.",
-                "سهم إنتل يهبط بنسبة 17% مع طغيان مشاكل التصنيع على تفوق الأرباح المحقق.",
-                "أرباح الشركات العملاقة الأسبوع المقبل قد ترفع سوق الأسهم الذي بدأ في التوسع. إليكم ما ينتظرنا."
+                "وال ستريت استعدت لانهيار الائتمان الخاص. وخطر حدوثه آخذ في التصاعد",
+                "السيناتور وارن تهاجم مدير مكتب الحماية المالية للمستهلك لتقويضه مساعي ترامب لتعزيز القدرة على تحمل تكاليف البطاقات الائتمانية",
+                "مساعي ترامب للحصول على حقوق المعادن في جرينلاند قد تمنع وصول الصين إلى الأتربة النادرة",
+                "داتابريكس تحصل على ديون إضافية بقيمة 1.8 مليار دولار قبل الاكتتاب العام",
+                "سهم إنتل يهبط بنسبة 17% في أسوأ يوم له منذ عام 2024، حيث غطت مشاكل التصنيع على تفوق الأرباح",
+                "أرباح الشركات الكبرى الأسبوع المقبل قد ترفع سوق الأسهم الذي بدأ يتسع نطاقه. إليكم نظرة على ما ينتظرنا"
             ]
         },
-        "last_updated": "2026-01-23T20:40:41.269103Z"
+        "last_updated": "2026-01-23T21:33:53.820936Z"
     },
     "system_status": "OPERATIONAL"
 }
