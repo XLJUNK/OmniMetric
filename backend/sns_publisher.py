@@ -19,32 +19,36 @@ class SNSPublisher:
         self.status_log_file = os.path.join(os.path.dirname(__file__), "sns_status.json")
         self.sequencer = BlueskySequencer()
         
-        # OGP Font Config (Windows)
-        self.font_path_default = "C:\\Windows\\Fonts\\arial.ttf"
-        self.font_bold_path_default = "C:\\Windows\\Fonts\\arialbd.ttf"
+        # OGP Font Config (Asset-based)
+        self.assets_dir = os.path.join(os.path.dirname(__file__), "assets", "fonts")
+        # Default fallback
+        self.default_font = os.path.join(self.assets_dir, "NotoSansJP-Bold.ttf")
         
     def get_font_for_lang(self, language):
-        """Returns the best available font path for the language on Windows."""
-        # Priorities for Standard Windows Fonts
+        """Returns the best available font path from backend/assets/fonts/."""
+        # Map languages to specific font files
+        # JP/EN/ES/ID -> NotoSansJP-Bold (Covers Latin + JP)
         font_map = {
-            "JP": ["meiryo.ttc", "msgothic.ttc", "yugothr.ttc"],
-            "CN": ["msyh.ttc", "simhei.ttf"],
-            "AR": ["tahoma.ttf", "arial.ttf"], # Tahoma handles Arabic well
-            "HI": ["nirmala.ttf", "mangal.ttf"],
-            "ID": ["arial.ttf"],
-            "ES": ["arial.ttf"],
-            "EN": ["arial.ttf"]
+            "JP": "NotoSansJP-Bold.ttf",
+            "EN": "NotoSansJP-Bold.ttf",
+            "ES": "NotoSansJP-Bold.ttf",
+            "ID": "NotoSansJP-Bold.ttf",
+            "CN": "NotoSansSC-Bold.ttf",
+            "HI": "NotoSansDevanagari-Bold.ttf",
+            "AR": "NotoSansArabic-Bold.ttf"
         }
         
-        candidates = font_map.get(language, ["arial.ttf"])
-        windows_font_dir = "C:\\Windows\\Fonts"
+        filename = font_map.get(language, "NotoSansJP-Bold.ttf")
+        path = os.path.join(self.assets_dir, filename)
         
-        for filename in candidates:
-            path = os.path.join(windows_font_dir, filename)
-            if os.path.exists(path):
-                return path
-        
-        return self.font_path_default
+        if os.path.exists(path):
+            return path
+            
+        # Fallback to whatever usually works or just standard system font if local asset missing?
+        # In CI, we expect assets to be there. Locally, they might be missing.
+        # Check for local checkout existence or fallback to simple default.
+        self._log(f"Warning: Font asset not found at {path}. Trying fallback.", is_error=True)
+        return self.default_font if os.path.exists(self.default_font) else "arial.ttf"
         
     def get_regime_name(self, score):
         if score > 60: return "ACCUMULATE (リスク選好)"
@@ -78,13 +82,9 @@ class SNSPublisher:
                 # Dynamic Font Loading
                 font_file = self.get_font_for_lang(language)
                 
-                # For bold, we try to guess or just use the same font (many TTCs include weights, 
-                # but PIL index logic is complex. We will stick to regular/base font for robustness 
-                # or try to find a bold variant if standard naming).
-                # For simplicity in this "Resilience" phase, we use the same base font for Large Text 
-                # but increase size, as fallback.
-                
-                font_large = ImageFont.truetype(font_file, 180)
+                # Visual Authority: Significant Size Increase
+                # Score: 180 -> 270 (1.5x) for massive impact
+                font_large = ImageFont.truetype(font_file, 270)
                 font_medium = ImageFont.truetype(font_file, 60)
                 font_small = ImageFont.truetype(font_file, 40)
                 
@@ -95,11 +95,15 @@ class SNSPublisher:
                 font_small = ImageFont.load_default()
             
             # 3. Draw Content
-            # Title
-            draw.text((60, 50), "GLOBAL MACRO SIGNAL", font=font_small, fill=(150, 150, 150))
+            # Margins (Visual Authority: 80px)
+            margin_x = 80
             
-            # Score (Center Left)
-            draw.text((60, 120), str(score), font=font_large, fill=score_color)
+            # Title
+            draw.text((margin_x, 50), "GLOBAL MACRO SIGNAL", font=font_small, fill=(150, 150, 150))
+            
+            # Score (Center Left) - Adjusted for larger font
+            # Previous Y=120. With 270px font, we need to ensure it doesn't overlap.
+            draw.text((margin_x, 110), str(score), font=font_large, fill=score_color)
             
             # Risk Label (Localized)
             risk_labels = {
@@ -139,8 +143,8 @@ class SNSPublisher:
                 except:
                     pass
 
-            draw.text((60, 320), risk_label, font=font_medium, fill=score_color)
-            draw.text((60, 450), title_text, font=font_small, fill=text_color)
+            draw.text((margin_x, 380), risk_label, font=font_medium, fill=score_color)
+            draw.text((margin_x, 480), title_text, font=font_small, fill=text_color)
             
             # 4. Save
             script_dir = os.path.dirname(os.path.abspath(__file__))

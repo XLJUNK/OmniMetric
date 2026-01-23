@@ -1,13 +1,13 @@
 # Global Macro Signal (OmniMetric Terminal) - プロジェクト仕様書
-**Version 2.0.0 (As-Built)**
-**Last Updated:** 2026-01-12
+**Version 2.1.0 (Recovery & Stability Release)**
+**Last Updated:** 2026-01-24
 
 ## 1. プロジェクト概要 (Executive Summary)
 **Global Macro Signal (GMS)** は、機関投資家レベルの市場リスク分析を個人投資家に提供する、AI駆動型金融・経済分析プラットフォームです。「OmniMetric Terminal」というブランド名で展開され、Bloombergターミナルのような高度な視認性と、生成AIによる深い洞察を融合させています。
 
 ### 核心思想 (Core Philosophy)
 *   **Institutional Grade (機関投資家品質)**: 遊びのない、プロフェッショナルでミニマルなUI/UX。
-*   **Silent Execution (静寂なる実行)**: エラーをユーザーに見せない。彻底的なフォールバックと自己修復機能。
+*   **Silent Execution (静寂なる実行)**: エラーをユーザーに見せない。徹底的なフォールバックと自己修復機能。
 *   **Resilient Intelligence (堅牢な知能)**: 単一のAIモデルに依存せず、稼働率100%を目指す冗長構成。
 *   **Fact-Based Authority (客観的権威)**: 予測や助言を排除し、純粋なデータと事実のみを法的準拠の下で提供する。
 
@@ -15,13 +15,13 @@
 
 ## 2. システムアーキテクチャ (Architecture)
 
-本システムは、**「静的解析と動的配信のハイブリッド」**構成を採用しています。
+本システムは、**「静的解析とビルド時データ注入（Static Bundling）」**構成を採用し、エッジ環境での安定性を最大化しています。
 
 ### 2.1 Backend (Data & SEO Engine)
 *   **言語**: Python 3.10
 *   **基盤**: GitHub Actions (Scheduled Workflows)
 *   **Core Scripts**:
-    *   `gms_engine.py`: 市場データ収集(Yahoo/FRED)、GMSスコア算出、AIレポート生成。
+    *   `gms_engine.py`: 市場データ収集(Yahoo/FRED)、GMSスコア算出、AIレポート生成。**FMP v3 API (Robust Endpoints)** を使用し、エラー耐性を強化。
     *   `sns_publisher.py`: Twitter/Blueskyへの自動投稿、緊急アラート(>5%変動)、固定ツイート管理。
     *   `seo_monitor.py`: Google Search Console APIと連携し、トレンドキーワードを分析・抽出。
 *   **AI Engine**:
@@ -36,8 +36,7 @@
 *   **主な機能**:
     *   **News Ticker (`/api/news`)**: 
         *   Gemini 3 Flash および 2.5 Flash-Lite を使用した「プロ翻訳者」モード。
-        *   JSON一括処理（Batch Processing）と指数バックオフ（Retry）によるAPI最適化。
-        *   1時間のISRキャッシュ (`revalidate=3600`) による負荷分散。
+        *   **Static Bundling**: `filesystem`APIの制限を回避するため、ビルド生成されたJSON (`frontend/data/current_signal.json`) を直接インポートして配信。Vercel Edge環境での完全な互換性を保証。
     *   **Dynamic OGP (`/api/og`)**: リアルタイムの市場スコアを反映したSNS用画像を動的生成。
     *   **Economic Calendar**: FREDおよびバックエンド算出データに基づく重要イベント表示。
 
@@ -45,7 +44,8 @@
 1.  **Monitor**: `update.yml`と`sns_bot.yml`が毎時起動。
 2.  **Optimize**: `seo_monitor.py`が検索トレンドを取得し、SNSハッシュタグを最適化。
 3.  **Publish**:
-    *   **Web**: `current_signal.json` を更新しVercelへデプロイ。
+    *   **Backend**: `fetch_news.py` 実行時、ノードブリッジ用のパスを絶対パスで厳格解決。
+    *   **Bundle**: 最新の `current_signal.json` を `frontend/data/` へ転送・バンドルし、Vercelへデプロイ。
     *   **SNS**: Twitter/Bluesky へ多言語で連動ポスト（緊急時は即時アラート）。
 
 ---
@@ -70,7 +70,7 @@
 *   **Translation Logic**:
     *   **Batching**: 全見出しを1リクエストのJSONとしてGeminiに送信。
     *   **Professional Core**: 「Bloomberg端末の翻訳者」として、金融特有の言い回し（"Plunge", "Soar"等）を的確に訳出。
-    *   **Resilience**: 翻訳失敗時は即座に英語原文へフォールバック。
+    *   **Resilience**: 翻訳失敗時は即座に英語原文へフォールバック。JSON一括読み込みによる高速化。
 
 ---
 
@@ -100,7 +100,7 @@
 | `BLUESKY_HANDLE` | Bluesky Handle (e.g. `example.bsky.social`) |
 | `BLUESKY_PASSWORD` | Bluesky App Password |
 | `GSC_CREDENTIALS_JSON` | Google Search Console Service Account Key (JSON content) |
-| `FMP_API_KEY` | 経済カレンダー用 (Financial Modeling Prep) |
+| `FMP_API_KEY` | 経済カレンダー用 (Financial Modeling Prep v3 API) |
 
 ### 4.3 依存ライブラリ (Dependencies)
 *   **Frontend**: `next`, `react`, `tailwindcss`, `framer-motion`, `recharts`, `lucide-react`, `ai`, `@ai-sdk/google`
