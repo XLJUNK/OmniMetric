@@ -1501,13 +1501,17 @@ def update_signal(force_news=False):
                 print(f"[AIO] SEO Module Error: {e}")
 
             # 2. SNS Strategic Publication
-            try:
-                sns = SNSPublisher(log_callback=log_diag)
-                sns.publish_update(payload)
-            except Exception as e:
-                print(f"[AIO] SNS Module Error: {e}")
-                import traceback
-                traceback.print_exc()
+            github_event = os.getenv("GITHUB_EVENT_NAME", "manual")
+            if github_event == "push":
+                print("[AIO] SNS Skipped (Reason: Triggered by git push / deploy)")
+            else:
+                try:
+                    sns = SNSPublisher(log_callback=log_diag)
+                    sns.publish_update(payload)
+                except Exception as e:
+                    print(f"[AIO] SNS Module Error: {e}")
+                    import traceback
+                    traceback.print_exc()
 
             # 3. Performance Audit (Archive & Summary)
             try:

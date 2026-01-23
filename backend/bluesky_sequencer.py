@@ -29,30 +29,8 @@ class BlueskySequencer:
 
     def check_schedule(self, jst_now=None):
         """
-        Checks if the current time matches any scheduled slot (Hour-based).
-        Returns:
-            matches (list): List of tuples (lang, phase, force_post)
+        Simplified Schedule: ALWAYS returns EN task.
+        Timing is controlled by GitHub Actions Cron (xx:05, xx:35).
         """
-        if jst_now is None:
-            jst_now = self.get_jst_now()
-            
-        j_hour = jst_now.hour
-        is_wknd = self.is_weekend(jst_now)
-        matches = []
-
-        # Iterate through all languages and slots
-        for lang, phases in self.SCHEDULE.items():
-            # Check Phase 1
-            p1_h, _ = phases["PH1"]
-            if j_hour == p1_h:
-                # Match Found: Phase 1 (Hour Match)
-                force = True if is_wknd else False
-                matches.append((lang, 1, force))
-
-            # Check Phase 2
-            p2_h, _ = phases["PH2"]
-            if j_hour == p2_h:
-                # Match Found: Phase 2 (Hour Match)
-                matches.append((lang, 2, True))
-
-        return matches
+        # Always execute EN task when invoked
+        return [("EN", 1, False)]
