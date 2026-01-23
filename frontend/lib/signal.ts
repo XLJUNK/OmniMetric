@@ -5,7 +5,7 @@ export interface SignalData {
     gms_score: number;
     sector_scores?: Record<string, number>;
     market_data: any;
-    analysis: any;
+    analysis?: any;
     events: any[];
     history_chart: any[];
 }

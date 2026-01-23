@@ -10,14 +10,7 @@ import { NewsTicker } from '@/components/NewsTicker';
 import { AdUnit } from '@/components/AdUnit';
 
 // Types
-interface SignalData {
-    last_updated: string;
-    gms_score: number;
-    market_data: any;
-    analysis: any;
-    events: any[];
-    history_chart: any[];
-}
+import { SignalData } from '@/lib/signal';
 
 interface GridItem {
     key: string;

@@ -12,16 +12,7 @@ import { AdUnit } from '@/components/AdUnit';
 import MESSAGES from '@/data/messages.json';
 import { TVPartnerCard } from '@/components/TVPartnerCard';
 
-interface SignalData {
-    last_updated: string;
-    last_successful_update?: string;
-    gms_score: number;
-    sector_scores?: Record<string, number>;
-    market_data: any;
-    analysis: any;
-    events: any[];
-    history_chart: any[];
-}
+import { SignalData } from '@/lib/signal';
 
 interface GMSHeaderProps {
     data: SignalData;

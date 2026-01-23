@@ -12,7 +12,8 @@ import { PulseTile } from '@/components/PulseTile';
 import { useDevice } from '@/hooks/useDevice';
 import { Skeleton, SkeletonCard, SkeletonPulseTile } from '@/components/Skeleton';
 import { useTheme } from "@/components/ThemeProvider";
-import { useSignalData, SignalData } from '@/hooks/useSignalData';
+import { SignalData } from '@/lib/signal';
+import { useSignalData } from '@/hooks/useSignalData';
 import { ToastNotification } from '@/components/ToastNotification';
 import dynamic from 'next/dynamic';
 
