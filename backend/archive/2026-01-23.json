@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-01-23T02:06:15Z",
-    "last_successful_update": "2026-01-23T02:06:15Z",
+    "last_updated": "2026-01-23T02:28:00Z",
+    "last_successful_update": "2026-01-23T02:28:00Z",
     "gms_score": 35,
     "sector_scores": {
         "STOCKS": 50,
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 89775.09,
+            "price": 89716.02,
             "prev_price": 89376.96,
-            "daily_chg": 0.45,
-            "change_percent": -4.12,
+            "daily_chg": 0.38,
+            "change_percent": -4.18,
             "trend": "UP",
             "sparkline": [
                 88731.98,
@@ -604,14 +604,14 @@
                 92553.59,
                 88310.91,
                 89376.96,
-                89775.09
+                89716.02
             ]
         },
         "ETH": {
-            "price": 2962.86,
+            "price": 2958.42,
             "prev_price": 2978.9,
-            "daily_chg": -0.54,
-            "change_percent": -9.7,
+            "daily_chg": -0.69,
+            "change_percent": -9.84,
             "trend": "DOWN",
             "sparkline": [
                 3000.39,
@@ -635,14 +635,14 @@
                 3186.62,
                 2935.61,
                 2978.9,
-                2962.86
+                2958.42
             ]
         },
         "SOL": {
-            "price": 128.74,
+            "price": 128.46,
             "prev_price": 129.38,
-            "daily_chg": -0.5,
-            "change_percent": -6.71,
+            "daily_chg": -0.71,
+            "change_percent": -6.91,
             "trend": "DOWN",
             "sparkline": [
                 126.76,
@@ -666,14 +666,14 @@
                 133.34,
                 125.71,
                 129.38,
-                128.74
+                128.46
             ]
         },
         "DXY": {
-            "price": 98.33,
+            "price": 98.35,
             "prev_price": 98.76,
-            "daily_chg": -0.43,
-            "change_percent": -1.0,
+            "daily_chg": -0.41,
+            "change_percent": -0.98,
             "trend": "DOWN",
             "sparkline": [
                 98.6,
@@ -697,14 +697,14 @@
                 99.39,
                 98.64,
                 98.76,
-                98.33
+                98.35
             ]
         },
         "USDJPY": {
-            "price": 158.66,
+            "price": 158.61,
             "prev_price": 158.46,
-            "daily_chg": 0.13,
-            "change_percent": 0.72,
+            "daily_chg": 0.1,
+            "change_percent": 0.68,
             "trend": "UP",
             "sparkline": [
                 156.88,
@@ -728,14 +728,14 @@
                 158.18,
                 158.16,
                 158.46,
-                158.66
+                158.61
             ]
         },
         "EURUSD": {
             "price": 1.18,
             "prev_price": 1.17,
-            "daily_chg": 0.67,
-            "change_percent": 1.08,
+            "daily_chg": 0.68,
+            "change_percent": 1.1,
             "trend": "UP",
             "sparkline": [
                 1.18,
@@ -825,10 +825,10 @@
             ]
         },
         "GOLD": {
-            "price": 4960.5,
+            "price": 4951.5,
             "prev_price": 4831.8,
-            "daily_chg": 2.66,
-            "change_percent": 7.46,
+            "daily_chg": 2.48,
+            "change_percent": 7.26,
             "trend": "UP",
             "sparkline": [
                 4361.4,
@@ -852,14 +852,14 @@
                 4588.4,
                 4759.6,
                 4831.8,
-                4960.5
+                4951.5
             ]
         },
         "OIL": {
-            "price": 59.78,
+            "price": 59.77,
             "prev_price": 60.62,
-            "daily_chg": -1.39,
-            "change_percent": 1.0,
+            "daily_chg": -1.4,
+            "change_percent": 0.98,
             "trend": "DOWN",
             "sparkline": [
                 56.66,
@@ -883,14 +883,14 @@
                 59.44,
                 60.34,
                 60.62,
-                59.78
+                59.77
             ]
         },
         "COPPER": {
-            "price": 5.84,
+            "price": 5.82,
             "prev_price": 5.73,
-            "daily_chg": 1.87,
-            "change_percent": -1.87,
+            "daily_chg": 1.64,
+            "change_percent": -2.09,
             "trend": "UP",
             "sparkline": [
                 5.44,
@@ -914,14 +914,14 @@
                 5.79,
                 5.77,
                 5.73,
-                5.84
+                5.82
             ]
         },
         "NATGAS": {
-            "price": 4.94,
+            "price": 4.98,
             "prev_price": 4.88,
-            "daily_chg": 1.39,
-            "change_percent": 58.02,
+            "daily_chg": 2.24,
+            "change_percent": 59.34,
             "trend": "UP",
             "sparkline": [
                 3.98,
@@ -945,7 +945,7 @@
                 3.1,
                 3.91,
                 4.88,
-                4.94
+                4.98
             ]
         },
         "MOVE": {
@@ -1106,22 +1106,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "The 7.46% drop in VIX and 1.39% dip in Oil prices suggests easing inflation fears, curbing safety flight. US 10-year yield remains stable at 4.26%, with breakeven inflation steady at 2.31%, narrowing the gap from the Fed's target. Net Liquidity saw a minor increase, but the GMS score is at 35/100, keeping markets in defensive territory. HY spreads tightened by 1.47%, signaling a slight risk-on sentiment. Gold's 2.66% rise implies that some inflation hedge demand persists.",
+        "content": "The 7.46% drop in VIX coupled with a slight increase in net liquidity suggests easing market anxiety, though inflation at 2.8% remains above the Fed's target. A 1.47% contraction in HY spreads signals increasing risk appetite, but a GMS score of 35 still indicates defensive positioning. Oil's 1.4% decline may ease inflation, while gold's 2.48% surge indicates hedging against uncertainty. USDJPY edged up 0.1%, continuing its weakening trend, potentially supporting corporate profits. The market is shifting from a range but warrants caution.",
         "reports": {
-            "JP": "VIXの7.46%低下と原油価格の1.39%下落は、インフレ懸念の緩和を示唆し、安全資産への逃避を抑制しています。米10年債利回りは4.26%で安定しており、ブレークイーブンインフレ率は2.31%で変わらず、FRBのインフレ目標からの乖離が縮小しています。ネット流動性はわずかに増加しましたが、GMSスコアは35/100で、市場は依然としてディフェンシブな領域にあります。ハイイールド債のスプレッドは1.47%縮小し、リスク選好のわずかな兆候が見られます。金価格が2.66%上昇していることは、インフレに対するヘッジ需要が依然として存在していることを示しています。",
-            "EN": "The 7.46% drop in VIX and 1.39% dip in Oil prices suggests easing inflation fears, curbing safety flight. US 10-year yield remains stable at 4.26%, with breakeven inflation steady at 2.31%, narrowing the gap from the Fed's target. Net Liquidity saw a minor increase, but the GMS score is at 35/100, keeping markets in defensive territory. HY spreads tightened by 1.47%, signaling a slight risk-on sentiment. Gold's 2.66% rise implies that some inflation hedge demand persists.",
-            "CN": "VIX 下跌 7.46%，原油价格下跌 1.39%，表明通胀担忧有所缓解，从而抑制了避险情绪。美国 10 年期国债收益率稳定在 4.26%，盈亏平衡通胀率稳定在 2.31%，缩小了与美联储目标之间的差距。净流动性略有增加，但 GMS 评分仍为 35/100，市场仍处于防御区域。高收益债券息差收紧 1.47%，表明风险偏好略有回升。黄金上涨 2.66%，暗示对冲通胀的需求仍然存在。",
-            "ES": "La caída del 7.46% en el VIX y el descenso del 1.39% en los precios del petróleo sugieren una disminución de los temores de inflación, frenando la fuga hacia activos seguros. El rendimiento del Tesoro estadounidense a 10 años se mantiene estable en el 4.26%, con una inflación de equilibrio constante en el 2.31%, reduciendo la brecha con el objetivo de la Fed. La liquidez neta experimentó un ligero aumento, pero la puntuación GMS se sitúa en 35/100, manteniendo los mercados en territorio defensivo. Los diferenciales de HY se redujeron un 1.47%, lo que indica un ligero sentimiento de apetito por el riesgo. El aumento del oro del 2.66% implica que persiste cierta demanda de cobertura contra la inflación.",
-            "HI": "VIX में 7.46% गिरावट और तेल की कीमतों में 1.39% गिरावट से मुद्रास्फीति के डर में कमी का सुझाव मिलता है, जिससे सुरक्षित उड़ान पर अंकुश लगता है। अमेरिकी 10-वर्षीय उपज 4.26% पर स्थिर है, ब्रेकइवन मुद्रास्फीति 2.31% पर स्थिर है, फेड के लक्ष्य से अंतर कम हो रहा है। नेट लिक्विडिटी में मामूली वृद्धि देखी गई, लेकिन जीएमएस स्कोर 35/100 पर है, जो बाजारों को रक्षात्मक क्षेत्र में रखता है। एचवाई स्प्रेड 1.47% तक कड़े हुए, जो थोड़े जोखिम-ऑन सेंटीमेंट का संकेत देते हैं। सोने में 2.66% की वृद्धि का तात्पर्य है कि कुछ मुद्रास्फीति हेज मांग बनी हुई है।",
-            "ID": "Penurunan 7,46% pada VIX dan penurunan 1,39% pada harga minyak mengindikasikan meredanya kekhawatiran inflasi, membatasi pelarian aset aman. Imbal hasil obligasi AS 10-tahun tetap stabil di 4,26%, dengan inflasi impas tetap di 2,31%, mempersempit kesenjangan dari target The Fed. Likuiditas Bersih mengalami sedikit peningkatan, tetapi skor GMS berada di 35/100, menjaga pasar di wilayah defensif. Spread HY diperketat sebesar 1,47%, menandakan sentimen risk-on yang sedikit. Kenaikan emas sebesar 2,66% menyiratkan bahwa beberapa permintaan lindung nilai inflasi tetap ada.",
-            "AR": "يشير انخفاض مؤشر فيكس بنسبة 7.46% وانخفاض أسعار النفط بنسبة 1.39% إلى تراجع المخاوف بشأن التضخم، مما يحد من الهروب إلى الملاذات الآمنة. ظل عائد السندات الأمريكية لأجل 10 سنوات مستقرًا عند 4.26%، مع ثبات معدل التضخم التعادلي عند 2.31%، مما يقلل الفجوة مع هدف بنك الاحتياطي الفيدرالي. شهد صافي السيولة زيادة طفيفة، لكن درجة GMS تبلغ 35/100، مما يحافظ على الأسواق في منطقة دفاعية. تقلصت فروق أسعار السندات عالية العائد بنسبة 1.47%، مما يشير إلى شعور طفيف بالإقبال على المخاطرة. يشير ارتفاع الذهب بنسبة 2.66% إلى استمرار بعض الطلب على التحوط من التضخم."
+            "JP": "VIXの7.46%低下と小幅な流動性増加は、市場の安心感を示唆するも、2.8%のインフレ率はFRBの目標を上回る水準です。HYスプレッドは1.47%縮小し、リスク選好の兆しが見られますが、GMSスコア35は依然としてディフェンシブな領域です。原油価格の1.4%下落はインフレ緩和に寄与する一方、金価格は2.48%上昇し、不確実性へのヘッジ需要を示唆します。USDJPYは0.1%上昇し、円安傾向が継続、企業収益を支える可能性があります。市場はレンジ相場から脱却しつつあるものの、慎重な姿勢が求められます。",
+            "EN": "The 7.46% drop in VIX coupled with a slight increase in net liquidity suggests easing market anxiety, though inflation at 2.8% remains above the Fed's target. A 1.47% contraction in HY spreads signals increasing risk appetite, but a GMS score of 35 still indicates defensive positioning. Oil's 1.4% decline may ease inflation, while gold's 2.48% surge indicates hedging against uncertainty. USDJPY edged up 0.1%, continuing its weakening trend, potentially supporting corporate profits. The market is shifting from a range but warrants caution.",
+            "CN": "VIX 下跌 7.46%，净流动性略有增加，表明市场焦虑情绪有所缓解，但 2.8% 的通胀率仍高于美联储的目标。 HY 利差收窄 1.47%，表明风险偏好有所上升，但 GMS 指数为 35 仍表明防御性仓位。 原油价格下跌 1.4% 可能会缓解通货膨胀，而黄金价格上涨 2.48% 表明对不确定性的对冲需求。 美元兑日元上涨 0.1%，延续疲软趋势，可能支撑企业利润。 市场正从区间波动转向，但需要谨慎。",
+            "ES": "La caída del 7.46% en el VIX, junto con un ligero aumento en la liquidez neta, sugiere una menor ansiedad en el mercado, aunque la inflación del 2.8% sigue por encima del objetivo de la Fed. Una contracción del 1.47% en los diferenciales HY señala un mayor apetito por el riesgo, pero un puntaje GMS de 35 aún indica un posicionamiento defensivo. La caída del 1.4% del petróleo puede aliviar la inflación, mientras que el aumento del 2.48% del oro indica cobertura contra la incertidumbre. El USDJPY subió un 0.1%, continuando su tendencia a la baja, lo que podría respaldar las ganancias corporativas. El mercado está cambiando de un rango, pero exige precaución.",
+            "HI": "वीआईएक्स में 7.46% की गिरावट और शुद्ध तरलता में थोड़ी वृद्धि से बाजार की चिंता कम होने का संकेत मिलता है, हालांकि 2.8% पर मुद्रास्फीति अभी भी फेड के लक्ष्य से ऊपर है। एचवाई स्प्रेड में 1.47% का संकुचन जोखिम लेने की भूख बढ़ने का संकेत देता है, लेकिन जीएमएस स्कोर 35 अभी भी रक्षात्मक स्थिति का संकेत देता है। तेल में 1.4% की गिरावट से मुद्रास्फीति कम हो सकती है, जबकि सोने में 2.48% की वृद्धि अनिश्चितता के खिलाफ बचाव का संकेत देती है। USDJPY में 0.1% की वृद्धि हुई, जो अपने कमजोर रुझान को जारी रखता है, संभावित रूप से कॉर्पोरेट मुनाफे का समर्थन करता है। बाजार एक सीमा से बदल रहा है लेकिन सावधानी बरतने की जरूरत है।",
+            "ID": "Penurunan VIX sebesar 7,46% ditambah dengan sedikit peningkatan likuiditas bersih menunjukkan meredanya kecemasan pasar, meskipun inflasi pada 2,8% masih di atas target The Fed. Kontraksi 1,47% pada spread HY menandakan meningkatnya selera risiko, tetapi skor GMS 35 masih menunjukkan posisi defensif. Penurunan minyak sebesar 1,4% dapat meredakan inflasi, sementara lonjakan emas sebesar 2,48% mengindikasikan lindung nilai terhadap ketidakpastian. USDJPY naik 0,1%, melanjutkan tren pelemahannya, yang berpotensi mendukung keuntungan perusahaan. Pasar bergeser dari kisaran tetapi memerlukan kehati-hatian.",
+            "AR": "يشير انخفاض مؤشر VIX بنسبة 7.46% إلى جانب زيادة طفيفة في صافي السيولة إلى تخفيف القلق في السوق، على الرغم من أن التضخم البالغ 2.8% لا يزال أعلى من هدف الاحتياطي الفيدرالي. يشير انكماش بنسبة 1.47% في فروق أسعار السندات عالية المخاطر إلى زيادة الإقبال على المخاطرة، ولكن درجة GMS البالغة 35 لا تزال تشير إلى تمركز دفاعي. قد يؤدي انخفاض النفط بنسبة 1.4% إلى تخفيف التضخم، في حين يشير ارتفاع الذهب بنسبة 2.48% إلى التحوط ضد عدم اليقين. ارتفع الدولار الأمريكي مقابل الين الياباني بنسبة 0.1%، مما استمر في اتجاهه النزولي، مما قد يدعم أرباح الشركات. السوق يتحول من نطاق ولكنه يستدعي الحذر."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-20T10:42:54Z",
-            "score": 28
-        },
         {
             "date": "2026-01-20T11:34:03Z",
             "score": 28
@@ -1357,6 +1353,10 @@
         {
             "date": "2026-01-23T02:06:15Z",
             "score": 35
+        },
+        {
+            "date": "2026-01-23T02:28:00Z",
+            "score": 35
         }
     ],
     "intelligence": {
@@ -1379,7 +1379,7 @@
             {
                 "title": "TikTok forms U.S. joint venture, names Adam Presser CEO",
                 "link": "https://www.cnbc.com/2026/01/22/tiktok-forms-us-joint-venture-names-a-ceo.html",
-                "isoDate": "2026-01-23T02:03:36Z"
+                "isoDate": "2026-01-23T02:15:56Z"
             },
             {
                 "title": "S&P 500 futures are little changed after major averages advance for second straight day: Live updates",
@@ -1393,7 +1393,7 @@
             }
         ],
         "translations": {},
-        "last_updated": "2026-01-23T02:06:15.123738Z"
+        "last_updated": "2026-01-23T02:28:00.430523Z"
     },
     "system_status": "OPERATIONAL"
 }
