@@ -7,7 +7,7 @@ import time
 from datetime import datetime, timedelta
 import random
 from fredapi import Fred
-import google.generativeai as genai
+
 import requests
 from dotenv import load_dotenv
 import subprocess
