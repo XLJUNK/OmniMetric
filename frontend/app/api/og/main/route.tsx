@@ -31,6 +31,7 @@ export async function GET(request: Request) {
 
         // 5. Font Loading (Robust Fallback)
         let fontOptions = {};
+        /* 
         try {
             const fontData = await fetch(
                 new URL('https://raw.githubusercontent.com/rsms/inter/master/docs/font-files/Inter-Bold.otf')
@@ -44,6 +45,7 @@ export async function GET(request: Request) {
         } catch (e) {
             console.warn("Font load failed, falling back to system fonts", e);
         }
+        */
 
         return new ImageResponse(
             (
