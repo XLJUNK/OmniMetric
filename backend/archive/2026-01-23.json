@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-01-23T00:40:28Z",
-    "last_successful_update": "2026-01-23T00:40:28Z",
+    "last_updated": "2026-01-23T00:54:04Z",
+    "last_successful_update": "2026-01-23T00:54:04Z",
     "gms_score": 35,
     "sector_scores": {
         "STOCKS": 50,
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 89448.1,
+            "price": 89479.23,
             "prev_price": 89376.96,
-            "daily_chg": 0.08,
-            "change_percent": -4.47,
+            "daily_chg": 0.11,
+            "change_percent": -4.44,
             "trend": "UP",
             "sparkline": [
                 88731.98,
@@ -604,14 +604,14 @@
                 92553.59,
                 88310.91,
                 89376.96,
-                89448.1
+                89479.23
             ]
         },
         "ETH": {
-            "price": 2945.21,
+            "price": 2947.62,
             "prev_price": 2978.9,
-            "daily_chg": -1.13,
-            "change_percent": -10.24,
+            "daily_chg": -1.05,
+            "change_percent": -10.17,
             "trend": "DOWN",
             "sparkline": [
                 3000.39,
@@ -635,14 +635,14 @@
                 3186.62,
                 2935.61,
                 2978.9,
-                2945.21
+                2947.62
             ]
         },
         "SOL": {
-            "price": 128.1,
+            "price": 128.23,
             "prev_price": 129.38,
-            "daily_chg": -0.99,
-            "change_percent": -7.17,
+            "daily_chg": -0.89,
+            "change_percent": -7.08,
             "trend": "DOWN",
             "sparkline": [
                 126.76,
@@ -666,7 +666,7 @@
                 133.34,
                 125.71,
                 129.38,
-                128.1
+                128.23
             ]
         },
         "DXY": {
@@ -701,10 +701,10 @@
             ]
         },
         "USDJPY": {
-            "price": 158.53,
+            "price": 158.51,
             "prev_price": 158.46,
-            "daily_chg": 0.05,
-            "change_percent": 0.63,
+            "daily_chg": 0.03,
+            "change_percent": 0.62,
             "trend": "UP",
             "sparkline": [
                 156.88,
@@ -728,14 +728,14 @@
                 158.18,
                 158.16,
                 158.46,
-                158.53
+                158.51
             ]
         },
         "EURUSD": {
             "price": 1.18,
             "prev_price": 1.17,
-            "daily_chg": 0.69,
-            "change_percent": 1.11,
+            "daily_chg": 0.68,
+            "change_percent": 1.1,
             "trend": "UP",
             "sparkline": [
                 1.18,
@@ -825,10 +825,10 @@
             ]
         },
         "GOLD": {
-            "price": 4954.8,
+            "price": 4951.7,
             "prev_price": 4831.8,
-            "daily_chg": 2.55,
-            "change_percent": 7.33,
+            "daily_chg": 2.48,
+            "change_percent": 7.27,
             "trend": "UP",
             "sparkline": [
                 4361.4,
@@ -852,14 +852,14 @@
                 4588.4,
                 4759.6,
                 4831.8,
-                4954.8
+                4951.7
             ]
         },
         "OIL": {
-            "price": 59.63,
+            "price": 59.62,
             "prev_price": 60.62,
-            "daily_chg": -1.63,
-            "change_percent": 0.74,
+            "daily_chg": -1.65,
+            "change_percent": 0.73,
             "trend": "DOWN",
             "sparkline": [
                 56.66,
@@ -883,14 +883,14 @@
                 59.44,
                 60.34,
                 60.62,
-                59.63
+                59.62
             ]
         },
         "COPPER": {
-            "price": 5.82,
+            "price": 5.81,
             "prev_price": 5.73,
-            "daily_chg": 1.51,
-            "change_percent": -2.22,
+            "daily_chg": 1.41,
+            "change_percent": -2.31,
             "trend": "UP",
             "sparkline": [
                 5.44,
@@ -914,14 +914,14 @@
                 5.79,
                 5.77,
                 5.73,
-                5.82
+                5.81
             ]
         },
         "NATGAS": {
-            "price": 4.92,
+            "price": 4.93,
             "prev_price": 4.88,
-            "daily_chg": 0.98,
-            "change_percent": 57.38,
+            "daily_chg": 1.15,
+            "change_percent": 57.64,
             "trend": "UP",
             "sparkline": [
                 3.98,
@@ -945,7 +945,7 @@
                 3.1,
                 3.91,
                 4.88,
-                4.92
+                4.93
             ]
         },
         "MOVE": {
@@ -1106,22 +1106,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "Despite the VIX decline and lower oil prices suggesting risk appetite, a 2.8% inflation rate limits the Fed's policy pivot, keeping real rates high. The US 10-year yield remains static at 4.26% with an unchanged yield spread, creating market ambiguity. The Copper/Gold ratio is unchanged at 1.17, reflecting a neutral economic outlook. Net Liquidity has marginally increased, but the GMS score remains defensive at 35. USDJPY persists at 158.53, reflecting continued Yen weakness.",
+        "content": "Despite the VIX decrease and lower oil prices suggesting temporary risk relief, a GMS score of 35 remains defensive. With the US 10-year yield steady at 4.26% and real interest rates at 1.92%, monetary tightening pressures persist. A flat Copper/Gold ratio of 1.17 indicates uncertain economic outlook. Despite slight liquidity increase, the GMS signals risk aversion. Inflation is under target and influences Fed policy.",
         "reports": {
-            "JP": "VIXの低下と原油安はリスク選好を示唆するも、2.8%のインフレ率はFRBの政策転換を抑制し、実質金利を高く維持します。米10年債利回りは4.26%で膠着し、イールドスプレッドも変化なく、市場の方向感は不明確です。銅/金レシオは1.17で変化なく、景気見通しは中立を示唆します。ネット流動性はわずかに増加しましたが、GMSスコアは35で防御的な水準です。ドル円は158.53で推移し、引き続き円安圧力がかかっています。",
-            "EN": "Despite the VIX decline and lower oil prices suggesting risk appetite, a 2.8% inflation rate limits the Fed's policy pivot, keeping real rates high. The US 10-year yield remains static at 4.26% with an unchanged yield spread, creating market ambiguity. The Copper/Gold ratio is unchanged at 1.17, reflecting a neutral economic outlook. Net Liquidity has marginally increased, but the GMS score remains defensive at 35. USDJPY persists at 158.53, reflecting continued Yen weakness.",
-            "CN": "尽管VIX下降和油价下跌表明风险偏好情绪，但2.8%的通胀率限制了美联储的政策转向，维持实际利率在高位。美国10年期国债收益率稳定在4.26%，收益率差未变，导致市场方向不明。铜金比维持在1.17不变，反映出中性的经济前景。净流动性略有增加，但GMS评分仍为35，处于防御水平。美元兑日元汇率维持在158.53，表明日元持续疲软。",
-            "ES": "A pesar de la caída del VIX y los precios más bajos del petróleo que sugieren apetito por el riesgo, una tasa de inflación del 2.8% limita el giro en la política de la Fed, manteniendo altas las tasas reales. El rendimiento del bono estadounidense a 10 años se mantiene estático en el 4.26% con un diferencial de rendimiento sin cambios, creando ambigüedad en el mercado. La relación Cobre/Oro no ha cambiado en 1.17, lo que refleja una perspectiva económica neutral. La liquidez neta ha aumentado marginalmente, pero la puntuación GMS sigue siendo defensiva en 35. El USDJPY persiste en 158.53, lo que refleja la continua debilidad del yen.",
-            "HI": "VIX में गिरावट और तेल की कीमतों में कमी के बावजूद, 2.8% की मुद्रास्फीति दर फेड की नीतिगत बदलाव को सीमित करती है, जिससे वास्तविक दरें ऊंची बनी रहती हैं। अमेरिकी 10-वर्षीय उपज 4.26% पर स्थिर बनी हुई है, जिसमें उपज प्रसार अपरिवर्तित है, जिससे बाजार में अस्पष्टता बनी हुई है। कॉपर/गोल्ड अनुपात 1.17 पर अपरिवर्तित है, जो एक तटस्थ आर्थिक दृष्टिकोण को दर्शाता है। नेट लिक्विडिटी में मामूली वृद्धि हुई है, लेकिन जीएमएस स्कोर 35 पर रक्षात्मक बना हुआ है। यूएसडीजेपीवाई 158.53 पर बना हुआ है, जो येन की निरंतर कमजोरी को दर्शाता है।",
-            "ID": "Meskipun penurunan VIX dan harga minyak yang lebih rendah menunjukkan selera risiko, tingkat inflasi 2,8% membatasi perubahan kebijakan The Fed, menjaga suku bunga riil tetap tinggi. Imbal hasil obligasi AS 10-tahun tetap statis di 4,26% dengan selisih imbal hasil yang tidak berubah, menciptakan ambiguitas pasar. Rasio Tembaga/Emas tidak berubah di 1,17, mencerminkan prospek ekonomi netral. Likuiditas Bersih meningkat sedikit, tetapi skor GMS tetap defensif di 35. USDJPY bertahan di 158,53, mencerminkan berlanjutnya pelemahan Yen.",
-            "AR": "على الرغم من انخفاض مؤشر VIX وانخفاض أسعار النفط مما يشير إلى الإقبال على المخاطرة، فإن معدل التضخم البالغ 2.8٪ يحد من تحول سياسة بنك الاحتياطي الفيدرالي، مما يحافظ على ارتفاع المعدلات الحقيقية. يظل عائد سندات الخزانة الأمريكية لأجل 10 سنوات ثابتًا عند 4.26٪ مع بقاء فارق العائد دون تغيير، مما يخلق غموضًا في السوق. نسبة النحاس/الذهب لم تتغير عند 1.17، مما يعكس نظرة اقتصادية محايدة. زادت السيولة الصافية بشكل طفيف، لكن درجة GMS لا تزال دفاعية عند 35. يستمر سعر الدولار الأمريكي مقابل الين الياباني عند 158.53، مما يعكس استمرار ضعف الين."
+            "JP": "VIXの低下と原油安は一時的なリスク軽減を示唆するも、GMSスコア35は依然として防御的です。米10年債利回りが4.26%で安定し、実質金利が1.92%を維持する中、金融引き締め圧力は継続。銅と金の比率が1.17で横ばいであることは、景気見通しの不確実性を示唆。流動性のわずかな増加にもかかわらず、GMSはリスク回避を示唆。インフレ率は目標を下回り、FRBの政策に影響を与えます。",
+            "EN": "Despite the VIX decrease and lower oil prices suggesting temporary risk relief, a GMS score of 35 remains defensive. With the US 10-year yield steady at 4.26% and real interest rates at 1.92%, monetary tightening pressures persist. A flat Copper/Gold ratio of 1.17 indicates uncertain economic outlook. Despite slight liquidity increase, the GMS signals risk aversion. Inflation is under target and influences Fed policy.",
+            "CN": "尽管VIX下降和油价下跌表明暂时缓解了风险，但GMS得分35仍为防御性。 美国10年期国债收益率稳定在4.26％，实际利率为1.92％，货币紧缩压力持续存在。 铜金比率持平于1.17，表明经济前景不明朗。 尽管流动性略有增加，但GMS仍表示规避风险。 通货膨胀率低于目标，影响美联储政策。",
+            "ES": "A pesar de que la disminución del VIX y los precios más bajos del petróleo sugieren un alivio temporal del riesgo, un puntaje GMS de 35 sigue siendo defensivo. Con el rendimiento del bono estadounidense a 10 años estable en 4.26% y las tasas de interés reales en 1.92%, persisten las presiones de ajuste monetario. Una relación cobre/oro plana de 1.17 indica una perspectiva económica incierta. El GMS señala aversión al riesgo. La inflación está por debajo del objetivo e influye en la política de la Fed.",
+            "HI": "VIX में कमी और तेल की कीमतों में गिरावट के बावजूद GMS स्कोर 35 रक्षात्मक बना हुआ है, जो अस्थायी जोखिम राहत का सुझाव देता है। अमेरिकी 10-वर्षीय उपज 4.26% पर स्थिर रहने और वास्तविक ब्याज दरें 1.92% पर रहने के साथ, मौद्रिक कसने का दबाव जारी है। कॉपर/गोल्ड अनुपात 1.17 पर सपाट है, जो अनिश्चित आर्थिक दृष्टिकोण का संकेत देता है। हल्की तरलता वृद्धि के बावजूद, GMS जोखिम से बचने का संकेत देता है। मुद्रास्फीति लक्ष्य से कम है और फेड नीति को प्रभावित करती है।",
+            "ID": "Meskipun penurunan VIX dan harga minyak yang lebih rendah menunjukkan penurunan risiko sementara, skor GMS 35 tetap defensif. Dengan imbal hasil AS 10-tahun stabil di 4,26% dan suku bunga riil di 1,92%, tekanan pengetatan moneter tetap ada. Rasio Tembaga/Emas yang datar di 1,17 mengindikasikan prospek ekonomi yang tidak pasti. Terlepas dari sedikit peningkatan likuiditas, GMS menandakan penghindaran risiko. Inflasi di bawah target dan memengaruhi kebijakan Fed.",
+            "AR": "على الرغم من أن انخفاض مؤشر VIX وانخفاض أسعار النفط يشيران إلى تخفيف مؤقت للمخاطر، إلا أن درجة GMS البالغة 35 تظل دفاعية. مع استقرار عائدات سندات الخزانة الأمريكية لمدة 10 سنوات عند 4.26% وأسعار الفائدة الحقيقية عند 1.92%، تستمر ضغوط التشديد النقدي. تشير النسبة المسطحة بين النحاس والذهب البالغة 1.17 إلى توقعات اقتصادية غير مؤكدة. يشير GMS إلى النفور من المخاطرة. التضخم أقل من الهدف ويؤثر على سياسة بنك الاحتياطي الفيدرالي."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-20T07:39:00Z",
-            "score": 29
-        },
         {
             "date": "2026-01-20T08:49:29Z",
             "score": 28
@@ -1357,6 +1353,10 @@
         {
             "date": "2026-01-23T00:40:28Z",
             "score": 35
+        },
+        {
+            "date": "2026-01-23T00:54:04Z",
+            "score": 35
         }
     ],
     "intelligence": {
@@ -1384,7 +1384,7 @@
             {
                 "title": "Elon Musk says Tesla taking safety supervisors out of some Robotaxi vehicles in Austin",
                 "link": "https://www.cnbc.com/2026/01/22/musk-says-tesla-takes-safety-supervisors-out-of-some-austin-robotaxis.html",
-                "isoDate": "2026-01-22T23:14:27Z"
+                "isoDate": "2026-01-23T00:53:37Z"
             },
             {
                 "title": "Analysts are growing more bullish on these stocks, including a major trading platform",
@@ -1393,7 +1393,7 @@
             }
         ],
         "translations": {},
-        "last_updated": "2026-01-23T00:40:28.950494Z"
+        "last_updated": "2026-01-23T00:54:04.993952Z"
     },
     "system_status": "OPERATIONAL"
 }
