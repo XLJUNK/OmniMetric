@@ -247,4 +247,10 @@ if __name__ == "__main__":
         
     except Exception as e:
         print(f"[ERROR] Failed to update news: {e}")
+        # Create failure flag for GitHub Actions to pick up
+        try:
+            flag_path = os.path.join(os.path.dirname(__file__), "ai_failed.flag")
+            with open(flag_path, "w") as f:
+                f.write("FAILURE_NEWS")
+        except: pass
         sys.exit(1)
