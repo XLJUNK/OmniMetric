@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 // @ts-ignore
-import signalData from '@/data/current_signal.json';
+import signalData from '../../../data/current_signal.json';
 
 // This API serves pre-translated news from the build-time bundled JSON
 // v5.7: Switched to static import for Edge compatibility
