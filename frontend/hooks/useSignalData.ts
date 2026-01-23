@@ -2,16 +2,8 @@
 
 import { useState, useEffect } from 'react';
 
-export interface SignalData {
-    last_updated: string;
-    last_successful_update?: string;
-    gms_score: number;
-    sector_scores?: Record<string, number>;
-    market_data: any;
-    analysis: any;
-    events: any[];
-    history_chart: any[];
-}
+import { SignalData } from '@/lib/signal';
+export type { SignalData };
 
 export const useSignalData = (initialData?: SignalData | null) => {
     const [data, setData] = useState<SignalData | null>(initialData || null);
