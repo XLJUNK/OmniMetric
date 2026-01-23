@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-01-23T15:48:01Z",
-    "last_successful_update": "2026-01-23T15:48:01Z",
+    "last_updated": "2026-01-23T15:56:37Z",
+    "last_successful_update": "2026-01-23T15:56:37Z",
     "gms_score": 36,
     "sector_scores": {
         "STOCKS": 50,
@@ -84,13 +84,12 @@
             ]
         },
         "HY_SPREAD": {
-            "price": 2.69,
-            "prev_price": 2.73,
-            "daily_chg": -1.47,
-            "change_percent": -1.47,
+            "price": 2.64,
+            "prev_price": 2.69,
+            "daily_chg": -1.86,
+            "change_percent": -1.86,
             "trend": "CALM",
             "sparkline": [
-                2.88,
                 2.91,
                 2.91,
                 2.98,
@@ -119,7 +118,8 @@
                 2.65,
                 2.65,
                 2.73,
-                2.69
+                2.69,
+                2.64
             ]
         },
         "NFCI": {
@@ -218,11 +218,11 @@
             ]
         },
         "VIX": {
-            "price": 15.65,
+            "price": 15.57,
             "prev_price": 15.64,
-            "daily_chg": 0.06,
-            "change_percent": -1.32,
-            "trend": "UP",
+            "daily_chg": -0.45,
+            "change_percent": -1.83,
+            "trend": "DOWN",
             "sparkline": [
                 14.08,
                 14.0,
@@ -245,7 +245,7 @@
                 20.09,
                 16.9,
                 15.64,
-                15.65
+                15.57
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
@@ -360,10 +360,10 @@
             ]
         },
         "SPY": {
-            "price": 689.76,
+            "price": 690.54,
             "prev_price": 688.98,
-            "daily_chg": 0.11,
-            "change_percent": -0.27,
+            "daily_chg": 0.23,
+            "change_percent": -0.16,
             "trend": "UP",
             "sparkline": [
                 684.83,
@@ -387,14 +387,14 @@
                 677.58,
                 685.4,
                 688.98,
-                689.76
+                690.54
             ]
         },
         "TNX": {
             "price": 4.24,
             "prev_price": 4.25,
-            "daily_chg": -0.09,
-            "change_percent": 0.33,
+            "daily_chg": -0.14,
+            "change_percent": 0.28,
             "trend": "DOWN",
             "sparkline": [
                 4.17,
@@ -422,10 +422,10 @@
             ]
         },
         "QQQ": {
-            "price": 623.92,
+            "price": 624.7,
             "prev_price": 620.76,
-            "daily_chg": 0.51,
-            "change_percent": 0.43,
+            "daily_chg": 0.63,
+            "change_percent": 0.55,
             "trend": "UP",
             "sparkline": [
                 619.21,
@@ -449,14 +449,14 @@
                 608.06,
                 616.28,
                 620.76,
-                623.92
+                624.7
             ]
         },
         "IWM": {
-            "price": 266.97,
+            "price": 267.23,
             "prev_price": 269.79,
-            "daily_chg": -1.05,
-            "change_percent": 0.46,
+            "daily_chg": -0.95,
+            "change_percent": 0.55,
             "trend": "DOWN",
             "sparkline": [
                 253.58,
@@ -480,14 +480,14 @@
                 262.58,
                 267.79,
                 269.79,
-                266.97
+                267.23
             ]
         },
         "RSP": {
-            "price": 198.73,
+            "price": 198.84,
             "prev_price": 199.66,
-            "daily_chg": -0.47,
-            "change_percent": -0.16,
+            "daily_chg": -0.41,
+            "change_percent": -0.11,
             "trend": "DOWN",
             "sparkline": [
                 193.54,
@@ -511,14 +511,14 @@
                 196.08,
                 199.4,
                 199.66,
-                198.73
+                198.84
             ]
         },
         "HYG": {
-            "price": 81.15,
+            "price": 81.18,
             "prev_price": 81.18,
-            "daily_chg": -0.04,
-            "change_percent": 0.07,
+            "daily_chg": -0.01,
+            "change_percent": 0.1,
             "trend": "DOWN",
             "sparkline": [
                 80.43,
@@ -542,7 +542,7 @@
                 80.88,
                 81.12,
                 81.18,
-                81.15
+                81.18
             ]
         },
         "NIFTY": {
@@ -577,11 +577,11 @@
             ]
         },
         "BTC": {
-            "price": 89119.78,
+            "price": 89567.31,
             "prev_price": 89462.45,
-            "daily_chg": -0.38,
-            "change_percent": -3.71,
-            "trend": "DOWN",
+            "daily_chg": 0.12,
+            "change_percent": -3.23,
+            "trend": "UP",
             "sparkline": [
                 89944.7,
                 90603.19,
@@ -604,14 +604,14 @@
                 88310.91,
                 89376.96,
                 89462.45,
-                89119.78
+                89567.31
             ]
         },
         "ETH": {
-            "price": 2931.31,
+            "price": 2947.79,
             "prev_price": 2949.63,
-            "daily_chg": -0.62,
-            "change_percent": -8.01,
+            "daily_chg": -0.06,
+            "change_percent": -7.49,
             "trend": "DOWN",
             "sparkline": [
                 3124.42,
@@ -635,14 +635,14 @@
                 2935.61,
                 2978.9,
                 2949.63,
-                2931.31
+                2947.79
             ]
         },
         "SOL": {
-            "price": 126.82,
+            "price": 127.48,
             "prev_price": 128.29,
-            "daily_chg": -1.14,
-            "change_percent": -4.89,
+            "daily_chg": -0.63,
+            "change_percent": -4.39,
             "trend": "DOWN",
             "sparkline": [
                 132.13,
@@ -666,7 +666,7 @@
                 125.71,
                 129.38,
                 128.29,
-                126.82
+                127.48
             ]
         },
         "DXY": {
@@ -701,10 +701,10 @@
             ]
         },
         "USDJPY": {
-            "price": 158.19,
+            "price": 158.13,
             "prev_price": 158.46,
-            "daily_chg": -0.17,
-            "change_percent": 0.42,
+            "daily_chg": -0.21,
+            "change_percent": 0.38,
             "trend": "DOWN",
             "sparkline": [
                 156.88,
@@ -728,14 +728,14 @@
                 158.18,
                 158.16,
                 158.46,
-                158.19
+                158.13
             ]
         },
         "EURUSD": {
             "price": 1.18,
             "prev_price": 1.17,
-            "daily_chg": 0.71,
-            "change_percent": 1.13,
+            "daily_chg": 0.76,
+            "change_percent": 1.18,
             "trend": "UP",
             "sparkline": [
                 1.18,
@@ -763,9 +763,9 @@
             ]
         },
         "USDINR": {
-            "price": 91.83,
+            "price": 91.82,
             "prev_price": 91.54,
-            "daily_chg": 0.32,
+            "daily_chg": 0.31,
             "change_percent": 1.24,
             "trend": "UP",
             "sparkline": [
@@ -790,7 +790,7 @@
                 90.9,
                 91.12,
                 91.54,
-                91.83
+                91.82
             ]
         },
         "USDSAR": {
@@ -825,10 +825,10 @@
             ]
         },
         "GOLD": {
-            "price": 4948.8,
+            "price": 4960.2,
             "prev_price": 4908.8,
-            "daily_chg": 0.81,
-            "change_percent": 7.85,
+            "daily_chg": 1.05,
+            "change_percent": 8.1,
             "trend": "UP",
             "sparkline": [
                 4444.6,
@@ -852,14 +852,14 @@
                 4759.6,
                 4831.8,
                 4908.8,
-                4948.8
+                4960.2
             ]
         },
         "OIL": {
-            "price": 60.99,
+            "price": 60.84,
             "prev_price": 59.36,
-            "daily_chg": 2.75,
-            "change_percent": 2.61,
+            "daily_chg": 2.49,
+            "change_percent": 2.36,
             "trend": "UP",
             "sparkline": [
                 58.01,
@@ -883,14 +883,14 @@
                 60.34,
                 60.62,
                 59.36,
-                60.99
+                60.84
             ]
         },
         "COPPER": {
-            "price": 5.92,
+            "price": 5.94,
             "prev_price": 5.74,
-            "daily_chg": 3.04,
-            "change_percent": 2.22,
+            "daily_chg": 3.48,
+            "change_percent": 2.66,
             "trend": "UP",
             "sparkline": [
                 5.44,
@@ -914,14 +914,14 @@
                 5.77,
                 5.73,
                 5.74,
-                5.92
+                5.94
             ]
         },
         "NATGAS": {
-            "price": 3.62,
+            "price": 3.61,
             "prev_price": 5.05,
-            "daily_chg": -28.15,
-            "change_percent": 16.82,
+            "daily_chg": -28.42,
+            "change_percent": 16.37,
             "trend": "DOWN",
             "sparkline": [
                 3.96,
@@ -945,7 +945,7 @@
                 3.91,
                 4.88,
                 5.05,
-                3.62
+                3.61
             ]
         },
         "MOVE": {
@@ -976,7 +976,7 @@
             ]
         },
         "BREADTH": {
-            "price": 0.11,
+            "price": 0.05,
             "change_percent": 0.0,
             "trend": "HEALTHY",
             "sparkline": [
@@ -1000,11 +1000,11 @@
                 3.06,
                 3.64,
                 3.25,
-                2.66
+                2.61
             ]
         },
         "SPY_MOMENTUM": {
-            "price": -0.11,
+            "price": -0.05,
             "change_percent": 0,
             "trend": "BALANCED",
             "sparkline": [
@@ -1106,22 +1106,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS at 36 keeps the market in a defensive regime. Flat net liquidity and yield spreads prevent a risk-on shift. Intel's fall forces valuation compression across the tech sector. High crypto fear signals a broad speculative capital exit. Flat momentum dictates a strict focus on capital safety.",
+        "content": "GMS 36 forces defense as liquidity stays stagnant at 5713 points. Intel’s 15% drop hurts tech sentiment via manufacturing failures. Real rates at 1.92% maintain valuation compression for the market. Crypto fear at 24 shows that investors reject speculative assets. Flat trends will remain until net liquidity finally begins to rise.",
         "reports": {
-            "JP": "GMS指数は36という低水準で停滞しており、市場は依然として厳格なディフェンシブ領域に留まっています。純流動性の微増では不十分であり、金利スプレッドの固定がリスクオンへの転換を阻害しています。インテルの製造問題は、好決算を打ち消すほどの評価減を引き起こし、市場全体の重石です。仮想通貨市場の極端な恐怖心は、投機的資金が安全資産へ逃避している現状を如実に物語ります。この平坦なモメンタム下では、ボラティリティに備えた慎重な資産配分が不可欠となります。",
-            "EN": "GMS at 36 keeps the market in a defensive regime. Flat net liquidity and yield spreads prevent a risk-on shift. Intel's fall forces valuation compression across the tech sector. High crypto fear signals a broad speculative capital exit. Flat momentum dictates a strict focus on capital safety.",
-            "CN": "GMS指数停滞在36点的水平，表明市场目前正处于一个非常严峻的防御性制度之中。净流动性的微小变化与固定的收益率利差共同作用，严重限制了风险资产的任何反弹。英特尔制造业务的困境引发了股价的大幅回落，并导致整个科技板块面临估值压缩的压力。加密货币市场的极端恐惧情绪与工业金属价格的上涨形成对比，显示出投机资金的流出。在当前这种平淡的市场势头下，投资者必须采取极其谨慎的态度并优先考虑资本保全。",
-            "ES": "El GMS en 36 mantiene al mercado en un régimen defensivo. La liquidez plana limita cualquier posible repunte de los activos. La caída de Intel provoca una fuerte compresión en tecnología. El miedo extremo en cripto confirma la fuga hacia la calidad. El impulso plano exige un enfoque estricto en preservar capital.",
-            "HI": "GMS 36 पर स्थिर है, जो बाजार को रक्षात्मक क्षेत्र में रखता है। शुद्ध तरलता में कमी जोखिम भरी संपत्तियों की वृद्धि को रोकती है। इंटेल की गिरावट ने तकनीकी क्षेत्र में मूल्यांकन दबाव बढ़ा दिया है। क्रिप्टो में अत्यधिक डर सट्टा पूंजी के बाहर निकलने का संकेत देता है। वर्तमान सपाट गति पूंजी सुरक्षा पर ध्यान केंद्रित करने की मांग करती है।",
-            "ID": "Skor GMS 36 memaksa pasar tetap dalam rezim defensif ketat. Likuiditas yang datar membatasi potensi reli aset berisiko saat ini. Penurunan Intel memicu kompresi valuasi pada sektor teknologi global. Ketakutan ekstrem di kripto menandakan pelarian modal ke kualitas. Momentum datar ini menuntut fokus penuh pada pelestarian modal.",
-            "AR": "يستقر مؤشر GMS عند 36، مما يبقي السوق في وضع دفاعي. السيولة المسطحة تمنع أي صعود محتمل للأصول ذات المخاطر العالية. تسبب هبوط إنتل في ضغط تقييمات قطاع التكنولوجيا بشكل كبير. الخوف الشديد في الكريبتو يؤكد خروج السيولة من المضاربات حالياً. يتطلب الزخم المسطح تركيزاً صارماً على حماية رأس المال المتاح."
+            "JP": "GMSスコアは36と低迷し、市場が防御的な姿勢を維持する中で、ネット流動性の停滞が資産価格の上値を重くしています。インテルの製造問題による15％の急落は、成長株への信頼を損ない、ハイテク指数の重石となっているのが現状です。銅や原油の上昇は実需を反映していますが、実質金利が1.92％の高水準に留まるため、バリュエーションの拡大は抑制されています。暗号資産のセンチメントが24と極めて低い水準に止まっていることは、投資家のリスク許容度が依然として回復していないことを示唆します。最終的に、VIXが15.57で安定しているものの、流動性の供給不足が続く限り、市場はレンジ内での推移を余儀なくされるでしょう。",
+            "EN": "GMS 36 forces defense as liquidity stays stagnant at 5713 points. Intel’s 15% drop hurts tech sentiment via manufacturing failures. Real rates at 1.92% maintain valuation compression for the market. Crypto fear at 24 shows that investors reject speculative assets. Flat trends will remain until net liquidity finally begins to rise.",
+            "CN": "GMS评分维持在36的防御区间，这直接反映了全球流动性在5713水平的停滞对资产价格构成的显著下行压力。英特尔公司因制造环节问题导致股价暴跌15%，这一突发事件显著削弱了科技板块的风险偏好并抑制了市场动能。尽管铜和原油价格出现反弹，但维持在1.92%的高位实际利率仍在持续压缩SPY等主流指数的市盈率估值空间。加密货币恐惧指数长期徘徊在24的历史低位，充分证明了在宏观不确定性下，投资者依然倾向于资本保全而非投机。只要净流动性流量未能实现实质性扩张，即便VIX指数保持在15.57的低位，市场也难以摆脱目前的震荡整理格局。",
+            "ES": "GMS de 36 exige defensa mientras la liquidez neta sigue estancada hoy. La caída del 15% en Intel golpea el sector tecnológico por manufactura. Tasas reales al 1.92% fuerzan una compresión de valoraciones de mercado. El miedo cripto en 24 muestra que el inversor evita riesgos externos. La tendencia plana seguirá hasta que la liquidez logre expandirse ya.",
+            "HI": "GMS स्कोर 36 रक्षात्मक रुख दिखाता है क्योंकि तरलता 5713 पर स्थिर बनी हुई है। इंटेल के 15% गिरने से विनिर्माण संकट के कारण तकनीकी भावना को भारी चोट लगी है। 1.92% की वास्तविक दरें बाजार के मूल्यांकन पर लगातार भारी दबाव डाल रही हैं। 24 का क्रिप्टो डर सूचकांक साबित करता है कि निवेशक अभी जोखिम से बच रहे हैं। जब तक तरलता नहीं बढ़ती, बाजार में यह सुस्ती और सपाट रुझान बना रहेगा।",
+            "ID": "Skor GMS 36 memaksa posisi defensif saat likuiditas bersih stagnan di 5713. Penurunan 15% Intel merusak sentimen teknologi akibat masalah manufaktur global. Suku bunga riil 1.92% terus menekan valuasi pasar secara keseluruhan saat ini. Sentimen kripto rendah di 24 membuktikan investor masih menghindari risiko aset. Tren pasar tetap datar hingga ada ekspansi likuiditas bersih yang lebih nyata.",
+            "AR": "درجة 36 في GMS تفرض موقفًا دفاعيًا مع استقرار السيولة عند 5713 نقطة. سقوط إنتل بنسبة 15% دمر معنويات قطاع التكنولوجيا بسبب مشاكل التصنيع الكبيرة. تواصل المعدلات الحقيقية بنسبة 1.92% الضغط على تقييمات السوق بشكل مستمر حالياً. يعكس خوف الكريبتو عند 24 تجنب المستثمرين الواضح للمخاطر في الوقت الحالي. سيبقى اتجاه السوق مسطحاً حتى نرى توسعاً حقيقياً في تدفقات السيولة الصافية."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-22T14:25:53Z",
-            "score": 32
-        },
         {
             "date": "2026-01-22T14:43:07Z",
             "score": 31
@@ -1356,6 +1352,10 @@
         },
         {
             "date": "2026-01-23T15:48:01Z",
+            "score": 36
+        },
+        {
+            "date": "2026-01-23T15:56:37Z",
             "score": 36
         }
     ],
