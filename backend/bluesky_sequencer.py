@@ -29,40 +29,30 @@ class BlueskySequencer:
 
     def check_schedule(self, jst_now=None):
         """
-        Checks if the current time matches any scheduled slot.
+        Checks if the current time matches any scheduled slot (Hour-based).
         Returns:
-            match_found (bool): True if matched
-            lang (str): Language code (e.g., "JP")
-            phase (int): 1 or 2
-            force_post (bool): True if Smart Skip should be bypassed
+            matches (list): List of tuples (lang, phase, force_post)
         """
         if jst_now is None:
             jst_now = self.get_jst_now()
             
         j_hour = jst_now.hour
-        j_min = jst_now.minute
         is_wknd = self.is_weekend(jst_now)
+        matches = []
 
         # Iterate through all languages and slots
         for lang, phases in self.SCHEDULE.items():
             # Check Phase 1
-            p1_h, p1_m = phases["PH1"]
+            p1_h, _ = phases["PH1"]
             if j_hour == p1_h:
-                # 15 min buffer window (e.g. 05-20 for 05 slot)
-                if p1_m <= j_min <= p1_m + 15:
-                    # Match Found: Phase 1
-                    # Weekday: Smart Skip ON (Force=False)
-                    # Weekend: Force Post (Weekly Summary)
-                    force = True if is_wknd else False
-                    return True, lang, 1, force
+                # Match Found: Phase 1 (Hour Match)
+                force = True if is_wknd else False
+                matches.append((lang, 1, force))
 
             # Check Phase 2
-            p2_h, p2_m = phases["PH2"]
+            p2_h, _ = phases["PH2"]
             if j_hour == p2_h:
-                if p2_m <= j_min <= p2_m + 15:
-                    # Match Found: Phase 2
-                    # Weekday: Force Post (Deep Analysis)
-                    # Weekend: Force Post (Weekly Summary)
-                    return True, lang, 2, True
+                # Match Found: Phase 2 (Hour Match)
+                matches.append((lang, 2, True))
 
-        return False, None, 0, False
+        return matches

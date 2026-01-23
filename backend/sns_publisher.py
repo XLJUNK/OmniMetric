@@ -272,22 +272,15 @@ class SNSPublisher:
         results = {}
         
         # SEQUENCER LOGIC (Golden Schedule)
-        match, lang, phase, force_post = self.sequencer.check_schedule()
+        # SEQUENCER LOGIC (Golden Schedule)
+        matches = self.sequencer.check_schedule()
         
-        target_languages = []
-        if match:
-            target_languages.append(lang)
-            self._log(f"Sequencer Match: {lang} (Phase {phase}, Force: {force_post})")
-        else:
-             self._log("Sequencer: No slot match. Skipping.")
+        if not matches:
+             self._log("Sequencer: No slot match in this hour. Skipping.")
              return {"STATUS": "SKIPPED_NO_SLOT"}
 
-        # OGP GENERATION LOOP
-        # Generate OGP for ALL targets
-        generated_ogps = {}
-        for lang in target_languages:
-            generated_ogps[lang] = self.generate_ogp_image(score, lang)
-
+        results["MATCHES"] = len(matches)
+        
         # 1. Post to Twitter (X) - PAUSED
         self._log("Stage 1 (Twitter) is currently DISABLED per user request.")
         results["TW_SKIP"] = True
@@ -295,37 +288,37 @@ class SNSPublisher:
         # 2. Post to Bluesky
         try:
             from sns_publisher_bsky import BlueskyPublisher
-            self._log("Processing Serial SNS Broadcast: Stage 2 (Bluesky)")
+            self._log(f"Processing Serial SNS Broadcast: Stage 2 (Bluesky) - {len(matches)} Tasks")
             bsky_pub = BlueskyPublisher(log_callback=self.log_callback)
             
-            # Check Skip Logic (Global Score check)
-            # If force_post is True, we skip the skipping.
-            if bsky_pub.should_skip(score) and not force_post:
-                 self._log("BlueSky Smart-Skip triggered (Score Unchanged).")
-                 results["BSKY"] = "SKIPPED"
-            else:
-                for lang in target_languages:
+            for (lang, phase, force_post) in matches:
+                self._log(f"Executing Task: {lang} (Phase {phase}, Force: {force_post})")
+                
+                # OGP Generation
+                image_path = self.generate_ogp_image(score, lang)
+                
+                # Check Skip Logic (Global Score check)
+                if bsky_pub.should_skip(score) and not force_post:
+                     self._log(f"[{lang}] BlueSky Smart-Skip triggered (Score Unchanged).")
+                     results[f"BSKY_{lang}"] = "SKIPPED"
+                else:
                      # Prepare Text
-                     # `format_post` currently only has JP/EN. 
-                     # We need to map others to EN text if translation missing, 
-                     # BUT use the OGP we generated (which IS translated).
                      raw_posts = self.format_post(data)
-                     text_body = raw_posts.get(lang, raw_posts.get("EN")) # Fallback to EN text
-                     
-                     # Attach matching OGP
-                     image_path = generated_ogps.get(lang)
+                     # Fallback to EN if specific lang key missing in format_post (only EN/JP currently)
+                     # ideally format_post should support all, but for now we fallback
+                     text_body = raw_posts.get(lang, raw_posts.get("EN")) 
+                     if lang == "JP": text_body = raw_posts.get("JP")
                      
                      res = bsky_pub.publish(data, image_path=image_path, force=force_post) 
                      results[f"BSKY_{lang}"] = res
                      
+                # Cleanup Image per task
+                if image_path and os.path.exists(image_path): os.remove(image_path)
+                     
         except Exception as e:
             self._log(f"Bluesky Integration Error: {e}", is_error=True, platform="BLUESKY")
-            results["BSKY"] = False
+            results["BSKY_ERROR"] = str(e)
             
-        # Cleanup Images
-        for p in generated_ogps.values():
-            if p and os.path.exists(p): os.remove(p)
-        
         return results
 
     def post_to_twitter(self, text):
