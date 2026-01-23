@@ -836,7 +836,47 @@ def get_last_valid_analysis():
     return None
 
 
-def generate_multilingual_report(data, score):
+def calculate_trend_context(history, current_score):
+    """
+    Analyzes the last 10 data points to determine trend vector and narrative.
+    Returns a dict with 'vector', 'narrative', 'stat_str'.
+    """
+    if not history or len(history) < 3:
+        return {"vector": "FLAT", "narrative": "Insufficient history to determine trend.", "stat_str": "N/A"}
+
+    # Use last 10 points
+    recent_window = history[-10:]
+    past_score = recent_window[0]['score']
+    
+    # Calculate Vector
+    delta = current_score - past_score
+    vector = "FLAT"
+    if delta > 3: vector = "UPWARD (Improving)"
+    elif delta < -3: vector = "DOWNWARD (Deteriorating)"
+
+    # Statistics
+    scores = [h['score'] for h in recent_window] + [current_score]
+    min_score = min(scores)
+    max_score = max(scores)
+    
+    # Narrative Logic (User Rule)
+    narrative = f"Market is moving from {past_score} to {current_score}."
+    
+    if current_score < 40:
+        if vector == "UPWARD (Improving)":
+            narrative = f"Bottoming out and stabilizing sentiment. Recovering from a low of {min_score}."
+        elif vector == "DOWNWARD (Deteriorating)":
+            narrative = f"Deepening caution and testing support levels. Down from a high of {max_score}."
+    
+    stat_str = f"Range[{min_score}-{max_score}] Delta[{delta:+d}]"
+    
+    return {
+        "vector": vector,
+        "narrative": narrative,
+        "stat_str": stat_str
+    }
+
+def generate_multilingual_report(data, score, trend_context={}):
     """Generates AI analysis in 7 languages using a SINGLE batch API call for efficiency."""
     # Prepare high-density data summary for AI v5.2
     # Include current, previous, and daily change for context
@@ -861,8 +901,10 @@ def generate_multilingual_report(data, score):
             return valid_cache
         return FALLBACK_STATUS
     else:
-        log_diag(f"[AI BRIDGE] GEMINI_API_KEY detected (Length: {len(GEMINI_KEY)})")
-
+    # Calculate Trend Context
+    trend_narrative = trend_context.get("narrative", "Market is analyzing new data patterns.")
+    trend_vector = trend_context.get("vector", "FLAT")
+    history_stat = trend_context.get("stat_str", "")
 
     # Prepare high-density data summary for AI v5.2
     # Include current, previous, and daily change for context
@@ -918,6 +960,8 @@ You are the centralized brain of the OmniMetric Terminal. You do not act as a si
 
 Market Context:
 - Current GMS Score: {score}/100
+- Momentum Vector: {trend_vector} (History: {history_stat})
+- Trend Narrative: {trend_narrative}
 - Market Matrix:
 {market_summary}
 - News: {breaking_news}
@@ -1267,8 +1311,20 @@ def update_signal(force_news=False):
         score = calculate_total_gms(market_data, sector_scores)
         log_diag(f"[OUT] GMS_TOTAL: {{ score: {score} }}")
         
+        # History Management (Hoisted for AI Context)
+        history = []
+        try:
+            if os.path.exists(HISTORY_FILE):
+                with open(HISTORY_FILE, 'r', encoding='utf-8') as f:
+                    history = json.load(f)
+        except: pass
+
+        # Trend Analysis
+        trend_context = calculate_trend_context(history, score)
+        log_diag(f"[AI CONTEXT] Trend: {trend_context['vector']} | {trend_context['narrative']}")
+
         # AI Analysis (Pass context)
-        ai_reports = generate_multilingual_report(market_data, score) 
+        ai_reports = generate_multilingual_report(market_data, score, trend_context) 
         
         # News Intelligence (New: Pre-translated & Cached)
         intelligence = None
@@ -1302,13 +1358,7 @@ def update_signal(force_news=False):
         # GLOBAL SAFEGUARD: Ensure events are sorted chronologically regardless of source
         events.sort(key=lambda x: x["date"])
 
-        # History Management
-        history = []
-        try:
-            if os.path.exists(HISTORY_FILE):
-                with open(HISTORY_FILE, 'r', encoding='utf-8') as f:
-                    history = json.load(f)
-        except: pass
+        # (History loading moved up)
         
         # Append new entry (UTC)
         new_entry = {
