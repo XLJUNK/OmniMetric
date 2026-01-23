@@ -104,7 +104,15 @@ jobs:
         if: always() # Run even if commit output "No changes"
         run: |
           if [ -f backend/ai_failed.flag ]; then
-            echo "::error::AI GENERATION FALLED (Stealth Cache Used)"
+            echo "::error::AI GENERATION FAILED (Stealth Cache Used)"
+            echo "--- FAILURE FLAG CONTENT ---"
+            cat backend/ai_failed.flag
+            echo ""
+            echo "--- ENGINE LOG DUMP ---"
+            cat backend/engine_log.txt || echo "No engine log found"
+            echo ""
+            echo "--- NEWS DEBUG LOG DUMP ---"
+            cat backend/news_debug.log || echo "No news debug log found"
             echo "Sending Private Alert to Owner..."
             exit 1
           fi

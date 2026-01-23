@@ -1536,6 +1536,11 @@ def update_signal(force_news=False):
 
 if __name__ == "__main__":
     try:
+        # 1. Cleanup old flags
+        flag_path = os.path.join(SCRIPT_DIR, "ai_failed.flag")
+        if os.path.exists(flag_path):
+            os.remove(flag_path)
+
         print(f"--- [START] Engine Run at {datetime.utcnow().isoformat()} ---")
         result = update_signal(force_news=True)
         print(f"--- [FINISH] Engine Run SUCCESS (Score: {result.get('gms_score', 'N/A')}) ---")
