@@ -56,22 +56,37 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
         );
     }
 
-    // Dynamic relative time logic for high-density "Bloomberg" feel
-    const getRelativeTime = (isoDate?: string) => {
-        if (!isoDate) return "RECENT";
+    // Absolute time logic: JST for JP, UTC for others
+    const getFormattedTime = (isoDate?: string) => {
+        if (!isoDate) return "";
 
-        const past = new Date(isoDate).getTime();
-        const diffSeconds = Math.floor((now - past) / 1000);
+        const date = new Date(isoDate);
+        const isJP = lang === 'JP';
+        const timeZone = isJP ? 'Asia/Tokyo' : 'UTC';
+        const label = isJP ? '(JST)' : '(UTC)';
 
-        if (diffSeconds < 60) return "Just now";
+        const nowJST = new Date(new Date().toLocaleString("en-US", { timeZone }));
+        const targetJST = new Date(date.toLocaleString("en-US", { timeZone }));
 
-        const diffMinutes = Math.floor(diffSeconds / 60);
-        if (diffMinutes < 60) return `${diffMinutes}m ago`;
+        const isSameDay = nowJST.toDateString() === targetJST.toDateString();
 
-        const diffHours = Math.floor(diffMinutes / 60);
-        if (diffHours < 24) return `${diffHours}h ago`;
+        const timeStr = new Intl.DateTimeFormat('en-US', {
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: false,
+            timeZone
+        }).format(date);
 
-        return "RECENT";
+        if (isSameDay) {
+            return `${timeStr} ${label}`;
+        } else {
+            const dateStr = new Intl.DateTimeFormat('en-US', {
+                month: '2-digit',
+                day: '2-digit',
+                timeZone
+            }).format(date);
+            return `${dateStr} ${timeStr} ${label}`;
+        }
     };
 
     return (
@@ -116,7 +131,7 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
 
                         {/* TIMESTAMP - Right-aligned metadata */}
                         <span className={`shrink-0 text-[9px] md:text-[10px] font-mono font-medium text-slate-400 dark:text-slate-500 group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-colors ${isRTL ? 'mr-4' : 'ml-4'}`}>
-                            {getRelativeTime(item.isoDate)}
+                            {getFormattedTime(item.isoDate)}
                         </span>
                     </Link>
                 ))}
