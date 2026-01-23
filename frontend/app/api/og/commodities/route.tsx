@@ -47,19 +47,33 @@ export async function GET(request: Request) {
             }
         }
 
-        // Font Loading (Noto Sans JP Bold)
+        // 5. Dynamic Font Loading & RTL Logic
+        let fontUrl = 'https://github.com/google/fonts/raw/main/ofl/notosansjp/NotoSansJP-Bold.ttf'; // Default (JP/EN/ES/ID)
+        let fontFamily = '"NotoSansJP", sans-serif';
+        const isRTL = lang === 'AR';
+
+        if (lang === 'CN') {
+            fontUrl = 'https://github.com/google/fonts/raw/main/ofl/notosanssc/NotoSansSC-Bold.ttf';
+            fontFamily = '"NotoSansSC", sans-serif';
+        } else if (lang === 'HI') {
+            fontUrl = 'https://github.com/google/fonts/raw/main/ofl/notosansdevanagari/NotoSansDevanagari-Bold.ttf';
+            fontFamily = '"NotoSansDevanagari", sans-serif';
+        } else if (lang === 'AR') {
+            fontUrl = 'https://github.com/google/fonts/raw/main/ofl/notosansarabic/NotoSansArabic-Bold.ttf';
+            fontFamily = '"NotoSansArabic", sans-serif';
+        }
+
         let fontOptions = {};
         try {
-            const fontUrl = new URL('https://github.com/google/fonts/raw/main/ofl/notosansjp/NotoSansJP-Bold.ttf');
-            const fontData = await fetch(fontUrl).then((res) => res.arrayBuffer());
-
+            const fontData = await fetch(new URL(fontUrl)).then((res) => res.arrayBuffer());
             if (fontData.byteLength > 0) {
+                const fontName = fontFamily.split('"')[1];
                 fontOptions = {
-                    fonts: [{ name: 'NotoSansJP', data: fontData, style: 'normal', weight: 700 }]
+                    fonts: [{ name: fontName, data: fontData, style: 'normal', weight: 700 }]
                 };
             }
         } catch (e) {
-            console.warn("Font load failed", e);
+            console.warn(`Font load failed for ${lang}`, e);
         }
 
         return new ImageResponse(
@@ -69,9 +83,10 @@ export async function GET(request: Request) {
                         height: '100%', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
                         backgroundColor: '#050505', // Void Black
                         color: 'white',
-                        fontFamily: '"NotoSansJP", sans-serif',
+                        fontFamily: fontFamily,
                         padding: '60px',
-                        border: '16px solid #334155'
+                        border: '16px solid #334155',
+                        direction: isRTL ? 'rtl' : 'ltr'
                     }}
                 >
                     {/* Header */}
