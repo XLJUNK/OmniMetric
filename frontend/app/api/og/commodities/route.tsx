@@ -47,48 +47,65 @@ export async function GET(request: Request) {
             }
         }
 
-        // Font Loading
+        // Font Loading (Noto Sans JP Bold)
         let fontOptions = {};
-        /* 
         try {
-            const fontData = await fetch(
-                new URL('https://raw.githubusercontent.com/rsms/inter/master/docs/font-files/Inter-Bold.otf')
-            ).then((res) => res.arrayBuffer());
+            const fontUrl = new URL('https://github.com/google/fonts/raw/main/ofl/notosansjp/NotoSansJP-Bold.ttf');
+            const fontData = await fetch(fontUrl).then((res) => res.arrayBuffer());
 
             if (fontData.byteLength > 0) {
                 fontOptions = {
-                    fonts: [{ name: 'InterFont', data: fontData, style: 'normal', weight: 700 }]
+                    fonts: [{ name: 'NotoSansJP', data: fontData, style: 'normal', weight: 700 }]
                 };
             }
         } catch (e) {
-            console.warn("Font load failed, falling back to system fonts", e);
+            console.warn("Font load failed", e);
         }
-        */
 
         return new ImageResponse(
             (
                 <div
                     style={{
                         height: '100%', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                        backgroundColor: '#0c0e1a', color: 'white', padding: '60px', border: '12px solid #334155'
+                        backgroundColor: '#050505', // Void Black
+                        color: 'white',
+                        fontFamily: '"NotoSansJP", sans-serif',
+                        padding: '60px',
+                        border: '16px solid #334155'
                     }}
                 >
                     {/* Header */}
-                    <div style={{ display: 'flex', position: 'absolute', top: 50, left: 80 }}>
-                        <div style={{ display: 'flex', fontSize: 34, color: '#f59e0b', fontWeight: 'bold' }}>
-                            OMNIMETRIC | {commoditiesLabel}
+                    <div style={{ display: 'flex', position: 'absolute', top: 50, left: 80, alignItems: 'center' }}>
+                        <div style={{ display: 'flex', width: '12px', height: '12px', background: '#f59e0b', borderRadius: '50%', marginRight: '15px' }}></div>
+                        <div style={{ display: 'flex', fontSize: 30, color: '#94a3b8', fontWeight: 'bold', letterSpacing: '0.1em' }}>
+                            OMNIMETRIC | <span style={{ color: '#f59e0b', marginLeft: '10px' }}>{commoditiesLabel}</span>
                         </div>
                     </div>
 
                     {/* Central Panel */}
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: '#111827', padding: '70px 100px', borderRadius: '30px', border: '4px solid #475569' }}>
-                        <div style={{ display: 'flex', fontSize: 44, color: '#94a3b8', marginBottom: '25px', letterSpacing: '0.05em' }}>{mainMetricLabel}</div>
-                        <div style={{ display: 'flex', fontSize: 160, fontWeight: 900, lineHeight: 1 }}>{mainMetricValue}</div>
+                    <div style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        backgroundColor: '#111827',
+                        padding: '60px 120px',
+                        borderRadius: '16px',
+                        border: '2px solid #374151'
+                    }}>
+                        <div style={{ display: 'flex', fontSize: 40, color: '#64748b', marginBottom: '20px', letterSpacing: '0.05em', textTransform: 'uppercase' }}>{mainMetricLabel}</div>
+
+                        {/* Massive Metric */}
+                        <div style={{ display: 'flex', fontSize: 200, fontWeight: 900, lineHeight: 0.9, letterSpacing: '-0.04em' }}>{mainMetricValue}</div>
+
+                        {/* Trend Status */}
                         <div style={{
-                            display: 'flex', marginTop: '30px', padding: '10px 40px', borderRadius: '100px', fontSize: 54, fontWeight: 'bold',
+                            display: 'flex', marginTop: '40px', padding: '15px 50px',
+                            borderRadius: '8px',
+                            fontSize: 48, fontWeight: 'bold',
                             color: trendColor,
-                            backgroundColor: 'rgba(255,255,255,0.05)',
-                            border: `12px solid #ffffff22`
+                            backgroundColor: trendColor + '22', // 0.1 opacity background
+                            border: `2px solid ${trendColor}`,
+                            letterSpacing: '0.05em'
                         }}>
                             {trendText}
                         </div>
@@ -96,7 +113,7 @@ export async function GET(request: Request) {
 
                     {/* Footer */}
                     <div style={{ display: 'flex', position: 'absolute', bottom: 50, right: 80 }}>
-                        <div style={{ display: 'flex', fontSize: 30, color: '#64748b' }}>{dateStr} | Supply Chain Intelligence</div>
+                        <div style={{ display: 'flex', fontSize: 24, color: '#475569', letterSpacing: '0.05em' }}>{dateStr} | SUPPLY CHAIN INTELLIGENCE</div>
                     </div>
                 </div>
             ),
@@ -112,11 +129,10 @@ export async function GET(request: Request) {
             (
                 <div style={{
                     height: '100%', width: '100%', display: 'flex', flexDirection: 'column',
-                    alignItems: 'center', justifyContent: 'center', backgroundColor: '#0c0e1a', color: 'white'
+                    alignItems: 'center', justifyContent: 'center', backgroundColor: '#000', color: 'white'
                 }}>
-                    <div style={{ fontSize: 60, fontWeight: 'bold', color: '#f59e0b', marginBottom: 20 }}>OMNIMETRIC TERMINAL</div>
-                    <div style={{ fontSize: 40, color: '#94a3b8' }}>COMMODITIES DATA SYNC...</div>
-                    <div style={{ fontSize: 24, color: '#475569', marginTop: 40 }}>STATUS 200 | RE-FETCHING REGISTRY</div>
+                    <div style={{ fontSize: 60, fontWeight: 'bold', color: '#f59e0b', marginBottom: 20 }}>OMNIMETRIC</div>
+                    <div style={{ fontSize: 40, color: '#94a3b8' }}>SYSTEM SYNCHRONIZING...</div>
                 </div>
             ),
             { width: 1200, height: 630 }
