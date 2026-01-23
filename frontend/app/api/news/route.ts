@@ -12,10 +12,23 @@ export async function GET(
         const { searchParams } = new URL(request.url);
         const lang = (searchParams.get('lang') || 'EN').toUpperCase();
 
-        // 1. Path to the master data file
-        const dataPath = path.join(process.cwd(), '..', 'backend', 'current_signal.json');
+        // 1. More robust path resolution: check various positions for backend data
+        const possiblePaths = [
+            path.join(process.cwd(), 'backend', 'current_signal.json'), // Root execution
+            path.join(process.cwd(), '../backend', 'current_signal.json'), // frontend/ execution
+            path.join(process.cwd(), 'current_signal.json'), // flat structure
+        ];
 
-        if (!fs.existsSync(dataPath)) {
+        let dataPath = '';
+        for (const p of possiblePaths) {
+            if (fs.existsSync(p)) {
+                dataPath = p;
+                break;
+            }
+        }
+
+        if (!dataPath) {
+            console.error("[NEWS_API] Signal file not found. Checked:", possiblePaths);
             return NextResponse.json({ news: [] });
         }
 
