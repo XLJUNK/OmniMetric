@@ -900,7 +900,9 @@ def generate_multilingual_report(data, score, trend_context={}):
             log_diag("[SMART CACHE] Using cached analysis due to missing API Key.")
             return valid_cache
         return FALLBACK_STATUS
-    else:
+
+    log_diag(f"[AI BRIDGE] GEMINI_API_KEY detected (Length: {len(GEMINI_KEY)})")
+
     # Calculate Trend Context
     trend_narrative = trend_context.get("narrative", "Market is analyzing new data patterns.")
     trend_vector = trend_context.get("vector", "FLAT")
