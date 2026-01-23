@@ -1038,7 +1038,7 @@ Output JSON:
                     cmd = ["node", js_script, prompt]
                     process = subprocess.run(cmd, capture_output=True, text=True, encoding='utf-8', env=os.environ.copy(), cwd=frontend_dir, timeout=60)
 
-                if process.returncode == 0:
+            if process.returncode == 0:
                     stdout_content = process.stdout
                     log_diag(f"[AI BRIDGE] Received {len(stdout_content)} bytes of output. Head: {stdout_content[:100].strip()}...")
                     
