@@ -1,10 +1,10 @@
 {
     "metrics": {
-        "avg_vix_defensive": 17.01,
+        "avg_vix_defensive": 16.89,
         "avg_vix_neutral": null,
         "avg_vix_accumulate": 14.49,
-        "sample_count": 13,
-        "last_updated": "2026-01-22 23:57:15"
+        "sample_count": 14,
+        "last_updated": "2026-01-23 00:18:33"
     },
     "summaries": {
         "EN": "Collecting historical correlation data to validate algorithmic performance...",
@@ -270,6 +270,26 @@
             "qqq_price": 620.76,
             "iwm_price": 269.79,
             "crypto_sentiment": 20
+        },
+        {
+            "date": "2026-01-23",
+            "gms_score": 35,
+            "net_liquidity": 5713.26,
+            "move_price": 56.5,
+            "real_rate": 1.92,
+            "breakeven_inflation": 2.31,
+            "dxy_price": 98.27,
+            "hy_spread": 2.69,
+            "nfci_price": -0.59,
+            "breadth_spread": 0.52,
+            "gold_price": 4960.5,
+            "btc_price": 89435.6,
+            "copper_gold_ratio": 1.17,
+            "vix_price": 15.64,
+            "spy_price": 688.98,
+            "qqq_price": 620.76,
+            "iwm_price": 269.79,
+            "crypto_sentiment": 24
         }
     ]
 }
