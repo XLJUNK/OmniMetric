@@ -72,7 +72,13 @@ jobs:
           if [ -n "$INDEXNOW_KEY" ]; then
             echo "Pinging IndexNow (Bing/Yandex)..."
             # Root and main sections
-            URLS="https://omnimetric.net/
+            URLS="https://omnimetric.net/en
+            https://omnimetric.net/jp
+            https://omnimetric.net/cn
+            https://omnimetric.net/es
+            https://omnimetric.net/hi
+            https://omnimetric.net/id
+            https://omnimetric.net/ar
             https://omnimetric.net/commodities
             https://omnimetric.net/api/og/main?lang=EN
             https://omnimetric.net/api/og/main?lang=JP

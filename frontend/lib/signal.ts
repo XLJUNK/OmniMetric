@@ -30,10 +30,17 @@ export async function getSignalData(): Promise<SignalData | null> {
                 console.log("[getSignalData] Data successfully retrieved from GitHub Registry");
                 return data;
             }
+            console.warn("[getSignalData] Data format invalid or missing last_updated");
+        } else {
+            const errorBody = await res.text().catch(() => "N/A");
+            console.warn(`[getSignalData] Registry fetch failed | Status: ${res.status} | Body Snippet: ${errorBody.substring(0, 100)}`);
         }
-        console.warn(`[getSignalData] Registry fetch returned status ${res.status}`);
-    } catch (error) {
-        console.error("[getSignalData] Edge Fetch Error:", error);
+    } catch (error: any) {
+        console.error("[getSignalData] Edge Fetch Critical Error:", {
+            message: error.message,
+            stack: error.stack,
+            cause: error.cause
+        });
     }
 
     // Standard Fallback Data

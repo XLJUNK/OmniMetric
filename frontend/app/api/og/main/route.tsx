@@ -8,88 +8,110 @@ export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
     const lang = (searchParams.get('lang') || 'EN').toUpperCase() as LangType;
 
-    // 1. Data Fetch
-    const data = await getSignalData();
-    const score = data?.gms_score || 50;
-
-    // 2. Localization Logic
-    const momentumKey = calculateMomentum(data);
-    const momentumText = DICTIONARY[lang]?.momentum?.[momentumKey] || DICTIONARY['EN'].momentum[momentumKey];
-    const gmsLabel = DICTIONARY[lang]?.titles?.gms_score || "GMS SCORE";
-
-    // 3. Trend Arrow & Color
-    const { arrow, color } = getTrendVisuals(momentumKey);
-
-    // 4. Localized Date
-    const dateObj = new Date(data?.last_updated || new Date());
-    const dateStr = dateObj.toLocaleDateString(lang === 'JP' ? 'ja-JP' : 'en-US', {
-        month: 'short', day: 'numeric', timeZone: 'Asia/Tokyo'
-    });
-
-    // 5. Font Loading (Robust Fallback)
-    let fontOptions = {};
     try {
-        // Use a faster raw URL and add a potential timeout helper if needed, 
-        // but for now just the more reliable URL
-        const fontData = await fetch(
-            new URL('https://raw.githubusercontent.com/rsms/inter/master/docs/font-files/Inter-Bold.otf')
-        ).then((res) => res.arrayBuffer());
+        // 1. Data Fetch
+        const data = await getSignalData();
+        if (!data) throw new Error("Signal data is null after fetch");
 
-        if (fontData.byteLength > 0) {
-            fontOptions = {
-                fonts: [{ name: 'InterFont', data: fontData, style: 'normal', weight: 700 }]
-            };
+        const score = data?.gms_score || 50;
+
+        // 2. Localization Logic
+        const momentumKey = calculateMomentum(data);
+        const momentumText = DICTIONARY[lang]?.momentum?.[momentumKey] || DICTIONARY['EN'].momentum[momentumKey];
+        const gmsLabel = DICTIONARY[lang]?.titles?.gms_score || "GMS SCORE";
+
+        // 3. Trend Arrow & Color
+        const { arrow, color } = getTrendVisuals(momentumKey);
+
+        // 4. Localized Date
+        const dateObj = new Date(data?.last_updated || new Date());
+        const dateStr = dateObj.toLocaleDateString(lang === 'JP' ? 'ja-JP' : 'en-US', {
+            month: 'short', day: 'numeric', timeZone: 'Asia/Tokyo'
+        });
+
+        // 5. Font Loading (Robust Fallback)
+        let fontOptions = {};
+        try {
+            const fontData = await fetch(
+                new URL('https://raw.githubusercontent.com/rsms/inter/master/docs/font-files/Inter-Bold.otf')
+            ).then((res) => res.arrayBuffer());
+
+            if (fontData.byteLength > 0) {
+                fontOptions = {
+                    fonts: [{ name: 'InterFont', data: fontData, style: 'normal', weight: 700 }]
+                };
+            }
+        } catch (e) {
+            console.warn("Font load failed, falling back to system fonts", e);
         }
-    } catch (e) {
-        console.warn("Font load failed, falling back to system fonts", e);
+
+        return new ImageResponse(
+            (
+                <div
+                    style={{
+                        height: '100%', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+                        backgroundColor: '#0a0b14', color: 'white',
+                        padding: '60px', border: '12px solid #1e293b'
+                    }}
+                >
+                    {/* Header */}
+                    <div style={{ display: 'flex', position: 'absolute', top: 50, left: 70 }}>
+                        <div style={{ display: 'flex', fontSize: 34, fontWeight: 'bold', color: '#38bdf8' }}>OMNIMETRIC TERMINAL</div>
+                    </div>
+
+                    {/* Main Content Area */}
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        {/* Score Section */}
+                        <div style={{ display: 'flex', flexDirection: 'column', borderLeft: '10px solid #0ea5e9', paddingLeft: '50px' }}>
+                            <div style={{ display: 'flex', fontSize: 44, color: '#94a3b8', marginBottom: '10px' }}>{gmsLabel}</div>
+                            <div style={{ display: 'flex', alignItems: 'center' }}>
+                                <div style={{ display: 'flex', fontSize: 180, fontWeight: 900, lineHeight: 1 }}>{score}</div>
+                                <div style={{ display: 'flex', fontSize: 100, marginLeft: '30px', color: color }}>{arrow}</div>
+                            </div>
+                        </div>
+
+                        {/* Momentum Badge Section */}
+                        <div style={{ display: 'flex', marginLeft: '80px' }}>
+                            <div style={{
+                                display: 'flex',
+                                backgroundColor: color === '#94a3b8' ? '#334155' : color + '33',
+                                borderColor: color,
+                                padding: '25px 50px', borderRadius: '16px', fontSize: 54, fontWeight: 'bold', border: '12px solid #ffffff44', color: 'white'
+                            }}>
+                                {momentumText}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Footer */}
+                    <div style={{ display: 'flex', position: 'absolute', bottom: 50, right: 70 }}>
+                        <div style={{ display: 'flex', fontSize: 30, color: '#64748b' }}>{dateStr} | Institutional Real-Time Intelligence</div>
+                    </div>
+                </div>
+            ),
+            { width: 1200, height: 630, ...fontOptions }
+        );
+    } catch (error: any) {
+        console.error(`[OG/Main] Critical Render Failure | URL: ${request.url}`, {
+            error: error.message,
+            stack: error.stack
+        });
+
+        // Emergency Fallback Render (Guarantees Image Output)
+        return new ImageResponse(
+            (
+                <div style={{
+                    height: '100%', width: '100%', display: 'flex', flexDirection: 'column',
+                    alignItems: 'center', justifyContent: 'center', backgroundColor: '#0a0b14', color: 'white'
+                }}>
+                    <div style={{ fontSize: 60, fontWeight: 'bold', color: '#38bdf8', marginBottom: 20 }}>OMNIMETRIC TERMINAL</div>
+                    <div style={{ fontSize: 40, color: '#94a3b8' }}>DATA SYNCHRONIZING...</div>
+                    <div style={{ fontSize: 24, color: '#475569', marginTop: 40 }}>STATUS 200 | RE-FETCHING REGISTRY</div>
+                </div>
+            ),
+            { width: 1200, height: 630 }
+        );
     }
-
-    return new ImageResponse(
-        (
-            <div
-                style={{
-                    height: '100%', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                    backgroundColor: '#0a0b14', color: 'white',
-                    padding: '60px', border: '12px solid #1e293b'
-                }}
-            >
-                {/* Header */}
-                <div style={{ display: 'flex', position: 'absolute', top: 50, left: 70 }}>
-                    <div style={{ display: 'flex', fontSize: 34, fontWeight: 'bold', color: '#38bdf8' }}>OMNIMETRIC TERMINAL</div>
-                </div>
-
-                {/* Main Content Area */}
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    {/* Score Section */}
-                    <div style={{ display: 'flex', flexDirection: 'column', borderLeft: '10px solid #0ea5e9', paddingLeft: '50px' }}>
-                        <div style={{ display: 'flex', fontSize: 44, color: '#94a3b8', marginBottom: '10px' }}>{gmsLabel}</div>
-                        <div style={{ display: 'flex', alignItems: 'center' }}>
-                            <div style={{ display: 'flex', fontSize: 180, fontWeight: 900, lineHeight: 1 }}>{score}</div>
-                            <div style={{ display: 'flex', fontSize: 100, marginLeft: '30px', color: color }}>{arrow}</div>
-                        </div>
-                    </div>
-
-                    {/* Momentum Badge Section */}
-                    <div style={{ display: 'flex', marginLeft: '80px' }}>
-                        <div style={{
-                            display: 'flex',
-                            backgroundColor: color === '#94a3b8' ? '#334155' : color + '33',
-                            borderColor: color,
-                            padding: '25px 50px', borderRadius: '16px', fontSize: 54, fontWeight: 'bold', border: '12px solid #ffffff44', color: 'white'
-                        }}>
-                            {momentumText}
-                        </div>
-                    </div>
-                </div>
-
-                {/* Footer */}
-                <div style={{ display: 'flex', position: 'absolute', bottom: 50, right: 70 }}>
-                    <div style={{ display: 'flex', fontSize: 30, color: '#64748b' }}>{dateStr} | Institutional Real-Time Intelligence</div>
-                </div>
-            </div>
-        ),
-        { width: 1200, height: 630, ...fontOptions }
-    );
 }
 
 function calculateMomentum(data: any): 'stable' | 'rising' | 'falling' | 'peaking' | 'bottoming' {
