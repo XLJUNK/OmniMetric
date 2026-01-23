@@ -2,13 +2,14 @@ import os
 import requests
 import xml.etree.ElementTree as ET
 import json
-import google.generativeai as genai
+import time
 from datetime import datetime
 from dotenv import load_dotenv
 
 # Load environment
 load_dotenv()
 GEMINI_KEY = os.getenv("GEMINI_API_KEY", "").strip()
+GATEWAY_SLUG = os.getenv("VERCEL_AI_GATEWAY_SLUG", "omni-metric")
 
 # Target Languages
 LANG_MAP = {
@@ -20,12 +21,18 @@ LANG_MAP = {
     'AR': 'Arabic'
 }
 
+def log_diag(msg):
+    """Simple logger for news module"""
+    print(f"[NEWS_ENGINE] {msg}")
+
 def fetch_raw_news():
-    """Fetches top 6 headlines from CNBC RSS."""
+    """Fetches top 6 headlines from CNBC RSS using robust date parsing."""
     FEED_URL = 'https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114'
     try:
+        log_diag(f"Fetching RSS feed from {FEED_URL}...")
         res = requests.get(FEED_URL, timeout=10)
         if res.status_code != 200:
+            log_diag(f"RSS Fetch Failed: Status {res.status_code}")
             return []
         
         root = ET.fromstring(res.text)
@@ -40,38 +47,55 @@ def fetch_raw_news():
             link = link.replace('<![CDATA[', '').replace(']]>', '').strip()
             
             # Date ISO conversion
-            iso_date = datetime.now().isoformat()
+            iso_date = datetime.utcnow().isoformat() + "Z"
             try:
                 # CNBC uses RFC 822: "Wed, 21 Jan 2026 14:20:59 EST"
-                # Simple fallback if parsing fails
-                iso_date = datetime.strptime(pub_date.split(' +')[0].split(' -')[0].strip(), "%a, %d %b %Y %H:%M:%S").isoformat()
-            except: pass
+                # Strip timezone name and use simple parsing
+                clean_date = pub_date.split(' +')[0].split(' -')[0].strip()
+                # Handle EST/EDT manually if present
+                clean_date = clean_date.replace(" EST", "").replace(" EDT", "").replace(" GMT", "")
+                
+                # Try multiple formats
+                formats = [
+                    "%a, %d %b %Y %H:%M:%S",
+                    "%a, %d %b %Y %H:%M:%S %Z",
+                    "%d %b %Y %H:%M:%S"
+                ]
+                
+                dt_obj = None
+                for fmt in formats:
+                    try:
+                        dt_obj = datetime.strptime(clean_date, fmt)
+                        break
+                    except: continue
+                
+                if dt_obj:
+                    # Assume headers are roughly UTC/EST, just format to ISO
+                    iso_date = dt_obj.strftime("%Y-%m-%dT%H:%M:%SZ")
+            except Exception as e: 
+                log_diag(f"Date Parse Warning: {e} for '{pub_date}'")
 
             items.append({
                 "title": title,
                 "link": link,
                 "isoDate": iso_date
             })
+        
+        log_diag(f"RSS Fetch Success: {len(items)} items recovered.")
         return items
     except Exception as e:
-        print(f"[FETCH_NEWS] Raw fetch failed: {e}")
+        log_diag(f"Raw fetch failed: {e}")
         return []
 
 def translate_news_batch(items):
-    """Translates all headlines into all target languages in a single AI pass."""
+    """Translates all headlines using VERCEL AI GATEWAY (HTTP/REST) to bypass firewall."""
     if not GEMINI_KEY:
-        print("[FETCH_NEWS] Skipping translation: GEMINI_API_KEY is missing.")
+        log_diag("Skipping translation: GEMINI_API_KEY is missing.")
         return {}
     if not items:
         return {}
 
-    genai.configure(api_key=GEMINI_KEY)
-    model = genai.GenerativeModel('gemini-2.0-flash')
-
     titles = [item['title'] for item in items]
-    
-    # Structure: { "JP": ["T1", "T2"...], "CN": [...] }
-    translations = {}
     
     prompt = f"""You are a professional financial translator for a Bloomberg terminal.
 Translate the following {len(titles)} US market news headlines into:
@@ -93,21 +117,59 @@ Example Output:
   "CN": ["Translation 1", "Translation 2"]
 }}"""
 
-    try:
-        response = model.generate_content(prompt)
-        text = response.text.replace('```json', '').replace('```', '').strip()
-        
-        # Robust JSON extraction
-        if '{' in text and '}' in text:
-            start = text.find('{')
-            end = text.rfind('}') + 1
-            text = text[start:end]
+    # VERCEL GATEWAY CONFIGURATION
+    model_name = "gemini-2.0-flash-001"
+    url = f"https://gateway.ai.vercel.com/v1/{GATEWAY_SLUG}/google/models/{model_name}:generateContent"
+    
+    headers = {
+        "Content-Type": "application/json",
+        "x-vercel-ai-gateway-provider": "google",
+        "x-vercel-ai-gateway-cache": "disable",
+        "User-Agent": "OmniMetric-NewsFetcher/1.0"
+    }
+    
+    proxy_url = f"{url}?key={GEMINI_KEY}"
+    payload = {"contents": [{"parts": [{"text": prompt}]}]}
+
+    for attempt in range(2):
+        try:
+            log_diag(f"Sending Translation Request to Gateway (Attempt {attempt+1})...")
+            response = requests.post(proxy_url, json=payload, headers=headers, timeout=30)
             
-        translated_data = json.loads(text)
-        return translated_data
-    except Exception as e:
-        print(f"[FETCH_NEWS] AI Translation failed: {e}")
-        return {}
+            if response.status_code == 200:
+                result = response.json()
+                if 'candidates' in result and result['candidates']:
+                    text = result['candidates'][0]['content']['parts'][0]['text']
+                    
+                    # Cleanup JSON
+                    text = text.replace('```json', '').replace('```', '').strip()
+                    if '{' in text:
+                        text = text[text.find('{'):text.rfind('}')+1]
+                    
+                    try:
+                        translated_data = json.loads(text)
+                        
+                        # VALIDATION: Check for all keys
+                        missing = [code for code in LANG_MAP.keys() if code not in translated_data]
+                        if not missing:
+                            log_diag("[SUCCESS] Translation complete and validated.")
+                            return translated_data
+                        else:
+                            log_diag(f"[WARN] Partial translation. Missing: {missing}")
+                            # Keep what we have, better than nothing
+                            return translated_data
+                    except json.JSONDecodeError:
+                        log_diag("[ERROR] Failed to parse AI JSON response.")
+            else:
+                log_diag(f"[FAIL] Gateway Error {response.status_code}: {response.text}")
+                
+            time.sleep(1) # Backoff
+            
+        except Exception as e:
+            log_diag(f"[EXCEPTION] Gateway Connection Failed: {e}")
+            
+    return {}
+
 
 def get_news_payload():
     """Main entry point: Returns raw news and its translations."""
