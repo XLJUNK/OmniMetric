@@ -57,6 +57,9 @@ jobs:
           git reset --hard origin/main
           python backend/gms_engine.py
           
+          # FORCE NEWS UPDATE (Fix for empty translations)
+          python backend/fetch_news.py
+          
           # SKILL COMPLIANCE CHECK (Blocks commit if failed)
           python scripts/verify_skills.py
           

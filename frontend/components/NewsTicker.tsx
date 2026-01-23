@@ -21,10 +21,20 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
                     const entities: any = { '&apos;': "'", '&amp;': "&", '&quot;': '"', '&lt;': "<", '&gt;': ">" };
                     return str.replace(/&(apos|amp|quot|lt|gt);/g, match => entities[match] || match);
                 };
-                const decodedNews = (json.news || []).map((item: any) => ({
-                    ...item,
-                    title: decodeEntities(item.title)
-                }));
+                const decodedNews = (json.news || []).map((item: any, index: number) => {
+                    // v5.5: Multi-language Support (Check translations first)
+                    // If we are in EN, use item.title (English).
+                    // If we are in JP/CN/etc, check `json.translations[lang][index]`.
+                    let displayTitle = item.title;
+                    if (lang !== 'EN' && json.translations && json.translations[lang] && json.translations[lang][index]) {
+                        displayTitle = json.translations[lang][index];
+                    }
+
+                    return {
+                        ...item,
+                        title: decodeEntities(displayTitle)
+                    };
+                });
                 // Strictly take top 3 for the vertical stack
                 setNews(decodedNews.slice(0, 3));
             } catch (e) {

@@ -194,6 +194,27 @@ def get_news_payload():
     }
 
 if __name__ == "__main__":
-    # Test run
-    payload = get_news_payload()
-    print(json.dumps(payload, indent=2, ensure_ascii=False))
+    # Standalone Execution (GitHub Actions / Manual Update)
+    try:
+        payload = get_news_payload()
+        
+        # Load existing signal file to merge
+        signal_path = os.path.join(os.path.dirname(__file__), "current_signal.json")
+        data = {}
+        if os.path.exists(signal_path):
+            with open(signal_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+        
+        # Merge intelligence
+        data["intelligence"] = payload
+        
+        # Save back
+        with open(signal_path, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=4, ensure_ascii=False)
+            
+        print(f"[SUCCESS] News updated in {signal_path}")
+        print(json.dumps(payload, indent=2, ensure_ascii=False))
+        
+    except Exception as e:
+        print(f"[ERROR] Failed to update news: {e}")
+        sys.exit(1)
