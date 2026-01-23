@@ -82,6 +82,13 @@ export const DICTIONARY = {
             neutral: "NEUTRAL",
             defensive: "DEFENSIVE"
         },
+        momentum: {
+            bottoming: "BOTTOMING OUT",
+            peaking: "PEAKING",
+            rising: "RISING",
+            falling: "FALLING",
+            stable: "STABLE"
+        },
         events: {
             cpi: "CPI INFLATION DATA",
             fomc: "FOMC RATE DECISION",
@@ -312,6 +319,13 @@ export const DICTIONARY = {
             accumulate: "ACCUMULATE (強気)",
             neutral: "NEUTRAL (静観)",
             defensive: "DEFENSIVE (守備)"
+        },
+        momentum: {
+            bottoming: "底打ち (BOTTOMING)",
+            peaking: "天井 (PEAKING)",
+            rising: "上昇 (RISING)",
+            falling: "下落 (FALLING)",
+            stable: "安定 (STABLE)"
         },
         events: {
             cpi: "CPI 消費者物価指数",
@@ -544,6 +558,13 @@ export const DICTIONARY = {
             neutral: "中立观望",
             defensive: "防御姿态"
         },
+        momentum: {
+            bottoming: "筑底 (BOTTOMING)",
+            peaking: "见顶 (PEAKING)",
+            rising: "上涨 (RISING)",
+            falling: "下跌 (FALLING)",
+            stable: "稳定 (STABLE)"
+        },
         events: {
             cpi: "CPI 通胀数据",
             fomc: "FOMC 利率决议",
@@ -729,6 +750,13 @@ export const DICTIONARY = {
             accumulate: "ACUMULAR",
             neutral: "NEUTRAL",
             defensive: "DEFENSIVA"
+        },
+        momentum: {
+            bottoming: "SUELO (BOTTOMING)",
+            peaking: "TECHO (PEAKING)",
+            rising: "ALZA (RISING)",
+            falling: "BAJA (FALLING)",
+            stable: "ESTABLE (STABLE)"
         },
         events: {
             cpi: "DATOS DE INFLACIÓN (CPI)",
@@ -916,6 +944,13 @@ export const DICTIONARY = {
             neutral: "तटस्थ (NEUTRAL)",
             defensive: "रक्षात्मक (DEFENSIVE)"
         },
+        momentum: {
+            bottoming: "बॉटमिंग आउट (BOTTOMING)",
+            peaking: "पीकिंग (PEAKING)",
+            rising: "बढ़ रहा (RISING)",
+            falling: "गिर रहा (FALLING)",
+            stable: "स्थिर (STABLE)"
+        },
         events: {
             cpi: "CPI मुद्रास्फीति डेटा",
             fomc: "FOMC दर निर्णय",
@@ -1102,6 +1137,13 @@ export const DICTIONARY = {
             neutral: "NETRAL",
             defensive: "DEFENSIF"
         },
+        momentum: {
+            bottoming: "BOTTOMING OUT",
+            peaking: "PEAKING",
+            rising: "NAIK (RISING)",
+            falling: "TURUN (FALLING)",
+            stable: "STABIL (STABLE)"
+        },
         events: {
             cpi: "DATA INFLASI CPI",
             fomc: "KEPUTUSAN SUKU BUNGA FOMC",
@@ -1282,6 +1324,13 @@ export const DICTIONARY = {
             accumulate: "تجميع",
             neutral: "محايد",
             defensive: "دفاعي"
+        },
+        momentum: {
+            bottoming: "القاع (BOTTOMING)",
+            peaking: "القمة (PEAKING)",
+            rising: "صعود (RISING)",
+            falling: "هبوط (FALLING)",
+            stable: "مستقر (STABLE)"
         },
         events: {
             cpi: "بيانات تضخم CPI",

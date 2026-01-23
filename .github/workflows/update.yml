@@ -63,6 +63,26 @@ jobs:
           git add backend/current_signal.json backend/history.json backend/archive/*.json backend/sns_status.json backend/sns_last_post.json
           git commit -m "Auto-update market signal [bot]" || echo "No changes to commit"
           git push origin main
+
+      - name: Ping IndexNow
+        if: success()
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: |
+          if [ -n "$INDEXNOW_KEY" ]; then
+            echo "Pinging IndexNow (Bing/Yandex)..."
+            # Root and main sections
+            URLS="https://omnimetric.net/
+            https://omnimetric.net/commodities
+            https://omnimetric.net/api/og/main?lang=EN
+            https://omnimetric.net/api/og/main?lang=JP
+            https://omnimetric.net/api/og/commodities?lang=ES"
+            
+            for url in $URLS; do
+              curl -v "https://www.bing.com/indexnow?url=$url&key=$INDEXNOW_KEY"
+              curl -v "https://yandex.com/indexnow?url=$url&key=$INDEXNOW_KEY"
+            done
+          fi
       - name: Commit Artifacts on Failure
         if: failure()
         run: |
