@@ -7,7 +7,7 @@ const requiredKeys = [
     'FRED_API_KEY',
     'GEMINI_API_KEY',
     'FMP_API_KEY',
-    'NEXT_PUBLIC_GEMINI_API_KEY'
+
 ];
 
 console.log("--- [DEPLOY GUARD] Checking environment variables... ---");
