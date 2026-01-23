@@ -1471,7 +1471,7 @@ def update_signal(force_news=False):
 if __name__ == "__main__":
     try:
         print(f"--- [START] Engine Run at {datetime.utcnow().isoformat()} ---")
-        result = update_signal()
+        result = update_signal(force_news=True)
         print(f"--- [FINISH] Engine Run SUCCESS (Score: {result.get('gms_score', 'N/A')}) ---")
     except Exception as e:
         print(f"--- [FATAL ERROR] ---")

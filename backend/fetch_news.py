@@ -27,7 +27,7 @@ def log_diag(msg):
 
 def fetch_raw_news():
     """Fetches top 6 headlines from CNBC RSS using robust date parsing."""
-    FEED_URL = 'https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114'
+    FEED_URL = f'https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114&t={int(time.time())}'
     try:
         log_diag(f"Fetching RSS feed from {FEED_URL}...")
         res = requests.get(FEED_URL, timeout=10)
