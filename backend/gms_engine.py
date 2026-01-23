@@ -440,7 +440,13 @@ def fetch_economic_calendar():
         # FMP v3 Endpoint (Standard)
         url = f"https://financialmodelingprep.com/api/v3/economic_calendar?from={start_date}&to={end_date}&apikey={api_key}"
         log_diag(f"[FMP] Fetching calendar from: {url.replace(api_key, 'REDACTED')}")
-        response = requests.get(url, timeout=10)
+        
+        # Add User-Agent to avoid mod_security/WAF blocks
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "Accept": "application/json"
+        }
+        response = requests.get(url, headers=headers, timeout=10)
         log_diag(f"[FMP] Response status: {response.status_code}")
         
         if response.status_code != 200:
