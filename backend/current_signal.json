@@ -1,9 +1,9 @@
 {
-    "last_updated": "2026-01-23T09:15:36Z",
-    "last_successful_update": "2026-01-23T09:15:36Z",
-    "gms_score": 36,
+    "last_updated": "2026-01-23T09:41:25Z",
+    "last_successful_update": "2026-01-23T09:41:25Z",
+    "gms_score": 34,
     "sector_scores": {
-        "STOCKS": 50,
+        "STOCKS": 40,
         "CRYPTO": 25,
         "FOREX": 65,
         "COMMODITIES": 55
@@ -218,10 +218,10 @@
             ]
         },
         "VIX": {
-            "price": 15.86,
+            "price": 15.87,
             "prev_price": 15.64,
-            "daily_chg": 1.41,
-            "change_percent": 0.0,
+            "daily_chg": 1.47,
+            "change_percent": 0.06,
             "trend": "UP",
             "sparkline": [
                 14.08,
@@ -245,7 +245,7 @@
                 20.09,
                 16.9,
                 15.64,
-                15.86
+                15.87
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
@@ -546,10 +546,10 @@
             ]
         },
         "NIFTY": {
-            "price": 25078.5,
+            "price": 25041.45,
             "prev_price": 25289.9,
-            "daily_chg": -0.84,
-            "change_percent": -1.98,
+            "daily_chg": -0.98,
+            "change_percent": -2.13,
             "trend": "DOWN",
             "sparkline": [
                 26177.15,
@@ -573,14 +573,14 @@
                 25232.5,
                 25157.5,
                 25289.9,
-                25078.5
+                25041.45
             ]
         },
         "BTC": {
-            "price": 89235.56,
+            "price": 89026.71,
             "prev_price": 89462.45,
-            "daily_chg": -0.25,
-            "change_percent": -3.58,
+            "daily_chg": -0.49,
+            "change_percent": -3.81,
             "trend": "DOWN",
             "sparkline": [
                 89944.7,
@@ -604,14 +604,14 @@
                 88310.91,
                 89376.96,
                 89462.45,
-                89235.56
+                89026.71
             ]
         },
         "ETH": {
-            "price": 2929.01,
+            "price": 2924.74,
             "prev_price": 2949.63,
-            "daily_chg": -0.7,
-            "change_percent": -8.08,
+            "daily_chg": -0.84,
+            "change_percent": -8.22,
             "trend": "DOWN",
             "sparkline": [
                 3124.42,
@@ -635,14 +635,14 @@
                 2935.61,
                 2978.9,
                 2949.63,
-                2929.01
+                2924.74
             ]
         },
         "SOL": {
-            "price": 127.15,
+            "price": 127.0,
             "prev_price": 128.29,
-            "daily_chg": -0.89,
-            "change_percent": -4.64,
+            "daily_chg": -1.0,
+            "change_percent": -4.75,
             "trend": "DOWN",
             "sparkline": [
                 132.13,
@@ -666,14 +666,14 @@
                 125.71,
                 129.38,
                 128.29,
-                127.15
+                127.0
             ]
         },
         "DXY": {
-            "price": 98.36,
+            "price": 98.33,
             "prev_price": 98.36,
-            "daily_chg": 0.0,
-            "change_percent": -1.04,
+            "daily_chg": -0.03,
+            "change_percent": -1.07,
             "trend": "DOWN",
             "sparkline": [
                 98.29,
@@ -697,14 +697,14 @@
                 98.64,
                 98.76,
                 98.36,
-                98.36
+                98.33
             ]
         },
         "USDJPY": {
-            "price": 157.97,
+            "price": 158.01,
             "prev_price": 158.46,
-            "daily_chg": -0.31,
-            "change_percent": 0.28,
+            "daily_chg": -0.28,
+            "change_percent": 0.3,
             "trend": "DOWN",
             "sparkline": [
                 156.88,
@@ -728,14 +728,14 @@
                 158.18,
                 158.16,
                 158.46,
-                157.97
+                158.01
             ]
         },
         "EURUSD": {
             "price": 1.17,
             "prev_price": 1.17,
-            "daily_chg": 0.58,
-            "change_percent": 1.0,
+            "daily_chg": 0.63,
+            "change_percent": 1.05,
             "trend": "UP",
             "sparkline": [
                 1.18,
@@ -825,11 +825,11 @@
             ]
         },
         "GOLD": {
-            "price": 4915.6,
+            "price": 4908.8,
             "prev_price": 4908.8,
-            "daily_chg": 0.14,
-            "change_percent": 7.13,
-            "trend": "UP",
+            "daily_chg": 0.0,
+            "change_percent": 6.98,
+            "trend": "DOWN",
             "sparkline": [
                 4444.6,
                 4482.8,
@@ -852,14 +852,14 @@
                 4759.6,
                 4831.8,
                 4908.8,
-                4915.6
+                4908.8
             ]
         },
         "OIL": {
-            "price": 60.04,
+            "price": 60.05,
             "prev_price": 59.36,
-            "daily_chg": 1.15,
-            "change_percent": 1.01,
+            "daily_chg": 1.16,
+            "change_percent": 1.03,
             "trend": "UP",
             "sparkline": [
                 58.01,
@@ -883,14 +883,14 @@
                 60.34,
                 60.62,
                 59.36,
-                60.04
+                60.05
             ]
         },
         "COPPER": {
             "price": 5.81,
             "prev_price": 5.74,
-            "daily_chg": 1.2,
-            "change_percent": 0.4,
+            "daily_chg": 1.18,
+            "change_percent": 0.38,
             "trend": "UP",
             "sparkline": [
                 5.44,
@@ -920,8 +920,8 @@
         "NATGAS": {
             "price": 3.52,
             "prev_price": 5.05,
-            "daily_chg": -30.27,
-            "change_percent": 13.37,
+            "daily_chg": -30.31,
+            "change_percent": 13.31,
             "trend": "DOWN",
             "sparkline": [
                 3.96,
@@ -1106,22 +1106,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "The GMS score remains flat at 36, signaling market neutrality as bond volatility (MOVE) holds steady at 56.5, precluding a flight to safety. Crude oil is up 1.15% and copper is up 1.2%, potentially reigniting inflation fears and impacting Fed policy. The US 10-year yield is unchanged at 4.26%, with the real interest rate stable at 1.92%, reflecting the current monetary environment. However, natural gas plummeted by 30.27%, posing a risk of energy market volatility spilling over to other assets. NIFTY is down -0.84%, indicating a deteriorating Asian market sentiment.",
+        "content": "The GMS score declined to 34, shifting market sentiment to risk-off. Rising oil prices are increasing inflationary pressure, amplifying uncertainty around the Fed's monetary policy. Despite the US 10-year yield holding steady at 4.26%, the MOVE index's stagnation suggests latent bond market volatility. A stable Copper/Gold ratio of 1.18 reflects mixed economic outlook. The confluence of rising volatility and decreasing liquidity is intensifying valuation compression pressure on SPY.",
         "reports": {
-            "JP": "GMSスコアは36で停滞し、市場は中立を示唆、債券市場のボラティリティ指数(MOVE)が56.5で安定しているため、安全資産への逃避は見られない。原油価格は1.15%上昇し、銅価格も1.2%上昇しているが、これらはインフレ圧力の再燃を示唆する可能性があり、FRBの金融政策に影響を与えるかもしれない。米10年債利回りは4.26%で変わらず、実質金利は1.92%で安定しており、現在の金融環境が反映されている。しかし、天然ガスは30.27%急落し、エネルギー市場の変動が他の資産に波及するリスクがある。日経平均は-0.84%下落し、アジア市場のセンチメント悪化が懸念される。",
-            "EN": "The GMS score remains flat at 36, signaling market neutrality as bond volatility (MOVE) holds steady at 56.5, precluding a flight to safety. Crude oil is up 1.15% and copper is up 1.2%, potentially reigniting inflation fears and impacting Fed policy. The US 10-year yield is unchanged at 4.26%, with the real interest rate stable at 1.92%, reflecting the current monetary environment. However, natural gas plummeted by 30.27%, posing a risk of energy market volatility spilling over to other assets. NIFTY is down -0.84%, indicating a deteriorating Asian market sentiment.",
-            "CN": "GMS评分稳定在36，表明市场中性，债券波动率（MOVE）稳定在56.5，排除了避险情绪。原油上涨1.15%，铜上涨1.2%，可能重新引发通胀担忧，影响美联储政策。美国10年期国债收益率稳定在4.26%，实际利率稳定在1.92%，反映了当前的货币环境。然而，天然气暴跌30.27%，带来了能源市场波动蔓延到其他资产的风险。印度NIFTY指数下跌-0.84%，表明亚洲市场情绪恶化。",
-            "ES": "La puntuación GMS se mantiene plana en 36, lo que indica una neutralidad del mercado, ya que la volatilidad de los bonos (MOVE) se mantiene estable en 56.5, lo que impide una huida hacia la seguridad. El petróleo crudo sube un 1.15% y el cobre sube un 1.2%, lo que podría reavivar los temores de inflación e impactar la política de la Fed. El rendimiento del Tesoro estadounidense a 10 años se mantiene sin cambios en 4.26%, con la tasa de interés real estable en 1.92%, lo que refleja el entorno monetario actual. Sin embargo, el gas natural se desplomó un 30.27%, lo que plantea un riesgo de que la volatilidad del mercado energético se extienda a otros activos. El NIFTY bajó un -0.84%, lo que indica un deterioro del sentimiento del mercado asiático.",
-            "HI": "जीएमएस स्कोर 36 पर स्थिर बना हुआ है, जो बाजार की तटस्थता का संकेत देता है क्योंकि बॉन्ड अस्थिरता (MOVE) 56.5 पर स्थिर है, जो सुरक्षा की ओर पलायन को रोकता है। कच्चे तेल में 1.15% और तांबे में 1.2% की वृद्धि हुई है, जिससे संभावित रूप से मुद्रास्फीति का डर फिर से बढ़ सकता है और फेड नीति पर असर पड़ सकता है। अमेरिकी 10-वर्षीय उपज 4.26% पर अपरिवर्तित है, वास्तविक ब्याज दर 1.92% पर स्थिर है, जो वर्तमान मौद्रिक वातावरण को दर्शाती है। हालांकि, प्राकृतिक गैस 30.27% गिर गई, जिससे ऊर्जा बाजार की अस्थिरता के अन्य संपत्तियों में फैलने का खतरा है। निफ्टी -0.84% नीचे है, जो एशियाई बाजार की धारणा बिगड़ने का संकेत है।",
-            "ID": "Skor GMS tetap datar di 36, menandakan netralitas pasar karena volatilitas obligasi (MOVE) tetap stabil di 56.5, menghalangi pelarian ke aset aman. Minyak mentah naik 1.15% dan tembaga naik 1.2%, berpotensi memicu kembali kekhawatiran inflasi dan memengaruhi kebijakan The Fed. Imbal hasil US 10-tahun tidak berubah pada 4.26%, dengan suku bunga riil stabil di 1.92%, mencerminkan lingkungan moneter saat ini. Namun, gas alam merosot 30.27%, menimbulkan risiko volatilitas pasar energi meluas ke aset lain. NIFTY turun -0.84%, menunjukkan sentimen pasar Asia yang memburuk.",
-            "AR": "لا يزال مؤشر GMS ثابتًا عند 36، مما يشير إلى حياد السوق حيث يظل تقلب السندات (MOVE) ثابتًا عند 56.5، مما يحول دون التوجه إلى الأصول الآمنة. ارتفع النفط الخام بنسبة 1.15٪ وارتفع النحاس بنسبة 1.2٪، مما قد يؤدي إلى إحياء المخاوف بشأن التضخم والتأثير على سياسة الاحتياطي الفيدرالي. ظل عائد السندات الأمريكية لأجل 10 سنوات دون تغيير عند 4.26٪، مع استقرار سعر الفائدة الحقيقي عند 1.92٪، مما يعكس البيئة النقدية الحالية. ومع ذلك، انخفض الغاز الطبيعي بنسبة 30.27٪، مما يشكل خطر انتشار تقلبات سوق الطاقة إلى أصول أخرى. انخفض مؤشر NIFTY بنسبة -0.84٪، مما يشير إلى تدهور معنويات السوق الآسيوية."
+            "JP": "GMSスコアが34に低下し、市場のセンチメントはリスクオフに移行しています。原油価格の上昇はインフレ圧力を高め、FRBの金融政策に対する不確実性を増大させています。米10年債利回りが4.26%で安定しているにもかかわらず、MOVE指数の膠着は債券市場の潜在的な変動リスクを示唆しています。銅と金の比率が1.18で変わらず、景気に対する見方が分かれています。ボラティリティの上昇と流動性の低下が重なり、SPYのバリュエーション圧縮圧力を強めています。",
+            "EN": "The GMS score declined to 34, shifting market sentiment to risk-off. Rising oil prices are increasing inflationary pressure, amplifying uncertainty around the Fed's monetary policy. Despite the US 10-year yield holding steady at 4.26%, the MOVE index's stagnation suggests latent bond market volatility. A stable Copper/Gold ratio of 1.18 reflects mixed economic outlook. The confluence of rising volatility and decreasing liquidity is intensifying valuation compression pressure on SPY.",
+            "CN": "GMS评分降至34，市场情绪转向避险。原油价格上涨加剧了通胀压力，增加了美联储货币政策的不确定性。尽管美国10年期国债收益率稳定在4.26%，但MOVE指数的停滞表明债券市场潜在的波动风险。铜金比率稳定在1.18，反映出对经济前景的看法不一。波动性上升和流动性下降共同施压，加剧了SPY的估值压缩压力。",
+            "ES": "El puntaje GMS disminuyó a 34, cambiando el sentimiento del mercado a aversión al riesgo. El aumento de los precios del petróleo está incrementando la presión inflacionaria, lo que amplifica la incertidumbre en torno a la política monetaria de la Fed. A pesar de que el rendimiento del bono estadounidense a 10 años se mantiene estable en 4.26%, el estancamiento del índice MOVE sugiere una volatilidad latente en el mercado de bonos. Una relación cobre/oro estable de 1.18 refleja perspectivas económicas mixtas. La confluencia del aumento de la volatilidad y la disminución de la liquidez está intensificando la presión de compresión de la valoración en SPY.",
+            "HI": "जीएमएस स्कोर 34 तक गिर गया, जिससे बाजार की भावना जोखिम से बचने की ओर बढ़ गई। तेल की बढ़ती कीमतें मुद्रास्फीति के दबाव को बढ़ा रही हैं, जिससे फेड की मौद्रिक नीति को लेकर अनिश्चितता बढ़ रही है। अमेरिकी 10-वर्षीय उपज 4.26% पर स्थिर रहने के बावजूद, MOVE सूचकांक का स्थिर बने रहना संभावित बॉन्ड बाजार अस्थिरता का सुझाव देता है। 1.18 का एक स्थिर तांबा/सोना अनुपात मिश्रित आर्थिक दृष्टिकोण को दर्शाता है। बढ़ती अस्थिरता और घटती तरलता का संगम SPY पर मूल्यांकन संपीड़न दबाव को तेज कर रहा है।",
+            "ID": "Skor GMS turun menjadi 34, menggeser sentimen pasar ke penghindaran risiko. Kenaikan harga minyak meningkatkan tekanan inflasi, memperkuat ketidakpastian seputar kebijakan moneter The Fed. Meskipun imbal hasil obligasi AS 10-tahun tetap stabil di 4.26%, stagnasi indeks MOVE menunjukkan volatilitas pasar obligasi laten. Rasio Tembaga/Emas yang stabil di 1.18 mencerminkan prospek ekonomi yang beragam. Pertemuan antara meningkatnya volatilitas dan menurunnya likuiditas memperintensif tekanan kompresi valuasi pada SPY.",
+            "AR": "انخفض مؤشر GMS إلى 34، مما أدى إلى تحويل معنويات السوق إلى النفور من المخاطرة. ارتفاع أسعار النفط يزيد من الضغوط التضخمية، مما يضاعف حالة عدم اليقين بشأن السياسة النقدية لمجلس الاحتياطي الفيدرالي. على الرغم من استقرار عائد سندات الخزانة الأمريكية لأجل 10 سنوات عند 4.26٪، إلا أن ركود مؤشر MOVE يشير إلى تقلبات كامنة في سوق السندات. تعكس نسبة النحاس/الذهب المستقرة البالغة 1.18 نظرة اقتصادية مختلطة. إن التقاء ارتفاع التقلبات وانخفاض السيولة يؤدي إلى تكثيف ضغط انكماش التقييم على SPY."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-21T05:40:22Z",
-            "score": 25
-        },
         {
             "date": "2026-01-21T07:55:27Z",
             "score": 25
@@ -1357,6 +1353,10 @@
         {
             "date": "2026-01-23T09:15:36Z",
             "score": 36
+        },
+        {
+            "date": "2026-01-23T09:41:25Z",
+            "score": 34
         }
     ],
     "intelligence": {
@@ -1382,9 +1382,9 @@
                 "isoDate": "2026-01-23T07:34:55Z"
             },
             {
-                "title": "European markets edge lower; Ericsson pops 11% after fourth-quarter profit beat",
-                "link": "https://www.cnbc.com/2026/01/23/european-markets-set-for-a-lackluster-open-geopolitics-in-focus-.html",
-                "isoDate": "2026-01-23T09:11:09Z"
+                "title": "TikTok forms U.S. joint venture, names Adam Presser CEO",
+                "link": "https://www.cnbc.com/2026/01/22/tiktok-forms-us-joint-venture-names-a-ceo.html",
+                "isoDate": "2026-01-23T03:28:14Z"
             },
             {
                 "title": "Analysts are growing more bullish on these stocks, including a major trading platform",
@@ -1393,7 +1393,7 @@
             }
         ],
         "translations": {},
-        "last_updated": "2026-01-23T09:15:39.055198Z"
+        "last_updated": "2026-01-23T09:41:28.485634Z"
     },
     "system_status": "OPERATIONAL"
 }
