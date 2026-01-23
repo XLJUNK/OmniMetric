@@ -163,15 +163,27 @@ Input: {json.dumps(titles)}"""
         if process.returncode == 0:
             # generate_insight.ts outputs {"text": "..."}
             try:
-                # Find the actual JSON start if there's noise
-                json_start_node = stdout.find('{')
-                json_end_node = stdout.rfind('}') + 1
+                # CLEAN NOISE: Filter out [dotenv] or other logs that pollute stdout
+                lines = stdout.splitlines()
+                clean_lines = [line for line in lines if not line.strip().startswith("[") and not line.strip().startswith("Note:")]
+                clean_stdout = "\n".join(clean_lines)
+
+                # Find the actual JSON start
+                json_start_node = clean_stdout.find('{')
+                json_end_node = clean_stdout.rfind('}') + 1
+                
                 if json_start_node != -1 and json_end_node > json_start_node:
-                    clean_stdout = stdout[json_start_node:json_end_node]
-                    raw_result = json.loads(clean_stdout)
+                    final_json_str = clean_stdout[json_start_node:json_end_node]
+                    raw_result = json.loads(final_json_str)
                 else:
-                    log_diag(f"[ERROR] No JSON found in Node stdout: {stdout}")
-                    return {}
+                    # Fallback: Try regex if simple find fails
+                    import re
+                    match = re.search(r'\{"text":.*\}', stdout, re.DOTALL)
+                    if match:
+                       raw_result = json.loads(match.group(0))
+                    else:
+                       log_diag(f"[ERROR] No JSON found in Node stdout. Raw: {stdout[:200]}...")
+                       return {}
 
                 text = raw_result.get("text", "")
                 
