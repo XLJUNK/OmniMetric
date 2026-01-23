@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-01-23T21:33:32Z",
-    "last_successful_update": "2026-01-23T21:33:32Z",
+    "last_updated": "2026-01-23T21:50:41Z",
+    "last_successful_update": "2026-01-23T21:50:41Z",
     "gms_score": 32,
     "sector_scores": {
         "STOCKS": 35,
@@ -577,11 +577,11 @@
             ]
         },
         "BTC": {
-            "price": 89513.09,
+            "price": 89333.53,
             "prev_price": 89462.45,
-            "daily_chg": 0.06,
-            "change_percent": -3.29,
-            "trend": "UP",
+            "daily_chg": -0.14,
+            "change_percent": -3.48,
+            "trend": "DOWN",
             "sparkline": [
                 89944.7,
                 90603.19,
@@ -604,14 +604,14 @@
                 88310.91,
                 89376.96,
                 89462.45,
-                89513.09
+                89333.53
             ]
         },
         "ETH": {
-            "price": 2946.81,
+            "price": 2941.66,
             "prev_price": 2949.63,
-            "daily_chg": -0.1,
-            "change_percent": -7.53,
+            "daily_chg": -0.27,
+            "change_percent": -7.69,
             "trend": "DOWN",
             "sparkline": [
                 3124.42,
@@ -635,14 +635,14 @@
                 2935.61,
                 2978.9,
                 2949.63,
-                2946.81
+                2941.66
             ]
         },
         "SOL": {
-            "price": 127.34,
+            "price": 127.1,
             "prev_price": 128.29,
-            "daily_chg": -0.74,
-            "change_percent": -4.5,
+            "daily_chg": -0.92,
+            "change_percent": -4.68,
             "trend": "DOWN",
             "sparkline": [
                 132.13,
@@ -666,14 +666,14 @@
                 125.71,
                 129.38,
                 128.29,
-                127.34
+                127.1
             ]
         },
         "DXY": {
-            "price": 97.47,
+            "price": 97.49,
             "prev_price": 98.36,
-            "daily_chg": -0.9,
-            "change_percent": -1.93,
+            "daily_chg": -0.88,
+            "change_percent": -1.91,
             "trend": "DOWN",
             "sparkline": [
                 98.29,
@@ -697,14 +697,14 @@
                 98.64,
                 98.76,
                 98.36,
-                97.47
+                97.49
             ]
         },
         "USDJPY": {
-            "price": 155.69,
+            "price": 155.81,
             "prev_price": 158.46,
-            "daily_chg": -1.74,
-            "change_percent": -1.17,
+            "daily_chg": -1.67,
+            "change_percent": -1.1,
             "trend": "DOWN",
             "sparkline": [
                 156.88,
@@ -728,14 +728,14 @@
                 158.18,
                 158.16,
                 158.46,
-                155.69
+                155.81
             ]
         },
         "EURUSD": {
             "price": 1.18,
             "prev_price": 1.17,
-            "daily_chg": 1.39,
-            "change_percent": 1.81,
+            "daily_chg": 1.33,
+            "change_percent": 1.75,
             "trend": "UP",
             "sparkline": [
                 1.18,
@@ -825,10 +825,10 @@
             ]
         },
         "GOLD": {
-            "price": 4981.8,
+            "price": 4982.7,
             "prev_price": 4908.8,
-            "daily_chg": 1.49,
-            "change_percent": 8.57,
+            "daily_chg": 1.51,
+            "change_percent": 8.59,
             "trend": "UP",
             "sparkline": [
                 4444.6,
@@ -852,14 +852,14 @@
                 4759.6,
                 4831.8,
                 4908.8,
-                4981.8
+                4982.7
             ]
         },
         "OIL": {
-            "price": 61.27,
+            "price": 61.3,
             "prev_price": 59.36,
-            "daily_chg": 3.22,
-            "change_percent": 3.08,
+            "daily_chg": 3.27,
+            "change_percent": 3.13,
             "trend": "UP",
             "sparkline": [
                 58.01,
@@ -883,14 +883,14 @@
                 60.34,
                 60.62,
                 59.36,
-                61.27
+                61.3
             ]
         },
         "COPPER": {
             "price": 5.94,
             "prev_price": 5.74,
-            "daily_chg": 3.42,
-            "change_percent": 2.6,
+            "daily_chg": 3.38,
+            "change_percent": 2.56,
             "trend": "UP",
             "sparkline": [
                 5.44,
@@ -918,10 +918,10 @@
             ]
         },
         "NATGAS": {
-            "price": 3.62,
+            "price": 3.65,
             "prev_price": 5.05,
-            "daily_chg": -28.21,
-            "change_percent": 16.73,
+            "daily_chg": -27.71,
+            "change_percent": 17.53,
             "trend": "DOWN",
             "sparkline": [
                 3.96,
@@ -945,12 +945,12 @@
                 3.91,
                 4.88,
                 5.05,
-                3.62
+                3.65
             ]
         },
         "MOVE": {
-            "price": 56.5,
-            "change_percent": 0.01,
+            "price": 56.25,
+            "change_percent": -0.44,
             "trend": "NORMAL",
             "sparkline": [
                 59.48,
@@ -972,7 +972,7 @@
                 66.67,
                 59.56,
                 56.5,
-                56.5
+                56.25
             ]
         },
         "BREADTH": {
@@ -1105,22 +1105,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS fell to 32, signaling a defensive shift as risks rise. VIX rose 2.88% while IWM dropped, hitting asset valuations. Stagnant liquidity drove a 1.49% gold surge into safety. Deteriorating momentum forces a test of key support levels. Stay risk-off until net liquidity shows a real recovery.",
+        "content": "With the GMS score falling to 32 and VIX rising, the market has shifted into a defensive regime where investor caution remains significantly heightened. Stagnant net liquidity combined with emerging private credit risks is forcing a valuation compression as the cost of capital begins to impact stability. Sustained real interest rates at 1.95% are restricting capital flows into risk assets, accelerating a flight to safety across major global benchmarks. Sharp declines in natural gas and rising gold prices underscore deepening volatility, suggesting that structural support levels are undergoing a severe test. Given the downward momentum vector, a cautious approach is mandatory to navigate this deteriorating environment until a definitive price floor is established.",
         "reports": {
-            "JP": "GMSスコアが32へ低下し下落ベクトルが強まる中、市場はプライベートクレジットの崩壊リスクを背景に深い警戒局面へ突入しています。VIXが16.09へ上昇しIWMが1.85%急落した事実は、資本コストの増大がリスク資産の価格を圧迫している証拠です。正味流動性が停滞する中でゴールドが1.49%上昇したことは、投資家がボラティリティを回避し安全資産へ逃避していることを示します。クレジット市場の潜在的脆弱性と実質金利の維持が重なり、テクニカルなサポートレベルを試す下押し圧力が一段と強まっています。モメンタムの悪化を考慮すると、流動性の改善が見られない限り、現在は防御的戦略を優先すべき時期と言えます。",
-            "EN": "GMS fell to 32, signaling a defensive shift as risks rise. VIX rose 2.88% while IWM dropped, hitting asset valuations. Stagnant liquidity drove a 1.49% gold surge into safety. Deteriorating momentum forces a test of key support levels. Stay risk-off until net liquidity shows a real recovery.",
-            "CN": "随着GMS评分降至32点且下行矢量不断增强，当前市场因私募信贷领域的潜在崩溃风险而进入深度防御模式。VIX指数上升2.88%与IWM下跌1.85%的客观现象，共同证明了资本成本升高正严重挤压风险资产的估值空间。在净流动性增长陷入长期停滞的宏观背景下，黄金价格上涨1.49%反映了全球投资者向安全资产转移的明确趋势。信用市场的潜在脆弱性与实际利率的维持相互交织，导致市场正面临回测关键技术支撑位的巨大压力。鉴于当前动量持续恶化且整体流动性未见好转，建议投资者在现阶段应优先采取防御性策略以规避风险。",
-            "ES": "GMS bajó a 32 por riesgos de crédito crecientes. VIX subió 2.88% e IWM cayó por altos costos de capital. El oro subió 1.49% ante la liquidez estancada actual. El impulso cae y presiona los niveles de soporte técnico. Sea cauteloso hasta que mejore la liquidez neta del sistema.",
-            "HI": "जीएमएस 32 पर है, जो बढ़ते ऋण जोखिम को दर्शाता है। विक्स 2.88% बढ़ा और आईडब्ल्यूएम गिरने से दबाव बढ़ गया। तरलता की कमी से सोने में 1.49% की बढ़त देखी गई। गिरता मोमेंटम अब तकनीकी समर्थन स्तरों का परीक्षण करेगा। तरलता सुधरने तक सतर्क रहें और सुरक्षात्मक रुख अपनाएं।",
-            "ID": "GMS turun ke 32 karena risiko kredit meningkat. VIX naik 2.88% dan IWM jatuh menekan valuasi pasar. Likuiditas stagnan mendorong emas naik 1.49% ke keamanan. Momentum buruk memaksa pasar uji level dukungan teknis. Tetap defensif hingga likuiditas bersih sistem membaik.",
-            "AR": "انخفض جي إم إس لـ 32 بسبب مخاطر الائتمان المتزايدة. زاد فيكس 2.88% مما ضغط على أسعار الأصول الصغيرة. دفع ركود السيولة الذهب للصعود بنسبة 1.49% كأمان. يختبر الزخم المتدهور مستويات الدعم الفنية الهامة حالياً. حافظ على استراتيجية دفاعية حتى تتوفر السيولة الصافية."
+            "JP": "GMSスコアが32に低下しVIXが上昇する中、市場は明確なディフェンシブ局面へと移行しており、投資家の警戒心は極めて高い水準にあります。流動性が停滞しプライベートクレジットの崩壊リスクが報じられたことで、資本コストの増大に伴う急激なバリュエーション圧縮への懸念が強まっています。実質金利が1.95%を維持する現状ではリスク資産への流入が制限され、10年債利回りの推移を含め安全資産への資金逃避が明確なトレンドとなりました。天然ガスの暴落や金価格の上昇は市場の不透明感を反映しており、ボラティリティの増大が今後の価格形成における主要な重石となることは避けられません。下降ベクトルの継続によりサポートレベルの再検証が不可欠な段階にあり、現在は積極的な蓄積を避けリスク管理を最優先すべき極めて慎重な局面です。",
+            "EN": "With the GMS score falling to 32 and VIX rising, the market has shifted into a defensive regime where investor caution remains significantly heightened. Stagnant net liquidity combined with emerging private credit risks is forcing a valuation compression as the cost of capital begins to impact stability. Sustained real interest rates at 1.95% are restricting capital flows into risk assets, accelerating a flight to safety across major global benchmarks. Sharp declines in natural gas and rising gold prices underscore deepening volatility, suggesting that structural support levels are undergoing a severe test. Given the downward momentum vector, a cautious approach is mandatory to navigate this deteriorating environment until a definitive price floor is established.",
+            "CN": "随着GMS评分降至32且VIX波动率上升，市场已进入防御模式，投资者在不确定性增加的情况下表现出明显的风险规避情绪。净流动性停滞与私人信贷崩溃风险并存，正迫使市场重新评估资本成本，并导致高估值资产面临持续的下行压力与估值压缩。在实际利率维持在1.95%的高位背景下，资金流入风险资产受阻，市场正转向避险资产以对冲信贷市场可能出现的结构性违约风险。天然气价格暴跌与黄金上涨反映了能源市场的动荡，这种波动性增加预示着市场在测试支撑位时将面临比预期更严峻的抛售挑战。鉴于目前动量向量持续向下，建议投资者保持高度警惕并优先进行风险控制，在市场建立明确的筑底信号前避免盲目增加仓位。",
+            "ES": "Con el GMS en 32 y el VIX en aumento, el mercado ha entrado en un régimen defensivo donde la cautela de los inversores domina la narrativa actual. La liquidez estancada y el riesgo en el crédito privado están forzando una compresión de valoraciones debido al incremento persistente en el costo del capital. Una tasa de interés real del 1.95% limita el flujo hacia activos de riesgo, acelerando una rotación hacia la seguridad ante la fragilidad de los diferenciales. El colapso del gas natural y el alza del oro reflejan una volatilidad estructural que pone a prueba los niveles de soporte clave en este entorno incierto. Dado el vector de impulso bajista, es imperativo priorizar la gestión de riesgos y mantener una postura conservadora hasta que se estabilice el mercado global.",
+            "HI": "GMS स्कोर 32 तक गिरने और VIX में वृद्धि के साथ, बाजार एक रक्षात्मक शासन में स्थानांतरित हो गया है जहां निवेशकों की सावधानी अब काफी बढ़ गई है। स्थिर शुद्ध तरलता और निजी क्रेडिट जोखिमों के कारण मूल्यांकन में गिरावट आ रही है क्योंकि पूंजी की लागत अब बाजार की स्थिरता को प्रभावित करने लगी है। 1.95% की वास्तविक ब्याज दर जोखिम वाली संपत्तियों में पूंजी प्रवाह को प्रतिबंधित कर रही है, जिससे सुरक्षा की ओर पलायन की प्रक्रिया और तेज हो गई है। प्राकृतिक गैस में भारी गिरावट और सोने की बढ़ती कीमतें गहरी अस्थिरता को दर्शाती हैं, जो संकेत देती हैं कि प्रमुख समर्थन स्तरों का परीक्षण जारी है। नीचे की ओर बढ़ते संवेग को देखते हुए, जोखिम प्रबंधन को प्राथमिकता देना अनिवार्य है और बाजार में सुधार के स्पष्ट संकेतों तक सतर्क रहना आवश्यक है।",
+            "ID": "Dengan skor GMS turun ke 32 dan VIX meningkat, pasar telah beralih ke rezim defensif di mana kewaspadaan investor kini menjadi sangat dominan. Likuiditas bersih yang stagnan serta risiko kredit swasta memaksa kompresi valuasi karena biaya modal mulai menekan stabilitas aset berisiko global. Suku bunga riil sebesar 1,95% membatasi aliran modal ke aset risiko, mempercepat pergerakan dana menuju aset aman di tengah ketidakpastian ekonomi. Penurunan tajam harga gas alam dan kenaikan emas mencerminkan volatilitas struktural yang sedang menguji tingkat dukungan teknis pasar saat ini. Mengingat vektor momentum yang terus menurun, prioritas utama adalah manajemen risiko yang ketat hingga terbentuk dasar harga yang lebih stabil.",
+            "AR": "مع انخفاض مؤشر GMS إلى 32 وارتفاع VIX، انتقل السوق إلى وضع دفاعي حيث تزايد حذر المستثمرين بشكل كبير وسط تدهور واضح في الزخم العام. أدى ركود السيولة الصافية ومخاطر الائتمان الخاص إلى ضغط التقييمات، حيث بدأت تكلفة رأس المال تؤثر سلباً على استقرار الأصول ذات المخاطر العالية. تساهم معدلات الفائدة الحقيقية البالغة 1.95% في تقييد التدفقات الرأسمالية، مما سرع من الهروب نحو الملاذات الآمنة لتجنب تداعيات انهيار الائتمان. يعكس الهبوط الحاد في الغاز الطبيعي وصعود الذهب حالة من التقلب الهيكلي التي تضع مستويات الدعم الحالية تحت اختبار قاسٍ وغير مسبوق تقنياً. نظراً لاستمرار ناقل الزخم في الاتجاه الهبوطي، فمن الضروري منح الأولوية لإدارة المخاطر والالتزام بنهج متحفظ حتى يستقر المشهد المالي العالمي."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-22T20:40:17Z",
-            "score": 33
-        },
         {
             "date": "2026-01-22T21:35:11Z",
             "score": 34
@@ -1356,6 +1352,10 @@
         {
             "date": "2026-01-23T21:33:32Z",
             "score": 32
+        },
+        {
+            "date": "2026-01-23T21:50:41Z",
+            "score": 32
         }
     ],
     "intelligence": {
@@ -1363,85 +1363,85 @@
             {
                 "title": "Wall Street braced for a private credit meltdown. The risk of one is rising",
                 "link": "https://www.cnbc.com/2026/01/23/wall-street-private-credit-risk-rising.html",
-                "isoDate": "2026-01-23T21:33:35.147331Z"
+                "isoDate": "2026-01-23T21:50:43.127922Z"
             },
             {
                 "title": "Sen. Warren blasts CFPB director for undermining Trump's credit card affordability push",
                 "link": "https://www.cnbc.com/2026/01/23/warren-cfpb-director-letter-undermining-trump-credit-card-affordability.html",
-                "isoDate": "2026-01-23T21:33:35.149320Z"
+                "isoDate": "2026-01-23T21:50:43.130055Z"
             },
             {
                 "title": "Trump's push for Greenland mineral rights could block China's access to rare earths",
                 "link": "https://www.cnbc.com/2026/01/23/trump-greenland-china-rare-earth-mineral.html",
-                "isoDate": "2026-01-23T21:33:35.149341Z"
+                "isoDate": "2026-01-23T21:50:43.130080Z"
             },
             {
                 "title": "Databricks obtains $1.8 billion in additional debt ahead of IPO",
                 "link": "https://www.cnbc.com/2026/01/23/databricks-obtains-1point8-billion-in-additional-debt-ahead-of-ipo.html",
-                "isoDate": "2026-01-23T21:33:35.149355Z"
+                "isoDate": "2026-01-23T21:50:43.130093Z"
             },
             {
                 "title": "Intel stock drops 17%, its worst day since 2024, as manufacturing troubles overshadow earnings beat",
                 "link": "https://www.cnbc.com/2026/01/23/intel-stock-earnings-q4-2025-supply.html",
-                "isoDate": "2026-01-23T21:33:35.149366Z"
+                "isoDate": "2026-01-23T21:50:43.130104Z"
             },
             {
                 "title": "Megacap earnings next week could lift a stock market that’s broadening out. Here’s what’s ahead",
                 "link": "https://www.cnbc.com/2026/01/23/stock-market-next-week-outlook-for-jan-26-30-2026.html",
-                "isoDate": "2026-01-23T21:33:35.149378Z"
+                "isoDate": "2026-01-23T21:50:43.130116Z"
             }
         ],
         "translations": {
             "JP": [
-                "ウォール街はプライベートクレジットの崩壊に備えていた。そのリスクが高まっている",
+                "ウォール街はプライベートクレジットの崩壊を警戒。そのリスクは高まっている",
                 "ウォーレン上院議員、トランプ氏のクレジットカード負担軽減策を妨害したとしてCFPB局長を非難",
-                "トランプ氏のグリーンランド鉱物資源権益獲得への動き、中国のレアアースへのアクセスを阻止する可能性",
+                "トランプ氏のグリーンランド鉱物資源権益への注力、中国のレアアース供給を遮断する可能性",
                 "データブリックス、IPOを前に18億ドルの追加負債を調達",
-                "インテル株が17%下落、製造上の問題が好決算をかき消し、2024年以降で最悪の一日に",
-                "来週のメガキャップ決算が、広がりを見せる株式市場を押し上げる可能性。今後の見通しはこちら"
+                "インテル株が17%下落、製造上の問題が決算好調を打ち消し2024年以来最悪の下げ",
+                "来週のメガキャップ決算が裾野を広げる株式市場を押し上げる可能性。今後の見通し"
             ],
             "CN": [
-                "华尔街曾为私人信贷崩溃做准备，而如今崩溃风险正在上升",
-                "沃伦参议员抨击CFPB局长削弱特朗普推动的信用卡负担能力计划",
-                "特朗普对格陵兰岛矿产权的争取可能阻断中国获取稀土的渠道",
-                "Databricks在IPO前获得18亿美元追加债务",
-                "英特尔股价大跌17%，创2024年以来最惨单日表现，制造问题掩盖了收益超预期的利好",
-                "下周大型科技股业绩有望提振正在扩大的股市。以下是未来展望"
+                "华尔街对私募信贷崩溃严阵以待，其风险正在上升",
+                "沃伦参议员抨击消费者金融保护局局长，指其削弱了特朗普提高信用卡负担能力的努力",
+                "特朗普争取格陵兰岛矿产权，或将阻碍中国获取稀土",
+                "Databricks 在 IPO 前获得 18 亿美元额外债务",
+                "英特尔股价下跌 17%，创下 2024 年以来最差单日表现，制造问题掩盖了业绩超预期的利好",
+                "下周超大盘股财报有望提振正在扩张的股市，以下是未来展望"
             ],
             "ES": [
                 "Wall Street se preparó para un colapso del crédito privado. El riesgo de que ocurra está aumentando",
-                "La senadora Warren critica al director de la CFPB por socavar el plan de Trump para la asequibilidad de las tarjetas de crédito",
-                "El impulso de Trump por los derechos minerales en Groenlandia podría bloquear el acceso de China a las tierras raras",
+                "La senadora Warren critica al director de la CFPB por socavar el impulso de Trump para la asequibilidad de las tarjetas de crédito",
+                "El impulso de Trump por los derechos minerales de Groenlandia podría bloquear el acceso de China a las tierras raras",
                 "Databricks obtiene 1.800 millones de dólares en deuda adicional antes de su salida a bolsa",
-                "Las acciones de Intel caen un 17%, su peor día desde 2024, mientras los problemas de fabricación empañan unos beneficios superiores a los previstos",
-                "Los resultados de las megacaps la próxima semana podrían impulsar un mercado bursátil que se está ampliando. Esto es lo que nos espera"
+                "Las acciones de Intel caen un 17%, su peor día desde 2024, mientras los problemas de fabricación eclipsan la superación de beneficios",
+                "Los beneficios de las megacapitalizaciones la próxima semana podrían impulsar un mercado de valores que se está expandiendo. Esto es lo que nos espera"
             ],
             "HI": [
-                "वॉल स्ट्रीट निजी ऋण संकट के लिए तैयार था। अब इसका जोखिम बढ़ रहा है",
-                "सेन. वारेन ने ट्रंप के क्रेडिट कार्ड सामर्थ्य अभियान को कमजोर करने के लिए CFPB निदेशक की आलोचना की",
-                "ग्रीनलैंड खनिज अधिकारों के लिए ट्रंप का प्रयास चीन की दुर्लभ मृदा (rare earths) तक पहुंच को रोक सकता है",
-                "Databricks ने IPO से पहले 1.8 अरब डॉलर का अतिरिक्त ऋण प्राप्त किया",
-                "इंटेल का शेयर 17% गिरा, 2024 के बाद का सबसे खराब दिन, विनिर्माण समस्याओं ने बेहतर आय परिणामों को फीका किया",
-                "अगले सप्ताह मेगाकैप कंपनियों की कमाई शेयर बाजार को ऊपर उठा सकती है जो अब विस्तार ले रहा है। यहाँ जानें आगे क्या है"
+                "वॉल स्ट्रीट निजी क्रेडिट के ढहने के लिए तैयार है। इसका जोखिम बढ़ रहा है",
+                "सेन वारन ने ट्रंप के क्रेडिट कार्ड सामर्थ्य अभियान को कमजोर करने के लिए सीएफपीबी निदेशक की आलोचना की",
+                "ग्रीनलैंड के खनिज अधिकारों के लिए ट्रंप का प्रयास चीन की दुर्लभ मिट्टी (रेयर अर्थ) तक पहुंच को रोक सकता है",
+                "डेटाब्रिक्स ने आईपीओ से पहले 1.8 अरब डॉलर का अतिरिक्त ऋण प्राप्त किया",
+                "इंटेल के शेयर में 17% की गिरावट, 2024 के बाद का सबसे खराब दिन, विनिर्माण समस्याओं ने आय की बढ़त को फीका किया",
+                "अगले सप्ताह मेगाकैप की कमाई शेयर बाजार को ऊपर उठा सकती है जो व्यापक हो रहा है। यहाँ आगे क्या है"
             ],
             "ID": [
-                "Wall Street bersiap menghadapi keruntuhan kredit swasta. Risikonya kini semakin meningkat",
-                "Sen. Warren mengecam direktur CFPB karena merusak upaya keterjangkauan kartu kredit Trump",
+                "Wall Street bersiap menghadapi kehancuran kredit swasta. Risikonya kini meningkat",
+                "Senator Warren kecam direktur CFPB karena hambat upaya keterjangkauan kartu kredit era Trump",
                 "Upaya Trump untuk hak mineral Greenland dapat memblokir akses Tiongkok ke tanah jarang",
-                "Databricks memperoleh tambahan utang sebesar $1,8 miliar menjelang IPO",
-                "Saham Intel anjlok 17%, hari terburuknya sejak 2024, karena masalah manufaktur membayangi laporan laba yang melampaui estimasi",
-                "Laba perusahaan megacap minggu depan dapat mendongkrak pasar saham yang tengah meluas. Inilah yang akan terjadi selanjutnya"
+                "Databricks memperoleh utang tambahan sebesar $1,8 miliar menjelang IPO",
+                "Saham Intel anjlok 17%, hari terburuk sejak 2024, karena masalah manufaktur membayangi kinerja laba yang melampaui estimasi",
+                "Laba perusahaan megacap minggu depan dapat mendongkrak pasar saham yang sedang meluas. Inilah yang akan terjadi"
             ],
             "AR": [
-                "وال ستريت استعدت لانهيار الائتمان الخاص. وخطر حدوثه آخذ في التصاعد",
-                "السيناتور وارن تهاجم مدير مكتب الحماية المالية للمستهلك لتقويضه مساعي ترامب لتعزيز القدرة على تحمل تكاليف البطاقات الائتمانية",
-                "مساعي ترامب للحصول على حقوق المعادن في جرينلاند قد تمنع وصول الصين إلى الأتربة النادرة",
-                "داتابريكس تحصل على ديون إضافية بقيمة 1.8 مليار دولار قبل الاكتتاب العام",
-                "سهم إنتل يهبط بنسبة 17% في أسوأ يوم له منذ عام 2024، حيث غطت مشاكل التصنيع على تفوق الأرباح",
-                "أرباح الشركات الكبرى الأسبوع المقبل قد ترفع سوق الأسهم الذي بدأ يتسع نطاقه. إليكم نظرة على ما ينتظرنا"
+                "وول ستريت تستعد لانهيار الائتمان الخاص. ومخاطر حدوثه تتزايد",
+                "السيناتور وارن تهاجم مدير مكتب الحماية المالية للمستهلك لتقويضه جهود ترامب في تعزيز القدرة على تحمل تكاليف بطاقات الائتمان",
+                "مساعي ترامب للحصول على حقوق المعادن في غرينلاند قد تعيق وصول الصين إلى الأتربة النادرة",
+                "\"داتابريكس\" تحصل على ديون إضافية بقيمة 1.8 مليار دولار قبل الاكتتاب العام",
+                "سهم \"إنتل\" يهبط بنسبة 17% في أسوأ يوم له منذ عام 2024، حيث غطت مشاكل التصنيع على تفوق الأرباح",
+                "أرباح الشركات العملاقة الأسبوع المقبل قد ترفع سوق الأسهم الذي يشهد توسعاً. إليكم ما هو آت"
             ]
         },
-        "last_updated": "2026-01-23T21:33:53.820936Z"
+        "last_updated": "2026-01-23T21:51:05.853529Z"
     },
     "system_status": "OPERATIONAL"
 }
