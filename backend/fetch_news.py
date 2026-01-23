@@ -4,6 +4,7 @@ import xml.etree.ElementTree as ET
 import json
 import time
 import subprocess
+import re
 from datetime import datetime
 from dotenv import load_dotenv
 
@@ -44,7 +45,9 @@ def log_diag(msg):
 
     # File output for difficult environments
     try:
-        with open("news_debug.log", "a", encoding="utf-8") as f:
+        # Use absolute path for log file to avoid issues in Actions
+        log_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "news_debug.log")
+        with open(log_path, "a", encoding="utf-8") as f:
             f.write(f"{datetime.now().isoformat()} [NEWS_ENGINE] {msg}\n")
     except Exception:
         pass
@@ -134,20 +137,23 @@ Input: {json.dumps(titles)}"""
 
     try:
         log_diag("Routing translation through Node.js Bridge...")
-        # Resolve path to frontend directory (where package.json lives)
-        # Root is one level up from backend/fetch_news.py? No, backend/fetch_news.py is in backend/. Root is one up.
-        # Frontend is in root/frontend.
-        # Current file: .../backend/fetch_news.py
+        
+        # DEFINITIVE ABSOLUTE PATHS
         current_dir = os.path.dirname(os.path.abspath(__file__))
         root_dir = os.path.dirname(current_dir)
         frontend_dir = os.path.join(root_dir, "frontend")
+        script_abs_path = os.path.join(frontend_dir, "scripts", "generate_insight.ts")
         
-        # Script is inside frontend/scripts/generate_insight.ts
-        script_relative_path = os.path.join("scripts", "generate_insight.ts")
+        log_diag(f"Path Reference: cwd={frontend_dir}, script={script_abs_path}")
         
+        if not os.path.exists(frontend_dir):
+            log_diag(f"[CRITICAL] Frontend directory not found at {frontend_dir}")
+            return {}
+
         # Call npx tsx and pipe prompt via stdin
-        # CRITICAL: Run from FRONTEND dir so node_modules are found
-        cmd = ["npx", "tsx", script_relative_path]
+        # Using npx tsx <absolute_path> with cwd=<frontend_dir>
+        # Note: shell=True is sometimes needed for npx on Windows/Actions
+        cmd = ["npx", "tsx", script_abs_path]
         process = subprocess.Popen(
             cmd, 
             stdin=subprocess.PIPE, 
@@ -155,102 +161,122 @@ Input: {json.dumps(titles)}"""
             stderr=subprocess.PIPE, 
             text=True, 
             encoding='utf-8', 
-            shell=True, 
-            cwd=frontend_dir # execution context fixed
+            shell=(sys.platform == 'win32' or os.getenv('GITHUB_ACTIONS') == 'true'),
+            cwd=frontend_dir
         )
-        stdout, stderr = process.communicate(input=prompt, timeout=90) # Increased timeout to 90s for install overhead
+        stdout, stderr = process.communicate(input=prompt, timeout=90)
 
         if process.returncode == 0:
-            # generate_insight.ts outputs {"text": "..."}
             try:
-                # CLEAN NOISE: Filter out [dotenv] or other logs that pollute stdout
-                lines = stdout.splitlines()
-                clean_lines = [line for line in lines if not line.strip().startswith("[") and not line.strip().startswith("Note:")]
-                clean_stdout = "\n".join(clean_lines)
-
-                # Find the actual JSON start
-                json_start_node = clean_stdout.find('{')
-                json_end_node = clean_stdout.rfind('}') + 1
+                # ROBUST PARSING: Use regex to extract the JSON object containing "text"
+                # This ignores noise like [dotenv] or other log lines
+                match = re.search(r'\{"text":.*\}', stdout, re.DOTALL)
+                if not match:
+                    log_diag(f"[ERROR] No valid JSON with 'text' found in Node stdout. Raw: {stdout[:200]}...")
+                    return {}
                 
-                if json_start_node != -1 and json_end_node > json_start_node:
-                    final_json_str = clean_stdout[json_start_node:json_end_node]
-                    raw_result = json.loads(final_json_str)
-                else:
-                    # Fallback: Try regex if simple find fails
-                    import re
-                    match = re.search(r'\{"text":.*\}', stdout, re.DOTALL)
-                    if match:
-                       raw_result = json.loads(match.group(0))
-                    else:
-                       log_diag(f"[ERROR] No JSON found in Node stdout. Raw: {stdout[:200]}...")
-                       return {}
-
+                raw_result = json.loads(match.group(0))
                 text = raw_result.get("text", "")
                 
-                # Extract JSON from text (translated data)
-                text = text.replace('```json', '').replace('```', '').strip()
-                if '{' in text:
-                    text = text[text.find('{'):text.rfind('}')+1]
+                # Extract internal JSON from response text
+                text_match = re.search(r'\{.*\}', text, re.DOTALL)
+                if not text_match:
+                    log_diag(f"[ERROR] No translation JSON found in AI response text: {text[:200]}")
+                    return {}
                 
-                translated_data = json.loads(text)
+                translated_data = json.loads(text_match.group(0))
+                
+                # VALIDATION: Check if at least one target language exists
+                required_langs = ["JP", "CN", "ES", "HI", "ID", "AR"]
+                missing_langs = [l for l in required_langs if l not in translated_data]
+                
+                if missing_langs:
+                    log_diag(f"[WARNING] Missing languages in result: {missing_langs}")
+                    # We continue but will signal failure later if critical
+                
                 if "JP" in translated_data:
                     log_diag(f"[SUCCESS] Node Bridge returned {len(translated_data)} languages.")
                     return translated_data
+                else:
+                    log_diag(f"[ERROR] Critical language 'JP' missing from translation.")
+                    return {}
+
             except Exception as e:
                 log_diag(f"[ERROR] Failed to parse Node response: {e}. Raw stdout: {stdout[:500]}")
         else:
             log_diag(f"[ERROR] Node Bridge failed (code {process.returncode}): {stderr}")
+            if stdout:
+                log_diag(f"Stdout (Failed Run): {stdout[:500]}")
             
     except Exception as e:
         log_diag(f"[EXCEPTION] Node Bridge communication failed: {e}")
         
     return {}
 
-
-
 def get_news_payload():
     """Main entry point: Returns raw news and its translations."""
-    print("[FETCH_NEWS] Updating intelligence stream...")
+    log_diag("Updating intelligence stream...")
     raw_items = fetch_raw_news()
     if not raw_items:
-        return {"news": [], "translations": {}}
+        log_diag("[ABORT] No raw news fetched. Skipping translation.")
+        return None
 
     translations = translate_news_batch(raw_items)
     
+    if not translations:
+        log_diag("[ABORT] Translation failed. Using raw news only is NOT allowed for intelligence updates.")
+        return None
+
     return {
-        "news": raw_items, # English base
+        "news": raw_items,
         "translations": translations,
         "last_updated": datetime.utcnow().isoformat() + "Z"
     }
 
 if __name__ == "__main__":
-    # Standalone Execution (GitHub Actions / Manual Update)
     try:
         payload = get_news_payload()
         
-        # Load existing signal file to merge
-        signal_path = os.path.join(os.path.dirname(__file__), "current_signal.json")
+        # Load existing signal file
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        signal_path = os.path.join(script_dir, "current_signal.json")
+        flag_path = os.path.join(script_dir, "ai_failed.flag")
+        
+        # Cleanup old failure flag
+        if os.path.exists(flag_path):
+            os.remove(flag_path)
+
         data = {}
         if os.path.exists(signal_path):
             with open(signal_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
         
-        # Merge intelligence
-        data["intelligence"] = payload
-        
-        # Save back
-        with open(signal_path, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=4, ensure_ascii=False)
+        if payload:
+            # PROPER UPDATE: We have valid news and translations
+            data["intelligence"] = payload
+            with open(signal_path, "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=4, ensure_ascii=False)
+            log_diag(f"[DONE] News updated successfully in {signal_path}")
+        else:
+            # FAIL-SAFE: Preservation of old data
+            log_diag("[FAIL-SAFE] Invalid payload detected. Keeping previous intelligence to avoid empty state.")
+            # Touch failure flag for Actions detection
+            with open(flag_path, "w") as f:
+                f.write(f"NEWS_FETCH_OR_TRANSLATION_FAILED_{datetime.now().isoformat()}")
             
-        print(f"[SUCCESS] News updated in {signal_path}")
-        print(json.dumps(payload, indent=2, ensure_ascii=False))
+            # If intelligence doesn't exist at all, we might want to exit with error
+            if "intelligence" not in data:
+                log_diag("[CRITICAL] No previous intelligence found. System in blank state.")
+                sys.exit(1)
+            
+            sys.exit(0) # Exit with 0 so Actions continues, but flag handles the alert
         
     except Exception as e:
-        print(f"[ERROR] Failed to update news: {e}")
-        # Create failure flag for GitHub Actions to pick up
+        log_diag(f"[ERROR] Failed to update news: {e}")
         try:
-            flag_path = os.path.join(os.path.dirname(__file__), "ai_failed.flag")
+            flag_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "ai_failed.flag")
             with open(flag_path, "w") as f:
-                f.write("FAILURE_NEWS")
+                f.write(f"EXCEPTION_IN_NEWS_ENGINE_{e}")
         except: pass
         sys.exit(1)
+

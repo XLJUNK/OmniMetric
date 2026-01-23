@@ -45,7 +45,7 @@ async function main() {
             const lastRun = parseInt(fs.readFileSync(guardFile, 'utf8'));
             // Reduced to 5s to allow sequential GMS -> News execution
             if (now - lastRun < 5000) {
-                console.warn(`[AI GUARD] Rapid call detected. Cooling down... (${Math.round((5000 - (now - lastRun)) / 1000)}s remaining)`);
+                console.error(`[AI GUARD] Rapid call detected. Cooling down... (${Math.round((5000 - (now - lastRun)) / 1000)}s remaining)`);
                 process.exit(1);
             }
         }
@@ -68,7 +68,7 @@ async function main() {
         });
 
         // Output ONLY the raw text for Python to capture
-        console.log(JSON.stringify({ text: result.text }));
+        process.stdout.write(JSON.stringify({ text: result.text }) + '\n');
 
     } catch (error: any) {
         console.error("AI Generation Failed via Gateway:", error.message || error);

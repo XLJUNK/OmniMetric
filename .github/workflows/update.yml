@@ -55,6 +55,16 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git fetch origin main
           git reset --hard origin/main
+          
+          # PATH DEBUGGING
+          echo "Current Directory: $(pwd)"
+          echo "Listing root:"
+          ls -F
+          echo "Listing backend:"
+          ls -F backend/
+          echo "Listing frontend/scripts:"
+          ls -F frontend/scripts/
+          
           python backend/gms_engine.py
           
           # FORCE NEWS UPDATE (Fix for empty translations)
