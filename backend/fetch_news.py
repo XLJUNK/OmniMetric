@@ -134,13 +134,31 @@ Input: {json.dumps(titles)}"""
 
     try:
         log_diag("Routing translation through Node.js Bridge...")
-        # Resolve path to generate_insight.ts (relative to root)
-        script_path = os.path.join("frontend", "scripts", "generate_insight.ts")
+        # Resolve path to frontend directory (where package.json lives)
+        # Root is one level up from backend/fetch_news.py? No, backend/fetch_news.py is in backend/. Root is one up.
+        # Frontend is in root/frontend.
+        # Current file: .../backend/fetch_news.py
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        root_dir = os.path.dirname(current_dir)
+        frontend_dir = os.path.join(root_dir, "frontend")
+        
+        # Script is inside frontend/scripts/generate_insight.ts
+        script_relative_path = os.path.join("scripts", "generate_insight.ts")
         
         # Call npx tsx and pipe prompt via stdin
-        cmd = ["npx", "tsx", script_path]
-        process = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, encoding='utf-8', shell=True)
-        stdout, stderr = process.communicate(input=prompt, timeout=45)
+        # CRITICAL: Run from FRONTEND dir so node_modules are found
+        cmd = ["npx", "tsx", script_relative_path]
+        process = subprocess.Popen(
+            cmd, 
+            stdin=subprocess.PIPE, 
+            stdout=subprocess.PIPE, 
+            stderr=subprocess.PIPE, 
+            text=True, 
+            encoding='utf-8', 
+            shell=True, 
+            cwd=frontend_dir # execution context fixed
+        )
+        stdout, stderr = process.communicate(input=prompt, timeout=90) # Increased timeout to 90s for install overhead
 
         if process.returncode == 0:
             # generate_insight.ts outputs {"text": "..."}
