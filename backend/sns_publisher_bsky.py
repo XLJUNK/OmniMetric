@@ -96,12 +96,12 @@ class BlueskyPublisher:
         except Exception as e:
             self._log(f"Failed to update state file: {e}", is_error=True)
 
-    def publish(self, data):
+    def publish(self, data, image_path=None, reply_to=None, force=False):
         """Main entry point for Bluesky publishing."""
         score = data.get("gms_score", 50)
         
-        if self.should_skip(score):
-            return True # Not an error, just a skip
+        if self.should_skip(score) and not force:
+            return None # Not an error, just a skip
 
         text = self.format_post(data)
         
@@ -110,19 +110,35 @@ class BlueskyPublisher:
         
         if not all([bsky_user, bsky_pass]):
             self._log("Missing Bluesky credentials (BLUESKY_HANDLE / BLUESKY_PASSWORD).", is_error=True)
-            return False
+            return None
             
         try:
             client = Client()
             client.login(bsky_user, bsky_pass)
-            # Use send_post for the standard text post
-            client.send_post(text=text)
+            
+            embed = None
+            if image_path and os.path.exists(image_path):
+                with open(image_path, 'rb') as f:
+                    img_data = f.read()
+                upload = client.upload_blob(img_data)
+                from atproto import models
+                embed = models.AppBskyEmbedImages.Main(
+                    images=[models.AppBskyEmbedImages.Image(alt="Global Macro Signal OGP", image=upload.blob)]
+                )
+                self._log(f"Image uploaded successfully: {image_path}")
+
+            # Send post with optional threading
+            post = client.send_post(text=text, reply_to=reply_to, embed=embed)
+            
             self._log(f"Success: Posted GMS Score {score} to Bluesky.")
-            self.update_state(score)
-            return True
+            if not reply_to: # Only update state for top-level posts
+                self.update_state(score)
+                
+            return post # Returns models.AppBskyFeedPost.CreateRecordResponse
         except Exception as e:
             self._log(f"Error: {e}", is_error=True)
-            return False
+            return None
+
 
 if __name__ == "__main__":
     # Test script for local verification

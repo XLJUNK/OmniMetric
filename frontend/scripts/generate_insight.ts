@@ -15,13 +15,25 @@ try {
     // Ignore dotenv errors in production if envs are already set
 }
 
-const getPrompt = () => {
+const getPrompt = async () => {
     const args = process.argv.slice(2);
-    if (args.length === 0) {
-        console.error("Error: No prompt provided.");
-        process.exit(1);
+    if (args.length > 0) {
+        return args[0];
     }
-    return args[0];
+    // Read from stdin
+    return new Promise<string>((resolve, reject) => {
+        let data = '';
+        process.stdin.setEncoding('utf8');
+        process.stdin.on('data', chunk => data += chunk);
+        process.stdin.on('end', () => {
+            if (!data.trim()) {
+                console.error("Error: No prompt provided via args or stdin.");
+                process.exit(1);
+            }
+            resolve(data);
+        });
+        process.stdin.on('error', reject);
+    });
 };
 
 async function main() {
@@ -39,7 +51,7 @@ async function main() {
         fs.writeFileSync(guardFile, now.toString());
     } catch (e) { }
 
-    const prompt = getPrompt();
+    const prompt = await getPrompt();
 
     const gatewaySlug = process.env.VERCEL_AI_GATEWAY_SLUG || 'omni-metric';
 

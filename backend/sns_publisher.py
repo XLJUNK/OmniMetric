@@ -46,6 +46,20 @@ class SNSPublisher:
         
         return self.font_path_default
         
+    def get_regime_name(self, score):
+        if score > 60: return "ACCUMULATE (リスク選好)"
+        if score < 40: return "DEFENSIVE (リスク回避)"
+        return "NEUTRAL (中立局面)"
+
+    def get_regime_name_en(self, score):
+        if score > 60: return "ACCUMULATE (Risk-On)"
+        if score < 40: return "DEFENSIVE (Risk-Off)"
+        return "NEUTRAL (Wait & See)"
+
+    def get_regime_name_es(self, score):
+        if score > 60: return "ACUMULAR (Apetito de Riesgo)"
+        if score < 40: return "DEFENSIVA (Aversión al Riesgo)"
+        return "NEUTRAL (Paridad de Riesgo)"
         
     def generate_ogp_image(self, score, language="EN"):
         """Generates a high-quality OGP image with GMS Score and Market Outlook."""
@@ -269,6 +283,7 @@ class SNSPublisher:
         """
         posts = self.format_post(data)
         score = data.get("gms_score", 50)
+        sectors = data.get("sector_scores", {})
         results = {}
         
         # SEQUENCER LOGIC (Golden Schedule)
@@ -291,26 +306,61 @@ class SNSPublisher:
             self._log(f"Processing Serial SNS Broadcast: Stage 2 (Bluesky) - {len(matches)} Tasks")
             bsky_pub = BlueskyPublisher(log_callback=self.log_callback)
             
-            for (lang, phase, force_post) in matches:
+            # Implementation of JA -> EN -> ES Threading Sequence
+            # We sort matches to ensure JP is first if present
+            sorted_matches = sorted(matches, key=lambda x: (0 if x[0] == 'JP' else (1 if x[0] == 'EN' else 2)))
+            
+            parent_post = None
+            
+            for (lang, phase, force_post) in sorted_matches:
                 self._log(f"Executing Task: {lang} (Phase {phase}, Force: {force_post})")
                 
                 # OGP Generation
                 image_path = self.generate_ogp_image(score, lang)
                 
                 # Check Skip Logic (Global Score check)
-                if bsky_pub.should_skip(score) and not force_post:
+                if bsky_pub.should_skip(score) and not force_post and not parent_post:
                      self._log(f"[{lang}] BlueSky Smart-Skip triggered (Score Unchanged).")
                      results[f"BSKY_{lang}"] = "SKIPPED"
                 else:
                      # Prepare Text
                      raw_posts = self.format_post(data)
-                     # Fallback to EN if specific lang key missing in format_post (only EN/JP currently)
-                     # ideally format_post should support all, but for now we fallback
-                     text_body = raw_posts.get(lang, raw_posts.get("EN")) 
-                     if lang == "JP": text_body = raw_posts.get("JP")
                      
-                     res = bsky_pub.publish(data, image_path=image_path, force=force_post) 
-                     results[f"BSKY_{lang}"] = res
+                     # 3-Line News Stream Dynamic Translation Pattern (Per User Request)
+                     # We use specific templates for different languages in the thread
+                     if lang == "JP":
+                         text_body = f"最新のGMSスコアは{score}（{self.get_regime_name(score)}）です。\n\n"
+                         text_body += f"株: {sectors.get('STOCKS', 'N/A')} | 仮想通貨: {sectors.get('CRYPTO', 'N/A')} | 商品: {sectors.get('COMMODITIES', 'N/A')}\n"
+                         text_body += f"詳細: {self.site_url}/jp #OmniMetric"
+                     elif lang == "EN":
+                         text_body = f"Latest GMS Score: {score} ({self.get_regime_name_en(score)})\n\n"
+                         text_body += f"Stocks: {sectors.get('STOCKS', 'N/A')} | Crypto: {sectors.get('CRYPTO', 'N/A')} | Cmdty: {sectors.get('COMMODITIES', 'N/A')}\n"
+                         text_body += f"Live: {self.site_url}/en #Macro"
+                     elif lang == "ES":
+                         text_body = f"Puntaje GMS: {score} ({self.get_regime_name_es(score)})\n\n"
+                         text_body += f"Acciones: {sectors.get('STOCKS', 'N/A')} | Cripto: {sectors.get('CRYPTO', 'N/A')} | Cmdty: {sectors.get('COMMODITIES', 'N/A')}\n"
+                         text_body += f"Terminal: {self.site_url}/es #Inversion"
+                     else:
+                         # Fallback for other languages if schedule matches
+                         text_body = raw_posts.get(lang, raw_posts.get("EN"))
+
+                     # Resolve Threading (Reply Logic)
+                     reply_to = None
+                     if parent_post:
+                         from atproto import models
+                         reply_to = models.AppBskyFeedPost.ReplyRef(
+                             parent=models.ComAtprotoRepoStrongRef.Main(cid=parent_post.cid, uri=parent_post.uri),
+                             root=models.ComAtprotoRepoStrongRef.Main(cid=parent_post.cid, uri=parent_post.uri)
+                         )
+
+                     res_post = bsky_pub.publish(data, image_path=image_path, reply_to=reply_to, force=force_post) 
+                     
+                     if res_post:
+                         results[f"BSKY_{lang}"] = "SUCCESS"
+                         # Update parent for next reply in thread
+                         parent_post = res_post 
+                     else:
+                         results[f"BSKY_{lang}"] = "FAILED"
                      
                 # Cleanup Image per task
                 if image_path and os.path.exists(image_path): os.remove(image_path)
@@ -318,6 +368,7 @@ class SNSPublisher:
         except Exception as e:
             self._log(f"Bluesky Integration Error: {e}", is_error=True, platform="BLUESKY")
             results["BSKY_ERROR"] = str(e)
+
             
         return results
 

@@ -1281,21 +1281,22 @@ def get_next_event_dates():
 def update_signal(force_news=False):
     print(f"Running OmniMetric v2.0 Engine (Force News: {force_news})...")
     
-    # 1. Execution Control: 10-Minute Cool-down
-    try:
-        if os.path.exists(DATA_FILE):
-            with open(DATA_FILE, 'r', encoding='utf-8') as f:
-                existing_data = json.load(f)
-                last_upd_str = existing_data.get("last_successful_update")
-                if last_upd_str:
-                    # Handle both space and T formats for safety
-                    last_upd_str = last_upd_str.replace(' ', 'T').replace('Z', '')
-                    last_upd_dt = datetime.fromisoformat(last_upd_str)
-                    if (datetime.utcnow() - last_upd_dt).total_seconds() < 480: # 8-minute buffer for jittery 15m crons
-                        print(f"[AIO] SKIP: Recently updated ({last_upd_dt}). Enforced 8m cool-down.")
-                        return existing_data
-    except Exception as e:
-        print(f"[AIO] Cool-down check failed (Non-critical): {e}")
+    # 1. Execution Control: 10-Minute Cool-down (DISABLED FOR DEBUG)
+    if False:
+        try:
+            if os.path.exists(DATA_FILE):
+                with open(DATA_FILE, 'r', encoding='utf-8') as f:
+                    existing_data = json.load(f)
+                    last_upd_str = existing_data.get("last_successful_update")
+                    if last_upd_str:
+                        # Handle both space and T formats for safety
+                        last_upd_str = last_upd_str.replace(' ', 'T').replace('Z', '')
+                        last_upd_dt = datetime.fromisoformat(last_upd_str)
+                        if (datetime.utcnow() - last_upd_dt).total_seconds() < 480: # 8-minute buffer for jittery 15m crons
+                            print(f"[AIO] SKIP: Recently updated ({last_upd_dt}). Enforced 8m cool-down.")
+                            return existing_data
+        except Exception as e:
+            print(f"[AIO] Cool-down check failed (Non-critical): {e}")
 
     validate_api_keys()
     # FETCH DATA

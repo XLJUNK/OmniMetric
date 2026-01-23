@@ -3,6 +3,7 @@ import requests
 import xml.etree.ElementTree as ET
 import json
 import time
+import subprocess
 from datetime import datetime
 from dotenv import load_dotenv
 
@@ -10,6 +11,13 @@ from dotenv import load_dotenv
 load_dotenv()
 GEMINI_KEY = os.getenv("GEMINI_API_KEY", "").strip()
 GATEWAY_SLUG = os.getenv("VERCEL_AI_GATEWAY_SLUG", "omni-metric")
+
+import sys
+
+# Force UTF-8 for Windows Console
+if sys.platform == 'win32':
+    sys.stdout.reconfigure(encoding='utf-8')
+    sys.stderr.reconfigure(encoding='utf-8')
 
 # Target Languages
 LANG_MAP = {
@@ -21,9 +29,25 @@ LANG_MAP = {
     'AR': 'Arabic'
 }
 
+GATEWAY_KEY = os.getenv("AI_GATEWAY_API_KEY", "").strip()
+
 def log_diag(msg):
-    """Simple logger for news module"""
-    print(f"[NEWS_ENGINE] {msg}")
+    """Simple logger for news module with encoding safety and file persistence"""
+    try:
+        # Console output
+        print(f"[NEWS_ENGINE] {msg}")
+    except UnicodeEncodeError:
+        safe_msg = msg.encode('ascii', 'replace').decode('ascii')
+        print(f"[NEWS_ENGINE] {safe_msg}")
+    except Exception:
+        pass
+
+    # File output for difficult environments
+    try:
+        with open("news_debug.log", "a", encoding="utf-8") as f:
+            f.write(f"{datetime.now().isoformat()} [NEWS_ENGINE] {msg}\n")
+    except Exception:
+        pass
 
 def fetch_raw_news():
     """Fetches top 6 headlines from CNBC RSS using robust date parsing."""
@@ -88,10 +112,7 @@ def fetch_raw_news():
         return []
 
 def translate_news_batch(items):
-    """Translates all headlines using VERCEL AI GATEWAY (HTTP/REST) to bypass firewall."""
-    if not GEMINI_KEY:
-        log_diag("Skipping translation: GEMINI_API_KEY is missing.")
-        return {}
+    """Translates headlines using Node.js bridge (bypass Python SSL block)."""
     if not items:
         return {}
 
@@ -107,68 +128,54 @@ Translate the following {len(titles)} US market news headlines into:
 - Arabic (AR)
 
 Maintain a punchy, factual, institutional tone.
-Output ONLY a raw JSON object where keys are the 2-letter codes (JP, CN, ES, HI, ID, AR) and values are arrays of translated strings in the same order as input.
+Output ONLY a raw JSON object where keys are the 2-letter codes (JP, CN, ES, HI, ID, AR) and values are arrays in same order.
 
-Input: {json.dumps(titles)}
+Input: {json.dumps(titles)}"""
 
-Example Output:
-{{
-  "JP": ["Translation 1", "Translation 2"],
-  "CN": ["Translation 1", "Translation 2"]
-}}"""
+    try:
+        log_diag("Routing translation through Node.js Bridge...")
+        # Resolve path to generate_insight.ts (relative to root)
+        script_path = os.path.join("frontend", "scripts", "generate_insight.ts")
+        
+        # Call npx tsx and pipe prompt via stdin
+        cmd = ["npx", "tsx", script_path]
+        process = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, encoding='utf-8', shell=True)
+        stdout, stderr = process.communicate(input=prompt, timeout=45)
 
-    # VERCEL GATEWAY CONFIGURATION
-    model_name = "gemini-2.0-flash-001"
-    url = f"https://gateway.ai.vercel.com/v1/{GATEWAY_SLUG}/google/models/{model_name}:generateContent"
-    
-    headers = {
-        "Content-Type": "application/json",
-        "x-vercel-ai-gateway-provider": "google",
-        "x-vercel-ai-gateway-cache": "disable",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" # Bypass WAF
-    }
-    
-    proxy_url = f"{url}?key={GEMINI_KEY}"
-    payload = {"contents": [{"parts": [{"text": prompt}]}]}
+        if process.returncode == 0:
+            # generate_insight.ts outputs {"text": "..."}
+            try:
+                # Find the actual JSON start if there's noise
+                json_start_node = stdout.find('{')
+                json_end_node = stdout.rfind('}') + 1
+                if json_start_node != -1 and json_end_node > json_start_node:
+                    clean_stdout = stdout[json_start_node:json_end_node]
+                    raw_result = json.loads(clean_stdout)
+                else:
+                    log_diag(f"[ERROR] No JSON found in Node stdout: {stdout}")
+                    return {}
 
-    for attempt in range(2):
-        try:
-            log_diag(f"Sending Translation Request to Gateway (Attempt {attempt+1})...")
-            response = requests.post(proxy_url, json=payload, headers=headers, timeout=30)
-            
-            if response.status_code == 200:
-                result = response.json()
-                if 'candidates' in result and result['candidates']:
-                    text = result['candidates'][0]['content']['parts'][0]['text']
-                    
-                    # Cleanup JSON
-                    text = text.replace('```json', '').replace('```', '').strip()
-                    if '{' in text:
-                        text = text[text.find('{'):text.rfind('}')+1]
-                    
-                    try:
-                        translated_data = json.loads(text)
-                        
-                        # VALIDATION: Check for all keys
-                        missing = [code for code in LANG_MAP.keys() if code not in translated_data]
-                        if not missing:
-                            log_diag("[SUCCESS] Translation complete and validated.")
-                            return translated_data
-                        else:
-                            log_diag(f"[WARN] Partial translation. Missing: {missing}")
-                            # Keep what we have, better than nothing
-                            return translated_data
-                    except json.JSONDecodeError:
-                        log_diag("[ERROR] Failed to parse AI JSON response.")
-            else:
-                log_diag(f"[FAIL] Gateway Error {response.status_code}: {response.text}")
+                text = raw_result.get("text", "")
                 
-            time.sleep(1) # Backoff
+                # Extract JSON from text (translated data)
+                text = text.replace('```json', '').replace('```', '').strip()
+                if '{' in text:
+                    text = text[text.find('{'):text.rfind('}')+1]
+                
+                translated_data = json.loads(text)
+                if "JP" in translated_data:
+                    log_diag(f"[SUCCESS] Node Bridge returned {len(translated_data)} languages.")
+                    return translated_data
+            except Exception as e:
+                log_diag(f"[ERROR] Failed to parse Node response: {e}. Raw stdout: {stdout[:500]}")
+        else:
+            log_diag(f"[ERROR] Node Bridge failed (code {process.returncode}): {stderr}")
             
-        except Exception as e:
-            log_diag(f"[EXCEPTION] Gateway Connection Failed: {e}")
-            
+    except Exception as e:
+        log_diag(f"[EXCEPTION] Node Bridge communication failed: {e}")
+        
     return {}
+
 
 
 def get_news_payload():

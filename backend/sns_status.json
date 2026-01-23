@@ -5,12 +5,12 @@
         "message": "Twitter Error: 429 Too Many Requests\nToo Many Requests"
     },
     "BLUESKY": {
-        "timestamp": "2026-01-23T06:52:02.243293",
+        "timestamp": "2026-01-23T06:48:57.962355",
         "status": "FAILURE",
-        "message": "Bluesky Integration Error: BlueskyPublisher.publish() got an unexpected keyword argument 'image_path'"
+        "message": "Missing Bluesky credentials (BLUESKY_HANDLE / BLUESKY_PASSWORD)."
     },
     "SYSTEM": {
-        "timestamp": "2026-01-23T06:52:02.219228",
+        "timestamp": "2026-01-23T03:55:21.706585",
         "status": "FAILURE",
         "message": "Font loading failed (C:\\Windows\\Fonts\\arial.ttf): cannot open resource. Using PIL default."
     }

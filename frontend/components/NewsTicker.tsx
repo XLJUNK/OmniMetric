@@ -116,9 +116,10 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
                             >
                                 <span className="w-1 h-1 bg-white rounded-full animate-pulse shadow-[0_0_4px_rgba(255,255,255,0.8)]"></span>
                                 <span className="text-[9px] md:text-[10px] font-black text-white tracking-[0.05em] uppercase whitespace-nowrap">
-                                    {i === 0 ? "LIVE" : "BREAKING"}
+                                    {i === 0 ? (t.titles.live || "LIVE") : (t.titles.breaking || "BREAKING")}
                                 </span>
                             </div>
+
 
                             {/* TITLE - Institutional Slate - Theme Responsive */}
                             <span
