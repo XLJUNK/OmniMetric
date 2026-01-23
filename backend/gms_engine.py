@@ -444,11 +444,11 @@ def fetch_economic_calendar():
         log_diag(f"[FMP] Response status: {response.status_code}")
         
         if response.status_code != 200:
-            log_diag(f"[ERROR] Calendar Fetch Failed: Status {response.status_code}")
+            log_diag(f"[WARN] Calendar Fetch Failed: Status {response.status_code}. Using empty list.")
             return []
             
         if not response.text.strip():
-            log_diag("[ERROR] Calendar Fetch Failed: Empty response body")
+            log_diag("[WARN] Calendar Fetch Failed: Empty response body. Using empty list.")
             return []
             
         try:

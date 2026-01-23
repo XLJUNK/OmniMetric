@@ -40,6 +40,14 @@ def log_diag(msg):
     except:
         pass
 
+def create_failure_flag(reason="Unknown"):
+    """Creates a flag file to alert GitHub Actions but allow workflow to continue."""
+    flag_path = os.path.join(SCRIPT_DIR, "ai_failed.flag")
+    try:
+        with open(flag_path, "w") as f:
+            f.write(f"FAILURE REASON: {reason}\\nTimestamp: {datetime.now()}")
+    except: pass
+
 def fetch_raw_news():
     """Fetches top 6 headlines from CNBC RSS."""
     FEED_URL = f'https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114&t={int(time.time())}'
@@ -122,7 +130,8 @@ Output JSON format: {{ "JP": [...], "CN": [...], ... }} only."""
         
         if not os.path.exists(script_path):
             log_diag(f"[FATAL] Translation Script NOT FOUND at {script_path}")
-            sys.exit(1) # Strict Exit
+            create_failure_flag("Translation Script Missing")
+            sys.exit(0) # Fail-Open (Allow partial commit)
 
         # 2. COMMAND CONSTRUCTION
         # Linux/Actions: ["npx", "tsx", path] with shell=False
@@ -148,7 +157,8 @@ Output JSON format: {{ "JP": [...], "CN": [...], ... }} only."""
         if process.returncode != 0:
             log_diag(f"[FATAL] Node process exited with code {process.returncode}")
             log_diag(f"STDERR: {stderr}")
-            sys.exit(1) # Strict Exit
+            create_failure_flag(f"Node Process Failed (Code {process.returncode})")
+            sys.exit(0) # Fail-Open
 
         # 3. RESPONSE PARSING
         log_diag(f"Node finished. Stdout length: {len(stdout)} chars")
@@ -157,7 +167,8 @@ Output JSON format: {{ "JP": [...], "CN": [...], ... }} only."""
         match = re.search(r'\{"text":.*\}', stdout, re.DOTALL)
         if not match:
             log_diag(f"[FATAL] Invalid Bridge Output (No JSON wrapper). Raw: {stdout[:500]}")
-            sys.exit(1) # Strict Exit
+            create_failure_flag("Invalid Bridge Output")
+            sys.exit(0) # Fail-Open
 
         wrapper = json.loads(match.group(0))
         inner_text = wrapper.get("text", "")
@@ -171,7 +182,8 @@ Output JSON format: {{ "JP": [...], "CN": [...], ... }} only."""
                  return data
              except:
                  log_diag(f"[FATAL] Could not parse AI response JSON: {inner_text[:200]}")
-                 sys.exit(1)
+                 create_failure_flag("JSON Parse Error")
+                 sys.exit(0)
 
         final_json_str = json_match.group(1)
         data = json.loads(final_json_str)
@@ -179,14 +191,16 @@ Output JSON format: {{ "JP": [...], "CN": [...], ... }} only."""
         required = ["JP", "CN", "ES", "HI", "ID", "AR"]
         if not all(k in data for k in required):
             log_diag(f"[FATAL] Missing languages in translation. Got: {list(data.keys())}")
-            sys.exit(1)
+            create_failure_flag("Missing Languages")
+            sys.exit(0)
             
         log_diag("[SUCCESS] Translation verified.")
         return data
 
     except Exception as e:
         log_diag(f"[FATAL] Bridge Exception: {e}")
-        sys.exit(1)
+        create_failure_flag(f"Bridge Exception: {e}")
+        sys.exit(0)
 
 def main():
     log_diag("=== STARTING NEWS UPDATE ===")
@@ -195,13 +209,15 @@ def main():
     news_items = fetch_raw_news()
     if not news_items:
         log_diag("[FATAL] No news items fetched.")
-        sys.exit(1) # Strict Exit
+        create_failure_flag("No News Items Fetched")
+        sys.exit(0) # Fail-Open (Allow partial commit)
 
     # 2. Translate
     translations = translate_news_batch(news_items)
     if not translations:
         log_diag("[FATAL] Translation returned empty.")
-        sys.exit(1)
+        create_failure_flag("Translation Empty")
+        sys.exit(0)
 
     # 3. Update File
     payload = {
@@ -229,7 +245,8 @@ def main():
         
     except Exception as e:
         log_diag(f"[FATAL] File Write Error: {e}")
-        sys.exit(1)
+        create_failure_flag(f"File Write Error: {e}")
+        sys.exit(0)
 
 if __name__ == "__main__":
     main()
