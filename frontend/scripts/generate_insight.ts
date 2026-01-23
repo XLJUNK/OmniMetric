@@ -43,6 +43,7 @@ async function main() {
     try {
         if (fs.existsSync(guardFile)) {
             const lastRun = parseInt(fs.readFileSync(guardFile, 'utf8'));
+            // Reduced to 5s to allow sequential GMS -> News execution
             if (now - lastRun < 5000) {
                 console.warn(`[AI GUARD] Rapid call detected. Cooling down... (${Math.round((5000 - (now - lastRun)) / 1000)}s remaining)`);
                 process.exit(1);
