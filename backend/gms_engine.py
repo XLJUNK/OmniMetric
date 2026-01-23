@@ -440,10 +440,24 @@ def fetch_economic_calendar():
         # FMP Stable is the current recommended endpoint for Economic Calendar
         url = f"https://financialmodelingprep.com/stable/economic-calendar?from={start_date}&to={end_date}&apikey={api_key}"
         log_diag(f"[FMP] Fetching calendar from: {url.replace(api_key, 'REDACTED')}")
-        response = requests.get(url, timeout=5)
+        response = requests.get(url, timeout=10)
         log_diag(f"[FMP] Response status: {response.status_code}")
-        data = response.json()
-        log_diag(f"[FMP] Data preview: {str(data)[:200]}")
+        
+        if response.status_code != 200:
+            log_diag(f"[ERROR] Calendar Fetch Failed: Status {response.status_code}")
+            return []
+            
+        if not response.text.strip():
+            log_diag("[ERROR] Calendar Fetch Failed: Empty response body")
+            return []
+            
+        try:
+            data = response.json()
+        except Exception as e:
+            log_diag(f"[ERROR] Calendar Fetch Failed (JSON Parse): {e}. Response: {response.text[:100]}")
+            return []
+            
+        log_diag(f"[FMP] Data items: {len(data) if isinstance(data, list) else 'N/A'}")
         
         events = []
         if isinstance(data, list):
@@ -1005,8 +1019,8 @@ Output JSON:
         try:
             log_diag(f"[AI BATCH] Requesting 7-language analysis (Attempt {attempt+1})...")
             
-            script_path = "scripts/generate_insight.ts"
             frontend_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "frontend")
+            script_path = os.path.join(frontend_dir, "scripts", "generate_insight.ts")
             
             import shutil
             if not shutil.which("npx"):

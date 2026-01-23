@@ -152,7 +152,7 @@ Input: {json.dumps(titles)}"""
 
         # Call npx tsx and pipe prompt via stdin
         # Using npx tsx <absolute_path> with cwd=<frontend_dir>
-        # Note: shell=True is sometimes needed for npx on Windows/Actions
+        # Note: shell=True is ONLY for Windows/CMD. On Linux, list + shell=False is correct.
         cmd = ["npx", "tsx", script_abs_path]
         process = subprocess.Popen(
             cmd, 
@@ -161,7 +161,7 @@ Input: {json.dumps(titles)}"""
             stderr=subprocess.PIPE, 
             text=True, 
             encoding='utf-8', 
-            shell=(sys.platform == 'win32' or os.getenv('GITHUB_ACTIONS') == 'true'),
+            shell=(sys.platform == 'win32'),
             cwd=frontend_dir
         )
         stdout, stderr = process.communicate(input=prompt, timeout=90)
