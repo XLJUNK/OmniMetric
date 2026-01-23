@@ -58,7 +58,7 @@ async function main() {
 
     try {
         const result = await generateText({
-            model: gateway.languageModel('google/gemini-2.0-flash'),
+            model: gateway.languageModel('google/gemini-3-flash'),
             prompt: prompt,
             headers: {
                 'x-vercel-ai-gateway-provider': 'google',

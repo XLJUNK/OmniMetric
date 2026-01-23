@@ -25,8 +25,9 @@
     *   `sns_publisher.py`: Twitter/Blueskyへの自動投稿、緊急アラート(>5%変動)、固定ツイート管理。
     *   `seo_monitor.py`: Google Search Console APIと連携し、トレンドキーワードを分析・抽出。
 *   **AI Engine**:
-    *   **Analysis**: `Gemini 1.5 Pro` - 深い定性的な市場分析。
-    *   **Translation**: `Gemini 1.5 Flash` - 高速かつ低コストな多言語処理。
+    *   **Primary (Speed)**: `Gemini 3 Flash` - 高速応答・最新の標準モデル。
+    *   **Secondary (Quality)**: `Gemini 2.5 Pro` - 複雑な分析や推論に使用。
+    *   **Tertiary (Cost)**: `Gemini 2.5 Flash-Lite` - 翻訳や単純タスクのコスト削減用。
 
 ### 2.2 Frontend (User Interface)
 *   **フレームワーク**: Next.js 15 (App Router)
@@ -34,7 +35,7 @@
 *   **ホスティング**: Vercel (Serverless / Edge Functions)
 *   **主な機能**:
     *   **News Ticker (`/api/news`)**: 
-        *   Gemini 1.5 Flash を使用した「プロ翻訳者」モード。
+        *   Gemini 3 Flash および 2.5 Flash-Lite を使用した「プロ翻訳者」モード。
         *   JSON一括処理（Batch Processing）と指数バックオフ（Retry）によるAPI最適化。
         *   1時間のISRキャッシュ (`revalidate=3600`) による負荷分散。
     *   **Dynamic OGP (`/api/og`)**: リアルタイムの市場スコアを反映したSNS用画像を動的生成。
@@ -77,12 +78,15 @@
 
 システム稼働には以下の環境変数が必須です。
 
+**重要なお知らせ (2026.01 Update)**:
+セキュリティ強化のため、`NEXT_PUBLIC_` プレフィックスを持つAPIキーの使用は非推奨となりました。すべての AI API コールはサーバーサイド（Backend または Server Actions）で行い、`GEMINI_API_KEY` に統一してください。
+
 ### 4.1 Vercel (Frontend Production)
 | 変数名 | 説明 |
 | :--- | :--- |
-| `NEXT_PUBLIC_GEMINI_API_KEY` | フロントエンド翻訳用 (Must start with NEXT_PUBLIC_) |
+| `GEMINI_API_KEY` | サーバーサイド生成/翻訳用 (推奨: `NEXT_PUBLIC_` 版は削除) |
 | `NEXT_PUBLIC_GA_ID` | Google Analytics 4 測定ID |
-| `AI_MODEL_FLASH` | 翻訳用モデル (`gemini-1.5-flash`) |
+| `VERCEL_AI_GATEWAY_SLUG` | Vercel AI Gateway のプロジェクトスラグ (e.g. `omni-metric`) |
 
 ### 4.2 GitHub Secrets (Backend Automation)
 | 変数名 | 説明 |
@@ -96,9 +100,10 @@
 | `BLUESKY_HANDLE` | Bluesky Handle (e.g. `example.bsky.social`) |
 | `BLUESKY_PASSWORD` | Bluesky App Password |
 | `GSC_CREDENTIALS_JSON` | Google Search Console Service Account Key (JSON content) |
+| `FMP_API_KEY` | 経済カレンダー用 (Financial Modeling Prep) |
 
 ### 4.3 依存ライブラリ (Dependencies)
-*   **Frontend**: `next`, `react`, `tailwindcss`, `framer-motion`, `recharts`, `lucide-react`
+*   **Frontend**: `next`, `react`, `tailwindcss`, `framer-motion`, `recharts`, `lucide-react`, `ai`, `@ai-sdk/google`
 *   **Backend**: `yfinance`, `fredapi`, `google-generativeai`, `tweepy`, `atproto`, `google-api-python-client`
 
 ---

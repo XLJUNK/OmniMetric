@@ -1124,11 +1124,11 @@ Output JSON:
             log_diag(f"[AI BRIDGE CRITICAL] {e}")
 
     # VERCEL AI GATEWAY - RESILIENCE PROTOCOL (PRIMARY)
-    # Priority: 3-Pro > 3-Flash > 2.0-Flash
+    # Priority: 3-Flash (Speed) > 2.5-Pro (Quality) > 2.5-Flash-Lite (Cost)
     models = [
-        "gemini-2.0-flash-001", # Start with the most reliable one to fix immediate issue
-        "gemini-1.5-pro",
-        "gemini-1.5-flash"
+        "gemini-3-flash", 
+        "gemini-2.5-pro",
+        "gemini-2.5-flash-lite"
     ]
 
     gateway_slug = os.getenv("VERCEL_AI_GATEWAY_SLUG", "omni-metric")
