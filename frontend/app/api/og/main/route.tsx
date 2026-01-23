@@ -29,12 +29,17 @@ export async function GET(request: Request) {
     // 5. Font Loading (Robust Fallback)
     let fontOptions = {};
     try {
+        // Use a faster raw URL and add a potential timeout helper if needed, 
+        // but for now just the more reliable URL
         const fontData = await fetch(
-            new URL('https://github.com/google/fonts/raw/main/ofl/inter/Inter-Bold.ttf')
+            new URL('https://raw.githubusercontent.com/rsms/inter/master/docs/font-files/Inter-Bold.otf')
         ).then((res) => res.arrayBuffer());
-        fontOptions = {
-            fonts: [{ name: 'Inter', data: fontData, style: 'normal', weight: 700 }]
-        };
+
+        if (fontData.byteLength > 0) {
+            fontOptions = {
+                fonts: [{ name: 'InterFont', data: fontData, style: 'normal', weight: 700 }]
+            };
+        }
     } catch (e) {
         console.warn("Font load failed, falling back to system fonts", e);
     }
@@ -44,13 +49,13 @@ export async function GET(request: Request) {
             <div
                 style={{
                     height: '100%', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                    backgroundColor: '#0a0b14', color: 'white', fontFamily: 'sans-serif',
+                    backgroundColor: '#0a0b14', color: 'white',
                     padding: '60px', border: '12px solid #1e293b'
                 }}
             >
                 {/* Header */}
                 <div style={{ display: 'flex', position: 'absolute', top: 50, left: 70 }}>
-                    <span style={{ fontSize: 34, fontWeight: 'bold', color: '#38bdf8' }}>OMNIMETRIC TERMINAL</span>
+                    <div style={{ display: 'flex', fontSize: 34, fontWeight: 'bold', color: '#38bdf8' }}>OMNIMETRIC TERMINAL</div>
                 </div>
 
                 {/* Main Content Area */}
@@ -59,8 +64,8 @@ export async function GET(request: Request) {
                     <div style={{ display: 'flex', flexDirection: 'column', borderLeft: '10px solid #0ea5e9', paddingLeft: '50px' }}>
                         <div style={{ display: 'flex', fontSize: 44, color: '#94a3b8', marginBottom: '10px' }}>{gmsLabel}</div>
                         <div style={{ display: 'flex', alignItems: 'center' }}>
-                            <span style={{ fontSize: 180, fontWeight: 900, lineHeight: 1 }}>{score}</span>
-                            <span style={{ fontSize: 100, marginLeft: '30px', color: color }}>{arrow}</span>
+                            <div style={{ display: 'flex', fontSize: 180, fontWeight: 900, lineHeight: 1 }}>{score}</div>
+                            <div style={{ display: 'flex', fontSize: 100, marginLeft: '30px', color: color }}>{arrow}</div>
                         </div>
                     </div>
 
@@ -68,9 +73,9 @@ export async function GET(request: Request) {
                     <div style={{ display: 'flex', marginLeft: '80px' }}>
                         <div style={{
                             display: 'flex',
-                            backgroundColor: color === '#94a3b8' ? '#334155' : color + '33', // Add transparency for background
+                            backgroundColor: color === '#94a3b8' ? '#334155' : color + '33',
                             borderColor: color,
-                            padding: '25px 50px', borderRadius: '16px', fontSize: 54, fontWeight: 'bold', border: '3px solid', color: 'white'
+                            padding: '25px 50px', borderRadius: '16px', fontSize: 54, fontWeight: 'bold', border: '12px solid #ffffff44', color: 'white'
                         }}>
                             {momentumText}
                         </div>
@@ -79,7 +84,7 @@ export async function GET(request: Request) {
 
                 {/* Footer */}
                 <div style={{ display: 'flex', position: 'absolute', bottom: 50, right: 70 }}>
-                    <span style={{ fontSize: 30, color: '#64748b' }}>{dateStr} | Institutional Real-Time Intelligence</span>
+                    <div style={{ display: 'flex', fontSize: 30, color: '#64748b' }}>{dateStr} | Institutional Real-Time Intelligence</div>
                 </div>
             </div>
         ),

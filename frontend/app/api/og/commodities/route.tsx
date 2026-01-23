@@ -48,11 +48,14 @@ export async function GET(request: Request) {
     let fontOptions = {};
     try {
         const fontData = await fetch(
-            new URL('https://github.com/google/fonts/raw/main/ofl/inter/Inter-Bold.ttf')
+            new URL('https://raw.githubusercontent.com/rsms/inter/master/docs/font-files/Inter-Bold.otf')
         ).then((res) => res.arrayBuffer());
-        fontOptions = {
-            fonts: [{ name: 'Inter', data: fontData, style: 'normal', weight: 700 }]
-        };
+
+        if (fontData.byteLength > 0) {
+            fontOptions = {
+                fonts: [{ name: 'InterFont', data: fontData, style: 'normal', weight: 700 }]
+            };
+        }
     } catch (e) { }
 
     return new ImageResponse(
@@ -65,9 +68,9 @@ export async function GET(request: Request) {
             >
                 {/* Header */}
                 <div style={{ display: 'flex', position: 'absolute', top: 50, left: 80 }}>
-                    <span style={{ fontSize: 34, color: '#f59e0b', fontWeight: 'bold' }}>
+                    <div style={{ display: 'flex', fontSize: 34, color: '#f59e0b', fontWeight: 'bold' }}>
                         OMNIMETRIC | {commoditiesLabel}
-                    </span>
+                    </div>
                 </div>
 
                 {/* Central Panel */}
@@ -78,7 +81,7 @@ export async function GET(request: Request) {
                         display: 'flex', marginTop: '30px', padding: '10px 40px', borderRadius: '100px', fontSize: 54, fontWeight: 'bold',
                         color: trendColor,
                         backgroundColor: 'rgba(255,255,255,0.05)',
-                        border: `2px solid ${trendColor}33`
+                        border: `12px solid #ffffff22`
                     }}>
                         {trendText}
                     </div>
@@ -86,7 +89,7 @@ export async function GET(request: Request) {
 
                 {/* Footer */}
                 <div style={{ display: 'flex', position: 'absolute', bottom: 50, right: 80 }}>
-                    <span style={{ fontSize: 30, color: '#64748b' }}>{dateStr} | Supply Chain Intelligence</span>
+                    <div style={{ display: 'flex', fontSize: 30, color: '#64748b' }}>{dateStr} | Supply Chain Intelligence</div>
                 </div>
             </div>
         ),
