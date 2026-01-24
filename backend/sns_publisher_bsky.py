@@ -10,6 +10,87 @@ class BlueskyPublisher:
         self.state_file = os.path.join(os.path.dirname(__file__), "sns_last_post.json")
         self.status_log_file = os.path.join(os.path.dirname(__file__), "sns_status.json")
 
+    def get_trend_text(self, data, lang):
+        """Returns localized trend direction text (e.g. 'Trend: UP', 'トレンド: 上昇')"""
+        # Simplistic extraction from STOCKS or VIX for "Trend" proxy if GMS trend not explicit
+        # Using simple Score direction or VIX trend
+        
+        # Localized Dictionaries
+        terms = {
+            "JP": {"UP": "上昇", "DOWN": "下落", "NEUTRAL": "中立", "RISK-ON": "リスク選好", "RISK-OFF": "リスク回避"},
+            "EN": {"UP": "UP", "DOWN": "DOWN", "NEUTRAL": "NEUTRAL", "RISK-ON": "RISK-ON", "RISK-OFF": "RISK-OFF"},
+            "CN": {"UP": "上升", "DOWN": "下跌", "NEUTRAL": "中性", "RISK-ON": "风险偏好", "RISK-OFF": "风险规避"},
+            "ES": {"UP": "ALZA", "DOWN": "BAJA", "NEUTRAL": "NEUTRAL", "RISK-ON": "APETITO", "RISK-OFF": "AVERSIÓN"},
+            "HI": {"UP": "ऊपर", "DOWN": "नीचे", "NEUTRAL": "तठस्थ", "RISK-ON": "जोखिम-पर", "RISK-OFF": "जोखिम-मना"},
+            "ID": {"UP": "NAIK", "DOWN": "TURUN", "NEUTRAL": "NETRAL", "RISK-ON": "RISK-ON", "RISK-OFF": "RISK-OFF"},
+            "AR": {"UP": "صعود", "DOWN": "هبوط", "NEUTRAL": "محايد", "RISK-ON": "مخاطرة", "RISK-OFF": "تجنب"},
+        }
+        
+        score = data.get("gms_score", 50)
+        regime = "NEUTRAL"
+        if score > 60: regime = "RISK-ON"
+        elif score < 40: regime = "RISK-OFF"
+        
+        t = terms.get(lang, terms["EN"])
+        return t.get(regime, regime)
+
+    def format_post(self, data, lang="EN"):
+        """
+        Generates professional posts respecting the user requirement:
+        【GMS Score: XX/100】 [Trend] + [AI Insight (2 sentences)] + Tags
+        """
+        score = data.get("gms_score", 50)
+        trend_text = self.get_trend_text(data, lang)
+        
+        # Extract AI Insight
+        analysis = data.get("analysis", {})
+        reports = analysis.get("reports", {})
+        ai_insight = reports.get(lang, reports.get("EN", ""))
+        
+        # Truncate to ~2 sentences / 100-120 chars max for readability
+        # Simple split by punctuation
+        delimiters = ["。", "！", "？", ".", "!", "?"]
+        sentences = []
+        current = ""
+        for char in ai_insight:
+            current += char
+            if char in delimiters:
+                sentences.append(current)
+                current = ""
+        if current: sentences.append(current)
+        
+        # Take first 2 sentences
+        short_summary = "".join(sentences[:2])
+        if len(short_summary) > 130: # Hard cap
+             short_summary = short_summary[:127] + "..."
+             
+        # Build Tags
+        tags = "#OmniMetric"
+        if lang == "JP": tags += " #株 #為替 #投資"
+        elif lang == "EN": tags += " #Macro #Finance #Investing"
+        elif lang == "CN": tags += " #美股 #宏观 #投资"
+        elif lang == "ES": tags += " #Bolsa #Finanzas #Macro"
+        elif lang == "ID": tags += " #Saham #Forex #Investasi"
+        elif lang == "HI": tags += " #बाजार #निवेश #वित्त"
+        elif lang == "AR": tags += " #استثمار #اقتصاد"
+
+        # Construct Post
+        # Format: 【GMS Score: XX/100】 [Trend] + [AI Insight] + Tags
+        header = f"【GMS Score: {score}/100】"
+        trend_section = f"[{trend_text}]"
+        
+        post_text = f"{header} {trend_section}\n\n{short_summary}\n\n{tags}"
+        
+        # Add Link
+        link_map = {
+            "JP": "/jp", "EN": "/en", "CN": "/cn", "ES": "/es",
+            "HI": "/hi", "ID": "/id", "AR": "/ar"
+        }
+        suffix = link_map.get(lang, "")
+        post_text += f"\n{self.site_url}{suffix}"
+
+        return post_text
+
     def _write_status(self, status, message=None):
         """Writes the latest attempt status to a JSON file."""
         try:
@@ -46,35 +127,6 @@ class BlueskyPublisher:
         if score < 40: return "DEFENSIVE (Risk-Off)"
         return "NEUTRAL (Wait & See)"
 
-    def format_post(self, data):
-        """
-        Generates professional terminal-style posts for Bluesky.
-        """
-        score = data.get("gms_score", 50)
-        regime = self.get_regime_name(score)
-        sectors = data.get("sector_scores", {})
-        
-        stocks = sectors.get("STOCKS", "N/A")
-        crypto = sectors.get("CRYPTO", "N/A")
-        commodities = sectors.get("COMMODITIES", "N/A")
-        
-        analysis = data.get("analysis", {})
-        reports = analysis.get("reports", {})
-        ai_insight = reports.get("EN", "")
-        
-        # Shorten AI Insight for the "Analysis" section
-        if len(ai_insight) > 80:
-            ai_insight = ai_insight[:77] + "..."
-
-        # Compact Professional Template (v2.4.0)
-        template = (
-            f"【GMS Signal】{regime} ({score}/100)\n\n"
-            f"Analysis: {ai_insight}\n\n"
-            f"Sectors: Stocks {stocks} | Crypto {crypto} | Cmdty {commodities}\n"
-            f"Live: {self.site_url} #OmniMetric #Macro"
-        )
-        return template
-
     def should_skip(self, current_score):
         """Smart-skip logic to prevent redundant posts."""
         try:
@@ -96,14 +148,14 @@ class BlueskyPublisher:
         except Exception as e:
             self._log(f"Failed to update state file: {e}", is_error=True)
 
-    def publish(self, data, image_path=None, reply_to=None, force=False):
+    def publish(self, data, image_path=None, reply_to=None, force=False, lang="EN"):
         """Main entry point for Bluesky publishing."""
         score = data.get("gms_score", 50)
         
         if self.should_skip(score) and not force:
             return None # Not an error, just a skip
 
-        text = self.format_post(data)
+        text = self.format_post(data, lang=lang)
         
         bsky_user = os.getenv("BLUESKY_HANDLE")
         bsky_pass = os.getenv("BLUESKY_PASSWORD")
@@ -123,14 +175,14 @@ class BlueskyPublisher:
                 upload = client.upload_blob(img_data)
                 from atproto import models
                 embed = models.AppBskyEmbedImages.Main(
-                    images=[models.AppBskyEmbedImages.Image(alt="Global Macro Signal OGP", image=upload.blob)]
+                    images=[models.AppBskyEmbedImages.Image(alt=f"Global Macro Signal {lang}", image=upload.blob)]
                 )
                 self._log(f"Image uploaded successfully: {image_path}")
 
             # Send post with optional threading
             post = client.send_post(text=text, reply_to=reply_to, embed=embed)
             
-            self._log(f"Success: Posted GMS Score {score} to Bluesky.")
+            self._log(f"Success: Posted GMS Score {score} ({lang}) to Bluesky.")
             if not reply_to: # Only update state for top-level posts
                 self.update_state(score)
                 
@@ -138,7 +190,6 @@ class BlueskyPublisher:
         except Exception as e:
             self._log(f"Error: {e}", is_error=True)
             return None
-
 
 if __name__ == "__main__":
     # Test script for local verification
@@ -148,6 +199,6 @@ if __name__ == "__main__":
             data = json.load(f)
         pub = BlueskyPublisher()
         print("\n--- BLUESKY POST PREVIEW ---")
-        print(pub.format_post(data))
+        print(pub.format_post(data, lang="EN"))
     else:
         print("current_signal.json not found for testing.")

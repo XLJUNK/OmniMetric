@@ -75,6 +75,10 @@ jobs:
           
           # SKILL COMPLIANCE CHECK (Blocks commit if failed)
           python scripts/verify_skills.py
+
+          # SNS PUBLISHER (Bluesky - Golden Schedule)
+          # Runs every 30 mins, checks internal schedule logic
+          python backend/sns_publisher.py
           
           # FRONTEND SYNC: Copy signal to frontend/data for import
           mkdir -p frontend/data

@@ -157,7 +157,7 @@ class SNSPublisher:
         except Exception as e:
             self._log(f"Failed to update state file: {e}")
 
-    def publish_update(self, data):
+    def publish_update(self, data, force_override=False):
         """
         Main entry point for publishing.
         Handles Weekend Dispersion and Multilingual OGP.
@@ -168,8 +168,11 @@ class SNSPublisher:
         results = {}
         
         # SEQUENCER LOGIC (Golden Schedule)
-        # SEQUENCER LOGIC (Golden Schedule)
-        matches = self.sequencer.check_schedule()
+        if force_override:
+            # Force all major languages sequence
+            matches = [("JP", 1, True), ("EN", 2, True), ("ES", 3, True)]
+        else:
+            matches = self.sequencer.check_schedule()
         
         if not matches:
              self._log("Sequencer: No slot match in this hour. Skipping.")
@@ -193,6 +196,9 @@ class SNSPublisher:
             
             parent_post = None
             
+            # Load OGP Generator
+            from ogp_generator import generate_dynamic_ogp
+
             for (lang, phase, force_post) in sorted_matches:
                 self._log(f"Executing Task: {lang} (Phase {phase}, Force: {force_post})")
                 
@@ -201,27 +207,21 @@ class SNSPublisher:
                      self._log(f"[{lang}] BlueSky Smart-Skip triggered (Score Unchanged).")
                      results[f"BSKY_{lang}"] = "SKIPPED"
                 else:
-                     # Prepare Text
-                     raw_posts = self.format_post(data)
+                     # 1. Generate OGP Image (Disposable)
+                     timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
+                     img_filename = f"gms_ogp_{lang}_{timestamp}.png"
+                     img_path = os.path.join(os.path.dirname(__file__), img_filename)
                      
-                     # 3-Line News Stream Dynamic Translation Pattern (Per User Request)
-                     # We use specific templates for different languages in the thread
-                     if lang == "JP":
-                         text_body = f"最新のGMSスコアは{score}（{self.get_regime_name(score)}）です。\n\n"
-                         text_body += f"株: {sectors.get('STOCKS', 'N/A')} | 仮想通貨: {sectors.get('CRYPTO', 'N/A')} | 商品: {sectors.get('COMMODITIES', 'N/A')}\n"
-                         text_body += f"詳細: {self.site_url}/jp #OmniMetric"
-                     elif lang == "EN":
-                         text_body = f"Latest GMS Score: {score} ({self.get_regime_name_en(score)})\n\n"
-                         text_body += f"Stocks: {sectors.get('STOCKS', 'N/A')} | Crypto: {sectors.get('CRYPTO', 'N/A')} | Cmdty: {sectors.get('COMMODITIES', 'N/A')}\n"
-                         text_body += f"Live: {self.site_url}/en #Macro"
-                     elif lang == "ES":
-                         text_body = f"Puntaje GMS: {score} ({self.get_regime_name_es(score)})\n\n"
-                         text_body += f"Acciones: {sectors.get('STOCKS', 'N/A')} | Cripto: {sectors.get('CRYPTO', 'N/A')} | Cmdty: {sectors.get('COMMODITIES', 'N/A')}\n"
-                         text_body += f"Terminal: {self.site_url}/es #Inversion"
-                     else:
-                         # Fallback for other languages if schedule matches
-                         text_body = raw_posts.get(lang, raw_posts.get("EN"))
+                     try:
+                         generate_dynamic_ogp(data, img_path)
+                     except Exception as e:
+                         self._log(f"OGP Gen Error: {e}", is_error=True)
+                         img_path = None # Fallback to no image
 
+                     # 2. Prepare Text (Handled inside BSKY publisher mostly, but we can override title logic if needed)
+                     # The BSKY publisher handles the "Rich Template" internally.
+                     
+                     # 3. Publish
                      # Resolve Threading (Reply Logic)
                      reply_to = None
                      if parent_post:
@@ -231,8 +231,7 @@ class SNSPublisher:
                              root=models.ComAtprotoRepoStrongRef.Main(cid=parent_post.cid, uri=parent_post.uri)
                          )
 
-                     # Using image_path=None to rely on static link preview (server side metadata)
-                     res_post = bsky_pub.publish(data, image_path=None, reply_to=reply_to, force=force_post) 
+                     res_post = bsky_pub.publish(data, image_path=img_path, reply_to=reply_to, force=force_post, lang=lang) 
                      
                      if res_post:
                          results[f"BSKY_{lang}"] = "SUCCESS"
@@ -240,6 +239,13 @@ class SNSPublisher:
                          parent_post = res_post 
                      else:
                          results[f"BSKY_{lang}"] = "FAILED"
+                     
+                     # 4. Cleanup
+                     if img_path and os.path.exists(img_path):
+                         try:
+                             os.remove(img_path)
+                             self._log(f"Cleanup: Removed {img_filename}")
+                         except: pass
                      
         except Exception as e:
             self._log(f"Bluesky Integration Error: {e}", is_error=True, platform="BLUESKY")
@@ -272,15 +278,18 @@ class SNSPublisher:
 
 # CLI entry point
 if __name__ == "__main__":
+    import sys
     from gms_engine import DATA_FILE, log_diag
+    
     with open(DATA_FILE, 'r', encoding='utf-8') as f:
         data = json.load(f)
+    
     pub = SNSPublisher(log_callback=log_diag)
-    print("\n--- SEQUENCER EXECUTION TEST ---")
+    print("\n--- SNS PUBLISHER EXECUTION ---")
     
-    # We will trigger publish_update directly.
-    # It will check the sequencer for CURRENT TIME.
-    # Likely "SKIPPED_NO_SLOT" unless we are lucky.
+    force_mode = "--force" in sys.argv
+    if force_mode:
+        print("[CLI] Force Mode Enabled: Bypassing Schedule Check.")
     
-    res = pub.publish_update(data)
+    res = pub.publish_update(data, force_override=force_mode)
     print(res)

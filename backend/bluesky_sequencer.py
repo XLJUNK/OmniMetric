@@ -7,15 +7,26 @@ class BlueskySequencer:
     """
     
     # Golden Schedule (JST)
-    # Format: "LANG": {"PH1": (Hour, Minute), "PH2": (Hour, Minute)}
-    SCHEDULE = {
-        "JP": {"PH1": (7, 5),  "PH2": (10, 35)},
-        "ZH": {"PH1": (8, 35), "PH2": (11, 35)},
-        "ID": {"PH1": (9, 35), "PH2": (12, 5)},
-        "HI": {"PH1": (12, 5), "PH2": (15, 5)},
-        "AR": {"PH1": (15, 35),"PH2": (18, 35)},
-        "ES": {"PH1": (16, 35),"PH2": (23, 35)},
-        "EN": {"PH1": (21, 35),"PH2": (0, 5)} # 00:05 Next Day
+    # Format: "LANG": {"PH1": (Hour, Minute), "PH2": (Hour, Minute), "PH3": (Hour, Minute)}
+    # Times are JST (UTC+9)
+    SCHEDULE_WEEKDAY = {
+        "JP": [(7, 5), (10, 35), (14, 35)],  # Pre-open, Lunch, Close-1h (Adjusted to Cron 05/35)
+        # 14:00 is not x:05/35. Closest is 14:05 (Close-55m) or 13:35. User said "Close-1h".
+        # Close is 15:00. 14:00 is target. Cron runs 13:35, 14:05.
+        # Let's use 14:05 as "Close-1h approx".
+        
+        "EN": [(21, 35), (0, 5), (5, 5)], # US Pre-open, Mid-day, Close
+        "ZH": [(10, 35), (14, 5)],        # HK/CN Lunch, Close
+        "ID": [(10, 35), (16, 5)],        # Jakarta
+        "HI": [(12, 35), (16, 35)],       # Mumbai
+        "AR": [(16, 5), (19, 35)],        # Riyadh/Dubai
+        "ES": [(17, 5), (23, 35)]         # Madrid/Latam
+    }
+
+    SCHEDULE_WEEKEND = {
+        "JP": [(9, 35)],      # Sat AM Recap
+        "EN": [(21, 5)],      # Sun Evening (US time) / Mon Morning JST
+        "ALL": [(20, 35)]     # Sun Night Global
     }
 
     def get_jst_now(self):
@@ -24,13 +35,54 @@ class BlueskySequencer:
 
     def is_weekend(self, jst_dt):
         """Returns True if Saturday or Sunday (JST)."""
-        # 5=Sat, 6=Sun
         return jst_dt.weekday() >= 5
 
-    def check_schedule(self, jst_now=None):
+    def check_schedule(self):
         """
-        Simplified Schedule: ALWAYS returns EN task.
-        Timing is controlled by GitHub Actions Cron (xx:05, xx:35).
+        Checks if the current time matches any Golden Schedule slots.
+        Returns a list of tuples: (LANG, PHASE_ID, FORCE_FLAG)
         """
-        # Always execute EN task when invoked
-        return [("EN", 1, False)]
+        now_jst = self.get_jst_now()
+        is_we = self.is_weekend(now_jst)
+        
+        current_hour = now_jst.hour
+        current_minute = now_jst.minute
+        
+        matches = []
+        
+        # Tolerance window (since cron might be slightly delayed)
+        # Target: 05 and 35
+        # We check if we are within [Target, Target+10m]
+        
+        schedule = self.SCHEDULE_WEEKEND if is_we else self.SCHEDULE_WEEKDAY
+        
+        # Helper to check time match
+        def is_time_match(h, m):
+            # Strict hour match
+            if h != current_hour:
+                return False
+            # Loose minute match (0-9 min delay allowed)
+            if m <= current_minute < m + 10:
+                return True
+            return False
+
+        if is_we:
+             # Weekday Logic
+             for lang, slots in self.SCHEDULE_WEEKEND.items(): # Use self.
+
+                 for i, (h, m) in enumerate(slots):
+                     if is_time_match(h, m):
+                         if lang == "ALL":
+                             # Add all major langs
+                             for l in ["JP", "EN", "ZH", "ES"]:
+                                 matches.append((l, 99, True))
+                         else:
+                             matches.append((lang, i+1, True))
+        else:
+            # Weekday Logic
+            for lang, slots in self.SCHEDULE_WEEKDAY.items(): # Use self.
+                for i, (h, m) in enumerate(slots):
+                    if is_time_match(h, m):
+                        matches.append((lang, i+1, False))
+        
+        return matches
