@@ -1153,7 +1153,7 @@ Output JSON:
         "gemini-2.5-flash-lite"
     ]
 
-    gateway_slug = os.getenv("VERCEL_AI_GATEWAY_SLUG", "omni-metric")
+    gateway_slug = "xljunk" # Strict enforcement
     
     for model_name in models:
         log_diag(f"[AI GATEWAY] Attempting Model: {model_name}...")
@@ -1167,10 +1167,9 @@ Output JSON:
                     log_diag(f"[AI GATEWAY] Rate Limit Guard: Backing off for {wait_time}s...")
                     time.sleep(wait_time)
 
-                # URL: Upstream is models/{model}:generateContent
-                # Vercel Proxy: /v1/{slug}/google/models/{model}:generateContent
-                # Standard Google path mapping for Gemini 3
-                url = f"https://gateway.ai.vercel.com/v1/{gateway_slug}/google/models/{model_name}:generateContent"
+                # URL: Vercel AI Gateway (.tech domain)
+                # Structure: https://gateway.ai.vercel.tech/v1/{slug}/google/models/{model}:generateContent
+                url = f"https://gateway.ai.vercel.tech/v1/{gateway_slug}/google/models/{model_name}:generateContent"
                 
                 headers = {
                     "Content-Type": "application/json",
@@ -1184,8 +1183,8 @@ Output JSON:
                 
                 payload = {"contents": [{"parts": [{"text": prompt}]}]}
                 
-                # Timeout Reduced to 25s to allow fallback
-                response = requests.post(proxy_url, json=payload, headers=headers, timeout=25)
+                # Timeout Increased to 30s
+                response = requests.post(proxy_url, json=payload, headers=headers, timeout=30)
                 
                 if response.status_code == 200:
                     result = response.json()
@@ -1216,7 +1215,9 @@ Output JSON:
                     continue # Trigger Backoff and Retry
                 
                 else:
-                    log_diag(f"[AI GATEWAY FAIL] Status {response.status_code}: {response.text}")
+                    # Enhanced Error Logging
+                    error_msg = response.text.strip()
+                    log_diag(f"[AI GATEWAY FAIL] Status {response.status_code} | Msg: {error_msg[:500]}")
                     # Non-429 error (e.g. 500 or 404). Do not retry same model endlessly.
                     break # Move to next model immediately (Downgrade)
 
