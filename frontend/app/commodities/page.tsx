@@ -55,13 +55,11 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
     metadata.openGraph = {
         title,
         description: desc,
-        images: [{ url: `/api/og/commodities?lang=${lang}`, width: 1200, height: 630 }]
     };
     metadata.twitter = {
         card: 'summary_large_image',
         title,
         description: desc,
-        images: [`/api/og/commodities?lang=${lang}`]
     };
 
     return metadata;

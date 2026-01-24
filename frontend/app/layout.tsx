@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Noto_Sans_JP, Noto_Sans_Arabic, Noto_Sans_Devanagari } from "next/font/google";
 import "./globals.css";
 import React, { Suspense } from "react";
@@ -31,19 +31,28 @@ const notoHI = Noto_Sans_Devanagari({
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
+export const viewport: Viewport = {
+  themeColor: '#000000',
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://omnimetric.net'),
   title: "Global Macro Signal (OmniMetric Terminal) | AI-Driven Financial Insight",
   description: "機関投資家品質の市場リスク分析を提供するAI駆動型金融・経済分析プラットフォーム。独自スコアによりグローバルマクロのリスク許容度をリアルタイムで可視化します。",
   icons: {
-    icon: '/icon.svg',
-    shortcut: '/icon.svg',
-    apple: '/icon.svg',
+    icon: '/icon.png',
+    apple: '/icon.png',
   },
+  appleWebApp: {
+    capable: true,
+    title: 'Global Macro Signal',
+    statusBarStyle: 'black-translucent',
+  },
+
   openGraph: {
     images: [
       {
-        url: '/api/og',
+        url: '/brand-og.png',
         width: 1200,
         height: 630,
         alt: 'Global Macro Signal | Institutional Real-Time Analysis',

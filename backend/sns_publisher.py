@@ -1,55 +1,21 @@
 import os
 import json
 import tweepy
-from datetime import datetime, timedelta
+from datetime import datetime
 import pytz
 from atproto import Client
-from PIL import Image, ImageDraw, ImageFont
-import arabic_reshaper
-from bidi.algorithm import get_display
 from bluesky_sequencer import BlueskySequencer
 
 class SNSPublisher:
     def __init__(self, site_url="https://omnimetric.net", log_callback=None):
         self.site_url = site_url
         self.log_callback = log_callback
-        # This file tracks the last successful score to prevent duplicates
-        self.state_file = os.path.join(os.path.dirname(__file__), "sns_last_post.json")
-        # This file tracks the detailed STATUS of the last attempt (Success/Fail/Error) for debugging
-        self.status_log_file = os.path.join(os.path.dirname(__file__), "sns_status.json")
         self.sequencer = BlueskySequencer()
         
-        # OGP Font Config (Asset-based)
-        self.assets_dir = os.path.join(os.path.dirname(__file__), "assets", "fonts")
-        # Default fallback
-        self.default_font = os.path.join(self.assets_dir, "NotoSansJP-Bold.ttf")
-        
-    def get_font_for_lang(self, language):
-        """Returns the best available font path from backend/assets/fonts/."""
-        # Map languages to specific font files
-        # JP/EN/ES/ID -> NotoSansJP-Bold (Covers Latin + JP)
-        font_map = {
-            "JP": "NotoSansJP-Bold.ttf",
-            "EN": "NotoSansJP-Bold.ttf",
-            "ES": "NotoSansJP-Bold.ttf",
-            "ID": "NotoSansJP-Bold.ttf",
-            "CN": "NotoSansSC-Bold.ttf",
-            "HI": "NotoSansDevanagari-Bold.ttf",
-            "AR": "NotoSansArabic-Bold.ttf"
-        }
-        
-        filename = font_map.get(language, "NotoSansJP-Bold.ttf")
-        path = os.path.join(self.assets_dir, filename)
-        
-        if os.path.exists(path):
-            return path
-            
-        # Fallback to whatever usually works or just standard system font if local asset missing?
-        # In CI, we expect assets to be there. Locally, they might be missing.
-        # Check for local checkout existence or fallback to simple default.
-        self._log(f"Warning: Font asset not found at {path}. Trying fallback.", is_error=True)
-        return self.default_font if os.path.exists(self.default_font) else "arial.ttf"
-        
+        # State tracking
+        self.state_file = os.path.join(os.path.dirname(__file__), "sns_last_post.json")
+        self.status_log_file = os.path.join(os.path.dirname(__file__), "sns_status.json")
+
     def get_regime_name(self, score):
         if score > 60: return "ACCUMULATE (リスク選好)"
         if score < 40: return "DEFENSIVE (リスク回避)"
@@ -65,97 +31,8 @@ class SNSPublisher:
         if score < 40: return "DEFENSIVA (Aversión al Riesgo)"
         return "NEUTRAL (Paridad de Riesgo)"
         
-    def generate_ogp_image(self, score, language="EN"):
-        """Generates a high-quality OGP image with GMS Score and Market Outlook."""
-        try:
-            # 1. Canvas Setup (1200x630 - Standard OGP)
-            width, height = 1200, 630
-            bg_color = (10, 10, 15) # Dark Slate/Black
-            img = Image.new('RGB', (width, height), color=bg_color)
-            draw = ImageDraw.Draw(img)
-            
-            # 2. Colors & Fonts
-            score_color = (0, 255, 128) if score > 60 else ((255, 50, 50) if score < 40 else (255, 200, 0))
-            text_color = (240, 240, 240)
-            
-            try:
-                # Dynamic Font Loading
-                font_file = self.get_font_for_lang(language)
-                
-                # Visual Authority: Significant Size Increase
-                # Score: 180 -> 270 (1.5x) for massive impact
-                font_large = ImageFont.truetype(font_file, 270)
-                font_medium = ImageFont.truetype(font_file, 60)
-                font_small = ImageFont.truetype(font_file, 40)
-                
-            except Exception as e:
-                self._log(f"Font loading failed ({font_file}): {e}. Using PIL default.", is_error=True)
-                font_large = ImageFont.load_default()
-                font_medium = ImageFont.load_default()
-                font_small = ImageFont.load_default()
-            
-            # 3. Draw Content
-            # Margins (Visual Authority: 80px)
-            margin_x = 80
-            
-            # Title
-            draw.text((margin_x, 50), "GLOBAL MACRO SIGNAL", font=font_small, fill=(150, 150, 150))
-            
-            # Score (Center Left) - Adjusted for larger font
-            # Previous Y=120. With 270px font, we need to ensure it doesn't overlap.
-            draw.text((margin_x, 110), str(score), font=font_large, fill=score_color)
-            
-            # Risk Label (Localized)
-            risk_labels = {
-                "EN": {"HIGH": "RISK ON / ACCUMULATE", "LOW": "RISK OFF / DEFENSIVE", "MID": "RISK PARITY"},
-                "JP": {"HIGH": "リスクオン (買い)", "LOW": "リスクオフ (守り)", "MID": "リスク中立"},
-                "CN": {"HIGH": "风险偏好 (买入)", "LOW": "风险规避 (防御)", "MID": "风险中性"},
-                "ES": {"HIGH": "APETITO DE RIESGO", "LOW": "AVERSIÓN AL RIESGO", "MID": "PARIDAD DE RIESGO"},
-                "AR": {"HIGH": "شهية المخاطرة (تراكم)", "LOW": "تجنب المخاطرة (دفاعي)", "MID": "تكافؤ المخاطر"},
-                "HI": {"HIGH": "जोखिम पर (खरीदें)", "LOW": "जोखिम से बचाव (रक्षात्मक)", "MID": "जोखिम समानता"},
-                "ID": {"HIGH": "RISK ON / AKUMULASI", "LOW": "RISK OFF / DEFENSIF", "MID": "PARITAS RISIKO"}
-            }
-            
-            rl_set = risk_labels.get(language, risk_labels["EN"])
-            if score > 60: risk_label = rl_set["HIGH"]
-            elif score < 40: risk_label = rl_set["LOW"]
-            else: risk_label = rl_set["MID"]
-            
-            # Language Specific Title
-            lang_map = {
-                "EN": "Market Intelligence",
-                "JP": "市場分析 (Market Analysis)",
-                "CN": "市场分析 (Market Analysis)",
-                "ES": "Inteligencia de Mercado",
-                "AR": "تحليل السوق الاستراتيجي",
-                "HI": "बाजार विश्लेषण",
-                "ID": "Analisis Pasar Strategis"
-            }
-            title_text = lang_map.get(language, "Market Intelligence")
+    # OGP Image Generation Removed - Using Static Link Previews
 
-            # ARABIC FIX: Reshape and Reorder
-            if language == "AR":
-                try:
-                    import arabic_reshaper
-                    from bidi.algorithm import get_display
-                    risk_label = get_display(arabic_reshaper.reshape(risk_label))
-                    title_text = get_display(arabic_reshaper.reshape(title_text))
-                except:
-                    pass
-
-            draw.text((margin_x, 380), risk_label, font=font_medium, fill=score_color)
-            draw.text((margin_x, 480), title_text, font=font_small, fill=text_color)
-            
-            # 4. Save
-            script_dir = os.path.dirname(os.path.abspath(__file__))
-            filename = f"ogp_{language}_{datetime.now().strftime('%H%M')}.png"
-            path = os.path.join(script_dir, filename)
-            img.save(path)
-            return path
-            
-        except Exception as e:
-            self._log(f"OGP Generation Failed: {e}", is_error=True)
-            return None
 
     def _write_status(self, platform, status, message=None):
         """Writes the latest attempt status to a JSON file for Git tracking."""
@@ -319,9 +196,6 @@ class SNSPublisher:
             for (lang, phase, force_post) in sorted_matches:
                 self._log(f"Executing Task: {lang} (Phase {phase}, Force: {force_post})")
                 
-                # OGP Generation
-                image_path = self.generate_ogp_image(score, lang)
-                
                 # Check Skip Logic (Global Score check)
                 if bsky_pub.should_skip(score) and not force_post and not parent_post:
                      self._log(f"[{lang}] BlueSky Smart-Skip triggered (Score Unchanged).")
@@ -357,7 +231,8 @@ class SNSPublisher:
                              root=models.ComAtprotoRepoStrongRef.Main(cid=parent_post.cid, uri=parent_post.uri)
                          )
 
-                     res_post = bsky_pub.publish(data, image_path=image_path, reply_to=reply_to, force=force_post) 
+                     # Using image_path=None to rely on static link preview (server side metadata)
+                     res_post = bsky_pub.publish(data, image_path=None, reply_to=reply_to, force=force_post) 
                      
                      if res_post:
                          results[f"BSKY_{lang}"] = "SUCCESS"
@@ -365,9 +240,6 @@ class SNSPublisher:
                          parent_post = res_post 
                      else:
                          results[f"BSKY_{lang}"] = "FAILED"
-                     
-                # Cleanup Image per task
-                if image_path and os.path.exists(image_path): os.remove(image_path)
                      
         except Exception as e:
             self._log(f"Bluesky Integration Error: {e}", is_error=True, platform="BLUESKY")

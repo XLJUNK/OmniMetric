@@ -12,7 +12,13 @@ export async function GET(
 ): Promise<NextResponse> {
     try {
         const { searchParams } = new URL(request.url);
-        const lang = (searchParams.get('lang') || 'EN').toUpperCase();
+        let langParam = searchParams.get('lang') || 'EN';
+
+        // Security: Input Validation (Allowlist)
+        const ALLOWED_LANGS = ['EN', 'JP', 'CN', 'ES', 'HI', 'ID', 'AR'];
+        const lang = ALLOWED_LANGS.includes(langParam.toUpperCase())
+            ? langParam.toUpperCase()
+            : 'EN';
 
         // Type safety for imported JSON
         const data: any = signalData;

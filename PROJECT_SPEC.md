@@ -37,7 +37,8 @@
     *   **News Ticker (`/api/news`)**: 
         *   Gemini 3 Flash および 2.5 Flash-Lite を使用した「プロ翻訳者」モード。
         *   **Static Bundling**: `filesystem`APIの制限を回避するため、ビルド生成されたJSON (`frontend/data/current_signal.json`) を直接インポートして配信。Vercel Edge環境での完全な互換性を保証。
-    *   **Dynamic OGP (`/api/og`)**: リアルタイムの市場スコアを反映したSNS用画像を動的生成。
+    *   **Static OGP**: ブランド一貫性と表示安定性のため、WebサイトのOGPには静的画像 (`/brand-og.png`) を採用。
+    *   **Link Preview Strategy**: SNSボットは画像を添付せず、リンク機能（Link Card）を活用して静的OGPを表示させる仕様へ変更（画像生成ロジックは廃止）。
     *   **Economic Calendar**: FREDおよびバックエンド算出データに基づく重要イベント表示。
 
 ### 2.3 Workflow (Automation)

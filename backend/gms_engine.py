@@ -92,15 +92,23 @@ def log_diag(msg):
     if not isinstance(msg, str):
         msg = str(msg)
     
-    # Centralized Redaction: Scrub all known API keys
+    # Centralized Redaction (Strict Regex)
+    # 1. Direct string replacement for known keys
     sensitive_keys = [FRED_KEY, GEMINI_KEY, FMP_KEY]
     for key in filter(None, sensitive_keys):
-        if key in msg:
+        if len(key) > 5: # Guard against short/empty keys matching everything
             msg = msg.replace(key, "REDACTED")
+            
+    # 2. Regex Pattern Redaction (Catch-all for potential leaks in URLs/Headers)
+    # Matches key=AIza... or apikey=... patterns commonly used via GET params
+    msg = re.sub(r'(key|apikey|token)=([a-zA-Z0-9_\-]+)', r'\1=REDACTED', msg, flags=re.IGNORECASE)
             
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     line = f"[{timestamp}] {msg}\n"
-    print(msg)
+    
+    # Safe Print (Redacted only)
+    print(msg) 
+    
     try:
         with open(LOG_FILE, "a", encoding="utf-8") as f:
             f.write(line)
