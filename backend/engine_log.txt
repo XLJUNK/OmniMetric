@@ -7986,3 +7986,20 @@ Output JSON:
 [2026-01-23 15:48:57] [SNS] Executing Task: AR (Phase 1, Force: False)
 [2026-01-23 15:48:57] [SNS_BSKY] Missing Bluesky credentials (BLUESKY_HANDLE / BLUESKY_PASSWORD).
 [2026-01-23 15:48:57] [AIO] Running Performance Audit...
+[2026-01-24 23:47:13] [SNS] Stage 1 (Twitter) is currently DISABLED per user request.
+[2026-01-24 23:47:13] [SNS] Processing Serial SNS Broadcast: Stage 2 (Bluesky) - 3 Tasks
+[2026-01-24 23:47:13] [SNS] Executing Task: JP (Phase 1, Force: True)
+[2026-01-24 23:47:13] [SNS_BSKY] Smart-skip: Current score (38) matches last posted score. Skipping.
+[2026-01-24 23:47:14] [SNS_BSKY] Smart-skip: Current score (38) matches last posted score. Skipping.
+[2026-01-24 23:47:14] [SNS_BSKY] Missing Bluesky credentials (BLUESKY_HANDLE / BLUESKY_PASSWORD).
+[2026-01-24 23:47:14] [SNS] Cleanup: Removed gms_ogp_JP_20260124234713.png
+[2026-01-24 23:47:14] [SNS] Executing Task: EN (Phase 2, Force: True)
+[2026-01-24 23:47:14] [SNS_BSKY] Smart-skip: Current score (38) matches last posted score. Skipping.
+[2026-01-24 23:47:14] [SNS_BSKY] Smart-skip: Current score (38) matches last posted score. Skipping.
+[2026-01-24 23:47:14] [SNS_BSKY] Missing Bluesky credentials (BLUESKY_HANDLE / BLUESKY_PASSWORD).
+[2026-01-24 23:47:14] [SNS] Cleanup: Removed gms_ogp_EN_20260124234714.png
+[2026-01-24 23:47:14] [SNS] Executing Task: ES (Phase 3, Force: True)
+[2026-01-24 23:47:14] [SNS_BSKY] Smart-skip: Current score (38) matches last posted score. Skipping.
+[2026-01-24 23:47:14] [SNS_BSKY] Smart-skip: Current score (38) matches last posted score. Skipping.
+[2026-01-24 23:47:14] [SNS_BSKY] Missing Bluesky credentials (BLUESKY_HANDLE / BLUESKY_PASSWORD).
+[2026-01-24 23:47:14] [SNS] Cleanup: Removed gms_ogp_ES_20260124234714.png
