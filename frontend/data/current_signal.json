@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-01-24T23:30:03Z",
-    "last_successful_update": "2026-01-24T23:30:03Z",
+    "last_updated": "2026-01-24T23:47:51Z",
+    "last_successful_update": "2026-01-24T23:47:51Z",
     "gms_score": 38,
     "sector_scores": {
         "STOCKS": 35,
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 89243.73,
+            "price": 89191.13,
             "prev_price": 89503.88,
-            "daily_chg": -0.29,
-            "change_percent": 1.06,
+            "daily_chg": -0.35,
+            "change_percent": 1.0,
             "trend": "DOWN",
             "sparkline": [
                 90603.19,
@@ -604,14 +604,14 @@
                 89376.96,
                 89462.45,
                 89503.88,
-                89243.73
+                89191.13
             ]
         },
         "ETH": {
-            "price": 2952.64,
+            "price": 2949.3,
             "prev_price": 2953.26,
-            "daily_chg": -0.02,
-            "change_percent": 0.58,
+            "daily_chg": -0.13,
+            "change_percent": 0.47,
             "trend": "DOWN",
             "sparkline": [
                 3125.92,
@@ -635,14 +635,14 @@
                 2978.9,
                 2949.63,
                 2953.26,
-                2952.64
+                2949.3
             ]
         },
         "SOL": {
-            "price": 127.29,
+            "price": 127.15,
             "prev_price": 127.36,
-            "daily_chg": -0.06,
-            "change_percent": 1.26,
+            "daily_chg": -0.17,
+            "change_percent": 1.15,
             "trend": "DOWN",
             "sparkline": [
                 133.3,
@@ -666,7 +666,7 @@
                 129.38,
                 128.29,
                 127.36,
-                127.29
+                127.15
             ]
         },
         "DXY": {
@@ -1105,22 +1105,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "The current GMS Score remains at 38, indicating that the market is firmly entrenched within a defensive regime according to quantitative metrics. Momentum is exhibiting a flat vector, providing zero delta which effectively forces the overall Score to stagnate at its current 38 level. A 2.88% spike in the VIX combined with stagnant net liquidity at 5714.39 is currently driving valuation compression across major equity indices. Operational disruptions from massive winter storms and airline cancellations are acting as a catalyst for increased risk aversion in the short term. Given the lack of liquidity growth and low crypto sentiment, the macro environment dictates a cautious approach focused on capital preservation and risk management.",
+        "content": "The GMS Score is at 38 as flat momentum keeps the market defensive. VIX rose 2.88% while storms increased macro uncertainty globally. IWM fell 1.85%, showing a rotation from risk to higher quality. Higher energy prices reflect supply risks and compress valuations. Momentum is flat with zero delta, causing the Score to remain at 38.",
         "reports": {
-            "JP": "現在のGMSスコアは38を示しており、市場が明確な防衛的フェーズに留まっていることを定量的なデータが裏付けています。モメンタムは横ばいの推移を維持しており、この停滞した変化率がスコアを38の低水準に固定させる要因となっています。VIX指数の2.88%の上昇とネットリクイディティの微増という相反する動きが、価格の変動性を抑制しつつも上値を重くしています。大規模な冬の嵐による航空便の大量欠航は、実体経済への短期的負荷として作用し、リスク回避姿勢をさらに強める結果となりました。ネットリクイディティが5714.39付近で停滞する中、投資家は不透明なマクロ環境を警戒し、慎重な資産配分を維持すべき局面です。",
-            "EN": "The current GMS Score remains at 38, indicating that the market is firmly entrenched within a defensive regime according to quantitative metrics. Momentum is exhibiting a flat vector, providing zero delta which effectively forces the overall Score to stagnate at its current 38 level. A 2.88% spike in the VIX combined with stagnant net liquidity at 5714.39 is currently driving valuation compression across major equity indices. Operational disruptions from massive winter storms and airline cancellations are acting as a catalyst for increased risk aversion in the short term. Given the lack of liquidity growth and low crypto sentiment, the macro environment dictates a cautious approach focused on capital preservation and risk management.",
-            "CN": "当前GMS分数为38点，量化数据显示市场正处于明确的防御性阶段，投资者普遍采取风险规避策略以应对潜在的不确定性。动量向量呈现持平态势，这种变化率的停滞导致整体评分固定在38位，反映出市场缺乏向上突破或向下探底的明确动力。VIX指数上涨2.88%与净流动性的微弱增长形成博弈，在限制价格波幅的同时，也压制了风险资产估值扩张的微观空间。大规模冬季风暴导致航空公司取消上万航班，这一突发事件加剧了市场对实体经济供应链受阻的担忧，进一步削弱了情绪。在流动性总量维持在5714.39水平且加密情绪低迷的背景下，宏观策略应以资产保值为核心，严密监测波动率后续演变。",
-            "ES": "El puntaje GMS actual se sitúa en 38, confirmando mediante análisis cuantitativo que el mercado permanece en un régimen defensivo estricto hoy. El momentum muestra un vector plano sin cambios significativos en la delta, lo que provoca que el puntaje se mantenga estancado en el nivel de 38. El aumento del 2.88% en el VIX junto a una liquidez neta estancada en 5714.39 genera una compresión en las valoraciones de activos de riesgo. Las cancelaciones masivas de vuelos por tormentas invernales actúan como un choque operativo que refuerza la actual tendencia de aversión al riesgo global. Ante la falta de expansión en la liquidez y el bajo sentimiento cripto, la estrategia macroeconómica recomienda priorizar la preservación de capital y vigilar la volatilidad.",
-            "HI": "वर्तमान जीएमएस स्कोर 38 पर स्थिर है, जो मात्रात्मक विश्लेषण के अनुसार बाजार के पूरी तरह से रक्षात्मक शासन में होने का संकेत देता है। मोमेंटम एक सपाट वेक्टर प्रदर्शित कर रहा है, जिससे बदलाव की दर शून्य हो गई है और यही कारण स्कोर को 38 पर स्थिर रख रहा है। वीआईएक्स में 2.88% की वृद्धि और 5714.39 पर रुकी हुई शुद्ध तरलता मिलकर जोखिम वाली संपत्तियों के मूल्यांकन पर दबाव डाल रही हैं। शीतकालीन तूफान के कारण उड़ानों के बड़े पैमाने पर रद्दीकरण ने वास्तविक अर्थव्यवस्था के लिए अल्पकालिक जोखिम और अनिश्चितता को बढ़ा दिया है। तरलता में वृद्धि की कमी और कमजोर क्रिप्टो सेंटिमेंट को देखते हुए, निवेशकों को पूंजी संरक्षण पर केंद्रित एक सतर्क रुख अपनाना चाहिए और बाजार की अस्थिरता पर कड़ी नजर रखनी चाहिए।",
-            "ID": "Skor GMS saat ini berada di angka 38, menunjukkan bahwa pasar tetap tertahan dalam rezim defensif berdasarkan metrik kuantitatif yang ketat. Momentum menunjukkan vektor datar tanpa perubahan delta, yang menyebabkan skor keseluruhan tertahan secara stagnan pada posisi level 38 hari ini. Lonjakan VIX sebesar 2.88% dikombinasikan dengan likuiditas bersih yang stagnan di 5714.39 memicu tekanan kompresi pada valuasi pasar ekuitas. Gangguan operasional akibat badai musim dingin yang membatalkan belasan ribu penerbangan memperkuat sentimen penghindaran risiko investor saat ini. Dengan pertumbuhan likuiditas yang minim dan sentimen kripto yang rendah, strategi makro harus tetap fokus pada upaya preservasi modal utama serta memantau pergerakan volatilidad pasar.",
-            "AR": "تظل درجة GMS عند 38 حالياً، مما يؤكد أن السوق لا يزال غارقاً في نظام دفاعي صارم وفقاً للمؤشرات الكمية والبيانات المتاحة لدينا. يظهر الزخم ناقلاً مسطحاً مع انعدام التغير في الدلتا، مما يتسبب في بقاء الدرجة الكلية ثابتة عند مستوى 38 دون أي تحسن يذكر. يؤدي ارتفاع مؤشر VIX بنسبة 2.88% مع ركود السيولة الصافية عند 5714.39 إلى ضغط واضح على تقييمات الأصول ذات المخاطر العالية. تعمل اضطرابات العواصف الشتوية وإلغاء آلاف الرحلات الجوية كمحفز لزيادة النفور من المخاطرة وتدهور المشاعر الاقتصادية في المدى القصير. في ظل غياب نمو السيولة وضعف مشاعر الكريبتو، تملي الاستراتيجية الكلية نهجاً حذراً يركز بشكل أساسي على حماية رأس المال المستثمر في هذه الظروف الصعبة."
+            "JP": "現在のGMSスコアは38に位置しており、平坦なモメンタムベクトルが非常に明確な防衛的レジームを規定しています。VIXが2.88%上昇する中、冬の嵐による大規模な航空便欠航が実体経済の不透明感を強め、リスク回避を促します。ネットリクイディティは依然として安定していますが、IWMの1.85%下落は資本が質への逃避を行っている証拠です。原油や天然ガスといった資源価格の急騰は供給網リスクを反映しており、株式のバリュエーションを圧迫する要因です。モメンタムは変化率ゼロのフラットな状態で推移し、スコアを38に留めているため、厳格な守りの姿勢が必要です。",
+            "EN": "The GMS Score is at 38 as flat momentum keeps the market defensive. VIX rose 2.88% while storms increased macro uncertainty globally. IWM fell 1.85%, showing a rotation from risk to higher quality. Higher energy prices reflect supply risks and compress valuations. Momentum is flat with zero delta, causing the Score to remain at 38.",
+            "CN": "目前GMS评分稳定在38点，平稳的动能矢量特征促使整体市场环境继续处于一个明确的防御性制度阶段。波动率VIX上涨2.88%配合冬季风暴造成的航空物流干扰，极大地增加了宏观经济不确定性并引发避险情绪。尽管净流动性总量变化微小，但小盘股IWM下跌1.85%的现象，明确揭示了资本正从风险资产流向安全资产。能源价格的显著飙升反映了潜在的供应链中断风险，这种成本推动型压力正在对股票整体估值形成压缩作用。动能呈现变化率为零的持平态势，导致评分锁定在38点，在当前动荡背景下维持资产安全是极必要的策略。",
+            "ES": "El GMS se mantiene en 38 ya que el impulso plano ancla el régimen defensivo. El VIX subió 2.88% mientras tormentas invernales elevan la incertidumbre macro. IWM cayó 1.85%, señalando una rotación hacia la calidad ante el riesgo actual. El alza en energía refleja choques de oferta y comprime las valuaciones reales. El impulso es plano con delta cero, lo que causa que el Score se mantenga en 38.",
+            "HI": "GMS स्कोर 38 पर स्थिर है क्योंकि सपाट गति बाजार को रक्षात्मक बनाए रखती है। VIX में 2.88% वृद्धि और तूफान ने आर्थिक अनिश्चितता को काफी बढ़ा दिया है। IWM में 1.85% गिरावट जोखिम वाली संपत्तियों से सुरक्षित निवेश की ओर बदलाव है। बढ़ती ऊर्जा कीमतें आपूर्ति झटकों को दर्शाती हैं और बाजार मूल्यांकन को दबाती हैं। गति शून्य डेल्टा के साथ सपाट है, जिससे स्कोर 38 पर स्थिर बना हुआ है।",
+            "ID": "Skor GMS di 38 karena momentum datar menjaga rezim pasar tetap defensif. VIX naik 2.88% saat badai salju memicu ketidakpastian makro yang signifikan. Penurunan IWM 1.85% menandakan rotasi ke aset aman dari aset berisiko tinggi. Harga energi yang naik mencerminkan risiko pasokan dan menekan valuasi saham. Momentum datar dengan delta nol, menyebabkan Skor tetap bertahan di angka 38.",
+            "AR": "يبقى مؤشر GMS عند 38 حيث أدى الزخم المسطح لاستمرار النظام الدفاعي للسوق. ارتفع VIX بنسبة 2.88% وزادت العواصف الشتوية من عدم اليقين الاقتصادي العام. يشير انخفاض IWM بنسبة 1.85% إلى تحول واضح نحو الأمان بعيداً عن المخاطر. تعكس أسعار الطاقة المرتفعة صدمات العرض وتضغط على تقييمات الأسهم الحالية. الزخم مسطح مع دلتا صفر، مما تسبب في بقاء النتيجة ثابتة عند مستوى 38."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-23T15:20:59Z",
-            "score": 36
-        },
         {
             "date": "2026-01-23T15:41:34Z",
             "score": 36
@@ -1356,92 +1352,96 @@
         {
             "date": "2026-01-24T23:30:03Z",
             "score": 38
+        },
+        {
+            "date": "2026-01-24T23:47:51Z",
+            "score": 38
         }
     ],
     "intelligence": {
         "news": [
             {
-                "title": "Airlines cancel nearly 13,000 weekend flights as massive winter storm sweeps across U.S.",
+                "title": "Airlines cancel more than 13,000 weekend flights as massive winter storm sweeps across the U.S.",
                 "link": "https://www.cnbc.com/2026/01/23/winter-storm-fern-flight-cancellations.html",
-                "isoDate": "2026-01-24T23:30:05.041467Z"
+                "isoDate": "2026-01-24T23:47:52.530597Z"
             },
             {
                 "title": "Trump threatens to impose 100% tariff if Canada makes deal with China",
                 "link": "https://www.cnbc.com/2026/01/24/trump-tariff-canada-china.html",
-                "isoDate": "2026-01-24T23:30:05.043489Z"
+                "isoDate": "2026-01-24T23:47:52.532431Z"
             },
             {
                 "title": "Gov. Walz calls on Trump to halt ICE operations in Minnesota after another fatal shooting",
                 "link": "https://www.cnbc.com/2026/01/24/walz-trump-ice-shooting.html",
-                "isoDate": "2026-01-24T23:30:05.043511Z"
+                "isoDate": "2026-01-24T23:47:52.532454Z"
             },
             {
                 "title": "New Berkshire CEO Abel quickly signals troubled Kraft Heinz stake could be toast",
                 "link": "https://www.cnbc.com/2026/01/24/new-berkshire-ceo-abel-quickly-signals-troubled-kraft-heinz-stake-could-be-toast.html",
-                "isoDate": "2026-01-24T23:30:05.043524Z"
+                "isoDate": "2026-01-24T23:47:52.532467Z"
             },
             {
                 "title": "Meta's Reality Labs cuts sparked fears of a 'VR winter'",
                 "link": "https://www.cnbc.com/2026/01/24/metas-reality-labs-cuts-sparked-fears-of-a-vr-winter.html",
-                "isoDate": "2026-01-24T23:30:05.043552Z"
+                "isoDate": "2026-01-24T23:47:52.532480Z"
             },
             {
                 "title": "These stocks reporting earnings next week are usually winning bets",
                 "link": "https://www.cnbc.com/2026/01/24/these-stocks-reporting-earnings-next-week-are-usually-winning-bets.html",
-                "isoDate": "2026-01-24T23:30:05.043564Z"
+                "isoDate": "2026-01-24T23:47:52.532492Z"
             }
         ],
         "translations": {
             "JP": [
-                "大規模な冬の嵐が全米を襲い、航空各社は週末の約13,000便を欠航",
-                "トランプ氏、カナダが中国と合意すれば100%の関税を課すと警告",
-                "ウォルズ知事、相次ぐ射殺事件を受け、ミネソタ州でのICE活動停止をトランプ氏に要請",
-                "バークシャーの新CEOアベル氏、苦境のクラフト・ハインツ株売却の可能性を早々に示唆",
-                "メタのリアリティ・ラボ部門の人員削減、「VRの冬」への懸念を呼び起こす",
-                "来週決算発表を控えるこれらの銘柄は、通常「勝ち馬」とされる"
+                "大規模な冬の嵐が全米を襲い、航空会社が週末の13,000便以上を欠航。",
+                "トランプ氏、カナダが中国と取引を行えば100％の関税を課すと警告。",
+                "ウォルズ知事、相次ぐ射殺事件を受け、ミネソタ州でのICE活動停止をトランプ氏に要請。",
+                "バークシャーの新CEOアベル氏、苦境にあるクラフト・ハインツ株の売却の可能性を早々に示唆。",
+                "メタのReality Labsにおける人員削減が「VRの冬」への懸念を引き起こす。",
+                "来週決算発表を控えるこれらの銘柄は、通常「勝ち馬」とされる。"
             ],
             "CN": [
-                "强冬季风暴席卷全美，航空公司取消周末近1.3万架次航班",
-                "特朗普威胁称，若加拿大与中国达成协议，将对其征收100%关税",
-                "又一起致命枪击案发生后，沃尔兹州长呼吁特朗普停止在明尼苏达州的ICE行动",
-                "伯克希尔新任CEO阿贝尔迅速发出信号，暗示陷入困境的卡夫亨氏股份可能被抛弃",
-                "Meta旗下Reality Labs的裁员引发了对“VR寒冬”的担忧",
-                "这些下周发布财报的股票通常是“稳赢之选”"
+                "强冬季风暴席卷全美，航空公司取消逾1.3万架次周末航班。",
+                "特朗普威胁称，若加拿大与中国达成协议，将征收100%的关税。",
+                "在又一起致命枪击案后，沃尔兹州长呼吁特朗普停止ICE在明尼苏达州的行动。",
+                "伯克希尔新任CEO阿贝尔迅速释放信号，暗示陷入困境的卡夫亨氏股份可能被放弃。",
+                "Meta Reality Labs的裁员引发了对“VR寒冬”的担忧。",
+                "这些下周发布财报的股票通常是稳操胜券的选择。"
             ],
             "ES": [
-                "Aerolíneas cancelan casi 13.000 vuelos de fin de semana mientras una tormenta invernal masiva azota EE. UU.",
-                "Trump amenaza con imponer un arancel del 100% si Canadá llega a un acuerdo con China",
-                "El gobernador Walz pide a Trump detener las operaciones de ICE en Minnesota tras otro tiroteo mortal",
-                "El nuevo CEO de Berkshire, Abel, señala rápidamente que la participación en la atribulada Kraft Heinz podría haber terminado",
-                "Los recortes en Reality Labs de Meta desataron temores de un 'invierno de la VR'",
-                "Estas acciones que presentan resultados la próxima semana suelen ser apuestas ganadoras"
+                "Aerolíneas cancelan más de 13,000 vuelos de fin de semana mientras una tormenta invernal masiva azota EE. UU.",
+                "Trump amenaza con imponer un arancel del 100% si Canadá llega a un acuerdo con China.",
+                "El gobernador Walz pide a Trump detener las operaciones del ICE en Minnesota tras otro tiroteo mortal.",
+                "El nuevo CEO de Berkshire, Abel, señala rápidamente que la problemática participación en Kraft Heinz podría estar acabada.",
+                "Los recortes en Reality Labs de Meta despertaron temores de un 'invierno de la RV'.",
+                "Estas acciones que presentan resultados la próxima semana suelen ser apuestas ganadoras."
             ],
             "HI": [
-                "अमेरिका में भारी बर्फीले तूफान के कारण एयरलाइनों ने सप्ताहांत की लगभग 13,000 उड़ानें रद्द कीं",
-                "ट्रंप ने धमकी दी कि अगर कनाडा चीन के साथ समझौता करता है तो वह 100% टैरिफ लगाएंगे",
-                "एक और घातक गोलीबारी के बाद, गवर्नर वाल्ज ने ट्रंप से मिनेसोटा में ICE संचालन रोकने का आह्वान किया",
-                "बर्कशायर के नए सीईओ एबेल ने संकेत दिया कि संकटग्रस्त क्राफ्ट हेंज में हिस्सेदारी खत्म हो सकती है",
-                "मेटा के रियलिटी लैब्स में कटौती ने 'VR शीतकाल' की आशंका पैदा कर दी है",
-                "अगले सप्ताह अर्निंग रिपोर्ट देने वाले ये स्टॉक आमतौर पर मुनाफे वाले दांव होते हैं"
+                "अमेरिका में भीषण बर्फीले तूफान के बीच एयरलाइनों ने सप्ताहांत की 13,000 से अधिक उड़ानें रद्द कीं।",
+                "ट्रंप ने धमकी दी कि अगर कनाडा ने चीन के साथ समझौता किया तो वे 100% टैरिफ लगाएंगे।",
+                "एक और घातक गोलीबारी के बाद गवर्नर वाल्ज़ ने ट्रंप से मिनेसोटा में ICE संचालन रोकने का आह्वान किया।",
+                "बर्कशायर के नए सीईओ एबेल ने संकेत दिए कि संकटग्रस्त क्राफ्ट हेंज की हिस्सेदारी खत्म हो सकती है।",
+                "मेटा के 'रियलिटी लैब्स' में कटौती ने 'VR विंटर' की आशंका पैदा कर दी है।",
+                "अगले सप्ताह अर्निंग रिपोर्ट देने वाले ये स्टॉक आमतौर पर जीतने वाले दांव होते हैं।"
             ],
             "ID": [
-                "Maskapai batalkan hampir 13.000 penerbangan akhir pekan saat badai musim dingin dahsyat melanda AS",
-                "Trump ancam kenakan tarif 100% jika Kanada menjalin kesepakatan dengan China",
-                "Gubernur Walz mendesak Trump untuk menghentikan operasi ICE di Minnesota setelah penembakan fatal lainnya",
-                "CEO baru Berkshire, Abel, beri sinyal bahwa saham Kraft Heinz yang bermasalah bisa segera dilepas",
-                "Pemangkasan di Reality Labs milik Meta memicu kekhawatiran akan 'musim dingin VR'",
-                "Saham-saham yang melaporkan laba minggu depan ini biasanya merupakan taruhan yang menguntungkan"
+                "Maskapai batalkan lebih dari 13.000 penerbangan akhir pekan saat badai musim dingin dahsyat melanda AS.",
+                "Trump ancam kenakan tarif 100% jika Kanada menjalin kesepakatan dengan China.",
+                "Gubernur Walz desak Trump hentikan operasi ICE di Minnesota setelah penembakan fatal lainnya.",
+                "CEO baru Berkshire, Abel, beri sinyal bahwa saham Kraft Heinz yang bermasalah bisa segera berakhir.",
+                "Pemangkasan di Reality Labs milik Meta memicu kekhawatiran akan 'musim dingin VR'.",
+                "Saham-saham yang melaporkan laba minggu depan ini biasanya merupakan taruhan yang menguntungkan."
             ],
             "AR": [
-                "شركات الطيران تلغي ما يقرب من 13,000 رحلة في عطلة نهاية الأسبوع مع اجتياح عاصفة شتوية عاتية للولايات المتحدة",
-                "ترامب يهدد بفرض رسوم جمركية بنسبة 100% إذا أبرمت كندا اتفاقاً مع الصين",
-                "الحاكم والز يدعو ترامب لوقف عمليات هيئة إنفاذ قوانين الهجرة والجمارك (ICE) في مينيسوتا بعد حادث إطلاق نار مميت آخر",
-                "الرئيس التنفيذي الجديد لشركة بيركشاير، آبل، يلمح سريعاً إلى أن حصة كرافت هاينز المتعثرة قد تنتهي",
-                "التخفيضات في مختبرات 'رياليتي لابس' التابعة لميتا تثير مخاوف من 'شتاء الواقع الافتراضي'",
-                "هذه الأسهم التي ستعلن عن نتائج أرباحها الأسبوع المقبل عادة ما تكون رهانات رابحة"
+                "شركات الطيران تلغي أكثر من 13,000 رحلة في عطلة نهاية الأسبوع مع اجتياح عاصفة شتوية هائلة للولايات المتحدة.",
+                "ترامب يهدد بفرض رسوم جمركية بنسبة 100% إذا أبرمت كندا صفقة مع الصين.",
+                "الحاكم والز يدعو ترامب لوقف عمليات إدارة إنفاذ قوانين الهجرة والجمارك (ICE) في مينيسوتا بعد حادث إطلاق نار مميت آخر.",
+                "آبل، الرئيس التنفيذي الجديد لشركة بيركشاير، يشير سريعاً إلى أن حصة كرافت هاينز المتعثرة قد تكون في طريقها للتصفية.",
+                "التخفيضات في 'رياليتي لابس' التابعة لميتا تثير المخاوف من 'شتاء الواقع الافتراضي'.",
+                "هذه الأسهم التي ستعلن عن أرباحها الأسبوع المقبل تعتبر عادةً رهانات رابحة."
             ]
         },
-        "last_updated": "2026-01-24T23:30:29.213134Z"
+        "last_updated": "2026-01-24T23:48:13.328862Z"
     },
     "system_status": "OPERATIONAL"
 }
