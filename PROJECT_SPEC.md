@@ -1,5 +1,5 @@
 # Global Macro Signal (OmniMetric Terminal) - プロジェクト仕様書
-**Version 2.1.0 (Recovery & Stability Release)**
+**Version 4.5.0 (Recovery & Stability Release)**
 **Last Updated:** 2026-01-24
 
 ## 1. プロジェクト概要 (Executive Summary)
