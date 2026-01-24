@@ -213,7 +213,7 @@ class SNSPublisher:
                      img_path = os.path.join(os.path.dirname(__file__), img_filename)
                      
                      try:
-                         generate_dynamic_ogp(data, img_path)
+                         generate_dynamic_ogp(data, img_path, lang=lang)
                      except Exception as e:
                          self._log(f"OGP Gen Error: {e}", is_error=True)
                          img_path = None # Fallback to no image

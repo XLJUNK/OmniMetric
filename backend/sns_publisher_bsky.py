@@ -82,12 +82,15 @@ class BlueskyPublisher:
         post_text = f"{header} {trend_section}\n\n{short_summary}\n\n{tags}"
         
         # Add Link
-        link_map = {
-            "JP": "/jp", "EN": "/en", "CN": "/cn", "ES": "/es",
-            "HI": "/hi", "ID": "/id", "AR": "/ar"
-        }
-        suffix = link_map.get(lang, "")
-        post_text += f"\n{self.site_url}{suffix}"
+        # URL Logic: https://www.omnimetric.net/?lang=XX
+        base_url = self.site_url.replace("https://omnimetric.net", "https://www.omnimetric.net")
+        if not "www" in base_url: base_url = base_url.replace("https://", "https://www.")
+        
+        url_lang = lang.upper()
+        # Exception: "CN" usually maps to "ZH" or "CN" in query logic? Assuming "CN" based on user context, but let's check.
+        # Check backend/current_signal.json usage? "CN" is key.
+        
+        post_text += f"\n{base_url}/?lang={url_lang}"
 
         return post_text
 
