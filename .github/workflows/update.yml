@@ -5,6 +5,12 @@ on:
   schedule:
     - cron: '5,35 * * * *' # Every 30 minutes, offset by 5m (User Decision: Avoid install overhead)
   workflow_dispatch:
+    inputs:
+      force_bluesky:
+        description: 'Force Bluesky Post (Bypass Schedule)'
+        required: false
+        type: boolean
+        default: false
 
 concurrency:
   group: update-signal
@@ -77,8 +83,12 @@ jobs:
           python scripts/verify_skills.py
 
           # SNS PUBLISHER (Bluesky - Golden Schedule)
-          # Runs every 30 mins, checks internal schedule logic
-          python backend/sns_publisher.py
+          # Runs every 30 mins. Supports manual force via workflow_dispatch.
+          FORCE_FLAG=""
+          if [ "${{ inputs.force_bluesky }}" == "true" ]; then
+            FORCE_FLAG="--force"
+          fi
+          python backend/sns_publisher.py $FORCE_FLAG
           
           # FRONTEND SYNC: Copy signal to frontend/data for import
           mkdir -p frontend/data
