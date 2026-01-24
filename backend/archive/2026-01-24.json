@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-01-24T22:50:39Z",
-    "last_successful_update": "2026-01-24T22:50:39Z",
+    "last_updated": "2026-01-24T23:30:03Z",
+    "last_successful_update": "2026-01-24T23:30:03Z",
     "gms_score": 38,
     "sector_scores": {
         "STOCKS": 35,
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 89206.5,
+            "price": 89243.73,
             "prev_price": 89503.88,
-            "daily_chg": -0.33,
-            "change_percent": 1.01,
+            "daily_chg": -0.29,
+            "change_percent": 1.06,
             "trend": "DOWN",
             "sparkline": [
                 90603.19,
@@ -604,15 +604,15 @@
                 89376.96,
                 89462.45,
                 89503.88,
-                89206.5
+                89243.73
             ]
         },
         "ETH": {
-            "price": 2955.39,
+            "price": 2952.64,
             "prev_price": 2953.26,
-            "daily_chg": 0.07,
-            "change_percent": 0.67,
-            "trend": "UP",
+            "daily_chg": -0.02,
+            "change_percent": 0.58,
+            "trend": "DOWN",
             "sparkline": [
                 3125.92,
                 3140.71,
@@ -635,14 +635,14 @@
                 2978.9,
                 2949.63,
                 2953.26,
-                2955.39
+                2952.64
             ]
         },
         "SOL": {
-            "price": 127.2,
+            "price": 127.29,
             "prev_price": 127.36,
-            "daily_chg": -0.13,
-            "change_percent": 1.19,
+            "daily_chg": -0.06,
+            "change_percent": 1.26,
             "trend": "DOWN",
             "sparkline": [
                 133.3,
@@ -666,7 +666,7 @@
                 129.38,
                 128.29,
                 127.36,
-                127.2
+                127.29
             ]
         },
         "DXY": {
@@ -1105,22 +1105,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "Flat momentum is persisting, causing the GMS Score to remain stuck at 38. VIX spikes and stagnant net liquidity are forcing broad valuation compression. Weakness in IWM and low crypto sentiment reflect a lack of risk appetite. Winter storms and flight cancellations increase macroeconomic uncertainty. Maintain defensive strategies as momentum shows no structural improvement.",
+        "content": "The current GMS Score remains at 38, indicating that the market is firmly entrenched within a defensive regime according to quantitative metrics. Momentum is exhibiting a flat vector, providing zero delta which effectively forces the overall Score to stagnate at its current 38 level. A 2.88% spike in the VIX combined with stagnant net liquidity at 5714.39 is currently driving valuation compression across major equity indices. Operational disruptions from massive winter storms and airline cancellations are acting as a catalyst for increased risk aversion in the short term. Given the lack of liquidity growth and low crypto sentiment, the macro environment dictates a cautious approach focused on capital preservation and risk management.",
         "reports": {
-            "JP": "現在のモメンタムが完全に停滞していることで、GMSスコアは38という防御的な水準に留まっています。VIX指数の上昇と純流動性の伸び悩みという組み合わせは、リスク資産のバリュエーション圧縮を招いています。IWMの大幅な下落やクリプトセンチメントの悪化は、現在の市場におけるリスク回避姿勢を鮮明にしました。記録的な冬の嵐による大規模な航空便の欠航は実体経済への重石となり、供給網の混乱が強く懸念されます。モメンタムに改善の兆しが全く見られない以上、当面はキャッシュ比率を高める防御的な戦略を継続すべきです。",
-            "EN": "Flat momentum is persisting, causing the GMS Score to remain stuck at 38. VIX spikes and stagnant net liquidity are forcing broad valuation compression. Weakness in IWM and low crypto sentiment reflect a lack of risk appetite. Winter storms and flight cancellations increase macroeconomic uncertainty. Maintain defensive strategies as momentum shows no structural improvement.",
-            "CN": "当前动量向量呈现明显的持平态势，直接导致GMS分数维持在38点的防御性区间且无上升迹象。恐慌指数VIX上涨近百分之三而净流动性增长几乎停滞，这种组合正在迫使风险资产进行估值压缩。小盘股指数IWM的大幅下跌与加密货币情绪的低迷，充分反映出在高利率环境下市场缺乏风险偏好。大规模冬季风暴造成的航班取消加剧了宏观经济的不确定性，并可能对供应链产生长期的负面影响。鉴于动量并未能产生任何向上的推动力，理事会建议投资者在流动性环境显著改善前保持保守策略。",
-            "ES": "El momentum es plano, lo que causa que el Score se mantenga en 38. El alza del VIX y la liquidez estancada fuerzan una fuerte compresión. La debilidad del IWM refleja la falta de apetito por el riesgo actual. Tormentas invernales masivas añaden incertidumbre macro y económica. Siga con una estrategia defensiva ya que el momentum no tiene alza.",
-            "HI": "वर्तमान में मोमेंटम स्थिर है, जिससे स्कोर 38 के स्तर पर बना हुआ है। VIX में वृद्धि और स्थिर तरलता वैल्यूएशन में भारी गिरावट ला रही है। IWM की कमजोरी बाजार में जोखिम लेने की क्षमता की कमी दर्शाती है। शीत लहर और रद उड़ानें व्यापक आर्थिक अनिश्चितता को बढ़ा रही हैं। मोमेंटम में सुधार न होने से अपनी रक्षात्मक रणनीति को जारी रखें।",
-            "ID": "Momentum terpantau datar, menyebabkan Skor GMS tertahan di angka 38. Lonjakan VIX dan likuiditas yang mandek memaksa kompresi harga aset. Lemahnya IWM serta sentimen kripto menunjukkan nihilnya selera risiko. Badai musim dingin ekstrem menambah ketidakpastian pada ekonomi makro. Pertahankan strategi defensif karena momentum belum menunjukkan kenaikan.",
-            "AR": "الزخم مسطح حالياً، مما أدى إلى بقاء سجل جي إم إس عند مستوى 38. ارتفاع مؤشر التقلب والسيولة الراكدة يضغطان على تقييمات كل الأصول. يعكس ضعف الأسهم الصغيرة غياب الشهية للمخاطرة في ظل ظروف صعبة. تزيد العواصف الشتوية من عدم اليقين الاقتصادي وتضغط على الإمدادات. ينصح المجلس بالبقاء في وضع دفاعي حتى يتحسن زخم السيولة بوضوح."
+            "JP": "現在のGMSスコアは38を示しており、市場が明確な防衛的フェーズに留まっていることを定量的なデータが裏付けています。モメンタムは横ばいの推移を維持しており、この停滞した変化率がスコアを38の低水準に固定させる要因となっています。VIX指数の2.88%の上昇とネットリクイディティの微増という相反する動きが、価格の変動性を抑制しつつも上値を重くしています。大規模な冬の嵐による航空便の大量欠航は、実体経済への短期的負荷として作用し、リスク回避姿勢をさらに強める結果となりました。ネットリクイディティが5714.39付近で停滞する中、投資家は不透明なマクロ環境を警戒し、慎重な資産配分を維持すべき局面です。",
+            "EN": "The current GMS Score remains at 38, indicating that the market is firmly entrenched within a defensive regime according to quantitative metrics. Momentum is exhibiting a flat vector, providing zero delta which effectively forces the overall Score to stagnate at its current 38 level. A 2.88% spike in the VIX combined with stagnant net liquidity at 5714.39 is currently driving valuation compression across major equity indices. Operational disruptions from massive winter storms and airline cancellations are acting as a catalyst for increased risk aversion in the short term. Given the lack of liquidity growth and low crypto sentiment, the macro environment dictates a cautious approach focused on capital preservation and risk management.",
+            "CN": "当前GMS分数为38点，量化数据显示市场正处于明确的防御性阶段，投资者普遍采取风险规避策略以应对潜在的不确定性。动量向量呈现持平态势，这种变化率的停滞导致整体评分固定在38位，反映出市场缺乏向上突破或向下探底的明确动力。VIX指数上涨2.88%与净流动性的微弱增长形成博弈，在限制价格波幅的同时，也压制了风险资产估值扩张的微观空间。大规模冬季风暴导致航空公司取消上万航班，这一突发事件加剧了市场对实体经济供应链受阻的担忧，进一步削弱了情绪。在流动性总量维持在5714.39水平且加密情绪低迷的背景下，宏观策略应以资产保值为核心，严密监测波动率后续演变。",
+            "ES": "El puntaje GMS actual se sitúa en 38, confirmando mediante análisis cuantitativo que el mercado permanece en un régimen defensivo estricto hoy. El momentum muestra un vector plano sin cambios significativos en la delta, lo que provoca que el puntaje se mantenga estancado en el nivel de 38. El aumento del 2.88% en el VIX junto a una liquidez neta estancada en 5714.39 genera una compresión en las valoraciones de activos de riesgo. Las cancelaciones masivas de vuelos por tormentas invernales actúan como un choque operativo que refuerza la actual tendencia de aversión al riesgo global. Ante la falta de expansión en la liquidez y el bajo sentimiento cripto, la estrategia macroeconómica recomienda priorizar la preservación de capital y vigilar la volatilidad.",
+            "HI": "वर्तमान जीएमएस स्कोर 38 पर स्थिर है, जो मात्रात्मक विश्लेषण के अनुसार बाजार के पूरी तरह से रक्षात्मक शासन में होने का संकेत देता है। मोमेंटम एक सपाट वेक्टर प्रदर्शित कर रहा है, जिससे बदलाव की दर शून्य हो गई है और यही कारण स्कोर को 38 पर स्थिर रख रहा है। वीआईएक्स में 2.88% की वृद्धि और 5714.39 पर रुकी हुई शुद्ध तरलता मिलकर जोखिम वाली संपत्तियों के मूल्यांकन पर दबाव डाल रही हैं। शीतकालीन तूफान के कारण उड़ानों के बड़े पैमाने पर रद्दीकरण ने वास्तविक अर्थव्यवस्था के लिए अल्पकालिक जोखिम और अनिश्चितता को बढ़ा दिया है। तरलता में वृद्धि की कमी और कमजोर क्रिप्टो सेंटिमेंट को देखते हुए, निवेशकों को पूंजी संरक्षण पर केंद्रित एक सतर्क रुख अपनाना चाहिए और बाजार की अस्थिरता पर कड़ी नजर रखनी चाहिए।",
+            "ID": "Skor GMS saat ini berada di angka 38, menunjukkan bahwa pasar tetap tertahan dalam rezim defensif berdasarkan metrik kuantitatif yang ketat. Momentum menunjukkan vektor datar tanpa perubahan delta, yang menyebabkan skor keseluruhan tertahan secara stagnan pada posisi level 38 hari ini. Lonjakan VIX sebesar 2.88% dikombinasikan dengan likuiditas bersih yang stagnan di 5714.39 memicu tekanan kompresi pada valuasi pasar ekuitas. Gangguan operasional akibat badai musim dingin yang membatalkan belasan ribu penerbangan memperkuat sentimen penghindaran risiko investor saat ini. Dengan pertumbuhan likuiditas yang minim dan sentimen kripto yang rendah, strategi makro harus tetap fokus pada upaya preservasi modal utama serta memantau pergerakan volatilidad pasar.",
+            "AR": "تظل درجة GMS عند 38 حالياً، مما يؤكد أن السوق لا يزال غارقاً في نظام دفاعي صارم وفقاً للمؤشرات الكمية والبيانات المتاحة لدينا. يظهر الزخم ناقلاً مسطحاً مع انعدام التغير في الدلتا، مما يتسبب في بقاء الدرجة الكلية ثابتة عند مستوى 38 دون أي تحسن يذكر. يؤدي ارتفاع مؤشر VIX بنسبة 2.88% مع ركود السيولة الصافية عند 5714.39 إلى ضغط واضح على تقييمات الأصول ذات المخاطر العالية. تعمل اضطرابات العواصف الشتوية وإلغاء آلاف الرحلات الجوية كمحفز لزيادة النفور من المخاطرة وتدهور المشاعر الاقتصادية في المدى القصير. في ظل غياب نمو السيولة وضعف مشاعر الكريبتو، تملي الاستراتيجية الكلية نهجاً حذراً يركز بشكل أساسي على حماية رأس المال المستثمر في هذه الظروف الصعبة."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-23T15:18:04Z",
-            "score": 36
-        },
         {
             "date": "2026-01-23T15:20:59Z",
             "score": 36
@@ -1355,6 +1351,10 @@
         },
         {
             "date": "2026-01-24T22:50:39Z",
+            "score": 38
+        },
+        {
+            "date": "2026-01-24T23:30:03Z",
             "score": 38
         }
     ],
