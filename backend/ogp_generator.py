@@ -6,12 +6,19 @@ from datetime import datetime
 import matplotlib.font_manager as fm
 
 # Global font configuration
-# Try to load NotoSansJP if available (deployed via GitHub Actions)
 FONT_PATH = os.path.join(os.path.dirname(__file__), "assets", "fonts", "NotoSansJP-Bold.ttf")
 PROP_FONT = None
-if os.path.exists(FONT_PATH):
-    PROP_FONT = fm.FontProperties(fname=FONT_PATH)
-else:
+
+try:
+    if os.path.exists(FONT_PATH):
+        # Attempt to load, will raise runtime error if file is corrupt
+        PROP_FONT = fm.FontProperties(fname=FONT_PATH)
+        # Check by accessing a property to force load (optional but safer)
+        _ = PROP_FONT.get_name()
+    else:
+        raise FileNotFoundError("Font file not found")
+except Exception as e:
+    print(f"[OGP] Warning: Custom font loading failed ({e}). Using default.")
     # Fallback to default sans-serif
     PROP_FONT = fm.FontProperties(family='sans-serif', weight='bold')
 

@@ -46,10 +46,10 @@ jobs:
         run: |
           mkdir -p backend/assets/fonts
           echo "Downloading Noto Sans Fonts..."
-          curl -L -o backend/assets/fonts/NotoSansJP-Bold.ttf "https://github.com/google/fonts/raw/main/ofl/notosansjp/NotoSansJP-Bold.ttf"
-          curl -L -o backend/assets/fonts/NotoSansSC-Bold.ttf "https://github.com/google/fonts/raw/main/ofl/notosanssc/NotoSansSC-Bold.ttf"
-          curl -L -o backend/assets/fonts/NotoSansDevanagari-Bold.ttf "https://github.com/google/fonts/raw/main/ofl/notosansdevanagari/NotoSansDevanagari-Bold.ttf"
-          curl -L -o backend/assets/fonts/NotoSansArabic-Bold.ttf "https://github.com/google/fonts/raw/main/ofl/notosansarabic/NotoSansArabic-Bold.ttf"
+          curl -fL -o backend/assets/fonts/NotoSansJP-Bold.ttf "https://github.com/google/fonts/raw/main/ofl/notosansjp/NotoSansJP-Bold.ttf" || echo "Failed to download JP font"
+          curl -fL -o backend/assets/fonts/NotoSansSC-Bold.ttf "https://github.com/google/fonts/raw/main/ofl/notosanssc/NotoSansSC-Bold.ttf" || echo "Failed to download SC font"
+          curl -fL -o backend/assets/fonts/NotoSansDevanagari-Bold.ttf "https://github.com/google/fonts/raw/main/ofl/notosansdevanagari/NotoSansDevanagari-Bold.ttf" || echo "Failed to download Devanagari font"
+          curl -fL -o backend/assets/fonts/NotoSansArabic-Bold.ttf "https://github.com/google/fonts/raw/main/ofl/notosansarabic/NotoSansArabic-Bold.ttf" || echo "Failed to download Arabic font"
           ls -lh backend/assets/fonts/
       - name: Sync and Run Engine
         env:
