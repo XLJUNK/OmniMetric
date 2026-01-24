@@ -43,7 +43,15 @@ class BlueskySequencer:
         Returns a list of tuples: (LANG, PHASE_ID, FORCE_FLAG)
         """
         now_jst = self.get_jst_now()
-        is_we = self.is_weekend(now_jst)
+        
+        # Virtual Day Logic: Treat 00:00-05:59 as "Previous Day" (for US Market continuity)
+        # Mon 00:05 is Sunday Night -> Weekend (Skip)
+        # Sat 00:05 is Friday Night -> Weekday (Post)
+        effective_dt = now_jst
+        if now_jst.hour < 6:
+            effective_dt = now_jst - timedelta(days=1)
+
+        is_we = self.is_weekend(effective_dt)
         
         current_hour = now_jst.hour
         current_minute = now_jst.minute
