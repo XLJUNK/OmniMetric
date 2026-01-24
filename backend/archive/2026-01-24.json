@@ -1,10 +1,10 @@
 {
-    "last_updated": "2026-01-24T05:51:57Z",
-    "last_successful_update": "2026-01-24T05:51:57Z",
-    "gms_score": 33,
+    "last_updated": "2026-01-24T06:48:33Z",
+    "last_successful_update": "2026-01-24T06:48:33Z",
+    "gms_score": 38,
     "sector_scores": {
         "STOCKS": 35,
-        "CRYPTO": 25,
+        "CRYPTO": 75,
         "FOREX": 70,
         "COMMODITIES": 55
     },
@@ -577,13 +577,12 @@
             ]
         },
         "BTC": {
-            "price": 89675.12,
-            "prev_price": 89462.45,
-            "daily_chg": 0.24,
-            "change_percent": -3.11,
+            "price": 89534.98,
+            "prev_price": 89503.88,
+            "daily_chg": 0.03,
+            "change_percent": 1.39,
             "trend": "UP",
             "sparkline": [
-                89944.7,
                 90603.19,
                 91413.49,
                 93882.55,
@@ -604,17 +603,17 @@
                 88310.91,
                 89376.96,
                 89462.45,
-                89675.12
+                89503.88,
+                89534.98
             ]
         },
         "ETH": {
-            "price": 2956.29,
-            "prev_price": 2949.63,
-            "daily_chg": 0.23,
-            "change_percent": -7.23,
+            "price": 2958.39,
+            "prev_price": 2953.26,
+            "daily_chg": 0.17,
+            "change_percent": 0.78,
             "trend": "UP",
             "sparkline": [
-                3124.42,
                 3125.92,
                 3140.71,
                 3226.13,
@@ -635,17 +634,17 @@
                 2935.61,
                 2978.9,
                 2949.63,
-                2956.29
+                2953.26,
+                2958.39
             ]
         },
         "SOL": {
-            "price": 127.56,
-            "prev_price": 128.29,
-            "daily_chg": -0.57,
-            "change_percent": -4.34,
-            "trend": "DOWN",
+            "price": 127.49,
+            "prev_price": 127.36,
+            "daily_chg": 0.1,
+            "change_percent": 1.42,
+            "trend": "UP",
             "sparkline": [
-                132.13,
                 133.3,
                 133.9,
                 137.99,
@@ -666,7 +665,8 @@
                 125.71,
                 129.38,
                 128.29,
-                127.56
+                127.36,
+                127.49
             ]
         },
         "DXY": {
@@ -1105,22 +1105,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS 33 and 2.88% VIX spike confirm a defensive market regime. Stagnant liquidity at 5714 and credit risks create system stress. Real rates at 1.95% drive the 1.85% drop in IWM valuations. Gold rose 1.37% as investors seek safety from inflation shifts. Low liquidity and credit fears mandate a strict risk-off stance.",
+        "content": "1. GMS at 38 is defensive but shows a recovery from recent lows. 2. VIX rises 2.88% while stable liquidity provides a price floor. 3. Private credit risks loom even as high-yield debt spreads narrow. 4. Surging energy and copper prices drive cost-push inflation fears. 5. Stay cautious until momentum pushes the index above forty points.",
         "reports": {
-            "JP": "GMSスコア33とVIXの2.88%上昇は、市場の防御的な姿勢を明確に示しています。純流動性が5714で停滞し、クレジットリスクがシステム全体の負荷を急激に高めます。1.95%の実質金利が資本コストを押し上げ、IWMの評価を1.85%下落させました。ゴールドの1.37%上昇は、根強いインフレ懸念に伴う安全資産への逃避を反映します。供給不足の流動性と信用市場の不安が重なり、リスクオフの継続が不可欠な状況です。",
-            "EN": "GMS 33 and 2.88% VIX spike confirm a defensive market regime. Stagnant liquidity at 5714 and credit risks create system stress. Real rates at 1.95% drive the 1.85% drop in IWM valuations. Gold rose 1.37% as investors seek safety from inflation shifts. Low liquidity and credit fears mandate a strict risk-off stance.",
-            "CN": "GMS评分33与VIX上升2.88%共同确认了当前市场明显的防御性体制。5714的停滞流动性与潜在信贷风险并存，显著加剧了系统的整体压力。1.95%的高实际利率推高资本成本，导致IWM估值出现1.85%的收缩。黄金上涨1.37%充分表明，在通胀担忧背景下投资者正寻求避险。流动性扩张缺乏及信用风险频发，要求全球投资者必须严格规避风险。",
-            "ES": "GMS 33 y alza de 2.88% en VIX confirman un régimen defensivo. Liquidez de 5714 y riesgos de crédito causan estrés sistémico. Tasas reales de 1.95% provocan caída de 1.85% en el índice IWM. El oro subió 1.37% por la búsqueda de refugio ante la inflación. Riesgos de crédito y baja liquidez exigen total cautela hoy.",
-            "HI": "GMS 33 और VIX की 2.88% वृद्धि बाजार में बढ़ते तनाव को दर्शाती है। 5714 की तरलता और क्रेडिट जोखिम प्रणालीगत अस्थिरता पैदा करते हैं। 1.95% की वास्तविक दरें लागत बढ़ाकर IWM मूल्य को कम करती हैं। सोने में 1.37% की बढ़त मुद्रास्फीति के बीच सुरक्षा की खोज है। तरलता की कमी और ऋण जोखिम के कारण जोखिम-मुक्त रुख अनिवार्य है।",
-            "ID": "GMS 33 dan VIX naik 2,88% mengonfirmasi rezim pasar yang defensif. Likuiditas statis 5714 dan risiko kredit memicu stres pada sistem. Suku bunga riil 1,95% menekan valuasi IWM hingga turun 1,85%. Emas naik 1,37% saat investor mencari aman dari risiko inflasi. Kurangnya likuiditas dan risiko kredit mewajibkan sikap waspada.",
-            "AR": "مؤشر GMS 33 وارتفاع VIX بنسبة 2.88% يؤكدان النظام الدفاعي للسوق. سيولة 5714 ومخاطر الائتمان تسبب ضغوطاً هيكلية واضحة في النظام. الفائدة الحقيقية 1.95% تدفع تقييمات IWM للانخفاض بنسبة 1.85%. صعود الذهب 1.37% يعكس الهروب للأمان بسبب مخاوف تضخمية معقدة. ضعف السيولة ومخاطر الائتمان تتطلب اتخاذ موقف استثماري حذر جداً."
+            "JP": "1. 現在のGMS指数は38と守備的領域にありますが、低値32からの回復は市場の底打ちを強く示唆しています。2. VIXが16.09へ上昇し警戒感が強まる一方で、ネットリクイディティの安定が過度な価格下落を防いでいます。3. ハイイールド債スプレッドの縮小にも関わらず、プライベートクレジットの崩壊リスクが新たな懸念材料です。4. 原油や銅、天然ガスなどの資源価格急騰は、期待インフレ率を押し上げ、実質金利のバランスを揺さぶります。5. モメンタムは改善傾向ですが、指数が中立水準の40を突破するまでは防御的な資産配分を維持すべきです。",
+            "EN": "1. GMS at 38 is defensive but shows a recovery from recent lows. 2. VIX rises 2.88% while stable liquidity provides a price floor. 3. Private credit risks loom even as high-yield debt spreads narrow. 4. Surging energy and copper prices drive cost-push inflation fears. 5. Stay cautious until momentum pushes the index above forty points.",
+            "CN": "1. 当前GMS指数为38，尽管仍处于防御区间，但从此前32点的低位回升显示出市场情绪正在底部企稳。2. 尽管VIX上涨2.88%引发了市场波动担忧，但5714点的净流动性水平为资产估值提供了坚实支撑。3. 即使高收益债利差在收窄，私人信贷市场潜在的违约和崩盘风险已成为压制风险偏好的核心逻辑。4. 原油、铜及天然气价格的同步大幅飙升加剧了通胀压力，直接挑战了当前实际利率与估值的平衡。5. 鉴于动能矢量正向上修复，投资者应保持警惕，直至整体指数能有效突破四十点这一中性平衡水位。",
+            "ES": "1. El GMS de 38 es defensivo pero el alza desde 32 sugiere un suelo firme. 2. El VIX sube 2.88% mientras la liquidez estable soporta el valor de activos. 3. El riesgo de crédito privado crece pese a diferenciales de deuda bajos. 4. El alza en crudo y cobre eleva la inflacion y presiona las tasas reales. 5. Mantenga la cautela hasta que el impulso supere el nivel neutral de 40.",
+            "HI": "1. GMS 38 रक्षात्मक है लेकिन 32 से सुधार बाजार के स्थिर होने का संकेत है। 2. VIX 2.88% बढ़ा है जबकि स्थिर तरलता कीमतों को गिरने से रोक रही है। 3. हाई-यील्ड स्प्रेड कम हैं मगर निजी ऋण जोखिम अब बाजार को डरा रहे हैं। 4. तेल और तांबे की तेजी से मुद्रास्फीति और वास्तविक दरों पर दबाव बढ़ेगा। 5. जब तक मोमेंटम 40 को पार न करे तब तक रक्षात्मक रणनीति ही अपनाएं।",
+            "ID": "1. GMS 38 tetap defensif namun pemulihan dari 32 menandakan dasar pasar. 2. VIX naik 2,88% saat likuiditas stabil menyokong valuasi aset utama. 3. Risiko kredit swasta naik meski spread obligasi yield tinggi menyempit. 4. Lonjakan minyak dan tembaga memicu inflasi serta menekan bunga riil. 5. Tetap defensif hingga momentum membawa indeks melampaui level netral.",
+            "AR": "1. مؤشر GMS عند 38 دفاعي مع تعافي المعنويات من مستوى 32 السابق. 2. ارتفاع VIX يقابله استقرار السيولة الصافية مما يدعم تقييمات الأصول. 3. مخاطر الائتمان الخاص تزداد رغم ضيق هوامش عوائد السندات المرتفعة. 4. قفزة أسعار النفط والنحاس ترفع التضخم وتضغط على الفائدة الحقيقية. 5. حافظ على الحذر حتى يتجاوز الزخم الصاعد مستوى الأربعين نقطة حالاً."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-23T00:54:04Z",
-            "score": 35
-        },
         {
             "date": "2026-01-23T01:32:25Z",
             "score": 35
@@ -1356,6 +1352,10 @@
         {
             "date": "2026-01-24T05:51:57Z",
             "score": 33
+        },
+        {
+            "date": "2026-01-24T06:48:33Z",
+            "score": 38
         }
     ],
     "intelligence": 0.0,
