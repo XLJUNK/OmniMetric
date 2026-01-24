@@ -1,20 +1,19 @@
 {
-    "last_updated": "2026-01-23T23:49:30Z",
-    "last_successful_update": "2026-01-23T23:49:30Z",
-    "gms_score": 32,
+    "last_updated": "2026-01-24T06:48:33Z",
+    "last_successful_update": "2026-01-24T06:48:33Z",
+    "gms_score": 38,
     "sector_scores": {
         "STOCKS": 35,
-        "CRYPTO": 25,
-        "FOREX": 55,
+        "CRYPTO": 75,
+        "FOREX": 70,
         "COMMODITIES": 55
     },
     "market_data": {
         "CRYPTO_SENTIMENT": {
-            "price": 24,
+            "price": 25,
             "change_percent": 0.0,
-            "trend": "FEAR",
+            "trend": "BEARISH",
             "sparkline": [
-                23,
                 20,
                 23,
                 24,
@@ -43,7 +42,8 @@
                 32,
                 24,
                 20,
-                24
+                24,
+                25
             ]
         },
         "YIELD_SPREAD": {
@@ -577,13 +577,12 @@
             ]
         },
         "BTC": {
-            "price": 89385.61,
-            "prev_price": 89462.45,
-            "daily_chg": -0.09,
-            "change_percent": -3.42,
-            "trend": "DOWN",
+            "price": 89534.98,
+            "prev_price": 89503.88,
+            "daily_chg": 0.03,
+            "change_percent": 1.39,
+            "trend": "UP",
             "sparkline": [
-                89944.7,
                 90603.19,
                 91413.49,
                 93882.55,
@@ -604,17 +603,17 @@
                 88310.91,
                 89376.96,
                 89462.45,
-                89385.61
+                89503.88,
+                89534.98
             ]
         },
         "ETH": {
-            "price": 2948.59,
-            "prev_price": 2949.63,
-            "daily_chg": -0.04,
-            "change_percent": -7.47,
-            "trend": "DOWN",
+            "price": 2958.39,
+            "prev_price": 2953.26,
+            "daily_chg": 0.17,
+            "change_percent": 0.78,
+            "trend": "UP",
             "sparkline": [
-                3124.42,
                 3125.92,
                 3140.71,
                 3226.13,
@@ -635,17 +634,17 @@
                 2935.61,
                 2978.9,
                 2949.63,
-                2948.59
+                2953.26,
+                2958.39
             ]
         },
         "SOL": {
-            "price": 127.19,
-            "prev_price": 128.29,
-            "daily_chg": -0.86,
-            "change_percent": -4.61,
-            "trend": "DOWN",
+            "price": 127.49,
+            "prev_price": 127.36,
+            "daily_chg": 0.1,
+            "change_percent": 1.42,
+            "trend": "UP",
             "sparkline": [
-                132.13,
                 133.3,
                 133.9,
                 137.99,
@@ -666,14 +665,15 @@
                 125.71,
                 129.38,
                 128.29,
-                127.19
+                127.36,
+                127.49
             ]
         },
         "DXY": {
-            "price": 97.46,
+            "price": 97.6,
             "prev_price": 98.36,
-            "daily_chg": -0.92,
-            "change_percent": -1.95,
+            "daily_chg": -0.77,
+            "change_percent": -1.8,
             "trend": "DOWN",
             "sparkline": [
                 98.29,
@@ -697,15 +697,15 @@
                 98.64,
                 98.76,
                 98.36,
-                97.46
+                97.6
             ]
         },
         "USDJPY": {
-            "price": 155.72,
+            "price": 158.5,
             "prev_price": 158.46,
-            "daily_chg": -1.73,
-            "change_percent": -1.15,
-            "trend": "DOWN",
+            "daily_chg": 0.03,
+            "change_percent": 0.61,
+            "trend": "UP",
             "sparkline": [
                 156.88,
                 156.18,
@@ -728,14 +728,14 @@
                 158.18,
                 158.16,
                 158.46,
-                155.72
+                158.5
             ]
         },
         "EURUSD": {
             "price": 1.18,
             "prev_price": 1.17,
-            "daily_chg": 1.29,
-            "change_percent": 1.7,
+            "daily_chg": 0.7,
+            "change_percent": 1.12,
             "trend": "UP",
             "sparkline": [
                 1.18,
@@ -763,10 +763,10 @@
             ]
         },
         "USDINR": {
-            "price": 91.64,
+            "price": 91.56,
             "prev_price": 91.54,
-            "daily_chg": 0.11,
-            "change_percent": 1.03,
+            "daily_chg": 0.02,
+            "change_percent": 0.94,
             "trend": "UP",
             "sparkline": [
                 89.6,
@@ -790,15 +790,15 @@
                 90.9,
                 91.12,
                 91.54,
-                91.64
+                91.56
             ]
         },
         "USDSAR": {
             "price": 3.75,
             "prev_price": 3.75,
-            "daily_chg": 0.11,
-            "change_percent": 0.01,
-            "trend": "UP",
+            "daily_chg": -0.01,
+            "change_percent": -0.11,
+            "trend": "DOWN",
             "sparkline": [
                 3.75,
                 3.75,
@@ -825,10 +825,10 @@
             ]
         },
         "GOLD": {
-            "price": 4983.1,
+            "price": 4976.2,
             "prev_price": 4908.8,
-            "daily_chg": 1.51,
-            "change_percent": 8.6,
+            "daily_chg": 1.37,
+            "change_percent": 8.45,
             "trend": "UP",
             "sparkline": [
                 4444.6,
@@ -852,14 +852,14 @@
                 4759.6,
                 4831.8,
                 4908.8,
-                4983.1
+                4976.2
             ]
         },
         "OIL": {
-            "price": 61.28,
+            "price": 61.07,
             "prev_price": 59.36,
-            "daily_chg": 3.23,
-            "change_percent": 3.1,
+            "daily_chg": 2.88,
+            "change_percent": 2.74,
             "trend": "UP",
             "sparkline": [
                 58.01,
@@ -883,14 +883,14 @@
                 60.34,
                 60.62,
                 59.36,
-                61.28
+                61.07
             ]
         },
         "COPPER": {
-            "price": 5.94,
+            "price": 5.91,
             "prev_price": 5.74,
-            "daily_chg": 3.39,
-            "change_percent": 2.57,
+            "daily_chg": 2.93,
+            "change_percent": 2.12,
             "trend": "UP",
             "sparkline": [
                 5.44,
@@ -914,15 +914,15 @@
                 5.77,
                 5.73,
                 5.74,
-                5.94
+                5.91
             ]
         },
         "NATGAS": {
-            "price": 3.64,
+            "price": 5.28,
             "prev_price": 5.05,
-            "daily_chg": -27.79,
-            "change_percent": 17.4,
-            "trend": "DOWN",
+            "daily_chg": 4.56,
+            "change_percent": 70.0,
+            "trend": "UP",
             "sparkline": [
                 3.96,
                 4.41,
@@ -945,7 +945,7 @@
                 3.91,
                 4.88,
                 5.05,
-                3.64
+                5.28
             ]
         },
         "MOVE": {
@@ -1105,42 +1105,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "Current GMS at 32 keeps the market in a defensive regime as the 2.88% VIX spike reflects rising structural uncertainty. Stagnant net liquidity paired with a 1.85% drop in IWM illustrates the tightening cost of capital for smaller firms. Emerging private credit meltdown risks and steady 10Y yields are forcing a broad valuation compression across sectors. A 1.73% decline in USDJPY signals a clear flight to safety while high real rates continue to suppress equity premiums. With momentum remaining flat, maintaining a defensive posture is logical until liquidity flows show a true reversal.",
+        "content": "1. GMS at 38 is defensive but shows a recovery from recent lows. 2. VIX rises 2.88% while stable liquidity provides a price floor. 3. Private credit risks loom even as high-yield debt spreads narrow. 4. Surging energy and copper prices drive cost-push inflation fears. 5. Stay cautious until momentum pushes the index above forty points.",
         "reports": {
-            "JP": "GMSが32へ低下し防衛局面にある中、VIXの2.88%上昇は市場の潜在的な不安定さと不確実性を明確に示しています。流動性が停滞する中でIWMが1.85%下落した事実は、金利上昇に伴う中小型株のバリュエーション圧縮を象徴しています。民間信用市場の崩壊リスクが浮上しており、10年債利回りの高止まりがリスク資産への資本コスト負担を増大させています。円高への急激な回帰は安全資産への逃避を加速させ、実質金利1.95%の維持が株式市場のプレミアムを一段と抑制します。モメンタムが横ばいの現状では、流動性供給の反転が見られるまで、守備的なポートフォリオの維持が最も賢明な選択です。",
-            "EN": "Current GMS at 32 keeps the market in a defensive regime as the 2.88% VIX spike reflects rising structural uncertainty. Stagnant net liquidity paired with a 1.85% drop in IWM illustrates the tightening cost of capital for smaller firms. Emerging private credit meltdown risks and steady 10Y yields are forcing a broad valuation compression across sectors. A 1.73% decline in USDJPY signals a clear flight to safety while high real rates continue to suppress equity premiums. With momentum remaining flat, maintaining a defensive posture is logical until liquidity flows show a true reversal.",
-            "CN": "当前GMS指数降至32并维持防御格局，而VIX指数2.88%的涨幅则深刻反映了市场内部不确定性的剧烈波动。净流动性趋于停滞且IWM大幅下跌1.85%，这种现象充分说明了资本成本上升正迫使中小型企业进行估值压缩。随着私人信贷市场崩溃风险的不断升温，长期美债收益率的坚挺进一步加剧了风险资产所面临的流动性紧缩压力。美元兑日元1.73%的跌幅清晰揭示了避险资金的快速回流，同时高位运行的实际利率也显著削弱了股市的吸引力。在市场动能依然维持平淡的情况下，建议在看到净流动性指标出现根本性好转之前，继续严格执行防御性投资策略。",
-            "ES": "El GMS en 32 mantiene el régimen defensivo mientras el salto del 2.88% en el VIX refleja una mayor incertidumbre estructural. La liquidez estancada y la caída del 1.85% en el IWM ilustran la compresión de valoraciones por el alto costo del capital. Los riesgos de crisis en el crédito privado junto a rendimientos altos del Tesoro presionan fuertemente a los activos de riesgo. La caída del 1.73% en el USDJPY señala una clara fuga hacia la seguridad mientras las tasas reales limitan las primas de renta variable. Con un impulso plano, es vital mantener una postura defensiva hasta que los flujos de liquidez neta muestren una mejora real.",
-            "HI": "GMS 32 पर होने से सुरक्षात्मक रुख बना हुआ है और VIX में 2.88% की वृद्धि बाजार में बढ़ती अनिश्चितता को स्पष्ट रूप से दर्शाती है। शुद्ध तरलता में ठहराव और IWM में 1.85% की गिरावट यह बताती है कि बढ़ती पूंजी लागत के कारण मूल्यांकन में भारी दबाव आ रहा है। निजी ऋण संकट के बढ़ते जोखिम और स्थिर बांड यील्ड जोखिम वाली संपत्तियों पर अतिरिक्त दबाव डालकर उनकी कीमत को कम कर रहे हैं। USDJPY में 1.73% की गिरावट सुरक्षित निवेश की ओर झुकाव दिखाती है, जबकि उच्च वास्तविक दरें इक्विटी प्रीमियम को सीमित करती हैं। वर्तमान सपाट गति को देखते हुए, जब तक तरलता प्रवाह में सुधार नहीं होता, तब तक रक्षात्मक रणनीति बनाए रखना ही सबसे उचित है।",
-            "ID": "Skor GMS 32 menjaga pasar tetap defensif saat lonjakan VIX 2.88% mencerminkan ketidakpastian struktural yang kian meningkat. Likuiditas yang stagnan dan penurunan IWM sebesar 1.85% menunjukkan tekanan kompresi valuasi akibat naiknya biaya modal. Risiko krisis kredit swasta yang muncul bersama imbal hasil obligasi tinggi memperberat tekanan pada seluruh aset berisiko. Penurunan USDJPY sebesar 1.73% menandakan pelarian ke aset aman sementara suku bunga riil terus menekan premi ekuitas. Dengan momentum yang datar, mempertahankan posisi defensif sangat logis hingga aliran likuiditas neta membaik secara nyata.",
-            "AR": "مؤشر GMS عند 32 يبقي السوق في حالة دفاعية بينما يعكس ارتفاع VIX بنسبة 2.88% زيادة واضحة في عدم اليقين الهيكلي. ركود السيولة وانخفاض IWM بنسبة 1.85% يوضح ضغط تقييم الأصول الناتج عن ارتفاع تكلفة رأس المال في الشركات الصغيرة. مخاطر ائتمان القطاع الخاص المتزايدة مع ثبات عوائد السندات تزيد من الضغوط الانكماشية على كافة الأصول ذات المخاطر العالية. تراجع USDJPY بنسبة 1.73% يشير إلى هروب واضح نحو الأمان بينما تستمر الفوائد الحقيقية في كبح علاوات مخاطر الأسهم. في ظل زخم مسطح، يبقى الحفاظ على نهج استثماري دفاعي أمراً ضرورياً حتى يتحسن تدفق السيولة الصافية بشكل ملموس وحقيقي."
+            "JP": "1. 現在のGMS指数は38と守備的領域にありますが、低値32からの回復は市場の底打ちを強く示唆しています。2. VIXが16.09へ上昇し警戒感が強まる一方で、ネットリクイディティの安定が過度な価格下落を防いでいます。3. ハイイールド債スプレッドの縮小にも関わらず、プライベートクレジットの崩壊リスクが新たな懸念材料です。4. 原油や銅、天然ガスなどの資源価格急騰は、期待インフレ率を押し上げ、実質金利のバランスを揺さぶります。5. モメンタムは改善傾向ですが、指数が中立水準の40を突破するまでは防御的な資産配分を維持すべきです。",
+            "EN": "1. GMS at 38 is defensive but shows a recovery from recent lows. 2. VIX rises 2.88% while stable liquidity provides a price floor. 3. Private credit risks loom even as high-yield debt spreads narrow. 4. Surging energy and copper prices drive cost-push inflation fears. 5. Stay cautious until momentum pushes the index above forty points.",
+            "CN": "1. 当前GMS指数为38，尽管仍处于防御区间，但从此前32点的低位回升显示出市场情绪正在底部企稳。2. 尽管VIX上涨2.88%引发了市场波动担忧，但5714点的净流动性水平为资产估值提供了坚实支撑。3. 即使高收益债利差在收窄，私人信贷市场潜在的违约和崩盘风险已成为压制风险偏好的核心逻辑。4. 原油、铜及天然气价格的同步大幅飙升加剧了通胀压力，直接挑战了当前实际利率与估值的平衡。5. 鉴于动能矢量正向上修复，投资者应保持警惕，直至整体指数能有效突破四十点这一中性平衡水位。",
+            "ES": "1. El GMS de 38 es defensivo pero el alza desde 32 sugiere un suelo firme. 2. El VIX sube 2.88% mientras la liquidez estable soporta el valor de activos. 3. El riesgo de crédito privado crece pese a diferenciales de deuda bajos. 4. El alza en crudo y cobre eleva la inflacion y presiona las tasas reales. 5. Mantenga la cautela hasta que el impulso supere el nivel neutral de 40.",
+            "HI": "1. GMS 38 रक्षात्मक है लेकिन 32 से सुधार बाजार के स्थिर होने का संकेत है। 2. VIX 2.88% बढ़ा है जबकि स्थिर तरलता कीमतों को गिरने से रोक रही है। 3. हाई-यील्ड स्प्रेड कम हैं मगर निजी ऋण जोखिम अब बाजार को डरा रहे हैं। 4. तेल और तांबे की तेजी से मुद्रास्फीति और वास्तविक दरों पर दबाव बढ़ेगा। 5. जब तक मोमेंटम 40 को पार न करे तब तक रक्षात्मक रणनीति ही अपनाएं।",
+            "ID": "1. GMS 38 tetap defensif namun pemulihan dari 32 menandakan dasar pasar. 2. VIX naik 2,88% saat likuiditas stabil menyokong valuasi aset utama. 3. Risiko kredit swasta naik meski spread obligasi yield tinggi menyempit. 4. Lonjakan minyak dan tembaga memicu inflasi serta menekan bunga riil. 5. Tetap defensif hingga momentum membawa indeks melampaui level netral.",
+            "AR": "1. مؤشر GMS عند 38 دفاعي مع تعافي المعنويات من مستوى 32 السابق. 2. ارتفاع VIX يقابله استقرار السيولة الصافية مما يدعم تقييمات الأصول. 3. مخاطر الائتمان الخاص تزداد رغم ضيق هوامش عوائد السندات المرتفعة. 4. قفزة أسعار النفط والنحاس ترفع التضخم وتضغط على الفائدة الحقيقية. 5. حافظ على الحذر حتى يتجاوز الزخم الصاعد مستوى الأربعين نقطة حالاً."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-22T23:46:41Z",
-            "score": 34
-        },
-        {
-            "date": "2026-01-22T23:57:15Z",
-            "score": 34
-        },
-        {
-            "date": "2026-01-23T00:18:33Z",
-            "score": 35
-        },
-        {
-            "date": "2026-01-23T00:27:39Z",
-            "score": 35
-        },
-        {
-            "date": "2026-01-23T00:40:28Z",
-            "score": 35
-        },
-        {
-            "date": "2026-01-23T00:54:04Z",
-            "score": 35
-        },
         {
             "date": "2026-01-23T01:32:25Z",
             "score": 35
@@ -1356,6 +1332,30 @@
         {
             "date": "2026-01-23T23:49:30Z",
             "score": 32
+        },
+        {
+            "date": "2026-01-24T02:24:05Z",
+            "score": 33
+        },
+        {
+            "date": "2026-01-24T03:51:20Z",
+            "score": 33
+        },
+        {
+            "date": "2026-01-24T04:44:21Z",
+            "score": 33
+        },
+        {
+            "date": "2026-01-24T05:34:27Z",
+            "score": 33
+        },
+        {
+            "date": "2026-01-24T05:51:57Z",
+            "score": 33
+        },
+        {
+            "date": "2026-01-24T06:48:33Z",
+            "score": 38
         }
     ],
     "intelligence": 0.0,

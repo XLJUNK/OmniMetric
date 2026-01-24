@@ -1,20 +1,19 @@
 {
-    "last_updated": "2026-01-23T16:16:28Z",
-    "last_successful_update": "2026-01-23T16:16:28Z",
-    "gms_score": 37,
+    "last_updated": "2026-01-24T06:48:33Z",
+    "last_successful_update": "2026-01-24T06:48:33Z",
+    "gms_score": 38,
     "sector_scores": {
-        "STOCKS": 50,
-        "CRYPTO": 25,
-        "FOREX": 65,
+        "STOCKS": 35,
+        "CRYPTO": 75,
+        "FOREX": 70,
         "COMMODITIES": 55
     },
     "market_data": {
         "CRYPTO_SENTIMENT": {
-            "price": 24,
+            "price": 25,
             "change_percent": 0.0,
-            "trend": "FEAR",
+            "trend": "BEARISH",
             "sparkline": [
-                23,
                 20,
                 23,
                 24,
@@ -43,15 +42,15 @@
                 32,
                 24,
                 20,
-                24
+                24,
+                25
             ]
         },
         "YIELD_SPREAD": {
-            "price": 0.55,
+            "price": 0.54,
             "change_percent": 0.0,
             "trend": "NORMAL",
             "sparkline": [
-                0.56,
                 0.53,
                 0.51,
                 0.52,
@@ -80,7 +79,8 @@
                 0.57,
                 0.6,
                 0.56,
-                0.55
+                0.55,
+                0.54
             ]
         },
         "HY_SPREAD": {
@@ -142,13 +142,12 @@
             ]
         },
         "NET_LIQUIDITY": {
-            "price": 5713.26,
-            "prev_price": 5711.98,
+            "price": 5714.39,
+            "prev_price": 5713.26,
             "daily_chg": 0.02,
-            "change_percent": -1.52,
+            "change_percent": -1.5,
             "trend": "EXPANSION",
             "sparkline": [
-                5679.52,
                 5677.76,
                 5678.8,
                 5713.41,
@@ -177,15 +176,15 @@
                 5801.3,
                 5799.02,
                 5711.98,
-                5713.26
+                5713.26,
+                5714.39
             ]
         },
         "BREAKEVEN_INFLATION": {
-            "price": 2.31,
+            "price": 2.32,
             "change_percent": 0.0,
             "trend": "STABLE",
             "sparkline": [
-                2.26,
                 2.25,
                 2.23,
                 2.24,
@@ -214,15 +213,16 @@
                 2.33,
                 2.33,
                 2.34,
-                2.31
+                2.31,
+                2.32
             ]
         },
         "VIX": {
-            "price": 15.41,
+            "price": 16.09,
             "prev_price": 15.64,
-            "daily_chg": -1.47,
-            "change_percent": -2.84,
-            "trend": "DOWN",
+            "daily_chg": 2.88,
+            "change_percent": 1.45,
+            "trend": "UP",
             "sparkline": [
                 14.08,
                 14.0,
@@ -245,15 +245,14 @@
                 20.09,
                 16.9,
                 15.64,
-                15.41
+                16.09
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
-            "price": 0.65,
+            "price": 0.64,
             "change_percent": 0.0,
             "trend": "NEUTRAL",
             "sparkline": [
-                0.67,
                 0.67,
                 0.67,
                 0.67,
@@ -282,7 +281,8 @@
                 0.65,
                 0.7,
                 0.66,
-                0.65
+                0.65,
+                0.64
             ]
         },
         "US_10Y_YIELD": {
@@ -290,7 +290,6 @@
             "change_percent": 0.0,
             "trend": "STABLE",
             "sparkline": [
-                4.14,
                 4.19,
                 4.18,
                 4.15,
@@ -319,15 +318,15 @@
                 4.24,
                 4.24,
                 4.3,
+                4.26,
                 4.26
             ]
         },
         "REAL_INTEREST_RATE": {
-            "price": 1.92,
+            "price": 1.95,
             "change_percent": 0.0,
             "trend": "STABLE",
             "sparkline": [
-                1.89,
                 1.93,
                 1.93,
                 1.92,
@@ -356,14 +355,15 @@
                 1.91,
                 1.91,
                 1.97,
-                1.92
+                1.92,
+                1.95
             ]
         },
         "SPY": {
-            "price": 690.52,
+            "price": 689.23,
             "prev_price": 688.98,
-            "daily_chg": 0.22,
-            "change_percent": -0.16,
+            "daily_chg": 0.04,
+            "change_percent": -0.35,
             "trend": "UP",
             "sparkline": [
                 684.83,
@@ -387,7 +387,7 @@
                 677.58,
                 685.4,
                 688.98,
-                690.52
+                689.23
             ]
         },
         "TNX": {
@@ -422,10 +422,10 @@
             ]
         },
         "QQQ": {
-            "price": 624.8,
+            "price": 622.72,
             "prev_price": 620.76,
-            "daily_chg": 0.65,
-            "change_percent": 0.57,
+            "daily_chg": 0.32,
+            "change_percent": 0.23,
             "trend": "UP",
             "sparkline": [
                 619.21,
@@ -449,14 +449,14 @@
                 608.06,
                 616.28,
                 620.76,
-                624.8
+                622.72
             ]
         },
         "IWM": {
-            "price": 267.11,
+            "price": 264.81,
             "prev_price": 269.79,
-            "daily_chg": -1.0,
-            "change_percent": 0.51,
+            "daily_chg": -1.85,
+            "change_percent": -0.36,
             "trend": "DOWN",
             "sparkline": [
                 253.58,
@@ -480,14 +480,14 @@
                 262.58,
                 267.79,
                 269.79,
-                267.11
+                264.81
             ]
         },
         "RSP": {
-            "price": 198.85,
+            "price": 198.77,
             "prev_price": 199.66,
-            "daily_chg": -0.41,
-            "change_percent": -0.1,
+            "daily_chg": -0.45,
+            "change_percent": -0.14,
             "trend": "DOWN",
             "sparkline": [
                 193.54,
@@ -511,15 +511,15 @@
                 196.08,
                 199.4,
                 199.66,
-                198.85
+                198.77
             ]
         },
         "HYG": {
-            "price": 81.18,
+            "price": 81.14,
             "prev_price": 81.18,
-            "daily_chg": 0.01,
-            "change_percent": 0.12,
-            "trend": "UP",
+            "daily_chg": -0.05,
+            "change_percent": 0.06,
+            "trend": "DOWN",
             "sparkline": [
                 80.43,
                 80.49,
@@ -542,7 +542,7 @@
                 80.88,
                 81.12,
                 81.18,
-                81.18
+                81.14
             ]
         },
         "NIFTY": {
@@ -577,13 +577,12 @@
             ]
         },
         "BTC": {
-            "price": 89582.97,
-            "prev_price": 89462.45,
-            "daily_chg": 0.13,
-            "change_percent": -3.21,
+            "price": 89534.98,
+            "prev_price": 89503.88,
+            "daily_chg": 0.03,
+            "change_percent": 1.39,
             "trend": "UP",
             "sparkline": [
-                89944.7,
                 90603.19,
                 91413.49,
                 93882.55,
@@ -604,17 +603,17 @@
                 88310.91,
                 89376.96,
                 89462.45,
-                89582.97
+                89503.88,
+                89534.98
             ]
         },
         "ETH": {
-            "price": 2948.74,
-            "prev_price": 2949.63,
-            "daily_chg": -0.03,
-            "change_percent": -7.47,
-            "trend": "DOWN",
+            "price": 2958.39,
+            "prev_price": 2953.26,
+            "daily_chg": 0.17,
+            "change_percent": 0.78,
+            "trend": "UP",
             "sparkline": [
-                3124.42,
                 3125.92,
                 3140.71,
                 3226.13,
@@ -635,17 +634,17 @@
                 2935.61,
                 2978.9,
                 2949.63,
-                2948.74
+                2953.26,
+                2958.39
             ]
         },
         "SOL": {
-            "price": 128.02,
-            "prev_price": 128.29,
-            "daily_chg": -0.21,
-            "change_percent": -3.99,
-            "trend": "DOWN",
+            "price": 127.49,
+            "prev_price": 127.36,
+            "daily_chg": 0.1,
+            "change_percent": 1.42,
+            "trend": "UP",
             "sparkline": [
-                132.13,
                 133.3,
                 133.9,
                 137.99,
@@ -666,14 +665,15 @@
                 125.71,
                 129.38,
                 128.29,
-                128.02
+                127.36,
+                127.49
             ]
         },
         "DXY": {
-            "price": 98.19,
+            "price": 97.6,
             "prev_price": 98.36,
-            "daily_chg": -0.17,
-            "change_percent": -1.21,
+            "daily_chg": -0.77,
+            "change_percent": -1.8,
             "trend": "DOWN",
             "sparkline": [
                 98.29,
@@ -697,15 +697,15 @@
                 98.64,
                 98.76,
                 98.36,
-                98.19
+                97.6
             ]
         },
         "USDJPY": {
-            "price": 158.21,
+            "price": 158.5,
             "prev_price": 158.46,
-            "daily_chg": -0.15,
-            "change_percent": 0.43,
-            "trend": "DOWN",
+            "daily_chg": 0.03,
+            "change_percent": 0.61,
+            "trend": "UP",
             "sparkline": [
                 156.88,
                 156.18,
@@ -728,14 +728,14 @@
                 158.18,
                 158.16,
                 158.46,
-                158.21
+                158.5
             ]
         },
         "EURUSD": {
             "price": 1.18,
             "prev_price": 1.17,
-            "daily_chg": 0.68,
-            "change_percent": 1.1,
+            "daily_chg": 0.7,
+            "change_percent": 1.12,
             "trend": "UP",
             "sparkline": [
                 1.18,
@@ -763,10 +763,10 @@
             ]
         },
         "USDINR": {
-            "price": 91.88,
+            "price": 91.56,
             "prev_price": 91.54,
-            "daily_chg": 0.37,
-            "change_percent": 1.3,
+            "daily_chg": 0.02,
+            "change_percent": 0.94,
             "trend": "UP",
             "sparkline": [
                 89.6,
@@ -790,15 +790,15 @@
                 90.9,
                 91.12,
                 91.54,
-                91.88
+                91.56
             ]
         },
         "USDSAR": {
             "price": 3.75,
             "prev_price": 3.75,
-            "daily_chg": 0.11,
-            "change_percent": 0.01,
-            "trend": "UP",
+            "daily_chg": -0.01,
+            "change_percent": -0.11,
+            "trend": "DOWN",
             "sparkline": [
                 3.75,
                 3.75,
@@ -825,10 +825,10 @@
             ]
         },
         "GOLD": {
-            "price": 4963.8,
+            "price": 4976.2,
             "prev_price": 4908.8,
-            "daily_chg": 1.12,
-            "change_percent": 8.18,
+            "daily_chg": 1.37,
+            "change_percent": 8.45,
             "trend": "UP",
             "sparkline": [
                 4444.6,
@@ -852,14 +852,14 @@
                 4759.6,
                 4831.8,
                 4908.8,
-                4963.8
+                4976.2
             ]
         },
         "OIL": {
-            "price": 60.83,
+            "price": 61.07,
             "prev_price": 59.36,
-            "daily_chg": 2.48,
-            "change_percent": 2.34,
+            "daily_chg": 2.88,
+            "change_percent": 2.74,
             "trend": "UP",
             "sparkline": [
                 58.01,
@@ -883,14 +883,14 @@
                 60.34,
                 60.62,
                 59.36,
-                60.83
+                61.07
             ]
         },
         "COPPER": {
-            "price": 5.93,
+            "price": 5.91,
             "prev_price": 5.74,
-            "daily_chg": 3.33,
-            "change_percent": 2.51,
+            "daily_chg": 2.93,
+            "change_percent": 2.12,
             "trend": "UP",
             "sparkline": [
                 5.44,
@@ -914,15 +914,15 @@
                 5.77,
                 5.73,
                 5.74,
-                5.93
+                5.91
             ]
         },
         "NATGAS": {
-            "price": 3.63,
+            "price": 5.28,
             "prev_price": 5.05,
-            "daily_chg": -28.11,
-            "change_percent": 16.89,
-            "trend": "DOWN",
+            "daily_chg": 4.56,
+            "change_percent": 70.0,
+            "trend": "UP",
             "sparkline": [
                 3.96,
                 4.41,
@@ -945,15 +945,14 @@
                 3.91,
                 4.88,
                 5.05,
-                3.63
+                5.28
             ]
         },
         "MOVE": {
-            "price": 56.5,
-            "change_percent": -5.13,
+            "price": 56.25,
+            "change_percent": -0.44,
             "trend": "NORMAL",
             "sparkline": [
-                61.17,
                 59.48,
                 58.5,
                 59.21,
@@ -972,39 +971,39 @@
                 58.05,
                 66.67,
                 59.56,
-                56.5
+                56.5,
+                56.25
             ]
         },
         "BREADTH": {
-            "price": 0.06,
+            "price": 0.21,
             "change_percent": 0.0,
             "trend": "HEALTHY",
             "sparkline": [
                 0.0,
-                0.01,
-                0.05,
-                0.24,
-                0.2,
-                0.09,
-                0.58,
-                0.84,
-                1.47,
-                0.64,
-                1.52,
+                0.04,
+                0.23,
+                0.19,
+                0.07,
+                0.56,
+                0.83,
                 1.45,
-                1.38,
-                1.58,
-                2.55,
-                2.73,
-                2.55,
-                3.06,
-                3.64,
-                3.25,
-                2.61
+                0.63,
+                1.5,
+                1.43,
+                1.37,
+                1.57,
+                2.53,
+                2.71,
+                2.53,
+                3.04,
+                3.62,
+                3.23,
+                2.74
             ]
         },
         "SPY_MOMENTUM": {
-            "price": -0.06,
+            "price": -0.21,
             "change_percent": 0,
             "trend": "BALANCED",
             "sparkline": [
@@ -1106,98 +1105,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS score of 37 confirms a defensive regime where flat liquidity mandates strict capital preservation for all portfolios. Momentum moved from 34 to 37, yet real rates at 1.92% keep forcing valuation compression. Rising private credit risks signal systemic fragility despite the tightening of high-yield spreads. Market breadth at 0.06 shows that current price action lacks broad support and remains dangerously concentrated. Maintain a safety flight posture until GMS breaks the 40-point neutral threshold to confirm a macro shift.",
+        "content": "1. GMS at 38 is defensive but shows a recovery from recent lows. 2. VIX rises 2.88% while stable liquidity provides a price floor. 3. Private credit risks loom even as high-yield debt spreads narrow. 4. Surging energy and copper prices drive cost-push inflation fears. 5. Stay cautious until momentum pushes the index above forty points.",
         "reports": {
-            "JP": "GMSスコア37は防衛領域を示しており、流動性の停滞に伴い資本の保全を最優先すべき局面です。モメンタムは37へ微増しましたが、実質金利1.92%の高止まりがバリュエーションを強く抑制しています。プライベートクレジットの崩壊リスクの浮上は、スプレッド縮小の裏にある金融システムの脆弱性を露呈させました。騰落広がりを示すブレドスは0.06と極めて低く、指数の動きは一部の銘柄に依存した不安定なものです。スコアが40を突破するまでは、リスクを抑え安全資産を重視する防衛的な姿勢を維持してください。",
-            "EN": "GMS score of 37 confirms a defensive regime where flat liquidity mandates strict capital preservation for all portfolios. Momentum moved from 34 to 37, yet real rates at 1.92% keep forcing valuation compression. Rising private credit risks signal systemic fragility despite the tightening of high-yield spreads. Market breadth at 0.06 shows that current price action lacks broad support and remains dangerously concentrated. Maintain a safety flight posture until GMS breaks the 40-point neutral threshold to confirm a macro shift.",
-            "CN": "GMS评分37处于明确的防御区间，流动性停滞要求全球投资者在当前环境下必须优先考虑资本保全。虽然势能微升至37，但1.92%的高真实利率持续对各类资产估值产生明显的压缩效应。私人信贷市场的潜在崩盘风险加剧了系统脆弱性，抵消了高收益债利差收窄带来的正面影响。目前市场广度仅为0.06，反映出当前的上涨极度集中且缺乏广泛的基础支撑。在指标突破40分的中立门槛前，建议维持避险姿态并重点关注流动性风险的蔓延。",
-            "ES": "GMS en 37 confirma un régimen defensivo donde la liquidez estancada exige preservar el capital rigurosamente. El impulso subió a 37, pero tasas reales de 1.92% mantienen la compresión de valor en activos de riesgo. Riesgos en crédito privado sugieren fragilidad sistémica pese a la mejora en diferenciales de deuda. La amplitud de 0.06 indica que las ganancias carecen de base sólida y están muy concentradas. Siga en modo de seguridad hasta que el GMS supere los 40 puntos para confirmar un cambio de tendencia real.",
-            "HI": "GMS स्कोर 37 रक्षात्मक शासन है जहाँ पूंजी सुरक्षा सबसे महत्वपूर्ण है। गति 37 है, लेकिन 1.92% की वास्तविक दरें मूल्यांकन पर भारी दबाव डाल रही हैं। निजी ऋण जोखिम वित्तीय प्रणाली में कमजोरी दिखाते हैं, जो चिंता का विषय है। बाजार की चौड़ाई 0.06 होना दर्शाता है कि बढ़त केवल कुछ शेयरों तक सीमित है। जब तक स्कोर 40 को पार नहीं करता, तब तक सुरक्षित निवेश बनाए रखना आवश्यक है।",
-            "ID": "Skor GMS 37 mengonfirmasi rezim defensif di mana likuiditas stagnan menuntut fokus penuh pada perlindungan modal. Momentum naik ke 37, namun suku bunga riil 1.92% terus menekan valuasi aset risiko secara signifikan. Risiko kredit swasta yang meningkat menandakan kerentanan sistemik meski spread imbal hasil tinggi menyempit. Luas pasar 0.06 menunjukkan kenaikan harga sangat terkonsentrasi dan tidak memiliki basis pendukung luas. Tetaplah pada posisi aman hingga skor GMS melewati batas 40 untuk mengonfirmasi perubahan makro.",
-            "AR": "تؤكد درجة 37 في مؤشر GMS دخول نظام دفاعي يتطلب حماية رأس المال كأولوية. الزخم وصل 37 لكن الفائدة الحقيقية 1.92% تضغط التقييمات بشكل مستمر وواضح. أزمة الائتمان الخاص تعكس هشاشة نظامية كبيرة رغم تراجع فروق العوائد مؤخراً. اتساع السوق 0.06 يثبت أن المكاسب الحالية مركزة جداً وتفتقر للدعم الجماعي. التزم بنهج التحوط والأمان حتى يتجاوز المؤشر حاجز 40 نقطة لتأكيد التحول."
+            "JP": "1. 現在のGMS指数は38と守備的領域にありますが、低値32からの回復は市場の底打ちを強く示唆しています。2. VIXが16.09へ上昇し警戒感が強まる一方で、ネットリクイディティの安定が過度な価格下落を防いでいます。3. ハイイールド債スプレッドの縮小にも関わらず、プライベートクレジットの崩壊リスクが新たな懸念材料です。4. 原油や銅、天然ガスなどの資源価格急騰は、期待インフレ率を押し上げ、実質金利のバランスを揺さぶります。5. モメンタムは改善傾向ですが、指数が中立水準の40を突破するまでは防御的な資産配分を維持すべきです。",
+            "EN": "1. GMS at 38 is defensive but shows a recovery from recent lows. 2. VIX rises 2.88% while stable liquidity provides a price floor. 3. Private credit risks loom even as high-yield debt spreads narrow. 4. Surging energy and copper prices drive cost-push inflation fears. 5. Stay cautious until momentum pushes the index above forty points.",
+            "CN": "1. 当前GMS指数为38，尽管仍处于防御区间，但从此前32点的低位回升显示出市场情绪正在底部企稳。2. 尽管VIX上涨2.88%引发了市场波动担忧，但5714点的净流动性水平为资产估值提供了坚实支撑。3. 即使高收益债利差在收窄，私人信贷市场潜在的违约和崩盘风险已成为压制风险偏好的核心逻辑。4. 原油、铜及天然气价格的同步大幅飙升加剧了通胀压力，直接挑战了当前实际利率与估值的平衡。5. 鉴于动能矢量正向上修复，投资者应保持警惕，直至整体指数能有效突破四十点这一中性平衡水位。",
+            "ES": "1. El GMS de 38 es defensivo pero el alza desde 32 sugiere un suelo firme. 2. El VIX sube 2.88% mientras la liquidez estable soporta el valor de activos. 3. El riesgo de crédito privado crece pese a diferenciales de deuda bajos. 4. El alza en crudo y cobre eleva la inflacion y presiona las tasas reales. 5. Mantenga la cautela hasta que el impulso supere el nivel neutral de 40.",
+            "HI": "1. GMS 38 रक्षात्मक है लेकिन 32 से सुधार बाजार के स्थिर होने का संकेत है। 2. VIX 2.88% बढ़ा है जबकि स्थिर तरलता कीमतों को गिरने से रोक रही है। 3. हाई-यील्ड स्प्रेड कम हैं मगर निजी ऋण जोखिम अब बाजार को डरा रहे हैं। 4. तेल और तांबे की तेजी से मुद्रास्फीति और वास्तविक दरों पर दबाव बढ़ेगा। 5. जब तक मोमेंटम 40 को पार न करे तब तक रक्षात्मक रणनीति ही अपनाएं।",
+            "ID": "1. GMS 38 tetap defensif namun pemulihan dari 32 menandakan dasar pasar. 2. VIX naik 2,88% saat likuiditas stabil menyokong valuasi aset utama. 3. Risiko kredit swasta naik meski spread obligasi yield tinggi menyempit. 4. Lonjakan minyak dan tembaga memicu inflasi serta menekan bunga riil. 5. Tetap defensif hingga momentum membawa indeks melampaui level netral.",
+            "AR": "1. مؤشر GMS عند 38 دفاعي مع تعافي المعنويات من مستوى 32 السابق. 2. ارتفاع VIX يقابله استقرار السيولة الصافية مما يدعم تقييمات الأصول. 3. مخاطر الائتمان الخاص تزداد رغم ضيق هوامش عوائد السندات المرتفعة. 4. قفزة أسعار النفط والنحاس ترفع التضخم وتضغط على الفائدة الحقيقية. 5. حافظ على الحذر حتى يتجاوز الزخم الصاعد مستوى الأربعين نقطة حالاً."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-22T14:53:27Z",
-            "score": 34
-        },
-        {
-            "date": "2026-01-22T15:07:40Z",
-            "score": 30
-        },
-        {
-            "date": "2026-01-22T15:29:04Z",
-            "score": 31
-        },
-        {
-            "date": "2026-01-22T15:44:13Z",
-            "score": 31
-        },
-        {
-            "date": "2026-01-22T16:50:04Z",
-            "score": 34
-        },
-        {
-            "date": "2026-01-22T17:41:35Z",
-            "score": 34
-        },
-        {
-            "date": "2026-01-22T18:51:32Z",
-            "score": 34
-        },
-        {
-            "date": "2026-01-22T19:34:36Z",
-            "score": 34
-        },
-        {
-            "date": "2026-01-22T19:51:40Z",
-            "score": 34
-        },
-        {
-            "date": "2026-01-22T20:40:17Z",
-            "score": 33
-        },
-        {
-            "date": "2026-01-22T21:35:11Z",
-            "score": 34
-        },
-        {
-            "date": "2026-01-22T21:54:24Z",
-            "score": 34
-        },
-        {
-            "date": "2026-01-22T22:36:52Z",
-            "score": 34
-        },
-        {
-            "date": "2026-01-22T23:37:18Z",
-            "score": 34
-        },
-        {
-            "date": "2026-01-22T23:46:41Z",
-            "score": 34
-        },
-        {
-            "date": "2026-01-22T23:57:15Z",
-            "score": 34
-        },
-        {
-            "date": "2026-01-23T00:18:33Z",
-            "score": 35
-        },
-        {
-            "date": "2026-01-23T00:27:39Z",
-            "score": 35
-        },
-        {
-            "date": "2026-01-23T00:40:28Z",
-            "score": 35
-        },
-        {
-            "date": "2026-01-23T00:54:04Z",
-            "score": 35
-        },
         {
             "date": "2026-01-23T01:32:25Z",
             "score": 35
@@ -1357,6 +1276,86 @@
         {
             "date": "2026-01-23T16:16:28Z",
             "score": 37
+        },
+        {
+            "date": "2026-01-23T16:29:31Z",
+            "score": 37
+        },
+        {
+            "date": "2026-01-23T16:47:33Z",
+            "score": 37
+        },
+        {
+            "date": "2026-01-23T17:36:30Z",
+            "score": 36
+        },
+        {
+            "date": "2026-01-23T17:54:58Z",
+            "score": 33
+        },
+        {
+            "date": "2026-01-23T18:51:21Z",
+            "score": 33
+        },
+        {
+            "date": "2026-01-23T19:36:09Z",
+            "score": 33
+        },
+        {
+            "date": "2026-01-23T19:50:06Z",
+            "score": 33
+        },
+        {
+            "date": "2026-01-23T20:40:24Z",
+            "score": 33
+        },
+        {
+            "date": "2026-01-23T21:33:32Z",
+            "score": 32
+        },
+        {
+            "date": "2026-01-23T21:50:41Z",
+            "score": 32
+        },
+        {
+            "date": "2026-01-23T22:32:59Z",
+            "score": 32
+        },
+        {
+            "date": "2026-01-23T22:51:50Z",
+            "score": 32
+        },
+        {
+            "date": "2026-01-23T23:34:40Z",
+            "score": 32
+        },
+        {
+            "date": "2026-01-23T23:49:30Z",
+            "score": 32
+        },
+        {
+            "date": "2026-01-24T02:24:05Z",
+            "score": 33
+        },
+        {
+            "date": "2026-01-24T03:51:20Z",
+            "score": 33
+        },
+        {
+            "date": "2026-01-24T04:44:21Z",
+            "score": 33
+        },
+        {
+            "date": "2026-01-24T05:34:27Z",
+            "score": 33
+        },
+        {
+            "date": "2026-01-24T05:51:57Z",
+            "score": 33
+        },
+        {
+            "date": "2026-01-24T06:48:33Z",
+            "score": 38
         }
     ],
     "intelligence": {
@@ -1364,85 +1363,85 @@
             {
                 "title": "Wall Street braced for a private credit meltdown. The risk of one is rising",
                 "link": "https://www.cnbc.com/2026/01/23/wall-street-private-credit-risk-rising.html",
-                "isoDate": "2026-01-23T16:16:29.651327Z"
+                "isoDate": "2026-01-24T06:48:36.771651Z"
             },
             {
-                "title": "Intel stock drops 15% as manufacturing troubles overshadow earnings beat",
-                "link": "https://www.cnbc.com/2026/01/23/intel-stock-earnings-q4-2025-supply.html",
-                "isoDate": "2026-01-23T16:16:29.653345Z"
+                "title": "Sen. Warren blasts CFPB director for undermining Trump's credit card affordability push",
+                "link": "https://www.cnbc.com/2026/01/23/warren-cfpb-director-letter-undermining-trump-credit-card-affordability.html",
+                "isoDate": "2026-01-24T06:48:36.773654Z"
             },
             {
                 "title": "Trump's push for Greenland mineral rights could block China's access to rare earths",
                 "link": "https://www.cnbc.com/2026/01/23/trump-greenland-china-rare-earth-mineral.html",
-                "isoDate": "2026-01-23T16:16:29.653368Z"
+                "isoDate": "2026-01-24T06:48:36.773677Z"
             },
             {
-                "title": "Pardoned Binance founder Zhao says his business relationship with the Trumps was 'misconstrued'",
-                "link": "https://www.cnbc.com/2026/01/23/pardon-binance-founder-cz-trump.html",
-                "isoDate": "2026-01-23T16:16:29.653382Z"
+                "title": "Databricks obtains $1.8 billion in additional debt ahead of IPO",
+                "link": "https://www.cnbc.com/2026/01/23/databricks-obtains-1point8-billion-in-additional-debt-ahead-of-ipo.html",
+                "isoDate": "2026-01-24T06:48:36.773690Z"
             },
             {
-                "title": "S&P 500 and Nasdaq rise led by tech, Dow struggles as Street wraps up wild week: Live updates",
-                "link": "https://www.cnbc.com/2026/01/22/stock-market-today-live-updates.html",
-                "isoDate": "2026-01-23T16:16:29.653394Z"
+                "title": "Intel stock drops 17%, its worst day since 2024, as manufacturing troubles overshadow earnings beat",
+                "link": "https://www.cnbc.com/2026/01/23/intel-stock-earnings-q4-2025-supply.html",
+                "isoDate": "2026-01-24T06:48:36.773702Z"
             },
             {
-                "title": "Small cap stocks are feeling the 'January Effect.' Why the gains could continue",
-                "link": "https://www.cnbc.com/2026/01/23/small-cap-stocks-are-feeling-the-january-effect-why-the-gains-could-continue.html",
-                "isoDate": "2026-01-23T16:16:29.653406Z"
+                "title": "Megacap earnings next week could lift a stock market that’s broadening out. Here’s what’s ahead",
+                "link": "https://www.cnbc.com/2026/01/23/stock-market-next-week-outlook-for-jan-26-30-2026.html",
+                "isoDate": "2026-01-24T06:48:36.773714Z"
             }
         ],
         "translations": {
             "JP": [
-                "ウォール街はプライベートクレジットの崩壊に備えていた。そのリスクが高まっている",
-                "インテル株が15%下落、製造上の問題が予想を上回る決算に影を落とす",
-                "トランプ氏のグリーンランド鉱物権益獲得への動き、中国のレアアースへのアクセスを遮断する可能性",
-                "恩赦を受けたバイナンス創設者の趙氏、トランプ一家とのビジネス関係は「誤解されていた」と語る",
-                "S&P 500とナスダックがハイテク株主導で上昇、ダウは苦戦、激動の1週間が終了：ライブ速報",
-                "小型株に「1月効果」の兆し。上昇が続く可能性の理由"
+                "ウォール街はプライベートクレジットの崩壊に備えていた。そのリスクが高まっている。",
+                "ウォーレン上院議員、トランプ氏のクレジットカード負担軽減策を妨害したとしてCFPB局長を非難。",
+                "トランプ氏のグリーンランド鉱物資源権益への追求、中国のレアアースへのアクセスを阻止する可能性。",
+                "データブリックス、IPOを前に18億ドルの追加負債を調達。",
+                "インテル株が17％下落、2024年以降で最悪の日に。製造上の問題が決算の上振れを打ち消す。",
+                "来週のメガキャップ企業の決算、広がりを見せる株式市場を押し上げる可能性。今後の見通し。"
             ],
             "CN": [
-                "华尔街已为私募信贷崩溃做好准备，风险正在上升",
-                "英特尔股价下跌15%，制造问题掩盖了超出预期的业绩表现",
-                "特朗普推动格陵兰岛矿产权利，可能阻断中国获取稀土",
-                "获赦免的币安创始人赵长鹏表示，他与特朗普家族的业务关系被“误解”了",
-                "科技股推动标普500和纳指上涨，道指表现挣扎，华尔街结束动荡的一周：实时更新",
-                "小盘股正感受到“一月效应”，涨势为何可能持续"
+                "华尔街已为私募信贷崩溃做好准备。风险正在上升。",
+                "参议员沃伦抨击CFPB局长破坏特朗普的信用卡负担能力计划。",
+                "特朗普争取格陵兰岛矿产权可能阻断中国获取稀土的渠道。",
+                "Databricks 在 IPO 前获得 18 亿美元额外债务融资。",
+                "英特尔股价下跌 17%，创下 2024 年以来最差单日表现，制造问题掩盖了业绩超预期的利好。",
+                "下周的大盘股财报或将提振正在扩大涨势的股市。以下是未来展望。"
             ],
             "ES": [
-                "Wall Street se preparó para un colapso del crédito privado. El riesgo de que ocurra está aumentando",
-                "Las acciones de Intel caen un 15% mientras los problemas de fabricación empañan unos resultados mejores de lo previsto",
-                "El impulso de Trump por los derechos minerales en Groenlandia podría bloquear el acceso de China a las tierras raras",
-                "El indultado fundador de Binance, Zhao, afirma que su relación comercial con los Trump fue \"malinterpretada\"",
-                "El S&P 500 y el Nasdaq suben impulsados por la tecnología, el Dow sufre mientras Wall Street cierra una semana agitada: actualizaciones en vivo",
-                "Las acciones de pequeña capitalización sienten el \"efecto enero\". Por qué las ganancias podrían continuar"
+                "Wall Street se preparó para un colapso del crédito privado. El riesgo de que ocurra está aumentando.",
+                "La senadora Warren critica al director de la CFPB por socavar el impulso de Trump a la asequibilidad de las tarjetas de crédito.",
+                "La presión de Trump por los derechos minerales de Groenlandia podría bloquear el acceso de China a las tierras raras.",
+                "Databricks obtiene 1.800 millones de dólares en deuda adicional antes de su salida a bolsa.",
+                "Las acciones de Intel caen un 17%, su peor día desde 2024, mientras los problemas de fabricación eclipsan la superación de las previsiones de beneficios.",
+                "Los beneficios de las megacapitalizadas la próxima semana podrían impulsar un mercado bursátil que se está ampliando. Esto es lo que nos espera."
             ],
             "HI": [
-                "वॉल स्ट्रीट ने निजी ऋण संकट के लिए खुद को तैयार किया। इसके होने का जोखिम बढ़ रहा है",
-                "विनिर्माण समस्याओं के कारण इंटेल के शेयर 15% गिरे, बेहतर तिमाही नतीजों पर संकट भारी पड़ा",
-                "ग्रीनलैंड के खनिज अधिकारों के लिए ट्रम्प का प्रयास चीन की दुर्लभ मृदा (rare earths) तक पहुंच को रोक सकता है",
-                "क्षमा प्राप्त बिनेंस संस्थापक झाओ का कहना है कि ट्रम्प परिवार के साथ उनके व्यापारिक संबंधों को 'गलत समझा' गया था",
-                "टेक के नेतृत्व में S&P 500 और नैस्डैक में तेजी, डॉव में संघर्ष क्योंकि वॉल स्ट्रीट ने उथल-पुथल वाले सप्ताह को समाप्त किया: लाइव अपडेट",
-                "स्मॉल कैप शेयरों में 'जनवरी इफेक्ट' दिख रहा है। बढ़त क्यों जारी रह सकती है"
+                "वॉल स्ट्रीट ने निजी ऋण संकट के लिए खुद को तैयार किया। इसके होने का जोखिम बढ़ रहा है।",
+                "सीनेटर वारेन ने ट्रंप की क्रेडिट कार्ड सामर्थ्य योजना को कमजोर करने के लिए CFPB निदेशक की आलोचना की।",
+                "ग्रीनलैंड के खनिज अधिकारों के लिए ट्रंप का प्रयास दुर्लभ धातुओं तक चीन की पहुंच को रोक सकता है।",
+                "डेटाब्रिक्स ने IPO से पहले 1.8 बिलियन डॉलर का अतिरिक्त कर्ज प्राप्त किया।",
+                "विनिर्माण समस्याओं के कारण इंटेल के शेयर 17% गिरे, 2024 के बाद का सबसे खराब दिन।",
+                "अगले हफ्ते मेगाकैप आय उन शेयर बाजारों को ऊपर उठा सकती है जो विस्तार कर रहे हैं। यहाँ जानें आगे क्या है।"
             ],
             "ID": [
-                "Wall Street bersiap menghadapi keruntuhan kredit swasta. Risikonya kini meningkat",
-                "Saham Intel anjlok 15% karena masalah manufaktur membayangi capaian laba yang melampaui estimasi",
-                "Upaya Trump untuk hak mineral Greenland dapat memblokir akses China ke tanah jarang",
-                "Pendiri Binance yang diampuni, Zhao, mengatakan hubungan bisnisnya dengan keluarga Trump telah \"disalahpahami\"",
-                "S&P 500 dan Nasdaq naik dipimpin sektor teknologi, Dow kesulitan saat Wall Street menutup pekan yang liar: Pembaruan terkini",
-                "Saham kapitalisasi kecil merasakan 'Efek Januari'. Mengapa penguatan ini bisa berlanjut"
+                "Wall Street bersiap menghadapi keruntuhan kredit swasta. Risikonya kini meningkat.",
+                "Senator Warren kecam direktur CFPB karena hambat upaya keterjangkauan kartu kredit Trump.",
+                "Upaya Trump atas hak mineral Greenland dapat memblokir akses Tiongkok ke tanah jarang.",
+                "Databricks memperoleh utang tambahan senilai $1,8 miliar menjelang IPO.",
+                "Saham Intel anjlok 17%, hari terburuk sejak 2024, karena masalah manufaktur bayangi laba yang melampaui estimasi.",
+                "Laba emiten kapitalisasi raksasa minggu depan dapat dongkrak pasar saham yang tengah meluas. Inilah yang akan terjadi."
             ],
             "AR": [
-                "وول ستريت تستعد لانهيار الائتمان الخاص. ومخاطر حدوثه في تزايد",
-                "أسهم إنتل تهبط بنسبة 15% بسبب مشاكل التصنيع التي غطت على تفوق الأرباح",
-                "سعي ترامب للحصول على حقوق المعادن في غرينلاند قد يعيق وصول الصين إلى الأتربة النادرة",
-                "مؤسس باينانس \"تشاو\" الذي حصل على عفو يقول إن علاقته التجارية مع عائلة ترامب \"فُهمت بشكل خاطئ\"",
-                "مؤشرا \"إس آند بي 500\" و\"ناسداك\" يرتفعان بقيادة التكنولوجيا، و\"داو جونز\" يعاني مع اختتام وول ستريت لأسبوع مضطرب: تحديثات مباشرة",
-                "الأسهم ذات القيمة السوقية الصغيرة تشعر بـ \"تأثير يناير\". لماذا قد تستمر المكاسب"
+                "وول ستريت تستعد لانهيار الائتمان الخاص.. والمخاطر في تزايد.",
+                "السناتور وارن تهاجم مدير مكتب الحماية المالية للمستهلك لتقويضه مساعي ترامب لتعزيز القدرة على تحمل تكاليف البطاقات الائتمانية.",
+                "مساعي ترامب للحصول على حقوق المعادن في جرينلاند قد تمنع وصول الصين إلى الأتربة النادرة.",
+                "\"داتابريكس\" تحصل على ديون إضافية بقيمة 1.8 مليار دولار قبل طرحها العام الأولي.",
+                "سهم إنتل يهوي 17% في أسوأ يوم له منذ 2024 مع طغيان مشاكل التصنيع على تفوق الأرباح.",
+                "أرباح الشركات الكبرى الأسبوع المقبل قد ترفع سوق الأسهم الذي يشهد توسعاً.. إليكم ما ينتظرنا."
             ]
         },
-        "last_updated": "2026-01-23T16:16:47.791559Z"
+        "last_updated": "2026-01-24T06:48:54.200057Z"
     },
     "system_status": "OPERATIONAL"
 }
