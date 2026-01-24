@@ -5,6 +5,14 @@ import os
 from datetime import datetime
 import matplotlib.font_manager as fm
 
+# Specialized shaping for Arabic
+try:
+    import arabic_reshaper
+    from bidi.algorithm import get_display
+    HAS_RTL_SUPPORT = True
+except ImportError:
+    HAS_RTL_SUPPORT = False
+
 # Font Mapping Configuration
 FONT_DIR = os.path.join(os.path.dirname(__file__), "assets", "fonts")
 FONT_MAP = {
@@ -32,6 +40,18 @@ def get_font_prop(lang="EN"):
     # Ultimate fallback
     return fm.FontProperties(family='sans-serif', weight='bold')
 
+def process_text(text, lang):
+    """Handles RTL shaping for Arabic if libraries are available."""
+    if lang == "AR" and HAS_RTL_SUPPORT and text:
+        try:
+            reshaped_text = arabic_reshaper.reshape(text)
+            bidi_text = get_display(reshaped_text)
+            return bidi_text
+        except Exception as e:
+            print(f"[OGP/RTL] Shaping error: {e}")
+            return text
+    return text
+
 def generate_dynamic_ogp(data, output_path, lang="EN"):
     """
     Generates a high-contrast 1200x630 OGP image.
@@ -49,7 +69,8 @@ def generate_dynamic_ogp(data, output_path, lang="EN"):
     ax.axis('off')
 
     # 2. Draw Header
-    ax.text(60, 560, "GLOBAL MACRO SIGNAL", color='#94a3b8', fontsize=24, fontproperties=font_prop, ha='left')
+    title = process_text("GLOBAL MACRO SIGNAL", lang) # Likely stays English but processed anyway
+    ax.text(60, 560, title, color='#94a3b8', fontsize=24, fontproperties=font_prop, ha='left')
     
     today = datetime.now().strftime("%Y-%m-%d")
     ax.text(1140, 560, today, color='#94a3b8', fontsize=24, fontproperties=font_prop, ha='right')
@@ -65,21 +86,21 @@ def generate_dynamic_ogp(data, output_path, lang="EN"):
         score_color = '#ef4444' # Red
         regime_text = "RISK-OFF"
 
+    # RTL Process Regime Text (Important for AR localization if implemented eventually)
+    regime_text = process_text(regime_text, lang)
+
     # Draw Circle
     circle = patches.Circle((600, 315), 180, linewidth=10, edgecolor=score_color, facecolor='#1e293b')
     ax.add_patch(circle)
     
-    # Draw Score Text
+    # Draw Score Text (Digits usually don't need reshaping but safe to pass)
     ax.text(600, 315, str(score), color='white', fontsize=120, fontweight='bold', ha='center', va='center', fontproperties=font_prop)
     ax.text(600, 180, regime_text, color=score_color, fontsize=30, fontweight='bold', ha='center', va='center', fontproperties=font_prop)
 
     # 4. Sector Grid (Bottom)
     sectors = data.get("sector_scores", {})
-    sec_names = ["STOCKS", "CRYPTO", "FOREX", "CMDTY"]
+    sec_names = ["STOCKS", "CRYPTO", "FOREX", "CMDTY"] # These are currently hardcoded English
     sec_keys = ["STOCKS", "CRYPTO", "FOREX", "COMMODITIES"]
-    
-    start_x = 200
-    gap = 266 # (1200-400)/3 approx
     
     y_pos = 80
     
@@ -94,7 +115,8 @@ def generate_dynamic_ogp(data, output_path, lang="EN"):
         if len(sec_keys) == 4:
             x = 150 + (i * 300)
 
-        ax.text(x, y_pos, sec_names[i], color='#94a3b8', fontsize=16, ha='center', fontproperties=font_prop)
+        label = process_text(sec_names[i], lang)
+        ax.text(x, y_pos, label, color='#94a3b8', fontsize=16, ha='center', fontproperties=font_prop)
         ax.text(x, y_pos - 40, str(sec_score), color=sec_color, fontsize=28, fontweight='bold', ha='center', fontproperties=font_prop)
 
     # 5. Save
