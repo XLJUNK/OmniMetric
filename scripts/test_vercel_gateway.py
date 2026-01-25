@@ -21,9 +21,9 @@ def test_gateway():
     print(f"🔹 API Key: {key[:4]}... (Length: {len(key)})")
 
     # 2. Construct URL (Exact Production Pattern)
-    # Pattern: https://gateway.vercel.ai/with-gateway/{slug}/google/v1beta/models/{model}:generateContent
+    # Pattern: https://gateway.ai.vercel.tech/v1/{slug}/google/v1beta/models/{model}:generateContent
     model = "gemini-3-flash"
-    base_url = f"https://gateway.vercel.ai/with-gateway/{slug}/google/v1beta/models/{model}:generateContent"
+    base_url = f"https://gateway.ai.vercel.tech/v1/{slug}/google/v1beta/models/{model}:generateContent"
     
     # Add Key as Query Param (Vercel Proxy Standard)
     target_url = f"{base_url}?key={key}"

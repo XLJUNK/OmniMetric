@@ -1177,9 +1177,9 @@ Output JSON:
                     log_diag(f"[AI GATEWAY] Rate Limit Guard: Backing off for {wait_time}s...")
                     time.sleep(wait_time)
 
-                # URL: Vercel AI Gateway (Forced Physical Path)
-                # Correct Pattern: https://gateway.vercel.ai/with-gateway/xljunk/google/v1beta/models/{model}:generateContent
-                url = f"https://gateway.vercel.ai/with-gateway/{gateway_slug}/google/v1beta/models/{model_name}:generateContent"
+                # URL: Vercel AI Gateway (Restored Working Host)
+                # Correct Pattern: https://gateway.ai.vercel.tech/v1/xljunk/google/v1beta/models/{model}:generateContent
+                url = f"https://gateway.ai.vercel.tech/v1/{gateway_slug}/google/v1beta/models/{model_name}:generateContent"
                 
                 headers = {
                     "Content-Type": "application/json",

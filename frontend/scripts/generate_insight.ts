@@ -60,7 +60,7 @@ async function main() {
     // v5.9: Physically force all traffic through Vercel AI Gateway via baseURL
     const google = createGoogleGenerativeAI({
         apiKey: gatewayApiKey || process.env.GEMINI_API_KEY,
-        baseURL: `https://gateway.vercel.ai/with-gateway/${gatewaySlug}/google`,
+        baseURL: `https://gateway.ai.vercel.tech/v1/${gatewaySlug}/google`,
     });
 
     try {

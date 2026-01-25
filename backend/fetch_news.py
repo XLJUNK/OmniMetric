@@ -200,7 +200,19 @@ Output JSON format: {{ "JP": [...], "CN": [...], ... }} only."""
     except Exception as e:
         log_diag(f"[FATAL] Bridge Exception: {e}")
         create_failure_flag(f"Bridge Exception: {e}")
-        sys.exit(0)
+        return None
+
+def get_news_payload():
+    """Logic split to allow gms_engine to call news fetch directly."""
+    items = fetch_raw_news()
+    if not items: return None
+    translations = translate_news_batch(items)
+    if not translations: return None
+    return {
+        "news": items,
+        "translations": translations,
+        "last_updated": datetime.utcnow().isoformat() + "Z"
+    }
 
 def main():
     log_diag("=== STARTING NEWS UPDATE ===")
