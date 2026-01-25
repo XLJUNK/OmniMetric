@@ -21,9 +21,9 @@ def test_gateway():
     print(f"🔹 API Key: {key[:4]}... (Length: {len(key)})")
 
     # 2. Construct URL (Exact Production Pattern)
-    # Pattern: https://gateway.ai.vercel.com/v1/{slug}/google/models/{model}:generateContent
-    model = "gemini-2.0-flash-001"
-    base_url = f"https://gateway.ai.vercel.com/v1/{slug}/google/models/{model}:generateContent"
+    # Pattern: https://gateway.vercel.ai/with-gateway/{slug}/google/v1beta/models/{model}:generateContent
+    model = "gemini-3-flash"
+    base_url = f"https://gateway.vercel.ai/with-gateway/{slug}/google/v1beta/models/{model}:generateContent"
     
     # Add Key as Query Param (Vercel Proxy Standard)
     target_url = f"{base_url}?key={key}"
@@ -31,12 +31,15 @@ def test_gateway():
     print(f"🔹 Target URL: {base_url} (Key Hidden)")
     
     # 3. Headers
+    gateway_key = os.getenv("AI_GATEWAY_API_KEY")
     headers = {
         "Content-Type": "application/json",
         "x-vercel-ai-gateway-provider": "google",
         "x-vercel-ai-gateway-cache": "disable",
         "User-Agent": "OmniMetric-Verifier/1.0"
     }
+    if gateway_key:
+        headers["Authorization"] = f"Bearer {gateway_key}"
     
     # 4. Payload
     payload = {

@@ -30,6 +30,7 @@ load_dotenv(os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env')) # 
 FRED_KEY = os.getenv("FRED_API_KEY", "").strip()
 GEMINI_KEY = os.getenv("GEMINI_API_KEY", "").strip()
 FMP_KEY = os.getenv("FMP_API_KEY", "").strip()
+AI_GATEWAY_KEY = os.getenv("AI_GATEWAY_API_KEY", "").strip()
 
 # CONFIGURATION
 # Institutional-grade constants
@@ -1188,6 +1189,9 @@ Output JSON:
                     "x-vercel-ai-gateway-cache": "disable", # Disable cache to force fresh gen
                     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" # Bypass WAF
                 }
+                
+                if AI_GATEWAY_KEY:
+                    headers["Authorization"] = f"Bearer {AI_GATEWAY_KEY}"
                 
                 # Proxy URL Construction
                 proxy_url = f"{url}?key={GEMINI_KEY}"
