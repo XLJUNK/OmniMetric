@@ -23,14 +23,20 @@ jobs:
           VERCEL_AI_GATEWAY_SLUG: ${{ secrets.VERCEL_AI_GATEWAY_SLUG }}
         run: python scripts/test_vercel_gateway.py
 
-      - name: Debug with Curl
+      - name: Diagnostic Curl Tests
         if: always()
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          VERCEL_AI_GATEWAY_SLUG: ${{ secrets.VERCEL_AI_GATEWAY_SLUG }}
+          SLUG: "xljunk"
         run: |
-          echo "Testing Connectivity with Curl..."
-          curl -v -X POST "https://gateway.ai.vercel.com/v1/$VERCEL_AI_GATEWAY_SLUG/google/models/gemini-2.0-flash-001:generateContent?key=$GEMINI_API_KEY" \
-          -H "Content-Type: application/json" \
-          -H "x-vercel-ai-gateway-provider: google" \
-          -d '{"contents": [{"parts": [{"text": "Hello"}]}]}'
+          echo "--- Variation 1: with-gateway (Instruction) ---"
+          curl -v -X POST "https://gateway.vercel.ai/with-gateway/$SLUG/google/v1beta/models/gemini-3-flash:generateContent?key=$GEMINI_API_KEY" \
+          -H "Content-Type: application/json" -d '{"contents":[{"parts":[{"text":"Hi"}]}]}'
+          
+          echo "--- Variation 2: ai-gateway.vercel.sh ---"
+          curl -v -X POST "https://ai-gateway.vercel.sh/with-gateway/$SLUG/google/v1beta/models/gemini-3-flash:generateContent?key=$GEMINI_API_KEY" \
+          -H "Content-Type: application/json" -d '{"contents":[{"parts":[{"text":"Hi"}]}]}'
+
+          echo "--- Variation 3: Standard v1 Pattern ---"
+          curl -v -X POST "https://gateway.ai.vercel.com/v1/$SLUG/google/v1beta/models/gemini-3-flash:generateContent?key=$GEMINI_API_KEY" \
+          -H "Content-Type: application/json" -d '{"contents":[{"parts":[{"text":"Hi"}]}]}'
