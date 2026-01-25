@@ -131,7 +131,7 @@ Output JSON format: {{ "JP": [...], "CN": [...], ... }} only."""
         if not os.path.exists(script_path):
             log_diag(f"[FATAL] Translation Script NOT FOUND at {script_path}")
             create_failure_flag("Translation Script Missing")
-            sys.exit(0) # Fail-Open (Allow partial commit)
+            return {} 
 
         # 2. COMMAND CONSTRUCTION
         # Linux/Actions: ["npx", "tsx", path] with shell=False
@@ -158,7 +158,7 @@ Output JSON format: {{ "JP": [...], "CN": [...], ... }} only."""
             log_diag(f"[FATAL] Node process exited with code {process.returncode}")
             log_diag(f"STDERR: {stderr}")
             create_failure_flag(f"Node Process Failed (Code {process.returncode})")
-            sys.exit(0) # Fail-Open
+            return {}
 
         # 3. RESPONSE PARSING
         log_diag(f"Node finished. Stdout length: {len(stdout)} chars")
@@ -168,7 +168,7 @@ Output JSON format: {{ "JP": [...], "CN": [...], ... }} only."""
         if not match:
             log_diag(f"[FATAL] Invalid Bridge Output (No JSON wrapper). Raw: {stdout[:500]}")
             create_failure_flag("Invalid Bridge Output")
-            sys.exit(0) # Fail-Open
+            return {}
 
         wrapper = json.loads(match.group(0))
         inner_text = wrapper.get("text", "")
@@ -176,14 +176,13 @@ Output JSON format: {{ "JP": [...], "CN": [...], ... }} only."""
         # Extract inner JSON if wrapped in markdown
         json_match = re.search(r'(\{.*\})', inner_text, re.DOTALL)
         if not json_match:
-             # Try parsing directly if no code block
              try:
                  data = json.loads(inner_text)
                  return data
              except:
                  log_diag(f"[FATAL] Could not parse AI response JSON: {inner_text[:200]}")
                  create_failure_flag("JSON Parse Error")
-                 sys.exit(0)
+                 return {}
 
         final_json_str = json_match.group(1)
         data = json.loads(final_json_str)
@@ -192,7 +191,7 @@ Output JSON format: {{ "JP": [...], "CN": [...], ... }} only."""
         if not all(k in data for k in required):
             log_diag(f"[FATAL] Missing languages in translation. Got: {list(data.keys())}")
             create_failure_flag("Missing Languages")
-            sys.exit(0)
+            return {}
             
         log_diag("[SUCCESS] Translation verified.")
         return data

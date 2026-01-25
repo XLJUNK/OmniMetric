@@ -1177,28 +1177,31 @@ Output JSON:
                     log_diag(f"[AI GATEWAY] Rate Limit Guard: Backing off for {wait_time}s...")
                     time.sleep(wait_time)
 
-                # URL: Vercel AI Gateway (Official Production Host)
-                # Correct Pattern: https://gateway.ai.vercel.com/v1/xljunk/google/v1beta/models/{model}:generateContent
-                url = f"https://gateway.ai.vercel.com/v1/{gateway_slug}/google/v1beta/models/{model_name}:generateContent"
-                
+
+                # Unified Key/URL Logic with Fail-Safe
                 headers = {
                     "Content-Type": "application/json",
-                    "x-vercel-ai-gateway-provider": "google",
-                    "x-vercel-ai-gateway-slug": gateway_slug, # Explicit routing
-                    "x-vercel-ai-gateway-cache": "disable", # Disable cache to force fresh gen
-                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" # Bypass WAF
+                    "x-vercel-ai-gateway-cache": "disable",
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
                 }
                 
-                if AI_GATEWAY_KEY:
-                    headers["Authorization"] = f"Bearer {AI_GATEWAY_KEY}"
-                
-                # Proxy URL Construction
-                proxy_url = f"{url}?key={GEMINI_KEY}"
+                if attempt == 0:
+                    # Attempt 1: Vercel AI Gateway (Forced Physical Path)
+                    url = f"https://gateway.vercel.ai/with-gateway/{gateway_slug}/google/v1beta/models/{model_name}:generateContent"
+                    headers["x-vercel-ai-gateway-provider"] = "google"
+                    headers["x-vercel-ai-gateway-slug"] = gateway_slug
+                    if AI_GATEWAY_KEY: headers["Authorization"] = f"Bearer {AI_GATEWAY_KEY}"
+                else:
+                    # Attempt 2+: Direct API Fallback
+                    log_diag(f"[AI GATEWAY] Failing Over to Direct Google API for {model_name}...")
+                    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent"
+
+                target_url = f"{url}?key={GEMINI_KEY}"
                 
                 payload = {"contents": [{"parts": [{"text": prompt}]}]}
                 
                 # Timeout Increased to 30s
-                response = requests.post(proxy_url, json=payload, headers=headers, timeout=30)
+                response = requests.post(target_url, json=payload, headers=headers, timeout=30)
                 
                 if response.status_code == 200:
                     result = response.json()
