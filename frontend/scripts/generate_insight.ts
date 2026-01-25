@@ -54,7 +54,12 @@ async function main() {
 
     const prompt = await getPrompt();
 
-    const gatewaySlug = process.env.VERCEL_AI_GATEWAY_SLUG || 'omni-metric';
+    const gatewaySlug = process.env.VERCEL_AI_GATEWAY_SLUG || 'xljunk'; // Specific target validation
+    const gatewayApiKey = process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_AI_GATEWAY_API_KEY;
+
+    if (!gatewayApiKey) {
+        console.warn("[WARN] AI_GATEWAY_API_KEY seems missing. Gateway might reject the request.");
+    }
 
     try {
         const result = await generateText({
@@ -64,6 +69,9 @@ async function main() {
                 'x-vercel-ai-gateway-provider': 'google',
                 'x-vercel-ai-gateway-cache': 'enable',
                 'x-vercel-ai-gateway-cache-ttl': '3600',
+                // Explicitly asserting the slug and key for physical trace
+                'x-vercel-ai-gateway-slug': gatewaySlug,
+                ...(gatewayApiKey ? { 'Authorization': `Bearer ${gatewayApiKey}` } : {})
             }
         });
 

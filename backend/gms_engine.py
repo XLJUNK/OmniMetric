@@ -1161,7 +1161,7 @@ Output JSON:
         "gemini-2.5-flash-lite"
     ]
 
-    gateway_slug = "xljunk" # Strict enforcement
+    gateway_slug = os.getenv("VERCEL_AI_GATEWAY_SLUG", "xljunk") # Dynamic with strict fallback
     
     for model_name in models:
         log_diag(f"[AI GATEWAY] Attempting Model: {model_name}...")
