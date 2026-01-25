@@ -1,11 +1,11 @@
 {
-    "last_updated": "2026-01-25T17:30:22Z",
-    "last_successful_update": "2026-01-25T17:30:22Z",
-    "gms_score": 33,
+    "last_updated": "2026-01-25T17:48:21Z",
+    "last_successful_update": "2026-01-25T17:48:21Z",
+    "gms_score": 32,
     "sector_scores": {
         "STOCKS": 35,
         "CRYPTO": 25,
-        "FOREX": 65,
+        "FOREX": 55,
         "COMMODITIES": 55
     },
     "market_data": {
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 87692.55,
+            "price": 87871.37,
             "prev_price": 89110.73,
-            "daily_chg": -1.59,
-            "change_percent": -1.88,
+            "daily_chg": -1.39,
+            "change_percent": -1.68,
             "trend": "DOWN",
             "sparkline": [
                 91413.49,
@@ -604,14 +604,14 @@
                 89462.45,
                 89503.88,
                 89110.73,
-                87692.55
+                87871.37
             ]
         },
         "ETH": {
-            "price": 2877.38,
+            "price": 2887.49,
             "prev_price": 2948.74,
-            "daily_chg": -2.42,
-            "change_percent": -3.41,
+            "daily_chg": -2.08,
+            "change_percent": -3.07,
             "trend": "DOWN",
             "sparkline": [
                 3140.71,
@@ -635,14 +635,14 @@
                 2949.63,
                 2953.26,
                 2948.74,
-                2877.38
+                2887.49
             ]
         },
         "SOL": {
-            "price": 121.79,
+            "price": 122.26,
             "prev_price": 127.05,
-            "daily_chg": -4.14,
-            "change_percent": -5.87,
+            "daily_chg": -3.77,
+            "change_percent": -5.5,
             "trend": "DOWN",
             "sparkline": [
                 133.9,
@@ -666,7 +666,7 @@
                 128.29,
                 127.36,
                 127.05,
-                121.79
+                122.26
             ]
         },
         "DXY": {
@@ -701,13 +701,12 @@
             ]
         },
         "USDJPY": {
-            "price": 158.5,
-            "prev_price": 158.46,
-            "daily_chg": 0.03,
-            "change_percent": 0.61,
-            "trend": "UP",
+            "price": 155.53,
+            "prev_price": 158.5,
+            "daily_chg": -1.88,
+            "change_percent": -1.67,
+            "trend": "DOWN",
             "sparkline": [
-                156.88,
                 156.18,
                 156.09,
                 156.46,
@@ -728,7 +727,8 @@
                 158.18,
                 158.16,
                 158.46,
-                158.5
+                158.5,
+                155.53
             ]
         },
         "EURUSD": {
@@ -1105,22 +1105,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS Status: 33 (Defensive). A flat momentum vector maintains a cautious regime. While VIX (Fear Index) rose 2.88% indicating rising anxiety, the DXY (Dollar Strength) fell significantly by 0.92%, providing a liquidity cushion. Contrarian view: Strong performance in Copper and Gold suggests underlying commodity demand that could offset winter storm disruptions. Though sentiment remains low at 25, tightening HY Spreads indicate credit resilience. Action: Maintain defensive positioning while monitoring if USD weakness triggers a risk-on reversal.",
+        "content": "GMS Status: Defensive (32/100). Macro Root: Flat momentum pushed the score to 32 as the VIX (Fear/Volatility) rose by 2.88%, signaling rising caution. However, a weakening DXY (Dollar strength) and narrowing HY Spreads suggest credit markets remain stable. Warning: While winter storms add logistical risk, the sharp drop in DXY provides unexpected liquidity support. Conclusion: Maintain defensive positioning while watching if liquidity prevents a deeper market correction.",
         "reports": {
-            "JP": "GMS状況：33（防衛）。横ばいのモメンタムにより慎重な局面が継続しています。VIX（恐怖指数）が2.88%上昇し警戒感が高まる一方、DXY（ドル指数）が0.92%下落し流動性を支えています。逆説的視点：銅や金の力強い上昇は、冬の嵐による混乱を相殺する実需の強さを示唆しています。センチメントは25と低いですが、社債スプレッドの縮小は信用の底堅さを示しています。結論：防衛姿勢を維持しつつ、ドル安がリスクオンの転換点となるか注視すべきです。",
-            "EN": "GMS Status: 33 (Defensive). A flat momentum vector maintains a cautious regime. While VIX (Fear Index) rose 2.88% indicating rising anxiety, the DXY (Dollar Strength) fell significantly by 0.92%, providing a liquidity cushion. Contrarian view: Strong performance in Copper and Gold suggests underlying commodity demand that could offset winter storm disruptions. Though sentiment remains low at 25, tightening HY Spreads indicate credit resilience. Action: Maintain defensive positioning while monitoring if USD weakness triggers a risk-on reversal.",
-            "CN": "GMS状态：33（防御）。持平的动能维持了谨慎的市场格局。虽然VIX（恐慌指数）上涨2.88%显示焦虑升温，但DXY（美元走势）下跌0.92%为流动性提供了支撑。反向观点：铜和黄金的强劲表现暗示了潜在的商品需求，可能抵消冬季风暴带来的负面影响。尽管加密情绪保持在25的低位，但高收益债利差收窄显示信用市场依然稳健。结论：保持防御性配置，同时密切关注美元走弱是否会引发风险偏好的反转。",
-            "ES": "Estado GMS: 33 (Defensivo). El momentum plano mantiene un régimen de cautela. Mientras el VIX (Índice de miedo) subió un 2.88% indicando ansiedad, el DXY (Fuerza del dólar) cayó un 0.92%, aportando liquidez. Factor contrario: El repunte en Cobre y Oro sugiere una demanda subyacente que podría compensar las interrupciones climáticas. Aunque el sentimiento es bajo (25), la reducción en diferenciales de crédito indica resiliencia. Conclusión: Mantener postura defensiva pero vigilar si la debilidad del dólar activa un retorno al riesgo.",
-            "HI": "GMS स्थिति: 33 (रक्षात्मक)। फ्लैट मोमेंटम सतर्क बाजार व्यवस्था को बनाए रखता है। जबकि VIX (डर सूचकांक) में 2.88% की वृद्धि चिंता दर्शाती है, DXY (डॉलर की मजबूती) में 0.92% की गिरावट ने तरलता को सहारा दिया है। विपरीत दृष्टिकोण: कॉपर और गोल्ड में मजबूती अंतर्निहित मांग का संकेत देती है जो तूफान की बाधाओं को संतुलित कर सकती है। हालांकि सेंटीमेंट 25 पर कम है, लेकिन क्रेडिट स्प्रेड में सुधार लचीलापन दिखाता है। निष्कर्ष: रक्षात्मक स्थिति बनाए रखें और निगरानी करें कि क्या डॉलर की कमजोरी जोखिम-ऑन रिकवरी को ट्रिगर करती है।",
-            "ID": "Status GMS: 33 (Defensif). Momentum yang datar mempertahankan rezim penuh kehati-hatian. Saat VIX (Indeks Ketakutan) naik 2,88% menunjukkan kecemasan, DXY (Kekuatan Dolar) turun 0,92% memberikan dukungan likuiditas. Pandangan kontran: Kenaikan Tembaga dan Emas menyiratkan permintaan komoditas yang kuat yang dapat mengimbangi gangguan badai musim dingin. Meskipun sentimen rendah di angka 25, penyempitan spread kredit menunjukkan ketahanan. Kesimpulan: Pertahankan posisi defensif sambil memantau apakah pelemahan USD memicu pembalikan risiko.",
-            "AR": "حالة GMS: 33 (دفاعي). الزخم المسطح يحافظ على نظام الحذر. بينما ارتفع VIX (مؤشر الخوف) بنسبة 2.88% مما يشير للقلق، انخفض DXY (قوة الدولار) بنسبة 0.92% ليدعم السيولة. وجهة نظر معارضة: القوة في النحاس والذهب تشير لطلب أساسي قد يعوض تعطل الرحلات بسبب العواصف. رغم انخفاض المشاعر عند 25، إلا أن تقلص هوامش الائتمان يظهر مرونة السوق. الخلاصة: الحفاظ على التمركز الدفاعي مع مراقبة ما إذا كان ضعف الدولار سيحفز العودة للمخاطرة."
+            "JP": "GMS状況：守備的 (32/100)。マクロ要因：フラットな勢いがスコアを32に押し下げ、VIX（恐怖指数）が2.88%上昇し、市場の警戒感が高まっています。一方で、DXY（ドル指数）の低下とハイイールド債スプレッドの縮小は信用市場の安定を示唆しています。警告：冬の嵐が物流リスクを高めますが、ドル安が予期せぬ流動性を供給する可能性があります。結論：守備的姿勢を維持しつつ、流動性が下落を抑制するか注視。",
+            "EN": "GMS Status: Defensive (32/100). Macro Root: Flat momentum pushed the score to 32 as the VIX (Fear/Volatility) rose by 2.88%, signaling rising caution. However, a weakening DXY (Dollar strength) and narrowing HY Spreads suggest credit markets remain stable. Warning: While winter storms add logistical risk, the sharp drop in DXY provides unexpected liquidity support. Conclusion: Maintain defensive positioning while watching if liquidity prevents a deeper market correction.",
+            "CN": "GMS状态：防御型 (32/100)。宏观根源：持平的动能将得分推至32。VIX（恐慌指数）上涨2.88%反映出风险偏好下降。尽管如此，DXY（美元指数）的走软和高收益债利差收窄表明信贷市场依然稳固。警告：大型暴风雪带来了物流中断风险，但美元走弱可能为市场注入意外流动性。结论：保持防御配置，密切关注流动性是否能有效抵消情绪面带来的下行压力。",
+            "ES": "Estado GMS: Defensivo (32/100). Raíz Macro: El impulso plano llevó la puntuación a 32 mientras el VIX (Miedo/Volatilidad) subió un 2,88%, indicando mayor precaución. No obstante, la debilidad del DXY (Fuerza del dólar) y la reducción del diferencial HY sugieren estabilidad crediticia. Advertencia: Las tormentas invernales suponen riesgos logísticos, pero la caída del DXY aporta liquidez inesperada al sistema. Conclusión: Mantener una postura defensiva vigilando si la liquidez frena una corrección mayor.",
+            "HI": "GMS स्थिति: रक्षात्मक (32/100)। मैक्रो रूट: सपाट गति ने स्कोर को 32 तक धकेल दिया क्योंकि VIX (डर/अस्थिरता) 2.88% बढ़ गया, जो सावधानी का संकेत है। हालांकि, गिरते DXY (डॉलर की मजबूती) और कम होते HY स्प्रेड से क्रेडिट बाजार में स्थिरता दिखती है। चेतावनी: शीतकालीन तूफान लॉजिस्टिक जोखिम पैदा कर रहे हैं, लेकिन DXY में गिरावट नकदी का प्रवाह बढ़ा सकती है। निष्कर्ष: रक्षात्मक रुख बनाए रखें और देखें कि क्या लिक्विडिटी बाजार को और अधिक गिरने से बचाने में मदद करती है।",
+            "ID": "Status GMS: Defensif (32/100). Akar Makro: Momentum datar mendorong skor ke 32 saat VIX (Ketakutan/Volatilitas) naik 2,88%, menandakan kehati-hatian. Namun, pelemahan DXY (Kekuatan Dolar) dan penyempitan HY Spread menunjukkan pasar kredit yang stabil. Peringatan: Badai musim dingin menambah risiko logistik, namun penurunan tajam DXY memberikan dukungan likuiditas tak terduga. Kesimpulan: Pertahankan posisi defensif sambil memantau apakah likuiditas mampu menahan tekanan koreksi lebih lanjut.",
+            "AR": "حالة GMS: دفاعي (32/100). الجذر الماكرو: دفع الزخم المسطح النتيجة إلى 32 مع ارتفاع VIX (مؤشر الخوف) بنسبة 2.88%، مما يشير لزيادة الحذر. ومع ذلك، يشير ضعف DXY (قوة الدولار) وضيق هوامش العائد المرتفع إلى استقرار سوق الائتمان. تحذير: تزيد العواصف الشتوية من المخاطر اللوجستية، لكن انخفاض DXY يوفر سيولة غير متوقعة قد تدعم السوق. الخلاصة: الحفاظ على التموضع الدفاعي مع مراقبة ما إذا كانت السيولة ستمنع حدوث تصحيح أعمق للأسعار."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-24T07:46:13Z",
-            "score": 38
-        },
         {
             "date": "2026-01-24T08:40:10Z",
             "score": 38
@@ -1356,6 +1352,10 @@
         {
             "date": "2026-01-25T17:30:22Z",
             "score": 33
+        },
+        {
+            "date": "2026-01-25T17:48:21Z",
+            "score": 32
         }
     ],
     "intelligence": {
@@ -1363,85 +1363,85 @@
             {
                 "title": "Flight disruptions from massive winter storm will linger Monday",
                 "link": "https://www.cnbc.com/2026/01/23/winter-storm-fern-flight-cancellations.html",
-                "isoDate": "2026-01-25T17:30:04.885800Z"
+                "isoDate": "2026-01-25T17:48:02.120359Z"
             },
             {
                 "title": "After second Minneapolis shooting, Congress hurtles toward a partial government shutdown over DHS funding",
                 "link": "https://www.cnbc.com/2026/01/25/minneapolis-shooting-government-shutdown.html",
-                "isoDate": "2026-01-25T17:30:04.887053Z"
+                "isoDate": "2026-01-25T17:48:02.121643Z"
             },
             {
                 "title": "Auto executives are hoping for the best and planning for the worst in 2026",
                 "link": "https://www.cnbc.com/2026/01/25/auto-industry-2026.html",
-                "isoDate": "2026-01-25T17:30:04.887076Z"
+                "isoDate": "2026-01-25T17:48:02.121666Z"
             },
             {
                 "title": "Gov. Walz calls on Trump to halt ICE operations in Minnesota after another fatal shooting",
                 "link": "https://www.cnbc.com/2026/01/24/walz-trump-ice-shooting.html",
-                "isoDate": "2026-01-25T17:30:04.887089Z"
+                "isoDate": "2026-01-25T17:48:02.121680Z"
             },
             {
                 "title": "Trump administration to take 10% stake in USA Rare Earth in $1.6 billion deal, sources say",
                 "link": "https://www.cnbc.com/2026/01/24/us-rare-earths-miner.html",
-                "isoDate": "2026-01-25T17:30:04.887101Z"
+                "isoDate": "2026-01-25T17:48:02.121692Z"
             },
             {
                 "title": "JPMorgan's top short ideas for 2026",
                 "link": "https://www.cnbc.com/2026/01/25/jpmorgans-top-short-ideas-for-2026.html",
-                "isoDate": "2026-01-25T17:30:04.887113Z"
+                "isoDate": "2026-01-25T17:48:02.121704Z"
             }
         ],
         "translations": {
             "JP": [
-                "大規模な冬の嵐によるフライトの乱れ、月曜日も続く見通し",
-                "ミネアポリスで2度目の発砲事件、議会は国土安全保障省（DHS）の予算を巡り政府機関の一部閉鎖へ突き進む",
-                "自動車メーカーの幹部ら、2026年に向けて最善を期待しつつ最悪の事態に備える",
-                "ウォルズ知事、相次ぐ致命的な銃撃事件を受け、トランプ大統領にミネソタ州でのICE（移民税関捜査局）活動停止を要請",
-                "トランプ政権、16億ドルの取引でUSAレアアースの株式10％を取得へ、関係筋が明らかに",
-                "JPモルガンが選ぶ2026年のトップ・ショート（空売り）銘柄"
+                "大規模な冬の嵐によるフライトの乱れは月曜日も続く見通し",
+                "ミネアポリスでの2件目の銃撃事件を受け、議会はDHS予算を巡り政府機関の一部閉鎖へと突き進む",
+                "自動車メーカー幹部、2026年に向けて最善を期待しつつ最悪の事態に備える",
+                "ウォルズ知事、相次ぐ射殺事件を受けトランプ氏にミネソタ州でのICE活動停止を要請",
+                "トランプ政権、16億ドルの取引でUSAレアアースの株式10%を取得へ、関係筋が明かす",
+                "JPモルガンが選ぶ2026年の注目ショート（空売り）銘柄"
             ],
             "CN": [
-                "大规模冬季风暴导致的航班中断将持续至周一",
-                "明尼阿波利斯发生第二次枪击案后，国会因国土安全部资金问题面临政府部分停摆",
-                "汽车行业高管对2026年抱有最好的希望，并做最坏的打算",
-                "沃尔兹州长在又一起致命枪击案后，呼吁特朗普停止在明尼苏达州的ICE行动",
-                "消息人士称，特朗普政府将在16亿美元的交易中入股USA Rare Earth 10%的股份",
-                "摩根大通2026年最佳做空策略建议"
+                "大规模冬季风暴导致的航班延误将持续至周一",
+                "明尼阿波利斯发生第二起枪击案后，国会因国土安全部资金问题正趋向政府部分停摆",
+                "汽车行业高管对2026年抱最好的希望，做最坏的打算",
+                "在又一起致命枪击案发生后，沃尔兹州长呼吁特朗普停止在明尼苏达州的ICE执法行动",
+                "消息人士称，特朗普政府将通过16亿美元交易收购USA Rare Earth 10%的股份",
+                "摩根大通2026年最佳做空建议"
             ],
             "ES": [
                 "Las interrupciones de vuelos por la tormenta invernal masiva persistirán el lunes",
-                "Tras el segundo tiroteo en Minneapolis, el Congreso se encamina hacia un cierre parcial del gobierno por la financiación del DHS",
+                "Tras el segundo tiroteo en Minneapolis, el Congreso se encamina a un cierre parcial del gobierno por la financiación del DHS",
                 "Ejecutivos del sector automotriz esperan lo mejor y se preparan para lo peor en 2026",
-                "El gobernador Walz pide a Trump detener las operaciones del ICE en Minnesota tras otro tiroteo mortal",
-                "El gobierno de Trump tomará una participación del 10% en USA Rare Earth en un acuerdo de 1,600 millones de dólares, según fuentes",
-                "Las principales ideas de venta en corto de JPMorgan para 2026"
+                "El gobernador Walz pide a Trump detener las operaciones del ICE en Minnesota tras otro tiroteo fatal",
+                "La administración Trump tomará una participación del 10% en USA Rare Earth en un acuerdo de 1.600 millones de dólares, según fuentes",
+                "Las principales ideas de posiciones cortas (short) de JPMorgan para 2026"
             ],
             "HI": [
-                "भारी शीतकालीन तूफान के कारण उड़ानों में व्यवधान सोमवार को भी जारी रहेगा",
-                "मिनियापोलिस में दूसरी गोलीबारी के बाद, DHS फंडिंग को लेकर कांग्रेस आंशिक सरकारी कामकाज ठप होने की ओर बढ़ रही है",
-                "ऑटो क्षेत्र के कार्यकारी 2026 के लिए बेहतर की उम्मीद और सबसे खराब के लिए योजना बना रहे हैं",
-                "गवर्नर वाल्ज़ ने एक और घातक गोलीबारी के बाद ट्रंप से मिनेसोटा में ICE के संचालन को रोकने का आह्वान किया",
-                "सूत्रों के अनुसार, ट्रंप प्रशासन 1.6 बिलियन डॉलर के सौदे में USA Rare Earth में 10% हिस्सेदारी लेगा",
-                "2026 के लिए जेपी मॉर्गन के शीर्ष शॉर्ट आइडियाज (बिकवाली के विचार)"
+                "भीषण शीतकालीन तूफान से उड़ानों में व्यवधान सोमवार को भी जारी रहेगा",
+                "मिनियापोलिस में दूसरी गोलीबारी के बाद, DHS फंडिंग को लेकर कांग्रेस सरकार के आंशिक बंद की ओर बढ़ रही है",
+                "ऑटो कार्यकारी 2026 में सबसे अच्छे की उम्मीद कर रहे हैं और सबसे बुरे के लिए योजना बना रहे हैं",
+                "एक और घातक गोलीबारी के बाद गवर्नर वाल्ज़ ने ट्रंप से मिनेसोटा में ICE के संचालन को रोकने का आह्वान किया",
+                "सूत्रों के अनुसार, ट्रंप प्रशासन 1.6 अरब डॉलर के सौदे में USA Rare Earth में 10% हिस्सेदारी लेगा",
+                "2026 के लिए जेपी मॉर्गन के शीर्ष शॉर्ट (बिकवाली) विचार"
             ],
             "ID": [
-                "Gangguan penerbangan akibat badai musim dingin yang dahsyat akan berlanjut hingga Senin",
-                "Setelah penembakan kedua di Minneapolis, Kongres bersiap menghadapi penutupan sebagian pemerintahan terkait pendanaan DHS",
+                "Gangguan penerbangan akibat badai musim dingin yang hebat akan berlanjut hingga Senin",
+                "Setelah penembakan kedua di Minneapolis, Kongres menuju penutupan sebagian pemerintahan terkait pendanaan DHS",
                 "Eksekutif otomotif berharap yang terbaik dan merencanakan yang terburuk di tahun 2026",
-                "Gubernur Walz meminta Trump untuk menghentikan operasi ICE di Minnesota setelah penembakan fatal lainnya",
+                "Gubernur Walz mendesak Trump untuk menghentikan operasi ICE di Minnesota setelah penembakan fatal lainnya",
                 "Pemerintahan Trump akan mengambil 10% saham di USA Rare Earth dalam kesepakatan senilai $1,6 miliar, menurut sumber",
-                "Ide jual kosong (short ideas) teratas JPMorgan untuk tahun 2026"
+                "Ide short (jual kosong) teratas JPMorgan untuk tahun 2026"
             ],
             "AR": [
-                "اضطرابات الرحلات الجوية الناتجة عن عاصفة شتوية عاتية ستستمر يوم الاثنين",
-                "بعد حادث إطلاق النار الثاني في مينيابوليس، الكونجرس يتجه نحو إغلاق جزئي للحكومة بسبب تمويل وزارة الأمن الداخلي",
-                "الرؤساء التنفيذيون لشركات السيارات يأملون في الأفضل ويخططون للأسوأ في عام 2026",
-                "الحاكم والز يدعو ترامب إلى وقف عمليات إدارة إنفاذ قوانين الهجرة والجمارك (ICE) في مينيسوتا بعد حادث إطلاق نار مميت آخر",
-                "إدارة ترامب تستحوذ على حصة 10% في شركة 'USA Rare Earth' في صفقة بقيمة 1.6 مليار دولار، وفقاً لمصادر",
-                "أفضل أفكار البيع على المكشوف من جي بي مورغان لعام 2026"
+                "اضطرابات الرحلات الجوية الناجمة عن العاصفة الشتوية العاتية ستستمر يوم الاثنين",
+                "بعد حادث إطلاق النار الثاني في مينيابوليس، الكونجرس يندفع نحو إغلاق جزئي للحكومة بسبب تمويل وزارة الأمن الداخلي",
+                "مسؤولو قطاع السيارات يأملون في الأفضل ويخططون للأسوأ في عام 2026",
+                "الحاكم فالز يدعو ترامب إلى وقف عمليات وكالة إنفاذ قوانين الهجرة والجمارك (ICE) في مينيسوتا بعد حادث إطلاق نار مميت آخر",
+                "مصادر: إدارة ترامب ستستحوذ على حصة 10% في شركة USA Rare Earth في صفقة بقيمة 1.6 مليار دولار",
+                "أبرز أفكار البيع على المكشوف (Short) من جيه بي مورجان لعام 2026"
             ]
         },
-        "last_updated": "2026-01-25T17:30:22.526969Z"
+        "last_updated": "2026-01-25T17:48:21.654577Z"
     },
     "system_status": "OPERATIONAL"
 }
