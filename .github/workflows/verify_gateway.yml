@@ -1,3 +1,28 @@
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'scripts/test_vercel_gateway.py'
+      - '.github/workflows/verify_gateway.yml'
+
+jobs:
+  test_gateway:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: pip install requests python-dotenv
+      - name: Run Gateway Test
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          VERCEL_AI_GATEWAY_SLUG: ${{ secrets.VERCEL_AI_GATEWAY_SLUG }}
+        run: python scripts/test_vercel_gateway.py || echo "Test Script FAILED but continuing to diagnostics..."
+
       - name: Save and Push Results
         if: always()
         run: |
@@ -28,7 +53,8 @@
 
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git checkout -b debug/gateway-results || git checkout debug/gateway-results
+          git fetch origin
+          git checkout debug/gateway-results || git checkout -b debug/gateway-results
           git add debug/results.txt
-          git commit -m "chore: gateway diagnostic results [bot]"
+          git commit -m "chore: gateway diagnostic results [bot]" || exit 0
           git push origin debug/gateway-results --force
