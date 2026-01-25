@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-01-24T16:06:17Z",
-    "last_successful_update": "2026-01-24T16:06:17Z",
+    "last_updated": "2026-01-25T02:40:30Z",
+    "last_successful_update": "2026-01-25T02:40:30Z",
     "gms_score": 38,
     "sector_scores": {
         "STOCKS": 35,
@@ -14,7 +14,6 @@
             "change_percent": 0.0,
             "trend": "BEARISH",
             "sparkline": [
-                20,
                 23,
                 24,
                 24,
@@ -43,6 +42,7 @@
                 24,
                 20,
                 24,
+                25,
                 25
             ]
         },
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 89163.49,
+            "price": 89035.13,
             "prev_price": 89503.88,
-            "daily_chg": -0.38,
-            "change_percent": 0.97,
+            "daily_chg": -0.52,
+            "change_percent": 0.82,
             "trend": "DOWN",
             "sparkline": [
                 90603.19,
@@ -604,15 +604,15 @@
                 89376.96,
                 89462.45,
                 89503.88,
-                89163.49
+                89035.13
             ]
         },
         "ETH": {
-            "price": 2953.61,
+            "price": 2949.96,
             "prev_price": 2953.26,
-            "daily_chg": 0.01,
-            "change_percent": 0.61,
-            "trend": "UP",
+            "daily_chg": -0.11,
+            "change_percent": 0.49,
+            "trend": "DOWN",
             "sparkline": [
                 3125.92,
                 3140.71,
@@ -635,14 +635,14 @@
                 2978.9,
                 2949.63,
                 2953.26,
-                2953.61
+                2949.96
             ]
         },
         "SOL": {
-            "price": 126.67,
+            "price": 127.06,
             "prev_price": 127.36,
-            "daily_chg": -0.54,
-            "change_percent": 0.77,
+            "daily_chg": -0.24,
+            "change_percent": 1.07,
             "trend": "DOWN",
             "sparkline": [
                 133.3,
@@ -666,7 +666,7 @@
                 129.38,
                 128.29,
                 127.36,
-                126.67
+                127.06
             ]
         },
         "DXY": {
@@ -1105,82 +1105,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS is 38 as flat momentum keeps the market in a defensive regime. VIX up 2.88% with flat liquidity forces valuation compression. Storm Fern spiked gas, adding macro risks to energy sectors. Low crypto sentiment shows that risk appetite is constrained. Flat momentum kept the score at 38, favoring a risk-off view.",
+        "content": "The GMS Score is 38 as flat momentum keeps the market in a defensive regime. A 2.88% VIX spike and small-cap weakness signal caution. Energy costs rose 4.56% due to storms, adding pressure. Stagnant liquidity holds the score steady. Low sentiment keeps the current index at 38. The lack of net liquidity growth prevents any score expansion, confirming that the current momentum vector is neutral. This environment demands capital preservation until the score clears the neutral 40 threshold definitively.",
         "reports": {
-            "JP": "現在のGMSスコアは38を維持しており、モメンタムが横ばいで推移した結果、市場は依然としてディフェンシブな領域に留まっています。VIXが2.88%上昇する一方で純流動性が停滞している事実は、投資家の警戒感とボラティリティの圧縮が同時に進行していることを示唆します。冬の嵐によるガス価格の急騰は、不確実性を高める要因であり、供給サイドのショックが市場全体の重石となっています。債券スプレッドは縮小しましたが、仮想通貨センチメントが25と低迷しているため、全体的なリスク許容度は依然として抑制された状態です。モメンタムの停滞がスコアを38に固定しており、流動性の明確な変化がない限り、現在は資本保護を優先すべき慎重な局面と言えます。",
-            "EN": "GMS is 38 as flat momentum keeps the market in a defensive regime. VIX up 2.88% with flat liquidity forces valuation compression. Storm Fern spiked gas, adding macro risks to energy sectors. Low crypto sentiment shows that risk appetite is constrained. Flat momentum kept the score at 38, favoring a risk-off view.",
-            "CN": "当前的GMS分数维持在38点，动量向量的持续平稳表现使市场继续处于极其谨慎的防御性管理制度之中。恐慌指数VIX上涨了2.88%，结合目前停滞的净流动性数据，正在迫使全球风险资产的估值进行深度压缩。冬季风暴Fern导致天然气价格急剧飙升，这为当前本就复杂的宏观经济环境增加了额外的能源供应风险因素。尽管部分信用利差表现稳定，但加密货币情绪指数仅为25，这充分证实了市场整体风险偏好依然受到严密限制。动量的横向停滞导致分数最终定格在38点，在当前宏观背景下，采取资本保值的稳健防御立场显得至关重要。",
-            "ES": "GMS es 38 con impulso plano, el mercado sigue defensivo. VIX subió 2.88% y la liquidez estática comprime valores. La tormenta Fern elevó el gas y los riesgos macro de hoy. El sentimiento cripto en 25 muestra poco apetito de riesgo. El impulso plano fijó el score en 38, busque seguridad.",
-            "HI": "जीएमएस 38 है क्योंकि फ्लैट मोमेंटम बाजार को सुरक्षित रखता है। वीआईएक्स 2.88% बढ़ा, जिससे संपत्ति के मूल्यांकन पर दबाव पड़ा है। तूफान फर्न ने गैस की कीमतें बढ़ाईं, जिससे जोखिम और बढ़ गया है। क्रिप्टो सेंटिमेंट 25 पर है, जो कम जोखिम लेने की क्षमता दिखाता है। फ्लैट मोमेंटम ने स्कोर 38 रखा, इसलिए पूंजी की सुरक्षा जरूरी है।",
-            "ID": "GMS di 38 karena momentum datar menjaga pasar tetap defensif. VIX naik 2.88% dan likuiditas stagnan menekan valuasi aset. Badai Fern menaikkan gas, menambah risiko makro pada energi. Sentimen kripto di 25 menunjukkan minat risiko yang rendah. Momentum datar menjaga skor di 38, fokuslah pada modal anda.",
-            "AR": "سجل جي إم إس هو 38 والزخم المسطح يبقي السوق في وضع دفاعي. زاد فيكس 2.88% مع ركود السيولة مما ضغط على تقييمات الأصول. رفعت العاصفة فيرن سعر الغاز وزادت مخاطر الاقتصاد في الطاقة. معنويات الكريبتو عند 25 تؤكد ضعف الشهية للمخاطرة لدى الجميع. الزخم المسطح ثبت السكور عند 38، فاحمِ رأس مالك الخاص الآن."
+            "JP": "GMSスコアは38を維持し、モメンタムはフラットに推移しており、市場は依然としてディフェンシブな局面を継続しています。VIXの2.88%の上昇と小型株の1.85%の下落はリスク回避姿勢を強め、流動性の停滞が価格の重石となっています。歴史的な供給ショックと同様に、大規模な冬の嵐によるエネルギー価格の急騰がインフレ懸念を再燃させ、評価を圧迫しています。ハイイールド債のスプレッド縮小は見られるものの、仮想通貨の低いセンチメントが投資家の慎重な心理を如実に示しています。ネットリクイディティの変化が極めて僅かであるため、モメンタムは横ばいとなり、スコアを38に固定する要因となりました。",
+            "EN": "The GMS Score is 38 as flat momentum keeps the market in a defensive regime. A 2.88% VIX spike and small-cap weakness signal caution. Energy costs rose 4.56% due to storms, adding pressure. Stagnant liquidity holds the score steady. Low sentiment keeps the current index at 38. The lack of net liquidity growth prevents any score expansion, confirming that the current momentum vector is neutral. This environment demands capital preservation until the score clears the neutral 40 threshold definitively.",
+            "CN": "目前GMS分数维持在38点，动量呈现持平走势，显示出市场依然处于严峻的防御性制度之中。VIX指数上涨2.88%且小盘股出现1.85%的显著跌幅，反映出避险资金正迅速流向质量资产。由于大规模冬冬袭击美国导致天然气价格飙升4.56%，这在宏观上加剧了通胀压力与估值压缩。净流动性仅微增0.02%，这种极低的变动率导致动量陷入停滞，从而使分数继续在38点横盘。加密货币市场情绪保持在25的低位，这与高收益债利差的矛盾表现共同支撑了当前分数的稳定性。",
+            "ES": "El puntaje GMS es 38 con un momentum plano, manteniendo al mercado en un régimen defensivo. El alza del 2.88% en el VIX y la caída de las small-caps elevan la aversión al riesgo. Las tormentas invernales subieron la energía un 4.56%, presionando la inflación. La liquidez estancada impide que el score suba. El sentimiento de 25 mantiene el índice en 38. Esta falta de cambio en la liquidez neta sugiere una consolidación de la debilidad estructural. Se requiere una mejora en los flujos monetarios para que el impulso cambie la trayectoria del puntaje actual.",
+            "HI": "GMS स्कोर 38 है और मोमेंटम फ्लैट है, जो बाजार को रक्षात्मक शासन में रखता है। VIX में 2.88% की वृद्धि और स्मॉल-कैप में गिरावट जोखिम से बचने का संकेत देती है। तूफान ने ऊर्जा की कीमतों को 4.56% बढ़ा दिया, जिससे मुद्रास्फीति का दबाव बढ़ गया। स्थिर तरलता स्कोर को बढ़ने से रोकती है। क्रिप्टो सेंटिमेंट 25 पर होने से सूचकांक 38 पर स्थिर है। शुद्ध तरलता में नाममात्र की वृद्धि ने मोमेंटम को उदासीन बना दिया है, जिससे स्कोर में कोई बदलाव नहीं हुआ। निवेशकों को सतर्क रहने की सलाह दी जाती है क्योंकि बाजार अभी भी जोखिम-बंद मोड में बना हुआ है।",
+            "ID": "Skor GMS berada di 38 dengan momentum datar, menunjukkan rezim defensif yang berkelanjutan. Kenaikan VIX sebesar 2,88% dan pelemahan saham kecil memicu penghindaran risiko. Badai musim dingin menaikkan harga gas 4,56%, menambah tekanan inflasi. Likuiditas yang stagnan menahan laju skor. Sentimen kripto di level 25 menjaga skor tetap di angka 38. Ketiadaan aliran likuiditas baru menyebabkan momentum tidak bergerak, yang pada akhirnya memaku skor pada posisi saat ini. Strategi defensif tetap diutamakan mengingat volatilitas yang mulai meningkat di sektor energi dan pasar modal.",
+            "AR": "يبقى سجل جي إم إس عند 38 مع زخم مسطح، مما يبقي السوق في وضع دفاعي. أدى ارتفاع فيكس بنسبة 2.88% وهبوط الشركات الصغيرة لزيادة الحذر. رفعت العواصف أسعار الغاز بنسبة 4.56%، مما ضغط على التضخم. تمنع السيولة الراكدة أي تحسن في السجل حالياً. ثبات معنويات الكريبتو عند 25 يجعل المؤشر مستقراً عند 38 اليوم. إن غياب التغير في صافي السيولة أدى إلى تحييد الزخم، مما حال دون تحرك السجل نحو المنطقة المحايدة. يراقب المستشارون عن كثب أي تحولات في عوائد السندات قد تعيد تقييم الأصول الخطرة في هذا المناخ."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-23T09:04:09Z",
-            "score": 36
-        },
-        {
-            "date": "2026-01-23T09:15:36Z",
-            "score": 36
-        },
-        {
-            "date": "2026-01-23T09:41:25Z",
-            "score": 34
-        },
-        {
-            "date": "2026-01-23T10:40:23Z",
-            "score": 34
-        },
-        {
-            "date": "2026-01-23T11:32:13Z",
-            "score": 36
-        },
-        {
-            "date": "2026-01-23T11:49:57Z",
-            "score": 36
-        },
-        {
-            "date": "2026-01-23T13:08:30Z",
-            "score": 36
-        },
-        {
-            "date": "2026-01-23T13:53:07Z",
-            "score": 34
-        },
-        {
-            "date": "2026-01-23T14:01:21Z",
-            "score": 34
-        },
-        {
-            "date": "2026-01-23T14:05:03Z",
-            "score": 34
-        },
-        {
-            "date": "2026-01-23T14:19:38Z",
-            "score": 34
-        },
-        {
-            "date": "2026-01-23T14:42:17Z",
-            "score": 34
-        },
-        {
-            "date": "2026-01-23T15:04:32Z",
-            "score": 35
-        },
-        {
-            "date": "2026-01-23T15:18:04Z",
-            "score": 36
-        },
-        {
-            "date": "2026-01-23T15:20:59Z",
-            "score": 36
-        },
-        {
-            "date": "2026-01-23T15:41:34Z",
-            "score": 36
-        },
         {
             "date": "2026-01-23T15:48:01Z",
             "score": 36
@@ -1356,92 +1292,156 @@
         {
             "date": "2026-01-24T16:06:17Z",
             "score": 38
+        },
+        {
+            "date": "2026-01-24T16:08:46Z",
+            "score": 38
+        },
+        {
+            "date": "2026-01-24T16:38:45Z",
+            "score": 38
+        },
+        {
+            "date": "2026-01-24T17:30:39Z",
+            "score": 38
+        },
+        {
+            "date": "2026-01-24T17:47:52Z",
+            "score": 38
+        },
+        {
+            "date": "2026-01-24T18:44:23Z",
+            "score": 38
+        },
+        {
+            "date": "2026-01-24T19:27:06Z",
+            "score": 38
+        },
+        {
+            "date": "2026-01-24T19:44:46Z",
+            "score": 38
+        },
+        {
+            "date": "2026-01-24T20:33:31Z",
+            "score": 38
+        },
+        {
+            "date": "2026-01-24T20:50:18Z",
+            "score": 38
+        },
+        {
+            "date": "2026-01-24T21:28:57Z",
+            "score": 38
+        },
+        {
+            "date": "2026-01-24T21:46:44Z",
+            "score": 38
+        },
+        {
+            "date": "2026-01-24T22:33:21Z",
+            "score": 38
+        },
+        {
+            "date": "2026-01-24T22:50:39Z",
+            "score": 38
+        },
+        {
+            "date": "2026-01-24T23:30:03Z",
+            "score": 38
+        },
+        {
+            "date": "2026-01-24T23:47:51Z",
+            "score": 38
+        },
+        {
+            "date": "2026-01-25T02:40:30Z",
+            "score": 38
         }
     ],
     "intelligence": {
         "news": [
             {
-                "title": "Winter Storm Fern could cause significant power outages",
-                "link": "https://www.cnbc.com/2026/01/24/winter-storm-fern-could-cause-significant-power-outages.html",
-                "isoDate": "2026-01-24T16:06:19.236956Z"
+                "title": "Airlines cancel more than 13,000 weekend flights as massive winter storm sweeps across the U.S.",
+                "link": "https://www.cnbc.com/2026/01/23/winter-storm-fern-flight-cancellations.html",
+                "isoDate": "2026-01-25T02:40:31.619299Z"
             },
             {
                 "title": "Trump threatens to impose 100% tariff if Canada makes deal with China",
                 "link": "https://www.cnbc.com/2026/01/24/trump-tariff-canada-china.html",
-                "isoDate": "2026-01-24T16:06:19.238944Z"
+                "isoDate": "2026-01-25T02:40:31.621324Z"
             },
             {
-                "title": "Meta's Reality Labs cuts sparked fears of a 'VR winter'",
-                "link": "https://www.cnbc.com/2026/01/24/metas-reality-labs-cuts-sparked-fears-of-a-vr-winter.html",
-                "isoDate": "2026-01-24T16:06:19.238966Z"
+                "title": "Gov. Walz calls on Trump to halt ICE operations in Minnesota after another fatal shooting",
+                "link": "https://www.cnbc.com/2026/01/24/walz-trump-ice-shooting.html",
+                "isoDate": "2026-01-25T02:40:31.621346Z"
             },
             {
-                "title": "I spent the week with tech CEOs. Here's what they're talking about",
-                "link": "https://www.cnbc.com/2026/01/24/tech-davos-ai-agentic-robotics.html",
-                "isoDate": "2026-01-24T16:06:19.238980Z"
+                "title": "U.S. to inject $1.6 billion into rare earths miner for 10% stake, FT reports",
+                "link": "https://www.cnbc.com/2026/01/24/us-rare-earths-miner.html",
+                "isoDate": "2026-01-25T02:40:31.621359Z"
             },
             {
-                "title": "Musk’s $1 trillion pay package renews focus on soaring CEO compensation",
-                "link": "https://www.cnbc.com/2026/01/24/musks-1-trillion-pay-package-renews-focus-on-rising-ceo-compensation.html",
-                "isoDate": "2026-01-24T16:06:19.238993Z"
+                "title": "New Berkshire CEO Abel quickly signals troubled Kraft Heinz stake could be toast",
+                "link": "https://www.cnbc.com/2026/01/24/new-berkshire-ceo-abel-quickly-signals-troubled-kraft-heinz-stake-could-be-toast.html",
+                "isoDate": "2026-01-25T02:40:31.621371Z"
             },
             {
                 "title": "These stocks reporting earnings next week are usually winning bets",
                 "link": "https://www.cnbc.com/2026/01/24/these-stocks-reporting-earnings-next-week-are-usually-winning-bets.html",
-                "isoDate": "2026-01-24T16:06:19.239005Z"
+                "isoDate": "2026-01-25T02:40:31.621382Z"
             }
         ],
         "translations": {
             "JP": [
-                "冬の嵐「フェーン」により、大規模な停電が発生する恐れ",
-                "トランプ氏、カナダが中国と合意すれば100%の関税を課すと脅迫",
-                "MetaのReality Labs人員削減が「VRの冬」への懸念を呼び起こす",
-                "テック企業のCEOたちと一週間を過ごした。彼らの話題はこれだ",
-                "マスク氏の1兆ドル報酬案が、高騰するCEO報酬への注目を再燃させる",
-                "来週決算発表を控えるこれらの銘柄は、通常、勝ち馬である"
+                "大規模な冬の嵐が全米を襲い、航空各社が週末の13,000便以上を欠航",
+                "トランプ氏、カナダが中国と合意すれば100%の関税を課すと警告",
+                "ウォルツ知事、相次ぐ射殺事件を受け、ミネソタ州でのICE活動停止をトランプ氏に要求",
+                "米政府、レアアース採掘業者に16億ドルを投じ10%の株式取得へ、FT紙報道",
+                "バークシャーの新CEOアベル氏、苦境のクラフト・ハインツ株売却の可能性を早々に示唆",
+                "来週決算発表を控える銘柄、通常は「勝ち馬」とされるのはこれら"
             ],
             "CN": [
-                "冬季风暴“费恩”可能导致大规模停电",
-                "特朗普威胁称，若加拿大与中国达成协议，将征收100%关税",
-                "Meta旗下Reality Labs的裁员引发了对“VR寒冬”的担忧",
-                "我与科技巨头CEO们共度了一周。以下是他们的谈资",
-                "马斯克1万亿美元的薪酬方案再次引发对CEO薪酬飙升的关注",
-                "这些下周发布财报的股票通常是稳操胜券的选择"
+                "强冬季风暴席卷全美，航空公司取消逾1.3万架次周末航班",
+                "特朗普威胁：若加拿大与中国达成交易，将征收100%关税",
+                "再次发生致命枪击案后，沃尔兹州长呼吁特朗普停止在明尼苏达州的ICE执法行动",
+                "据《金融时报》报道，美国将向稀土矿商注资16亿美元以换取10%股份",
+                "伯克希尔新任CEO阿贝尔迅速释放信号，陷入困境的卡夫亨氏持股可能被抛弃",
+                "这些下周发布财报的股票通常是“稳赢”的选择"
             ],
             "ES": [
-                "La tormenta invernal Fern podría causar importantes cortes de energía",
+                "Las aerolíneas cancelan más de 13.000 vuelos de fin de semana mientras una tormenta invernal masiva azota los EE. UU.",
                 "Trump amenaza con imponer un arancel del 100% si Canadá llega a un acuerdo con China",
-                "Los recortes en Reality Labs de Meta despertaron temores de un 'invierno de la VR'",
-                "Pasé la semana con CEOs de tecnología. Esto es de lo que están hablando",
-                "El paquete salarial de 1 billón de dólares de Musk renueva el enfoque en la creciente compensación de los CEOs",
+                "El gobernador Walz pide a Trump que detenga las operaciones del ICE en Minnesota tras otro tiroteo mortal",
+                "EE. UU. inyectará 1.600 millones de dólares en una minera de tierras raras por una participación del 10%, según el FT",
+                "El nuevo CEO de Berkshire, Abel, señala rápidamente que la participación en la atribulada Kraft Heinz podría llegar a su fin",
                 "Estas acciones que presentan resultados la próxima semana suelen ser apuestas ganadoras"
             ],
             "HI": [
-                "शीतकालीन तूफान फर्न के कारण भारी बिजली कटौती हो सकती है",
-                "ट्रंप ने धमकी दी है कि अगर कनाडा चीन के साथ सौदा करता है तो वह 100% टैरिफ लगाएंगे",
-                "मेटा की रियलिटी लैब्स में कटौती ने 'VR विंटर' की आशंकाओं को जन्म दिया है",
-                "मैंने सप्ताह तकनीकी सीईओ के साथ बिताया। यहाँ वे बातें हैं जिन पर वे चर्चा कर रहे हैं",
-                "मस्क के $1 ट्रिलियन के वेतन पैकेज ने सीईओ के बढ़ते मुआवजे पर फिर से ध्यान केंद्रित किया है",
-                "अगले सप्ताह आय की रिपोर्ट करने वाले ये स्टॉक आमतौर पर जीतने वाले दांव होते हैं"
+                "अमेरिका में भारी बर्फीले तूफान के कारण एयरलाइनों ने सप्ताहांत की 13,000 से अधिक उड़ानें रद्द कीं",
+                "ट्रंप ने धमकी दी: अगर कनाडा चीन के साथ समझौता करता है, तो 100% टैरिफ लगाएंगे",
+                "एक और घातक गोलीबारी के बाद गवर्नर वाल्ज़ ने ट्रंप से मिनेसोटा में ICE के संचालन को रोकने का आह्वान किया",
+                "अमेरिका दुर्लभ पृथ्वी खनन कंपनी में 10% हिस्सेदारी के लिए 1.6 बिलियन डॉलर का निवेश करेगा, FT की रिपोर्ट",
+                "बर्कशायर के नए CEO एबेल ने संकेत दिया कि संकटग्रस्त क्राफ्ट हेंज में हिस्सेदारी खत्म हो सकती है",
+                "अगले हफ्ते कमाई की रिपोर्ट देने वाले ये स्टॉक आमतौर पर जीतने वाले दांव होते हैं"
             ],
             "ID": [
-                "Badai Musim Dingin Fern dapat menyebabkan pemadaman listrik yang signifikan",
-                "Trump mengancam akan memberlakukan tarif 100% jika Kanada membuat kesepakatan dengan China",
-                "Pemangkasan Reality Labs Meta memicu kekhawatiran akan 'musim dingin VR'",
-                "Saya menghabiskan seminggu bersama para CEO teknologi. Inilah yang mereka bicarakan",
-                "Paket gaji Musk senilai $1 triliun memperbarui fokus pada kompensasi CEO yang melonjak",
-                "Saham-saham yang melaporkan laba minggu depan ini biasanya merupakan taruhan yang menang"
+                "Maskapai batalkan lebih dari 13.000 penerbangan akhir pekan saat badai musim dingin dahsyat melanda AS",
+                "Trump ancam kenakan tarif 100% jika Kanada buat kesepakatan dengan China",
+                "Gubernur Walz desak Trump hentikan operasi ICE di Minnesota setelah penembakan fatal lainnya",
+                "AS akan suntikkan $1,6 miliar ke penambang logam tanah jarang untuk 10% saham, lapor FT",
+                "CEO baru Berkshire, Abel, beri sinyal kepemilikan saham di Kraft Heinz yang bermasalah bisa segera berakhir",
+                "Saham-saham yang melaporkan laba minggu depan ini biasanya menjadi taruhan yang menguntungkan"
             ],
             "AR": [
-                "العاصفة الشتوية 'فيرن' قد تتسبب في انقطاعات كبيرة في التيار الكهربائي",
-                "ترامب يهدد بفرض رسوم جمركية بنسبة 100% إذا أبرمت كندا صفقة مع الصين",
-                "تخفيضات 'رياليتي لابس' التابعة لشركة ميتا أثارت مخاوف من 'شتاء الواقع الافتراضي'",
-                "لقد قضيت الأسبوع مع الرؤساء التنفيذيين لشركات التكنولوجيا. إليكم ما يتحدثون عنه",
-                "حزمة رواتب ماسك البالغة تريليون دولار تجدد التركيز على تعويضات الرؤساء التنفيذيين المتصاعدة",
-                "هذه الأسهم التي تعلن عن أرباحها الأسبوع المقبل عادة ما تكون رهانًا رابحًا"
+                "شركات الطيران تلغي أكثر من 13,000 رحلة في عطلة نهاية الأسبوع مع اجتياح عاصفة شتوية هائلة للولايات المتحدة",
+                "ترامب يهدد بفرض رسوم جمركية بنسبة 100% إذا أبرمت كندا اتفاقاً مع الصين",
+                "الحاكم والتز يدعو ترامب لوقف عمليات وكالة إنفاذ قوانين الهجرة (ICE) في مينيسوتا بعد حادث إطلاق نار مميت آخر",
+                "الولايات المتحدة ستضخ 1.6 مليار دولار في شركة تعدين للأتربة النادرة مقابل حصة 10%، وفقاً لصحيفة فايننشال تايمز",
+                "الرئيس التنفيذي الجديد لشركة بيركشاير، آبل، يشير سريعاً إلى أن حصة كرافت هاينز المتعثرة قد تنتهي",
+                "هذه الأسهم التي ستعلن عن أرباحها الأسبوع المقبل عادة ما تكون رهانات رابحة"
             ]
         },
-        "last_updated": "2026-01-24T16:06:37.556380Z"
+        "last_updated": "2026-01-25T02:40:48.134008Z"
     },
     "system_status": "OPERATIONAL"
 }

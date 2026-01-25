@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-01-24T23:47:51Z",
-    "last_successful_update": "2026-01-24T23:47:51Z",
+    "last_updated": "2026-01-25T02:40:30Z",
+    "last_successful_update": "2026-01-25T02:40:30Z",
     "gms_score": 38,
     "sector_scores": {
         "STOCKS": 35,
@@ -14,7 +14,6 @@
             "change_percent": 0.0,
             "trend": "BEARISH",
             "sparkline": [
-                20,
                 23,
                 24,
                 24,
@@ -43,6 +42,7 @@
                 24,
                 20,
                 24,
+                25,
                 25
             ]
         },
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 89191.13,
+            "price": 89035.13,
             "prev_price": 89503.88,
-            "daily_chg": -0.35,
-            "change_percent": 1.0,
+            "daily_chg": -0.52,
+            "change_percent": 0.82,
             "trend": "DOWN",
             "sparkline": [
                 90603.19,
@@ -604,14 +604,14 @@
                 89376.96,
                 89462.45,
                 89503.88,
-                89191.13
+                89035.13
             ]
         },
         "ETH": {
-            "price": 2949.3,
+            "price": 2949.96,
             "prev_price": 2953.26,
-            "daily_chg": -0.13,
-            "change_percent": 0.47,
+            "daily_chg": -0.11,
+            "change_percent": 0.49,
             "trend": "DOWN",
             "sparkline": [
                 3125.92,
@@ -635,14 +635,14 @@
                 2978.9,
                 2949.63,
                 2953.26,
-                2949.3
+                2949.96
             ]
         },
         "SOL": {
-            "price": 127.15,
+            "price": 127.06,
             "prev_price": 127.36,
-            "daily_chg": -0.17,
-            "change_percent": 1.15,
+            "daily_chg": -0.24,
+            "change_percent": 1.07,
             "trend": "DOWN",
             "sparkline": [
                 133.3,
@@ -666,7 +666,7 @@
                 129.38,
                 128.29,
                 127.36,
-                127.15
+                127.06
             ]
         },
         "DXY": {
@@ -1105,22 +1105,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "The GMS Score is at 38 as flat momentum keeps the market defensive. VIX rose 2.88% while storms increased macro uncertainty globally. IWM fell 1.85%, showing a rotation from risk to higher quality. Higher energy prices reflect supply risks and compress valuations. Momentum is flat with zero delta, causing the Score to remain at 38.",
+        "content": "The GMS Score is 38 as flat momentum keeps the market in a defensive regime. A 2.88% VIX spike and small-cap weakness signal caution. Energy costs rose 4.56% due to storms, adding pressure. Stagnant liquidity holds the score steady. Low sentiment keeps the current index at 38. The lack of net liquidity growth prevents any score expansion, confirming that the current momentum vector is neutral. This environment demands capital preservation until the score clears the neutral 40 threshold definitively.",
         "reports": {
-            "JP": "現在のGMSスコアは38に位置しており、平坦なモメンタムベクトルが非常に明確な防衛的レジームを規定しています。VIXが2.88%上昇する中、冬の嵐による大規模な航空便欠航が実体経済の不透明感を強め、リスク回避を促します。ネットリクイディティは依然として安定していますが、IWMの1.85%下落は資本が質への逃避を行っている証拠です。原油や天然ガスといった資源価格の急騰は供給網リスクを反映しており、株式のバリュエーションを圧迫する要因です。モメンタムは変化率ゼロのフラットな状態で推移し、スコアを38に留めているため、厳格な守りの姿勢が必要です。",
-            "EN": "The GMS Score is at 38 as flat momentum keeps the market defensive. VIX rose 2.88% while storms increased macro uncertainty globally. IWM fell 1.85%, showing a rotation from risk to higher quality. Higher energy prices reflect supply risks and compress valuations. Momentum is flat with zero delta, causing the Score to remain at 38.",
-            "CN": "目前GMS评分稳定在38点，平稳的动能矢量特征促使整体市场环境继续处于一个明确的防御性制度阶段。波动率VIX上涨2.88%配合冬季风暴造成的航空物流干扰，极大地增加了宏观经济不确定性并引发避险情绪。尽管净流动性总量变化微小，但小盘股IWM下跌1.85%的现象，明确揭示了资本正从风险资产流向安全资产。能源价格的显著飙升反映了潜在的供应链中断风险，这种成本推动型压力正在对股票整体估值形成压缩作用。动能呈现变化率为零的持平态势，导致评分锁定在38点，在当前动荡背景下维持资产安全是极必要的策略。",
-            "ES": "El GMS se mantiene en 38 ya que el impulso plano ancla el régimen defensivo. El VIX subió 2.88% mientras tormentas invernales elevan la incertidumbre macro. IWM cayó 1.85%, señalando una rotación hacia la calidad ante el riesgo actual. El alza en energía refleja choques de oferta y comprime las valuaciones reales. El impulso es plano con delta cero, lo que causa que el Score se mantenga en 38.",
-            "HI": "GMS स्कोर 38 पर स्थिर है क्योंकि सपाट गति बाजार को रक्षात्मक बनाए रखती है। VIX में 2.88% वृद्धि और तूफान ने आर्थिक अनिश्चितता को काफी बढ़ा दिया है। IWM में 1.85% गिरावट जोखिम वाली संपत्तियों से सुरक्षित निवेश की ओर बदलाव है। बढ़ती ऊर्जा कीमतें आपूर्ति झटकों को दर्शाती हैं और बाजार मूल्यांकन को दबाती हैं। गति शून्य डेल्टा के साथ सपाट है, जिससे स्कोर 38 पर स्थिर बना हुआ है।",
-            "ID": "Skor GMS di 38 karena momentum datar menjaga rezim pasar tetap defensif. VIX naik 2.88% saat badai salju memicu ketidakpastian makro yang signifikan. Penurunan IWM 1.85% menandakan rotasi ke aset aman dari aset berisiko tinggi. Harga energi yang naik mencerminkan risiko pasokan dan menekan valuasi saham. Momentum datar dengan delta nol, menyebabkan Skor tetap bertahan di angka 38.",
-            "AR": "يبقى مؤشر GMS عند 38 حيث أدى الزخم المسطح لاستمرار النظام الدفاعي للسوق. ارتفع VIX بنسبة 2.88% وزادت العواصف الشتوية من عدم اليقين الاقتصادي العام. يشير انخفاض IWM بنسبة 1.85% إلى تحول واضح نحو الأمان بعيداً عن المخاطر. تعكس أسعار الطاقة المرتفعة صدمات العرض وتضغط على تقييمات الأسهم الحالية. الزخم مسطح مع دلتا صفر، مما تسبب في بقاء النتيجة ثابتة عند مستوى 38."
+            "JP": "GMSスコアは38を維持し、モメンタムはフラットに推移しており、市場は依然としてディフェンシブな局面を継続しています。VIXの2.88%の上昇と小型株の1.85%の下落はリスク回避姿勢を強め、流動性の停滞が価格の重石となっています。歴史的な供給ショックと同様に、大規模な冬の嵐によるエネルギー価格の急騰がインフレ懸念を再燃させ、評価を圧迫しています。ハイイールド債のスプレッド縮小は見られるものの、仮想通貨の低いセンチメントが投資家の慎重な心理を如実に示しています。ネットリクイディティの変化が極めて僅かであるため、モメンタムは横ばいとなり、スコアを38に固定する要因となりました。",
+            "EN": "The GMS Score is 38 as flat momentum keeps the market in a defensive regime. A 2.88% VIX spike and small-cap weakness signal caution. Energy costs rose 4.56% due to storms, adding pressure. Stagnant liquidity holds the score steady. Low sentiment keeps the current index at 38. The lack of net liquidity growth prevents any score expansion, confirming that the current momentum vector is neutral. This environment demands capital preservation until the score clears the neutral 40 threshold definitively.",
+            "CN": "目前GMS分数维持在38点，动量呈现持平走势，显示出市场依然处于严峻的防御性制度之中。VIX指数上涨2.88%且小盘股出现1.85%的显著跌幅，反映出避险资金正迅速流向质量资产。由于大规模冬冬袭击美国导致天然气价格飙升4.56%，这在宏观上加剧了通胀压力与估值压缩。净流动性仅微增0.02%，这种极低的变动率导致动量陷入停滞，从而使分数继续在38点横盘。加密货币市场情绪保持在25的低位，这与高收益债利差的矛盾表现共同支撑了当前分数的稳定性。",
+            "ES": "El puntaje GMS es 38 con un momentum plano, manteniendo al mercado en un régimen defensivo. El alza del 2.88% en el VIX y la caída de las small-caps elevan la aversión al riesgo. Las tormentas invernales subieron la energía un 4.56%, presionando la inflación. La liquidez estancada impide que el score suba. El sentimiento de 25 mantiene el índice en 38. Esta falta de cambio en la liquidez neta sugiere una consolidación de la debilidad estructural. Se requiere una mejora en los flujos monetarios para que el impulso cambie la trayectoria del puntaje actual.",
+            "HI": "GMS स्कोर 38 है और मोमेंटम फ्लैट है, जो बाजार को रक्षात्मक शासन में रखता है। VIX में 2.88% की वृद्धि और स्मॉल-कैप में गिरावट जोखिम से बचने का संकेत देती है। तूफान ने ऊर्जा की कीमतों को 4.56% बढ़ा दिया, जिससे मुद्रास्फीति का दबाव बढ़ गया। स्थिर तरलता स्कोर को बढ़ने से रोकती है। क्रिप्टो सेंटिमेंट 25 पर होने से सूचकांक 38 पर स्थिर है। शुद्ध तरलता में नाममात्र की वृद्धि ने मोमेंटम को उदासीन बना दिया है, जिससे स्कोर में कोई बदलाव नहीं हुआ। निवेशकों को सतर्क रहने की सलाह दी जाती है क्योंकि बाजार अभी भी जोखिम-बंद मोड में बना हुआ है।",
+            "ID": "Skor GMS berada di 38 dengan momentum datar, menunjukkan rezim defensif yang berkelanjutan. Kenaikan VIX sebesar 2,88% dan pelemahan saham kecil memicu penghindaran risiko. Badai musim dingin menaikkan harga gas 4,56%, menambah tekanan inflasi. Likuiditas yang stagnan menahan laju skor. Sentimen kripto di level 25 menjaga skor tetap di angka 38. Ketiadaan aliran likuiditas baru menyebabkan momentum tidak bergerak, yang pada akhirnya memaku skor pada posisi saat ini. Strategi defensif tetap diutamakan mengingat volatilitas yang mulai meningkat di sektor energi dan pasar modal.",
+            "AR": "يبقى سجل جي إم إس عند 38 مع زخم مسطح، مما يبقي السوق في وضع دفاعي. أدى ارتفاع فيكس بنسبة 2.88% وهبوط الشركات الصغيرة لزيادة الحذر. رفعت العواصف أسعار الغاز بنسبة 4.56%، مما ضغط على التضخم. تمنع السيولة الراكدة أي تحسن في السجل حالياً. ثبات معنويات الكريبتو عند 25 يجعل المؤشر مستقراً عند 38 اليوم. إن غياب التغير في صافي السيولة أدى إلى تحييد الزخم، مما حال دون تحرك السجل نحو المنطقة المحايدة. يراقب المستشارون عن كثب أي تحولات في عوائد السندات قد تعيد تقييم الأصول الخطرة في هذا المناخ."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-23T15:41:34Z",
-            "score": 36
-        },
         {
             "date": "2026-01-23T15:48:01Z",
             "score": 36
@@ -1355,6 +1351,10 @@
         },
         {
             "date": "2026-01-24T23:47:51Z",
+            "score": 38
+        },
+        {
+            "date": "2026-01-25T02:40:30Z",
             "score": 38
         }
     ],
