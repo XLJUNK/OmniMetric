@@ -1,109 +1,77 @@
-import { createGoogleGenerativeAI } from '@ai-sdk/google';
 import { generateText } from 'ai';
+import { gateway } from '@ai-sdk/gateway';
+import * as dotenv from 'dotenv';
 import * as fs from 'fs';
 import * as path from 'path';
 
-async function getPrompt(): Promise<string> {
-    const stdinBuffer: Buffer[] = [];
+// Load environment variables strictly before any SDK calls
+const envPath = path.resolve(__dirname, '../../.env');
+const backendEnvPath = path.resolve(__dirname, '../../backend/.env');
 
-    for await (const chunk of process.stdin) {
-        stdinBuffer.push(chunk);
-    }
-
-    return Buffer.concat(stdinBuffer).toString('utf-8');
+try {
+    dotenv.config({ path: envPath });
+    dotenv.config({ path: backendEnvPath });
+} catch (e) {
+    // Ignore dotenv errors in production if envs are already set
 }
 
+const getPrompt = async () => {
+    const args = process.argv.slice(2);
+    if (args.length > 0) {
+        return args[0];
+    }
+    // Read from stdin
+    return new Promise<string>((resolve, reject) => {
+        let data = '';
+        process.stdin.setEncoding('utf8');
+        process.stdin.on('data', chunk => data += chunk);
+        process.stdin.on('end', () => {
+            if (!data.trim()) {
+                console.error("Error: No prompt provided via args or stdin.");
+                process.exit(1);
+            }
+            resolve(data);
+        });
+        process.stdin.on('error', reject);
+    });
+};
+
 async function main() {
-    // Cool-down Guard (Prevent spam)
-    const guardFile = path.join(process.cwd(), '.ai_guard');
+    // PHYSICAL GUARD: Prevent rapid consecutive calls (1 min cooldown)
+    const guardFile = path.resolve(__dirname, '../../.ai_guard');
+    const now = Date.now();
     try {
         if (fs.existsSync(guardFile)) {
-            const lastRun = parseInt(fs.readFileSync(guardFile, 'utf-8'));
-            const now = Date.now();
-            const elapsed = now - lastRun;
-            const cooldown = 30 * 60 * 1000; // 30 min
-
-            if (elapsed < cooldown) {
-                const remaining = Math.ceil((cooldown - elapsed) / 60000);
-                console.error(`[GUARD] Cool-down active. ${remaining} min remaining.`);
-                process.exit(0);
+            const lastRun = parseInt(fs.readFileSync(guardFile, 'utf8'));
+            // Reduced to 5s to allow sequential GMS -> News execution
+            if (now - lastRun < 5000) {
+                console.error(`[AI GUARD] Rapid call detected. Cooling down... (${Math.round((5000 - (now - lastRun)) / 1000)}s remaining)`);
+                process.exit(1);
             }
         }
-        fs.writeFileSync(guardFile, Date.now().toString());
+        fs.writeFileSync(guardFile, now.toString());
     } catch (e) { }
 
     const prompt = await getPrompt();
 
-    const gatewaySlug = process.env.VERCEL_AI_GATEWAY_SLUG || 'xljunk';
-    const geminiKey = process.env.GEMINI_API_KEY || '';
+    const gatewaySlug = process.env.VERCEL_AI_GATEWAY_SLUG || 'omni-metric';
 
-    if (!geminiKey) {
-        console.error('[AI] CRITICAL: GEMINI_API_KEY not found in environment');
-        process.exit(1);
-    }
-
-    // EMERGENCY FAILOVER: Try Gateway first, then fallback to direct API
-    let result: any = null;
-    let lastError: any = null;
-
-    // Attempt 1: Vercel AI Gateway
     try {
-        console.error(`[AI] Attempt 1: Vercel AI Gateway (${gatewaySlug})...`);
-
-        const google = createGoogleGenerativeAI({
-            apiKey: geminiKey,
-            baseURL: `https://gateway.vercel.ai/with-gateway/${gatewaySlug}/google`,
-        });
-
-        result = await generateText({
-            model: google('gemini-3-flash'),
+        const result = await generateText({
+            model: gateway.languageModel('google/gemini-3-flash'),
             prompt: prompt,
             headers: {
                 'x-vercel-ai-gateway-provider': 'google',
                 'x-vercel-ai-gateway-cache': 'enable',
                 'x-vercel-ai-gateway-cache-ttl': '3600',
-                'x-vercel-ai-gateway-slug': gatewaySlug,
             }
         });
 
-        console.error(`[AI] ✓ Gateway Success`);
-    } catch (error: any) {
-        lastError = error;
-        const statusCode = error?.response?.status || error?.statusCode || 'UNKNOWN';
-        const url = error?.config?.url || `gateway.vercel.ai/with-gateway/${gatewaySlug}`;
-        console.error(`[AI] ✗ Gateway Failed: URL=${url}, Status=${statusCode}, Error=${error.message || error}`);
-    }
-
-    // Attempt 2: Direct Google API Fallback
-    if (!result) {
-        try {
-            console.error(`[AI] Attempt 2: Direct Google API Fallback...`);
-
-            const googleDirect = createGoogleGenerativeAI({
-                apiKey: geminiKey,
-                // Use default baseURL (generativelanguage.googleapis.com)
-            });
-
-            result = await generateText({
-                model: googleDirect('gemini-1.5-flash-latest'),
-                prompt: prompt,
-            });
-
-            console.error(`[AI] ✓ Direct API Success`);
-        } catch (error: any) {
-            const statusCode = error?.response?.status || error?.statusCode || 'UNKNOWN';
-            const url = error?.config?.url || 'generativelanguage.googleapis.com';
-            console.error(`[AI] ✗ Direct API Failed: URL=${url}, Status=${statusCode}, Error=${error.message || error}`);
-            console.error(`[AI] CRITICAL: All AI endpoints failed. Last Gateway Error:`, lastError?.message || lastError);
-            process.exit(1);
-        }
-    }
-
-    // Output ONLY the raw text for Python to capture
-    if (result && result.text) {
+        // Output ONLY the raw text for Python to capture
         process.stdout.write(JSON.stringify({ text: result.text }) + '\n');
-    } else {
-        console.error(`[AI] CRITICAL: No text generated despite success flag.`);
+
+    } catch (error: any) {
+        console.error("AI Generation Failed via Gateway:", error.message || error);
         process.exit(1);
     }
 }
