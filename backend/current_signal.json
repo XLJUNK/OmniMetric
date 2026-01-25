@@ -1358,6 +1358,94 @@
             "score": 33
         }
     ],
+<<<<<<< Updated upstream
     "intelligence": 0.0,
+=======
+    "intelligence": {
+        "news": [
+            {
+                "title": "Airlines cancel more than 13,000 weekend flights as massive winter storm sweeps across the U.S.",
+                "link": "https://www.cnbc.com/2026/01/23/winter-storm-fern-flight-cancellations.html",
+                "isoDate": "2026-01-25T07:46:34.073267Z"
+            },
+            {
+                "title": "Trump threatens to impose 100% tariff if Canada makes deal with China",
+                "link": "https://www.cnbc.com/2026/01/24/trump-tariff-canada-china.html",
+                "isoDate": "2026-01-25T07:46:34.077262Z"
+            },
+            {
+                "title": "Gov. Walz calls on Trump to halt ICE operations in Minnesota after another fatal shooting",
+                "link": "https://www.cnbc.com/2026/01/24/walz-trump-ice-shooting.html",
+                "isoDate": "2026-01-25T07:46:34.077262Z"
+            },
+            {
+                "title": "Japan PM vows to act against speculative market moves after yen spike",
+                "link": "https://www.cnbc.com/2026/01/25/japan-pm-vows-to-act-against-speculative-market-moves-after-yen-spike.html",
+                "isoDate": "2026-01-25T07:46:34.077262Z"
+            },
+            {
+                "title": "U.S. to inject $1.6 billion into rare earths miner for 10% stake, FT reports",
+                "link": "https://www.cnbc.com/2026/01/24/us-rare-earths-miner.html",
+                "isoDate": "2026-01-25T07:46:34.077262Z"
+            },
+            {
+                "title": "These stocks reporting earnings next week are usually winning bets",
+                "link": "https://www.cnbc.com/2026/01/24/these-stocks-reporting-earnings-next-week-are-usually-winning-bets.html",
+                "isoDate": "2026-01-25T07:46:34.077262Z"
+            }
+        ],
+        "translations": {
+            "JP": [
+                "大規模な冬の嵐が全米を襲う中、航空各社は週末のフライトを13,000便以上欠航",
+                "トランプ氏、カナダが中国と取引すれば100%の関税を課すと警告",
+                "ウォルズ知事、相次ぐ射殺事件を受け、ミネソタ州でのICE活動停止をトランプ氏に要請",
+                "日本の首相、円急騰を受け投機的な市場の動きに対処すると表明",
+                "米国、レアアース採掘大手へ16億ドルを投じ10%の株式取得へ、FT紙報道",
+                "来週決算発表を控えるこれらの銘柄は、通常「勝てる賭け」となる"
+            ],
+            "CN": [
+                "强冬季风暴席卷全美，航空公司取消周末逾1.3万架次航班",
+                "特朗普威胁称，若加拿大与中国达成协议，将对其征收100%关税",
+                "沃尔兹州长在又一起致命枪击案后，要求特朗普停止在明尼苏达州的ICE行动",
+                "日元飙升后，日本首相誓言打击投机性市场波动",
+                "据FT报道，美国将向稀土矿商注资16亿美元以换取10%股份",
+                "下周公布财报的这些股票通常是“稳赢之选”"
+            ],
+            "ES": [
+                "Aerolíneas cancelan más de 13,000 vuelos de fin de semana mientras tormenta invernal masiva azota EE. UU.",
+                "Trump amenaza con imponer arancel del 100% si Canadá llega a un acuerdo con China",
+                "Gobernador Walz pide a Trump detener operaciones de ICE en Minnesota tras otro tiroteo fatal",
+                "Primer Ministro de Japón promete actuar contra movimientos especulativos tras repunte del yen",
+                "EE. UU. inyectará $1,600 millones en minera de tierras raras por una participación del 10%, informa FT",
+                "Estas acciones que presentan resultados la próxima semana suelen ser apuestas ganadoras"
+            ],
+            "HI": [
+                "अमेरिका में भीषण शीतकालीन तूफान के बीच एयरलाइंस ने सप्ताहांत की 13,000 से अधिक उड़ानें रद्द कीं",
+                "ट्रम्प ने चेतावनी दी कि यदि कनाडा चीन के साथ समझौता करता है तो वह 100% शुल्क लगाएंगे",
+                "एक और घातक गोलीबारी के बाद गवर्नर वाल्ज़ ने ट्रम्प से मिनेसोटा में ICE संचालन रोकने का आह्वान किया",
+                "येन में उछाल के बाद जापानी पीएम ने सट्टा बाजार की चालों के खिलाफ कार्रवाई करने का संकल्प लिया",
+                "FT की रिपोर्ट: अमेरिका 10% हिस्सेदारी के लिए दुर्लभ मृदा खनन कंपनी में 1.6 अरब डॉलर निवेश करेगा",
+                "अगले हफ्ते कमाई की रिपोर्ट देने वाले ये स्टॉक आमतौर पर जीतने वाले दांव होते हैं"
+            ],
+            "ID": [
+                "Maskapai batalkan lebih dari 13.000 penerbangan akhir pekan saat badai musim dingin dahsyat melanda AS",
+                "Trump ancam kenakan tarif 100% jika Kanada buat kesepakatan dengan China",
+                "Gubernur Walz minta Trump hentikan operasi ICE di Minnesota setelah penembakan fatal lainnya",
+                "PM Jepang berjanji tindak pergerakan pasar spekulatif setelah lonjakan yen",
+                "AS akan suntikkan $1,6 miliar ke penambang tanah jarang untuk 10% saham, lapor FT",
+                "Saham-saham yang melaporkan laba minggu depan ini biasanya menjadi taruhan yang menguntungkan"
+            ],
+            "AR": [
+                "شركات الطيران تلغي أكثر من 13,000 رحلة في عطلة نهاية الأسبوع مع اجتياح عاصفة شتوية هائلة للولايات المتحدة",
+                "ترامب يهدد بفرض تعريفة جمركية بنسبة 100% إذا أبرمت كندا صفقة مع الصين",
+                "الحاكم والز يدعو ترامب لوقف عمليات إدارة إنفاذ قوانين الهجرة (ICE) في مينيسوتا بعد حادث إطلاق نار مميت آخر",
+                "رئيس وزراء اليابان يتعهد بالتحرك ضد التحركات المضاربة في السوق بعد قفزة الين",
+                "الولايات المتحدة تضخ 1.6 مليار دولار في شركة تعدين للأتربة النادرة مقابل حصة 10%، وفقاً لصحيفة فاينانشال تايمز",
+                "هذه الأسهم التي تعلن عن نتائج أرباحها الأسبوع المقبل عادة ما تكون رهانات رابحة"
+            ]
+        },
+        "last_updated": "2026-01-25T07:46:57.080525Z"
+    },
+>>>>>>> Stashed changes
     "system_status": "OPERATIONAL"
 }
