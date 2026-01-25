@@ -1,5 +1,5 @@
 import { generateText } from 'ai';
-import { gateway } from '@ai-sdk/gateway';
+import { createGoogleGenerativeAI } from '@ai-sdk/google';
 import * as dotenv from 'dotenv';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -54,25 +54,23 @@ async function main() {
 
     const prompt = await getPrompt();
 
-    const gatewaySlug = process.env.VERCEL_AI_GATEWAY_SLUG || 'omni-metric'; // Standardized fallback
+    const gatewaySlug = process.env.VERCEL_AI_GATEWAY_SLUG || 'xljunk';
     const gatewayApiKey = process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_AI_GATEWAY_API_KEY;
 
-    if (gatewayApiKey) {
-        process.env.VERCEL_AI_GATEWAY_API_KEY = gatewayApiKey;
-    } else {
-        console.warn("[WARN] AI_GATEWAY_API_KEY seems missing. Gateway might reject the request.");
-    }
+    // v5.9: Physically force all traffic through Vercel AI Gateway via baseURL
+    const google = createGoogleGenerativeAI({
+        apiKey: gatewayApiKey || process.env.GEMINI_API_KEY,
+        baseURL: `https://gateway.vercel.ai/with-gateway/${gatewaySlug}/google`,
+    });
 
     try {
         const result = await generateText({
-            // v5.8: Updated to use the fastest official Gemini 3 architecture
-            model: gateway.languageModel('google/gemini-3-flash'),
+            model: google('gemini-3-flash'),
             prompt: prompt,
             headers: {
                 'x-vercel-ai-gateway-provider': 'google',
                 'x-vercel-ai-gateway-cache': 'enable',
                 'x-vercel-ai-gateway-cache-ttl': '3600',
-                // Explicitly asserting the slug for project routing
                 'x-vercel-ai-gateway-slug': gatewaySlug,
             }
         });

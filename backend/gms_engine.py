@@ -1163,7 +1163,7 @@ Output JSON:
         "gemini-2.5-flash-lite"    # Extreme Efficiency Fallback
     ]
 
-    gateway_slug = os.getenv("VERCEL_AI_GATEWAY_SLUG", "omni-metric") # Standardized fallback
+    gateway_slug = os.getenv("VERCEL_AI_GATEWAY_SLUG", "xljunk") # Target: xljunk
     
     for model_name in models:
         log_diag(f"[AI GATEWAY] Attempting Model: {model_name}...")
@@ -1177,9 +1177,9 @@ Output JSON:
                     log_diag(f"[AI GATEWAY] Rate Limit Guard: Backing off for {wait_time}s...")
                     time.sleep(wait_time)
 
-                # URL: Vercel AI Gateway
-                # Correct Pattern: https://gateway.ai.vercel.tech/v1/{slug}/google/v1/models/{model}:generateContent
-                url = f"https://gateway.ai.vercel.tech/v1/{gateway_slug}/google/v1/models/{model_name}:generateContent"
+                # URL: Vercel AI Gateway (Forced Physical Path)
+                # Correct Pattern: https://gateway.vercel.ai/with-gateway/xljunk/google/v1beta/models/{model}:generateContent
+                url = f"https://gateway.vercel.ai/with-gateway/{gateway_slug}/google/v1beta/models/{model_name}:generateContent"
                 
                 headers = {
                     "Content-Type": "application/json",
