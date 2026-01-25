@@ -1,8 +1,10 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ExternalLink, Zap } from 'lucide-react';
 import { LangType, DICTIONARY } from '@/data/dictionary';
+import { TRADINGVIEW_ADS, AdSegment } from '@/data/tradingview-ads';
+import Image from 'next/image';
 
 interface TVPartnerCardProps {
     lang: LangType;
@@ -10,68 +12,64 @@ interface TVPartnerCardProps {
 }
 
 export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps) => {
-    // 1. Language & Dictionary Logic
-    // Fallback to EN if language is not supported or dictionary entry is missing
-    const t = DICTIONARY[lang] || DICTIONARY['EN'];
+    // 1. Load Data
+    const adContent = TRADINGVIEW_ADS[lang] || TRADINGVIEW_ADS['EN'];
     const isRTL = lang === 'AR';
 
-    // Robust fallback logic for partner data
-    let p = (t as any).partner;
-    if (!p && DICTIONARY['EN']) {
-        p = (DICTIONARY['EN'] as any).partner;
-    }
+    // 2. Random Segment Logic
+    const [selectedSegment, setSelectedSegment] = useState<AdSegment | null>(null);
 
-    // Ultimate safety fallback to prevent runtime crashes
-    if (!p) {
-        p = {
-            badge: "TradingView Official Partner",
-            title: "Get $15 Credit: Save on your new TradingView plan. Experience world-class charting starting from OmniMetric.",
-            action: "Start Analysis (Get $15 Credit)",
-            disclaimer: "OmniMetric is an official partner of TradingView. Benefits apply via our referral links. Please invest at your own risk."
-        };
-    }
+    useEffect(() => {
+        const segments = adContent.segments;
+        if (segments && segments.length > 0) {
+            const random = segments[Math.floor(Math.random() * segments.length)];
+            setSelectedSegment(random);
+        }
+    }, [adContent, lang]);
 
-    // 2. URL Branching Logic
+    // 3. Fallback for Safe Mode / SSR
+    const segment = selectedSegment || adContent.segments[0];
+
+    // 4. URL Construction
     const AFFILIATE_ID = '162240';
     let baseUrl = 'https://www.tradingview.com/';
-
     switch (lang) {
         case 'JP': baseUrl = 'https://jp.tradingview.com/'; break;
         case 'CN': baseUrl = 'https://cn.tradingview.com/'; break;
         case 'ES': baseUrl = 'https://es.tradingview.com/'; break;
-        case 'HI': baseUrl = 'https://in.tradingview.com/'; break; // India
+        case 'HI': baseUrl = 'https://in.tradingview.com/'; break;
         case 'ID': baseUrl = 'https://id.tradingview.com/'; break;
         case 'AR': baseUrl = 'https://ar.tradingview.com/'; break;
         default: baseUrl = 'https://www.tradingview.com/'; break;
     }
+    const affiliateUrl = `${baseUrl}?aff_id=${AFFILIATE_ID}&source=omnimetric_ad_${segment.id}`;
 
-    const affiliateUrl = `${baseUrl}?aff_id=${AFFILIATE_ID}`;
+    // Helper for Button Text - MERGED CLEANLY
+    let baseAction = (DICTIONARY[lang] as any)?.partner?.action || "Start Analysis";
 
-    const linkText = (p as any).link_text || "Analyze on TradingView ($15 Bonus)";
+    // Split by half OR full width parenthesis and take key part
+    // This handles "分析を開始する (15ドルの特典付き)" or similar
+    baseAction = baseAction.split(/[\(（]/)[0].trim();
 
-    // Short offer text for minimal card
-    const offerTextMap: Record<string, string> = {
-        EN: "Get $15 Credit",
-        JP: "15ドルの特典を獲得",
-        CN: "获得 $15 奖励",
-        ES: "Obtenga $15 de Crédito",
-        HI: "$15 का क्रेडिट प्राप्त करें",
-        ID: "Dapatkan Kredit $15",
-        AR: "احصل على رصيد 15 دولارًا"
-    };
-    const offerText = offerTextMap[lang] || offerTextMap['EN'];
+    const bonusText = adContent.bonus;
 
+    // Construct merged button text
+    let fullButtonText = `${baseAction}。${bonusText}`;
+    if (lang === 'EN') fullButtonText = `${baseAction}. ${bonusText}`;
+
+    // VARIANT: Text Link
     if (variant === 'text-link') {
+        const titleLink = (DICTIONARY[lang] as any)?.partner?.title || adContent.main;
+        const linkText = (DICTIONARY[lang] as any)?.partner?.link_text || "Analyze on TradingView ($15 Bonus)";
         return (
             <a
                 href={affiliateUrl}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 className="group inline-flex items-center gap-2 text-xs font-bold text-slate-500 hover:text-sky-500 transition-colors"
-                title={p.title}
+                title={titleLink}
             >
                 <div className="w-5 h-5 rounded bg-slate-100 dark:bg-[#131722] flex items-center justify-center shrink-0 border border-slate-200 dark:border-slate-700 group-hover:border-sky-500 transition-colors">
-                    {/* Tiny TV Icon representation */}
                     <svg viewBox="0 0 24 24" className="w-3 h-3 text-slate-900 dark:text-white fill-current">
                         <path d="M12 0L0 12h5v12h14V12h5L12 0zm0 4.8l7.2 7.2h-2.4v9.6H7.2V12H4.8L12 4.8z" />
                         <path d="M21 12L12 3 3 12h4v8h10v-8h4z" />
@@ -83,17 +81,20 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
         );
     }
 
+    // VARIANT: Minimal
     if (variant === 'minimal') {
+        const badgeText = (DICTIONARY[lang] as any)?.partner?.badge || "TradingView Partner";
+        const offerText = adContent.bonus.replace(/。$/, '');
+
         return (
             <a
                 href={affiliateUrl}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 className="group block w-full mt-4 bg-white dark:bg-gradient-to-r dark:from-[#131722] dark:to-[#0A0A0A] border border-slate-200 dark:border-[#1E293B] hover:border-sky-500/50 rounded-lg p-3 transition-all duration-300 shadow-sm dark:shadow-none"
             >
                 <div className={`flex items-center justify-between gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
                     <div className={`flex items-center gap-2 ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
-                        {/* TradingView Logo Icon / Branding */}
                         <div className="w-8 h-8 rounded bg-slate-100 dark:bg-white flex items-center justify-center shrink-0">
                             <svg viewBox="0 0 24 24" className="w-5 h-5 text-black fill-current">
                                 <path d="M12 0L0 12h5v12h14V12h5L12 0zm0 4.8l7.2 7.2h-2.4v9.6H7.2V12H4.8L12 4.8z" />
@@ -102,56 +103,98 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
                             </svg>
                         </div>
                         <div>
-                            <span className="block text-[9px] font-bold text-sky-500 uppercase tracking-wider">{p.badge}</span>
+                            <span className="block text-[9px] font-bold text-sky-500 uppercase tracking-wider">{badgeText}</span>
                             <span className={`block text-xs font-bold text-slate-700 dark:text-slate-200 group-hover:text-sky-600 dark:group-hover:text-white transition-colors ${isRTL ? 'font-arabic' : ''}`}>
                                 {offerText}
                             </span>
                         </div>
                     </div>
-                    <ExternalLink className={`w-4 h-4 text-slate-400 dark:text-slate-500 group-hover:text-sky-500 transition-colors ${isRTL ? 'rotate-180' : ''}`} />
                 </div>
             </a>
         );
     }
 
+    // VARIANT: Default (Main Banner) - COMPACT INTEGRATED DESIGN
     return (
-        <div className="w-full relative group overflow-hidden bg-white dark:bg-[#131722] border border-slate-200 dark:border-[#1E293B] rounded-xl hover:border-sky-500/30 transition-all duration-300 shadow-sm dark:shadow-none">
-            {/* Background Gradient Effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="w-full relative group overflow-hidden bg-slate-50 dark:bg-[#0A0A0A] border border-slate-200 dark:border-slate-800 rounded-xl transition-all duration-300 shadow-sm dark:shadow-none my-6">
 
-            <div className={`relative z-10 p-5 md:p-6 flex flex-col sm:flex-row items-center justify-between gap-6 ${isRTL ? 'sm:flex-row-reverse' : ''}`}>
+            {/* Added: Specific min-height to ensure structure visibility */}
+            <div className={`flex flex-col md:flex-row items-stretch min-h-[160px] ${isRTL ? 'md:flex-row-reverse' : ''}`}>
 
-                {/* Visual / Text Side */}
-                <div className={`flex-1 space-y-3 text-center ${isRTL ? 'sm:text-right' : 'sm:text-left'}`}>
-                    <div className="inline-flex items-center gap-2 px-2 py-1 rounded bg-slate-100 dark:bg-[#2A2E39] border border-slate-200 dark:border-[#434651]">
-                        <span className="w-1.5 h-1.5 rounded-full bg-sky-500 animate-pulse"></span>
-                        <span className="text-[10px] font-bold text-slate-600 dark:text-slate-200 uppercase tracking-widest">{p.badge}</span>
-                    </div>
-
-                    <h3 className={`text-sm md:text-base font-bold text-slate-900 dark:text-white leading-relaxed max-w-xl ${isRTL ? 'font-arabic' : ''}`}>
-                        {p.title}
-                    </h3>
-                </div>
-
-                {/* CTA Side */}
-                <div className="shrink-0 w-full sm:w-auto">
+                {/* 1. Image Area (Fixed Width ~300px on Desktop to accommodate 3 images) */}
+                <div className={`w-full md:w-[300px] bg-slate-100 dark:bg-[#0f0f0f] border-b md:border-b-0 ${isRTL ? 'md:border-l' : 'md:border-r'} border-slate-200 dark:border-slate-800/50 shrink-0 overflow-hidden flex flex-col`}>
+                    {/* Clickable Image Container - FLEX ROW for 3 side-by-side images */}
                     <a
                         href={affiliateUrl}
                         target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-[#2962FF] hover:bg-[#1E53E5] !text-white font-bold rounded-lg transition-all shadow-lg shadow-blue-900/20 hover:shadow-blue-900/40 text-sm"
-                        style={{ color: '#FFFFFF' }}
+                        rel="noopener noreferrer nofollow"
+                        className="relative flex-1 flex flex-row items-center justify-center p-1 gap-1 hover:opacity-90 transition-opacity min-h-[120px]"
                     >
-                        <Zap className="w-4 h-4 fill-current" />
-                        {p.action}
+                        {/* Image 1: Dynamic Segment (Analyst/Minds) */}
+                        <div className="relative w-1/3 h-full min-h-[100px]">
+                            <Image
+                                src={`/images/${segment.image}`}
+                                alt="TradingView Feature"
+                                fill
+                                className="object-contain"
+                                sizes="(max-width: 768px) 33vw, 100px"
+                            />
+                        </div>
+
+                        {/* Image 2: Chart Sample 1 */}
+                        <div className="relative w-1/3 h-full min-h-[100px]">
+                            <Image
+                                src="/images/tv_chart_sample.png"
+                                alt="TradingView Chart 1"
+                                fill
+                                className="object-contain"
+                                sizes="(max-width: 768px) 33vw, 100px"
+                            />
+                        </div>
+
+                        {/* Image 3: Chart Sample 2 (New) */}
+                        <div className="relative w-1/3 h-full min-h-[100px]">
+                            <Image
+                                src="/images/tv_chart_sample_2.png"
+                                alt="TradingView Chart 2"
+                                fill
+                                className="object-contain"
+                                sizes="(max-width: 768px) 33vw, 100px"
+                            />
+                        </div>
                     </a>
+
+                    {/* Official Partner Label (Bottom of Image Area) */}
+                    <div className="py-2 text-center w-full bg-slate-50/50 dark:bg-black/20 border-t border-slate-200/50 dark:border-slate-800/50">
+                        <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest leading-none block">
+                            TradingView Official Partner
+                        </span>
+                    </div>
+                </div>
+
+                {/* 2. Content Area - Tighter Padding */}
+                <div className={`p-4 md:p-5 flex-1 flex flex-col justify-center text-center ${isRTL ? 'md:text-right' : 'md:text-left'}`}>
+
+                    {/* Main Copy - Dynamic Typography matching AI Insight EXACTLY (fluid-base) */}
+                    <h3 className={`text-fluid-base font-medium text-slate-700 dark:text-slate-300 leading-relaxed max-w-2xl text-center mx-auto mb-4 ${isRTL ? 'font-arabic' : ''}`}>
+                        {segment.text}
+                    </h3>
+
+                    {/* CTA Button - Full Form Width, FLUID TEXT */}
+                    <div className="w-full flex justify-center">
+                        <a
+                            href={affiliateUrl}
+                            target="_blank"
+                            rel="noopener noreferrer nofollow"
+                            className="inline-flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#2962FF] hover:bg-[#1E53E5] !text-white text-fluid-sm font-bold rounded shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all text-center whitespace-nowrap overflow-hidden"
+                            style={{ color: '#FFFFFF' }}
+                        >
+                            <Zap className="w-3.5 h-3.5 fill-current text-white shrink-0" />
+                            <span className="text-white relative top-[0.5px]">{fullButtonText}</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-
-            {/* Bottom Disclaimer for Card (Optional, but user asked for Footer disclaimer. I will add a tiny one here too just in case or keep clean?) 
-                User instruction: "Footer: ... disclaimer". Doesn't strictly say on card. 
-                But for "Trustworthiness", a clean card is better. I'll leave it clean.
-            */}
         </div>
     );
 };
