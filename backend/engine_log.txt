@@ -8037,3 +8037,279 @@ Output JSON:
 [2026-01-25 00:51:29] [SNS_BSKY] Smart-skip: Current score (38) matches last posted score. Skipping.
 [2026-01-25 00:51:29] [SNS_BSKY] Missing Bluesky credentials (BLUESKY_HANDLE / BLUESKY_PASSWORD).
 [2026-01-25 00:51:29] [SNS] Cleanup: Removed gms_ogp_ES_20260125005129.png
+[2026-01-25 17:51:18] [FMP] Fetching calendar from: https://financialmodelingprep.com/api/v3/economic_calendar?from=2026-01-25&to=2026-03-11&apikey=REDACTED
+[2026-01-25 17:51:19] [FMP] Response status: 403
+[2026-01-25 17:51:19] [WARN] Calendar Fetch Failed: Status 403. Using empty list.
+[2026-01-25 17:51:23] [IN] FRED_RAW: { series: DGS10, price: 4.26 }
+[2026-01-25 17:51:24] [IN] FRED_RAW: { series: DFII10, price: 1.95 }
+[2026-01-25 17:51:24] [FRED] Fetching T10YIE (Breakeven Inflation)...
+[2026-01-25 17:51:24] [IN] FRED_RAW: { series: T10YIE, price: 2.32 }
+[2026-01-25 17:51:25] [IN] FRED_RAW: { series_id: NFCI, val: -0.59026 }
+[2026-01-25 17:51:25] [FRED] Calculating Net Liquidity...
+[2026-01-25 17:51:26] [IN] FRED_RAW: { series: WALCL, last: 6584580.0 }
+[2026-01-25 17:51:26] [IN] FRED_RAW: { series: TGA, last: 869261.0 }
+[2026-01-25 17:51:26] [IN] FRED_RAW: { series: RRP, last: 0.927 }
+[2026-01-25 17:51:26] [FRED] Calculated Net Liquidity: 5714.392B (using WALCL=6584580.0)
+[2026-01-25 17:51:26] [OUT] CALC_LIQ: { price: 5714.39, chg: 0.02% }
+[2026-01-25 17:51:26] [IN] YF_QUERY: { count: 21, tickers: ['HG=F', 'NG=F', 'SPY', 'INR=X', 'HYG']... }
+[2026-01-25 17:51:27] [IN] YF_RAW: { ticker: VIX, price: 16.09, chg: 2.88% }
+[2026-01-25 17:51:27] [IN] YF_RAW: { ticker: SPY, price: 689.23, chg: 0.04% }
+[2026-01-25 17:51:27] [IN] YF_RAW: { ticker: TNX, price: 4.24, chg: -0.24% }
+[2026-01-25 17:51:27] [IN] YF_RAW: { ticker: QQQ, price: 622.72, chg: 0.32% }
+[2026-01-25 17:51:27] [IN] YF_RAW: { ticker: IWM, price: 264.81, chg: -1.85% }
+[2026-01-25 17:51:27] [IN] YF_RAW: { ticker: RSP, price: 198.77, chg: -0.45% }
+[2026-01-25 17:51:28] [IN] YF_RAW: { ticker: HYG, price: 81.14, chg: -0.05% }
+[2026-01-25 17:51:28] [IN] YF_RAW: { ticker: NIFTY, price: 25048.65, chg: -0.95% }
+[2026-01-25 17:51:28] [IN] YF_RAW: { ticker: BTC, price: 88096.18, chg: -1.14% }
+[2026-01-25 17:51:28] [IN] YF_RAW: { ticker: ETH, price: 2924.08, chg: -0.84% }
+[2026-01-25 17:51:28] [IN] YF_RAW: { ticker: SOL, price: 126.02, chg: -0.81% }
+[2026-01-25 17:51:28] [IN] YF_RAW: { ticker: DXY, price: 97.46, chg: -0.92% }
+[2026-01-25 17:51:28] [IN] YF_RAW: { ticker: USDJPY, price: 158.5, chg: 0.03% }
+[2026-01-25 17:51:28] [IN] YF_RAW: { ticker: EURUSD, price: 1.18, chg: 0.7% }
+[2026-01-25 17:51:28] [IN] YF_RAW: { ticker: USDINR, price: 91.56, chg: 0.02% }
+[2026-01-25 17:51:29] [IN] YF_RAW: { ticker: USDSAR, price: 3.75, chg: -0.01% }
+[2026-01-25 17:51:29] [IN] YF_RAW: { ticker: GOLD, price: 4979.7, chg: 1.44% }
+[2026-01-25 17:51:29] [IN] YF_RAW: { ticker: OIL, price: 61.07, chg: 2.88% }
+[2026-01-25 17:51:29] [IN] YF_RAW: { ticker: COPPER, price: 5.95, chg: 3.57% }
+[2026-01-25 17:51:29] [IN] YF_RAW: { ticker: NATGAS, price: 3.61, chg: -28.46% }
+[2026-01-25 17:51:29] [GUARD] Data Integrity Audit: 100% Data Completion (All feeds successful).
+[2026-01-25 17:51:29] [GUARD] Market data acquisition: OPERATIONAL
+[2026-01-25 17:51:29] [OUT] CALC_SCORE: { sector: STOCKS, score: 35 }
+[2026-01-25 17:51:30] [OUT] CALC_SCORE: { sector: CRYPTO, score: 25 }
+[2026-01-25 17:51:30] [OUT] CALC_SCORE: { sector: FOREX, score: 70 }
+[2026-01-25 17:51:30] [OUT] CALC_SCORE: { sector: COMMODITIES, score: 55 }
+[2026-01-25 17:51:30] [OUT] SECTOR_SCORES: {"STOCKS": 35, "CRYPTO": 25, "FOREX": 70, "COMMODITIES": 55}
+[2026-01-25 17:51:30] [OUT] GMS_TOTAL: { score: 33 }
+[2026-01-25 17:51:30] [AI CONTEXT] Trend: DOWNWARD (Deteriorating) | Deepening caution and testing support levels. Down from a high of 38.
+[2026-01-25 17:51:30] [AI BRIDGE] GEMINI_API_KEY detected (Length: 39)
+[2026-01-25 17:51:30] [AI BATCH] Requesting 7-language analysis (Attempt 1)...
+[2026-01-25 17:51:30] [AI BRIDGE] Command: npx -y tsx C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\scripts\generate_insight.ts 
+【AI Insight Protocol v5.4: The Council of Three】
+You are the centralized brain of the OmniMetric Terminal. You do not act as a single writer, but as a "Council of Three" specialized agents working in unison.
+
+### THE COUNCIL (Your Internal personas):
+1. [SKILL_01] QUANTITATIVE ANALYST (The Data):
+   - Focus: Fisher Equation, Liquidity, Volatility (VIX/MOVE). 
+   - Logic: Score = Altitude. Momentum = Rate of Change.
+   - Rule: Math only. 0.1% variances matter. NO subjective opinion.
+
+2. [SKILL_02] MACRO STRATEGIST (The Context):
+   - Focus: MacroWiki, Historical Parallels (GFC, 1970s).
+   - Logic: Identify the current "Market Regime".
+
+3. [SKILL_06] THE CONTRARIAN (The Dissenter):
+   - Focus: Counter-narratives and Tailwind/Headwind blindspots.
+   - Logic: Challenge the consensus of Skill 01/02.
+   - Task: Identify ONE logical factor that could break the current regime.
+
+4. [SKILL_03] CHIEF OF STAFF (The Voice):
+   - Focus: Synthesis & Global Adaptation.
+   - Logic: Synthesize the debate into a unified, professional report.
+   - Action: Balance the metrics with the Contrarian's warning into a cohesive view.
+
+### REASONING PROTOCOL:
+- STEP 1 (Identify): Skill 01/02 identify the regime (Defensive, Neutral, Accumulate) based on Matrix.
+- STEP 2 (Challenge): Skill 06 identifies one见落としている (overlooked) positive or negative catalyst.
+- STEP 3 (Draft): Skill 03 writes the final report.
+
+### WRITING GUIDELINES (STRICT):
+- STRUCTURE: [GMS Status] -> [Macro Root (DXY/VIX logic)] -> [Contrarian Warning (Skill 06)] -> [Conclusion/Action].
+- CLARITY: Explain what indicators mean for beginners (e.g., 'DXY (Dollar strength/Liquidity)', 'VIX (Fear/Volatility)').
+- CHARACTER COUNT: ~250 characters per language. (Absolute range: 230-300).
+- MULTI-LANGUAGE: JP, EN, CN, ES, HI, ID, AR. Keep logical consistency across all.
+
+### STRICT LOGIC: SCORE VS MOMENTUM
+- SCORE = Position. MOMENTUM = Direction/Delta.
+- NEVER say "Momentum rose to 37." SAY "Momentum pushed the score to 37."
+
+### OUTPUT PROTOCOL:
+- Focus on logical cause-and-effect: (e.g., 'While GMS score 38 suggests caution, the Contrarian Skill 06 notes that peaking VIX might signal a short-term bottom...')
+- JSON format only. No extra text.
+
+*** NEGATIVE CONSTRAINTS (CRITICAL) ***
+- DO NOT include the character count in the output.
+- DO NOT include any metadata or parenthetical notes.
+- NEVER conflate Score and Momentum.
+
+Market Context:
+- Current GMS Score: 33/100
+- Momentum Vector: DOWNWARD (Deteriorating) (History: Range[33-38] Delta[-5])
+- Trend Narrative: Deepening caution and testing support levels. Down from a high of 38.
+- Market Matrix:
+- CRYPTO_SENTIMENT: 25 (Prev: 25, DailyChg: 0.0%)
+- YIELD_SPREAD: 0.54 (Prev: 0.54, DailyChg: 0.0%)
+- HY_SPREAD: 2.64 (Prev: 2.69, DailyChg: -1.86%)
+- NFCI: -0.59 (Prev: -0.59, DailyChg: 0.0%)
+- NET_LIQUIDITY: 5714.39 (Prev: 5713.26, DailyChg: 0.02%)
+- BREAKEVEN_INFLATION: 2.32 (Prev: 2.32, DailyChg: 0.0%)
+- VIX: 16.09 (Prev: 15.64, DailyChg: 2.88%)
+- YIELD_SPREAD_10Y2Y: 0.64 (Prev: 0.64, DailyChg: 0.0%)
+- US_10Y_YIELD: 4.26 (Prev: 4.26, DailyChg: 0.0%)
+- REAL_INTEREST_RATE: 1.95 (Prev: 1.95, DailyChg: 0.0%)
+- SPY: 689.23 (Prev: 688.98, DailyChg: 0.04%)
+- TNX: 4.24 (Prev: 4.25, DailyChg: -0.24%)
+- QQQ: 622.72 (Prev: 620.76, DailyChg: 0.32%)
+- IWM: 264.81 (Prev: 269.79, DailyChg: -1.85%)
+- RSP: 198.77 (Prev: 199.66, DailyChg: -0.45%)
+- HYG: 81.14 (Prev: 81.18, DailyChg: -0.05%)
+- NIFTY: 25048.65 (Prev: 25289.9, DailyChg: -0.95%)
+- BTC: 88096.18 (Prev: 89110.73, DailyChg: -1.14%)
+- ETH: 2924.08 (Prev: 2948.74, DailyChg: -0.84%)
+- SOL: 126.02 (Prev: 127.05, DailyChg: -0.81%)
+- DXY: 97.46 (Prev: 98.36, DailyChg: -0.92%)
+- USDJPY: 158.5 (Prev: 158.46, DailyChg: 0.03%)
+- EURUSD: 1.18 (Prev: 1.17, DailyChg: 0.7%)
+- USDINR: 91.56 (Prev: 91.54, DailyChg: 0.02%)
+- USDSAR: 3.75 (Prev: 3.75, DailyChg: -0.01%)
+- GOLD: 4979.7 (Prev: 4908.8, DailyChg: 1.44%)
+- OIL: 61.07 (Prev: 59.36, DailyChg: 2.88%)
+- COPPER: 5.95 (Prev: 5.74, DailyChg: 3.57%)
+- NATGAS: 3.61 (Prev: 5.05, DailyChg: -28.46%)
+- MOVE: 56.25 (Prev: 56.25, DailyChg: 0.0%)
+- BREADTH: 0.21 (Prev: 0.21, DailyChg: 0.0%)
+- SPY_MOMENTUM: -0.21 (Prev: -0.21, DailyChg: 0.0%)
+- COPPER_GOLD: 1.19 (Prev: 1.19, DailyChg: 0.0%)
+
+- News: Airlines cancel more than 13,000 weekend flights as massive winter storm sweeps across the U.S.
+
+Regime Guide:
+- 0-40: DEFENSIVE (Risk-Off).
+- 40-60: NEUTRAL.
+- 60-100: ACCUMULATE (Risk-On).
+
+Output JSON:
+{
+  "JP": "...",
+  "EN": "...",
+  "CN": "...",
+  "ES": "...",
+  "HI": "...",
+  "ID": "...",
+  "AR": "..."
+}
+
+[2026-01-25 17:51:45] [AI BRIDGE] Received 2564 bytes of output. Head: [dotenv@17.2.3] injecting env (0) from ..\.env -- tip: ⚙️  suppress all logs with { quiet: true }
+[d...
+[2026-01-25 17:51:45] [AI ERROR] Bridge JSON parse failed: Expecting value: line 1 column 1 (char 0)
+[2026-01-25 17:51:45] [AI BATCH] Requesting 7-language analysis (Attempt 2)...
+[2026-01-25 17:51:45] [AI BRIDGE] Command: npx -y tsx C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\scripts\generate_insight.ts 
+【AI Insight Protocol v5.4: The Council of Three】
+You are the centralized brain of the OmniMetric Terminal. You do not act as a single writer, but as a "Council of Three" specialized agents working in unison.
+
+### THE COUNCIL (Your Internal personas):
+1. [SKILL_01] QUANTITATIVE ANALYST (The Data):
+   - Focus: Fisher Equation, Liquidity, Volatility (VIX/MOVE). 
+   - Logic: Score = Altitude. Momentum = Rate of Change.
+   - Rule: Math only. 0.1% variances matter. NO subjective opinion.
+
+2. [SKILL_02] MACRO STRATEGIST (The Context):
+   - Focus: MacroWiki, Historical Parallels (GFC, 1970s).
+   - Logic: Identify the current "Market Regime".
+
+3. [SKILL_06] THE CONTRARIAN (The Dissenter):
+   - Focus: Counter-narratives and Tailwind/Headwind blindspots.
+   - Logic: Challenge the consensus of Skill 01/02.
+   - Task: Identify ONE logical factor that could break the current regime.
+
+4. [SKILL_03] CHIEF OF STAFF (The Voice):
+   - Focus: Synthesis & Global Adaptation.
+   - Logic: Synthesize the debate into a unified, professional report.
+   - Action: Balance the metrics with the Contrarian's warning into a cohesive view.
+
+### REASONING PROTOCOL:
+- STEP 1 (Identify): Skill 01/02 identify the regime (Defensive, Neutral, Accumulate) based on Matrix.
+- STEP 2 (Challenge): Skill 06 identifies one见落としている (overlooked) positive or negative catalyst.
+- STEP 3 (Draft): Skill 03 writes the final report.
+
+### WRITING GUIDELINES (STRICT):
+- STRUCTURE: [GMS Status] -> [Macro Root (DXY/VIX logic)] -> [Contrarian Warning (Skill 06)] -> [Conclusion/Action].
+- CLARITY: Explain what indicators mean for beginners (e.g., 'DXY (Dollar strength/Liquidity)', 'VIX (Fear/Volatility)').
+- CHARACTER COUNT: ~250 characters per language. (Absolute range: 230-300).
+- MULTI-LANGUAGE: JP, EN, CN, ES, HI, ID, AR. Keep logical consistency across all.
+
+### STRICT LOGIC: SCORE VS MOMENTUM
+- SCORE = Position. MOMENTUM = Direction/Delta.
+- NEVER say "Momentum rose to 37." SAY "Momentum pushed the score to 37."
+
+### OUTPUT PROTOCOL:
+- Focus on logical cause-and-effect: (e.g., 'While GMS score 38 suggests caution, the Contrarian Skill 06 notes that peaking VIX might signal a short-term bottom...')
+- JSON format only. No extra text.
+
+*** NEGATIVE CONSTRAINTS (CRITICAL) ***
+- DO NOT include the character count in the output.
+- DO NOT include any metadata or parenthetical notes.
+- NEVER conflate Score and Momentum.
+
+Market Context:
+- Current GMS Score: 33/100
+- Momentum Vector: DOWNWARD (Deteriorating) (History: Range[33-38] Delta[-5])
+- Trend Narrative: Deepening caution and testing support levels. Down from a high of 38.
+- Market Matrix:
+- CRYPTO_SENTIMENT: 25 (Prev: 25, DailyChg: 0.0%)
+- YIELD_SPREAD: 0.54 (Prev: 0.54, DailyChg: 0.0%)
+- HY_SPREAD: 2.64 (Prev: 2.69, DailyChg: -1.86%)
+- NFCI: -0.59 (Prev: -0.59, DailyChg: 0.0%)
+- NET_LIQUIDITY: 5714.39 (Prev: 5713.26, DailyChg: 0.02%)
+- BREAKEVEN_INFLATION: 2.32 (Prev: 2.32, DailyChg: 0.0%)
+- VIX: 16.09 (Prev: 15.64, DailyChg: 2.88%)
+- YIELD_SPREAD_10Y2Y: 0.64 (Prev: 0.64, DailyChg: 0.0%)
+- US_10Y_YIELD: 4.26 (Prev: 4.26, DailyChg: 0.0%)
+- REAL_INTEREST_RATE: 1.95 (Prev: 1.95, DailyChg: 0.0%)
+- SPY: 689.23 (Prev: 688.98, DailyChg: 0.04%)
+- TNX: 4.24 (Prev: 4.25, DailyChg: -0.24%)
+- QQQ: 622.72 (Prev: 620.76, DailyChg: 0.32%)
+- IWM: 264.81 (Prev: 269.79, DailyChg: -1.85%)
+- RSP: 198.77 (Prev: 199.66, DailyChg: -0.45%)
+- HYG: 81.14 (Prev: 81.18, DailyChg: -0.05%)
+- NIFTY: 25048.65 (Prev: 25289.9, DailyChg: -0.95%)
+- BTC: 88096.18 (Prev: 89110.73, DailyChg: -1.14%)
+- ETH: 2924.08 (Prev: 2948.74, DailyChg: -0.84%)
+- SOL: 126.02 (Prev: 127.05, DailyChg: -0.81%)
+- DXY: 97.46 (Prev: 98.36, DailyChg: -0.92%)
+- USDJPY: 158.5 (Prev: 158.46, DailyChg: 0.03%)
+- EURUSD: 1.18 (Prev: 1.17, DailyChg: 0.7%)
+- USDINR: 91.56 (Prev: 91.54, DailyChg: 0.02%)
+- USDSAR: 3.75 (Prev: 3.75, DailyChg: -0.01%)
+- GOLD: 4979.7 (Prev: 4908.8, DailyChg: 1.44%)
+- OIL: 61.07 (Prev: 59.36, DailyChg: 2.88%)
+- COPPER: 5.95 (Prev: 5.74, DailyChg: 3.57%)
+- NATGAS: 3.61 (Prev: 5.05, DailyChg: -28.46%)
+- MOVE: 56.25 (Prev: 56.25, DailyChg: 0.0%)
+- BREADTH: 0.21 (Prev: 0.21, DailyChg: 0.0%)
+- SPY_MOMENTUM: -0.21 (Prev: -0.21, DailyChg: 0.0%)
+- COPPER_GOLD: 1.19 (Prev: 1.19, DailyChg: 0.0%)
+
+- News: Airlines cancel more than 13,000 weekend flights as massive winter storm sweeps across the U.S.
+
+Regime Guide:
+- 0-40: DEFENSIVE (Risk-Off).
+- 40-60: NEUTRAL.
+- 60-100: ACCUMULATE (Risk-On).
+
+Output JSON:
+{
+  "JP": "...",
+  "EN": "...",
+  "CN": "...",
+  "ES": "...",
+  "HI": "...",
+  "ID": "...",
+  "AR": "..."
+}
+
+[2026-01-25 17:52:02] [AI BRIDGE] Received 4368 bytes of output. Head: [dotenv@17.2.3] injecting env (0) from ..\.env -- tip: ⚙️  suppress all logs with { quiet: true }
+[d...
+[2026-01-25 17:52:02] [AI ERROR] Bridge JSON parse failed: Expecting value: line 1 column 1 (char 0)
+[2026-01-25 17:52:02] [AI GATEWAY] Attempting Model: gemini-3-flash...
+[2026-01-25 17:52:03] [AI GATEWAY EXCEPTION] HTTPSConnectionPool(host='gateway.ai.vercel.tech', port=443): Max retries exceeded with url: /v1/omni-metric/google/models/gemini-3-flash:generateContent?key=REDACTED (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-01-25 17:52:03] [AI GATEWAY] Attempting Model: gemini-2.5-pro...
+[2026-01-25 17:52:04] [AI GATEWAY EXCEPTION] HTTPSConnectionPool(host='gateway.ai.vercel.tech', port=443): Max retries exceeded with url: /v1/omni-metric/google/models/gemini-2.5-pro:generateContent?key=REDACTED (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-01-25 17:52:04] [AI GATEWAY] Attempting Model: gemini-2.5-flash-lite...
+[2026-01-25 17:52:05] [AI GATEWAY EXCEPTION] HTTPSConnectionPool(host='gateway.ai.vercel.tech', port=443): Max retries exceeded with url: /v1/omni-metric/google/models/gemini-2.5-flash-lite:generateContent?key=REDACTED (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+[2026-01-25 17:52:05] [CRITICAL] ALL AI METHODS FAILED. Engaging Stealth Fallback...
+[2026-01-25 17:52:05] [ALERT] Failure flag created at C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\backend\ai_failed.flag
+[2026-01-25 17:52:05] [SMART CACHE] Found valid report from 2026-01-25.json
+[2026-01-25 17:52:05] [STEALTH] Loaded Valid Cache. Appending '..' mark.
+[2026-01-25 17:52:05] [AIO] News fetch failed: module 'fetch_news' has no attribute 'get_news_payload'
+[2026-01-25 17:52:05] [SNS] Sequencer: No slot match in this hour. Skipping.
+[2026-01-25 17:52:05] [AIO] Running Performance Audit...

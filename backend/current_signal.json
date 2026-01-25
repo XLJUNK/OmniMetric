@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
     "last_updated": "2026-01-25T13:42:50Z",
     "last_successful_update": "2026-01-25T13:42:50Z",
+=======
+    "last_updated": "2026-01-25T08:52:05Z",
+    "last_successful_update": "2026-01-25T08:52:05Z",
+>>>>>>> 28b75b78 (chore: include minor backend updates and synchronize with remote)
     "gms_score": 33,
     "sector_scores": {
         "STOCKS": 35,
@@ -577,10 +582,17 @@
             ]
         },
         "BTC": {
+<<<<<<< HEAD
             "price": 88664.3,
             "prev_price": 89110.73,
             "daily_chg": -0.5,
             "change_percent": -0.8,
+=======
+            "price": 88096.18,
+            "prev_price": 89110.73,
+            "daily_chg": -1.14,
+            "change_percent": -1.43,
+>>>>>>> 28b75b78 (chore: include minor backend updates and synchronize with remote)
             "trend": "DOWN",
             "sparkline": [
                 91413.49,
@@ -604,6 +616,7 @@
                 89462.45,
                 89503.88,
                 89110.73,
+<<<<<<< HEAD
                 88664.3
             ]
         },
@@ -612,6 +625,16 @@
             "prev_price": 2948.74,
             "daily_chg": -0.42,
             "change_percent": -1.43,
+=======
+                88096.18
+            ]
+        },
+        "ETH": {
+            "price": 2924.08,
+            "prev_price": 2948.74,
+            "daily_chg": -0.84,
+            "change_percent": -1.84,
+>>>>>>> 28b75b78 (chore: include minor backend updates and synchronize with remote)
             "trend": "DOWN",
             "sparkline": [
                 3140.71,
@@ -635,6 +658,7 @@
                 2949.63,
                 2953.26,
                 2948.74,
+<<<<<<< HEAD
                 2936.4
             ]
         },
@@ -643,6 +667,16 @@
             "prev_price": 127.05,
             "daily_chg": -0.45,
             "change_percent": -2.24,
+=======
+                2924.08
+            ]
+        },
+        "SOL": {
+            "price": 126.02,
+            "prev_price": 127.05,
+            "daily_chg": -0.81,
+            "change_percent": -2.59,
+>>>>>>> 28b75b78 (chore: include minor backend updates and synchronize with remote)
             "trend": "DOWN",
             "sparkline": [
                 133.9,
@@ -666,7 +700,11 @@
                 128.29,
                 127.36,
                 127.05,
+<<<<<<< HEAD
                 126.49
+=======
+                126.02
+>>>>>>> 28b75b78 (chore: include minor backend updates and synchronize with remote)
             ]
         },
         "DXY": {
@@ -1105,6 +1143,7 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
+<<<<<<< HEAD
         "content": "Score is 33 as VIX rises 2.8% amid stagnant global liquidity flows. Momentum is flat, causing the Score to stay at 33 for now. Storms cut flights and caused a 28% crash in natural gas. Weak small-caps show poor breadth despite tight spreads. Gold rises as a hedge while real rates stay at 1.95%.",
         "reports": {
             "JP": "現在のGMSスコアは33の守備的領域にあり、流動性の停滞とVIXの2.8%上昇が市場の不確実性を著しく増大させています。モメンタムは横ばいで推移しており、この方向性の欠如がスコアを33に留め、投資家にリスクオフ姿勢の継続を強制しています。冬の嵐による航空便の大量欠航はエネルギー需要を混乱させ、天然ガスの28%暴落という極端な価格変動を引き起こしました。HY債スプレッドは縮小しましたが、小型株の下落は市場の幅広さの欠如を露呈させ、歪な指数構成への警戒が必要な状況です。実質金利が1.95%で安定する中、金や銅の上昇はインフレへの強い警戒感と、現在の慎重な資産配分の重要性を強調しています。",
@@ -1114,10 +1153,60 @@
             "HI": "GMS स्कोर 33 के रक्षात्मक क्षेत्र में है क्योंकि तरलता स्थिर है और VIX में 2.8% की वृद्धि हुई है। मोमेंटम फ्लैट है, जिससे स्कोर 33 पर स्थिर बना हुआ है और यह सख्त रिस्क-ऑफ को दर्शाता है। तूफान ने उड़ानों को बाधित किया जिससे प्राकृतिक गैस की कीमतों में 28% की बड़ी गिरावट आई। स्माल-कैप में कमजोरी बाजार की संकीर्णता को स्पष्ट रूप से दर्शाती है। सोना मुद्रास्फीति हेज के रूप में बढ़ रहा है जबकि वास्तविक ब्याज दरें 1.95% पर स्थिर हैं।",
             "ID": "Skor GMS di 33 pada zona defensif karena likuiditas stagnan dan VIX yang naik sebesar 2.8%. Momentum datar, menyebabkan skor tetap di 33 dan memaksa sikap pasar tetap defensif. Badai salju memicu pembatalan penerbangan dan membuat harga gas alam anjlok sebesar 28% tadi. Penurunan saham kecil menunjukkan lebar pasar yang buruk meski spread obligasi sedang membaik. Emas naik sebagai lindung nilai inflasi sementara suku bunga riil stabil pada level 1.95%.",
             "AR": "سجل GMS نحو 33 في منطقة دفاعية مع ركود السيولة وارتفاع VIX بنسبة 2.8% حالياً. الزخم مستقر، مما أبقى النتيجة عند 33 ويفرض على المستثمرين نهجاً صارماً للتحوط. أدت العواصف لإلغاء الرحلات وهبوط حاد لأسعار الغاز بنحو 28% تقريباً. يظهر تراجع الشركات الصغيرة ضيق السوق رغم تحسن طفيف في هوامش السندات. ارتفع الذهب كتحوط من التضخم بينما استقرت الفائدة الحقيقية عند نحو 1.95%."
+=======
+        "content": "The GMS Score declines to 33, reflecting increased caution. The rise in VIX coupled with a surge in oil prices is amplifying market uncertainty. While the yield spread remains unchanged and break-even inflation is stable, risk-off sentiment prevails. The copper-gold ratio remains flat, suggesting divided views on economic prospects. Airline flight cancellations due to winter storms could further impact economic activity, warranting vigilance...",
+        "reports": {
+            "JP": "GMSスコアは33に低下し、慎重な姿勢が強まっています。VIXの上昇と原油価格の急騰が重なり、市場の不確実性を高めています。イールドスプレッドは変化がなく、ブレークイーブンインフレ率も安定していますが、リスクオフのセンチメントが優勢です。銅と金の比率は変わらず、景気に対する見方も分かれています。航空会社のフライトキャンセルが経済活動に影響を与える可能性があり、警戒が必要です。..",
+            "EN": "The GMS Score declines to 33, reflecting increased caution. The rise in VIX coupled with a surge in oil prices is amplifying market uncertainty. While the yield spread remains unchanged and break-even inflation is stable, risk-off sentiment prevails. The copper-gold ratio remains flat, suggesting divided views on economic prospects. Airline flight cancellations due to winter storms could further impact economic activity, warranting vigilance...",
+            "CN": "GMS 指数下降至 33，反映出谨慎情绪加剧。 VIX 的上升和油价的飙升加剧了市场的不确定性。虽然收益率差保持不变，盈亏平衡通胀率稳定，但避险情绪依然盛行。铜金比率保持不变，表明对经济前景的看法存在分歧。冬季风暴导致的航空公司航班取消可能会进一步影响经济活动，需要保持警惕。..",
+            "ES": "El puntaje GMS desciende a 33, lo que refleja una mayor cautela. El aumento en el VIX, junto con un aumento en los precios del petróleo, está amplificando la incertidumbre del mercado. Si bien el diferencial de rendimiento se mantiene sin cambios y la inflación de equilibrio es estable, prevalece el sentimiento de aversión al riesgo. La relación cobre-oro se mantiene plana, lo que sugiere puntos de vista divididos sobre las perspectivas económicas. Las cancelaciones de vuelos de aerolíneas debido a las tormentas de invierno podrían afectar aún más la actividad económica, lo que justifica la vigilancia...",
+            "HI": "जीएमएस स्कोर 33 तक गिर गया है, जो बढ़ती सावधानी को दर्शाता है। वीआईएक्स में वृद्धि और तेल की कीमतों में उछाल बाजार की अनिश्चितता को बढ़ा रहे हैं। हालांकि उपज अंतर अपरिवर्तित है और ब्रेक-इवन मुद्रास्फीति स्थिर है, जोखिम-प्रतिकूल भावना प्रबल है। तांबा-सोना अनुपात सपाट बना हुआ है, जो आर्थिक संभावनाओं पर विभाजित विचारों का सुझाव देता है। शीतकालीन तूफानों के कारण एयरलाइन उड़ानों के रद्द होने से आर्थिक गतिविधि और प्रभावित हो सकती है, जिसके लिए सतर्कता की आवश्यकता है।..",
+            "ID": "Skor GMS turun menjadi 33, mencerminkan peningkatan kehati-hatian. Kenaikan VIX ditambah dengan lonjakan harga minyak memperkuat ketidakpastian pasar. Sementara selisih imbal hasil tetap tidak berubah dan inflasi impas stabil, sentimen penghindaran risiko tetap berlaku. Rasio tembaga-emas tetap datar, menunjukkan pandangan yang terpecah tentang prospek ekonomi. Pembatalan penerbangan maskapai karena badai musim dingin dapat semakin berdampak pada aktivitas ekonomi, yang memerlukan kewaspadaan...",
+            "AR": "انخفاض مؤشر GMS إلى 33، مما يعكس زيادة الحذر. ارتفاع مؤشر VIX جنبًا إلى جنب مع الارتفاع في أسعار النفط يزيد من حالة عدم اليقين في السوق. في حين أن فروق العائد تظل دون تغيير واستقرار معدل التضخم، إلا أن معنويات النفور من المخاطرة لا تزال سائدة. ولا تزال نسبة النحاس إلى الذهب ثابتة، مما يشير إلى وجود آراء متباينة حول الآفاق الاقتصادية. قد تؤثر إلغاءات رحلات الطيران بسبب العواصف الشتوية على النشاط الاقتصادي، مما يستدعي اليقظة..."
+>>>>>>> 28b75b78 (chore: include minor backend updates and synchronize with remote)
         }
     },
     "history_chart": [
         {
+<<<<<<< HEAD
+=======
+            "date": "2026-01-23T19:50:06Z",
+            "score": 33
+        },
+        {
+            "date": "2026-01-23T20:40:24Z",
+            "score": 33
+        },
+        {
+            "date": "2026-01-23T21:33:32Z",
+            "score": 32
+        },
+        {
+            "date": "2026-01-23T21:50:41Z",
+            "score": 32
+        },
+        {
+            "date": "2026-01-23T22:32:59Z",
+            "score": 32
+        },
+        {
+            "date": "2026-01-23T22:51:50Z",
+            "score": 32
+        },
+        {
+            "date": "2026-01-23T23:34:40Z",
+            "score": 32
+        },
+        {
+            "date": "2026-01-23T23:49:30Z",
+            "score": 32
+        },
+        {
+            "date": "2026-01-24T02:24:05Z",
+            "score": 33
+        },
+        {
+>>>>>>> 28b75b78 (chore: include minor backend updates and synchronize with remote)
             "date": "2026-01-24T03:51:20Z",
             "score": 33
         },
@@ -1318,6 +1407,7 @@
             "score": 33
         },
         {
+<<<<<<< HEAD
             "date": "2026-01-25T07:52:13Z",
             "score": 33
         },
@@ -1443,5 +1533,12 @@
         },
         "last_updated": "2026-01-25T13:43:07.736575Z"
     },
+=======
+            "date": "2026-01-25T08:52:05Z",
+            "score": 33
+        }
+    ],
+    "intelligence": 0.0,
+>>>>>>> 28b75b78 (chore: include minor backend updates and synchronize with remote)
     "system_status": "OPERATIONAL"
 }
