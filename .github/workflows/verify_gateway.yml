@@ -1,42 +1,34 @@
-on:
-  workflow_dispatch:
-  push:
-    branches: [ main ]
-    paths:
-      - 'scripts/test_vercel_gateway.py'
-      - '.github/workflows/verify_gateway.yml'
-
-jobs:
-  test_gateway:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-      - name: Install dependencies
-        run: pip install requests python-dotenv
-      - name: Run Gateway Test
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          VERCEL_AI_GATEWAY_SLUG: ${{ secrets.VERCEL_AI_GATEWAY_SLUG }}
-        run: python scripts/test_vercel_gateway.py
-
-      - name: Diagnostic Curl Tests
+      - name: Save and Push Results
         if: always()
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          SLUG: "xljunk"
         run: |
-          echo "--- Variation 1: with-gateway (Instruction) ---"
-          curl -v -X POST "https://gateway.vercel.ai/with-gateway/$SLUG/google/v1beta/models/gemini-3-flash:generateContent?key=$GEMINI_API_KEY" \
-          -H "Content-Type: application/json" -d '{"contents":[{"parts":[{"text":"Hi"}]}]}'
+          mkdir -p debug
+          echo "--- GATEWAY DIAGNOSTICS ---" > debug/results.txt
+          date >> debug/results.txt
           
-          echo "--- Variation 2: ai-gateway.vercel.sh ---"
-          curl -v -X POST "https://ai-gateway.vercel.sh/with-gateway/$SLUG/google/v1beta/models/gemini-3-flash:generateContent?key=$GEMINI_API_KEY" \
-          -H "Content-Type: application/json" -d '{"contents":[{"parts":[{"text":"Hi"}]}]}'
+          # Run tests and capture to file (Sanitized)
+          echo "Variation 1 (gateway.vercel.ai):" >> debug/results.txt
+          curl -s -o /dev/null -w "%{http_code}" -X POST "https://gateway.vercel.ai/with-gateway/xljunk/google/v1beta/models/gemini-3-flash:generateContent?key=${{ secrets.GEMINI_API_KEY }}" \
+          -H "Content-Type: application/json" -d '{"contents":[{"parts":[{"text":"Hi"}]}]}' >> debug/results.txt
+          echo "" >> debug/results.txt
 
-          echo "--- Variation 3: Standard v1 Pattern ---"
-          curl -v -X POST "https://gateway.ai.vercel.com/v1/$SLUG/google/v1beta/models/gemini-3-flash:generateContent?key=$GEMINI_API_KEY" \
-          -H "Content-Type: application/json" -d '{"contents":[{"parts":[{"text":"Hi"}]}]}'
+          echo "Variation 2 (ai-gateway.vercel.sh):" >> debug/results.txt
+          curl -s -o /dev/null -w "%{http_code}" -X POST "https://ai-gateway.vercel.sh/with-gateway/xljunk/google/v1beta/models/gemini-3-flash:generateContent?key=${{ secrets.GEMINI_API_KEY }}" \
+          -H "Content-Type: application/json" -d '{"contents":[{"parts":[{"text":"Hi"}]}]}' >> debug/results.txt
+          echo "" >> debug/results.txt
+
+          echo "Variation 3 (gateway.ai.vercel.com):" >> debug/results.txt
+          curl -s -o /dev/null -w "%{http_code}" -X POST "https://gateway.ai.vercel.com/v1/xljunk/google/v1beta/models/gemini-3-flash:generateContent?key=${{ secrets.GEMINI_API_KEY }}" \
+          -H "Content-Type: application/json" -d '{"contents":[{"parts":[{"text":"Hi"}]}]}' >> debug/results.txt
+          echo "" >> debug/results.txt
+
+          echo "Variation 4 (gateway.ai.vercel.tech - Jan 23):" >> debug/results.txt
+          curl -s -o /dev/null -w "%{http_code}" -X POST "https://gateway.ai.vercel.tech/v1/xljunk/google/models/gemini-3-flash:generateContent?key=${{ secrets.GEMINI_API_KEY }}" \
+          -H "Content-Type: application/json" -d '{"contents":[{"parts":[{"text":"Hi"}]}]}' >> debug/results.txt
+          echo "" >> debug/results.txt
+
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b debug/gateway-results || git checkout debug/gateway-results
+          git add debug/results.txt
+          git commit -m "chore: gateway diagnostic results [bot]"
+          git push origin debug/gateway-results --force
