@@ -1,11 +1,11 @@
 {
-    "last_updated": "2026-01-25T15:25:41Z",
-    "last_successful_update": "2026-01-25T15:25:41Z",
+    "last_updated": "2026-01-25T15:31:41Z",
+    "last_successful_update": "2026-01-25T15:31:41Z",
     "gms_score": 33,
     "sector_scores": {
         "STOCKS": 35,
         "CRYPTO": 25,
-        "FOREX": 70,
+        "FOREX": 65,
         "COMMODITIES": 55
     },
     "market_data": {
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 88524.16,
+            "price": 88613.76,
             "prev_price": 89110.73,
-            "daily_chg": -0.66,
-            "change_percent": -0.95,
+            "daily_chg": -0.56,
+            "change_percent": -0.85,
             "trend": "DOWN",
             "sparkline": [
                 91413.49,
@@ -604,14 +604,14 @@
                 89462.45,
                 89503.88,
                 89110.73,
-                88524.16
+                88613.76
             ]
         },
         "ETH": {
-            "price": 2926.72,
+            "price": 2929.56,
             "prev_price": 2948.74,
-            "daily_chg": -0.75,
-            "change_percent": -1.75,
+            "daily_chg": -0.65,
+            "change_percent": -1.66,
             "trend": "DOWN",
             "sparkline": [
                 3140.71,
@@ -635,14 +635,14 @@
                 2949.63,
                 2953.26,
                 2948.74,
-                2926.72
+                2929.56
             ]
         },
         "SOL": {
-            "price": 125.82,
+            "price": 125.92,
             "prev_price": 127.05,
-            "daily_chg": -0.97,
-            "change_percent": -2.75,
+            "daily_chg": -0.89,
+            "change_percent": -2.68,
             "trend": "DOWN",
             "sparkline": [
                 133.9,
@@ -666,7 +666,7 @@
                 128.29,
                 127.36,
                 127.05,
-                125.82
+                125.92
             ]
         },
         "DXY": {
@@ -763,13 +763,12 @@
             ]
         },
         "USDINR": {
-            "price": 91.56,
-            "prev_price": 91.54,
-            "daily_chg": 0.02,
-            "change_percent": 0.94,
+            "price": 91.64,
+            "prev_price": 91.56,
+            "daily_chg": 0.08,
+            "change_percent": 0.8,
             "trend": "UP",
             "sparkline": [
-                89.6,
                 89.51,
                 90.11,
                 89.83,
@@ -790,21 +789,22 @@
                 90.9,
                 91.12,
                 91.54,
-                91.56
+                91.56,
+                91.64
             ]
         },
         "USDSAR": {
             "price": 3.75,
             "prev_price": 3.75,
-            "daily_chg": -0.01,
-            "change_percent": -0.11,
-            "trend": "DOWN",
+            "daily_chg": 0.12,
+            "change_percent": 0.11,
+            "trend": "UP",
             "sparkline": [
                 3.75,
                 3.75,
                 3.75,
-                3.75,
                 3.74,
+                3.75,
                 3.75,
                 3.75,
                 3.75,
@@ -1351,6 +1351,10 @@
         },
         {
             "date": "2026-01-25T15:25:41Z",
+            "score": 33
+        },
+        {
+            "date": "2026-01-25T15:31:41Z",
             "score": 33
         }
     ],
