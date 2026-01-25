@@ -3,6 +3,7 @@
  * Blocks Vercel builds if critical API keys are missing to prevent "Missing Key" errors in production.
  */
 
+
 const requiredKeys = [
     'FRED_API_KEY',
     'GEMINI_API_KEY',
