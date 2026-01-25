@@ -37,6 +37,11 @@ async function main() {
     const gatewaySlug = process.env.VERCEL_AI_GATEWAY_SLUG || 'xljunk';
     const geminiKey = process.env.GEMINI_API_KEY || '';
 
+    if (!geminiKey) {
+        console.error('[AI] CRITICAL: GEMINI_API_KEY not found in environment');
+        process.exit(1);
+    }
+
     // EMERGENCY FAILOVER: Try Gateway first, then fallback to direct API
     let result: any = null;
     let lastError: any = null;
