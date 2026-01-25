@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-01-25T20:53:55Z",
-    "last_successful_update": "2026-01-25T20:53:55Z",
+    "last_updated": "2026-01-25T21:30:00Z",
+    "last_successful_update": "2026-01-25T21:30:00Z",
     "gms_score": 32,
     "sector_scores": {
         "STOCKS": 35,
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 86320.48,
+            "price": 86795.24,
             "prev_price": 89110.73,
-            "daily_chg": -3.13,
-            "change_percent": -3.42,
+            "daily_chg": -2.6,
+            "change_percent": -2.89,
             "trend": "DOWN",
             "sparkline": [
                 91413.49,
@@ -604,14 +604,14 @@
                 89462.45,
                 89503.88,
                 89110.73,
-                86320.48
+                86795.24
             ]
         },
         "ETH": {
-            "price": 2796.9,
+            "price": 2816.15,
             "prev_price": 2948.74,
-            "daily_chg": -5.15,
-            "change_percent": -6.11,
+            "daily_chg": -4.5,
+            "change_percent": -5.46,
             "trend": "DOWN",
             "sparkline": [
                 3140.71,
@@ -635,14 +635,14 @@
                 2949.63,
                 2953.26,
                 2948.74,
-                2796.9
+                2816.15
             ]
         },
         "SOL": {
-            "price": 117.76,
+            "price": 118.02,
             "prev_price": 127.05,
-            "daily_chg": -7.32,
-            "change_percent": -8.98,
+            "daily_chg": -7.11,
+            "change_percent": -8.78,
             "trend": "DOWN",
             "sparkline": [
                 133.9,
@@ -666,7 +666,7 @@
                 128.29,
                 127.36,
                 127.05,
-                117.76
+                118.02
             ]
         },
         "DXY": {
@@ -701,10 +701,10 @@
             ]
         },
         "USDJPY": {
-            "price": 154.46,
+            "price": 154.62,
             "prev_price": 158.5,
-            "daily_chg": -2.55,
-            "change_percent": -2.35,
+            "daily_chg": -2.45,
+            "change_percent": -2.25,
             "trend": "DOWN",
             "sparkline": [
                 156.18,
@@ -728,14 +728,14 @@
                 158.16,
                 158.46,
                 158.5,
-                154.46
+                154.62
             ]
         },
         "EURUSD": {
             "price": 1.19,
             "prev_price": 1.18,
-            "daily_chg": 0.98,
-            "change_percent": 1.98,
+            "daily_chg": 1.01,
+            "change_percent": 2.01,
             "trend": "UP",
             "sparkline": [
                 1.18,
@@ -1105,22 +1105,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS status: Defensive. Flat momentum pushed the score to 32, signaling a risk-off regime. Rising VIX (market fear) suggests increasing caution despite a weaker DXY (dollar strength/liquidity). While crypto and small caps face significant pressure, tightening High-Yield spreads (credit risk) offer a contrarian silver lining, indicating that credit markets remain fundamentally resilient. Use extreme caution and prioritize capital preservation until volatility peaks and momentum shifts toward a recovery vector.",
+        "content": "GMS status is Defensive as Momentum pushed the score down to 32. While VIX (Fear/Volatility) rose 2.88% reflecting higher risk, the DXY (Dollar strength/Liquidity) dropped 0.92%, providing a vital liquidity cushion. This variance suggests that although sentiment is weak, the falling Dollar could prevent a deep sell-off. Maintain a risk-off posture but monitor for short-term stabilization as liquidity improves. Focus on capital preservation while watching for a VIX peak to signal a tactical entry.",
         "reports": {
-            "JP": "GMSステータスは「守備的」です。停滞したモメンタムがスコアを32に押し下げ、明確なリスクオフ局面を示しています。DXY（ドルの強さ/流動性）の低下は本来プラス要因ですが、VIX（市場の恐怖心）の上昇がそれを打ち消し、投資家の警戒を促しています。仮想通貨市場は軟調ですが、ハイイールド債スプレッド（信用リスク）の改善は、信用市場の底堅さを示す唯一の希望的観測です。ボラティリティが安定するまで、資本保護を最優先すべきです。",
-            "EN": "GMS status: Defensive. Flat momentum pushed the score to 32, signaling a risk-off regime. Rising VIX (market fear) suggests increasing caution despite a weaker DXY (dollar strength/liquidity). While crypto and small caps face significant pressure, tightening High-Yield spreads (credit risk) offer a contrarian silver lining, indicating that credit markets remain fundamentally resilient. Use extreme caution and prioritize capital preservation until volatility peaks and momentum shifts toward a recovery vector.",
-            "CN": "GMS状态为“防守”。持平的动能将得分推至32，标志着市场进入风险规避阶段。尽管DXY（美元强度与流动性）有所下降，但VIX（市场恐慌指数）的上升抵消了这一影响，暗示不确定性增加。加密货币和中小盘股目前面临较大压力，然而高收益债利差（信用风险）的收窄提供了一个反向看好信号，反映出信用市场的基本面依然稳健。在波动率见顶前，建议投资者保持克制，优先保护资本安全。",
-            "ES": "Estado GMS: Defensivo. El impulso plano llevó la puntuación a 32, indicando un régimen de aversión al riesgo. El aumento del VIX (miedo del mercado) sugiere precaución, a pesar de la debilidad del DXY (fuerza del dólar/liquidez). Mientras las criptomonedas y las empresas de pequeña capitalización sufren presión, la reducción de los diferenciales de alto rendimiento (riesgo crediticio) es un factor alcista inesperado, sugiriendo resiliencia en el crédito. Mantenga cautela extrema y priorice el capital hasta que la volatilidad ceda.",
-            "HI": "GMS स्थिति: रक्षात्मक। फ्लैट मोमेंटम ने स्कोर को 32 पर धकेल दिया है, जो रिस्क-ऑफ माहौल का संकेत है। DXY (डॉलर की मजबूती/तरलता) में गिरावट के बावजूद, VIX (बाजार का डर) में वृद्धि बढ़ती सावधानी को दर्शाती है। जहाँ क्रिप्टो और स्मॉल-कैप दबाव में हैं, वहीं हाई-यिल्ड स्प्रेड (क्रेडिट जोखिम) का कम होना एक विपरीत सकारात्मक संकेत है, जो ऋण बाजार की मजबूती दिखाता है। जब तक अस्थिरता कम नहीं होती और मोमेंटम में सुधार नहीं आता, तब तक पूंजी सुरक्षा को प्राथमिकता दें और बाजार में अत्यधिक सतर्क रहें।",
-            "ID": "Status GMS: Defensif. Momentum datar mendorong skor ke 32, menandakan rezim risk-off. Kenaikan VIX (indeks ketakutan) menunjukkan kewaspadaan meskipun DXY (kekuatan dolar/likuiditas) melemah. Saat aset kripto dan saham kapitalisasi kecil tertekan, penyempitan spread imbal hasil tinggi (risiko kredit) memberikan sinyal kontarian bahwa pasar kredit masih cukup tangguh. Gunakan kewaspadaan ekstrem; prioritaskan pelestarian modal hingga volatilitas mencapai puncaknya dan momentum bergeser kembali ke arah akumulasi.",
-            "AR": "حالة GMS: دفاعية. دفع الزخم المسطح النتيجة إلى 32، مما يشير إلى نظام تجنب المخاطر. يشير ارتفاع VIX (خوف السوق) إلى زيادة الحذر رغم ضعف مؤشر DXY (قوة الدولار/السيولة). بينما تواجه العملات المشفرة والشركات الصغيرة ضغوطًا بيعية، فإن تضييق هوامش العائد المرتفع (مخاطر الائتمان) يقدم إشارة معاكسة تدل على مرونة أسواق الائتمان بشكل عام. يجب توخي الحذر الشديد وإعطاء الأولوية لحماية رأس المال حتى تبلغ التقلبات ذروتها ويتحول اتجاه الزخم نحو الاستقرار مجددًا."
+            "JP": "GMSは守備的（Defensive）な局面にあり、モメンタムがスコアを32まで押し下げました。VIX（市場の恐怖指数）が2.88%上昇し警戒感が高まる中、DXY（ドル安）が0.92%下落したことで流動性が供給されています。この指標の乖離は、市場のセンチメントは脆弱ですが、ドル安がクッションとなり急落を抑制する可能性を示唆します。現時点ではリスクオフを維持すべきですが、流動性の改善による短期的な市場の安定化に注視してください。",
+            "EN": "GMS status is Defensive as Momentum pushed the score down to 32. While VIX (Fear/Volatility) rose 2.88% reflecting higher risk, the DXY (Dollar strength/Liquidity) dropped 0.92%, providing a vital liquidity cushion. This variance suggests that although sentiment is weak, the falling Dollar could prevent a deep sell-off. Maintain a risk-off posture but monitor for short-term stabilization as liquidity improves. Focus on capital preservation while watching for a VIX peak to signal a tactical entry.",
+            "CN": "GMS状态处于防御型区间，动量将得分进一步推低至32。虽然VIX（恐慌指数）上涨2.88%反映出市场风险偏好下降，但DXY（美元强度）下跌0.92%为市场提供了必要的流动性缓冲。这种背离信号表明，尽管当前市场情绪较为疲软，但美元的走弱可能阻止价格出现深度回撤。操作上应保持避险姿态，同时密切关注因流动性环境改善而可能出现的短期企稳机会，以应对当前波动的市场环境。",
+            "ES": "El estado de GMS es Defensivo ya que el impulso bajó la puntuación a 32. Mientras el VIX (Miedo/Volatilidad) subió un 2,88% reflejando mayor riesgo, el DXY (Fuerza del dólar/Liquidez) cayó un 0,92%, brindando un colchón de liquidez. Esta varianza sugiere que, aunque el sentimiento es débil, la caída del dólar podría evitar un colapso mayor en los precios. Mantenga una postura de bajo riesgo y cautela, pero observe una posible estabilización a corto plazo gracias a la mejora en la liquidez global.",
+            "HI": "GMS स्थिति रक्षात्मक (Defensive) है क्योंकि मोमेंटम ने स्कोर को 32 तक धकेल दिया है। जबकि VIX (डर/अस्थिरता) में 2.88% की वृद्धि जोखिम को दर्शाती है, DXY (डॉलर की मजबूती/लिक्विडिटी) में 0.92% की गिरावट ने बाजार को सहारा दिया है। यह अंतर बताता है कि खराब सेंटीमेंट के बावजूद, गिरता डॉलर बड़ी गिरावट को रोक सकता है। अभी जोखिम से बचने की रणनीति अपनाएं, लेकिन लिक्विडिटी में सुधार के कारण बाजार के स्थिर होने पर नज़र रखें, जो भविष्य में रिकवरी का संकेत दे सकता है।",
+            "ID": "Status GMS berada di area Defensif karena momentum menekan skor ke 32. Meskipun VIX (Indeks Ketakutan) naik 2,88% yang mencerminkan risiko tinggi, DXY (Kekuatan Dolar/Likuiditas) turun 0,92%, memberikan dukungan likuiditas yang penting. Perbedaan ini menunjukkan bahwa meskipun sentimen pasar melemah, pelemahan Dolar dapat menahan koreksi tajam lebih lanjut. Tetap waspada dan pertahankan posisi defensif, namun pantau tanda-tanda stabilisasi jangka pendek akibat perbaikan likuiditas global.",
+            "AR": "حالة GMS دفاعية حيث دفع الزخم النتيجة إلى 32. بينما ارتفع VIX (مؤشر الخوف) بنسبة 2.88% مما يعكس زيادة المخاطر، انخفض DXY (قوة الدولار) بنسبة 0.92%، مما وفر سيولة داعمة للسوق. يشير هذا التباين إلى أنه رغم ضعف المعنويات العامة، إلا أن هبوط الدولار قد يمنع حدوث انهيار أعمق في الأسعار. يجب الحفاظ على نهج تجنب المخاطر حالياً مع مراقبة استقرار السوق على المدى القصير بفضل تحسن مستويات السيولة العالمية بشكل طفيف."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-24T11:27:40Z",
-            "score": 38
-        },
         {
             "date": "2026-01-24T11:46:00Z",
             "score": 38
@@ -1356,6 +1352,10 @@
         {
             "date": "2026-01-25T20:53:55Z",
             "score": 32
+        },
+        {
+            "date": "2026-01-25T21:30:00Z",
+            "score": 32
         }
     ],
     "intelligence": {
@@ -1363,85 +1363,85 @@
             {
                 "title": "Alex Pretti killing: Minnesota CEOs, including UnitedHealth, Target, call for 'immediate deescalation'",
                 "link": "https://www.cnbc.com/2026/01/25/alex-pretti-ceo-minneapolis-minnesota.html",
-                "isoDate": "2026-01-25T20:53:56.328894Z"
+                "isoDate": "2026-01-25T21:30:01.259482Z"
             },
             {
                 "title": "Videos of Alex Pretti shooting by federal agents in Minneapolis contradict Trump official claims",
                 "link": "https://www.cnbc.com/2026/01/25/alex-pretti-minneapolis-shooting-videos-trump.html",
-                "isoDate": "2026-01-25T20:53:56.330781Z"
+                "isoDate": "2026-01-25T21:30:01.261488Z"
             },
             {
                 "title": "Partial government shutdown more likely over DHS funding fight after Alex Pretti killing",
                 "link": "https://www.cnbc.com/2026/01/25/minneapolis-shooting-government-shutdown.html",
-                "isoDate": "2026-01-25T20:53:56.330803Z"
+                "isoDate": "2026-01-25T21:30:01.261510Z"
             },
             {
                 "title": "Flight disruptions from massive winter storm will linger Monday",
                 "link": "https://www.cnbc.com/2026/01/23/winter-storm-fern-flight-cancellations.html",
-                "isoDate": "2026-01-25T20:53:56.330814Z"
+                "isoDate": "2026-01-25T21:30:01.261522Z"
             },
             {
                 "title": "Ice from winter storm leaves hundreds of thousands of customers without power across the South",
                 "link": "https://www.cnbc.com/2026/01/25/massive-winter-storm-brings-ice-cold-and-widespread-power-outages.html",
-                "isoDate": "2026-01-25T20:53:56.330824Z"
+                "isoDate": "2026-01-25T21:30:01.261534Z"
             },
             {
                 "title": "JPMorgan's top short ideas for 2026",
                 "link": "https://www.cnbc.com/2026/01/25/jpmorgans-top-short-ideas-for-2026.html",
-                "isoDate": "2026-01-25T20:53:56.330837Z"
+                "isoDate": "2026-01-25T21:30:01.261545Z"
             }
         ],
         "translations": {
             "JP": [
-                "アレックス・プレッティ殺害事件：ユナイテッドヘルスやターゲットを含むミネソタ州のCEOらが「即時の事態沈静化」を要請",
-                "ミネアポリスでの連邦捜査官によるアレックス・プレッティ射殺動画、トランプ政権高官の主張と矛盾",
-                "アレックス・プレッティ殺害後のDHS予算争いを巡り、政府機関の一部閉鎖の可能性が高まる",
-                "大規模な冬の嵐によるフライトの混乱、月曜日まで続く見込み",
-                "冬の嵐による着氷で、南部全域の数十万世帯が停電",
-                "JPモルガンが選ぶ2026年のトップ・ショート（空売り）候補"
+                "アレックス・プレッティ殺害：ユナイテッドヘルスやターゲットを含むミネソタ州のCEOらが「即時の沈静化」を求める",
+                "ミネアポリスでの連邦捜査官によるアレックス・プレッティ射殺の動画がトランプ政権高官の主張と矛盾",
+                "アレックス・プレッティ殺害後の国土安全保障省（DHS）の予算争いを巡り、政府機関の一部閉鎖の可能性が高まる",
+                "大規模な冬の嵐によるフライトの乱れが月曜日まで続く見込み",
+                "冬の嵐による氷の影響で、南部全域の数十万世帯が停電",
+                "2026年に向けたJPモルガンの主要ショート（空売り）推奨銘柄"
             ],
             "CN": [
-                "亚历克斯·普雷蒂被杀事件：包括联合健康和塔吉特在内的明尼苏达州首席执行官呼吁“立即降温”",
-                "明尼阿波利斯联邦特工枪杀亚历克斯·普雷蒂的视频与特朗普政府官员的说法相矛盾",
-                "亚历克斯·普雷蒂被杀后，围绕国土安全部资金的争斗使政府部分停摆的可能性增加",
-                "强冬季风暴造成的航班中断将持续至周一",
-                "冬季风暴带来的积冰导致南部数十万用户断电",
-                "摩根大通2026年首选做空建议"
+                "亚历克斯·普雷蒂被杀：包括联合健康和塔吉特在内的明尼苏达州首席执行官呼吁“立即降温”",
+                "明尼阿波利斯联邦特工枪击亚历克斯·普雷蒂的视频与特朗普官员的说法相矛盾",
+                "在亚历克斯·普雷蒂被杀后，国土安全部（DHS）的资金争端使政府部分关门的可能性加大",
+                "强冬季风暴导致的航班中断将持续到周一",
+                "冬季风暴带来的结冰导致南部数十万用户断电",
+                "摩根大通 2026 年首选做空建议"
             ],
             "ES": [
                 "Asesinato de Alex Pretti: Directores ejecutivos de Minnesota, incluidos UnitedHealth y Target, piden una \"desescalada inmediata\"",
-                "Videos del tiroteo de Alex Pretti por agentes federales en Minneapolis contradicen las afirmaciones de funcionarios de Trump",
-                "Cierre parcial del gobierno es más probable tras la disputa por el financiamiento del DHS después del asesinato de Alex Pretti",
+                "Videos de los disparos de agentes federales contra Alex Pretti en Minneapolis contradicen las afirmaciones de funcionarios de Trump",
+                "El cierre parcial del gobierno es más probable debido a la disputa por los fondos del DHS tras el asesinato de Alex Pretti",
                 "Las interrupciones de vuelos por la tormenta invernal masiva persistirán el lunes",
-                "El hielo de la tormenta invernal deja a cientos de miles de clientes sin electricidad en el sur",
+                "El hielo de la tormenta invernal deja a cientos de miles de clientes sin electricidad en todo el Sur",
                 "Las principales ideas de posiciones cortas de JPMorgan para 2026"
             ],
             "HI": [
                 "एलेक्स प्रेटी की हत्या: यूनाइटेडहेल्थ, टारगेट सहित मिनेसोटा के सीईओ ने 'तत्काल तनाव कम करने' का आह्वान किया",
-                "मिनियापोलिस में संघीय एजेंटों द्वारा एलेक्स प्रेटी की शूटिंग के वीडियो ट्रंप अधिकारियों के दावों का खंडन करते हैं",
-                "एलेक्स प्रेटी की हत्या के बाद DHS फंडिंग की लड़ाई पर आंशिक सरकारी तालाबंदी की संभावना बढ़ी",
-                "भीषण बर्फीले तूफान से उड़ानों में व्यवधान सोमवार तक बना रहेगा",
-                "बर्फीले तूफान की वजह से दक्षिण में लाखों उपभोक्ता बिना बिजली के रह गए हैं",
-                "2026 के लिए जेपी मॉर्गन के शीर्ष शॉर्ट आइडिया (बिकवाली के सुझाव)"
+                "मिनियापोलिस में संघीय एजेंटों द्वारा एलेक्स प्रेटी को गोली मारने के वीडियो ट्रम्प प्रशासन के अधिकारियों के दावों का खंडन करते हैं",
+                "एलेक्स प्रेटी की हत्या के बाद DHS फंडिंग विवाद के कारण आंशिक सरकारी कामकाज ठप होने की संभावना बढ़ी",
+                "भीषण शीतकालीन तूफान के कारण उड़ानों में व्यवधान सोमवार तक बना रहेगा",
+                "शीतकालीन तूफान की बर्फ के कारण दक्षिण में लाखों उपभोक्ता बिजली के बिना रहने को मजबूर",
+                "2026 के लिए जेपी मॉर्गन के शीर्ष शॉर्ट (बिकवाली) विचार"
             ],
             "ID": [
-                "Pembunuhan Alex Pretti: Para CEO Minnesota, termasuk UnitedHealth dan Target, menyerukan 'deeskalasi segera'",
+                "Pembunuhan Alex Pretti: CEO Minnesota, termasuk UnitedHealth dan Target, menyerukan 'deeskalasi segera'",
                 "Video penembakan Alex Pretti oleh agen federal di Minneapolis bertentangan dengan klaim pejabat Trump",
-                "Penutupan sebagian pemerintah (shutdown) lebih mungkin terjadi akibat perselisihan anggaran DHS pasca pembunuhan Alex Pretti",
-                "Gangguan penerbangan akibat badai musim dingin yang masif akan berlanjut hingga Senin",
-                "Es dari badai musim dingin menyebabkan ratusan ribu pelanggan tanpa listrik di seluruh wilayah Selatan",
-                "Ide 'short' (penjualan kosong) teratas JPMorgan untuk tahun 2026"
+                "Penutupan sebagian pemerintah lebih mungkin terjadi karena perebutan pendanaan DHS setelah pembunuhan Alex Pretti",
+                "Gangguan penerbangan akibat badai musim dingin yang besar akan berlanjut hingga Senin",
+                "Es dari badai musim dingin menyebabkan ratusan ribu pelanggan tanpa aliran listrik di seluruh wilayah Selatan",
+                "Ide short (jual kosong) teratas JPMorgan untuk tahun 2026"
             ],
             "AR": [
-                "مقتل أليكس بريتي: رؤساء تنفيذيون في مينيسوتا، بما في ذلك يونايتد هيلث وتارغيت، يدعون إلى \"تهدئة فورية\"",
-                "مقاطع فيديو لإطلاق النار على أليكس بريتي من قبل عملاء فيدراليين في مينيابوليس تتناقض مع ادعاءات مسؤولي ترامب",
-                "احتمال إغلاق حكومي جزئي يزداد بسبب الصراع على تمويل وزارة الأمن الداخلي بعد مقتل أليكس بريتي",
-                "اضطرابات الرحلات الجوية الناجمة عن العاصفة الشتوية العاتية ستستمر يوم الاثنين",
-                "الجليد الناتج عن العاصفة الشتوية يقطع الكهرباء عن مئات الآلاف من المشتركين في الجنوب",
-                "أفضل أفكار البيع على المكشوف (Short Ideas) من جي بي مورغان لعام 2026"
+                "مقتل أليكس بريتي: الرؤساء التنفيذيون في مينيسوتا، بما في ذلك يونايتد هيلث وتارغت، يدعون إلى \"وقف فوري للتصعيد\"",
+                "مقاطع فيديو لإطلاق النار على أليكس بريتي من قبل عملاء فيدراليين في مينيابوليس تتعارض مع ادعاءات مسؤولي ترامب",
+                "إغلاق جزئي للحكومة أصبح أكثر احتمالاً بسبب معركة تمويل وزارة الأمن الداخلي بعد مقتل أليكس بريتي",
+                "اضطرابات الرحلات الجوية الناتجة عن عاصفة شتوية عارمة ستستمر حتى يوم الاثنين",
+                "الجليد الناتج عن العاصفة الشتوية يترك مئات الآلاف من المشتركين بدون كهرباء في جميع أنحاء الجنوب",
+                "أبرز أفكار البيع على المكشوف من جي بي مورغان لعام 2026"
             ]
         },
-        "last_updated": "2026-01-25T20:54:13.270220Z"
+        "last_updated": "2026-01-25T21:30:18.471966Z"
     },
     "system_status": "OPERATIONAL"
 }
