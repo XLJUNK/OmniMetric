@@ -1201,7 +1201,14 @@ Output JSON:
                 payload = {"contents": [{"parts": [{"text": prompt}]}]}
                 
                 # Timeout Increased to 30s
-                response = requests.post(target_url, json=payload, headers=headers, timeout=30)
+                log_diag(f"[AI REQUEST] URL={target_url[:100]}... Model={model_name} Attempt={attempt+1}")
+                
+                try:
+                    response = requests.post(target_url, json=payload, headers=headers, timeout=30)
+                    log_diag(f"[AI RESPONSE] Status={response.status_code} Model={model_name}")
+                except requests.exceptions.RequestException as e:
+                    log_diag(f"[AI ERROR] Network Exception: URL={target_url[:100]}, Error={str(e)[:200]}")
+                    continue
                 
                 if response.status_code == 200:
                     result = response.json()
@@ -1214,7 +1221,7 @@ Output JSON:
                     
                     if 'candidates' in result and result['candidates']:
                         text = result['candidates'][0]['content']['parts'][0]['text']
-                        log_diag(f"[AI SUCCESS] Generated via {model_name} (Gateway).")
+                        log_diag(f"[AI SUCCESS] Generated via {model_name} (Attempt {attempt+1}).")
                         text = text.replace("```json", "").replace("```", "").strip()
                         reports = json.loads(text)
                         
@@ -1225,16 +1232,18 @@ Output JSON:
                             return reports
                         else:
                              log_diag(f"[AI INVALID] {model_name} returned incomplete JSON.")
-                             break 
+                             break
+                    else:
+                        log_diag(f"[AI ERROR] No candidates in response. Model={model_name}") 
                 
                 elif response.status_code == 429:
-                    log_diag(f"[AI GATEWAY 429] Rate Limit on {model_name} (Attempt {attempt+1}/2).")
+                    log_diag(f"[AI RATE LIMIT] URL={target_url[:100]}, Model={model_name}, Status=429")
                     continue # Trigger Backoff and Retry
                 
                 else:
-                    # Enhanced Error Logging
+                    # Enhanced Error Logging with URL and Status
                     error_msg = response.text.strip()
-                    log_diag(f"[AI GATEWAY FAIL] Status {response.status_code} | Msg: {error_msg[:500]}")
+                    log_diag(f"[AI ERROR] URL={target_url[:100]}, Model={model_name}, Status={response.status_code}, Body={error_msg[:300]}")
                     # Non-429 error (e.g. 500 or 404). Do not retry same model endlessly.
                     break # Move to next model immediately (Downgrade)
 

@@ -156,7 +156,8 @@ Output JSON format: {{ "JP": [...], "CN": [...], ... }} only."""
         
         if process.returncode != 0:
             log_diag(f"[FATAL] Node process exited with code {process.returncode}")
-            log_diag(f"STDERR: {stderr}")
+            log_diag(f"[STDERR] {stderr[:500]}")
+            log_diag(f"[STDOUT] {stdout[:500]}")
             create_failure_flag(f"Node Process Failed (Code {process.returncode})")
             return {}
 
