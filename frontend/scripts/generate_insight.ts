@@ -65,6 +65,7 @@ async function main() {
 
     try {
         const result = await generateText({
+            // v5.8: Updated to use the fastest official Gemini 3 architecture
             model: gateway.languageModel('google/gemini-3-flash'),
             prompt: prompt,
             headers: {

@@ -1154,11 +1154,13 @@ Output JSON:
             log_diag(f"[AI BRIDGE CRITICAL] {e}")
 
     # VERCEL AI GATEWAY - RESILIENCE PROTOCOL (PRIMARY)
-    # Priority: 3-Flash (Speed) > 2.5-Pro (Quality) > 2.5-Flash-Lite (Cost)
+    # Strategy: Flash-Targeted Speed > High-Tier Reasoning > Efficient Fallbacks
     models = [
-        "gemini-3-flash", 
-        "gemini-2.5-pro",
-        "gemini-2.5-flash-lite"
+        "gemini-3-flash",          # Speed & Latest Architecture
+        "gemini-3-pro-preview",    # Maximum Intelligence Tier
+        "gemini-2.5-pro",          # High Stability Reasoning
+        "gemini-2.0-flash",        # Consistent Performance Baseline
+        "gemini-2.5-flash-lite"    # Extreme Efficiency Fallback
     ]
 
     gateway_slug = os.getenv("VERCEL_AI_GATEWAY_SLUG", "xljunk") # Dynamic with strict fallback
