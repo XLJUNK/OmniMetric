@@ -1163,7 +1163,7 @@ Output JSON:
         "gemini-2.5-flash-lite"    # Extreme Efficiency Fallback
     ]
 
-    gateway_slug = os.getenv("VERCEL_AI_GATEWAY_SLUG", "xljunk") # Dynamic with strict fallback
+    gateway_slug = os.getenv("VERCEL_AI_GATEWAY_SLUG", "omni-metric") # Standardized fallback
     
     for model_name in models:
         log_diag(f"[AI GATEWAY] Attempting Model: {model_name}...")
@@ -1177,13 +1177,14 @@ Output JSON:
                     log_diag(f"[AI GATEWAY] Rate Limit Guard: Backing off for {wait_time}s...")
                     time.sleep(wait_time)
 
-                # URL: Vercel AI Gateway (.tech domain)
-                # Structure: https://gateway.ai.vercel.tech/v1/{slug}/google/models/{model}:generateContent
-                url = f"https://gateway.ai.vercel.tech/v1/{gateway_slug}/google/models/{model_name}:generateContent"
+                # URL: Vercel AI Gateway
+                # Correct Pattern: https://gateway.ai.vercel.tech/v1/{slug}/google/v1/models/{model}:generateContent
+                url = f"https://gateway.ai.vercel.tech/v1/{gateway_slug}/google/v1/models/{model_name}:generateContent"
                 
                 headers = {
                     "Content-Type": "application/json",
                     "x-vercel-ai-gateway-provider": "google",
+                    "x-vercel-ai-gateway-slug": gateway_slug, # Explicit routing
                     "x-vercel-ai-gateway-cache": "disable", # Disable cache to force fresh gen
                     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" # Bypass WAF
                 }

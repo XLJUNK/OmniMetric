@@ -54,7 +54,7 @@ async function main() {
 
     const prompt = await getPrompt();
 
-    const gatewaySlug = process.env.VERCEL_AI_GATEWAY_SLUG || 'xljunk'; // Specific target validation
+    const gatewaySlug = process.env.VERCEL_AI_GATEWAY_SLUG || 'omni-metric'; // Standardized fallback
     const gatewayApiKey = process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_AI_GATEWAY_API_KEY;
 
     if (gatewayApiKey) {
