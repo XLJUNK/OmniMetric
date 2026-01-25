@@ -57,7 +57,9 @@ async function main() {
     const gatewaySlug = process.env.VERCEL_AI_GATEWAY_SLUG || 'xljunk'; // Specific target validation
     const gatewayApiKey = process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_AI_GATEWAY_API_KEY;
 
-    if (!gatewayApiKey) {
+    if (gatewayApiKey) {
+        process.env.VERCEL_AI_GATEWAY_API_KEY = gatewayApiKey;
+    } else {
         console.warn("[WARN] AI_GATEWAY_API_KEY seems missing. Gateway might reject the request.");
     }
 
@@ -69,9 +71,8 @@ async function main() {
                 'x-vercel-ai-gateway-provider': 'google',
                 'x-vercel-ai-gateway-cache': 'enable',
                 'x-vercel-ai-gateway-cache-ttl': '3600',
-                // Explicitly asserting the slug and key for physical trace
+                // Explicitly asserting the slug for project routing
                 'x-vercel-ai-gateway-slug': gatewaySlug,
-                ...(gatewayApiKey ? { 'Authorization': `Bearer ${gatewayApiKey}` } : {})
             }
         });
 
