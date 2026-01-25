@@ -1,10 +1,10 @@
 {
-    "last_updated": "2026-01-25T05:54:07Z",
-    "last_successful_update": "2026-01-25T05:54:07Z",
-    "gms_score": 38,
+    "last_updated": "2026-01-25T06:48:34Z",
+    "last_successful_update": "2026-01-25T06:48:34Z",
+    "gms_score": 33,
     "sector_scores": {
         "STOCKS": 35,
-        "CRYPTO": 75,
+        "CRYPTO": 25,
         "FOREX": 70,
         "COMMODITIES": 55
     },
@@ -577,13 +577,12 @@
             ]
         },
         "BTC": {
-            "price": 88850.69,
-            "prev_price": 89503.88,
-            "daily_chg": -0.73,
-            "change_percent": 0.61,
+            "price": 88711.06,
+            "prev_price": 89110.73,
+            "daily_chg": -0.45,
+            "change_percent": -0.75,
             "trend": "DOWN",
             "sparkline": [
-                90603.19,
                 91413.49,
                 93882.55,
                 93729.03,
@@ -604,17 +603,17 @@
                 89376.96,
                 89462.45,
                 89503.88,
-                88850.69
+                89110.73,
+                88711.06
             ]
         },
         "ETH": {
-            "price": 2941.86,
-            "prev_price": 2953.26,
-            "daily_chg": -0.39,
-            "change_percent": 0.21,
+            "price": 2941.03,
+            "prev_price": 2948.74,
+            "daily_chg": -0.26,
+            "change_percent": -1.27,
             "trend": "DOWN",
             "sparkline": [
-                3125.92,
                 3140.71,
                 3226.13,
                 3295.95,
@@ -635,17 +634,17 @@
                 2978.9,
                 2949.63,
                 2953.26,
-                2941.86
+                2948.74,
+                2941.03
             ]
         },
         "SOL": {
-            "price": 126.62,
-            "prev_price": 127.36,
-            "daily_chg": -0.58,
-            "change_percent": 0.73,
+            "price": 126.56,
+            "prev_price": 127.05,
+            "daily_chg": -0.39,
+            "change_percent": -2.18,
             "trend": "DOWN",
             "sparkline": [
-                133.3,
                 133.9,
                 137.99,
                 141.1,
@@ -666,7 +665,8 @@
                 129.38,
                 128.29,
                 127.36,
-                126.62
+                127.05,
+                126.56
             ]
         },
         "DXY": {
@@ -1105,22 +1105,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "The market is stagnant at a GMS score of 38, with flat momentum. Rising oil and copper prices temporarily increased inflation expectations, but stable US 10-year yields countered this effect. Airline cancellations reflect concerns about economic activity, weighing on investor sentiment. The decline in the US Dollar Index and the rise in EURUSD suggests dollar weakness. Financial conditions remain tight, as indicated by the NFCI, warranting a cautious approach to risk assets.",
+        "content": "The GMS Score has declined to 33, signaling heightened caution. The VIX rose by 2.88%, while the MOVE index remains steady at 56.25, indicating persistent bond market volatility concerns. A 2.88% increase in oil prices is sparking renewed inflation anxieties. Historical data suggests we are entering a phase of testing support levels. Despite a marginal increase in Net Liquidity (0.02%), overall market sentiment remains guarded.",
         "reports": {
-            "JP": "市場はGMSスコア38で停滞、モメンタムは横ばいです。原油と銅の上昇は一時的なインフレ期待を高めましたが、米10年債利回りの安定がそれを打ち消しました。航空便のキャンセルは経済活動への懸念を反映し、投資家心理を圧迫しています。米ドル指数の低下とユーロドルの上昇は、ドルの弱さを示唆しています。金融環境はNFCIが示すように依然として引き締まっており、リスク資産への慎重な姿勢が求められます。",
-            "EN": "The market is stagnant at a GMS score of 38, with flat momentum. Rising oil and copper prices temporarily increased inflation expectations, but stable US 10-year yields countered this effect. Airline cancellations reflect concerns about economic activity, weighing on investor sentiment. The decline in the US Dollar Index and the rise in EURUSD suggests dollar weakness. Financial conditions remain tight, as indicated by the NFCI, warranting a cautious approach to risk assets.",
-            "CN": "市场 GMS 评分为 38，动量持平，整体停滞不前。原油和铜价上涨暂时提高了通胀预期，但稳定的美国 10 年期国债收益率抵消了这种影响。 航空公司取消航班反映了对经济活动的担忧，打压了投资者情绪。 美元指数下跌和欧元兑美元汇率上涨表明美元走软。正如 NFCI 指数所示，金融环境仍然紧张，因此对风险资产采取谨慎态度是必要的。",
-            "ES": "El mercado se estanca con una puntuación GMS de 38, con un impulso plano. El aumento de los precios del petróleo y del cobre incrementó temporalmente las expectativas de inflación, pero la estabilidad de los rendimientos de los bonos estadounidenses a 10 años contrarrestó este efecto. Las cancelaciones de vuelos reflejan la preocupación por la actividad económica, lo que pesa sobre la confianza de los inversores. La caída del índice del dólar estadounidense y el aumento del EURUSD sugieren una debilidad del dólar. Las condiciones financieras siguen siendo restrictivas, como indica el NFCI, lo que justifica un enfoque prudente hacia los activos de riesgo.",
-            "HI": "बाजार 38 के जीएमएस स्कोर पर स्थिर है, गति सपाट है। तेल और तांबे की बढ़ती कीमतों ने अस्थायी रूप से मुद्रास्फीति की उम्मीदों को बढ़ाया, लेकिन स्थिर अमेरिकी 10-वर्षीय उपज ने इस प्रभाव को बेअसर कर दिया। एयरलाइन रद्द करने से आर्थिक गतिविधि के बारे में चिंताएं दिखाई दे रही हैं, जिससे निवेशकों की भावना पर असर पड़ रहा है। यूएस डॉलर इंडेक्स में गिरावट और EURUSD में वृद्धि डॉलर की कमजोरी का सुझाव देती है। वित्तीय स्थिति तंग बनी हुई है, जैसा कि एनएफसीआई द्वारा इंगित किया गया है, जोखिम वाली संपत्तियों के प्रति सतर्क दृष्टिकोण की आवश्यकता है।",
-            "ID": "Pasar stagnan pada skor GMS 38, dengan momentum datar. Kenaikan harga minyak dan tembaga sementara meningkatkan ekspektasi inflasi, tetapi imbal hasil obligasi AS 10 tahun yang stabil menetralkan efek ini. Pembatalan maskapai mencerminkan kekhawatiran tentang aktivitas ekonomi, yang membebani sentimen investor. Penurunan Indeks Dolar AS dan kenaikan EURUSD menunjukkan kelemahan dolar. Kondisi keuangan tetap ketat, seperti yang ditunjukkan oleh NFCI, yang memerlukan pendekatan hati-hati terhadap aset berisiko.",
-            "AR": "السوق راكد عند درجة GMS تبلغ 38، مع زخم مسطح. وارتفاع أسعار النفط والنحاس زاد مؤقتا من التوقعات التضخمية، ولكن استقرار عائدات سندات الخزانة الأمريكية لأجل 10 سنوات أدى إلى تحييد هذا التأثير. وتعكس إلغاءات شركات الطيران المخاوف بشأن النشاط الاقتصادي، مما يثقل كاهل معنويات المستثمرين. ويشير الانخفاض في مؤشر الدولار الأمريكي والارتفاع في اليورو مقابل الدولار الأمريكي إلى ضعف الدولار. ولا تزال الأوضاع المالية متشددة، كما هو مبين في مؤشر NFCI، مما يستدعي اتباع نهج حذر تجاه الأصول الخطرة."
+            "JP": "GMSスコアは33に低下、警戒感が強まっています。VIXが2.88%上昇し、MOVE指数は56.25で安定していますが、債券市場のボラティリティへの懸念が残ります。原油価格が2.88%上昇し、インフレ圧力の再燃が意識され始めています。過去のデータから、現在の状況は支持線を探る段階に入りつつあることを示唆します。Net Liquidityのわずかな増加(0.02%)にも関わらず、全体的な市場心理は依然として慎重です。",
+            "EN": "The GMS Score has declined to 33, signaling heightened caution. The VIX rose by 2.88%, while the MOVE index remains steady at 56.25, indicating persistent bond market volatility concerns. A 2.88% increase in oil prices is sparking renewed inflation anxieties. Historical data suggests we are entering a phase of testing support levels. Despite a marginal increase in Net Liquidity (0.02%), overall market sentiment remains guarded.",
+            "CN": "GMS评分降至33，表明市场谨慎情绪加剧。VIX上涨2.88%，MOVE指数稳定在56.25，显示债券市场波动性持续存在。石油价格上涨2.88%，引发了对通胀再次抬头的担忧。历史数据表明，我们正进入测试支撑位的阶段。尽管净流动性略有增加（0.02%），但整体市场情绪依然谨慎。",
+            "ES": "El puntaje GMS ha disminuido a 33, señalando una mayor precaución. El VIX aumentó un 2.88%, mientras que el índice MOVE se mantiene estable en 56.25, lo que indica persistentes preocupaciones sobre la volatilidad del mercado de bonos. Un aumento del 2.88% en los precios del petróleo está generando nuevas inquietudes inflacionarias. Los datos históricos sugieren que estamos entrando en una fase de prueba de los niveles de soporte. A pesar de un ligero aumento en la liquidez neta (0.02%), el sentimiento general del mercado sigue siendo cauteloso.",
+            "HI": "जीएमएस स्कोर 33 तक गिर गया है, जो बढ़ी हुई सावधानी का संकेत देता है। वीआईएक्स में 2.88% की वृद्धि हुई, जबकि एमओवीई इंडेक्स 56.25 पर स्थिर बना हुआ है, जो लगातार बॉन्ड बाजार की अस्थिरता की चिंताओं का संकेत देता है। तेल की कीमतों में 2.88% की वृद्धि से नए सिरे से मुद्रास्फीति की चिंताएँ बढ़ रही हैं। ऐतिहासिक डेटा से पता चलता है कि हम समर्थन स्तरों के परीक्षण के चरण में प्रवेश कर रहे हैं। नेट लिक्विडिटी में मामूली वृद्धि (0.02%) के बावजूद, समग्र बाजार धारणा सतर्क बनी हुई है।",
+            "ID": "Skor GMS telah menurun menjadi 33, menandakan kehati-hatian yang meningkat. VIX naik sebesar 2.88%, sementara indeks MOVE tetap stabil di 56.25, menunjukkan kekhawatiran volatilitas pasar obligasi yang terus-menerus. Kenaikan harga minyak sebesar 2.88% memicu kekhawatiran inflasi yang baru. Data historis menunjukkan bahwa kita memasuki fase pengujian level dukungan. Terlepas dari sedikit peningkatan dalam Likuiditas Bersih (0.02%), sentimen pasar secara keseluruhan tetap berhati-hati.",
+            "AR": "انخفض مؤشر GMS إلى 33، مما يشير إلى زيادة الحذر. ارتفع مؤشر VIX بنسبة 2.88%، بينما ظل مؤشر MOVE ثابتًا عند 56.25، مما يشير إلى استمرار المخاوف بشأن تقلبات سوق السندات. أدت الزيادة بنسبة 2.88% في أسعار النفط إلى إثارة مخاوف تضخمية متجددة. تشير البيانات التاريخية إلى أننا ندخل مرحلة اختبار مستويات الدعم. على الرغم من الزيادة الطفيفة في صافي السيولة (0.02%)، إلا أن معنويات السوق العامة لا تزال حذرة."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-23T17:36:30Z",
-            "score": 36
-        },
         {
             "date": "2026-01-23T17:54:58Z",
             "score": 33
@@ -1356,6 +1352,10 @@
         {
             "date": "2026-01-25T05:54:07Z",
             "score": 38
+        },
+        {
+            "date": "2026-01-25T06:48:34Z",
+            "score": 33
         }
     ],
     "intelligence": 0.0,
