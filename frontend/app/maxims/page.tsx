@@ -4,6 +4,7 @@ import { Quote } from 'lucide-react';
 import { AdSenseSlot } from '@/components/AdSenseSlot';
 import { DynamicStructuredData } from '@/components/DynamicStructuredData';
 import { Metadata } from 'next';
+import { getMultilingualMetadata } from '@/data/seo';
 import { WikiSearch } from '@/components/WikiSearch';
 import { getWikiData } from '@/lib/wiki';
 import { LanguageSelector } from '@/components/LanguageSelector';
@@ -61,14 +62,11 @@ const getPageDesc = (l: LangType) => {
 };
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
-    const lang = await getLang(searchParams);
-    return {
-        title: `${getPageTitle(lang)} - OmniMetric`,
-        description: getPageDesc(lang),
-        alternates: {
-            canonical: `https://omnimetric.net/maxims${lang !== 'EN' ? `?lang=${lang}` : ''}`,
-        }
-    };
+    const s = await searchParams;
+    return getMultilingualMetadata('/maxims', s.lang || 'EN',
+        "Investment Maxims | OmniMetric",
+        "Timeless wisdom from the world's most successful investors and market philosophers."
+    );
 }
 
 const getSubtitle = (l: LangType) => {

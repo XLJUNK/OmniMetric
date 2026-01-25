@@ -8,8 +8,8 @@ import { getMultilingualMetadata } from '@/data/seo';
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
     const s = await searchParams;
     return getMultilingualMetadata('/crypto', s.lang || 'EN',
-        "Crypto Assets Analysis | OmniMetric",
-        "Institutional risk monitoring for Bitcoin, Ethereum, and Solana. Advanced volatility and correlation metrics."
+        "Crypto Market Intelligence | OmniMetric",
+        "Quant-based risk analysis of major crypto assets including Bitcoin, Ethereum, and Solana."
     );
 }
 

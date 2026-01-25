@@ -18,15 +18,11 @@ type Props = {
     params: Promise<{ lang: string }>;
 };
 
+import { getMultilingualMetadata } from '@/data/seo';
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { lang } = await params;
-    return {
-        title: "Terms of Service | OmniMetric Terminal",
-        description: "Terms and Conditions, Disclaimers, and Usage Restrictions for OmniMetric.",
-        alternates: {
-            canonical: `https://omnimetric.net/${lang}/legal/terms`
-        }
-    };
+    return getMultilingualMetadata('/legal/terms', lang, "Terms of Service | OmniMetric Terminal", "Terms and Conditions, Disclaimers, and Usage Restrictions for OmniMetric.", 'path');
 }
 
 export default async function TermsPage({ params }: Props) {

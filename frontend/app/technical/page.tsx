@@ -6,6 +6,7 @@ import { Metadata } from 'next';
 import { WikiSearch } from '@/components/WikiSearch';
 import { getWikiData } from '@/lib/wiki';
 import { LanguageSelector } from '@/components/LanguageSelector';
+import { getMultilingualMetadata } from '@/data/seo';
 
 // Import all language data
 import technicalDataEn from '@/data/technical-en.json';
@@ -59,14 +60,12 @@ const getPageDesc = (l: LangType) => {
 };
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
-    const lang = await getLang(searchParams);
-    return {
-        title: `${getPageTitle(lang)} - OmniMetric`,
-        description: getPageDesc(lang),
-        alternates: {
-            canonical: `https://omnimetric.net/technical${lang !== 'EN' ? `?lang=${lang}` : ''}`,
-        }
-    };
+    const s = await searchParams;
+    const lang = s.lang || 'EN';
+    return getMultilingualMetadata('/technical', lang,
+        "Technical Analysis Hub | OmniMetric",
+        "Core technical technical indicators and quant-momentum analysis for active market researchers."
+    );
 }
 
 const getSubtitle = (l: LangType) => {

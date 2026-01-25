@@ -36,7 +36,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://omnimetric.net'),
+  metadataBase: new URL('https://www.omnimetric.net'),
   title: "Global Macro Signal (OmniMetric Terminal) | AI-Driven Financial Insight",
   description: "機関投資家品質の市場リスク分析を提供するAI駆動型金融・経済分析プラットフォーム。独自スコアによりグローバルマクロのリスク許容度をリアルタイムで可視化します。",
   icons: {
@@ -59,35 +59,6 @@ export const metadata: Metadata = {
       }
     ],
   },
-  other: {
-    // Academic Citation Metatags (for AI citation systems)
-    'citation_title': 'OmniMetric Global Macro Signal Index',
-    'citation_author': 'OmniMetric Project',
-    'citation_publication_date': new Date().toISOString().split('T')[0],
-    'citation_journal_title': 'OmniMetric Terminal',
-    'citation_online_date': new Date().toISOString().split('T')[0],
-    // Dublin Core Metadata
-    'DC.title': 'Global Macro Signal - Institutional Risk Index',
-    'DC.creator': 'OmniMetric AI',
-    'DC.subject': 'Financial Markets, Risk Analysis, Macro Economics',
-    'DC.description': 'Real-time algorithmic risk assessment integrating Net Liquidity, Volatility, and Credit Spreads',
-    'DC.type': 'Dataset',
-    'DC.format': 'application/json',
-    'DC.language': 'en',
-  },
-  alternates: {
-    canonical: 'https://omnimetric.net',
-    languages: {
-      'en': 'https://omnimetric.net',
-      'ja': 'https://omnimetric.net?lang=JP',
-      'zh-CN': 'https://omnimetric.net?lang=CN',
-      'es': 'https://omnimetric.net?lang=ES',
-      'hi': 'https://omnimetric.net?lang=HI',
-      'id': 'https://omnimetric.net?lang=ID',
-      'ar': 'https://omnimetric.net?lang=AR',
-      'x-default': 'https://omnimetric.net',
-    }
-  }
 };
 
 import { LegalFooter } from "@/components/LegalFooter";

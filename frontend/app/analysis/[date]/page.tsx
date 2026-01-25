@@ -29,14 +29,22 @@ async function getReportData(date: string) {
     return null;
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ date: string }> }): Promise<Metadata> {
+import { getMultilingualMetadata } from '@/data/seo';
+
+type Props = {
+    params: Promise<{ date: string }>;
+    searchParams: Promise<{ lang?: string }>;
+};
+
+export async function generateMetadata({ params, searchParams }: Props): Promise<Metadata> {
     const { date } = await params;
+    const { lang } = await searchParams;
+    const l = lang || 'EN';
+
     const data = await getReportData(date);
 
     if (!data || !data.analysis) {
-        return {
-            title: 'Report Not Found | OmniMetric',
-        };
+        return getMultilingualMetadata(`/analysis/${date}`, l, 'Report Not Found | OmniMetric');
     }
 
     const score = data.gms_score;
@@ -44,18 +52,10 @@ export async function generateMetadata({ params }: { params: Promise<{ date: str
     if (score > 60) regime = "Risk Preference";
     if (score < 40) regime = "Risk Avoidance";
 
-    return {
-        title: `${score} - ${regime} | OmniMetric Market Analysis ${date}`,
-        description: typeof data.analysis.content === 'string' ? data.analysis.content.slice(0, 160) : "Institutional Global Macro Signal daily analysis report.",
-        alternates: {
-            languages: {
-                'en': `/analysis/${date}?lang=EN`,
-                'ja': `/analysis/${date}?lang=JP`,
-                'zh': `/analysis/${date}?lang=CN`,
-                'es': `/analysis/${date}?lang=ES`,
-            }
-        }
-    };
+    const title = `${score} - ${regime} | OmniMetric Market Analysis ${date}`;
+    const description = typeof data.analysis.content === 'string' ? data.analysis.content.slice(0, 160) : "Institutional Global Macro Signal daily analysis report.";
+
+    return getMultilingualMetadata(`/analysis/${date}`, l, title, description);
 }
 
 export default async function AnalysisPage({ params }: { params: Promise<{ date: string }> }) {

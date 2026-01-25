@@ -49,6 +49,8 @@ function getContentDescription(item: WikiItem, lang: LangType): string {
     return "";
 }
 
+import { getMultilingualMetadata } from '@/data/seo';
+
 // Metadata
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { lang, slug } = await params;
@@ -57,26 +59,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     if (!item) return { title: 'Not Found' };
 
-    // Hreflang
-    const languages = Object.keys(DICTIONARY).map(l => l.toLowerCase());
-    const alternates = languages.reduce((acc, l) => {
-        acc[l] = `https://omnimetric.net/${l}/wiki/${slug}`;
-        return acc;
-    }, {} as Record<string, string>);
+    const metadata = getMultilingualMetadata(`/wiki/${slug}`, lang, `${item.title} - ${item.type.toUpperCase()} | OmniMetric`, getLocalizedSEODescription(item, lang).slice(0, 120), 'path');
 
-    // x-default and standard mapping
-    alternates['x-default'] = `https://omnimetric.net/en/wiki/${slug}`;
-    alternates['ja'] = alternates['jp'];
-    alternates['zh-CN'] = alternates['cn'];
-
-    return {
-        title: `${item.title} - ${item.type.toUpperCase()} | OmniMetric`,
-        description: getLocalizedSEODescription(item, lang).slice(0, 120),
-        alternates: {
-            languages: alternates,
-            canonical: `https://omnimetric.net/${lang}/wiki/${slug}`
-        }
-    };
+    return metadata;
 }
 
 export default async function WikiDetailPage({ params }: Props) {

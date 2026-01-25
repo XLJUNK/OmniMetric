@@ -31,32 +31,12 @@ const WIKI_DESCRIPTIONS: Record<string, string> = {
     ar: "قاعدة المعرفة الكليّة العالمية: فهرس شامل للمؤشرات الاقتصادية والتحليل الفني وحكم الاستثمار."
 };
 
+import { getMultilingualMetadata } from '@/data/seo';
+
 // Helper for metadata
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { lang } = await params;
-    const normalizedLang = lang.toUpperCase() as LangType;
-
-    // Hreflang generation
-    const languages = Object.keys(DICTIONARY).map(l => l.toLowerCase());
-    const alternates = languages.reduce((acc, l) => {
-        acc[l] = `https://omnimetric.net/${l}/wiki`;
-        return acc;
-    }, {} as Record<string, string>);
-
-    // Add x-default
-    alternates['x-default'] = `https://omnimetric.net/en/wiki`;
-    // Map standard codes
-    alternates['ja'] = alternates['jp'];
-    alternates['zh-CN'] = alternates['cn'];
-
-    return {
-        title: `OmniMetric Wiki Index (${normalizedLang})`,
-        description: WIKI_DESCRIPTIONS[lang.toLowerCase()] || WIKI_DESCRIPTIONS['en'],
-        alternates: {
-            languages: alternates,
-            canonical: `https://omnimetric.net/${lang}/wiki`
-        }
-    };
+    return getMultilingualMetadata('/wiki', lang, `OmniMetric Wiki Index (${lang.toUpperCase()})`, WIKI_DESCRIPTIONS[lang.toLowerCase()] || WIKI_DESCRIPTIONS['en'], 'path');
 }
 
 export default async function WikiIndexPage({ params }: Props) {

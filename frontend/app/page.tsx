@@ -45,16 +45,6 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
 
   const metadata = getMultilingualMetadata('/', lang, title, desc);
 
-  metadata.openGraph = {
-    title,
-    description: desc,
-  };
-  metadata.twitter = {
-    card: 'summary_large_image',
-    title,
-    description: desc,
-  };
-
   return metadata;
 }
 

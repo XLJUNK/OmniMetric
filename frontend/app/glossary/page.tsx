@@ -4,6 +4,7 @@ import { GlossaryTerm } from '@/types/glossary';
 import { DynamicStructuredData } from '@/components/DynamicStructuredData';
 import { GlossaryClient } from '@/components/GlossaryClient';
 import { Metadata } from 'next';
+import { getMultilingualMetadata } from '@/data/seo';
 import { WikiSearch } from '@/components/WikiSearch';
 import { getWikiData } from '@/lib/wiki';
 
@@ -48,14 +49,11 @@ const getPageDesc = (l: LangType) => {
 };
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
-    const lang = await getLang(searchParams);
-    return {
-        title: `${getPageTitle(lang)} - OmniMetric`,
-        description: getPageDesc(lang),
-        alternates: {
-            canonical: `https://omnimetric.net/glossary${lang !== 'EN' ? `?lang=${lang}` : ''}`,
-        }
-    };
+    const s = await searchParams;
+    return getMultilingualMetadata('/glossary', s.lang || 'EN',
+        "Macro Glossary Index | OmniMetric",
+        "Define your macro. A comprehensive glossary of institutional financial terms and risk indicators."
+    );
 }
 
 export default async function GlossaryPage({ searchParams }: { searchParams: Promise<{ lang?: string }> }) {

@@ -32,37 +32,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
 
             title = `Ratio Cobre Oro: ${val} (${trend}) | Análisis de Commodities ${dateStr}`;
             desc = `El Ratio Cobre/Oro actual es ${val}. Tendencia: ${trend}. Análisis de materias primas actualizado el ${dateStr}.`;
-        } else {
-            title = "Análisis de Materias Primas | OmniMetric";
-            desc = "Seguimiento en tiempo real de Oro, Petróleo, Cobre y Gas Natural.";
         }
-    } else {
-        // Fallback for other languages to just standard Multilingual title
-        // Currently getMultilingualMetadata handles the "Base Title" + Suffix.
-        // But for consistency we might want dynamic dates here too? 
-        // For now, sticking to user's specific request for "GMS Main" and "Ratio Cobre Oro".
     }
 
-    // Note: getMultilingualMetadata appends " | OmniMetric" usually, but here we override `title` for ES.
-    // If we use getMultilingualMetadata, it might double append.
-    // Let's use getMultilingualMetadata but pass our custom title if calculated.
-
-    // Actually, getMultilingualMetadata does: title || "Default..."
-    // So passing our custom title works.
-
-    const metadata = getMultilingualMetadata('/commodities', lang, title, desc);
-
-    metadata.openGraph = {
-        title,
-        description: desc,
-    };
-    metadata.twitter = {
-        card: 'summary_large_image',
-        title,
-        description: desc,
-    };
-
-    return metadata;
+    return getMultilingualMetadata('/commodities', lang, title, desc);
 }
 
 const jsonLd = {

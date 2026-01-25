@@ -8,8 +8,8 @@ import { getMultilingualMetadata } from '@/data/seo';
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
     const s = await searchParams;
     return getMultilingualMetadata('/forex', s.lang || 'EN',
-        "Forex & Rates Analysis | OmniMetric",
-        "Global currency and interest rate market intelligence. USD, JPY, EUR analysis and yield curve monitoring."
+        "Currency & Rates Analysis | OmniMetric",
+        "Global forex and interest rate analysis including US Dollar Index (DXY), Yen, and Treasury yields."
     );
 }
 

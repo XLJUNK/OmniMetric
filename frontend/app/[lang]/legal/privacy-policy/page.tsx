@@ -19,15 +19,11 @@ type Props = {
     params: Promise<{ lang: string }>;
 };
 
+import { getMultilingualMetadata } from '@/data/seo';
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { lang } = await params;
-    return {
-        title: "Privacy Policy | OmniMetric Terminal",
-        description: "Privacy Policy and Data Protection practices for OmniMetric.",
-        alternates: {
-            canonical: `https://omnimetric.net/${lang}/legal/privacy-policy`
-        }
-    };
+    return getMultilingualMetadata('/legal/privacy-policy', lang, "Privacy Policy | OmniMetric Terminal", "Privacy Policy and Data Protection practices for OmniMetric.", 'path');
 }
 
 export default async function PrivacyPage({ params }: Props) {
