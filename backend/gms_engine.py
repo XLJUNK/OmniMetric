@@ -1186,10 +1186,9 @@ Output JSON:
                 }
                 
                 if attempt == 0:
-                    # Attempt 1: Vercel AI Gateway (Forced Physical Path)
-                    url = f"https://gateway.vercel.ai/with-gateway/{gateway_slug}/google/v1beta/models/{model_name}:generateContent"
+                    # Attempt 1: Vercel AI Gateway (Universal V1 REST)
+                    url = f"https://ai-gateway.vercel.sh/v1/google/v1beta/models/{model_name}:generateContent"
                     headers["x-vercel-ai-gateway-provider"] = "google"
-                    headers["x-vercel-ai-gateway-slug"] = gateway_slug
                     if AI_GATEWAY_KEY: headers["Authorization"] = f"Bearer {AI_GATEWAY_KEY}"
                 else:
                     # Attempt 2+: Direct API Fallback
