@@ -2,7 +2,7 @@ name: Wiki Heavy Rollout (V4.7-777)
 
 on:
   schedule:
-    - cron: '0 * * * *' # Every hour
+    - cron: '15 * * * *' # Every hour (10m after main update :05, ends before :35)
   workflow_dispatch:
 
 concurrency:
