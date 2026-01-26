@@ -5,11 +5,10 @@ import { gateway } from '@ai-sdk/gateway';
 export const dynamic = 'force-dynamic';
 
 export async function GET(request: NextRequest) {
-    const SLUG = process.env.VERCEL_AI_GATEWAY_SLUG || process.env.AI_GATEWAY_SLUG;
     const API_KEY = process.env.AI_GATEWAY_API_KEY;
 
-    if (!SLUG || !API_KEY) {
-        return NextResponse.json({ status: "ERROR", message: "Env missing" });
+    if (!API_KEY) {
+        return NextResponse.json({ status: "ERROR", message: "Env missing (AI_GATEWAY_API_KEY)" });
     }
 
     // Based on User's Model List: naming uses '/' and gemini-2.0-flash is available.
@@ -37,8 +36,7 @@ export async function GET(request: NextRequest) {
                 return NextResponse.json({
                     status: "SUCCESS_IDENTIFIED",
                     winner: m,
-                    text: text,
-                    slug: SLUG
+                    text: text
                 });
             }
         } catch (e: any) {
@@ -48,7 +46,6 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json({
         status: "PROBE_V3_COMPLETE",
-        results: results,
-        slug_used: SLUG
+        results: results
     });
 }

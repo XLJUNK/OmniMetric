@@ -1,5 +1,6 @@
 import { generateText } from 'ai';
 import { gateway } from '@ai-sdk/gateway';
+import { google } from '@ai-sdk/google';
 import * as dotenv from 'dotenv';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -54,25 +55,55 @@ async function main() {
 
     const prompt = await getPrompt();
 
-    const gatewaySlug = process.env.VERCEL_AI_GATEWAY_SLUG || 'omni-metric';
+    // DYNAMIC MODEL SELECTION
+    // GMS Analysis (High Priority) -> gemini-3-flash
+    // News Translation (Routine) -> gemini-2.5-flash
+    const isNewsTask = /translator|Translate/i.test(prompt);
+    const targetModel = isNewsTask ? 'google/gemini-2.5-flash' : 'google/gemini-3-flash';
+    const taskName = isNewsTask ? 'NEWS_TRANSLATION' : 'GMS_ANALYSIS';
 
+    let result;
     try {
-        const result = await generateText({
-            model: gateway.languageModel('google/gemini-3-flash'),
+        // TRIAL 1: Vercel AI Gateway (Universal V3)
+        console.error(`[AI GATEWAY] [${taskName}] Trial 1: Using ${targetModel}...`);
+        result = await generateText({
+            model: gateway.languageModel(targetModel),
             prompt: prompt,
             headers: {
-                'x-vercel-ai-gateway-provider': 'google',
                 'x-vercel-ai-gateway-cache': 'enable',
                 'x-vercel-ai-gateway-cache-ttl': '3600',
             }
         });
-
-        // Output ONLY the raw text for Python to capture
-        process.stdout.write(JSON.stringify({ text: result.text }) + '\n');
+        console.error(`[AI GATEWAY] Success: Logic completed.`);
 
     } catch (error: any) {
-        console.error("AI Generation Failed via Gateway:", error.message || error);
-        process.exit(1);
+        const errorMsg = error.message || String(error);
+        const isRateLimit = errorMsg.includes('429') || error.statusCode === 429;
+
+        console.error(`[AI GATEWAY] FAILED (Task: ${taskName}, Error: ${errorMsg})`);
+
+        if (isRateLimit) {
+            console.error(`[AI GATEWAY] Trigger: 429 Rate Limit detected. Proceeding to Direct Fallback...`);
+        }
+
+        // TRIAL 2: Direct Google API Fallback (BYOK)
+        // Benefit: Bypasses Gateway Quota, SSL issues, and Rate Limits
+        console.error(`[AI DIRECT] Trial 2: Failing over to Google AI SDK (Direct)...`);
+        try {
+            result = await generateText({
+                model: google(targetModel.replace('google/', '')),
+                prompt: prompt
+            });
+            console.error(`[AI DIRECT] Success: Critical path secured via Direct API.`);
+        } catch (directError: any) {
+            console.error(`[AI FATAL] Both Gateway and Direct API failed: ${directError.message}`);
+            process.exit(1);
+        }
+    }
+
+    if (result) {
+        // Output ONLY the raw text for Python to capture
+        process.stdout.write(JSON.stringify({ text: result.text }) + '\n');
     }
 }
 

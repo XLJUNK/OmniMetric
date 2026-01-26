@@ -1156,10 +1156,10 @@ Output JSON:
     # VERCEL AI GATEWAY - RESILIENCE PROTOCOL (PRIMARY)
     # Strategy: Flash-Targeted Speed > High-Tier Reasoning > Efficient Fallbacks
     models = [
-        "gemini-3-flash",          # Speed & Latest Architecture
+        "gemini-3-flash",          # High Resource for GMS Analysis
+        "gemini-2.5-flash",        # Balanced Stable Performance
         "gemini-3-pro-preview",    # Maximum Intelligence Tier
         "gemini-2.5-pro",          # High Stability Reasoning
-        "gemini-2.0-flash",        # Consistent Performance Baseline
         "gemini-2.5-flash-lite"    # Extreme Efficiency Fallback
     ]
 
@@ -1237,8 +1237,9 @@ Output JSON:
                         log_diag(f"[AI ERROR] No candidates in response. Model={model_name}") 
                 
                 elif response.status_code == 429:
-                    log_diag(f"[AI RATE LIMIT] URL={target_url[:100]}, Model={model_name}, Status=429")
-                    continue # Trigger Backoff and Retry
+                    log_diag(f"[AI RATE LIMIT] URL={target_url[:100]}, Model={model_name}, Status=429. Triggering fallback...")
+                    # User Request: If 429, immediately try next model or direct fallback
+                    break # Break attempt loop to move to next model OR direct fallback in attempt 1
                 
                 else:
                     # Enhanced Error Logging with URL and Status
