@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-01-26T21:36:33Z",
-    "last_successful_update": "2026-01-26T21:36:33Z",
+    "last_updated": "2026-01-26T21:55:25Z",
+    "last_successful_update": "2026-01-26T21:55:25Z",
     "gms_score": 40,
     "sector_scores": {
         "STOCKS": 70,
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 87803.02,
+            "price": 88022.16,
             "prev_price": 86572.22,
-            "daily_chg": 1.42,
-            "change_percent": -1.85,
+            "daily_chg": 1.67,
+            "change_percent": -1.61,
             "trend": "UP",
             "sparkline": [
                 93882.55,
@@ -604,14 +604,14 @@
                 89503.88,
                 89110.73,
                 86572.22,
-                87803.02
+                88022.16
             ]
         },
         "ETH": {
-            "price": 2909.14,
+            "price": 2930.27,
             "prev_price": 2815.9,
-            "daily_chg": 3.31,
-            "change_percent": -1.37,
+            "daily_chg": 4.06,
+            "change_percent": -0.66,
             "trend": "UP",
             "sparkline": [
                 3226.13,
@@ -635,14 +635,14 @@
                 2953.26,
                 2948.74,
                 2815.9,
-                2909.14
+                2930.27
             ]
         },
         "SOL": {
-            "price": 123.94,
+            "price": 124.48,
             "prev_price": 118.77,
-            "daily_chg": 4.35,
-            "change_percent": -3.39,
+            "daily_chg": 4.8,
+            "change_percent": -2.97,
             "trend": "UP",
             "sparkline": [
                 137.99,
@@ -666,14 +666,14 @@
                 127.36,
                 127.05,
                 118.77,
-                123.94
+                124.48
             ]
         },
         "DXY": {
-            "price": 97.07,
+            "price": 97.08,
             "prev_price": 97.6,
-            "daily_chg": -0.54,
-            "change_percent": -1.59,
+            "daily_chg": -0.53,
+            "change_percent": -1.58,
             "trend": "DOWN",
             "sparkline": [
                 97.94,
@@ -697,7 +697,7 @@
                 98.76,
                 98.36,
                 97.6,
-                97.07
+                97.08
             ]
         },
         "USDJPY": {
@@ -734,8 +734,8 @@
         "EURUSD": {
             "price": 1.19,
             "prev_price": 1.18,
-            "daily_chg": 1.06,
-            "change_percent": 2.06,
+            "daily_chg": 1.08,
+            "change_percent": 2.09,
             "trend": "UP",
             "sparkline": [
                 1.18,
@@ -763,10 +763,10 @@
             ]
         },
         "USDINR": {
-            "price": 91.67,
+            "price": 91.66,
             "prev_price": 91.56,
-            "daily_chg": 0.13,
-            "change_percent": 0.85,
+            "daily_chg": 0.11,
+            "change_percent": 0.83,
             "trend": "UP",
             "sparkline": [
                 89.51,
@@ -790,7 +790,7 @@
                 91.12,
                 91.54,
                 91.56,
-                91.67
+                91.66
             ]
         },
         "USDSAR": {
@@ -825,10 +825,10 @@
             ]
         },
         "GOLD": {
-            "price": 5015.6,
+            "price": 5001.9,
             "prev_price": 4976.2,
-            "daily_chg": 0.79,
-            "change_percent": 5.38,
+            "daily_chg": 0.52,
+            "change_percent": 5.09,
             "trend": "UP",
             "sparkline": [
                 4482.8,
@@ -852,7 +852,7 @@
                 4831.8,
                 4908.8,
                 4976.2,
-                5015.6
+                5001.9
             ]
         },
         "OIL": {
@@ -887,11 +887,11 @@
             ]
         },
         "COPPER": {
-            "price": 5.91,
+            "price": 5.92,
             "prev_price": 5.91,
-            "daily_chg": -0.09,
-            "change_percent": 2.3,
-            "trend": "DOWN",
+            "daily_chg": 0.15,
+            "change_percent": 2.55,
+            "trend": "UP",
             "sparkline": [
                 5.48,
                 5.5,
@@ -914,14 +914,14 @@
                 5.73,
                 5.74,
                 5.91,
-                5.91
+                5.92
             ]
         },
         "NATGAS": {
-            "price": 3.83,
+            "price": 3.84,
             "prev_price": 5.28,
-            "daily_chg": -27.37,
-            "change_percent": -1.95,
+            "daily_chg": -27.18,
+            "change_percent": -1.69,
             "trend": "DOWN",
             "sparkline": [
                 4.41,
@@ -945,12 +945,12 @@
                 4.88,
                 5.05,
                 5.28,
-                3.83
+                3.84
             ]
         },
         "MOVE": {
-            "price": 56.25,
-            "change_percent": -0.0,
+            "price": 55.77,
+            "change_percent": -0.86,
             "trend": "NORMAL",
             "sparkline": [
                 59.21,
@@ -971,7 +971,7 @@
                 59.56,
                 56.5,
                 56.25,
-                56.25
+                55.77
             ]
         },
         "BREADTH": {
@@ -1103,22 +1103,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS Score 40 suggests a transition from defensive to neutral. DXY (Dollar strength/Liquidity) fell 0.54%, generally a positive. VIX (Fear/Volatility) is still low, despite a slight rise. However, the 1.52% increase in HY_SPREAD (credit risk perception) signals a potential headwind, warranting caution as credit stress could impede further improvement.",
+        "content": "GMS score pushed to 40, signaling a transition from Defensive. Weakening DXY (Dollar strength/Liquidity) supports improving sentiment, while VIX (Fear/Volatility) remains moderate. However, persistent inflation concerns could swiftly reverse dollar weakness and risk appetite. Monitor inflation data for regime shifts.",
         "reports": {
-            "JP": "GMSスコア40は防御的姿勢から中立への移行を示唆。DXY（ドル高/流動性）は0.54%下落し、通常はポジティブ。VIX（恐怖/変動性）は小幅上昇も低位維持。しかし、HYスプレッド（信用リスク認識）が1.52%上昇しており、信用不安が改善を妨げる可能性があり、注意が必要。",
-            "EN": "GMS Score 40 suggests a transition from defensive to neutral. DXY (Dollar strength/Liquidity) fell 0.54%, generally a positive. VIX (Fear/Volatility) is still low, despite a slight rise. However, the 1.52% increase in HY_SPREAD (credit risk perception) signals a potential headwind, warranting caution as credit stress could impede further improvement.",
-            "CN": "GMS评分40预示市场正从防御转向中性。DXY（美元强度/流动性）下跌0.54%，通常为利好。VIX（恐慌/波动性）虽小幅上升，但仍处于低位。然而，高收益债券利差（信用风险感知）上涨1.52%，预示潜在逆风，信贷压力可能阻碍进一步改善，需谨慎。",
-            "ES": "Puntuación GMS 40 indica transición de defensivo a neutral. DXY (Fuerza/Liquidez del Dólar) bajó 0.54%, generalmente positivo. VIX (Miedo/Volatilidad) sigue bajo, pese a leve alza. No obstante, el alza del 1.52% en HY_SPREAD (percepción de riesgo crediticio) es una señal de posible obstáculo; la tensión crediticia podría frenar mejoras.",
-            "HI": "जीएमएस स्कोर 40 रक्षात्मक से तटस्थ स्थिति की ओर संक्रमण दर्शाता है। DXY (डॉलर की मजबूती/तरलता) 0.54% गिरा, जो आमतौर पर सकारात्मक है। VIX (डर/अस्थिरता) मामूली बढ़त के बावजूद अभी भी कम है। हालांकि, HY_SPREAD (क्रेडिट जोखिम धारणा) में 1.52% की वृद्धि संभावित बाधा का संकेत देती है, जिससे क्रेडिट तनाव आगे सुधार में बाधा डाल सकता है, अतः सतर्कता बरतें।",
-            "ID": "Skor GMS 40 menunjukkan transisi dari defensif ke netral. DXY (kekuatan Dolar/Likuiditas) turun 0.54%, umumnya positif. VIX (Ketakutan/Volatilitas) masih rendah, meski sedikit naik. Namun, kenaikan 1.52% pada HY_SPREAD (persepsi risiko kredit) menandakan potensi hambatan, kehati-hatian diperlukan karena tekanan kredit dapat menghambat peningkatan lebih lanjut.",
-            "AR": "يشير مؤشر GMS 40 إلى انتقال من وضع دفاعي إلى محايد. انخفض مؤشر الدولار (DXY) بنسبة 0.54%، وهو أمر إيجابي بشكل عام. لا يزال مؤشر VIX (الخوف/التقلب) منخفضًا، رغم ارتفاع طفيف. لكن ارتفاع فروق العائد المرتفع (HY_SPREAD) بنسبة 1.52% يشير إلى رياح معاكسة محتملة، مما يستدعي الحذر حيث قد يعرقل ضغط الائتمان المزيد من التحسن."
+            "JP": "GMSスコアは40に押し上げられ、ディフェンシブからの移行を示唆。DXY（ドル強度/流動性）の軟化はセンチメント改善を支持し、VIX（恐怖指数/変動性）は中程度。しかし、根強いインフレ懸念はドルの軟化とリスク選好を急速に逆転させる可能性。インフレデータを監視し、レジームシフトに注意。",
+            "EN": "GMS score pushed to 40, signaling a transition from Defensive. Weakening DXY (Dollar strength/Liquidity) supports improving sentiment, while VIX (Fear/Volatility) remains moderate. However, persistent inflation concerns could swiftly reverse dollar weakness and risk appetite. Monitor inflation data for regime shifts.",
+            "CN": "GMS指数推高至40，预示从防御性转向。DXY（美元强度/流动性）走弱支持情绪改善，VIX（恐慌指数/波动性）保持中等。然而，持续通胀担忧可能迅速逆转美元走弱和风险偏好。密切关注通胀数据以应对机制转变。",
+            "ES": "El puntaje GMS subió a 40, señalando una transición de defensivo. La debilidad del DXY (fortaleza/liquidez del dólar) apoya la mejora del sentimiento, mientras el VIX (miedo/volatilidad) permanece moderado. Sin embargo, la inflación persistente podría revertir rápidamente la debilidad del dólar y el apetito por el riesgo. Monitorear datos de inflación para cambios de régimen.",
+            "HI": "जीएमएस स्कोर 40 तक बढ़ा, जो रक्षात्मक से संक्रमण का संकेत है। कमजोर DXY (डॉलर की मजबूती/तरलता) बेहतर भावना का समर्थन करता है, जबकि VIX (डर/अस्थिरता) मध्यम रहता है। हालाँकि, लगातार मुद्रास्फीति की चिंताएं डॉलर की कमजोरी और जोखिम लेने की भूख को तेजी से उलट सकती हैं। शासन परिवर्तन के लिए मुद्रास्फीति डेटा की निगरानी करें।",
+            "ID": "Skor GMS terdorong ke 40, menandakan transisi dari Defensif. Pelemahan DXY (kekuatan/likuiditas Dolar) mendukung sentimen yang membaik, sementara VIX (Ketakutan/Volatilitas) tetap moderat. Namun, kekhawatiran inflasi yang persisten dapat dengan cepat membalikkan pelemahan dolar dan selera risiko. Pantau data inflasi untuk pergeseran rezim.",
+            "AR": "ارتفعت نقاط GMS إلى 40، مما يشير إلى انتقال من الحالة الدفاعية. ضعف مؤشر DXY (قوة الدولار/السيولة) يدعم تحسن المعنويات، بينما يظل مؤشر VIX (الخوف/التقلب) معتدلاً. ومع ذلك، يمكن لمخاوف التضخم المستمرة أن تعكس بسرعة ضعف الدولار والرغبة في المخاطرة. راقب بيانات التضخم لتحولات النظام."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-25T05:04:58Z",
-            "score": 38
-        },
         {
             "date": "2026-01-25T05:07:18Z",
             "score": 38
@@ -1354,6 +1350,10 @@
         {
             "date": "2026-01-26T21:36:33Z",
             "score": 40
+        },
+        {
+            "date": "2026-01-26T21:55:25Z",
+            "score": 40
         }
     ],
     "intelligence": {
@@ -1361,85 +1361,85 @@
             {
                 "title": "Treasury cancels Booz Allen contracts after employee leaked Trump tax records; stock falls",
                 "link": "https://www.cnbc.com/2026/01/26/trump-tax-records-treasury-cancels-booz-allen-contracts.html",
-                "isoDate": "2026-01-26T21:36:34.718470Z"
+                "isoDate": "2026-01-26T21:55:26.023664Z"
             },
             {
                 "title": "AI spending wasn't the biggest engine of U.S. economic growth in 2025, despite popular assumptions",
                 "link": "https://www.cnbc.com/2026/01/26/ai-wasnt-the-biggest-engine-of-us-gdp-growth-in-2025.html",
-                "isoDate": "2026-01-26T21:36:34.720462Z"
+                "isoDate": "2026-01-26T21:55:26.025751Z"
             },
             {
                 "title": "How the USA Rare Earth deal with the Trump administration came together",
                 "link": "https://www.cnbc.com/2026/01/26/how-the-usa-rare-earth-deal-with-the-trump-administration-came-together.html",
-                "isoDate": "2026-01-26T21:36:34.720485Z"
+                "isoDate": "2026-01-26T21:55:26.025775Z"
             },
             {
                 "title": "Nike to cut 775 employees as it accelerates 'automation' at U.S. distribution centers",
                 "link": "https://www.cnbc.com/2026/01/26/nike-to-lay-off-775-employees-at-us-distribution-centers.html",
-                "isoDate": "2026-01-26T21:36:34.720498Z"
+                "isoDate": "2026-01-26T21:55:26.025789Z"
             },
             {
-                "title": "Tech's top CEOs mum after Minneapolis killings, while leaders like Reid Hoffman, Yann LeCun speak out",
-                "link": "https://www.cnbc.com/2026/01/26/alex-pretti-killing-ice-tech-ceo-response.html",
-                "isoDate": "2026-01-26T21:36:34.720510Z"
+                "title": "TikTok uninstalls are up 150% following U.S. joint venture",
+                "link": "https://www.cnbc.com/2026/01/26/tiktok-uninstalls-are-up-150percent-following-us-joint-venture.html",
+                "isoDate": "2026-01-26T21:55:26.025801Z"
             },
             {
-                "title": "Where Invesco sees 'tremendous' opportunities for income in 2026",
-                "link": "https://www.cnbc.com/2026/01/26/where-invesco-sees-tremendous-opportunities-for-income-in-2026.html",
-                "isoDate": "2026-01-26T21:36:34.720522Z"
+                "title": "This stock sector is having its best start to a year in a quarter century",
+                "link": "https://www.cnbc.com/2026/01/26/this-stock-sector-is-having-its-best-start-to-a-year-in-a-quarter-century.html",
+                "isoDate": "2026-01-26T21:55:26.025812Z"
             }
         ],
         "translations": {
             "JP": [
-                "財務省、トランプ氏の納税記録漏洩でブーズ・アレンとの契約を解除；株価下落",
-                "2025年の米国経済成長の最大の原動力はAI支出ではなかった、一般的な想定にもかかわらず",
-                "トランプ政権とのUSAレアアース取引がどのようにしてまとまったのか",
-                "ナイキ、米国の配送センターでの「自動化」加速に伴い775人の従業員を削減へ",
-                "ミネアポリスでの殺害事件後、テック業界のトップCEOは沈黙、一方リード・ホフマン、ヤン・ルカンといったリーダーは発言",
-                "インベスコが2026年に「莫大な」収益機会を見出す分野"
+                "財務省、従業員がトランプ氏の納税記録を漏洩したためブーズ・アレンとの契約を解除。株価は下落。",
+                "一般的な想定に反し、2025年の米国経済成長の最大の原動力はAI支出ではなかった。",
+                "USA Rare Earthとトランプ政権との取引はいかにして実現したのか。",
+                "ナイキ、米国の物流センターでの「自動化」を加速するため775人の従業員を削減へ。",
+                "米国での合弁事業後、TikTokのアンインストール数が150%増加。",
+                "この株式セクターが四半世紀で最高の年のスタートを切っている。"
             ],
             "CN": [
-                "财政部取消布兹·艾伦合同，因员工泄露特朗普纳税记录；股价下跌",
-                "尽管普遍认为，2025年美国经济增长的最大引擎并非人工智能支出",
-                "USA稀土与特朗普政府的交易是如何达成的",
-                "随着耐克加速美国配送中心的“自动化”，将裁员775人",
-                "明尼阿波利斯凶杀案后，科技界顶级CEO保持沉默，而里德·霍夫曼、扬·勒昆等领导人则发声",
-                "景顺看好2026年“巨大”的收入机会"
+                "财政部取消布兹·艾伦合同，因员工泄露特朗普税务记录；股价下跌。",
+                "尽管普遍认为，但2025年美国经济增长的最大引擎并非人工智能支出。",
+                "USA Rare Earth与特朗普政府的交易是如何达成的。",
+                "耐克将在美国配送中心加速“自动化”，裁员775人。",
+                "在美国合资企业成立后，TikTok卸载量飙升150%。",
+                "该股票板块迎来了25年来最好的开年表现。"
             ],
             "ES": [
-                "El Tesoro cancela contratos con Booz Allen después de que un empleado filtrara registros fiscales de Trump; las acciones caen",
-                "El gasto en IA no fue el mayor motor del crecimiento económico de EE. UU. en 2025, a pesar de las suposiciones populares",
-                "Cómo se gestó el acuerdo de USA Rare Earth con la administración Trump",
-                "Nike recortará 775 empleados a medida que acelera la \"automatización\" en los centros de distribución de EE. UU.",
-                "Los principales CEO de tecnología guardan silencio tras los asesinatos de Minneapolis, mientras líderes como Reid Hoffman, Yann LeCun se pronuncian",
-                "Dónde Invesco ve \"tremendas\" oportunidades de ingresos en 2026"
+                "El Tesoro cancela contratos con Booz Allen tras filtración de registros fiscales de Trump por un empleado; las acciones caen.",
+                "El gasto en IA no fue el mayor motor del crecimiento económico de EE. UU. en 2025, a pesar de las suposiciones populares.",
+                "Cómo se gestó el acuerdo de USA Rare Earth con la administración Trump.",
+                "Nike recortará 775 empleados al acelerar la \"automatización\" en los centros de distribución de EE. UU.",
+                "Las desinstalaciones de TikTok aumentan un 150% tras la empresa conjunta en EE. UU.",
+                "Este sector bursátil está teniendo su mejor inicio de año en un cuarto de siglo."
             ],
             "HI": [
-                "कर्मचारी द्वारा ट्रम्प के टैक्स रिकॉर्ड लीक करने के बाद ट्रेजरी ने बूज़ एलन के अनुबंध रद्द किए; शेयर गिरे",
-                "लोकप्रिय धारणाओं के बावजूद, 2025 में अमेरिकी आर्थिक विकास का सबसे बड़ा इंजन AI खर्च नहीं था",
-                "ट्रम्प प्रशासन के साथ USA रेयर अर्थ का सौदा कैसे हुआ",
-                "अमेरिकी वितरण केंद्रों में 'स्वचालन' को गति देने के कारण नाइके 775 कर्मचारियों की छंटनी करेगा",
-                "मिनियापोलिस हत्याओं के बाद टेक के शीर्ष सीईओ खामोश, जबकि रीड हॉफमैन, यान लेकन जैसे नेता मुखर हुए",
-                "2026 में इनवेस्को को 'जबरदस्त' आय के अवसर कहाँ दिखते हैं"
+                "कर्मचारी द्वारा ट्रंप के टैक्स रिकॉर्ड लीक करने के बाद ट्रेजरी ने बूज एलन के अनुबंध रद्द किए; शेयर गिरे।",
+                "लोकप्रिय धारणाओं के बावजूद, 2025 में अमेरिकी आर्थिक विकास का सबसे बड़ा इंजन AI खर्च नहीं था।",
+                "यूएसए रेयर अर्थ का ट्रंप प्रशासन के साथ समझौता कैसे हुआ।",
+                "नाइकी अमेरिकी वितरण केंद्रों पर 'स्वचालन' में तेजी लाने के लिए 775 कर्मचारियों की छंटनी करेगा।",
+                "अमेरिकी संयुक्त उद्यम के बाद टिकटॉक अनइंस्टॉल में 150% की वृद्धि।",
+                "यह स्टॉक सेक्टर एक चौथाई सदी में साल की अपनी सबसे अच्छी शुरुआत कर रहा है।"
             ],
             "ID": [
-                "Departemen Keuangan batalkan kontrak Booz Allen setelah karyawan bocorkan catatan pajak Trump; saham jatuh",
-                "Pengeluaran AI bukan pendorong terbesar pertumbuhan ekonomi AS pada tahun 2025, meskipun ada asumsi populer",
-                "Bagaimana kesepakatan USA Rare Earth dengan pemerintahan Trump terjalin",
-                "Nike akan memangkas 775 karyawan seiring percepatan 'otomatisasi' di pusat distribusi AS",
-                "CEO Teknologi papan atas bungkam setelah pembunuhan di Minneapolis, sementara pemimpin seperti Reid Hoffman, Yann LeCun bersuara",
-                "Di mana Invesco melihat peluang pendapatan 'luar biasa' pada tahun 2026"
+                "Departemen Keuangan batalkan kontrak Booz Allen setelah karyawan bocorkan catatan pajak Trump; saham jatuh.",
+                "Pengeluaran AI bukan pendorong terbesar pertumbuhan ekonomi AS pada tahun 2025, meskipun ada asumsi populer.",
+                "Bagaimana kesepakatan USA Rare Earth dengan pemerintahan Trump terwujud.",
+                "Nike akan memangkas 775 karyawan saat mempercepat 'otomatisasi' di pusat distribusi AS.",
+                "Pencopotan TikTok naik 150% menyusul usaha patungan di AS.",
+                "Sektor saham ini mengalami awal tahun terbaiknya dalam seperempat abad."
             ],
             "AR": [
-                "وزارة الخزانة تلغي عقود بوز ألين بعد تسريب موظف سجلات ترامب الضريبية؛ أسعار الأسهم تهبط",
-                "لم يكن الإنفاق على الذكاء الاصطناعي أكبر محرك للنمو الاقتصادي الأمريكي في عام 2025، على الرغم من الافتراضات الشائعة",
-                "كيف تم التوصل إلى صفقة USA Rare Earth مع إدارة ترامب",
-                "نايكي ستخفض 775 موظفًا مع تسريع \"الأتمتة\" في مراكز التوزيع الأمريكية",
-                "كبار الرؤساء التنفيذيين في مجال التكنولوجيا صامتون بعد حوادث القتل في مينيابوليس، بينما يتحدث قادة مثل ريد هوفمان ويان لوكون",
-                "أين ترى إنفيسكو فرصًا \"هائلة\" للدخل في عام 2026"
+                "وزارة الخزانة تلغي عقود بوز ألين بعد تسريب موظف سجلات ترامب الضريبية؛ انخفاض الأسهم.",
+                "لم يكن الإنفاق على الذكاء الاصطناعي أكبر محرك للنمو الاقتصادي الأمريكي في عام 2025، على الرغم من الافتراضات الشائعة.",
+                "كيف تم التوصل إلى صفقة USA Rare Earth مع إدارة ترامب.",
+                "نايكي ستخفض 775 موظفاً مع تسريع \"الأتمتة\" في مراكز التوزيع الأمريكية.",
+                "ارتفاع عمليات إلغاء تثبيت تيك توك بنسبة 150% بعد المشروع المشترك في الولايات المتحدة.",
+                "هذا القطاع من الأسهم يشهد أفضل بداية له في ربع قرن."
             ]
         },
-        "last_updated": "2026-01-26T21:36:48.249441Z"
+        "last_updated": "2026-01-26T21:55:38.446655Z"
     },
     "system_status": "OPERATIONAL"
 }
