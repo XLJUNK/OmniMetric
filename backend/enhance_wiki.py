@@ -353,7 +353,7 @@ if __name__ == "__main__":
             
             if missing_langs:
                 to_process.append((item, missing_langs))
-                if len(to_process) >= 5: # BATCH SIZE: 5 items (all langs for each)
+                if len(to_process) >= 3: # BATCH SIZE: 3 items (all langs for each)
                     break
         
         if not to_process:
@@ -366,9 +366,7 @@ if __name__ == "__main__":
             for lang in langs:
                 enhancer.generate_report(item, lang)
                 # Institutional safety delay to avoid Free Tier 429 cascades
-                time.sleep(20)
-            # Brief pause between items
-            time.sleep(10)
+                time.sleep(15)
         
         # Final check for completion signal in the same run
         final_count = len([f for f in os.listdir(DATA_DIR) if f.endswith('.json')])
