@@ -772,9 +772,8 @@ def calculate_sector_score(sector_name, data):
         
         # Normalized scoring logic (Simplified for robustness)
         # Invert: Higher Price = Lower Score (Risk Off / Bad)
-        # Normal: Higher Price = Higher Score (Risk On / Good)
-        
-        impact = 0
+        *   **Primary (Analysis & Translation)**: `Gemini 2.5 Flash` - Institutional stability focus (V4.6.1 Standard).
+        *   **Resilience Protocol**: Universal Gateway (V3) with direct fallback for 100% uptime.
         if key in config["invert"]:
              # E.g., VIX: 20 is neutral. >20 bad (-), <20 good (+)
              # Baseline 20. +1 point for every 0.5 below 20?

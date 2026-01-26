@@ -1,0 +1,71 @@
+name: Wiki Heavy Rollout (V4.7-777)
+
+on:
+  schedule:
+    - cron: '0 * * * *' # Every hour
+  workflow_dispatch:
+
+concurrency:
+  group: wiki-generation
+  cancel-in-progress: false
+
+jobs:
+  generate-wiki:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    timeout-minutes: 30
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Full history for tagging
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          pip install requests python-dotenv
+
+      - name: Run Wiki Batch Generation
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python backend/enhance_wiki.py | tee wiki_generation.log
+
+      - name: Commit and Push Progress
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Add only new or changed heavy wiki files
+          git add backend/data/wiki_heavy/*.json
+          
+          # Use progress from log if possible for commit message
+          PROGRESS_MSG=$(grep "\[PROGRESS\]" wiki_generation.log | tail -n 1 || echo "Update wiki heavy batch")
+          
+          git commit -m "chore: $PROGRESS_MSG [bot]" || echo "No changes to commit"
+          git push origin main
+
+      - name: Completion Notification (Git Tag)
+        run: |
+          if grep -q "ALL_WIKI_GENERATED_SIGNAL" wiki_generation.log; then
+            echo "All 777 Wiki files generated! Creating release tag..."
+            
+            # Use V4.7-WIKI-777-COMPLETE as requested
+            TAG_NAME="V4.7-WIKI-777-COMPLETE"
+            
+            # Check if tag already exists to avoid error
+            if git rev-parse "$TAG_NAME" >/dev/null 2>&1; then
+              echo "Tag $TAG_NAME already exists. Skipping."
+            else
+              git tag "$TAG_NAME"
+              git push origin "$TAG_NAME"
+            fi
+          else
+            echo "Rolling generation in progress..."
+          fi
