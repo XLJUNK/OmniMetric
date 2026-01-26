@@ -95,6 +95,10 @@ jobs:
           
           git add backend/current_signal.json backend/history.json backend/archive/*.json backend/sns_status.json backend/sns_last_post.json frontend/data/current_signal.json
           git commit -m "Auto-update market signal [bot]" || echo "No changes to commit"
+          
+          # Pull with rebase in case wiki or other workflow updated remote
+          git pull --rebase origin main || echo "Already up to date"
+          
           git push origin main
           
           # VISIBILITY: Always show logs
