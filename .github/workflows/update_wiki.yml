@@ -49,6 +49,10 @@ jobs:
           PROGRESS_MSG=$(grep "\[PROGRESS\]" wiki_generation.log | tail -n 1 || echo "Update wiki heavy batch")
           
           git commit -m "chore: $PROGRESS_MSG [bot]" || echo "No changes to commit"
+          
+          # Pull with rebase in case remote was updated by another workflow run
+          git pull --rebase origin main || echo "Already up to date"
+          
           git push origin main
 
       - name: Completion Notification (Git Tag)
