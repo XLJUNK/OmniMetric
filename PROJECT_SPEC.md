@@ -1,6 +1,6 @@
 # Global Macro Signal (OmniMetric Terminal) - プロジェクト仕様書
-**Version 4.5.0 (Recovery & Stability Release)**
-**Last Updated:** 2026-01-24
+**Version 4.6.0 (Universal Gateway & Dynamic AI Release)**
+**Last Updated:** 2026-01-26
 
 ## 1. プロジェクト概要 (Executive Summary)
 **Global Macro Signal (GMS)** は、機関投資家レベルの市場リスク分析を個人投資家に提供する、AI駆動型金融・経済分析プラットフォームです。「OmniMetric Terminal」というブランド名で展開され、Bloombergターミナルのような高度な視認性と、生成AIによる深い洞察を融合させています。
@@ -24,10 +24,10 @@
     *   `gms_engine.py`: 市場データ収集(Yahoo/FRED)、GMSスコア算出、AIレポート生成。**FMP v3 API (Robust Endpoints)** を使用し、エラー耐性を強化。
     *   `sns_publisher.py`: Twitter/Blueskyへの自動投稿、緊急アラート(>5%変動)、固定ツイート管理。
     *   `seo_monitor.py`: Google Search Console APIと連携し、トレンドキーワードを分析・抽出。
-*   **AI Engine**:
-    *   **Primary (Speed)**: `Gemini 3 Flash` - 高速応答・最新の標準モデル。
-    *   **Secondary (Quality)**: `Gemini 2.5 Pro` - 複雑な分析や推論に使用。
-    *   **Tertiary (Cost)**: `Gemini 2.5 Flash-Lite` - 翻訳や単純タスクのコスト削減用。
+    *   **AI Engine**:
+        *   **Primary (High-Value Analysis)**: `Gemini 3 Flash` - GMSスコアの洞察生成に使用。
+        *   **Secondary (Stable Baseline)**: `Gemini 2.5 Flash` - 定型業務（ニュース翻訳）および安定稼働用。
+        *   **Resilience Protocol**: Universal Gateway (V3) を経由し、障害時は自動で Direct Google API への二段階フォールバックを実行。
 
 ### 2.2 Frontend (User Interface)
 *   **フレームワーク**: Next.js 15 (App Router)
@@ -35,8 +35,8 @@
 *   **ホスティング**: Vercel (Serverless / Edge Functions)
 *   **主な機能**:
     *   **News Ticker (`/api/news`)**: 
-        *   Gemini 3 Flash および 2.5 Flash-Lite を使用した「プロ翻訳者」モード。
-        *   **Static Bundling**: `filesystem`APIの制限を回避するため、ビルド生成されたJSON (`frontend/data/current_signal.json`) を直接インポートして配信。Vercel Edge環境での完全な互換性を保証。
+        *   **Dynamic Model Selection**: タスク内容（翻訳か分析か）に基づき、最適モデルを自動選択。
+        *   **Universal Gateway**: 個別スラグに依存しない `ai-gateway.vercel.sh` を使用し、404エラーを物理的に排除。
     *   **Static OGP**: ブランド一貫性と表示安定性のため、WebサイトのOGPには静的画像 (`/brand-og.png`) を採用。
     *   **Link Preview Strategy**: SNSボットは画像を添付せず、リンク機能（Link Card）を活用して静的OGPを表示させる仕様へ変更（画像生成ロジックは廃止）。
     *   **Economic Calendar**: FREDおよびバックエンド算出データに基づく重要イベント表示。
@@ -87,7 +87,7 @@
 | :--- | :--- |
 | `GEMINI_API_KEY` | サーバーサイド生成/翻訳用 (推奨: `NEXT_PUBLIC_` 版は削除) |
 | `NEXT_PUBLIC_GA_ID` | Google Analytics 4 測定ID |
-| `VERCEL_AI_GATEWAY_SLUG` | Vercel AI Gateway のプロジェクトスラグ (e.g. `omni-metric`) |
+| `AI_GATEWAY_API_KEY` | Vercel AI Gateway 認証用 |
 
 ### 4.2 GitHub Secrets (Backend Automation)
 | 変数名 | 説明 |

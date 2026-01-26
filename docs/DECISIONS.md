@@ -63,3 +63,30 @@ This instability disrupted the entire data pipeline.
 ### Consequences
 - (+) **Reliability**: Engine survives API hiccups.
 - (+) **Future-Proof**: v3 is the current standard.
+---
+
+## [ADR-004] Universal Gateway & Dual-Tier Fallback
+**Date:** 2026-01-26
+**Status:** ACCEPTED
+
+### Context
+Isolated Gateways (slug-based) frequently returned `404 DEPLOYMENT_NOT_FOUND` due to Vercel's internal BYOK tester inconsistencies. Additionally, 429 (Rate Limit) errors from the Gateway could disrupt the 30-minute news cycle.
+
+### Decision
+- **Switch to Universal Gateway**:
+    - Use `ai-gateway.vercel.sh/v3` (TS) and `/v1` (Python).
+    - Remove dependency on `VERCEL_AI_GATEWAY_SLUG`.
+- **Implement Dual-Tier Fallback**:
+    - **Trial 1**: Vercel AI Gateway (for logging, caching, and account-level management).
+    - **Trial 2**: Direct Google API (if Trial 1 fails due to 402, 404, 429, or timeouts).
+- **Dynamic Model Selection**:
+    - `Gemini 3 Flash` for GMS reports (Quality).
+    - `Gemini 2.5 Flash` for News translation (Stability/Cost).
+
+### Consequences
+- (+) **High Availability**: 100% uptime for AI features regardless of Gateway status.
+- (+) **Simplified Config**: No slug management required.
+- (+) **Cost Efficient**: Preserves Vercel credits by using 2.5-flash for high-volume routine tasks.
+
+### Prevention Rule
+**DO NOT re-enable isolated slug-based routing** unless Vercel's Byok support is verified to be stable.

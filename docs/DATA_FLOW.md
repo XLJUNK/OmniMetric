@@ -85,8 +85,9 @@ import signalData from '../../../data/current_signal.json';
     *   Endpoint: `/api/v3/economic_calendar` (v3 is strict requirement).
     *   Auth: `FMP_API_KEY`.
 2.  **Gemini AI (Google)**:
-    *   Models: `gemini-2.0-flash-exp`, `gemini-1.5-pro`.
-    *   Auth: `GEMINI_API_KEY`.
+    *   Models: `gemini-3-flash`, `gemini-2.5-flash`.
+    *   Gateway: Universal V3 (`ai-gateway.vercel.sh/v3`).
+    *   Auth: `GEMINI_API_KEY`, `AI_GATEWAY_API_KEY`.
 3.  **IndexNow**:
     *   Pings Bing/Yandex on deployment.
     *   Auth: `INDEXNOW_KEY`.
