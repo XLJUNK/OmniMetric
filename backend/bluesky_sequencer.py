@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 class BlueskySequencer:
     """
@@ -31,7 +31,7 @@ class BlueskySequencer:
 
     def get_jst_now(self):
         """Returns current JST time."""
-        return datetime.utcnow() + timedelta(hours=9)
+        return datetime.now(timezone.utc) + timedelta(hours=9)
 
     def is_weekend(self, jst_dt):
         """Returns True if Saturday or Sunday (JST)."""

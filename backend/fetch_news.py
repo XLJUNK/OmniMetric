@@ -5,7 +5,8 @@ import json
 import time
 import subprocess
 import re
-from datetime import datetime
+from datetime import datetime, timezone
+from dateutil import parser
 from dotenv import load_dotenv
 import sys
 
@@ -20,33 +21,39 @@ GEMINI_KEY = os.getenv("GEMINI_API_KEY", "").strip()
 
 # LOGGING SETUP
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Centralized logging
+from utils.log_utils import create_logger
+
+# Initialize centralized logger
+logger = create_logger(
+    "fetch_news",
+    sensitive_keys=[],  # News engine doesn't use API keys
+    json_format=False
+)
 LOG_FILE = os.path.join(SCRIPT_DIR, "news_debug.log")
 
 def log_diag(msg):
-    """Robust logger that writes to both console and file with timestamp."""
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    formatted_msg = f"[{timestamp}] [NEWS_ENGINE] {msg}"
+    """Wrapper for centralized logger (backward compatibility)."""
+    # Add [NEWS_ENGINE] prefix for consistency
+    prefixed_msg = f"[NEWS_ENGINE] {msg}"
     
-    # Console
-    try:
-        print(formatted_msg)
-    except:
-        pass
-
-    # File
-    try:
-        with open(LOG_FILE, "a", encoding="utf-8") as f:
-            f.write(formatted_msg + "\n")
-    except:
-        pass
+    # Determine log level
+    if "[ERROR]" in msg or "[FATAL]" in msg:
+        logger.error(prefixed_msg)
+    elif "[WARN]" in msg:
+        logger.warn(prefixed_msg)
+    else:
+        logger.info(prefixed_msg)
 
 def create_failure_flag(reason="Unknown"):
     """Creates a flag file to alert GitHub Actions but allow workflow to continue."""
-    flag_path = os.path.join(SCRIPT_DIR, "ai_failed.flag")
+    flag_path = os.path.join(os.path.dirname(__file__), "news_failed.flag") # Changed SCRIPT_DIR to os.path.dirname(__file__) and filename
     try:
         with open(flag_path, "w") as f:
-            f.write(f"FAILURE REASON: {reason}\\nTimestamp: {datetime.now()}")
-    except: pass
+            f.write(f"FAILURE REASON: {reason}\nTimestamp: {datetime.now(timezone.utc)}")
+    except (IOError, OSError) as e: # Specific exception types
+        log_diag(f"[WARN] Failed to create failure flag: {e}")
 
 def fetch_raw_news():
     """Fetches top 6 headlines from CNBC RSS."""
@@ -54,9 +61,7 @@ def fetch_raw_news():
     try:
         log_diag(f"Fetching RSS from {FEED_URL}...")
         res = requests.get(FEED_URL, timeout=15)
-        if res.status_code != 200:
-            log_diag(f"[ERROR] RSS Fetch Failed: Status {res.status_code}")
-            return []
+        res.raise_for_status()  # Raise HTTPError for bad status codes
         
         root = ET.fromstring(res.text)
         items = []
@@ -76,18 +81,15 @@ def fetch_raw_news():
             title = title.replace('<![CDATA[', '').replace(']]>', '').strip()
             
             # Date Handling
-            iso_date = datetime.utcnow().isoformat() + "Z"
+            iso_date = datetime.now(timezone.utc).isoformat() + "Z"
             if pub_date:
                 try:
-                    # Simplistic approach to handle CNBC date formats
-                    clean_date = pub_date.split(' +')[0].split(' -')[0].replace(" EST", "").replace(" EDT", "").strip()
-                    for fmt in ["%a, %d %b %Y %H:%M:%S", "%d %b %Y %H:%M:%S"]:
-                        try:
-                            dt = datetime.strptime(clean_date, fmt)
-                            iso_date = dt.strftime("%Y-%m-%dT%H:%M:%SZ")
-                            break
-                        except: continue
-                except: pass
+                    # Use dateutil.parser for robust date parsing
+                    parsed_date = parser.parse(pub_date)
+                    iso_date = parsed_date.isoformat() + "Z"
+                except (ValueError, parser.ParserError) as e:
+                    log_diag(f"[WARN] Date parsing failed for '{pub_date}': {e}")
+                    iso_date = datetime.now(timezone.utc).isoformat() + "Z" # Fallback to current UTC time
 
             items.append({
                 "title": title,
@@ -98,8 +100,20 @@ def fetch_raw_news():
         count = len(items)
         log_diag(f"RSS Parsed: {count} items found.")
         return items
+    except requests.exceptions.Timeout:
+        log_diag(f"[RSS_TIMEOUT] CNBC RSS feed timed out after 15s")
+        return []
+    except requests.exceptions.ConnectionError as e:
+        log_diag(f"[RSS_CONNECTION] Network error: {e}")
+        return []
+    except requests.exceptions.HTTPError as e:
+        log_diag(f"[RSS_HTTP] HTTP {e.response.status_code}: {e}")
+        return []
+    except ET.ParseError as e:
+        log_diag(f"[RSS_PARSE] XML parsing error: {e}")
+        return []
     except Exception as e:
-        log_diag(f"[FATAL] RSS Fetch Exception: {e}")
+        log_diag(f"[RSS_UNEXPECTED] {type(e).__name__}: {e}")
         return []
 
 def translate_news_batch(items):
@@ -180,7 +194,7 @@ Output JSON format: {{ "JP": [...], "CN": [...], ... }} only."""
              try:
                  data = json.loads(inner_text)
                  return data
-             except:
+             except json.JSONDecodeError: # Specific exception type
                  log_diag(f"[FATAL] Could not parse AI response JSON: {inner_text[:200]}")
                  create_failure_flag("JSON Parse Error")
                  return {}
@@ -211,7 +225,7 @@ def get_news_payload():
     return {
         "news": items,
         "translations": translations,
-        "last_updated": datetime.utcnow().isoformat() + "Z"
+        "last_updated": datetime.now(timezone.utc).isoformat() + "Z"
     }
 
 def main():
@@ -235,7 +249,7 @@ def main():
     payload = {
         "news": news_items,
         "translations": translations,
-        "last_updated": datetime.utcnow().isoformat() + "Z"
+        "last_updated": datetime.now(timezone.utc).isoformat()
     }
     
     signal_path = os.path.join(SCRIPT_DIR, "current_signal.json")

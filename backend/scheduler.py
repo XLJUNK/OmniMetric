@@ -3,7 +3,7 @@ import sys
 import schedule
 import time
 from gms_engine import update_signal
-from datetime import datetime
+from datetime import datetime, timezone
 
 PID_FILE = "scheduler.pid"
 
@@ -24,7 +24,7 @@ def check_pid():
         f.write(str(os.getpid()))
 
 def job():
-    print(f"[{datetime.now().strftime('%H:%M:%S')}] Scheduler triggered: Updating GMS Signal...")
+    print(f"[{datetime.now(timezone.utc).strftime('%H:%M:%S')}] Scheduler triggered: Updating GMS Signal...")
     update_signal()
 
 def run_scheduler():
@@ -52,7 +52,7 @@ def run_scheduler():
         try:
             schedule.run_pending()
         except Exception as e:
-            print(f"[{datetime.now().strftime('%H:%M:%S')}] Scheduler Error: {e}")
+            print(f"[{datetime.now(timezone.utc).strftime('%H:%M:%S')}] Scheduler Error: {e}")
         time.sleep(60)
 
 if __name__ == "__main__":

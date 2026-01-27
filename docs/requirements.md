@@ -1,7 +1,7 @@
-# Global Macro Signal - 要件定義書 (v2.1.0)
+# Global Macro Signal - 要件定義書 (v2.2.0)
 
-> **Last Updated**: 2026-01-24
-> **Version**: 2.1.0 (Recovery & Stability Release)
+> **Last Updated**: 2026-01-27
+> **Version**: 2.2.0 (Premium UI & Theme Stabilization)
 
 5人の専門家チームによる再定義を行い、機関投資家レベルの「プロ仕様」ダッシュボードを目指します。
 
@@ -34,7 +34,8 @@
 
 *   **News Ticker**: 8ヶ国語対応のリアルタイムニュース速報（静的データ配信により超高速化）。
 *   **Signal Panel**: 即座に市場状態（Safe/Caution/Danger）を判別可能。
-*   **Plotly Charts**: インタラクティブな多機能チャート。
+*   **Premium Modal**: 透過・ブラーを廃止し、100%ソリッドな背景で視認性を極限まで高めたメソドロジー・ポップアップ。
+*   **Default Dark Theme**: ブランドイメージを統一するため、新規訪問者に対してダークモードをデフォルト設定。
 
 ## 4. グロース・SEO・AI戦略 - Global & Automated
 **目標**: 8ヶ国語展開 × AI自動生成記事で、世界の検索流入を独占する。

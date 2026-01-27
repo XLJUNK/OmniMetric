@@ -31,8 +31,9 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
                     }
 
                     return {
-                        ...item,
-                        title: decodeEntities(displayTitle)
+                        title: decodeEntities(displayTitle),
+                        link: item.link || item.url || '#',
+                        isoDate: item.isoDate || item.published
                     };
                 });
                 // Strictly take top 3 for the vertical stack

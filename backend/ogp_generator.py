@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import io
 import os
-from datetime import datetime
+from datetime import datetime, timezone
 import matplotlib.font_manager as fm
 
 # Specialized shaping for Arabic
@@ -72,7 +72,7 @@ def generate_dynamic_ogp(data, output_path, lang="EN"):
     title = process_text("GLOBAL MACRO SIGNAL", lang) # Likely stays English but processed anyway
     ax.text(60, 560, title, color='#94a3b8', fontsize=24, fontproperties=font_prop, ha='left')
     
-    today = datetime.now().strftime("%Y-%m-%d")
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     ax.text(1140, 560, today, color='#94a3b8', fontsize=24, fontproperties=font_prop, ha='right')
 
     # 3. Main Score Circle

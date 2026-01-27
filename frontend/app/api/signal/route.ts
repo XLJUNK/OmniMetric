@@ -1,47 +1,43 @@
-import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs';
+import { NextRequest } from 'next/server';
 import path from 'path';
+import fs from 'fs';
+import { successResponse, internalErrorResponse, notFoundResponse } from '@/lib/api-response';
 
 export const dynamic = 'force-dynamic';
-export const revalidate = 900; // 15 minutes revalidation at Edge level
+export const revalidate = 900;
 
-export async function GET(
-    request: NextRequest
-): Promise<NextResponse> {
+export async function GET(request: NextRequest) {
     try {
-        // More robust path resolution: check various positions for backend data
+        // Attempt to locate current_signal.json in multiple possible paths
         const possiblePaths = [
-            path.join(process.cwd(), 'backend', 'current_signal.json'), // Root execution
-            path.join(process.cwd(), '../backend', 'current_signal.json'), // frontend/ execution
-            path.join(process.cwd(), 'current_signal.json'), // flat structure
+            path.join(process.cwd(), 'data', 'current_signal.json'),
+            path.join(process.cwd(), '../backend/current_signal.json'),
+            path.join(process.cwd(), '../../backend/current_signal.json')
         ];
 
-        let filePath = '';
-        for (const p of possiblePaths) {
-            if (fs.existsSync(p)) {
-                filePath = p;
+        let data = null;
+        let foundPath = null;
+
+        for (const filePath of possiblePaths) {
+            if (fs.existsSync(filePath)) {
+                const fileContents = fs.readFileSync(filePath, 'utf8');
+                data = JSON.parse(fileContents);
+                foundPath = filePath;
                 break;
             }
         }
 
-        if (!filePath) {
-            console.error("Signal file not found. Checked:", possiblePaths);
-            return NextResponse.json({ error: 'Signal not yet generated' }, { status: 404 });
+        if (!data) {
+            console.error('[API /signal] current_signal.json not found in any expected location');
+            return notFoundResponse('Signal data not available');
         }
 
-        const fileContents = fs.readFileSync(filePath, 'utf8');
-        const data = JSON.parse(fileContents);
-
-        // Optimized Cache-Control: Browser and Edge cache for 15 mins
-        return NextResponse.json(data, {
-            headers: {
-                'Cache-Control': 'public, max-age=900, s-maxage=900, stale-while-revalidate=600',
-                'Pragma': 'no-cache',
-                'Expires': '0',
-            }
+        return successResponse(data, {
+            cacheControl: 'public, s-maxage=900, stale-while-revalidate=1800'
         });
+
     } catch (error) {
-        console.error("API Error:", error);
-        return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+        console.error('[API /signal] Error reading signal data:', error);
+        return internalErrorResponse('Failed to load signal data');
     }
 }

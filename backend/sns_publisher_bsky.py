@@ -1,6 +1,6 @@
 import os
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 from atproto import Client
 
 class BlueskyPublisher:
@@ -104,7 +104,7 @@ class BlueskyPublisher:
             
             # Merge Bluesky status
             current_status["BLUESKY"] = {
-                "timestamp": datetime.utcnow().isoformat(),
+                "timestamp": datetime.now(timezone.utc).isoformat(),
                 "status": status,
                 "message": message or "OK"
             }
@@ -147,7 +147,7 @@ class BlueskyPublisher:
     def update_state(self, score):
         try:
             with open(self.state_file, 'w') as f:
-                json.dump({"last_bsky_score": score, "last_post_at": datetime.utcnow().isoformat()}, f)
+                json.dump({"last_bsky_score": score, "last_post_at": datetime.now(timezone.utc).isoformat()}, f)
         except Exception as e:
             self._log(f"Failed to update state file: {e}", is_error=True)
 

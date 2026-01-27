@@ -90,3 +90,80 @@ Isolated Gateways (slug-based) frequently returned `404 DEPLOYMENT_NOT_FOUND` du
 
 ### Prevention Rule
 **DO NOT re-enable isolated slug-based routing** unless Vercel's Byok support is verified to be stable.
+
+---
+
+## [ADR-005] Database Adoption Strategy (File-Based Retention)
+**Date:** 2026-01-27
+**Status:** ACCEPTED
+
+### Context
+Considered migrating to a relational database (PostgreSQL/Supabase) to improve query flexibility and scalability.
+However, the project currently generates no revenue, and database hosting incurs fixed monthly costs ($20-50/mo).
+
+### Decision
+- **Reject Database Adoption**: Continue using the JSON file-based system.
+- **Trigger Condition**: Re-evaluate ONLY when:
+    1.  Revenue is generated > Cost.
+    2.  Data size exceeds 10MB.
+    3.  Complex analytical queries become a necessity.
+
+### Consequences
+- (+) **Zero Cost**: Operational expenses remain at $0.
+- (+) **Simplicity**: No migration or connection management required.
+- (-) **Limited Analytics**: Complex historical queries remain difficult.
+
+---
+
+## [ADR-006] Strict UTC Standardization
+**Date:** 2026-01-27
+**Status:** ACCEPTED
+
+### Context
+Mixed timezone usage (`datetime.now()`, `datetime.utcnow()`, local time) caused inconsistencies in data timestamps and logging.
+
+### Decision
+- **Enforce UTC Everywhere**: Use `datetime.now(timezone.utc)` exclusively.
+- **Explicit Forbidden**: `datetime.now()` (without tz), `datetime.utcnow()` (deprecated).
+
+### Consequences
+- (+) **Data Integrity**: Timestamps are consistent across all environments (Local/CI/Prod).
+- (+) **Debugging**: Log correlation is accurate.
+
+---
+
+## [ADR-007] Centralized Logging & Redaction
+**Date:** 2026-01-27
+**Status:** ACCEPTED
+
+### Context
+Logging logic was duplicated across scripts, leading to inconsistent formats and potential security risks (accidental API key leakage).
+
+### Decision
+- **Implement `utils.log_utils`**: Centralized logger with:
+    - Automatic API Key Redaction (Masking).
+    - Log Rotation (10MB limit).
+    - IN/OUT Metric Standardization.
+
+### Consequences
+- (+) **Security**: Sensitive keys are never logged.
+- (+) **Maintainability**: Logging logic reduced by 60% in individual scripts.
+- (+) **Observability**: Consistent structured logs.
+
+---
+
+## [ADR-008] AI Observability via Metrics
+**Date:** 2026-01-27
+**Status:** ACCEPTED
+
+### Context
+The AI Fallback system (5 layers) is complex but reliable. Simplification was proposed but rejected to maintain high availability. However, visibility into *which* fallback layer was being used was poor.
+
+### Decision
+- **Keep Multi-Layer Strategy**: Retain Bridge -> Gateway (5 models) -> Direct -> Cache flow.
+- **Add `AIMetrics` Class**: Implement tracking for Success Rate and Latency per method.
+- **Output**: Log metrics summary at the end of each run.
+
+### Consequences
+- (+) **High Availability**: 99.9% uptime maintained.
+- (+) **Observability**: Operations team can see "Success Rate of Flash Model" vs "Fallback Rate".

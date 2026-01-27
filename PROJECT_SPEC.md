@@ -1,6 +1,6 @@
 # Global Macro Signal (OmniMetric Terminal) - プロジェクト仕様書
-**Version 4.6.0 (Universal Gateway & Dynamic AI Release)**
-**Last Updated:** 2026-01-26
+**Version 4.7.0 (Premium UI & Theme Stabilization)**
+**Last Updated:** 2026-01-27
 
 ## 1. プロジェクト概要 (Executive Summary)
 **Global Macro Signal (GMS)** は、機関投資家レベルの市場リスク分析を個人投資家に提供する、AI駆動型金融・経済分析プラットフォームです。「OmniMetric Terminal」というブランド名で展開され、Bloombergターミナルのような高度な視認性と、生成AIによる深い洞察を融合させています。
@@ -24,9 +24,11 @@
     *   `gms_engine.py`: 市場データ収集(Yahoo/FRED)、GMSスコア算出、AIレポート生成。**FMP v3 API (Robust Endpoints)** を使用し、エラー耐性を強化。
     *   `sns_publisher.py`: Twitter/Blueskyへの自動投稿、緊急アラート(>5%変動)、固定ツイート管理。
     *   `seo_monitor.py`: Google Search Console APIと連携し、トレンドキーワードを分析・抽出。
+    *   `utils/log_utils.py`: **Centralized Logger**。APIキーの自動秘匿、ログローテーション、IN/OUT計測を一元管理。
     *   **AI Engine**:
         *   **Primary (High-Value Analysis)**: `Gemini 3 Flash` - GMSスコアの洞察生成に使用。
         *   **Secondary (Stable Baseline)**: `Gemini 2.5 Flash` - 定型業務（ニュース翻訳）および安定稼働用。
+        *   **Observability**: `AIMetrics` クラスにより、各モデルの成功率とレイテンシを追跡・記録。
         *   **Resilience Protocol**: Universal Gateway (V3) を経由し、障害時は自動で Direct Google API への二段階フォールバックを実行。
 
 ### 2.2 Frontend (User Interface)
@@ -37,6 +39,10 @@
     *   **News Ticker (`/api/news`)**: 
         *   **Dynamic Model Selection**: タスク内容（翻訳か分析か）に基づき、最適モデルを自動選択。
         *   **Universal Gateway**: 個別スラグに依存しない `ai-gateway.vercel.sh` を使用し、404エラーを物理的に排除。
+    *   **Premium Theme Strategy**:
+        *   **Dark Mode by Default**: ユーザ利便性とブランドイメージ維持のため、初期状態をダークモードに固定。
+        *   **Dynamic Theme Sync**: `ThemeProvider` により、マニュアルでのテーマ切り替えと永続化をサポート。
+    *   **Abolished Modal Transparency**: 視認性向上のため、モーダルの透過・ブラーを完全に廃止。100%ソリッドな背景を採用。
     *   **Static OGP**: ブランド一貫性と表示安定性のため、WebサイトのOGPには静的画像 (`/brand-og.png`) を採用。
     *   **Link Preview Strategy**: SNSボットは画像を添付せず、リンク機能（Link Card）を活用して静的OGPを表示させる仕様へ変更（画像生成ロジックは廃止）。
     *   **Economic Calendar**: FREDおよびバックエンド算出データに基づく重要イベント表示。
@@ -71,7 +77,16 @@
 *   **Translation Logic**:
     *   **Batching**: 全見出しを1リクエストのJSONとしてGeminiに送信。
     *   **Professional Core**: 「Bloomberg端末の翻訳者」として、金融特有の言い回し（"Plunge", "Soar"等）を的確に訳出。
+    *   **Minimal Disclaimer**: AIインサイトの免責事項を短縮し、ヘッダーのタイムスタンプを削除することで、リアルタイム性を損なわない洗練された表示を実現。
     *   **Resilience**: 翻訳失敗時は即座に英語原文へフォールバック。JSON一括読み込みによる高速化。
+
+### 3.4 データ整合性と検証 (Data Integrity & Validation)
+時系列データの信頼性を担保するため、4層の検証フレームワークを実装。
+1.  **Availability**: データ取得成功の確認。
+2.  **Quality**: `validate_numeric_data()` による NaN/Inf チェック。
+3.  **Range**: `validate_range()` による異常値（例: 金利 > 20%）の排除。
+4.  **Anomaly**: `detect_anomaly()` による急激な変動（>30-50%）の検出とログ記録。
+**対象メトリクス**: US 10Y Yield, Net Liquidity, GMS Score, etc.
 
 ---
 

@@ -1,7 +1,7 @@
 import os
 import json
 import tweepy
-from datetime import datetime
+from datetime import datetime, timezone
 import pytz
 from atproto import Client
 from bluesky_sequencer import BlueskySequencer
@@ -43,7 +43,7 @@ class SNSPublisher:
                     current_status = json.load(f)
             
             current_status[platform] = {
-                "timestamp": datetime.utcnow().isoformat(),
+                "timestamp": datetime.now(timezone.utc).isoformat(),
                 "status": status,
                 "message": message or "OK"
             }
@@ -150,7 +150,7 @@ class SNSPublisher:
                     state = json.load(f)
             
             state["last_twitter_score"] = score
-            state["last_post_at"] = datetime.utcnow().isoformat()
+            state["last_post_at"] = datetime.now(timezone.utc).isoformat()
             
             with open(self.state_file, 'w') as f:
                 json.dump(state, f, indent=4)
@@ -208,7 +208,7 @@ class SNSPublisher:
                      results[f"BSKY_{lang}"] = "SKIPPED"
                 else:
                      # 1. Generate OGP Image (Disposable)
-                     timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
+                     timestamp = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
                      img_filename = f"gms_ogp_{lang}_{timestamp}.png"
                      img_path = os.path.join(os.path.dirname(__file__), img_filename)
                      
@@ -245,7 +245,10 @@ class SNSPublisher:
                          try:
                              os.remove(img_path)
                              self._log(f"Cleanup: Removed {img_filename}")
-                         except: pass
+                         except FileNotFoundError:
+                             pass  # Already deleted, OK
+                         except (OSError, PermissionError) as e:
+                             self._log(f"[WARN] Cleanup failed for {img_filename}: {e}")
                      
         except Exception as e:
             self._log(f"Bluesky Integration Error: {e}", is_error=True, platform="BLUESKY")

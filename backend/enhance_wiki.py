@@ -5,7 +5,7 @@ import time
 import requests
 import re
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 try:
     from dotenv import load_dotenv
     load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
@@ -184,7 +184,7 @@ class WikiEnhancer:
                 "type": item["type"],
                 "category": item["category"],
                 "sections": sections,
-                "generated_at": datetime.now().isoformat()
+                "generated_at": datetime.now(timezone.utc).isoformat()
             }
             with open(save_path, "w", encoding="utf-8") as f:
                 json.dump(report, f, indent=2, ensure_ascii=False)

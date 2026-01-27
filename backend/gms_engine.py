@@ -4,7 +4,7 @@ import numpy as np
 import json
 import os
 import time
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 import random
 from fredapi import Fred
 
@@ -31,6 +31,16 @@ FRED_KEY = os.getenv("FRED_API_KEY", "").strip()
 GEMINI_KEY = os.getenv("GEMINI_API_KEY", "").strip()
 FMP_KEY = os.getenv("FMP_API_KEY", "").strip()
 AI_GATEWAY_KEY = os.getenv("AI_GATEWAY_API_KEY", "").strip()
+
+# Centralized logging
+from utils.log_utils import create_logger
+
+# Initialize centralized logger with API key redaction
+logger = create_logger(
+    "gms_engine",
+    sensitive_keys=[GEMINI_KEY, FMP_KEY, FRED_KEY],
+    json_format=False
+)
 
 # CONFIGURATION
 # Institutional-grade constants
@@ -89,34 +99,128 @@ FRONTEND_DATA_FILE = os.path.join(FRONTEND_DATA_DIR, "current_signal.json")
 LOG_FILE = os.path.join(SCRIPT_DIR, "engine_log.txt")
 
 def log_diag(msg):
-    """Writes diagnostic messages to a file for bot upload, ensuring sensitive data is redacted."""
-    if not isinstance(msg, str):
-        msg = str(msg)
-    
-    # Centralized Redaction (Strict Regex)
-    # 1. Direct string replacement for known keys
-    sensitive_keys = [FRED_KEY, GEMINI_KEY, FMP_KEY]
-    for key in filter(None, sensitive_keys):
-        if len(key) > 5: # Guard against short/empty keys matching everything
-            msg = msg.replace(key, "REDACTED")
-            
-    # 2. Regex Pattern Redaction (Catch-all for potential leaks in URLs/Headers)
-    # Matches key=AIza... or apikey=... patterns commonly used via GET params
-    msg = re.sub(r'(key|apikey|token)=([a-zA-Z0-9_\-]+)', r'\1=REDACTED', msg, flags=re.IGNORECASE)
-            
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    line = f"[{timestamp}] {msg}\n"
-    
-    # Safe Print (Redacted only)
-    print(msg) 
-    
-    try:
-        with open(LOG_FILE, "a", encoding="utf-8") as f:
-            f.write(line)
-    except Exception as e:
-        print(f"FAILED TO WRITE LOG: {e}")
+    """Wrapper for centralized logger (backward compatibility)."""
+    # Determine log level from message prefix
+    if "[ERROR]" in msg or "[FATAL]" in msg:
+        logger.error(msg)
+    elif "[WARN]" in msg:
+        logger.warn(msg)
+    else:
+        logger.info(msg)
 
-# ... (Existing Directory Checks)
+# ============================================
+# DATA VALIDATION HELPERS
+# ============================================
+
+# Expected ranges for validation
+DATA_RANGES = {
+    "US_10Y_YIELD": {"min": 0, "max": 20, "typical": (2, 6)},
+    "REAL_RATE": {"min": -5, "max": 10, "typical": (-2, 3)},
+    "BREAKEVEN_INFLATION": {"min": 0, "max": 10, "typical": (1, 4)},
+    "NFCI": {"min": -2, "max": 5, "typical": (-1, 2)},
+    "NET_LIQUIDITY": {"min": 0, "max": 10000, "typical": (5000, 7000)},  # Billions
+    "GMS_SCORE": {"min": 0, "max": 100, "typical": (30, 70)}
+}
+
+def validate_numeric_data(value, name, allow_negative=True, min_val=None, max_val=None):
+    """Validate numeric data quality (NaN/Inf checks)."""
+    # Check for NaN/Inf
+    if pd.isna(value) or np.isinf(value):
+        log_diag(f"[DATA_WARN] {name}: Invalid value (NaN/Inf), using fallback")
+        return None
+    
+    # Check for negative values
+    if not allow_negative and value < 0:
+        log_diag(f"[DATA_WARN] {name}: Negative value {value}, using absolute")
+        return abs(value)
+    
+    # Check range
+    if min_val is not None and value < min_val:
+        log_diag(f"[DATA_WARN] {name}: Value {value} below min {min_val}")
+        return min_val
+    
+    if max_val is not None and value > max_val:
+        log_diag(f"[DATA_WARN] {name}: Value {value} above max {max_val}")
+        return max_val
+    
+    return value
+
+def validate_range(value, metric_name):
+    """Validate value is within expected range."""
+    if value is None or metric_name not in DATA_RANGES:
+        return value
+    
+    ranges = DATA_RANGES[metric_name]
+    
+    # Hard limits
+    if value < ranges["min"] or value > ranges["max"]:
+        log_diag(f"[DATA_ERROR] {metric_name}: Value {value} outside valid range [{ranges['min']}, {ranges['max']}]")
+        return None
+    
+    # Typical range warning
+    typical_min, typical_max = ranges["typical"]
+    if value < typical_min or value > typical_max:
+        log_diag(f"[DATA_WARN] {metric_name}: Value {value} outside typical range [{typical_min}, {typical_max}]")
+    
+    return value
+
+def detect_anomaly(current_value, previous_value, metric_name, threshold_percent=50):
+    """Detect abnormal changes in metric values."""
+    if previous_value is None or previous_value == 0:
+        return False
+    
+    change_percent = abs((current_value - previous_value) / previous_value * 100)
+    
+    if change_percent > threshold_percent:
+        log_diag(f"[DATA_ANOMALY] {metric_name}: Large change detected: {change_percent:.1f}% (from {previous_value} to {current_value})")
+        return True
+    
+    return False
+
+# ============================================
+# AI METRICS COLLECTION
+# ============================================
+
+class AIMetrics:
+    """Track AI generation success rates and performance across fallback layers."""
+    def __init__(self):
+        self.attempts = {}
+        self.successes = {}
+        self.latencies = {}
+    
+    def record(self, method, success, latency_ms):
+        """Record an attempt with its outcome and latency."""
+        if method not in self.attempts:
+            self.attempts[method] = 0
+            self.successes[method] = 0
+            self.latencies[method] = []
+        
+        self.attempts[method] += 1
+        if success:
+            self.successes[method] += 1
+        self.latencies[method].append(latency_ms)
+    
+    def get_summary(self):
+        """Get formatted summary of all metrics."""
+        summary = {}
+        for method in self.attempts.keys():
+            total = self.attempts[method]
+            success = self.successes[method]
+            latencies = self.latencies[method]
+            
+            summary[method] = {
+                "attempts": total,
+                "success_rate": f"{(success / total * 100):.1f}%" if total > 0 else "0%",
+                "avg_latency_ms": f"{(sum(latencies) / len(latencies)):.0f}" if latencies else "0"
+            }
+        return summary
+
+# Global metrics instance
+ai_metrics = AIMetrics()
+
+# ============================================
+# API KEY VALIDATION
+# ============================================
 DATA_FILE = os.path.join(SCRIPT_DIR, "current_signal.json")
 HISTORY_FILE = os.path.join(SCRIPT_DIR, "history.json")
 ARCHIVE_DIR = os.path.join(SCRIPT_DIR, "archive")
@@ -198,10 +302,24 @@ def fetch_fred_data():
             with open(DATA_FILE, 'r', encoding='utf-8') as f:
                 saved = json.load(f)
                 previous_data = saved.get('market_data', {})
-    except: pass
+    except FileNotFoundError:
+        log_diag(f"[FILE_NOT_FOUND] Data file not found: {DATA_FILE}")
+    except PermissionError:
+        log_diag(f"[FILE_PERMISSION] No permission to read: {DATA_FILE}")
+    except json.JSONDecodeError as e:
+        log_diag(f"[FILE_JSON] Invalid JSON in {DATA_FILE}")
+        log_diag(f"  Error: {e.msg} at line {e.lineno}, column {e.colno}")
+        if e.doc:
+            lines = e.doc.split('\n')
+            if e.lineno <= len(lines):
+                log_diag(f"  >>> {lines[e.lineno - 1][:100]}")
+    except IOError as e:
+        log_diag(f"[FILE_IO] I/O error reading {DATA_FILE}: {e}")
+    except Exception as e:
+        log_diag(f"[FILE_UNEXPECTED] Error loading {DATA_FILE}: {type(e).__name__}: {e}")
 
     # Fetch Historical Data (Last 90 days to ensure clean data for weekly series)
-    start_date = (datetime.now() - timedelta(days=90)).strftime('%Y-%m-%d')
+    start_date = (datetime.now(timezone.utc) - timedelta(days=90)).strftime('%Y-%m-%d')
     
     if not FRED_KEY: return data
 
@@ -237,7 +355,8 @@ def fetch_fred_data():
                 "trend": "NEUTRAL",
                 "sparkline": [round(x, 2) for x in series.tail(30).tolist()]
             }
-        except: pass
+        except (KeyError, IndexError, ValueError) as e:
+            log_diag(f"[WARN] VIX data processing failed: {e}")
 
         # 1-B. YIELD SPREAD (10Y-3M) - PRIMARY
         try:
@@ -255,7 +374,21 @@ def fetch_fred_data():
         # 1-C. US 10Y YIELD (DGS10)
         try:
             yield_10y = fred.get_series('DGS10', observation_start=start_date).ffill()
-            current_yield = float(yield_10y.iloc[-1])
+            raw_yield = float(yield_10y.iloc[-1])
+            
+            # Validate data quality
+            current_yield = validate_numeric_data(raw_yield, "US_10Y_YIELD", allow_negative=False, min_val=0, max_val=20)
+            if current_yield is None:
+                if 'US_10Y_YIELD' in previous_data:
+                    current_yield = previous_data['US_10Y_YIELD']['price']
+                else:
+                    current_yield = 4.0  # Reasonable default
+            
+            # Validate range
+            current_yield = validate_range(current_yield, "US_10Y_YIELD")
+            if current_yield is None:
+                current_yield = previous_data.get('US_10Y_YIELD', {}).get('price', 4.0)
+            
             data['US_10Y_YIELD'] = {
                 "price": round(current_yield, 2),
                 "change_percent": 0.0,
@@ -386,6 +519,20 @@ def fetch_fred_data():
                 prev_price = valid_series.iloc[-2]
                 daily_chg = ((last_val - prev_price) / prev_price) * 100
 
+            # Validate data quality
+            validated_val = validate_numeric_data(last_val, "NET_LIQUIDITY", allow_negative=False, min_val=0)
+            if validated_val is None:
+                if 'NET_LIQUIDITY' in previous_data:
+                    validated_val = previous_data['NET_LIQUIDITY']['price']
+                else:
+                    validated_val = 6200.0  # Typical value
+            else:
+                validated_val = validate_range(validated_val, "NET_LIQUIDITY")
+                if validated_val is None:
+                    validated_val = previous_data.get('NET_LIQUIDITY', {}).get('price', 6200.0)
+            
+            last_val = validated_val
+
             data['NET_LIQUIDITY'] = {
                 "price": round(last_val, 2), # Billions
                 "prev_price": round(prev_price, 2),
@@ -411,7 +558,16 @@ def fetch_crypto_sentiment():
     """FETCH CRYPTO FEAR & GREED INDEX (Free API)"""
     try:
         url = "https://api.alternative.me/fng/?limit=30"
+        
+        log_diag("[IN] API_CALL: { provider: 'Fear&Greed', endpoint: '/fng', timeout: 5s }")
+        
+        start_time = time.time()
         response = requests.get(url, timeout=5)
+        duration_ms = int((time.time() - start_time) * 1000)
+        
+        log_diag(f"[OUT] API_RESPONSE: {{ provider: 'Fear&Greed', status: {response.status_code}, duration: {duration_ms}ms }}")
+        
+        response.raise_for_status()  # Raise HTTPError for bad status codes
         data = response.json()
         if data and "data" in data and len(data["data"]) > 0:
             sparkline = [int(x["value"]) for x in reversed(data["data"])]
@@ -429,8 +585,16 @@ def fetch_crypto_sentiment():
                 "trend": trend,
                 "sparkline": sparkline
             }
+    except requests.exceptions.Timeout:
+        log_diag(f"[CRYPTO_TIMEOUT] Fear & Greed API timed out after 5s")
+    except requests.exceptions.ConnectionError as e:
+        log_diag(f"[CRYPTO_CONNECTION] Network error: {e}")
+    except requests.exceptions.HTTPError as e:
+        log_diag(f"[CRYPTO_HTTP] HTTP {e.response.status_code}: {e}")
+    except (json.JSONDecodeError, KeyError, ValueError, IndexError) as e:
+        log_diag(f"[CRYPTO_PARSE] Data parsing error: {e}")
     except Exception as e:
-        print(f"[Warn] Crypto F&G Error: {e}")
+        log_diag(f"[CRYPTO_UNEXPECTED] {type(e).__name__}: {e}")
     return None
 
 
@@ -443,9 +607,8 @@ def fetch_economic_calendar():
             return []
             
         # Extension: Search window increased to 45 days for monthly coverage
-        start_date = datetime.now().strftime("%Y-%m-%d")
-        end_date = (datetime.now() + timedelta(days=45)).strftime("%Y-%m-%d")
-        
+        start_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        end_date = (datetime.now(timezone.utc) + timedelta(days=45)).strftime("%Y-%m-%d")
         # FMP v3 Endpoint (Standard)
         url = f"https://financialmodelingprep.com/api/v3/economic_calendar?from={start_date}&to={end_date}&apikey={api_key}"
         log_diag(f"[FMP] Fetching calendar from: {url.replace(api_key, 'REDACTED')}")
@@ -455,21 +618,38 @@ def fetch_economic_calendar():
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
             "Accept": "application/json"
         }
-        response = requests.get(url, headers=headers, timeout=10)
-        log_diag(f"[FMP] Response status: {response.status_code}")
         
-        if response.status_code != 200:
-            log_diag(f"[WARN] Calendar Fetch Failed: Status {response.status_code}. Using empty list.")
-            return []
-            
-        if not response.text.strip():
-            log_diag("[WARN] Calendar Fetch Failed: Empty response body. Using empty list.")
-            return []
-            
+        log_diag("[IN] API_CALL: { provider: 'FMP', endpoint: '/calendar', timeout: 10s }")
+        
         try:
+            start_time = time.time()
+            response = requests.get(url, headers=headers, timeout=10)
+            duration_ms = int((time.time() - start_time) * 1000)
+            
+            log_diag(f"[OUT] API_RESPONSE: {{ provider: 'FMP', status: {response.status_code}, size: {len(response.content)}B, duration: {duration_ms}ms }}")
+            response.raise_for_status()  # Raise HTTPError for bad status codes
+            
+            if not response.text.strip():
+                log_diag("[FMP_WARN] Calendar Fetch: Empty response body. Using empty list.")
+                return []
+            
             data = response.json()
+        except requests.exceptions.Timeout:
+            log_diag(f"[FMP_TIMEOUT] Calendar API timed out after 10s for URL: {url}")
+            return []
+        except requests.exceptions.ConnectionError as e:
+            log_diag(f"[FMP_CONNECTION] Network error: {e}")
+            return []
+        except requests.exceptions.HTTPError as e:
+            log_diag(f"[FMP_HTTP] HTTP {e.response.status_code}: {e.response.text[:200]}")
+            return []
+        except json.JSONDecodeError as e:
+            log_diag(f"[FMP_JSON] JSON parse error in FMP Calendar API response")
+            log_diag(f"  Error: {e.msg} at line {e.lineno}, column {e.colno}")
+            log_diag(f"  Response preview: {response.text[:200]}")
+            return []
         except Exception as e:
-            log_diag(f"[ERROR] Calendar Fetch Failed (JSON Parse): {e}. Response: {response.text[:100]}")
+            log_diag(f"[FMP_UNEXPECTED] {type(e).__name__}: {e}")
             return []
             
         if isinstance(data, dict) and "Error Message" in data:
@@ -824,15 +1004,33 @@ def fetch_breaking_news():
     """Fetches top headline from CNBC for AI context."""
     try:
         FEED_URL = 'https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114'
+        log_diag("[IN] API_CALL: { provider: 'CNBC_RSS', endpoint: '/rss', timeout: 10s }")
+        
+        start_time = time.time()
         res = requests.get(FEED_URL, timeout=10)
-        if res.status_code == 200:
-            root = ET.fromstring(res.text)
-            item = root.find('.//item')
-            if item is not None:
-                title = item.find('title').text
-                return title.strip()
+        duration_ms = int((time.time() - start_time) * 1000)
+        
+        log_diag(f"[OUT] API_RESPONSE: {{ provider: 'CNBC_RSS', status: {res.status_code}, size: {len(res.content)}B, duration: {duration_ms}ms }}")
+        
+        res.raise_for_status()  # Raise HTTPError for bad status codes
+        
+        root = ET.fromstring(res.text)
+        item = root.find('.//item')
+        if item is not None:
+            title = item.find('title').text
+            return title.strip()
+    except requests.exceptions.Timeout:
+        log_diag(f"[RSS_TIMEOUT] CNBC RSS feed timed out after 10s")
+    except requests.exceptions.ConnectionError as e:
+        log_diag(f"[RSS_CONNECTION] Network error: {e}")
+    except requests.exceptions.HTTPError as e:
+        log_diag(f"[RSS_HTTP] HTTP {e.response.status_code}: {e}")
+    except ET.ParseError as e:
+        log_diag(f"[RSS_PARSE] XML parsing error: {e}")
+    except (AttributeError, TypeError) as e:
+        log_diag(f"[RSS_DATA] Data extraction error: {e}")
     except Exception as e:
-        print(f"[NEWS] Fetch failed: {e}")
+        log_diag(f"[RSS_UNEXPECTED] {type(e).__name__}: {e}")
     return "Market data synchronization active."
 
 def get_last_valid_analysis():
@@ -865,7 +1063,11 @@ def get_last_valid_analysis():
                         
                     log_diag(f"[SMART CACHE] Found valid report from {fname}")
                     return reports
-            except:
+            except (FileNotFoundError, PermissionError, json.JSONDecodeError, IOError):
+                # Skip invalid/inaccessible files
+                continue
+            except Exception as e:
+                log_diag(f"[ARCHIVE_UNEXPECTED] Error reading {path}: {type(e).__name__}: {e}")
                 continue
     except Exception as e:
         log_diag(f"[SMART CACHE ERROR] {e}")
@@ -924,9 +1126,16 @@ def generate_multilingual_report(data, score, trend_context={}):
         if valid_cache:
             log_diag("[GUARD] Using Smart Cache (Mock Mode)")
             return valid_cache
-        
-        log_diag("[GUARD] No valid cache found. Using static FALLBACK_STATUS.")
-        return FALLBACK_STATUS
+        else:
+            ai_metrics.record("smart_cache", False, int((time.time() - cache_start) * 1000))
+            ai_metrics.record("static_fallback", True, 0)
+            
+            # Log final metrics summary
+            metrics_summary = ai_metrics.get_summary()
+            log_diag(f"[AI METRICS] Final Summary: {json.dumps(metrics_summary, indent=2)}")
+            
+            log_diag("[CRITICAL] No valid cache found. Using static fallback.")
+            return FALLBACK_STATUS
 
     if not GEMINI_KEY:
         log_diag("[AI BRIDGE CRITICAL] GEMINI_API_KEY is MISSING from environment.")
@@ -1044,31 +1253,31 @@ Output JSON:
         text = re.sub(r'\(\d+ characters?\)$', '', text.strip(), flags=re.IGNORECASE)
         return text.strip()
 
-    for attempt in range(2): 
+    # ATTEMPT 1: NODE.JS BRIDGE (SSL Isolation + Environment Stability)
+    if not IS_MOCK_MODE:
         try:
-            log_diag(f"[AI BATCH] Requesting 7-language analysis (Attempt {attempt+1})...")
+            log_diag("[AI BRIDGE] Attempting Node.js Bridge for SSL isolation...")
             
-            frontend_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "frontend")
+            bridge_start = time.time()
+            bridge_success = False
+            
+            frontend_dir = os.path.join(os.path.dirname(SCRIPT_DIR), "frontend")
             script_path = os.path.join(frontend_dir, "scripts", "generate_insight.ts")
             
             import shutil
             if not shutil.which("npx"):
-                log_diag("[AI BRIDGE SKIP] 'npx' not found. Jumping to Python SDK fallback.")
-                break 
-            
-            cmd = ["npx", "-y", "tsx", script_path, prompt]
-            
-            log_diag(f"[AI BRIDGE] Command: {' '.join(cmd)}")
-            
-            process = subprocess.run(
-                cmd,
-                capture_output=True,
-                text=True,
-                encoding='utf-8',
-                creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0,
-                check=False,
-                env=os.environ.copy(),
-                cwd=frontend_dir,
+                log_diag("[AI BRIDGE WARN] npx not found in PATH. Skipping Bridge.")
+            else:
+                cmd = ["npx", "-y", "tsx", script_path, prompt]
+                
+                log_diag(f"[AI BRIDGE] Executing: {' '.join(cmd[:3])}...")
+                
+                process = subprocess.run(
+                    cmd,
+                    capture_output=True,
+                    text=True,
+                    encoding='utf-8',
+                    creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0,
                 timeout=120,
                 shell=(os.name == 'nt') # Mandatory for npx on Windows
             )
@@ -1089,7 +1298,8 @@ Output JSON:
                     try:
                         with open(os.path.join(SCRIPT_DIR, "logs", "latest_raw_response.json"), "w", encoding="utf-8") as f:
                             f.write(stdout_content)
-                    except: pass
+                    except (IOError, OSError) as e:
+                        log_diag(f"[WARN] Failed to write audit log: {e}")
                     
                     # Define required languages
                     required = ["JP", "EN", "CN", "ES", "HI", "ID", "AR"]
@@ -1132,6 +1342,8 @@ Output JSON:
                                     
                                     if valid:
                                         log_diag("[AI SUCCESS] Reports parsed and validated via Bridge.")
+                                        bridge_success = True
+                                        ai_metrics.record("node_bridge", True, int((time.time() - bridge_start) * 1000))
                                         return reports
                                     else:
                                         log_diag("[AI FAIL] Validation failed (Quality Guard). Using Fallback.")
@@ -1151,6 +1363,10 @@ Output JSON:
                 
         except Exception as e:
             log_diag(f"[AI BRIDGE CRITICAL] {e}")
+        
+        # Record failure if bridge didn't succeed
+        if not bridge_success:
+            ai_metrics.record("node_bridge", False, int((time.time() - bridge_start) * 1000))
 
     # VERCEL AI GATEWAY - RESILIENCE PROTOCOL (PRIMARY)
     # Strategy: Flash-Targeted Speed > High-Tier Reasoning > Efficient Fallbacks
@@ -1166,6 +1382,9 @@ Output JSON:
     
     for model_name in models:
         log_diag(f"[AI GATEWAY] Attempting Model: {model_name}...")
+        
+        model_success = False
+        model_start = time.time()
         
         # Reduced Retries for speed (Max 2 Attempts)
         for attempt in range(2):
@@ -1199,13 +1418,22 @@ Output JSON:
                 payload = {"contents": [{"parts": [{"text": prompt}]}]}
                 
                 # Timeout Increased to 30s
-                log_diag(f"[AI REQUEST] URL={target_url[:100]}... Model={model_name} Attempt={attempt+1}")
+                log_diag(f"[IN] API_CALL: {{ provider: 'AI_Gateway', model: {model_name}, endpoint: '/generateContent', timeout: 30s }}")
                 
                 try:
+                    start_time = time.time()
                     response = requests.post(target_url, json=payload, headers=headers, timeout=30)
-                    log_diag(f"[AI RESPONSE] Status={response.status_code} Model={model_name}")
+                    duration_ms = int((time.time() - start_time) * 1000)
+                    
+                    log_diag(f"[OUT] API_RESPONSE: {{ provider: 'AI_Gateway', model: {model_name}, status: {response.status_code}, duration: {duration_ms}ms }}")
+                except requests.exceptions.Timeout:
+                    log_diag(f"[AI_TIMEOUT] Gemini API timed out after 30s. Model={model_name}")
+                    continue
+                except requests.exceptions.ConnectionError as e:
+                    log_diag(f"[AI_CONNECTION] Network error: {e}")
+                    continue
                 except requests.exceptions.RequestException as e:
-                    log_diag(f"[AI ERROR] Network Exception: URL={target_url[:100]}, Error={str(e)[:200]}")
+                    log_diag(f"[AI_REQUEST] Request exception: {type(e).__name__}: {e}")
                     continue
                 
                 if response.status_code == 200:
@@ -1215,7 +1443,8 @@ Output JSON:
                     try:
                         with open(os.path.join(SCRIPT_DIR, "logs", "latest_raw_response.json"), "w", encoding="utf-8") as f:
                             json.dump(result, f, indent=2, ensure_ascii=False)
-                    except: pass
+                    except (IOError, OSError, TypeError) as e:
+                        log_diag(f"[WARN] Failed to write audit log: {e}")
                     
                     if 'candidates' in result and result['candidates']:
                         text = result['candidates'][0]['content']['parts'][0]['text']
@@ -1226,7 +1455,10 @@ Output JSON:
                         # Validate Keys
                         if all(lang in reports for lang in required):
                             for lang in required:
-                                reports[lang] = sanitize_insight_text(reports[lang]) 
+                                reports[lang] = sanitize_insight_text(reports[lang])
+                            
+                            model_success = True
+                            ai_metrics.record(f"gateway_{model_name}", True, int((time.time() - model_start) * 1000))
                             return reports
                         else:
                              log_diag(f"[AI INVALID] {model_name} returned incomplete JSON.")
@@ -1249,6 +1481,10 @@ Output JSON:
             except Exception as e:
                 log_diag(f"[AI GATEWAY EXCEPTION] {e}")
                 break # Move to next model
+        
+        # Record failure if model didn't succeed
+        if not model_success:
+            ai_metrics.record(f"gateway_{model_name}", False, int((time.time() - model_start) * 1000))
 
     # BACKSTOPS REMOVED: Strict Gateway Enforcement
     # If Gateway loop fails, the function will proceed to raise the Exception below.
@@ -1264,13 +1500,21 @@ Output JSON:
         with open(flag_path, "w") as f:
             f.write("FAILURE")
         log_diag(f"[ALERT] Failure flag created at {flag_path}")
-    except: pass
+    except (IOError, OSError) as e:
+        log_diag(f"[ERROR] Failed to create failure flag: {e}")
     
     # 2. Load Valid Cache (Stale Data)
+    cache_start = time.time()
     valid_cache = get_last_valid_analysis()
     
     if valid_cache:
         log_diag("[STEALTH] Loaded Valid Cache. Appending '..' mark.")
+        ai_metrics.record("smart_cache", True, int((time.time() - cache_start) * 1000))
+        
+        # Log metrics summary
+        metrics_summary = ai_metrics.get_summary()
+        log_diag(f"[AI METRICS] {json.dumps(metrics_summary, indent=2)}")
+        
         # 3. Append Silent Mark ".."
         for lang, text in valid_cache.items():
             if not text.endswith(".."):
@@ -1287,7 +1531,7 @@ Output JSON:
 
 def get_next_event_dates():
     """Smart Fallback: Dynamically calculates the next major economic event dates."""
-    now = datetime.now()
+    now = datetime.now(timezone.utc)
     
     def get_first_friday(year, month):
         first_day = datetime(year, month, 1)
@@ -1367,7 +1611,7 @@ def update_signal(force_news=False):
                         # Handle both space and T formats for safety
                         last_upd_str = last_upd_str.replace(' ', 'T').replace('Z', '')
                         last_upd_dt = datetime.fromisoformat(last_upd_str)
-                        if (datetime.utcnow() - last_upd_dt).total_seconds() < 480: # 8-minute buffer for jittery 15m crons
+                        if (datetime.now(timezone.utc) - last_upd_dt).total_seconds() < 480: # 8-minute buffer for jittery 15m crons
                             print(f"[AIO] SKIP: Recently updated ({last_upd_dt}). Enforced 8m cool-down.")
                             return existing_data
         except Exception as e:
@@ -1386,7 +1630,26 @@ def update_signal(force_news=False):
             sector_scores[sector] = score
             log_diag(f"[OUT] CALC_SCORE: {{ sector: {sector}, score: {score} }}")
             
-        score = calculate_total_gms(market_data, sector_scores)
+        # Calculate GMS Score
+        score = calculate_total_gms(market_data, sector_scores) # Original line
+        
+        # Validate range
+        score = validate_range(score, "GMS_SCORE")
+        if score is None:
+            score = 50  # Neutral fallback
+        
+        # Anomaly detection
+        previous_data = None # Placeholder for previous data, assuming it's loaded elsewhere or needs to be loaded here
+        try:
+            if os.path.exists(DATA_FILE):
+                with open(DATA_FILE, 'r', encoding='utf-8') as f:
+                    previous_data = json.load(f)
+        except Exception as e:
+            log_diag(f"[WARN] Could not load previous data for anomaly detection: {e}")
+
+        if previous_data and 'gms_score' in previous_data: # Assuming 'gms_score' is the key for the total GMS score
+            detect_anomaly(score, previous_data['gms_score'], "GMS_SCORE", threshold_percent=30)
+        
         log_diag(f"[OUT] GMS_TOTAL: {{ score: {score} }}")
         
         # History Management (Hoisted for AI Context)
@@ -1395,7 +1658,15 @@ def update_signal(force_news=False):
             if os.path.exists(HISTORY_FILE):
                 with open(HISTORY_FILE, 'r', encoding='utf-8') as f:
                     history = json.load(f)
-        except: pass
+        except json.JSONDecodeError as e:
+            log_diag(f"[FILE_JSON] Invalid JSON in history file: {HISTORY_FILE}")
+            log_diag(f"  Error: {e.msg} at line {e.lineno}, column {e.colno}")
+            if e.doc:
+                lines = e.doc.split('\n')
+                if e.lineno <= len(lines):
+                    log_diag(f"  >>> {lines[e.lineno - 1][:100]}")
+        except (FileNotFoundError, IOError) as e:
+            log_diag(f"[FILE_ERROR] Failed to load history: {e}")
 
         # Trend Analysis
         trend_context = calculate_trend_context(history, score)
@@ -1440,7 +1711,7 @@ def update_signal(force_news=False):
         
         # Append new entry (UTC)
         new_entry = {
-            "timestamp": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"), # ISO UTC with Z suffix
+            "timestamp": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), # ISO UTC with Z suffix
             "score": score
         }
         history.append(new_entry)
@@ -1453,7 +1724,8 @@ def update_signal(force_news=False):
         try:
             with open(HISTORY_FILE, 'w', encoding='utf-8') as f:
                 json.dump(history, f, indent=4)
-        except: pass
+        except (IOError, OSError) as e:
+            log_diag(f"[ERROR] Failed to save history file: {e}")
 
         # Format for Frontend Chart
         # Expected format: [{"date": "HH:MM", "score": 75}, ...]
@@ -1464,8 +1736,8 @@ def update_signal(force_news=False):
                 history_chart.append({"date": fmt_date, "score": h["score"]})
 
         payload = {
-            "last_updated": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"), # ISO UTC with Z suffix
-            "last_successful_update": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"), # ISO UTC with Z suffix
+            "last_updated": datetime.now(timezone.utc).isoformat(), # ISO UTC with timezone
+            "last_successful_update": datetime.now(timezone.utc).isoformat(), # ISO UTC with timezone
             "gms_score": score,
             "sector_scores": sector_scores, 
             "market_data": market_data,
@@ -1496,12 +1768,13 @@ def update_signal(force_news=False):
         payload = sanitize(payload)
         
         # Archive using UTC date
-        today_str = datetime.utcnow().strftime("%Y-%m-%d")
+        today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         archive_path = os.path.join(ARCHIVE_DIR, f"{today_str}.json")
         try:
             with open(archive_path, 'w', encoding='utf-8') as f:
                 json.dump(payload, f, indent=4, ensure_ascii=False)
-        except: pass
+        except (IOError, OSError, TypeError) as e:
+            log_diag(f"[ERROR] Failed to create archive copy: {e}")
 
         try:
             with open(DATA_FILE, 'w', encoding='utf-8') as f:
@@ -1512,14 +1785,25 @@ def update_signal(force_news=False):
         # Synced Frontend Save (ISR/Fetch support)
         if not os.path.exists(FRONTEND_DATA_DIR):
             try:
-                os.makedirs(FRONTEND_DATA_DIR)
-            except: pass
+                os.makedirs(FRONTEND_DATA_DIR, exist_ok=True)
+            except PermissionError:
+                log_diag(f"[DIR_PERMISSION] No permission to create: {FRONTEND_DATA_DIR}")
+            except OSError as e:
+                log_diag(f"[DIR_OS] OS error creating {FRONTEND_DATA_DIR}: {e}")
+            except Exception as e:
+                log_diag(f"[DIR_UNEXPECTED] Error creating {FRONTEND_DATA_DIR}: {type(e).__name__}: {e}")
         try:
             with open(FRONTEND_DATA_FILE, 'w', encoding='utf-8') as f:
                 json.dump(payload, f, indent=4, ensure_ascii=False)
             print(f"Synced signal to frontend: {FRONTEND_DATA_FILE}")
+        except PermissionError:
+            log_diag(f"[FILE_PERMISSION] No permission to write: {FRONTEND_DATA_FILE}")
+        except OSError as e:
+            log_diag(f"[FILE_OS] OS error writing {FRONTEND_DATA_FILE}: {e}")
+        except IOError as e:
+            log_diag(f"[FILE_IO] I/O error writing {FRONTEND_DATA_FILE}: {e}")
         except Exception as e:
-            print(f"Frontend sync failed: {e}")
+            log_diag(f"[FILE_UNEXPECTED] Error writing {FRONTEND_DATA_FILE}: {type(e).__name__}: {e}")
 
         try:
             # TRIGGER SEO & SNS MODULES (Atomic)
@@ -1579,8 +1863,8 @@ def update_signal(force_news=False):
              print(f"[Warn] Failed to load cache for fallback: {ex}")
 
         payload = {
-            "last_updated": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
-            "last_successful_update": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"), 
+            "last_updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "last_successful_update": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), 
             "gms_score": cached_sys_score,
             "sector_scores": cached_sector_scores,
             "market_data": cached_market_data,
@@ -1594,10 +1878,12 @@ def update_signal(force_news=False):
             "intelligence": old_json.get("intelligence") if 'old_json' in locals() else None,
             "system_status": "MAINTENANCE"
         }
+        # Save Main Data File
         try:
             with open(DATA_FILE, 'w', encoding='utf-8') as f:
                 json.dump(payload, f, indent=4, ensure_ascii=False)
-        except: pass
+        except (IOError, OSError, TypeError) as e:
+            log_diag(f"[ERROR] Failed to save main data file: {e}")
         return payload
 
 if __name__ == "__main__":
@@ -1607,7 +1893,7 @@ if __name__ == "__main__":
         if os.path.exists(flag_path):
             os.remove(flag_path)
 
-        print(f"--- [START] Engine Run at {datetime.utcnow().isoformat()} ---")
+        print(f"--- [START] Engine Run at {datetime.now(timezone.utc).isoformat()} ---")
         result = update_signal(force_news=True)
         print(f"--- [FINISH] Engine Run SUCCESS (Score: {result.get('gms_score', 'N/A')}) ---")
     except Exception as e:

@@ -1,6 +1,6 @@
 import json
 import os
-from datetime import datetime
+from datetime import datetime, timezone
 import pandas as pd
 import numpy as np
 
@@ -67,7 +67,7 @@ def update_summary():
     # Sort by date
     summary.sort(key=lambda x: x['date'])
 
-    today_str = datetime.now().strftime("%Y-%m-%d")
+    today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     if current_data:
         # Update or Add today's entry
         market_data = current_data.get("market_data", {})
@@ -133,7 +133,7 @@ def analyze_performance(summary):
         "avg_vix_neutral": avg_vix_neutral if avg_vix_neutral > 0 else None,
         "avg_vix_accumulate": avg_vix_high if avg_vix_high > 0 else None,
         "sample_count": len(df),
-        "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        "last_updated": datetime.now(timezone.utc).isoformat()
     }
 
     # Generate Performance Summary Strings (Multi-language template)

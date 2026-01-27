@@ -1,14 +1,13 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest } from 'next/server';
 import path from 'path';
 import fs from 'fs';
+import { successResponse, internalErrorResponse } from '@/lib/api-response';
 
 // Optimize caching for this route
 export const revalidate = 60;
 export const dynamic = 'force-dynamic';
 
-export async function GET(
-    request: NextRequest
-): Promise<NextResponse> {
+export async function GET(request: NextRequest) {
     try {
         // VERCEL COMPLIANCE: Do not use exec('python').
         // Directly read the generated JSON file from the backend.
@@ -19,11 +18,11 @@ export async function GET(
         if (fs.existsSync(filePath)) {
             const fileContents = fs.readFileSync(filePath, 'utf8');
             const data = JSON.parse(fileContents);
-            return NextResponse.json(data);
+            return successResponse(data);
         } else {
             console.warn("Live data file missing, serving fallback structure.");
             // Return safe fallback structure with 200 OK
-            return NextResponse.json({
+            return successResponse({
                 gms_score: 50,
                 market_data: {},
                 analysis: { content: "System Maintenance: Live data unavailable." },
@@ -35,9 +34,12 @@ export async function GET(
     } catch (error) {
         console.error("API Live Error:", error);
         // Ensure we never return 500, always 200 with error details or valid fallback
-        return NextResponse.json({
+        return successResponse({
             error: 'System Maintenance',
-            details: 'Live data currently unavailable'
-        }, { status: 200 });
+            details: 'Live data currently unavailable',
+            gms_score: 50,
+            market_data: {},
+            history_chart: []
+        });
     }
 }

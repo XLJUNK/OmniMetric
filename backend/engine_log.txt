@@ -8464,3 +8464,12 @@ Output JSON:
   "AR": "..."
 }
 
+[2026-01-27 04:58:37] [CRYPTO_TIMEOUT] Fear & Greed API timed out after 5s
+[2026-01-27 04:58:37] [CRYPTO_CONNECTION] Network error: Network unreachable
+[2026-01-27 04:58:37] [CRYPTO_HTTP] HTTP 503: 
+[2026-01-27 04:58:37] [FMP] Fetching calendar from: https://financialmodelingprep.com/api/v3/economic_calendar?from=2026-01-27&to=2026-03-13&apikey=REDACTED
+[2026-01-27 04:58:37] [FMP_TIMEOUT] Calendar API timed out after 10s for URL: https://financialmodelingprep.com/api/v3/economic_calendar?from=2026-01-27&to=2026-03-13&apikey=REDACTED
+[2026-01-27 04:58:37] [FMP] Fetching calendar from: https://financialmodelingprep.com/api/v3/economic_calendar?from=2026-01-27&to=2026-03-13&apikey=REDACTED
+[2026-01-27 04:58:37] [FMP] Response status: 401
+[2026-01-27 04:58:37] [FMP_HTTP] HTTP 401: {"Error Message": "Invalid API Key"}
+[2026-01-27 04:58:37] [RSS_TIMEOUT] CNBC RSS feed timed out after 10s

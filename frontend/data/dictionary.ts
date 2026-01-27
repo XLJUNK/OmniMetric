@@ -47,7 +47,8 @@ export const DICTIONARY = {
             delayed_tick: "*15m DLY",
             methodology: "METHODOLOGY",
             analysis_history: "Analysis History",
-            live_stream: "LIVE INTELLIGENCE STREAM"
+            live_stream: "LIVE INTELLIGENCE STREAM",
+            ai_disclaimer: "This insight is a multi-faceted analysis by AI and does not guarantee accuracy."
         },
         methodology: {
             title: "GMS QUANT METHODOLOGY",
@@ -288,7 +289,8 @@ export const DICTIONARY = {
             delayed_tick: "*15分遅延",
             methodology: "算出ロジック (METHODOLOGY)",
             analysis_history: "分析履歴 (Analysis History)",
-            live_stream: "ライブ・インテリジェンス（LIVE INTELLIGENCE）"
+            live_stream: "ライブ・インテリジェンス（LIVE INTELLIGENCE）",
+            ai_disclaimer: "本インサイトはAIによる多角的な分析結果であり、内容の正確性を保証するものではありません。"
         },
         methodology: {
             title: "GMS QUANT METHODOLOGY",
@@ -528,7 +530,8 @@ export const DICTIONARY = {
             delayed_tick: "*延迟15分",
             methodology: "方法论",
             analysis_history: "分析历史 (Analysis History)",
-            live_stream: "实时情报流"
+            live_stream: "实时情报流",
+            ai_disclaimer: "本洞察是由人工智能进行的多元化分析结果，不保证内容的准确性。"
         },
         methodology: {
             title: "GMS QUANT METHODOLOGY",
@@ -723,7 +726,8 @@ export const DICTIONARY = {
             delayed_tick: "*RETRASO 15m",
             methodology: "METODOLOGÍA",
             analysis_history: "Historial de Análisis",
-            live_stream: "FLUJO DE INTELIGENCIA EN VIVO"
+            live_stream: "FLUJO DE INTELIGENCIA EN VIVO",
+            ai_disclaimer: "Este análisis es el resultado de un estudio multifacético realizado por IA y no garantiza la precisión de su contenido."
         },
         methodology: {
             title: "METODOLOGÍA CUANTITATIVA GMS",
@@ -918,7 +922,8 @@ export const DICTIONARY = {
             delayed_tick: "*15 मिनट देरी",
             methodology: "पद्धति (METHODOLOGY)",
             analysis_history: "विश्लेषण इतिहास",
-            live_stream: "LIVE INTELLIGENCE STREAM"
+            live_stream: "LIVE INTELLIGENCE STREAM",
+            ai_disclaimer: "यह अंतर्दृष्टि AI द्वारा बहुआयामी विश्लेषण का परिणाम है और सामग्री की सटीकता की गारंटी नहीं देती है।"
         },
         methodology: {
             title: "GMS मात्रात्मक पद्धति",
@@ -1113,7 +1118,8 @@ export const DICTIONARY = {
             delayed_tick: "*Tunda 15m",
             methodology: "METODOLOGI",
             analysis_history: "Riwayat Analisis",
-            live_stream: "ALIRAN INTELIJEN LANGSUNG"
+            live_stream: "ALIRAN INTELIJEN LANGSUNG",
+            ai_disclaimer: "Wawasan ini adalah hasil analisis multifaset oleh AI dan tidak menjamin keakuratan isinya."
         },
         methodology: {
             title: "METODOLOGI KUANTITATIF GMS",
@@ -1303,7 +1309,8 @@ export const DICTIONARY = {
             breaking: "عاجل",
             delayed_tick: "*تأخير 15د",
             methodology: "المنهجية (METHODOLOGY)",
-            analysis_history: "سجل التحليل"
+            analysis_history: "سجل التحليل",
+            ai_disclaimer: "هذه الرؤية هي نتيجة تحليل متعدد الأوجه بواسطة الذكاء الاصطناعي ولا تضمن دقة محتواها."
         },
         methodology: {
             title: "منهجية GMS الكمية",

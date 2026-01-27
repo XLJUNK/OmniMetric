@@ -17,7 +17,6 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
-        // Hydration logic
         setMounted(true);
         try {
             const savedConfig = localStorage.getItem('gms_terminal_config_v1');
@@ -25,11 +24,6 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
                 const config = JSON.parse(savedConfig);
                 if (config.theme) {
                     setThemeState(config.theme);
-                }
-            } else {
-                // Check system preference if no config
-                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-                    setThemeState('light');
                 }
             }
         } catch (e) {

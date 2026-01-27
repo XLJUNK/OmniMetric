@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Shield, Activity, Globe, Zap, Clock, ChevronDown, Check, Info, X, Settings } from 'lucide-react';
+import { Shield, Activity, Globe, Zap, Clock, ChevronDown, Check, Info, X, Settings, Layers, ShieldCheck } from 'lucide-react';
 import { RiskGauge, HistoryChart } from '@/components/Charts';
 import { DICTIONARY, LangType } from '@/data/dictionary';
 import { useDevice } from '@/hooks/useDevice';
@@ -74,49 +74,70 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
         }
     }
 
-    // Mobile Accordion State
-
-
     if (!data) return null;
 
     return (
         <div className="w-full gms-container">
-            {/* METHODOLOGY MODAL */}
+            {/* METHODOLOGY MODAL (Abolished ALL transparency for maximum structural solidity) */}
             {showInfo && (
-                <div className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setShowInfo(false)}>
-                    <div className="bg-white dark:bg-[#111] border border-slate-200 dark:border-slate-800 rounded-xl w-full max-w-2xl p-6 shadow-2xl relative" onClick={e => e.stopPropagation()}>
+                <div
+                    className="fixed inset-0 z-[9999] flex items-center justify-center p-4 !opacity-100"
+                    style={{ backgroundColor: theme === 'dark' ? '#000000' : '#0F172ACC' }} // Deep slate for light mode backdrop, pure black for dark
+                    onClick={() => setShowInfo(false)}
+                >
+                    <div
+                        className="border border-slate-200 dark:border-slate-700 rounded-xl w-full max-w-2xl p-6 shadow-2xl relative !opacity-100"
+                        style={{ backgroundColor: theme === 'dark' ? '#000000' : '#FFFFFF' }}
+                        onClick={e => e.stopPropagation()}
+                    >
                         <div className="flex justify-between items-start mb-4 border-b border-slate-200 dark:border-slate-800 pb-2">
-                            <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tighter">
-                                {t.methodology.title}
-                            </h2>
+                            <div>
+                                <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tighter">
+                                    {t.methodology.title}
+                                </h2>
+                                <p className="text-[10px] text-slate-500 dark:text-slate-400 font-mono mt-1">Institutional Quant Logic v2.4</p>
+                            </div>
                             <button
-                                className="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors p-1"
                                 onClick={() => setShowInfo(false)}
-                                aria-label="Close"
+                                className="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors group"
                             >
-                                <X className="w-6 h-6" />
+                                <X className="w-6 h-6 text-slate-400 dark:text-slate-500 group-hover:text-slate-900 dark:group-hover:text-white" />
                             </button>
                         </div>
-                        <div className="space-y-6 text-sm text-slate-600 dark:text-slate-300 font-mono">
-                            <p>{t.methodology.desc}</p>
+
+                        <div className="space-y-6 max-h-[70vh] overflow-y-auto pr-2 custom-scrollbar">
+                            <section>
+                                <h3 className="text-xs font-bold text-slate-900 dark:text-slate-200 uppercase tracking-widest mb-3 flex items-center gap-2">
+                                    <Activity className="w-3.5 h-3.5 text-sky-500" />
+                                    CORE LOGIC
+                                </h3>
+                                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-sans">
+                                    {t.methodology.desc}
+                                </p>
+                            </section>
 
                             <div className="space-y-4">
-                                <div>
-                                    <span className="block text-green-400 font-bold mb-1">{t.methodology.zone_accumulate}</span>
-                                    <p className="opacity-70">{t.methodology.zone_accumulate_desc}</p>
+                                <div className="p-3 bg-blue-50 dark:bg-blue-900/10 rounded-lg border border-blue-100 dark:border-blue-900/20">
+                                    <span className="block text-blue-600 dark:text-blue-400 font-bold mb-1">{t.methodology.zone_accumulate}</span>
+                                    <p className="text-xs text-slate-600 dark:text-slate-400">{t.methodology.zone_accumulate_desc}</p>
                                 </div>
-                                <div>
-                                    <span className="block text-yellow-400 font-bold mb-1">{t.methodology.zone_neutral}</span>
-                                    <p className="opacity-70">{t.methodology.zone_neutral_desc}</p>
+                                <div className="p-3 bg-slate-50 dark:bg-slate-900/30 rounded-lg border border-slate-100 dark:border-slate-800">
+                                    <span className="block text-slate-500 dark:text-slate-400 font-bold mb-1">{t.methodology.zone_neutral}</span>
+                                    <p className="text-xs text-slate-600 dark:text-slate-400">{t.methodology.zone_neutral_desc}</p>
                                 </div>
-                                <div>
-                                    <span className="block text-red-400 font-bold mb-1">{t.methodology.zone_defensive}</span>
-                                    <p className="opacity-70">{t.methodology.zone_defensive_desc}</p>
+                                <div className="p-3 bg-red-50 dark:bg-red-900/10 rounded-lg border border-red-100 dark:border-red-900/20">
+                                    <span className="block text-red-600 dark:text-red-400 font-bold mb-1">{t.methodology.zone_defensive}</span>
+                                    <p className="text-xs text-slate-600 dark:text-slate-400">{t.methodology.zone_defensive_desc}</p>
                                 </div>
                             </div>
 
-                            <div className="border-t border-slate-200 dark:border-slate-800 pt-4 flex flex-col gap-2">
-                                <span className="text-[10px] text-slate-500 uppercase tracking-widest">{t.methodology.inputs}</span>
+                            <div className="border-t border-slate-100 dark:border-slate-800 pt-4 flex flex-col gap-2">
+                                <span className="text-[10px] text-slate-500 uppercase tracking-widest mb-1">{t.methodology.inputs}</span>
+                                <div className="flex flex-wrap gap-2">
+                                    {["VIX", "MOVE", "HY OAS", "NFCI", "M2"].map(tag => (
+                                        <span key={tag} className="text-[9px] font-mono px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded border border-slate-200 dark:border-slate-700">{tag}</span>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -128,7 +149,7 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
                 <div className="flex justify-between items-start">
                     {/* TITLE AREA */}
                     <div className="pointer-events-auto cursor-pointer" onClick={() => router.push(`/?lang=${lang}`)}>
-                        <h1 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tighter mb-0 leading-none hover:text-sky-500 transition-colors text-slate-900 dark:text-white">OMNIMETRIC TERMINAL</h1>
+                        <h1 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tighter mb-0 leading-none hover:text-sky-500 transition-colors text-slate-900 dark:text-white uppercase">OMNIMETRIC TERMINAL</h1>
                         <h2 className="text-[10px] sm:text-sm md:text-base font-bold text-sky-500 tracking-[0.2em] uppercase mt-1">Global Macro Signal (GMS)</h2>
                         <div className="h-px w-full mt-2 bg-slate-200 dark:bg-[#1E293B]" />
                     </div>
@@ -222,10 +243,10 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
                         </p>
                     </div>
 
-                    {/* AIO: Citation Footer */}
-                    <div className="mt-6 pt-3 border-t border-slate-100 dark:border-[#1E293B] flex justify-end">
-                        <p className="text-[0.56rem] text-slate-600 font-mono select-all">
-                            Cite: <span className="text-slate-500">OmniMetric GMS ({new Date().toISOString().split('T')[0]}) @ omnimetric.net</span>
+                    {/* AIO: Citation Footer (Disclaimer stays, Citation removed) */}
+                    <div className="mt-6 pt-3 border-t border-slate-100 dark:border-[#1E293B] flex flex-col items-end gap-1">
+                        <p className={`text-[0.56rem] text-slate-400 dark:text-slate-500 font-sans tracking-tight max-w-[90%] text-right leading-relaxed ${lang === 'AR' ? 'font-arabic' : ''}`}>
+                            {(t.titles as any).ai_disclaimer}
                         </p>
                     </div>
 
@@ -282,13 +303,12 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
                 </div>
             </div>
 
-            {/* 4. Breaking News / Risk Events (Optional but included per layout request) */}
+            {/* 4. Breaking News / Risk Events */}
             <div className="max-w-[1600px] mx-auto w-full px-4 md:px-8 mb-4">
                 <div className="bg-white dark:bg-black border border-slate-200 dark:border-[#1E293B] rounded-xl p-0">
                     {(!data.events || data.events.length === 0) ? (
                         <div className="p-4 text-xs text-slate-600 font-mono">NO UPCOMING RISK EVENTS DETECTED.</div>
                     ) : (
-                        // SAFETY SORT: Ensure events are chronologically sorted (Fix for Localhost/Stale Data)
                         ([...(data.events || [])].sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()).slice(0, 3)).map((evt, i) => (
                             <div key={i} className="flex flex-col border-b border-slate-100 dark:border-[#1E293B] last:border-0 py-3 px-4 hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
                                 <div className="flex items-center gap-2 rtl:flex-row-reverse rtl:justify-end">
@@ -308,6 +328,6 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
             <div className="max-w-[1600px] mx-auto w-full px-4 md:px-8 mb-8">
                 <AdUnit />
             </div>
-        </div >
+        </div>
     );
 };
