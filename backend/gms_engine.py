@@ -1468,15 +1468,19 @@ Output JSON:
                 
                 elif response.status_code == 429:
                     log_diag(f"[AI RATE LIMIT] URL={target_url[:100]}, Model={model_name}, Status=429. Triggering fallback...")
-                    # User Request: If 429, immediately try next model or direct fallback
-                    break # Break attempt loop to move to next model OR direct fallback in attempt 1
+                    # User Request: If 429, immediately try Direct API
+                    if attempt == 0:
+                        continue
+                    break # Break if Direct API also rate limits
                 
                 else:
-                    # Enhanced Error Logging with URL and Status
                     error_msg = response.text.strip()
                     log_diag(f"[AI ERROR] URL={target_url[:100]}, Model={model_name}, Status={response.status_code}, Body={error_msg[:300]}")
-                    # Non-429 error (e.g. 500 or 404). Do not retry same model endlessly.
-                    break # Move to next model immediately (Downgrade)
+                    # Non-429 error (e.g. 500 or 404). Try Direct API if this was Gateway attempt.
+                    if attempt == 0:
+                         log_diag(f"[AI FALLBACK] Gateway failed. Switching to Direct API for {model_name}...")
+                         continue
+                    break # Move to next model if Direct API also fails
 
             except Exception as e:
                 log_diag(f"[AI GATEWAY EXCEPTION] {e}")
@@ -1534,7 +1538,7 @@ def get_next_event_dates():
     now = datetime.now(timezone.utc)
     
     def get_first_friday(year, month):
-        first_day = datetime(year, month, 1)
+        first_day = datetime(year, month, 1, tzinfo=timezone.utc)
         w = first_day.weekday()
         # Friday is 4. (4 - w) % 7 gives days to add.
         return first_day + timedelta(days=(4 - w) % 7)
@@ -1559,14 +1563,14 @@ def get_next_event_dates():
     # 3. FOMC (Next meeting - Static schedule for 2026 for realism)
     # 2026 Dates: Jan 27-28, Mar 17-18, May 5-6, June 16-17, July 28-29, Sep 15-16, Oct 27-28, Dec 15-16
     fomc_dates = [
-        datetime(2026, 1, 28, 14, 0),
-        datetime(2026, 3, 18, 14, 0),
-        datetime(2026, 5, 6, 14, 0),
-        datetime(2026, 6, 17, 14, 0),
-        datetime(2026, 7, 29, 14, 0),
-        datetime(2026, 9, 16, 14, 0),
-        datetime(2026, 10, 28, 14, 0),
-        datetime(2026, 12, 16, 14, 0)
+        datetime(2026, 1, 28, 14, 0, tzinfo=timezone.utc),
+        datetime(2026, 3, 18, 14, 0, tzinfo=timezone.utc),
+        datetime(2026, 5, 6, 14, 0, tzinfo=timezone.utc),
+        datetime(2026, 6, 17, 14, 0, tzinfo=timezone.utc),
+        datetime(2026, 7, 29, 14, 0, tzinfo=timezone.utc),
+        datetime(2026, 9, 16, 14, 0, tzinfo=timezone.utc),
+        datetime(2026, 10, 28, 14, 0, tzinfo=timezone.utc),
+        datetime(2026, 12, 16, 14, 0, tzinfo=timezone.utc)
     ]
     fomc_dt = next((d for d in fomc_dates if d > now), fomc_dates[-1])
 
@@ -1755,7 +1759,7 @@ def update_signal(force_news=False):
         
         # SANITIZE PAYLOAD - Remove NaNs
         def sanitize(obj):
-            if obj is None: return 0.0
+            if obj is None: return None
             if isinstance(obj, float):
                 if np.isnan(obj) or np.isinf(obj): return 0.0
                 return obj
