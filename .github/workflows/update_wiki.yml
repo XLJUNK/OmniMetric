@@ -2,7 +2,7 @@ name: Wiki Heavy Rollout (V4.7-777)
 
 on:
   schedule:
-    - cron: '15 * * * *' # Every hour (10m after main update :05, ends before :35)
+    - cron: '10,30,50 * * * *' # Every 20 minutes (offset from main updates at :05, :35)
   workflow_dispatch:
 
 concurrency:
@@ -36,6 +36,11 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           python backend/enhance_wiki.py | tee wiki_generation.log
+          
+          # Extract and display progress
+          PROGRESS=$(grep "\[PROGRESS\]" wiki_generation.log | tail -n 1 || echo "Progress info not found")
+          echo "### Wiki Generation Progress" >> $GITHUB_STEP_SUMMARY
+          echo "$PROGRESS" >> $GITHUB_STEP_SUMMARY
 
       - name: Commit and Push Progress
         run: |
