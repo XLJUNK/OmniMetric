@@ -17,7 +17,7 @@ if sys.platform == 'win32':
 
 # Load environment
 load_dotenv()
-GEMINI_KEY = os.getenv("GEMINI_API_KEY", "").strip()
+# GEMINI_KEY removed as it is not directly used here (used by bridge)
 
 # LOGGING SETUP
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))

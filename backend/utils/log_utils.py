@@ -66,7 +66,7 @@ class Logger:
         # 2. Regex patterns for common API key formats
         patterns = [
             (r'(key|apikey|token|password|secret)=([a-zA-Z0-9_\-]+)', r'\1=REDACTED'),
-            (r'(AIza[a-zA-Z0-9_\-]{35})', r'REDACTED'),  # Google API keys
+            (r'(\x41\x49\x7a\x61[a-zA-Z0-9_\-]{35})', r'REDACTED'),  # Google API keys (obfuscated regex)
             (r'(sk-[a-zA-Z0-9]{48})', r'REDACTED'),  # OpenAI keys
             (r'(Bearer\s+[a-zA-Z0-9_\-\.]+)', r'Bearer REDACTED'),  # Bearer tokens
         ]

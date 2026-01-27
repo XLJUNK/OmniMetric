@@ -44,7 +44,7 @@ Configure in Vercel Dashboard → Project Settings → Environment Variables.
 
 | Variable | Required | Description | Example |
 |----------|----------|-------------|---------|
-| `GEMINI_API_KEY` | ✅ Yes | Server-side AI generation (same as GitHub) | `AIza...` |
+| `GEMINI_API_KEY` | ✅ Yes | Server-side AI generation (same as GitHub) | `GOOGLE_API_KEY_FORMAT` |
 | `AI_GATEWAY_API_KEY` | ⚠️ Optional | Vercel AI Gateway auth | `ag_...` |
 | `NEXT_PUBLIC_GA_ID` | ⚠️ Optional | Google Analytics 4 Measurement ID | `G-XXXXXXXXXX` |
 

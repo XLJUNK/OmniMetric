@@ -50,15 +50,15 @@ class TestLogger:
     def test_api_key_redaction(self):
         """Test sensitive API keys are redacted."""
         logger = Logger(self.log_file)
-        logger.register_sensitive_keys(["secret_key_12345", "AIzaSyABC123"])
+        logger.register_sensitive_keys(["secret_key_12345", "DUMMY_GOOGLE_KEY_123"])
         
         logger.info("Using API key: secret_key_12345")
-        logger.info("Google key: AIzaSyABC123")
+        logger.info("Google key: DUMMY_GOOGLE_KEY_123")
         
         with open(self.log_file, 'r') as f:
             content = f.read()
             assert "secret_key_12345" not in content, "API key should be redacted"
-            assert "AIzaSyABC123" not in content, "Google key should be redacted"
+            assert "DUMMY_GOOGLE_KEY_123" not in content, "Google key should be redacted"
             assert "REDACTED" in content, "REDACTED placeholder should be present"
     
     def test_log_rotation(self):

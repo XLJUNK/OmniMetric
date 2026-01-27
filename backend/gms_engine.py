@@ -249,10 +249,10 @@ def validate_api_keys():
 
     
     if missing:
-        print(f"--- [ADMIN ALERT] MISSING API KEYS: {', '.join(missing)} ---")
-        print("System will operate in SIMULATED/FALLBACK mode for affected modules.")
+        logger.warn(f"MISSING API KEYS: {', '.join(missing)}")
+        logger.info("System will operate in SIMULATED/FALLBACK mode for affected modules.")
     else:
-        print("--- [SYSTEM] ALL API KEYS VALIDATED ---")
+        logger.info("ALL API KEYS VALIDATED")
     return len(missing) == 0
 
 def fetch_net_liquidity(fred):
@@ -1370,8 +1370,8 @@ Output JSON:
 
     # VERCEL AI GATEWAY - RESILIENCE PROTOCOL (PRIMARY)
     # Strategy: Flash-Targeted Speed > High-Tier Reasoning > Efficient Fallbacks
-    models = [
         "gemini-3-flash",          # High Resource for GMS Analysis
+        "gemini-2.0-flash",        # [FALLBACK] Valid Direct API Model
         "gemini-2.5-flash",        # Balanced Stable Performance
         "gemini-3-pro-preview",    # Maximum Intelligence Tier
         "gemini-2.5-pro",          # High Stability Reasoning
@@ -1467,7 +1467,7 @@ Output JSON:
                         log_diag(f"[AI ERROR] No candidates in response. Model={model_name}") 
                 
                 elif response.status_code == 429:
-                    log_diag(f"[AI RATE LIMIT] URL={target_url[:100]}, Model={model_name}, Status=429. Triggering fallback...")
+                    log_diag(f"[AI RATE LIMIT] URL=[MASKED], Model={model_name}, Status=429. Triggering fallback...")
                     # User Request: If 429, immediately try Direct API
                     if attempt == 0:
                         continue
@@ -1475,7 +1475,7 @@ Output JSON:
                 
                 else:
                     error_msg = response.text.strip()
-                    log_diag(f"[AI ERROR] URL={target_url[:100]}, Model={model_name}, Status={response.status_code}, Body={error_msg[:300]}")
+                    log_diag(f"[AI ERROR] URL=[MASKED], Model={model_name}, Status={response.status_code}, Body={error_msg[:300]}")
                     # Non-429 error (e.g. 500 or 404). Try Direct API if this was Gateway attempt.
                     if attempt == 0:
                          log_diag(f"[AI FALLBACK] Gateway failed. Switching to Direct API for {model_name}...")
