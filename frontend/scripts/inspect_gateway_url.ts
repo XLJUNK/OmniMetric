@@ -11,7 +11,7 @@ dotenv.config({ path: backendEnvPath });
 
 // Monkeypatch fetch
 const originalFetch = global.fetch;
-global.fetch = function (...args) {
+global.fetch = function (...args: any[]) {
     console.log("FETCH URL:", args[0]);
     if (args[1] && args[1].headers) {
         console.log("FETCH HEADERS:", JSON.stringify(args[1].headers, null, 2));
