@@ -1,12 +1,12 @@
 {
-    "last_updated": "2026-01-27T02:34:24Z",
-    "last_successful_update": "2026-01-27T02:34:24Z",
-    "gms_score": 40,
+    "last_updated": "2026-01-27T04:02:21Z",
+    "last_successful_update": "2026-01-27T04:02:21Z",
+    "gms_score": 39,
     "sector_scores": {
         "STOCKS": 70,
         "CRYPTO": 25,
         "FOREX": 55,
-        "COMMODITIES": 55
+        "COMMODITIES": 40
     },
     "market_data": {
         "CRYPTO_SENTIMENT": {
@@ -546,13 +546,12 @@
             ]
         },
         "NIFTY": {
-            "price": 25048.65,
-            "prev_price": 25289.9,
-            "daily_chg": -0.95,
-            "change_percent": -2.1,
+            "price": 24967.2,
+            "prev_price": 25048.65,
+            "daily_chg": -0.33,
+            "change_percent": -1.05,
             "trend": "DOWN",
             "sparkline": [
-                26177.15,
                 26142.1,
                 26042.3,
                 25942.1,
@@ -573,14 +572,15 @@
                 25232.5,
                 25157.5,
                 25289.9,
-                25048.65
+                25048.65,
+                24967.2
             ]
         },
         "BTC": {
-            "price": 88526.9,
+            "price": 88640.95,
             "prev_price": 86572.22,
-            "daily_chg": 2.26,
-            "change_percent": -1.05,
+            "daily_chg": 2.39,
+            "change_percent": -0.92,
             "trend": "UP",
             "sparkline": [
                 93882.55,
@@ -604,14 +604,14 @@
                 89503.88,
                 89110.73,
                 86572.22,
-                88526.9
+                88640.95
             ]
         },
         "ETH": {
-            "price": 2934.09,
+            "price": 2937.34,
             "prev_price": 2815.9,
-            "daily_chg": 4.2,
-            "change_percent": -0.53,
+            "daily_chg": 4.31,
+            "change_percent": -0.42,
             "trend": "UP",
             "sparkline": [
                 3226.13,
@@ -635,14 +635,14 @@
                 2953.26,
                 2948.74,
                 2815.9,
-                2934.09
+                2937.34
             ]
         },
         "SOL": {
-            "price": 124.43,
+            "price": 124.32,
             "prev_price": 118.77,
-            "daily_chg": 4.77,
-            "change_percent": -3.0,
+            "daily_chg": 4.67,
+            "change_percent": -3.09,
             "trend": "UP",
             "sparkline": [
                 137.99,
@@ -666,14 +666,14 @@
                 127.36,
                 127.05,
                 118.77,
-                124.43
+                124.32
             ]
         },
         "DXY": {
-            "price": 97.03,
+            "price": 97.05,
             "prev_price": 97.6,
-            "daily_chg": -0.59,
-            "change_percent": -1.63,
+            "daily_chg": -0.56,
+            "change_percent": -1.61,
             "trend": "DOWN",
             "sparkline": [
                 97.94,
@@ -697,14 +697,14 @@
                 98.76,
                 98.36,
                 97.6,
-                97.03
+                97.05
             ]
         },
         "USDJPY": {
-            "price": 154.21,
+            "price": 154.43,
             "prev_price": 155.17,
-            "daily_chg": -0.61,
-            "change_percent": -2.5,
+            "daily_chg": -0.48,
+            "change_percent": -2.36,
             "trend": "DOWN",
             "sparkline": [
                 156.09,
@@ -728,14 +728,14 @@
                 158.46,
                 158.5,
                 155.17,
-                154.21
+                154.43
             ]
         },
         "EURUSD": {
             "price": 1.19,
             "prev_price": 1.19,
-            "daily_chg": 0.28,
-            "change_percent": 1.4,
+            "daily_chg": 0.21,
+            "change_percent": 1.33,
             "trend": "UP",
             "sparkline": [
                 1.18,
@@ -763,10 +763,10 @@
             ]
         },
         "USDINR": {
-            "price": 91.68,
+            "price": 91.73,
             "prev_price": 91.5,
-            "daily_chg": 0.19,
-            "change_percent": 0.62,
+            "daily_chg": 0.25,
+            "change_percent": 0.67,
             "trend": "UP",
             "sparkline": [
                 90.11,
@@ -790,7 +790,7 @@
                 91.54,
                 91.56,
                 91.5,
-                91.68
+                91.73
             ]
         },
         "USDSAR": {
@@ -825,10 +825,10 @@
             ]
         },
         "GOLD": {
-            "price": 5062.2,
+            "price": 5068.9,
             "prev_price": 4976.2,
-            "daily_chg": 1.73,
-            "change_percent": 6.36,
+            "daily_chg": 1.86,
+            "change_percent": 6.5,
             "trend": "UP",
             "sparkline": [
                 4482.8,
@@ -852,14 +852,14 @@
                 4831.8,
                 4908.8,
                 4976.2,
-                5062.2
+                5068.9
             ]
         },
         "OIL": {
-            "price": 60.36,
+            "price": 60.24,
             "prev_price": 61.07,
-            "daily_chg": -1.16,
-            "change_percent": 0.03,
+            "daily_chg": -1.36,
+            "change_percent": -0.17,
             "trend": "DOWN",
             "sparkline": [
                 58.38,
@@ -883,14 +883,14 @@
                 60.62,
                 59.36,
                 61.07,
-                60.36
+                60.24
             ]
         },
         "COPPER": {
-            "price": 5.91,
+            "price": 5.9,
             "prev_price": 5.91,
-            "daily_chg": -0.08,
-            "change_percent": 2.31,
+            "daily_chg": -0.25,
+            "change_percent": 2.13,
             "trend": "DOWN",
             "sparkline": [
                 5.48,
@@ -914,14 +914,14 @@
                 5.73,
                 5.74,
                 5.91,
-                5.91
+                5.9
             ]
         },
         "NATGAS": {
-            "price": 3.8,
+            "price": 3.77,
             "prev_price": 5.28,
-            "daily_chg": -28.04,
-            "change_percent": -2.84,
+            "daily_chg": -28.59,
+            "change_percent": -3.58,
             "trend": "DOWN",
             "sparkline": [
                 4.41,
@@ -945,7 +945,7 @@
                 4.88,
                 5.05,
                 5.28,
-                3.8
+                3.77
             ]
         },
         "MOVE": {
@@ -1038,40 +1038,40 @@
             ]
         },
         "COPPER_GOLD": {
-            "price": 1.17,
+            "price": 1.16,
             "change_percent": 0,
             "trend": "RISK-OFF",
             "sparkline": [
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16
             ]
         }
     },
@@ -1103,22 +1103,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS score 40 signals Neutral at Defensive threshold; momentum flat. DXY (Dollar strength/Liquidity) weakened 0.59%, typically aiding risk assets. VIX (Fear/Volatility) slightly rose to 16.15, indicating minor unease; High Yield spreads widened. Yet, strong crypto (BTC +2.26%, ETH +4.2%) and Gold (+1.73%) rallies suggest selective risk-on or alternative asset seeking, potentially understating specific market strengths. Maintain neutral, monitor asset divergence.",
+        "content": "GMS score 39 indicates a Defensive (Risk-Off) regime, with momentum pushing it from 40. DXY (Dollar strength/Liquidity) weakened by 0.56%, while VIX (Fear/Volatility) rose slightly by 0.37%. Worsening credit spreads and tariff news reinforce caution. Though a weaker DXY can typically ease global conditions, current risk signals advise maintaining a defensive posture.",
         "reports": {
-            "JP": "GMSスコア40は防御的境界のニュートラルを示し、モメンタムは横ばいです。DXY（ドル高/流動性）は0.59%弱まり、通常リスク資産を支援。VIX（恐怖/変動性）は16.15に微増し、僅かな不安を示唆、高利回りスプレッドは拡大。しかし、暗号通貨（BTC +2.26%、ETH +4.2%）と金（+1.73%）の力強い上昇は、選択的なリスクオンまたは代替資産への動きを示唆し、特定の市場の強さを過小評価している可能性。中立を維持し、資産の乖離を注視。",
-            "EN": "GMS score 40 signals Neutral at Defensive threshold; momentum flat. DXY (Dollar strength/Liquidity) weakened 0.59%, typically aiding risk assets. VIX (Fear/Volatility) slightly rose to 16.15, indicating minor unease; High Yield spreads widened. Yet, strong crypto (BTC +2.26%, ETH +4.2%) and Gold (+1.73%) rallies suggest selective risk-on or alternative asset seeking, potentially understating specific market strengths. Maintain neutral, monitor asset divergence.",
-            "CN": "GMS分数40表示中性，处于防御门槛；动量持平。DXY（美元强度/流动性）减弱0.59%，通常利好风险资产。VIX（恐慌/波动性）微升至16.15，表明轻微不安；高收益利差扩大。然而，强劲的加密货币（BTC +2.26%，ETH +4.2%）和黄金（+1.73%）上涨表明选择性风险偏好或寻求替代资产，可能低估了特定市场力量。保持中立，观察资产分歧。",
-            "ES": "La puntuación GMS 40 indica Neutral en el umbral Defensivo; el impulso es plano. El DXY (fortaleza/liquidez del dólar) se debilitó un 0.59%, lo que suele favorecer los activos de riesgo. El VIX (miedo/volatilidad) subió ligeramente a 16.15, indicando una leve inquietud; los diferenciales de alto rendimiento se ampliaron. No obstante, los fuertes repuntes de criptomonedas (BTC +2.26%, ETH +4.2%) y Oro (+1.73%) sugieren una asunción selectiva de riesgos o búsqueda de activos alternativos, infravalorando posiblemente fortalezas específicas del mercado. Mantener postura neutral, monitorear divergencia de activos.",
-            "HI": "जीएमएस स्कोर 40 रक्षात्मक सीमा पर तटस्थ संकेत देता है; गति सपाट है। DXY (डॉलर की ताकत/तरलता) 0.59% कमजोर हुआ, जो आमतौर पर जोखिम वाली संपत्तियों का समर्थन करता है। VIX (भय/अस्थिरता) मामूली बढ़कर 16.15 हो गया, जो हल्की बेचैनी दर्शाता है; उच्च उपज स्प्रेड बढ़ गए। फिर भी, मजबूत क्रिप्टो (BTC +2.26%, ETH +4.2%) और सोने (+1.73%) की रैलियां चुनिंदा जोखिम-ऑन या वैकल्पिक संपत्ति की तलाश का सुझाव देती हैं, जो विशिष्ट बाजार शक्तियों को कम आंक सकती हैं। तटस्थ रहें, संपत्ति विचलन की निगरानी करें।",
-            "ID": "Skor GMS 40 menandakan Netral di ambang Pertahanan; momentum datar. DXY (kekuatan Dolar/Likuiditas) melemah 0.59%, biasanya mendukung aset berisiko. VIX (Ketakutan/Volatilitas) sedikit naik ke 16.15, menunjukkan sedikit kegelisahan; spread imbal hasil tinggi melebar. Namun, reli kuat kripto (BTC +2.26%, ETH +4.2%) dan Emas (+1.73%) menyiratkan pengambilan risiko selektif atau pencarian aset alternatif, berpotensi meremehkan kekuatan pasar tertentu. Tetap netral, pantau divergensi aset.",
-            "AR": "يشير مؤشر GMS 40 إلى الحياد عند العتبة الدفاعية؛ الزخم مسطح. ضعف مؤشر DXY (قوة الدولار/السيولة) بنسبة 0.59%، مما يدعم عادة الأصول الخطرة. ارتفع مؤشر VIX (الخوف/التقلب) قليلاً إلى 16.15، مما يشير إلى قلق طفيف؛ واتسعت فروق العائد المرتفع. ومع ذلك، فإن الارتفاعات القوية في العملات المشفرة (BTC +2.26%, ETH +4.2%) والذهب (+1.73%) تشير إلى تفضيل انتقائي للمخاطرة أو البحث عن أصول بديلة، مما قد يقلل من تقدير نقاط القوة السوقية المحددة. حافظ على الحياد، راقب تباعد الأصول."
+            "JP": "GMSスコア39は防衛的（リスク回避）体制を示し、モメンタムは40から押し下げました。DXY（ドル高/流動性）は0.56%下落し、VIX（恐怖/変動性）は0.37%上昇。信用スプレッド悪化と関税ニュースが警戒を強めます。DXY安は通常、世界経済の状況を緩和しますが、現在のリスクシグナルは防衛的な姿勢維持を推奨します。",
+            "EN": "GMS score 39 indicates a Defensive (Risk-Off) regime, with momentum pushing it from 40. DXY (Dollar strength/Liquidity) weakened by 0.56%, while VIX (Fear/Volatility) rose slightly by 0.37%. Worsening credit spreads and tariff news reinforce caution. Though a weaker DXY can typically ease global conditions, current risk signals advise maintaining a defensive posture.",
+            "CN": "GMS评分39表明防御性（规避风险）状态，势头从40回落。DXY（美元强度/流动性）下跌0.56%，而VIX（恐慌/波动性）小幅上升0.37%。信贷息差恶化和关税新闻加剧了谨慎情绪。尽管美元走弱通常能缓解全球状况，但当前风险信号建议保持防御态势。",
+            "ES": "La puntuación GMS de 39 señala un régimen Defensivo (Aversión al Riesgo), con el impulso cayendo desde 40. El DXY (fuerza del dólar/Liquidez) se debilitó un 0.56%, mientras el VIX (Miedo/Volatilidad) subió un 0.37%. Los diferenciales de crédito en aumento y noticias de aranceles refuerzan la cautela. Aunque un DXY débil puede aliviar las condiciones globales, las señales de riesgo actuales aconsejan mantener una postura defensiva.",
+            "HI": "GMS स्कोर 39 रक्षात्मक (जोखिम-से-बचें) व्यवस्था दर्शाता है, मोमेंटम 40 से नीचे आया। DXY (डॉलर की ताकत/तरलता) 0.56% कमजोर हुआ, जबकि VIX (भय/अस्थिरता) 0.37% बढ़ा। बिगड़ते क्रेडिट स्प्रेड और टैरिफ समाचार सावधानी बढ़ाते हैं। यद्यपि कमजोर DXY वैश्विक स्थितियों को आसान कर सकता है, मौजूदा जोखिम संकेत रक्षात्मक रुख की अनुशंसा करते हैं।",
+            "ID": "Skor GMS 39 menunjukkan rezim Defensif (Hindari Risiko), dengan momentum mendorongnya dari 40. DXY (kekuatan Dolar/Likuiditas) melemah 0.56%, sementara VIX (Ketakutan/Volatilitas) naik tipis 0.37%. Pelebaran spread kredit dan berita tarif memperkuat kehati-hatian. Meski DXY yang lebih lemah biasanya meringankan kondisi global, sinyal risiko saat ini menyarankan untuk tetap defensif.",
+            "AR": "يشير مؤشر GMS البالغ 39 إلى نظام دفاعي (تجنب المخاطر)، حيث دفع الزخم النتيجة من 40. ضعف مؤشر DXY (قوة الدولار/السيولة) بنسبة 0.56%، بينما ارتفع VIX (الخوف/التقلب) قليلاً بنسبة 0.37%. اتساع فروقات الائتمان وأخبار التعريفات تعزز الحذر. رغم أن ضعف الدولار قد يخفف الظروف العالمية، فإن إشارات المخاطر الحالية تنصح بالحفاظ على موقف دفاعي."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-25T15:25:41Z",
-            "score": 33
-        },
         {
             "date": "2026-01-25T15:31:41Z",
             "score": 33
@@ -1354,6 +1350,10 @@
         {
             "date": "2026-01-27T02:34:24Z",
             "score": 40
+        },
+        {
+            "date": "2026-01-27T04:02:21Z",
+            "score": 39
         }
     ],
     "intelligence": {
@@ -1361,85 +1361,85 @@
             {
                 "title": "Hyundai shares fall after Trump says tariffs on South Korean autos, pharma to rise to 25%",
                 "link": "https://www.cnbc.com/2026/01/26/trump-south-korea-tariffs-trade-autos-pharma.html",
-                "isoDate": "2026-01-27T02:34:09.414192Z"
+                "isoDate": "2026-01-27T04:02:06.785104Z"
             },
             {
                 "title": "White House eases tone on Pretti killing: Trump 'does not want any Americans to lose their lives'",
                 "link": "https://www.cnbc.com/2026/01/26/trump-tom-homan-minnesota-alex-pretti-ice.html",
-                "isoDate": "2026-01-27T02:34:09.415455Z"
+                "isoDate": "2026-01-27T04:02:06.786796Z"
             },
             {
-                "title": "China's industrial profits edge up in 2025, reversing three years of declines as Beijing curbs price wars",
-                "link": "https://www.cnbc.com/2026/01/27/china-industrial-profits-2025-december-growth-factory-consumer-demand.html",
-                "isoDate": "2026-01-27T02:34:09.415478Z"
+                "title": "Asia markets seeing 'unbelievable' rush of capital, driving equity rallies and IPO frenzy",
+                "link": "https://www.cnbc.com/2026/01/27/asia-markets-see-unbelievable-rush-of-capital-amid-equity-and-ipo-frenzy.html",
+                "isoDate": "2026-01-27T04:02:06.786819Z"
             },
             {
                 "title": "S&P 500 futures are little changed after index rises ahead of this week’s Big Tech earnings: Live updates",
                 "link": "https://www.cnbc.com/2026/01/26/stock-market-today-live-updates.html",
-                "isoDate": "2026-01-27T02:34:09.415493Z"
+                "isoDate": "2026-01-27T04:02:06.786834Z"
             },
             {
-                "title": "Health insurers tumble after Trump administration proposes keeping Medicare Advantage rates flat next year",
-                "link": "https://www.cnbc.com/2026/01/26/health-insurers-tumble-after-trump-proposes-keeping-medicare-rates-flat.html",
-                "isoDate": "2026-01-27T02:34:09.415505Z"
+                "title": "China's industrial profits edge up in 2025, reversing three years of declines as Beijing curbs price wars",
+                "link": "https://www.cnbc.com/2026/01/27/china-industrial-profits-2025-december-growth-factory-consumer-demand.html",
+                "isoDate": "2026-01-27T04:02:06.786846Z"
             },
             {
                 "title": "This stock sector is having its best start to a year in a quarter century",
                 "link": "https://www.cnbc.com/2026/01/26/this-stock-sector-is-having-its-best-start-to-a-year-in-a-quarter-century.html",
-                "isoDate": "2026-01-27T02:34:09.415517Z"
+                "isoDate": "2026-01-27T04:02:06.786859Z"
             }
         ],
         "translations": {
             "JP": [
-                "トランプ大統領が韓国の自動車と医薬品に対する関税を25%に引き上げると発言した後、現代自動車の株価が下落。",
-                "ホワイトハウス、プレッティ殺害事件に関するトーンを和らげる：トランプ氏「いかなるアメリカ人も命を落とすことを望まない」。",
-                "中国の工業利益、2025年にわずかに上昇、北京が価格競争を抑制し3年間の下落から反転。",
-                "今週のビッグテック決算を前に指数が上昇したものの、S&P 500先物はほぼ横ばい：ライブアップデート。",
-                "トランプ政権が来年のメディケア・アドバンテージ料率を据え置くことを提案した後、医療保険会社が急落。",
-                "この株式セクターが四半世紀で最高の年初を記録。"
+                "Hyundai株は、トランプ氏が韓国の自動車と医薬品への関税を25%に引き上げると述べた後、下落。",
+                "ホワイトハウス、プレッティ氏殺害に関するトーンを軟化：トランプ氏「いかなるアメリカ人も命を落とすことを望まない」",
+                "アジア市場で「信じられない」ほどの資本流入があり、株式上昇とIPO狂乱を後押し。",
+                "今週のビッグテック決算を前に指数が上昇した後、S&P 500先物は小幅な動き：ライブアップデート",
+                "2025年、中国の工業利益が微増、北京が価格競争を抑制し3年間の減少を反転。",
+                "この株式セクターは、25年間で最高の年初を記録している。"
             ],
             "CN": [
-                "特朗普称将韩国汽车和药品关税提高至25%后，现代汽车股价下跌。",
-                "白宫就普雷蒂遇害事件缓和措辞：特朗普“不希望任何美国人丧生”。",
-                "2025年中国工业利润小幅上升，在北京遏制价格战后，扭转了连续三年的下降趋势。",
-                "在本周大型科技公司财报公布前指数上涨后，标普500期货几无变化：实时更新。",
-                "特朗普政府提议明年医疗保险优势计划费率保持不变后，健康保险公司股价暴跌。",
-                "该股票板块正在经历四分之一个世纪以来最好的一年开局。"
+                "特朗普称将韩国汽车和制药关税提高至25%后，现代汽车股价下跌。",
+                "白宫软化对普雷蒂遇害事件的口吻：特朗普“不希望任何美国人丧生”。",
+                "亚洲市场出现“难以置信”的资本涌入，推动股市上涨和IPO热潮。",
+                "S&P 500指数在本周大型科技公司财报前上涨后，股指期货变化不大：实时更新。",
+                "2025年中国工业利润小幅上升，北京遏制价格战，扭转了三年来的跌势。",
+                "该股票板块正迎来25年来最佳的年度开局。"
             ],
             "ES": [
                 "Las acciones de Hyundai caen después de que Trump dijera que los aranceles sobre automóviles y productos farmacéuticos surcoreanos subirán al 25%.",
                 "La Casa Blanca suaviza el tono sobre el asesinato de Pretti: Trump \"no quiere que ningún estadounidense pierda la vida\".",
-                "Las ganancias industriales de China aumentan ligeramente en 2025, revirtiendo tres años de caídas a medida que Beijing frena las guerras de precios.",
-                "Los futuros del S&P 500 apenas cambian después de que el índice subiera antes de los resultados de las grandes tecnológicas de esta semana: Actualizaciones en vivo.",
-                "Las aseguradoras de salud caen después de que la administración Trump propusiera mantener las tarifas de Medicare Advantage sin cambios el próximo año.",
+                "Los mercados asiáticos experimentan una afluencia de capital \"increíble\", impulsando repuntes bursátiles y un frenesí de OPI.",
+                "Los futuros del S&P 500 apenas varían después de que el índice subiera antes de las ganancias de las grandes tecnológicas de esta semana: Actualizaciones en vivo.",
+                "Los beneficios industriales de China aumentan ligeramente en 2025, revirtiendo tres años de caídas mientras Pekín frena las guerras de precios.",
                 "Este sector bursátil está teniendo su mejor comienzo de año en un cuarto de siglo."
             ],
             "HI": [
                 "ट्रम्प के दक्षिण कोरियाई ऑटो और फार्मा पर टैरिफ 25% तक बढ़ाने की बात कहने के बाद हुंडई के शेयर गिरे।",
-                "व्हाइट हाउस ने प्रेट्टी की हत्या पर अपना रुख नरम किया: ट्रम्प 'नहीं चाहते कि कोई अमेरिकी अपनी जान गंवाए'।",
-                "चीन का औद्योगिक लाभ 2025 में मामूली रूप से बढ़ा, बीजिंग द्वारा मूल्य युद्धों पर अंकुश लगाने से तीन साल की गिरावट उलट गई।",
-                "इस सप्ताह की बड़ी टेक आय से पहले सूचकांक में वृद्धि के बाद एस एंड पी 500 वायदा में मामूली बदलाव: लाइव अपडेट।",
-                "ट्रम्प प्रशासन द्वारा अगले साल मेडिकेयर एडवांटेज दरों को अपरिवर्तित रखने का प्रस्ताव करने के बाद स्वास्थ्य बीमा कंपनियां गिर गईं।",
-                "यह स्टॉक सेक्टर एक चौथाई सदी में साल की अपनी सर्वश्रेष्ठ शुरुआत कर रहा है।"
+                "प्रीति की हत्या पर व्हाइट हाउस ने अपना रुख नरम किया: ट्रम्प \"नहीं चाहते कि कोई भी अमेरिकी अपनी जान गंवाए\"।",
+                "एशियाई बाजारों में पूंजी का 'अविश्वसनीय' प्रवाह दिख रहा है, जिससे इक्विटी में उछाल और आईपीओ उन्माद बढ़ रहा है।",
+                "इस सप्ताह की बड़ी टेक आय से पहले सूचकांक में वृद्धि के बाद S&P 500 वायदा में थोड़ा बदलाव: लाइव अपडेट।",
+                "2025 में चीन का औद्योगिक लाभ थोड़ा बढ़ा, बीजिंग द्वारा मूल्य युद्धों पर अंकुश लगाने से तीन साल की गिरावट पलटी।",
+                "यह स्टॉक सेक्टर एक चौथाई सदी में साल की अपनी सबसे अच्छी शुरुआत कर रहा है।"
             ],
             "ID": [
-                "Saham Hyundai jatuh setelah Trump mengatakan tarif untuk mobil dan farmasi Korea Selatan akan naik menjadi 25%.",
-                "Gedung Putih melonggarkan nada bicara tentang pembunuhan Pretti: Trump 'tidak ingin ada warga Amerika yang kehilangan nyawa'.",
-                "Laba industri Tiongkok sedikit naik pada tahun 2025, membalikkan penurunan selama tiga tahun karena Beijing menahan perang harga.",
-                "Futures S&P 500 sedikit berubah setelah indeks naik menjelang laporan keuangan Big Tech minggu ini: Pembaruan langsung.",
-                "Asuransi kesehatan anjlok setelah pemerintahan Trump mengusulkan menjaga tarif Medicare Advantage tetap datar tahun depan.",
+                "Saham Hyundai jatuh setelah Trump mengatakan tarif untuk otomotif dan farmasi Korea Selatan akan naik menjadi 25%.",
+                "Gedung Putih melunakkan nada terkait pembunuhan Pretti: Trump 'tidak ingin ada warga Amerika yang kehilangan nyawa'.",
+                "Pasar Asia menyaksikan gelombang modal 'luar biasa', mendorong reli ekuitas dan hiruk pikuk IPO.",
+                "Futures S&P 500 sedikit berubah setelah indeks naik menjelang laporan laba Big Tech minggu ini: Pembaruan langsung.",
+                "Laba industri Tiongkok sedikit meningkat pada tahun 2025, membalikkan penurunan selama tiga tahun karena Beijing menahan perang harga.",
                 "Sektor saham ini mengalami awal tahun terbaiknya dalam seperempat abad."
             ],
             "AR": [
-                "انخفضت أسهم هيونداي بعد أن قال ترامب إن الرسوم الجمركية على السيارات والأدوية الكورية الجنوبية سترتفع إلى 25%.",
+                "أسهم هيونداي تهبط بعد قول ترامب إن الرسوم الجمركية على السيارات والأدوية الكورية الجنوبية سترتفع إلى 25%.",
                 "البيت الأبيض يخفف لهجته بشأن مقتل بريتي: ترامب \"لا يريد أن يفقد أي أمريكي حياته\".",
-                "ارتفعت الأرباح الصناعية في الصين بشكل طفيف في عام 2025، مما عكس ثلاث سنوات من التراجعات مع كبح بكين لحروب الأسعار.",
-                "تغيرت عقود S&P 500 الآجلة قليلاً بعد ارتفاع المؤشر قبل أرباح شركات التكنولوجيا الكبرى هذا الأسبوع: تحديثات مباشرة.",
-                "انهارت شركات التأمين الصحي بعد أن اقترحت إدارة ترامب الإبقاء على أسعار Medicare Advantage ثابتة العام المقبل.",
-                "يشهد قطاع الأسهم هذا أفضل بداية له في العام منذ ربع قرن."
+                "أسواق آسيا تشهد تدفقًا \"لا يصدق\" لرأس المال، مما يدفع ارتفاعات الأسهم وحمى الاكتتابات العامة الأولية.",
+                "عقود S&P 500 الآجلة تتغير قليلاً بعد ارتفاع المؤشر قبل أرباح شركات التكنولوجيا الكبرى هذا الأسبوع: تحديثات حية.",
+                "أرباح الصين الصناعية ترتفع قليلاً في عام 2025، عاكسة ثلاث سنوات من التراجع مع كبح بكين لحروب الأسعار.",
+                "يشهد قطاع الأسهم هذا أفضل بداية عام له منذ ربع قرن."
             ]
         },
-        "last_updated": "2026-01-27T02:34:24.331618Z"
+        "last_updated": "2026-01-27T04:02:21.960324Z"
     },
     "system_status": "OPERATIONAL"
 }
