@@ -1,6 +1,6 @@
 
 const gatewaySlug = "omni-metric";
-const apiKey = "AIzaSyBS6G9Oq7hI2b1n7Yt7Kx7v0z9M8L7a6S0";
+const apiKey = process.env.GEMINI_API_KEY || "";
 const MODEL_NAME = "gemini-2.0-flash";
 const geminiUrl = `https://gateway.ai.vercel.com/v1/${gatewaySlug}/google/v1beta/models/${MODEL_NAME}:generateContent?key=${apiKey}`;
 
