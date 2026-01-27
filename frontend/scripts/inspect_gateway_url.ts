@@ -19,7 +19,7 @@ global.fetch = function (...args: any[]) {
     if (args[1] && args[1].body) {
         console.log("FETCH BODY:", args[1].body);
     }
-    return originalFetch.apply(this, args);
+    return originalFetch.apply(globalThis, args as any);
 } as any;
 
 async function main() {
