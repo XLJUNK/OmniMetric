@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-01-27T00:26:05Z",
-    "last_successful_update": "2026-01-27T00:26:05Z",
+    "last_updated": "2026-01-27T00:35:27Z",
+    "last_successful_update": "2026-01-27T00:35:27Z",
     "gms_score": 40,
     "sector_scores": {
         "STOCKS": 70,
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 88200.98,
+            "price": 88263.45,
             "prev_price": 86572.22,
-            "daily_chg": 1.88,
-            "change_percent": -1.41,
+            "daily_chg": 1.95,
+            "change_percent": -1.34,
             "trend": "UP",
             "sparkline": [
                 93882.55,
@@ -604,14 +604,14 @@
                 89503.88,
                 89110.73,
                 86572.22,
-                88200.98
+                88263.45
             ]
         },
         "ETH": {
-            "price": 2920.36,
+            "price": 2920.15,
             "prev_price": 2815.9,
-            "daily_chg": 3.71,
-            "change_percent": -0.99,
+            "daily_chg": 3.7,
+            "change_percent": -1.0,
             "trend": "UP",
             "sparkline": [
                 3226.13,
@@ -635,14 +635,14 @@
                 2953.26,
                 2948.74,
                 2815.9,
-                2920.36
+                2920.15
             ]
         },
         "SOL": {
-            "price": 124.1,
+            "price": 124.07,
             "prev_price": 118.77,
-            "daily_chg": 4.48,
-            "change_percent": -3.27,
+            "daily_chg": 4.46,
+            "change_percent": -3.29,
             "trend": "UP",
             "sparkline": [
                 137.99,
@@ -666,7 +666,7 @@
                 127.36,
                 127.05,
                 118.77,
-                124.1
+                124.07
             ]
         },
         "DXY": {
@@ -701,10 +701,10 @@
             ]
         },
         "USDJPY": {
-            "price": 154.2,
+            "price": 154.16,
             "prev_price": 155.17,
-            "daily_chg": -0.63,
-            "change_percent": -2.51,
+            "daily_chg": -0.65,
+            "change_percent": -2.53,
             "trend": "DOWN",
             "sparkline": [
                 156.09,
@@ -728,14 +728,14 @@
                 158.46,
                 158.5,
                 155.17,
-                154.2
+                154.16
             ]
         },
         "EURUSD": {
             "price": 1.19,
             "prev_price": 1.19,
-            "daily_chg": 0.22,
-            "change_percent": 1.34,
+            "daily_chg": 0.24,
+            "change_percent": 1.35,
             "trend": "UP",
             "sparkline": [
                 1.18,
@@ -825,10 +825,10 @@
             ]
         },
         "GOLD": {
-            "price": 5046.2,
+            "price": 5043.5,
             "prev_price": 4976.2,
-            "daily_chg": 1.41,
-            "change_percent": 6.02,
+            "daily_chg": 1.35,
+            "change_percent": 5.96,
             "trend": "UP",
             "sparkline": [
                 4482.8,
@@ -852,14 +852,14 @@
                 4831.8,
                 4908.8,
                 4976.2,
-                5046.2
+                5043.5
             ]
         },
         "OIL": {
-            "price": 60.84,
+            "price": 60.81,
             "prev_price": 61.07,
-            "daily_chg": -0.38,
-            "change_percent": 0.83,
+            "daily_chg": -0.43,
+            "change_percent": 0.78,
             "trend": "DOWN",
             "sparkline": [
                 58.38,
@@ -883,14 +883,14 @@
                 60.62,
                 59.36,
                 61.07,
-                60.84
+                60.81
             ]
         },
         "COPPER": {
             "price": 5.92,
             "prev_price": 5.91,
-            "daily_chg": 0.16,
-            "change_percent": 2.55,
+            "daily_chg": 0.14,
+            "change_percent": 2.53,
             "trend": "UP",
             "sparkline": [
                 5.48,
@@ -920,8 +920,8 @@
         "NATGAS": {
             "price": 3.83,
             "prev_price": 5.28,
-            "daily_chg": -27.49,
-            "change_percent": -2.1,
+            "daily_chg": -27.39,
+            "change_percent": -1.97,
             "trend": "DOWN",
             "sparkline": [
                 4.41,
@@ -1103,22 +1103,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "Global Market Sentiment (GMS) is Defensive with a score of 40. Widening High Yield (HY) spreads, indicating increased credit risk, reinforce this cautious stance. While DXY (Dollar strength/Liquidity) softened, easing global conditions, it didn't push the score beyond the defensive threshold. Monitor for broader liquidity shifts; current data supports caution, despite niche risk appetite.",
+        "content": "GMS Status remains Defensive at 40, with flat momentum. DXY (Dollar strength/Liquidity) weakened by 0.56%, generally favoring risk assets. However, VIX (Fear/Volatility) slightly rose 0.37%, and HY_SPREAD increased 1.52%, reflecting credit market caution. While the score suggests defensiveness, sustained DXY weakness could provide an unexpected liquidity tailwind, potentially challenging the current cautious outlook.",
         "reports": {
-            "JP": "世界の市場センチメント（GMS）はスコア40で防御的です。ハイイールド（HY）スプレッドの拡大は信用リスクの増加を示し、この警戒姿勢を強めています。DXY（ドル高/流動性）は軟化し、世界的な状況をわずかに緩和しましたが、スコアを防御的閾値を超えて押し上げませんでした。より広範な流動性の変化を監視してください。現在のデータは、ニッチなリスク選好にもかかわらず、慎重なアプローチを支持しています。",
-            "EN": "Global Market Sentiment (GMS) is Defensive with a score of 40. Widening High Yield (HY) spreads, indicating increased credit risk, reinforce this cautious stance. While DXY (Dollar strength/Liquidity) softened, easing global conditions, it didn't push the score beyond the defensive threshold. Monitor for broader liquidity shifts; current data supports caution, despite niche risk appetite.",
-            "CN": "全球市场情绪（GMS）分数为40，处于防御性状态。高收益（HY）息差扩大表明信用风险增加，强化了这种谨慎立场。尽管DXY（美元强度/流动性）走软，略微缓解了全球状况，但未能将分数推过防御阈值。请关注更广泛的流动性变化；当前数据支持谨慎态度，尽管存在小众风险偏好。",
-            "ES": "El Sentimiento del Mercado Global (GMS) es Defensivo con una puntuación de 40. La ampliación de los diferenciales de alto rendimiento (HY), que indica mayor riesgo crediticio, refuerza esta postura cautelosa. Aunque el DXY (fortaleza del dólar/liquidez) se debilitó, aliviando ligeramente las condiciones globales, no impulsó la puntuación más allá del umbral defensivo. Esté atento a cambios de liquidez más amplios; los datos actuales sugieren cautela, a pesar del apetito de riesgo de nicho.",
-            "HI": "वैश्विक बाजार भावना (GMS) 40 के स्कोर के साथ रक्षात्मक है। उच्च उपज (HY) स्प्रेड में वृद्धि, जो बढ़ते क्रेडिट जोखिम का संकेत देती है, इस सतर्क रुख को मजबूत करती है। जबकि DXY (डॉलर की मजबूती/तरलता) कमजोर हुआ, जिससे वैश्विक स्थितियां थोड़ी आसान हुईं, इसने स्कोर को रक्षात्मक सीमा से ऊपर नहीं धकेला। व्यापक तरलता बदलावों पर नज़र रखें; वर्तमान डेटा, कुछ विशिष्ट जोखिम भूख के बावजूद, सावधानी का समर्थन करता है।",
-            "ID": "Sentimen Pasar Global (GMS) bersifat Defensif dengan skor 40. Pelebaran spread High Yield (HY) yang menunjukkan peningkatan risiko kredit, memperkuat sikap hati-hati ini. Meskipun DXY (kekuatan Dolar/Likuiditas) melemah, sedikit melonggarkan kondisi global, hal ini tidak mendorong skor melampaui ambang defensif. Pantau pergeseran likuiditas yang lebih luas; data saat ini mendukung kehati-hatian, terlepas dari selera risiko khusus.",
-            "AR": "المعنويات السوقية العالمية (GMS) دفاعية بنتيجة 40. اتساع فروقات العائد المرتفع (HY)، الذي يشير إلى زيادة مخاطر الائتمان، يعزز هذا الموقف الحذر. بينما ضعف مؤشر DXY (قوة الدولار/السيولة)، مما خفف الظروف العالمية قليلاً، إلا أنه لم يدفع النتيجة لتجاوز الحد الدفاعي. راقب تحولات السيولة الأوسع؛ البيانات الحالية تدعم الحذر، رغم وجود شهية مخاطرة متخصصة."
+            "JP": "GMSステータスは40でディフェンシブを維持し、モメンタムは横ばいです。DXY（ドルの強さ/流動性）は0.56%下落し、通常リスク資産に有利です。しかし、VIX（恐怖/変動性）は0.37%上昇し、HYスプレッドは1.52%増加し、信用市場の警戒感を示します。スコアは守備的ながら、持続的なDXYの弱さは予期せぬ流動性の追い風となり、現在の慎重な見通しに影響を与える可能性があります。",
+            "EN": "GMS Status remains Defensive at 40, with flat momentum. DXY (Dollar strength/Liquidity) weakened by 0.56%, generally favoring risk assets. However, VIX (Fear/Volatility) slightly rose 0.37%, and HY_SPREAD increased 1.52%, reflecting credit market caution. While the score suggests defensiveness, sustained DXY weakness could provide an unexpected liquidity tailwind, potentially challenging the current cautious outlook.",
+            "CN": "GMS状态仍为防御性40分，动能持平。DXY（美元强度/流动性）下跌0.56%，通常利好风险资产。然而，VIX（恐慌/波动性）小幅上涨0.37%，HY_SPREAD增加1.52%，反映信用市场谨慎。尽管分数表明防御性，DXY持续走弱可能提供意想不到的流动性顺风，或将挑战当前谨慎前景。",
+            "ES": "El estado GMS permanece Defensivo en 40, con impulso plano. El DXY (fortaleza del dólar/liquidez) se debilitó un 0.56%, generalmente favorable a los activos de riesgo. Sin embargo, el VIX (miedo/volatilidad) subió ligeramente un 0.37% y el HY_SPREAD aumentó un 1.52%, reflejando cautela en el mercado crediticio. Aunque la puntuación sugiere defensa, la debilidad sostenida del DXY podría ofrecer un inesperado impulso de liquidez, desafiando la perspectiva actual.",
+            "HI": "जीएमएस स्थिति 40 पर रक्षात्मक बनी हुई है, गति स्थिर है। डीएक्सवाई (डॉलर की मजबूती/तरलता) 0.56% कमजोर हुआ, जो आमतौर पर जोखिम परिसंपत्तियों के पक्ष में है। हालांकि, वीआईएक्स (भय/अस्थिरता) में 0.37% की मामूली वृद्धि हुई, और HY_SPREAD 1.52% बढ़ा, जो क्रेडिट बाजार में सावधानी दर्शाता है। जबकि स्कोर रक्षात्मकता का सुझाव देता है, डीएक्सवाई की लगातार कमजोरी अप्रत्याशित तरलता का समर्थन कर सकती है, जो वर्तमान सतर्क दृष्टिकोण को चुनौती दे सकता है।",
+            "ID": "Status GMS tetap Defensif di 40, dengan momentum datar. DXY (kekuatan Dolar/Likuiditas) melemah 0.56%, umumnya mendukung aset berisiko. Namun, VIX (Ketakutan/Volatilitas) sedikit naik 0.37%, dan HY_SPREAD meningkat 1.52%, mencerminkan kehati-hatian pasar kredit. Meskipun skor menyarankan defensif, pelemahan DXY yang berkelanjutan dapat memberikan dorongan likuiditas tak terduga, berpotensi menantang prospek saat ini.",
+            "AR": "يظل وضع GMS دفاعيًا عند 40، مع زخم ثابت. ضعف مؤشر الدولار (قوة الدولار/السيولة) بنسبة 0.56%، مما يدعم الأصول الخطرة عمومًا. ومع ذلك، ارتفع مؤشر VIX (الخوف/التقلب) قليلاً بنسبة 0.37%، وزاد فروق عوائد السندات عالية المخاطر (HY_SPREAD) بنسبة 1.52%، مما يعكس حذر سوق الائتمان. بينما تشير النتيجة إلى الدفاعية، قد يوفر ضعف الدولار المستمر دفعة سيولة غير متوقعة، مما قد يتحدى النظرة الحالية."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-25T14:47:15Z",
-            "score": 33
-        },
         {
             "date": "2026-01-25T14:49:43Z",
             "score": 33
@@ -1354,92 +1350,96 @@
         {
             "date": "2026-01-27T00:26:05Z",
             "score": 40
+        },
+        {
+            "date": "2026-01-27T00:35:27Z",
+            "score": 40
         }
     ],
     "intelligence": {
         "news": [
             {
+                "title": "Hyundai shares fall after Trump says tariffs on South Korean autos, pharma to rise to 25%",
+                "link": "https://www.cnbc.com/2026/01/26/trump-south-korea-tariffs-trade-autos-pharma.html",
+                "isoDate": "2026-01-27T00:35:28.654829Z"
+            },
+            {
+                "title": "S&P 500 futures are little changed after index rises ahead of this week’s Big Tech earnings: Live updates",
+                "link": "https://www.cnbc.com/2026/01/26/stock-market-today-live-updates.html",
+                "isoDate": "2026-01-27T00:35:28.656872Z"
+            },
+            {
                 "title": "Health insurers tumble after Trump administration proposes keeping Medicare Advantage rates flat next year",
                 "link": "https://www.cnbc.com/2026/01/26/health-insurers-tumble-after-trump-proposes-keeping-medicare-rates-flat.html",
-                "isoDate": "2026-01-27T00:26:05.959340Z"
+                "isoDate": "2026-01-27T00:35:28.656895Z"
             },
             {
                 "title": "Treasury cancels Booz Allen contracts after employee leaked Trump tax records; stock falls",
                 "link": "https://www.cnbc.com/2026/01/26/trump-tax-records-treasury-cancels-booz-allen-contracts.html",
-                "isoDate": "2026-01-27T00:26:05.961213Z"
-            },
-            {
-                "title": "Hyundai shares fall after Trump says tariffs on South Korean autos, pharma to rise to 25%",
-                "link": "https://www.cnbc.com/2026/01/26/trump-south-korea-tariffs-trade-autos-pharma.html",
-                "isoDate": "2026-01-27T00:26:05.961235Z"
+                "isoDate": "2026-01-27T00:35:28.656908Z"
             },
             {
                 "title": "AI spending wasn't the biggest engine of U.S. economic growth in 2025, despite popular assumptions",
                 "link": "https://www.cnbc.com/2026/01/26/ai-wasnt-the-biggest-engine-of-us-gdp-growth-in-2025.html",
-                "isoDate": "2026-01-27T00:26:05.961250Z"
-            },
-            {
-                "title": "South Korean auto stocks fall after Trump hikes tariffs on trade deal approval delay",
-                "link": "https://www.cnbc.com/2026/01/27/asia-markets-live-nikkei-kospi-hang-seng.html",
-                "isoDate": "2026-01-27T00:26:05.961262Z"
+                "isoDate": "2026-01-27T00:35:28.656919Z"
             },
             {
                 "title": "This stock sector is having its best start to a year in a quarter century",
                 "link": "https://www.cnbc.com/2026/01/26/this-stock-sector-is-having-its-best-start-to-a-year-in-a-quarter-century.html",
-                "isoDate": "2026-01-27T00:26:05.961273Z"
+                "isoDate": "2026-01-27T00:35:28.656931Z"
             }
         ],
         "translations": {
             "JP": [
-                "トランプ政権が来年のメディケア・アドバンテージ料率を据え置くことを提案した後、医療保険会社が急落",
-                "従業員がトランプ氏の納税記録を漏洩した後、財務省がブーズ・アレンとの契約を解除；株価下落",
-                "トランプ氏が韓国産自動車と医薬品への関税を25%に引き上げると発言した後、現代自動車の株価が下落",
-                "一般的な想定に反し、2025年の米国経済成長の最大の原動力はAI支出ではなかった",
-                "貿易協定承認の遅延でトランプ氏が関税を引き上げた後、韓国自動車株が下落",
+                "トランプ氏が韓国産自動車・医薬品への関税を25%に引き上げると発言後、現代自動車株が下落",
+                "今週の主要テクノロジー企業の決算発表を前に指数が上昇後、S&P 500先物は小幅な変動：ライブ更新",
+                "トランプ政権がメディケア・アドバンテージの来年料率を据え置くと提案後、医療保険会社が急落",
+                "従業員がトランプ氏の納税記録を漏洩後、財務省がブーズ・アレンとの契約を解除；株価下落",
+                "一般的な仮定に反し、AIへの支出は2025年の米国経済成長の最大の原動力ではなかった",
                 "この株式セクターは四半世紀で最高の年の始まりを迎えている"
             ],
             "CN": [
-                "特朗普政府提议明年维持医疗保险优势计划费率不变后，医疗保险公司股价暴跌",
-                "员工泄露特朗普纳税记录后，财政部取消了与Booz Allen的合同；股价下跌",
-                "特朗普表示对韩国汽车和药品征收的关税将升至25%后，现代汽车股价下跌",
-                "尽管普遍认为如此，但2025年美国经济增长的最大引擎并非人工智能支出",
-                "贸易协议审批延迟后，特朗普提高关税，韩国汽车股下跌",
-                "该股票板块正迎来四分之一世纪以来最好的年度开局"
+                "特朗普称将韩国汽车、药品关税提高至25%后，现代汽车股价下跌",
+                "在本周大型科技股财报前指数上涨后，标普500期货几无变化：实时更新",
+                "特朗普政府提议明年医疗保险优势计划费率保持不变后，医疗保险公司股价暴跌",
+                "员工泄露特朗普纳税记录后，财政部取消了与博思艾伦的合同；股价下跌",
+                "尽管普遍认为，2025年人工智能支出并非美国经济增长的最大引擎",
+                "该股票板块正迎来25年来最佳的开年表现"
             ],
             "ES": [
-                "Aseguradoras de salud caen en picada después de que la administración Trump propusiera mantener las tarifas de Medicare Advantage sin cambios el próximo año",
-                "El Tesoro cancela contratos de Booz Allen después de que un empleado filtrara los registros fiscales de Trump; las acciones caen",
-                "Las acciones de Hyundai caen después de que Trump dijera que los aranceles a los automóviles y productos farmacéuticos surcoreanos subirán al 25%",
+                "Las acciones de Hyundai caen después de que Trump dijera que los aranceles sobre automóviles y productos farmacéuticos surcoreanos subirán al 25%",
+                "Los futuros del S&P 500 apenas varían después de que el índice subiera antes de los resultados de las grandes tecnológicas de esta semana: Actualizaciones en vivo",
+                "Las aseguradoras de salud caen en picada después de que la administración Trump propusiera mantener las tasas de Medicare Advantage sin cambios el próximo año",
+                "El Tesoro cancela los contratos de Booz Allen después de que un empleado filtrara los registros fiscales de Trump; las acciones caen",
                 "El gasto en IA no fue el mayor motor del crecimiento económico de EE. UU. en 2025, a pesar de las suposiciones populares",
-                "Las acciones de automóviles surcoreanos caen después de que Trump aumentara los aranceles por el retraso en la aprobación del acuerdo comercial",
                 "Este sector bursátil está teniendo su mejor comienzo de año en un cuarto de siglo"
             ],
             "HI": [
-                "ट्रंप प्रशासन द्वारा अगले साल मेडिकेयर एडवांटेज दरों को स्थिर रखने का प्रस्ताव देने के बाद स्वास्थ्य बीमा कंपनियां लुढ़कीं",
+                "ट्रंप द्वारा दक्षिण कोरियाई ऑटो, फार्मा पर टैरिफ 25% तक बढ़ाने की घोषणा के बाद हुंडई के शेयर गिरे",
+                "इस सप्ताह की बिग टेक आय से पहले इंडेक्स बढ़ने के बाद S&P 500 वायदा में मामूली बदलाव: लाइव अपडेट",
+                "ट्रंप प्रशासन द्वारा अगले साल मेडिकेयर एडवांटेज दरों को अपरिवर्तित रखने का प्रस्ताव देने के बाद स्वास्थ्य बीमा कंपनियों के शेयर गिरे",
                 "कर्मचारी द्वारा ट्रंप के टैक्स रिकॉर्ड लीक करने के बाद ट्रेजरी ने बूज एलन के अनुबंध रद्द किए; शेयर गिरे",
-                "ट्रंप द्वारा दक्षिण कोरियाई ऑटो और फार्मा पर टैरिफ 25% तक बढ़ाने की बात कहने के बाद हुंडई के शेयर गिरे",
                 "लोकप्रिय धारणाओं के बावजूद, 2025 में अमेरिकी आर्थिक विकास का सबसे बड़ा इंजन AI खर्च नहीं था",
-                "व्यापार समझौते की मंजूरी में देरी पर ट्रंप द्वारा टैरिफ बढ़ाने के बाद दक्षिण कोरियाई ऑटो शेयरों में गिरावट",
-                "यह स्टॉक सेक्टर एक चौथाई सदी में साल की अपनी सबसे अच्छी शुरुआत कर रहा है"
+                "यह स्टॉक सेक्टर एक चौथाई सदी में साल की अपनी सर्वश्रेष्ठ शुरुआत कर रहा है"
             ],
             "ID": [
-                "Perusahaan asuransi kesehatan anjlok setelah pemerintahan Trump mengusulkan untuk mempertahankan tarif Medicare Advantage tetap datar tahun depan",
-                "Departemen Keuangan membatalkan kontrak Booz Allen setelah seorang karyawan membocorkan catatan pajak Trump; saham jatuh",
                 "Saham Hyundai jatuh setelah Trump mengatakan tarif atas mobil dan farmasi Korea Selatan akan naik menjadi 25%",
-                "Pengeluaran AI bukanlah pendorong terbesar pertumbuhan ekonomi AS pada tahun 2025, meskipun ada asumsi populer",
-                "Saham otomotif Korea Selatan jatuh setelah Trump menaikkan tarif karena penundaan persetujuan kesepakatan perdagangan",
+                "Futures S&P 500 sedikit berubah setelah indeks naik menjelang laporan keuangan Big Tech minggu ini: Pembaruan langsung",
+                "Asuransi kesehatan anjlok setelah pemerintahan Trump mengusulkan untuk mempertahankan tarif Medicare Advantage tetap datar tahun depan",
+                "Departemen Keuangan membatalkan kontrak Booz Allen setelah seorang karyawan membocorkan catatan pajak Trump; saham jatuh",
+                "Pengeluaran AI bukan pendorong terbesar pertumbuhan ekonomi AS pada tahun 2025, meskipun ada asumsi populer",
                 "Sektor saham ini mengalami awal tahun terbaiknya dalam seperempat abad"
             ],
             "AR": [
-                "شركات التأمين الصحي تتراجع بعد أن اقترحت إدارة ترامب الإبقاء على أسعار ميديكير أدفانتج ثابتة العام المقبل",
-                "وزارة الخزانة تلغي عقود بوز ألن بعد تسريب موظف لسجلات ترامب الضريبية؛ وتتراجع الأسهم",
-                "أسهم هيونداي تتراجع بعد تصريح ترامب بأن الرسوم الجمركية على السيارات والأدوية الكورية الجنوبية سترتفع إلى 25%",
-                "إنفاق الذكاء الاصطناعي لم يكن المحرك الأكبر للنمو الاقتصادي الأمريكي في عام 2025، على الرغم من الافتراضات الشائعة",
-                "أسهم السيارات الكورية الجنوبية تتراجع بعد رفع ترامب للتعريفات الجمركية بسبب تأخير الموافقة على الاتفاق التجاري",
-                "يشهد هذا القطاع الأسهمي أفضل بداية له في عام خلال ربع قرن"
+                "أسهم هيونداي تهبط بعد تصريح ترامب برفع التعريفات على السيارات والأدوية الكورية الجنوبية إلى 25%",
+                "عقود S&P 500 الآجلة تتغير قليلاً بعد ارتفاع المؤشر قبيل إعلانات أرباح شركات التكنولوجيا الكبرى هذا الأسبوع: تحديثات مباشرة",
+                "شركات التأمين الصحي تهبط بعد اقتراح إدارة ترامب الإبقاء على أسعار \"ميديكير أدفانتج\" ثابتة العام المقبل",
+                "وزارة الخزانة تلغي عقود بوز ألن بعد تسريب موظف لسجلات ترامب الضريبية؛ الأسهم تتراجع",
+                "الإنفاق على الذكاء الاصطناعي لم يكن المحرك الأكبر للنمو الاقتصادي الأمريكي في عام 2025، رغم الافتراضات الشائعة",
+                "يشهد هذا القطاع من الأسهم أفضل بداية لعام في ربع قرن"
             ]
         },
-        "last_updated": "2026-01-27T00:26:17.973207Z"
+        "last_updated": "2026-01-27T00:35:41.454961Z"
     },
     "system_status": "OPERATIONAL"
 }
