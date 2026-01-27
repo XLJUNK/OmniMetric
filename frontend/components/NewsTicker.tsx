@@ -37,9 +37,45 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
                     };
                 });
                 // Strictly take top 3 for the vertical stack
-                setNews(decodedNews.slice(0, 3));
+                // Success: Update Cache
+                const finalNews = decodedNews.length > 0 ? decodedNews.slice(0, 3) : [];
+                if (finalNews.length > 0) {
+                    setNews(finalNews);
+                    try {
+                        localStorage.setItem(`gms_news_cache_${lang}`, JSON.stringify({
+                            timestamp: Date.now(),
+                            news: finalNews
+                        }));
+                    } catch (err) {
+                        // Storage full or disabled, ignore
+                    }
+                } else {
+                    // If API returns empty, try cache before fallback
+                    throw new Error("Empty API response");
+                }
             } catch (e) {
-                // Fail silently to maintain terminal aesthetic
+                // v5.5 FIX: Robust Fallback with Caching Strategy
+                // 1. Try Cache
+                try {
+                    const cachedRaw = localStorage.getItem(`gms_news_cache_${lang}`);
+                    if (cachedRaw) {
+                        const cached = JSON.parse(cachedRaw);
+                        // Optional: Check expiration (e.g. 24h?) - For now, show last known valid news to maintain utility
+                        if (cached.news && Array.isArray(cached.news) && cached.news.length > 0) {
+                            setNews(cached.news);
+                            return; // Successfully used cache
+                        }
+                    }
+                } catch (cacheErr) {
+                    // Cache corrupt, ignore
+                }
+
+                // 2. Final Fallback: System Synchronizing Status
+                setNews([{
+                    title: t.status.market || "Synchronizing market intelligence...",
+                    link: "#",
+                    isoDate: new Date().toISOString()
+                }]);
             }
         };
         fetchNews();
