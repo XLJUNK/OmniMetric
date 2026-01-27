@@ -26,8 +26,9 @@
     *   `seo_monitor.py`: Google Search Console APIと連携し、トレンドキーワードを分析・抽出。
     *   `utils/log_utils.py`: **Centralized Logger**。APIキーの自動秘匿、ログローテーション、IN/OUT計測を一元管理。
     *   **AI Engine**:
-        *   **Primary (High-Value Analysis)**: `Gemini 3 Flash` - GMSスコアの洞察生成に使用。
-        *   **Secondary (Stable Baseline)**: `Gemini 2.5 Flash` - 定型業務（ニュース翻訳）および安定稼働用。
+        *   **Primary (High-Value Analysis)**: `Gemini 1.5 Flash` - GMSスコアの洞察生成に使用。
+        *   **Secondary (Stable Baseline)**: `Gemini 1.5 Pro` - 複雑な推論分析用。
+        *   **Experimental**: `Gemini 2.0 Flash` - 次世代機能のテスト用。
         *   **Observability**: `AIMetrics` クラスにより、各モデルの成功率とレイテンシを追跡・記録。
         *   **Resilience Protocol**: Universal Gateway (V3) を経由し、障害時は自動で Direct Google API への二段階フォールバックを実行。
 
