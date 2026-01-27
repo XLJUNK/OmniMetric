@@ -14,9 +14,13 @@ export const useSignalData = (initialData?: SignalData | null) => {
     // Primary Signal Data Fetching
     useEffect(() => {
         const fetchData = async () => {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 8000);
+
             try {
                 // Timeout to prevent hanging UI
-                const res = await fetch(`/api/signal`, { signal: AbortSignal.timeout(5000) });
+                const res = await fetch(`/api/signal`, { signal: controller.signal });
+                clearTimeout(timeoutId);
                 if (res.ok) {
                     const json = await res.json();
                     setData(json);
@@ -25,6 +29,7 @@ export const useSignalData = (initialData?: SignalData | null) => {
                     setErrorCount(prev => prev + 1);
                 }
             } catch (e) {
+                clearTimeout(timeoutId);
                 console.error("Signal Fetch Error:", e);
                 setErrorCount(prev => prev + 1);
             }
@@ -37,13 +42,19 @@ export const useSignalData = (initialData?: SignalData | null) => {
     // Live Feed Fetching
     useEffect(() => {
         const fetchLive = async () => {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 8000);
+
             try {
-                const res = await fetch('/api/live', { signal: AbortSignal.timeout(5000) });
+                const res = await fetch('/api/live', { signal: controller.signal });
+                clearTimeout(timeoutId);
                 if (res.ok) {
                     const json = await res.json();
                     setLiveData(json);
                 }
-            } catch (e) { }
+            } catch (e) {
+                clearTimeout(timeoutId);
+            }
         };
         fetchLive();
         const interval = setInterval(fetchLive, 30000);

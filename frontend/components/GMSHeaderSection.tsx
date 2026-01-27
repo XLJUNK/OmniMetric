@@ -27,7 +27,9 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
     const { isMobile } = useDevice();
     const { theme } = useTheme();
     const router = useRouter();
-    const t = DICTIONARY[lang];
+
+    // Safety: Ensure lang exists in DICTIONARY
+    const t = DICTIONARY[lang] || DICTIONARY['EN'];
 
     // Helper to change language via URL
     const setLang = (l: LangType) => {
@@ -65,8 +67,9 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
 
     if (aiContent && typeof aiContent === 'string') {
         const isPlaceholder = PLACEHOLDER_BLOCKLIST.some(p => aiContent.includes(p));
-        if (isPlaceholder || !aiRaw || aiRaw.length < 20) {
-            if (aiRaw && aiRaw.includes("【GMS:")) {
+        // Add length check with safety
+        if (isPlaceholder || !aiRaw || (typeof aiRaw === 'string' && aiRaw.length < 20)) {
+            if (typeof aiRaw === 'string' && aiRaw.includes("【GMS:")) {
                 aiContent = aiRaw;
             } else {
                 aiContent = getDynamicFallback();

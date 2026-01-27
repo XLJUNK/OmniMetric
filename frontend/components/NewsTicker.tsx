@@ -10,7 +10,7 @@ import { DICTIONARY, LangType } from '@/data/dictionary';
 export const NewsTicker = ({ lang }: { lang: LangType }) => {
     const [news, setNews] = useState<{ title: string, link: string, isoDate?: string }[]>([]);
     const [now, setNow] = useState(Date.now());
-    const t = DICTIONARY[lang];
+    const t = DICTIONARY[lang] || DICTIONARY['EN'];
 
     useEffect(() => {
         const fetchNews = async () => {

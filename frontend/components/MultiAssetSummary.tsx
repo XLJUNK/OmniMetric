@@ -35,8 +35,11 @@ export const MultiAssetSummary = ({ initialData }: MultiAssetSummaryProps) => {
     const router = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();
-    const lang = (searchParams.get('lang') as LangType) || 'EN';
-    const t = DICTIONARY[lang];
+
+    // Safety: Ensure lang is always valid and uppercase for DICTIONARY access
+    const langParam = (searchParams.get('lang') || 'EN').toUpperCase();
+    const lang = (Object.keys(DICTIONARY).includes(langParam) ? langParam : 'EN') as LangType;
+    const t = DICTIONARY[lang] || DICTIONARY['EN'];
 
     const setLang = (l: LangType) => {
         router.push(`${pathname}?lang=${l}`);
@@ -66,13 +69,15 @@ export const MultiAssetSummary = ({ initialData }: MultiAssetSummaryProps) => {
         // 2. Hydration: Load Custom Config
         try {
             const saved = localStorage.getItem('gms_terminal_config_v1');
-            if (saved) {
+            if (saved && saved !== "null" && saved !== "undefined") {
                 const config = JSON.parse(saved);
-                if (config.visibleTiles && Array.isArray(config.visibleTiles)) {
-                    setTiles(config.visibleTiles);
-                }
-                if (config.hiddenTiles && Array.isArray(config.hiddenTiles)) {
-                    setHiddenTiles(config.hiddenTiles);
+                if (config && typeof config === 'object') {
+                    if (config.visibleTiles && Array.isArray(config.visibleTiles)) {
+                        setTiles(config.visibleTiles);
+                    }
+                    if (config.hiddenTiles && Array.isArray(config.hiddenTiles)) {
+                        setHiddenTiles(config.hiddenTiles);
+                    }
                 }
                 // Theme is now handled by ThemeProvider, but we sync mainly for tile state
             }
@@ -88,7 +93,14 @@ export const MultiAssetSummary = ({ initialData }: MultiAssetSummaryProps) => {
         // To avoid conflicts, we'll read the current config, update tiles, and save back.
         try {
             const saved = localStorage.getItem('gms_terminal_config_v1');
-            const currentConfig = saved ? JSON.parse(saved) : {};
+            let currentConfig = {};
+            if (saved && saved !== "null" && saved !== "undefined") {
+                try {
+                    currentConfig = JSON.parse(saved);
+                } catch (e) {
+                    currentConfig = {};
+                }
+            }
 
             localStorage.setItem('gms_terminal_config_v1', JSON.stringify({
                 ...currentConfig,
