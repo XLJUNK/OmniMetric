@@ -92,11 +92,11 @@ jobs:
 
           # SNS PUBLISHER (Bluesky - Golden Schedule)
           # Runs every 30 mins. Supports manual force via workflow_dispatch.
-          FORCE_FLAG=""
-          if [ "${{ inputs.force_bluesky }}" == "true" ]; then
-            FORCE_FLAG="--force"
-          fi
-          python backend/sns_publisher.py $FORCE_FLAG
+          # FORCE_FLAG=""
+          # if [ "${{ inputs.force_bluesky }}" == "true" ]; then
+          #   FORCE_FLAG="--force"
+          # fi
+          # python backend/sns_publisher.py $FORCE_FLAG
           
           # FRONTEND SYNC: Copy signal to frontend/data for import
           mkdir -p frontend/data
