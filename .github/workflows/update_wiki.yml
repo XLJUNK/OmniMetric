@@ -7,7 +7,7 @@ on:
 
 concurrency:
   group: wiki-generation
-  cancel-in-progress: false
+  cancel-in-progress: true # Cancel previous run if still executing
 
 jobs:
   generate-wiki:
