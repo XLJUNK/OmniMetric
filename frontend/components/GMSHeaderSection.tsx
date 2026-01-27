@@ -28,6 +28,9 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
     const { theme } = useTheme();
     const router = useRouter();
 
+    // 0. Safety Guard: Immediate Exit if No Data
+    if (!data) return null;
+
     // Safety: Ensure lang exists in DICTIONARY
     const t = DICTIONARY[lang] || DICTIONARY['EN'];
 
@@ -76,8 +79,6 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
             }
         }
     }
-
-    if (!data) return null;
 
     return (
         <div className="w-full gms-container">

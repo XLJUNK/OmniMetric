@@ -208,12 +208,17 @@ export const MultiAssetSummary = ({ initialData }: MultiAssetSummaryProps) => {
     return (
         <div className={`w-full font-sans min-h-screen flex flex-col pb-24 relative transition-colors duration-300`}>
             {/* 1. Global Header Status & GMS Dashboard */}
-            <GMSHeaderSection
-                data={data!}
-                lang={lang}
-                isSafeMode={isSafeMode}
-                onOpenSettings={() => setIsSettingsOpen(true)}
-            />
+            {data ? (
+                <GMSHeaderSection
+                    data={data}
+                    lang={lang}
+                    isSafeMode={isSafeMode}
+                    onOpenSettings={() => setIsSettingsOpen(true)}
+                />
+            ) : (
+                // Skeleton Loader or Safe Header
+                <div className="w-full h-32 animate-pulse bg-slate-100 dark:bg-white/5" />
+            )}
 
             {/* 5. Pulse Tiles (Sectors) - 4th Position (Indicators) */}
             <div className="max-w-[1600px] mx-auto w-full px-4 md:px-8 mb-12">

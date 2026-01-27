@@ -26,7 +26,7 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
                     // If we are in EN, use item.title (English).
                     // If we are in JP/CN/etc, check `json.translations[lang][index]`.
                     let displayTitle = item.title;
-                    if (lang !== 'EN' && json.translations && json.translations[lang] && json.translations[lang][index]) {
+                    if (lang !== 'EN' && json?.translations && json.translations[lang] && json.translations[lang][index]) {
                         displayTitle = json.translations[lang][index];
                     }
 
@@ -72,6 +72,7 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
         if (!isoDate) return "";
 
         const date = new Date(isoDate);
+        if (isNaN(date.getTime())) return ""; // CRITICAL FIX: Prevent invalid dates from crashing the app
         const isJP = lang === 'JP';
         const timeZone = isJP ? 'Asia/Tokyo' : 'UTC';
         const label = isJP ? '(JST)' : '(UTC)';
