@@ -16,6 +16,11 @@ try {
     // Ignore dotenv errors in production if envs are already set
 }
 
+// Map GEMINI_API_KEY to GOOGLE_GENERATIVE_AI_API_KEY for @ai-sdk/google
+if (process.env.GEMINI_API_KEY && !process.env.GOOGLE_GENERATIVE_AI_API_KEY) {
+    process.env.GOOGLE_GENERATIVE_AI_API_KEY = process.env.GEMINI_API_KEY;
+}
+
 const getPrompt = async () => {
     const args = process.argv.slice(2);
     if (args.length > 0) {
