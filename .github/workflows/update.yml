@@ -14,7 +14,7 @@ on:
 
 concurrency:
   group: update-signal
-  cancel-in-progress: false
+  cancel-in-progress: true # Cancel previous run if still executing
 
 jobs:
   update:
@@ -42,10 +42,19 @@ jobs:
       - name: Install Node dependencies
         working-directory: ./frontend
         run: npm ci
+      
+      - name: Cache Fonts
+        id: cache-fonts
+        uses: actions/cache@v3
+        with:
+          path: backend/assets/fonts
+          key: noto-fonts-v1
+      
       - name: Install Fonts
+        if: steps.cache-fonts.outputs.cache-hit != 'true'
         run: |
           mkdir -p backend/assets/fonts
-          echo "Downloading Noto Sans Fonts..."
+          echo "Downloading Noto Sans Fonts (cache miss)..."
           curl -fL -o backend/assets/fonts/NotoSansJP-Bold.ttf "https://github.com/google/fonts/raw/main/ofl/notosansjp/NotoSansJP-Bold.ttf" || echo "Failed to download JP font"
           curl -fL -o backend/assets/fonts/NotoSansSC-Bold.ttf "https://github.com/google/fonts/raw/main/ofl/notosanssc/NotoSansSC-Bold.ttf" || echo "Failed to download SC font"
           curl -fL -o backend/assets/fonts/NotoSansDevanagari-Bold.ttf "https://github.com/google/fonts/raw/main/ofl/notosansdevanagari/NotoSansDevanagari-Bold.ttf" || echo "Failed to download Devanagari font"
