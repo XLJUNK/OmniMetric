@@ -24,3 +24,14 @@ build/
 !**/requirements.txt
 !frontend/public/*.txt
 
+# Debug and Test Files
+debug_archive/
+*_debug*.txt
+*_debug*.log
+debug_*.json
+temp_*.json
+probe_*.txt
+probe_*.py
+gateway_*.txt
+test_gateway.py
+scheduler.pid
