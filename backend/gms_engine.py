@@ -1392,12 +1392,12 @@ Output JSON:
         model_success = False
         model_start = time.time()
         
-        # Reduced Retries for speed (Max 2 Attempts)
-        for attempt in range(2):
+        # Retries for robustness (Max 3 Attempts)
+        for attempt in range(3):
             try:
-                # Calculate Backoff: 1s, 2s
+                # Calculate Backoff: (Attempt * 5)s -> 0s, 5s...
                 if attempt > 0:
-                    wait_time = attempt
+                    wait_time = attempt * 5
                     log_diag(f"[AI GATEWAY] Rate Limit Guard: Backing off for {wait_time}s...")
                     time.sleep(wait_time)
 
