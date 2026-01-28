@@ -94,3 +94,49 @@ class BlueskySequencer:
                         matches.append((lang, i+1, False))
         
         return matches
+
+    def find_recent_slot(self, lookback_minutes=60):
+        """
+        Stateful Catch-up Logic:
+        Checks if there was a Golden Schedule slot within the last X minutes.
+        Returns a list of unique (LANG, PHASE, FORCE) tuples for the *latest* slot found.
+        """
+        now_jst = self.get_jst_now()
+        start_jst = now_jst - timedelta(minutes=lookback_minutes)
+        
+        # Determine valid day (handle 0-6am logic)
+        effective_dt = now_jst
+        if now_jst.hour < 6:
+            effective_dt = now_jst - timedelta(days=1)
+        is_we = self.is_weekend(effective_dt)
+        schedule = self.SCHEDULE_WEEKEND if is_we else self.SCHEDULE_WEEKDAY
+        
+        found_matches = []
+        
+        # Iterate all defined slots
+        for lang, slots in schedule.items():
+            for i, (h, m) in enumerate(slots):
+                # Create a specific datetime for this slot today
+                # Note: This simplistic approach works because we only care about "Today's" slots relative to Now.
+                # However, 0-6am slots belong to "Tomorrow" if we are late at night, or "Today" if early morning.
+                # To be robust: Check both "Today" and "Yesterday" candidate dates for the slot.
+                
+                candidates = [
+                    now_jst.replace(hour=h, minute=m, second=0, microsecond=0),
+                    now_jst.replace(hour=h, minute=m, second=0, microsecond=0) - timedelta(days=1),
+                    now_jst.replace(hour=h, minute=m, second=0, microsecond=0) + timedelta(days=1)
+                ]
+                
+                for slot_dt in candidates:
+                    # Check if slot is within the window [Start < Slot <= Now]
+                    if start_jst < slot_dt <= now_jst:
+                        # Found a recent slot!
+                        if lang == "ALL":
+                            for l in ["JP", "EN", "ZH", "ES"]:
+                                found_matches.append((l, 99, True))
+                        else:
+                            force = True if is_we else False # Weekend usually forces
+                            found_matches.append((lang, i+1, force))
+                            
+        # Deduplication (If multiple slots hit, which shouldn't happen in 1h window usually, but good to be safe)
+        return list(set(found_matches))

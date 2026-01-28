@@ -2,7 +2,7 @@ name: SNS Publisher (Independent)
 
 on:
 #  schedule:
-#    - cron: '10,40 * * * *' # Run 5 minutes after the main update (5,35) to ensure data is ready
+#    - cron: '35 * * * *' # Run at :35 (15m buffer after Main Engine finishes)
   workflow_dispatch:
     inputs:
       force_post:
