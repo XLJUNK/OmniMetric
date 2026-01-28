@@ -1,10 +1,10 @@
 {
-    "last_updated": "2026-01-28T08:49:31.238056+00:00",
-    "last_successful_update": "2026-01-28T08:49:31.238062+00:00",
-    "gms_score": 38,
+    "last_updated": "2026-01-28T09:46:30.759794+00:00",
+    "last_successful_update": "2026-01-28T09:46:30.759801+00:00",
+    "gms_score": 41,
     "sector_scores": {
         "STOCKS": 55,
-        "CRYPTO": 40,
+        "CRYPTO": 75,
         "FOREX": 55,
         "COMMODITIES": 55
     },
@@ -218,10 +218,10 @@
             ]
         },
         "VIX": {
-            "price": 16.08,
+            "price": 16.26,
             "prev_price": 16.35,
-            "daily_chg": -1.65,
-            "change_percent": 2.81,
+            "daily_chg": -0.55,
+            "change_percent": 3.96,
             "trend": "DOWN",
             "sparkline": [
                 13.6,
@@ -245,7 +245,7 @@
                 16.09,
                 16.15,
                 16.35,
-                16.08
+                16.26
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
@@ -546,10 +546,10 @@
             ]
         },
         "NIFTY": {
-            "price": 25204.3,
+            "price": 25337.75,
             "prev_price": 25175.4,
-            "daily_chg": 0.11,
-            "change_percent": 0.19,
+            "daily_chg": 0.64,
+            "change_percent": 0.72,
             "trend": "UP",
             "sparkline": [
                 26042.3,
@@ -573,15 +573,15 @@
                 25289.9,
                 25048.65,
                 25175.4,
-                25204.3
+                25337.75
             ]
         },
         "BTC": {
-            "price": 88902.6,
+            "price": 89223.77,
             "prev_price": 89102.57,
-            "daily_chg": -0.22,
-            "change_percent": -0.23,
-            "trend": "DOWN",
+            "daily_chg": 0.14,
+            "change_percent": 0.13,
+            "trend": "UP",
             "sparkline": [
                 91308.05,
                 91027.12,
@@ -604,14 +604,14 @@
                 86572.22,
                 88267.14,
                 89102.57,
-                88902.6
+                89223.77
             ]
         },
         "ETH": {
-            "price": 2987.39,
+            "price": 3005.5,
             "prev_price": 3022.21,
-            "daily_chg": -1.15,
-            "change_percent": 1.31,
+            "daily_chg": -0.55,
+            "change_percent": 1.93,
             "trend": "DOWN",
             "sparkline": [
                 3166.84,
@@ -635,15 +635,15 @@
                 2815.9,
                 2926.46,
                 3022.21,
-                2987.39
+                3005.5
             ]
         },
         "SOL": {
-            "price": 126.63,
+            "price": 127.13,
             "prev_price": 127.05,
-            "daily_chg": -0.34,
-            "change_percent": -0.33,
-            "trend": "DOWN",
+            "daily_chg": 0.06,
+            "change_percent": 0.06,
+            "trend": "UP",
             "sparkline": [
                 136.31,
                 138.29,
@@ -666,14 +666,14 @@
                 118.77,
                 124.14,
                 127.05,
-                126.63
+                127.13
             ]
         },
         "DXY": {
-            "price": 96.06,
+            "price": 96.11,
             "prev_price": 96.22,
-            "daily_chg": -0.17,
-            "change_percent": -2.34,
+            "daily_chg": -0.11,
+            "change_percent": -2.29,
             "trend": "DOWN",
             "sparkline": [
                 98.02,
@@ -697,14 +697,14 @@
                 97.6,
                 97.04,
                 96.22,
-                96.06
+                96.11
             ]
         },
         "USDJPY": {
-            "price": 152.71,
+            "price": 152.7,
             "prev_price": 154.34,
-            "daily_chg": -1.05,
-            "change_percent": -3.62,
+            "daily_chg": -1.06,
+            "change_percent": -3.63,
             "trend": "DOWN",
             "sparkline": [
                 156.46,
@@ -728,14 +728,14 @@
                 158.5,
                 155.17,
                 154.34,
-                152.71
+                152.7
             ]
         },
         "EURUSD": {
             "price": 1.2,
             "prev_price": 1.19,
-            "daily_chg": 0.85,
-            "change_percent": 2.61,
+            "daily_chg": 0.94,
+            "change_percent": 2.69,
             "trend": "UP",
             "sparkline": [
                 1.18,
@@ -763,10 +763,10 @@
             ]
         },
         "USDINR": {
-            "price": 91.77,
+            "price": 91.74,
             "prev_price": 91.71,
-            "daily_chg": 0.06,
-            "change_percent": 0.25,
+            "daily_chg": 0.03,
+            "change_percent": 0.23,
             "trend": "UP",
             "sparkline": [
                 89.83,
@@ -790,7 +790,7 @@
                 91.56,
                 91.5,
                 91.71,
-                91.77
+                91.74
             ]
         },
         "USDSAR": {
@@ -825,10 +825,10 @@
             ]
         },
         "GOLD": {
-            "price": 5333.3,
+            "price": 5312.5,
             "prev_price": 5079.9,
-            "daily_chg": 4.99,
-            "change_percent": 8.65,
+            "daily_chg": 4.58,
+            "change_percent": 8.22,
             "trend": "UP",
             "sparkline": [
                 4529.1,
@@ -852,15 +852,15 @@
                 4976.2,
                 5079.7,
                 5079.9,
-                5333.3
+                5312.5
             ]
         },
         "OIL": {
-            "price": 62.54,
+            "price": 62.2,
             "prev_price": 62.39,
-            "daily_chg": 0.24,
-            "change_percent": 5.36,
-            "trend": "UP",
+            "daily_chg": -0.3,
+            "change_percent": 4.78,
+            "trend": "DOWN",
             "sparkline": [
                 56.74,
                 58.08,
@@ -883,14 +883,14 @@
                 61.07,
                 60.63,
                 62.39,
-                62.54
+                62.2
             ]
         },
         "COPPER": {
-            "price": 5.99,
+            "price": 5.95,
             "prev_price": 5.83,
-            "daily_chg": 2.83,
-            "change_percent": 4.37,
+            "daily_chg": 2.17,
+            "change_percent": 3.7,
             "trend": "UP",
             "sparkline": [
                 5.77,
@@ -914,14 +914,14 @@
                 5.91,
                 5.98,
                 5.83,
-                5.99
+                5.95
             ]
         },
         "NATGAS": {
-            "price": 3.7,
+            "price": 3.62,
             "prev_price": 6.95,
-            "daily_chg": -46.78,
-            "change_percent": -26.64,
+            "daily_chg": -47.93,
+            "change_percent": -28.23,
             "trend": "DOWN",
             "sparkline": [
                 4.37,
@@ -945,7 +945,7 @@
                 5.28,
                 6.8,
                 6.95,
-                3.7
+                3.62
             ]
         },
         "MOVE": {
@@ -1105,22 +1105,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "The GMS score of 38 indicates a Defensive market regime. While momentum remains flat, DXY (Dollar strength/Liquidity) is declining alongside VIX (Fear/Volatility). This combination suggests easing systemic pressure. However, the upcoming Fed decision is a critical catalyst. A less hawkish stance than anticipated could challenge the current risk-off sentiment, potentially spurring a short-term rally. Maintain caution, but observe for shifts in Fed narrative.",
+        "content": "GMS score 41 indicates a NEUTRAL regime, with momentum pushing it from 40. A slight weakening in DXY (Dollar strength/Liquidity) and lower VIX (Fear/Volatility) suggest easing macro pressures. However, a significant rise in Gold and Copper hints at underlying inflation concerns or a subtle flight to real assets, potentially challenging the current calm ahead of the Fed's decision. Exercise caution.",
         "reports": {
-            "JP": "GMSスコア38は防御的な市場局面を示唆。モメンタムは横ばいですが、DXY（ドル高/流動性）とVIX（恐怖/変動性）は共に低下。これはシステム的な圧力が緩和している可能性を示唆します。しかし、間近なFRB決定が重要な触媒。予想よりハト派的な姿勢なら、現在のリスクオフを打ち破り、短期的な上昇を促す可能性。注意を払いつつ、FRBの論調変化を注視してください。",
-            "EN": "The GMS score of 38 indicates a Defensive market regime. While momentum remains flat, DXY (Dollar strength/Liquidity) is declining alongside VIX (Fear/Volatility). This combination suggests easing systemic pressure. However, the upcoming Fed decision is a critical catalyst. A less hawkish stance than anticipated could challenge the current risk-off sentiment, potentially spurring a short-term rally. Maintain caution, but observe for shifts in Fed narrative.",
-            "CN": "GMS评分38表明市场处于防御模式。尽管动能持平，但DXY（美元走强/流动性）与VIX（恐慌/波动性）均呈下降趋势。这暗示系统性压力正在缓解。然而，即将到来的美联储决议是关键催化剂。若其立场鸽派程度超出预期，可能挑战当前避险情绪，短期内或刺激反弹。保持谨慎，关注美联联储政策措辞的变化。",
-            "ES": "La puntuación GMS de 38 señala un régimen de mercado Defensivo. Aunque el impulso se mantiene plano, el DXY (fortaleza del dólar/liquidez) disminuye junto con el VIX (miedo/volatilidad). Esto sugiere una reducción de la presión sistémica. No obstante, la próxima decisión de la Fed es clave. Una postura menos restrictiva de lo esperado podría desafiar el sentimiento de aversión al riesgo actual, impulsando un repunte a corto plazo. Mantenga la cautela, pero observe los cambios en la narrativa de la Fed.",
-            "HI": "जीएमएस स्कोर 38 एक रक्षात्मक बाजार व्यवस्था का संकेत देता है। गति सपाट रहने के बावजूद, डीएक्सवाई (डॉलर की मजबूती/तरलता) वीआईएक्स (भय/अस्थिरता) के साथ घट रहा है। यह प्रणालीगत दबाव में कमी का सुझाव देता है। हालाँकि, आगामी फेड निर्णय एक महत्वपूर्ण उत्प्रेरक है। यदि अपेक्षित से कम आक्रामक रुख अपनाया जाता है, तो यह मौजूदा जोखिम-मुक्त भावना को चुनौती दे सकता है, जिससे अल्पकालिक रैली संभव है। सतर्क रहें, पर फेड के बयानों में बदलाव पर नजर रखें।",
-            "ID": "Skor GMS 38 menunjukkan rezim pasar Defensif. Meskipun momentum datar, DXY (kekuatan Dolar/Likuiditas) menurun bersama VIX (Ketakutan/Volatilitas). Ini mengisyaratkan tekanan sistemik mereda. Namun, keputusan The Fed mendatang adalah katalis kritis. Sikap yang kurang hawkish dari perkiraan dapat menantang sentimen penghindaran risiko saat ini, berpotensi memicu reli jangka pendek. Tetap waspada, namun amati perubahan narasi The Fed.",
-            "AR": "يشير مؤشر GMS البالغ 38 إلى نظام سوق دفاعي. بينما يظل الزخم ثابتًا، يتراجع مؤشر DXY (قوة الدولار/السيولة) جنبًا إلى جنب مع VIX (الخوف/التقلب). هذا يشير إلى تراجع الضغط المنهجي. ومع ذلك، فإن قرار الاحتياطي الفيدرالي القادم هو محفز حاسم. قد يؤدي الموقف الأقل تشديدًا من المتوقع إلى تحدي المعنويات الحالية لتجنب المخاطر، مما قد يحفز ارتفاعًا قصير المدى. حافظ على الحذر، لكن راقب تحولات خطاب الفيدرالي."
+            "JP": "GMSスコア41は中立レジームを示し、モメンタムが40から押し上げました。DXY（ドル高/流動性）のわずかな弱化とVIX（恐怖/変動性）の低下は、マクロ圧力の緩和を示唆。しかし、金と銅の大幅上昇は根底にあるインフレ懸念、あるいは実物資産への微妙な逃避を示唆し、FRB決定を控えた現在の落ち着きに異議を唱える可能性があり、注意が必要です。",
+            "EN": "GMS score 41 indicates a NEUTRAL regime, with momentum pushing it from 40. A slight weakening in DXY (Dollar strength/Liquidity) and lower VIX (Fear/Volatility) suggest easing macro pressures. However, a significant rise in Gold and Copper hints at underlying inflation concerns or a subtle flight to real assets, potentially challenging the current calm ahead of the Fed's decision. Exercise caution.",
+            "CN": "GMS分数为41，表明处于中性市场态势，动能将其从40推高。DXY（美元强度/流动性）略有走弱，VIX（恐慌/波动性）下降，表明宏观压力有所缓解。然而，黄金和铜显著上涨暗示潜在的通胀担忧或向实物资产的微妙转移，这可能在美联储决定前挑战当前的平静。请谨慎。",
+            "ES": "El GMS con 41 puntos indica un régimen NEUTRAL, con el impulso empujándolo desde 40. Un leve debilitamiento del DXY (fuerza del dólar/liquidez) y un VIX (miedo/volatilidad) más bajo sugieren una disminución de las presiones macro. Sin embargo, un aumento significativo del oro y el cobre insinúa preocupaciones inflacionarias subyacentes o un sutil refugio hacia activos reales, desafiando la calma actual antes de la decisión de la Fed. Tenga precaución.",
+            "HI": "जीएमएस स्कोर 41 एक NEUTRAL व्यवस्था को इंगित करता है, जिसमें गति ने इसे 40 से ऊपर धकेला। DXY (डॉलर की मजबूती/तरलता) में थोड़ी कमजोरी और कम VIX (भय/अस्थिरता) मैक्रो दबावों में कमी का सुझाव देते हैं। हालांकि, सोने और तांबे में उल्लेखनीय वृद्धि अंतर्निहित मुद्रास्फीति संबंधी चिंताओं या वास्तविक संपत्ति की ओर सूक्ष्म पलायन का संकेत देती है, जो फेड के फैसले से पहले वर्तमान शांति को चुनौती दे सकती है। सावधानी बरतें।",
+            "ID": "Skor GMS 41 menunjukkan rezim NETRAL, dengan momentum mendorongnya dari 40. Pelemahan DXY (kekuatan Dolar/Likuiditas) dan VIX (Ketakutan/Volatilitas) yang lebih rendah menunjukkan tekanan makro yang mereda. Namun, kenaikan signifikan pada Emas dan Tembaga mengisyaratkan kekhawatiran inflasi yang mendasari atau perpindahan halus ke aset riil, berpotensi menantang ketenangan saat ini menjelang keputusan The Fed. Lakukan kehati-hatian.",
+            "AR": "تشير نتيجة GMS البالغة 41 إلى نظام محايد، حيث دفعها الزخم من 40. يشير ضعف طفيف في مؤشر الدولار DXY (قوة الدولار/السيولة) وانخفاض VIX (الخوف/التقلب) إلى تخفيف الضغوط الكلية. ومع ذلك، تشير الزيادة الكبيرة في الذهب والنحاس إلى مخاوف تضخمية كامنة أو تحول دقيق نحو الأصول الحقيقية، مما قد يتحدى الهدوء الحالي قبل قرار الفيدرالي. توخ الحذر."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-26T13:10:34Z",
-            "score": 34
-        },
         {
             "date": "2026-01-26T14:03:27Z",
             "score": 36
@@ -1356,92 +1352,12 @@
         {
             "date": "2026-01-28T08:49:31Z",
             "score": 38
+        },
+        {
+            "date": "2026-01-28T09:46:30Z",
+            "score": 41
         }
     ],
-    "intelligence": {
-        "news": [
-            {
-                "title": "The Fed releases its latest interest rate decision Wednesday. Here's what to expect",
-                "link": "https://www.cnbc.com/2026/01/27/fed-preview-january-2026.html",
-                "isoDate": "2026-01-27T19:43:34+00:00Z"
-            },
-            {
-                "title": "SK Hynix smashes earnings estimates as AI memory demand drives record profit",
-                "link": "https://www.cnbc.com/2026/01/28/sk-hynix-smashes-earnings-estimates-as-ai-memory-demand-drives-record-profit.html",
-                "isoDate": "2026-01-28T08:20:32+00:00Z"
-            },
-            {
-                "title": "Chip giant ASML surges 7% as AI boom fuels record orders and upbeat 2026 guidance",
-                "link": "https://www.cnbc.com/2026/01/28/asml-q4-2025-earnings-report.html",
-                "isoDate": "2026-01-28T08:29:17+00:00Z"
-            },
-            {
-                "title": "LVMH shares plummet 7% as fourth-quarter results lag competitors",
-                "link": "https://www.cnbc.com/2026/01/28/lvmh-earnings-shares-fall-luxury.html",
-                "isoDate": "2026-01-28T08:23:11+00:00Z"
-            },
-            {
-                "title": "Anthropic CEO Dario Amodei warns AI may cause ‘unusually painful’ disruption to jobs",
-                "link": "https://www.cnbc.com/2026/01/27/dario-amodei-warns-ai-cause-unusually-painful-disruption-jobs.html",
-                "isoDate": "2026-01-28T07:07:07+00:00Z"
-            },
-            {
-                "title": "From high-end watches to passenger jets, these sectors are poised to be winners of the EU-India trade deal",
-                "link": "https://www.cnbc.com/2026/01/28/eu-india-trade-deal-von-der-leyen-modi-invest-sector-goods-stocks.html",
-                "isoDate": "2026-01-28T06:00:01+00:00Z"
-            }
-        ],
-        "translations": {
-            "JP": [
-                "FRBは水曜日に最新の金利決定を発表します。注目点はこちら",
-                "SKハイニックス、AIメモリー需要が記録的な利益を牽引し、業績予想を大幅に上回る",
-                "半導体大手ASML、AIブームが記録的な受注と強気な2026年ガイダンスを後押しし7%急騰",
-                "LVMH株、第4四半期決算が競合に遅れをとり7%急落",
-                "Anthropic CEO ダリオ・アモデイ氏、AIが雇用に「異常に痛ましい」混乱を引き起こす可能性を警告",
-                "高級時計から旅客機まで、これらのセクターはEU・インド貿易協定の勝者となる見込み"
-            ],
-            "CN": [
-                "美联储周三公布最新利率决议。以下是市场预期",
-                "SK海力士营收超预期，AI内存需求推动创纪录利润",
-                "芯片巨头ASML股价飙升7%，AI热潮推动创纪录订单和乐观的2026年指引",
-                "LVMH股价暴跌7%，第四季度业绩不及竞争对手",
-                "Anthropic首席执行官Dario Amodei警告，AI可能对就业造成“异常痛苦”的冲击",
-                "从高端手表到客机，这些行业有望成为欧盟-印度贸易协议的赢家"
-            ],
-            "ES": [
-                "La Fed publica su última decisión sobre tipos de interés el miércoles. Esto es lo que se puede esperar",
-                "SK Hynix supera las estimaciones de ganancias mientras la demanda de memoria de IA impulsa beneficios récord",
-                "El gigante de los chips ASML sube un 7% mientras el auge de la IA impulsa pedidos récord y una previsión optimista para 2026",
-                "Las acciones de LVMH caen un 7% mientras los resultados del cuarto trimestre quedan por detrás de los competidores",
-                "El CEO de Anthropic, Dario Amodei, advierte que la IA podría causar una disrupción \"inusualmente dolorosa\" en los empleos",
-                "Desde relojes de alta gama hasta aviones de pasajeros, estos sectores están preparados para ser los ganadores del acuerdo comercial UE-India"
-            ],
-            "HI": [
-                "फेड बुधवार को अपनी नवीनतम ब्याज दर का निर्णय जारी करेगा। यहाँ क्या उम्मीद करें",
-                "SK हाइनेक्स ने AI मेमोरी की मांग से रिकॉर्ड मुनाफे के कारण कमाई के अनुमानों को ध्वस्त किया",
-                "चिप दिग्गज ASML AI बूम से रिकॉर्ड ऑर्डर और 2026 के लिए आशावादी मार्गदर्शन के कारण 7% उछला",
-                "LVMH के शेयर 7% गिरे, क्योंकि चौथी तिमाही के नतीजे प्रतिद्वंद्वियों से पीछे रह गए",
-                "एंथ्रोपिक के सीईओ डारियो अमोदेई ने चेतावनी दी कि AI नौकरियों में 'असामान्य रूप से दर्दनाक' व्यवधान पैदा कर सकता है",
-                "हाई-एंड घड़ियों से लेकर यात्री जेट तक, ये क्षेत्र EU-भारत व्यापार सौदे के विजेता बनने के लिए तैयार हैं"
-            ],
-            "ID": [
-                "The Fed merilis keputusan suku bunga terbarunya Rabu ini. Inilah yang perlu diperkirakan",
-                "SK Hynix lampaui estimasi pendapatan karena permintaan memori AI mendorong rekor keuntungan",
-                "Raksasa chip ASML melonjak 7% karena ledakan AI mendorong pesanan rekor dan panduan optimis 2026",
-                "Saham LVMH anjlok 7% karena hasil kuartal keempat tertinggal dari para pesaing",
-                "CEO Anthropic Dario Amodei memperingatkan AI dapat menyebabkan gangguan pekerjaan yang 'sangat menyakitkan'",
-                "Dari jam tangan mewah hingga jet penumpang, sektor-sektor ini siap menjadi pemenang kesepakatan perdagangan UE-India"
-            ],
-            "AR": [
-                "مجلس الاحتياطي الفيدرالي يصدر قراره الأخير بشأن سعر الفائدة يوم الأربعاء. إليك ما يمكن توقعه",
-                "SK Hynix تتجاوز تقديرات الأرباح حيث يدفع طلب ذاكرة الذكاء الاصطناعي إلى أرباح قياسية",
-                "عملاق الرقائق ASML يقفز 7% مع ارتفاع الذكاء الاصطناعي الذي يغذي طلبات قياسية وتوقعات متفائلة لعام 2026",
-                "أسهم LVMH تهوي 7% مع تأخر نتائج الربع الرابع عن المنافسين",
-                "الرئيس التنفيذي لـ Anthropic داريو أمودي يحذر من أن الذكاء الاصطناعي قد يسبب اضطرابًا \"مؤلمًا بشكل غير عادي\" للوظائف",
-                "من الساعات الفاخرة إلى الطائرات المدنية، هذه القطاعات تستعد لتكون الرابحة من اتفاقية التجارة بين الاتحاد الأوروبي والهند"
-            ]
-        },
-        "last_updated": "2026-01-28T08:49:31.237592+00:00Z"
-    },
+    "intelligence": null,
     "system_status": "OPERATIONAL"
 }
