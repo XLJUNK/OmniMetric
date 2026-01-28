@@ -19,7 +19,7 @@ MODEL_NAME = "gemini-2.5-flash"
 API_KEY = os.getenv("GEMINI_API_KEY")
 
 # CRITICAL: RATE LIMIT SETTINGS
-REQUEST_INTERVAL = 3   # Reduced from 15s (Flash is faster)
+REQUEST_INTERVAL = 5   # Increased to 5s for Safety (Max 12 RPM)
 MAX_RETRIES = 5
 BASE_BACKOFF = 30      # Reduced from 60s
 
@@ -265,8 +265,8 @@ if __name__ == "__main__":
             print("ALL_WIKI_GENERATED_SIGNAL")
             sys.exit(0)
 
-        # 2. Select Batch (Max 3 Items that are incomplete)
-        BATCH_SIZE = 3
+        # 2. Select Batch (Max 1 Items that are incomplete)
+        BATCH_SIZE = 1
         batch_items = []
         
         for item in items:
