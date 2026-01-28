@@ -1,14 +1,14 @@
 {
     "metrics": {
-        "avg_vix_defensive": 16.74,
-        "avg_vix_neutral": 16.31,
+        "avg_vix_defensive": 16.72,
+        "avg_vix_neutral": 16.15,
         "avg_vix_accumulate": 14.49,
         "sample_count": 19,
-        "last_updated": "2026-01-28T14:30:37.928873+00:00"
+        "last_updated": "2026-01-28T14:40:52.197529+00:00"
     },
     "summaries": {
-        "EN": "Over the past 19 entries, market volatility (VIX) was 2.6% higher during GMS Defensive regimes (<40) compared to Neutral, validating the signal's sensitivity to structural stress.",
-        "JP": "過去19回の観測データにおいて、GMSが「ディフェンシブ（40以下）」を示した期間のVIX指数は平均16.74となり、ニュートラル期間より2.6%高く推移しました。これは、本アルゴリズムが市場の構造的ストレスを正確に捉えていることを客観的に示しています。"
+        "EN": "Over the past 19 entries, market volatility (VIX) was 3.5% higher during GMS Defensive regimes (<40) compared to Neutral, validating the signal's sensitivity to structural stress.",
+        "JP": "過去19回の観測データにおいて、GMSが「ディフェンシブ（40以下）」を示した期間のVIX指数は平均16.72となり、ニュートラル期間より3.5%高く推移しました。これは、本アルゴリズムが市場の構造的ストレスを正確に捉えていることを客観的に示しています。"
     },
     "history": [
         {
@@ -373,22 +373,22 @@
         },
         {
             "date": "2026-01-28",
-            "gms_score": 40,
+            "gms_score": 39,
             "net_liquidity": 5714.07,
             "move_price": 56.12,
             "real_rate": 1.9,
             "breakeven_inflation": 2.34,
-            "dxy_price": 96.29,
+            "dxy_price": 96.25,
             "hy_spread": 2.69,
             "nfci_price": -0.6,
-            "breadth_spread": -1.53,
-            "gold_price": 5296.5,
-            "btc_price": 89843.53,
+            "breadth_spread": -1.31,
+            "gold_price": 5292.6,
+            "btc_price": 89754.77,
             "copper_gold_ratio": 1.12,
-            "vix_price": 16.48,
-            "spy_price": 697.16,
-            "qqq_price": 635.33,
-            "iwm_price": 265.89,
+            "vix_price": 16.46,
+            "spy_price": 697.21,
+            "qqq_price": 635.58,
+            "iwm_price": 265.55,
             "crypto_sentiment": 29
         }
     ]
