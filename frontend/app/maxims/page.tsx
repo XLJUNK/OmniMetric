@@ -120,7 +120,7 @@ export default async function MaximsPage({ searchParams }: { searchParams: Promi
     })));
 
     return (
-        <div className="min-h-screen bg-slate-50 dark:bg-[#020617] text-slate-800 dark:text-slate-200 font-sans selection:bg-sky-500/30 pb-20">
+        <div className="min-h-screen text-slate-800 dark:text-slate-200 font-sans selection:bg-sky-500/30 pb-20">
             {/* Inject JSON-LD */}
             <DynamicStructuredData data={breadcrumbJsonLd} />
             <DynamicStructuredData data={{

@@ -25,7 +25,7 @@ export const TerminalPage = ({ pageKey, children, lang: propLang, selectorMode =
     const pageData = t.subpages[pageKey] as any;
 
     return (
-        <div className="min-h-screen bg-slate-50 dark:bg-[#0A0A0A] text-slate-800 dark:text-[#E0E0E0] font-sans selection:bg-sky-500 selection:text-white">
+        <div className="min-h-screen text-slate-800 dark:text-[#E0E0E0] font-sans selection:bg-sky-500 selection:text-white">
             <div className="max-w-[1400px] mx-auto px-6 py-12 md:py-20 lg:px-24">
                 {/* 1. TOP NAV / BREADCRUMB */}
                 <div className="flex justify-end items-center mb-16 opacity-100">
