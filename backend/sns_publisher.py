@@ -31,7 +31,7 @@ class SNSPublisher:
         if score < 40: return "DEFENSIVA (Aversión al Riesgo)"
         return "NEUTRAL (Paridad de Riesgo)"
         
-    # OGP Image Generation Removed - Using Static Link Previews
+    # OGP Image Generation Removed - Using Static Link Previews (Logic moved to ogp_generator.py)
 
 
     def _write_status(self, platform, status, message=None):
@@ -160,25 +160,60 @@ class SNSPublisher:
     def publish_update(self, data, force_override=False):
         """
         Main entry point for publishing.
-        Handles Weekend Dispersion and Multilingual OGP.
+        Handles Weekend Dispersion, Multilingual OGP, and Stateful Catch-up.
         """
         posts = self.format_post(data)
         score = data.get("gms_score", 50)
         sectors = data.get("sector_scores", {})
         results = {}
         
-        # SEQUENCER LOGIC (Golden Schedule)
+        # SEQUENCER LOGIC (Golden Schedule + Stateful Catch-up)
+        matches = []
         if force_override:
             # Force all major languages sequence
             matches = [("JP", 1, True), ("EN", 2, True), ("ES", 3, True)]
         else:
-            matches = self.sequencer.check_schedule()
+            # STRICT MODE: Use Time Window Catch-up
+            # Look back 55 minutes (Cron runs every 60m or 30m, 55m window covers enough overlap without double posting)
+            matches = self.sequencer.find_recent_slot(lookback_minutes=55)
         
         if not matches:
-             self._log("Sequencer: No slot match in this hour. Skipping.")
-             return {"STATUS": "SKIPPED_NO_SLOT"}
+             self._log("Sequencer: No schedule slot found in the last 55 minutes. Standby.")
+             return {"STATUS": "STANDBY"}
 
-        results["MATCHES"] = len(matches)
+        # STATEFUL FILTER: Remove already posted tasks
+        # We need to check if we posted this Language recently (e.g., in the last 50 mins)
+        # This prevents double posting if the Cron runs twice in the same window (e.g. at :35 and then manually)
+        
+        valid_matches = []
+        last_posts = {}
+        try:
+            if os.path.exists(self.state_file):
+                with open(self.state_file, 'r') as f:
+                    last_posts = json.load(f).get("history", {})
+        except: pass
+
+        now_utc = datetime.now(timezone.utc)
+        
+        for (lang, phase, force) in matches:
+            last_ts_str = last_posts.get(lang)
+            should_run = True
+            
+            if last_ts_str:
+                last_ts = datetime.fromisoformat(last_ts_str)
+                # If posted within the last 50 minutes, skip it.
+                if (now_utc - last_ts).total_seconds() < 3000: # 50 mins
+                    should_run = False
+                    self._log(f"Skipping {lang}: Already posted at {last_ts_str}")
+
+            if should_run:
+                valid_matches.append((lang, phase, force))
+
+        if not valid_matches:
+             self._log("All slots already processed. Standby.")
+             return {"STATUS": "ALL_PROCESSED"}
+
+        results["MATCHES"] = len(valid_matches)
         
         # 1. Post to Twitter (X) - PAUSED
         self._log("Stage 1 (Twitter) is currently DISABLED per user request.")
@@ -187,17 +222,19 @@ class SNSPublisher:
         # 2. Post to Bluesky
         try:
             from sns_publisher_bsky import BlueskyPublisher
-            self._log(f"Processing Serial SNS Broadcast: Stage 2 (Bluesky) - {len(matches)} Tasks")
+            self._log(f"Processing Serial SNS Broadcast: Stage 2 (Bluesky) - {len(valid_matches)} Tasks")
             bsky_pub = BlueskyPublisher(log_callback=self.log_callback)
             
-            # Implementation of JA -> EN -> ES Threading Sequence
-            # We sort matches to ensure JP is first if present
-            sorted_matches = sorted(matches, key=lambda x: (0 if x[0] == 'JP' else (1 if x[0] == 'EN' else 2)))
+            # Sort: JP first
+            sorted_matches = sorted(valid_matches, key=lambda x: (0 if x[0] == 'JP' else (1 if x[0] == 'EN' else 2)))
             
             parent_post = None
             
             # Load OGP Generator
             from ogp_generator import generate_dynamic_ogp
+
+            # Load clean history to update
+            current_history = last_posts.copy()
 
             for (lang, phase, force_post) in sorted_matches:
                 self._log(f"Executing Task: {lang} (Phase {phase}, Force: {force_post})")
@@ -218,11 +255,7 @@ class SNSPublisher:
                          self._log(f"OGP Gen Error: {e}", is_error=True)
                          img_path = None # Fallback to no image
 
-                     # 2. Prepare Text (Handled inside BSKY publisher mostly, but we can override title logic if needed)
-                     # The BSKY publisher handles the "Rich Template" internally.
-                     
-                     # 3. Publish
-                     # Resolve Threading (Reply Logic)
+                     # 2. Publish
                      reply_to = None
                      if parent_post:
                          from atproto import models
@@ -235,25 +268,35 @@ class SNSPublisher:
                      
                      if res_post:
                          results[f"BSKY_{lang}"] = "SUCCESS"
-                         # Update parent for next reply in thread
-                         parent_post = res_post 
+                         parent_post = res_post
+                         # Update History Memory (Key: Lang)
+                         current_history[lang] = datetime.now(timezone.utc).isoformat()
                      else:
                          results[f"BSKY_{lang}"] = "FAILED"
                      
-                     # 4. Cleanup
+                     # 3. Cleanup
                      if img_path and os.path.exists(img_path):
-                         try:
-                             os.remove(img_path)
-                             self._log(f"Cleanup: Removed {img_filename}")
-                         except FileNotFoundError:
-                             pass  # Already deleted, OK
-                         except (OSError, PermissionError) as e:
-                             self._log(f"[WARN] Cleanup failed for {img_filename}: {e}")
-                     
+                         try: os.remove(img_path)
+                         except: pass
+            
+            # SAVE HISTORY
+            try:
+                full_state = {}
+                if os.path.exists(self.state_file):
+                    with open(self.state_file, 'r') as f:
+                        full_state = json.load(f)
+                
+                full_state["history"] = current_history
+                full_state["last_post_at"] = datetime.now(timezone.utc).isoformat()
+                
+                with open(self.state_file, 'w') as f:
+                    json.dump(full_state, f, indent=4)
+            except Exception as e:
+                self._log(f"Failed to save history: {e}")
+
         except Exception as e:
             self._log(f"Bluesky Integration Error: {e}", is_error=True, platform="BLUESKY")
             results["BSKY_ERROR"] = str(e)
-
             
         return results
 
