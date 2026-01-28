@@ -18,6 +18,9 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
 
     useEffect(() => {
         setMounted(true);
+        // FORCE DEFAULT DARK: Only load from storage if present.
+        // We explicitly DO NOT check window.matchMedia('(prefers-color-scheme: dark)')
+        // so that the default is always dark regardless of OS settings.
         try {
             const savedConfig = localStorage.getItem('gms_terminal_config_v1');
             if (savedConfig) {
