@@ -19,9 +19,9 @@ MODEL_NAME = "gemini-2.5-flash"
 API_KEY = os.getenv("GEMINI_API_KEY")
 
 # CRITICAL: RATE LIMIT SETTINGS
-REQUEST_INTERVAL = 15  # Seconds between requests (Strict "Stream" Mode)
+REQUEST_INTERVAL = 3   # Reduced from 15s (Flash is faster)
 MAX_RETRIES = 5
-BASE_BACKOFF = 60      # Start with 60s for 429 errors
+BASE_BACKOFF = 30      # Reduced from 60s
 
 PERSONA_LABELS = {
     "EN": { "geopolitics": "Geopolitical Strategist", "macro": "Macroeconomic Analyst", "quant": "Quant & Data Scientist", "technical": "Technical Analyst", "policy": "Policy & Regulatory Advisor", "tech": "AI & Future Tech Researcher" },
@@ -87,7 +87,7 @@ class WikiEnhancer:
         task_id = f"{item['slug']}-{lang}"
         if task_id in self.completed_tasks:
             print(f"  [SKIP] {task_id} (Already in progress.json)")
-            return
+            return False
 
         slug = item["slug"]
         save_path = os.path.join(DATA_DIR, f"{slug}-{lang.lower()}.json")
@@ -96,14 +96,14 @@ class WikiEnhancer:
         if os.path.exists(save_path):
             self._save_progress(task_id)
             print(f"  [SKIP] {task_id} (File exists)")
-            return
+            return False
 
         print(f"  [GENERATE] {slug} ({lang})...")
         prompt = self._build_prompt(item, lang)
         
         try:
             content = self._call_ai(prompt)
-            if not content: return
+            if not content: return False
 
             sections = self._parse_sections(content)
             
@@ -156,9 +156,11 @@ class WikiEnhancer:
             
             self._save_progress(task_id)
             print(f"  [SUCCESS] {slug}-{lang.lower()}.json created.")
+            return True
             
         except Exception as e:
             print(f"  [ERROR] {slug}: {e}")
+            return False
 
     def _build_prompt(self, item, lang):
         labels = PERSONA_LABELS.get(lang, PERSONA_LABELS["EN"])
@@ -263,8 +265,8 @@ if __name__ == "__main__":
             print("ALL_WIKI_GENERATED_SIGNAL")
             sys.exit(0)
 
-        # 2. Select Batch (Max 5 Items that are incomplete)
-        BATCH_SIZE = 5
+        # 2. Select Batch (Max 3 Items that are incomplete)
+        BATCH_SIZE = 3
         batch_items = []
         
         for item in items:
@@ -289,9 +291,10 @@ if __name__ == "__main__":
         for item in batch_items:
             print(f"Processing Item: {item['slug']}...")
             for lang in LANGS:
-                enhancer.generate_report(item, lang)
-                # STRICT INTERVAL (Flow Control)
-                time.sleep(REQUEST_INTERVAL)
+                generated = enhancer.generate_report(item, lang)
+                # STRICT INTERVAL (Flow Control) - Only sleep if we actually hit the API
+                if generated:
+                    time.sleep(REQUEST_INTERVAL)
             processed_count += 1
             
         print(f"Batch Complete. Processed {processed_count} items.")
