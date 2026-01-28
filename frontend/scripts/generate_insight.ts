@@ -64,8 +64,8 @@ async function main() {
     // GMS Analysis (High Priority) -> gemini-3-flash
     // News Translation (Routine) -> gemini-2.5-flash
     const isNewsTask = /translator|Translate/i.test(prompt);
-    // V4.6.1: Regressed all tasks to gemini-2.5-flash due to stability and rate limit optimization.
-    const targetModel = 'google/gemini-2.0-flash';
+    // V4.7-777: Unified on gemini-2.5-flash for all modules
+    const targetModel = 'google/gemini-2.5-flash';
     const taskName = isNewsTask ? 'NEWS_TRANSLATION' : 'GMS_ANALYSIS';
 
     let result;

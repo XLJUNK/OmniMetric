@@ -1370,12 +1370,10 @@ Output JSON:
 
     # VERCEL AI GATEWAY - RESILIENCE PROTOCOL (PRIMARY)
     # Strategy: Flash-Targeted Speed > High-Tier Reasoning > Efficient Fallbacks
-        "gemini-3-flash",          # High Resource for GMS Analysis
-        "gemini-2.0-flash",        # [FALLBACK] Valid Direct API Model
-        "gemini-2.5-flash",        # Balanced Stable Performance
-        "gemini-3-pro-preview",    # Maximum Intelligence Tier
-        "gemini-2.5-pro",          # High Stability Reasoning
-        "gemini-2.5-flash-lite"    # Extreme Efficiency Fallback
+        "gemini-2.5-flash",        # [PRIMARY] Verified Stable & Fast
+        "gemini-2.0-flash",        # [FALLBACK] Legacy Stable
+        "gemini-1.5-flash",        # [DEEP BACKUP]
+        "gemini-3-flash"           # [EXPERIMENTAL] Low Priority until Stable
     ]
 
     gateway_slug = os.getenv("VERCEL_AI_GATEWAY_SLUG", "xljunk") # Target: xljunk
