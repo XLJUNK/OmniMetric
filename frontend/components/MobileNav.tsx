@@ -22,7 +22,7 @@ export const MobileNav = () => {
         { key: 'maxims', label: t.labels.maxims || 'Maxims', icon: ScrollText, path: '/maxims' },
     ];
     return (
-        <nav className="fixed top-0 left-0 right-0 h-[48px] bg-[#000000]/95 backdrop-blur-xl border-b border-[#1E293B] md:hidden w-full z-[9999] shadow-2xl overflow-hidden">
+        <nav className="fixed top-0 left-0 right-0 h-[48px] bg-white/95 dark:bg-[#000000]/95 backdrop-blur-xl border-b border-slate-200 dark:border-[#1E293B] md:hidden w-full z-[9999] shadow-2xl overflow-hidden transition-colors duration-300">
             <div className="grid grid-cols-8 h-full w-full items-center px-0">
                 {tabs.map((tab) => {
                     const isActive = pathname === tab.path;
@@ -39,19 +39,19 @@ export const MobileNav = () => {
                             onClick={() => router.push(`${tab.path}?lang=${lang}`)}
                             className={`group flex flex-col items-center justify-center w-full h-full transition-all relative p-0.5`}
                         >
-                            {/* Icon: Active=Blue, Inactive=Slate-300, Hover=Slate-100 */}
+                            {/* Icon: Active=Blue, Inactive=Slate-500(Light)/Slate-300(Dark), Hover=Slate-900(Light)/Slate-100(Dark) */}
                             <tab.icon
                                 className={`w-3.5 h-3.5 mb-0.5 transition-colors duration-200 ${isActive
                                     ? 'text-[#007AFF] drop-shadow-[0_0_10px_#007AFF] fill-[#007AFF]/20'
-                                    : 'text-slate-300 group-hover:text-slate-100'
+                                    : 'text-slate-500 dark:text-slate-300 group-hover:text-slate-900 dark:group-hover:text-slate-100'
                                     }`}
                                 strokeWidth={2}
                             />
 
-                            {/* Text: Active=Blue, Inactive=Slate-300, Hover=Slate-100 */}
+                            {/* Text: Active=Blue, Inactive=Slate-500(Light)/Slate-300(Dark), Hover=Slate-900(Light)/Slate-100(Dark) */}
                             <span className={`${textSizeClass} font-bold uppercase tracking-tight text-center leading-[0.85] w-full whitespace-normal break-words px-0 transition-colors duration-200 ${isActive
                                 ? 'text-[#007AFF] drop-shadow-[0_0_5px_#007AFF]'
-                                : 'text-slate-300 group-hover:text-slate-100'
+                                : 'text-slate-500 dark:text-slate-300 group-hover:text-slate-900 dark:group-hover:text-slate-100'
                                 }`}>
                                 {label}
                             </span>

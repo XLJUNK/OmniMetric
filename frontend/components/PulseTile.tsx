@@ -216,8 +216,8 @@ export const PulseTile = ({ title, score, ticker, data, onClick, lang, wikiSlug,
                 {/* CORNER 4: BOTTOM-RIGHT (Factors) - PADDING 0.75rem */}
                 <div style={{ position: 'absolute', bottom: '0.75rem', right: '0.75rem', zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'flex-end', pointerEvents: 'none' }}>
                     {factors.map((f, i) => (
-                        <div key={i} className={`text-[0.56rem] sm:text-[0.65rem] text-[#94A3B8] font-sans tracking-wider font-medium leading-tight drop-shadow-md bg-black/50 px-1.5 py-0.5 rounded backdrop-blur-[2px] mb-0.5`}>
-                            <span className="text-[0.5rem] sm:text-[0.56rem] mr-1 opacity-70 text-slate-500">{f.label}:</span>{f.status}
+                        <div key={i} className={`text-[0.56rem] sm:text-[0.65rem] ${theme === 'dark' ? 'text-[#94A3B8] bg-black/50' : 'text-slate-600 bg-slate-100 border border-slate-200'} font-sans tracking-wider font-medium leading-tight drop-shadow-md px-1.5 py-0.5 rounded backdrop-blur-[2px] mb-0.5`}>
+                            <span className={`text-[0.5rem] sm:text-[0.56rem] mr-1 opacity-70 ${theme === 'dark' ? 'text-slate-500' : 'text-slate-400'}`}>{f.label}:</span>{f.status}
                         </div>
                     ))}
                 </div>
