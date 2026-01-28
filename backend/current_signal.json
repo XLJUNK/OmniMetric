@@ -1,10 +1,10 @@
 {
-    "last_updated": "2026-01-28T22:40:15.360204+00:00",
-    "last_successful_update": "2026-01-28T22:40:15.360210+00:00",
-    "gms_score": 34,
+    "last_updated": "2026-01-28T23:06:19.199608+00:00",
+    "last_successful_update": "2026-01-28T23:06:19.199615+00:00",
+    "gms_score": 37,
     "sector_scores": {
         "STOCKS": 40,
-        "CRYPTO": 40,
+        "CRYPTO": 65,
         "FOREX": 55,
         "COMMODITIES": 55
     },
@@ -578,11 +578,11 @@
             ]
         },
         "BTC": {
-            "price": 89096.32,
+            "price": 89258.99,
             "prev_price": 89102.57,
-            "daily_chg": -0.01,
-            "change_percent": -0.02,
-            "trend": "DOWN",
+            "daily_chg": 0.18,
+            "change_percent": 0.17,
+            "trend": "UP",
             "sparkline": [
                 91308.05,
                 91027.12,
@@ -605,14 +605,14 @@
                 86572.22,
                 88267.14,
                 89102.57,
-                89096.32
+                89258.99
             ]
         },
         "ETH": {
-            "price": 3008.4,
+            "price": 3014.69,
             "prev_price": 3022.21,
-            "daily_chg": -0.46,
-            "change_percent": 2.02,
+            "daily_chg": -0.25,
+            "change_percent": 2.24,
             "trend": "DOWN",
             "sparkline": [
                 3166.84,
@@ -636,14 +636,14 @@
                 2815.9,
                 2926.46,
                 3022.21,
-                3008.4
+                3014.69
             ]
         },
         "SOL": {
-            "price": 125.45,
+            "price": 125.5,
             "prev_price": 127.05,
-            "daily_chg": -1.27,
-            "change_percent": -1.26,
+            "daily_chg": -1.22,
+            "change_percent": -1.22,
             "trend": "DOWN",
             "sparkline": [
                 136.31,
@@ -667,13 +667,13 @@
                 118.77,
                 124.14,
                 127.05,
-                125.45
+                125.5
             ]
         },
         "DXY": {
             "price": 96.34,
             "prev_price": 96.22,
-            "daily_chg": 0.12,
+            "daily_chg": 0.13,
             "change_percent": -2.05,
             "trend": "UP",
             "sparkline": [
@@ -702,10 +702,10 @@
             ]
         },
         "USDJPY": {
-            "price": 153.39,
+            "price": 153.36,
             "prev_price": 154.34,
-            "daily_chg": -0.61,
-            "change_percent": -3.2,
+            "daily_chg": -0.63,
+            "change_percent": -3.22,
             "trend": "DOWN",
             "sparkline": [
                 156.46,
@@ -729,14 +729,14 @@
                 158.5,
                 155.17,
                 154.34,
-                153.39
+                153.36
             ]
         },
         "EURUSD": {
             "price": 1.2,
             "prev_price": 1.19,
-            "daily_chg": 0.69,
-            "change_percent": 2.45,
+            "daily_chg": 0.71,
+            "change_percent": 2.46,
             "trend": "UP",
             "sparkline": [
                 1.18,
@@ -1121,10 +1121,6 @@
     },
     "history_chart": [
         {
-            "date": "2026-01-27T00:12:04Z",
-            "score": 40
-        },
-        {
             "date": "2026-01-27T00:19:47Z",
             "score": 40
         },
@@ -1359,6 +1355,10 @@
         {
             "date": "2026-01-28T22:40:15Z",
             "score": 34
+        },
+        {
+            "date": "2026-01-28T23:06:19Z",
+            "score": 37
         }
     ],
     "intelligence": null,
