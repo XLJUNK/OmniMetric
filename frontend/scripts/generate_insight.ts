@@ -65,7 +65,10 @@ async function main() {
     // News Translation (Routine) -> gemini-2.5-flash
     const isNewsTask = /translator|Translate/i.test(prompt);
     // V4.7-777: Unified on gemini-2.5-flash for all modules
-    const targetModel = 'google/gemini-2.5-flash';
+    // Allow Environment Variable Override
+    const envModel = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
+    // Ensure 'google/' prefix is present for Vercel SDK if missing
+    const targetModel = envModel.startsWith('google/') ? envModel : `google/${envModel}`;
     const taskName = isNewsTask ? 'NEWS_TRANSLATION' : 'GMS_ANALYSIS';
 
     let result;

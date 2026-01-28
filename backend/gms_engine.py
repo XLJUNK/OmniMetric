@@ -1369,12 +1369,20 @@ Output JSON:
             ai_metrics.record("node_bridge", False, int((time.time() - bridge_start) * 1000))
 
     # VERCEL AI GATEWAY - RESILIENCE PROTOCOL (PRIMARY)
-    # Strategy: Flash-Targeted Speed > High-Tier Reasoning > Efficient Fallbacks
+    # Strategy: Env Var Target > Flash-Targeted Speed > High-Tier Reasoning > Efficient Fallbacks
+    
+    target_model = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+    
+    models = [
+        target_model,              # [ENV PRIORITY]
         "gemini-2.5-flash",        # [PRIMARY] Verified Stable & Fast
         "gemini-2.0-flash",        # [FALLBACK] Legacy Stable
         "gemini-1.5-flash",        # [DEEP BACKUP]
         "gemini-3-flash"           # [EXPERIMENTAL] Low Priority until Stable
     ]
+    
+    # Remove duplicates while preserving order
+    models = list(dict.fromkeys(models))
 
     gateway_slug = os.getenv("VERCEL_AI_GATEWAY_SLUG", "xljunk") # Target: xljunk
     
