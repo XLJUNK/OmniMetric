@@ -204,9 +204,15 @@ OUTPUT FORMAT: Return ONLY a valid JSON object.
                     print(f"    [429] Rate limit hit. Backoff {current_backoff}s... (Attempt {attempt+1}/{MAX_RETRIES})")
                     time.sleep(current_backoff)
                     current_backoff *= 2 # Exponential Backoff
+                elif resp.status_code in [403, 401]:
+                    print(f"    [CRITICAL] API Permission Denied ({resp.status_code}). Key may be invalid or leaked.")
+                    print(f"    Response: {resp.text}")
+                    sys.exit(1) # Fail immediately to alert user
                 else:
                     print(f"    [AI API Error] {resp.status_code} - {self._mask_secret(resp.text)[:200]}")
                     break
+            except SystemExit:
+                raise
             except Exception as e:
                 print(f"    [AI Exception] {self._mask_secret(str(e))[:100]}...") # Masked log
                 time.sleep(10)
