@@ -149,7 +149,10 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
             )}
 
             {/* 1. Global Header Status */}
-            <div className="max-w-[1600px] mx-auto w-full px-4 md:px-6 py-3 border-b border-slate-200 dark:border-slate-800 relative z-50 transition-colors duration-300 bg-white dark:bg-[#0A0A0A]">
+            <div
+                className="max-w-[1600px] mx-auto w-full px-4 md:px-6 py-3 border-b border-slate-200 dark:border-slate-800 relative z-50 transition-colors duration-300"
+                style={{ backgroundColor: theme === 'dark' ? '#0A0A0A' : '#ffffff' }}
+            >
                 <div className="flex justify-between items-start">
                     {/* TITLE AREA */}
                     <div className="pointer-events-auto cursor-pointer" onClick={() => router.push(`/?lang=${lang}`)}>
@@ -173,7 +176,7 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
                                 {lang} <ChevronDown className="w-3 h-3" />
                             </button>
                             {isLangOpen && (
-                                <div className="absolute top-full right-0 mt-1 w-24 rounded-md overflow-hidden z-[10001] pointer-events-auto bg-white dark:bg-black border border-neutral-200 dark:border-neutral-800 outline-none shadow-lg flex flex-col p-1" style={{ backgroundColor: theme === 'dark' ? '#000000' : '#FFFFFF', opacity: 1 }}>
+                                <div className="absolute top-full right-0 mt-1 w-24 rounded-md overflow-hidden z-[10001] pointer-events-auto border border-neutral-200 dark:border-neutral-800 outline-none shadow-lg flex flex-col p-1" style={{ backgroundColor: theme === 'dark' ? '#000000' : '#FFFFFF', opacity: 1 }}>
                                     {(Object.keys(DICTIONARY) as LangType[]).map((l) => (
                                         <button
                                             key={l}
@@ -208,7 +211,10 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
             {/* 2. Primary GMS Score & AI Insight */}
             <div className="max-w-[1600px] mx-auto w-full p-4 md:p-6 grid grid-cols-1 lg:grid-cols-3 gap-4">
                 {/* GMS SCORE CARD */}
-                <div className="lg:col-span-1 bg-white dark:bg-[#111] !rounded-xl !border !border-slate-200 dark:!border-[#1E293B] !ring-0 !outline-none !shadow-none p-4 flex flex-col items-center gap-4 relative overflow-visible group">
+                <div
+                    className="lg:col-span-1 !rounded-xl !border !border-slate-200 dark:!border-[#1E293B] !ring-0 !outline-none !shadow-none p-4 flex flex-col items-center gap-4 relative overflow-visible group transition-colors duration-300"
+                    style={{ backgroundColor: theme === 'dark' ? '#111' : '#ffffff' }}
+                >
                     {/* RISK GAUGE & INFO */}
                     <div className="w-full px-1 pt-2 pb-6">
                         <div className="flex justify-end rtl:justify-start mb-1.5">
@@ -232,7 +238,10 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
                 </div>
 
                 {/* AI INSIGHT */}
-                <div className="lg:col-span-2 bg-white dark:bg-[#111] !rounded-xl !border !border-slate-200 dark:!border-[#1E293B] !ring-0 !outline-none !shadow-none p-6 flex flex-col relative overflow-hidden group min-h-[14rem]">
+                <div
+                    className="lg:col-span-2 !rounded-xl !border !border-slate-200 dark:!border-[#1E293B] !ring-0 !outline-none !shadow-none p-6 flex flex-col relative overflow-hidden group min-h-[14rem] transition-colors duration-300"
+                    style={{ backgroundColor: theme === 'dark' ? '#111' : '#ffffff' }}
+                >
                     <div className="flex items-center gap-2 mb-4 border-b !border-slate-100 dark:!border-[#1E293B] pb-3">
                         <Zap className="w-3.5 h-3.5 text-sky-500" />
                         <h3 className="text-slate-400 text-[10px] font-semibold uppercase tracking-[0.2em] flex-grow">OmniMetric AI-Driven Global Insights</h3>
@@ -299,7 +308,10 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
 
             {/* 3. News (Live Intelligence Stream) */}
             <div className="max-w-[1600px] mx-auto w-full px-4 md:px-6 mb-4">
-                <div className="bg-white dark:bg-[#111] border border-slate-200 dark:border-[#1E293B] rounded-xl overflow-hidden">
+                <div
+                    className="border border-slate-200 dark:border-[#1E293B] rounded-xl overflow-hidden transition-colors duration-300"
+                    style={{ backgroundColor: theme === 'dark' ? '#111' : '#ffffff' }}
+                >
                     <div className="bg-slate-100 dark:bg-black/40 px-6 py-4 border-b border-slate-200 dark:border-[#1E293B]">
                         <h3 className="text-slate-400 text-[10px] font-black uppercase tracking-[0.2em]">{(t.titles as any).live_stream || "LIVE INTELLIGENCE STREAM"}</h3>
                     </div>
@@ -309,7 +321,10 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
 
             {/* 4. Breaking News / Risk Events */}
             <div className="max-w-[1600px] mx-auto w-full px-4 md:px-8 mb-4">
-                <div className="bg-white dark:bg-black border border-slate-200 dark:border-[#1E293B] rounded-xl p-0">
+                <div
+                    className="border border-slate-200 dark:border-[#1E293B] rounded-xl p-0 transition-colors duration-300"
+                    style={{ backgroundColor: theme === 'dark' ? '#000000' : '#ffffff' }}
+                >
                     {(!data.events || data.events.length === 0) ? (
                         <div className="p-4 text-xs text-slate-600 font-mono">NO UPCOMING RISK EVENTS DETECTED.</div>
                     ) : (
