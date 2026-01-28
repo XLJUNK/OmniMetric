@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { DICTIONARY, LangType } from '@/data/dictionary';
+import { useTheme } from '@/components/ThemeProvider';
 
 // Professional stack approach (v5.5 UI Optimization)
 // Purpose: Instant situational awareness via "simultaneity of information"
@@ -10,6 +11,7 @@ import { DICTIONARY, LangType } from '@/data/dictionary';
 export const NewsTicker = ({ lang }: { lang: LangType }) => {
     const [news, setNews] = useState<{ title: string, link: string, isoDate?: string }[]>([]);
     const [now, setNow] = useState(Date.now());
+    const { theme } = useTheme();
     const t = DICTIONARY[lang] || DICTIONARY['EN'];
 
     useEffect(() => {
@@ -138,7 +140,11 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
     };
 
     return (
-        <div className="w-full bg-white dark:bg-[#050505] border-y border-slate-200 dark:border-white/5 shadow-2xl relative z-10 select-none" dir={isRTL ? 'rtl' : 'ltr'}>
+        <div
+            className="w-full bg-white dark:bg-[#050505] border-y border-slate-200 dark:border-white/5 shadow-2xl relative z-10 select-none"
+            dir={isRTL ? 'rtl' : 'ltr'}
+            style={{ backgroundColor: theme === 'dark' ? '#050505' : '#ffffff' }}
+        >
             <div className={`flex flex-col divide-y divide-slate-100 dark:divide-white/5 min-h-[102px]`}>
                 {news.map((item, i) => (
                     <Link

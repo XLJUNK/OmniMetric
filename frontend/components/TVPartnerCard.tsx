@@ -128,7 +128,10 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
             <div className={`flex flex-col md:flex-row items-stretch min-h-[160px] ${isRTL ? 'md:flex-row-reverse' : ''}`}>
 
                 {/* 1. Image Area (Fixed Width ~300px on Desktop to accommodate 3 images) */}
-                <div className={`w-full md:w-[300px] bg-slate-100 dark:bg-[#0f0f0f] border-b md:border-b-0 ${isRTL ? 'md:border-l' : 'md:border-r'} border-slate-200 dark:border-slate-800/50 shrink-0 overflow-hidden flex flex-col`}>
+                <div
+                    className={`w-full md:w-[300px] bg-slate-100 dark:bg-[#0f0f0f] border-b md:border-b-0 ${isRTL ? 'md:border-l' : 'md:border-r'} border-slate-200 dark:border-slate-800/50 shrink-0 overflow-hidden flex flex-col`}
+                    style={{ backgroundColor: theme === 'dark' ? '#0f0f0f' : '#ffffff' }}
+                >
                     {/* Clickable Image Container - FLEX ROW for 3 side-by-side images */}
                     <a
                         href={affiliateUrl}
