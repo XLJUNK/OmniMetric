@@ -1,11 +1,11 @@
 {
-    "last_updated": "2026-01-27T16:04:51.943604+00:00",
-    "last_successful_update": "2026-01-27T16:04:51.943611+00:00",
-    "gms_score": 38,
+    "last_updated": "2026-01-28T01:00:58.525373+00:00",
+    "last_successful_update": "2026-01-28T01:00:58.525379+00:00",
+    "gms_score": 40,
     "sector_scores": {
         "STOCKS": 60,
-        "CRYPTO": 25,
-        "FOREX": 55,
+        "CRYPTO": 40,
+        "FOREX": 60,
         "COMMODITIES": 55
     },
     "market_data": {
@@ -14,7 +14,6 @@
             "change_percent": 0.0,
             "trend": "BEARISH",
             "sparkline": [
-                24,
                 23,
                 21,
                 20,
@@ -43,15 +42,15 @@
                 25,
                 25,
                 20,
+                29,
                 29
             ]
         },
         "YIELD_SPREAD": {
-            "price": 0.55,
+            "price": 0.57,
             "change_percent": 0.0,
             "trend": "NORMAL",
             "sparkline": [
-                0.51,
                 0.52,
                 0.5,
                 0.54,
@@ -80,7 +79,8 @@
                 0.56,
                 0.55,
                 0.54,
-                0.55
+                0.55,
+                0.57
             ]
         },
         "HY_SPREAD": {
@@ -142,13 +142,12 @@
             ]
         },
         "NET_LIQUIDITY": {
-            "price": 5713.83,
-            "prev_price": 5714.39,
-            "daily_chg": -0.01,
-            "change_percent": -1.47,
-            "trend": "CONTRACTION",
+            "price": 5714.07,
+            "prev_price": 5713.83,
+            "daily_chg": 0.0,
+            "change_percent": 0.04,
+            "trend": "EXPANSION",
             "sparkline": [
-                5678.8,
                 5713.41,
                 5712.06,
                 5720.72,
@@ -177,15 +176,15 @@
                 5711.98,
                 5713.26,
                 5714.39,
-                5713.83
+                5713.83,
+                5714.07
             ]
         },
         "BREAKEVEN_INFLATION": {
-            "price": 2.32,
+            "price": 2.34,
             "change_percent": 0.0,
             "trend": "STABLE",
             "sparkline": [
-                2.23,
                 2.24,
                 2.24,
                 2.24,
@@ -214,15 +213,16 @@
                 2.34,
                 2.31,
                 2.32,
-                2.32
+                2.32,
+                2.34
             ]
         },
         "VIX": {
-            "price": 15.74,
+            "price": 16.35,
             "prev_price": 16.15,
-            "daily_chg": -2.54,
-            "change_percent": -6.86,
-            "trend": "DOWN",
+            "daily_chg": 1.24,
+            "change_percent": -3.25,
+            "trend": "UP",
             "sparkline": [
                 13.47,
                 13.6,
@@ -245,15 +245,14 @@
                 15.64,
                 16.09,
                 16.15,
-                15.74
+                16.35
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
-            "price": 0.66,
+            "price": 0.71,
             "change_percent": 0.0,
             "trend": "NEUTRAL",
             "sparkline": [
-                0.67,
                 0.67,
                 0.66,
                 0.68,
@@ -282,15 +281,15 @@
                 0.66,
                 0.65,
                 0.64,
-                0.66
+                0.66,
+                0.71
             ]
         },
         "US_10Y_YIELD": {
-            "price": 4.24,
+            "price": 4.22,
             "change_percent": 0.0,
             "trend": "STABLE",
             "sparkline": [
-                4.18,
                 4.15,
                 4.16,
                 4.12,
@@ -319,15 +318,15 @@
                 4.3,
                 4.26,
                 4.26,
-                4.24
+                4.24,
+                4.22
             ]
         },
         "REAL_INTEREST_RATE": {
-            "price": 1.92,
+            "price": 1.9,
             "change_percent": 0.0,
             "trend": "STABLE",
             "sparkline": [
-                1.93,
                 1.92,
                 1.92,
                 1.88,
@@ -356,14 +355,15 @@
                 1.97,
                 1.92,
                 1.95,
-                1.92
+                1.92,
+                1.9
             ]
         },
         "SPY": {
-            "price": 696.09,
+            "price": 695.49,
             "prev_price": 692.73,
-            "daily_chg": 0.49,
-            "change_percent": 1.56,
+            "daily_chg": 0.4,
+            "change_percent": 1.47,
             "trend": "UP",
             "sparkline": [
                 690.38,
@@ -387,14 +387,14 @@
                 688.98,
                 689.23,
                 692.73,
-                696.09
+                695.49
             ]
         },
         "TNX": {
             "price": 4.22,
             "prev_price": 4.21,
-            "daily_chg": 0.09,
-            "change_percent": -0.85,
+            "daily_chg": 0.24,
+            "change_percent": -0.71,
             "trend": "UP",
             "sparkline": [
                 4.14,
@@ -422,10 +422,10 @@
             ]
         },
         "QQQ": {
-            "price": 631.21,
+            "price": 631.13,
             "prev_price": 625.46,
-            "daily_chg": 0.92,
-            "change_percent": 2.42,
+            "daily_chg": 0.91,
+            "change_percent": 2.41,
             "trend": "UP",
             "sparkline": [
                 623.93,
@@ -449,15 +449,15 @@
                 620.76,
                 622.72,
                 625.46,
-                631.21
+                631.13
             ]
         },
         "IWM": {
-            "price": 263.55,
+            "price": 264.73,
             "prev_price": 263.98,
-            "daily_chg": -0.16,
-            "change_percent": -1.58,
-            "trend": "DOWN",
+            "daily_chg": 0.28,
+            "change_percent": -1.14,
+            "trend": "UP",
             "sparkline": [
                 252.71,
                 251.42,
@@ -480,14 +480,14 @@
                 269.79,
                 264.81,
                 263.98,
-                263.55
+                264.73
             ]
         },
         "RSP": {
-            "price": 198.99,
+            "price": 198.93,
             "prev_price": 199.24,
-            "daily_chg": -0.13,
-            "change_percent": -0.21,
+            "daily_chg": -0.16,
+            "change_percent": -0.24,
             "trend": "DOWN",
             "sparkline": [
                 193.79,
@@ -511,15 +511,15 @@
                 199.66,
                 198.77,
                 199.24,
-                198.99
+                198.93
             ]
         },
         "HYG": {
-            "price": 81.21,
+            "price": 81.17,
             "prev_price": 81.18,
-            "daily_chg": 0.03,
-            "change_percent": 0.1,
-            "trend": "UP",
+            "daily_chg": -0.01,
+            "change_percent": 0.06,
+            "trend": "DOWN",
             "sparkline": [
                 80.64,
                 80.6,
@@ -542,7 +542,7 @@
                 81.18,
                 81.14,
                 81.18,
-                81.21
+                81.17
             ]
         },
         "NIFTY": {
@@ -577,11 +577,11 @@
             ]
         },
         "BTC": {
-            "price": 87950.96,
+            "price": 89322.44,
             "prev_price": 88267.14,
-            "daily_chg": -0.36,
-            "change_percent": -1.74,
-            "trend": "DOWN",
+            "daily_chg": 1.2,
+            "change_percent": -0.2,
+            "trend": "UP",
             "sparkline": [
                 93729.03,
                 91308.05,
@@ -604,14 +604,14 @@
                 89110.73,
                 86572.22,
                 88267.14,
-                87950.96
+                89322.44
             ]
         },
         "ETH": {
-            "price": 2936.2,
+            "price": 3019.92,
             "prev_price": 2926.46,
-            "daily_chg": 0.33,
-            "change_percent": -0.58,
+            "daily_chg": 3.19,
+            "change_percent": 2.26,
             "trend": "UP",
             "sparkline": [
                 3295.95,
@@ -635,14 +635,14 @@
                 2948.74,
                 2815.9,
                 2926.46,
-                2936.2
+                3019.92
             ]
         },
         "SOL": {
-            "price": 124.87,
+            "price": 127.02,
             "prev_price": 124.14,
-            "daily_chg": 0.59,
-            "change_percent": -1.96,
+            "daily_chg": 2.32,
+            "change_percent": -0.26,
             "trend": "UP",
             "sparkline": [
                 141.1,
@@ -666,14 +666,14 @@
                 127.05,
                 118.77,
                 124.14,
-                124.87
+                127.02
             ]
         },
         "DXY": {
-            "price": 96.41,
+            "price": 95.98,
             "prev_price": 97.04,
-            "daily_chg": -0.65,
-            "change_percent": -2.38,
+            "daily_chg": -1.09,
+            "change_percent": -2.82,
             "trend": "DOWN",
             "sparkline": [
                 97.98,
@@ -697,17 +697,16 @@
                 98.36,
                 97.6,
                 97.04,
-                96.41
+                95.98
             ]
         },
         "USDJPY": {
-            "price": 153.19,
-            "prev_price": 155.17,
-            "daily_chg": -1.27,
-            "change_percent": -3.14,
+            "price": 152.59,
+            "prev_price": 154.34,
+            "daily_chg": -1.13,
+            "change_percent": -3.7,
             "trend": "DOWN",
             "sparkline": [
-                156.09,
                 156.46,
                 156.01,
                 156.41,
@@ -728,17 +727,17 @@
                 158.46,
                 158.5,
                 155.17,
-                153.19
+                154.34,
+                152.59
             ]
         },
         "EURUSD": {
             "price": 1.2,
             "prev_price": 1.19,
-            "daily_chg": 0.87,
-            "change_percent": 1.99,
+            "daily_chg": 1.2,
+            "change_percent": 2.97,
             "trend": "UP",
             "sparkline": [
-                1.18,
                 1.18,
                 1.18,
                 1.17,
@@ -759,17 +758,17 @@
                 1.17,
                 1.18,
                 1.19,
+                1.19,
                 1.2
             ]
         },
         "USDINR": {
-            "price": 91.52,
-            "prev_price": 91.5,
-            "daily_chg": 0.02,
-            "change_percent": 0.44,
-            "trend": "UP",
+            "price": 91.43,
+            "prev_price": 91.71,
+            "daily_chg": -0.31,
+            "change_percent": -0.12,
+            "trend": "DOWN",
             "sparkline": [
-                90.11,
                 89.83,
                 89.9,
                 89.77,
@@ -790,18 +789,18 @@
                 91.54,
                 91.56,
                 91.5,
-                91.52
+                91.71,
+                91.43
             ]
         },
         "USDSAR": {
             "price": 3.75,
-            "prev_price": 3.74,
-            "daily_chg": 0.13,
-            "change_percent": 0.11,
+            "prev_price": 3.75,
+            "daily_chg": 0.12,
+            "change_percent": 0.1,
             "trend": "UP",
             "sparkline": [
                 3.75,
-                3.75,
                 3.74,
                 3.75,
                 3.75,
@@ -821,14 +820,15 @@
                 3.75,
                 3.75,
                 3.74,
+                3.75,
                 3.75
             ]
         },
         "GOLD": {
-            "price": 5082.8,
+            "price": 5167.5,
             "prev_price": 5079.7,
-            "daily_chg": 0.06,
-            "change_percent": 5.19,
+            "daily_chg": 1.73,
+            "change_percent": 6.95,
             "trend": "UP",
             "sparkline": [
                 4480.6,
@@ -852,14 +852,14 @@
                 4908.8,
                 4976.2,
                 5079.7,
-                5082.8
+                5167.5
             ]
         },
         "OIL": {
-            "price": 61.59,
+            "price": 62.51,
             "prev_price": 60.63,
-            "daily_chg": 1.58,
-            "change_percent": 1.6,
+            "daily_chg": 3.1,
+            "change_percent": 3.12,
             "trend": "UP",
             "sparkline": [
                 58.35,
@@ -883,14 +883,14 @@
                 59.36,
                 61.07,
                 60.63,
-                61.59
+                62.51
             ]
         },
         "COPPER": {
-            "price": 5.86,
+            "price": 5.94,
             "prev_price": 5.98,
-            "daily_chg": -2.09,
-            "change_percent": 2.26,
+            "daily_chg": -0.68,
+            "change_percent": 3.74,
             "trend": "DOWN",
             "sparkline": [
                 5.5,
@@ -914,14 +914,14 @@
                 5.74,
                 5.91,
                 5.98,
-                5.86
+                5.94
             ]
         },
         "NATGAS": {
-            "price": 3.72,
+            "price": 3.76,
             "prev_price": 6.8,
-            "daily_chg": -45.34,
-            "change_percent": -23.75,
+            "daily_chg": -44.68,
+            "change_percent": -22.83,
             "trend": "DOWN",
             "sparkline": [
                 4.24,
@@ -945,12 +945,12 @@
                 5.05,
                 5.28,
                 6.8,
-                3.72
+                3.76
             ]
         },
         "MOVE": {
-            "price": 55.77,
-            "change_percent": -0.86,
+            "price": 56.12,
+            "change_percent": 0.63,
             "trend": "NORMAL",
             "sparkline": [
                 59.21,
@@ -971,11 +971,12 @@
                 59.56,
                 56.5,
                 56.25,
-                55.77
+                55.77,
+                56.12
             ]
         },
         "BREADTH": {
-            "price": -1.77,
+            "price": -1.71,
             "change_percent": 0.0,
             "trend": "NARROW",
             "sparkline": [
@@ -998,11 +999,11 @@
                 3.01,
                 2.51,
                 2.25,
-                1.62
+                1.68
             ]
         },
         "SPY_MOMENTUM": {
-            "price": 1.77,
+            "price": 1.71,
             "change_percent": 0,
             "trend": "SKEWED",
             "sparkline": [
@@ -1104,22 +1105,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS score 38 signals a Defensive (Risk-Off) regime. Momentum is flat, having pushed the score from 40 to 38, reflecting sustained caution. DXY (Dollar strength/Liquidity) weakened by 0.65%, and VIX (Fear/Volatility) fell 2.54%. While a defensive posture persists, this decline in DXY and VIX suggests a potential easing of systemic stress, possibly hinting at a short-term market bottom. Maintain a defensive stance, but monitor DXY/VIX for tactical accumulation signals.",
+        "content": "GMS score is 40, signaling a Defensive regime with flat momentum. While DXY (Dollar strength/Liquidity) dropped over 1%, VIX (Fear/Volatility) slightly rose, indicating persistent caution. The market awaits the Fed's rate decision, which could pivot liquidity. Maintain a defensive posture; watch for DXY's continued impact on risk assets post-Fed.",
         "reports": {
-            "JP": "GMSスコア38は防御的（リスクオフ）レジームを示唆。モメンタムはフラットで、スコアを40から38へ押し下げ、継続的な警戒を反映。DXY（ドル高/流動性）は0.65%弱化、VIX（恐怖/変動性）は2.54%下落。防御的な姿勢は続くものの、DXYとVIXの低下はシステム的ストレス緩和の可能性を示唆し、短期的な市場底入れの兆候となり得る。防御的スタンスを維持しつつ、DXY/VIXを注視し戦術的積み立てのシグナルを探る。",
-            "EN": "GMS score 38 signals a Defensive (Risk-Off) regime. Momentum is flat, having pushed the score from 40 to 38, reflecting sustained caution. DXY (Dollar strength/Liquidity) weakened by 0.65%, and VIX (Fear/Volatility) fell 2.54%. While a defensive posture persists, this decline in DXY and VIX suggests a potential easing of systemic stress, possibly hinting at a short-term market bottom. Maintain a defensive stance, but monitor DXY/VIX for tactical accumulation signals.",
-            "CN": "GMS分数38预示防御性（避险）市场。动能持平，将分数从40推至38，反映持续谨慎。DXY（美元强度/流动性）弱化0.65%，VIX（恐慌/波动性）下跌2.54%。尽管防御态势持续，DXY和VIX的下降表明系统性压力可能缓解，或预示短期市场触底。保持防御立场，但需关注DXY/VIX以寻找战术性积累信号。",
-            "ES": "La puntuación GMS de 38 indica un régimen Defensivo (Aversión al Riesgo). El impulso se mantiene plano, habiendo empujado la puntuación de 40 a 38, reflejando precaución sostenida. El DXY (fortaleza del dólar/liquidez) se debilitó un 0.65%, y el VIX (miedo/volatilidad) cayó un 2.54%. Aunque persiste la postura defensiva, el descenso del DXY y VIX sugiere una posible disminución del estrés sistémico, lo que podría indicar un fondo de mercado a corto plazo. Mantenga una postura defensiva, pero monitoree DXY/VIX para señales de acumulación táctica.",
-            "HI": "जीएमएस स्कोर 38 रक्षात्मक (जोखिम-बंद) शासन का संकेत देता है। गति सपाट है, जिसने स्कोर को 40 से 38 पर धकेला है, जो निरंतर सतर्कता को दर्शाता है। DXY (डॉलर की मजबूती/तरलता) 0.65% कमजोर हुआ, और VIX (भय/अस्थिरता) 2.54% गिर गया। जबकि रक्षात्मक रुख बना हुआ है, DXY और VIX में यह गिरावट प्रणालीगत तनाव में संभावित कमी का सुझाव देती है, संभवतः अल्पावधि में बाजार के निचले स्तर का संकेत। रक्षात्मक रुख बनाए रखें, लेकिन सामरिक संचय संकेतों के लिए DXY/VIX की निगरानी करें।",
-            "ID": "Skor GMS 38 mengindikasikan rezim Defensif (Hindari Risiko). Momentum datar, mendorong skor dari 40 ke 38, mencerminkan kehati-hatian berkelanjutan. DXY (kekuatan Dolar/Likuiditas) melemah 0.65%, dan VIX (Ketakutan/Volatilitas) turun 2.54%. Meskipun sikap defensif tetap ada, penurunan DXY dan VIX ini menunjukkan potensi meredanya tekanan sistemik, mungkin mengisyaratkan dasar pasar jangka pendek. Pertahankan posisi defensif, namun pantau DXY/VIX untuk sinyal akumulasi taktis.",
-            "AR": "يشير مؤشر GMS البالغ 38 إلى نظام دفاعي (تجنب المخاطر). الزخم ثابت، وقد دفع المؤشر من 40 إلى 38، مما يعكس حذرًا مستمرًا. ضعف مؤشر DXY (قوة الدولار/السيولة) بنسبة 0.65%، وانخفض VIX (الخوف/التقلب) بنسبة 2.54%. بينما تستمر الوضعية الدفاعية، يشير هذا الانخفاض في DXY و VIX إلى احتمال تخفيف الضغط المنهجي، ربما يلمح إلى قاع سوق قصير الأجل. حافظ على موقف دفاعي، ولكن راقب DXY/VIX لإشارات التراكم التكتيكي."
+            "JP": "GMSスコアは40で、フラットなモメンタムと共に守備的なレジームを示唆します。DXY（ドルの強さ/流動性）が1%以上下落した一方で、VIX（恐怖/変動性）はわずかに上昇し、依然として慎重な姿勢を示しています。市場はFRBの金利決定を待ち、それが流動性を転換させる可能性があります。防御的姿勢を維持し、FRB後のDXYのリスク資産への影響を注視してください。",
+            "EN": "GMS score is 40, signaling a Defensive regime with flat momentum. While DXY (Dollar strength/Liquidity) dropped over 1%, VIX (Fear/Volatility) slightly rose, indicating persistent caution. The market awaits the Fed's rate decision, which could pivot liquidity. Maintain a defensive posture; watch for DXY's continued impact on risk assets post-Fed.",
+            "CN": "GMS分数为40，表明处于防御性区间，动能持平。DXY（美元强度/流动性）下跌超1%，而VIX（恐慌/波动性）略有上升，显示市场仍保持谨慎。市场正等待美联储的利率决议，这可能改变流动性方向。请保持防御性态势，关注美联储决议后DXY对风险资产的持续影响。",
+            "ES": "La puntuación GMS es 40, señalando un régimen Defensivo con momentum plano. Aunque el DXY (Fuerza del dólar/Liquidez) cayó más del 1%, el VIX (Miedo/Volatilidad) subió ligeramente, indicando precaución persistente. El mercado espera la decisión de tipos de la Fed, que podría girar la liquidez. Mantenga una postura defensiva; observe el impacto continuo del DXY en los activos de riesgo post-Fed.",
+            "HI": "जीएमएस स्कोर 40 है, जो सपाट गति के साथ रक्षात्मक व्यवस्था का संकेत देता है। जबकि डीएक्सवाई (डॉलर की मजबूती/तरलता) में 1% से अधिक की गिरावट आई, वीआईएक्स (भय/अस्थिरता) में थोड़ी वृद्धि हुई, जो लगातार सावधानी दर्शाती है। बाजार फेड के ब्याज दर निर्णय का इंतजार कर रहा है, जो तरलता को मोड़ सकता है। रक्षात्मक रुख बनाए रखें; फेड के बाद जोखिम वाली संपत्तियों पर डीएक्सवाई के निरंतर प्रभाव पर नजर रखें।",
+            "ID": "Skor GMS adalah 40, mengindikasikan rezim Defensif dengan momentum datar. Meskipun DXY (kekuatan Dolar/Likuiditas) turun lebih dari 1%, VIX (Ketakutan/Volatilitas) sedikit naik, menunjukkan kehati-hatian yang gigih. Pasar menanti keputusan suku bunga Fed, yang dapat mengubah likuiditas. Pertahankan posisi defensif; amati dampak DXY yang berkelanjutan pada aset berisiko pasca-Fed.",
+            "AR": "نتيجة GMS هي 40، مما يشير إلى نظام دفاعي بزخم مسطح. بينما انخفض مؤشر DXY (قوة الدولار/السيولة) بأكثر من 1%، ارتفع VIX (الخوف/التقلب) قليلاً، مما يشير إلى حذر مستمر. ينتظر السوق قرار سعر الفائدة من الاحتياطي الفيدرالي، والذي قد يغير مسار السيولة. حافظ على موقف دفاعي؛ راقب التأثير المستمر لمؤشر DXY على الأصول الخطرة بعد قرار الفيدرالي."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-26T02:39:53Z",
-            "score": 32
-        },
         {
             "date": "2026-01-26T03:34:56Z",
             "score": 32
@@ -1355,92 +1352,96 @@
         {
             "date": "2026-01-27T16:04:51Z",
             "score": 38
+        },
+        {
+            "date": "2026-01-28T01:00:58Z",
+            "score": 40
         }
     ],
     "intelligence": {
         "news": [
             {
-                "title": "Humana, UnitedHealth plunge 20% after Trump administration proposes keeping Medicare Advantage rates flat",
-                "link": "https://www.cnbc.com/2026/01/26/health-insurers-tumble-after-trump-proposes-keeping-medicare-rates-flat.html",
-                "isoDate": "2026-01-27T15:01:16+00:00Z"
+                "title": "The Fed releases its latest interest rate decision Wednesday. Here's what to expect",
+                "link": "https://www.cnbc.com/2026/01/27/fed-preview-january-2026.html",
+                "isoDate": "2026-01-27T19:43:34+00:00Z"
             },
             {
-                "title": "Amazon converting Fresh supermarkets, Go stores to Whole Foods locations",
-                "link": "https://www.cnbc.com/2026/01/27/amazon-fresh-go-supermarkets-whole-foods-convert.html",
-                "isoDate": "2026-01-27T16:02:25+00:00Z"
+                "title": "Homebuyers are backing out of deals at the fastest pace in nearly a decade",
+                "link": "https://www.cnbc.com/2026/01/27/homebuyers-backing-out-of-deals.html",
+                "isoDate": "2026-01-27T20:28:11+00:00Z"
             },
             {
-                "title": "ICE chief ordered to appear in Minnesota federal court, judge threatens contempt ruling",
-                "link": "https://www.cnbc.com/2026/01/27/ice-chief-todd-lyons-minnesota-court-contempt.html",
-                "isoDate": "2026-01-27T15:08:43+00:00Z"
+                "title": "Dollar suffers worst one-day slide since last April after Trump says currency hasn't fallen too low",
+                "link": "https://www.cnbc.com/2026/01/27/dollar-worst-one-day-rout-since-april-trump-says-hasnt-fallen-too-low.html",
+                "isoDate": "2026-01-28T00:18:42+00:00Z"
             },
             {
-                "title": "Tesla lost $15 billion in brand value in 2025 as Musk stepped deeper into politics, research shows",
-                "link": "https://www.cnbc.com/2026/01/27/tesla-brand-value-2025-musk-politics.html",
-                "isoDate": "2026-01-27T15:47:04+00:00Z"
+                "title": "The government is barreling toward a partial shutdown over DHS funding. Here's what to expect",
+                "link": "https://www.cnbc.com/2026/01/27/us-government-shutdown-over-dhs-funding.html",
+                "isoDate": "2026-01-27T22:42:21+00:00Z"
             },
             {
-                "title": "UPS to cut additional 30,000 jobs in Amazon unwind, turnaround plan",
-                "link": "https://www.cnbc.com/2026/01/27/ups-job-cuts-amazon-unwind-turnaround-plan.html",
-                "isoDate": "2026-01-27T15:47:03+00:00Z"
+                "title": "Trump says 'we're going to de-escalate a little bit' in Minnesota after Alex Pretti killing",
+                "link": "https://www.cnbc.com/2026/01/27/alex-pretti-trump-investigation-greg-bovino-homan-minnesota.html",
+                "isoDate": "2026-01-27T22:01:00+00:00Z"
             },
             {
-                "title": "Big Tech stocks have been stuck for months. One top tech analyst says it’s time to buy",
-                "link": "https://www.cnbc.com/2026/01/27/big-tech-stocks-have-been-stuck-one-top-analyst-says-its-time-to-buy.html",
-                "isoDate": "2026-01-27T15:05:46+00:00Z"
+                "title": "This energy ETF is set to break through a key level, charts show. Two ways to play the trend",
+                "link": "https://www.cnbc.com/2026/01/27/this-energy-etf-is-set-to-break-through-a-key-level-charts-show-how-to-play-it.html",
+                "isoDate": "2026-01-27T20:38:06+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "ヒューマナ、ユナイテッドヘルスが20%急落、トランプ政権がメディケア・アドバンテージ料率据え置きを提案後",
-                "アマゾン、フレッシュスーパーマーケットとGoストアをホールフーズ店舗に転換",
-                "ICE長官、ミネソタ連邦裁判所への出廷を命じられる、判事が侮辱罪の判決を警告",
-                "テスラ、2025年にブランド価値150億ドルを喪失、マスク氏が政治に深く関与したため、と調査が示す",
-                "UPS、アマゾンとの提携解消と再建計画で追加3万人の人員削減へ",
-                "大手テクノロジー株は数ヶ月間停滞。あるトップテックアナリストは今が買い時だと語る"
+                "FRBは水曜日に最新の金利決定を発表します。注目すべき点はこちら。",
+                "住宅購入者が契約を撤回するペースが約10年で最速に。",
+                "トランプ氏が「通貨は十分に下落していない」と発言後、ドルが昨年4月以来最大の1日下落を記録。",
+                "政府はDHS（国土安全保障省）の資金調達を巡り部分的な閉鎖に向かっています。注目すべき点はこちら。",
+                "アレックス・プレッティ殺害後、トランプ氏がミネソタで「少しばかり事態を鎮静化させるつもりだ」と発言。",
+                "このエネルギーETFは主要な水準を突破する見込みとチャートが示しています。トレンドに乗る2つの方法。"
             ],
             "CN": [
-                "在特朗普政府提议维持医疗保险优惠计划费率不变后，Humana和UnitedHealth股价暴跌20%",
-                "亚马逊将Fresh超市和Go门店改造为全食超市（Whole Foods）门店",
-                "ICE局长被勒令在明尼苏达州联邦法院出庭，法官威胁将作出藐视法庭裁决",
-                "研究显示，由于马斯克更深入地涉足政治，特斯拉在2025年损失了150亿美元的品牌价值",
-                "UPS将在与亚马逊解绑及转型计划中裁减额外3万个工作岗位",
-                "大型科技股已停滞数月。一位顶级科技分析师表示，现在是买入时机"
+                "美联储周三公布最新利率决议。以下是预期。",
+                "购房者退出交易的速度达到近十年来的最快水平。",
+                "特朗普称美元跌幅不够，美元创去年4月以来最大单日跌幅。",
+                "政府因国土安全部资金问题正迅速走向部分停摆。以下是预期。",
+                "特朗普在亚历克斯·普雷蒂遇害后表示，将在明尼苏达州“稍微缓和一下局势”。",
+                "图表显示，这只能源ETF将突破关键水平。把握趋势的两种方式。"
             ],
             "ES": [
-                "Humana y UnitedHealth caen un 20% después de que la administración Trump propusiera mantener las tarifas de Medicare Advantage sin cambios",
-                "Amazon convierte sus supermercados Fresh y tiendas Go en ubicaciones de Whole Foods",
-                "El jefe de ICE es ordenado a comparecer en un tribunal federal de Minnesota; el juez amenaza con dictar desacato",
-                "Tesla perdió 15.000 millones de dólares en valor de marca en 2025 a medida que Musk se adentró más en la política, según una investigación",
-                "UPS recortará 30.000 puestos de trabajo adicionales en el desenlace con Amazon y plan de reestructuración",
-                "Las acciones de las grandes tecnológicas llevan meses estancadas. Un analista tecnológico líder dice que es hora de comprar"
+                "La Fed publica su última decisión sobre tipos de interés el miércoles. Esto es lo que se espera.",
+                "Los compradores de vivienda están desistiendo de los acuerdos al ritmo más rápido en casi una década.",
+                "El dólar sufre su peor caída en un solo día desde el pasado abril después de que Trump dijera que la moneda no ha caído demasiado.",
+                "El gobierno se precipita hacia un cierre parcial por la financiación del DHS. Esto es lo que se espera.",
+                "Trump dice que \"vamos a desescalar un poco\" en Minnesota después del asesinato de Alex Pretti.",
+                "Este ETF de energía está a punto de romper un nivel clave, muestran los gráficos. Dos formas de operar la tendencia."
             ],
             "HI": [
-                "ट्रम्प प्रशासन द्वारा मेडिकेयर एडवांटेज दरों को अपरिवर्तित रखने का प्रस्ताव रखने के बाद हुमाना, यूनाइटेडहेल्थ 20% गिर गए",
-                "अमेज़न फ्रेश सुपरमार्केट और गो स्टोर्स को होल फूड्स स्थानों में बदल रहा है",
-                "ICE प्रमुख को मिनेसोटा संघीय अदालत में पेश होने का आदेश, न्यायाधीश ने अवमानना ​​शास के लिए धमकाया",
-                "शोध से पता चलता है कि मस्क के राजनीति में गहराई से उतरने के कारण टेस्ला ने 2025 में ब्रांड मूल्य में $15 बिलियन खो दिए",
-                "अमेज़न से अलग होने और पुनरुत्थान योजना में UPS अतिरिक्त 30,000 नौकरियाँ काटेगा",
-                "बिग टेक स्टॉक कई महीनों से अटके हुए हैं। एक शीर्ष तकनीकी विश्लेषक का कहना है कि यह खरीदने का समय है"
+                "फेड बुधवार को अपनी नवीनतम ब्याज दर के फैसले की घोषणा करेगा। यहां जानें क्या उम्मीद करें।",
+                "घर खरीदार लगभग एक दशक में सबसे तेज़ गति से सौदों से पीछे हट रहे हैं।",
+                "ट्रंप के यह कहने के बाद कि मुद्रा बहुत ज़्यादा नहीं गिरी है, डॉलर को पिछले अप्रैल के बाद से सबसे बड़ी एक दिवसीय गिरावट का सामना करना पड़ा।",
+                "डीएचएस फंडिंग को लेकर सरकार आंशिक शटडाउन की ओर बढ़ रही है। यहां जानें क्या उम्मीद करें।",
+                "एलेक्स प्रीटी की हत्या के बाद ट्रंप ने कहा कि मिनेसोटा में 'हम थोड़ा-बहुत तनाव कम करने जा रहे हैं'।",
+                "चार्ट दिखाते हैं कि यह ऊर्जा ईटीएफ एक महत्वपूर्ण स्तर को तोड़ने के लिए तैयार है। प्रवृत्ति को खेलने के दो तरीके।"
             ],
             "ID": [
-                "Humana, UnitedHealth anjlok 20% setelah pemerintahan Trump mengusulkan untuk mempertahankan tarif Medicare Advantage tetap",
-                "Amazon mengubah supermarket Fresh, toko Go menjadi lokasi Whole Foods",
-                "Kepala ICE diperintahkan hadir di pengadilan federal Minnesota, hakim mengancam putusan penghinaan",
-                "Tesla kehilangan $15 miliar nilai merek pada tahun 2025 karena Musk semakin mendalami politik, tunjuk penelitian",
-                "UPS akan memangkas 30.000 pekerjaan tambahan dalam pembubaran Amazon, rencana perbaikan",
-                "Saham Big Tech telah macet selama berbulan-bulan. Seorang analis teknologi top mengatakan ini saatnya untuk membeli"
+                "The Fed merilis keputusan suku bunga terbarunya pada hari Rabu. Berikut yang perlu Anda harapkan.",
+                "Pembeli rumah membatalkan kesepakatan dengan laju tercepat dalam hampir satu dekade.",
+                "Dolar mengalami penurunan satu hari terburuk sejak April lalu setelah Trump mengatakan mata uang tersebut belum jatuh terlalu rendah.",
+                "Pemerintah sedang menuju penutupan sebagian karena pendanaan DHS. Berikut yang perlu Anda harapkan.",
+                "Trump mengatakan 'kita akan meredakan sedikit ketegangan' di Minnesota setelah pembunuhan Alex Pretti.",
+                "ETF energi ini diperkirakan akan menembus level kunci, demikian yang ditunjukkan oleh grafik. Dua cara untuk memanfaatkan tren."
             ],
             "AR": [
-                "هيومانا ويونايتد هيلث يهويان 20% بعد اقتراح إدارة ترامب الإبقاء على معدلات ميديكير أدفانتج دون تغيير",
-                "أمازون تحول متاجر فريش سوبرماركت ومتاجر جو إلى مواقع هول فودز",
-                "رئيس ICE يُطلب للمثول أمام محكمة مينيسوتا الفدرالية، والقاضي يهدد بحكم ازدراء المحكمة",
-                "أظهرت الأبحاث أن تسلا خسرت 15 مليار دولار من قيمة علامتها التجارية في عام 2025 مع تعمق ماسك في السياسة",
-                "يو بي إس (UPS) ستخفض 30 ألف وظيفة إضافية ضمن خطة التخارج من أمازون وإعادة الهيكلة",
-                "أسهم شركات التكنولوجيا الكبرى عالقة منذ أشهر. محلل تقني بارز يقول إن الوقت قد حان للشراء"
+                "يعلن الفيدرالي قراره الأخير بشأن أسعار الفائدة يوم الأربعاء. إليك ما يمكن توقعه.",
+                "يتراجع مشترو المنازل عن الصفقات بأسرع وتيرة في ما يقرب من عقد من الزمان.",
+                "الدولار يتكبد أسوأ انخفاض ليوم واحد منذ أبريل الماضي بعد قول ترامب إن العملة لم تنخفض كثيرًا.",
+                "الحكومة تتجه نحو إغلاق جزئي بسبب تمويل وزارة الأمن الداخلي. إليك ما يمكن توقعه.",
+                "ترامب يقول \"سنهدئ الأمور قليلاً\" في مينيسوتا بعد مقتل أليكس بريتي.",
+                "يُظهر الرسم البياني أن صندوق المؤشرات المتداولة للطاقة هذا يستعد لاختراق مستوى رئيسي. طريقتان للاستفادة من هذا الاتجاه."
             ]
         },
-        "last_updated": "2026-01-27T16:05:07.821397+00:00"
+        "last_updated": "2026-01-28T01:01:11.290860+00:00"
     },
     "system_status": "OPERATIONAL"
 }
