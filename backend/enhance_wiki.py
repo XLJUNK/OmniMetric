@@ -20,7 +20,7 @@ API_KEY = os.getenv("GEMINI_API_KEY")
 
 # CRITICAL: RATE LIMIT SETTINGS
 REQUEST_INTERVAL = 5   # Increased to 5s for Safety (Max 12 RPM)
-MAX_RETRIES = 5
+MAX_RETRIES = 2        # Reduced from 5 (Fail Fast)
 BASE_BACKOFF = 30      # Reduced from 60s
 
 PERSONA_LABELS = {
@@ -198,7 +198,7 @@ OUTPUT FORMAT: Return ONLY a valid JSON object.
         
         for attempt in range(MAX_RETRIES):
             try:
-                resp = requests.post(url, json=payload, headers={"Content-Type": "application/json"}, timeout=120)
+                resp = requests.post(url, json=payload, headers={"Content-Type": "application/json"}, timeout=60)
                 
                 if resp.status_code == 200:
                     return resp.json()['candidates'][0]['content']['parts'][0]['text']
