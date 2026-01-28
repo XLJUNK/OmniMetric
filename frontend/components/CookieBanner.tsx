@@ -34,7 +34,7 @@ export function CookieBanner() {
     if (!isVisible) return null;
 
     return (
-        <div className="fixed bottom-4 left-4 z-[9999] max-w-[320px] w-full bg-[#000000] border-l-2 border-cyan-500 p-5 shadow-[0_0_40px_rgba(0,0,0,0.9)] flex flex-col gap-4 animate-in fade-in slide-in-from-bottom-8 duration-700">
+        <div className="fixed bottom-4 left-4 z-[9999] max-w-[320px] w-full bg-white dark:bg-[#000000] border-l-2 border-cyan-500 p-5 shadow-[0_0_40px_rgba(0,0,0,0.2)] dark:shadow-[0_0_40px_rgba(0,0,0,0.9)] flex flex-col gap-4 animate-in fade-in slide-in-from-bottom-8 duration-700">
             <div className="flex items-center gap-2 border-b border-[#1E293B] pb-2">
                 <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse shadow-[0_0_8px_#22d3ee]"></div>
                 <span className="text-[10px] text-cyan-400 font-mono uppercase tracking-[0.25em]">System Protocol</span>
