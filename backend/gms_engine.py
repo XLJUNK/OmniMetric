@@ -1307,9 +1307,9 @@ Output JSON:
                     
                     # Robust JSON Extraction (Replaces fragile Regex)
                     try:
-                        # 1. Clean Output (Remove dotenv noise)
+                        # 1. Clean Output (Remove dotenv noise and other prefixes)
                         lines = stdout_content.splitlines()
-                        clean_lines = [line for line in lines if not line.strip().startswith("[") and not line.strip().startswith("Note:")]
+                        clean_lines = [line for line in lines if not line.strip().startswith("Note:") and "[dotenv" not in line]
                         clean_stdout = "\n".join(clean_lines)
 
                         # 2. Find JSON boundaries
