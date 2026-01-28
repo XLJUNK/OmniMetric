@@ -208,7 +208,7 @@ OUTPUT FORMAT: Return ONLY a valid JSON object.
                     current_backoff *= 2 # Exponential Backoff
                 elif resp.status_code in [403, 401]:
                     print(f"    [CRITICAL] API Permission Denied ({resp.status_code}). Key may be invalid or leaked.")
-                    print(f"    Response: {resp.text}")
+                    print(f"    Response: {self._mask_secret(resp.text)}")
                     sys.exit(1) # Fail immediately to alert user
                 else:
                     print(f"    [AI API Error] {resp.status_code} - {self._mask_secret(resp.text)[:200]}")

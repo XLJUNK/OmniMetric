@@ -136,7 +136,8 @@ export async function GET(request: Request) {
             { width: 1200, height: 630, ...fontOptions }
         );
     } catch (error: any) {
-        console.error(`[OG/Main] Critical Render Failure | URL: ${request.url}`, {
+        console.error('[OG/Main] Critical Render Failure', {
+            url: request.url,
             error: error.message,
             stack: error.stack
         });
