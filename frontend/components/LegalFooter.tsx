@@ -4,16 +4,21 @@ import Link from 'next/link';
 import { LangType, DICTIONARY } from '@/data/dictionary';
 import { useDevice } from '@/hooks/useDevice';
 import { useCurrentLang } from '@/hooks/useCurrentLang';
+import { useTheme } from '@/components/ThemeProvider';
 import { Zap } from 'lucide-react';
 
 export const LegalFooter = () => {
     const lang = useCurrentLang();
     const t = DICTIONARY[lang];
     const { isMobile } = useDevice();
+    const { theme } = useTheme();
     const lowerLang = lang.toLowerCase();
 
     return (
-        <footer className="w-full bg-slate-50 dark:bg-[#050505] border-t border-slate-200 dark:border-slate-800 mt-auto transition-colors duration-300">
+        <footer
+            className="w-full bg-slate-50 dark:bg-[#050505] border-t border-slate-200 dark:border-slate-800 mt-auto transition-colors duration-300"
+            style={{ backgroundColor: theme === 'dark' ? '#050505' : '#F8FAFC' }}
+        >
             {/* Minimal Link Bar */}
             <div className="w-full bg-slate-100 dark:bg-[#0a0a0a] border-b border-slate-200 dark:border-slate-800/50 py-3">
                 <div className={`max-w-[1600px] mx-auto flex flex-wrap justify-center items-center gap-x-4 gap-y-3 px-4 text-[10px] font-mono tracking-wider`}>

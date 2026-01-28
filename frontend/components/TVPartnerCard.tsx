@@ -6,12 +6,15 @@ import { LangType, DICTIONARY } from '@/data/dictionary';
 import { TRADINGVIEW_ADS, AdSegment } from '@/data/tradingview-ads';
 import Image from 'next/image';
 
+import { useTheme } from '@/components/ThemeProvider';
+
 interface TVPartnerCardProps {
     lang: LangType;
     variant?: 'default' | 'minimal' | 'sidebar' | 'text-link';
 }
 
 export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps) => {
+    const { theme } = useTheme();
     // 1. Load Data
     const adContent = TRADINGVIEW_ADS[lang] || TRADINGVIEW_ADS['EN'];
     const isRTL = lang === 'AR';
@@ -116,7 +119,10 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
 
     // VARIANT: Default (Main Banner) - COMPACT INTEGRATED DESIGN
     return (
-        <div className="w-full relative group overflow-hidden bg-slate-50 dark:bg-[#0A0A0A] border border-slate-200 dark:border-slate-800 rounded-xl transition-all duration-300 shadow-sm dark:shadow-none my-6">
+        <div
+            className="w-full relative group overflow-hidden bg-slate-50 dark:bg-[#0A0A0A] border border-slate-200 dark:border-slate-800 rounded-xl transition-all duration-300 shadow-sm dark:shadow-none my-6"
+            style={{ backgroundColor: theme === 'dark' ? '#0A0A0A' : '#ffffff' }}
+        >
 
             {/* Added: Specific min-height to ensure structure visibility */}
             <div className={`flex flex-col md:flex-row items-stretch min-h-[160px] ${isRTL ? 'md:flex-row-reverse' : ''}`}>

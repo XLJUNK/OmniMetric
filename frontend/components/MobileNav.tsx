@@ -4,11 +4,13 @@ import { Home, LineChart, Bitcoin, Banknote, Gem, Globe, ScrollText, Activity } 
 import { usePathname, useRouter } from 'next/navigation';
 import { DICTIONARY } from '@/data/dictionary';
 import { useCurrentLang } from '@/hooks/useCurrentLang';
+import { useTheme } from '@/components/ThemeProvider';
 
 export const MobileNav = () => {
     const pathname = usePathname();
     const router = useRouter();
     const lang = useCurrentLang();
+    const { theme } = useTheme();
     const t = DICTIONARY[lang];
 
     const tabs = [
@@ -22,7 +24,10 @@ export const MobileNav = () => {
         { key: 'maxims', label: t.labels.maxims || 'Maxims', icon: ScrollText, path: '/maxims' },
     ];
     return (
-        <nav className="fixed top-0 left-0 right-0 h-[48px] bg-white/95 dark:bg-[#000000]/95 backdrop-blur-xl border-b border-slate-200 dark:border-[#1E293B] md:hidden w-full z-[9999] shadow-2xl overflow-hidden transition-colors duration-300">
+        <nav
+            className="fixed top-0 left-0 right-0 h-[48px] bg-white/95 dark:bg-[#000000]/95 backdrop-blur-xl border-b border-slate-200 dark:border-[#1E293B] md:hidden w-full z-[9999] shadow-2xl overflow-hidden transition-colors duration-300"
+            style={{ backgroundColor: theme === 'dark' ? '#000000' : '#ffffff' }}
+        >
             <div className="grid grid-cols-8 h-full w-full items-center px-0">
                 {tabs.map((tab) => {
                     const isActive = pathname === tab.path;
