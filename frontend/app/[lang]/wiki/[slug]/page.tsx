@@ -5,8 +5,26 @@ import { LangType, DICTIONARY } from '@/data/dictionary';
 import { getWikiItem, getAllSlugs, WikiItem, getWikiData } from '@/lib/wiki';
 import { DynamicStructuredData } from '@/components/DynamicStructuredData';
 import { AdSenseSlot } from '@/components/AdSenseSlot';
-import { ArrowLeft, Share2, TrendingUp, BookOpen, Quote, Activity, Home, ChevronRight } from 'lucide-react';
+import { ArrowLeft, Share2, TrendingUp, BookOpen, Quote, Activity, Home, ChevronRight, Globe, Cpu, Scale, Zap, Users } from 'lucide-react';
 import { Metadata } from 'next';
+
+// UI Helpers
+const ExpertCard = ({ role, icon: Icon, color, bg, content, isRTL }: any) => {
+    if (!content) return null;
+    return (
+        <div className={`p-4 rounded-xl border border-border bg-card hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors ${isRTL ? 'text-right' : 'text-left'}`}>
+            <div className={`flex items-center gap-2 mb-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                <div className={`p-1.5 rounded ${bg} ${color}`}>
+                    <Icon className="w-4 h-4" />
+                </div>
+                <span className="text-[10px] font-black uppercase tracking-widest text-slate-500">{role}</span>
+            </div>
+            <p className="text-xs md:text-sm leading-6 md:leading-7 font-medium text-slate-700 dark:text-slate-300">
+                &ldquo;{content}&rdquo;
+            </p>
+        </div>
+    );
+};
 
 // Generate params for SSG
 export async function generateStaticParams() {
@@ -155,10 +173,40 @@ export default async function WikiDetailPage({ params }: Props) {
                         <p className="text-lg text-slate-400 font-serif leading-relaxed">
                             {getContentDescription(item, normalizedLang)}
                         </p>
+
+                        {/* V4.7 HEAVY: Deep Dive */}
+                        {item.heavy?.deep_dive && (
+                            <div className="mt-8 p-6 bg-slate-50 dark:bg-slate-900/50 border-l-4 border-sky-500 text-sm leading-8 text-slate-700 dark:text-slate-300 font-serif">
+                                <h3 className="text-xs font-black text-sky-500 uppercase tracking-widest mb-2 font-sans">Deep Dive Context</h3>
+                                {item.heavy.deep_dive}
+                            </div>
+                        )}
                     </header>
+
+                    {/* V4.7 HEAVY: THE COUNCIL (Hybrid Integration) */}
+                    {item.heavy?.council_debate && Object.keys(item.heavy.council_debate).length > 0 && (
+                        <section className="space-y-6">
+                            <h2 className={`text-xl font-black uppercase tracking-tighter flex items-center gap-3 ${isRTL ? 'justify-end' : ''}`}>
+                                <Users className="w-5 h-5 text-sky-500" />
+                                <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-purple-500">
+                                    The Council Debate
+                                </span>
+                            </h2>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                {/* Expert Cards */}
+                                <ExpertCard role="Geopolitics" icon={Globe} color="text-emerald-400" bg="bg-emerald-400/10" content={item.heavy.council_debate.geopolitics} isRTL={isRTL} />
+                                <ExpertCard role="Macro" icon={Activity} color="text-sky-400" bg="bg-sky-400/10" content={item.heavy.council_debate.macro} isRTL={isRTL} />
+                                <ExpertCard role="Quant" icon={Cpu} color="text-violet-400" bg="bg-violet-400/10" content={item.heavy.council_debate.quant} isRTL={isRTL} />
+                                <ExpertCard role="Technical" icon={TrendingUp} color="text-amber-400" bg="bg-amber-400/10" content={item.heavy.council_debate.technical} isRTL={isRTL} />
+                                <ExpertCard role="Policy" icon={Scale} color="text-rose-400" bg="bg-rose-400/10" content={item.heavy.council_debate.policy} isRTL={isRTL} />
+                                <ExpertCard role="Tech" icon={Zap} color="text-cyan-400" bg="bg-cyan-400/10" content={item.heavy.council_debate.tech} isRTL={isRTL} />
+                            </div>
+                        </section>
+                    )}
 
                     {/* Content Body Based on Type */}
                     <div className="space-y-12">
+
 
                         {/* GLOSSARY SPECIFIC */}
                         {item.type === 'glossary' && (

@@ -1,8 +1,8 @@
 name: Wiki Heavy Rollout (V4.7-777)
 
 on:
-#  schedule:
-#    - cron: '10,30,50 * * * *' # Every 20 minutes (offset from main updates at :05, :35)
+  schedule:
+    - cron: '20 * * * *' # Every hour at :20 (Strategic Gap from Main Engine)
   workflow_dispatch:
 
 concurrency:

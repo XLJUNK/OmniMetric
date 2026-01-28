@@ -1,7 +1,10 @@
 import { LangType } from '@/data/dictionary';
 import { GlossaryTerm } from '@/types/glossary';
+// Server-side imports for Heavy Data
+import fs from 'fs';
+import path from 'path';
 
-// Import all data (Server-side only usually, but we import here for the helper)
+// Import all data (Standard Light Data)
 import glossaryEn from '@/data/glossary-en.json';
 import glossaryJa from '@/data/glossary-ja.json';
 import glossaryCn from '@/data/glossary-cn.json';
@@ -35,7 +38,22 @@ export interface WikiItem {
     category: string;
     title: string;
     tags: string[];
-    data: any; // The raw object from JSON
+    data: any; // Light data
+    heavy?: {
+        summary: string;
+        deep_dive: string;
+        council_debate: {
+            geopolitics: string;
+            macro: string;
+            quant: string;
+            technical: string;
+            policy: string;
+            tech: string;
+        };
+        forecast_risks: string;
+        gms_conclusion: string;
+        generated_at: string;
+    };
 }
 
 const glossaryMap: Record<LangType, any> = { EN: glossaryEn, JP: glossaryJa, CN: glossaryCn, ES: glossaryEs, HI: glossaryHi, ID: glossaryId, AR: glossaryAr };
@@ -52,6 +70,37 @@ const slugify = (text: string) => {
         .replace(/-+$/, '');            // Trim - from end
 };
 
+// Helper: Try Load Heavy Data
+const loadHeavyData = (slug: string, lang: LangType) => {
+    try {
+        // Look in frontend/data/wiki_heavy
+        const filePath = path.join(process.cwd(), 'data', 'wiki_heavy', `${slug}-${lang.toLowerCase()}.json`);
+        if (fs.existsSync(filePath)) {
+            const raw = fs.readFileSync(filePath, 'utf-8');
+            const heavy = JSON.parse(raw);
+
+            // Parse council_debate if stringified
+            if (heavy.sections && heavy.sections.council_debate && typeof heavy.sections.council_debate === 'string') {
+                try {
+                    heavy.sections.council_debate = JSON.parse(heavy.sections.council_debate);
+                } catch { }
+            }
+
+            return {
+                summary: heavy.sections?.summary || "",
+                deep_dive: heavy.sections?.deep_dive || "",
+                council_debate: heavy.sections?.council_debate || {},
+                forecast_risks: heavy.sections?.forecast_risks || "",
+                gms_conclusion: heavy.sections?.gms_conclusion || "",
+                generated_at: heavy.generated_at
+            };
+        }
+    } catch (e) {
+        // Fail silent, return undefined (Hybrid Fallback)
+    }
+    return undefined;
+};
+
 export const getWikiData = (lang: LangType) => {
     // 1. Glossary
     const glossary = (glossaryMap[lang] || glossaryEn).map((item: any) => ({
@@ -60,32 +109,31 @@ export const getWikiData = (lang: LangType) => {
         category: item.category,
         title: item.term,
         tags: item.seo_keywords || [],
-        data: item
+        data: item,
+        heavy: loadHeavyData(item.id, lang)
     }));
 
     // 2. Technical
-    // We must rely on EN structure for slug generation to ensure consistency across languages
     const techEn = technicalEn;
     const techTarget = technicalMap[lang] || technicalEn;
 
     const technical: WikiItem[] = [];
     techEn.forEach((cat: any, catIdx: number) => {
         cat.indicators.forEach((ind: any, indIdx: number) => {
-            // Get target language item using indices
             const targetCat = techTarget[catIdx];
             const targetInd = targetCat?.indicators[indIdx];
-
-            // Fallback to EN if target missing
             const finalInd = targetInd || ind;
 
             if (finalInd) {
+                const slug = slugify(ind.name);
                 technical.push({
-                    slug: slugify(ind.name), // Always use EN name for slug
+                    slug: slug,
                     type: 'technical' as WikiType,
                     category: targetCat?.category || cat.category,
                     title: finalInd.name,
                     tags: finalInd.seo_keywords || [],
-                    data: finalInd
+                    data: finalInd,
+                    heavy: loadHeavyData(slug, lang)
                 });
             }
         });
@@ -100,7 +148,6 @@ export const getWikiData = (lang: LangType) => {
         cat.quotes.forEach((quote: any, quoteIdx: number) => {
             const targetCat = maxTarget[catIdx];
             const targetQuote = targetCat?.quotes[quoteIdx];
-
             const finalQuote = targetQuote || quote;
 
             if (finalQuote) {
@@ -110,7 +157,8 @@ export const getWikiData = (lang: LangType) => {
                     category: targetCat?.category || cat.category,
                     title: `"${finalQuote.text}"`,
                     tags: [finalQuote.attribution || ''],
-                    data: finalQuote
+                    data: finalQuote,
+                    heavy: loadHeavyData(quote.id, lang)
                 });
             }
         });
@@ -125,6 +173,5 @@ export const getWikiItem = (slug: string, lang: LangType): WikiItem | undefined 
 };
 
 export const getAllSlugs = () => {
-    // Return all unique slugs (based on EN)
     return getWikiData('EN').map(item => item.slug);
 };

@@ -1,7 +1,7 @@
 name: Daily GMS Correlation Archive
 on:
   schedule:
-    - cron: '0 21 * * 1-5' # 21:00 UTC (Market Close EST) Mon-Fri
+    - cron: '0 21 * * *' # 21:00 UTC (Daily Archive)
   workflow_dispatch:
 
 jobs:
