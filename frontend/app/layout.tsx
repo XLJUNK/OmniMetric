@@ -82,7 +82,45 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // ... (keeping jsonLd logic hidden here for brevity, assume it's same) ...
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "OmniMetric",
+        "url": "https://omnimetric.ai",
+        "logo": "https://omnimetric.ai/icon.png",
+        "sameAs": [
+          "https://twitter.com/omnimetric",
+          "https://github.com/omnimetric"
+        ]
+      },
+      {
+        "@type": "Dataset",
+        "name": "Global Macro Signal (GMS) Index",
+        "description": "Real-time algorithmic risk scoring (0-100) for global financial markets, integrating Net Liquidity, Volatility (VIX/MOVE), and Credit Spreads.",
+        "creator": {
+          "@type": "Organization",
+          "name": "OmniMetric"
+        },
+        "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "variableMeasured": [
+          "Global Macro Score",
+          "US Net Liquidity",
+          "Bond Volatility (MOVE)",
+          "High Yield Spread"
+        ]
+      },
+      {
+        "@type": "FinancialQuote",
+        "name": "OmniMetric GMS Score",
+        "symbol": "GMS",
+        "price": "36",
+        "priceCurrency": "USD",
+        "marketCapitalization": "Institutional"
+      }
+    ]
+  };
 
   return (
     <html lang="en">
