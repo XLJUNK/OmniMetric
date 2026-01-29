@@ -66,7 +66,7 @@ async function main() {
     const isNewsTask = /translator|Translate/i.test(prompt);
     // V4.7-777: Unified Strategy
     // GMS Analysis -> Use Env Model (default: gemini-3-flash or 2.5-flash)
-    // News Translation -> Force Cheaper Model (gemini-2.5-flash-lite or 1.5-flash) to save quota
+    // News Translation -> Force Cheaper Model (gemini-2.5-flash-lite) to save quota
     let envModel = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
 
     if (isNewsTask) {

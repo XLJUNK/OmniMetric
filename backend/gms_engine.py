@@ -1377,8 +1377,7 @@ Output JSON:
         target_model,              # [ENV PRIORITY]
         "gemini-3-flash",          # [TIER 1] High Reasoning (Newest)
         "gemini-2.5-flash",        # [TIER 2] Standard Balanced
-        "gemini-2.5-flash-lite",   # [TIER 3] Quota Extension (High RPD)
-        "gemini-1.5-flash"         # [TIER 4] Deep Backup
+        "gemini-2.5-flash-lite"    # [TIER 3] Quota Extension (High RPD)
     ]
     
     # Remove duplicates while preserving order
