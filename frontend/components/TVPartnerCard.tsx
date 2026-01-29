@@ -195,7 +195,7 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
                             href={affiliateUrl}
                             target="_blank"
                             rel="noopener noreferrer nofollow"
-                            className="inline-flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#2962FF] hover:bg-[#1E53E5] !text-white text-fluid-sm font-bold rounded shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all text-center whitespace-nowrap overflow-hidden"
+                            className="inline-flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#2962FF] hover:bg-[#1E53E5] !text-white text-[10px] xs:text-xs sm:text-sm font-bold rounded shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all text-center whitespace-normal leading-tight overflow-hidden"
                             style={{ color: '#FFFFFF' }}
                         >
                             <Zap className="w-3.5 h-3.5 fill-current text-white shrink-0" />
