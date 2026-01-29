@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-01-29T19:02:48.472377+00:00",
-    "last_successful_update": "2026-01-29T19:02:48.472383+00:00",
+    "last_updated": "2026-01-29T19:39:24.835033+00:00",
+    "last_successful_update": "2026-01-29T19:39:24.835040+00:00",
     "gms_score": 35,
     "sector_scores": {
         "STOCKS": 50,
@@ -143,13 +143,12 @@
             ]
         },
         "NET_LIQUIDITY": {
-            "price": 5714.22,
-            "prev_price": 5714.07,
-            "daily_chg": 0.0,
-            "change_percent": 0.02,
-            "trend": "EXPANSION",
+            "price": 5712.47,
+            "prev_price": 5714.22,
+            "daily_chg": -0.03,
+            "change_percent": -0.03,
+            "trend": "CONTRACTION",
             "sparkline": [
-                5712.06,
                 5720.72,
                 5722.24,
                 5717.88,
@@ -178,7 +177,8 @@
                 5714.39,
                 5713.83,
                 5714.07,
-                5714.22
+                5714.22,
+                5712.47
             ]
         },
         "BREAKEVEN_INFLATION": {
@@ -219,10 +219,10 @@
             ]
         },
         "VIX": {
-            "price": 17.5,
+            "price": 17.23,
             "prev_price": 16.35,
-            "daily_chg": 7.03,
-            "change_percent": 8.76,
+            "daily_chg": 5.38,
+            "change_percent": 7.09,
             "trend": "UP",
             "sparkline": [
                 14.2,
@@ -246,7 +246,7 @@
                 16.15,
                 16.35,
                 16.35,
-                17.5
+                17.23
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
@@ -361,10 +361,10 @@
             ]
         },
         "SPY": {
-            "price": 690.84,
+            "price": 691.68,
             "prev_price": 695.42,
-            "daily_chg": -0.66,
-            "change_percent": 0.23,
+            "daily_chg": -0.54,
+            "change_percent": 0.36,
             "trend": "DOWN",
             "sparkline": [
                 687.85,
@@ -388,14 +388,14 @@
                 692.73,
                 695.49,
                 695.42,
-                690.84
+                691.68
             ]
         },
         "TNX": {
-            "price": 4.23,
+            "price": 4.22,
             "prev_price": 4.25,
-            "daily_chg": -0.47,
-            "change_percent": -0.19,
+            "daily_chg": -0.61,
+            "change_percent": -0.33,
             "trend": "DOWN",
             "sparkline": [
                 4.12,
@@ -419,14 +419,14 @@
                 4.21,
                 4.22,
                 4.25,
-                4.23
+                4.22
             ]
         },
         "QQQ": {
-            "price": 625.73,
+            "price": 625.86,
             "prev_price": 633.22,
-            "daily_chg": -1.18,
-            "change_percent": 0.48,
+            "daily_chg": -1.16,
+            "change_percent": 0.5,
             "trend": "DOWN",
             "sparkline": [
                 620.87,
@@ -450,14 +450,14 @@
                 625.46,
                 631.13,
                 633.22,
-                625.73
+                625.86
             ]
         },
         "IWM": {
-            "price": 261.88,
+            "price": 263.03,
             "prev_price": 263.3,
-            "daily_chg": -0.54,
-            "change_percent": -1.11,
+            "daily_chg": -0.1,
+            "change_percent": -0.67,
             "trend": "DOWN",
             "sparkline": [
                 249.88,
@@ -481,15 +481,15 @@
                 263.98,
                 264.73,
                 263.3,
-                261.88
+                263.03
             ]
         },
         "RSP": {
-            "price": 197.77,
+            "price": 198.45,
             "prev_price": 198.26,
-            "daily_chg": -0.25,
-            "change_percent": -0.5,
-            "trend": "DOWN",
+            "daily_chg": 0.09,
+            "change_percent": -0.16,
+            "trend": "UP",
             "sparkline": [
                 193.52,
                 193.21,
@@ -512,14 +512,14 @@
                 199.24,
                 198.93,
                 198.26,
-                197.77
+                198.45
             ]
         },
         "HYG": {
-            "price": 81.01,
+            "price": 81.03,
             "prev_price": 81.04,
-            "daily_chg": -0.03,
-            "change_percent": -0.15,
+            "daily_chg": -0.02,
+            "change_percent": -0.14,
             "trend": "DOWN",
             "sparkline": [
                 80.63,
@@ -543,7 +543,7 @@
                 81.18,
                 81.17,
                 81.04,
-                81.01
+                81.03
             ]
         },
         "NIFTY": {
@@ -578,10 +578,10 @@
             ]
         },
         "BTC": {
-            "price": 83334.64,
+            "price": 84002.31,
             "prev_price": 89184.57,
-            "daily_chg": -6.56,
-            "change_percent": -3.74,
+            "daily_chg": -5.81,
+            "change_percent": -2.97,
             "trend": "DOWN",
             "sparkline": [
                 91027.12,
@@ -605,14 +605,14 @@
                 88267.14,
                 89102.57,
                 89184.57,
-                83334.64
+                84002.31
             ]
         },
         "ETH": {
-            "price": 2759.36,
+            "price": 2798.89,
             "prev_price": 3006.61,
-            "daily_chg": -8.22,
-            "change_percent": -2.01,
+            "daily_chg": -6.91,
+            "change_percent": -0.6,
             "trend": "DOWN",
             "sparkline": [
                 3104.38,
@@ -636,14 +636,14 @@
                 2926.46,
                 3022.21,
                 3006.61,
-                2759.36
+                2798.89
             ]
         },
         "SOL": {
-            "price": 115.7,
+            "price": 116.27,
             "prev_price": 125.12,
-            "daily_chg": -7.53,
-            "change_percent": -2.59,
+            "daily_chg": -7.07,
+            "change_percent": -2.11,
             "trend": "DOWN",
             "sparkline": [
                 138.29,
@@ -667,14 +667,14 @@
                 124.14,
                 127.05,
                 125.12,
-                115.7
+                116.27
             ]
         },
         "DXY": {
-            "price": 96.21,
+            "price": 96.24,
             "prev_price": 96.45,
-            "daily_chg": -0.24,
-            "change_percent": -1.42,
+            "daily_chg": -0.22,
+            "change_percent": -1.4,
             "trend": "DOWN",
             "sparkline": [
                 98.04,
@@ -698,14 +698,14 @@
                 97.04,
                 96.22,
                 96.45,
-                96.21
+                96.24
             ]
         },
         "USDJPY": {
-            "price": 153.03,
+            "price": 153.09,
             "prev_price": 152.45,
-            "daily_chg": 0.38,
-            "change_percent": -3.45,
+            "daily_chg": 0.42,
+            "change_percent": -3.41,
             "trend": "UP",
             "sparkline": [
                 156.01,
@@ -729,7 +729,7 @@
                 155.17,
                 154.34,
                 152.45,
-                153.03
+                153.09
             ]
         },
         "EURUSD": {
@@ -764,9 +764,9 @@
             ]
         },
         "USDINR": {
-            "price": 91.82,
+            "price": 91.83,
             "prev_price": 91.53,
-            "daily_chg": 0.31,
+            "daily_chg": 0.32,
             "change_percent": 0.29,
             "trend": "UP",
             "sparkline": [
@@ -791,7 +791,7 @@
                 91.5,
                 91.71,
                 91.53,
-                91.82
+                91.83
             ]
         },
         "USDSAR": {
@@ -826,10 +826,10 @@
             ]
         },
         "GOLD": {
-            "price": 5387.5,
+            "price": 5340.5,
             "prev_price": 5301.6,
-            "daily_chg": 1.62,
-            "change_percent": 8.27,
+            "daily_chg": 0.73,
+            "change_percent": 7.32,
             "trend": "UP",
             "sparkline": [
                 4325.1,
@@ -853,14 +853,14 @@
                 5079.7,
                 5079.9,
                 5301.6,
-                5387.5
+                5340.5
             ]
         },
         "OIL": {
-            "price": 65.31,
+            "price": 65.41,
             "prev_price": 63.21,
-            "daily_chg": 3.32,
-            "change_percent": 6.94,
+            "daily_chg": 3.48,
+            "change_percent": 7.11,
             "trend": "UP",
             "sparkline": [
                 58.08,
@@ -884,14 +884,14 @@
                 60.63,
                 62.39,
                 63.21,
-                65.31
+                65.41
             ]
         },
         "COPPER": {
             "price": 6.21,
             "prev_price": 5.89,
-            "daily_chg": 5.41,
-            "change_percent": 5.08,
+            "daily_chg": 5.33,
+            "change_percent": 5.0,
             "trend": "UP",
             "sparkline": [
                 5.49,
@@ -919,10 +919,10 @@
             ]
         },
         "NATGAS": {
-            "price": 3.84,
+            "price": 3.92,
             "prev_price": 7.46,
-            "daily_chg": -48.47,
-            "change_percent": -27.13,
+            "daily_chg": -47.45,
+            "change_percent": -25.69,
             "trend": "DOWN",
             "sparkline": [
                 4.69,
@@ -946,7 +946,7 @@
                 6.8,
                 6.95,
                 7.46,
-                3.84
+                3.92
             ]
         },
         "MOVE": {
@@ -978,7 +978,7 @@
             ]
         },
         "BREADTH": {
-            "price": -0.73,
+            "price": -0.52,
             "change_percent": 0.0,
             "trend": "HEALTHY",
             "sparkline": [
@@ -1003,11 +1003,11 @@
                 2.25,
                 1.68,
                 1.35,
-                1.76
+                1.99
             ]
         },
         "SPY_MOMENTUM": {
-            "price": 0.73,
+            "price": 0.52,
             "change_percent": 0,
             "trend": "BALANCED",
             "sparkline": [
@@ -1044,40 +1044,40 @@
             ]
         },
         "COPPER_GOLD": {
-            "price": 1.15,
+            "price": 1.16,
             "change_percent": 0,
             "trend": "RISK-OFF",
             "sparkline": [
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16
             ]
         }
     },
@@ -1109,22 +1109,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS status is Defensive with a score of 35, momentum pushing it from 38. VIX (Fear/Volatility) surged, signaling increased anxiety, while DXY (Dollar strength/Liquidity) slightly dipped. Though DXY offers minor liquidity relief, the overall market remains risk-off. A defensive stance is prudent.",
+        "content": "GMS score 35 signifies a Defensive regime, with momentum pushing deeper into caution. VIX (fear/volatility) surged, and Net Liquidity slightly contracted, indicating increased risk aversion. While tech and crypto show weakness, DXY (Dollar strength/liquidity) eased slightly. However, significant rises in Oil and Copper suggest underlying demand or inflation pressures, potentially offering a re-allocation opportunity or market floor, despite prevailing equity caution. Monitor for sustained DXY weakness and commodity strength for tactical shifts.",
         "reports": {
-            "JP": "GMSステータスは38から35に押し下げられ、現在は防御的です。VIX（恐怖/変動性）は急上昇し、不安増大を示唆する一方、DXY（ドル高/流動性）はわずかに下落しました。DXYがわずかな流動性緩和を提供するものの、市場全体はリスクオフを維持しており、防御的な姿勢が賢明です。",
-            "EN": "GMS status is Defensive with a score of 35, momentum pushing it from 38. VIX (Fear/Volatility) surged, signaling increased anxiety, while DXY (Dollar strength/Liquidity) slightly dipped. Though DXY offers minor liquidity relief, the overall market remains risk-off. A defensive stance is prudent.",
-            "CN": "GMS状态为防御性，评分35，动能将其从38推低。VIX（恐慌/波动性）飙升，预示焦虑加剧，而DXY（美元走强/流动性）略有下跌。尽管DXY提供微弱的流动性缓解，但整体市场仍处于避险状态。采取防御性策略是明智的。",
-            "ES": "El estado del GMS es Defensivo con una puntuación de 35, impulsado por el impulso desde 38. El VIX (Miedo/Volatilidad) subió, indicando mayor ansiedad, mientras que el DXY (Fortaleza del dólar/Liquidez) bajó levemente. Aunque el DXY ofrece un alivio de liquidez menor, el mercado sigue siendo de aversión al riesgo. Una postura defensiva es prudente.",
-            "HI": "GMS स्थिति 35 के स्कोर के साथ रक्षात्मक है, गति ने इसे 38 से धकेला। VIX (भय/अस्थिरता) में उछाल आया, जो बढ़ती चिंता का संकेत देता है, जबकि DXY (डॉलर की मजबूती/तरलता) में थोड़ी गिरावट आई। हालांकि DXY मामूली तरलता राहत प्रदान करता है, समग्र बाजार जोखिम-बंद रहता है। रक्षात्मक रुख समझदारी भरा है।",
-            "ID": "Status GMS adalah Defensif dengan skor 35, momentum mendorongnya dari 38. VIX (Ketakutan/Volatilitas) melonjak, menandakan peningkatan kecemasan, sementara DXY (Kekuatan Dolar/Likuiditas) sedikit menurun. Meskipun DXY menawarkan sedikit bantuan likuiditas, pasar secara keseluruhan tetap risk-off. Sikap defensif adalah bijaksana.",
-            "AR": "وضع GMS دفاعي بنتيجة 35، وقد دفعه الزخم من 38. ارتفع مؤشر VIX (الخوف/التقلب) مما يشير إلى زيادة القلق، بينما انخفض مؤشر DXY (قوة الدولار/السيولة) قليلاً. على الرغم من أن DXY يوفر تخفيفًا طفيفًا للسيولة، إلا أن السوق العام يظل في وضع تجنب المخاطر. لذا، فإن اتخاذ موقف دفاعي حكيم."
+            "JP": "GMSスコア35は防御的なレジームを示し、警戒感が強まっています。VIX（恐怖/変動性）が急上昇し、ネット流動性がわずかに収縮し、リスク回避が高まっています。テクノロジーと暗号通貨は軟調ですが、DXY（ドル高/流動性）はわずかに緩和。しかし、原油と銅の大幅上昇は、潜在的な需要やインフレ圧力を示唆し、株式の警戒感にもかかわらず、再配分の機会や市場の下支えとなる可能性があります。DXYの持続的な軟化とコモディティの強さに注目し、戦術的なシフトに備えましょう。",
+            "EN": "GMS score 35 signifies a Defensive regime, with momentum pushing deeper into caution. VIX (fear/volatility) surged, and Net Liquidity slightly contracted, indicating increased risk aversion. While tech and crypto show weakness, DXY (Dollar strength/liquidity) eased slightly. However, significant rises in Oil and Copper suggest underlying demand or inflation pressures, potentially offering a re-allocation opportunity or market floor, despite prevailing equity caution. Monitor for sustained DXY weakness and commodity strength for tactical shifts.",
+            "CN": "GMS指数35表明防御性态势，市场情绪愈发谨慎。VIX（恐慌/波动性）飙升，净流动性略有收缩，显示避险情绪升温。尽管科技股和加密货币走弱，DXY（美元强度/流动性）小幅回落。然而，原油和铜的显著上涨可能预示着潜在需求或通胀压力，尽管当前股市谨慎，但这可能提供再配置机会或市场底部支撑。密切关注DXY持续走弱和商品走强，以进行战术调整。",
+            "ES": "La puntuación GMS 35 indica un régimen Defensivo, con impulso hacia una mayor cautela. El VIX (miedo/volatilidad) subió bruscamente y la liquidez neta se contrajo ligeramente, señalando aversión al riesgo. Aunque la tecnología y las criptomonedas muestran debilidad, el DXY (fortaleza del dólar/liquidez) se relajó. Sin embargo, los aumentos significativos en Petróleo y Cobre sugieren demanda subyacente o presiones inflacionarias, ofreciendo una oportunidad de reasignación o un piso de mercado, a pesar de la cautela actual en renta variable. Monitoree la debilidad sostenida del DXY y la fortaleza de los commodities para cambios tácticos.",
+            "HI": "जीएमएस स्कोर 35 एक रक्षात्मक व्यवस्था दर्शाता है, जिसमें सतर्कता बढ़ रही है। VIX (डर/अस्थिरता) में तेजी आई, और शुद्ध तरलता थोड़ी सिकुड़ी, जो बढ़े हुए जोखिम से बचने का संकेत देती है। जबकि तकनीकी और क्रिप्टो कमजोरी दिखाते हैं, DXY (डॉलर की मजबूती/तरलता) में थोड़ी ढील हुई। हालांकि, तेल और तांबे में महत्वपूर्ण वृद्धि अंतर्निहित मांग या मुद्रास्फीति के दबाव का सुझाव देती है, जो मौजूदा इक्विटी सावधानी के बावजूद पुनर्वितरण का अवसर या बाजार का आधार प्रदान कर सकती है। रणनीतिक बदलावों के लिए DXY की निरंतर कमजोरी और कमोडिटी की मजबूती पर नजर रखें।",
+            "ID": "Skor GMS 35 menandakan rezim Defensif, dengan momentum yang mendorong kehati-hatian lebih dalam. VIX (ketakutan/volatilitas) melonjak, dan Likuiditas Bersih sedikit berkontraksi, menunjukkan peningkatan keengganan risiko. Meskipun teknologi dan kripto menunjukkan kelemahan, DXY (kekuatan Dolar/likuiditas) sedikit mereda. Namun, kenaikan signifikan pada Minyak dan Tembaga menunjukkan permintaan mendasar atau tekanan inflasi, berpotensi menawarkan peluang realokasi atau dasar pasar, meskipun kehati-hatian ekuitas berlaku. Pantau pelemahan DXY berkelanjutan dan kekuatan komoditas untuk pergeseran taktis.",
+            "AR": "يشير مؤشر GMS 35 إلى نظام دفاعي، مع تزايد الحذر. ارتفع مؤشر VIX (الخوف/التقلب) بشكل حاد، وانكمشت السيولة الصافية قليلاً، مما يدل على تزايد النفور من المخاطر. بينما تظهر التكنولوجيا والعملات المشفرة ضعفًا، انخفض مؤشر DXY (قوة الدولار/السيولة) قليلاً. ومع ذلك، تشير الزيادات الكبيرة في النفط والنحاس إلى طلب أساسي أو ضغوط تضخمية، مما قد يوفر فرصة لإعادة التخصيص أو قاع للسوق، على الرغم من الحذر الحالي في الأسهم. راقب ضعف DXY المستمر وقوة السلع للتحولات التكتيكية."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-27T15:41:21Z",
-            "score": 38
-        },
         {
             "date": "2026-01-27T15:53:03Z",
             "score": 38
@@ -1360,6 +1356,10 @@
         {
             "date": "2026-01-29T19:02:48Z",
             "score": 35
+        },
+        {
+            "date": "2026-01-29T19:39:24Z",
+            "score": 35
         }
     ],
     "intelligence": {
@@ -1370,19 +1370,19 @@
                 "isoDate": "2026-01-29T17:54:53+00:00Z"
             },
             {
-                "title": "Trade balance soared 94% in November and was higher than a year ago, despite tariff efforts",
+                "title": "Trade deficit soared 94% in November and was higher than a year ago, despite tariff efforts",
                 "link": "https://www.cnbc.com/2026/01/29/trade-balance-soared-94percent-in-november-and-was-higher-than-a-year-ago-despite-tariff-efforts.html",
-                "isoDate": "2026-01-29T15:32:16+00:00Z"
+                "isoDate": "2026-01-29T19:33:06+00:00Z"
             },
             {
                 "title": "Funding bill fails to clear key Senate procedural vote before shutdown deadline",
                 "link": "https://www.cnbc.com/2026/01/29/senate-voting-government-spending-shutdown.html",
-                "isoDate": "2026-01-29T18:46:27+00:00Z"
+                "isoDate": "2026-01-29T19:14:17+00:00Z"
             },
             {
                 "title": "American Airlines to fly to Venezuela for first time since 2019, marking return of U.S. service",
                 "link": "https://www.cnbc.com/2026/01/29/american-airlines-return-service-venezuela.html",
-                "isoDate": "2026-01-29T18:45:44+00:00Z"
+                "isoDate": "2026-01-29T19:36:09+00:00Z"
             },
             {
                 "title": "Apartment rents just dropped to the lowest level in 4 years",
@@ -1398,54 +1398,54 @@
         "translations": {
             "JP": [
                 "AIの混乱懸念でソフトウェア株が弱気相場入り、ServiceNowは12%下落",
-                "関税努力にもかかわらず、貿易収支は11月に94%急増、前年を上回る",
+                "関税努力にもかかわらず、11月の貿易赤字は94%急増し、前年を上回る",
                 "シャットダウン期限前に、資金調達法案が上院の主要な手続き投票を通過できず",
-                "アメリカン航空、2019年以来初となるベネズエラへのフライト、米国サービス再開をマーク",
-                "アパートの賃料が4年ぶりの低水準に下落",
-                "マイクロソフト、決算発表後の急落で主要なテクニカルレベルを試す"
+                "アメリカン航空、2019年以来初のベネズエラ路線就航、米サービス再開を示す",
+                "アパートの家賃、4年ぶりの最低水準に",
+                "マイクロソフト、決算後の急落後に主要なテクニカルレベルを試す"
             ],
             "CN": [
                 "AI颠覆担忧导致软件股进入熊市，ServiceNow暴跌12%",
-                "尽管有关税举措，贸易差额11月飙升94%，高于去年同期",
-                "资金法案在停摆最后期限前未能通过参议院关键程序性投票",
+                "尽管有关税努力，11月贸易逆差飙升94%，高于去年同期",
+                "资金法案在政府停摆最后期限前未能通过参议院关键程序性投票",
                 "美国航空自2019年以来首次飞往委内瑞拉，标志着美国服务回归",
-                "公寓租金跌至四年来的最低水平",
-                "微软在财报发布后暴跌，测试关键技术水平"
+                "公寓租金跌至四年来的最低点",
+                "微软在财报后暴跌后测试关键技术水平"
             ],
             "ES": [
-                "Las acciones tecnológicas ingresan al mercado bajista por temor a la disrupción de la IA, con ServiceNow cayendo un 12%",
-                "La balanza comercial se disparó un 94% en noviembre y fue superior a la del año pasado, a pesar de los esfuerzos arancelarios",
-                "El proyecto de ley de financiación no supera una votación procedural clave del Senado antes de la fecha límite del cierre",
-                "American Airlines volará a Venezuela por primera vez desde 2019, marcando el regreso del servicio estadounidense",
+                "Las acciones de software entran en mercado bajista por temor a disrupción de IA con ServiceNow desplomándose 12%",
+                "El déficit comercial se disparó un 94% en noviembre y fue superior al del año pasado, a pesar de los esfuerzos arancelarios",
+                "El proyecto de ley de financiación no supera un voto de procedimiento clave del Senado antes de la fecha límite de cierre",
+                "American Airlines volará a Venezuela por primera vez desde 2019, marcando el regreso del servicio de EE. UU.",
                 "Los alquileres de apartamentos acaban de caer al nivel más bajo en 4 años",
                 "Microsoft está probando un nivel técnico importante después de su caída posterior a los resultados"
             ],
             "HI": [
-                "एआई व्यवधान के डर से सॉफ्टवेयर स्टॉक बियर मार्केट में प्रवेश, सर्विसनाउ 12% गिरा",
-                "टैरिफ प्रयासों के बावजूद, नवंबर में व्यापार संतुलन 94% बढ़ा और एक साल पहले से अधिक था",
-                "शटडाउन की समय सीमा से पहले फंडिंग बिल सीनेट के प्रमुख प्रक्रियात्मक वोट में विफल",
-                "अमेरिकन एयरलाइंस 2019 के बाद पहली बार वेनेजुएला के लिए उड़ान भरेगी, जो अमेरिकी सेवा की वापसी को चिह्नित करेगा",
-                "अपार्टमेंट के किराए 4 साल के सबसे निचले स्तर पर आ गए हैं",
-                "माइक्रोसॉफ्ट अपनी कमाई के बाद की गिरावट के बाद एक प्रमुख तकनीकी स्तर का परीक्षण कर रहा है"
+                "एआई व्यवधान के डर से सॉफ्टवेयर स्टॉक में आई मंदी, सर्विसनाउ 12% गिरा",
+                "टैरिफ प्रयासों के बावजूद, नवंबर में व्यापार घाटा 94% बढ़ा और एक साल पहले से अधिक था",
+                "शटडाउन समय सीमा से पहले फंडिंग विधेयक सीनेट के प्रमुख प्रक्रियात्मक वोट को पार करने में विफल",
+                "अमेरिकन एयरलाइंस 2019 के बाद पहली बार वेनेजुएला के लिए उड़ान भरेगी, अमेरिकी सेवा की वापसी का प्रतीक",
+                "अपार्टमेंट का किराया 4 साल के सबसे निचले स्तर पर आ गया है",
+                "माइक्रोसॉफ्ट अपनी कमाई के बाद की गिरावट के बाद एक महत्वपूर्ण तकनीकी स्तर का परीक्षण कर रहा है"
             ],
             "ID": [
-                "Saham perangkat lunak memasuki pasar beruang karena ketakutan akan disrupsi AI, dengan ServiceNow anjlok 12%",
-                "Neraca perdagangan melonjak 94% pada bulan November dan lebih tinggi dari tahun lalu, terlepas dari upaya tarif",
-                "RUU pendanaan gagal melewati pemungutan suara prosedural kunci Senat sebelum batas waktu penutupan",
+                "Saham perangkat lunak memasuki pasar bearish karena ketakutan disrupsi AI dengan ServiceNow anjlok 12%",
+                "Defisit perdagangan melonjak 94% pada bulan November dan lebih tinggi dari tahun lalu, meskipun ada upaya tarif",
+                "Rancangan undang-undang pendanaan gagal melewati pemungutan suara prosedural kunci Senat sebelum batas waktu penutupan",
                 "American Airlines akan terbang ke Venezuela untuk pertama kalinya sejak 2019, menandai kembalinya layanan AS",
                 "Sewa apartemen baru saja turun ke level terendah dalam 4 tahun",
-                "Microsoft sedang menguji level teknis utama setelah penurunan pasca-pendapatan"
+                "Microsoft menguji level teknis utama setelah penurunan pasca-laporan keuangan"
             ],
             "AR": [
-                "أسهم البرمجيات تدخل السوق الهابطة وسط مخاوف تعطيل الذكاء الاصطناعي مع انخفاض ServiceNow بنسبة 12%",
-                "الميزان التجاري قفز بنسبة 94٪ في نوفمبر وكان أعلى من العام الماضي، على الرغم من جهود التعريفات الجمركية",
+                "أسهم البرمجيات تدخل سوق هابط وسط مخاوف من تعطيل الذكاء الاصطناعي مع هبوط ServiceNow 12%",
+                "ارتفع العجز التجاري بنسبة 94٪ في نوفمبر وكان أعلى من العام الماضي، على الرغم من جهود التعريفة الجمركية",
                 "مشروع قانون التمويل يفشل في تجاوز تصويت إجرائي رئيسي في مجلس الشيوخ قبل الموعد النهائي للإغلاق",
-                "الخطوط الجوية الأمريكية ستطير إلى فنزويلا لأول مرة منذ عام 2019، مما يمثل عودة الخدمة الأمريكية",
+                "الخطوط الجوية الأمريكية تطير إلى فنزويلا لأول مرة منذ عام 2019، مما يمثل عودة الخدمة الأمريكية",
                 "إيجارات الشقق انخفضت للتو إلى أدنى مستوى في 4 سنوات",
-                "مايكروسوفت تختبر مستوى تقنيًا رئيسيًا بعد هبوطها بعد الأرباح"
+                "مايكروسوفت تختبر مستوى تقنيًا رئيسيًا بعد انخفاضها بعد الأرباح"
             ]
         },
-        "last_updated": "2026-01-29T19:02:48.471872+00:00Z"
+        "last_updated": "2026-01-29T19:39:24.834521+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
