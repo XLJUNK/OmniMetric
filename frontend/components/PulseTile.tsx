@@ -153,8 +153,8 @@ export const PulseTile = ({ title, score, ticker, data, onClick, lang, wikiSlug,
 
                 {/* CORNER 1: TOP-LEFT (Title) - PADDING 0.75rem */}
                 <div style={{ position: 'absolute', top: '0.75rem', left: '0.75rem', zIndex: 10, display: 'flex', flexDirection: 'column', pointerEvents: 'none' }}>
-                    <div className="flex items-center gap-1.5 pointer-events-auto">
-                        <h3 className={`${theme === 'dark' ? 'text-slate-200' : 'text-slate-800'} pulse-tile-title font-black uppercase tracking-[0.1em] font-sans leading-tight text-fluid-xs`}>{title}</h3>
+                    <div className="flex items-center gap-1.5 pointer-events-auto text-fluid-xs">
+                        <h3 className={`${theme === 'dark' ? 'text-slate-200' : 'text-slate-800'} pulse-tile-title font-black uppercase tracking-[0.1em] font-sans leading-tight`}>{title}</h3>
                         {wikiSlug && (
                             <Link
                                 href={`/${(lang || 'EN').toLowerCase()}/wiki/${wikiSlug}`}
@@ -162,7 +162,7 @@ export const PulseTile = ({ title, score, ticker, data, onClick, lang, wikiSlug,
                                 className={`text-slate-600 transition-colors p-0.5 rounded-full relative after:absolute after:-inset-4 after:content-[''] ${score >= 60 ? 'hover:text-blue-400 hover:bg-blue-400/10' : (score < 40 ? 'hover:text-rose-400 hover:bg-rose-400/10' : 'hover:text-slate-300 hover:bg-slate-700/50')}`}
                                 title="Open Macro Wiki Definition"
                             >
-                                <Info className="w-3 h-3 md:w-3.5 md:h-3.5" />
+                                <Info className="w-[1.15em] h-[1.15em] opacity-80" strokeWidth={2.5} />
                             </Link>
                         )}
                     </div>
