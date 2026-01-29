@@ -56,6 +56,35 @@
     *   **Bundle**: 最新の `current_signal.json` を `frontend/data/` へ転送・バンドルし、Vercelへデプロイ。
     *   **SNS**: Twitter/Bluesky へ多言語で連動ポスト（緊急時は即時アラート）。
 
+
+### 2.4 AI Model Strategy (Resilience & Quota Optimization)
+**Objective**: Maximize Free Tier RPD (Request Per Day) efficiency while maintaining 100% uptime.
+
+1.  **Vercel AI Gateway Priority**:
+    *   Primary Route via `ai-gateway.vercel.sh` (Universal V3).
+    *   Falls back to Direct Google API immediately upon error (429/5xx).
+
+2.  **Tiered Fallback Matrix**:
+    *   **AI Insight (GMS Engine)**:
+        1.  `gemini-3-flash` (Priority: High Reasoning)
+        2.  `gemini-2.5-flash` (Standard)
+        3.  `gemini-2.5-flash-lite` (Final Backup)
+    *   **News Translation (Batch Process)**:
+        1.  `gemini-2.5-flash-lite` (Primary: Quota Saver)
+        2.  `gemini-2.5-flash` (Shared Buffer)
+        3.  `gemini-3-flash` (Emergency)
+
+3.  **Quota Optimization (Straddling Strategy)**:
+    *   **Main Engine**: Uses ~24 RPD (Hourly).
+    *   **News Engine**: Uses ~24 RPD (Hourly).
+    *   **Total Demand**: 48 RPD.
+    *   **Capacity**: `3-flash` (20) + `2.5-flash` (20) + `Lite` (20) = **60 RPD**.
+    *   **Rotation**: News starts with `Lite`, rotates to `Standard` when `Lite` exhausts (evening). Main starts with `3-flash`, rotates to `Standard`. They meet in the middle (`2.5-flash`) which acts as the shared buffer.
+
+4.  **Billing Protection**:
+    *   Workflow redundant calls eliminated (Single execution per hour).
+    *   Strict "Fail Fast" logic to prevent retry storms.
+
 ---
 
 ## 3. 機能仕様 (Functional Features)
