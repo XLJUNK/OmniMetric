@@ -1,20 +1,19 @@
 {
-    "last_updated": "2026-01-28T23:37:18.727131+00:00",
-    "last_successful_update": "2026-01-28T23:37:18.727138+00:00",
-    "gms_score": 37,
+    "last_updated": "2026-01-29T00:17:36.739376+00:00",
+    "last_successful_update": "2026-01-29T00:17:36.739383+00:00",
+    "gms_score": 34,
     "sector_scores": {
         "STOCKS": 40,
-        "CRYPTO": 65,
+        "CRYPTO": 40,
         "FOREX": 55,
         "COMMODITIES": 55
     },
     "market_data": {
         "CRYPTO_SENTIMENT": {
-            "price": 29,
+            "price": 26,
             "change_percent": 0.0,
             "trend": "BEARISH",
             "sparkline": [
-                23,
                 21,
                 20,
                 28,
@@ -43,7 +42,8 @@
                 25,
                 20,
                 29,
-                29
+                29,
+                26
             ]
         },
         "YIELD_SPREAD": {
@@ -578,11 +578,11 @@
             ]
         },
         "BTC": {
-            "price": 89115.95,
+            "price": 88981.02,
             "prev_price": 89102.57,
-            "daily_chg": 0.02,
-            "change_percent": 0.01,
-            "trend": "UP",
+            "daily_chg": -0.14,
+            "change_percent": -0.15,
+            "trend": "DOWN",
             "sparkline": [
                 91308.05,
                 91027.12,
@@ -605,14 +605,14 @@
                 86572.22,
                 88267.14,
                 89102.57,
-                89115.95
+                88981.02
             ]
         },
         "ETH": {
-            "price": 3006.58,
+            "price": 3000.97,
             "prev_price": 3022.21,
-            "daily_chg": -0.52,
-            "change_percent": 1.96,
+            "daily_chg": -0.7,
+            "change_percent": 1.77,
             "trend": "DOWN",
             "sparkline": [
                 3166.84,
@@ -636,14 +636,14 @@
                 2815.9,
                 2926.46,
                 3022.21,
-                3006.58
+                3000.97
             ]
         },
         "SOL": {
-            "price": 125.1,
+            "price": 125.08,
             "prev_price": 127.05,
-            "daily_chg": -1.54,
-            "change_percent": -1.54,
+            "daily_chg": -1.56,
+            "change_percent": -1.56,
             "trend": "DOWN",
             "sparkline": [
                 136.31,
@@ -667,7 +667,7 @@
                 118.77,
                 124.14,
                 127.05,
-                125.1
+                125.08
             ]
         },
         "DXY": {
@@ -702,13 +702,12 @@
             ]
         },
         "USDJPY": {
-            "price": 153.19,
-            "prev_price": 154.34,
-            "daily_chg": -0.74,
-            "change_percent": -3.32,
-            "trend": "DOWN",
+            "price": 153.08,
+            "prev_price": 152.45,
+            "daily_chg": 0.41,
+            "change_percent": -3.42,
+            "trend": "UP",
             "sparkline": [
-                156.46,
                 156.01,
                 156.41,
                 156.73,
@@ -729,18 +728,18 @@
                 158.5,
                 155.17,
                 154.34,
-                153.19
+                152.45,
+                153.08
             ]
         },
         "EURUSD": {
             "price": 1.2,
-            "prev_price": 1.19,
-            "daily_chg": 0.84,
-            "change_percent": 2.6,
-            "trend": "UP",
+            "prev_price": 1.2,
+            "daily_chg": -0.29,
+            "change_percent": 1.94,
+            "trend": "DOWN",
             "sparkline": [
                 1.18,
-                1.18,
                 1.17,
                 1.18,
                 1.17,
@@ -760,17 +759,17 @@
                 1.18,
                 1.19,
                 1.19,
+                1.2,
                 1.2
             ]
         },
         "USDINR": {
             "price": 92.0,
-            "prev_price": 91.71,
-            "daily_chg": 0.31,
-            "change_percent": 0.51,
+            "prev_price": 91.53,
+            "daily_chg": 0.51,
+            "change_percent": 0.48,
             "trend": "UP",
             "sparkline": [
-                89.83,
                 89.9,
                 89.77,
                 89.96,
@@ -791,17 +790,17 @@
                 91.56,
                 91.5,
                 91.71,
+                91.53,
                 92.0
             ]
         },
         "USDSAR": {
             "price": 3.75,
             "prev_price": 3.75,
-            "daily_chg": 0.13,
-            "change_percent": 0.11,
+            "daily_chg": 0.12,
+            "change_percent": 0.13,
             "trend": "UP",
             "sparkline": [
-                3.75,
                 3.74,
                 3.75,
                 3.75,
@@ -821,15 +820,16 @@
                 3.75,
                 3.75,
                 3.74,
+                3.75,
                 3.75,
                 3.75
             ]
         },
         "GOLD": {
-            "price": 5512.5,
+            "price": 5523.2,
             "prev_price": 5079.9,
-            "daily_chg": 8.52,
-            "change_percent": 12.3,
+            "daily_chg": 8.73,
+            "change_percent": 12.52,
             "trend": "UP",
             "sparkline": [
                 4529.1,
@@ -853,14 +853,14 @@
                 4976.2,
                 5079.7,
                 5079.9,
-                5512.5
+                5523.2
             ]
         },
         "OIL": {
-            "price": 63.45,
+            "price": 63.5,
             "prev_price": 62.39,
-            "daily_chg": 1.7,
-            "change_percent": 6.89,
+            "daily_chg": 1.78,
+            "change_percent": 6.97,
             "trend": "UP",
             "sparkline": [
                 56.74,
@@ -884,14 +884,14 @@
                 61.07,
                 60.63,
                 62.39,
-                63.45
+                63.5
             ]
         },
         "COPPER": {
-            "price": 6.01,
+            "price": 6.0,
             "prev_price": 5.83,
-            "daily_chg": 3.05,
-            "change_percent": 4.6,
+            "daily_chg": 2.97,
+            "change_percent": 4.51,
             "trend": "UP",
             "sparkline": [
                 5.77,
@@ -915,14 +915,14 @@
                 5.91,
                 5.98,
                 5.83,
-                6.01
+                6.0
             ]
         },
         "NATGAS": {
-            "price": 3.76,
+            "price": 3.75,
             "prev_price": 6.95,
-            "daily_chg": -45.94,
-            "change_percent": -25.49,
+            "daily_chg": -46.02,
+            "change_percent": -25.59,
             "trend": "DOWN",
             "sparkline": [
                 4.37,
@@ -946,7 +946,7 @@
                 5.28,
                 6.8,
                 6.95,
-                3.76
+                3.75
             ]
         },
         "MOVE": {
@@ -1120,10 +1120,6 @@
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-27T00:26:05Z",
-            "score": 40
-        },
         {
             "date": "2026-01-27T00:35:27Z",
             "score": 40
@@ -1359,8 +1355,96 @@
         {
             "date": "2026-01-28T23:37:18Z",
             "score": 37
+        },
+        {
+            "date": "2026-01-29T00:17:36Z",
+            "score": 34
         }
     ],
-    "intelligence": null,
+    "intelligence": {
+        "news": [
+            {
+                "title": "Tesla tops estimates for quarter, but wraps up first annual revenue drop on record",
+                "link": "https://www.cnbc.com/2026/01/28/tesla-tsla-2025-q4-earnings.html",
+                "isoDate": "2026-01-28T23:32:20+00:00Z"
+            },
+            {
+                "title": "Meta shares jump 10% on stronger-than-expected revenue forecast",
+                "link": "https://www.cnbc.com/2026/01/28/meta-q4-earnings-report-2025.html",
+                "isoDate": "2026-01-28T22:23:29+00:00Z"
+            },
+            {
+                "title": "Microsoft stock drops 7% on slowing cloud growth, light margin guidance",
+                "link": "https://www.cnbc.com/2026/01/28/microsoft-msft-q2-earnings-report-2026.html",
+                "isoDate": "2026-01-28T23:58:16+00:00Z"
+            },
+            {
+                "title": "Meta’s Reality Labs posts $6.02 billion loss in fourth quarter",
+                "link": "https://www.cnbc.com/2026/01/28/metas-reality-labs-posts-6point02-billion-loss-in-fourth-quarter.html",
+                "isoDate": "2026-01-28T21:32:00+00:00Z"
+            },
+            {
+                "title": "S&P 500 futures are little changed as traders weigh tech giants' earnings: Live updates",
+                "link": "https://www.cnbc.com/2026/01/28/stock-market-today-live-updates.html",
+                "isoDate": "2026-01-29T00:11:39+00:00Z"
+            },
+            {
+                "title": "Investors will have to wait a bit longer for any rate cuts this year",
+                "link": "https://www.cnbc.com/2026/01/28/investors-may-have-to-wait-a-bit-longer-for-any-rate-cuts-this-year.html",
+                "isoDate": "2026-01-28T21:35:07+00:00Z"
+            }
+        ],
+        "translations": {
+            "JP": [
+                "テスラ、四半期決算は予想を上回るも、過去最高の年間売上高は減少",
+                "メタ株、予想を上回る収益予測で10%上昇",
+                "マイクロソフト株、クラウド成長鈍化と利益率ガイダンス低迷で7%下落",
+                "メタのReality Labs、第4四半期に60.2億ドルの損失を計上",
+                "S&P500先物は、テクノロジー大手決算を市場が検討する中、小幅な変動",
+                "投資家は、今年の利下げをもう少し待つ必要あり"
+            ],
+            "CN": [
+                "特斯拉季度业绩超预期，但全年营收创纪录下滑",
+                "Meta股价因高于预期的营收预测上涨10%",
+                "微软股价因云计算增长放缓及利润指引疲软下跌7%",
+                "Meta的Reality Labs第四季度亏损60.2亿美元",
+                "标准普尔500指数期货几乎持平，因交易员权衡科技巨头财报：实时更新",
+                "投资者今年降息将需再等片刻"
+            ],
+            "ES": [
+                "Tesla supera las estimaciones trimestrales, pero registra su primera caída anual de ingresos en récord",
+                "Las acciones de Meta saltan un 10% ante un pronóstico de ingresos mejor de lo esperado",
+                "Las acciones de Microsoft caen un 7% por la desaceleración del crecimiento en la nube y una guía de márgenes ligera",
+                "Reality Labs de Meta registra una pérdida de $6.02 mil millones en el cuarto trimestre",
+                "Los futuros del S&P 500 apenas cambian mientras los operadores sopesan los resultados de los gigantes tecnológicos: Actualizaciones en vivo",
+                "Los inversores tendrán que esperar un poco más para cualquier recorte de tasas este año"
+            ],
+            "HI": [
+                "टेस्ला का तिमाही अनुमानों से बेहतर प्रदर्शन, लेकिन रिकॉर्ड पर पहली वार्षिक राजस्व गिरावट",
+                "मेटा के शेयर मजबूत, अपेक्षा से अधिक राजस्व पूर्वानुमान पर 10% उछले",
+                "माइक्रोसॉफ्ट के शेयर क्लाउड वृद्धि में मंदी, मार्जिन मार्गदर्शन में गिरावट के कारण 7% गिरे",
+                "मेटा का रियलिटी लैब्स चौथी तिमाही में 6.02 अरब डॉलर का घाटा",
+                "S&P 500 फ्यूचर्स में मामूली बदलाव, ट्रेडर टेक दिग्गजों की कमाई का आकलन कर रहे: लाइव अपडेट",
+                "निवेशकों को इस साल दरों में कटौती का इंतजार थोड़ा और करना होगा"
+            ],
+            "ID": [
+                "Tesla lampaui perkiraan kuartalan, namun catat penurunan pendapatan tahunan pertama dalam rekor",
+                "Saham Meta melonjak 10% berkat perkiraan pendapatan yang lebih kuat dari perkiraan",
+                "Saham Microsoft anjlok 7% karena pertumbuhan cloud yang melambat, panduan margin rendah",
+                "Reality Labs Meta mencatat kerugian $6,02 miliar di kuartal keempat",
+                "Future S&P 500 sedikit berubah saat trader menimbang pendapatan raksasa teknologi: Pembaruan langsung",
+                "Investor harus menunggu sedikit lebih lama untuk pemotongan suku bunga tahun ini"
+            ],
+            "AR": [
+                "تسلا تتصدر التقديرات للربع، لكنها تختتم أول انخفاض سنوي في الإيرادات على الإطلاق",
+                "أسهم ميتا تقفز 10% وسط توقعات إيرادات أقوى من المتوقع",
+                "سهم مايكروسوفت ينخفض 7% بسبب تباطؤ نمو السحابة وتوجيهات هامش ضعيفة",
+                "مختبرات الواقع (Reality Labs) التابعة لشركة ميتا تسجل خسارة 6.02 مليار دولار في الربع الرابع",
+                "عقود مؤشرات S&P 500 الآجلة تتغير بشكل طفيف مع تقييم التجار لأرباح عمالقة التكنولوجيا: تحديثات مباشرة",
+                "سيتعين على المستثمرين الانتظار لفترة أطول قليلاً لأي خفض في أسعار الفائدة هذا العام"
+            ]
+        },
+        "last_updated": "2026-01-29T00:17:43.528856+00:00"
+    },
     "system_status": "OPERATIONAL"
 }
