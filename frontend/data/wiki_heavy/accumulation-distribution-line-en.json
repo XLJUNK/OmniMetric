@@ -1,0 +1,16 @@
+{
+    "slug": "accumulation-distribution-line",
+    "lang": "EN",
+    "title": "A/D Line (Accumulation/Distribution)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "The Shadow Trend. A/D Line connects price and volume to show if money is flowing in or out. It is similar to OBV but weights volume based on where the price closes within the day's range. It exposes hidden weakness in uptrends.",
+        "deep_dive": "It uses the Closing Location Value (CLV). If price closes near the high of the day, volume is added. If near the low, volume is subtracted. This creates a divergence engine that spots tops before they happen.",
+        "council_debate": "{\"geopolitics\": \"Sanctions create hidden flows. When a country is sanctioned, its assets might look stable on the surface (price pegged), but the A/D Line will crash as insiders distribute (sell) into the artificial bid. We use it to time currency collapses.\", \"macro\": \"The 'smart money' accumulates early. In a recession, cyclical stocks (like Copper miners) often bottom before the economy does. If price is making new lows but the A/D Line is rising, it is 'Bullish Divergence'. The big players are buying the panic.\", \"quant\": \"We model 'Distribution Days'. If the A/D Line drops for 3 consecutive days while the S&P 500 makes new highs, our algos switch to 'Risk Off'. This signal preempted the 2008 crash and the 2020 COVID crash.\", \"technical\": \"Divergence is King. If Price is rising, A/D MUST be rising. If Price rises but A/D falls, the rally is a lie. This is 'Bearish Divergence'. It means the market is being propped up by a few large caps while the majority are being sold.\", \"policy\": \"Central Banks buy ETFs. This lifts price but not necessarily the A/D Line if the broader market is selling. A disconnect between the Central Bank's balance sheet (buying) and the A/D Line (selling) signals policy failure.\", \"tech\": \"Crypto whales distribute into retail FOMO. When a token pumps 20% in a day but closes near the middle of its range on massive volume, the A/D Line stays flat or drops. This reveals that whales were selling into the retail buying frenzy.\"}",
+        "forecast_risks": "Gap Sensitivity. Like OBV, gaps can distort the line. However, A/D is generally smoother than OBV because it focuses on the Close relative to the Range, not just the Close relative to yesterday.",
+        "gms_conclusion": "Price can be manipulated; Close Location relative to High/Low is harder to fake. A/D Line detects the bluff."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:40:00+00:00"
+}

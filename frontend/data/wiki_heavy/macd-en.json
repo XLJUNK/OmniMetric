@@ -1,0 +1,16 @@
+{
+    "slug": "macd",
+    "lang": "EN",
+    "title": "MACD (Moving Average Convergence Divergence)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "The 'Momentum King'. MACD shows the relationship between two moving averages (usually 12 and 26). It signals when momentum is speeding up or slowing down. It is the best tool for spotting trend reversals.",
+        "deep_dive": "The MACD line is the difference between the 12-EMA and 26-EMA. The 'Signal Line' is a 9-EMA of the MACD. The 'Histogram' visualizes the gap between them. Histogram expansion = Trend Acceleration.",
+        "council_debate": "{\"geopolitics\": \"Political news hits instantly. MACD is a lagging indicator. Do not use MACD to trade breaking news. However, look for 'MACD Divergence' AFTER the crisis has settled. It often marks the exact turnaround point.\", \"macro\": \"When the fundamentals (Macro) and the price momentum (MACD) agree, go `All In`. If the economy is growing but MACD is falling, trust the MACD. Momentum leads fundamentals.\", \"quant\": \"Divergence is our Alpha. When price makes a Higher High, but MACD makes a Lower High, it is a mathematical guarantee that momentum is weakening. Algorithmic traders aggressively short these divergences.\", \"technical\": \"The 'Histogram Flip' at the zero line is the safest entry signal. It confirms that the trend has mathematically reversed. We wait for the first bar of the new color to close before entering.\", \"policy\": \"During Quantitative Easing (QE), MACD can stay overbought for years. Oscillators usually fail in liquidity bubbles. Do not short just because MACD is high. Short only when it crosses down.\", \"tech\": \"Use MACD on higher timeframes (Weekly/Monthly) for Crypto. Daily MACD in crypto is too noisy. The Weekly MACD Cross on Bitcoin has historically signaled the start and end of every 4-year cycle.\"}",
+        "forecast_risks": "Lagging Crosses. By the time the MACD lines cross, a significant portion of the move may be over. It works best in long, swinging trends, not in tight ranges.",
+        "gms_conclusion": "Respect the Divergence. When price screams 'Up' but MACD whispers 'Down', listen to the whisper."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:00:00+00:00"
+}

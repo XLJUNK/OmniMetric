@@ -1,0 +1,16 @@
+{
+    "slug": "sovereign-credit-spread",
+    "lang": "ES",
+    "title": "Diferencial de Crédito Soberano",
+    "type": "indicator",
+    "category": "Bonds",
+    "sections": {
+        "summary": "El Diferencial de Crédito Soberano mide la diferencia de rendimiento entre los Bonos del Tesoro de EE. UU. (libres de riesgo) y los bonos soberanos de otras naciones (o bonos corporativos). Cuantifica la 'Prima de Riesgo' exigida por los inversores para prestar dinero a un gobierno o corporación.",
+        "deep_dive": "La ampliación de los diferenciales indica un aumento del riesgo de incumplimiento o estrés de liquidez. El estrechamiento de los diferenciales indica confianza y un entorno de 'búsqueda de rendimiento'. El diferencial de 10 años Italia-Alemania (BTP-Bund) es el indicador clásico del riesgo de ruptura de la Eurozona.",
+        "council_debate": "{\"geopolitics\": \"Cuando una nación se alinea con el bloque geopolítico 'equivocado' (por ejemplo, BRICS frente a G7), su diferencial de crédito a menudo se amplía a medida que huye el capital occidental. Monitoreamos los diferenciales de Mercados Emergentes (EM) en busca de signos de fuga de capitales impulsada por el riesgo de sanciones.\", \"macro\": \"En un mundo saturado de deuda, la teoría de la 'Dominancia Fiscal' sugiere que incluso las naciones desarrolladas (como el Reino Unido o Francia) pueden enfrentar ataques de 'Vigilantes de Bonos'. Un aumento en los diferenciales obliga a los gobiernos a invocar la austeridad, matando el crecimiento.\", \"quant\": \"Modelamos el 'Impulso de Crédito'. Cuando los diferenciales se estrechan rápidamente, es equivalente a un recorte de tasas. Cuando se amplían, es un ajuste financiero. Los diferenciales de Alto Rendimiento (Basura) superiores a 500 pb generalmente señalan una recesión inminente.\", \"technical\": \"Observe el 'OAS' (Diferencial Ajustado por Opciones). Si rompe su promedio móvil de 200 días, activa la venta algorítmica de acciones. El crédito lidera a las acciones. Si el crédito se rompe, las acciones lo siguen.\", \"policy\": \"Los bancos centrales usan el 'Control de la Curva de Rendimiento' (YCC) o QE para suprimir artificialmente los diferenciales. Si los diferenciales se amplían a pesar de la intervención del banco central, indica una pérdida de credibilidad de la política (el comercio 'Widowmaker').\", \"tech\": \"Los datos en tiempo real sobre los ingresos fiscales y el gasto público (ahora disponibles a través de API gubernamentales abiertas) se están introduciendo en modelos de crédito de IA, haciendo que la fijación de precios de los diferenciales sea más rápida y despiadada que las agencias de calificación crediticia tradicionales.\"}",
+        "forecast_risks": "El riesgo a la baja es una 'Crisis de Deuda Soberana' que cae en cascada desde los mercados emergentes periféricos hasta el núcleo (G7). La ventaja es una 'Edad de Oro del Crédito' si la productividad impulsada por la IA aumenta el PIB lo suficiente como para reducir las relaciones deuda/PIB de forma natural.",
+        "gms_conclusion": "El canario en la mina de carbón. Un mercado de valores saludable no puede coexistir con diferenciales de crédito que se disparan. Si los diferenciales están subiendo, reduzca el riesgo inmediatamente."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T13:40:00+00:00"
+}

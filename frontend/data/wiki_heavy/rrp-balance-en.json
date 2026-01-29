@@ -1,0 +1,16 @@
+{
+    "slug": "rrp-balance",
+    "lang": "EN",
+    "title": "Reverse Repo (RRP) Balance",
+    "type": "indicator",
+    "category": "Liquidity",
+    "sections": {
+        "summary": "The Overnight Reverse Repurchase (ON RRP) facility is where money market funds (MMFs) park excess cash at the Fed. Think of it as the 'overflow tank' for the financial system's liquidity.",
+        "deep_dive": "When the RRP balance falls, that cash enters the banking system (often buying T-Bills), effectively increasing Net Liquidity. It acted as a massive liquidity cushion in 2024-2025, neutralizing the impact of QT (Quantitative Tightening).",
+        "council_debate": "{\"geopolitics\": \"Foreign central banks also use the Foreign RRP facility. A spike there indicates a global shortage of dollars, forcing foreign nations to park cash for safety rather than buying US Treasuries.\", \"macro\": \"It's simple hydraulics. Fed Balance Sheet - TGA - RRP = Liquidity. If RRP drains to zero, the next dollar of QT comes directly out of bank reserves. That's the danger zone.\", \"quant\": \"We track the rate of drainage. If RRP drains faster than QT, it's net stimulative (Bullish). If RRP stops draining while QT continues, markets usually crash within 6 weeks (Bearish).\", \"technical\": \"RRP levels below $300 Billion act as a psychological support level. Below that, volatility algorithms re-price 'Tail Risk'.\", \"policy\": \"The Fed wants RRP to be non-zero but low. If it's too high, banks aren't lending. If it's zero, repo rates spike and the plumbing breaks (like September 2019).\", \"tech\": \"New DeFi repo markets are trying to compete with the Fed's RRP, but institutional trust isn't there yet. We monitor 'Real World Asset' (RWA) protocols as a potential future alternative for parking stablecoin cash.\"}",
+        "forecast_risks": "The 'Zero Bound Risk'. Once RRP hits zero, the liquidity buffer is gone. Any shock after that point (e.g., unexpectedly larger T-Bill issuance) causes an immediate liquidity crisis.",
+        "gms_conclusion": "The buffer is wearing thin. We are transitioning from a world of 'Abundant Reserves' to 'Ample Reserves'. Watch this level daily."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T13:45:00+00:00"
+}

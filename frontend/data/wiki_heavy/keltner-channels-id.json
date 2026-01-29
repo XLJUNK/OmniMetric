@@ -1,0 +1,16 @@
+{
+    "slug": "keltner-channels",
+    "lang": "ID",
+    "title": "Saluran Keltner (Keltner Channels)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Amplop 'Cerdas'. Saluran Keltner menempatkan band di atas dan di bawah Exponential Moving Average (EMA) pusat berdasarkan volatilitas (ATR). Tidak seperti Bollinger Bands, mereka tidak kejang dengan setiap kedutan harga. Mereka lebih halus dan lebih ramah tren.",
+        "deep_dive": "Terdiri dari EMA 20 hari dan band yang diatur pada 2x ATR. Karena mereka menggunakan Average True Range (ATR) daripada Deviasi Standar, mereka menyaring kebisingan secara lebih efektif. Penutupan di luar saluran adalah sinyal penembusan yang signifikan.",
+        "council_debate": "{\"geopolitics\": \"Guncangan rantai pasokan adalah pergeseran permanen, bukan kebisingan. Saluran Keltner menyaring kebisingan harian lebih baik daripada Bollinger Bands. Ketika harga menembus saluran Keltner atas selama krisis, itu berarti 'Premi Risiko' telah diatur ulang secara struktural lebih tinggi.\", \"macro\": \"Inflasi adalah tren, bukan osilator pembalik rata-rata. Saluran Keltner lebih unggul untuk aset inflasi yang mengikuti tren (Emas, Minyak). Kendarai band atas selama narasi makro bertahan.\", \"quant\": \"Kami menguji strategi 'Squeeze'. Ketika Bollinger Bands berkontraksi *di dalam* Saluran Keltner, itu memberi sinyal kompresi ekstrem. Pengaturan 'TTM Squeeze' ini adalah salah satu pengaturan perdagangan dengan probabilitas tertinggi dalam sejarah.\", \"technical\": \"'Slingshot' (Ketapel). Ketika harga menarik kembali ke EMA (Mean) dalam tren naik yang kuat, sering kali memantul tepat dari 20 EMA atau Keltner Band yang lebih rendah. Ini adalah titik masuk risiko rendah.\", \"policy\": \"Bank Sentral membenci volatilitas. Mereka mencoba mempertahankan suku bunga di dalam Saluran Keltner. Ketika suku bunga menembus saluran atas, Bond Vigilantes telah mengambil kendali dari The Fed.\", \"tech\": \"Crypto terlalu fluktuatif untuk pengaturan standar. Kami menggunakan 3x ATR untuk Saluran Keltner dalam Bitcoin. Penembusan band 3x ATR adalah peristiwa 'Lilin Dewa' (God Candle).\"}",
+        "forecast_risks": "'Penggilingan Pasar Datar'. Di pasar samping, harga akan menggiling di sepanjang band tanpa tren, memicu sinyal penembusan palsu. Anda HARUS menggunakan ADX untuk mengonfirmasi kekuatan tren sebelum memercayai penembusan Keltner.",
+        "gms_conclusion": "Lebih halus dari Bollinger. Lebih baik untuk Tren. Standar bagi para profesional yang ingin menyaring kebisingan."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:00:00+00:00"
+}

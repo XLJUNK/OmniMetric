@@ -1,0 +1,16 @@
+{
+    "slug": "ism-manufacturing-pmi",
+    "lang": "ID",
+    "title": "ISM Manufacturing PMI",
+    "type": "indicator",
+    "category": "Economy",
+    "sections": {
+        "summary": "ISM Manufacturing PMI (Indeks Manajer Pembelian) adalah survei bulanan terhadap manajer rantai pasokan. Angka di atas 50 menunjukkan ekspansi; di bawah 50 menunjukkan kontraksi. Secara historis, ini adalah indikator utama yang paling dapat diandalkan untuk PDB AS.",
+        "deep_dive": "Ini melacak 5 area utama: Pesanan Baru, Inventaris, Produksi, Pengiriman Pemasok, dan Ketenagakerjaan. 'Pesanan Baru' adalah komponen yang paling berwawasan ke depan. Jika Pesanan Baru naik tetapi Inventaris turun, ledakan produksi sudah dekat.",
+        "council_debate": "{\"geopolitics\": \"Reshoring dan 'Friend-shoring' mendistorsi data. Konstruksi manufaktur AS sedang booming (positif), tetapi output aktual tertinggal karena kekurangan tenaga kerja. Fraktur rantai pasokan global membuat komponen 'Pengiriman Pemasok' tidak stabil.\", \"macro\": \"Hati-hati dengan divergensi 'Barang vs. Jasa'. Kami telah melihat resesi di ISM Manufaktur (<50) sementara ISM Jasa tetap kuat. 'Resesi Bergulir' ini menciptakan kebingungan tetapi mencegah keruntuhan ekonomi total.\", \"quant\": \"Kami menggunakan ISM PMI untuk menentukan waktu 'Rotasi Sektor'. Ketika PMI mencapai titik terendah dan naik, beli Industri dan Material. Ketika PMI memuncak dan berguling, putar ke saham Defensif (Utilitas, Perawatan Kesehatan).\", \"technical\": \"Level 42,5 adalah 'Lantai Resesi' historis. Jika PMI menembus di bawah 42,5, hard landing hampir dijamin. Garis 50 adalah garis pemisah Bull/Bear.\", \"policy\": \"The Fed jarang menaikkan suku bunga ketika ISM di bawah 45. Kontraksi mendalam di bidang manufaktur adalah sinyal kuat untuk penurunan suku bunga, seringkali mengesampingkan data inflasi yang kaku.\", \"tech\": \"Otomatisasi memutus hubungan antara 'Output Manufaktur' dan 'Ketenagakerjaan Manufaktur'. Kita dapat memiliki output tinggi dengan perekrutan rendah. Sub-indeks Ketenagakerjaan PMI menjadi ukuran yang kurang dapat diandalkan untuk pasar tenaga kerja secara keseluruhan.\"}",
+        "forecast_risks": "Risikonya adalah 'False Dawn' di mana PMI memantul sebentar karena penyesuaian musiman tetapi kemudian runtuh lagi karena suku bunga yang lebih tinggi akhirnya menggigit sektor industri padat modal.",
+        "gms_conclusion": "Detak jantung ekonomi fisik. Jika ISM PMI naik dari <50 menuju 50, itu adalah sinyal paling bullish untuk saham siklis."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T13:40:00+00:00"
+}

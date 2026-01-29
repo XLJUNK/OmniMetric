@@ -1,0 +1,16 @@
+{
+    "slug": "fractals",
+    "lang": "ES",
+    "title": "Fractales de Williams",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "La teoría del caos en acción. Un fractal es un patrón geométrico recurrente que muestra un punto de inflexión. Un 'Buy Fractal' es una serie de 5 barras donde el mínimo más bajo está en el medio, flanqueado por dos mínimos más altos. Marca un fondo potencial.",
+        "deep_dive": "Los mercados son autosimilares en todos los plazos. Un fractal en un gráfico de 1 minuto se parece a uno en un gráfico mensual. No intercambiamos el Fractal en sí; comerciamos con la *ruptura* del Fractal High o Low. Detecta estructura en el caos.",
+        "council_debate": "{\"geopolitics\": \"La historia se repite, pero no exactamente. Rima. Las crisis geopolíticas son fractales. Una escaramuza local (pequeño fractal) a menudo predice una guerra mayor (gran fractal) si la estructura es idéntica. Mapeamos la intensidad del conflicto usando geometría fractal.\", \"macro\": \"Los ciclos económicos son fractales. El ciclo económico de 4 años está anidado dentro de un ciclo de deuda de 10 años, dentro de una onda de Kondratieff de 50 años. Identificamos en qué 'Ola' estamos para asignar capital. Actualmente, estamos en un fractal de 'invierno'.\", \"quant\": \"Filtramos el ruido. Un fractal es un extremo local. Al conectar fractales, dibujamos líneas de tendencia que son matemáticamente significativas, no subjetivas. Si el precio rompe un 'Soporte Fractal', nuestros algoritmos de venta se activan instantáneamente.\", \"technical\": \"La comida del cocodrilo. Bill Williams usó Fractals con el indicador Alligator. Un fractal por encima de los dientes del Alligator es una señal de ruptura válida. Nunca tomamos una operación a menos que un Fractal haya confirmado la dirección.\", \"policy\": \"Los errores de política son fractales. Un pequeño error de política (subida de tipos demasiado tarde) cae en cascada en una crisis bancaria, que cae en cascada en una crisis de deuda soberana. El patrón de negación y pánico es idéntico en todas las escalas.\", \"tech\": \"Las bases de código son fractales. Un error en una biblioteca de bajo nivel refleja una falla en la arquitectura del sistema. En los mercados, los crash repentinos impulsados ​​por Algo son eventos fractales: los micro-crash ocurren cada segundo, pareciéndose al Flash Crash de 2010.\"}",
+        "forecast_risks": "Retraso y Repintado. Un fractal necesita 2 barras *después* de la barra central para confirmar. Es un indicador rezagado. Además, los brotes falsos son comunes en los mercados laterales.",
+        "gms_conclusion": "No adivines el turno. Deje que el Fractal marque el giro, luego cambie el impulso."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:50:00+00:00"
+}

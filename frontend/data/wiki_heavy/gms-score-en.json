@@ -1,0 +1,16 @@
+{
+    "slug": "gms-score",
+    "lang": "EN",
+    "title": "GMS Score",
+    "type": "glossary",
+    "category": "GMS Exclusive",
+    "sections": {
+        "summary": "The Global Macro Signal (GMS) Score is a proprietary composite index ranging from 0 (Maximum Bearish/Risk-Off) to 100 (Maximum Bullish/Risk-On). It synthesizes data from 18 Tier-1 macro indicators, including Net Liquidity, Real Rates, and VIX. A score above 60 suggests a robust investment environment, while below 40 warns of systemic fragility.",
+        "deep_dive": "Unlike traditional 'black box' algo scores, the GMS Score is transparently derived from the weighted consensus of six analytical frameworks (The Council): Geopolitics, Macroeconomics, Quantitative Analysis, Technicals, Policy, and Technology. It acts as a 'Health Bar' for the global financial system, filtering out noise to reveal the true underlying trend.",
+        "council_debate": "{\"geopolitics\": \"The GMS Score is the only metric that quantitatively discounts asset prices for geopolitical risk premium. When the score drops despite rising stock prices, it's often an early warning of a geopolitical 'rugged landscape' ahead that markets are ignoring.\", \"macro\": \"I view the GMS Score as a 'Business Cycle Speedometer'. A steady reading between 40-60 indicates a Goldilocks zone. Rapid drops (e.g., from 70 to 30 in a month) are more predictive of recession than the yield curve inversion itself.\", \"quant\": \"Mathematically, the GMS Score is a mean-reverting oscillator. The 'Buy Zone' is statistically significant when the score reverses upward from <20 (Oversold). The 'Sell Zone' activates >80 (Overbought), where the probability of positive forward returns diminishes exponentially.\", \"technical\": \"The GMS Score often leads price action. We frequently see 'GMS Divergence'—where the S&P 500 makes a new high, but the GMS Score makes a lower high. This internal weakness almost always precedes a market correction.\", \"policy\": \"Central banks should watch this score. It aggregates financial conditions more holistically than the Bloomberg FCI. A score below 20 usually forces the Fed to pivot, regardless of inflation data, to prevent a credit freeze.\", \"tech\": \"In the age of AI, data moves faster. The GMS Score updates in real-time, capturing 'Alternative Data' signals like satellite imagery of supply chains and AI-driven sentiment analysis that traditional quarterly GDP reports miss.\"}",
+        "forecast_risks": "The primary risk to the GMS Score reliability is a 'Correlation Breakdown' where all asset classes move in unison (correlation = 1) due to a liquidity shock. In such an event, the score might lag the initial crash but will accurately signal the 'All Clear' for reentry.",
+        "gms_conclusion": "The GMS Score is currently the 'North Star' for asset allocation. Do not fight the trend of the score. If the score is falling, raise cash. If rising, deploy capital. It is the ultimate filter for separating signal from noise."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T13:10:00+00:00"
+}

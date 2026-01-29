@@ -220,7 +220,8 @@ export const DICTIONARY = {
                 SPY: "S&P 500", QQQ: "Nasdaq 100", IWM: "Russell 2000", RSP: "S&P 500 Equal Weight", HYG: "High Yield Bond", NIFTY: "Nifty 50",
                 VIX: "VIX Volatility", TNX: "US 10Y Yield", MOVE: "MOVE Index", CRYPTO_SENTIMENT: "Crypto Fear & Greed"
             },
-            search_placeholder: "Search Knowledge Base..."
+            search_placeholder: "Search Knowledge Base...",
+            wiki_deep_dive: "Deep Dive Analysis"
         },
         subpages: {
             about: {
@@ -461,7 +462,8 @@ export const DICTIONARY = {
                 SPY: "S&P 500", QQQ: "ナスダック100", IWM: "ラッセル2000", RSP: "S&P500均等加重", HYG: "ハイイールド債", NIFTY: "Nifty 50",
                 VIX: "VIX恐怖指数", TNX: "米国10年債利回り", MOVE: "MOVE債券恐怖指数", CRYPTO_SENTIMENT: "暗号資産恐怖指数 (F&G)"
             },
-            search_placeholder: "マクロ知識ベースを検索..."
+            search_placeholder: "マクロ知識ベースを検索...",
+            wiki_deep_dive: "詳細分析を読む"
         },
         subpages: {
             about: {
@@ -657,7 +659,8 @@ export const DICTIONARY = {
                 VIX: "VIX恐慌指数", TNX: "美国10年期国债", MOVE: "MOVE指数", CRYPTO_SENTIMENT: "加密恐慌/贪婪指数",
                 REAL_INTEREST_RATE: "10年期实质利率", BREAKEVEN_INFLATION: "10年期预期通胀率"
             },
-            search_placeholder: "搜索宏观知识库..."
+            search_placeholder: "搜索宏观知识库...",
+            wiki_deep_dive: "阅读深度分析"
         },
         subpages: {
             about: {
@@ -853,7 +856,8 @@ export const DICTIONARY = {
                 VIX: "Volatilidad VIX", TNX: "Bono 10 Años", MOVE: "Índice MOVE", CRYPTO_SENTIMENT: "Índice Miedo/Codicia",
                 REAL_INTEREST_RATE: "Tasa Real 10A", BREAKEVEN_INFLATION: "Inflación Implícita 10A"
             },
-            search_placeholder: "Buscar..."
+            search_placeholder: "Buscar...",
+            wiki_deep_dive: "Leer Análisis Detallado"
         },
         subpages: {
             about: {
@@ -1049,7 +1053,8 @@ export const DICTIONARY = {
                 VIX: "VIX सूचकांक", TNX: "US 10Y Yield", MOVE: "MOVE Index", CRYPTO_SENTIMENT: "Crypto Fear & Greed",
                 REAL_INTEREST_RATE: "10Y वास्तविक दर", BREAKEVEN_INFLATION: "10Y ब्रेकइवन मुद्रास्फीति"
             },
-            search_placeholder: "खोज..."
+            search_placeholder: "खोज...",
+            wiki_deep_dive: "विस्तृत विश्लेषण पढ़ें"
         },
         subpages: {
             about: {
@@ -1239,7 +1244,8 @@ export const DICTIONARY = {
 
             maxims: "PETUAH EMAS",
             technical: "TEKNIKAL",
-            search_placeholder: "Cari..."
+            search_placeholder: "Cari...",
+            wiki_deep_dive: "Baca Analisis Mendalam"
         },
         subpages: {
             about: {
@@ -1429,7 +1435,8 @@ export const DICTIONARY = {
             maxims: "درر",
 
             technical: "فني",
-            search_placeholder: "بحث..."
+            search_placeholder: "بحث...",
+            wiki_deep_dive: "قراءة التحليل العميق"
         },
         subpages: {
             about: {

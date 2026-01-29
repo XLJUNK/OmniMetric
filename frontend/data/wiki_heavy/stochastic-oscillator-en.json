@@ -1,0 +1,16 @@
+{
+    "slug": "stochastic-oscillator",
+    "lang": "EN",
+    "title": "Stochastic Oscillator",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "The 'Range Finder'. Stochastics compares a closing price to its price range over a period. It works best in flat, sideways markets. It tells you where the price is relative to its recent high-low channel.",
+        "deep_dive": "%K is the fast line, %D is the slow line. A crossover in the overbought (>80) or oversold (<20) zone is the classic signal. It is faster and more sensitive than RSI, but prone to false signals.",
+        "council_debate": "{\"geopolitics\": \"In a range-bound geopolitical standoff (no war, no peace), Stochastics is king. It captures the back-and-forth headlines perfectly. Buy the dip at 20, sell the rip at 80.\", \"macro\": \"Macro trends destroy Stochastics users. In a strong inflation uptrend, Stochastics will stay > 80 forever. If you short every time it hits 80, you will be wiped out. Use it only when the Macro is neutral.\", \"quant\": \"We use Stochastics for 'Mean Reversion' in Asian trading hours (often low volatility). If the S&P 500 futures dip to Stoch 10 during the Asian lunch break, our bots buy it for a quick bounce back to 50.\", \"technical\": \"Look for the 'Hinge'. When %K and %D lines flatten out and then sharply turn, it looks like a door hinge. This visual pattern often precedes a violent breakout from the range.\", \"policy\": \"Central banks pegging rates creates perfect Stochastic ranges. If the Fed says 'Rates will stay 5.25% for a year', the bond market becomes a Stochastics playground. Buy low yield, sell high yield.\", \"tech\": \"In Crypto, Stochastics is useful for 'Scalping' on the 15-minute chart. Crypto ranges are wide (5-10%). Capturing the swing from 20 to 80 on a 15m chart is a profitable strat for day traders.\"}",
+        "forecast_risks": "Pop and Drop. In a crash, Stochastics will hit 0 and stay there. Buying because 'it can't go lower' is a fallacy. It can 'embed' at 0 for the entire duration of the crash.",
+        "gms_conclusion": "Use Stochastics in Boxes (Ranges). Use MACD in Trends. Know which environment you are in."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:00:00+00:00"
+}

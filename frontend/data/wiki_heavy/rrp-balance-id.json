@@ -1,0 +1,16 @@
+{
+    "slug": "rrp-balance",
+    "lang": "ID",
+    "title": "Saldo Reverse Repo (RRP)",
+    "type": "indicator",
+    "category": "Liquidity",
+    "sections": {
+        "summary": "Fasilitas Overnight Reverse Repurchase (ON RRP) adalah tempat dana pasar uang (MMF) memarkir kelebihan uang tunai di The Fed. Anggap saja sebagai 'tangki pelimpah' untuk likuiditas sistem keuangan.",
+        "deep_dive": "Ketika saldo RRP turun, uang tunai itu masuk ke sistem perbankan (seringkali membeli T-Bills), secara efektif meningkatkan Likuiditas Bersih. Ini bertindak sebagai bantalan likuiditas besar-besaran pada 2024-2025, menetralkan dampak QT (Pengetatan Kuantitatif).",
+        "council_debate": "{\"geopolitics\": \"Bank sentral asing juga menggunakan fasilitas RRP Asing. Lonjakan di sana menunjukkan kekurangan dolar global, memaksa negara-negara asing untuk memarkir uang tunai demi keamanan daripada membeli US Treasury.\", \"macro\": \"Ini hidrolika sederhana. Neraca Fed - TGA - RRP = Likuiditas. Jika RRP terkuras hingga nol, dolar QT berikutnya keluar langsung dari cadangan bank. Itu adalah zona bahaya.\", \"quant\": \"Kami melacak tingkat drainase. Jika RRP mengalir lebih cepat daripada QT, itu adalah stimulatif bersih (Bullish). Jika RRP berhenti mengalir sementara QT berlanjut, pasar biasanya jatuh dalam waktu 6 minggu (Bearish).\", \"technical\": \"Level RRP di bawah $300 Miliar bertindak sebagai level support psikologis. Di bawah itu, algoritma volatilitas menetapkan ulang harga 'Risiko Ekor'.\", \"policy\": \"The Fed ingin RRP menjadi non-nol tetapi rendah. Jika terlalu tinggi, bank tidak memberikan pinjaman. Jika nol, suku bunga repo melonjak dan perpipaan pecah (seperti September 2019).\", \"tech\": \"Pasar repo DeFi baru mencoba bersaing dengan RRP The Fed, tetapi kepercayaan institusional belum ada di sana. Kami memantau protokol 'Aset Dunia Nyata' (RWA) sebagai alternatif masa depan yang potensial untuk memarkir uang tunai stablecoin.\"}",
+        "forecast_risks": "'Zero Bound Risk'. Begitu RRP mencapai nol, penyangga likuiditas hilang. Kejutan apa pun setelah titik itu (misalnya, penerbitan T-Bill yang tak terduga lebih besar) menyebabkan krisis likuiditas segera.",
+        "gms_conclusion": "Penyangga semakin tipis. Kita sedang bertransisi dari dunia 'Cadangan Berlimpah' ke 'Cadangan Cukup'. Perhatikan level ini setiap hari."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T13:45:00+00:00"
+}

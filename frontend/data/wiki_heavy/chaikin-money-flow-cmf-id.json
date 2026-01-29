@@ -1,0 +1,16 @@
+{
+    "slug": "chaikin-money-flow-cmf",
+    "lang": "ID",
+    "title": "CMF (Aliran Uang Chaikin)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Pengukur Tekanan Institusional. CMF mengukur tekanan beli dan jual selama periode tertentu. Ini lebih ketat dari osilator lainnya. Ia menuntut agar harga ditutup di bagian atas kisaran harian untuk dihitung sebagai 'Akumulasi'. Ini menyaring penutupan yang lemah.",
+        "deep_dive": "Dikembangkan oleh Marc Chaikin. Ini menjumlahkan Garis Akumulasi/Distribusi selama (biasanya) 21 hari. Nilai di atas nol menunjukkan tekanan beli. Nilai di bawah nol menunjukkan tekanan jual. Sangat baik untuk mengonfirmasi penembusan (breakouts).",
+        "council_debate": "{\"geopolitics\": \"Posisi uang pintar *sebelum* konflik. Kami menonton CMF di Saham Pertahanan. Jika CMF berubah positif sementara saham masih datar, orang dalam menumpuk sebelum kontrak pemerintah atau berita perang pecah.\", \"macro\": \"Alat Rotasi Sektor. Dalam resesi, modal berputar ke Utilitas. Kami menggunakan CMF untuk melihat sektor mana yang menerima 'Aliran' sebelum harga pecah. Jika CMF Teknologi negatif tetapi CMF Utilitas positif, rotasi aktif.\", \"quant\": \"Kami menggunakan keragaman CMF. Jika S&P 500 membuat level tertinggi tetapi rata-rata CMF konstituen turun, reli adalah 'Sempit'. Ini adalah sinyal pendek probabilitas tinggi untuk indeks.\", \"technical\": \"Konfirmasi Penembusan. Penembusan harga dengan CMF negatif adalah 'Penembusan Palsu'. Penembusan harga dengan kenaikan, CMF positif adalah 'Penembusan Sejati'. Jangan pernah membeli breakout jika CMF berada di bawah nol.\", \"policy\": \"Sovereign Wealth Funds membeli dalam jumlah besar. Pembelian mereka mendukung penutupan. CMF sensitif terhadap 'Kekuatan Penutupan'. Jika aktor negara mendukung aset strategis, CMF akan tetap positif bahkan pada hari-hari turun.\", \"tech\": \"Grup pompa Crypto menaikkan harga tetapi menjual sebelum penutupan. Ini meninggalkan sumbu atas yang panjang. CMF menghukum penutupan yang lemah, sehingga mendeteksi 'Pompa' ini sebagai distribusi (Jual), bahkan jika lilinnya berwarna hijau. Itu menyelamatkan Anda dari membeli bagian atas.\"}",
+        "forecast_risks": "Risiko Kesenjangan. CMF tidak menangani kesenjangan semalam dengan baik. Ini berfokus pada kisaran intraday. Gunakan bersama dengan OBV untuk mendapatkan gambaran volume yang lengkap.",
+        "gms_conclusion": "Amatir membuka pasar; Profesional menutup pasar. CMF melacak para profesional."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:35:00+00:00"
+}

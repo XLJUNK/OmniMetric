@@ -1,0 +1,16 @@
+{
+    "slug": "chaikin-volatility",
+    "lang": "ID",
+    "title": "Volatilitas Chaikin (Chaikin Volatility)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Detektor 'Ketenangan Sebelum Badai'. Volatilitas Chaikin mengukur tingkat perubahan rentang perdagangan. Ini melihat puncak pasar (kepuasan diri) dan dasar pasar (kepanikan) berdasarkan ekspansi dan kontraksi pergerakan harga.",
+        "deep_dive": "Dikembangkan oleh Marc Chaikin. Tidak seperti ATR (nilai absolut), ini adalah osilator perubahan persentase. Ketika volatilitas sangat rendah untuk waktu yang lama, ia memprediksi penembusan yang kejam. Ketika sangat tinggi, ia memprediksi pembalikan.",
+        "council_debate": "{\"geopolitics\": \"Kepuasan diri adalah musuh. Ketika Volatilitas Chaikin mencapai posisi terendah multi-tahun, pasar mengabaikan risiko geopolitik. Ini adalah ketenangan sebelum badai. Beli opsi put (perlindungan) saat volatilitas 'mati'.\", \"macro\": \"Stabilitas ekonomi (Goldilocks) membunuh volatilitas. Volatilitas Chaikin turun selama masa booming. Tapi 'Momen Minsky' terjadi ketika stabilitas melahirkan ketidakstabilan. Lonjakan tiba-tiba dalam Volatilitas Chaikin dari basis rendah menandakan rezim makro telah rusak.\", \"quant\": \"Mean Reversion Volatilitas. Kami mempersingkat volatilitas ketika secara historis tinggi (menjual opsi) dan membeli volatilitas ketika secara historis rendah. Volatilitas Chaikin memberi kami peringkat persentil relatif dari ketakutan.\", \"technical\": \"Divergensi. Harga membuat level tertinggi baru, tetapi Volatilitas Chaikin membuat level tertinggi yang lebih rendah. Ini berarti reli kehilangan energi. 'Uang bodoh' masih membeli, tetapi 'uang pintar' telah berhenti mendorong volatilitas.\", \"policy\": \"'The Greenspan Put' menekan volatilitas. Tapi akhirnya, bendungan itu pecah. Perhatikan Volatilitas Chaikin melonjak *meskipun* ada jaminan The Fed. Itu berarti pasar telah kehilangan kepercayaan pada bank sentral.\", \"tech\": \"Di Crypto, volatilitas rendah mencurigakan. Bitcoin tidak bisa diam lama. Garis Volatilitas Chaikin yang datar biasanya mendahului pergerakan 20%. Kami mengangkang pasar (Beli Panggilan + Beli Put) setiap kali garis datar ini terjadi.\"}",
+        "forecast_risks": "Perdagangan 'Pembuat Janda'. Volatilitas dapat tetap rendah untuk jumlah waktu yang tidak rasional (misalnya, 2017). Bertaruh pada lonjakan volatilitas terlalu dini akan menguras akun Anda melalui peluruhan theta (peluruhan waktu).",
+        "gms_conclusion": "Volatilitas adalah siklus. Ia bernafas masuk (rendah) dan bernafas keluar (tinggi). Gunakan Volatilitas Chaikin untuk mengatur waktu napas."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:00:00+00:00"
+}

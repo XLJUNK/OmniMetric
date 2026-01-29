@@ -1,0 +1,16 @@
+{
+    "slug": "rsi-relative-strength-index",
+    "lang": "ES",
+    "title": "RSI (Índice de Fuerza Relativa)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "El 'Velocímetro' del mercado. El RSI mide la velocidad y el cambio de los movimientos de precios. Identifica condiciones de sobrecompra (codicia) y sobreventa (miedo). 70 es 'Caliente', 30 es 'Frío'.",
+        "deep_dive": "El RSI oscila entre 0 y 100. Tradicionalmente, >70 es sobrecompra y <30 es sobreventa. Sin embargo, en tendencias fuertes, el RSI puede permanecer sobrecomprado durante semanas. La divergencia (precio sube, RSI baja) es su señal más poderosa.",
+        "council_debate": "{\"geopolitics\": \"Durante los choques geopolíticos, el RSI alcanza mínimos extremos (<20). Esto suele ser el 'Fondo de Pánico'. Esperamos a que el RSI vuelva a subir por encima de 30 para confirmar que el pánico ha disminuido antes de comprar la caída.\", \"macro\": \"En un mercado alcista estructural (Tendencia Macro), el RSI rara vez llega a 30. Encuentra soporte en 40-50. Si el RSI llega a 30 en un mercado alcista, es una oportunidad de compra generacional.\", \"quant\": \"Usamos 'RSI 2' (RSI de 2 períodos) para la reversión a la media. Si RSI(2) < 5, compramos. Si RSI(2) > 95, vendemos. Captura el cambio a corto plazo. El RSI estándar (14) es demasiado lento para HFT.\", \"technical\": \"Los 'Giros Fallidos' (Failure Swings) son la joya oculta del RSI. Un techo de giro fallido ocurre cuando el RSI sube por encima de 70, cae, sube de nuevo pero no cruza 70, y luego rompe el mínimo anterior. Señala una reversión sin necesidad de divergencia de precios.\", \"policy\": \"El RSI es útil para la intervención monetaria. Cuando el RSI USD/JPY llega a 85, es probable que el Ministerio de Finanzas intervenga. Los responsables políticos observan los extremos del impulso para cronometrar sus acciones y lograr el máximo impacto.\", \"tech\": \"En las temporadas de criptomonedas alternativas, el RSI puede permanecer en 90+ durante un mes. Vender solo porque RSI > 70 en cripto te llevará a la bancarrota. Necesitas esperar a que se rompa la línea de tendencia del RSI para salir de bombas enormes.\"}",
+        "forecast_risks": "La 'Trampa de Sobrecompra'. En un movimiento parabólico fuerte, RSI > 70 no es una señal de venta; es una señal de 'Fuerza'. Ponerse corto en una tendencia fuerte solo porque el RSI está sobrecomprado es la forma más rápida de perder dinero.",
+        "gms_conclusion": "No predigas el tope. Deja que la divergencia RSI o el giro fallido lo confirmen. Hasta entonces, la tendencia es tu amiga, incluso en RSI 80."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:00:00+00:00"
+}

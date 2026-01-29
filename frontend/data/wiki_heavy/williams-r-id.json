@@ -1,0 +1,16 @@
+{
+    "slug": "williams-r",
+    "lang": "ID",
+    "title": "Williams %R",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Detektor 'Paus'. Williams %R adalah osilator momentum yang mengukur level overbought dan oversold. Tidak seperti RSI, ia tidak memiliki perataan, membuatnya sangat sensitif terhadap titik balik pasar. Ini melihat saat yang tepat tekanan beli habis.",
+        "deep_dive": "Dikembangkan oleh Larry Williams. Ini bergerak pada skala 0 hingga -100. 0 hingga -20 adalah Overbought. -80 hingga -100 adalah Oversold. Keajaiban %R adalah kemampuannya untuk mengantisipasi pembalikan harga sebelum muncul di grafik.",
+        "council_debate": "{\"geopolitics\": \"Perdagangan krisis membutuhkan kecepatan. RSI terlalu lambat. Williams %R bereaksi instan terhadap berita utama geopolitik. Jika berita menyebar dan %R tetap disematkan di atas -20, pasar mendiskon ketakutan. Jika turun, segera jual.\", \"macro\": \"Tren makro jeda, tetapi jarang berbalik arah secara instan. Kami menggunakan Williams %R untuk memasuki tren makro yang mapan pada pullback. Di Pasar Bull, kami membeli ketika %R mencapai -80 (Oversold). Di Pasar Bear, kami menjual ketika mencapai -20 (Overbought).\", \"quant\": \"Algos Mean Reversion menyukai sinyal ini. Kami mencari 'Failure Swings'. Jika %R mencapai -100, memantul, dan kemudian gagal menembus -80 pada pengujian ulang berikutnya, itu adalah sinyal divergensi. Probabilitas pembalikan > 65%.\", \"technical\": \"'The Pop'. Ketika harga sedang tren kuat, %R dapat tetap 'Overbought' (di atas -20) selama berminggu-minggu. Ini bukan sinyal jual; ini adalah tanda kekuatan ekstrem. Hanya jual ketika %R menembus kembali DI BAWAH -20.\", \"policy\": \"Fed speak menciptakan kebisingan. Williams %R membantu menyaringnya. Jika Powell berbicara dan pasar turun, tetapi %R memegang garis tengah -50, trennya utuh. Itu hanya flush likuiditas.\", \"tech\": \"Crypto bergerak cepat. Kami menggunakan Williams %R yang dinormalisasi pada grafik 4 jam untuk perdagangan kulit kepala Bitcoin. Itu menangkap puncak lokal skema 'Pump and Dump' dengan akurasi yang menakutkan.\"}",
+        "forecast_risks": "'Pasak' (The Peg). Dalam tren super, Williams %R bisa 'dipatok' pada -0 atau -100 untuk waktu yang lama. Menjual hanya karena 'Overbought' dalam tren naik yang kuat adalah cara pasti untuk bangkrut. Anda memerlukan pemicu untuk keluar.",
+        "gms_conclusion": "Ujung saraf pasar yang sensitif. Gunakan untuk mengatur waktu entri Anda dengan presisi, tetapi hormati trennya."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:30:00+00:00"
+}

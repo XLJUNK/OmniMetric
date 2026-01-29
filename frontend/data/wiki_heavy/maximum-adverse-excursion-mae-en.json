@@ -1,0 +1,16 @@
+{
+    "slug": "maximum-adverse-excursion-mae",
+    "lang": "EN",
+    "title": "MAE (Maximum Adverse Excursion)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "The Pain Tolerance Gauge. MAE measures the maximum loss incurred by a trade while it was open, even if it eventually became profitable. It tells you if your entry was precise or if you just got lucky after surviving a massive drawdown.",
+        "deep_dive": "Used for dissecting trading systems. If your average winning trade has an MAE of -5% but your stop loss is -2%, your stops are too tight. If your MAE is consistently near 0, your entries are sniper-like.",
+        "council_debate": "{\"geopolitics\": \"Nations have MAE limits. How much pain can a population endure from sanctions before regime change happens? We model the 'Social MAE' of a country. If inflation hits 50%, that might be the MAE limit before revolution triggers.\", \"macro\": \"Recessions are the MAE of the business cycle. We measure the depth of GDP contraction. If the economy recovers but the drawdown (MAE) was -10%, the structural damage (scarring) might be permanent, limiting future growth.\", \"quant\": \"We optimize Stop Losses using MAE clouds. We plot every trade's profit vs. its MAE. This creates a scatter plot. We draw the stop loss line just below the 'Noise' cluster. This scientifically minimizes risk without getting stopped out of winning trades.\", \"technical\": \"MAE reveals support quality. If price tests a support level and the MAE (penetration) is deep and frequent, that support is 'porous' and likely to break. We prefer 'Clean Rejections' with low MAE.\", \"policy\": \"Central Banks have an MAE for pain. They will tolerate some market decline (-10%), but if the S&P 500 drops -20% (their mental MAE), the 'Fed Put' activates. We trade the specific MAE level of the Central Bank governor.\", \"tech\": \"DeFi liquidations are MAE events. In leveraged yield farming, you are profitable until you aren't. We monitor the MAE of collateral ratios. A sudden price wick (high MAE) can liquidate a position even if the price recovers instantly.\"}",
+        "forecast_risks": "Survivor Bias. MAE analysis often only looks at winning trades. You must also study Maximum Favorable Excursion (MFE) and losing trades to get the full picture.",
+        "gms_conclusion": "Profit tells you the destination. MAE tells you how bumpy the road was. Prefer smooth roads."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T16:00:00+00:00"
+}

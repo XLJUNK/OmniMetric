@@ -1,0 +1,16 @@
+{
+    "slug": "volume-profile",
+    "lang": "EN",
+    "title": "Volume Profile",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "The X-Ray of Market Structure. Unlike standard volume (plotted over time), Volume Profile plots volume over *price*. It reveals where the 'fair value' is and where the market rejects price. It identifies the 'Point of Control' (POC) where the most business was transacted.",
+        "deep_dive": "It builds a histogram on the Y-axis. The 'Value Area' contains 70% of the volume. Prices above the Value Area are 'Unfair Highs'. Prices below are 'Unfair Lows'. The market always tries to return to the POC (Point of Control) unless something fundamental changes.",
+        "council_debate": "{\"geopolitics\": \"Supply Chains create nodes. When Russia was sanctioned, the Volume Profile of Oil shifted upwards. The old 'fair value' of $60 became irrelevant. Volume Profile showed us that the new 'Acceptance' level was $85. We trade the new reality, not the history.\", \"macro\": \"Inflation resets the board. Volume Profile shows us 'Sticky Prices'. If the CPI prints high, but price cannot hold above a high volume node (Resistance), the inflation scare is fake. The market is 'Rejecting' the higher prices.\", \"quant\": \"We arb the Value Area. If price drifts out of the Value Area (VA) without volume support, we fade it back to the POC. It is statistically the highest probability trade in futures markets. 80% Rule: If we open outside the VA but trade back in, we will traverse the entire VA.\", \"technical\": \"Support is not a line; it is a brick wall of orders. Volume Profile shows you exactly how thick that wall is. A 'High Volume Node' (HVN) acts as a magnet and support to bounce off. A 'Low Volume Node' (LVN) is a vacuum—price will zip through it fast.\", \"policy\": \"Central Bank intervention often happens at Low Volume Nodes to stop a crash. They step into the vacuum. Volume Profile allows us to see where the market is 'thin' and vulnerable to manipulation.\", \"tech\": \"In Crypto, new tokens have no profile. Bitcoin has a decade of profile. We use Fixed Range Volume Profile on Bitcoin to find the 'Cost Basis' of the last bull run. Using the POC of the 2021 bull run told us exactly where the 2022 bear market would bottom.\"}",
+        "forecast_risks": "Context Switching. Yesterday's Volume Profile is useful, but if news changes (e.g., War), the old nodes mean nothing. Do not trade off a profile from a different regime.",
+        "gms_conclusion": "Standard charts show you where price went. Volume Profile shows you where price wants to stay."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:35:00+00:00"
+}

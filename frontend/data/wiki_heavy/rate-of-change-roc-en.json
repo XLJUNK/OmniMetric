@@ -1,0 +1,16 @@
+{
+    "slug": "rate-of-change-roc",
+    "lang": "EN",
+    "title": "ROC (Rate of Change)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "The Speedometer of the Market. ROC measures the percentage change in price between the current price and the price N periods ago. It tells you the pure velocity of the trend. When ROC peaks, the trend is accelerating. When it dives, momentum is broken.",
+        "deep_dive": "It oscillates around a zero line. Positive ROC means price is higher than N days ago (Uptrend). Negative ROC means price is lower (Downtrend). Extreme readings (statistically high or low) often signal a market climax.",
+        "council_debate": "{\"geopolitics\": \"Wars and shocks cause velocity spikes. We monitor the ROC of Crude Oil. If the 12-day ROC of Oil exceeds +20%, it signals an 'Energy Shock' that will crash equities. It is our early warning system.\", \"macro\": \"Inflation is a Rate of Change phenomenon. We look at the ROC of the CPI. Even if inflation is high, if the ROC turns negative, the 'Disinflation' narrative begins, and bonds become a buy.\", \"quant\": \"Momentum factor investing relies on ROC. We rank every stock in the S&P 500 by its 12-month ROC. We buy the top decile (winners) and short the bottom decile (losers). This simple strategy beats the market over decades.\", \"technical\": \"Divergence on Velocity. If price makes a new high, but ROC makes a lower high, it means the car is still moving forward but taking its foot off the gas. A stalling engine leads to a crash.\", \"policy\": \"Central Banks react to the 'Speed' of market moves, not just levels. A slow 10% drop is fine. A 10% crash in 2 days (High Negative ROC) forces the Fed to intervene. High Negative ROC triggers the 'Fed Put'.\", \"tech\": \"In Crypto, ROC is parabolic. We use it to identify 'Vertical Blow-offs'. When Bitcoin's ROC goes vertical (near 90 degrees), the bubble is about to burst. Sell into the velocity spike.\"}",
+        "forecast_risks": "The 'Whipsaw Zero'. In a range-bound market, ROC will chop around the zero line endlessly. It is useless in sideways markets. Only use it when a clear trend is present.",
+        "gms_conclusion": "Speed kills, but it also pays. ROC tells you how fast the train is moving so you don't step in front of it."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:30:00+00:00"
+}

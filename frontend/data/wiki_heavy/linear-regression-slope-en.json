@@ -1,0 +1,16 @@
+{
+    "slug": "linear-regression-slope",
+    "lang": "EN",
+    "title": "Linear Regression Slope",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "The Trend Mathematized. Linear Regression fits a 'best fit' line through the prices and then measures the angle (slope) of that line. It tells you the exact direction and strength of the trend, stripping out the day-to-day noise.",
+        "deep_dive": "It's pure statistics. A positive slope > X means a strong uptrend. A negative slope < Y means a strong downtrend. A near-zero slope means choppy, sideways action. It is the objective arbiter of 'Is it trending?'.",
+        "council_debate": "{\"geopolitics\": \"Political stability yields linear growth. Political chaos yields volatility. We gauge the 'Health' of a nation by the Linear Regression Slope of its currency. A stable, gentle positive slope is investable. A jagged, vertical slope is uninvestable.\", \"macro\": \"GDP grows linearly (mostly). Bubbles grow exponentially. If the Linear Regression Slope of an asset deviates 3 sigmas from the GDP growth rate, it is a bubble. We use this to detect overheating sectors.\", \"quant\": \"We use Slope Z-Score. We calculate the slope, then normalize it. If the Slope Z-Score hits +3 (3 standard deviations above normal), the trend is unsustainable. We mean-revert (Short) the asset back to its mean trend.\", \"technical\": \"The 'Slope Flip'. We don't guess bottoms. We wait for the Linear Regression Slope to flip from negative to positive. This confirms the trend change mathematically, filtering out 'fake bounces'.\", \"policy\": \"Targeting 2% Inflation requires a specific slope of price rise. Central Banks essentially manage the Linear Regression Slope of critical asset prices. If the slope gets too steep, they raise rates to flatten the line.\", \"tech\": \"Moore's Law is linear on a log scale. We apply Linear Regression to Log Charts of Bitcoin. It reveals the long-term 'Fair Value' path. When price is far above the regression line, it's expensive. When below, it's a generational buy.\"}",
+        "forecast_risks": "Lag. Because it calculates a 'best fit' over N periods, it is slow to react to sudden crashes. It describes the recent past perfectly but can miss the immediate turn.",
+        "gms_conclusion": "Don't fight the math. If the slope is positive, look for longs. If negative, look for shorts."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:40:00+00:00"
+}

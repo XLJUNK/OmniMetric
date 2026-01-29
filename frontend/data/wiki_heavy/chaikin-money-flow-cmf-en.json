@@ -1,0 +1,16 @@
+{
+    "slug": "chaikin-money-flow-cmf",
+    "lang": "EN",
+    "title": "CMF (Chaikin Money Flow)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Institutional Pressure Gauge. CMF measures buying and selling pressure over a specific period. It is stricter than other oscillators. It demands that price closes in the upper half of the daily range to count as 'Accumulation'. It filters out weak closes.",
+        "deep_dive": "Developed by Marc Chaikin. It sums up the Accumulation/Distribution Line over (usually) 21 days. Values above zero indicate buying pressure. Values below zero indicate selling pressure. It is excellent for confirming breakouts.",
+        "council_debate": "{\"geopolitics\": \"Smart money positions *before* the conflict. We watch CMF on Defense Stocks. If CMF turns positive while the stock is still flat, insiders are accumulating before the government contract or war news breaks.\", \"macro\": \"Sector Rotation tool. In a recession, capital rotates to Utilities. We use CMF to spot which sector is receiving the 'Flow' before price breaks out. If Tech CMF is negative but Utilities CMF is positive, the rotation is active.\", \"quant\": \"We use CMF diversity. If S&P 500 is making highs but average CMF of the constituents is dropping, the rally is 'Narrow'. This is a high-probability short signal for the index.\", \"technical\": \"The Breakout Confirmation. A price breakout with negative CMF is a 'False Breakout'. A price breakout with rising, positive CMF is a 'True Breakout'. Never buy a breakout if CMF is below zero.\", \"policy\": \"Sovereign Wealth Funds buy in bulk. Their buying supports the close. CMF is sensitive to 'Closing Strength'. If a state actor is supporting a strategic asset, CMF will stay persistently positive even on down days.\", \"tech\": \"Crypto pump groups push price up but sell before the close. This leaves a long upper wick. CMF punishes weak closes, so it detects these 'Pumps' as distribution (Selling), even if the candle is green. It saves you from buying the top.\"}",
+        "forecast_risks": "Gap Risk. CMF does not handle overnight gaps well. It focuses on the intraday range. Use it in conjunction with OBV to get a complete picture of volume.",
+        "gms_conclusion": "Amateurs open the market; Professionals close the market. CMF tracks the professionals."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:35:00+00:00"
+}

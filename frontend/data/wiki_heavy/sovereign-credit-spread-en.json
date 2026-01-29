@@ -1,0 +1,16 @@
+{
+    "slug": "sovereign-credit-spread",
+    "lang": "EN",
+    "title": "Sovereign Credit Spread",
+    "type": "indicator",
+    "category": "Bonds",
+    "sections": {
+        "summary": "The Sovereign Credit Spread measures the difference in yield between US Treasuries (Risk-Free) and the sovereign bonds of other nations (or US corporate bonds). It quantifies the 'Risk Premium' demanded by investors to lend to a government or corporation.",
+        "deep_dive": "Widening spreads indicate rising default risk or liquidity stress. Narrowing spreads signal confidence and a 'reach for yield' environment. The 10Y Italy-Germany spread (BTP-Bund) is the classic proxy for Eurozone breakage risk.",
+        "council_debate": "{\"geopolitics\": \"When a nation aligns with the 'wrong' geopolitical bloc (e.g., BRICS vs. G7), its credit spread often widens as Western capital flees. We monitor Emerging Market (EM) spreads for signs of capital flight driven by sanctions risk.\", \"macro\": \"In a debt-saturated world, the 'Fiscal Dominance' theory suggests that even developed nations (like the UK or France) can face 'Bond Vigilante' attacks. A spike in spreads forces governments to invoke austerity, killing growth.\", \"quant\": \"We model the 'Credit Impulse'. When spreads narrow rapidly, it's equivalent to a rate cut. When they widen, it's a financial tightening. High-Yield (Junk) spreads over 500bps usually signal an imminent recession.\", \"technical\": \"Watch the 'OAS' (Option-Adjusted Spread). If it breaks its 200-day moving average, it triggers algorithmic selling of equities. Credit leads equities. If credit cracks, stocks follow.\", \"policy\": \"Central banks use 'Yield Curve Control' (YCC) or QE to artificially suppress spreads. If spreads widen despite central bank intervention, it signals a loss of policy credibility (the 'Widowmaker' trade).\", \"tech\": \"Real-time data on tax receipts and government spending (now available via open gov APIs) is being fed into AI credit models, making spread pricing faster and more ruthless than traditional credit rating agencies.\"}",
+        "forecast_risks": "The downside risk is a 'Sovereign Debt Crisis' cascading from peripheral emerging markets to the core (G7). The upside is a 'Golden Age of Credit' if AI-driven productivity boosts GDP enough to lower debt-to-GDP ratios naturally.",
+        "gms_conclusion": "The canary in the coal mine. A healthy stock market cannot coexist with blowing-out credit spreads. If spreads are rising, de-risk immediately."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T13:40:00+00:00"
+}

@@ -1,0 +1,16 @@
+{
+    "slug": "moving-average-sma-ema",
+    "lang": "ID",
+    "title": "Rata-rata Bergerak (SMA/EMA)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Moving Averages memperhalus aksi harga untuk mengungkapkan tren yang sebenarnya. Mereka adalah 'Garis di Pasir' antara pasar Bull dan Bear. SMA (Sederhana) lambat dan stabil; EMA (Eksponensial) cepat dan reaktif.",
+        "deep_dive": "SMA 200-Hari adalah garis pemisah institusional. Di atasnya, uang besar membeli saat turun. Di bawahnya, mereka menjual saat reli. 'Golden Cross' (50-Hari melintasi di atas 200-Hari) menandakan dimulainya pasar bull jangka panjang; 'Death Cross' menandakan kehancuran.",
+        "council_debate": "{\"geopolitics\": \"Berita politik menciptakan kebisingan (paku). Rata-rata bergerak menyaring kebisingan ini. Krisis Geopolitik hanya signifikan jika menembus SMA 200-Hari. Jika tidak, itu hanya peluang membeli.\", \"macro\": \"Dalam resesi, SMA 200-Hari bertindak sebagai langit-langit resistensi. Setiap reli ke 200-Hari adalah jebakan. Dalam ekspansi, ia bertindak sebagai lantai dukungan.\", \"quant\": \"Strategi Mengikuti Tren menggunakan persilangan EMA (mis., 9-EMA vs 21-EMA) untuk menghasilkan sinyal beli/jual otomatis. Ini menghilangkan bias manusia. 'Kemiringan' rata-rata bergerak menentukan ukuran keyakinan.\", \"technical\": \"Harga yang kembali ke rata-rata (Mean Reversion) adalah hukum fisika. Jika harga 20% di atas SMA 200-Hari, itu 'meregang' seperti karet gelang dan akan kembali. Kami memudarkan ekstrem.\", \"policy\": \"Pompa likuiditas bank sentral biasanya menjaga harga di atas EMA 50-Hari. Ketika likuiditas ditarik, 50-Hari pecah terlebih dahulu, memperingatkan perubahan rezim sebelum data ekonomi yang tertinggal mengonfirmasinya.\", \"tech\": \"Algo Perdagangan Frekuensi Tinggi (HFT) berjalan di depan level-level ini. Mereka akan mempertahankan SMA 200-Hari secara agresif. Jika pecah, kaskade stop-loss dipicu, menciptakan 'Vakum Likuiditas' ke bawah.\"}",
+        "forecast_risks": "Whipsaws di pasar yang berombak. Rata-rata bergerak tidak berguna dalam kisaran sideways. Mereka hanya bekerja di lingkungan yang sedang tren. Anda akan mati kehabisan darah dari sinyal palsu di pasar yang datar.",
+        "gms_conclusion": "SMA 50-Minggu adalah 'Level Dewa' kami untuk tren jangka panjang. Hormati tren sampai membungkuk."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T14:00:00+00:00"
+}

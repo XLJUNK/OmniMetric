@@ -1,0 +1,16 @@
+{
+    "slug": "parabolic-sar",
+    "lang": "ID",
+    "title": "Parabolic SAR (Berhenti dan Mundur)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Sistem 'Berhenti dan Mundur'. Ini adalah indikator stop-loss trailing yang dirancang untuk mengunci keuntungan. Diasumsikan pasar selalu menjadi tren. Saat titik-titik terbalik, Anda membalik posisi Anda.",
+        "deep_dive": "Titik SAR muncul di bawah harga dalam tren naik dan di atas harga dalam tren turun. Saat tren berakselerasi, titik-titik berakselerasi (kurva parabola), memperketat stop-loss untuk melindungi keuntungan.",
+        "council_debate": "{\"geopolitics\": \"Dalam perang atau krisis, pasar bergerak secara vertikal. SAR adalah indikator TERBAIK untuk menangkap gerakan vertikal karena berakselerasi dengan harga. Itu membuat Anda tetap dalam perdagangan selama pompa/dump panik.\", \"macro\": \"SAR bekerja sangat buruk dalam periode konsolidasi makro (mis., Menunggu risalah Fed). Ini akan memotong Anda berkeping-keping. Hanya gunakan ketika katalis makro yang jelas (Kenaikan Suku Bunga, Perang) aktif.\", \"quant\": \"Kami menggunakan SAR untuk mengelola risiko, bukan untuk memasuki perdagangan. Ini adalah trailing stop matematis. Kami mengatur algo kami untuk keluar tepat 1 tick di luar titik SAR. Ini menghilangkan emosi dari pintu keluar.\", \"technical\": \"Gabungkan SAR dengan ADX. Hanya ambil sinyal SAR jika ADX > 25. Jika ADX rendah, abaikan flip SAR. Filter sederhana ini mengubah strategi yang kalah menjadi strategi pemenang.\", \"policy\": \"Kesalahan kebijakan menyebabkan pembalikan 'Berbentuk V'. SAR lambat menangkap bagian bawah bentuk-V yang tepat, tetapi ia menangkap daging dari tren pemulihan setelah ditetapkan.\", \"tech\": \"Pasar Crypto didorong oleh momentum. Bitcoin menghormati Parabolic SAR di grafik Mingguan yang terkenal. Ini mendefinisikan seluruh Bull Run. Ketika SAR Mingguan terbalik, Bull Run secara matematis berakhir.\"}",
+        "forecast_risks": "Whipsaws di pasar menyamping. SAR akan terus membalik beli/jual dalam kisaran, menghasilkan 10 kerugian kecil berturut-turut. Ini HANYA bekerja dalam tren yang kuat.",
+        "gms_conclusion": "Alat 'Biarkan Pemenang Berlari' yang paling utama. Jangan pernah memindahkan stop-loss Anda dari titik SAR. Biarkan pasar membawa Anda keluar."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T14:30:00+00:00"
+}

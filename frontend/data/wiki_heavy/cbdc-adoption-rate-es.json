@@ -1,0 +1,16 @@
+{
+    "slug": "cbdc-adoption-rate",
+    "lang": "ES",
+    "title": "Tasa de Adopción de CBDC",
+    "type": "indicator",
+    "category": "Liquidity",
+    "sections": {
+        "summary": "La Tasa de Adopción de CBDC (Moneda Digital del Banco Central) mide el porcentaje de transacciones y liquidaciones globales realizadas utilizando monedas digitales emitidas por bancos centrales (Dólar Digital, Yuan Digital, etc.). Representa la transición del dinero 'Basado en Cuentas' al dinero 'Basado en Tokens'.",
+        "deep_dive": "A diferencia de las criptomonedas, las CBDC no son descentralizadas. Son pasivos directos del Banco Central, eludiendo a los bancos comerciales. Esto permite el 'Dinero Programable'—cheques de estímulo que caducan si no se gastan, o tasas de interés negativas aplicadas directamente a las billeteras de los consumidores.",
+        "council_debate": "{\"geopolitics\": \"El Yuan Digital (e-CNY) es la punta de lanza de la desdolarización. Al permitir la liquidación transfronteriza sin SWIFT, China está construyendo un riel financiero paralelo inmune a las sanciones de EE. UU. La tasa de adopción en las naciones BRICS es la métrica clave para observar la erosión de la hegemonía del USD.\", \"macro\": \"Las CBDC aumentan la 'Velocidad del Dinero' al hacer que las liquidaciones sean instantáneas. Sin embargo, también aumentan el riesgo de 'Corridas Bancarias Digitales'. En una crisis, los fondos podrían huir de los bancos comerciales a la seguridad de la billetera CBDC en segundos, colapsando el sector bancario tradicional.\", \"quant\": \"Modelamos el 'Riesgo de Desintermediación' para Visa/Mastercard y los bancos comerciales. Si la Tasa de Adopción de CBDC cruza el 15% en economías avanzadas, los modelos de valoración para los procesadores de pagos heredados se rompen permanentemente.\", \"technical\": \"Aún no hay un gráfico para esto, pero rastreamos 'Activaciones de Billetera' y 'Volumen de Transacciones' como indicadores de impulso. La curva sigue actualmente un patrón de adopción clásico en 'Curva S', similar al internet temprano.\", \"policy\": \"La privacidad es el campo de batalla. Las democracias occidentales luchan por implementar CBDC debido a los temores del 'Gran Hermano'. Espere que las 'CBDC Mayoristas' (banco a banco) se lancen primero, con las 'CBDC Minoristas' (consumidor) enfrentando una fuerte resistencia política.\", \"tech\": \"La pila tecnológica importa. ¿Es Blockchain o Libro Mayor Centralizado? La mayoría de los Bancos Centrales eligen bases de datos centralizadas por velocidad. Esto crea un riesgo cibernético masivo de punto único de falla que las criptomonedas descentralizadas evitan.\"}",
+        "forecast_risks": "El riesgo a la baja es una 'Ciberpandemia' donde un actor estatal piratea un libro mayor de CBDC importante, eliminando efectivamente la oferta monetaria de una nación. El lado positivo (para la eficiencia) es la eliminación de los ciclos de liquidación T+2, liberando billones en capital atrapado.",
+        "gms_conclusion": "Neutral a Bajista para Bancos. La alta adopción es alcista para 'Activos Duros' (Oro, Bitcoin) ya que los ciudadanos buscan depósitos de valor no vigilados. Bajista para bancos regionales."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T13:30:00+00:00"
+}

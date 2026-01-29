@@ -141,6 +141,20 @@ export const GlossaryClient = ({ lang, data, pageTitle, pageDesc, searchItems, s
                                                             <Hash className="w-3 h-3 text-slate-600" />
                                                             {item.id.replace(/-/g, ' ')}
                                                         </span>
+
+                                                        {/* Wiki Deep Dive Button */}
+                                                        {searchItems.some(wiki => wiki.slug === item.id) && (
+                                                            <div className="mt-6 pt-4 border-t border-slate-100 dark:border-[#1E293B]">
+                                                                <a
+                                                                    href={`/${lang.toLowerCase()}/wiki/${item.id}`}
+                                                                    className="group/btn relative w-full flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-sky-500 to-emerald-500 hover:from-sky-400 hover:to-emerald-400 text-white text-xs font-bold uppercase tracking-widest rounded-lg shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 transform hover:-translate-y-0.5 overflow-hidden"
+                                                                >
+                                                                    <span className="absolute inset-0 bg-white/20 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></span>
+                                                                    <BookOpen className="w-4 h-4 relative z-10" />
+                                                                    <span className="relative z-10">{DICTIONARY[lang]?.labels?.wiki_deep_dive || "Read Full Deep Dive"}</span>
+                                                                </a>
+                                                            </div>
+                                                        )}
                                                     </div>
 
                                                     {/* Definition */}

@@ -1,0 +1,16 @@
+{
+    "slug": "z-score",
+    "lang": "ES",
+    "title": "Puntuación Z (Z-Score)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "El Gran Normalizador. Z-Score mide cuántas desviaciones estándar tiene el precio de la media. Le permite comparar la volatilidad en activos muy diferentes (por ejemplo, Apple vs. Bitcoin) en una sola escala.",
+        "deep_dive": "Fórmula: (Precio - Media) / Desviación estándar. Una puntuación Z de 0 es la media. +2 es raro (95% de confianza). +3 es una anomalía (99.7% de confianza). Acortamos +3 y compramos -3 para la reversión a la media.",
+        "council_debate": "{\"geopolitics\": \"Los valores atípicos indican un cambio de régimen. En los mercados normales, los Z-Scores se mantienen entre -2 y +2. Cuando el rublo ruso alcanza un Z-Score de -6, no es solo un aumento de volatilidad; es una ruptura geopolítica. Buscamos eventos de 'Cisne Negro' donde Z > 5.\", \"macro\": \"Compresión de valoración. Calculamos el Z-Score de la relación P/E en relación con su promedio de 10 años. Si el S&P 500 P/E Z-Score es +2.5, el mercado es históricamente caro. Rotamos hacia activos con Z-Scores negativos (infravalorados).\", \"quant\": \"El arbitraje estadístico ('Stat Arb') se basa completamente en esto. Si la acción A y la acción B están correlacionadas, pero la acción A tiene un Z-Score de +2 y la acción B tiene un Z-Score de -2, ponemos en corto A y compramos B, apostando a que el diferencial se cerrará. Esto es 'Pairs Trading'.\", \"technical\": \"Las Bandas de Bollinger son solo Z-Score +/- 2. Z-Score nos da los datos brutos. Lo usamos para filtrar brotes. Si el precio se rompe pero Z-Score ya es +4, el movimiento se agota. Desvanecemos la ruptura.\", \"policy\": \"Los bancos centrales suprimen el riesgo de cola. Temen los eventos de Z-Score. Si los rendimientos de los bonos alcanzan un Z-Score de +3, la Reserva Federal interviene con QE para aplastar la volatilidad. Nos adelantamos a la Reserva Federal cuando la volatilidad se vuelve extrema.\", \"tech\": \"Los Z-Scores de carga del servidor predicen fallas. En el comercio de alta frecuencia, si la latencia alcanza un Z-Score de +3, eliminamos el bot inmediatamente para evitar errores de ejecución. En criptografía, los Z-Scores de tasa de hash predicen la capitulación de los mineros.\"}",
+        "forecast_risks": "Las tendencias pueden permanecer irracionales. En una burbuja fuerte, Z-Score puede permanecer por encima de +3 durante meses. Ponerse en corto basándose únicamente en un Z-Score alto es peligroso ('The Widowmaker'). Mide el estiramiento, no el tiempo.",
+        "gms_conclusion": "La banda elástica solo puede estirarse hasta cierto punto. Z-Score te dice cuándo está a punto de romperse."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:50:00+00:00"
+}

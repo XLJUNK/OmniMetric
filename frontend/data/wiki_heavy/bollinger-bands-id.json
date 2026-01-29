@@ -1,0 +1,16 @@
+{
+    "slug": "bollinger-bands",
+    "lang": "ID",
+    "title": "Bollinger Bands",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Bollinger Bands mengukur volatilitas. Mereka menjawab pertanyaan: 'Apakah harga tenang atau keras?' Ketika band meremas, ledakan akan datang. Ketika mereka lebar, gerakannya habis.",
+        "deep_dive": "Band terdiri dari SMA 20-Hari (tengah) dan dua standar deviasi +/- (atas/bawah). Statistik mengatakan 95% aksi harga harus tetap berada di dalam band. Ketika harga menyentuh band, itu adalah peristiwa penting.",
+        "council_debate": "{\"geopolitics\": \"Guncangan geopolitik menyebabkan 'Band Walking'. Ini adalah saat harga naik band Atas atau Bawah terus menerus. Ini menandakan peristiwa Black Swan di mana statistik normal gagal. Jangan memudarkan band walk yang disebabkan oleh perang.\", \"macro\": \"Dalam rezim volatilitas rendah (ekonomi Goldilocks), band-band itu sempit. Rasa puas diri ini berbahaya. Kami menggunakan indikator 'BandWidth' untuk memprediksi kapan lingkungan makro akan berubah dari tenang menjadi badai.\", \"quant\": \"Kami memperdagangkan 'Mean Reversion'. Jika harga mencapai Band Atas tetapi RSI berbeda, kami short. Kami bertaruh pada pengembalian ke SMA 20-Hari. Ini adalah strategi tingkat kemenangan tinggi di pasar yang terikat kisaran.\", \"technical\": \"'Bollinger Squeeze' adalah pengaturan yang paling kuat. Ketika volatilitas runtuh ke posisi terendah bersejarah, energi dibangun. Penembusan berikutnya biasanya eksplosif dan tren selama berbulan-bulan. Kami membeli penembusan dari pemerasan.\", \"policy\": \"Bank Sentral menekan volatilitas ('The Fed Put'). Ini secara artifisial menekan band. Ketika The Fed kehilangan kendali, band mengembang dengan keras, biasanya ke arah bawah.\", \"tech\": \"Algo bertindak sebagai 'Mesin Reversion Mean' di band. Mereka menjual Band Atas dan membeli Band Bawah secara otomatis. Ini menciptakan level support dan resistance yang memuaskan diri sendiri.\"}",
+        "forecast_risks": "'Head Fake'. Seringkali, harga pecah dari tekanan ke satu arah, kemudian segera berbalik dan meledak ke arah yang berlawanan. Tunggu penutupan harian yang dikonfirmasi di luar band.",
+        "gms_conclusion": "Volatilitas adalah siklus. Volatilitas rendah menyebabkan volatilitas tinggi. The Bands memberi tahu Anda kapan ketenangan akan segera berakhir."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T14:00:00+00:00"
+}

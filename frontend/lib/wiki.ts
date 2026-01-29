@@ -61,8 +61,9 @@ const technicalMap: Record<LangType, any> = { EN: technicalEn, JP: technicalJa, 
 const maximsMap: Record<LangType, any> = { EN: maximsEn, JP: maximsJa, CN: maximsCn, ES: maximsEs, HI: maximsHi, ID: maximsId, AR: maximsAr };
 
 // Utility to slugify string
-const slugify = (text: string) => {
+export const slugify = (text: string) => {
     return text.toString().toLowerCase()
+        .replace(/\//g, '-')            // Replace slash with -
         .replace(/\s+/g, '-')           // Replace spaces with -
         .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
         .replace(/\-\-+/g, '-')         // Replace multiple - with single -
@@ -101,13 +102,37 @@ const loadHeavyData = (slug: string, lang: LangType) => {
     return undefined;
 };
 
+// Helper: Clean Mixed English/Localized Titles
+const cleanLocalizedTitle = (text: string, lang: LangType): string => {
+    if (lang === 'EN') return text;
+
+    // Pattern 1: "English (Localized)" -> Keep Localized
+    // Pattern 2: "Localized (English)" -> Keep Localized
+
+    // Check if text has parentheses
+    const match = text.match(/^(.*?)\s*\((.*?)\)$/);
+    if (match) {
+        const part1 = match[1];
+        const part2 = match[2];
+
+        // Heuristic: If one part has non-ASCII (likely localized) and the other is ASCII (English)
+        const isPart1ASCII = /^[\x00-\x7F]*$/.test(part1);
+        const isPart2ASCII = /^[\x00-\x7F]*$/.test(part2);
+
+        if (!isPart1ASCII && isPart2ASCII) return part1.trim(); // "Localized (English)" -> "Localized"
+        if (isPart1ASCII && !isPart2ASCII) return part2.trim(); // "English (Localized)" -> "Localized"
+    }
+
+    return text;
+};
+
 export const getWikiData = (lang: LangType) => {
     // 1. Glossary
     const glossary = (glossaryMap[lang] || glossaryEn).map((item: any) => ({
         slug: item.id,
         type: 'glossary' as WikiType,
-        category: item.category,
-        title: item.term,
+        category: cleanLocalizedTitle(item.category, lang),
+        title: cleanLocalizedTitle(item.term, lang),
         tags: item.seo_keywords || [],
         data: item,
         heavy: loadHeavyData(item.id, lang)
@@ -115,22 +140,28 @@ export const getWikiData = (lang: LangType) => {
 
     // 2. Technical
     const techEn = technicalEn;
+    // Fallback to EN if target lang file is missing, but map exists
     const techTarget = technicalMap[lang] || technicalEn;
 
     const technical: WikiItem[] = [];
     techEn.forEach((cat: any, catIdx: number) => {
         cat.indicators.forEach((ind: any, indIdx: number) => {
-            const targetCat = techTarget[catIdx];
-            const targetInd = targetCat?.indicators[indIdx];
+            // Safely access target category and indicator
+            const targetCat = techTarget[catIdx] || cat;
+            const targetInd = targetCat?.indicators?.[indIdx];
             const finalInd = targetInd || ind;
 
             if (finalInd) {
+                // Use English Name for Slug (Canonical)
                 const slug = slugify(ind.name);
+                const rawTitle = finalInd.name;
+                const rawCategory = targetCat?.category || cat.category;
+
                 technical.push({
                     slug: slug,
                     type: 'technical' as WikiType,
-                    category: targetCat?.category || cat.category,
-                    title: finalInd.name,
+                    category: cleanLocalizedTitle(rawCategory, lang),
+                    title: cleanLocalizedTitle(rawTitle, lang),
                     tags: finalInd.seo_keywords || [],
                     data: finalInd,
                     heavy: loadHeavyData(slug, lang)
@@ -146,16 +177,27 @@ export const getWikiData = (lang: LangType) => {
     const maxims: WikiItem[] = [];
     maxEn.forEach((cat: any, catIdx: number) => {
         cat.quotes.forEach((quote: any, quoteIdx: number) => {
-            const targetCat = maxTarget[catIdx];
-            const targetQuote = targetCat?.quotes[quoteIdx];
+            const targetCat = maxTarget[catIdx] || cat;
+            const targetQuote = targetCat?.quotes?.[quoteIdx];
             const finalQuote = targetQuote || quote;
 
             if (finalQuote) {
+                // For Maxims:
+                // If EN: Title = text ("The trend is your friend")
+                // If Non-EN: Title = meaning ("趋势是你的朋友") because 'text' is usually left in English even in localized files
+
+                let displayTitle = `"${finalQuote.text}"`;
+                if (lang !== 'EN' && finalQuote.meaning) {
+                    // Check if meaning is different from text (i.e. it is actually translated)
+                    // In maxims-cn.json: text is English, meaning is Chinese.
+                    displayTitle = `"${finalQuote.meaning}"`;
+                }
+
                 maxims.push({
                     slug: quote.id,
                     type: 'maxim' as WikiType,
-                    category: targetCat?.category || cat.category,
-                    title: `"${finalQuote.text}"`,
+                    category: cleanLocalizedTitle(targetCat?.category || cat.category, lang),
+                    title: displayTitle,
                     tags: [finalQuote.attribution || ''],
                     data: finalQuote,
                     heavy: loadHeavyData(quote.id, lang)

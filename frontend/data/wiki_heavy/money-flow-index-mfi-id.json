@@ -1,0 +1,16 @@
+{
+    "slug": "money-flow-index-mfi",
+    "lang": "ID",
+    "title": "MFI (Indeks Arus Uang)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "RSI Berbobot Volume. MFI menambahkan volume ke Indeks Kekuatan Relatif (RSI). Tidak hanya peduli tentang pergerakan harga; ia peduli tentang *keyakinan* di balik gerakan itu. Ini memberi tahu Anda apakah 'Uang Cerdas' diam-diam membeli atau menjual.",
+        "deep_dive": "Dihitung menggunakan Harga dan Volume Khas. Seperti RSI, berkisar antara 0 hingga 100. Lebih dari 80 adalah Overbought. Di bawah 20 adalah Oversold. Tetapi tidak seperti RSI, divergensi dalam MFI jauh lebih kuat karena menyiratkan volume bertentangan dengan harga.",
+        "council_debate": "{\"geopolitics\": \"Pelarian Modal meninggalkan jejak. Ketika sebuah negara berada dalam krisis, harga mungkin ditahan oleh intervensi bank sentral, tetapi MFI akan jatuh karena volume riil melarikan diri. Kami menggunakan MFI untuk melihat 'Stabilitas Palsu' dalam mata uang pasar negara berkembang.\", \"macro\": \"Likuiditas mendorong pasar. MFI adalah proksi untuk aliran likuiditas ke dalam suatu aset. Ketika M2 global (Pasokan Uang) naik, kami melihat MFI di semua aset naik. Pasang naiklah yang mengangkat semua perahu.\", \"quant\": \"Kami mencari 'Divergensi Volume'. Jika saham mencapai level tertinggi baru pada volume rendah (MFI rendah), itu adalah 'Perangkap Banteng'. Kami mempersingkat gerakan kelelahan ini. Sebaliknya, aksi jual pada volume rendah (MFI Tinggi relatif terhadap harga) adalah pembelian.\", \"technical\": \"'Aturan 80/20'. Ketika MFI melebihi 80 dan kemudian menembus kembali di bawah 80, itu adalah sinyal jual yang lebih kuat daripada RSI karena itu berarti *volume* pembelian telah mengering, bukan hanya momentum.\", \"policy\": \"Bank Sentral membeli obligasi untuk memanipulasi suku bunga. Ini menciptakan 'Volume Buatan'. MFI dapat didistorsi di pasar obligasi oleh QE (Pelonggaran Kuantitatif). Kami menyesuaikan MFI untuk perubahan neraca bank sentral.\", \"tech\": \"Di Crypto, perdagangan cucian (wash trading) merajalela. MFI dapat dipalsukan di bursa kecil. Kami hanya menggunakan MFI di bursa likuiditas tinggi (Binance, Coinbase). Jika harga Bitcoin datar tetapi MFI naik, 'Paus' sedang terakumulasi. Beli.\"}",
+        "forecast_risks": "Penyimpangan Volume Rendah. Di pasar liburan volume rendah, MFI dapat memberikan sinyal yang tidak menentu karena pesanan kecil memindahkan indeks terlalu banyak. Membutuhkan pasar cair untuk bekerja.",
+        "gms_conclusion": "RSI adalah untuk kecepatan. MFI adalah untuk kebenaran. Gunakan MFI untuk melihat apakah ada uang nyata di balik langkah tersebut."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:30:00+00:00"
+}

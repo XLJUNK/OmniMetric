@@ -1,0 +1,16 @@
+{
+    "slug": "on-balance-volume-obv",
+    "lang": "ES",
+    "title": "OBV (Volumen En Balance)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "El 'Suero de la Verdad' de los gráficos. OBV es un total acumulativo de volumen. Cuando el precio cierra al alza, se agrega volumen. Cuando baja, se resta. Opera bajo el principio básico: 'El Volumen Precede al Precio'. Revela si un movimiento de precios tiene una convicción real o es solo una finta hueca.",
+        "deep_dive": "Desarrollado por Joe Granville en 1963. OBV no se trata del nivel, sino de la *tendencia* de la línea. Un OBV en aumento durante un precio plano indica acumulación (compra de dinero inteligente). Un OBV cayendo durante un repunte de precios indica distribución (dinero inteligente vendiendo en el repunte).",
+        "council_debate": "{\"geopolitics\": \"La fuga de capitales es silenciosa antes de ser ruidosa. Observamos el OBV en los ETF de divisas. Si una moneda es estable pero el OBV se está colapsando, los iniciados están sacando dinero antes de que lleguen las sanciones o la devaluación. OBV detectó el colapso del Rublo Ruso con semanas de antelación.\", \"macro\": \"Los datos de inflación son retrospectivos. El OBV de las materias primas es prospectivo. Si los precios del cobre están estancados pero el OBV está subiendo, la demanda industrial es real y la narrativa de 'recesión' es incorrecta.\", \"quant\": \"Usamos el análisis de pendiente OBV. Si la pendiente de OBV es más pronunciada que la pendiente del Precio, es una señal 'alfa' de alta convicción. Nos apalancamos en estas operaciones.\", \"technical\": \"La 'Divergencia de Granville'. Si el precio marca un nuevo máximo pero el OBV no logra marcar un nuevo máximo, es una divergencia negativa. El rally está funcionando con los vapores. La venta es inminente.\", \"policy\": \"Los bancos centrales pueden fijar precios, pero no pueden fingir volumen. Si la Fed compra bonos para suprimir los rendimientos (elevando los precios de los bonos), el OBV podría parecer plano o débil porque el mercado *privado* no está participando. OBV expone el apoyo artificial.\", \"tech\": \"Ballenas vs. Minoristas. En Cripto, el comercio minorista persigue el precio (velas verdes). Las ballenas se acumulan en velas rojas. Si Bitcoin cae un -5% pero el OBV se mantiene plano, las Ballenas absorbieron la venta. Esta es la señal definitiva de 'Comprar la Caída'.\"}",
+        "forecast_risks": "Distorsiones de Brecha. Una brecha masiva hacia arriba/abajo con poco volumen puede distorsionar significativamente el recuento acumulativo. Funciona mejor en mercados continuos como Forex o Cripto.",
+        "gms_conclusion": "El precio es el anuncio. El volumen es el combustible. OBV te dice si el tanque está lleno o vacío."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:35:00+00:00"
+}

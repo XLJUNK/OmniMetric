@@ -1,0 +1,16 @@
+{
+    "slug": "m2-money-supply",
+    "lang": "ES",
+    "title": "Oferta Monetaria M2",
+    "type": "indicator",
+    "category": "Liquidity",
+    "sections": {
+        "summary": "M2 mide la oferta monetaria total, incluyendo efectivo, depósitos en cuenta corriente y 'cuasi dinero' como depósitos de ahorro y valores del mercado monetario. Es el tanque de combustible de la economía y el motor a largo plazo de la inflación.",
+        "deep_dive": "Friedman dijo: 'La inflación es siempre y en todas partes un fenómeno monetario'. El crecimiento de M2 superando el crecimiento del PIB conduce a la inflación. Por el contrario, la contracción de M2 (que ocurrió en 2023-2024 por primera vez en décadas) es una poderosa fuerza deflacionaria.",
+        "council_debate": "{\"geopolitics\": \"El estatus del USD como moneda de reserva global permite a EE. UU. exportar inflación expandiendo el M2. Sin embargo, las naciones BRICS observan esta depreciación de cerca como una razón para desdolarizar los rieles de liquidación.\", \"macro\": \"Observamos la 'K de Marshall' (M2 / PIB). Cuando este ratio se dispara, se forman burbujas de activos. Cuando colapsa, ocurren crisis de liquidez. Actualmente, el M2 se está estabilizando, pero la 'velocidad' de ese dinero está aumentando debido a las eficiencias de la IA.\", \"quant\": \"Existe un famoso retraso de 12-18 meses entre los picos de M2 y los picos del IPC. La inyección masiva de M2 en 2020 causó la inflación de 2022. La contracción de 2023 sugiere que la desinflación persistirá hasta bien entrado 2026.\", \"technical\": \"M2 no tiene un gráfico de trading, pero su 'Cambio Interanual' es una superposición clave para el S&P 500. Las acciones luchan por subir de manera sostenible cuando M2 se está contrayendo (impulso de liquidez negativo).\", \"policy\": \"La Fed controla M2 a través del QT (Ajuste Cuantitativo). Al dejar que los bonos venzan en su balance, efectivamente eliminan M2 del sistema. Es el asesino silencioso de las burbujas especulativas.\", \"tech\": \"Las monedas estables (USDT, USDC) son el nuevo 'M2 en la Sombra'. Liquidan billones en volumen pero no son capturadas completamente en las estadísticas tradicionales de M2 de la Fed. Verificamos la velocidad de las monedas estables en la cadena para obtener la imagen del 'Verdadero M2'.\"}",
+        "forecast_risks": "El riesgo es una 'Trampa de Liquidez' donde el M2 se expande, pero el dinero no circula (la velocidad cae), llevando a un crecimiento estancado a pesar de la impresión. O, un 'error de política' donde el QT drena M2 demasiado rápido, colapsando el mercado de repos.",
+        "gms_conclusion": "El dinero importa. Si el M2 crece al 5-6%, las acciones pueden subir. Si el M2 es negativo, el efectivo es el rey. Actualmente, estamos viendo comenzar una fase de 'Re-liquefacción'."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T13:40:00+00:00"
+}

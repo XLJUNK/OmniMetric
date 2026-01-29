@@ -1,0 +1,16 @@
+{
+    "slug": "rate-of-change-roc",
+    "lang": "ID",
+    "title": "ROC (Tingkat Perubahan)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Speedometer Pasar. ROC mengukur persentase perubahan harga antara harga saat ini dan harga N periode lalu. Ini memberi tahu Anda kecepatan murni tren. Ketika ROC memuncak, tren semakin cepat. Saat menyelam, momentum rusak.",
+        "deep_dive": "Itu berosilasi di sekitar garis nol. ROC positif berarti harga lebih tinggi dari N hari yang lalu (Uptrend). ROC negatif berarti harga lebih rendah (Downtrend). Pembacaan ekstrem (tinggi atau rendah secara statistik) sering kali menandakan klimaks pasar.",
+        "council_debate": "{\"geopolitics\": \"Perang dan guncangan menyebabkan lonjakan kecepatan. Kami memantau ROC Minyak Mentah. Jika ROC Minyak 12 hari melebihi +20%, itu menandakan 'Kejut Energi' yang akan menabrak ekuitas. Ini adalah sistem peringatan dini kami.\", \"macro\": \"Inflasi adalah fenomena Tingkat Perubahan. Kami melihat ROC IHK (CPI). Bahkan jika inflasi tinggi, jika ROC berubah negatif, narasi 'Disinflasi' dimulai, dan obligasi menjadi pembelian.\", \"quant\": \"Investasi faktor momentum bergantung pada ROC. Kami memeringkat setiap saham di S&P 500 berdasarkan ROC 12 bulannya. Kami membeli desil teratas (pemenang) dan menyingkat desil bawah (pecundang). Strategi sederhana ini mengalahkan pasar selama beberapa dekade.\", \"technical\": \"Divergensi pada Kecepatan. Jika harga membuat level tertinggi baru, tetapi ROC membuat level tertinggi yang lebih rendah, itu berarti mobil masih bergerak maju tetapi melepaskan kakinya dari gas. Mesin yang macet menyebabkan kecelakaan.\", \"policy\": \"Bank Sentral bereaksi terhadap 'Kecepatan' pergerakan pasar, bukan hanya level. Penurunan 10% yang lambat baik-baik saja. Penurunan 10% dalam 2 hari (Tinggi Negatif ROC) memaksa The Fed untuk campur tangan. ROC Negatif Tinggi memicu 'The Fed Put'.\", \"tech\": \"Di Crypto, ROC adalah parabola. Kami menggunakannya untuk mengidentifikasi 'Vertical Blow-offs'. Ketika ROC Bitcoin menjadi vertikal (mendekati 90 derajat), gelembung akan segera pecah. Jual ke lonjakan kecepatan.\"}",
+        "forecast_risks": "'Whipsaw Zero'. Di pasar yang terikat kisaran, ROC akan memotong di sekitar garis nol tanpa henti. Tidak ada gunanya di pasar menyamping. Hanya gunakan ketika tren yang jelas hadir.",
+        "gms_conclusion": "Kecepatan membunuh, tetapi juga membayar. ROC memberi tahu Anda seberapa cepat kereta bergerak sehingga Anda tidak melangkah di depannya."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:30:00+00:00"
+}

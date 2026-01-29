@@ -1,0 +1,16 @@
+{
+    "slug": "z-score",
+    "lang": "ID",
+    "title": "Skor-Z (Z-Score)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Normalizer Hebat. Z-Score mengukur berapa banyak harga deviasi standar dari mean. Ini memungkinkan Anda membandingkan volatilitas di aset yang sangat berbeda (mis., Apple vs. Bitcoin) dalam satu skala.",
+        "deep_dive": "Rumus: (Harga - Berarti) / Standar Deviasi. Z-Score 0 adalah meannya. +2 langka (kepercayaan 95%). +3 adalah anomali (kepercayaan 99,7%). Kami mempersingkat +3 dan membeli -3 untuk pengembalian rata-rata.",
+        "council_debate": "{\"geopolitics\": \"Outlier menandakan perubahan rezim. Di pasar normal, Z-Score tetap antara -2 dan +2. Ketika Rubel Rusia mencapai Z-Score -6, itu bukan hanya lonjakan volatilitas; itu adalah pecahnya geopolitik. Kami mencari acara 'Black Swan' di mana Z > 5.\", \"macro\": \"Kompresi penilaian. Kami menghitung Z-Score rasio P/E relatif terhadap rata-rata 10 tahunnya. Jika S&P 500 P/E Z-Score adalah +2.5, pasar secara historis mahal. Kami memutar ke aset dengan Z-Score negatif (undervalued).\", \"quant\": \"Arbitrase Statistik ('Stat Arb') sepenuhnya bergantung pada ini. Jika Saham A dan Saham B berkorelasi, tetapi Saham A memiliki Z-Score +2 dan Saham B memiliki Z-Score -2, kami Short A dan Beli B, bertaruh spread akan ditutup. Ini adalah 'Pairs Trading'.\", \"technical\": \"Bollinger Bands hanyalah Z-Score +/- 2. Z-Score memberi kita data mentah. Kami menggunakannya untuk memfilter breakout. Jika harga menembus tetapi Z-Score sudah +4, langkahnya habis. Kami memudarkan penembusan.\", \"policy\": \"Bank Sentral menekan risiko ekor. Mereka takut acara Z-Score. Jika imbal hasil obligasi mencapai Z-Score +3, The Fed melangkah dengan QE untuk menghancurkan volatilitas. Kami menjalankan The Fed ketika volatilitas menjadi ekstrem.\", \"tech\": \"Server memuat Z-Score memprediksi crash. Dalam perdagangan frekuensi tinggi, jika latensi mencapai Z-Score +3, kami segera membunuh bot untuk mencegah kesalahan eksekusi. Dalam crypto, Z-Score tingkat hash memprediksi kapitulasi penambang.\"}",
+        "forecast_risks": "Tren bisa tetap tidak irasional. Dalam gelembung yang kuat, Z-Score dapat bertahan di atas +3 selama berbulan -bulan. Shorting hanya berdasarkan Z-Score tinggi berbahaya ('The Widowmaker'). Ini mengukur peregangan, bukan waktu.",
+        "gms_conclusion": "Pita elastis hanya bisa meregang sejauh ini. Z-Score memberi tahu Anda kapan itu akan membentak."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:50:00+00:00"
+}

@@ -1,0 +1,16 @@
+{
+    "slug": "ism-manufacturing-pmi",
+    "lang": "ES",
+    "title": "PMI Manufacturero del ISM",
+    "type": "indicator",
+    "category": "Economy",
+    "sections": {
+        "summary": "El PMI (Índice de Gestores de Compras) Manufacturero del ISM es una encuesta mensual a gerentes de cadena de suministro. Una lectura superior a 50 indica expansión; inferior a 50 indica contracción. Históricamente, es el indicador adelantado más confiable para el PIB de EE. UU.",
+        "deep_dive": "Rastrea 5 áreas clave: Nuevos Pedidos, Inventario, Producción, Entregas de Proveedores y Empleo. 'Nuevos Pedidos' es el componente más prospectivo. Si los Nuevos Pedidos suben pero los Inventarios bajan, un auge de producción es inminente.",
+        "council_debate": "{\"geopolitics\": \"La relocalización (reshoring) y el 'Friend-shoring' están distorsionando los datos. La construcción manufacturera de EE. UU. está en auge (positivo), pero la producción real está rezagada debido a la escasez de mano de obra. Las fracturas de la cadena de suministro global hacen que el componente de 'Entregas de Proveedores' sea volátil.\", \"macro\": \"Cuidado con la divergencia 'Bienes vs. Servicios'. Hemos visto una recesión en el ISM Manufacturero (<50) mientras que el ISM de Servicios se mantuvo fuerte. Esta 'Recesión Rotativa' crea confusión pero previene un colapso económico total.\", \"quant\": \"Usamos el PMI del ISM para cronometrar la 'Rotación Sectorial'. Cuando el PMI toca fondo y sube, compre Industriales y Materiales. Cuando el PMI alcanza su punto máximo y cae, rote hacia acciones Defensivas (Servicios Públicos, Salud).\", \"technical\": \"El nivel de 42.5 es el 'Piso de Recesión' histórico. Si el PMI cae por debajo de 42.5, un aterrizaje forzoso está virtualmente garantizado. La línea de 50 es la línea divisoria Toro/Oso.\", \"policy\": \"La Fed rara vez sube las tasas cuando el ISM está por debajo de 45. Una contracción profunda en la manufactura es una señal fuerte para recortes de tasas, a menudo anulando los datos de inflación pegajosa.\", \"tech\": \"La automatización está rompiendo el vínculo entre 'Producción Manufacturera' y 'Empleo Manufacturero'. Podemos tener una alta producción con poca contratación. El subíndice de Empleo del PMI se está convirtiendo en un medidor menos confiable del mercado laboral general.\"}",
+        "forecast_risks": "El riesgo es un 'Falso Amanecer' donde el PMI rebota brevemente debido a ajustes estacionales pero luego colapsa nuevamente a medida que las tasas más altas finalmente muerden al sector industrial intensivo en capital.",
+        "gms_conclusion": "El latido de la economía física. Si el PMI del ISM está subiendo desde <50 hacia 50, es la señal más alcista para las acciones cíclicas."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T13:40:00+00:00"
+}

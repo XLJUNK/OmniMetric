@@ -1,0 +1,16 @@
+{
+    "slug": "rrp-balance",
+    "lang": "ES",
+    "title": "Saldo de Repo Inverso (RRP)",
+    "type": "indicator",
+    "category": "Liquidity",
+    "sections": {
+        "summary": "La facilidad de Recompra Inversa a un día (ON RRP) es donde los fondos del mercado monetario (MMF) estacionan el exceso de efectivo en la Fed. Piense en ello como el 'tanque de desbordamiento' para la liquidez del sistema financiero.",
+        "deep_dive": "Cuando el saldo de RRP cae, ese efectivo ingresa al sistema bancario (a menudo comprando letras del Tesoro), aumentando efectivamente la Liquidez Neta. Actuó como un amortiguador de liquidez masivo en 2024-2025, neutralizando el impacto del QT (Ajuste Cuantitativo).",
+        "council_debate": "{\"geopolitics\": \"Los bancos centrales extranjeros también utilizan la facilidad de RRP Extranjero. Un pico allí indica una escasez global de dólares, lo que obliga a las naciones extranjeras a estacionar efectivo por seguridad en lugar de comprar bonos del Tesoro de EE. UU.\", \"macro\": \"Es hidráulica simple. Balance de la Fed - TGA - RRP = Liquidez. Si el RRP se agota a cero, el próximo dólar de QT sale directamente de las reservas bancarias. Esa es la zona de peligro.\", \"quant\": \"Rastreamos la tasa de drenaje. Si el RRP se drena más rápido que el QT, es un estímulo neto (Alcista). Si el RRP deja de drenarse mientras el QT continúa, los mercados generalmente colapsan dentro de las 6 semanas (Bajista).\", \"technical\": \"Los niveles de RRP por debajo de $300 mil millones actúan como un nivel de soporte psicológico. Por debajo de eso, los algoritmos de volatilidad revalorizan el 'Riesgo de Cola'.\", \"policy\": \"La Fed quiere que el RRP sea distinto de cero pero bajo. Si es demasiado alto, los bancos no están prestando. Si es cero, las tasas de repo se disparan y las tuberías se rompen (como en septiembre de 2019).\", \"tech\": \"Los nuevos mercados de repos DeFi están tratando de competir con el RRP de la Fed, pero la confianza institucional aún no está allí. Monitoreamos los protocolos de 'Activos del Mundo Real' (RWA) como una posible alternativa futura para estacionar efectivo de monedas estables.\"}",
+        "forecast_risks": "El 'Riesgo del Límite Cero'. Una vez que el RRP llega a cero, el amortiguador de liquidez desaparece. Cualquier choque después de ese punto (por ejemplo, una emisión de letras del Tesoro inesperadamente mayor) causa una crisis de liquidez inmediata.",
+        "gms_conclusion": "El amortiguador se está agotando. Estamos haciendo la transición de un mundo de 'Reservas Abundantes' a 'Reservas Amplias'. Observe este nivel diariamente."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T13:45:00+00:00"
+}

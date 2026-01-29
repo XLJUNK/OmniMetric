@@ -1,0 +1,16 @@
+{
+    "slug": "rsi-relative-strength-index",
+    "lang": "ID",
+    "title": "RSI (Indeks Kekuatan Relatif)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "'Speedometer' pasar. RSI mengukur kecepatan dan perubahan pergerakan harga. Ini mengidentifikasi kondisi overbought (keserakahan) dan oversold (ketakutan). 70 adalah 'Panas', 30 adalah 'Dingin'.",
+        "deep_dive": "RSI berosilasi antara 0 dan 100. Secara tradisional, >70 overbought dan <30 oversold. Namun, dalam tren yang kuat, RSI dapat tetap overbought selama berminggu-minggu. Divergensi (harga naik, RSI turun) adalah sinyal yang paling kuat.",
+        "council_debate": "{\"geopolitics\": \"Selama guncangan geopolitik, RSI mencapai posisi terendah ekstrim (<20). Ini biasanya adalah 'Panic Bottom'. Kami menunggu RSI naik kembali di atas 30 untuk memastikan kepanikan telah mereda sebelum membeli penurunan.\", \"macro\": \"Di pasar bull struktural (Macro Uptrend), RSI jarang mencapai 30. Ia menemukan support di 40-50. Jika RSI mencapai 30 di pasar bull, itu adalah peluang pembelian generasi.\", \"quant\": \"Kami menggunakan 'RSI 2' (RSI 2 periode) untuk pengembalian rata-rata. Jika RSI(2) < 5, kami membeli. Jika RSI(2) > 95, kami menjual. Ini menangkap pembalikan jangka pendek. RSI standar (14) terlalu lambat untuk HFT.\", \"technical\": \"'Failure Swings' adalah permata tersembunyi RSI. Puncak Failure Swing terjadi ketika RSI naik di atas 70, turun, naik lagi tetapi gagal melewati 70, dan kemudian menembus terendah sebelumnya. Ini menandakan pembalikan tanpa memerlukan Divergensi Harga.\", \"policy\": \"RSI berguna untuk intervensi mata uang. Ketika RSI USD/JPY mencapai 85, Kementerian Keuangan kemungkinan akan melakukan intervensi. Pembuat kebijakan mengawasi momentum ekstrem untuk mengatur waktu tindakan mereka demi dampak maksimum.\", \"tech\": \"Di musim alt Crypto, RSI dapat bertahan di 90+ selama sebulan. Menjual hanya karena RSI > 70 di crypto akan membuat Anda bangkrut. Anda harus menunggu RSI Trendline Break untuk keluar dari pompa besar.\"}",
+        "forecast_risks": "'Perangkap Overbought'. Dalam pergerakan parabola yang kuat, RSI > 70 bukanlah sinyal jual; itu adalah sinyal 'Kekuatan'. Shorting tren yang kuat hanya karena RSI overbought adalah cara tercepat untuk kehilangan uang.",
+        "gms_conclusion": "Jangan memprediksi puncak. Biarkan Divergensi RSI atau Failure Swing mengonfirmasinya. Sampai saat itu, tren adalah teman Anda, bahkan di RSI 80."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:00:00+00:00"
+}

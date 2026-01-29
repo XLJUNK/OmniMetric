@@ -1,0 +1,16 @@
+{
+    "slug": "supertrend",
+    "lang": "EN",
+    "title": "Supertrend",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "The 'Set and Forget' trend follower. It is an ATR-based trailing stop that keeps you on the right side of the major market flow. Green means Buy, Red means Sell.",
+        "deep_dive": "Supertrend uses volatility (ATR) to calculate its offset. It adjusts automatically: if volatility increases, the stop moves further away to avoid being stopped out by noise. If volatility decreases, it tightens.",
+        "council_debate": "{\"geopolitics\": \"In geopolitical crises, markets become volatile and 'noisy'. Fixed percentage stops get hunted. Supertrend uses volatility (ATR) to adapt. It is the only stop-loss that 'breathes' with the panic index.\", \"macro\": \"Supertrend excels in capturing 'Reflation Trades' or 'Devaluation Cycles' that last for years. It ignores the monthly CPI noise and keeps you long the USD or Commodities for the entire cycle.\", \"quant\": \"We backtest Supertrend on everything. It fails in sideways markets (whipsaw city). But on a diversified portfolio of 50 assets, the big winners (outliers) pay for all the small losses. It is a pure 'Convexity' strategy.\", \"technical\": \"Don't just use one Supertrend. Use two. A slow one (Weekly 10, 3) for the main trend, and a fast one (Daily 7, 3) for entries. Do not take a trade unless both agree. This is 'Multiple Timeframe Alignment'.\", \"policy\": \"Central bank liquidity drives trends. As long as the Supertrend is Green, assume the 'Fed Put' is active. When it flips Red, it means the liquidity drain has finally overpowered the sentiment.\", \"tech\": \"Crypto traders love Supertrend because crypto volatility is insane. It prevents 'Paper Hands'. It forces you to hold Bitcoin through 30% drops if the trend structure is technically still intact.\"}",
+        "forecast_risks": "The 'Chopping Block'. In a flat market, Supertrend will buy the top and sell the bottom repeatedly. You MUST filter it with ADX. If ADX < 20, turn off your Supertrend signals.",
+        "gms_conclusion": "Simplicity is the ultimate sophistication. Supertrend removes all discretion. It forces you to be disciplined."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:00:00+00:00"
+}

@@ -1,0 +1,16 @@
+{
+    "slug": "linear-regression-slope",
+    "lang": "ES",
+    "title": "Pendiente de Regresión Lineal",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "La Tendencia Matematizada. La regresión lineal ajusta una línea de 'mejor ajuste' a través de los precios y luego mide el ángulo (pendiente) de esa línea. Le indica la dirección exacta y la fuerza de la tendencia, eliminando el ruido del día a día.",
+        "deep_dive": "Es pura estadística. Una pendiente positiva > X significa una fuerte tendencia alcista. Una pendiente negativa < Y significa una fuerte tendencia bajista. Una pendiente cercana a cero significa una acción lateral y agitada. Es el árbitro objetivo de '¿Está en tendencia?'.",
+        "council_debate": "{\"geopolitics\": \"La estabilidad política produce un crecimiento lineal. El caos político produce volatilidad. Medimos la 'salud' de una nación por la pendiente de regresión lineal de su moneda. Una pendiente positiva estable y suave es invertible. Una pendiente vertical dentada no se puede invertir.\", \"macro\": \"El PIB crece linealmente (principalmente). Las burbujas crecen exponencialmente. Si la pendiente de regresión lineal de un activo se desvía 3 sigmas de la tasa de crecimiento del PIB, es una burbuja. Usamos esto para detectar sectores de sobrecalentamiento.\", \"quant\": \"Usamos Slope Z-Score. Calculamos la pendiente, luego la normalizamos. Si el Slope Z-Score llega a +3 (3 desviaciones estándar por encima de lo normal), la tendencia es insostenible. Revertimos a la media (Corto) el activo de vuelta a su tendencia media.\", \"technical\": \"El 'Slope Flip'. No adivinamos los fondos. Esperamos a que la pendiente de regresión lineal cambie de negativa a positiva. Esto confirma el cambio de tendencia matemáticamente, filtrando 'rebotes falsos'.\", \"policy\": \"Apuntar a una inflación del 2% requiere una pendiente específica de aumento de precios. Los bancos centrales gestionan esencialmente la pendiente de regresión lineal de los precios de los activos críticos. Si la pendiente se vuelve demasiado empinada, aumentan las tasas para aplanar la línea.\", \"tech\": \"La ley de Moore es lineal en una escala logarítmica. Aplicamos regresión lineal a los gráficos de registro de Bitcoin. Revela el camino del 'Valor Razonable' a largo plazo. Cuando el precio está muy por encima de la línea de regresión, es caro. Cuando está abajo, es una compra generacional.\"}",
+        "forecast_risks": "Retraso. Debido a que calcula un 'mejor ajuste' durante N períodos, tarda en reaccionar ante caídas repentinas. Describe el pasado reciente a la perfección, pero puede perderse el giro inmediato.",
+        "gms_conclusion": "No luches contra las matemáticas. Si la pendiente es positiva, busque largos. Si es negativo, busque pantalones cortos."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:40:00+00:00"
+}

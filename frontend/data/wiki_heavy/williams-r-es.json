@@ -1,0 +1,16 @@
+{
+    "slug": "williams-r",
+    "lang": "ES",
+    "title": "Williams %R",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "El detector de 'Ballenas'. Williams %R es un oscilador de impulso que mide los niveles de sobrecompra y sobreventa. A diferencia del RSI, no tiene suavizado, lo que lo hace extremadamente sensible a los puntos de inflexión del mercado. Detecta el momento exacto en que se agota la presión de compra.",
+        "deep_dive": "Desarrollado por Larry Williams. Se mueve en una escala de 0 a -100. 0 a -20 es Sobrecompra. -80 a -100 es Sobreventa. La magia de %R es su capacidad para anticipar las reversiones de precios antes de que aparezcan en el gráfico.",
+        "council_debate": "{\"geopolitics\": \"El comercio de crisis requiere velocidad. RSI es demasiado lento. Williams %R reacciona instantáneamente a los titulares geopolíticos. Si llegan noticias y %R se mantiene fijado por encima de -20, el mercado está descontando el miedo. Si cae, vende inmediatamente.\", \"macro\": \"Las tendencias macro se pausan, pero rara vez se revierten instantáneamente. Usamos Williams %R para entrar en tendencias macro establecidas en retrocesos. En un mercado alcista, compramos cuando %R llega a -80 (sobreventa). En un mercado bajista, vendemos en corto cuando llega a -20 (sobrecompra).\", \"quant\": \"A los algoritmos de reversión a la media les encanta esta señal. Buscamos 'Failure Swings'. Si %R llega a -100, rebota y luego no logra romper -80 en la siguiente prueba, es una señal de divergencia. Probabilidad de reversión > 65%.\", \"technical\": \"'El Estallido'. Cuando el precio tiene una tendencia fuerte, %R puede permanecer 'sobrecomprado' (por encima de -20) durante semanas. Esto no es una señal de venta; es un signo de fuerza extrema. Solo venda cuando %R rompa de nuevo POR DEBAJO de -20.\", \"policy\": \"El discurso de la Fed crea ruido. Williams %R ayuda a filtrarlo. Si Powell habla y el mercado cae, pero %R mantiene la línea media de -50, la tendencia está intacta. Fue solo una descarga de liquidez.\", \"tech\": \"Crypto se mueve rápido. Usamos Williams %R normalizado en gráficos de 4 horas para el comercio de especulación (scalping) de Bitcoin. Atrapa los techos locales de los esquemas de 'Pump and Dump' con una precisión aterradora.\"}",
+        "forecast_risks": "La 'Clavija' (The Peg). En una súper tendencia, Williams %R puede quedarse 'clavado' en -0 o -100 durante mucho tiempo. Vender solo porque está 'sobrecomprado' en una fuerte tendencia alcista es una forma segura de arruinarse. Necesitas un gatillo para salir.",
+        "gms_conclusion": "La terminación nerviosa sensible del mercado. Úselo para cronometrar sus entradas con precisión, pero respete la tendencia."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:30:00+00:00"
+}

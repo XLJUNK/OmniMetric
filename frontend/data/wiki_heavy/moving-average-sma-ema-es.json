@@ -1,0 +1,16 @@
+{
+    "slug": "moving-average-sma-ema",
+    "lang": "ES",
+    "title": "Medias Móviles (SMA/EMA)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Las medias móviles suavizan la acción del precio para revelar la verdadera tendencia. Son la 'Línea en la Arena' entre los mercados alcistas y bajistas. La SMA (Simple) es lenta y constante; la EMA (Exponencial) es rápida y reactiva.",
+        "deep_dive": "La SMA de 200 días es la línea divisoria institucional. Por encima de ella, el dinero grande compra en las caídas. Por debajo de ella, venden en los repuntes. La 'Cruz Dorada' (el cruce de 50 días por encima de 200 días) señala el inicio de un mercado alcista a largo plazo; la 'Cruz de la Muerte' señala un colapso.",
+        "council_debate": "{\"geopolitics\": \"Las noticias políticas crean ruido (picos). Las medias móviles filtran este ruido. Una crisis geopolítica solo es significativa si rompe la SMA de 200 días. De lo contrario, es solo una oportunidad de compra.\", \"macro\": \"En una recesión, la SMA de 200 días actúa como un techo de resistencia. Cada repunte hacia la SMA de 200 días es una trampa. En una expansión, actúa como un piso de soporte.\", \"quant\": \"Las estrategias de seguimiento de tendencias utilizan cruces de EMA (por ejemplo, 9-EMA vs 21-EMA) para generar señales automáticas de compra/venta. Esto elimina el sesgo humano. La 'pendiente' de la media móvil determina el tamaño de la convicción.\", \"technical\": \"El precio que regresa a la media (Reversión a la Media) es una ley de la física. Si el precio está un 20% por encima de la SMA de 200 días, está 'estirado' como una banda elástica y retrocederá. Nos desvanecemos en los extremos.\", \"policy\": \"Las inyecciones de liquidez del banco central generalmente mantienen el precio por encima de la EMA de 50 días. Cuando se retira la liquidez, la línea de 50 días se rompe primero, advirtiendo de un cambio de régimen antes de que los datos económicos rezagados lo confirmen.\", \"tech\": \"Los algoritmos de Negociación de Alta Frecuencia (HFT) se adelantan a estos niveles. Defenderán la SMA de 200 días agresivamente. Si se rompe, se activan cascadas de stop-loss, creando un 'Vacío de Liquidez' hacia abajo.\"}",
+        "forecast_risks": "Latigazos en mercados agitados. Las medias móviles son inútiles en rangos laterales. Solo funcionan en entornos de tendencia. Te desangrarás hasta la muerte por señales falsas en un mercado plano.",
+        "gms_conclusion": "La SMA de 50 semanas es nuestro 'Nivel de Dios' para las tendencias a largo plazo. Respeta la tendencia hasta que se doble."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T14:00:00+00:00"
+}

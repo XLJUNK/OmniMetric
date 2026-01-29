@@ -1,0 +1,16 @@
+{
+    "slug": "standard-deviation",
+    "lang": "ES",
+    "title": "Desviación Estándar",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "La medida estadística de Riesgo. La Desviación Estándar cuantifica cuánto se desvía el historial de precios de su promedio. Es el combustible crudo para las Bandas de Bollinger y la fijación de precios de opciones. Altas DS = Alto Riesgo/Recompensa.",
+        "deep_dive": "1 Desviación Estándar (DS) cubre el 68% de la acción del precio. 2 DS cubre el 95%. 3 DS cubre el 99.7%. En finanzas, buscamos 'Valores Atípicos'—eventos más allá de 2 o 3 DS—para señalar que algo anormal está sucediendo.",
+        "council_debate": "{\"geopolitics\": \"La historia es solo una serie de eventos 6-Sigma (Guerras Mundiales, Pandemias). La Desviación Estándar asume una curva de campana (Distribución Normal), pero la historia tiene 'Colas Gordas'. Confiar en la DS para la gestión del riesgo geopolítico es un apalancamiento peligroso.\", \"macro\": \"Para un inversor Macro, el riesgo es 'Pérdida Permanente de Capital', no Desviación Estándar. El efectivo tiene cero DS pero rendimiento real negativo. Las acciones de crecimiento tienen alta DS pero rendimiento real positivo. No confunda volatilidad con riesgo.\", \"quant\": \"El Z-Score es el rey. Normalizamos todo a Desviaciones Estándar. Si una acción se cotiza a -3 DS en relación con su sector, es estadísticamente barata. Compramos la operación de reversión a la media agresivamente a -3 DS.\", \"technical\": \"La 'Banda Elástica'. El precio no puede estirarse demasiado lejos del promedio antes de volver a romperse. Buscamos 'Velas de Agotamiento' fuera de la 2da o 3ra Desviación Estándar. Ahí es donde desvanecemos el movimiento.\", \"policy\": \"Los bancos centrales dirigen la economía para minimizar la Desviación Estándar del PIB y la Inflación. Quieren un mundo aburrido. Cuando la DS se dispara, siempre intervienen. Un entorno de alta DS es un signo de fracaso político.\", \"tech\": \"El código nunca miente, pero las distribuciones sí. Los rendimientos de las criptomonedas son 'Leptocúrticos' (Colas Gordas). Un movimiento de 5 DS en acciones ocurre una vez por siglo. En cripto, ocurre todos los martes. Ajuste sus modelos mentales para esperar el infinito.\"}",
+        "forecast_risks": "El 'Cisne Negro'. La Desviación Estándar asume una distribución normal. Los mercados financieros *no* son normales. Son fractales. Ocurren eventos de 10 DS, y aniquilan a cualquiera que use la lógica de apalancamiento de 3 DS.",
+        "gms_conclusion": "Sepa qué es 'Normal' para que pueda detectar lo 'Anormal'. Pero nunca asuma que lo 'Imposible' no sucederá. 3 DS no es un muro duro."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:00:00+00:00"
+}

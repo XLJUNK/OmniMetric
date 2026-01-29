@@ -1,0 +1,16 @@
+{
+    "slug": "money-flow-index-mfi",
+    "lang": "ES",
+    "title": "MFI (Índice de Flujo de Dinero)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "RSI Poderado por Volumen. MFI agrega volumen al Índice de Fuerza Relativa (RSI). No solo le importan los movimientos de precios; le importa la *convicción* detrás de los movimientos. Te dice si el 'Dinero Inteligente' está comprando o vendiendo en secreto.",
+        "deep_dive": "Calculado utilizando el precio típico y el volumen. Al igual que el RSI, oscila entre 0 y 100. Más de 80 es sobrecompra. Menos de 20 es sobreventa. Pero a diferencia del RSI, una divergencia en MFI es mucho más poderosa porque implica que el volumen está contradiciendo el precio.",
+        "council_debate": "{\"geopolitics\": \"La fuga de capitales deja huellas. Cuando un país está en crisis, el precio puede ser sostenido por la intervención del banco central, pero el MFI se estrellará porque el volumen real está huyendo. Usamos MFI para detectar la 'falsa estabilidad' en las monedas de los mercados emergentes.\", \"macro\": \"La liquidez impulsa los mercados. MFI es un proxy para el flujo de liquidez hacia un activo. Cuando aumenta la M2 mundial (oferta monetaria), vemos aumentar el MFI en todos los activos. Es la marea creciente que levanta a todos los barcos.\", \"quant\": \"Buscamos 'Divergencia de Volumen'. Si una acción alcanza un nuevo máximo con un volumen bajo (MFI bajo), es una 'trampa para toros'. Acortamos estos movimientos de agotamiento. Por el contrario, una venta masiva con bajo volumen (MFI alto en relación con el precio) es una compra.\", \"technical\": \"La 'Regla 80/20'. Cuando MFI supera los 80 y luego vuelve a romper por debajo de 80, es una señal de venta más fuerte que el RSI porque significa que el *volumen* de compra se ha agotado, no solo el impulso.\", \"policy\": \"Los bancos centrales compran bonos para manipular las tasas. Esto crea 'Volumen Artificial'. El MFI puede verse distorsionado en los mercados de bonos por la QE (flexibilización cuantitativa). Ajustamos el MFI para los cambios en el balance del banco central.\", \"tech\": \"En Crypto, el comercio de lavado (wash trading) es desenfrenado. El MFI puede ser falsificado en pequeños intercambios. Solo usamos MFI en intercambios de alta liquidez (Binance, Coinbase). Si el precio de Bitcoin es plano pero el MFI está aumentando, las 'Ballenas' se están acumulando. Compra.\"}",
+        "forecast_risks": "Deriva de Volumen Bajo. En los mercados de vacaciones de bajo volumen, MFI puede dar señales erráticas porque las órdenes pequeñas mueven demasiado el índice. Requiere mercados líquidos para funcionar.",
+        "gms_conclusion": "RSI es para la velocidad. MFI es por la verdad. Use MFI para ver si hay dinero real detrás de la mudanza."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:30:00+00:00"
+}

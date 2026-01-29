@@ -1,0 +1,16 @@
+{
+    "slug": "cci-commodity-channel-index",
+    "lang": "ID",
+    "title": "CCI (Indeks Saluran Komoditas)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Pencari 'Penyimpangan Siklis'. CCI mengukur tingkat harga saat ini relatif terhadap tingkat harga rata-rata selama periode waktu tertentu. Digunakan terutama untuk menemukan tren baru atau kondisi ekstrem. +100/-100 adalah level kuncinya.",
+        "deep_dive": "Donald Lambert merancang CCI untuk komoditas, yang bersifat siklis. Itu tidak terbatas (tidak seperti RSI). Pembacaan tinggi berarti harga luar biasa tinggi dibandingkan dengan rata-rata. Pergerakan di atas +100 menyiratkan tren naik yang kuat sedang dimulai.",
+        "council_debate": "{\"geopolitics\": \"Komoditas bereaksi keras terhadap guncangan pasokan (Perang). CCI menangkap guncangan ini lebih baik daripada RSI karena tidak memiliki batasan. Ketika Minyak CCI mencapai +300 selama perang, itu secara akurat mencerminkan permintaan panik 'tak terbatas'.\", \"macro\": \"Siklus inflasi adalah siklus komoditas. Kami menggunakan CCI bulanan pada Indeks CRB untuk menentukan apakah kami berada dalam rezim 'Aset Keras' atau rezim 'Aset Kertas'. CCI > 0 pada grafik bulanan berarti Memiliki Aset Riil.\", \"quant\": \"Kami menggunakan CCI untuk 'Momentum Breakouts'. Sebagian besar indikator mengatakan jual saat overbought. CCI mengatakan BELI ketika melintas di atas +100. Ini adalah sinyal kontra-intuitif yang bekerja dengan baik di pasar momentum yang kuat.\", \"technical\": \"Cari 'Zero Line Reject'. Dalam tren naik, harga terkoreksi, CCI turun mendekati 0, lalu memantul kembali. Ini adalah titik masuk 'Beli Dip' yang sempurna. Ini menegaskan tren masih hidup.\", \"policy\": \"Keputusan OPEC mendorong CCI Minyak. Ketika OPEC memangkas produksi, CCI Minyak melintasi +100. Ini adalah sinyal tren yang didorong oleh kebijakan. Jangan melawan OPEC, dan jangan melawan penembusan CCI.\", \"tech\": \"Bitcoin meniru komoditas lebih dari sekadar saham. CCI bekerja sangat baik pada grafik mingguan Bitcoin. Penutupan mingguan di atas +100 sering menandai dimulainya kenaikan 6 bulan.\"}",
+        "forecast_risks": "Whipsaw dalam kisaran sempit. CCI sangat sensitif. Di pasar yang berombak, ia akan melewati +100 dan -100 berulang kali, menghasilkan sinyal penembusan palsu. Harus memfilter secara signifikan dengan garis tren.",
+        "gms_conclusion": "Untuk Komoditas dan Kripto, CCI lebih unggul daripada RSI. Itu menghormati potensi mania yang tak terbatas."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:00:00+00:00"
+}

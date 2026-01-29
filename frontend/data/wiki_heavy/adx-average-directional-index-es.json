@@ -1,0 +1,16 @@
+{
+    "slug": "adx-average-directional-index",
+    "lang": "ES",
+    "title": "ADX (Índice Direccional Promedio)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "El ADX mide la fuerza de la tendencia, independientemente de la dirección. Te dice '¿Qué tan fuerte es el movimiento?', no '¿A dónde va?'. Responde a la pregunta crítica: '¿Debo operar la tendencia o el rango?'",
+        "deep_dive": "ADX varía de 0 a 100. Las lecturas por debajo de 20 indican una tendencia débil (mercado agitado/de rango). Las lecturas superiores a 25 indican una fuerte tendencia. Las lecturas superiores a 50 indican una tendencia 'Clímax' agotada.",
+        "council_debate": "{\"geopolitics\": \"Los eventos de crisis provocan picos instantáneos en ADX. Cuando Rusia invadió Ucrania, el ADX del petróleo se volvió vertical. Si la geopolítica está impulsando el mercado, ignore las señales de sobrecompra y confíe en la fuerza de ADX.\", \"macro\": \"Las tendencias macro (como la inflación) son lentas y persistentes. Buscamos un ADX en aumento en el gráfico semanal. Esto confirma un cambio estructural secular, no solo un rebote cíclico.\", \"quant\": \"Usamos ADX como filtro. Si ADX < 20, nuestros algoritmos cambian al modo 'Reversión a la Media' (comprar barato, vender caro). Si ADX > 25, cambian al modo 'Seguimiento de Tendencia' (comprar caro, vender más caro). Mezclar esto es fatal.\", \"technical\": \"Las líneas DMI (Índice de Movimiento Direccional) acompañan al ADX. +DI cruzando -DI es la señal de compra. Pero solo tomamos la señal si el ADX está subiendo. Un cruce con ADX cayendo es una falsa alarma.\", \"policy\": \"Los 'Pivotes' del Banco Central matan las tendencias. Cuando la Fed señala una pausa, el ADX colapsa. Esta es la señal para cerrar posiciones de seguimiento de tendencias y pasar a neutral/efectivo.\", \"tech\": \"A los HFT les encantan los entornos de ADX bajo porque pueden hacer especulación con pequeños movimientos. Los humanos pierden dinero en ADX bajo porque son cortados por el ruido. Si el ADX es bajo, ve a jugar al golf.\"}",
+        "forecast_risks": "Retraso. ADX es un promedio suavizado de un rango suavizado. Es muy lento para reaccionar. Para cuando el ADX alcanza su punto máximo, el techo del precio a menudo ya está adentro. Úselo para mantenerse en las operaciones, no para ingresar a ellas.",
+        "gms_conclusion": "Sin Tendencia, Sin Operación. Si el ADX está por debajo de 20, el mercado es un casino. Espere a que la lectura cruce 25 antes de desplegar capital."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T14:30:00+00:00"
+}

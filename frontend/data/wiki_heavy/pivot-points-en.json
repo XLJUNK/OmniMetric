@@ -1,0 +1,16 @@
+{
+    "slug": "pivot-points",
+    "lang": "EN",
+    "title": "Pivot Points",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "The Floor Trader's Roadmap. Pivot Points use yesterday's High, Low, and Close to calculate today's support and resistance levels. They are static levels that do not change during the day, providing a fixed map for traders.",
+        "deep_dive": "Calculated as (High + Low + Close) / 3. Above the Pivot is bullish; below is bearish. R1, R2, S1, and S2 serve as magnetic targets. Because so many algorithms watch these levels, they become self-fulfilling prophecies.",
+        "council_debate": "{\"geopolitics\": \"Geopolitical news often hits overnight. If the market opens above the Pivot Point despite bad news, it shows resilience. We use the Pivot as a 'Line in the Sand' for news interpretation.\", \"macro\": \"Pivots are irrelevant for long-term trends but crucial for weekly execution. We use Weekly and Monthly Pivots to time our entries into macro trends. Buying a macro uptrend at the Monthly S1 support is the perfect entry.\", \"quant\": \"Mean Reversion heaven. Prices rarely move beyond R3 or S3 in a single day. If price hits R3, we short it back to the Pivot. It is a statistical volatility boundary.\", \"technical\": \"Confluence is key. A Pivot Point that aligns with a Fibonacci level or a Moving Average is a 'Concrete Wall'. We place our limit orders exactly at these confluence points.\", \"policy\": \"Central Bankers watch psychological levels, but the market watches Pivots. A break of a Yearly Pivot often signals a major shift in monetary policy expectations.\", \"tech\": \"Algos love Pivots. In Crypto, you will see flash crashes stop exactly, to the penny, on the S2 Pivot. It's programmed logic. Don't fight the machines; just front-run their orders at the Pivot levels.\"}",
+        "forecast_risks": "Trend Days. On a strong trend day, price will blow through R1, R2, and R3 like paper. Counter-trend trading at Pivots is suicide during a strong news-driven trend.",
+        "gms_conclusion": "The invisible grid of the market. Use them to define your battlefield for the day."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:15:00+00:00"
+}

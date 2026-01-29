@@ -1,0 +1,16 @@
+{
+    "slug": "bollinger-bands",
+    "lang": "ES",
+    "title": "Bandas de Bollinger",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Las Bandas de Bollinger miden la volatilidad. Responden a la pregunta: '¿El precio es tranquilo o ruidoso?' Cuando las bandas se aprietan, se acerca una explosión. Cuando son anchos, el movimiento se agota.",
+        "deep_dive": "Las bandas consisten en una SMA de 20 días (medio) y dos desviaciones estándar +/- (superior/inferior). Las estadísticas dicen que el 95% de la acción del precio debería permanecer dentro de las bandas. Cuando el precio toca la banda, es un evento significativo.",
+        "council_debate": "{\"geopolitics\": \"Los choques geopolíticos causan 'Caminata de Banda'. Esto es cuando el precio monta la banda Superior o Inferior continuamente. Esto señala un evento de Cisne Negro donde fallan las estadísticas normales. No desvanezca una caminata de banda causada por la guerra.\", \"macro\": \"En regímenes de baja volatilidad (economía Ricitos de Oro), las bandas son estrechas. Esta complacencia es peligrosa. Usamos el indicador 'Ancho de Banda' para predecir cuándo el entorno macro está a punto de cambiar de calma a tormenta.\", \"quant\": \"Comerciamos la 'Reversión a la Media'. Si el precio toca la Banda Superior pero el RSI está divergiendo, vamos en corto. Apostamos por un retorno a la SMA de 20 días. Es una estrategia de alta tasa de ganancias en mercados limitados por rango.\", \"technical\": \"El 'Apretón de Bollinger' es la configuración más poderosa. Cuando la volatilidad colapsa a mínimos históricos, se acumula energía. La ruptura posterior suele ser explosiva y de tendencias durante meses. Compramos la ruptura del apretón.\", \"policy\": \"Los bancos centrales suprimen la volatilidad (La 'Opción de Venta de la Fed'). Esto comprime artificialmente las bandas. Cuando la Fed pierde el control, las bandas se expanden violentamente, generalmente a la baja.\", \"tech\": \"Los algoritmos actúan como 'Máquinas de Reversión a la Media' en las bandas. Venden la Banda Superior y compran la Banda Inferior automáticamente. Esto crea niveles de soporte y resistencia autocumplidos.\"}",
+        "forecast_risks": "El 'Head Fake'. A menudo, el precio sale de un apretón en una dirección, luego se invierte inmediatamente y explota en la dirección opuesta. Espere un cierre diario confirmado fuera de la banda.",
+        "gms_conclusion": "La volatilidad es cíclica. La baja volatilidad conduce a una alta volatilidad. Las Bandas te dicen cuándo la calma está a punto de terminar."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T14:00:00+00:00"
+}

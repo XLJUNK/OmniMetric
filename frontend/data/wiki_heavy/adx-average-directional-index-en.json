@@ -1,0 +1,16 @@
+{
+    "slug": "adx-average-directional-index",
+    "lang": "EN",
+    "title": "ADX (Average Directional Index)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "The ADX measures Trend Strength, regardless of direction. It tells you 'How strong is the move?', not 'Where is it going?'. It answers the critical question: 'Should I trade the Trend or the Range?'",
+        "deep_dive": "ADX ranges from 0 to 100. Readings below 20 indicate a weak trend (choppy/range market). Readings above 25 indicate a strong trend. Readings above 50 indicate an exhausted 'Climax' trend.",
+        "council_debate": "{\"geopolitics\": \"Crisis events cause instant spikes in ADX. When Russia invaded Ukraine, Oil's ADX went vertical. If Geopolitics is driving the market, ignore overbought signals and trust the ADX strength.\", \"macro\": \"Macro trends (like inflation) are slow and persistent. We look for a rising ADX on the Weekly chart. This confirms a secular structural shift, not just a cyclical bounce.\", \"quant\": \"We use ADX as a filter. If ADX < 20, our algorithms switch to 'Mean Reversion' mode (buy low, sell high). If ADX > 25, they switch to 'Trend Following' mode (buy high, sell higher). Mixing these up is fatal.\", \"technical\": \"The DMI (Directional Movement Index) lines accompany the ADX. +DI crossing -DI is the buy signal. But we only take the signal if ADX is rising. A cross with falling ADX is a false alarm.\", \"policy\": \"Central Bank 'Pivots' kill trends. When the Fed signals a pause, the ADX collapses. This is the signal to close trend-following positions and move to neutral/cash.\", \"tech\": \"HFTs love low ADX environments because they can scalp small moves. Humans lose money in low ADX because they get chopped up by noise. If ADX is low, go play golf.\"}",
+        "forecast_risks": "Lag. ADX is a smoothed average of a smoothed range. It is very slow to react. By the time ADX peaks, the price top is often already in. Use it to stay in trades, not to enter them.",
+        "gms_conclusion": "No Trend, No Trade. If ADX is below 20, the market is a casino. Wait for the reading to cross 25 before deploying capital."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T14:30:00+00:00"
+}

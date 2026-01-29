@@ -1,0 +1,15 @@
+{
+    "slug": "correlation-coefficient",
+    "lang": "EN",
+    "title": "Correlation Coefficient",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "The Relationship Meter. It measures how strongly two assets move together. Range is from +1 (Perfect Positive) to -1 (Perfect Negative). Zero means no relationship. It is the backbone of portfolio construction and hedging.",
+        "deep_dive": "Correlation is not causation, but it is profit. If Bitcoin and the Nasdaq have a correlation of +0.9, trading them as separate assets is an illusion. You just doubled your risk. We use correlation to find true diversification.",
+        "council_debate": "{\"geopolitics\": \"All correlations go to 1 in a crisis. When war starts, investors sell everything to buy cash. Gold, Stocks, Crypto—all drop together. Understanding 'Correlations go to 1' prevents false confidence in diversification during panic.\", \"macro\": \"The Dollar Wrecking Ball. DXY usually has a -1 correlation with Risk Assets. If DXY rises, Stocks/Crypto fall. If this correlation breaks (both rising), it signals a 'Flight to Safety' where investors prefer US assets over everything else.\", \"quant\": \"We trade 'Dispersion'. If two stocks in the same sector usually have 0.9 correlation but drop to 0.5, we investigate. If the disconnect is unjustified, we buy the laggard and sell the leader, betting on 'Mean Reversion' of the correlation.\", \"technical\": \"Correlation as a filter. If I want to buy Oil, I check the CAD/USD chart. Since Canada is an oil exporter, CAD should be rising. If Oil rises but CAD falls (Divergence), the Oil rally is suspect.\", \"policy\": \"Central Banks manipulate correlations. QE forces all asset classes to rise together (positive correlation). QT makes them fall together. Knowing the policy regime tells you if diversification will work or fail.\", \"tech\": \"Bitcoin and Gold. The 'Holy Grail' for Crypto is decoupling from the Nasdaq and correlating with Gold. We track the BTC-Gold correlation daily. A shift to positive correlation marks Bitcoin's maturation into 'Digital Gold'.\"}",
+        "forecast_risks": "Correlation is dynamic. Relationships change instantly. A hedge that worked yesterday (Stock vs. Bond) might fail today if inflation spikes (both fall together).\", \"gms_conclusion\": \"Don't put all your eggs in one basket. Correlation tells you if you are holding different baskets or just painted the same basket different colors.\""
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:50:00+00:00"
+}

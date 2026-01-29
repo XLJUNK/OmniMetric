@@ -1,0 +1,16 @@
+{
+    "slug": "pivot-points",
+    "lang": "ES",
+    "title": "Puntos Pivote (Pivot Points)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "La hoja de ruta del operador de piso. Los puntos pivote utilizan el máximo, mínimo y cierre de ayer para calcular los niveles de soporte y resistencia de hoy. Son niveles estáticos que no cambian durante el día, proporcionando un mapa fijo para los comerciantes.",
+        "deep_dive": "Calculado como (Alto + Bajo + Cierre) / 3. Por encima del Pivote es alcista; por debajo es bajista. R1, R2, S1 y S2 sirven como objetivos magnéticos. Debido a que tantos algoritmos observan estos niveles, se convierten en profecías autocumplidas.",
+        "council_debate": "{\"geopolitics\": \"Las noticias geopolíticas a menudo llegan durante la noche. Si el mercado abre por encima del Punto Pivote a pesar de las malas noticias, muestra resistencia. Usamos el Pivote como una 'Línea en la Arena' para la interpretación de noticias.\", \"macro\": \"Los pivotes son irrelevantes para las tendencias a largo plazo, pero cruciales para la ejecución semanal. Usamos pivotes semanales y mensuales para cronometrar nuestras entradas en tendencias macro. Comprar una tendencia alcista macro en el soporte mensual S1 es la entrada perfecta.\", \"quant\": \"El cielo de la reversión a la media. Los precios rara vez se mueven más allá de R3 o S3 en un solo día. Si el precio alcanza el R3, lo ponemos en corto de regreso al Pivote. Es un límite de volatilidad estadística.\", \"technical\": \"La confluencia es clave. Un punto de pivote que se alinea con un nivel de Fibonacci o una media móvil es un 'Muro de Hormigón'. Colocamos nuestras órdenes limitadas exactamente en estos puntos de confluencia.\", \"policy\": \"Los banqueros centrales observan los niveles psicológicos, pero el mercado observa los pivotes. Una ruptura de un pivote anual a menudo indica un cambio importante en las expectativas de política monetaria.\", \"tech\": \"A los algos les encantan los pivotes. En Cripto, verá que los bloqueos repentinos se detienen exactamente, al centavo, en el Pivote S2. Es una lógica programada. No luches contra las máquinas; simplemente adelántate a sus órdenes en los niveles de Pivote.\"}",
+        "forecast_risks": "Días de Tendencia. En un día de tendencia fuerte, el precio atravesará R1, R2 y R3 como papel. El comercio de contra-tendencia en Pivotes es un suicidio durante una fuerte tendencia impulsada por noticias.",
+        "gms_conclusion": "La cuadrícula invisible del mercado. Úsalos para definir tu campo de batalla del día."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:15:00+00:00"
+}

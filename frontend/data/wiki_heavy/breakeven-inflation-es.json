@@ -1,0 +1,16 @@
+{
+    "slug": "breakeven-inflation",
+    "lang": "ES",
+    "title": "Tasa de Inflación de Equilibrio a 10 Años de EE. UU.",
+    "type": "indicator",
+    "category": "Inflation",
+    "sections": {
+        "summary": "La 'Tasa de Equilibrio' representa la expectativa del mercado de la inflación anual promedio durante los próximos 10 años. Se deriva restando el rendimiento real de los TIPS (Valores del Tesoro Protegidos contra la Inflación) del rendimiento nominal de los bonos del Tesoro estándar de EE. UU.",
+        "deep_dive": "A diferencia de las encuestas a los consumidores (que rastrean el sentimiento pasado), la Tasa de Equilibrio pone dinero real en juego. Si el rendimiento nominal a 10 años es del 4.0% y el rendimiento de los TIPS a 10 años es del 1.8%, la tasa de inflación de equilibrio es del 2.2%. Este es el obstáculo que la Fed debe superar para mantener la credibilidad.",
+        "council_debate": "{\"geopolitics\": \"La desglobalización es estructuralmente inflacionaria. A medida que las cadenas de suministro se fracturan y las naciones priorizan la resiliencia sobre la eficiencia, el 'piso' para esta tasa se mueve del 1.5% al 2.5%.\", \"macro\": \"El objetivo de la Fed es 2.0%, pero la realidad fiscal sugiere que tolerarán 3.0% para inflar la deuda. La tasa de equilibrio que olfatea esta 'Dominancia Fiscal' es el canario en la mina de carbón.\", \"quant\": \"Alta correlación con el crudo y los salarios del cobre. Utilizamos estructuras de plazos de futuros de materias primas para anticiparnos a los cambios en los Breakevens.\", \"technical\": \"El nivel del 2.50% es la 'Línea de Credibilidad'. Si los Breakevens se mantienen por encima del 2.50%, el mercado está apostando a que la Fed ha perdido el control. Por debajo del 2.00% señala riesgo de recesión deflacionaria.\", \"policy\": \"Powell odia las expectativas desancladas. Si esta métrica aumenta mientras la economía se desacelera, obliga a la Reserva Federal a mantener las tasas más altas por más tiempo (pesadilla estanflacionaria).\", \"tech\": \"La IA es la contrafuerza deflacionaria masiva. Mientras los costos de energía aumentan (inflacionario), los costos del trabajo intelectual se desploman (deflacionario). La tasa de equilibrio es el campo de batalla entre estas dos megafuerzas.\"}",
+        "forecast_risks": "El riesgo de la 'Espiral Salarios-Precios'. Si los Breakevens se desanclan al alza, los trabajadores exigen salarios más altos, bloqueando la alta inflación durante una década. El otro riesgo de cola es un 'Colapso Deflacionario' donde el exceso de deuda hace que los precios colapsen.",
+        "gms_conclusion": "La prueba del detector de mentiras del mercado para la Fed. Actualmente descontando un 'Aterrizaje Suave', pero esté atento a una ruptura por encima del 2.4%."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T13:50:00+00:00"
+}

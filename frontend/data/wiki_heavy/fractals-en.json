@@ -1,0 +1,16 @@
+{
+    "slug": "fractals",
+    "lang": "EN",
+    "title": "Williams Fractals",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Chaos Theory in action. A Fractal is a recurring geometric pattern showing a turning point. A 'Buy Fractal' is a series of 5 bars where the lowest low is in the middle, flanked by two higher lows. It marks a potential bottom.",
+        "deep_dive": "Markets are self-similar across timeframes. A fractal on a 1-minute chart looks like one on a monthly chart. We don't trade the Fractal itself; we trade the *breakout* of the Fractal High or Low. It detects structure in the chaos.",
+        "council_debate": "{\"geopolitics\": \"History repeats, but not exactly. It rhymes. Geopolitical crises are fractals. A local skirmish (small fractal) often predicts a larger war (large fractal) if the structure is identical. We map conflict intensity using fractal geometry.\", \"macro\": \"Economic cycles are fractal. The 4-year business cycle is nested inside a 10-year debt cycle, inside a 50-year Kondratieff wave. We identify which 'Wave' we are in to allocate capital. Currently, we are in a 'Winter' fractal.\", \"quant\": \"We filter noise. A fractal is a local extrema. By connecting fractals, we draw trendlines that are mathematically significant, not subjective. If price breaks a 'Fractal Support', our selling algorithms trigger instantly.\", \"technical\": \"The Alligator's food. Bill Williams used Fractals with the Alligator indicator. A Fractal above the Alligator's teeth is a valid breakout signal. We never take a trade unless a Fractal has confirmed the direction.\", \"policy\": \"Policy errors are fractals. A small policy mistake (rate hike too late) cascades into a banking crisis, which cascades into a sovereign debt crisis. The pattern of denial and panic is identical at every scale.\", \"tech\": \"Codebases are fractal. A bug in a low-level library mirrors a flaw in the system architecture. In markets, Algo-driven flash crashes are fractal events—micro-crashes happen every second, resembling the 2010 Flash Crash.\"} ",
+        "forecast_risks": "Lag and Repainting. A fractal needs 2 bars *after* the middle bar to confirm. It is a lagging indicator. Also, false breakouts are common in sideways markets.",
+        "gms_conclusion": "Don't guess the turn. Let the Fractal mark the turn, then trade the momentum."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:50:00+00:00"
+}

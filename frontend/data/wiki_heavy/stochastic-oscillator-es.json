@@ -1,0 +1,16 @@
+{
+    "slug": "stochastic-oscillator",
+    "lang": "ES",
+    "title": "Oscilador Estocástico",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "El 'Buscador de Rangos'. El estocástico compara un precio de cierre con su rango de precios durante un período. Funciona mejor en mercados planos y laterales. Le dice dónde está el precio en relación con su canal alto-bajo reciente.",
+        "deep_dive": "%K es la línea rápida, %D es la línea lenta. Un cruce en la zona de sobrecompra (>80) o sobreventa (<20) es la señal clásica. Es más rápido y sensible que el RSI, pero propenso a señales falsas.",
+        "council_debate": "{\"geopolitics\": \"En un punto muerto geopolítico de rango limitado (sin guerra, sin paz), el estocástico es el rey. Capta perfectamente los titulares de ida y vuelta. Compre la caída en 20, venda el repunte en 80.\", \"macro\": \"Las tendencias macro destruyen a los usuarios de estocásticos. En una fuerte tendencia alcista de inflación, el estocástico se mantendrá > 80 para siempre. Si te pones corto cada vez que llega a 80, serás aniquilado. Úselo solo cuando la Macro sea neutral.\", \"quant\": \"Usamos estocásticos para la 'reversión a la media' en las horas de negociación asiáticas (a menudo baja volatilidad). Si los futuros del S&P 500 caen a Stoch 10 durante la pausa del almuerzo asiática, nuestros bots lo compran para un rápido rebote a 50.\", \"technical\": \"Busque la 'Bisagra' (Hinge). Cuando las líneas %K y %D se aplanan y luego giran bruscamente, parece una bisagra de puerta. Este patrón visual a menudo precede a una ruptura violenta del rango.\", \"policy\": \"Los bancos centrales que fijan las tasas crean rangos estocásticos perfectos. Si la Fed dice 'Las tasas se mantendrán en 5.25% por un año', el mercado de bonos se convierte en un patio de recreo para estocásticos. Compre bajo rendimiento, venda alto rendimiento.\", \"tech\": \"En Cripto, el estocástico es útil para 'Scalping' en el gráfico de 15 minutos. Los rangos criptográficos son amplios (5-10%). Capturar la oscilación de 20 a 80 en un gráfico de 15m es una estrategia rentable para los comerciantes diarios.\"}",
+        "forecast_risks": "Pop y Drop. En un colapso, el estocástico llegará a 0 y se quedará allí. Comprar porque 'no puede bajar más' es una falacia. Puede 'incrustarse' en 0 durante toda la duración del colapso.",
+        "gms_conclusion": "Use Estocásticos en Cajas (Rangos). Usa MACD en Tendencias. Sepa en qué entorno se encuentra."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:00:00+00:00"
+}

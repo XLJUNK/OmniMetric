@@ -1,0 +1,16 @@
+{
+    "slug": "z-score",
+    "lang": "EN",
+    "title": "Z-Score (Standard Score)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "The Great Normalizer. Z-Score measures how many standard deviations price is from the mean. It allows you to compare volatility across widely different assets (e.g., Apple vs. Bitcoin) on a single scale.",
+        "deep_dive": "Formula: (Price - Mean) / Standard Deviation. A Z-Score of 0 is the mean. +2 is rare (95% confidence). +3 is an anomaly (99.7% confidence). We short +3 and buy -3 for mean reversion.",
+        "council_debate": "{\"geopolitics\": \"Outliers signal regime change. In normal markets, Z-Scores stay between -2 and +2. When the Russian Ruble hits a Z-Score of -6, it is not just a volatility spike; it is a geopolitical rupture. We look for 'Black Swan' events where Z > 5.\", \"macro\": \"Valuation compression. We compute the Z-Score of the P/E ratio relative to its 10-year average. If the S&P 500 P/E Z-Score is +2.5, the market is historically expensive. We rotate into assets with negative Z-Scores (undervalued).\", \"quant\": \"Statistical Arbitrage ('Stat Arb') relies entirely on this. If Stock A and Stock B are correlated, but Stock A has a Z-Score of +2 and Stock B has a Z-Score of -2, we Short A and Buy B, betting the spread will close. This is 'Pairs Trading'.\", \"technical\": \"Bollinger Bands are just Z-Score +/- 2. Z-Score gives us the raw data. We use it to filter breakouts. If price breaks out but Z-Score is already +4, the move is exhausted. We fade the breakout.\", \"policy\": \"Central Banks suppress tail risk. They fear Z-Score events. If bond yields hit a Z-Score of +3, the Fed steps in with QE to crush volatility. We Front-run the Fed when volatility gets extreme.\", \"tech\": \"Server load Z-Scores predict crashes. In high-frequency trading, if latency hits a Z-Score of +3, we kill the bot immediately to prevent execution errors. In crypto, hash rate Z-Scores predict miner capitulation.\"}",
+        "forecast_risks": "Trends can stay irrational. In a strong bubble, Z-Score can stay above +3 for months. Shorting based solely on high Z-Score is dangerous ('The Widowmaker'). It measures stretch, not timing.",
+        "gms_conclusion": "The elastic band can only stretch so far. Z-Score tells you when it's about to snap."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:50:00+00:00"
+}

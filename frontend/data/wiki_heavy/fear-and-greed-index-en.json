@@ -1,0 +1,16 @@
+{
+    "slug": "fear-and-greed-index",
+    "lang": "EN",
+    "title": "Fear & Greed Index",
+    "type": "indicator",
+    "category": "Sentiment",
+    "sections": {
+        "summary": "The Fear & Greed Index is a composite sentiment indicator that tracks 7 market factors: Stock Price Momentum, Stock Price Strength, Stock Price Breadth, Put and Call Options, Junk Bond Demand, Market Volatility, and Safe Haven Demand. It ranges from 0 (Extreme Fear) to 100 (Extreme Greed).",
+        "deep_dive": "It acts as a contrarian indicator. 'Extreme Fear' often signals that investors are too bearish, presenting a buying opportunity. 'Extreme Greed' suggests the market is overextended and due for a correction.",
+        "council_debate": "{\"geopolitics\": \"Geopolitical shocks (wars, sanctions) trigger sharp spikes in the Safe Haven component (Bond/Gold demand), pushing the index to 'Extreme Fear'. These are historically the best 'Buy the Dip' moments.\", \"macro\": \"This index is a real-time monitor of 'Financial Conditions'. Extreme Fear acts like a rate hike (tightening conditions), while Extreme Greed acts like a rate cut (loosening conditions).\", \"quant\": \"We backtest mean reversion strategies. Buying when the index hits <10 and selling when >90 has historically outperformed 'Buy and Hold'. However, the index can stay in 'Extreme Greed' for months during strong bull runs, wiping out premature shorts.\", \"technical\": \"We look for divergences. If the S&P 500 makes a higher high, but the Fear & Greed Index makes a lower high, it indicates internal market weakness and exhausted momentum.\", \"policy\": \"The Fed watches this implicitly. If markets are in 'Extreme Greed' while inflation is high, it gives the Fed a green light to talk hawkishly to cool things down.\", \"tech\": \"Social sentiment analysis (Twitter, Reddit) is becoming a faster leading indicator than the option market components. The 'Retail Crowd' often drives the Greed meter faster than institutions.\"}",
+        "forecast_risks": "The risk is a 'Regime Change' where the index stays pinned at 'Extreme Fear' for a prolonged period (like 2008), signaling a structural depression rather than a buyable dip.",
+        "gms_conclusion": "Use it as an emotional check. If you feel like buying when the index is at 90, stop. If you feel like selling when it's at 10, stop. It's the best mirror for your own psychology."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T13:30:00+00:00"
+}

@@ -1,0 +1,16 @@
+{
+    "slug": "atr-average-true-range",
+    "lang": "EN",
+    "title": "ATR (Average True Range)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "ATR measures the 'Energy' of the market. It tells you how much an asset moves on average per day. It is the ultimate tool for Position Sizing. High ATR = Small Position. Low ATR = Large Position.",
+        "deep_dive": "ATR does not indicate direction, only volatility. It accounts for 'Gaps' which other volatility measures miss. A breakout accompanied by rising ATR is valid. A breakout with falling ATR is suspicious.",
+        "council_debate": "{\"geopolitics\": \"Uncertainty creates volatility. We watch ATR to gauge how 'nervous' the market is about a geopolitical situation. If ATR is rising, fear is rising, even if price is flat.\", \"macro\": \"ATR expands during regime shifts (e.g., Inflation Shock). It contracts during stable regimes (Great Moderation). We are currently in a high ATR structural regime due to global instability.\", \"quant\": \"We use 'Volatility Targeting'. If we target 10% volatility for a portfolio, we must reduce position sizes when ATR rises. If we didn't, a high ATR stock would dominate the portfolio risk. ATR normalizes risk across all assets.\", \"technical\": \"Use ATR for stop-losses ('Chandelier Stop'). Place your stop 2x ATR away from your entry. This ensures you are not stopped out by normal daily noise. Only a true trend change will hit a 2ATR stop.\", \"policy\": \"Central banks try to suppress ATR (Forward Guidance). When they fail, ATR explodes. The 'Bond Market Volatility' (MOVE Index) is essentially ATR for bonds. It is the canary in the coal mine.\", \"tech\": \"In Crypto, ATR can explode 10x in a week. Often, a massive spike in ATR marks a capitulation bottom. When sellers are exhausted, volatility peaks. Buying when ATR is at all-time highs (panic) is usually profitable.\"}",
+        "forecast_risks": "ATR is lagging. It tells you volatility *has* increased, not that it *will*. Also, low ATR periods can last for years (complacency), leading to massive leverage blowups when it finally turns.",
+        "gms_conclusion": "Know your vehicle's speed. Don't drive a Ferrari (High ATR) like a Honda (Low ATR). Adjust your seatbelt (Position Size) accordingly."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:00:00+00:00"
+}

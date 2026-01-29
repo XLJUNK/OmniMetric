@@ -1,0 +1,16 @@
+{
+    "slug": "on-balance-volume-obv",
+    "lang": "ID",
+    "title": "OBV (On-Balance Volume)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "'Serum Kebenaran' grafik. OBV adalah total kumulatif dari volume. Ketika harga ditutup naik, volume ditambahkan. Saat turun, dikurangi. Ini beroperasi pada prinsip inti: 'Volume Mendahului Harga'. Ini mengungkapkan apakah pergerakan harga memiliki keyakinan nyata atau hanya tipuan kosong.",
+        "deep_dive": "Dikembangkan oleh Joe Granville pada tahun 1963. OBV bukan tentang level, tetapi *tren* garis. OBV yang meningkat selama harga datar menandakan akumulasi (pembelian uang pintar). OBV yang jatuh selama reli harga menandakan distribusi (uang pintar menjual ke dalam reli).",
+        "council_debate": "{\"geopolitics\": \"Pelarian modal diam sebelum nyaring. Kami menonton OBV di ETF mata uang. Jika mata uang stabil tetapi OBV jatuh, orang dalam memindahkan uang keluar sebelum sanksi atau devaluasi melanda. OBV mendeteksi keruntuhan Rubel Rusia berminggu-minggu sebelumnya.\", \"macro\": \"Data inflasi berwawasan ke belakang. Komoditas OBV berwawasan ke depan. Jika harga Tembaga macet tetapi OBV merobek lebih tinggi, permintaan industri adalah nyata, dan narasi 'resesi' salah.\", \"quant\": \"Kami menggunakan Analisis Kemiringan OBV. Jika kemiringan OBV lebih curam daripada kemiringan Harga, itu adalah sinyal 'alpha' keyakinan tinggi. Kami memanfaatkan perdagangan ini.\", \"technical\": \"'Divergensi Granville'. Jika harga membuat level tertinggi baru tetapi OBV gagal membuat level tertinggi baru, itu adalah divergensi negatif. Reli berjalan di atas asap. Penjualan sudah dekat.\", \"policy\": \"Bank Sentral dapat menetapkan harga, tetapi mereka tidak dapat memalsukan volume. Jika The Fed membeli obligasi untuk menekan imbal hasil (menaikkan harga obligasi), OBV mungkin terlihat datar atau lemah karena pasar *swasta* tidak berpartisipasi. OBV mengekspos dukungan buatan.\", \"tech\": \"Paus vs Ritel. Di Crypto, ritel mengejar harga (lilin hijau). Paus menumpuk di lilin merah. Jika Bitcoin membuang -5% tetapi OBV tetap datar, Paus menyerap penjualan. Ini adalah sinyal 'Beli di saat Dip' yang paling utama.\"}",
+        "forecast_risks": "Distorsi Kesenjangan (Gap). Kesenjangan besar naik/turun pada volume ringan dapat mendistorsi hitungan kumulatif secara signifikan. Ini bekerja paling baik di pasar berkelanjutan seperti Forex atau Crypto.",
+        "gms_conclusion": "Harga adalah iklannya. Volume adalah bahan bakarnya. OBV memberi tahu Anda apakah tangki penuh atau kosong."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:35:00+00:00"
+}

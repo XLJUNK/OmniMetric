@@ -1,0 +1,16 @@
+{
+    "slug": "move-index",
+    "lang": "ES",
+    "title": "Índice MOVE (Bond VIX)",
+    "type": "indicator",
+    "category": "Sentiment",
+    "sections": {
+        "summary": "El Índice MOVE (Estimación de Volatilidad de Opciones de Merrill Lynch) mide la volatilidad implícita de las opciones del Tesoro de EE. UU. Es efectivamente el 'VIX para Bonos'. ¿Por qué importa? Porque el mercado del Tesoro de EE. UU. es la garantía que sustenta todo el sistema financiero global.",
+        "deep_dive": "Mientras que el VIX mide el miedo en las acciones, el MOVE mide el miedo en los cimientos de las finanzas. Un MOVE alto significa que los distribuidores están aterrorizados de mantener inventario, lo que lleva a agujeros de liquidez. Un mercado del Tesoro roto rompe todo lo demás.",
+        "council_debate": "{\"geopolitics\": \"Cuando las naciones extranjeras (China, Japón) intervienen en los mercados de divisas para apoyar sus monedas, venden bonos del Tesoro, disparando el Índice MOVE. La alta volatilidad de los bonos es a menudo un síntoma de guerras de divisas globales.\", \"macro\": \"El desenrollado de la 'Paridad de Riesgo' es el peligro. Estos fondos masivos equilibran el riesgo comprando bonos cuando las acciones son volátiles. Pero cuando los Bonos Y las Acciones son volátiles (Alto MOVE + Alto VIX), deben vender TODO. El Índice MOVE es el detonante de esta ruptura de correlación.\", \"quant\": \"Hay un umbral crítico en 120. Por debajo de 120, el apalancamiento es seguro. Por encima de 120, los modelos de Valor en Riesgo (VaR) obligan a los bancos a desapalancarse. Si el MOVE se mantiene por encima de 140 durante más de 2 semanas, un evento crediticio es estadísticamente inevitable.\", \"technical\": \"El Índice MOVE lidera al VIX. A menudo, los operadores de bonos huelen problemas semanas antes que los operadores de acciones. Una ruptura en el MOVE es un indicador adelantado para una ruptura en el VIX.\", \"policy\": \"La Fed teme al Índice MOVE más que al IPC. Si el mercado del Tesoro deja de funcionar (MOVE > 180), la Fed se convierte en el 'Comprador de Último Recurso' instantáneamente, anulando las preocupaciones sobre la inflación. Esto es dominancia financiera.\", \"tech\": \"El Trading de Alta Frecuencia (HFT) algorítmico en bonos exacerba la volatilidad. En el pasado, los distribuidores humanos absorbían los choques; ahora, los algoritmos simplemente retiran liquidez cuando la volatilidad se dispara, causando 'Flash Crashes' en los rendimientos.\"}",
+        "forecast_risks": "El riesgo a la baja es una 'Subasta Fallida' donde el Tesoro de EE. UU. intenta vender deuda y nadie compra, enviando el MOVE en vertical. El lado positivo es un retorno a los niveles de volatilidad de la 'Gran Moderación' si la inflación se estabiliza en el 2%.",
+        "gms_conclusion": "El medidor de riesgo más subestimado. Si el MOVE está subiendo, reduzca el apalancamiento en todas partes, incluso si el mercado de valores parece tranquilo. Representa la 'inestabilidad de la garantía'."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T13:30:00+00:00"
+}

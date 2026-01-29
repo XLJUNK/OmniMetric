@@ -1,0 +1,16 @@
+{
+    "slug": "vwap",
+    "lang": "EN",
+    "title": "VWAP (Volume Weighted Average Price)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "The Institutional Benchmark. VWAP calculates the average price of a stock based on the volume traded at each price level. It reveals the true 'fair value' for the day. Institutions use it to execute large orders without moving the market.",
+        "deep_dive": "It resets at the open of every trading day. If price is above VWAP, buyers are in control and paying a premium. If below, sellers are in control. It acts as a dynamic support/resistance line for intraday trading.",
+        "council_debate": "{\"geopolitics\": \"During geopolitical panics, volume explodes. VWAP adjusts for this volume, telling you the real 'Panic Price'. If the market stabilizes above the panic-day VWAP, the crisis is priced in.\", \"macro\": \"We use 'Anchored VWAP' from major macro events (e.g., FOMC meetings, CPI releases). This tells us who is winning since that specific event. If price is below the 'CPI Anchored VWAP', inflation fears are dominating.\", \"quant\": \"Execution is everything. We are judged by whether we bought below VWAP. Therefore, we provide liquidity (buy limits) below VWAP and take liquidity (sell market) above it. This creates a natural mean reversion to the VWAP line throughout the day.\", \"technical\": \"The 'VWAP Pinch'. When price squeezes between a Moving Average and the VWAP, a breakout is imminent. We look for price to reclaim VWAP after a morning sell-off. That's the 'VWAP Reclaim' setup.\", \"policy\": \"Central Banks don't use VWAP, but the Bond Market does. When the 10-Year Yield trades consistently above its weekly VWAP, the trend is relentlessly higher regardless of Fed rhetoric.\", \"tech\": \"In Crypto, VWAP is the only gravity. Because there is no fundamental value, price orbits the VWAP. Algos will defend the VWAP on the first test. We always bid the first touch of VWAP in a trend.\"}",
+        "forecast_risks": "Late Day Noise. As the day ends, VWAP flattens out and becomes less significant because it takes massive volume to move it. Don't trust VWAP signals in the last hour of trading.",
+        "gms_conclusion": "The 'Truth' line. It tells you if you are getting a good deal or paying too much relative to the rest of the market."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:15:00+00:00"
+}

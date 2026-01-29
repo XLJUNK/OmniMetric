@@ -1,0 +1,16 @@
+{
+    "slug": "chaikin-volatility",
+    "lang": "ES",
+    "title": "Volatilidad de Chaikin",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "El detector de 'La Calma Antes de la Tormenta'. La volatilidad de Chaikin mide la tasa de cambio del rango de negociación. Detecta máximos del mercado (complacencia) y mínimos del mercado (pánico) en función de la expansión y contracción del movimiento de precios.",
+        "deep_dive": "Desarrollado por Marc Chaikin. A diferencia del ATR (valor absoluto), este es un oscilador de cambio porcentual. Cuando la volatilidad es extremadamente baja durante mucho tiempo, predice una ruptura violenta. Cuando es extremadamente alto, predice una reversión.",
+        "council_debate": "{\"geopolitics\": \"La complacencia es el enemigo. Cuando la volatilidad de Chaikin alcanza mínimos de varios años, el mercado está ignorando el riesgo geopolítico. Esta es la calma antes de la tormenta. Compre opciones de venta (protección) cuando la volatilidad esté 'muerta'.\", \"macro\": \"La estabilidad económica (Ricitos de Oro) mata la volatilidad. La volatilidad de Chaikin cae durante los tiempos de auge. Pero los 'Momentos Minsky' ocurren cuando la estabilidad engendra inestabilidad. Un aumento repentino en la volatilidad de Chaikin desde una base baja indica que el régimen macro se ha roto.\", \"quant\": \"Reversión a la media de volatilidad. Nos ponemos cortos en volatilidad cuando es históricamente alta (venta de opciones) y compramos volatilidad cuando es históricamente baja. La volatilidad de Chaikin nos da el rango percentil relativo del miedo.\", \"technical\": \"Divergencia. El precio marca un nuevo máximo, pero la volatilidad de Chaikin marca un máximo más bajo. Esto significa que el rally está perdiendo energía. El 'dinero tonto' sigue comprando, pero el 'dinero inteligente' ha dejado de empujar la volatilidad.\", \"policy\": \"La 'Opción de Venta de Greenspan' suprime la volatilidad. Pero finalmente, la presa se rompe. Esté atento a que la volatilidad de Chaikin aumente *a pesar* de la tranquilidad de la Fed. Eso significa que el mercado ha perdido la fe en el banco central.\", \"tech\": \"En Cripto, la baja volatilidad es sospechosa. Bitcoin no puede permanecer estable por mucho tiempo. Una línea plana de Volatilidad de Chaikin generalmente precede a un movimiento del 20%. Hacemos straddle en el mercado (Comprar Call + Comprar Put) cada vez que ocurre esta línea plana.\"}",
+        "forecast_risks": "El comercio de 'Hacedor de Viudas'. La volatilidad puede permanecer baja durante cantidades irracionales de tiempo (por ejemplo, 2017). Apostar por un aumento de la volatilidad demasiado pronto desangrará su cuenta a través de la desintegración theta (desintegración del tiempo).",
+        "gms_conclusion": "La volatilidad es cíclica. Inhala (bajo) y exhala (alto). Usa la volatilidad de Chaikin para cronometrar la respiración."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:00:00+00:00"
+}

@@ -1,0 +1,16 @@
+{
+    "slug": "supertrend",
+    "lang": "ID",
+    "title": "Supertrend",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Pengikut tren 'Setel dan Lupakan'. Ini adalah trailing stop berbasis ATR yang membuat Anda tetap berada di sisi kanan arus pasar utama. Hijau berarti Beli, Merah berarti Jual.",
+        "deep_dive": "Supertrend menggunakan volatilitas (ATR) untuk menghitung offsetnya. Ini menyesuaikan secara otomatis: jika volatilitas meningkat, stop bergerak lebih jauh untuk menghindari dihentikan oleh kebisingan. Jika volatilitas menurun, itu mengencang.",
+        "council_debate": "{\"geopolitics\": \"Dalam krisis geopolitik, pasar menjadi fluktuatif dan 'berisik'. Stop persentase tetap diburu. Supertrend menggunakan volatilitas (ATR) untuk beradaptasi. Ini adalah satu-satunya stop-loss yang 'bernapas' dengan indeks panik.\", \"macro\": \"Supertrend unggul dalam menangkap 'Reflation Trades' atau 'Siklus Devaluasi' yang berlangsung selama bertahun-tahun. Ini mengabaikan kebisingan IHK bulanan dan membuat Anda tetap membeli USD atau Komoditas untuk seluruh siklus.\", \"quant\": \"Kami menguji kembali Supertrend pada semuanya. Itu gagal di pasar samping (kota whipsaw). Tetapi pada portofolio terdiversifikasi dari 50 aset, pemenang besar (outlier) membayar semua kerugian kecil. Ini adalah strategi 'Konveksitas' murni.\", \"technical\": \"Jangan hanya menggunakan satu Supertrend. Gunakan dua. Satu yang lambat (Mingguan 10, 3) untuk tren utama, dan satu yang cepat (Harian 7, 3) untuk entri. Jangan melakukan perdagangan kecuali keduanya setuju. Ini adalah 'Penjajaran Kerangka Waktu Berganda'.\", \"policy\": \"Likuiditas bank sentral mendorong tren. Selama Supertrend berwarna Hijau, asumsikan 'The Fed Put' aktif. Ketika membalik Merah, itu berarti pengurasan likuiditas akhirnya mengalahkan sentimen.\", \"tech\": \"Pedagang Crypto menyukai Supertrend karena volatilitas crypto gila. Ini mencegah 'Tangan Kertas'. Ini memaksa Anda untuk memegang Bitcoin melalui penurunan 30% jika struktur tren secara teknis masih utuh.\"}",
+        "forecast_risks": "'Blok Pemotong'. Di pasar datar, Supertrend akan membeli bagian atas dan menjual bagian bawah berulang kali. Anda HARUS memfilternya dengan ADX. Jika ADX < 20, matikan sinyal Supertrend Anda.",
+        "gms_conclusion": "Kesederhanaan adalah kecanggihan tertinggi. Supertrend menghapus semua kebijaksanaan. Itu memaksa Anda untuk disiplin."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:00:00+00:00"
+}

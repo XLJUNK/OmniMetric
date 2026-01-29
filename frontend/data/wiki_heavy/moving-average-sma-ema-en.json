@@ -1,0 +1,16 @@
+{
+    "slug": "moving-average-sma-ema",
+    "lang": "EN",
+    "title": "Moving Averages (SMA/EMA)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Moving Averages smooth out price action to reveal the true trend. They are the 'Line in the Sand' between Bull and Bear markets. The SMA (Simple) is slow and steady; the EMA (Exponential) is fast and reactive.",
+        "deep_dive": "The 200-Day SMA is the institutional dividing line. Above it, big money buys dips. Below it, they sell rallies. The 'Golden Cross' (50-Day crossing above 200-Day) signals a long-term bull market start; the 'Death Cross' signals a crash.",
+        "council_debate": "{\"geopolitics\": \"Political news creates noise (spikes). Moving averages filter this noise. A Geopolitical crisis is only significant if it breaks the 200-Day SMA. Otherwise, it's just a buying opportunity.\", \"macro\": \"In a recession, the 200-Day SMA acts as a ceiling of resistance. Every rally to the 200-Day is a trap. In an expansion, it acts as a floor of support.\", \"quant\": \"Trend Following strategies use EMA crossovers (e.g., 9-EMA vs 21-EMA) to generate automatic buy/sell signals. This removes human bias. The 'Slope' of the moving average determines the conviction sizing.\", \"technical\": \"Price returning to the mean (Mean Reversion) is a law of physics. If price is 20% above the 200-Day SMA, it is 'stretched' like a rubber band and will snap back. We fade extremes.\", \"policy\": \"Central bank liquidity pumps usually keep price above the 50-Day EMA. When liquidity is withdrawn, the 50-Day breaks first, warning of a regime change before the lagging economic data confirms it.\", \"tech\": \"High-Frequency Trading (HFT) algos front-run these levels. They will defend the 200-Day SMA aggressively. If it breaks, stop-loss cascades are triggered, creating a 'Liquidity Vacuum' down.\", \"gms_conclusion\": \"The 50-Week SMA is our 'God Level' for long-term trends. Respect the trend until it bends.\"}",
+        "forecast_risks": "Whipsaws in chopping markets. Moving averages are useless in sideways ranges. They only work in trending environments. You will bleed to death from false signals in a flat market.",
+        "gms_conclusion": "The 50-Week SMA is our 'God Level' for long-term trends. Respect the trend until it bends."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T14:00:00+00:00"
+}

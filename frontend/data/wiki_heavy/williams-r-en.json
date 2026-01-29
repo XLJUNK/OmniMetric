@@ -1,0 +1,16 @@
+{
+    "slug": "williams-r",
+    "lang": "EN",
+    "title": "Williams %R",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "The 'Whale Detector'. Williams %R is a momentum oscillator that measures overbought and oversold levels. Unlike RSI, it has no smoothing, making it extremely sensitive to market turning points. It spots the exact moment buying pressure exhausts.",
+        "deep_dive": "Developed by Larry Williams. It moves on a scale of 0 to -100. 0 to -20 is Overbought. -80 to -100 is Oversold. The magic of %R is its ability to anticipate price reversals before they show up on the chart.",
+        "council_debate": "{\"geopolitics\": \"Crisis trading requires speed. RSI is too slow. Williams %R reacts instantly to geopolitical headlines. If news hits and %R stays pinned above -20, the market is discounting the fear. If it drops, sell immediately.\", \"macro\": \"Macro trends pause, but they rarely reverse instantly. We use Williams %R to enter established macro trends on pullbacks. In a Bull Market, we buy when %R hits -80 (Oversold). In a Bear Market, we short when it hits -20 (Overbought).\", \"quant\": \"Mean Reversion alogos love this signal. We look for 'Failure Swings'. If %R hits -100, bounces, and then fails to break -80 on the next retest, it's a divergence signal. Probability of reversal > 65%.\", \"technical\": \"'The Pop'. When price is trending strongly, %R can stay 'Overbought' (above -20) for weeks. This is not a sell signal; it is a sign of extreme strength. Only sell when %R breaks back BELOW -20.\", \"policy\": \"Fed speak creates noise. Williams %R helps filter it. If Powell speaks and the market drops, but %R holds the -50 midline, the trend is intact. It was just a liquidity flush.\", \"tech\": \"Crypto moves fast. We use normalized Williams %R on 4-hour charts for Bitcoin scalp trading. It catches the local tops of 'Pump and Dump' schemes with frightening accuracy.\"}",
+        "forecast_risks": "The 'Peg'. In a super-trend, Williams %R can get 'pegged' at -0 or -100 for a long time. Selling just because it is 'Overbought' in a strong uptrend is a surefire way to go broke. You need a trigger to exit.",
+        "gms_conclusion": "The sensitive nerve ending of the market. Use it to time your entries with precision, but respect the trend."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:30:00+00:00"
+}

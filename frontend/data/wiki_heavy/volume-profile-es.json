@@ -1,0 +1,16 @@
+{
+    "slug": "volume-profile",
+    "lang": "ES",
+    "title": "Perfil de Volumen (Volume Profile)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "La radiografía de la estructura del mercado. A diferencia del volumen estándar (trazado a lo largo del tiempo), Volume Profile traza el volumen sobre el *precio*. Revela dónde está el 'valor justo' y dónde el mercado rechaza el precio. Identifica el 'Punto de Control' (POC) donde se realizaron la mayoría de los negocios.",
+        "deep_dive": "Construye un histograma en el eje Y. El 'Área de Valor' contiene el 70% del volumen. Los precios por encima del Área de Valor son 'Altos Injustos'. Los precios por debajo son 'Bajos Injustos'. El mercado siempre intenta volver al POC a menos que algo fundamental cambie.",
+        "council_debate": "{\"geopolitics\": \"Las cadenas de suministro crean nodos. Cuando Rusia fue sancionada, el Perfil de Volumen del Petróleo se desplazó hacia arriba. El antiguo 'valor justo' de $60 se volvió irrelevante. El Perfil de Volumen nos mostró que el nuevo nivel de 'Aceptación' era $85. Comerciamos la nueva realidad, no la historia.\", \"macro\": \"La inflación reinicia el tablero. El Perfil de Volumen nos muestra 'Precios Pegajosos'. Si el IPC se imprime alto, pero el precio no puede mantenerse por encima de un nodo de alto volumen (Resistencia), el susto de la inflación es falso. El mercado está 'Rechazando' los precios más altos.\", \"quant\": \"Arbitramos el Área de Valor. Si el precio sale del Área de Valor (VA) sin soporte de volumen, lo desvanecemos de nuevo al POC. Es estadísticamente la operación de mayor probabilidad en los mercados de futuros. Regla del 80%: Si abrimos fuera del VA pero volvemos a entrar, atravesaremos todo el VA.\", \"technical\": \"El soporte no es una línea; es un muro de ladrillos de órdenes. El Perfil de Volumen te muestra exactamente qué tan grueso es ese muro. Un 'Nodo de Alto Volumen' (HVN) actúa como un imán y soporte para rebotar. Un 'Nodo de Bajo Volumen' (LVN) es un vacío: el precio lo atravesará rápidamente.\", \"policy\": \"La intervención del Banco Central a menudo ocurre en Nodos de Bajo Volumen para detener un colapso. Entran en el vacío. Volume Profile nos permite ver dónde el mercado es 'delgado' y vulnerable a la manipulación.\", \"tech\": \"En Cripto, los nuevos tokens no tienen perfil. Bitcoin tiene una década de perfil. Usamos el Perfil de Volumen de Rango Fijo en Bitcoin para encontrar la 'Base de Costo' de la última carrera alcista. Usar el POC de la carrera alcista de 2021 nos dijo exactamente dónde tocaría fondo el mercado bajista de 2022.\"}",
+        "forecast_risks": "Cambio de Contexto. El Perfil de Volumen de ayer es útil, pero si las noticias cambian (por ejemplo, Guerra), los nodos antiguos no significan nada. No negocie con un perfil de un régimen diferente.",
+        "gms_conclusion": "Los gráficos estándar te muestran a dónde fue el precio. El Perfil de Volumen te muestra dónde quiere quedarse el precio."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:35:00+00:00"
+}

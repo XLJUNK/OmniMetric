@@ -1,0 +1,16 @@
+{
+    "slug": "pce-price-index",
+    "lang": "EN",
+    "title": "PCE Price Index",
+    "type": "glossary",
+    "category": "Inflation",
+    "sections": {
+        "summary": "The Personal Consumption Expenditures (PCE) Price Index is the Federal Reserve's preferred inflation gauge. Unlike CPI, which uses a fixed basket of goods, weighted PCE accounts for consumer substitution (e.g., buying chicken when beef becomes expensive). It offers a more comprehensive view of actual spending behavior.",
+        "deep_dive": "While headline PCE grabs headlines, the 'Core PCE' (excluding food and energy) is the policy anchor. In the 2026 regime, the divergence between CPI and PCE has widened due to different weightings of healthcare (higher in PCE) and housing (lower in PCE). The Fed officially targets 2.0% Core PCE over the long run.",
+        "council_debate": "{\"geopolitics\": \"Healthcare costs are the sleeping giant in PCE. With an aging Western population and supply chain constraints on pharmaceuticals, the medical component of PCE faces a structural tailwind that no amount of rate hikes can suppress.\", \"macro\": \"The 'Substitution Effect' is masking real inflation pain. PCE is lower than CPI because it mathematically assumes that downgrading your lifestyle (buying cheaper goods) means inflation is lower. In reality, it reflects a lower standard of living.\", \"quant\": \"Watch the 'Trimmed Mean PCE'. My models show that when Trimmed Mean annualizes above 3%, sticky inflation is entrenched. Currently, it correlates highly with wage growth, suggesting a wage-price persistence.\", \"technical\": \"PCE trends are smoother than CPI. The 6-month annualized rate is the key signal. If the 6-month annualized Core PCE crosses below the 2-year yield, it signals a deflationary breakout for bonds.\", \"policy\": \"The Fed prefers PCE because it's usually lower than CPI, allowing them to claim victory sooner. It's a political tool as much as an economic one. Expect them to pivot based on PCE cooling even if CPI remains hot.\", \"tech\": \"Digital services deflation is heavily captured in PCE. As consumers switch to cheaper AI-powered subscription models (or free ad-supported tiers), PCE will structurally under-report the inflation in physical assets like land and materials.\"}",
+        "forecast_risks": "The downside risk is 'Medical Deflation' via AI drug discovery crashing healthcare costs, pulling PCE below 2% rapidly. The upside risk is a 'Service Sector Wage Spiral' keeping Core PCE stickier than expected, forcing the Fed to keep rates 'higher for longer'.",
+        "gms_conclusion": "Bullish for Bonds if Core PCE < 2.5%. The PCE is the 'Green Light' metric for the Fed. If this metric cools, the liquidity gates open, regardless of what CPI says."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T13:20:00+00:00"
+}

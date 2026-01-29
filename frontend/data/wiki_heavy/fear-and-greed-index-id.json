@@ -1,0 +1,16 @@
+{
+    "slug": "fear-and-greed-index",
+    "lang": "ID",
+    "title": "Indeks Ketakutan & Keserakahan (Fear & Greed Index)",
+    "type": "indicator",
+    "category": "Sentiment",
+    "sections": {
+        "summary": "Fear & Greed Index adalah indikator sentimen gabungan yang melacak 7 faktor pasar: Momentum Harga Saham, Kekuatan Harga Saham, Luasnya Harga Saham, Opsi Put dan Call, Permintaan Obligasi Sampah, Volatilitas Pasar, dan Permintaan Aset Aman. Mulai dari 0 (Ketakutan Ekstrem) hingga 100 (Keserakahan Ekstrem).",
+        "deep_dive": "Ini bertindak sebagai indikator kontrarian. 'Ketakutan Ekstrem' sering memberi sinyal bahwa investor terlalu bearish, menghadirkan peluang pembelian. 'Keserakahan Ekstrem' menunjukkan pasar terlalu luas dan akan mengalami koreksi.",
+        "council_debate": "{\"geopolitics\": \"Guncangan geopolitik (perang, sanksi) memicu lonjakan tajam pada komponen Safe Haven (permintaan Obligasi/Emas), mendorong indeks ke 'Ketakutan Ekstrem'. Ini secara historis adalah momen 'Beli saat Turun' terbaik.\", \"macro\": \"Indeks ini adalah pemantau real-time dari 'Kondisi Keuangan'. Ketakutan Ekstrem bertindak seperti kenaikan suku bunga (memperketat kondisi), sementara Keserakahan Ekstrem bertindak seperti pemotongan suku bunga (melonggarkan kondisi).\", \"quant\": \"Kami menguji strategi pengembalian rata-rata. Membeli saat indeks mencapai <10 dan menjual saat >90 secara historis mengungguli 'Beli dan Tahan'. Namun, indeks dapat bertahan dalam 'Keserakahan Ekstrem' selama berbulan-bulan selama bull run yang kuat, menghapus short seller prematur.\", \"technical\": \"Kami mencari divergensi. Jika S&P 500 membuat level tertinggi yang lebih tinggi, tetapi Fear & Greed Index membuat level tertinggi yang lebih rendah, itu menunjukkan kelemahan pasar internal dan momentum yang habis.\", \"policy\": \"The Fed mengawasi ini secara implisit. Jika pasar berada dalam 'Keserakahan Ekstrem' sementara inflasi tinggi, itu memberi The Fed lampu hijau untuk berbicara hawkish untuk mendinginkan suasana.\", \"tech\": \"Analisis sentimen sosial (Twitter, Reddit) menjadi indikator utama yang lebih cepat daripada komponen pasar opsi. 'Kerumunan Ritel' sering mendorong meteran Keserakahan lebih cepat daripada institusi.\"}",
+        "forecast_risks": "Risikonya adalah 'Perubahan Rezim' di mana indeks tetap tertahan di 'Ketakutan Ekstrem' untuk jangka waktu yang lama (seperti 2008), menandakan depresi struktural daripada penurunan yang dapat dibeli.",
+        "gms_conclusion": "Gunakan itu sebagai pemeriksaan emosional. Jika Anda merasa ingin membeli ketika indeks berada di 90, berhentilah. Jika Anda merasa ingin menjual ketika indeks berada di 10, berhentilah. Ini adalah cermin terbaik untuk psikologi Anda sendiri."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T13:30:00+00:00"
+}

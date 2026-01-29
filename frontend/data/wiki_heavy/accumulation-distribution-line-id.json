@@ -1,0 +1,16 @@
+{
+    "slug": "accumulation-distribution-line",
+    "lang": "ID",
+    "title": "Garis A/D (Akumulasi/Distribusi)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Tren Bayangan. A/D Line menghubungkan harga dan volume untuk menunjukkan apakah uang mengalir masuk atau keluar. Ini mirip dengan OBV tetapi volume bobot didasarkan pada di mana harga ditutup dalam kisaran hari itu. Ini mengekspos kelemahan tersembunyi dalam tren naik.",
+        "deep_dive": "Ini menggunakan Nilai Lokasi Penutupan (CLV). Jika harga ditutup di dekat level tertinggi hari itu, volume ditambahkan. Jika di dekat titik terendah, volume dikurangi. Ini menciptakan mesin divergensi yang melihat puncak sebelum terjadi.",
+        "council_debate": "{\"geopolitics\": \"Sanksi menciptakan aliran tersembunyi. Ketika suatu negara diberi sanksi, asetnya mungkin terlihat stabil di permukaan (harga dipatok), tetapi Garis A/D akan jatuh saat orang dalam mendistribusikan (menjual) ke dalam tawaran buatan. Kami menggunakannya untuk menghitung keruntuhan mata uang.\", \"macro\": \"'Uang pintar' terakumulasi lebih awal. Dalam resesi, saham siklus (seperti penambang Tembaga) sering turun sebelum ekonomi melakukannya. Jika harga membuat posisi terendah baru tetapi Garis A/D naik, itu adalah 'Divergensi Bullish'. Para pemain besar membeli kepanikan.\", \"quant\": \"Kami memodelkan 'Hari Distribusi'. Jika Garis A/D turun selama 3 hari berturut-turut sementara S&P 500 membuat level tertinggi baru, algo kami beralih ke 'Risk Off'. Sinyal ini mendahului kecelakaan 2008 dan kecelakaan COVID 2020.\", \"technical\": \"Divergensi adalah Raja. Jika Harga naik, A/D HARUS naik. Jika Harga naik tetapi A/D jatuh, reli itu bohong. Ini adalah 'Divergensi Bearish'. Ini berarti pasar ditopang oleh beberapa kapitalisasi besar sementara mayoritas dijual.\", \"policy\": \"Bank Sentral membeli ETF. Ini mengangkat harga tetapi belum tentu Garis A/D jika pasar yang lebih luas menjual. Putusnya hubungan antara neraca Bank Sentral (pembelian) dan Jalur A/D (penjualan) menandakan kegagalan kebijakan.\", \"tech\": \"Paus Crypto mendistribusikan ke FOMO ritel. Ketika token memompa 20% dalam sehari tetapi ditutup di dekat tengah kisarannya pada volume besar, Garis A/D tetap datar atau turun. Ini mengungkapkan bahwa paus menjual ke dalam kegilaan pembelian ritel.\"}",
+        "forecast_risks": "Sensitivitas Kesenjangan. Seperti OBV, celah dapat mendistorsi garis. Namun, A/D umumnya lebih halus daripada OBV karena berfokus pada Close relatif terhadap Range, bukan hanya Close relatif terhadap kemarin.",
+        "gms_conclusion": "Harga dapat dimanipulasi; Menutup Lokasi relatif terhadap Tinggi/Rendah lebih sulit dipalsukan. A/D Line mendeteksi penyamaran."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:40:00+00:00"
+}

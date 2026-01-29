@@ -1,0 +1,16 @@
+{
+    "slug": "on-balance-volume-obv",
+    "lang": "EN",
+    "title": "OBV (On-Balance Volume)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "The 'Truth Serum' of charts. OBV is a cumulative total of volume. When price closes up, volume is added. When down, subtracted. It operates on the core principle: 'Volume Precedes Price'. It reveals if a price move has real conviction or is just a hollow feint.",
+        "deep_dive": "Developed by Joe Granville in 1963. OBV is not about the level, but the *trend* of the line. A rising OBV during a flat price signals accumulation (smart money buying). A falling OBV during a price rally signals distribution (smart money selling into the rally).",
+        "council_debate": "{\"geopolitics\": \"Capital flight is silent before it is loud. We watch OBV on currency ETFs. If a currency is stable but OBV is crashing, insiders are moving money out before the sanctions or devaluation hits. OBV detected the Russian Ruble collapse weeks in advance.\", \"macro\": \"Inflation data is backward-looking. Commodity OBV is forward-looking. If Copper prices are stuck but OBV is ripping higher, industrial demand is real, and the 'recession' narrative is wrong.\", \"quant\": \"We use OBV Slope Analysis. If the slope of OBV is steeper than the slope of Price, it is a high-conviction 'alpha' signal. We lever up on these trades.\", \"technical\": \"The 'Granville Divergence'. If price makes a new high but OBV fails to make a new high, it is a negative divergence. The rally is running on fumes. Selling is imminent.\", \"policy\": \"Central Banks can fix prices, but they cannot fake volume. If the Fed buys bonds to suppress yields (raising bond prices), OBV might look flat or weak because the *private* market isn't participating. OBV exposes artificial support.\", \"tech\": \"Whales vs. Retail. In Crypto, retail chases price (green candles). Whales accumulate on red candles. If Bitcoin dumps -5% but OBV stays flat, Whales absorbed the selling. This is the ultimate 'Buy the Dip' signal.\"}",
+        "forecast_risks": "Gap Distortions. A massive gap up/down on light volume can distort the cumulative count significantly. It works best on continuous markets like Forex or Crypto.",
+        "gms_conclusion": "Price is the advertisement. Volume is the fuel. OBV tells you if the tank is full or empty."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:35:00+00:00"
+}

@@ -1,0 +1,16 @@
+{
+    "slug": "yield-curve-10y2y",
+    "lang": "ID",
+    "title": "Kurva Imbal Hasil 10Y-2Y (Yield Curve)",
+    "type": "glossary",
+    "category": "Bonds",
+    "sections": {
+        "summary": "Spread Kurva Imbal Hasil 10Y-2Y adalah selisih antara imbal hasil Treasury 10 tahun dan imbal hasil Treasury 2 tahun. Ini adalah prediktor resesi yang paling dapat diandalkan dalam sejarah. Ketika 'terbalik' (jatuh di bawah 0%), itu menandakan resesi yang akan datang. Ketika 'tidak terbalik' (un-inverts) kembali ke wilayah positif, resesi biasanya segera dimulai.",
+        "deep_dive": "Kurva terbalik berarti suku bunga jangka pendek (dikendalikan oleh The Fed) lebih tinggi daripada suku bunga jangka panjang (dikendalikan oleh ekspektasi pertumbuhan), menyiratkan The Fed sedang 'merusak' ekonomi untuk melawan inflasi. Fase berbahaya bukanlah inversi, tetapi 'pendalaman kembali' (re-steepening) tepat sebelum crash.",
+        "council_debate": "{\"geopolitics\": \"Bank sentral asing (China, Jepang) yang menjual Treasury AS berdampak pada ujung panjang (10Y) lebih dari ujung pendek (2Y). Tekanan jual struktural ini dapat memperdalam kurva secara artifisial, memberikan sinyal 'pertumbuhan' palsu padahal sebenarnya itu adalah jalan keluar likuiditas.\", \"macro\": \"Perhatikan 'Bear Steepener' vs. 'Bull Steepener'. Bull Steepener (2Y jatuh lebih cepat dari 10Y) berarti The Fed memangkas suku bunga dengan panik—itu bersifat resesi. Bear Steepener (10Y naik lebih cepat dari 2Y) berarti inflasi kembali berakselerasi—itu merusak penilaian.\", \"quant\": \"'Waktu Tunggu' dari inversi ke resesi bervariasi (6 hingga 24 bulan), tetapi sinyalnya memiliki tingkat keberhasilan 100% sejak 1955. Model saya memicu 'Siaga Merah' ketika kurva tidak terbalik setelah dibalik selama >3 bulan.\", \"technical\": \"Garis Nol (0,00%) adalah level kritis. Kami sering melihat 'Ciuman Selamat Malam' di mana spread reli untuk menguji 0,00% dari bawah, ditolak, dan kemudian jatuh lebih rendah sebelum penembusan akhir. Begitu bertahan >15bps positif, penarikan ekuitas biasanya semakin cepat.\", \"policy\": \"The Fed membenci kurva terbalik karena menghancurkan model bisnis bank (minjam pendek, meminjamkan panjang). Mereka akan mencoba memanipulasi ujung panjang melalui 'Operation Twist' atau penyesuaian QT untuk memaksa kurva normal, yang berpotensi menutupi sinyal organik.\", \"tech\": \"Deflasi AI secara teoritis harus menyeret imbal hasil 10Y turun secara permanen (keruntuhan biaya didorong teknologi), meratakan kurva secara struktural. Jika 10Y tetap tinggi meskipun ada AI, itu membuktikan dominasi fiskal (pasokan utang) lebih penting daripada pertumbuhan produktivitas.\"}",
+        "forecast_risks": "Risiko 'Dominasi Fiskal' mencegah 10Y jatuh, menjaga kurva terbalik selama bertahun-tahun tanpa resesi ('Resesi Godot'). Risiko kenaikan adalah normalisasi cepat yang didorong oleh ledakan produktivitas, memvalidasi 'Soft Landing'.",
+        "gms_conclusion": "Sangat Berhati-hati. Jika kurva terbalik, Anda berada di waktu pinjaman. Jika kurva semakin curam dari negatif ke positif, jendela untuk keluar dari aset risiko semakin tertutup."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T13:30:00+00:00"
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { DICTIONARY, LangType } from '@/data/dictionary';
-import { Quote } from 'lucide-react';
+import { Quote, BookOpen, ArrowRight } from 'lucide-react';
 import { AdSenseSlot } from '@/components/AdSenseSlot';
 import { DynamicStructuredData } from '@/components/DynamicStructuredData';
 import { Metadata } from 'next';
@@ -156,55 +156,77 @@ export default async function MaximsPage({ searchParams }: { searchParams: Promi
                 </div>
 
                 <div className="space-y-16">
-                    {maximsData.map((category, catIndex) => (
-                        <section key={catIndex} className="scroll-mt-24">
-                            <h2 className={`text-xl md:text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-8 flex items-center gap-3 ${isRTL ? 'border-r-4 pr-4 text-right' : 'border-l-4 pl-4'} border-sky-500`}>
-                                {category.category}
-                            </h2>
+                    {/* Wiki Availability Check */}
+                    {(() => {
+                        const availableWikiItems = getWikiData(lang);
+                        const hasWiki = (id: string) => availableWikiItems.some(i => i.slug === id);
 
-                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                {category.quotes.map((maxim) => (
-                                    <li key={maxim.id} className="h-full">
-                                        <article
-                                            className="h-full group relative bg-transparent dark:bg-[#0A0A0A] border border-slate-200 dark:border-[#1E293B] rounded-xl overflow-hidden hover:border-sky-500/50 transition-all duration-300 flex flex-col shadow-sm dark:shadow-none"
-                                        >
-                                            <div className="p-6 md:p-8 flex-1 flex flex-col">
-                                                {/* Icon */}
-                                                <div className={`mb-4 ${isRTL ? 'text-right' : ''}`}>
-                                                    <Quote className={`w-8 h-8 text-sky-500/10 dark:text-sky-900/50 fill-current group-hover:text-sky-500/20 transition-colors ${isRTL ? 'transform -scale-x-100' : ''}`} />
+                        return maximsData.map((category, catIndex) => (
+                            <section key={catIndex} className="scroll-mt-24">
+                                <h2 className={`text-xl md:text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-8 flex items-center gap-3 ${isRTL ? 'border-r-4 pr-4 text-right' : 'border-l-4 pl-4'} border-sky-500`}>
+                                    {category.category}
+                                </h2>
+
+                                <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    {category.quotes.map((maxim) => (
+                                        <li key={maxim.id} className="h-full">
+                                            <article
+                                                className="h-full group relative bg-transparent dark:bg-[#0A0A0A] border border-slate-200 dark:border-[#1E293B] rounded-xl overflow-hidden hover:border-sky-500/50 transition-all duration-300 flex flex-col shadow-sm dark:shadow-none"
+                                            >
+                                                <div className="p-6 md:p-8 flex-1 flex flex-col">
+                                                    {/* Icon */}
+                                                    <div className={`mb-4 ${isRTL ? 'text-right' : ''}`}>
+                                                        <Quote className={`w-8 h-8 text-sky-500/10 dark:text-sky-900/50 fill-current group-hover:text-sky-500/20 transition-colors ${isRTL ? 'transform -scale-x-100' : ''}`} />
+                                                    </div>
+
+                                                    {/* Text */}
+                                                    <blockquote className={`text-lg md:text-xl font-bold text-slate-800 dark:text-slate-100 mb-4 leading-snug ${isRTL ? 'text-right' : ''}`}>
+                                                        "{maxim.text}"
+                                                    </blockquote>
+
+                                                    {/* Attribution */}
+                                                    <div className={`mt-auto pt-4 border-t border-slate-100 dark:border-[#1E293B] flex items-center ${isRTL ? '' : 'justify-between'}`}>
+                                                        <span className="text-xs font-mono text-sky-600 dark:text-sky-400 font-bold uppercase tracking-wider">
+                                                            — {maxim.attribution}
+                                                        </span>
+                                                    </div>
+
+                                                    {/* Meaning / Context */}
+                                                    <div className={`mt-4 bg-transparent dark:bg-[#111] p-3 rounded text-xs text-slate-600 dark:text-slate-400 leading-relaxed border border-slate-200 dark:border-[#222] ${isRTL ? 'text-right' : ''}`}>
+                                                        <span className={`font-bold text-slate-400 dark:text-slate-500 ${isRTL ? 'ml-1' : 'mr-1'}`}>KEY:</span>
+                                                        {maxim.meaning}
+                                                    </div>
+
+                                                    {/* Wiki Deep Dive Button */}
+                                                    {/* Wiki Deep Dive Button */}
+                                                    {hasWiki(maxim.id) && (
+                                                        <div className="mt-6">
+                                                            <a
+                                                                href={`/${lang.toLowerCase()}/wiki/${maxim.id}`}
+                                                                className="group/btn relative w-full flex items-center justify-start pl-6 gap-3 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-[13px] font-bold uppercase tracking-widest rounded-xl shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 transition-all duration-300 transform hover:-translate-y-0.5 overflow-hidden"
+                                                            >
+                                                                <span className="absolute inset-0 bg-white/20 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></span>
+                                                                <BookOpen className="w-5 h-5 relative z-10 text-blue-100" />
+                                                                <span className="relative z-10">{DICTIONARY[lang]?.labels?.wiki_deep_dive || "Deep Dive Analysis"}</span>
+                                                                <ArrowRight className="w-4 h-4 ml-auto mr-6 relative z-10 opacity-70 group-hover/btn:translate-x-1 transition-transform" />
+                                                            </a>
+                                                        </div>
+                                                    )}
                                                 </div>
+                                            </article>
+                                        </li>
+                                    ))}
+                                </ul>
 
-                                                {/* Text */}
-                                                <blockquote className={`text-lg md:text-xl font-bold text-slate-800 dark:text-slate-100 mb-4 leading-snug ${isRTL ? 'text-right' : ''}`}>
-                                                    "{maxim.text}"
-                                                </blockquote>
-
-                                                {/* Attribution */}
-                                                <div className={`mt-auto pt-4 border-t border-slate-100 dark:border-[#1E293B] flex items-center ${isRTL ? '' : 'justify-between'}`}>
-                                                    <span className="text-xs font-mono text-sky-600 dark:text-sky-400 font-bold uppercase tracking-wider">
-                                                        — {maxim.attribution}
-                                                    </span>
-                                                </div>
-
-                                                {/* Meaning / Context */}
-                                                <div className={`mt-4 bg-transparent dark:bg-[#111] p-3 rounded text-xs text-slate-600 dark:text-slate-400 leading-relaxed border border-slate-200 dark:border-[#222] ${isRTL ? 'text-right' : ''}`}>
-                                                    <span className={`font-bold text-slate-400 dark:text-slate-500 ${isRTL ? 'ml-1' : 'mr-1'}`}>KEY:</span>
-                                                    {maxim.meaning}
-                                                </div>
-                                            </div>
-                                        </article>
-                                    </li>
-                                ))}
-                            </ul>
-
-                            {/* Ad Insertion after specific categories if needed */}
-                            {catIndex === 1 && (
-                                <div className="py-12">
-                                    <AdSenseSlot variant="responsive" />
-                                </div>
-                            )}
-                        </section>
-                    ))}
+                                {/* Ad Insertion after specific categories if needed */}
+                                {catIndex === 1 && (
+                                    <div className="py-12">
+                                        <AdSenseSlot variant="responsive" />
+                                    </div>
+                                )}
+                            </section>
+                        ));
+                    })()}
                 </div>
 
                 <div className="mt-20 pt-8 border-t border-slate-200 dark:border-[#1E293B] text-center">

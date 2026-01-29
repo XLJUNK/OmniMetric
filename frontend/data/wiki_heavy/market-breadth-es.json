@@ -1,0 +1,16 @@
+{
+    "slug": "market-breadth",
+    "lang": "ES",
+    "title": "Amplitud del Mercado (Market Breadth)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "El ejército detrás del general. La amplitud del mercado mide la cantidad de acciones que participan en un movimiento. Si el S&P 500 alcanza nuevos máximos pero solo suben 10 acciones (amplitud estrecha), el repunte es frágil. Si suben 400 acciones (gran amplitud), el repunte es sólido.",
+        "deep_dive": "Métricas comunes: línea de avance-descenso, nuevos máximos frente a nuevos mínimos y porcentaje de acciones por encima de su media móvil de 200 días. Un 'Empuje de amplitud' (presión de compra extrema) a menudo indica el comienzo de un nuevo mercado alcista.",
+        "council_debate": "{\"geopolitics\": \"Una amplia participación indica confianza nacional. Cuando sube todo el mercado de valores de un país, se moviliza el capital interno. Si solo suben los gigantes de la exportación mientras caen las empresas de pequeña capitalización internas, indica una podredumbre económica interna enmascarada por el comercio mundial.\", \"macro\": \"La liquidez levanta todos los barcos. Una gran amplitud confirma que la liquidez del banco central está impregnando efectivamente la economía real, no solo persiguiendo a unos pocos favoritos de la IA. Una amplitud débil sugiere una trampa de liquidez.\", \"quant\": \"Medimos el 'Zweig Breadth Thrust'. Si las emisiones en avance superaron a las emisiones en declive en 2:1 durante un período de 10 días, la probabilidad de una tendencia alcista continua es estadísticamente significativa (más del 80%). Aprovechamos los empujes de amplitud.\", \"technical\": \"Advertencia de divergencia. La señal más peligrosa en las finanzas es cuando el índice alcanza un máximo más alto, pero la línea de avance-descenso alcanza un mínimo más bajo. Esto sucedió en 1929, 2000 y 2008. Los generales están liderando, pero los soldados han huido.\", \"policy\": \"El estímulo fiscal se dirige a sectores específicos (amplitud estrecha). El estímulo monetario se dirige a todo el sistema (gran amplitud). Juzgamos el tipo de estímulo observando su efecto en la amplitud del mercado.\", \"tech\": \"Altseason es Amplitud. En Crypto, el dominio de Bitcoin cae mientras aumenta la capitalización de mercado total es la definición de amplitud en expansión. Significa que el dinero está rotando de la seguridad de BTC al riesgo de Alts.\"}",
+        "forecast_risks": "Distorsión del índice. Los índices ponderados por capitalización, como el S&P 500, pueden verse muy distorsionados por las megacapitalizaciones. La amplitud es el detector de mentiras del índice, pero puede ser prematuro. Un repunte estrecho puede persistir durante meses antes de colapsar.",
+        "gms_conclusion": "Los generales sólo pueden mantener la línea por un tiempo limitado sin el ejército. Observe la amplitud para conocer la verdadera salud del mercado."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T16:00:00+00:00"
+}

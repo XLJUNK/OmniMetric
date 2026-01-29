@@ -1,0 +1,16 @@
+{
+    "slug": "atr-average-true-range",
+    "lang": "ES",
+    "title": "ATR (Rango Verdadero Promedio)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "ATR mide la 'Energía' del mercado. Le dice cuánto se mueve un activo en promedio por día. Es la herramienta definitiva para el tamaño de la posición. ATR alto = Posición pequeña. ATR bajo = Posición grande.",
+        "deep_dive": "ATR no indica dirección, solo volatilidad. Tiene en cuenta las 'Brechas' que otras medidas de volatilidad pasan por alto. Una ruptura acompañada de un aumento del ATR es válida. Una ruptura con ATR cayendo es sospechosa.",
+        "council_debate": "{\"geopolitics\": \"La incertidumbre crea volatilidad. Observamos ATR para medir qué tan 'nervioso' está el mercado sobre una situación geopolítica. Si el ATR está subiendo, el miedo está aumentando, incluso si el precio es plano.\", \"macro\": \"El ATR se expande durante los cambios de régimen (por ejemplo, choque de inflación). Se contrae durante regímenes estables (Gran Moderación). Actualmente estamos en un régimen estructural de alto ATR debido a la inestabilidad global.\", \"quant\": \"Utilizamos 'Targeting de Volatilidad'. Si apuntamos a una volatilidad del 10% para una cartera, debemos reducir el tamaño de las posiciones cuando sube el ATR. Si no lo hiciéramos, una acción de alto ATR dominaría el riesgo de la cartera. ATR normaliza el riesgo en todos los activos.\", \"technical\": \"Use ATR para stop-loss ('Chandelier Stop'). Coloque su stop a 2 veces ATR de su entrada. Esto asegura que no sea detenido por el ruido diario normal. Solo un verdadero cambio de tendencia alcanzará un stop de 2ATR.\", \"policy\": \"Los bancos centrales intentan suprimir el ATR (Orientación a Futuro). Cuando fallan, el ATR explota. La 'Volatilidad del Mercado de Bonos' (Índice MOVE) es esencialmente ATR para bonos. Es el canario en la mina de carbón.\", \"tech\": \"En Cripto, el ATR puede explotar 10 veces en una semana. A menudo, un aumento masivo en el ATR marca un fondo de capitulación. Cuando los vendedores están agotados, la volatilidad alcanza su punto máximo. Comprar cuando el ATR está en máximos históricos (pánico) suele ser rentable.\"}",
+        "forecast_risks": "El ATR está rezagado. Te dice que la volatilidad *ha* aumentado, no que *lo hará*. Además, los períodos de bajo ATR pueden durar años (complacencia), lo que lleva a explosiones masivas de apalancamiento cuando finalmente gira.",
+        "gms_conclusion": "Conozca la velocidad de su vehículo. No conduzcas un Ferrari (ATR alto) como un Honda (ATR bajo). Ajuste su cinturón de seguridad (tamaño de la posición) en consecuencia."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:00:00+00:00"
+}

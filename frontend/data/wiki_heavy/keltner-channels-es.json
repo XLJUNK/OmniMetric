@@ -1,0 +1,16 @@
+{
+    "slug": "keltner-channels",
+    "lang": "ES",
+    "title": "Canales de Keltner",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "El Sobre 'Inteligente'. Los canales de Keltner colocan bandas por encima y por debajo de una media móvil exponencial (EMA) central basada en la volatilidad (ATR). A diferencia de las Bandas de Bollinger, no sufren espasmos con cada movimiento de precio. Son más suaves y amigables con las tendencias.",
+        "deep_dive": "Compuesto por una EMA de 20 días y bandas fijadas en 2x ATR. Debido a que utilizan el rango verdadero promedio (ATR) en lugar de la desviación estándar, filtran el ruido de manera más efectiva. Un cierre fuera del canal es una señal de ruptura significativa.",
+        "council_debate": "{\"geopolitics\": \"Los choques en la cadena de suministro son cambios permanentes, no ruido. Los canales de Keltner filtran el ruido diario mejor que las bandas de Bollinger. Cuando el precio rompe el canal superior de Keltner durante una crisis, significa que la 'Prima de Riesgo' se ha restablecido estructuralmente más alto.\", \"macro\": \"La inflación es una tendencia, no un oscilador de reversión a la media. Los canales de Keltner son superiores para los activos de inflación que siguen tendencias (oro, petróleo). Monta la banda superior mientras se mantenga la narrativa macro.\", \"quant\": \"Probamos estrategias de 'Squeeze' (Exprimir). Cuando las Bandas de Bollinger se contraen *dentro* de los Canales de Keltner, indica una compresión extrema. Esta configuración 'TTM Squeeze' es una de las configuraciones comerciales de mayor probabilidad en la historia.\", \"technical\": \"El 'Slingshot' (Tirachinas). Cuando el precio retrocede a la EMA (Media) en una fuerte tendencia alcista, a menudo rebota exactamente en la EMA 20 o en la Banda de Keltner inferior. Este es el punto de entrada de bajo riesgo.\", \"policy\": \"Los bancos centrales odian la volatilidad. Intentan mantener las tasas dentro de los canales de Keltner. Cuando las tasas rompen el canal superior, los vigilantes de bonos han tomado el control de la Fed.\", \"tech\": \"Cripto es demasiado volátil para configuraciones estándar. Usamos 3x ATR para los canales de Keltner en Bitcoin. Una ruptura de la banda 3x ATR es un evento de 'Vela de Dios'.\"}",
+        "forecast_risks": "El 'Molienda de Mercado Plano'. En un mercado lateral, el precio se moverá a lo largo de las bandas sin tendencia, lo que generará señales de ruptura falsas. DEBE usar ADX para confirmar la fuerza de la tendencia antes de confiar en una ruptura de Keltner.",
+        "gms_conclusion": "Más suave que Bollinger. Mejor para tendencias. El estándar para profesionales que quieren filtrar el ruido."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:00:00+00:00"
+}

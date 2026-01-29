@@ -1,0 +1,16 @@
+{
+    "slug": "standard-deviation",
+    "lang": "ID",
+    "title": "Deviasi Standar (Standard Deviation)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Ukuran statistik Risiko. Deviasi Standar mengukur seberapa banyak riwayat harga menyimpang dari rata-ratanya. Ini adalah bahan bakar mentah untuk Bollinger Bands dan penetapan harga opsi. SD Tinggi = Risiko/Hadiah Tinggi.",
+        "deep_dive": "1 Deviasi Standar (SD) mencakup 68% dari aksi harga. 2 SD mencakup 95%. 3 SD mencakup 99,7%. Di bidang keuangan, kami mencari 'Outlier'—peristiwa di luar 2 atau 3 SD—untuk memberi isyarat bahwa sesuatu yang tidak normal sedang terjadi.",
+        "council_debate": "{\"geopolitics\": \"Sejarah hanyalah serangkaian peristiwa 6-Sigma (Perang Dunia, Pandemi). Deviasi Standar mengasumsikan kurva lonceng (Distribusi Normal), tetapi sejarah memiliki 'Ekor Gemuk'. Mengandalkan SD untuk manajemen risiko geopolitik adalah leverage yang berbahaya.\", \"macro\": \"Bagi investor Makro, risiko adalah 'Kehilangan Modal Permanen', bukan Deviasi Standar. Uang tunai memiliki nol SD tetapi pengembalian nyata negatif. Saham pertumbuhan memiliki SD tinggi tetapi pengembalian nyata positif. Jangan bingung volatilitas dengan risiko.\", \"quant\": \"Z-Score adalah raja. Kami menormalkan semuanya menjadi Deviasi Standar. Jika saham diperdagangkan pada -3 SD relatif terhadap sektornya, itu secara statistik murah. Kami membeli perdagangan reversi rata-rata secara agresif di -3 SD.\", \"technical\": \"'Karet Gelang'. Harga tidak bisa meregang terlalu jauh dari rata-rata sebelum kembali. Kami mencari 'Lilin Kelelahan' di luar Deviasi Standar ke-2 atau ke-3. Di situlah kita memudarkan gerakan itu.\", \"policy\": \"Bank Sentral menjalankan ekonomi untuk meminimalkan Deviasi Standar PDB dan Inflasi. Mereka menginginkan dunia yang membosankan. Ketika SD melonjak, mereka selalu campur tangan. Lingkungan SD tinggi adalah tanda kegagalan kebijakan.\", \"tech\": \"Kode tidak pernah berbohong, tetapi distribusi melakukannya. Pengembalian Crypto adalah 'Leptokurtic' (Berekor Gemuk). Pergerakan 5 SD dalam stok terjadi sekali dalam satu abad. Di crypto, itu terjadi setiap hari Selasa. Sesuaikan model mental Anda untuk mengharapkan yang tak terbatas.\"}",
+        "forecast_risks": "'Angsa Hitam' (Black Swan). Deviasi Standar mengasumsikan distribusi normal. Pasar keuangan *tidak* normal. Mereka fraktal. Peristiwa 10 SD terjadi, dan mereka memusnahkan siapa saja yang menggunakan logika leverage 3 SD.",
+        "gms_conclusion": "Ketahui apa itu 'Normal' sehingga Anda dapat melihat 'Abnormal'. Tapi jangan pernah berasumsi bahwa 'Mustahil' tidak akan terjadi. 3 SD bukanlah dinding yang keras."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:00:00+00:00"
+}

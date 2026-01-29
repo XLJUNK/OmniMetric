@@ -1,0 +1,16 @@
+{
+    "slug": "chaikin-money-flow-cmf",
+    "lang": "ES",
+    "title": "CMF (Flujo de Dinero de Chaikin)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Medidor de Presión Institucional. CMF mide la presión de compra y venta durante un período específico. Es más estricto que otros osciladores. Exige que el precio cierre en la mitad superior del rango diario para contar como 'Acumulación'. Filtra los cierres débiles.",
+        "deep_dive": "Desarrollado por Marc Chaikin. Resume la Línea de Acumulación/Distribución durante (generalmente) 21 días. Los valores por encima de cero indican presión de compra. Los valores por debajo de cero indican presión de venta. Es excelente para confirmar rupturas.",
+        "council_debate": "{\"geopolitics\": \"El dinero inteligente se posiciona *antes* del conflicto. Observamos CMF en acciones de defensa. Si el CMF se vuelve positivo mientras las acciones siguen planas, los iniciados están acumulando antes de que estalle el contrato gubernamental o las noticias de guerra.\", \"macro\": \"Herramienta de Rotación de Sector. En una recesión, el capital rota a los servicios públicos (Utilities). Usamos CMF para detectar qué sector está recibiendo el 'Flujo' antes de que el precio se dispare. Si el CMF tecnológico es negativo pero el CMF de servicios públicos es positivo, la rotación está activa.\", \"quant\": \"Usamos diversidad de CMF. Si el S&P 500 está alcanzando máximos pero el CMF promedio de los constituyentes está cayendo, el repunte es 'Estrecho'. Esta es una señal corta de alta probabilidad para el índice.\", \"technical\": \"La Confirmación de Ruptura. Una ruptura de precios con CMF negativo es una 'Falsa Ruptura'. Una ruptura de precios con CMF positivo y en alza es una 'Verdadera Ruptura'. Nunca compre una ruptura si el CMF está por debajo de cero.\", \"policy\": \"Los fondos soberanos compran al por mayor. Su compra apoya el cierre. CMF es sensible a la 'Fuerza de Cierre'. Si un actor estatal está apoyando un activo estratégico, el CMF se mantendrá persistentemente positivo incluso en los días de baja.\", \"tech\": \"Los grupos de bombeo (pump y dump) de criptomonedas elevan el precio pero venden antes del cierre. Esto deja una mecha superior larga. CMF castiga los cierres débiles, por lo que detecta estos 'Pumps' como distribución (Venta), incluso si la vela es verde. Te salva de comprar la cima.\"}",
+        "forecast_risks": "Riesgo de Brecha. CMF no maneja bien los huecos nocturnos. Se centra en el rango intradía. Úselo junto con OBV para obtener una imagen completa del volumen.",
+        "gms_conclusion": "Los aficionados abren el mercado; Los profesionales cierran el mercado. CMF rastrea a los profesionales."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:35:00+00:00"
+}

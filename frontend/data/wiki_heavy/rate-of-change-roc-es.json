@@ -1,0 +1,16 @@
+{
+    "slug": "rate-of-change-roc",
+    "lang": "ES",
+    "title": "ROC (Tasa de Cambio)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "El velocímetro del mercado. ROC mide el cambio porcentual en el precio entre el precio actual y el precio de hace N períodos. Te dice la velocidad pura de la tendencia. Cuando el ROC alcanza su punto máximo, la tendencia se está acelerando. Cuando se zambulle, el impulso se rompe.",
+        "deep_dive": "Oscila alrededor de una línea cero. ROC positivo significa que el precio es más alto que hace N días (tendencia alcista). ROC negativo significa que el precio es más bajo (tendencia bajista). Las lecturas extremas (estadísticamente altas o bajas) a menudo indican un clímax del mercado.",
+        "council_debate": "{\"geopolitics\": \"Las guerras y los choques provocan picos de velocidad. Monitoreamos la ROC del Petróleo Crudo. Si la ROC de 12 días del petróleo supera el +20%, indica un 'choque energético' que colapsará las acciones. Es nuestro sistema de alerta temprana.\", \"macro\": \"La inflación es un fenómeno de Tasa de Cambio. Nos fijamos en la ROC del IPC. Incluso si la inflación es alta, si la ROC se vuelve negativa, comienza la narrativa de 'Desinflación' y los bonos se convierten en una compra.\", \"quant\": \"La inversión en factores de momento se basa en ROC. Clasificamos cada acción en el S&P 500 por su ROC de 12 meses. Compramos el decil superior (ganadores) y vendemos en corto el decil inferior (perdedores). Esta simple estrategia supera al mercado durante décadas.\", \"technical\": \"Divergencia en Velocidad. Si el precio marca un nuevo máximo, pero ROC marca un máximo más bajo, significa que el automóvil sigue avanzando pero quitando el pie del acelerador. Un motor estancado conduce a un accidente.\", \"policy\": \"Los bancos centrales reaccionan a la 'Velocidad' de los movimientos del mercado, no solo a los niveles. Una caída lenta del 10% está bien. Un colapso del 10% en 2 días (Alto ROC Negativo) obliga a la Fed a intervenir. El alto ROC negativo activa la 'Opción de Venta de la Fed'.\", \"tech\": \"En Cripto, ROC es parabólico. Lo usamos para identificar 'Blow-offs Verticales'. Cuando la ROC de Bitcoin se vuelve vertical (cerca de 90 grados), la burbuja está a punto de estallar. Vender en el pico de velocidad.\"}",
+        "forecast_risks": "El 'Whipsaw Zero'. En un mercado de rango limitado, ROC cortará alrededor de la línea cero sin cesar. Es inútil en los mercados laterales. Úselo solo cuando haya una tendencia clara.",
+        "gms_conclusion": "La velocidad mata, pero también paga. ROC te dice qué tan rápido se mueve el tren para que no te pares frente a él."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:30:00+00:00"
+}

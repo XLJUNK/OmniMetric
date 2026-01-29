@@ -1,0 +1,16 @@
+{
+    "slug": "donchian-channels",
+    "lang": "ES",
+    "title": "Canales de Donchian",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "El motor de los 'Tortugas Traders'. Los canales de Donchian simplemente trazan el máximo más alto y el mínimo más bajo de los últimos N períodos (generalmente 20 o 55). Es la forma más pura de seguimiento de tendencias de ruptura. Si el precio marca un nuevo máximo de 20 días, compras. Sin hacer preguntas.",
+        "deep_dive": "Hecho famoso por Richard Dennis y los Tortugas Traders. La lógica es simple: las tendencias consisten esencialmente en nuevos máximos (tendencia alcista) o nuevos mínimos (tendencia bajista). Al comprar cada nuevo máximo, garantizas que nunca perderás una tendencia importante.",
+        "council_debate": "{\"geopolitics\": \"Las tendencias aparecen cuando cambia el régimen geopolítico. Los canales de Donchian son la mejor herramienta para detectar 'Cambios de Régimen'. Cuando las sanciones golpean a un país, su moneda marca un nuevo mínimo de 55 días. Lo ponemos en corto inmediatamente.\", \"macro\": \"Los superciclos de materias primas son capturados perfectamente por los canales de Donchian. No nos importa el 'valor justo'. Si el cobre marca un nuevo máximo de 55 semanas, estamos largos. Las limitaciones de oferta siempre aparecen primero en el precio.\", \"quant\": \"El 'Whipsaw' (Sierra) es el asesino. La tasa de ganancia es solo del 30-40%. Pero los ganadores son 10 veces los perdedores. Un sistema Donchian puro requiere una diversificación masiva para sobrevivir a los mercados laterales.\", \"technical\": \"'Teoría de Cajas'. Los canales de Donchian visualizan la 'Caja de Darvas'. Buscamos una compresión (canal estrecho) seguida de una expansión (ruptura). Cuanto más tiempo haya estado plano el canal, más explosivo será el movimiento.\", \"policy\": \"Los bancos centrales intentan limitar los rendimientos. Cuando los rendimientos a 10 años rompen el canal superior de Donchian, el mercado está rompiendo a la Fed. Esa es una señal de 'Error de Política'.\", \"tech\": \"En Cripto, el FOMO impulsa el precio. Un nuevo máximo de 20 días en Bitcoin atrae inundaciones minoristas. Los canales de Donchian funcionan excepcionalmente bien en los mercados alcistas de criptomonedas porque el impulso es recursivo.\"}",
+        "forecast_risks": "La 'Falsa Ruptura'. En los mercados modernos, los algoritmos buscan stops justo por encima del máximo de 20 días. Activan la ruptura para atrapar a los alcistas y luego revierten. Necesitas un 'Filtro' (como ADX o un Filtro de Tiempo) para confirmar que la ruptura es real.",
+        "gms_conclusion": "La herramienta de tendencia primitiva pero poderosa. Brutal en mercados agitados, legendaria en los de tendencia. Úsala para tendencias 'Macro', no para el trading diario."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:15:00+00:00"
+}

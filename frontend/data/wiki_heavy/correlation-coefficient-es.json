@@ -1,0 +1,15 @@
+{
+    "slug": "correlation-coefficient",
+    "lang": "ES",
+    "title": "Coeficiente de Correlación",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "El medidor de relaciones. Mide con qué fuerza se mueven juntos dos activos. El rango es de +1 (Perfecta positiva) a -1 (Perfecta negativa). Cero significa que no hay relación. Es la columna vertebral de la construcción de carteras y la cobertura.",
+        "deep_dive": "La correlación no es causalidad, pero es ganancia. Si Bitcoin y el Nasdaq tienen una correlación de +0.9, intercambiarlos como activos separados es una ilusión. Acabas de duplicar tu riesgo. Usamos la correlación para encontrar una verdadera diversificación.",
+        "council_debate": "{\"geopolitics\": \"Todas las correlaciones van al 1 en una crisis. Cuando comienza la guerra, los inversores venden todo para comprar efectivo. Oro, acciones, criptografía: todos caen juntos. Comprender que las 'Las correlaciones van a 1' previene la falsa confianza en la diversificación durante el pánico.\", \"macro\": \"La bola de demolición del dólar. DXY generalmente tiene una correlación -1 con activos de riesgo. Si DXY sube, acciones/criptografía caen. Si esta correlación se rompe (ambas aumentan), indica un 'Vuelo a la seguridad' donde los inversores prefieren los activos estadounidenses sobre todo lo demás.\", \"quant\": \"Cambiamos la 'Dispersión'. Si dos acciones en el mismo sector generalmente tienen una correlación de 0.9 pero caen a 0.5, investigamos. Si la desconexión es injustificada, compramos al rezagado y vendemos al líder, apostando por la 'reversión media' de la correlación.\", \"technical\": \"Correlación como filtro. Si quiero comprar petróleo, reviso la tabla CAD/USD. Dado que Canadá es un exportador de petróleo, CAD debería estar aumentando. Si el petróleo aumenta pero el CAD cae (Divergencia), el rally petrolero es sospechoso.\", \"policy\": \"Los bancos centrales manipulan las correlaciones. El QE obliga a todas las clases de activos a elevarse juntas (correlación positiva). QT los hace caer juntos. Conocer el régimen de política le dice si la diversificación funcionará o fallará.\", \"tech\": \"Bitcoin y Oro. El 'Santo Grial' para Crypto se está desacoplando del Nasdaq y correlacionando con Gold. Rastreamos la correlación de BTC-Gold diariamente. Un cambio a la correlación positiva marca la maduración de Bitcoin en 'Oro Digital'.\"}",
+        "forecast_risks": "La correlación es dinámica. Las relaciones cambian al instante. Una cobertura que funcionó ayer (acciones frente a bonos) podría fallar hoy si la inflación aumenta (ambas caen juntas).\", \"gms_conclusion\": \"No pongas todos tus huevos en una sola canasta. La correlación te dice si estás sosteniendo diferentes canastas o simplemente pintaste la misma canasta de diferentes colores.\""
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:50:00+00:00"
+}

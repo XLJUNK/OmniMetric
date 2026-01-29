@@ -1,0 +1,16 @@
+{
+    "slug": "pivot-points",
+    "lang": "ID",
+    "title": "Poin Pivot (Pivot Points)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Peta Jalan Pedagang Lantai. Pivot Points menggunakan harga Tertinggi, Terendah, dan Penutupan kemarin untuk menghitung level support dan resistance hari ini. Mereka adalah level statis yang tidak berubah di siang hari, menyediakan peta tetap bagi para pedagang.",
+        "deep_dive": "Dihitung sebagai (Tinggi + Rendah + Tutup) / 3. Di atas Pivot adalah bullish; di bawah adalah bearish. R1, R2, S1, dan S2 berfungsi sebagai target magnetik. Karena begitu banyak algoritma yang mengawasi level-level ini, mereka menjadi ramalan yang terpenuhi dengan sendirinya.",
+        "council_debate": "{\"geopolitics\": \"Berita geopolitik sering muncul dalam semalam. Jika pasar dibuka di atas Pivot Point meskipun ada berita buruk, itu menunjukkan ketahanan. Kami menggunakan Pivot sebagai 'Garis di Pasir' untuk interpretasi berita.\", \"macro\": \"Pivot tidak relevan untuk tren jangka panjang tetapi sangat penting untuk eksekusi mingguan. Kami menggunakan Pivot Mingguan dan Bulanan untuk mengatur waktu masuknya kami ke dalam tren makro. Membeli tren naik makro di support S1 Bulanan adalah entri yang sempurna.\", \"quant\": \"Surga Mean Reversion. Harga jarang bergerak melampaui R3 atau S3 dalam satu hari. Jika harga mencapai R3, kami memendekkannya kembali ke Pivot. Ini adalah batas volatilitas statistik.\", \"technical\": \"Konfluensi adalah kuncinya. Titik Pivot yang sejajar dengan level Fibonacci atau Moving Average adalah 'Dinding Beton'. Kami menempatkan limit order kami tepat di titik-titik pertemuan ini.\", \"policy\": \"Bankir Sentral mengawasi level psikologis, tetapi pasar mengawasi Pivot. Penembusan Pivot Tahunan sering menandakan pergeseran besar dalam ekspektasi kebijakan moneter.\", \"tech\": \"Algos menyukai Pivot. Di Crypto, Anda akan melihat flash crash berhenti persis, sepeser pun, di Pivot S2. Itu adalah logika yang diprogram. Jangan lawan mesin; cukup jalankan perintah mereka di level Pivot.\"}",
+        "forecast_risks": "Hari Tren. Pada hari tren yang kuat, harga akan bertiup melalui R1, R2, dan R3 seperti kertas. Perdagangan kontra-tren di Pivot adalah bunuh diri selama tren yang didorong oleh berita yang kuat.",
+        "gms_conclusion": "Grid pasar yang tak terlihat. Gunakan mereka untuk menentukan medan perang Anda hari ini."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:15:00+00:00"
+}

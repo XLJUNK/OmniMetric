@@ -1,0 +1,16 @@
+{
+    "slug": "fear-and-greed-index",
+    "lang": "ES",
+    "title": "Índice de Miedo y Codicia",
+    "type": "indicator",
+    "category": "Sentiment",
+    "sections": {
+        "summary": "El Índice de Miedo y Codicia es un indicador de sentimiento compuesto que rastrea 7 factores del mercado: Impulso del Precio de las Acciones, Fortaleza del Precio, Amplitud del Precio, Opciones Put y Call, Demanda de Bonos Basura, Volatilidad del Mercado y Demanda de Refugio Seguro. Varía de 0 (Miedo Extremo) a 100 (Codicia Extrema).",
+        "deep_dive": "Actúa como un indicador contrario. El 'Miedo Extremo' a menudo señala que los inversores son demasiado bajistas, presentando una oportunidad de compra. La 'Codicia Extrema' sugiere que el mercado está sobreextendido y debe corregirse.",
+        "council_debate": "{\"geopolitics\": \"Los choques geopolíticos (guerras, sanciones) provocan fuertes picos en el componente de Refugio Seguro (demanda de bonos/oro), empujando el índice a 'Miedo Extremo'. Históricamente, estos son los mejores momentos para 'Comprar la Caída'.\", \"macro\": \"Este índice es un monitor en tiempo real de las 'Condiciones Financieras'. El Miedo Extremo actúa como un aumento de tasas (condiciones de ajuste), mientras que la Codicia Extrema actúa como un recorte de tasas (condiciones de relajación).\", \"quant\": \"Probamos estrategias de reversión a la media. Comprar cuando el índice llega a <10 y vender cuando >90 ha superado históricamente a 'Comprar y Mantener'. Sin embargo, el índice puede permanecer en 'Codicia Extrema' durante meses en fuertes mercados alcistas, eliminando a los vendedores en corto prematuros.\", \"technical\": \"Buscamos divergencias. Si el S&P 500 alcanza un máximo más alto, pero el Índice de Miedo y Codicia hace un máximo más bajo, indica debilidad interna del mercado y agotamiento del impulso.\", \"policy\": \"La Fed observa esto implícitamente. Si los mercados están en 'Codicia Extrema' mientras la inflación es alta, le da a la Fed luz verde para hablar con tono agresivo para enfriar las cosas.\", \"tech\": \"El análisis de sentimiento social (Twitter, Reddit) se está convirtiendo en un indicador adelantado más rápido que los componentes del mercado de opciones. La 'Multitud Minorista' a menudo impulsa el medidor de Codicia más rápido que las instituciones.\"}",
+        "forecast_risks": "El riesgo es un 'Cambio de Régimen' donde el índice se mantiene anclado en 'Miedo Extremo' por un período prolongado (como en 2008), señalando una depresión estructural en lugar de una caída comprable.",
+        "gms_conclusion": "Úselo como un control emocional. Si siente ganas de comprar cuando el índice está en 90, deténgase. Si siente ganas de vender cuando está en 10, deténgase. Es el mejor espejo para su propia psicología."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T13:30:00+00:00"
+}

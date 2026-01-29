@@ -1,0 +1,16 @@
+{
+    "slug": "accumulation-distribution-line",
+    "lang": "ES",
+    "title": "Línea A/D (Acumulación/Distribución)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "La Tendencia en la Sombra. La Línea A/D conecta el precio y el volumen para mostrar si el dinero entra o sale. Es similar a OBV pero pondera el volumen en función de dónde cierra el precio dentro del rango del día. Expone la debilidad oculta en las tendencias alcistas.",
+        "deep_dive": "Utiliza el Valor de Ubicación de Cierre (CLV). Si el precio cierra cerca del máximo del día, se agrega volumen. Si está cerca del mínimo, se resta el volumen. Esto crea un motor de divergencia que detecta los techos antes de que sucedan.",
+        "council_debate": "{\"geopolitics\": \"Las sanciones crean flujos ocultos. Cuando un país es sancionado, sus activos pueden parecer estables en la superficie (precio fijo), pero la Línea A/D colapsará a medida que los iniciados distribuyan (vendan) en la oferta artificial. Lo usamos para cronometrar los colapsos de divisas.\", \"macro\": \"El 'dinero inteligente' se acumula temprano. En una recesión, las acciones cíclicas (como las mineras de cobre) a menudo tocan fondo antes que la economía. Si el precio está marcando nuevos mínimos pero la línea A/D está subiendo, es una 'Divergencia Alcista'. Los grandes jugadores están comprando el pánico.\", \"quant\": \"Modelamos 'Días de Distribución'. Si la línea A/D cae durante 3 días consecutivos mientras el S&P 500 alcanza nuevos máximos, nuestros algoritmos cambian a 'Risk Off' (Sin Riesgo). Esta señal se adelantó al accidente de 2008 y al accidente de COVID de 2020.\", \"technical\": \"La Divergencia es el Rey. Si el precio está subiendo, A/D DEBE estar subiendo. Si el precio sube pero el A/D cae, el rally es una mentira. Esta es la 'Divergencia Bajista'. Significa que el mercado está siendo apuntalado por unas pocas capitalizaciones grandes, mientras que la mayoría se está vendiendo.\", \"policy\": \"Los bancos centrales compran ETF. Esto eleva el precio, pero no necesariamente la línea A/D si el mercado en general está vendiendo. Una desconexión entre el balance del Banco Central (compra) y la Línea A/D (venta) indica el fracaso de la política.\", \"tech\": \"Las ballenas criptográficas se distribuyen en el FOMO minorista. Cuando una ficha sube un 20% en un día pero cierra cerca de la mitad de su rango con un volumen masivo, la línea A/D se mantiene plana o cae. Esto revela que las ballenas estaban vendiendo en el frenesí de compra minorista.\"}",
+        "forecast_risks": "Sensibilidad de Brecha. Al igual que OBV, las brechas pueden distorsionar la línea. Sin embargo, A/D es generalmente más suave que OBV porque se enfoca en el Cierre relativo al Rango, no solo en el Cierre relativo a ayer.",
+        "gms_conclusion": "El precio puede ser manipulado; Cerrar la ubicación en relación con el Alto/Bajo es más difícil de falsificar. La Línea A/D detecta el farol."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:40:00+00:00"
+}

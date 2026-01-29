@@ -1,0 +1,16 @@
+{
+    "slug": "supertrend",
+    "lang": "ES",
+    "title": "Supertrend",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "El seguidor de tendencias 'Establecer y Olvidar'. Es un stop dinámico basado en ATR que lo mantiene en el lado correcto del flujo principal del mercado. Verde significa Comprar, Rojo significa Vender.",
+        "deep_dive": "Supertrend utiliza la volatilidad (ATR) para calcular su compensación. Se ajusta automáticamente: si aumenta la volatilidad, el stop se aleja para evitar ser detenido por el ruido. Si la volatilidad disminuye, se aprieta.",
+        "council_debate": "{\"geopolitics\": \"En crisis geopolíticas, los mercados se vuelven volátiles y 'ruidosos'. Los stops de porcentaje fijo son cazados. Supertrend utiliza la volatilidad (ATR) para adaptarse. Es el único stop-loss que 'respira' con el índice de pánico.\", \"macro\": \"Supertrend sobresale en capturar 'Operaciones de Reflación' o 'Ciclos de Devaluación' que duran años. Ignora el ruido mensual del IPC y lo mantiene largo en USD o Commodities durante todo el ciclo.\", \"quant\": \"Hacemos backtest de Supertrend en todo. Falla en mercados laterales (ciudad de latigazos). Pero en una cartera diversificada de 50 activos, los grandes ganadores (valores atípicos) pagan todas las pequeñas pérdidas. Es una estrategia pura de 'Convexidad'.\", \"technical\": \"No uses solo un Supertrend. Usa dos. Uno lento (Semanal 10, 3) para la tendencia principal, y uno rápido (Diario 7, 3) para las entradas. No realices una operación a menos que ambos estén de acuerdo. Esto es 'Alineación de Marco Temporal Múltiple'.\", \"policy\": \"La liquidez del banco central impulsa las tendencias. Mientras el Supertrend sea verde, asuma que la 'Opción de Venta de la Fed' está activa. Cuando se vuelve Rojo, significa que el drenaje de liquidez finalmente ha dominado el sentimiento.\", \"tech\": \"A los comerciantes de criptomonedas les encanta Supertrend porque la volatilidad de las criptomonedas es una locura. Previene 'Manos de Papel'. Te obliga a mantener Bitcoin a través de caídas del 30% si la estructura de la tendencia técnicamente sigue intacta.\"}",
+        "forecast_risks": "El 'Bloque de Carnicero'. En un mercado plano, Supertrend comprará el techo y venderá el fondo repetidamente. DEBES filtrarlo con ADX. Si ADX < 20, apague sus señales Supertrend.",
+        "gms_conclusion": "La simplicidad es la máxima sofisticación. Supertrend elimina toda discreción. Te obliga a ser disciplinado."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:00:00+00:00"
+}

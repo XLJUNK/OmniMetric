@@ -1,0 +1,15 @@
+{
+    "slug": "maximum-adverse-excursion-mae",
+    "lang": "ID",
+    "title": "MAE (Ekskursi Buruk Maksimal)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Pengukur Toleransi Nyeri. MAE mengukur kerugian maksimum yang ditanggung oleh perdagangan saat dibuka, bahkan jika akhirnya menjadi menguntungkan. Ini memberitahu Anda apakah entri Anda tepat atau apakah Anda hanya beruntung setelah selamat dari penarikan besar-besaran.",
+        "deep_dive": "Digunakan untuk membedah sistem perdagangan. Jika rata-rata perdagangan yang menang memiliki MAE -5% tetapi stop loss Anda -2%, stop Anda terlalu ketat. Jika MAE Anda secara konsisten mendekati 0, entri Anda seperti penembak jitu.",
+        "council_debate": "{\"geopolitics\": \"Bangsa memiliki batas MAE. Berapa banyak rasa sakit yang dapat ditanggung oleh suatu populasi dari sanksi sebelum perubahan rezim terjadi? Kami memodelkan 'MAE Sosial' suatu negara. Jika inflasi mencapai 50%, itu mungkin batas MAE sebelum revolusi memicu.\", \"macro\": \"Resesi adalah MAE dari siklus bisnis. Kami mengukur kedalaman kontraksi PDB. Jika ekonomi pulih tetapi penarikan (MAE) adalah -10%, kerusakan struktural (parut) mungkin permanen, membatasi pertumbuhan di masa depan.\", \"quant\": \"Kami mengoptimalkan Stop Loss menggunakan awan MAE. Kami merencanakan keuntungan setiap perdagangan vs MAE-nya. Ini membuat plot pencar. Kami menarik garis stop loss tepat di bawah kluster 'Kebisingan'. Ini secara ilmiah meminimalkan risiko tanpa berhenti dari memenangkan perdagangan.\", \"technical\": \"MAE mengungkapkan kualitas dukungan. Jika harga menguji level support dan MAE (penetrasi) dalam dan sering, support itu 'keropos' dan kemungkinan akan pecah. Kami lebih suka 'Penolakan Bersih' dengan MAE rendah.\", \"policy\": \"Bank Sentral memiliki MAE untuk rasa sakit. Mereka akan mentolerir beberapa penurunan pasar (-10%), tetapi jika S&P 500 turun -20% (MAE mental mereka), 'Fed Put' aktif. Kami memperdagangkan level MAE spesifik gubernur Bank Sentral.\", \"tech\": \"Likuidasi DeFi adalah peristiwa MAE. Dalam pertanian hasil leverage, Anda menguntungkan sampai Anda tidak. Kami memantau MAE rasio jaminan. Sumbu harga tiba-tiba (MAE tinggi) dapat melikuidasi posisi bahkan jika harga pulih secara instan.\"}",
+        "forecast_risks": "Bias Survivor. Analisis MAE seringkali hanya melihat perdagangan yang menang. Anda juga harus mempelajari Maximum Favorable Excursion (MFE) dan kehilangan perdagangan untuk mendapatkan gambaran lengkapnya.\", \"gms_conclusion\": \"Untung memberitahu Anda tujuannya. MAE memberitahumu betapa bergelombang jalan itu. Lebih suka jalan mulus.\""
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T16:00:00+00:00"
+}

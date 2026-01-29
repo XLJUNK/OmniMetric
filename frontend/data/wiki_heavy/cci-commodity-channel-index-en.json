@@ -1,0 +1,16 @@
+{
+    "slug": "cci-commodity-channel-index",
+    "lang": "EN",
+    "title": "CCI (Commodity Channel Index)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "The 'Cyclical Deviation' finder. CCI measures the current price level relative to an average price level over a given period of time. Used primarily to spot new trends or extreme conditions. +100/-100 are the key levels.",
+        "deep_dive": "Donald Lambert designed CCI for commodities, which are cyclical. It is unbounded (unlike RSI). High readings mean prices are unusually high compared to average. A move above +100 implies a strong uptrend is beginning.",
+        "council_debate": "{\"geopolitics\": \"Commodities react violently to supply shocks (War). CCI captures these shocks better than RSI because it has no ceiling. When Oil CCI hits +300 during a war, it accurately reflects the 'infinite' panic demand.\", \"macro\": \"Inflation cycles are commodities cycles. We use monthly CCI on the CRB Index to determine if we are in a 'Hard Asset' regime or a 'Paper Asset' regime. CCI > 0 on the monthly chart means Own Real Assets.\", \"quant\": \"We use CCI for 'Momentum Breakouts'. Most indicators say sell when overbought. CCI says BUY when it crosses above +100. It is a counter-intuitive signal that works well in strong momentum markets.\", \"technical\": \"Look for the 'Zero Line Reject'. In an uptrend, price corrects, CCI drops to near 0, then bounces back up. This is the perfect 'Buy the Dip' entry point. It confirms the trend is still alive.\", \"policy\": \"OPEC decisions drive Oil CCI. When OPEC cuts production, Oil CCI crosses +100. This is a policy-driven trend signal. Don't fight OPEC, and don't fight the CCI breakout.\", \"tech\": \"Bitcoin mimics a commodity more than a stock. CCI works exceptionally well on Bitcoin weekly charts. A weekly close above +100 often marks the start of a 6-month bull run.\"}",
+        "forecast_risks": "Whipsaws in narrow ranges. CCI is very sensitive. In a choppy market, it will cross +100 and -100 repeatedly, generating false breakout signals. Must significantly filter with trend lines.",
+        "gms_conclusion": "For Commodities and Crypto, CCI is superior to RSI. It respects the unbounded potential of mania."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:00:00+00:00"
+}

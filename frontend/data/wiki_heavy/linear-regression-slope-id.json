@@ -1,0 +1,16 @@
+{
+    "slug": "linear-regression-slope",
+    "lang": "ID",
+    "title": "Kemiringan Regresi Linier",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Tren yang Dimatematika. Regresi Linier mencocokkan garis 'paling pas' melalui harga dan kemudian mengukur sudut (kemiringan) garis itu. Ini memberi tahu Anda arah dan kekuatan tren yang tepat, menghilangkan kebisingan sehari-hari.",
+        "deep_dive": "Itu murni statistik. Kemiringan positif > X berarti tren naik yang kuat. Kemiringan negatif < Y berarti tren turun yang kuat. Kemiringan mendekati nol berarti aksi berombak dan menyamping. Ini adalah penengah objektif dari 'Apakah sedang tren?'.",
+        "council_debate": "{\"geopolitics\": \"Stabilitas politik menghasilkan pertumbuhan linier. Kekacauan politik menghasilkan volatilitas. Kami mengukur 'Kesehatan' suatu bangsa dengan Kemiringan Regresi Linier mata uangnya. Lereng positif yang stabil dan lembut dapat diinvestasikan. Lereng vertikal bergerigi tidak dapat diinvestasikan.\", \"macro\": \"PDB tumbuh secara linier (sebagian besar). Gelembung tumbuh secara eksponensial. Jika Kemiringan Regresi Linier suatu aset menyimpang 3 sigma dari tingkat pertumbuhan PDB, itu adalah gelembung. Kami menggunakan ini untuk mendeteksi sektor yang terlalu panas.\", \"quant\": \"Kami menggunakan Slope Z-Score. Kami menghitung kemiringan, lalu menormalkannya. Jika Slope Z-Score mencapai +3 (3 standar deviasi di atas normal), tren tersebut tidak berkelanjutan. Kami mengembalikan (Short) aset kembali ke tren ratanya.\", \"technical\": \"'Kemiringan Balik'. Kami tidak menebak pantat. Kami menunggu Kemiringan Regresi Linier bergeser dari negatif ke positif. Ini menegaskan perubahan tren secara matematis, menyaring 'pantulan palsu'.\", \"policy\": \"Menargetkan Inflasi 2% membutuhkan kemiringan kenaikan harga tertentu. Bank Sentral pada dasarnya mengelola Kemiringan Regresi Linier dari harga aset kritis. Jika lereng menjadi terlalu curam, mereka menaikkan suku bunga untuk meratakan garis.\", \"tech\": \"Hukum Moore linier pada skala log. Kami menerapkan Regresi Linier ke Log Bagan Bitcoin. Ini mengungkapkan jalur 'Nilai Wajar' jangka panjang. Ketika harga jauh di atas garis regresi, itu mahal. Di bawah, ini adalah pembelian generasi.\"}",
+        "forecast_risks": "Lag. Karena menghitung 'kecocokan terbaik' selama periode N, lambat bereaksi terhadap crash mendadak. Ini menggambarkan masa lalu baru-baru ini dengan sempurna tetapi bisa melewatkan belokan langsung.",
+        "gms_conclusion": "Jangan melawan matematika. Jika kemiringannya positif, cari buy. Jika negatif, cari sell."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:40:00+00:00"
+}

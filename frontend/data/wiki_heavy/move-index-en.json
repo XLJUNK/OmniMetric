@@ -1,0 +1,16 @@
+{
+    "slug": "move-index",
+    "lang": "EN",
+    "title": "MOVE Index (Bond VIX)",
+    "type": "indicator",
+    "category": "Sentiment",
+    "sections": {
+        "summary": "The MOVE Index (Merrill Lynch Option Volatility Estimate) measures the implied volatility of US Treasury options. It is effectively the 'VIX for Bonds'. Why does it matter? Because the US Treasury market is the collateral underpinning the entire global financial system.",
+        "deep_dive": "While the VIX measures fear in stocks, the MOVE measures fear in the foundation of finance. High MOVE means dealers are terrified to hold inventory, leading to liquidity holes. A broken Treasury market breaks everything else.",
+        "council_debate": "{\"geopolitics\": \"When foreign nations (China, Japan) intervene in FX markets to support their currencies, they sell Treasuries, spiking the MOVE Index. High bond volatility is often a symptom of global currency wars.\", \"macro\": \"The 'Risk Parity' unwind is the danger. These massive funds balance risk by buying bonds when stocks are volatile. But when Bonds AND Stocks are volatile (High MOVE + High VIX), they must sell EVERYTHING. The MOVE Index is the trigger for this correlation breakdown.\", \"quant\": \"There is a critical threshold at 120. Below 120, leverage is safe. Above 120, Value-at-Risk (VaR) models force banks to de-lever. If MOVE stays above 140 for more than 2 weeks, a credit event is statistically inevitable.\", \"technical\": \"The MOVE Index leads the VIX. Often, bond traders smell trouble weeks before equity traders do. A breakout in MOVE is a leading indicator for a breakout in VIX.\", \"policy\": \"The Fed fears the MOVE Index more than the CPI. If the Treasury market functions cease (MOVE > 180), the Fed becomes the 'Buyer of Last Resort' instantly, overriding inflation concerns. This is financial dominance.\", \"tech\": \"Algorithmic High-Frequency Trading (HFT) in bonds exacerbates volatility. In the past, human dealers absorbed shocks; now, algos just pull liquidity when volatility spikes, causing 'Flash Crashes' in yields.\"}",
+        "forecast_risks": "The downside risk is a 'Failed Auction' where the US Treasury tries to sell debt and no one buys, sending the MOVE vertical. The upside is a return to 'Great Moderation' volatility levels if inflation stabilizes at 2%.",
+        "gms_conclusion": "The most underappreciated risk gauge. If MOVE is rising, reduce leverage everywhere, even if the stock market looks calm. It represents the 'instability of the collateral'."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T13:30:00+00:00"
+}

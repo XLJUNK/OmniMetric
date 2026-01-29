@@ -1,0 +1,16 @@
+{
+    "slug": "vwap",
+    "lang": "ES",
+    "title": "VWAP (Precio Promedio Ponderado por Volumen)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "El Benchmak Institucional. VWAP calcula el precio promedio de una acción en función del volumen negociado en cada nivel de precios. Revela el verdadero 'valor justo' del día. Las instituciones lo utilizan para ejecutar grandes órdenes sin mover el mercado.",
+        "deep_dive": "Se restablece en la apertura de cada día de negociación. Si el precio está por encima de VWAP, los compradores tienen el control y pagan una prima. Si está por debajo, los vendedores tienen el control. Actúa como una línea dinámica de soporte/resistencia para el comercio intradía.",
+        "council_debate": "{\"geopolitics\": \"Durante los pánicos geopolíticos, el volumen explota. VWAP se ajusta a este volumen, diciéndole el verdadero 'Precio de Pánico'. Si el mercado se estabiliza por encima del VWAP del día del pánico, la crisis está descontada.\", \"macro\": \"Usamos 'VWAP Anclado' de eventos macro importantes (por ejemplo, reuniones del FOMC, publicaciones del IPC). Esto nos dice quién está ganando desde ese evento específico. Si el precio está por debajo del 'VWAP Anclado al IPC', dominan los temores de inflación.\", \"quant\": \"La ejecución lo es todo. Se nos juzga por si compramos por debajo de VWAP. Por lo tanto, proporcionamos liquidez (límite de compra) por debajo de VWAP y tomamos liquidez (mercado de venta) por encima de él. Esto crea una reversión a la media natural a la línea VWAP a lo largo del día.\", \"technical\": \"El 'Pellizco VWAP'. Cuando el precio se comprime entre una Media Móvil y el VWAP, una ruptura es inminente. Buscamos que el precio reclame VWAP después de una venta masiva matutina. Esa es la configuración de 'Reclamo VWAP'.\", \"policy\": \"Los bancos centrales no usan VWAP, pero el mercado de bonos sí. Cuando el rendimiento a 10 años se negocia constantemente por encima de su VWAP semanal, la tendencia es implacablemente más alta, independientemente de la retórica de la Fed.\", \"tech\": \"En Cripto, VWAP es la única gravedad. Como no hay valor fundamental, el precio orbita el VWAP. Los algoritmos defenderán el VWAP en la primera prueba. Siempre ofertamos al primer toque de VWAP en una tendencia.\"}",
+        "forecast_risks": "Ruido de última hora. A medida que termina el día, VWAP se aplana y se vuelve menos significativo porque se necesita un volumen masivo para moverlo. No confíes en las señales de VWAP en la última hora de negociación.",
+        "gms_conclusion": "La línea de la 'Verdad'. Le dice si está obteniendo un buen trato o pagando demasiado en relación con el resto del mercado."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:15:00+00:00"
+}

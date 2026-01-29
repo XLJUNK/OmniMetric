@@ -1,0 +1,16 @@
+{
+    "slug": "cpi",
+    "lang": "ES",
+    "title": "IPC (Índice de Precios al Consumidor)",
+    "type": "glossary",
+    "category": "Inflation",
+    "sections": {
+        "summary": "El IPC rastrea el precio promedio ponderado de una canasta de bienes y servicios de consumo, sirviendo como referencia para la inflación. La Fed apunta al 2%, pero en el mundo post-COVID, el 'IPC Supernúcleo' (Servicios excluyendo Energía y Vivienda) se ha convertido en el verdadero campo de batalla.",
+        "deep_dive": "El IPC tradicional está rezagado. La vivienda (alojamiento) constituye ~34% del índice pero sigue a los datos de alquiler en tiempo real con 12 meses de retraso. En 2026, el enfoque está en la 'AI-flación' (aumento del costo de cómputo/energía) versus 'AI-deflación' (colapso del costo del trabajo cognitivo).",
+        "council_debate": "{\"geopolitics\": \"La desglobalización es inflacionaria. La relocalización de las cadenas de suministro agrega un costo rígido estructural del 1-2% al IPC que la política monetaria no puede arreglar.\", \"macro\": \"La 'Última Milla' de la inflación es la más difícil. Bajar del 9% al 3% fue fácil (curación de las cadenas de suministro). Bajar del 3% al 2% requiere aplastar la demanda, algo que la Fed duda en hacer en un ciclo electoral.\", \"quant\": \"Existe una oportunidad de arbitraje estadístico en la predicción del componente 'Alquiler Equivalente de los Propietarios' (OER). Los modelos de rezago actuales predicen una fuerte caída en el OER, lo que debería llevar el IPC general por debajo del 2% temporalmente, creando un repunte 'falso' (Headfake).\", \"technical\": \"Los días de publicación del IPC son los nuevos días de ganancias. La volatilidad intradía se dispara un 300% en el lanzamiento. El patrón gráfico sugiere un 'piso más alto' para la inflación, alrededor del 2.5-3.0% a largo plazo.\", \"policy\": \"La Fed está aceptando secretamente que el 3% es el nuevo 2%. No lo dirán, pero sus acciones (pausar las tasas a pesar de la inflación pegajosa de los servicios) confirman que la 'Desinflación Oportunista' es la estrategia.\", \"tech\": \"La tecnología es la fuerza deflacionaria definitiva. Si los agentes de IA reducen el costo de las tareas de codificación, legales y administrativas a casi cero, los componentes de servicios fuertemente ponderados del IPC colapsarán, enmascarando la inflación en bienes físicos.\"}",
+        "forecast_risks": "Riesgo de 'Estanflación Ligera' donde el crecimiento se desacelera pero el IPC se mantiene en 3.5% debido a la espiral salarial. El riesgo al alza (para los mercados, no para los consumidores) es que la productividad de la IA lleve el IPC al 0% a pesar de la impresión masiva de dinero.",
+        "gms_conclusion": "Visión Neutral. Los componentes son mixtos. Ignore el número general; concéntrese en el Supernúcleo mes a mes. Si el Supernúcleo se anualiza >3.5%, permanezca a la defensiva."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T13:10:00+00:00"
+}

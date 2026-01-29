@@ -1,0 +1,16 @@
+{
+    "slug": "vwap",
+    "lang": "ID",
+    "title": "VWAP (Harga Rata-Rata Tertimbang Volume)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Tolok Ukur Kelembagaan. VWAP menghitung harga rata-rata saham berdasarkan volume yang diperdagangkan pada setiap tingkat harga. Ini mengungkapkan 'nilai wajar' yang sebenarnya untuk hari itu. Institusi menggunakannya untuk mengeksekusi pesanan besar tanpa menggerakkan pasar.",
+        "deep_dive": "Ini diatur ulang pada pembukaan setiap hari perdagangan. Jika harga di atas VWAP, pembeli memegang kendali dan membayar premi. Jika di bawah, penjual yang memegang kendali. Ini bertindak sebagai garis support/resistance dinamis untuk perdagangan intraday.",
+        "council_debate": "{\"geopolitics\": \"Selama kepanikan geopolitik, volume meledak. VWAP menyesuaikan volume ini, memberi tahu Anda 'Harga Panik' yang sebenarnya. Jika pasar stabil di atas VWAP hari panik, krisis sudah diperhitungkan.\", \"macro\": \"Kami menggunakan 'Anchored VWAP' dari peristiwa makro utama (misalnya, pertemuan FOMC, rilis IHK). Ini memberi tahu kita siapa yang menang sejak acara spesifik itu. Jika harga di bawah 'CPI Anchored VWAP', ketakutan inflasi mendominasi.\", \"quant\": \"Eksekusi adalah segalanya. Kami dinilai berdasarkan apakah kami membeli di bawah VWAP. Oleh karena itu, kami menyediakan likuiditas (batas beli) di bawah VWAP dan mengambil likuiditas (jual pasar) di atasnya. Ini menciptakan pengembalian rata-rata alami ke garis VWAP sepanjang hari.\", \"technical\": \"'Pencet VWAP'. Ketika harga meremas antara Rata-rata Pergerakan dan VWAP, penembusan sudah dekat. Kami mencari harga untuk merebut kembali VWAP setelah aksi jual pagi. Itu pengaturan 'VWAP Reclaim'.\", \"policy\": \"Bank Sentral tidak menggunakan VWAP, tetapi Pasar Obligasi menggunakannya. Ketika Imbal Hasil 10 Tahun diperdagangkan secara konsisten di atas VWAP mingguannya, trennya terus lebih tinggi terlepas dari retorika The Fed.\", \"tech\": \"Di Crypto, VWAP adalah satu-satunya gravitasi. Karena tidak ada nilai fundamental, harga mengorbit VWAP. Algos akan mempertahankan VWAP pada tes pertama. Kami selalu menawar sentuhan pertama VWAP dalam tren.\"}",
+        "forecast_risks": "Kebisingan Siang Akhir. Saat hari berakhir, VWAP mendatar dan menjadi kurang signifikan karena butuh volume besar untuk memindahkannya. Jangan percaya sinyal VWAP di jam terakhir perdagangan.",
+        "gms_conclusion": "Garis 'Kebenaran'. Ini memberi tahu Anda apakah Anda mendapatkan kesepakatan yang bagus atau membayar terlalu banyak relatif terhadap pasar lainnya."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:15:00+00:00"
+}

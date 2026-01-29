@@ -1,0 +1,16 @@
+{
+    "slug": "keltner-channels",
+    "lang": "EN",
+    "title": "Keltner Channels",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "The 'Smart' Envelope. Keltner Channels place bands above and below a central Exponential Moving Average (EMA) based on volatility (ATR). Unlike Bollinger Bands, they don't spasm with every price twitch. They are smoother and trend-friendlier.",
+        "deep_dive": "Composed of a 20-day EMA and bands set at 2x ATR. Because they use Average True Range (ATR) rather than Standard Deviation, they filter out noise more effectively. A close outside the channel is a significant breakout signal.",
+        "council_debate": "{\"geopolitics\": \"Supply chain shocks are permanent shifts, not noise. Keltner Channels filter out the daily noise better than Bollinger Bands. When price breaks the upper Keltner channel during a crisis, it means the 'Risk Premium' has structurally reset higher.\", \"macro\": \"Inflation is a trend, not a mean-reverting oscillator. Keltner Channels are superior for trend-following inflation assets (Gold, Oil). Ride the upper band as long as the macro narrative holds.\", \"quant\": \"We test 'Squeeze' strategies. When Bollinger Bands contract *inside* Keltner Channels, it signals extreme compression. This 'TTM Squeeze' setup is one of the highest probability trade setups in history.\", \"technical\": \"The 'Slingshot'. When price pulls back to the EMA (Mean) in a strong uptrend, it often bounces exactly off the 20 EMA or the lower Keltner Band. This is the low-risk entry point.\", \"policy\": \"Central Banks hate volatility. They try to keep rates inside the Keltner Channels. When rates break the upper channel, the Bond Vigilantes have taken control from the Fed.\", \"tech\": \"Crypto is too volatile for standard setups. We use 3x ATR for Keltner Channels in Bitcoin. A breakout of the 3x ATR band is a 'God Candle' event.\"}",
+        "forecast_risks": "The 'Flat Market Grind'. In a sideways market, price will grind along the bands without trending, triggering false breakout signals. You MUST use ADX to confirm trend strength before trusting a Keltner breakout.",
+        "gms_conclusion": "Smoother than Bollinger. Better for Trends. The standard for professionals who want to filter out the noise."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:00:00+00:00"
+}

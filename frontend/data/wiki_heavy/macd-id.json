@@ -1,0 +1,16 @@
+{
+    "slug": "macd",
+    "lang": "ID",
+    "title": "MACD (Konvergensi Rata-rata Bergerak Divergensi)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "'Raja Momentum'. MACD menunjukkan hubungan antara dua rata-rata bergerak (biasanya 12 dan 26). Ini menandakan ketika momentum semakin cepat atau melambat. Ini adalah alat terbaik untuk menemukan pembalikan tren.",
+        "deep_dive": "Garis MACD adalah perbedaan antara 12-EMA dan 26-EMA. 'Garis Sinyal' adalah 9-EMA dari MACD. 'Histogram' memvisualisasikan kesenjangan di antara mereka. Ekspansi Histogram = Akselerasi Tren.",
+        "council_debate": "{\"geopolitics\": \"Berita politik langsung hits. MACD adalah indikator lagging. Jangan gunakan MACD untuk memperdagangkan berita terkini. Namun, cari 'Divergensi MACD' SETELAH krisis selesai. Seringkali menandai titik balik yang tepat.\", \"macro\": \"Ketika fundamental (Makro) dan momentum harga (MACD) setuju, lakukan 'All In'. Jika ekonomi tumbuh tetapi MACD jatuh, percayalah pada MACD. Momentum memimpin fundamental.\", \"quant\": \"Divergensi adalah Alpha kita. Ketika harga membuat Higher High, tetapi MACD membuat Lower High, itu adalah jaminan matematis bahwa momentum melemah. Pedagang algoritmik secara agresif menyingkat perbedaan ini.\", \"technical\": \"'Histogram Flip' di garis nol adalah sinyal entri teraman. Ini menegaskan bahwa tren telah terbalik secara matematis. Kami menunggu batang pertama warna baru ditutup sebelum masuk.\", \"policy\": \"Selama Pelonggaran Kuantitatif (QE), MACD dapat tetap overbought selama bertahun-tahun. Osilator biasanya gagal dalam gelembung likuiditas. Jangan short hanya karena MACD tinggi. Short hanya jika menyilang ke bawah.\", \"tech\": \"Gunakan MACD pada rentang waktu yang lebih tinggi (Mingguan/Bulanan) untuk Crypto. MACD harian dalam crypto terlalu berisik. MACD Cross Mingguan pada Bitcoin secara historis menandakan awal dan akhir dari setiap siklus 4 tahun.\"}",
+        "forecast_risks": "Persilangan Tertinggal. Pada saat garis MACD melintas, sebagian besar pergerakan mungkin sudah berakhir. Ini bekerja paling baik dalam tren panjang dan berayun, bukan dalam kisaran ketat.",
+        "gms_conclusion": "Hormati Divergensi. Ketika harga berteriak 'Naik' tetapi MACD berbisik 'Turun', dengarkan bisikan itu."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:00:00+00:00"
+}

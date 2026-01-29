@@ -1,0 +1,16 @@
+{
+    "slug": "donchian-channels",
+    "lang": "EN",
+    "title": "Donchian Channels",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "The 'Turtle Trader' Engine. Donchian Channels simply plot the highest high and lowest low of the past N periods (usually 20 or 55). It is the purest form of breakout trend following. If price makes a new 20-day high, you buy. No questions asked.",
+        "deep_dive": "Made famous by Richard Dennis and the Turtle Traders. The logic is simple: Trends essentially consist of new highs (uptrend) or new lows (downtrend). By buying every new high, you guarantee that you will never miss a major trend.",
+        "council_debate": "{\"geopolitics\": \"Trends appear when the geopolitical regime changes. Donchian Channels are the best tool for catching 'Regime Shifts'. When sanctions hit a country, its currency makes a new 55-day low. We short it immediately.\", \"macro\": \"Commodity Supercycles are captured perfectly by Donchian Channels. We don't care about 'fair value'. If Copper makes a new 55-week high, we are long. Supply constraints always show up in price first.\", \"quant\": \"The 'Whipsaw' is the killer. Win rate is only 30-40%. But the winners are 10x the losers. A pure Donchian system requires massive diversification to survive the sideways markets.\", \"technical\": \"'Box Theory'. Donchian Channels visualize the 'Darvas Box'. We look for a squeeze (narrow channel) followed by an expansion (breakout). The longer the channel has been flat, the more explosive the move.\", \"policy\": \"Central Banks try to cap yields. When 10-Year Yields break the upper Donchian Channel, the market is breaking the Fed. That is a 'Policy Error' signal.\", \"tech\": \"In Crypto, FOMO drives price. A new 20-day high in Bitcoin attracts retail floods. Donchian Channels work exceptionally well in crypto bull markets because momentum is recursive.\"}",
+        "forecast_risks": "The 'False Breakout'. In modern markets, algos hunt for stops just above the 20-day high. They trigger the breakout to trap the bulls, then reverse. You need a 'Filter' (like ADX or a Time Filter) to confirm the breakout is real.",
+        "gms_conclusion": "The primitive yet powerful trend tool. Brutal in chopping markets, legendary in trending ones. Use it for 'Macro' trends, not day trading."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:15:00+00:00"
+}

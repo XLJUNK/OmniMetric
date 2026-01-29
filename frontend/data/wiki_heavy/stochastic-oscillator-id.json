@@ -1,0 +1,16 @@
+{
+    "slug": "stochastic-oscillator",
+    "lang": "ID",
+    "title": "Osilator Stokastik",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "'Pencari Rentang'. Stokastik membandingkan harga penutupan dengan kisaran harganya selama periode tertentu. Ini bekerja paling baik di pasar yang datar dan menyamping. Ini memberi tahu Anda di mana harga relatif terhadap saluran tinggi-rendah baru-baru ini.",
+        "deep_dive": "%K adalah garis cepat, %D adalah garis lambat. Crossover di zona overbought (>80) atau oversold (<20) adalah sinyal klasik. Ini lebih cepat dan lebih sensitif daripada RSI, tetapi rentan terhadap sinyal palsu.",
+        "council_debate": "{\"geopolitics\": \"Dalam kebuntuan geopolitik yang terikat kisaran (tanpa perang, tanpa perdamaian), Stokastik adalah raja. Ini menangkap berita utama bolak-balik dengan sempurna. Beli dip di 20, jual rip di 80.\", \"macro\": \"Tren makro menghancurkan pengguna Stokastik. Dalam tren naik inflasi yang kuat, Stokastik akan tetap > 80 selamanya. Jika Anda short setiap kali mencapai 80, Anda akan musnah. Gunakan hanya saat Makro netral.\", \"quant\": \"Kami menggunakan Stokastik untuk 'Mean Reversion' di jam perdagangan Asia (seringkali volatilitas rendah). Jika S&P 500 berjangka turun ke Stoch 10 selama istirahat makan siang Asia, bot kami membelinya untuk bangkit kembali dengan cepat ke 50.\", \"technical\": \"Cari 'Hinge' (Engsel). Ketika garis %K dan %D merata dan kemudian berputar tajam, itu terlihat seperti engsel pintu. Pola visual ini sering mendahului penembusan hebat dari kisaran.\", \"policy\": \"Bank sentral mematok suku bunga menciptakan kisaran Stokastik yang sempurna. Jika The Fed mengatakan 'Suku bunga akan tetap 5,25% selama setahun', pasar obligasi menjadi taman bermain Stokastik. Beli hasil rendah, jual hasil tinggi.\", \"tech\": \"Di Crypto, Stokastik berguna untuk 'Scalping' pada grafik 15 menit. Kisaran kripto lebar (5-10%). Menangkap ayunan dari 20 hingga 80 pada grafik 15m adalah strategi yang menguntungkan bagi pedagang harian.\"}",
+        "forecast_risks": "Pop dan Drop. Dalam kecelakaan, Stokastik akan mencapai 0 dan tetap di sana. Membeli karena 'tidak bisa lebih rendah' adalah kesalahan. Itu bisa 'menanamkan' di 0 untuk seluruh durasi kecelakaan.",
+        "gms_conclusion": "Gunakan Stokastik dalam Kotak (Rentang). Gunakan MACD di Tren. Ketahui lingkungan tempat Anda berada."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:00:00+00:00"
+}

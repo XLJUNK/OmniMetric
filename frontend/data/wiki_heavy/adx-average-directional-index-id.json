@@ -1,0 +1,16 @@
+{
+    "slug": "adx-average-directional-index",
+    "lang": "ID",
+    "title": "ADX (Indeks Arah Rata-rata)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "ADX mengukur Kekuatan Tren, terlepas dari arahnya. Ini memberi tahu Anda 'Seberapa kuat gerakannya?', bukan 'Ke mana arahnya?'. Ini menjawab pertanyaan kritis: 'Haruskah saya memperdagangkan Tren atau Rentang?'",
+        "deep_dive": "ADX berkisar dari 0 hingga 100. Bacaan di bawah 20 menunjukkan tren lemah (pasar berombak/kisaran). Bacaan di atas 25 menunjukkan tren yang kuat. Bacaan di atas 50 menunjukkan tren 'Klimaks' yang melelahkan.",
+        "council_debate": "{\"geopolitics\": \"Peristiwa krisis menyebabkan lonjakan instan di ADX. Ketika Rusia menginvasi Ukraina, ADX Minyak menjadi vertikal. Jika Geopolitik menggerakkan pasar, abaikan sinyal overbought dan percayalah pada kekuatan ADX.\", \"macro\": \"Tren makro (seperti inflasi) lambat dan persisten. Kami mencari ADX yang meningkat pada grafik Mingguan. Ini menegaskan pergeseran struktural sekuler, bukan hanya bangkitan siklus.\", \"quant\": \"Kami menggunakan ADX sebagai filter. Jika ADX < 20, algoritme kami beralih ke mode 'Mean Reversion' (beli rendah, jual tinggi). Jika ADX > 25, mereka beralih ke mode 'Trend Berikut' (beli tinggi, jual lebih tinggi). Mencampuradukkan ini berakibat fatal.\", \"technical\": \"Garis DMI (Directional Movement Index) menyertai ADX. +DI melintasi -DI adalah sinyal beli. Tapi kami hanya mengambil sinyal jika ADX naik. Persilangan dengan jatuhnya ADX adalah alarm palsu.\", \"policy\": \"'Pivots' Bank Sentral membunuh tren. Ketika The Fed memberi isyarat jeda, ADX runtuh. Ini adalah sinyal untuk menutup posisi mengikuti tren dan pindah ke netral/tunai.\", \"tech\": \"HFT menyukai lingkungan ADX rendah karena mereka dapat melakukan scalp gerakan kecil. Manusia kehilangan uang di ADX rendah karena mereka terpotong oleh kebisingan. Jika ADX rendah, pergilah bermain golf.\"}",
+        "forecast_risks": "Lag. ADX adalah rata-rata yang dihaluskan dari rentang yang dihaluskan. Sangat lambat untuk bereaksi. Pada saat ADX memuncak, harga teratas seringkali sudah masuk. Gunakan untuk tetap dalam perdagangan, bukan untuk memasukinya.",
+        "gms_conclusion": "Tidak Ada Tren, Tidak Ada Perdagangan. Jika ADX di bawah 20, pasar adalah kasino. Tunggu bacaan melewati 25 sebelum menyebarkan modal."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T14:30:00+00:00"
+}

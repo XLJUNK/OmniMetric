@@ -1,0 +1,16 @@
+{
+    "slug": "standard-deviation",
+    "lang": "EN",
+    "title": "Standard Deviation",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "The statistical measure of Risk. Standard Deviation quantifies how much price history deviates from its average. It is the raw fuel for Bollinger Bands and option pricing. High SD = High Risk/Reward.",
+        "deep_dive": "1 Standard Deviation (SD) covers 68% of price action. 2 SD covers 95%. 3 SD covers 99.7%. In finance, we look for 'Outliers'—events beyond 2 or 3 SD—to signal that something abnormal is happening.",
+        "council_debate": "{\"geopolitics\": \"History is just a series of 6-Sigma events (World Wars, Pandemics). Standard Deviation assumes a bell curve (Normal Distribution), but history has 'Fat Tails'. Relying on SD for geopolitical risk management is dangerous leverage.\", \"macro\": \"For a Macro investor, risk is 'Permanent Loss of Capital', not Standard Deviation. Cash has zero SD but negative real return. Growth stocks have high SD but positive real return. Don't confuse volatility with risk.\", \"quant\": \"Z-Score is king. We normalize everything to Standard Deviations. If a stock is trading at -3 SD relative to its sector, it is statistically cheap. We buy the mean reversion trade aggressively at -3 SD.\", \"technical\": \"The 'Rubber Band'. Price cannot stretch too far from the average before snapping back. We look for 'Exhaustion Candles' outside the 2nd or 3rd Standard Deviation. That is where we fade the move.\", \"policy\": \"Central Banks run the economy to minimize the Standard Deviation of GDP and Inflation. They want a boring world. When SD spikes, they always intervene. A high SD environment is a sign of policy failure.\", \"tech\": \"Code never lies, but distributions do. Crypto returns are 'Leptokurtic' (Fat Tailed). A 5 SD move in stocks happens once a century. In crypto, it happens every Tuesday. Adjust your mental models to expect the infinite.\"}",
+        "forecast_risks": "The 'Black Swan'. Standard Deviation assumes a normal distribution. Financial markets are *not* normal. They are fractal. 10 SD events happen, and they wipe out anyone using 3 SD leverage logic.",
+        "gms_conclusion": "Know what 'Normal' is so you can spot the 'Abnormal'. But never assume the 'Impossible' won't happen. 3 SD is not a hard wall."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:00:00+00:00"
+}

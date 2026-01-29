@@ -1,0 +1,16 @@
+{
+    "slug": "market-breadth",
+    "lang": "ID",
+    "title": "Luas Pasar (Market Breadth)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Tentara di belakang Jenderal. Market Breadth mengukur jumlah saham yang berpartisipasi dalam suatu pergerakan. Jika S&P 500 mencapai harga tertinggi baru tetapi hanya 10 saham yang naik (luas sempit), reli tersebut rapuh. Jika 400 saham naik (luas kuat), reli kuat.",
+        "deep_dive": "Metrik umum: Garis Maju-Tolak, Tertinggi Baru vs Terendah Baru, dan % saham di atas Rata-rata Pergerakan 200 hari mereka. 'Breadth Thrust' (tekanan beli ekstrem) sering menandakan dimulainya pasar bull baru.",
+        "council_debate": "{\"geopolitics\": \"Partisipasi luas menandakan kepercayaan nasional. Ketika seluruh pasar ekuitas suatu negara naik, modal domestik dimobilisasi. Jika hanya raksasa ekspor yang bangkit sementara kapitalisasi kecil domestik jatuh, itu menandakan pembusukan ekonomi internal yang ditutupi oleh perdagangan global.\", \"macro\": \"Likuiditas mengangkat semua perahu. Keluasan yang kuat menegaskan bahwa likuiditas bank sentral secara efektif menembus ekonomi riil, bukan hanya mengejar beberapa kesayangan AI. Luasnya yang lemah menunjukkan jebakan likuiditas.\", \"quant\": \"Kami mengukur 'Zweig Breadth Thrust'. Jika masalah Peningkatkan melebihi masalah Penurunan sebesar 2:1 selama periode 10 hari, kemungkinan tren naik yang berkelanjutan secara statistik signifikan (lebih dari 80%). Kami memanfaatkan dorongan luas.\", \"technical\": \"Peringatan Divergensi. Sinyal paling berbahaya di bidang keuangan adalah ketika Indeks membuat harga tertinggi yang lebih tinggi, tetapi Garis Maju-Tolak membuat harga terendah yang lebih rendah. Ini terjadi pada 1929, 2000, dan 2008. Para jenderal memimpin, tetapi para prajurit telah melarikan diri.\", \"policy\": \"Stimulus fiskal menargetkan sektor tertentu (luas sempit). Stimulus moneter menargetkan seluruh sistem (lebar luas). Kami menilai jenis stimulus dengan mengamati pengaruhnya terhadap luas pasar.\", \"tech\": \"Altseason adalah Breadth. Di Crypto, dominasi Bitcoin jatuh sementara Total Market Cap naik adalah definisi perluasan luas. Ini berarti uang berputar dari keamanan BTC ke risiko Alts.\"}",
+        "forecast_risks": "Distorsi Indeks. Indeks berbobot topi seperti S&P 500 dapat sangat terdistorsi oleh mega-caps. Breadth adalah pendeteksi kebohongan untuk indeks, tapi bisa jadi lebih awal. Reli sempit bisa bertahan selama berbulan-bulan sebelum runtuh.",
+        "gms_conclusion": "Para Jenderal hanya bisa menahan garis begitu lama tanpa Angkatan Darat. Tonton Breadth untuk kesehatan pasar yang sebenarnya."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T16:00:00+00:00"
+}

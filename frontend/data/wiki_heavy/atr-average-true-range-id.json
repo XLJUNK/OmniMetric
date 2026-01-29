@@ -1,0 +1,16 @@
+{
+    "slug": "atr-average-true-range",
+    "lang": "ID",
+    "title": "ATR (Rata-rata Rentang Sejati)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "ATR mengukur 'Energi' pasar. Ini memberi tahu Anda berapa banyak aset bergerak rata-rata per hari. Ini adalah alat utama untuk Ukuran Posisi. ATR Tinggi = Posisi Kecil. ATR Rendah = Posisi Besar.",
+        "deep_dive": "ATR tidak menunjukkan arah, hanya volatilitas. Ini memperhitungkan 'Kesenjangan' yang dilewatkan oleh ukuran volatilitas lainnya. Penembusan yang disertai dengan kenaikan ATR valid. Penembusan dengan ATR jatuh mencurigakan.",
+        "council_debate": "{\"geopolitics\": \"Ketidakpastian menciptakan volatilitas. Kami mengamati ATR untuk mengukur seberapa 'gugup' pasar tentang situasi geopolitik. Jika ATR naik, ketakutan meningkat, bahkan jika harga datar.\", \"macro\": \"ATR berkembang selama perubahan rezim (misalnya, Guncangan Inflasi). Ini menyusut selama rezim stabil (Moderasi Hebat). Kami saat ini berada dalam rezim struktural ATR tinggi karena ketidakstabilan global.\", \"quant\": \"Kami menggunakan 'Targeting Volatilitas'. Jika kami menargetkan volatilitas 10% untuk portofolio, kami harus mengurangi ukuran posisi ketika ATR naik. Jika tidak, saham ATR tinggi akan mendominasi risiko portofolio. ATR menormalkan risiko di semua aset.\", \"technical\": \"Gunakan ATR untuk stop-loss ('Chandelier Stop'). Tempatkan stop Anda 2x ATR jauhnya dari entri Anda. Ini memastikan Anda tidak dihentikan oleh kebisingan harian normal. Hanya perubahan tren yang benar yang akan mencapai stop 2ATR.\", \"policy\": \"Bank sentral mencoba menekan ATR (Forward Guidance). Ketika mereka gagal, ATR meledak. 'Volatilitas Pasar Obligasi' (Indeks MOVE) pada dasarnya adalah ATR untuk obligasi. Ini adalah kenari di tambang batu bara.\", \"tech\": \"Di Crypto, ATR dapat meledak 10x dalam seminggu. Seringkali, lonjakan besar-besaran di ATR menandai dasar kapitulasi. Ketika penjual kelelahan, volatilitas memuncak. Membeli saat ATR berada di level tertinggi sepanjang masa (kepanikan) biasanya menguntungkan.\"}",
+        "forecast_risks": "ATR tertinggal. Ini memberi tahu Anda volatilitas *telah* meningkat, bukan bahwa itu *akan*. Juga, periode ATR rendah dapat berlangsung selama bertahun-tahun (kepuasan diri), yang mengarah pada ledakan leverage besar-besaran ketika akhirnya berbalik.",
+        "gms_conclusion": "Ketahui kecepatan kendaraan Anda. Jangan mengendarai Ferrari (ATR Tinggi) seperti Honda (ATR Rendah). Sesuaikan sabuk pengaman Anda (Ukuran Posisi) yang sesuai."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:00:00+00:00"
+}

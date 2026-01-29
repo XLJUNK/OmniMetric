@@ -1,0 +1,16 @@
+{
+    "slug": "move-index",
+    "lang": "ID",
+    "title": "Indeks MOVE (Bond VIX)",
+    "type": "indicator",
+    "category": "Sentiment",
+    "sections": {
+        "summary": "Indeks MOVE (Estimasi Volatilitas Opsi Merrill Lynch) mengukur volatilitas tersirat dari opsi Treasury AS. Ini secara efektif adalah 'VIX untuk Obligasi'. Mengapa ini penting? Karena pasar Treasury AS adalah jaminan yang mendasari seluruh sistem keuangan global.",
+        "deep_dive": "Sementara VIX mengukur ketakutan pada saham, MOVE mengukur ketakutan pada fondasi keuangan. MOVE yang tinggi berarti dealer takut memegang inventaris, yang mengarah ke lubang likuiditas. Pasar Treasury yang rusak menghancurkan segalanya.",
+        "council_debate": "{\"geopolitics\": \"Ketika negara-negara asing (China, Jepang) melakukan intervensi di pasar FX untuk mendukung mata uang mereka, mereka menjual Treasury, memicu lonjakan Indeks MOVE. Volatilitas obligasi yang tinggi seringkali merupakan gejala perang mata uang global.\", \"macro\": \"Pelepasan 'Risk Parity' adalah bahayanya. Dana besar ini menyeimbangkan risiko dengan membeli obligasi ketika saham bergejolak. Tetapi ketika Obligasi DAN Saham bergejolak (MOVE Tinggi + VIX Tinggi), mereka harus menjual SEMUANYA. Indeks MOVE adalah pemicu kerusakan korelasi ini.\", \"quant\": \"Ada ambang batas kritis di 120. Di bawah 120, leverage aman. Di atas 120, model Value-at-Risk (VaR) memaksa bank untuk melakukan deleverage. Jika MOVE tetap di atas 140 selama lebih dari 2 minggu, peristiwa kredit secara statistik tidak dapat dihindari.\", \"technical\": \"Indeks MOVE memimpin VIX. Seringkali, pedagang obligasi mencium masalah berminggu-minggu sebelum pedagang ekuitas melakukannya. Penembusan di MOVE adalah indikator utama untuk penembusan di VIX.\", \"policy\": \"The Fed lebih takut pada Indeks MOVE daripada IHK. Jika fungsi pasar Treasury berhenti (MOVE > 180), The Fed menjadi 'Pembeli Pilihan Terkahir' secara instan, mengesampingkan kekhawatiran inflasi. Ini adalah dominasi keuangan.\", \"tech\": \"Perdagangan Frekuensi Tinggi (HFT) Algoritmik dalam obligasi memperburuk volatilitas. Di masa lalu, dealer manusia menyerap guncangan; sekarang, algo hanya menarik likuiditas ketika volatilitas melonjak, menyebabkan 'Flash Crashes' dalam imbal hasil.\"}",
+        "forecast_risks": "Risiko penurunannya adalah 'Lelang Gagal' di mana Departemen Keuangan AS mencoba menjual utang dan tidak ada yang membeli, mengirim MOVE vertikal. Sisi positifnya adalah kembalinya tingkat volatilitas 'Moderasi Hebat' jika inflasi stabil di 2%.",
+        "gms_conclusion": "Pengukur risiko yang paling kurang dihargai. Jika MOVE naik, kurangi leverage di mana-mana, bahkan jika pasar saham terlihat tenang. Ini mewakili 'ketidakstabilan jaminan'."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T13:30:00+00:00"
+}

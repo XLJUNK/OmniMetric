@@ -1,0 +1,16 @@
+{
+    "slug": "volume-profile",
+    "lang": "ID",
+    "title": "Profil Volume (Volume Profile)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Sinar-X Struktur Pasar. Tidak seperti volume standar (diplot dari waktu ke waktu), Profil Volume memplot volume di atas *harga*. Ini mengungkapkan di mana 'nilai wajar' berada dan di mana pasar menolak harga. Ini mengidentifikasi 'Point of Control' (POC) di mana sebagian besar bisnis ditransaksikan.",
+        "deep_dive": "Ini membangun histogram pada sumbu Y. 'Area Nilai' berisi 70% dari volume. Harga di atas Area Nilai adalah 'Tertinggi Tidak Adil'. Harga di bawah ini adalah 'Terendah Tidak Adil'. Pasar selalu mencoba untuk kembali ke POC kecuali ada sesuatu yang mendasar berubah.",
+        "council_debate": "{\"geopolitics\": \"Rantai Pasokan membuat node. Ketika Rusia dikenai sanksi, Profil Volume Minyak bergeser ke atas. 'Nilai wajar' lama $60 menjadi tidak relevan. Profil Volume menunjukkan kepada kita bahwa tingkat 'Penerimaan' baru adalah $85. Kami memperdagangkan realitas baru, bukan sejarah.\", \"macro\": \"Inflasi mengatur ulang papan. Profil Volume menunjukkan kepada kita 'Harga Lengket'. Jika CPI mencetak tinggi, tetapi harga tidak dapat bertahan di atas node volume tinggi (Resistance), ketakutan inflasi adalah palsu. Pasar 'Menolak' harga yang lebih tinggi.\", \"quant\": \"Kami meng-arb Area Nilai. Jika harga melayang keluar dari Area Nilai (VA) tanpa dukungan volume, kami memudarkannya kembali ke POC. Secara statistik, ini adalah perdagangan probabilitas tertinggi di pasar berjangka. Aturan 80%: Jika kita membuka di luar VA tetapi berdagang kembali, kita akan melintasi seluruh VA.\", \"technical\": \"Dukungan bukanlah garis; itu adalah tembok bata pesanan. Profil Volume menunjukkan dengan tepat seberapa tebal dinding itu. 'High Volume Node' (HVN) bertindak sebagai magnet dan dukungan untuk memantul. 'Low Volume Node' (LVN) adalah vakum—harga akan melesat melaluinya dengan cepat.\", \"policy\": \"Intervensi Bank Sentral sering terjadi pada Low Volume Node untuk menghentikan kehancuran. Mereka melangkah ke dalam ruang hampa. Profil Volume memungkinkan kita untuk melihat di mana pasar 'tipis' dan rentan terhadap manipulasi.\", \"tech\": \"Di Crypto, token baru tidak memiliki profil. Bitcoin memiliki profil satu dekade. Kami menggunakan Profil Volume Rentang Tetap di Bitcoin untuk menemukan 'Basis Biaya' dari bull run terakhir. Menggunakan POC bull run 2021 memberi tahu kami persis di mana pasar bear 2022 akan mencapai titik terendah.\"}",
+        "forecast_risks": "Peralihan Konteks. Profil Volume kemarin berguna, tetapi jika berita berubah (misalnya, Perang), node lama tidak ada artinya. Jangan menukar profil dari rezim yang berbeda.",
+        "gms_conclusion": "Grafik standar menunjukkan ke mana harga pergi. Profil Volume menunjukkan di mana harga ingin tinggal."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:35:00+00:00"
+}

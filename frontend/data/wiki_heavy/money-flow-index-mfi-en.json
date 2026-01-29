@@ -1,0 +1,16 @@
+{
+    "slug": "money-flow-index-mfi",
+    "lang": "EN",
+    "title": "MFI (Money Flow Index)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Volume-Weighted RSI. MFI adds volume to the Relative Strength Index (RSI). It doesn't just care about price moves; it cares about the *conviction* behind the moves. It tells you if 'Smart Money' is secretly buying or selling.",
+        "deep_dive": "Calculated using Typical Price and Volume. Like RSI, it ranges from 0 to 100. Over 80 is Overbought. Under 20 is Oversold. But unlike RSI, a divergence in MFI is much more powerful because it implies volume is contradicting price.",
+        "council_debate": "{\"geopolitics\": \"Capital Flight leaves tracks. When a country is in crisis, price might be held up by central bank intervention, but MFI will crash because real volume is fleeing. We use MFI to spot 'Fake Stability' in emerging market currencies.\", \"macro\": \"Liquidity drives markets. MFI is a proxy for liquidity flow into an asset. When global M2 (Money Supply) rises, we see MFI across all assets rise. It is the rising tide lifting all boats.\", \"quant\": \"We look for 'Volume Divergence'. If a stock hits a new high on low volume (low MFI), it's a 'Bull Trap'. We short these exhaustion moves. Conversely, a sell-off on low volume (High MFI relative to price) is a buy.\", \"technical\": \"The '80/20 Rule'. When MFI exceeds 80 and then breaks back below 80, it is a stronger sell signal than RSI because it means buying *volume* has dried up, not just momentum.\", \"policy\": \"Central Banks buy bonds to manipulate rates. This creates 'Artificial Volume'. MFI can be distorted in bond markets by QE (Quantitative Easing). We adjust MFI for central bank balance sheet changes.\", \"tech\": \"In Crypto, wash trading is rampant. MFI can be faked on small exchanges. We only use MFI on high-liquidity exchanges (Binance, Coinbase). If Bitcoin price is flat but MFI is rising, 'Whales' are accumulating. Buy.\", \"gms_conclusion\": \"RSI is for speed. MFI is for truth. Use MFI to see if there is real money behind the move.\"}",
+        "forecast_risks": "Low Volume Drift. In low volume holiday markets, MFI can give erratic signals because small orders move the index too much. Requires liquid markets to work.",
+        "gms_conclusion": "RSI is for speed. MFI is for truth. Use MFI to see if there is real money behind the move."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:30:00+00:00"
+}

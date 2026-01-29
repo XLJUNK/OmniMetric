@@ -1,0 +1,16 @@
+{
+    "slug": "chaikin-volatility",
+    "lang": "EN",
+    "title": "Chaikin Volatility",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "The 'Calm Before the Storm' detector. Chaikin Volatility measures the rate of change of the trading range. It spots market tops (complacency) and market bottoms (panic) based on the expansion and contraction of price movement.",
+        "deep_dive": "Developed by Marc Chaikin. Unlike ATR (absolute value), this is a percentage change oscillator. When volatility is extremely low for a long time, it predicts a violent breakout. When it is extremely high, it predicts a reversal.",
+        "council_debate": "{\"geopolitics\": \"Complacency is the enemy. When Chaikin Volatility hits multi-year lows, the market is ignoring geopolitical risk. This is the calm before the storm. Buy puts (protection) when volatility is 'dead'.\", \"macro\": \"Economic stability (Goldilocks) kills volatility. Chaikin Volatility drops during boom times. But 'Minsky Moments' happen when stability breeds instability. A sudden spike in Chaikin Volatility from a low base signals the macro regime has broken.\", \"quant\": \"Volatility Mean Reversion. We short volatility when it is historically high (selling options) and buy volatility when it is historically low. Chaikin Volatility gives us the relative percentile rank of fear.\", \"technical\": \"Divergence. Price makes a new high, but Chaikin Volatility makes a lower high. This means the rally is losing energy. The 'dumb money' is still buying, but the 'smart money' has stopped pushing volatility.\", \"policy\": \"The 'Greenspan Put' suppresses volatility. But eventually, the dam breaks. Watch for Chaikin Volatility to spike *despite* Fed reassurance. That means the market has lost faith in the central bank.\", \"tech\": \"In Crypto, low volatility is suspicious. Bitcoin cannot stay stable for long. A flat Chaikin Volatility line usually precedes a 20% move. We straddle the market (Buy Call + Buy Put) whenever this flatline happens.\"}",
+        "forecast_risks": "The 'Widowmaker' Trade. Volatility can stay low for irrational amounts of time (e.g., 2017). Betting on a volatility spike too early will bleed your account through theta decay (time decay).",
+        "gms_conclusion": "Volatility is cyclical. It breathes in (low) and breathes out (high). Use Chaikin Volatility to time the breath."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:00:00+00:00"
+}

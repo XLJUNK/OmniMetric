@@ -1,0 +1,16 @@
+{
+    "slug": "cci-commodity-channel-index",
+    "lang": "ES",
+    "title": "CCI (Índice de Canal de Productos Básicos)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "El buscador de 'Desviación Cíclica'. El CCI mide el nivel actual de precios en relación con un nivel de precios promedio durante un período de tiempo determinado. Se utiliza principalmente para detectar nuevas tendencias o condiciones extremas. +100/-100 son los niveles clave.",
+        "deep_dive": "Donald Lambert diseñó CCI para productos básicos, que son cíclicos. Es ilimitado (a diferencia de RSI). Lecturas altas significan que los precios son inusualmente altos en comparación con el promedio. Un movimiento por encima de +100 implica que está comenzando una fuerte tendencia alcista.",
+        "council_debate": "{\"geopolitics\": \"Las materias primas reaccionan violentamente a los choques de oferta (guerra). CCI captura estos choques mejor que RSI porque no tiene tope. Cuando el CCI del petróleo llega a +300 durante una guerra, refleja con precisión la demanda de pánico 'infinita'.\", \"macro\": \"Los ciclos de inflación son ciclos de materias primas. Usamos CCI mensual en el índice CRB para determinar si estamos en un régimen de 'Activos Duros' o un régimen de 'Activos de Papel'. CCI > 0 en el gráfico mensual significa poseer activos reales.\", \"quant\": \"Usamos CCI para 'Rupturas de Momento'. La mayoría de los indicadores dicen vender cuando hay sobrecompra. CCI dice COMPRAR cuando cruza por encima de +100. Es una señal contra-intuitiva que funciona bien en mercados de fuerte impulso.\", \"technical\": \"Busca el 'Rechazo de la Línea Cero' (Zero Line Reject). En una tendencia alcista, el precio corrige, el CCI cae a cerca de 0, luego rebota hacia arriba. Este es el punto de entrada perfecto 'Comprar la Caída'. Confirma que la tendencia sigue viva.\", \"policy\": \"Las decisiones de la OPEP impulsan el CCI del petróleo. Cuando la OPEP recorta la producción, el CCI del petróleo cruza +100. Esta es una señal de tendencia impulsada por políticas. No pelees contra la OPEP, y no pelees contra la ruptura del CCI.\", \"tech\": \"Bitcoin imita una mercancía más que una acción. CCI funciona excepcionalmente bien en los gráficos semanales de Bitcoin. Un cierre semanal por encima de +100 a menudo marca el inicio de una carrera alcista de 6 meses.\"}",
+        "forecast_risks": "Látigos en rangos estrechos. El CCI es muy sensible. En un mercado agitado, cruzará +100 y -100 repetidamente, generando señales de ruptura falsas. Debe filtrar significativamente con líneas de tendencia.",
+        "gms_conclusion": "Para Materias Primas y Cripto, CCI es superior a RSI. Respeta el potencial ilimitado de la manía."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:00:00+00:00"
+}

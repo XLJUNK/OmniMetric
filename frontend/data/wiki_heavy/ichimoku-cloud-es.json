@@ -1,0 +1,16 @@
+{
+    "slug": "ichimoku-cloud",
+    "lang": "ES",
+    "title": "Nube de Ichimoku (Ichimoku Kinko Hyo)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "El 'Gráfico de Equilibrio de un Vistazo'. Proporciona una imagen completa de soporte, resistencia, dirección de la tendencia e impulso, todo de un vistazo. Es el estándar de oro para el análisis técnico japonés.",
+        "deep_dive": "La 'Nube' (Kumo) representa el equilibrio de precios pasado, presente y futuro. Si el precio está por encima de la Nube, la tendencia es alcista. Si está por debajo, bajista. El grosor de la Nube indica la volatilidad y la fuerza del soporte/resistencia.",
+        "council_debate": "{\"geopolitics\": \"Ichimoku fue diseñado antes de las computadoras para visualizar el equilibrio del mercado. Funciona mejor en gráficos diarios/semanales, lo que lo hace perfecto para evaluar cambios geopolíticos a largo plazo donde el ruido a corto plazo es irrelevante.\", \"macro\": \"El 'Tramo de Retraso' (Chikou Span) es el componente más subestimado. Compara el precio de hoy con el de hace 26 días. Si el precio de hoy es más alto, se confirma el impulso. Valida la tesis macro con la acción del precio.\", \"quant\": \"Los números 9, 26, 52 se derivan de la semana comercial japonesa tradicional (6 días). Los cuantos modernos ajustan estos a 7, 22, 44, pero los ajustes originales aún funcionan porque 'todos los miran'. Es una profecía autocumplida.\", \"technical\": \"El 'Giro de Kumo' (cuando la nube cambia de color) predice una fecha futura de inversión de tendencia. Es un indicador de ciclo de tiempo. Observamos los giros exactamente cuando la nube se tuerce en el futuro.\", \"policy\": \"Los cambios en la política del banco central tardan en digerirse. La gruesa 'Nube Futura' representa esta inercia institucional. Una nube delgada significa 'consenso débil' y se rompe fácilmente por una sorpresa política.\", \"tech\": \"Debido a que Ichimoku es 'visual', es menos propenso a las cacerías de stop de HFT que líneas distintas como las medias móviles. La Nube es una zona, no una línea, lo que permite que el precio 'respire' sin detener a los tenedores a largo plazo.\"}",
+        "forecast_risks": "Parálisis por complejidad. El gráfico parece caótico para los principiantes. Además, la Nube es un indicador rezagado; confirma tendencias pero no atrapa fondos. No lo use para operar contra la tendencia.",
+        "gms_conclusion": "Si el precio está en la Nube, el mercado no tiene tendencia (Equilibrio). No haga nada. Espere la ruptura."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T14:30:00+00:00"
+}

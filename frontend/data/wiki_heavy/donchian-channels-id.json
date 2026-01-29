@@ -1,0 +1,16 @@
+{
+    "slug": "donchian-channels",
+    "lang": "ID",
+    "title": "Saluran Donchian (Donchian Channels)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Mesin 'Turtle Trader'. Saluran Donchian hanya memplot titik tertinggi tertinggi dan terendah terendah dari periode N masa lalu (biasanya 20 atau 55). Ini adalah bentuk paling murni dari tren breakout berikut. Jika harga membuat level tertinggi baru 20 hari, Anda membeli. Tidak ada pertanyaan yang diajukan.",
+        "deep_dive": "Dibuat terkenal oleh Richard Dennis dan Turtle Traders. Logikanya sederhana: Tren pada dasarnya terdiri dari tertinggi baru (tren naik) atau terendah baru (tren turun). Dengan membeli setiap tertinggi baru, Anda menjamin bahwa Anda tidak akan pernah melewatkan tren utama.",
+        "council_debate": "{\"geopolitics\": \"Tren muncul ketika rezim geopolitik berubah. Saluran Donchian adalah alat terbaik untuk menangkap 'Pergeseran Rezim'. Ketika sanksi menghantam suatu negara, mata uangnya membuat level terendah baru 55 hari. Kami segera memendekkannya (short).\", \"macro\": \"Supercycle Komoditas ditangkap dengan sempurna oleh Saluran Donchian. Kami tidak peduli dengan 'nilai wajar'. Jika Tembaga membuat level tertinggi baru 55 minggu, kami panjang (long). Kendala pasokan selalu muncul dalam harga terlebih dahulu.\", \"quant\": \"'Whipsaw' adalah pembunuhnya. Tingkat kemenangan hanya 30-40%. Tetapi pemenangnya adalah 10x dari yang kalah. Sistem Donchian murni membutuhkan diversifikasi besar-besaran untuk bertahan dari pasar samping.\", \"technical\": \"'Teori Kotak'. Saluran Donchian memvisualisasikan 'Kotak Darvas'. Kami mencari tekanan (saluran sempit) diikuti oleh ekspansi (penembusan). Semakin lama saluran itu datar, semakin eksplosif gerakannya.\", \"policy\": \"Bank Sentral mencoba membatasi hasil. Ketika Hasil 10 Tahun menembus Saluran Donchian atas, pasar melanggar The Fed. Itu adalah sinyal 'Kesalahan Kebijakan'.\", \"tech\": \"Di Crypto, FOMO mendorong harga. Level tertinggi baru 20 hari di Bitcoin menarik banjir ritel. Saluran Donchian bekerja sangat baik di pasar bull crypto karena momentumnya rekursif.\"}",
+        "forecast_risks": "'Penembusan Palsu'. Di pasar modern, algo berburu berhenti tepat di atas level tertinggi 20 hari. Mereka memicu penembusan untuk menjebak kenaikan, lalu membalikkan. Anda memerlukan 'Filter' (seperti ADX atau Filter Waktu) untuk mengonfirmasi bahwa penembusan itu nyata.",
+        "gms_conclusion": "Alat tren primitif namun kuat. Brutal di pasar yang memotong, legendaris di pasar yang sedang tren. Gunakan untuk tren 'Makro', bukan perdagangan harian."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:15:00+00:00"
+}

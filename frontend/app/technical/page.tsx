@@ -1,10 +1,10 @@
 import React from 'react';
 import { DICTIONARY, LangType } from '@/data/dictionary';
-import { Activity } from 'lucide-react';
+import { Activity, BookOpen, ArrowRight } from 'lucide-react';
 import { DynamicStructuredData } from '@/components/DynamicStructuredData';
 import { Metadata } from 'next';
 import { WikiSearch } from '@/components/WikiSearch';
-import { getWikiData } from '@/lib/wiki';
+import { getWikiData, slugify } from '@/lib/wiki';
 import { LanguageSelector } from '@/components/LanguageSelector';
 import { getMultilingualMetadata } from '@/data/seo';
 
@@ -156,44 +156,91 @@ export default async function TechnicalPage({ searchParams }: { searchParams: Pr
                 </div>
 
                 <div className="space-y-16">
-                    {technicalData.map((category, catIndex) => (
-                        <section key={catIndex} className="scroll-mt-24">
-                            <h2 className={`text-xl md:text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-8 flex items-center gap-3 ${isRTL ? 'border-r-4 pr-4 text-right' : 'border-l-4 pl-4'} border-purple-500`}>
-                                {category.category}
-                            </h2>
+                    {(() => {
+                        const availableWikiItems = getWikiData(lang);
+                        // Using imported slugify from '@/lib/wiki' directly
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {category.indicators.map((indicator, index) => (
-                                    <div
-                                        key={index}
-                                        className="group relative bg-transparent dark:bg-[#0A0A0A] border border-slate-200 dark:border-[#1E293B] hover:border-purple-500/50 transition-colors duration-300 rounded-xl overflow-hidden shadow-lg hover:shadow-purple-500/10"
-                                    >
-                                        <div className="p-6 flex flex-col h-full">
-                                            <div className={`flex items-start justify-between mb-4`}>
-                                                <h3 className={`font-bold text-lg text-slate-800 dark:text-slate-100 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors ${isRTL ? 'text-right' : ''}`}>
-                                                    {indicator.name}
-                                                </h3>
-                                                <Activity className={`w-5 h-5 text-slate-400 dark:text-slate-600 group-hover:text-purple-500 transition-colors flex-shrink-0 ${isRTL ? 'ml-0 mr-3' : 'ml-3'}`} />
+                        const hasWiki = (slug: string) => {
+                            return availableWikiItems.some(i => i.slug === slug);
+                        };
+
+                        return technicalData.map((category, catIndex) => (
+                            <section key={catIndex} className="scroll-mt-24">
+                                <h2 className={`text-xl md:text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-8 flex items-center gap-3 ${isRTL ? 'border-r-4 pr-4 text-right' : 'border-l-4 pl-4'} border-purple-500`}>
+                                    {category.category}
+                                </h2>
+
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                    {category.indicators.map((indicator, index) => {
+                                        // Get canonical English name for slug generation
+                                        // Parallel indexing ensures we get the matching English indicator
+                                        const enIndicator = technicalDataEn[catIndex]?.indicators[index];
+                                        const canonicalName = enIndicator?.name || indicator.name;
+                                        const wikiSlug = slugify(canonicalName);
+                                        const showWiki = hasWiki(wikiSlug);
+
+                                        return (
+                                            <div
+                                                key={index}
+                                                className="group relative bg-transparent dark:bg-[#0A0A0A] border border-slate-200 dark:border-[#1E293B] hover:border-purple-500/50 transition-colors duration-300 rounded-xl overflow-hidden shadow-lg hover:shadow-purple-500/10"
+                                            >
+                                                <div className="p-6 flex flex-col h-full">
+                                                    <div className={`flex items-start justify-between mb-4`}>
+                                                        {showWiki ? (
+                                                            <a href={`/${lang.toLowerCase()}/wiki/${wikiSlug}`} className="group/title flex items-center gap-3 w-full hover:opacity-80 transition-opacity">
+                                                                <h3 className={`font-bold text-lg text-slate-800 dark:text-slate-100 group-hover/title:text-purple-500 transition-colors ${isRTL ? 'text-right' : ''}`}>
+                                                                    {indicator.name}
+                                                                </h3>
+                                                                <Activity className={`w-5 h-5 text-slate-400 dark:text-slate-600 group-hover/title:text-purple-500 transition-colors flex-shrink-0 ${isRTL ? 'mr-auto' : 'ml-auto'}`} />
+                                                            </a>
+                                                        ) : (
+                                                            <>
+                                                                <h3 className={`font-bold text-lg text-slate-800 dark:text-slate-100 transition-colors ${isRTL ? 'text-right' : ''}`}>
+                                                                    {indicator.name}
+                                                                </h3>
+                                                                <Activity className={`w-5 h-5 text-slate-400 dark:text-slate-600 transition-colors flex-shrink-0 ${isRTL ? 'mr-auto' : 'ml-auto'}`} />
+                                                            </>
+                                                        )}
+                                                    </div>
+
+                                                    <p className={`text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 flex-grow ${isRTL ? 'text-right' : ''}`}>
+                                                        {indicator.description}
+                                                    </p>
+
+                                                    <div className={`mt-auto pt-6 border-t border-slate-100 dark:border-[#1E293B] bg-transparent dark:bg-[#111111] -mx-6 -mb-6 p-6`}>
+                                                        <div className={`${isRTL ? 'text-right' : ''} mb-4`}>
+                                                            <p className="text-xs font-mono text-purple-600 dark:text-purple-400 mb-1 font-bold uppercase tracking-wider">
+                                                                {isJa ? '見方・基準' : (lang === 'CN' ? '用法 / 基准' : (lang === 'ES' ? 'USO / REFERENCIA' : (lang === 'AR' ? 'الاستخدام / المعيار' : (lang === 'HI' ? 'उपयोग / मानदंड' : (lang === 'ID' ? 'PENGGUNAAN / TOLOK UKUR' : 'USAGE / BENCHMARK')))))}
+                                                            </p>
+                                                            <p className="text-xs text-slate-700 dark:text-slate-300 font-medium mb-2">
+                                                                {indicator.usage}
+                                                            </p>
+                                                        </div>
+
+                                                        {/* Wiki Link */}
+                                                        {showWiki && (
+                                                            <div className="mt-4">
+                                                                <a
+                                                                    href={`/${lang.toLowerCase()}/wiki/${wikiSlug}`}
+                                                                    className="group/btn relative w-full flex items-center justify-start pl-6 gap-3 py-4 bg-gradient-to-r from-purple-600 to-fuchsia-600 hover:from-purple-500 hover:to-fuchsia-500 text-white text-[13px] font-bold uppercase tracking-widest rounded-xl shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30 transition-all duration-300 transform hover:-translate-y-0.5 overflow-hidden"
+                                                                >
+                                                                    <span className="absolute inset-0 bg-white/20 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></span>
+                                                                    <BookOpen className="w-5 h-5 relative z-10 text-purple-100" />
+                                                                    <span className="relative z-10">{DICTIONARY[lang]?.labels?.wiki_deep_dive || "Deep Dive Analysis"}</span>
+                                                                    <ArrowRight className="w-4 h-4 ml-auto mr-6 relative z-10 opacity-70 group-hover/btn:translate-x-1 transition-transform" />
+                                                                </a>
+                                                            </div>
+                                                        )}
+                                                    </div>
+                                                </div>
                                             </div>
-
-                                            <p className={`text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6 flex-grow ${isRTL ? 'text-right' : ''}`}>
-                                                {indicator.description}
-                                            </p>
-
-                                            <div className={`mt-auto pt-4 border-t border-slate-100 dark:border-[#1E293B] bg-transparent dark:bg-[#111111] -mx-6 -mb-6 p-4 ${isRTL ? 'text-right' : ''}`}>
-                                                <p className="text-xs font-mono text-purple-600 dark:text-purple-400 mb-1 font-bold uppercase tracking-wider">
-                                                    {isJa ? '見方・基準' : (lang === 'CN' ? '用法 / 基准' : (lang === 'ES' ? 'USO / REFERENCIA' : (lang === 'AR' ? 'الاستخدام / المعيار' : (lang === 'HI' ? 'उपयोग / मानदंड' : (lang === 'ID' ? 'PENGGUNAAN / TOLOK UKUR' : 'USAGE / BENCHMARK')))))}
-                                                </p>
-                                                <p className="text-xs text-slate-700 dark:text-slate-300 font-medium">
-                                                    {indicator.usage}
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </section>
-                    ))}
+                                        )
+                                    })
+                                    }
+                                </div>
+                            </section>
+                        ));
+                    })()}
                 </div>
 
                 <footer className="mt-20 pt-8 border-t border-slate-200 dark:border-[#1E293B] text-center">

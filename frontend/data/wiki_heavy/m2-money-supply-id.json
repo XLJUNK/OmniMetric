@@ -1,0 +1,16 @@
+{
+    "slug": "m2-money-supply",
+    "lang": "ID",
+    "title": "Pasokan Uang M2",
+    "type": "indicator",
+    "category": "Liquidity",
+    "sections": {
+        "summary": "M2 mengukur total pasokan uang, termasuk uang tunai, deposito giro, dan 'uang dekat' seperti tabungan dan sekuritas pasar uang. Ini adalah tangki bahan bakar ekonomi dan pendorong inflasi jangka panjang.",
+        "deep_dive": "Friedman berkata 'Inflasi selalu dan di mana saja merupakan fenomena moneter.' Pertumbuhan M2 yang melampaui pertumbuhan PDB menyebabkan inflasi. Sebaliknya, kontraksi M2 (yang terjadi pada 2023-2024 untuk pertama kalinya dalam beberapa dekade) adalah kekuatan deflasi yang kuat.",
+        "council_debate": "{\"geopolitics\": \"Status USD sebagai mata uang cadangan global memungkinkan AS mengekspor inflasi dengan memperluas M2. Namun, negara-negara BRICS mengamati penurunan nilai ini dengan cermat sebagai alasan untuk mendedeolarisasi jalur penyelesaian.\", \"macro\": \"Kami mengamati 'Marshallian K' (M2 / PDB). Ketika rasio ini melonjak, gelembung aset terbentuk. Ketika runtuh, krisis likuiditas terjadi. Saat ini, M2 stabil, tetapi 'kecepatan' uang itu meningkat karena efisiensi AI.\", \"quant\": \"Ada jeda 12-18 bulan yang terkenal antara puncak M2 dan puncak IHK. Suntikan M2 besar-besaran tahun 2020 menyebabkan inflasi 2022. Kontraksi 2023 menunjukkan disinflasi akan bertahan hingga 2026.\", \"technical\": \"M2 tidak memiliki grafik perdagangan, tetapi 'Perubahan Tahunan'-nya adalah lapisan kunci untuk S&P 500. Saham berjuang untuk reli secara berkelanjutan ketika M2 berkontraksi (impuls likuiditas negatif).\", \"policy\": \"The Fed mengendalikan M2 melalui QT (Pengetatan Kuantitatif). Dengan membiarkan obligasi jatuh tempo dari neraca mereka, mereka secara efektif menghapus M2 dari sistem. Ini adalah pembunuh diam-diam gelembung spekulatif.\", \"tech\": \"Stablecoin (USDT, USDC) adalah 'Bayangan M2' baru. Mereka menyelesaikan triliunan volume tetapi tidak sepenuhnya ditangkap dalam statistik M2 Fed tradisional. Kami memverifikasi kecepatan stablecoin on-chain untuk mendapatkan gambaran 'True M2'.\"}",
+        "forecast_risks": "Risikonya adalah 'Perangkap Likuiditas' di mana M2 meluas, tetapi uang tidak beredar (Kecepatan turun), menyebabkan pertumbuhan stagnan meskipun dicetak. Atau, 'kesalahan kebijakan' di mana QT menguras M2 terlalu cepat, menghancurkan pasar repo.",
+        "gms_conclusion": "Uang itu penting. Jika M2 tumbuh 5-6%, saham bisa reli. Jika M2 negatif, uang tunai adalah raja. Saat ini, kita melihat fase 'Re-liquefication' dimulai."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T13:40:00+00:00"
+}

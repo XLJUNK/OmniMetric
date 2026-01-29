@@ -1,0 +1,16 @@
+{
+    "slug": "ichimoku-cloud",
+    "lang": "EN",
+    "title": "Ichimoku Cloud (Ichimoku Kinko Hyo)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "The 'One Glance Equilibrium Chart'. It provides a complete picture of support, resistance, trend direction, and momentum all in one glance. It is the gold standard for Japanese technical analysis.",
+        "deep_dive": "The 'Cloud' (Kumo) represents the past, present, and future price equilibrium. If price is above the Cloud, the trend is bullish. If below, bearish. The Cloud thickness indicates volatility and strength of support/resistance.",
+        "council_debate": "{\"geopolitics\": \"Ichimoku was designed before computers to visualize market balance. It works best on daily/weekly charts, making it perfect for assessing long-term geopolitical shifts where short-term noise is irrelevant.\", \"macro\": \"The 'Lagging Span' (Chikou Span) is the most underrated component. It compares today's price to 26 days ago. If today's price is higher, momentum is confirmed. It validates macro thesis with price action.\", \"quant\": \"The numbers 9, 26, 52 are derived from the traditional Japanese trading week (6 days). Modern quants adjust these to 7, 22, 44, but the original settings still work because 'everyone looks at them'. It is a self-fulfilling prophecy.\", \"technical\": \"The 'Kumo Twist' (when the cloud changes color) predicts a future date of trend reversal. It is a time-cycle indicator. We watch for turns exactly when the cloud twists in the future.\", \"policy\": \"Central bank policy shifts take time to digest. The thick 'Future Cloud' represents this institutional inertia. A thin cloud means 'weak consensus' and is easily broken by a policy surprise.\", \"tech\": \"Because Ichimoku is 'visual', it is less prone to HFT stop-hunts than distinct lines like moving averages. The Cloud is a zone, not a line, allowing for price to 'breathe' without stopping out long-term holders.\"}",
+        "forecast_risks": "Complexity paralysis. The chart looks chaotic to beginners. Also, the Cloud is a lagging indicator; it confirms trends but does not catch bottoms. Do not use it for counter-trend trading.",
+        "gms_conclusion": "If price is in the Cloud, the market is trendless (Equilibrium). Do nothing. Wait for the breakout."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T14:30:00+00:00"
+}

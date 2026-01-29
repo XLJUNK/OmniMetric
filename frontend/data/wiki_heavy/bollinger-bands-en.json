@@ -1,0 +1,16 @@
+{
+    "slug": "bollinger-bands",
+    "lang": "EN",
+    "title": "Bollinger Bands",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Bollinger Bands measure volatility. They answer the question: 'Is price quiet or loud?' When the bands squeeze, an explosion is coming. When they are wide, the move is exhausted.",
+        "deep_dive": "The bands consist of a 20-Day SMA (middle) and two standard deviations +/- (upper/lower). Statistics say 95% of price action should stay within the bands. When price touches the band, it is a significant event.",
+        "council_debate": "{\"geopolitics\": \"Geopolitical shocks cause 'Band Walking'. This is when price rides the Upper or Lower band continuously. This signals a Black Swan event where normal statistics fail. Don't fade a band walk caused by war.\", \"macro\": \"In low volatility regimes (Goldilocks economy), the bands are narrow. This complacency is dangerous. We use the 'BandWidth' indicator to predict when the macro environment is about to shift from calm to storm.\", \"quant\": \"We trade the 'Mean Reversion'. If price hits the Upper Band but the RSI is diverging, we short. We bet on a return to the 20-Day SMA. It is a high win-rate strategy in range-bound markets.\", \"technical\": \"The 'Bollinger Squeeze' is the most powerful setup. When volatility collapses to historic lows, energy is built up. The subsequent breakout is usually explosive and trends for months. We buy the breakout of the squeeze.\", \"policy\": \"Central Banks suppress volatility (The 'Fed Put'). This artificially compresses the bands. When the Fed loses control, the bands expand violently, usually to the downside.\", \"tech\": \"Algos act as 'Mean Reversion Machines' at the bands. They sell the Upper Band and buy the Lower Band automatically. This creates self-fulfilling support and resistance levels.\"}",
+        "forecast_risks": "The 'Head Fake'. Often, price breaks out of a squeeze in one direction, then immediately reverses and explodes in the opposite direction. Wait for a confirmed daily close outside the band.",
+        "gms_conclusion": "Volatility is cyclical. Low volatility leads to high volatility. The Bands tell you when the calm is about to end."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T14:00:00+00:00"
+}

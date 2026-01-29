@@ -1,0 +1,16 @@
+{
+    "slug": "rsi-relative-strength-index",
+    "lang": "EN",
+    "title": "RSI (Relative Strength Index)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "The 'Speedometer' of the market. RSI measures the speed and change of price movements. It identifies overbought (greed) and oversold (fear) conditions. 70 is 'Hot', 30 is 'Cold'.",
+        "deep_dive": "RSI oscillates between 0 and 100. Traditionally, >70 is overbought and <30 is oversold. However, in strong trends, RSI can stay overbought for weeks. Divergence (price up, RSI down) is its most powerful signal.",
+        "council_debate": "{\"geopolitics\": \"During geopolitical shocks, RSI hits extreme lows (<20). This is usually the 'Panic Bottom'. We wait for RSI to climb back above 30 to confirm the panic has subsided before buying the dip.\", \"macro\": \"In a structural bull market (Macro Uptrend), RSI rarely hits 30. It finds support at 40-50. If RSI hits 30 in a bull market, it's a generational buying opportunity.\", \"quant\": \"We use 'RSI 2' (2-period RSI) for mean reversion. If RSI(2) < 5, we buy. If RSI(2) > 95, we sell. It captures short-term flippening. Standard RSI(14) is too slow for HFT.\", \"technical\": \"'Failure Swings' are the hidden gem of RSI. A Failure Swing Top happens when RSI rises above 70, drops, rises again but fails to cross 70, and then breaks the previous low. It signals a reversal without needing Price Divergence.\", \"policy\": \"RSI is useful for currency intervention. When USD/JPY RSI hits 85, the Ministry of Finance is likely to intervene. Policymakers watch momentum extremes to time their actions for maximum impact.\", \"tech\": \"In Crypto alt seasons, RSI can stay at 90+ for a month. Selling just because RSI > 70 in crypto will bankrupt you. You need to wait for the RSI Trendline Break to exit huge pumps.\"}",
+        "forecast_risks": "The 'Overbought Trap'. In a strong parabolic move, RSI > 70 is not a sell signal; it's a 'Strength' signal. Shorting a strong trend just because RSI is overbought is the fastest way to lose money.",
+        "gms_conclusion": "Don't predict the top. Let the RSI Divergence or Failure Swing confirm it. Until then, the trend is your friend, even at RSI 80."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:00:00+00:00"
+}

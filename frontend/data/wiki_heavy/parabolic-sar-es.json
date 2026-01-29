@@ -1,0 +1,16 @@
+{
+    "slug": "parabolic-sar",
+    "lang": "ES",
+    "title": "SAR Parabólico (Stop y Reverso)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "El sistema 'Detener y Revertir'. Es un indicador de stop-loss dinámico diseñado para asegurar ganancias. Asume que el mercado siempre está en tendencia. Cuando los puntos se voltean, inviertes tu posición.",
+        "deep_dive": "Los puntos SAR aparecen debajo del precio en una tendencia alcista y por encima del precio en una tendencia bajista. A medida que la tendencia se acelera, los puntos se aceleran (curva parabólica), ajustando el stop-loss para proteger las ganancias.",
+        "council_debate": "{\"geopolitics\": \"En una guerra o crisis, los mercados se mueven verticalmente. SAR es el MEJOR indicador para capturar movimientos verticales porque se acelera con el precio. Te mantiene en la operación durante el bombeo/descarga de pánico.\", \"macro\": \"El SAR funciona terriblemente en períodos de consolidación macro (por ejemplo, esperando las actas de la Fed). Te hará pedazos. Úsalo solo cuando un catalizador macro claro (Subida de Tasas, Guerra) esté activo.\", \"quant\": \"Usamos SAR para gestionar el riesgo, no para entrar en operaciones. Es un stop dinámico matemático. Configuramos nuestros algoritmos para salir exactamente 1 tick más allá del punto SAR. Elimina la emoción de la salida.\", \"technical\": \"Combina SAR con ADX. Solo toma señales SAR si ADX > 25. Si ADX es bajo, ignora los giros de SAR. Este filtro simple convierte una estrategia perdedora en ganadora.\", \"policy\": \"Los errores de política causan reversiones en 'Forma de V'. SAR es lento para atrapar el fondo exacto de una forma de V, pero captura la carne de la tendencia de recuperación una vez que se establece.\", \"tech\": \"Los mercados criptográficos son impulsados por el impulso. Bitcoin respeta el SAR Parabólico en el gráfico semanalmente. Define toda la Carrera Alcista. Cuando el SAR Semanal se voltea, la Carrera Alcista ha terminado matemáticamente.\"}",
+        "forecast_risks": "Latigazos en mercados laterales. El SAR cambiará constantemente de compra/venta en un rango, generando 10 pequeñas pérdidas seguidas. SOLO funciona en tendencias fuertes.",
+        "gms_conclusion": "La herramienta definitiva de 'Dejar Correr a los Ganadores'. Nunca alejes tu stop-loss de los puntos SAR. Deja que el mercado te saque."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T14:30:00+00:00"
+}

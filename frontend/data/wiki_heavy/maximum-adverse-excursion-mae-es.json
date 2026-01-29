@@ -1,0 +1,15 @@
+{
+    "slug": "maximum-adverse-excursion-mae",
+    "lang": "ES",
+    "title": "MAE (Excursión Adversa Máxima)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "El medidor de tolerancia al dolor. MAE mide la pérdida máxima incurrida por una operación mientras estaba abierta, incluso si finalmente se volvió rentable. Te dice si tu entrada fue precisa o si simplemente tuviste suerte después de sobrevivir a una caída masiva.",
+        "deep_dive": "Se utiliza para diseccionar sistemas comerciales. Si su operación ganadora promedio tiene un MAE de -5% pero su stop loss es -2%, sus stop loss son demasiado ajustados. Si su MAE está constantemente cerca de 0, sus entradas son como francotiradores.",
+        "council_debate": "{\"geopolitics\": \"Las naciones tienen límites MAE. ¿Cuánto dolor puede soportar una población por las sanciones antes de que ocurra un cambio de régimen? Modelamos el 'MAE social' de un país. Si la inflación llega al 50%, ese podría ser el límite de MAE antes de que se desencadene la revolución.\", \"macro\": \"Las recesiones son el MAE del ciclo económico. Medimos la profundidad de la contracción del PIB. Si la economía se recupera pero la reducción (MAE) fue del -10%, el daño estructural (cicatrización) podría ser permanente, limitando el crecimiento futuro.\", \"quant\": \"Optimizamos Stop Losses utilizando nubes MAE. Trazamos la ganancia de cada operación frente a su MAE. Esto crea un diagrama de dispersión. Dibujamos la línea de stop loss justo debajo del grupo 'Noise'. Esto minimiza científicamente el riesgo sin detenerse en operaciones ganadoras.\", \"technical\": \"MAE revela la calidad del soporte. Si el precio prueba un nivel de soporte y el MAE (penetración) es profundo y frecuente, ese soporte es 'poroso' y es probable que se rompa. Preferimos 'rechazos limpios' con bajo MAE.\", \"policy\": \"Los bancos centrales tienen un MAE para el dolor. Tolerarán cierta caída del mercado (-10%), pero si el S&P 500 cae un -20% (su MAE mental), el 'Fed Put' se activa. Intercambiamos el nivel MAE específico del gobernador del Banco Central.\", \"tech\": \"Las liquidaciones de DeFi son eventos MAE. En la agricultura de rendimiento apalancado, usted es rentable hasta que no lo es. Monitoreamos el MAE de las tasas de garantía. Una mecha de precio repentina (MAE alto) puede liquidar una posición incluso si el precio se recupera instantáneamente.\"}",
+        "forecast_risks": "Sesgo de sobreviviente. El análisis MAE a menudo solo analiza las operaciones ganadoras. También debe estudiar la Excursión Favorable Máxima (MFE) y perder operaciones para obtener la imagen completa.\", \"gms_conclusion\": \"El beneficio te dice el destino. MAE te dice cuán accidentado estaba el camino. Prefiere carreteras lisas.\""
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T16:00:00+00:00"
+}

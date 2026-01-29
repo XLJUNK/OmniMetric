@@ -1,0 +1,16 @@
+{
+    "slug": "vix",
+    "lang": "EN",
+    "title": "VIX (Fear Index)",
+    "type": "glossary",
+    "category": "Sentiment",
+    "sections": {
+        "summary": "The VIX (CBOE Volatility Index) measures the stock market's expectation of volatility based on S&P 500 index options. Often called the 'Fear Index', it represents the annualized implied volatility for the next 30 days. Historically, values below 20 indicate stability, while values above 30 signal high distress.",
+        "deep_dive": "In the algorithmic era, VIX dynamics have evolved. The proliferation of 'Vol Control Funds' means VIX spikes trigger mechanical selling, creating feedback loops. Conversely, prolonged periods of low VIX (below 12) incentivize excessive leverage, building up 'hidden kinetic energy' that eventually releases in a 'Volmageddon' style crash.",
+        "council_debate": "{\"geopolitics\": \"VIX is failing to price in geopolitical tail risks. Markets have become desensitized to regional conflicts, treating them as 'buy the dip' events. This complacency suggests the next true geopolitical shock will cause a VIX super-spike (passing 60).\", \"macro\": \"The VIX is artificially suppressed by the 'dispersion trade'—selling index volatility while buying single-stock volatility. This masks the true fragility of the macro environment. We are seeing a 'calm surface, turbulent depth' phenomenon.\", \"quant\": \"Mean reversion is the only law here. My statistical models trigger a 'Hard Short' signal on equities when VIX closes below 11.5 for 3 consecutive days. The probability of a 100% volatility spike within 60 days of such an event is over 70%.\", \"technical\": \"Standard technicals apply inversely. VIX gap-fills are powerful. Currently, the weekly chart shows a massive 'falling wedge'. A breakout above 18 would confirm a trend reversal from the multi-year suppression regime.\", \"policy\": \"The Fed watches financial conditions, and a low VIX equals loose conditions. If VIX stays too low, it forces the Fed to be more hawkish to prevent asset bubbles. Paradoxically, a low VIX increases rate hike risk.\", \"tech\": \"0DTE (Zero Days to Expiration) options have broken the VIX. Hedging happens instantly intraday, so implied volatility doesn't show up in the 30-day VIX calculation. You should be watching VIX1D or CORRA indices for the true 'AI-speed' fear gauge.\"}",
+        "forecast_risks": "The structural risk is a '0DTE Unwind' where an intraday move overwhelms market makers, forcing a VIX spike that isn't reflected until it's too late. Upside risk for assets is a 'Goldilocks' scenario where VIX gently decays to single digits, fueling a melt-up.",
+        "gms_conclusion": "Cautionary stance. The divergence between VIX (low) and Geopolitical Risk (high) is at historical extremes. Relying on VIX as a hedge is dangerous; prefer long-gamma strategies or direct put options."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T13:00:00+00:00"
+}

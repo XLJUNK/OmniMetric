@@ -1,0 +1,16 @@
+{
+    "slug": "macd",
+    "lang": "ES",
+    "title": "MACD (Convergencia/Divergencia de Medias Móviles)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "El 'Rey del Momento'. MACD muestra la relación entre dos medias móviles (generalmente 12 y 26). Señala cuándo el impulso se está acelerando o desacelerando. Es la mejor herramienta para detectar cambios de tendencia.",
+        "deep_dive": "La línea MACD es la diferencia entre la EMA de 12 y la EMA de 26. La 'Línea de Señal' es una EMA de 9 del MACD. El 'Histograma' visualiza la brecha entre ellos. Expansión del Histograma = Aceleración de Tendencia.",
+        "council_debate": "{\"geopolitics\": \"Las noticias políticas golpean al instante. MACD es un indicador rezagado. No use MACD para operar noticias de última hora. Sin embargo, busque la 'Divergencia MACD' DESPUÉS de que la crisis se haya asentado. A menudo marca el punto de inflexión exacto.\", \"macro\": \"Cuando los fundamentos (Macro) y el impulso del precio (MACD) coinciden, ve con 'Todo'. Si la economía está creciendo pero el MACD está cayendo, confíe en el MACD. El impulso lidera los fundamentos.\", \"quant\": \"La divergencia es nuestro Alfa. Cuando el precio hace un Máximo Más Alto, pero el MACD hace un Máximo Más Bajo, es una garantía matemática de que el impulso se está debilitando. Los comerciantes algorítmicos acortan agresivamente estas divergencias.\", \"technical\": \"El 'Giro del Histograma' en la línea cero es la señal de entrada más segura. Confirma que la tendencia se ha invertido matemáticamente. Esperamos a que se cierre la primera barra del nuevo color antes de entrar.\", \"policy\": \"Durante la Flexibilización Cuantitativa (QE), el MACD puede permanecer sobrecomprado durante años. Los osciladores suelen fallar en las burbujas de liquidez. No te pongas corto solo porque el MACD es alto. Ponte corto solo cuando cruce hacia abajo.\", \"tech\": \"Use MACD en marcos de tiempo más altos (Semanal / Mensual) para Cripto. El MACD diario en cripto es demasiado ruidoso. La Cruz Semanal MACD en Bitcoin históricamente ha señalado el inicio y el final de cada ciclo de 4 años.\"}",
+        "forecast_risks": "Cruces Rezagados. Para cuando las líneas MACD se cruzan, una parte significativa del movimiento puede haber terminado. Funciona mejor en tendencias largas y oscilantes, no en rangos estrechos.",
+        "gms_conclusion": "Respeta la Divergencia. Cuando el precio grita 'Arriba' pero el MACD susurra 'Abajo', escucha el susurro."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T15:00:00+00:00"
+}

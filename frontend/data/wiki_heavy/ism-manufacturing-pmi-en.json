@@ -1,0 +1,16 @@
+{
+    "slug": "ism-manufacturing-pmi",
+    "lang": "EN",
+    "title": "ISM Manufacturing PMI",
+    "type": "indicator",
+    "category": "Economy",
+    "sections": {
+        "summary": "The ISM Manufacturing PMI (Purchasing Managers' Index) is a monthly survey of supply chain managers. A reading above 50 indicates expansion; below 50 indicates contraction. It is historically the most reliable leading indicator for US GDP.",
+        "deep_dive": "It tracks 5 key areas: New Orders, Inventory, Production, Supplier Deliveries, and Employment. 'New Orders' is the most forward-looking component. If New Orders are up but Inventories are down, a production boom is imminent.",
+        "council_debate": "{\"geopolitics\": \"Reshoring and 'Friend-shoring' are distorting the data. US manufacturing construction is booming (positive), but actual output is lagging due to labor shortages. Global supply chain fractures make the 'Supplier Deliveries' component volatile.\", \"macro\": \"Watch out for the 'Goods vs. Services' divergence. We've seen a recession in ISM Manufacturing (<50) while ISM Services remained strong. This 'Rolling Recession' creates confusion but prevents a total economic collapse.\", \"quant\": \"We use ISM PMI to time 'Sector Rotation'. When PMI bottoms and turns up, buy Industrials and Materials. When PMI peaks and rolls over, rotate into Defensive (Utilities, Healthcare) stocks.\", \"technical\": \"The 42.5 level is the historical 'Recession Floor'. If PMI breaks below 42.5, a hard landing is virtually guaranteed. The 50 line is the Bull/Bear dividing line.\", \"policy\": \"The Fed rarely hikes rates when ISM is below 45. A deep contraction in manufacturing is a strong signal for rate cuts, often overriding sticky inflation data.\", \"tech\": \"Automation is breaking the link between 'Manufacturing Output' and 'Manufacturing Employment'. We can have high output with low hiring. The PMI Employment sub-index is becoming a less reliable gauge of the overall labor market.\"}",
+        "forecast_risks": "The risk is a 'False Dawn' where PMI bounces briefly due to seasonal adjustments but then collapses again as higher rates finally bite the capital-intensive industrial sector.",
+        "gms_conclusion": "The heartbeat of the physical economy. If ISM PMI is rising from <50 towards 50, it is the most bullish signal for cyclical stocks."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T13:40:00+00:00"
+}

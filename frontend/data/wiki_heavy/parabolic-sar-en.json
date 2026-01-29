@@ -1,0 +1,16 @@
+{
+    "slug": "parabolic-sar",
+    "lang": "EN",
+    "title": "Parabolic SAR (Stop and Reverse)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "The 'Stop and Reverse' system. It is a trailing stop-loss indicator designed to lock in profits. It assumes the market is always trending. When the dots flip, you flip your position.",
+        "deep_dive": "The SAR dots appear below price in an uptrend and above price in a downtrend. As the trend accelerates, the dots accelerate (parabolic curve), tightening the stop-loss to protect gains.",
+        "council_debate": "{\"geopolitics\": \"In war or crisis, markets move vertically. SAR is the BEST indicator for catching vertical moves because it accelerates with price. It keeps you in the trade during the panic pump/dump.\", \"macro\": \"SAR works terribly in macro consolidation periods (e.g., waiting for Fed minutes). It will chop you to pieces. Only use it when a clear macro catalyst (Rate Hike, War) is active.\", \"quant\": \"We use SAR to manage risk, not to enter trades. It is a mathematical trailing stop. We set our algos to exit exactly 1 tick beyond the SAR dot. It removes emotion from the exit.\", \"technical\": \"Combine SAR with ADX. Only take SAR signals if ADX > 25. If ADX is low, ignore the SAR flips. This simple filter turns a losing strategy into a winning one.\", \"policy\": \"Policy errors cause 'V-Shaped' reversals. SAR is slow to catch the exact bottom of a V-shape, but it captures the meat of the recovery trend once it's established.\", \"tech\": \"Crypto markets are momentum-driven. Bitcoin respects Parabolic SAR on the Weekly chart famously. It defines the entire Bull Run. When Weekly SAR flips, the Bull Run is mathematically over.\"}",
+        "forecast_risks": "Whipsaws in sideways markets. The SAR will constantly flip buy/sell in a range, generating 10 small losses in a row. It ONLY works in strong trends.",
+        "gms_conclusion": "The ultimate 'Let Winners Run' tool. Never move your stop-loss away from the SAR dots. Let the market take you out."
+    },
+    "model": "Antigravity-GMS-v1",
+    "generated_at": "2026-01-29T14:30:00+00:00"
+}
