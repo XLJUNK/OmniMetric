@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import { LangType } from '@/data/dictionary';
 import { GlossaryTerm } from '@/types/glossary';
 import { WikiItem } from '@/lib/wiki';
-import { ArrowUp, ArrowDown, BookOpen, Hash, Link as LinkIcon } from 'lucide-react';
+import { ArrowUp, ArrowDown, BookOpen, Hash, Link as LinkIcon, ArrowRight } from 'lucide-react';
 import { AdSenseSlot } from '@/components/AdSenseSlot';
 import { TVPartnerCard } from '@/components/TVPartnerCard';
 import { WikiSearch } from '@/components/WikiSearch';
@@ -147,11 +147,12 @@ export const GlossaryClient = ({ lang, data, pageTitle, pageDesc, searchItems, s
                                                             <div className="mt-6 pt-4 border-t border-slate-100 dark:border-[#1E293B]">
                                                                 <a
                                                                     href={`/${lang.toLowerCase()}/wiki/${item.id}`}
-                                                                    className="group/btn relative w-full flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-sky-500 to-emerald-500 hover:from-sky-400 hover:to-emerald-400 text-white text-xs font-bold uppercase tracking-widest rounded-lg shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 transform hover:-translate-y-0.5 overflow-hidden"
+                                                                    className="group/btn relative w-full flex items-center justify-start pl-6 gap-3 py-4 bg-gradient-to-r from-sky-500 to-emerald-500 hover:from-sky-400 hover:to-emerald-400 text-white text-[13px] font-bold uppercase tracking-widest rounded-xl shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 transform hover:-translate-y-0.5 overflow-hidden"
                                                                 >
                                                                     <span className="absolute inset-0 bg-white/20 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></span>
-                                                                    <BookOpen className="w-4 h-4 relative z-10" />
+                                                                    <BookOpen className="w-5 h-5 relative z-10 text-emerald-100" />
                                                                     <span className="relative z-10">{DICTIONARY[lang]?.labels?.wiki_deep_dive || "Read Full Deep Dive"}</span>
+                                                                    <ArrowRight className="w-4 h-4 ml-auto mr-6 relative z-10 opacity-70 group-hover/btn:translate-x-1 transition-transform" />
                                                                 </a>
                                                             </div>
                                                         )}
