@@ -64,9 +64,15 @@ async function main() {
     // GMS Analysis (High Priority) -> gemini-3-flash
     // News Translation (Routine) -> gemini-2.5-flash
     const isNewsTask = /translator|Translate/i.test(prompt);
-    // V4.7-777: Unified on gemini-2.5-flash for all modules
-    // Allow Environment Variable Override
-    const envModel = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
+    // V4.7-777: Unified Strategy
+    // GMS Analysis -> Use Env Model (default: gemini-3-flash or 2.5-flash)
+    // News Translation -> Force Cheaper Model (gemini-2.5-flash-lite or 1.5-flash) to save quota
+    let envModel = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
+
+    if (isNewsTask) {
+        console.error(`[AI ROUTER] News Translation detected. Offloading to 'gemini-2.5-flash-lite' to save quota.`);
+        envModel = 'gemini-2.5-flash-lite';
+    }
     // Ensure 'google/' prefix is present for Vercel SDK if missing
     const targetModel = envModel.startsWith('google/') ? envModel : `google/${envModel}`;
     const taskName = isNewsTask ? 'NEWS_TRANSLATION' : 'GMS_ANALYSIS';

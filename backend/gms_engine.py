@@ -1375,10 +1375,10 @@ Output JSON:
     
     models = [
         target_model,              # [ENV PRIORITY]
-        "gemini-2.5-flash",        # [PRIMARY] Verified Stable & Fast
-        "gemini-2.0-flash",        # [FALLBACK] Legacy Stable
-        "gemini-1.5-flash",        # [DEEP BACKUP]
-        "gemini-3-flash"           # [EXPERIMENTAL] Low Priority until Stable
+        "gemini-3-flash",          # [TIER 1] High Reasoning (Newest)
+        "gemini-2.5-flash",        # [TIER 2] Standard Balanced
+        "gemini-2.5-flash-lite",   # [TIER 3] Quota Extension (High RPD)
+        "gemini-1.5-flash"         # [TIER 4] Deep Backup
     ]
     
     # Remove duplicates while preserving order
