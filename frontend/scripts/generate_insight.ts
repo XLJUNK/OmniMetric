@@ -141,5 +141,6 @@ async function main() {
             return; // Exit main function successfully
         }
     }
+}
 
-    main();
+main();

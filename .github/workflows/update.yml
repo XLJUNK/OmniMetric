@@ -73,7 +73,8 @@ jobs:
           python backend/gms_engine.py
           
           # FORCE NEWS UPDATE (Fix for empty translations)
-          python backend/fetch_news.py
+          # [DISABLED] Redundant: gms_engine.py already calls fetch_news (Double Billing Fix)
+          # python backend/fetch_news.py
           
           # SKILL COMPLIANCE CHECK (Blocks commit if failed)
           python scripts/verify_skills.py
