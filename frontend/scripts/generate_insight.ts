@@ -64,62 +64,82 @@ async function main() {
     // GMS Analysis (High Priority) -> gemini-3-flash
     // News Translation (Routine) -> gemini-2.5-flash
     const isNewsTask = /translator|Translate/i.test(prompt);
-    // V4.7-777: Unified Strategy
-    // GMS Analysis -> Use Env Model (default: gemini-3-flash or 2.5-flash)
-    // News Translation -> Force Cheaper Model (gemini-2.5-flash-lite) to save quota
-    let envModel = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
+    // V4.7-777: Unified Strategy with Quota Straddling
+    // 1. News Translation -> Rotation: Lite (0-20) -> Standard (21-24) -> High (Emergency)
+    // 2. Others -> Use Env Model (Single Shot, caller handles retry if needed)
+
+    let candidates: string[] = [];
 
     if (isNewsTask) {
-        console.error(`[AI ROUTER] News Translation detected. Offloading to 'gemini-2.5-flash-lite' to save quota.`);
-        envModel = 'gemini-2.5-flash-lite';
+        console.error(`[AI ROUTER] News Translation detected. Strategy: Lite -> Standard -> High (Quota Straddling)`);
+        candidates = [
+            'gemini-2.5-flash-lite', // Primary: Free Tier (Runs 1-20)
+            'gemini-2.5-flash',      // Secondary: Shared Buffer (Runs 21-24)
+            'gemini-3-flash'         // Emergency: High Quality
+        ];
+    } else {
+        // Default behavior for other tasks
+        const envModel = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
+        candidates = [envModel];
     }
-    // Ensure 'google/' prefix is present for Vercel SDK if missing
-    const targetModel = envModel.startsWith('google/') ? envModel : `google/${envModel}`;
-    const taskName = isNewsTask ? 'NEWS_TRANSLATION' : 'GMS_ANALYSIS';
 
-    let result;
-    try {
-        // TRIAL 1: Vercel AI Gateway (Universal V3)
-        console.error(`[AI GATEWAY] [${taskName}] Trial 1: Using ${targetModel}...`);
-        result = await generateText({
-            model: gateway.languageModel(targetModel),
-            prompt: prompt,
-            headers: {
-                'x-vercel-ai-gateway-cache': 'enable',
-                'x-vercel-ai-gateway-cache-ttl': '3600',
-            }
-        });
-        console.error(`[AI GATEWAY] Success: Logic completed.`);
+    for (let i = 0; i < candidates.length; i++) {
+        const modelName = candidates[i];
+        // Ensure 'google/' prefix for Vercel SDK
+        const targetModel = modelName.startsWith('google/') ? modelName : `google/${modelName}`;
+        const taskName = isNewsTask ? 'NEWS_TRANSLATION' : 'GMS_ANALYSIS';
 
-    } catch (error: any) {
-        const errorMsg = error.message || String(error);
-        const isRateLimit = errorMsg.includes('429') || error.statusCode === 429;
+        console.error(`[AI LOOP] Attempt ${i + 1}/${candidates.length}: Using ${targetModel}...`);
 
-        console.error(`[AI GATEWAY] FAILED (Task: ${taskName}, Error: ${errorMsg})`);
-
-        if (isRateLimit) {
-            console.error(`[AI GATEWAY] Trigger: 429 Rate Limit detected. Proceeding to Direct Fallback...`);
-        }
-
-        // TRIAL 2: Direct Google API Fallback (BYOK)
-        // Benefit: Bypasses Gateway Quota, SSL issues, and Rate Limits
-        console.error(`[AI DIRECT] Trial 2: Failing over to Google AI SDK (Direct)...`);
+        let result;
         try {
+            // TRIAL 1: Vercel AI Gateway (Universal V3)
+            // console.error(`[AI GATEWAY] [${taskName}] Trial 1...`); // Reduced verbosity
             result = await generateText({
-                model: google(targetModel.replace('google/', '')),
-                prompt: prompt
+                model: gateway.languageModel(targetModel),
+                prompt: prompt,
+                headers: {
+                    'x-vercel-ai-gateway-cache': 'enable',
+                    'x-vercel-ai-gateway-cache-ttl': '3600',
+                }
             });
-            console.error(`[AI DIRECT] Success: Critical path secured via Direct API.`);
-        } catch (directError: any) {
-            console.error(`[AI FATAL] Both Gateway and Direct API failed: ${directError.message}`);
-            process.exit(1);
+            console.error(`[AI GATEWAY] Success: ${modelName} completed.`);
+
+        } catch (error: any) {
+            const errorMsg = error.message || String(error);
+            const isRateLimit = errorMsg.includes('429') || error.statusCode === 429;
+
+            console.error(`[AI GATEWAY] FAILED (${modelName}): ${errorMsg}`);
+
+            // TRIAL 2: Direct Google API Fallback
+            console.error(`[AI DIRECT] Failing over to Google AI SDK (Direct)...`);
+            try {
+                result = await generateText({
+                    model: google(targetModel.replace('google/', '')),
+                    prompt: prompt
+                });
+                console.error(`[AI DIRECT] Success: ${modelName} secured via Direct API.`);
+            } catch (directError: any) {
+                console.error(`[AI DIRECT] FAILED (${modelName}): ${directError.message}`);
+
+                // If this was the last candidate, or if error is NOT a 429 (and we want to fail fast?), 
+                // strictly speaking we should probably rotate on 429s. 
+                // For robustness, we rotate on ANY failure in this script for News, as the goal is "Just get it done".
+                if (i === candidates.length - 1) {
+                    console.error(`[AI FATAL] All candidates failed.`);
+                    process.exit(1);
+                } else {
+                    console.error(`[AI LOOP] Switching to next model...`);
+                    continue; // Next candidate
+                }
+            }
+        }
+
+        if (result) {
+            // Output ONLY the raw text for Python to capture
+            process.stdout.write(JSON.stringify({ text: result.text }) + '\n');
+            return; // Exit main function successfully
         }
     }
 
-    if (result) {
-        // Output ONLY the raw text for Python to capture
-        process.stdout.write(JSON.stringify({ text: result.text }) + '\n');
-    }
-}
-
-main();
+    main();
