@@ -1,10 +1,10 @@
 {
-    "last_updated": "2026-01-29T22:41:02.516915+00:00",
-    "last_successful_update": "2026-01-29T22:41:02.516921+00:00",
-    "gms_score": 35,
+    "last_updated": "2026-01-29T23:37:53.902953+00:00",
+    "last_successful_update": "2026-01-29T23:37:53.902959+00:00",
+    "gms_score": 36,
     "sector_scores": {
         "STOCKS": 50,
-        "CRYPTO": 25,
+        "CRYPTO": 40,
         "FOREX": 55,
         "COMMODITIES": 55
     },
@@ -578,10 +578,10 @@
             ]
         },
         "BTC": {
-            "price": 84254.31,
+            "price": 84551.2,
             "prev_price": 89184.57,
-            "daily_chg": -5.53,
-            "change_percent": -2.68,
+            "daily_chg": -5.2,
+            "change_percent": -2.33,
             "trend": "DOWN",
             "sparkline": [
                 91027.12,
@@ -605,14 +605,14 @@
                 88267.14,
                 89102.57,
                 89184.57,
-                84254.31
+                84551.2
             ]
         },
         "ETH": {
-            "price": 2808.58,
+            "price": 2819.76,
             "prev_price": 3006.61,
-            "daily_chg": -6.59,
-            "change_percent": -0.26,
+            "daily_chg": -6.21,
+            "change_percent": 0.14,
             "trend": "DOWN",
             "sparkline": [
                 3104.38,
@@ -636,14 +636,14 @@
                 2926.46,
                 3022.21,
                 3006.61,
-                2808.58
+                2819.76
             ]
         },
         "SOL": {
-            "price": 117.42,
+            "price": 117.48,
             "prev_price": 125.12,
-            "daily_chg": -6.16,
-            "change_percent": -1.14,
+            "daily_chg": -6.11,
+            "change_percent": -1.09,
             "trend": "DOWN",
             "sparkline": [
                 138.29,
@@ -667,14 +667,14 @@
                 124.14,
                 127.05,
                 125.12,
-                117.42
+                117.48
             ]
         },
         "DXY": {
-            "price": 96.19,
+            "price": 96.16,
             "prev_price": 96.45,
-            "daily_chg": -0.27,
-            "change_percent": -1.44,
+            "daily_chg": -0.3,
+            "change_percent": -1.47,
             "trend": "DOWN",
             "sparkline": [
                 98.04,
@@ -698,14 +698,14 @@
                 97.04,
                 96.22,
                 96.45,
-                96.19
+                96.16
             ]
         },
         "USDJPY": {
-            "price": 153.02,
+            "price": 152.94,
             "prev_price": 152.45,
-            "daily_chg": 0.38,
-            "change_percent": -3.45,
+            "daily_chg": 0.32,
+            "change_percent": -3.51,
             "trend": "UP",
             "sparkline": [
                 156.01,
@@ -729,14 +729,14 @@
                 155.17,
                 154.34,
                 152.45,
-                153.02
+                152.94
             ]
         },
         "EURUSD": {
             "price": 1.2,
             "prev_price": 1.2,
-            "daily_chg": -0.39,
-            "change_percent": 1.84,
+            "daily_chg": -0.33,
+            "change_percent": 1.9,
             "trend": "DOWN",
             "sparkline": [
                 1.18,
@@ -826,10 +826,10 @@
             ]
         },
         "GOLD": {
-            "price": 5410.8,
+            "price": 5445.7,
             "prev_price": 5301.6,
-            "daily_chg": 2.06,
-            "change_percent": 8.73,
+            "daily_chg": 2.72,
+            "change_percent": 9.43,
             "trend": "UP",
             "sparkline": [
                 4325.1,
@@ -853,14 +853,14 @@
                 5079.7,
                 5079.9,
                 5301.6,
-                5410.8
+                5445.7
             ]
         },
         "OIL": {
-            "price": 65.51,
+            "price": 65.65,
             "prev_price": 63.21,
-            "daily_chg": 3.64,
-            "change_percent": 7.27,
+            "daily_chg": 3.86,
+            "change_percent": 7.5,
             "trend": "UP",
             "sparkline": [
                 58.08,
@@ -884,14 +884,14 @@
                 60.63,
                 62.39,
                 63.21,
-                65.51
+                65.65
             ]
         },
         "COPPER": {
-            "price": 6.28,
+            "price": 6.31,
             "prev_price": 5.89,
-            "daily_chg": 6.61,
-            "change_percent": 6.28,
+            "daily_chg": 7.03,
+            "change_percent": 6.69,
             "trend": "UP",
             "sparkline": [
                 5.49,
@@ -915,14 +915,14 @@
                 5.98,
                 5.83,
                 5.89,
-                6.28
+                6.31
             ]
         },
         "NATGAS": {
-            "price": 3.88,
+            "price": 3.89,
             "prev_price": 7.46,
-            "daily_chg": -48.02,
-            "change_percent": -26.48,
+            "daily_chg": -47.87,
+            "change_percent": -26.27,
             "trend": "DOWN",
             "sparkline": [
                 4.69,
@@ -946,7 +946,7 @@
                 6.8,
                 6.95,
                 7.46,
-                3.88
+                3.89
             ]
         },
         "MOVE": {
@@ -1108,22 +1108,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS status is Defensive at 35. Elevated VIX (fear/volatility) and widening HY spreads signal caution. While DXY (Dollar strength/Liquidity) eased slightly, crypto fell significantly. However, strong Apple sales may show pockets of resilience. Maintain caution, monitoring if fundamental strength can counter volatility.",
+        "content": "GMS Score 36 signals a Defensive market. Momentum pushed the score lower, reflecting caution. VIX (Fear/Volatility) increased, showing heightened anxiety, yet DXY (Dollar strength/Liquidity) slightly weakened. While defensive, this DXY dip with strong commodity gains (Gold, Oil, Copper) suggests capital may rotate into real assets for inflation protection, rather than pure risk-off. Maintain caution but watch DXY and commodities for allocation shifts.",
         "reports": {
-            "JP": "GMSは35で防御的状況。VIX上昇（恐怖/変動性）とHYスプレッド拡大が警戒を示す。DXY（ドル高/流動性）は僅かに軟化したが、仮想通貨は大幅下落。しかし、Appleの好調な売上は回復の兆しを示唆。警戒を維持し、ファンダメンタルズの強さが変動性を吸収できるか注視。",
-            "EN": "GMS status is Defensive at 35. Elevated VIX (fear/volatility) and widening HY spreads signal caution. While DXY (Dollar strength/Liquidity) eased slightly, crypto fell significantly. However, strong Apple sales may show pockets of resilience. Maintain caution, monitoring if fundamental strength can counter volatility.",
-            "CN": "GMS得分为35，处于防御态势。VIX升高（恐惧/波动性）和高收益债券利差扩大表明市场谨慎。尽管美元指数（美元强势/流动性）略有下降，加密货币大幅下跌。然而，苹果强劲的销售额可能预示局部韧性。保持谨慎，观察基本面强度能否抵消波动。",
-            "ES": "El GMS está en 35, indicando Defensa. VIX elevado (miedo/volatilidad) y spreads HY ampliados señalan cautela. Aunque el DXY (fuerza del dólar/liquidez) cedió levemente, las cripto cayeron mucho. No obstante, las fuertes ventas de Apple sugieren resiliencia. Mantener precaución, observando si la fortaleza fundamental puede contrarrestar la volatilidad.",
-            "HI": "जीएमएस स्कोर 35 पर डिफेंसिव स्थिति दर्शाता है। बढ़ा हुआ VIX (डर/अस्थिरता) और विस्तारित HY स्प्रेड सतर्कता का संकेत देते हैं। जबकि DXY (डॉलर की मजबूती/तरलता) थोड़ा कमजोर हुआ, क्रिप्टो में भारी गिरावट आई। हालांकि, Apple की मजबूत बिक्री लचीलापन दिखा सकती है। सावधानी बरतें, देखें कि क्या मौलिक ताकत अस्थिरता को संभाल सकती है।",
-            "ID": "GMS 35 menunjukkan status Defensif. VIX (ketakutan/volatilitas) yang tinggi dan spread HY melebar menandakan kehati-hatian. Meskipun DXY (kekuatan Dolar/Likuiditas) sedikit melemah, kripto jatuh signifikan. Namun, penjualan Apple yang kuat bisa jadi sinyal ketahanan. Tetap waspada, pantau apakah kekuatan fundamental dapat melawan volatilitas.",
-            "AR": "حالة GMS دفاعية عند 35. ارتفاع VIX (الخوف/التقلب) واتساع هوامش HY يشيران للحذر. بينما انخفض مؤشر DXY (قوة الدولار/السيولة) قليلاً، تراجعت العملات الرقمية بشدة. ومع ذلك، قد تشير مبيعات Apple القوية لمرونة محلية. حافظ على الحذر، راقب ما إذا كانت القوة الأساسية قادرة على امتصاص التقلبات."
+            "JP": "GMSスコア36は防御的な市場を示唆。モメンタムはスコアを押し下げ、警戒感を反映。VIX(恐怖/変動性)は上昇し不安を示すも、DXY(ドル高/流動性)はやや下落。防御的ながら、DXY下落と商品高(金、原油、銅)は、資本が純粋なリスクオフでなく、インフレヘッジの現物資産へ移行する可能性を示唆。警戒を維持しつつ、DXYと商品の資本配分シフトを注視。",
+            "EN": "GMS Score 36 signals a Defensive market. Momentum pushed the score lower, reflecting caution. VIX (Fear/Volatility) increased, showing heightened anxiety, yet DXY (Dollar strength/Liquidity) slightly weakened. While defensive, this DXY dip with strong commodity gains (Gold, Oil, Copper) suggests capital may rotate into real assets for inflation protection, rather than pure risk-off. Maintain caution but watch DXY and commodities for allocation shifts.",
+            "CN": "GMS评分36预示防御性市场。动能将评分推低，反映谨慎情绪。VIX（恐慌/波动性）上升，显示市场焦虑加剧，但DXY（美元强度/流动性）略有走弱。尽管处于防御态势，美元走弱与大宗商品（黄金、石油、铜）强劲上涨表明，资金可能转向通胀对冲的实物资产，而非纯粹规避风险。保持谨慎，同时关注美元和大宗商品以识别资金配置变化。",
+            "ES": "El GMS Score 36 indica un mercado Defensivo. El Momentum empujó la puntuación a la baja, reflejando cautela. El VIX (Miedo/Volatilidad) aumentó, mostrando ansiedad, pero el DXY (Fuerza del dólar/Liquidez) se debilitó levemente. Aunque defensivo, esta caída del DXY con fuertes ganancias en materias primas (Oro, Petróleo, Cobre) sugiere que el capital podría rotar hacia activos reales para protección contra la inflación, no solo a la aversión al riesgo. Mantenga la cautela, pero observe el DXY y las materias primas para cambios de asignación.",
+            "HI": "जीएमएस स्कोर 36 एक रक्षात्मक बाजार का संकेत देता है। मोमेंटम ने स्कोर को कम किया, जो सावधानी को दर्शाता है। VIX (भय/अस्थिरता) बढ़ा, जिससे बढ़ी हुई चिंता दिखी, फिर भी DXY (डॉलर की मजबूती/तरलता) थोड़ा कमजोर हुआ। रक्षात्मक होने के बावजूद, DXY की यह गिरावट और मजबूत कमोडिटी लाभ (सोना, तेल, तांबा) बताता है कि पूंजी शुद्ध जोखिम-बंद की बजाय मुद्रास्फीति-संरक्षण के लिए वास्तविक संपत्तियों में घूम सकती है। सावधानी बरतें लेकिन आवंटन में बदलाव के लिए DXY और कमोडिटीज पर नज़र रखें।",
+            "ID": "Skor GMS 36 menandakan pasar Defensif. Momentum mendorong skor lebih rendah, mencerminkan kehati-hatian. VIX (Ketakutan/Volatilitas) meningkat, menunjukkan kecemasan, namun DXY (Kekuatan Dolar/Likuiditas) sedikit melemah. Meskipun defensif, penurunan DXY ini dengan keuntungan komoditas kuat (Emas, Minyak, Tembaga) menunjukkan modal mungkin berotasi ke aset riil untuk perlindungan inflasi, bukan murni penghindaran risiko. Tetap waspada, namun pantau DXY dan komoditas untuk pergeseran alokasi.",
+            "AR": "يشير مؤشر GMS البالغ 36 إلى سوق دفاعي. دفع الزخم النتيجة للانخفاض، مما يعكس الحذر. زاد مؤشر VIX (الخوف/التقلب) مما يدل على قلق متزايد، لكن مؤشر DXY (قوة الدولار/السيولة) ضعف قليلاً. بينما الوضع دفاعي، يشير تراجع DXY مع مكاسب السلع القوية (الذهب والنفط والنحاس) إلى أن رأس المال قد يتحول إلى الأصول الحقيقية للحماية من التضخم، بدلاً من التجنب الصرف للمخاطر. حافظ على الحذر، لكن راقب DXY والسلع لتحولات التخصيص."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-28T01:00:58Z",
-            "score": 40
-        },
         {
             "date": "2026-01-28T01:42:34Z",
             "score": 40
@@ -1359,6 +1355,10 @@
         {
             "date": "2026-01-29T22:41:02Z",
             "score": 35
+        },
+        {
+            "date": "2026-01-29T23:37:53Z",
+            "score": 36
         }
     ],
     "intelligence": {
@@ -1366,12 +1366,7 @@
             {
                 "title": "Apple sales surge 16% on ‘staggering’ iPhone demand",
                 "link": "https://www.cnbc.com/2026/01/29/apple-aapl-earnings-report-q1-2026.html",
-                "isoDate": "2026-01-29T22:34:16+00:00Z"
-            },
-            {
-                "title": "Software stocks enter bear market on AI disruption fear with ServiceNow plunging 10%",
-                "link": "https://www.cnbc.com/2026/01/29/software-stocks-enter-bear-market-on-ai-disruption-fear-with-servicenow-plunging-11percent-thursday.html",
-                "isoDate": "2026-01-29T21:03:56+00:00Z"
+                "isoDate": "2026-01-29T23:08:57+00:00Z"
             },
             {
                 "title": "Microsoft lost $357 billion in market cap as stock plunged most since 2020",
@@ -1379,14 +1374,19 @@
                 "isoDate": "2026-01-29T21:41:49+00:00Z"
             },
             {
-                "title": "Amazon could invest up to $50 billion in OpenAI in coming weeks, source says",
-                "link": "https://www.cnbc.com/2026/01/29/amazon-openai-investment-jassy-altman.html",
-                "isoDate": "2026-01-29T21:36:38+00:00Z"
+                "title": "Trump backs Senate government funding deal that includes DHS extension",
+                "link": "https://www.cnbc.com/2026/01/29/trump-congress-government-shutdown.html",
+                "isoDate": "2026-01-29T23:36:12+00:00Z"
             },
             {
-                "title": "Trade deficit soared 94% in November and was higher than a year ago, despite tariff efforts",
-                "link": "https://www.cnbc.com/2026/01/29/trade-balance-soared-94percent-in-november-and-was-higher-than-a-year-ago-despite-tariff-efforts.html",
-                "isoDate": "2026-01-29T21:31:45+00:00Z"
+                "title": "Elon Musk's $20 billion spending plan signals 'Tesla of yesterday is gone'",
+                "link": "https://www.cnbc.com/2026/01/29/musks-20-billion-spending-plan-signals-tesla-of-yesterday-is-gone.html",
+                "isoDate": "2026-01-29T23:01:47+00:00Z"
+            },
+            {
+                "title": "Software stocks enter bear market on AI disruption fear with ServiceNow plunging 10%",
+                "link": "https://www.cnbc.com/2026/01/29/software-stocks-enter-bear-market-on-ai-disruption-fear-with-servicenow-plunging-11percent-thursday.html",
+                "isoDate": "2026-01-29T21:03:56+00:00Z"
             },
             {
                 "title": "These stocks posting earnings next week have a history of topping expectations",
@@ -1396,55 +1396,55 @@
         ],
         "translations": {
             "JP": [
-                "「驚異的」iPhone需要でApple売上16%増",
-                "AIの混乱懸念でソフトウェア株が弱気市場入り、ServiceNowは10%急落",
-                "マイクロソフト、株価2020年以来最大の急落で時価総額3570億ドル失う",
-                "アマゾン、数週間以内にOpenAIに最大500億ドル投資の可能性、関係者情報",
-                "関税努力にもかかわらず、11月の貿易赤字は94%急増、前年を上回る",
-                "来週決算発表、期待を上回る実績を上げる傾向のある銘柄"
+                "iPhone需要の「驚異的な」需要によりAppleの売上高が16%急増",
+                "マイクロソフト、株価が2020年以来最大の急落で時価総額3570億ドル失う",
+                "トランプ氏、国土安全保障省の延長を含む上院政府資金調達案を支持",
+                "イーロン・マスク氏の200億ドルの歳出計画は「昨日のテスラはもういない」ことを示唆",
+                "AIの混乱への懸念からソフトウェア株が弱気市場入り、ServiceNowは10%下落",
+                "来週決算発表、予想を上回る実績の歴史を持つ銘柄"
             ],
             "CN": [
-                "iPhone需求“惊人”带动苹果销售额飙升16%",
-                "受AI颠覆担忧影响 软件股进入熊市 ServiceNow暴跌10%",
-                "微软市值蒸发3570亿美元 股价创2020年来最大跌幅",
-                "知情人士：亚马逊或将在未来几周内向OpenAI投资高达500亿美元",
-                "11月贸易逆差飙升94% 尽管采取关税措施 仍高于去年同期",
-                "下周发布财报 曾有业绩超预期的股票"
+                "iPhone需求“惊人”带动苹果销售额激增16%",
+                "微软市值蒸发3570亿美元，股价创2020年来最大跌幅",
+                "特朗普支持包含国土安全部延期在内的参议院政府资金协议",
+                "埃隆·马斯克200亿美元支出计划预示“昨日的特斯拉已不复存在”",
+                "受AI颠覆恐惧影响，软件股进入熊市，ServiceNow大跌10%",
+                "下周公布财报的这些股票过往业绩均超预期"
             ],
             "ES": [
-                "Las ventas de Apple se disparan un 16% ante la \"asombrosa\" demanda de iPhone",
-                "Las acciones de software entran en mercado bajista por temor a disrupción de IA con ServiceNow hundiéndose un 10%",
-                "Microsoft perdió 357 mil millones de dólares en capitalización de mercado al desplomarse sus acciones lo más desde 2020",
-                "Amazon podría invertir hasta 50 mil millones de dólares en OpenAI en las próximas semanas, dice una fuente",
-                "El déficit comercial se disparó un 94% en noviembre y fue mayor que hace un año, a pesar de los esfuerzos arancelarios",
-                "Estas acciones que publican resultados la próxima semana tienen un historial de superar las expectativas"
+                "Las ventas de Apple se disparan un 16% por la \"asombrosa\" demanda del iPhone",
+                "Microsoft pierde 357 mil millones de dólares en capitalización de mercado al desplomarse sus acciones más desde 2020",
+                "Trump respalda el acuerdo de financiación gubernamental del Senado que incluye la extensión del DHS",
+                "El plan de gasto de 20 mil millones de dólares de Elon Musk señala que 'el Tesla de ayer ya no existe'",
+                "Las acciones de software entran en mercado bajista por temor a la disrupción de la IA con ServiceNow hundiéndose un 10%",
+                "Estas acciones que presentan ganancias la próxima semana tienen un historial de superar las expectativas"
             ],
             "HI": [
-                "'स्तब्ध' आईफोन मांग पर 16% बढ़ा Apple की बिक्री",
-                "AI व्यवधान के डर से सॉफ्टवेयर स्टॉक बेयर मार्केट में उतरे, सर्विसनाउ 10% गिरा",
-                "माइक्रोसॉफ्ट का बाजार पूंजीकरण $357 बिलियन घटा, स्टॉक 2020 के बाद सबसे ज्यादा गिरा",
-                "सूत्रों के अनुसार: Amazon अगले हफ्तों में OpenAI में $50 बिलियन तक का निवेश कर सकता है",
-                "नवंबर में व्यापार घाटा 94% बढ़ा और एक साल पहले से अधिक रहा, टैरिफ प्रयासों के बावजूद",
-                "अगले सप्ताह कमाई की रिपोर्ट करने वाले इन शेयरों में उम्मीदों से बेहतर प्रदर्शन का इतिहास रहा है"
+                "iPhone की 'स्तब्ध' मांग पर Apple की बिक्री 16% बढ़ी",
+                "माइक्रोसॉफ्ट ने 2020 के बाद सबसे बड़ी गिरावट पर बाजार पूंजी में $357 बिलियन का नुकसान उठाया",
+                "ट्रम्प ने DHS विस्तार सहित सीनेट सरकारी वित्त पोषण सौदे का समर्थन किया",
+                "एलन मस्क की $20 बिलियन की खर्च योजना 'कल का टेस्ला चला गया' का संकेत देती है",
+                "AI व्यवधान के डर से सॉफ्टवेयर स्टॉक बियर मार्केट में प्रवेश, सर्विसनाउ 10% गिरा",
+                "अगले सप्ताह कमाई पेश करने वाले इन स्टॉक का उम्मीदों को पार करने का इतिहास रहा है"
             ],
             "ID": [
-                "Penjualan Apple Melonjak 16% Karena Permintaan iPhone yang \"Menakjubkan\"",
-                "Saham Perangkat Lunak Masuk Pasar Beruang Akibat Ketakutan Disrupsi AI, ServiceNow Anjlok 10%",
-                "Microsoft Kehilangan $357 Miliar Kapitalisasi Pasar Saat Sahamnya Anjlok Paling Tinggi Sejak 2020",
-                "Sumber: Amazon Bisa Investasi Hingga $50 Miliar di OpenAI dalam Beberapa Minggu ke Depan",
-                "Defisit Perdagangan Melonjak 94% di November dan Lebih Tinggi dari Setahun Lalu, Meskipun Ada Upaya Tarif",
-                "Saham-Saham Ini yang Merilis Laporan Pendapatan Minggu Depan Memiliki Sejarah Melebihi Ekspektasi"
+                "Penjualan Apple melonjak 16% berkat permintaan iPhone yang 'menakjubkan'",
+                "Microsoft kehilangan kapitalisasi pasar $357 miliar karena sahamnya anjlok paling parah sejak 2020",
+                "Trump mendukung kesepakatan pendanaan pemerintah Senat yang mencakup perpanjangan DHS",
+                "Rencana belanja $20 miliar Elon Musk menandakan 'Tesla kemarin sudah tiada'",
+                "Saham perangkat lunak memasuki pasar beruang karena ketakutan disrupsi AI dengan ServiceNow anjlok 10%",
+                "Saham-saham yang membukukan pendapatan minggu depan ini memiliki rekam jejak melampaui ekspektasi"
             ],
             "AR": [
-                "مبيعات Apple ترتفع 16% بفضل طلب \"مذهل\" على iPhone",
-                "أسهم البرمجيات تدخل سوق الهبوط بسبب خوف من اضطراب الذكاء الاصطناعي مع هبوط ServiceNow بنسبة 10%",
-                "خسرت مايكروسوفت 357 مليار دولار من قيمتها السوقية مع أكبر انخفاض لسهمها منذ عام 2020",
-                "مصادر: أمازون قد تستثمر ما يصل إلى 50 مليار دولار في OpenAI في الأسابيع المقبلة",
-                "العجز التجاري ارتفع بنسبة 94% في نوفمبر وكان أعلى من العام الماضي، على الرغم من جهود التعريفة الجمركية",
-                "هذه الأسهم التي تعلن عن أرباحها الأسبوع المقبل لديها تاريخ في تجاوز التوقعات"
+                "مبيعات آبل ترتفع 16% بفضل طلب آيفون \"المذهل\"",
+                "مايكروسوفت تخسر 357 مليار دولار من قيمتها السوقية مع هبوط سهمها بأكبر نسبة منذ 2020",
+                "ترامب يدعم صفقة تمويل حكومي في مجلس الشيوخ تتضمن تمديد لوزارة الأمن الداخلي",
+                "خطة إنفاق إيلون ماسك البالغة 20 مليار دولار تشير إلى أن 'تسلا الأمس لم يعد موجوداً'",
+                "أسهم البرمجيات تدخل سوق هابطة بسبب الخوف من اضطراب الذكاء الاصطناعي مع هبوط ServiceNow بنسبة 10%",
+                "هذه الأسهم التي ستعلن عن أرباحها الأسبوع المقبل لديها تاريخ في تجاوز التوقعات"
             ]
         },
-        "last_updated": "2026-01-29T22:41:02.516396+00:00Z"
+        "last_updated": "2026-01-29T23:37:53.902443+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
