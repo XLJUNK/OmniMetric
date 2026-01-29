@@ -21,7 +21,7 @@ function LegalContent() {
                         <div className="w-1.5 h-4 bg-red-500"></div>
                         <h2 className="text-xs font-black tracking-[0.4em] uppercase">{pageData.disclaimer}</h2>
                     </div>
-                    <div className="bg-white dark:bg-[#111] border-l-2 border-red-500/50 p-8 shadow-sm dark:shadow-none">
+                    <div className="bg-transparent dark:bg-[#111] border-l-2 border-red-500/50 p-8 shadow-sm dark:shadow-none">
                         <p className="text-lg text-slate-700 dark:text-slate-300 font-medium leading-relaxed italic">
                             {pageData.disclaimer_content}
                         </p>
@@ -52,7 +52,7 @@ function LegalContent() {
 
 export default function LegalPage() {
     return (
-        <Suspense fallback={<div className="min-h-screen bg-white dark:bg-[#0A0A0A] flex items-center justify-center text-sky-500 font-mono text-xs animate-pulse">LOADING COMPLIANCE CORE...</div>}>
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-sky-500 font-mono text-xs animate-pulse">LOADING COMPLIANCE CORE...</div>}>
             <LegalContent />
         </Suspense>
     );

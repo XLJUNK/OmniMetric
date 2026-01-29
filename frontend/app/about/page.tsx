@@ -38,7 +38,7 @@ function AboutContent() {
                             {isJP ? 'オムニ・メトリックとは？' : 'What is OmniMetric?'}
                         </h2>
                     </div>
-                    <div className="bg-white dark:bg-[#111] !border !border-slate-200 dark:!border-slate-800 !rounded-xl p-8 space-y-4 shadow-sm dark:shadow-none">
+                    <div className="bg-transparent dark:bg-[#111] !border !border-slate-200 dark:!border-slate-800 !rounded-xl p-8 space-y-4 shadow-sm dark:shadow-none">
                         <p className="text-base text-slate-700 dark:text-slate-300 leading-relaxed">
                             {isJP
                                 ? 'オムニ・メトリックは、機関投資家級の金融データをAIで解析し、個人投資家向けに実用的なインサイトへ変換する'
@@ -73,7 +73,7 @@ function AboutContent() {
                         </h2>
                     </div>
                     <div className="grid gap-4">
-                        <div className="bg-white dark:bg-[#111] !border !border-slate-200 dark:!border-slate-800 !rounded-xl p-6 shadow-sm dark:shadow-none">
+                        <div className="bg-transparent dark:bg-[#111] !border !border-slate-200 dark:!border-slate-800 !rounded-xl p-6 shadow-sm dark:shadow-none">
                             <h3 className="text-sm font-bold text-yellow-600 dark:text-yellow-400 mb-3 uppercase tracking-wide">
                                 {isJP ? '📊 機関投資家級データソース' : '📊 Institutional-Grade Data Sources'}
                             </h3>
@@ -83,7 +83,7 @@ function AboutContent() {
                                     : 'We analyze Net Liquidity (Federal Reserve Balance Sheet - TGA - RRP), MOVE Index (bond volatility), and High Yield Credit Spreads—metrics typically reserved for hedge funds and institutional investors.'}
                             </p>
                         </div>
-                        <div className="bg-white dark:bg-[#111] !border !border-slate-200 dark:!border-slate-800 !rounded-xl p-6 shadow-sm dark:shadow-none">
+                        <div className="bg-transparent dark:bg-[#111] !border !border-slate-200 dark:!border-slate-800 !rounded-xl p-6 shadow-sm dark:shadow-none">
                             <h3 className="text-sm font-bold text-sky-600 dark:text-sky-400 mb-3 uppercase tracking-wide">
                                 {isJP ? '🤖 AIによるリアルタイム分析' : '🤖 AI-Powered Real-Time Analysis'}
                             </h3>
@@ -93,7 +93,7 @@ function AboutContent() {
                                     : 'Our proprietary algorithms process data from FRED, CBOE, Yahoo Finance, and alternative sources every 60 seconds, generating multilingual AI insights powered by Google Gemini.'}
                             </p>
                         </div>
-                        <div className="bg-white dark:bg-[#111] !border !border-slate-200 dark:!border-slate-800 !rounded-xl p-6 shadow-sm dark:shadow-none">
+                        <div className="bg-transparent dark:bg-[#111] !border !border-slate-200 dark:!border-slate-800 !rounded-xl p-6 shadow-sm dark:shadow-none">
                             <h3 className="text-sm font-bold text-green-600 dark:text-green-400 mb-3 uppercase tracking-wide">
                                 {isJP ? '🎯 定量的リスクスコアリング' : '🎯 Quantitative Risk Scoring'}
                             </h3>
@@ -131,7 +131,7 @@ function AboutContent() {
                             {isJP ? '技術とデータソース' : 'Technology & Data Sources'}
                         </h2>
                     </div>
-                    <div className="bg-white dark:bg-[#111] !border !border-slate-200 dark:!border-slate-800 !rounded-xl p-6 space-y-3 shadow-sm dark:shadow-none">
+                    <div className="bg-transparent dark:bg-[#111] !border !border-slate-200 dark:!border-slate-800 !rounded-xl p-6 space-y-3 shadow-sm dark:shadow-none">
                         <div className="grid grid-cols-2 gap-4 text-xs text-slate-500 dark:text-slate-400 font-mono">
                             <div><span className="text-slate-700 dark:text-slate-600">{isJP ? 'フロントエンド:' : 'Frontend:'}</span> Next.js 15 + TypeScript</div>
                             <div><span className="text-slate-700 dark:text-slate-600">{isJP ? 'バックエンド:' : 'Backend:'}</span> Python + FastAPI</div>

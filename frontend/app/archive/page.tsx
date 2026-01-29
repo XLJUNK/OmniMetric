@@ -191,7 +191,7 @@ function ArchiveListing() {
 
 export default function ArchivePage() {
     return (
-        <Suspense fallback={<div className="min-h-screen bg-white dark:bg-[#0A0A0A] flex items-center justify-center text-sky-500 font-mono text-xs animate-pulse">LOADING HISTORICAL INDEX...</div>}>
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-sky-500 font-mono text-xs animate-pulse">LOADING HISTORICAL INDEX...</div>}>
             <ArchiveListing />
         </Suspense>
     );

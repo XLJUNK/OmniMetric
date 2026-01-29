@@ -141,9 +141,9 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
 
     return (
         <div
-            className="w-full bg-white dark:bg-[#050505] border-y border-slate-200 dark:border-white/5 shadow-2xl relative z-10 select-none"
+            className="w-full bg-[#F1F5F9] dark:bg-[#050505] border-y border-slate-200 dark:border-white/5 shadow-2xl relative z-10 select-none"
             dir={isRTL ? 'rtl' : 'ltr'}
-            style={{ backgroundColor: theme === 'dark' ? '#050505' : '#ffffff' }}
+            style={{ backgroundColor: theme === 'dark' ? '#050505' : '#F1F5F9' }}
         >
             <div className={`flex flex-col divide-y divide-slate-100 dark:divide-white/5 min-h-[102px]`}>
                 {news.map((item, i) => (

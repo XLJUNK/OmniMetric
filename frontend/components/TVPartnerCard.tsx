@@ -94,7 +94,7 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
                 href={affiliateUrl}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                className="group block w-full mt-4 bg-white dark:bg-gradient-to-r dark:from-[#131722] dark:to-[#0A0A0A] border border-slate-200 dark:border-[#1E293B] hover:border-sky-500/50 rounded-lg p-3 transition-all duration-300 shadow-sm dark:shadow-none"
+                className="group block w-full mt-4 bg-[#F1F5F9] dark:bg-gradient-to-r dark:from-[#131722] dark:to-[#0A0A0A] border border-slate-200 dark:border-[#1E293B] hover:border-sky-500/50 rounded-lg p-3 transition-all duration-300 shadow-sm dark:shadow-none"
             >
                 <div className={`flex items-center justify-between gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
                     <div className={`flex items-center gap-2 ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
@@ -120,8 +120,8 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
     // VARIANT: Default (Main Banner) - COMPACT INTEGRATED DESIGN
     return (
         <div
-            className="w-full relative group overflow-hidden bg-slate-50 dark:bg-[#0A0A0A] border border-slate-200 dark:border-slate-800 rounded-xl transition-all duration-300 shadow-sm dark:shadow-none my-6"
-            style={{ backgroundColor: theme === 'dark' ? '#0A0A0A' : '#ffffff' }}
+            className="w-full relative group overflow-hidden bg-[#F1F5F9] dark:bg-[#0A0A0A] border border-slate-200 dark:border-slate-800 rounded-xl transition-all duration-300 shadow-sm dark:shadow-none my-6"
+            style={{ backgroundColor: theme === 'dark' ? '#0A0A0A' : '#F1F5F9' }}
         >
 
             {/* Added: Specific min-height to ensure structure visibility */}
@@ -129,8 +129,8 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
 
                 {/* 1. Image Area (Fixed Width ~300px on Desktop to accommodate 3 images) */}
                 <div
-                    className={`w-full md:w-[300px] bg-slate-100 dark:bg-[#0f0f0f] border-b md:border-b-0 ${isRTL ? 'md:border-l' : 'md:border-r'} border-slate-200 dark:border-slate-800/50 shrink-0 overflow-hidden flex flex-col`}
-                    style={{ backgroundColor: theme === 'dark' ? '#0f0f0f' : '#ffffff' }}
+                    className={`w-full md:w-[300px] bg-[#F1F5F9] dark:bg-[#0f0f0f] border-b md:border-b-0 ${isRTL ? 'md:border-l' : 'md:border-r'} border-slate-200 dark:border-slate-800/50 shrink-0 overflow-hidden flex flex-col`}
+                    style={{ backgroundColor: theme === 'dark' ? '#0f0f0f' : '#F1F5F9' }}
                 >
                     {/* Clickable Image Container - FLEX ROW for 3 side-by-side images */}
                     <a
@@ -174,7 +174,7 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
                     </a>
 
                     {/* Official Partner Label (Bottom of Image Area) */}
-                    <div className="py-2 text-center w-full bg-slate-50/50 dark:bg-black/20 border-t border-slate-200/50 dark:border-slate-800/50">
+                    <div className="py-2 text-center w-full bg-transparent dark:bg-black/20 border-t border-slate-200/50 dark:border-slate-800/50">
                         <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest leading-none block">
                             TradingView Official Partner
                         </span>

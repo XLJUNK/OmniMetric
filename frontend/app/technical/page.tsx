@@ -166,7 +166,7 @@ export default async function TechnicalPage({ searchParams }: { searchParams: Pr
                                 {category.indicators.map((indicator, index) => (
                                     <div
                                         key={index}
-                                        className="group relative bg-white dark:bg-[#0A0A0A] border border-slate-200 dark:border-[#1E293B] hover:border-purple-500/50 transition-colors duration-300 rounded-xl overflow-hidden shadow-lg hover:shadow-purple-500/10"
+                                        className="group relative bg-transparent dark:bg-[#0A0A0A] border border-slate-200 dark:border-[#1E293B] hover:border-purple-500/50 transition-colors duration-300 rounded-xl overflow-hidden shadow-lg hover:shadow-purple-500/10"
                                     >
                                         <div className="p-6 flex flex-col h-full">
                                             <div className={`flex items-start justify-between mb-4`}>
@@ -180,7 +180,7 @@ export default async function TechnicalPage({ searchParams }: { searchParams: Pr
                                                 {indicator.description}
                                             </p>
 
-                                            <div className={`mt-auto pt-4 border-t border-slate-100 dark:border-[#1E293B] bg-slate-50 dark:bg-[#111111] -mx-6 -mb-6 p-4 ${isRTL ? 'text-right' : ''}`}>
+                                            <div className={`mt-auto pt-4 border-t border-slate-100 dark:border-[#1E293B] bg-transparent dark:bg-[#111111] -mx-6 -mb-6 p-4 ${isRTL ? 'text-right' : ''}`}>
                                                 <p className="text-xs font-mono text-purple-600 dark:text-purple-400 mb-1 font-bold uppercase tracking-wider">
                                                     {isJa ? '見方・基準' : (lang === 'CN' ? '用法 / 基准' : (lang === 'ES' ? 'USO / REFERENCIA' : (lang === 'AR' ? 'الاستخدام / المعيار' : (lang === 'HI' ? 'उपयोग / मानदंड' : (lang === 'ID' ? 'PENGGUNAAN / TOLOK UKUR' : 'USAGE / BENCHMARK')))))}
                                                 </p>

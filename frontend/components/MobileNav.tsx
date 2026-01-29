@@ -25,8 +25,7 @@ export const MobileNav = () => {
     ];
     return (
         <nav
-            className="fixed top-0 left-0 right-0 h-[48px] bg-white/95 dark:bg-[#000000]/95 backdrop-blur-xl border-b border-slate-200 dark:border-[#1E293B] md:hidden w-full z-[9999] shadow-2xl overflow-hidden transition-colors duration-300"
-            style={{ backgroundColor: theme === 'dark' ? '#000000' : '#ffffff' }}
+            className="fixed top-0 left-0 right-0 h-[48px] bg-[#F1F5F9]/95 dark:bg-[#000000]/95 backdrop-blur-xl border-b border-slate-200 dark:border-[#1E293B] md:hidden w-full z-[9999] shadow-2xl overflow-hidden transition-colors duration-300"
         >
             <div className="grid grid-cols-8 h-full w-full items-center px-0">
                 {tabs.map((tab) => {

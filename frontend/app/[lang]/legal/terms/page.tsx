@@ -86,7 +86,7 @@ export default async function TermsPage({ params }: Props) {
 
                     {/* SECTIONS */}
                     {data.sections.map((section, idx) => (
-                        <section key={idx} className={`${section.title.includes('Modifications') ? '' : 'bg-white dark:bg-[#111]'} !border ${section.title.includes('Prohibited') ? '!border-yellow-500/30' : '!border-slate-200 dark:!border-slate-800'} !rounded-xl p-6 space-y-4 shadow-sm dark:shadow-none`}>
+                        <section key={idx} className={`${section.title.includes('Modifications') ? '' : 'bg-transparent dark:bg-[#111]'} !border ${section.title.includes('Prohibited') ? '!border-yellow-500/30' : '!border-slate-200 dark:!border-slate-800'} !rounded-xl p-6 space-y-4 shadow-sm dark:shadow-none`}>
                             <h2 className={`text-lg font-bold uppercase tracking-wide ${section.title.includes('Prohibited') ? 'text-yellow-600 dark:text-yellow-400' : 'text-slate-900 dark:text-white'}`}>
                                 {section.title}
                             </h2>
@@ -156,7 +156,7 @@ export default async function TermsPage({ params }: Props) {
                     ))}
 
                     {/* Contact */}
-                    <section className="bg-white dark:bg-[#111] !border !border-slate-200 dark:!border-slate-800 !rounded-xl p-6 shadow-sm dark:shadow-none">
+                    <section className="bg-transparent dark:bg-[#111] !border !border-slate-200 dark:!border-slate-800 !rounded-xl p-6 shadow-sm dark:shadow-none">
                         <h2 className="text-lg font-bold text-slate-900 dark:text-white uppercase tracking-wide mb-3">
                             {data.contact.title}
                         </h2>

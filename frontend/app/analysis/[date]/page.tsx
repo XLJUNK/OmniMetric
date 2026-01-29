@@ -74,7 +74,7 @@ export default async function AnalysisPage({ params }: { params: Promise<{ date:
     };
 
     return (
-        <main className="min-h-screen bg-slate-50 dark:bg-[#020617] text-slate-800 dark:text-slate-200 p-8 font-sans">
+        <main className="min-h-screen text-slate-800 dark:text-slate-200 p-8 font-sans">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

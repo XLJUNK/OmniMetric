@@ -102,7 +102,7 @@ export default async function WikiIndexPage({ params }: Props) {
 
     return (
         <Suspense fallback={null}>
-            <div className="min-h-screen bg-background text-foreground font-sans pb-20">
+            <div className="min-h-screen text-foreground font-sans pb-20">
                 <DynamicStructuredData data={breadcrumbSchema} />
                 {/* Note: DesktopNav is global, but its lang switcher might point to ?lang=. 
                      We might need a separate language switcher here or rely on user knowing manually. 
@@ -143,7 +143,7 @@ export default async function WikiIndexPage({ params }: Props) {
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                     {Object.entries(grouped[type]).map(([category, items]) => (
-                                        <div key={category} className="bg-slate-50 dark:bg-[#0A0A0A] border border-border rounded-lg p-6 hover:border-sky-500/30 transition-colors">
+                                        <div key={category} className="bg-transparent dark:bg-[#0A0A0A] border border-border rounded-lg p-6 hover:border-sky-500/30 transition-colors">
                                             <h3 className={`text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-4 border-b border-border pb-2 ${isRTL ? 'text-right' : 'text-left'}`}>
                                                 {category}
                                             </h3>

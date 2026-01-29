@@ -12,7 +12,7 @@ import React, { Suspense } from 'react';
 
 export default function ContactPage() {
     return (
-        <Suspense fallback={<div className="min-h-screen bg-white dark:bg-[#0A0A0A] flex items-center justify-center text-cyan-500 font-mono text-xs animate-pulse">CONNECTING TO SUPPORT SERVER...</div>}>
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-cyan-500 font-mono text-xs animate-pulse">CONNECTING TO SUPPORT SERVER...</div>}>
             <ContactContent />
         </Suspense>
     );
@@ -24,7 +24,7 @@ function ContactContent() {
     const isJP = lang === 'JP';
 
     return (
-        <div className="min-h-screen bg-slate-50 dark:bg-[#0A0A0A] text-slate-800 dark:text-[#E0E0E0] font-sans selection:bg-cyan-100 dark:selection:bg-sky-500 selection:text-cyan-900 dark:selection:text-white">
+        <div className="min-h-screen dark:bg-[#0A0A0A] text-slate-800 dark:text-[#E0E0E0] font-sans selection:bg-cyan-100 dark:selection:bg-sky-500 selection:text-cyan-900 dark:selection:text-white">
             <div className="max-w-[1400px] mx-auto px-6 py-12 md:py-20 lg:px-24">
                 {/* Breadcrumb / Top Nav */}
                 <div className="flex justify-end items-center mb-16 opacity-100">
@@ -65,7 +65,7 @@ function ContactContent() {
                     </div>
 
                     {/* Primary Contact */}
-                    <section className="bg-white dark:bg-[#111] !border !border-cyan-500/30 !rounded-xl p-8 text-center space-y-6 shadow-sm dark:shadow-none">
+                    <section className="bg-transparent dark:bg-[#111] !border !border-cyan-500/30 !rounded-xl p-8 text-center space-y-6 shadow-sm dark:shadow-none">
                         <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-500/10 rounded-full mb-2">
                             <svg className="w-8 h-8 text-cyan-600 dark:text-cyan-400" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
@@ -79,7 +79,7 @@ function ContactContent() {
                                 {isJP ? '技術的な問題、データフィードバック、または一般的なお問い合わせ' : 'For technical issues, data feedback, or general inquiries'}
                             </p>
                         </div>
-                        <div className="bg-slate-50 dark:bg-black !border !border-slate-200 dark:!border-slate-700 !rounded-lg p-6">
+                        <div className="bg-transparent dark:bg-black !border !border-slate-200 dark:!border-slate-700 !rounded-lg p-6">
                             <p className="text-xs text-slate-500 uppercase tracking-widest mb-2">
                                 {isJP ? 'X（Twitter）でダイレクトメッセージを送信' : 'Send a Direct Message on X (Twitter)'}
                             </p>
@@ -98,7 +98,7 @@ function ContactContent() {
                     </section>
 
                     {/* What We Can Help With */}
-                    <section className="bg-white dark:bg-[#111] !border !border-slate-200 dark:!border-slate-800 !rounded-xl p-6 space-y-4 shadow-sm dark:shadow-none">
+                    <section className="bg-transparent dark:bg-[#111] !border !border-slate-200 dark:!border-slate-800 !rounded-xl p-6 space-y-4 shadow-sm dark:shadow-none">
                         <h2 className="text-lg font-bold text-slate-900 dark:text-white uppercase tracking-wide">
                             {isJP ? '✅ 対応可能な内容' : '✅ What We Can Help With'}
                         </h2>
@@ -127,7 +127,7 @@ function ContactContent() {
                     </section>
 
                     {/* What We Don't Respond To */}
-                    <section className="bg-white dark:bg-[#111] !border !border-slate-200 dark:!border-slate-800 !rounded-xl p-6 space-y-4 shadow-sm dark:shadow-none">
+                    <section className="bg-transparent dark:bg-[#111] !border !border-slate-200 dark:!border-slate-800 !rounded-xl p-6 space-y-4 shadow-sm dark:shadow-none">
                         <h2 className="text-lg font-bold text-slate-900 dark:text-white uppercase tracking-wide">
                             {isJP ? '❌ 対応できない内容' : '❌ What We Don\'t Respond To'}
                         </h2>

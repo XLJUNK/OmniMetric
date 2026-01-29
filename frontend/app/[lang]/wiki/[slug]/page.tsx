@@ -12,7 +12,7 @@ import { Metadata } from 'next';
 const ExpertCard = ({ role, icon: Icon, color, bg, content, isRTL }: any) => {
     if (!content) return null;
     return (
-        <div className={`p-4 rounded-xl border border-border bg-card hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors ${isRTL ? 'text-right' : 'text-left'}`}>
+        <div className={`p-4 rounded-xl border border-border bg-transparent hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors ${isRTL ? 'text-right' : 'text-left'}`}>
             <div className={`flex items-center gap-2 mb-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
                 <div className={`p-1.5 rounded ${bg} ${color}`}>
                     <Icon className="w-4 h-4" />
@@ -140,7 +140,7 @@ export default async function WikiDetailPage({ params }: Props) {
         .slice(0, 3);
 
     return (
-        <div className="min-h-screen bg-background text-foreground font-sans pb-20">
+        <div className="min-h-screen text-foreground font-sans pb-20">
             <DynamicStructuredData data={articleSchema} />
             <DynamicStructuredData data={breadcrumbSchema} />
 
@@ -246,7 +246,7 @@ export default async function WikiDetailPage({ params }: Props) {
                         {/* TECHNICAL SPECIFIC */}
                         {item.type === 'technical' && (
                             <>
-                                <section className={`p-6 bg-slate-50 dark:bg-[#0A0A0A] border border-border rounded-lg ${isRTL ? 'text-right' : ''}`}>
+                                <section className={`p-6 bg-transparent dark:bg-[#0A0A0A] border border-border rounded-lg ${isRTL ? 'text-right' : ''}`}>
                                     <h3 className="text-purple-600 dark:text-purple-400 font-bold text-sm uppercase mb-3">Usage & Signals</h3>
                                     <p className="text-slate-700 dark:text-slate-300 text-lg font-medium leading-relaxed">
                                         {item.data.usage}
@@ -296,7 +296,7 @@ export default async function WikiDetailPage({ params }: Props) {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {related.map(r => (
                             <Link key={r.slug} href={`/${lang.toLowerCase()}/wiki/${r.slug}`} className="group block">
-                                <div className="p-6 bg-slate-50 dark:bg-[#0A0A0A] border border-border group-hover:border-sky-500/50 transition-all h-full flex flex-col justify-between">
+                                <div className="p-6 bg-transparent dark:bg-[#0A0A0A] border border-border group-hover:border-sky-500/50 transition-all h-full flex flex-col justify-between">
                                     <h4 className="text-sm font-bold text-foreground group-hover:text-sky-500 transition-colors mb-2">
                                         {r.title}
                                     </h4>

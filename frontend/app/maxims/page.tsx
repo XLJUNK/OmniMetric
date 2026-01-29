@@ -54,7 +54,7 @@ const getPageDesc = (l: LangType) => {
         case 'JP': return "市場の荒波を乗り越えるための、先人たちの知恵と規律。50の投資格言。";
         case 'CN': return "前人应对市场风浪的智慧与纪律。50条投资格言。";
         case 'ES': return "Sabiduría y disciplina de los maestros para navegar los ciclos del mercado.";
-        case 'HI': return "बाजार के उतार-चढ़ाव को समझने के लिए विशेषज्ञों का ज्ञान और अनुशासन।";
+        case 'HI': return "बाजार के उतार-चढ़ाव को समझने के लिए विशेषज्ञों का ज्ञान और अनुशासन。";
         case 'ID': return "Kebijaksanaan dan disiplin dari para ahli untuk menavigasi siklus pasar.";
         case 'AR': return "حكمة وانضباط من الخبراء للتنقل في دورات السوق.";
         default: return "Wisdom and discipline from the masters to navigate typical market cycles. 50 Investment Maxims.";
@@ -166,7 +166,7 @@ export default async function MaximsPage({ searchParams }: { searchParams: Promi
                                 {category.quotes.map((maxim) => (
                                     <li key={maxim.id} className="h-full">
                                         <article
-                                            className="h-full group relative bg-white dark:bg-[#0A0A0A] border border-slate-200 dark:border-[#1E293B] rounded-xl overflow-hidden hover:border-sky-500/50 transition-all duration-300 flex flex-col shadow-sm dark:shadow-none"
+                                            className="h-full group relative bg-transparent dark:bg-[#0A0A0A] border border-slate-200 dark:border-[#1E293B] rounded-xl overflow-hidden hover:border-sky-500/50 transition-all duration-300 flex flex-col shadow-sm dark:shadow-none"
                                         >
                                             <div className="p-6 md:p-8 flex-1 flex flex-col">
                                                 {/* Icon */}
@@ -187,7 +187,7 @@ export default async function MaximsPage({ searchParams }: { searchParams: Promi
                                                 </div>
 
                                                 {/* Meaning / Context */}
-                                                <div className={`mt-4 bg-slate-50 dark:bg-[#111] p-3 rounded text-xs text-slate-600 dark:text-slate-400 leading-relaxed border border-slate-200 dark:border-[#222] ${isRTL ? 'text-right' : ''}`}>
+                                                <div className={`mt-4 bg-transparent dark:bg-[#111] p-3 rounded text-xs text-slate-600 dark:text-slate-400 leading-relaxed border border-slate-200 dark:border-[#222] ${isRTL ? 'text-right' : ''}`}>
                                                     <span className={`font-bold text-slate-400 dark:text-slate-500 ${isRTL ? 'ml-1' : 'mr-1'}`}>KEY:</span>
                                                     {maxim.meaning}
                                                 </div>
