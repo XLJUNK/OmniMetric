@@ -1,10 +1,10 @@
 {
-    "last_updated": "2026-01-29T05:56:19.696412+00:00",
-    "last_successful_update": "2026-01-29T05:56:19.696419+00:00",
-    "gms_score": 31,
+    "last_updated": "2026-01-29T07:03:26.144837+00:00",
+    "last_successful_update": "2026-01-29T07:03:26.144844+00:00",
+    "gms_score": 38,
     "sector_scores": {
-        "STOCKS": 35,
-        "CRYPTO": 25,
+        "STOCKS": 40,
+        "CRYPTO": 75,
         "FOREX": 55,
         "COMMODITIES": 55
     },
@@ -547,10 +547,10 @@
             ]
         },
         "NIFTY": {
-            "price": 25280.5,
+            "price": 25303.25,
             "prev_price": 25342.75,
-            "daily_chg": -0.25,
-            "change_percent": -0.04,
+            "daily_chg": -0.16,
+            "change_percent": 0.05,
             "trend": "DOWN",
             "sparkline": [
                 25942.1,
@@ -574,17 +574,16 @@
                 25048.65,
                 25175.4,
                 25342.75,
-                25280.5
+                25303.25
             ]
         },
         "BTC": {
-            "price": 88103.41,
-            "prev_price": 89102.57,
+            "price": 88187.53,
+            "prev_price": 89184.57,
             "daily_chg": -1.12,
-            "change_percent": -1.13,
+            "change_percent": 1.87,
             "trend": "DOWN",
             "sparkline": [
-                91308.05,
                 91027.12,
                 90513.1,
                 90386.65,
@@ -605,17 +604,17 @@
                 86572.22,
                 88267.14,
                 89102.57,
-                88103.41
+                89184.57,
+                88187.53
             ]
         },
         "ETH": {
-            "price": 2948.09,
-            "prev_price": 3022.21,
-            "daily_chg": -2.45,
-            "change_percent": -0.02,
+            "price": 2951.54,
+            "prev_price": 3006.61,
+            "daily_chg": -1.83,
+            "change_percent": 4.82,
             "trend": "DOWN",
             "sparkline": [
-                3166.84,
                 3104.38,
                 3083.05,
                 3082.4,
@@ -636,17 +635,17 @@
                 2815.9,
                 2926.46,
                 3022.21,
-                2948.09
+                3006.61,
+                2951.54
             ]
         },
         "SOL": {
-            "price": 123.29,
-            "prev_price": 127.05,
-            "daily_chg": -2.96,
-            "change_percent": -2.96,
+            "price": 123.46,
+            "prev_price": 125.12,
+            "daily_chg": -1.32,
+            "change_percent": 3.95,
             "trend": "DOWN",
             "sparkline": [
-                136.31,
                 138.29,
                 135.76,
                 135.73,
@@ -667,11 +666,12 @@
                 118.77,
                 124.14,
                 127.05,
-                123.29
+                125.12,
+                123.46
             ]
         },
         "DXY": {
-            "price": 96.08,
+            "price": 96.09,
             "prev_price": 96.45,
             "daily_chg": -0.38,
             "change_percent": -1.55,
@@ -698,14 +698,14 @@
                 97.04,
                 96.22,
                 96.45,
-                96.08
+                96.09
             ]
         },
         "USDJPY": {
-            "price": 153.04,
+            "price": 153.0,
             "prev_price": 152.45,
-            "daily_chg": 0.39,
-            "change_percent": -3.45,
+            "daily_chg": 0.36,
+            "change_percent": -3.47,
             "trend": "UP",
             "sparkline": [
                 156.01,
@@ -729,14 +729,14 @@
                 155.17,
                 154.34,
                 152.45,
-                153.04
+                153.0
             ]
         },
         "EURUSD": {
             "price": 1.2,
             "prev_price": 1.2,
-            "daily_chg": -0.26,
-            "change_percent": 1.97,
+            "daily_chg": -0.2,
+            "change_percent": 2.03,
             "trend": "DOWN",
             "sparkline": [
                 1.18,
@@ -764,10 +764,10 @@
             ]
         },
         "USDINR": {
-            "price": 91.94,
+            "price": 91.97,
             "prev_price": 91.53,
-            "daily_chg": 0.44,
-            "change_percent": 0.42,
+            "daily_chg": 0.48,
+            "change_percent": 0.46,
             "trend": "UP",
             "sparkline": [
                 89.9,
@@ -791,14 +791,14 @@
                 91.5,
                 91.71,
                 91.53,
-                91.94
+                91.97
             ]
         },
         "USDSAR": {
             "price": 3.75,
             "prev_price": 3.75,
-            "daily_chg": 0.12,
-            "change_percent": 0.13,
+            "daily_chg": 0.13,
+            "change_percent": 0.14,
             "trend": "UP",
             "sparkline": [
                 3.74,
@@ -826,10 +826,10 @@
             ]
         },
         "GOLD": {
-            "price": 5579.2,
+            "price": 5605.9,
             "prev_price": 5301.6,
-            "daily_chg": 5.24,
-            "change_percent": 12.12,
+            "daily_chg": 5.74,
+            "change_percent": 12.65,
             "trend": "UP",
             "sparkline": [
                 4325.1,
@@ -853,14 +853,14 @@
                 5079.7,
                 5079.9,
                 5301.6,
-                5579.2
+                5605.9
             ]
         },
         "OIL": {
-            "price": 64.1,
+            "price": 64.22,
             "prev_price": 63.21,
-            "daily_chg": 1.41,
-            "change_percent": 4.96,
+            "daily_chg": 1.6,
+            "change_percent": 5.16,
             "trend": "UP",
             "sparkline": [
                 58.08,
@@ -884,14 +884,14 @@
                 60.63,
                 62.39,
                 63.21,
-                64.1
+                64.22
             ]
         },
         "COPPER": {
-            "price": 6.3,
+            "price": 6.31,
             "prev_price": 5.89,
-            "daily_chg": 6.85,
-            "change_percent": 6.51,
+            "daily_chg": 7.16,
+            "change_percent": 6.83,
             "trend": "UP",
             "sparkline": [
                 5.49,
@@ -915,14 +915,14 @@
                 5.98,
                 5.83,
                 5.89,
-                6.3
+                6.31
             ]
         },
         "NATGAS": {
-            "price": 3.92,
+            "price": 3.82,
             "prev_price": 7.46,
-            "daily_chg": -47.48,
-            "change_percent": -25.73,
+            "daily_chg": -48.75,
+            "change_percent": -27.53,
             "trend": "DOWN",
             "sparkline": [
                 4.69,
@@ -946,7 +946,7 @@
                 6.8,
                 6.95,
                 7.46,
-                3.92
+                3.82
             ]
         },
         "MOVE": {
@@ -1108,22 +1108,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS score at 31 indicates a DEFENSIVE (Risk-Off) regime, as flat momentum pushed the score from 34 to 31. DXY (Dollar strength/liquidity) eased slightly, potentially supporting risk assets. However, rising HY spreads (corporate credit risk) suggest caution. Maintain a defensive stance, but watch DXY for signals that could temper risk-off pressures.",
+        "content": "GMS Score 38 indicates a Defensive regime. However, upward momentum from weakening DXY (Dollar strength/Liquidity) and stable VIX (Fear/Volatility) suggests stabilizing sentiment. Watch for commodity surges (Gold, Oil, Copper) that could reignite inflation concerns, challenging this recovery and justifying a cautious stance.",
         "reports": {
-            "JP": "GMSスコア31は防御的（リスクオフ）局面を示し、フラットなモメンタムがスコアを34から31へ押し下げました。DXY（ドル高/流動性）はわずかに軟化し、リスク資産を支援する可能性も。しかし、HYスプレッド（社債信用リスク）上昇は警戒を示唆。防御的姿勢を維持しつつ、リスクオフ圧力を和らげるDXYの動向を注視。",
-            "EN": "GMS score at 31 indicates a DEFENSIVE (Risk-Off) regime, as flat momentum pushed the score from 34 to 31. DXY (Dollar strength/liquidity) eased slightly, potentially supporting risk assets. However, rising HY spreads (corporate credit risk) suggest caution. Maintain a defensive stance, but watch DXY for signals that could temper risk-off pressures.",
-            "CN": "GMS评分31表明处于防御性（规避风险）阶段，平稳动能将评分从34推至31。DXY（美元走强/流动性）略有放缓，可能支撑风险资产。然而，高收益利差（企业信用风险）上升提示谨慎。维持防御态势，但需关注DXY信号，以缓解避险压力。",
-            "ES": "El GMS de 31 señala un régimen DEFENSIVO (Aversión al Riesgo); el impulso plano bajó la puntuación de 34 a 31. El DXY (fortaleza del dólar/liquidez) se relajó levemente, pudiendo apoyar activos de riesgo. Sin embargo, los diferenciales HY (riesgo de crédito corporativo) al alza sugieren cautela. Mantenga una postura defensiva, pero observe el DXY.",
-            "HI": "GMS स्कोर 31 एक रक्षात्मक (जोखिम-बंद) स्थिति दर्शाता है, क्योंकि स्थिर गति ने स्कोर को 34 से 31 तक नीचे धकेल दिया। DXY (डॉलर की मजबूती/तरलता) में थोड़ी नरमी आई, जो जोखिम वाली संपत्तियों का समर्थन कर सकती है। हालांकि, बढ़ते HY स्प्रेड (कॉर्पोरेट क्रेडिट जोखिम) सावधानी का सुझाव देते हैं। रक्षात्मक रुख बनाए रखें, पर DXY पर नजर रखें।",
-            "ID": "Skor GMS 31 menunjukkan rezim DEFENSIVE (Penghindaran Risiko), seiring momentum datar mendorong skor dari 34 ke 31. DXY (kekuatan Dolar/likuiditas) sedikit melemah, berpotensi mendukung aset berisiko. Namun, kenaikan spread HY (risiko kredit korporasi) menyarankan kehati-hatian. Pertahankan sikap defensif, tapi pantau DXY untuk sinyal yang dapat meredam tekanan risiko.",
-            "AR": "يشير مؤشر GMS البالغ 31 إلى نظام دفاعي (تجنب المخاطر)، حيث دفع الزخم الثابت المؤشر من 34 إلى 31. تراجع مؤشر DXY (قوة الدولار/السيولة) قليلاً، مما قد يدعم الأصول الخطرة. ومع ذلك، تشير فروق HY المرتفعة (مخاطر ائتمان الشركات) إلى الحذر. حافظ على موقف دفاعي، وراقب DXY."
+            "JP": "GMSスコア38は防衛的なレジームを示しますが、DXY（ドル高/流動性）の弱体化とVIX（恐怖/変動性）の安定による上昇モメンタムは、センチメントの安定化を示唆。金、原油、銅などの商品価格高騰がインフレ懸念を再燃させ、回復を妨げる可能性があるため、引き続き警戒が必要です。",
+            "EN": "GMS Score 38 indicates a Defensive regime. However, upward momentum from weakening DXY (Dollar strength/Liquidity) and stable VIX (Fear/Volatility) suggests stabilizing sentiment. Watch for commodity surges (Gold, Oil, Copper) that could reignite inflation concerns, challenging this recovery and justifying a cautious stance.",
+            "CN": "GMS分数38表示防御性市场。然而，DXY（美元强度/流动性）走弱和VIX（恐慌/波动性）稳定带来的上升动能表明市场情绪正在稳定。需警惕黄金、原油、铜等大宗商品上涨可能重新点燃通胀担忧，这会挑战当前复苏，建议保持谨慎。",
+            "ES": "El GMS Score 38 indica un régimen Defensivo. No obstante, el impulso alcista por la debilidad del DXY (fuerza del dólar/liquidez) y la estabilidad del VIX (miedo/volatilidad) sugiere un sentimiento estabilizador. Vigile el aumento de commodities (oro, petróleo, cobre) que podría reavivar las preocupaciones inflacionarias, desafiando esta recuperación y justificando una postura cautelosa.",
+            "HI": "GMS स्कोर 38 रक्षात्मक शासन दर्शाता है। हालांकि, DXY (डॉलर की मजबूती/तरलता) के कमजोर होने और VIX (भय/अस्थिरता) के स्थिर रहने से उत्पन्न ऊपर की ओर गति स्थिर भावना को दर्शाती है। सोने, तेल, तांबे जैसी वस्तुओं में उछाल पर नज़र रखें जो मुद्रास्फीति की चिंताओं को फिर से बढ़ा सकता है, इस रिकवरी को चुनौती दे सकता है और सतर्क रुख को उचित ठहरा सकता है।",
+            "ID": "Skor GMS 38 menunjukkan rezim Defensif. Namun, momentum kenaikan dari melemahnya DXY (kekuatan Dolar/Likuiditas) dan VIX (Ketakutan/Volatilitas) yang stabil menyiratkan sentimen yang stabil. Waspadai lonjakan komoditas (Emas, Minyak, Tembaga) yang dapat menyalakan kembali kekhawatiran inflasi, menantang pemulihan ini dan membenarkan sikap hati-hati.",
+            "AR": "تشير نتيجة GMS 38 إلى نظام دفاعي. ومع ذلك، فإن الزخم الصاعد الناتج عن ضعف مؤشر الدولار DXY (قوة الدولار/السيولة) واستقرار مؤشر VIX (الخوف/التقلب) يوحي باستقرار المعنويات. راقب ارتفاع أسعار السلع (الذهب، النفط، النحاس) الذي قد يعيد إشعال مخاوف التضخم، مما يتحدى هذا التعافي ويبرر موقفًا حذرًا."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-27T06:53:31Z",
-            "score": 39
-        },
         {
             "date": "2026-01-27T07:38:31Z",
             "score": 39
@@ -1359,10 +1355,19 @@
         {
             "date": "2026-01-29T05:56:19Z",
             "score": 31
+        },
+        {
+            "date": "2026-01-29T07:03:26Z",
+            "score": 38
         }
     ],
     "intelligence": {
         "news": [
+            {
+                "title": "China and the UK are attempting to reset their relationship — here's how",
+                "link": "https://www.cnbc.com/2026/01/29/china-uk-starmer-xi-relations-visit-businesses-.html",
+                "isoDate": "2026-01-29T06:46:28+00:00Z"
+            },
             {
                 "title": "Tesla tops estimates for quarter, but wraps up first annual revenue drop on record",
                 "link": "https://www.cnbc.com/2026/01/28/tesla-tsla-2025-q4-earnings.html",
@@ -1372,11 +1377,6 @@
                 "title": "Meta’s Reality Labs posts $6.02 billion loss in fourth quarter",
                 "link": "https://www.cnbc.com/2026/01/28/metas-reality-labs-posts-6point02-billion-loss-in-fourth-quarter.html",
                 "isoDate": "2026-01-29T01:12:05+00:00Z"
-            },
-            {
-                "title": "Gold and silver keep hitting record highs. But is the precious metals market 'broken'?",
-                "link": "https://www.cnbc.com/2026/01/29/gold-and-silver-keep-hitting-record-high-but-the-market-may-be-broken.html",
-                "isoDate": "2026-01-29T01:32:42+00:00Z"
             },
             {
                 "title": "S&P 500 futures are little changed as investors weigh tech giants' earnings: Live updates",
@@ -1396,55 +1396,55 @@
         ],
         "translations": {
             "JP": [
-                "テスラ、四半期予想を上回るも、年間売上高は記録的な初の下落",
+                "中国と英国、関係再構築を模索 - その方法は",
+                "テスラ、四半期決算は予想を上回るも、年間収入は過去最高ながら初の下落",
                 "MetaのReality Labs、第4四半期に60.2億ドルの損失を計上",
-                "金と銀が史上最高値を更新し続ける。しかし、貴金属市場は「壊れている」のか？",
-                "S&P500先物は、投資家が巨大テック企業の決算を評価する中、小幅な動き。ライブアップデート",
-                "マイクロソフト株、クラウド成長鈍化と利益率ガイダンスの低迷で7%下落",
-                "投資家は今年の利下げをもう少し待たなければならない"
+                "S&P500先物は小動き、投資家は大手テック企業の決算を注視：ライブアップデート",
+                "Microsoft株、クラウド成長鈍化と弱いマージン見通しで7%下落",
+                "今年中の利下げ、投資家はもう少し待つ必要がありそう"
             ],
             "CN": [
-                "特斯拉季度业绩超预期，但全年营收创纪录首次下滑",
+                "中英两国正试图重塑关系——方式在此",
+                "特斯拉季度业绩超预期，但全年营收创纪录下滑",
                 "Meta的Reality Labs第四季度亏损60.2亿美元",
-                "黄金和白银持续创纪录新高。但贵金属市场是否“失灵”？",
-                "标普500指数期货变化不大，投资者权衡科技巨头财报：实时更新",
-                "微软股价因云计算增长放缓、利润率指引疲软下跌7%",
-                "投资者今年将不得不继续等待降息"
+                "标普500股指期货持平，投资者权衡科技巨头财报：实时更新",
+                "微软股价因云增长放缓、利润指引疲软下跌7%",
+                "降息仍需时日，投资者今年恐难如愿"
             ],
             "ES": [
-                "Tesla supera las estimaciones trimestrales, pero registra su primera caída anual de ingresos en récord",
-                "Reality Labs de Meta registra una pérdida de 6.020 millones de dólares en el cuarto trimestre",
-                "El oro y la plata siguen batiendo récords históricos. ¿Pero está el mercado de metales preciosos 'roto'?",
-                "Los futuros del S&P 500 apenas cambian mientras los inversores sopesan las ganancias de los gigantes tecnológicos: Actualizaciones en vivo",
-                "Las acciones de Microsoft caen un 7% por la desaceleración del crecimiento de la nube y una guía de márgenes baja",
+                "China y el Reino Unido intentan reiniciar su relación: así es como",
+                "Tesla supera las estimaciones del trimestre, pero registra su primera caída de ingresos anuales récord",
+                "Reality Labs de Meta registra una pérdida de $6.020 millones en el cuarto trimestre",
+                "Los futuros del S&P 500 apenas cambian mientras los inversores sopesan las ganancias de los gigantes tecnológicos: actualizaciones en vivo",
+                "Las acciones de Microsoft caen un 7% por la desaceleración del crecimiento en la nube y una guía de márgenes débil",
                 "Los inversores tendrán que esperar un poco más para cualquier recorte de tasas este año"
             ],
             "HI": [
-                "टेस्ला के तिमाही अनुमानों को पीछे छोड़ा, लेकिन रिकॉर्ड पर पहली वार्षिक राजस्व गिरावट",
-                "मेटा का रियलिटी लैब्स चौथी तिमाही में 6.02 अरब डॉलर का घाटा",
-                "सोना और चांदी रिकॉर्ड ऊंचाई पर पहुंच रहे हैं। लेकिन क्या कीमती धातु बाजार 'टूटा' हुआ है?",
-                "S&P 500 फ्यूचर्स में मामूली बदलाव, निवेशक टेक दिग्गजों की कमाई का मूल्यांकन कर रहे हैं: लाइव अपडेट",
-                "क्लाउड ग्रोथ में मंदी और कम मार्जिन गाइडेंस पर माइक्रोसॉफ्ट के शेयर 7% गिरे",
-                "निवेशकों को इस साल दरों में कटौती का इंतजार थोड़ा और करना होगा"
+                "चीन और ब्रिटेन अपने संबंधों को फिर से स्थापित करने का प्रयास कर रहे हैं - यहाँ बताया गया है कैसे",
+                "टेस्ला तिमाही के अनुमानों को पार कर गया, लेकिन रिकॉर्ड के बावजूद पहली वार्षिक राजस्व गिरावट दर्ज की",
+                "मेटा के रियलिटी लैब्स ने चौथी तिमाही में 6.02 अरब डॉलर का घाटा दर्ज किया",
+                "S&P 500 फ्यूचर्स में मामूली बदलाव, निवेशक टेक दिग्गजों की कमाई पर कर रहे हैं विचार: लाइव अपडेट",
+                "क्लाउड ग्रोथ में मंदी, हल्के मार्जिन गाइडेंस पर माइक्रोसॉफ्ट के शेयर 7% गिरे",
+                "इस साल ब्याज दरों में कटौती का इंतजार निवेशकों को थोड़ा और करना होगा"
             ],
             "ID": [
-                "Tesla puncaki estimasi kuartalan, tapi catat penurunan pendapatan tahunan pertama dalam rekor",
-                "Reality Labs Meta mencatat kerugian $6,02 miliar di kuartal keempat",
-                "Emas dan perak terus mencapai rekor tertinggi. Tapi apakah pasar logam mulia 'rusak'?",
-                "Futures S&P 500 sedikit berubah saat investor menimbang pendapatan raksasa teknologi: Pembaruan langsung",
-                "Saham Microsoft turun 7% karena perlambatan pertumbuhan cloud, panduan margin ringan",
-                "Investor harus menunggu sedikit lebih lama untuk pemotongan suku bunga tahun ini"
+                "Tiongkok dan Inggris Berupaya Memulai Kembali Hubungan Mereka — Begini Caranya",
+                "Tesla Lampaui Perkiraan Kuartalan, Namun Catat Penurunan Pendapatan Tahunan Pertama Setelah Rekor",
+                "Reality Labs Meta Merugi $6,02 Miliar pada Kuartal Keempat",
+                "Kontrak Berjangka S&P 500 Sedikit Berubah Saat Investor Menimbang Laba Raksasa Teknologi: Pembaruan Langsung",
+                "Saham Microsoft Turun 7% Akibat Perlambatan Pertumbuhan Cloud, Panduan Margin Tipis",
+                "Investor Harus Menunggu Sedikit Lebih Lama untuk Setiap Pemotongan Suku Bunga Tahun Ini"
             ],
             "AR": [
-                "تسلا تتجاوز تقديرات الربع، لكنها تختتم أول انخفاض سنوي في الإيرادات على الإطلاق",
-                "تحقق Reality Labs التابعة لشركة Meta خسارة قدرها 6.02 مليار دولار في الربع الرابع",
-                "الذهب والفضة يواصلان تسجيل أرقام قياسية. لكن هل سوق المعادن الثمينة 'معطل'؟",
-                "عقود مؤشر S&P 500 الآجلة بالكاد تتغير مع تقييم المستثمرين لأرباح عمالقة التكنولوجيا: تحديثات مباشرة",
-                "سهم مايكروسوفت ينخفض 7% بسبب تباطؤ نمو الخدمات السحابية وتوجيهات هامش منخفضة",
+                "الصين والمملكة المتحدة تحاولان إعادة ضبط علاقتهما - إليك كيف",
+                "تسلا تتجاوز تقديرات الربع، لكنها تسجل أول انخفاض سنوي في الإيرادات بعد رقم قياسي",
+                "تُسجل مختبرات الواقع التابعة لشركة ميتا خسارة بقيمة 6.02 مليار دولار في الربع الرابع",
+                "عقود مؤشرات ستاندرد آند بورز 500 الآجلة تتغير بشكل طفيف مع وزن المستثمرين لأرباح شركات التكنولوجيا العملاقة: تحديثات مباشرة",
+                "سهم مايكروسوفت ينخفض 7% بسبب تباطؤ نمو السحابة وتوجيهات هامشية ضعيفة",
                 "سيتعين على المستثمرين الانتظار لفترة أطول قليلاً لأي تخفيضات في أسعار الفائدة هذا العام"
             ]
         },
-        "last_updated": "2026-01-29T05:56:19.695931+00:00Z"
+        "last_updated": "2026-01-29T07:03:26.144348+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
