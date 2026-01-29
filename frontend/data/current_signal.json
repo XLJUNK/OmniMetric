@@ -1,9 +1,9 @@
 {
-    "last_updated": "2026-01-29T08:14:41.623343+00:00",
-    "last_successful_update": "2026-01-29T08:14:41.623350+00:00",
-    "gms_score": 38,
+    "last_updated": "2026-01-29T08:56:45.064908+00:00",
+    "last_successful_update": "2026-01-29T08:56:45.064914+00:00",
+    "gms_score": 40,
     "sector_scores": {
-        "STOCKS": 40,
+        "STOCKS": 50,
         "CRYPTO": 75,
         "FOREX": 55,
         "COMMODITIES": 55
@@ -219,13 +219,12 @@
             ]
         },
         "VIX": {
-            "price": 16.35,
+            "price": 16.07,
             "prev_price": 16.35,
-            "daily_chg": 0.0,
-            "change_percent": 4.54,
+            "daily_chg": -1.71,
+            "change_percent": -0.12,
             "trend": "DOWN",
             "sparkline": [
-                13.6,
                 14.2,
                 14.33,
                 14.95,
@@ -246,7 +245,8 @@
                 16.09,
                 16.15,
                 16.35,
-                16.35
+                16.35,
+                16.07
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
@@ -547,10 +547,10 @@
             ]
         },
         "NIFTY": {
-            "price": 25391.85,
+            "price": 25413.1,
             "prev_price": 25342.75,
-            "daily_chg": 0.19,
-            "change_percent": 0.4,
+            "daily_chg": 0.28,
+            "change_percent": 0.49,
             "trend": "UP",
             "sparkline": [
                 25942.1,
@@ -574,14 +574,14 @@
                 25048.65,
                 25175.4,
                 25342.75,
-                25391.85
+                25413.1
             ]
         },
         "BTC": {
-            "price": 87870.32,
+            "price": 87848.55,
             "prev_price": 89184.57,
-            "daily_chg": -1.47,
-            "change_percent": 1.5,
+            "daily_chg": -1.5,
+            "change_percent": 1.47,
             "trend": "DOWN",
             "sparkline": [
                 91027.12,
@@ -605,14 +605,14 @@
                 88267.14,
                 89102.57,
                 89184.57,
-                87870.32
+                87848.55
             ]
         },
         "ETH": {
-            "price": 2943.82,
+            "price": 2945.77,
             "prev_price": 3006.61,
-            "daily_chg": -2.09,
-            "change_percent": 4.54,
+            "daily_chg": -2.02,
+            "change_percent": 4.61,
             "trend": "DOWN",
             "sparkline": [
                 3104.38,
@@ -636,14 +636,14 @@
                 2926.46,
                 3022.21,
                 3006.61,
-                2943.82
+                2945.77
             ]
         },
         "SOL": {
-            "price": 123.31,
+            "price": 123.15,
             "prev_price": 125.12,
-            "daily_chg": -1.44,
-            "change_percent": 3.82,
+            "daily_chg": -1.58,
+            "change_percent": 3.68,
             "trend": "DOWN",
             "sparkline": [
                 138.29,
@@ -667,14 +667,14 @@
                 124.14,
                 127.05,
                 125.12,
-                123.31
+                123.15
             ]
         },
         "DXY": {
-            "price": 96.18,
+            "price": 96.24,
             "prev_price": 96.45,
-            "daily_chg": -0.29,
-            "change_percent": -1.46,
+            "daily_chg": -0.22,
+            "change_percent": -1.39,
             "trend": "DOWN",
             "sparkline": [
                 98.04,
@@ -698,14 +698,14 @@
                 97.04,
                 96.22,
                 96.45,
-                96.18
+                96.24
             ]
         },
         "USDJPY": {
-            "price": 153.24,
+            "price": 153.35,
             "prev_price": 152.45,
-            "daily_chg": 0.51,
-            "change_percent": -3.32,
+            "daily_chg": 0.59,
+            "change_percent": -3.25,
             "trend": "UP",
             "sparkline": [
                 156.01,
@@ -729,14 +729,14 @@
                 155.17,
                 154.34,
                 152.45,
-                153.24
+                153.35
             ]
         },
         "EURUSD": {
             "price": 1.2,
             "prev_price": 1.2,
-            "daily_chg": -0.29,
-            "change_percent": 1.94,
+            "daily_chg": -0.42,
+            "change_percent": 1.81,
             "trend": "DOWN",
             "sparkline": [
                 1.18,
@@ -764,10 +764,10 @@
             ]
         },
         "USDINR": {
-            "price": 91.96,
+            "price": 91.95,
             "prev_price": 91.53,
-            "daily_chg": 0.47,
-            "change_percent": 0.44,
+            "daily_chg": 0.46,
+            "change_percent": 0.43,
             "trend": "UP",
             "sparkline": [
                 89.9,
@@ -791,7 +791,7 @@
                 91.5,
                 91.71,
                 91.53,
-                91.96
+                91.95
             ]
         },
         "USDSAR": {
@@ -826,10 +826,10 @@
             ]
         },
         "GOLD": {
-            "price": 5572.3,
+            "price": 5519.6,
             "prev_price": 5301.6,
-            "daily_chg": 5.11,
-            "change_percent": 11.98,
+            "daily_chg": 4.11,
+            "change_percent": 10.92,
             "trend": "UP",
             "sparkline": [
                 4325.1,
@@ -853,14 +853,14 @@
                 5079.7,
                 5079.9,
                 5301.6,
-                5572.3
+                5519.6
             ]
         },
         "OIL": {
-            "price": 64.11,
+            "price": 64.41,
             "prev_price": 63.21,
-            "daily_chg": 1.42,
-            "change_percent": 4.98,
+            "daily_chg": 1.9,
+            "change_percent": 5.47,
             "trend": "UP",
             "sparkline": [
                 58.08,
@@ -884,14 +884,14 @@
                 60.63,
                 62.39,
                 63.21,
-                64.11
+                64.41
             ]
         },
         "COPPER": {
-            "price": 6.3,
+            "price": 6.32,
             "prev_price": 5.89,
-            "daily_chg": 6.97,
-            "change_percent": 6.63,
+            "daily_chg": 7.21,
+            "change_percent": 6.88,
             "trend": "UP",
             "sparkline": [
                 5.49,
@@ -915,14 +915,14 @@
                 5.98,
                 5.83,
                 5.89,
-                6.3
+                6.32
             ]
         },
         "NATGAS": {
             "price": 3.85,
             "prev_price": 7.46,
-            "daily_chg": -48.45,
-            "change_percent": -27.09,
+            "daily_chg": -48.35,
+            "change_percent": -26.96,
             "trend": "DOWN",
             "sparkline": [
                 4.69,
@@ -1043,40 +1043,40 @@
             ]
         },
         "COPPER_GOLD": {
-            "price": 1.13,
+            "price": 1.15,
             "change_percent": 0,
             "trend": "RISK-OFF",
             "sparkline": [
-                1.13,
-                1.13,
-                1.13,
-                1.13,
-                1.13,
-                1.13,
-                1.13,
-                1.13,
-                1.13,
-                1.13,
-                1.13,
-                1.13,
-                1.13,
-                1.13,
-                1.13,
-                1.13,
-                1.13,
-                1.13,
-                1.13,
-                1.13,
-                1.13,
-                1.13,
-                1.13,
-                1.13,
-                1.13,
-                1.13,
-                1.13,
-                1.13,
-                1.13,
-                1.13
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15
             ]
         }
     },
@@ -1108,22 +1108,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS score 38 signals a Defensive regime. Upward momentum, driven by a declining DXY (Dollar strength/Liquidity), indicates stabilizing sentiment. While VIX (Fear/Volatility) is steady, geopolitical factors like the China-UK reset could offer unexpected tailwinds. Maintain caution, but monitor DXY/VIX for sustained shifts as momentum pushes towards neutrality.",
+        "content": "The GMS Score stands at 40, marking the transition from Defensive to Neutral as upward momentum pushes the score. While DXY (Dollar strength/Liquidity) is easing and VIX (Fear/Volatility) shows slight declines, suggesting reduced market anxiety, a divergence appears. Significant rallies in commodities like Copper and Gold contrast with a crypto pullback, potentially signaling inflation concerns or a flight to real assets. This could challenge the current easing sentiment. Maintain a watchful, adaptive strategy.",
         "reports": {
-            "JP": "GMSスコア38はディフェンシブ体制を示唆。DXY（ドル/流動性）の低下が牽引する上向きのモメンタムは、センチメントの安定化を示します。VIX（恐怖/変動性）は安定していますが、英中関係のリセットなど地政学的要因が予想外の追い風となる可能性。警戒を維持しつつ、DXY/VIXの持続的変化を監視し、モメンタムが中立へ向かうのを注視してください。",
-            "EN": "GMS score 38 signals a Defensive regime. Upward momentum, driven by a declining DXY (Dollar strength/Liquidity), indicates stabilizing sentiment. While VIX (Fear/Volatility) is steady, geopolitical factors like the China-UK reset could offer unexpected tailwinds. Maintain caution, but monitor DXY/VIX for sustained shifts as momentum pushes towards neutrality.",
-            "CN": "GMS评分38表明防御性体制。DXY（美元强度/流动性）下降推动的向上动能预示情绪稳定。VIX（恐慌/波动性）保持平稳，但中英关系重置等地缘政治因素或带来意外利好。保持谨慎，同时密切关注DXY/VIX的持续变化，因动能正向中性推进。",
-            "ES": "GMS de 38 indica régimen Defensivo. El impulso alcista, impulsado por un DXY (fortaleza del dólar/Liquidez) decreciente, señala una estabilización del sentimiento. Aunque el VIX (Miedo/Volatilidad) es estable, factores geopolíticos como el reinicio Reino Unido-China podrían ofrecer vientos de cola. Mantenga la cautela, monitoreando DXY/VIX mientras el impulso busca la neutralidad.",
-            "HI": "GMS स्कोर 38 रक्षात्मक शासन का संकेत देता है। घटते DXY (डॉलर की मजबूती/तरलता) से प्रेरित ऊपर की गति स्थिर होती भावना को दर्शाती है। जबकि VIX (भय/अस्थिरता) स्थिर है, चीन-ब्रिटेन संबंध जैसे भू-राजनीतिक कारक अप्रत्याशित बढ़ावा दे सकते हैं। सावधानी बरतें, लेकिन DXY/VIX में निरंतर बदलावों पर नज़र रखें क्योंकि गति तटस्थता की ओर बढ़ रही है।",
-            "ID": "Skor GMS 38 menandakan rezim Defensif. Momentum naik, didorong oleh penurunan DXY (kekuatan Dolar/Likuiditas), menunjukkan sentimen stabil. Meskipun VIX (Ketakutan/Volatilitas) stabil, faktor geopolitik seperti pengaturan ulang hubungan Tiongkok-Inggris dapat menawarkan dorongan tak terduga. Tetap waspada, namun pantau perubahan berkelanjutan DXY/VIX seiring momentum bergerak menuju netralitas.",
-            "AR": "تشير درجة GMS 38 إلى نظام دفاعي. الزخم التصاعدي، مدفوعًا بانخفاض مؤشر DXY (قوة الدولار/السيولة)، يشير إلى استقرار المعنويات. بينما مؤشر VIX (الخوف/التقلب) مستقر، قد تقدم العوامل الجيوسياسية مثل إعادة ضبط العلاقات بين الصين والمملكة المتحدة رياحًا إيجابية غير متوقعة. حافظ على الحذر، ولكن راقب التحولات المستمرة في DXY/VIX مع اتجاه الزخم نحو الحياد."
+            "JP": "GMSスコアは40で、上昇モメンタムによりディフェンシブからニュートラルへ移行中。DXY（ドル高/流動性）が緩和し、VIX（恐怖/変動性）も僅かに低下し市場不安が和らいでいる一方、乖離が見られます。銅や金などコモディティの大幅上昇は仮想通貨の下落と対照的で、インフレ懸念か実物資産への逃避を示唆する可能性があり、現在の緩和ムードを揺るがす恐れがあります。警戒しつつ、適応的な戦略を維持してください。",
+            "EN": "The GMS Score stands at 40, marking the transition from Defensive to Neutral as upward momentum pushes the score. While DXY (Dollar strength/Liquidity) is easing and VIX (Fear/Volatility) shows slight declines, suggesting reduced market anxiety, a divergence appears. Significant rallies in commodities like Copper and Gold contrast with a crypto pullback, potentially signaling inflation concerns or a flight to real assets. This could challenge the current easing sentiment. Maintain a watchful, adaptive strategy.",
+            "CN": "GMS得分维持在40点，在上升动能推动下，市场正从防御型转向中性。虽然DXY（美元强度/流动性）略有放缓，VIX（恐慌/波动性）也略有下降，表明市场焦虑减轻，但存在分歧。铜和黄金等大宗商品显著上涨，与加密货币回调形成对比，这可能预示通胀担忧或转向实物资产。这或将挑战当前缓和的市场情绪。需保持警惕，采取适应性策略。",
+            "ES": "La Puntuación GMS es 40, marcando la transición de Defensiva a Neutral por el impulso alcista. Aunque el DXY (fuerza del dólar/liquidez) se relaja y el VIX (miedo/volatilidad) muestra leves caídas, sugiriendo menor ansiedad, hay una divergencia. Los repuntes significativos en materias primas como Cobre y Oro contrastan con la caída de cripto, señalando posibles preocupaciones inflacionarias o refugio en activos reales. Esto podría desafiar el actual sentimiento de alivio. Mantenga una estrategia vigilante y adaptativa.",
+            "HI": "जीएमएस स्कोर 40 पर है, जो बढ़ती गति के कारण डिफेंसिव से न्यूट्रल में संक्रमण दर्शाता है। हालांकि डीएक्सवाई (डॉलर की मजबूती/तरलता) में कमी आ रही है और वीआईएक्स (डर/अस्थिरता) में थोड़ी गिरावट है, जो बाजार की चिंता में कमी का सुझाव देती है, एक विचलन दिख रहा है। तांबे और सोने जैसी वस्तुओं में महत्वपूर्ण उछाल, क्रिप्टो की गिरावट के विपरीत, संभावित रूप से मुद्रास्फीति की चिंताओं या वास्तविक संपत्ति की ओर पलायन का संकेत दे सकता है। यह मौजूदा सहजता की भावना को चुनौती दे सकता है। सतर्क, अनुकूली रणनीति बनाए रखें।",
+            "ID": "Skor GMS berada di 40, menandai transisi dari Defensif ke Netral karena momentum naik. Sementara DXY (kekuatan Dolar/Likuiditas) sedikit mereda dan VIX (Ketakutan/Volatilitas) menunjukkan penurunan kecil, menunjukkan berkurangnya kecemasan pasar, ada perbedaan. Reli signifikan komoditas seperti Tembaga dan Emas berlawanan dengan kemunduran kripto, berpotensi menandakan kekhawatiran inflasi atau pelarian ke aset riil. Ini dapat menantang sentimen pelonggaran saat ini. Pertahankan strategi yang waspada dan adaptif.",
+            "AR": "سجل مؤشر GMS 40 نقطة، مما يشير إلى الانتقال من الدفاعي إلى المحايد بفضل الزخم الصاعد. بينما يتراجع مؤشر DXY (قوة الدولار/السيولة) وينخفض مؤشر VIX (الخوف/التقلب) قليلاً، مما يوحي بتقليل القلق في السوق، يظهر تباين. فالارتفاع الكبير في السلع مثل النحاس والذهب يتناقض مع تراجع العملات المشفرة، مما قد يشير إلى مخاوف تضخمية أو لجوء إلى الأصول الحقيقية. هذا قد يتحدى الشعور الحالي بالارتياح. حافظ على استراتيجية حذرة ومتكيفة."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-27T10:44:30Z",
-            "score": 40
-        },
         {
             "date": "2026-01-27T11:33:52Z",
             "score": 40
@@ -1359,6 +1355,10 @@
         {
             "date": "2026-01-29T08:14:41Z",
             "score": 38
+        },
+        {
+            "date": "2026-01-29T08:56:45Z",
+            "score": 40
         }
     ],
     "intelligence": {
@@ -1366,7 +1366,7 @@
             {
                 "title": "China and the UK are attempting to reset their relationship — here's how",
                 "link": "https://www.cnbc.com/2026/01/29/china-uk-starmer-xi-relations-visit-businesses-.html",
-                "isoDate": "2026-01-29T08:05:19+00:00Z"
+                "isoDate": "2026-01-29T08:14:43+00:00Z"
             },
             {
                 "title": "Gold and silver keep hitting record highs. But is the precious metals market 'broken'?",
@@ -1396,55 +1396,55 @@
         ],
         "translations": {
             "JP": [
-                "中国と英国、関係修復へ　その方法は",
-                "金と銀、史上最高値を更新し続けているが、貴金属市場は「壊れている」のか？",
-                "なぜNvidiaのAIブームは、オランダの半導体製造装置メーカーASMLなしでは起こり得なかったのか",
-                "S&P500先物は小動き、ハイテク大手の決算を投資家が検討中：ライブアップデート",
-                "マイクロソフト株、クラウド成長鈍化と利益率見通しの低迷で7％下落",
-                "投資家は年内の利下げをもう少し待つ必要がありそう"
+                "中国と英国、関係再構築を試みる　その方法は",
+                "金と銀、過去最高値更新を続ける。しかし貴金属市場は「壊れている」のか？",
+                "NVIDIAのAIブームは、オランダの半導体製造装置メーカーASMLなしでは実現しなかった理由",
+                "S&P500先物は小動き、ハイテク大手企業の決算を投資家が検討中：ライブアップデート",
+                "マイクロソフト株、クラウド成長鈍化と利益率ガイダンスの低迷で7%下落",
+                "投資家は今年の利下げをもう少し待つ必要がありそう"
             ],
             "CN": [
-                "中国与英国正试图重塑关系——以下是原因",
-                "黄金和白银持续创下历史新高。但贵金属市场是否“失灵”？",
-                "为什么英伟达的 AI 繁荣离不开荷兰芯片设备制造商 ASML？",
-                "标普 500 期货期货小幅变动，因投资者权衡科技巨头财报：实时更新",
-                "微软股价因云增长放缓、利润率指引疲软下跌 7%",
-                "投资者今年降息还要再等等"
+                "中英两国正试图重塑关系——它们将如何做到",
+                "黄金和白银持续创下历史新高。但贵金属市场是否“已破裂”？",
+                "为什么英伟达的AI热潮离不开荷兰芯片设备制造商ASML",
+                "标普500指数期货小幅变动，投资者权衡科技巨头财报：实时更新",
+                "微软股价因云增长放缓、利润率指引疲软下跌7%",
+                "投资者今年将不得不再等一段时间才能看到降息"
             ],
             "ES": [
                 "China y el Reino Unido intentan reestablecer su relación: aquí le explicamos cómo",
-                "El oro y la plata siguen alcanzando máximos históricos. ¿Pero está el mercado de metales preciosos \"roto\"?",
-                "Por qué el auge de la IA de Nvidia no podría haber ocurrido sin el fabricante holandés de equipos para chips ASML",
-                "Los futuros del S&P 500 apenas cambian mientras los inversores sopesan los resultados de los gigantes tecnológicos: actualizaciones en vivo",
-                "Las acciones de Microsoft caen un 7% por la desaceleración del crecimiento de la nube y una guía de márgenes débil",
-                "Los inversores tendrán que esperar un poco más para ver recortes de tasas este año"
+                "El oro y la plata siguen alcanzando máximos históricos. Pero, ¿está el mercado de metales preciosos \"roto\"?",
+                "Por qué el auge de la IA de Nvidia no podría haber sucedido sin el fabricante holandés de equipos para chips ASML",
+                "Los futuros del S&P 500 apenas cambian mientras los inversores sopesan las ganancias de los gigantes tecnológicos: Actualizaciones en vivo",
+                "Las acciones de Microsoft caen un 7% por la desaceleración del crecimiento en la nube y una guía de márgenes ligera",
+                "Los inversores tendrán que esperar un poco más para cualquier recorte de tasas este año"
             ],
             "HI": [
-                "चीन और यूके अपने संबंधों को फिर से स्थापित करने की कोशिश कर रहे हैं — यहाँ बताया गया है कि कैसे",
-                "सोना और चांदी रिकॉर्ड ऊंचाई पर पहुंच रहे हैं। लेकिन क्या कीमती धातु बाजार 'टूटा हुआ' है?",
-                "एनवीडिया का AI बूम डच चिप उपकरण निर्माता ASML के बिना क्यों नहीं हो सकता था",
-                "तकनीकी दिग्गजों की कमाई पर निवेशकों के विचार के कारण एसएंडपी 500 फ्यूचर्स में मामूली बदलाव: लाइव अपडेट",
-                "क्लाउड ग्रोथ में सुस्ती, हल्के मार्जिन गाइडेंस पर माइक्रोसॉफ्ट के शेयर 7% गिरे",
-                "निवेशकों को इस साल दर में कटौती के लिए थोड़ा और इंतजार करना होगा"
+                "चीन और ब्रिटेन अपने संबंधों को फिर से स्थापित करने का प्रयास कर रहे हैं — यहां बताया गया है कि कैसे",
+                "सोना और चांदी रिकॉर्ड उच्च स्तर को छू रहे हैं। लेकिन क्या कीमती धातुओं का बाजार 'टूटा' हुआ है?",
+                "क्यों Nvidia का AI बूम डच चिप उपकरण निर्माता ASML के बिना संभव नहीं हो सका",
+                "निवेशक तकनीकी दिग्गजों की कमाई का मूल्यांकन कर रहे हैं, एस एंड पी 500 फ्यूचर्स में मामूली बदलाव: लाइव अपडेट",
+                "क्लाउड वृद्धि में मंदी, हल्के मार्जिन मार्गदर्शन पर माइक्रोसॉफ्ट के शेयर 7% गिरे",
+                "निवेशकों को इस साल दरों में किसी भी कटौती के लिए थोड़ा और इंतजार करना होगा"
             ],
             "ID": [
-                "China dan Inggris mencoba mengatur ulang hubungan mereka — begini caranya",
-                "Emas dan perak terus mencapai rekor tertinggi. Namun, apakah pasar logam mulia 'rusak'?",
-                "Mengapa lonjakan AI Nvidia tidak bisa terjadi tanpa pembuat peralatan chip Belanda, ASML",
-                "Kontrak berjangka S&P 500 sedikit berubah karena investor menimbang pendapatan raksasa teknologi: Pembaruan langsung",
-                "Saham Microsoft turun 7% karena pertumbuhan cloud yang melambat, panduan margin yang ringan",
-                "Investor harus menunggu sedikit lebih lama untuk pemotongan suku bunga tahun ini"
+                "Tiongkok dan Inggris Berusaha Memperbaiki Hubungan Mereka — Begini Caranya",
+                "Emas dan perak terus mencapai rekor tertinggi. Tapi apakah pasar logam mulia 'rusak'?",
+                "Mengapa ledakan AI Nvidia tidak dapat terjadi tanpa pembuat peralatan chip Belanda ASML",
+                "S&P 500 futures sedikit berubah saat investor menimbang pendapatan raksasa teknologi: Pembaruan langsung",
+                "Saham Microsoft turun 7% karena pertumbuhan cloud melambat, panduan margin ringan",
+                "Investor harus menunggu sedikit lebih lama untuk setiap penurunan suku bunga tahun ini"
             ],
             "AR": [
-                "الصين والمملكة المتحدة تحاولان إعادة ضبط علاقتهما - إليك كيف",
-                "الذهب والفضة يواصلان تسجيل أرقام قياسية. لكن هل سوق المعادن الثمينة \"مكسور\"؟",
-                "لماذا لم يكن من الممكن تحقيق طفرة الذكاء الاصطناعي لشركة Nvidia دون صانع معدات الرقائق الهولندي ASML",
-                "عقود S&P 500 الآجلة تتغير بشكل طفيف مع وزن المستثمرين لأرباح عمالقة التكنولوجيا: تحديثات مباشرة",
-                "سهم مايكروسوفت ينخفض 7% بسبب تباطؤ نمو السحابة وتوجيهات هامش ضعيفة",
+                "الصين والمملكة المتحدة تحاولان إعادة ضبط علاقتهما — إليك كيف",
+                "الذهب والفضة يواصلان تحقيق أرقام قياسية. لكن هل سوق المعادن الثمينة \"مكسور\"؟",
+                "لماذا لم يكن ازدهار الذكاء الاصطناعي الخاص بشركة Nvidia ممكنًا لولا شركة ASML الهولندية المصنعة لمعدات الرقائق",
+                "عقود آجل مؤشر S&P 500 تتغير بشكل طفيف مع تقييم المستثمرين لأرباح عمالقة التكنولوجيا: تحديثات مباشرة",
+                "أسهم مايكروسوفت تنخفض 7% بسبب تباطؤ نمو السحابة وتوجيهات هوامش محدودة",
                 "سيتعين على المستثمرين الانتظار لفترة أطول قليلاً لأي تخفيضات في أسعار الفائدة هذا العام"
             ]
         },
-        "last_updated": "2026-01-29T08:14:41.622858+00:00Z"
+        "last_updated": "2026-01-29T08:56:45.064407+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
