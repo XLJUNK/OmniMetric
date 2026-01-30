@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-01-30T21:38:23.531151+00:00",
-    "last_successful_update": "2026-01-30T21:38:23.531157+00:00",
+    "last_updated": "2026-01-30T22:40:15.492176+00:00",
+    "last_successful_update": "2026-01-30T22:40:15.492182+00:00",
     "gms_score": 30,
     "sector_scores": {
         "STOCKS": 30,
@@ -47,11 +47,10 @@
             ]
         },
         "YIELD_SPREAD": {
-            "price": 0.57,
+            "price": 0.59,
             "change_percent": 0.0,
             "trend": "NORMAL",
             "sparkline": [
-                0.54,
                 0.53,
                 0.53,
                 0.46,
@@ -80,7 +79,8 @@
                 0.55,
                 0.57,
                 0.58,
-                0.57
+                0.57,
+                0.59
             ]
         },
         "HY_SPREAD": {
@@ -181,11 +181,10 @@
             ]
         },
         "BREAKEVEN_INFLATION": {
-            "price": 2.35,
+            "price": 2.36,
             "change_percent": 0.0,
             "trend": "STABLE",
             "sparkline": [
-                2.24,
                 2.23,
                 2.24,
                 2.24,
@@ -214,7 +213,8 @@
                 2.32,
                 2.34,
                 2.36,
-                2.35
+                2.35,
+                2.36
             ]
         },
         "VIX": {
@@ -249,11 +249,10 @@
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
-            "price": 0.71,
+            "price": 0.74,
             "change_percent": 0.0,
             "trend": "NEUTRAL",
             "sparkline": [
-                0.68,
                 0.73,
                 0.7,
                 0.68,
@@ -282,7 +281,8 @@
                 0.66,
                 0.71,
                 0.7,
-                0.71
+                0.71,
+                0.74
             ]
         },
         "US_10Y_YIELD": {
@@ -360,10 +360,10 @@
             ]
         },
         "SPY": {
-            "price": 691.92,
+            "price": 691.97,
             "prev_price": 694.04,
-            "daily_chg": -0.31,
-            "change_percent": -0.12,
+            "daily_chg": -0.3,
+            "change_percent": -0.11,
             "trend": "DOWN",
             "sparkline": [
                 687.01,
@@ -387,7 +387,7 @@
                 695.49,
                 695.42,
                 694.04,
-                691.92
+                691.97
             ]
         },
         "TNX": {
@@ -453,10 +453,10 @@
             ]
         },
         "IWM": {
-            "price": 259.73,
+            "price": 259.65,
             "prev_price": 263.37,
-            "daily_chg": -1.38,
-            "change_percent": -1.61,
+            "daily_chg": -1.41,
+            "change_percent": -1.64,
             "trend": "DOWN",
             "sparkline": [
                 248.03,
@@ -480,14 +480,14 @@
                 264.73,
                 263.3,
                 263.37,
-                259.73
+                259.65
             ]
         },
         "RSP": {
-            "price": 197.99,
+            "price": 198.08,
             "prev_price": 198.52,
-            "daily_chg": -0.27,
-            "change_percent": -0.63,
+            "daily_chg": -0.22,
+            "change_percent": -0.58,
             "trend": "DOWN",
             "sparkline": [
                 193.21,
@@ -511,14 +511,14 @@
                 198.93,
                 198.26,
                 198.52,
-                197.99
+                198.08
             ]
         },
         "HYG": {
-            "price": 81.1,
+            "price": 81.12,
             "prev_price": 81.03,
-            "daily_chg": 0.08,
-            "change_percent": -0.1,
+            "daily_chg": 0.11,
+            "change_percent": -0.07,
             "trend": "UP",
             "sparkline": [
                 80.71,
@@ -542,7 +542,7 @@
                 81.17,
                 81.04,
                 81.03,
-                81.1
+                81.12
             ]
         },
         "NIFTY": {
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 84234.62,
+            "price": 83912.83,
             "prev_price": 84561.59,
-            "daily_chg": -0.39,
-            "change_percent": -4.57,
+            "daily_chg": -0.77,
+            "change_percent": -4.93,
             "trend": "DOWN",
             "sparkline": [
                 90513.1,
@@ -604,14 +604,14 @@
                 89102.57,
                 89184.57,
                 84561.59,
-                84234.62
+                83912.83
             ]
         },
         "ETH": {
-            "price": 2697.45,
+            "price": 2698.8,
             "prev_price": 2818.23,
-            "daily_chg": -4.29,
-            "change_percent": -7.83,
+            "daily_chg": -4.24,
+            "change_percent": -7.78,
             "trend": "DOWN",
             "sparkline": [
                 3083.05,
@@ -635,14 +635,14 @@
                 3022.21,
                 3006.61,
                 2818.23,
-                2697.45
+                2698.8
             ]
         },
         "SOL": {
-            "price": 117.39,
+            "price": 116.86,
             "prev_price": 117.61,
-            "daily_chg": -0.19,
-            "change_percent": -5.44,
+            "daily_chg": -0.63,
+            "change_percent": -5.86,
             "trend": "DOWN",
             "sparkline": [
                 135.76,
@@ -666,7 +666,7 @@
                 127.05,
                 125.12,
                 117.61,
-                117.39
+                116.86
             ]
         },
         "DXY": {
@@ -976,7 +976,7 @@
             ]
         },
         "BREADTH": {
-            "price": -0.51,
+            "price": -0.47,
             "change_percent": 0.0,
             "trend": "HEALTHY",
             "sparkline": [
@@ -1000,11 +1000,11 @@
                 1.86,
                 1.52,
                 1.86,
-                1.89
+                1.93
             ]
         },
         "SPY_MOMENTUM": {
-            "price": 0.51,
+            "price": 0.47,
             "change_percent": 0,
             "trend": "BALANCED",
             "sparkline": [
@@ -1106,22 +1106,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS score of 30, pushed by downward momentum, indicates a Defensive regime. Rising DXY (Dollar strength/Liquidity) and VIX (Fear/Volatility) reflect growing caution and tighter global liquidity, with widening HY spreads. While risk-off deepens, potential new Federal Reserve leadership could unexpectedly shift monetary policy expectations, offering a tailwind. Maintain caution, but monitor policy shifts closely.",
+        "content": "GMS Status: Defensive. Strong DXY (Dollar strength/Liquidity) and rising VIX (Fear/Volatility) reflect tightening conditions and market risk aversion. Net Liquidity declines and credit spreads widen. While GMS 30 suggests caution, the rapid DXY surge might be stretched. Any DXY pause could offer a temporary reprieve. Maintain defensive posture; monitor DXY closely.",
         "reports": {
-            "JP": "GMSスコア30は、下降モメンタムにより防御的体制を示唆。DXY（ドル高/流動性）上昇とVIX（恐怖/変動性）増加は、市場の警戒感と世界的な流動性逼迫を反映し、HYスプレッドも拡大。リスクオフが深まる中、FRB新体制の可能性は金融政策期待を転換させ、追い風となることも。慎重な姿勢を維持しつつ、政策変更を注視。",
-            "EN": "GMS score of 30, pushed by downward momentum, indicates a Defensive regime. Rising DXY (Dollar strength/Liquidity) and VIX (Fear/Volatility) reflect growing caution and tighter global liquidity, with widening HY spreads. While risk-off deepens, potential new Federal Reserve leadership could unexpectedly shift monetary policy expectations, offering a tailwind. Maintain caution, but monitor policy shifts closely.",
-            "CN": "GMS得分30，受下降动能推动，预示防御性市场。DXY（美元走强/流动性）和VIX（恐慌/波动性）上升，反映市场谨慎情绪加剧及全球流动性收紧，高收益利差扩大。尽管避险情绪深化，美联储潜在新领导层可能意外改变货币政策预期，提供逆势利好。保持谨慎，密切关注政策转变。",
-            "ES": "El GMS con 30, impulsado por momento descendente, señala un régimen Defensivo. El DXY (fortaleza dólar/liquidez) y el VIX (miedo/volatilidad) en alza reflejan cautela y liquidez global más ajustada, con diferenciales HY ampliándose. Aunque el riesgo a la baja se profundiza, el posible nuevo liderazgo de la Fed podría alterar las expectativas monetarias, ofreciendo un viento de cola. Mantenga la cautela, monitoree cambios políticos.",
-            "HI": "GMS स्कोर 30, गिरावट के कारण, रक्षात्मक शासन का संकेत देता है। बढ़ते DXY (डॉलर मजबूती/तरलता) और VIX (भय/अस्थिरता) बढ़ती बाजार सावधानी और वैश्विक तरलता में सख्ती को दर्शाते हैं, जिससे HY स्प्रेड बढ़ रहे हैं। जबकि जोखिम कम हो रहा है, फेडरल रिजर्व का संभावित नया नेतृत्व मौद्रिक नीति की उम्मीदों को अप्रत्याशित रूप से बदल सकता है, जो एक टेलविंड प्रदान करता है। सतर्क रहें, नीतिगत बदलावों पर कड़ी नज़र रखें।",
-            "ID": "Skor GMS 30, didorong momentum menurun, menunjukkan rezim Defensif. Kenaikan DXY (kekuatan Dolar/Likuiditas) dan VIX (Ketakutan/Volatilitas) mencerminkan kehati-hatian pasar yang meningkat dan likuiditas global yang ketat, dengan spread HY melebar. Sementara sentimen risk-off mendalam, potensi kepemimpinan baru Federal Reserve dapat mengubah ekspektasi kebijakan moneter secara tak terduga, menawarkan angin segar. Tetap waspada, pantau pergeseran kebijakan.",
-            "AR": "نتيجة GMS البالغة 30، مدفوعة بزخم هبوطي، تشير إلى نظام دفاعي. يعكس ارتفاع مؤشر DXY (قوة الدولار/السيولة) ومؤشر VIX (الخوف/التقلب) تزايد حذر السوق وتشديد السيولة العالمية، مع اتساع فروق الائتمان عالية العائد. بينما تتعمق مخاطر الابتعاد عن المخاطرة، يمكن للقيادة الجديدة المحتملة للاحتياطي الفيدرالي تغيير توقعات السياسة النقدية بشكل غير متوقع، مما يوفر دفعة إيجابية. حافظ على الحذر، وراقب تحولات السياسة."
+            "JP": "GMSステータス：防御的。DXY（ドル高/流動性）の強さとVIX（恐怖/変動性）の上昇は、引き締めと市場のリスク回避を示唆。純流動性は低下し、クレジットスプレッドは拡大。GMS 30は警戒を促すが、DXYの急速な上昇は過剰な可能性。DXYの一時停止は一時的な安堵をもたらす。防御的姿勢を維持し、DXYを注視。",
+            "EN": "GMS Status: Defensive. Strong DXY (Dollar strength/Liquidity) and rising VIX (Fear/Volatility) reflect tightening conditions and market risk aversion. Net Liquidity declines and credit spreads widen. While GMS 30 suggests caution, the rapid DXY surge might be stretched. Any DXY pause could offer a temporary reprieve. Maintain defensive posture; monitor DXY closely.",
+            "CN": "GMS状态：防御性。强势美元（DXY，美元强度/流动性）和VIX（恐慌/波动性）上升反映市场紧缩及避险情绪。净流动性下降，信用利差扩大。GMS 30提示谨慎，但DXY快速上涨可能过度。任何DXY暂停或会提供短期喘息。维持防御姿态，密切关注DXY。",
+            "ES": "Estado GMS: Defensivo. DXY (fuerza del dólar/liquidez) fuerte y VIX (miedo/volatilidad) alza reflejan ajuste y aversión al riesgo. Liquidez neta baja, diferenciales de crédito amplios. GMS 30 sugiere cautela, pero el DXY rápido podría estar estirado. Una pausa en DXY ofrecería alivio temporal. Mantener defensiva, monitorear DXY.",
+            "HI": "जीएमएस स्थिति: रक्षात्मक। मजबूत डीएक्सवाई (डॉलर शक्ति/तरलता) और बढ़ता विक्स (भय/अस्थिरता) कसने की स्थिति और बाजार के जोखिम से बचने को दर्शाते हैं। शुद्ध तरलता घट रही है, और क्रेडिट स्प्रेड बढ़ रहे हैं। जबकि जीएमएस 30 सावधानी का सुझाव देता है, डीएक्सवाई में तेजी से वृद्धि अतिरंजित हो सकती है। डीएक्सवाई में कोई भी विराम अस्थायी राहत दे सकता है। रक्षात्मक मुद्रा बनाए रखें; डीएक्सवाई पर बारीकी से नज़र रखें।",
+            "ID": "Status GMS: Defensif. DXY (kekuatan Dolar/Likuiditas) yang kuat dan VIX (Ketakutan/Volatilitas) yang meningkat mencerminkan pengetatan kondisi dan penghindaran risiko pasar. Likuiditas bersih menurun, spread kredit melebar. Meskipun GMS 30 menyarankan kehati-hatian, lonjakan DXY yang cepat mungkin berlebihan. Setiap jeda DXY bisa menawarkan jeda sementara. Pertahankan posisi defensif; pantau DXY dengan cermat.",
+            "AR": "حالة GMS: دفاعية. يعكس ارتفاع مؤشر الدولار DXY (قوة الدولار/السيولة) و VIX (الخوف/التقلب) ظروف التشديد وتجنب المخاطر السوقية. تنخفض السيولة الصافية وتتسع فروقات الائتمان. بينما يشير GMS 30 إلى الحذر، قد تكون الزيادة السريعة في DXY مبالغاً فيها. أي توقف في DXY يمكن أن يوفر راحة مؤقتة. حافظ على موقف دفاعي؛ راقب DXY عن كثب."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-28T09:46:30Z",
-            "score": 41
-        },
         {
             "date": "2026-01-28T10:44:08Z",
             "score": 41
@@ -1357,6 +1353,10 @@
         {
             "date": "2026-01-30T21:38:23Z",
             "score": 30
+        },
+        {
+            "date": "2026-01-30T22:40:15Z",
+            "score": 30
         }
     ],
     "intelligence": {
@@ -1394,55 +1394,55 @@
         ],
         "translations": {
             "JP": [
-                "FRB（米連邦準備制度理事会）新議長候補、ケビン・ウォーシュ氏について知っておくべきすべて",
-                "ウォーシュ氏のFRB議長候補指名で、FRB独立性への懸念が後退、銀価格は1980年以来最悪の30％下落、金価格も急落",
-                "一部政府機関閉鎖が進行中、グラハム上院議員が反対を撤回し、上院が合意案を採決へ",
-                "トランプ大統領、ついにFRB議長候補を指名：ケビン・ウォーシュ氏が投資家に意味すること",
-                "S&P500種株価指数は3日続落、投機的な銀取引が解消されるも、月末は上昇で着地",
-                "来週決算発表のパランティアやその他注目株は、決算モメンタムを追い風に"
+                "連邦準備制度理事会（FRB）トップ候補、ケビン・ウォーシュ氏について知っておくべきことすべて",
+                "ウォーシュ氏のFRBトップ指名で、連邦準備制度の独立性への懸念が後退、銀は1980年以来最悪の日に30％急落、金も下落",
+                "部分的政府閉鎖が進行中。グラハム氏が阻止を解除、上院が合意案を採決へ",
+                "トランプ大統領、FRB議長指名を最終決定 - ケビン・ウォーシュ氏が投資家に意味すること",
+                "S&P 500種株価指数、投機的な銀取引の巻き戻しで3日続落も、月間ではプラスで終了",
+                "来週決算発表のパランティアなど、これらの銘柄は決算への勢いを背にしている"
             ],
             "CN": [
-                "关于特朗普提名的美联储主席候选人凯文·沃什，您需要了解的一切",
-                "沃什被提名为美联储主席，缓解了对美联储独立性的担忧，白银价格暴跌30%，创1980年以来最差单日表现，黄金价格随之下跌",
-                "部分政府停摆在即，格雷厄姆参议员取消阻挠后，参议院将就协议进行投票",
+                "关于特朗普提名的美联储主席候选人凯文·沃什，你需要知道的一切",
+                "沃什获提名为美联储主席候选，市场担忧美联储独立性缓解，白银暴跌30%创1980年来最差单日表现，黄金亦下跌",
+                "部分政府停摆在即；格雷厄姆取消阻拦，参议院将就协议进行投票",
                 "特朗普终于做出美联储主席人选决定——凯文·沃什对投资者意味着什么",
-                "标普500指数连续第三日下跌，因投机性白银交易回落，但月末收涨",
-                "Palantir及下周将公布财报的其他股票，均有盈利势头支撑"
+                "标普500指数下跌，因投机性白银交易回落，但月度收盘仍为正值",
+                "Palantir 和其他下周财报公布的股票，其盈利动能正强劲增长"
             ],
             "ES": [
                 "Todo lo que necesitas saber sobre Kevin Warsh, la elección de Trump para dirigir la Reserva Federal",
-                "La plata se desploma un 30% en el peor día desde 1980, el oro cae ante el alivio de los temores sobre la independencia de la Fed por la elección de Warsh",
-                "Paralización parcial del gobierno en camino; el Senado votará el acuerdo después de que Graham retire su objeción",
-                "Trump finalmente hace su elección de presidente de la Fed: lo que Kevin Warsh significa para los inversores",
-                "El S&P 500 cae por tercer día consecutivo mientras se deshace la operación especulativa de plata, pero termina el mes al alza",
-                "Palantir y estas otras acciones que reportan la próxima semana tienen el impulso de las ganancias a su favor"
+                "La plata se desploma un 30% en su peor día desde 1980, el oro cae mientras la elección de Warsh alivia el temor a la independencia de la Fed",
+                "Cierre parcial del gobierno en camino; el Senado votará el acuerdo después de que Graham retire su objeción",
+                "Trump finalmente elige a su presidente de la Fed: lo que Kevin Warsh significa para los inversores",
+                "El S&P 500 cae por tercer día consecutivo mientras se deshace la operación especulativa con plata, pero termina el mes en positivo",
+                "Palantir y estas otras acciones que reportan la próxima semana tienen impulso de ganancias a su favor"
             ],
             "HI": [
-                "केविन वॉर्श के बारे में आपको जो कुछ जानने की ज़रूरत है, जिन्हें फेडरल रिजर्व का नेतृत्व करने के लिए ट्रम्प ने चुना है",
-                "वॉर्श की फेड प्रमुख के रूप में नियुक्ति से फेड की स्वतंत्रता को लेकर चिंता कम हुई, चांदी 1980 के बाद अपने सबसे खराब दिन में 30% गिरी, सोना भी लुढ़का",
-                "आंशिक सरकारी शटडाउन की ओर अग्रसर; ग्राहम द्वारा रोक हटाए जाने के बाद सीनेट सौदे पर मतदान करेगी",
-                "ट्रम्प ने आखिरकार किया फेड चेयर का चुनाव - केविन वॉर्श का निवेशकों के लिए क्या मतलब है",
-                "सट्टा चांदी व्यापार के थमने से एसएंडपी 500 लगातार तीसरे दिन गिरा, लेकिन महीने का अंत सकारात्मक रहा",
-                "पालंटिर और अगले सप्ताह रिपोर्ट करने वाले ये अन्य स्टॉक, अपनी कमाई की गति का लाभ उठा रहे हैं"
+                "केविन वॉर्श, फेडरल रिजर्व का नेतृत्व करने के लिए ट्रम्प की पसंद के बारे में आपको जो कुछ भी जानने की आवश्यकता है",
+                "वॉर्श की फेड प्रमुख की पसंद से फेड की स्वतंत्रता का डर कम हुआ, चांदी 1980 के बाद के सबसे खराब दिन में 30% गिरी, सोना भी लुढ़का",
+                "आंशिक सरकारी शटडाउन पटरी पर; ग्राहम ने होल्ड छोड़ा, सीनेट सौदे पर मतदान करेगी",
+                "ट्रम्प ने आखिरकार अपना फेड चेयर उम्मीदवार चुना - केविन वॉर्श का निवेशकों के लिए क्या मतलब है",
+                "S&P 500 लगातार तीसरे दिन गिरा क्योंकि सट्टा चांदी का व्यापार अनवाइंड हुआ, लेकिन महीने का अंत सकारात्मक रहा",
+                "Palantir और ये अन्य स्टॉक जो अगले सप्ताह रिपोर्ट कर रहे हैं, उनके पास कमाई की गति है"
             ],
             "ID": [
-                "Segala yang perlu Anda ketahui tentang Kevin Warsh, pilihan Trump untuk memimpin Federal Reserve",
-                "Perak anjlok 30% di hari terburuk sejak 1980, emas jatuh saat pilihan Warsh meredakan ketakutan independensi The Fed",
-                "Penutupan pemerintah sebagian sesuai jadwal; Senat akan memilih kesepakatan setelah Graham mencabut penahanannya",
-                "Trump akhirnya membuat pilihan ketua The Fed-nya – apa arti Kevin Warsh bagi investor",
-                "S&P 500 jatuh untuk hari ketiga berturut-turut saat perdagangan perak spekulatif unwinds, tetapi berakhir bulan positif",
-                "Palantir dan saham lainnya yang melaporkan minggu depan memiliki momentum laba yang mendukungnya"
+                "Semua yang perlu Anda ketahui tentang Kevin Warsh, pilihan Trump untuk memimpin Federal Reserve",
+                "Perak anjlok 30% pada hari terburuk sejak 1980, emas jatuh seiring pilihan Warsh meredakan ketakutan kemandirian Fed",
+                "Penutupan pemerintahan parsial sesuai jadwal; Senat akan memilih kesepakatan setelah Graham mencabut penahanannya",
+                "Trump akhirnya membuat pilihan ketua Fed-nya — apa arti Kevin Warsh bagi investor",
+                "S&P 500 jatuh untuk hari ketiga berturut-turut karena perdagangan perak spekulatif unwind, tetapi berakhir bulan positif",
+                "Palantir dan saham-saham lain yang melaporkan minggu depan memiliki momentum pendapatan yang mendukung"
             ],
             "AR": [
                 "كل ما تحتاج لمعرفته عن كيفن وارش، اختيار ترامب لقيادة الاحتياطي الفيدرالي",
-                "الفضة تهبط 30% في أسوأ يوم لها منذ عام 1980، والذهب يتراجع مع تخفيف اختيار وارش لمخاوف استقلال الاحتياطي الفيدرالي",
-                "الإغلاق الحكومي الجزئي في طريقه؛ مجلس الشيوخ سيصوت على الصفقة بعد أن أسقط غراهام اعتراضه",
-                "ترامب يتخذ أخيرًا قراره بشأن رئيس الاحتياطي الفيدرالي - ما يعنيه كيفن وارش للمستثمرين",
-                "انخفاض مؤشر S&P 500 لليوم الثالث على التوالي مع تراجع تجارة الفضة المضاربة، لكنه ينهي الشهر بإيجابية",
-                "بالانتير وهذه الأسهم الأخرى التي ستعلن عن نتائجها الأسبوع المقبل لديها زخم أرباح يدعمها"
+                "الفضة تنخفض 30% في أسوأ يوم منذ عام 1980، والذهب يتهاوى مع تخفيف اختيار وارش لمخاوف استقلال الفيدرالي",
+                "الإغلاق الحكومي الجزئي يسير في طريقه؛ مجلس الشيوخ سيصوت على الصفقة بعد أن أسقط غراهام الرفض",
+                "ترامب أخيراً يتخذ قراره بشأن رئيس الاحتياطي الفيدرالي - ما يعنيه كيفن وارش للمستثمرين",
+                "مؤشر S&P 500 ينخفض لليوم الثالث على التوالي مع تراجع تجارة الفضة المضاربة، لكنه ينهي الشهر بإيجابية",
+                "بالانتير والأسهم الأخرى التي ستقدم تقاريرها الأسبوع المقبل لديها زخم أرباح قوي"
             ]
         },
-        "last_updated": "2026-01-30T21:38:23.530689+00:00Z"
+        "last_updated": "2026-01-30T22:40:15.491677+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
