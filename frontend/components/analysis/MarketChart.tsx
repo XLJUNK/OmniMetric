@@ -61,7 +61,7 @@ export default function MarketChart({ data, visibleIndicators, colors }: MarketC
                 textColor: colors?.textColor || '#d1d5db',
             },
             width: chartContainerRef.current.clientWidth,
-            height: 400,
+            height: 280, // Reduced from 400
             grid: {
                 vertLines: { color: '#333' },
                 horzLines: { color: '#333' },
@@ -252,7 +252,7 @@ export default function MarketChart({ data, visibleIndicators, colors }: MarketC
                 textColor: colors?.textColor || '#d1d5db',
             },
             width: rsiContainerRef.current.clientWidth,
-            height: 150,
+            height: 100, // Reduced from 150
             grid: {
                 vertLines: { color: '#333' },
                 horzLines: { color: '#333' },
@@ -298,10 +298,10 @@ export default function MarketChart({ data, visibleIndicators, colors }: MarketC
 
 
     return (
-        <div className="flex flex-col gap-1 w-full relative">
-            <div ref={chartContainerRef} className="w-full h-[400px]" />
+        <div className="flex flex-col w-full relative">
+            <div ref={chartContainerRef} className="w-full h-[280px]" />
             {visibleIndicators.rsi && (
-                <div ref={rsiContainerRef} className="w-full h-[150px]" />
+                <div ref={rsiContainerRef} className="w-full h-[100px] border-t border-slate-800/50" />
             )}
         </div>
     );
