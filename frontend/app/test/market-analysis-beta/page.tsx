@@ -61,19 +61,20 @@ export default function MarketAnalysisPage() {
             </header>
 
             {/* Unified Toolbar */}
-            <div className="bg-slate-900 border border-slate-800 rounded-xl p-3 mb-6 flex flex-col lg:flex-row gap-4 lg:items-center justify-between shadow-sm">
+            <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 mb-6 flex flex-col xl:flex-row gap-4 xl:items-center justify-between shadow-sm">
 
-                {/* Left: Selectors */}
-                <div className="flex flex-col sm:flex-row gap-4 sm:items-center">
-                    {/* Symbols */}
-                    <div className="flex bg-slate-950 rounded-lg p-1 border border-slate-800">
+                {/* Left Group: Primary Selection (Subject & Time) */}
+                <div className="flex flex-col md:flex-row gap-4 md:items-center flex-wrap">
+
+                    {/* Symbols (Blue Theme) */}
+                    <div className="flex gap-1 bg-slate-950/50 p-1 rounded-lg border border-slate-800/50">
                         {(["DXY", "US10Y", "SPX"] as Instrument[]).map(sym => (
                             <button
                                 key={sym}
                                 onClick={() => setSelectedSymbol(sym)}
-                                className={`px-4 py-1.5 rounded-md font-bold text-sm transition-all ${selectedSymbol === sym
-                                    ? 'bg-blue-600 text-white shadow-lg shadow-blue-900/50'
-                                    : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800'
+                                className={`px-4 py-2 rounded-md font-bold text-sm transition-all shadow-sm ${selectedSymbol === sym
+                                    ? 'bg-blue-600 text-white shadow-blue-500/30'
+                                    : 'bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-blue-200'
                                     }`}
                             >
                                 {sym}
@@ -81,17 +82,15 @@ export default function MarketAnalysisPage() {
                         ))}
                     </div>
 
-                    <div className="w-px h-8 bg-slate-800 hidden sm:block"></div>
-
-                    {/* Timeframes */}
-                    <div className="flex gap-1">
+                    {/* Timeframes (Emerald Theme) */}
+                    <div className="flex gap-1 bg-slate-950/50 p-1 rounded-lg border border-slate-800/50">
                         {(["1h", "4h", "Daily"] as Timeframe[]).map(tf => (
                             <button
                                 key={tf}
                                 onClick={() => setSelectedTimeframe(tf)}
-                                className={`px-3 py-1.5 text-xs font-medium rounded-md border transition-colors ${selectedTimeframe === tf
-                                    ? 'bg-slate-800 border-slate-600 text-emerald-400'
-                                    : 'bg-transparent border-transparent text-slate-500 hover:text-slate-300 hover:bg-slate-900'
+                                className={`px-4 py-2 rounded-md font-bold text-sm transition-all shadow-sm ${selectedTimeframe === tf
+                                    ? 'bg-emerald-600 text-white shadow-emerald-500/30'
+                                    : 'bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-emerald-200'
                                     }`}
                             >
                                 {tf}
@@ -100,35 +99,37 @@ export default function MarketAnalysisPage() {
                     </div>
                 </div>
 
-                {/* Right: Indicators */}
-                <div className="flex flex-wrap gap-2 items-center">
-                    <span className="text-xs text-slate-500 uppercase tracking-wider mr-1 md:block hidden">Indicators:</span>
+                {/* Right Group: Indicators (Violet Theme) */}
+                <div className="flex flex-wrap gap-2 items-center bg-slate-950/50 p-1 rounded-lg border border-slate-800/50">
+                    <span className="text-xs text-slate-500 font-bold uppercase tracking-wider px-2 hidden sm:block">
+                        Indicators
+                    </span>
                     <button
                         onClick={() => setIndicators({ ...indicators, bb: !indicators.bb })}
-                        className={`px-3 py-1.5 text-xs rounded-full border transition-all ${indicators.bb
-                            ? 'bg-cyan-500/10 border-cyan-500/50 text-cyan-400'
-                            : 'bg-slate-900 border-slate-700 text-slate-500 hover:border-slate-600'
+                        className={`px-3 py-2 rounded-md font-medium text-xs transition-all border ${indicators.bb
+                            ? 'bg-violet-600 border-violet-500 text-white shadow-lg shadow-violet-500/20'
+                            : 'bg-slate-900 border-slate-700 text-slate-400 hover:bg-slate-800 hover:border-slate-600'
                             }`}
                     >
-                        Bollinger Bands
+                        Bollinger
                     </button>
                     <button
                         onClick={() => setIndicators({ ...indicators, sma: !indicators.sma })}
-                        className={`px-3 py-1.5 text-xs rounded-full border transition-all ${indicators.sma
-                            ? 'bg-orange-500/10 border-orange-500/50 text-orange-400'
-                            : 'bg-slate-900 border-slate-700 text-slate-500 hover:border-slate-600'
+                        className={`px-3 py-2 rounded-md font-medium text-xs transition-all border ${indicators.sma
+                            ? 'bg-violet-600 border-violet-500 text-white shadow-lg shadow-violet-500/20'
+                            : 'bg-slate-900 border-slate-700 text-slate-400 hover:bg-slate-800 hover:border-slate-600'
                             }`}
                     >
-                        MA (200, 25)
+                        MA(200,25)
                     </button>
                     <button
                         onClick={() => setIndicators({ ...indicators, rsi: !indicators.rsi })}
-                        className={`px-3 py-1.5 text-xs rounded-full border transition-all ${indicators.rsi
-                            ? 'bg-purple-500/10 border-purple-500/50 text-purple-400'
-                            : 'bg-slate-900 border-slate-700 text-slate-500 hover:border-slate-600'
+                        className={`px-3 py-2 rounded-md font-medium text-xs transition-all border ${indicators.rsi
+                            ? 'bg-violet-600 border-violet-500 text-white shadow-lg shadow-violet-500/20'
+                            : 'bg-slate-900 border-slate-700 text-slate-400 hover:bg-slate-800 hover:border-slate-600'
                             }`}
                     >
-                        RSI
+                        RSI(14)
                     </button>
                 </div>
             </div>
