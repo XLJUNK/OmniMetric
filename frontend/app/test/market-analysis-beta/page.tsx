@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useEffect, useState } from 'react';
@@ -8,7 +7,7 @@ import { TVPartnerCard } from '@/components/TVPartnerCard';
 
 // Types matching JSON structure
 type Instrument = "DXY" | "US10Y" | "SPX"; // Using keys from JSON
-type Timeframe = "1h" | "4h" | "Daily";
+type Timeframe = "1h" | "4h";
 
 interface AnalysisData {
     [symbol: string]: {
@@ -19,7 +18,7 @@ interface AnalysisData {
 export default function MarketAnalysisPage() {
     const [data, setData] = useState<AnalysisData | null>(null);
     const [selectedSymbol, setSelectedSymbol] = useState<Instrument>("DXY");
-    const [selectedTimeframe, setSelectedTimeframe] = useState<Timeframe>("Daily");
+    const [selectedTimeframe, setSelectedTimeframe] = useState<Timeframe>("4h");
     const [indicators, setIndicators] = useState({
         bb: true,
         sma: true,
@@ -61,20 +60,20 @@ export default function MarketAnalysisPage() {
             </header>
 
             {/* Unified Toolbar */}
-            <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 mb-6 flex flex-col xl:flex-row gap-4 xl:items-center justify-between shadow-sm">
+            <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 mb-6 flex flex-col md:flex-row gap-6 md:items-center justify-between shadow-sm">
 
-                {/* Left Group: Primary Selection (Subject & Time) */}
-                <div className="flex flex-col md:flex-row gap-4 md:items-center flex-wrap">
+                {/* Left Group: Selectors */}
+                <div className="flex flex-col sm:flex-row gap-6 sm:items-center w-full md:w-auto">
 
                     {/* Symbols (Blue Theme) */}
-                    <div className="flex gap-1 bg-slate-950/50 p-1 rounded-lg border border-slate-800/50">
+                    <div className="flex gap-2">
                         {(["DXY", "US10Y", "SPX"] as Instrument[]).map(sym => (
                             <button
                                 key={sym}
                                 onClick={() => setSelectedSymbol(sym)}
-                                className={`px-4 py-2 rounded-md font-bold text-sm transition-all shadow-sm ${selectedSymbol === sym
-                                    ? 'bg-blue-600 text-white shadow-blue-500/30'
-                                    : 'bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-blue-200'
+                                className={`px-4 py-2 rounded-lg font-bold text-sm transition-all shadow-md flex items-center gap-2 ${selectedSymbol === sym
+                                    ? '!bg-blue-600 !text-white ring-1 ring-blue-400 shadow-blue-900/50'
+                                    : 'bg-slate-800 text-slate-400 hover:bg-slate-700 border border-slate-700'
                                     }`}
                             >
                                 {sym}
@@ -83,14 +82,14 @@ export default function MarketAnalysisPage() {
                     </div>
 
                     {/* Timeframes (Emerald Theme) */}
-                    <div className="flex gap-1 bg-slate-950/50 p-1 rounded-lg border border-slate-800/50">
-                        {(["1h", "4h", "Daily"] as Timeframe[]).map(tf => (
+                    <div className="flex gap-2">
+                        {(["1h", "4h"] as Timeframe[]).map(tf => (
                             <button
                                 key={tf}
                                 onClick={() => setSelectedTimeframe(tf)}
-                                className={`px-4 py-2 rounded-md font-bold text-sm transition-all shadow-sm ${selectedTimeframe === tf
-                                    ? 'bg-emerald-600 text-white shadow-emerald-500/30'
-                                    : 'bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-emerald-200'
+                                className={`px-4 py-2 rounded-lg font-bold text-sm transition-all shadow-md flex items-center gap-2 ${selectedTimeframe === tf
+                                    ? '!bg-emerald-600 !text-white ring-1 ring-emerald-400 shadow-emerald-900/50'
+                                    : 'bg-slate-800 text-slate-400 hover:bg-slate-700 border border-slate-700'
                                     }`}
                             >
                                 {tf}
@@ -100,36 +99,33 @@ export default function MarketAnalysisPage() {
                 </div>
 
                 {/* Right Group: Indicators (Violet Theme) */}
-                <div className="flex flex-wrap gap-2 items-center bg-slate-950/50 p-1 rounded-lg border border-slate-800/50">
-                    <span className="text-xs text-slate-500 font-bold uppercase tracking-wider px-2 hidden sm:block">
-                        Indicators
-                    </span>
+                <div className="flex flex-wrap gap-2 items-center justify-end w-full md:w-auto">
                     <button
                         onClick={() => setIndicators({ ...indicators, bb: !indicators.bb })}
-                        className={`px-3 py-2 rounded-md font-medium text-xs transition-all border ${indicators.bb
-                            ? 'bg-violet-600 border-violet-500 text-white shadow-lg shadow-violet-500/20'
-                            : 'bg-slate-900 border-slate-700 text-slate-400 hover:bg-slate-800 hover:border-slate-600'
+                        className={`px-4 py-2 rounded-lg font-bold text-xs transition-all shadow-md flex items-center gap-2 ${indicators.bb
+                            ? '!bg-violet-600 !text-white ring-1 ring-violet-400 shadow-violet-900/50'
+                            : 'bg-slate-800 text-slate-400 hover:bg-slate-700 border border-slate-700'
                             }`}
                     >
-                        Bollinger
+                        Bollinger {indicators.bb && <span className="text-white">✓</span>}
                     </button>
                     <button
                         onClick={() => setIndicators({ ...indicators, sma: !indicators.sma })}
-                        className={`px-3 py-2 rounded-md font-medium text-xs transition-all border ${indicators.sma
-                            ? 'bg-violet-600 border-violet-500 text-white shadow-lg shadow-violet-500/20'
-                            : 'bg-slate-900 border-slate-700 text-slate-400 hover:bg-slate-800 hover:border-slate-600'
+                        className={`px-4 py-2 rounded-lg font-bold text-xs transition-all shadow-md flex items-center gap-2 ${indicators.sma
+                            ? '!bg-violet-600 !text-white ring-1 ring-violet-400 shadow-violet-900/50'
+                            : 'bg-slate-800 text-slate-400 hover:bg-slate-700 border border-slate-700'
                             }`}
                     >
-                        MA(200,25)
+                        MA(200,25) {indicators.sma && <span className="text-white">✓</span>}
                     </button>
                     <button
                         onClick={() => setIndicators({ ...indicators, rsi: !indicators.rsi })}
-                        className={`px-3 py-2 rounded-md font-medium text-xs transition-all border ${indicators.rsi
-                            ? 'bg-violet-600 border-violet-500 text-white shadow-lg shadow-violet-500/20'
-                            : 'bg-slate-900 border-slate-700 text-slate-400 hover:bg-slate-800 hover:border-slate-600'
+                        className={`px-4 py-2 rounded-lg font-bold text-xs transition-all shadow-md flex items-center gap-2 ${indicators.rsi
+                            ? '!bg-violet-600 !text-white ring-1 ring-violet-400 shadow-violet-900/50'
+                            : 'bg-slate-800 text-slate-400 hover:bg-slate-700 border border-slate-700'
                             }`}
                     >
-                        RSI(14)
+                        RSI(14) {indicators.rsi && <span className="text-white">✓</span>}
                     </button>
                 </div>
             </div>
@@ -168,7 +164,7 @@ export default function MarketAnalysisPage() {
 
                         <div className="p-0">
                             {loading ? (
-                                <div className="h-[350px] flex items-center justify-center text-slate-500 animate-pulse">
+                                <div className="h-[280px] flex items-center justify-center text-slate-500 animate-pulse">
                                     Loading Market Data...
                                 </div>
                             ) : (
@@ -191,7 +187,7 @@ export default function MarketAnalysisPage() {
 
                     <div className="text-[10px] text-slate-700 text-center">
                         <p>Market data is delayed/simulated for testing.</p>
-                        <p>Timeframes: 1h, 4h, Daily only.</p>
+                        <p>Timeframes: 1h, 4h only.</p>
                     </div>
                 </div>
             </main>
