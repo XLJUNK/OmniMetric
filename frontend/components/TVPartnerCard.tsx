@@ -131,6 +131,13 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
                 {/* 2. Content Area - Full Width */}
                 <div className={`p-4 md:p-5 flex-1 flex flex-col justify-center text-center`}>
 
+                    {/* Badge: TradingView Official Partner */}
+                    <div className="flex justify-center mb-3">
+                        <span className="text-[10px] font-bold text-sky-500 uppercase tracking-widest border border-sky-500/30 px-2 py-0.5 rounded bg-sky-500/5 dark:bg-sky-500/10 dark:text-sky-400">
+                            {(DICTIONARY[lang] as any)?.partner?.badge || "TradingView Official Partner"}
+                        </span>
+                    </div>
+
                     {/* Main Copy - Dynamic Typography matching AI Insight EXACTLY (fluid-base) */}
                     <h3 className={`text-fluid-base font-medium text-slate-700 dark:text-slate-300 leading-relaxed max-w-2xl text-center mx-auto mb-4 ${isRTL ? 'font-arabic' : ''}`}>
                         {segment.text}
