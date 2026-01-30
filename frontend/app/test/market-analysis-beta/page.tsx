@@ -156,21 +156,25 @@ export default function MarketAnalysisPage() {
                     {/* Chart Container */}
                     <div className="bg-slate-900 border border-slate-800 rounded-xl shadow-lg overflow-hidden relative group">
                         {/* Header Overlay */}
-                        <div className="absolute top-4 left-4 z-10 pointer-events-none opacity-50 group-hover:opacity-100 transition-opacity flex flex-col gap-1">
-                            <h2 className="text-lg font-bold text-white flex items-center gap-2 drop-shadow-md">
-                                {selectedSymbol} <span className="text-slate-400 font-normal text-sm">/ {selectedTimeframe}</span>
+                        <div className="absolute top-4 left-4 z-20 flex flex-col gap-2 pointer-events-none">
+                            <h2 className="text-lg font-bold text-white flex items-center gap-2 drop-shadow-md bg-slate-900/30 backdrop-blur-[2px] px-2 py-1 rounded">
+                                {selectedSymbol} <span className="text-slate-300 font-normal text-sm">/ {selectedTimeframe}</span>
                             </h2>
                             {/* Conditional Signals in Header */}
-                            {latest?.is_bullish && (
-                                <span className="text-emerald-400 text-xs font-bold bg-emerald-950/80 border border-emerald-500/30 px-2 py-0.5 rounded backdrop-blur-sm w-fit">
-                                    Bullish Div
-                                </span>
-                            )}
-                            {latest?.is_bearish && (
-                                <span className="text-red-400 text-xs font-bold bg-red-950/80 border border-red-500/30 px-2 py-0.5 rounded backdrop-blur-sm w-fit">
-                                    Bearish Div
-                                </span>
-                            )}
+                            <div className="flex gap-2">
+                                {latest?.is_bullish && (
+                                    <span className="text-emerald-400 text-xs font-bold bg-slate-900/80 border border-emerald-500/50 px-2 py-1 rounded backdrop-blur-md shadow-lg flex items-center gap-1">
+                                        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                        Bullish Div
+                                    </span>
+                                )}
+                                {latest?.is_bearish && (
+                                    <span className="text-red-400 text-xs font-bold bg-slate-900/80 border border-red-500/50 px-2 py-1 rounded backdrop-blur-md shadow-lg flex items-center gap-1">
+                                        <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                                        Bearish Div
+                                    </span>
+                                )}
+                            </div>
                         </div>
 
                         {/* Price Overlay */}
