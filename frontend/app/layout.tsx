@@ -65,7 +65,6 @@ export const metadata: Metadata = {
 
 import { LegalFooter } from "@/components/LegalFooter";
 import { CookieBanner } from "@/components/CookieBanner";
-import { GoogleAdSense } from "@/components/GoogleAdSense";
 import { GoogleAnalytics } from '@next/third-parties/google';
 // MobileMenu removed as per user request (Sidebar is now responsive)
 import { Sidebar } from "@/components/Sidebar";

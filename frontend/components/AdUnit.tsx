@@ -62,7 +62,7 @@ export const AdUnit = () => {
             <ins className="adsbygoogle"
                 ref={insRef}
                 style={{ display: 'block', width: '100%', height: '100%' }}
-                data-ad-client="ca-pub-0000000000000000"
+                data-ad-client="ca-pub-1230621442620902"
                 data-ad-slot="1234567890"
                 data-ad-format="horizontal"
                 data-full-width-responsive="true"></ins>
