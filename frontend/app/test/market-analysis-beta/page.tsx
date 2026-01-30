@@ -3,15 +3,13 @@
 import React from 'react';
 import { MarketAnalysisWidget } from '@/components/analysis/MarketAnalysisWidget';
 import { TVPartnerCard } from '@/components/TVPartnerCard';
-import { useTheme } from '@/components/ThemeProvider';
+// import { useTheme } from '@/components/ThemeProvider';
 // import Link from 'next/link';
 
 // Types matching JSON structure
 // (Removed unused types)
 
 export default function MarketAnalysisPage() {
-    const { theme } = useTheme();
-
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 p-4 font-sans transition-colors duration-300">
             <header className="mb-6 max-w-7xl mx-auto">
