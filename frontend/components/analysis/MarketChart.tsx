@@ -172,10 +172,10 @@ export default function MarketChart({ data, visibleIndicators, colors }: MarketC
                     shape: 'arrowDown',
                     text: 'Bear Div',
                     size: 1
-                });
-            }
+                }
         });
-        candleSeries.setMarkers(markers);
+        (candleSeries as any).setMarkers(markers);
+
 
 
         const handleResize = () => {
@@ -208,7 +208,7 @@ export default function MarketChart({ data, visibleIndicators, colors }: MarketC
             if (d.is_bullish) markers.push({ time: d.time as UTCTimestamp, position: 'belowBar', color: '#2196F3', shape: 'arrowUp', text: 'Bull Div', size: 1 });
             if (d.is_bearish) markers.push({ time: d.time as UTCTimestamp, position: 'aboveBar', color: '#FF5252', shape: 'arrowDown', text: 'Bear Div', size: 1 });
         });
-        candleSeriesRef.current?.setMarkers(markers);
+        (candleSeriesRef.current as any)?.setMarkers(markers);
 
         volumeSeriesRef.current?.setData(sortedData.filter(d => d.volume !== undefined).map(d => ({
             time: d.time as UTCTimestamp,
