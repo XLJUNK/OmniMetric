@@ -147,10 +147,11 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
                             href={affiliateUrl}
                             target="_blank"
                             rel="noopener noreferrer nofollow"
-                            className="inline-flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#2962FF] hover:bg-[#1E53E5] text-white visited:text-white !text-white visited:!text-white hover:!text-white active:!text-white text-[10px] xs:text-xs sm:text-sm font-bold rounded shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all text-center whitespace-normal leading-tight overflow-hidden"
+                            style={{ color: '#ffffff' }} // Force White (Inline Style Priority)
+                            className="inline-flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#2962FF] hover:bg-[#1E53E5] text-white dark:text-white !text-white visited:text-white hover:text-white active:text-white text-[10px] xs:text-xs sm:text-sm font-bold rounded shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all text-center whitespace-normal leading-tight overflow-hidden"
                         >
-                            <Zap className="w-3.5 h-3.5 fill-current text-white shrink-0" />
-                            <span className="!text-white relative top-[0.5px]">{fullButtonText}</span>
+                            <Zap className="w-3.5 h-3.5 fill-current text-white shrink-0" style={{ fill: '#ffffff', color: '#ffffff' }} />
+                            <span className="!text-white relative top-[0.5px]" style={{ color: '#ffffff' }}>{fullButtonText}</span>
                         </a>
                     </div>
                 </div>
