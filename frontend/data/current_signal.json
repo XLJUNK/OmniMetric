@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-01-30T16:55:52.820269+00:00",
-    "last_successful_update": "2026-01-30T16:55:52.820276+00:00",
+    "last_updated": "2026-01-30T17:48:30.494210+00:00",
+    "last_successful_update": "2026-01-30T17:48:30.494217+00:00",
     "gms_score": 32,
     "sector_scores": {
         "STOCKS": 30,
@@ -360,10 +360,10 @@
             ]
         },
         "SPY": {
-            "price": 691.19,
+            "price": 690.3,
             "prev_price": 694.04,
-            "daily_chg": -0.41,
-            "change_percent": -0.22,
+            "daily_chg": -0.54,
+            "change_percent": -0.35,
             "trend": "DOWN",
             "sparkline": [
                 687.01,
@@ -387,7 +387,7 @@
                 695.49,
                 695.42,
                 694.04,
-                691.19
+                690.3
             ]
         },
         "TNX": {
@@ -422,10 +422,10 @@
             ]
         },
         "QQQ": {
-            "price": 624.62,
+            "price": 623.33,
             "prev_price": 629.43,
-            "daily_chg": -0.76,
-            "change_percent": -0.13,
+            "daily_chg": -0.97,
+            "change_percent": -0.34,
             "trend": "DOWN",
             "sparkline": [
                 619.43,
@@ -449,14 +449,14 @@
                 631.13,
                 633.22,
                 629.43,
-                624.62
+                623.33
             ]
         },
         "IWM": {
-            "price": 259.05,
+            "price": 259.24,
             "prev_price": 263.37,
-            "daily_chg": -1.64,
-            "change_percent": -1.87,
+            "daily_chg": -1.57,
+            "change_percent": -1.8,
             "trend": "DOWN",
             "sparkline": [
                 248.03,
@@ -480,14 +480,14 @@
                 264.73,
                 263.3,
                 263.37,
-                259.05
+                259.24
             ]
         },
         "RSP": {
-            "price": 197.12,
+            "price": 196.87,
             "prev_price": 198.52,
-            "daily_chg": -0.7,
-            "change_percent": -1.06,
+            "daily_chg": -0.83,
+            "change_percent": -1.19,
             "trend": "DOWN",
             "sparkline": [
                 193.21,
@@ -511,14 +511,14 @@
                 198.93,
                 198.26,
                 198.52,
-                197.12
+                196.87
             ]
         },
         "HYG": {
-            "price": 81.03,
+            "price": 81.0,
             "prev_price": 81.03,
-            "daily_chg": 0.0,
-            "change_percent": -0.18,
+            "daily_chg": -0.03,
+            "change_percent": -0.22,
             "trend": "DOWN",
             "sparkline": [
                 80.71,
@@ -542,7 +542,7 @@
                 81.17,
                 81.04,
                 81.03,
-                81.03
+                81.0
             ]
         },
         "NIFTY": {
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 82970.44,
+            "price": 83001.85,
             "prev_price": 84561.59,
-            "daily_chg": -1.88,
-            "change_percent": -6.0,
+            "daily_chg": -1.84,
+            "change_percent": -5.97,
             "trend": "DOWN",
             "sparkline": [
                 90513.1,
@@ -604,14 +604,14 @@
                 89102.57,
                 89184.57,
                 84561.59,
-                82970.44
+                83001.85
             ]
         },
         "ETH": {
-            "price": 2722.25,
+            "price": 2718.05,
             "prev_price": 2818.23,
-            "daily_chg": -3.41,
-            "change_percent": -6.98,
+            "daily_chg": -3.55,
+            "change_percent": -7.12,
             "trend": "DOWN",
             "sparkline": [
                 3083.05,
@@ -635,14 +635,14 @@
                 3022.21,
                 3006.61,
                 2818.23,
-                2722.25
+                2718.05
             ]
         },
         "SOL": {
-            "price": 116.93,
+            "price": 116.77,
             "prev_price": 117.61,
-            "daily_chg": -0.57,
-            "change_percent": -5.81,
+            "daily_chg": -0.71,
+            "change_percent": -5.93,
             "trend": "DOWN",
             "sparkline": [
                 135.76,
@@ -666,14 +666,14 @@
                 127.05,
                 125.12,
                 117.61,
-                116.93
+                116.77
             ]
         },
         "DXY": {
-            "price": 96.86,
+            "price": 96.92,
             "prev_price": 96.28,
-            "daily_chg": 0.6,
-            "change_percent": -0.19,
+            "daily_chg": 0.67,
+            "change_percent": -0.12,
             "trend": "UP",
             "sparkline": [
                 98.24,
@@ -697,7 +697,7 @@
                 96.22,
                 96.45,
                 96.28,
-                96.86
+                96.92
             ]
         },
         "USDJPY": {
@@ -1108,22 +1108,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS score 32 indicates a Defensive regime. Rising DXY (Dollar strength/Liquidity) at 96.86 and widening HY_SPREAD (credit risk) are key drivers. While VIX (Fear/Volatility) is moderate at 17.01, suggesting caution not panic, a potential short-term bottom could emerge if dollar strength abates. Maintain a defensive stance, monitoring DXY and VIX closely.",
+        "content": "GMS status is Defensive (Score 32), with momentum pushing it lower. A strengthening DXY (Dollar strength/Liquidity) and rising VIX (fear/volatility) highlight a clear risk-off shift, exacerbated by hawkish Fed nomination news. While caution is warranted, the market's strong reaction to an unconfirmed Fed chair nomination could present a short-term overcorrection if the policy outlook softens. Remain defensive but watch for reversals.",
         "reports": {
-            "JP": "GMSスコア32は防御的体制を示唆します。DXY（ドル高/流動性）96.86の上昇と高利回りスプレッド（信用リスク）の拡大が主要因です。VIX（恐怖/変動性）は17.01と中程度ですが、市場はパニックではなく警戒状態。ドル高が収まれば短期的な底打ちの可能性もあります。防御的姿勢を維持しつつ、DXYとVIXの動向を注視してください。",
-            "EN": "GMS score 32 indicates a Defensive regime. Rising DXY (Dollar strength/Liquidity) at 96.86 and widening HY_SPREAD (credit risk) are key drivers. While VIX (Fear/Volatility) is moderate at 17.01, suggesting caution not panic, a potential short-term bottom could emerge if dollar strength abates. Maintain a defensive stance, monitoring DXY and VIX closely.",
-            "CN": "GMS得分32显示防御性态势。DXY（美元走强/流动性）升至96.86及高收益利差（信用风险）扩大是主因。VIX（恐惧/波动性）保持在17.01的温和水平，市场并非恐慌而是谨慎。若美元走强减弱，短期底部或出现。保持防御立场，密切关注DXY和VIX。",
-            "ES": "Puntuación GMS 32 sugiere un régimen defensivo. El DXY (fortaleza del dólar/liquidez) en 96.86 y la ampliación del HY_SPREAD (riesgo crediticio) son factores clave. El VIX (miedo/volatilidad) en 17.01 indica cautela, no pánico; si la fortaleza del dólar cede, podría haber un mínimo a corto plazo. Mantenga una postura defensiva, monitoreando DXY y VIX.",
-            "HI": "जीएमएस स्कोर 32 रक्षात्मक व्यवस्था दर्शाता है। DXY (डॉलर की मजबूती/तरलता) 96.86 पर बढ़ना और HY_SPREAD (क्रेडिट जोखिम) का विस्तार मुख्य कारण हैं। VIX (भय/अस्थिरता) 17.01 पर मध्यम है, जो घबराहट नहीं बल्कि सावधानी दर्शाता है। यदि डॉलर की मजबूती कम होती है, तो अल्पकालिक निचला स्तर उभर सकता है। रक्षात्मक स्थिति बनाए रखें, DXY और VIX पर नज़र रखें।",
-            "ID": "Skor GMS 32 menunjukkan rezim Defensif. Kenaikan DXY (kekuatan Dolar/Likuiditas) di 96.86 dan pelebaran HY_SPREAD (risiko kredit) adalah pendorong utama. Meskipun VIX (Ketakutan/Volatilitas) moderat di 17.01, menyiratkan kehati-hatian bukan kepanikan, potensi dasar jangka pendek bisa muncul jika kekuatan Dolar mereda. Pertahankan sikap defensif, pantau DXY dan VIX dengan cermat.",
-            "AR": "يشير مؤشر GMS البالغ 32 إلى نظام دفاعي. ارتفاع مؤشر الدولار (DXY) (قوة الدولار/السيولة) عند 96.86 واتساع فروق الائتمان (HY_SPREAD) هي المحركات الرئيسية. بينما مؤشر VIX (الخوف/التقلب) معتدل عند 17.01، مما يشير إلى الحذر لا الذعر، قد يظهر قاع قصير الأجل إذا تراجعت قوة الدولار. حافظ على موقف دفاعي، راقب DXY وVIX عن كثب."
+            "JP": "GMSステータスは「防御的」(スコア32)で、モメンタムは下押ししています。DXY (ドル高/流動性) の上昇とVIX (恐怖/変動性) の高まりが明確なリスクオフシフトを示唆し、タカ派FRB人事のニュースがこれを悪化させています。慎重な姿勢は必要ですが、未確認のFRB議長指名に対する市場の強い反応は、政策見通しが緩和されれば短期的な過剰修正となる可能性があります。防御的な姿勢を維持しつつ、反転に注目してください。",
+            "EN": "GMS status is Defensive (Score 32), with momentum pushing it lower. A strengthening DXY (Dollar strength/Liquidity) and rising VIX (fear/volatility) highlight a clear risk-off shift, exacerbated by hawkish Fed nomination news. While caution is warranted, the market's strong reaction to an unconfirmed Fed chair nomination could present a short-term overcorrection if the policy outlook softens. Remain defensive but watch for reversals.",
+            "CN": "GMS状态为“防御性”（得分32），动量推动其走低。DXY（美元走强/流动性）上升和VIX（恐惧/波动性）升高表明明显的避险转变，鹰派美联储提名消息加剧了这一点。尽管需要谨慎，但市场对未经确认的美联储主席提名的强烈反应，若政策前景软化，可能构成短期超调。保持防御性，但关注反转信号。",
+            "ES": "El estado de GMS es \"Defensivo\" (Puntuación 32), con el impulso empujándolo a la baja. Un DXY (fortaleza del dólar/liquidez) creciente y un VIX (miedo/volatilidad) en aumento señalan un claro cambio de aversión al riesgo, exacerbado por la noticia de una nominación de la Fed de línea dura. Aunque la cautela es necesaria, la fuerte reacción del mercado a una nominación no confirmada podría generar una corrección excesiva a corto plazo si la perspectiva política se suaviza. Manténgase a la defensiva, pero observe los reversos.",
+            "HI": "GMS स्थिति \"रक्षात्मक\" (स्कोर 32) है, जिसमें गति इसे नीचे धकेल रही है। एक मजबूत होता DXY (डॉलर की मजबूती/तरलता) और बढ़ता VIX (भय/अस्थिरता) स्पष्ट जोखिम-बंद बदलाव को उजागर करता है, जो फेड के कठोर नामांकन की खबर से बढ़ गया है। हालांकि सावधानी आवश्यक है, एक अपुष्ट फेड अध्यक्ष नामांकन पर बाजार की मजबूत प्रतिक्रिया, यदि नीति दृष्टिकोण नरम पड़ता है, तो अल्पकालिक अतिसुधार प्रस्तुत कर सकती है। रक्षात्मक रहें लेकिन उलटफेरों पर नज़र रखें।",
+            "ID": "Status GMS adalah \"Defensif\" (Skor 32), dengan momentum mendorongnya lebih rendah. DXY (kekuatan Dolar/likuiditas) yang menguat dan VIX (ketakutan/volatilitas) yang meningkat menyoroti pergeseran risk-off yang jelas, diperparah oleh berita nominasi Fed yang hawkish. Meskipun kehati-hatian diperlukan, reaksi kuat pasar terhadap nominasi ketua Fed yang belum dikonfirmasi dapat menimbulkan koreksi berlebihan jangka pendek jika prospek kebijakan melunak. Tetap defensif tetapi perhatikan pembalikan.",
+            "AR": "حالة GMS هي \"دفاعية\" (النتيجة 32)، مع دفع الزخم لها للأسفل. يؤكد ارتفاع مؤشر DXY (قوة الدولار/السيولة) وارتفاع VIX (الخوف/التقلب) تحولًا واضحًا نحو تجنب المخاطر، والذي تفاقم بسبب أنباء ترشيح الفيدرالي المتشددة. بينما يتطلب الحذر، فإن رد فعل السوق القوي على ترشيح رئيس الفيدرالي غير المؤكد قد يمثل تصحيحًا مبالغًا فيه على المدى القصير إذا خفت آفاق السياسة. ابقَ دفاعيًا ولكن راقب الانعكاسات."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-28T06:34:43Z",
-            "score": 43
-        },
         {
             "date": "2026-01-28T06:47:58Z",
             "score": 40
@@ -1359,6 +1355,10 @@
         {
             "date": "2026-01-30T16:55:52Z",
             "score": 32
+        },
+        {
+            "date": "2026-01-30T17:48:30Z",
+            "score": 32
         }
     ],
     "intelligence": {
@@ -1366,12 +1366,12 @@
             {
                 "title": "Trump nominates Kevin Warsh for Federal Reserve chair to succeed Jerome Powell",
                 "link": "https://www.cnbc.com/2026/01/30/trump-nominates-kevin-warsh-for-federal-reserve-chair-to-succeed-jerome-powell.html",
-                "isoDate": "2026-01-30T16:40:29+00:00Z"
+                "isoDate": "2026-01-30T17:32:06+00:00Z"
             },
             {
                 "title": "Trump finally makes his Fed chair pick — what Kevin Warsh means for investors",
                 "link": "https://www.cnbc.com/2026/01/30/trump-finally-makes-his-fed-chair-pick-what-kevin-warsh-means-for-investors.html",
-                "isoDate": "2026-01-30T16:32:33+00:00Z"
+                "isoDate": "2026-01-30T17:10:18+00:00Z"
             },
             {
                 "title": "Partial government shutdown on track for Saturday after Senate vote on funding deal stalled",
@@ -1379,72 +1379,72 @@
                 "isoDate": "2026-01-30T15:46:43+00:00Z"
             },
             {
+                "title": "Stocks making the biggest moves midday: Newmont, Apple, Sandisk, Deckers Outdoor & more",
+                "link": "https://www.cnbc.com/2026/01/30/stocks-making-the-biggest-moves-midday-nem-aapl-sndk-deck.html",
+                "isoDate": "2026-01-30T17:43:55+00:00Z"
+            },
+            {
                 "title": "More Jeffrey Epstein files being released by DOJ, Blanche says",
                 "link": "https://www.cnbc.com/2026/01/30/jeffrey-epstein-files-doj.html",
-                "isoDate": "2026-01-30T16:51:23+00:00Z"
+                "isoDate": "2026-01-30T17:22:24+00:00Z"
             },
             {
-                "title": "Dow falls 400 points as investors weigh earnings, Warsh Fed chair pick; S&P 500 on pace for January gain: Live updates",
-                "link": "https://www.cnbc.com/2026/01/29/stock-market-today-live-updates.html",
-                "isoDate": "2026-01-30T16:52:06+00:00Z"
-            },
-            {
-                "title": "This Microsoft options trade creates an income stream while awaiting a snapback",
-                "link": "https://www.cnbc.com/2026/01/30/putting-on-a-microsoft-trade-using-options-to-create-an-income-stream.html",
-                "isoDate": "2026-01-30T15:40:38+00:00Z"
+                "title": "Pro Talks: Investor Shannon Saccocia talks whether geopolitics could upend market rally in 2026",
+                "link": "https://www.cnbc.com/video/2026/01/30/pro-talks-investor-shannon-saccocia-talks-whether-geopolitics-could-upend-market-rally-in-2026.html",
+                "isoDate": "2026-01-30T17:37:29+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "トランプ氏、パウエル氏の後任としてウォーシュ氏を連邦準備制度理事会（FRB）議長に指名",
-                "トランプ氏、ついにFRB議長候補を決定：ケビン・ウォーシュ氏が投資家に意味するもの",
-                "資金調達合意に関する上院の採決が難航、土曜日の政府一部閉鎖が現実味を帯びる",
-                "司法省、エプスタイン氏に関する追加資料を公開するとブランシュ氏が発言",
-                "決算とウォーシュFRB議長候補を投資家が検討、ダウ平均400ドル下落、S&P500は1月上昇ペース：ライブ速報",
-                "このマイクロソフトのオプション取引が、反発を待ちながら収入を生み出す"
+                "トランプ大統領、パウエル議長の後任にケビン・ウォーシュ氏をFRB議長に指名",
+                "トランプ氏、ついにFRB議長選定　ケビン・ウォーシュ氏が投資家にもたらすもの",
+                "資金調達合意巡る上院採決が難航、土曜までの政府一部閉鎖が濃厚に",
+                "午後に最も動いた株式：ニューモント、アップル、サンディスク、デッカーズ・アウトドアなど",
+                "司法省、ジェフリー・エプスタイン氏のさらに多くのファイルを開示へ＝ブランシュ氏",
+                "プロトーク：投資家シャノン・サッコシア氏、2026年の市場ラリーを地政学が覆す可能性について語る"
             ],
             "CN": [
-                "特朗普提名凯文·沃什接替鲍威尔出任美联储主席",
-                "特朗普终于做出美联储主席人选决定——凯文·沃什对投资者意味着什么",
-                "参议院就资金协议投票受阻，政府部分停摆或将在周六上演",
-                "司法部将公布更多杰弗里·爱泼斯坦文件，布兰奇表示",
-                "投资者权衡财报和沃什美联储主席提名，道指下跌400点；标普500指数有望实现1月上涨：实时更新",
-                "这笔微软期权交易将在等待反弹的同时创造收入流"
+                "特朗普提名凯文·沃什接替鲍威尔担任美联储主席",
+                "特朗普最终敲定美联储主席人选——凯文·沃什对投资者意味着什么",
+                "参议院就资金协议投票受阻，政府部分停摆恐将于周六上演",
+                "午盘波动最大股票：纽蒙特、苹果、闪迪、迪克户外等",
+                "司法部将公布更多杰弗里·爱泼斯坦文件：布兰奇称",
+                "专业对话：投资者香农·萨科西亚谈论地缘政治是否可能颠覆2026年市场反弹"
             ],
             "ES": [
                 "Trump nomina a Kevin Warsh como presidente de la Reserva Federal para suceder a Jerome Powell",
-                "Trump finalmente hace su elección para presidente de la Fed: lo que Kevin Warsh significa para los inversores",
-                "El cierre parcial del gobierno en camino para el sábado después de que la votación del Senado sobre el acuerdo de financiamiento se estancara",
-                "El DOJ está publicando más archivos de Jeffrey Epstein, dice Blanche",
-                "El Dow cae 400 puntos mientras los inversores sopesan las ganancias y la nominación de Warsh como presidente de la Fed; el S&P 500 en camino para una ganancia en enero: actualizaciones en vivo",
-                "Esta operación de opciones de Microsoft crea un flujo de ingresos mientras se espera un rebote"
+                "Trump finalmente hace su elección para la Fed: lo que Kevin Warsh significa para los inversores",
+                "Cierre parcial del gobierno en camino para el sábado después de que se estancara la votación del Senado sobre el acuerdo de financiación",
+                "Acciones que marcaron los mayores movimientos al mediodía: Newmont, Apple, Sandisk, Deckers Outdoor y más",
+                "El Departamento de Justicia liberará más archivos de Jeffrey Epstein, dice Blanche",
+                "Charlas Pro: La inversora Shannon Saccocia habla sobre si la geopolítica podría interrumpir el repunte del mercado en 2026"
             ],
             "HI": [
-                "ट्रम्प ने जेरोम पॉवेल का स्थान लेने के लिए केविन वॉर्श को फेडरल रिजर्व अध्यक्ष के रूप में नामांकित किया",
-                "ट्रम्प ने आखिरकार अपनी फेड अध्यक्ष की पसंद की - केविन वॉर्श निवेशकों के लिए क्या मतलब रखता है",
-                "धनराशि सौदे पर सीनेट में मतदान अटकने के बाद शनिवार को आंशिक सरकारी शटडाउन की ओर बढ़ा",
-                "DOJ जेफरी एपस्टीन की अधिक फाइलें जारी कर रहा है, ब्लैंच ने कहा",
-                "निवेशक आय और वॉर्श फेड अध्यक्ष की पसंद का मूल्यांकन करते हैं, डाओ 400 अंक गिरा; एस एंड पी 500 जनवरी में लाभ की ओर: लाइव अपडेट",
-                "यह माइक्रोसॉफ्ट विकल्प व्यापार झटके का इंतजार करते हुए एक आय धारा बनाता है"
+                "ट्रम्प ने जेरोम पॉवेल के उत्तराधिकारी के रूप में फेडरल रिजर्व अध्यक्ष के लिए केविन वॉर्श को नामांकित किया",
+                "ट्रम्प ने आखिरकार अपनी फेड अध्यक्ष की पसंद की - केविन वॉर्श का निवेशकों के लिए क्या मतलब है",
+                "धन सौदे पर सीनेट वोट में गतिरोध के बाद शनिवार को आंशिक सरकारी शटडाउन की ओर",
+                "स्टॉक जो दोपहर में सबसे बड़े चाल बना रहे हैं: न्यूमोंट, एप्पल, सैंडिस्क, डेकर्स आउटडोर और अधिक",
+                "डीओजे द्वारा जेफरी एपस्टीन की अधिक फाइलें जारी की जा रही हैं, ब्लैंच कहते हैं",
+                "प्रो टॉक्स: निवेशक शैनन सकोसिया 2026 में भू-राजनीति बाजार में तेजी को कैसे बाधित कर सकती है, इस पर चर्चा करती हैं"
             ],
             "ID": [
-                "Trump menominasikan Kevin Warsh sebagai ketua Federal Reserve untuk menggantikan Jerome Powell",
-                "Trump akhirnya membuat pilihan ketua Fed-nya — apa arti Kevin Warsh bagi investor",
-                "Penutupan pemerintah sebagian siap terjadi pada hari Sabtu setelah pemungutan suara Senat tentang kesepakatan pendanaan terhenti",
-                "DOJ merilis lebih banyak file Jeffrey Epstein, kata Blanche",
-                "Dow turun 400 poin saat investor mempertimbangkan laba, pilihan ketua Fed Warsh; S&P 500 dalam jalur untuk kenaikan Januari: Pembaruan Langsung",
-                "Perdagangan opsi Microsoft ini menciptakan aliran pendapatan sambil menunggu pembalikan harga"
+                "Trump menominasikan Kevin Warsh sebagai ketua Federal Reserve menggantikan Jerome Powell",
+                "Trump akhirnya membuat pilihan ketua The Fed-nya — apa artinya Kevin Warsh bagi investor",
+                "Penutupan pemerintah sebagian akan terjadi pada hari Sabtu setelah pemungutan suara Senat tentang kesepakatan pendanaan menemui jalan buntu",
+                "Saham-saham yang membuat pergerakan terbesar di tengah hari: Newmont, Apple, Sandisk, Deckers Outdoor & lainnya",
+                "Lebih banyak berkas Jeffrey Epstein dirilis oleh DOJ, kata Blanche",
+                "Pro Talks: Investor Shannon Saccocia membahas apakah geopolitik dapat mengganggu reli pasar di tahun 2026"
             ],
             "AR": [
-                "ترامب يرشح كيفن وارش لرئاسة الاحتياطي الفيدرالي ليخلف جيروم باول",
-                "ترامب أخيراً يتخذ قراره بشأن رئيس الاحتياطي الفيدرالي — ما يعنيه كيفن وارش للمستثمرين",
-                "إغلاق حكومي جزئي في طريقه يوم السبت بعد تعثر تصويت مجلس الشيوخ على اتفاق تمويل",
-                "وزارة العدل تنشر المزيد من ملفات جيفري إبشتاين، حسب قول بلانش",
-                "داو جونز ينخفض 400 نقطة مع تقييم المستثمرين للأرباح وترشيح وارش لرئاسة الفيد؛ ستاندرد آند بورز 500 على وشك تحقيق مكاسب يناير: تحديثات مباشرة",
-                "هذه الصفقة على خيارات مايكروسوفت تخلق تدفقًا للدخل أثناء انتظار الارتداد"
+                "ترامب يرشح كيفن وارش لرئاسة الاحتياطي الفيدرالي خلفًا لجيروم باول",
+                "ترامب يتخذ أخيرًا خياره لرئاسة الاحتياطي الفيدرالي - ما يعنيه كيفن وارش للمستثمرين",
+                "الإغلاق الحكومي الجزئي في طريقه يوم السبت بعد تعثر تصويت مجلس الشيوخ على صفقة تمويل",
+                "الأسهم التي حققت أكبر التحركات في منتصف النهار: نيوmont، أبل، سانديسك، ديكرز أوت دور والمزيد",
+                "وزارة العدل ستفرج عن المزيد من ملفات جيفري إبستين، يقول بلانش",
+                "حديث المحترفين: المستثمرة شانون ساسوكيا تتحدث عما إذا كانت الجيوسياسة يمكن أن تعطل انتعاش السوق في عام 2026"
             ]
         },
-        "last_updated": "2026-01-30T16:55:52.819777+00:00Z"
+        "last_updated": "2026-01-30T17:48:30.493714+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
