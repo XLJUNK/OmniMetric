@@ -1,20 +1,13 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { MarketAnalysisWidget } from '@/components/analysis/MarketAnalysisWidget';
 import { TVPartnerCard } from '@/components/TVPartnerCard';
 import { useTheme } from '@/components/ThemeProvider';
 // import Link from 'next/link';
 
 // Types matching JSON structure
-type Instrument = "DXY" | "US10Y" | "SPX"; // Using keys from JSON
-type Timeframe = "1h" | "4h";
-
-interface AnalysisData {
-    [symbol: string]: {
-        [tf: string]: any[]; // MarketData[]
-    }
-}
+// (Removed unused types)
 
 export default function MarketAnalysisPage() {
     const { theme } = useTheme();
