@@ -86,13 +86,11 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
             {/* METHODOLOGY MODAL (Abolished ALL transparency for maximum structural solidity) */}
             {showInfo && (
                 <div
-                    className="fixed inset-0 z-[9999] flex items-center justify-center p-4 !opacity-100"
-                    style={{ backgroundColor: theme === 'dark' ? '#000000' : '#0F172ACC' }} // Deep slate for light mode backdrop, pure black for dark
+                    className="fixed inset-0 z-[9999] flex items-center justify-center p-4 !opacity-100 bg-[#0F172ACC] dark:bg-black"
                     onClick={() => setShowInfo(false)}
                 >
                     <div
-                        className="border border-slate-200 dark:border-slate-700 rounded-xl w-full max-w-2xl p-6 shadow-2xl relative !opacity-100"
-                        style={{ backgroundColor: theme === 'dark' ? '#000000' : '#FFFFFF' }}
+                        className="border border-slate-200 dark:border-slate-700 rounded-xl w-full max-w-2xl p-6 shadow-2xl relative !opacity-100 bg-white dark:bg-black"
                         onClick={e => e.stopPropagation()}
                     >
                         <div className="flex justify-between items-start mb-4 border-b border-slate-200 dark:border-slate-800 pb-2">
@@ -105,6 +103,7 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
                             <button
                                 onClick={() => setShowInfo(false)}
                                 className="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors group"
+                                aria-label="Close"
                             >
                                 <X className="w-6 h-6 text-slate-400 dark:text-slate-500 group-hover:text-slate-900 dark:group-hover:text-white" />
                             </button>
@@ -151,8 +150,7 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
 
             {/* 1. Global Header Status */}
             <div
-                className="max-w-[1600px] mx-auto w-full px-4 md:px-6 py-3 border-b border-slate-200 dark:border-slate-800 relative z-50 transition-colors duration-300"
-                style={{ backgroundColor: theme === 'dark' ? '#0A0A0A' : '#F1F5F9' }}
+                className="max-w-[1600px] mx-auto w-full px-4 md:px-6 py-3 border-b border-slate-200 dark:border-slate-800 relative z-50 transition-colors duration-300 bg-[#F1F5F9] dark:bg-[#0A0A0A]"
             >
                 <div className="flex justify-between items-start">
                     {/* TITLE AREA */}
@@ -168,16 +166,12 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
                         <div className="relative z-[10000]">
                             <button
                                 onClick={() => setIsLangOpen(!isLangOpen)}
-                                className={`flex items-center gap-2 h-7 px-3 text-[10px] font-bold uppercase tracking-widest rounded transition-all outline-none focus:outline-none appearance-none hover:opacity-80 border border-transparent ${theme === 'dark'
-                                    ? 'text-[#FEF3C7]'
-                                    : 'text-black'
-                                    }`}
-                                style={{ backgroundColor: theme === 'dark' ? '#000000' : '#F1F5F9' }}
+                                className="flex items-center gap-2 h-7 px-3 text-[10px] font-bold uppercase tracking-widest rounded transition-all outline-none focus:outline-none appearance-none hover:opacity-80 border border-transparent text-black dark:text-[#FEF3C7] bg-[#F1F5F9] dark:bg-black"
                             >
                                 {lang} <ChevronDown className="w-3 h-3" />
                             </button>
                             {isLangOpen && (
-                                <div className="absolute top-full right-0 mt-1 w-24 rounded-md overflow-hidden z-[10001] pointer-events-auto border border-neutral-200 dark:border-neutral-800 outline-none shadow-lg flex flex-col p-1" style={{ backgroundColor: theme === 'dark' ? '#000000' : '#FFFFFF', opacity: 1 }}>
+                                <div className="absolute top-full right-0 mt-1 w-24 rounded-md overflow-hidden z-[10001] pointer-events-auto border border-neutral-200 dark:border-neutral-800 outline-none shadow-lg flex flex-col p-1 bg-white dark:bg-black opacity-100">
                                     {(Object.keys(DICTIONARY) as LangType[]).map((l) => (
                                         <button
                                             key={l}
@@ -196,140 +190,134 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
 
                         {/* SETTINGS TRIGGER */}
                         {onOpenSettings && (
-                            <button
-                                onClick={onOpenSettings}
-                                className="flex items-center justify-center p-0 h-7 w-7 rounded border border-transparent transition-all bg-transparent hover:bg-neutral-100 dark:hover:bg-neutral-800 dark:border-neutral-800"
-                                style={{ color: theme === 'dark' ? '#FEF3C7' : '#525252' }}
-                                title="Customize Terminal"
+                            className = "flex items-center justify-center p-0 h-7 w-7 rounded border border-transparent transition-all bg-transparent hover:bg-neutral-100 dark:hover:bg-neutral-800 dark:border-neutral-800 text-[#525252] dark:text-[#FEF3C7]"
+                                aria-label="Customize Terminal"
+                        title="Customize Terminal"
                             >
-                                <Settings className="w-4 h-4" />
-                            </button>
+                        <Settings className="w-4 h-4" />
+                    </button>
                         )}
-                    </div>
+                </div>
+            </div>
+        </div>
+
+            {/* 2. Primary GMS Score & AI Insight */ }
+    <div className="max-w-[1600px] mx-auto w-full p-4 md:p-6 grid grid-cols-1 lg:grid-cols-3 gap-4">
+        {/* GMS SCORE CARD */}
+        <div
+            className="lg:col-span-1 !rounded-xl !border !border-slate-200 dark:!border-[#1E293B] !ring-0 !outline-none !shadow-none p-4 flex flex-col items-center gap-4 relative overflow-visible group transition-colors duration-300 bg-[#F1F5F9] dark:bg-[#111]"
+        >
+            {/* RISK GAUGE & INFO */}
+            <div className="w-full px-1 pt-2 pb-6">
+                <div className="flex justify-end rtl:justify-start mb-1.5">
+                    <button
+                        className="text-[9px] font-mono font-bold tracking-widest text-slate-500 hover:text-slate-800 dark:hover:text-white transition-colors cursor-pointer border border-slate-200 dark:border-[#1E293B] px-2 py-0.5 rounded hover:bg-slate-100 dark:hover:bg-white/5"
+                        onClick={() => setShowInfo(true)}
+                    >
+                        [ What's GMS ]
+                    </button>
+                </div>
+                <RiskGauge score={data.gms_score} lang={lang} />
+            </div>
+
+            <div className="w-full h-[110px] z-10">
+                <HistoryChart
+                    data={data.history_chart || []}
+                    lang={lang}
+                    color={data.gms_score > 60 ? "#3b82f6" : (data.gms_score < 40 ? "#ef4444" : "#eab308")}
+                />
+            </div>
+        </div>
+
+        {/* AI INSIGHT */}
+        <div
+            className="lg:col-span-2 !rounded-xl !border !border-slate-200 dark:!border-[#1E293B] !ring-0 !outline-none !shadow-none p-6 flex flex-col relative overflow-hidden group min-h-[14rem] transition-colors duration-300 bg-[#F1F5F9] dark:bg-[#111]"
+        >
+            <div className="flex items-center gap-2 mb-4 border-b !border-slate-100 dark:!border-[#1E293B] pb-3">
+                <Zap className="w-3.5 h-3.5 text-sky-500" />
+                <h3 className="text-slate-400 text-[10px] font-semibold uppercase tracking-[0.2em] flex-grow">OmniMetric AI-Driven Global Insights</h3>
+                <div className="hidden sm:flex items-center gap-1 opacity-50 text-[9px] text-slate-500 font-mono">
+                    <Info className="w-3 h-3" /> AI-Generated
                 </div>
             </div>
 
-            {/* 2. Primary GMS Score & AI Insight */}
-            <div className="max-w-[1600px] mx-auto w-full p-4 md:p-6 grid grid-cols-1 lg:grid-cols-3 gap-4">
-                {/* GMS SCORE CARD */}
-                <div
-                    className="lg:col-span-1 !rounded-xl !border !border-slate-200 dark:!border-[#1E293B] !ring-0 !outline-none !shadow-none p-4 flex flex-col items-center gap-4 relative overflow-visible group transition-colors duration-300"
-                    style={{ backgroundColor: theme === 'dark' ? '#111' : '#F1F5F9' }}
-                >
-                    {/* RISK GAUGE & INFO */}
-                    <div className="w-full px-1 pt-2 pb-6">
-                        <div className="flex justify-end rtl:justify-start mb-1.5">
-                            <button
-                                className="text-[9px] font-mono font-bold tracking-widest text-slate-500 hover:text-slate-800 dark:hover:text-white transition-colors cursor-pointer border border-slate-200 dark:border-[#1E293B] px-2 py-0.5 rounded hover:bg-slate-100 dark:hover:bg-white/5"
-                                onClick={() => setShowInfo(true)}
-                            >
-                                [ What's GMS ]
-                            </button>
-                        </div>
-                        <RiskGauge score={data.gms_score} lang={lang} />
-                    </div>
-
-                    <div className="w-full h-[110px] z-10">
-                        <HistoryChart
-                            data={data.history_chart || []}
-                            lang={lang}
-                            color={data.gms_score > 60 ? "#3b82f6" : (data.gms_score < 40 ? "#ef4444" : "#eab308")}
-                        />
-                    </div>
-                </div>
-
-                {/* AI INSIGHT */}
-                <div
-                    className="lg:col-span-2 !rounded-xl !border !border-slate-200 dark:!border-[#1E293B] !ring-0 !outline-none !shadow-none p-6 flex flex-col relative overflow-hidden group min-h-[14rem] transition-colors duration-300"
-                    style={{ backgroundColor: theme === 'dark' ? '#111' : '#F1F5F9' }}
-                >
-                    <div className="flex items-center gap-2 mb-4 border-b !border-slate-100 dark:!border-[#1E293B] pb-3">
-                        <Zap className="w-3.5 h-3.5 text-sky-500" />
-                        <h3 className="text-slate-400 text-[10px] font-semibold uppercase tracking-[0.2em] flex-grow">OmniMetric AI-Driven Global Insights</h3>
-                        <div className="hidden sm:flex items-center gap-1 opacity-50 text-[9px] text-slate-500 font-mono">
-                            <Info className="w-3 h-3" /> AI-Generated
-                        </div>
-                    </div>
-
-                    <div className="flex-grow mt-2">
-                        <p className={`text-slate-700 dark:text-slate-300 text-fluid-base leading-relaxed font-serif italic rtl:font-arabic rtl:not-italic rtl:text-right ${lang === 'AR' ? 'text-lg leading-loose' : ''}`}>
-                            "{aiContent}"
-                        </p>
-                    </div>
-
-                    {/* AIO: Citation Footer (Disclaimer stays, Citation removed) */}
-                    <div className="mt-6 pt-3 border-t border-slate-100 dark:border-[#1E293B] flex flex-col items-end gap-1">
-                        <p className={`text-[0.56rem] text-slate-400 dark:text-slate-500 font-sans tracking-tight max-w-[90%] text-right leading-relaxed ${lang === 'AR' ? 'font-arabic' : ''}`}>
-                            {(t.titles as any).ai_disclaimer}
-                        </p>
-                    </div>
-
-                    {/* AIO: AnalysisNewsArticle Schema */}
-                    <script
-                        type="application/ld+json"
-                        dangerouslySetInnerHTML={{
-                            __html: JSON.stringify({
-                                "@context": "https://schema.org",
-                                "@type": "AnalysisNewsArticle",
-                                "headline": `Global Market Outlook - ${new Date().toISOString().split('T')[0]}`,
-                                "description": "AI-driven institutional market risk analysis",
-                                "author": {
-                                    "@type": "Organization",
-                                    "name": "OmniMetric AI",
-                                    "url": "https://omnimetric.net"
-                                },
-                                "publisher": {
-                                    "@type": "Organization",
-                                    "name": "OmniMetric Project",
-                                    "url": "https://omnimetric.net",
-                                    "logo": {
-                                        "@type": "ImageObject",
-                                        "url": "https://omnimetric.net/icon.svg"
-                                    }
-                                },
-                                "datePublished": data.last_updated,
-                                "dateModified": data.last_updated,
-                                "articleBody": aiContent,
-                                "articleSection": "Financial Analysis",
-                                "inLanguage": lang,
-                                "about": {
-                                    "@type": "Thing",
-                                    "name": "Global Macro Economics"
-                                }
-                            })
-                        }}
-                    />
-                </div>
+            <div className="flex-grow mt-2">
+                <p className={`text-slate-700 dark:text-slate-300 text-fluid-base leading-relaxed font-serif italic rtl:font-arabic rtl:not-italic rtl:text-right ${lang === 'AR' ? 'text-lg leading-loose' : ''}`}>
+                    "{aiContent}"
+                </p>
             </div>
 
-            {/* Market Analysis Widget (Strategic Placement: Below AI Insight) */}
-            <div className="max-w-[1600px] mx-auto w-full px-4 md:px-6 mb-8">
-                <MarketAnalysisWidget lang={lang} />
+            {/* AIO: Citation Footer (Disclaimer stays, Citation removed) */}
+            <div className="mt-6 pt-3 border-t border-slate-100 dark:border-[#1E293B] flex flex-col items-end gap-1">
+                <p className={`text-[0.56rem] text-slate-400 dark:text-slate-500 font-sans tracking-tight max-w-[90%] text-right leading-relaxed ${lang === 'AR' ? 'font-arabic' : ''}`}>
+                    {(t.titles as any).ai_disclaimer}
+                </p>
             </div>
 
-            {/* PARTNER BANNER (Strategic Placement: Below AI Insight) */}
-            <div className="max-w-[1600px] mx-auto w-full px-4 md:px-6 mb-8">
-                <TVPartnerCard lang={lang} />
-            </div>
+            {/* AIO: AnalysisNewsArticle Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "AnalysisNewsArticle",
+                        "headline": `Global Market Outlook - ${new Date().toISOString().split('T')[0]}`,
+                        "description": "AI-driven institutional market risk analysis",
+                        "author": {
+                            "@type": "Organization",
+                            "name": "OmniMetric AI",
+                            "url": "https://omnimetric.net"
+                        },
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "OmniMetric Project",
+                            "url": "https://omnimetric.net",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://omnimetric.net/icon.svg"
+                            }
+                        },
+                        "datePublished": data.last_updated,
+                        "dateModified": data.last_updated,
+                        "articleBody": aiContent,
+                        "articleSection": "Financial Analysis",
+                        "inLanguage": lang,
+                        "about": {
+                            "@type": "Thing",
+                            "name": "Global Macro Economics"
+                        }
+                    })
+                }}
+            />
+        </div>
+    </div>
 
-            {/* 3. News (Live Intelligence Stream) */}
-            <div className="max-w-[1600px] mx-auto w-full px-4 md:px-6 mb-4">
-                <div
-                    className="border border-slate-200 dark:border-[#1E293B] rounded-xl overflow-hidden transition-colors duration-300"
-                    style={{ backgroundColor: theme === 'dark' ? '#111' : '#F1F5F9' }}
-                >
-                    <div className="bg-slate-100 dark:bg-black/40 px-6 py-4 border-b border-slate-200 dark:border-[#1E293B]">
-                        <h3 className="text-slate-400 text-[10px] font-black uppercase tracking-[0.2em]">{(t.titles as any).live_stream || "LIVE INTELLIGENCE STREAM"}</h3>
-                    </div>
-                    <NewsTicker lang={lang} />
-                </div>
-            </div>
+    {/* Market Analysis Widget (Strategic Placement: Below AI Insight) */ }
+    <div className="max-w-[1600px] mx-auto w-full px-4 md:px-6 mb-8">
+        <MarketAnalysisWidget lang={lang} />
+    </div>
 
-            {/* 4. Breaking News / Risk Events */}
+    {/* PARTNER BANNER (Strategic Placement: Below AI Insight) */ }
+    <div className="max-w-[1600px] mx-auto w-full px-4 md:px-6 mb-8">
+        <TVPartnerCard lang={lang} />
+    </div>
+
+    {/* 3. News (Live Intelligence Stream) */ }
+    <div className="max-w-[1600px] mx-auto w-full px-4 md:px-6 mb-4">
+        <div
+            className="border border-slate-200 dark:border-[#1E293B] rounded-xl overflow-hidden transition-colors duration-300 bg-[#F1F5F9] dark:bg-[#111]"
+        >
+            <div className="bg-slate-100 dark:bg-black/40 px-6 py-4 border-b border-slate-200 dark:border-[#1E293B]">
+                <h3 className="text-slate-400 text-[10px] font-black uppercase tracking-[0.2em]">{(t.titles as any).live_stream || "LIVE INTELLIGENCE STREAM"}</h3>
+            </div>
+            <NewsTicker lang={lang} />
+        </div>
+    </div>
+
+    {/* 4. Breaking News / Risk Events */ }
             <div className="max-w-[1600px] mx-auto w-full px-4 md:px-8 mb-4">
                 <div
-                    className="border border-slate-200 dark:border-[#1E293B] rounded-xl p-0 transition-colors duration-300"
-                    style={{ backgroundColor: theme === 'dark' ? '#000000' : '#F1F5F9' }}
+                    className="border border-slate-200 dark:border-[#1E293B] rounded-xl p-0 transition-colors duration-300 bg-[#F1F5F9] dark:bg-black"
                 >
                     {(!data.events || data.events.length === 0) ? (
                         <div className="p-4 text-xs text-slate-600 font-mono">NO UPCOMING RISK EVENTS DETECTED.</div>
@@ -353,6 +341,6 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
             <div className="max-w-[1600px] mx-auto w-full px-4 md:px-8 mb-8">
                 <AdUnit />
             </div>
-        </div>
+        </div >
     );
 };

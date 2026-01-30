@@ -26,7 +26,8 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
         const segments = adContent.segments;
         if (segments && segments.length > 0) {
             const random = segments[Math.floor(Math.random() * segments.length)];
-            setSelectedSegment(random);
+            const timer = setTimeout(() => setSelectedSegment(random), 0);
+            return () => clearTimeout(timer);
         }
     }, [adContent, lang]);
 
