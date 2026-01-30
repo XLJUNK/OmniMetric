@@ -1,16 +1,7 @@
 'use client';
 
-import React, { useState } from 'react';
-import { ChevronDown, Check, Info, X } from 'lucide-react';
-import { RiskGauge, HistoryChart, MetricChart } from '@/components/Charts';
-import { DICTIONARY, LangType } from '@/data/dictionary';
-import { useRouter, usePathname, useSearchParams } from 'next/navigation';
-import { NewsTicker } from '@/components/NewsTicker';
-import { AdUnit } from '@/components/AdUnit';
-import { GMSHeaderSection } from '@/components/GMSHeaderSection';
 import { PulseTile } from '@/components/PulseTile';
 import { useDevice } from '@/hooks/useDevice';
-import { Skeleton, SkeletonCard, SkeletonPulseTile } from '@/components/Skeleton';
 import { useTheme } from "@/components/ThemeProvider";
 import { SignalData } from '@/lib/signal';
 import { useSignalData } from '@/hooks/useSignalData';
@@ -30,22 +21,15 @@ interface MultiAssetSummaryProps {
 
 export const MultiAssetSummary = ({ initialData }: MultiAssetSummaryProps) => {
     const { data, liveData, isSafeMode } = useSignalData(initialData);
-    const [isLangOpen, setIsLangOpen] = useState(false);
-    const [showInfo, setShowInfo] = useState(false);
-    const { isMobile, isDesktop } = useDevice();
+    const { isMobile } = useDevice();
 
     const router = useRouter();
-    const pathname = usePathname();
     const searchParams = useSearchParams();
 
     // Safety: Ensure lang is always valid and uppercase for DICTIONARY access
     const langParam = (searchParams.get('lang') || 'EN').toUpperCase();
     const lang = (Object.keys(DICTIONARY).includes(langParam) ? langParam : 'EN') as LangType;
     const t = DICTIONARY[lang] || DICTIONARY['EN'];
-
-    const setLang = (l: LangType) => {
-        router.push(`${pathname}?lang=${l}`);
-    };
 
     // Correctly call the hook
     const { theme, toggleTheme } = useTheme();
@@ -83,8 +67,8 @@ export const MultiAssetSummary = ({ initialData }: MultiAssetSummaryProps) => {
                 }
                 // Theme is now handled by ThemeProvider, but we sync mainly for tile state
             }
-        } catch (e) {
-            console.error("Failed to load terminal config", e);
+        } catch {
+            // ignore
         }
     }, []);
 
@@ -110,7 +94,7 @@ export const MultiAssetSummary = ({ initialData }: MultiAssetSummaryProps) => {
                 hiddenTiles: hidden,
                 version: 1
             }));
-        } catch (e) { /* ignore */ }
+        } catch { /* ignore */ }
     };
 
     const handleUpdateConfig = (visible: string[], hidden: string[]) => {
@@ -135,7 +119,7 @@ export const MultiAssetSummary = ({ initialData }: MultiAssetSummaryProps) => {
                 delete config.hiddenTiles;
                 localStorage.setItem('gms_terminal_config_v1', JSON.stringify(config));
             }
-        } catch (e) { }
+        } catch { }
 
         setToast({ msg: 'Restored Default Layout', show: true });
     };

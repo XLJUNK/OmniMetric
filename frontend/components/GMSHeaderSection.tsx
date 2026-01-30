@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Activity, Zap, ChevronDown, Info, X, Settings } from 'lucide-react';
 import { RiskGauge, HistoryChart } from '@/components/Charts';
 import { DICTIONARY, LangType } from '@/data/dictionary';
-import { useDevice } from '@/hooks/useDevice';
+
 import { useRouter } from 'next/navigation';
 import { useTheme } from '@/components/ThemeProvider';
 import { NewsTicker } from '@/components/NewsTicker';

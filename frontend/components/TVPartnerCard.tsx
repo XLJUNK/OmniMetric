@@ -14,7 +14,7 @@ interface TVPartnerCardProps {
 }
 
 export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps) => {
-    const { theme } = useTheme();
+
     // 1. Load Data
     const adContent = TRADINGVIEW_ADS[lang] || TRADINGVIEW_ADS['EN'];
     const isRTL = lang === 'AR';
