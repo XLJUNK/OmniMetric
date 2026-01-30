@@ -24,6 +24,7 @@ export default function MarketAnalysisPage() {
         sma: true,
         rsi: false
     });
+    const [simulatedSignal, setSimulatedSignal] = useState<"none" | "bullish" | "bearish">("none");
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -46,7 +47,14 @@ export default function MarketAnalysisPage() {
     const currentData = data?.[selectedSymbol]?.[selectedTimeframe] || [];
 
     // Get latest data point for display
-    const latest = currentData.length > 0 ? currentData[currentData.length - 1] : null;
+    const rawLatest = currentData.length > 0 ? currentData[currentData.length - 1] : null;
+
+    // Apply simulation overrides if active
+    const latest = rawLatest ? {
+        ...rawLatest,
+        is_bullish: simulatedSignal === "bullish" ? true : simulatedSignal === "bearish" ? false : rawLatest.is_bullish,
+        is_bearish: simulatedSignal === "bearish" ? true : simulatedSignal === "bullish" ? false : rawLatest.is_bearish
+    } : null;
 
     return (
         <div className="min-h-screen bg-slate-950 text-slate-100 p-4 font-sans">
@@ -126,6 +134,18 @@ export default function MarketAnalysisPage() {
                             }`}
                     >
                         RSI(14) {indicators.rsi && <span className="text-white">✓</span>}
+                    </button>
+
+                    {/* Test Simulation Button */}
+                    <button
+                        onClick={() => setSimulatedSignal(prev => prev === "none" ? "bullish" : prev === "bullish" ? "bearish" : "none")}
+                        className={`px-3 py-2 rounded-lg font-bold text-xs transition-all shadow-md border ${simulatedSignal !== "none"
+                            ? 'bg-amber-500 text-black border-amber-400'
+                            : 'bg-slate-800 text-slate-500 border-slate-700 hover:text-slate-300'
+                            }`}
+                        title="Simulate Signal (Test Only)"
+                    >
+                        ⚡ {simulatedSignal === "none" ? "Test" : simulatedSignal === "bullish" ? "Bull" : "Bear"}
                     </button>
                 </div>
             </div>
