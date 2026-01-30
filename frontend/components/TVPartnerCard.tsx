@@ -127,62 +127,9 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
             {/* Added: Specific min-height to ensure structure visibility */}
             <div className={`flex flex-col md:flex-row items-stretch min-h-[160px] ${isRTL ? 'md:flex-row-reverse' : ''}`}>
 
-                {/* 1. Image Area (Fixed Width ~300px on Desktop to accommodate 3 images) */}
-                <div
-                    className={`w-full md:w-[300px] bg-[#F1F5F9] dark:bg-[#0f0f0f] border-b md:border-b-0 ${isRTL ? 'md:border-l' : 'md:border-r'} border-slate-200 dark:border-slate-800/50 shrink-0 overflow-hidden flex flex-col`}
-                    style={{ backgroundColor: theme === 'dark' ? '#0f0f0f' : '#F1F5F9' }}
-                >
-                    {/* Clickable Image Container - FLEX ROW for 3 side-by-side images */}
-                    <a
-                        href={affiliateUrl}
-                        target="_blank"
-                        rel="noopener noreferrer nofollow"
-                        className="relative flex-1 flex flex-row items-center justify-center p-1 gap-1 hover:opacity-90 transition-opacity min-h-[120px]"
-                    >
-                        {/* Image 1: Dynamic Segment (Analyst/Minds) */}
-                        <div className="relative w-1/3 h-full min-h-[100px]">
-                            <Image
-                                src={`/images/${segment.image}`}
-                                alt="TradingView Feature"
-                                fill
-                                className="object-contain"
-                                sizes="(max-width: 768px) 33vw, 100px"
-                            />
-                        </div>
-
-                        {/* Image 2: Chart Sample 1 */}
-                        <div className="relative w-1/3 h-full min-h-[100px]">
-                            <Image
-                                src="/images/tv_chart_sample.png"
-                                alt="TradingView Chart 1"
-                                fill
-                                className="object-contain"
-                                sizes="(max-width: 768px) 33vw, 100px"
-                            />
-                        </div>
-
-                        {/* Image 3: Chart Sample 2 (New) */}
-                        <div className="relative w-1/3 h-full min-h-[100px]">
-                            <Image
-                                src="/images/tv_chart_sample_2.png"
-                                alt="TradingView Chart 2"
-                                fill
-                                className="object-contain"
-                                sizes="(max-width: 768px) 33vw, 100px"
-                            />
-                        </div>
-                    </a>
-
-                    {/* Official Partner Label (Bottom of Image Area) */}
-                    <div className="py-2 text-center w-full bg-transparent dark:bg-black/20 border-t border-slate-200/50 dark:border-slate-800/50">
-                        <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest leading-none block">
-                            TradingView Official Partner
-                        </span>
-                    </div>
-                </div>
-
-                {/* 2. Content Area - Tighter Padding */}
-                <div className={`p-4 md:p-5 flex-1 flex flex-col justify-center text-center ${isRTL ? 'md:text-right' : 'md:text-left'}`}>
+                {/* 1. Image Area REMOVED by user request */}
+                {/* 2. Content Area - Full Width */}
+                <div className={`p-4 md:p-5 flex-1 flex flex-col justify-center text-center`}>
 
                     {/* Main Copy - Dynamic Typography matching AI Insight EXACTLY (fluid-base) */}
                     <h3 className={`text-fluid-base font-medium text-slate-700 dark:text-slate-300 leading-relaxed max-w-2xl text-center mx-auto mb-4 ${isRTL ? 'font-arabic' : ''}`}>
