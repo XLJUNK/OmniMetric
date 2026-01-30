@@ -4,9 +4,6 @@ import React, { useState, useEffect } from 'react';
 import { ExternalLink, Zap } from 'lucide-react';
 import { LangType, DICTIONARY } from '@/data/dictionary';
 import { TRADINGVIEW_ADS, AdSegment } from '@/data/tradingview-ads';
-import Image from 'next/image';
-
-import { useTheme } from '@/components/ThemeProvider';
 
 interface TVPartnerCardProps {
     lang: LangType;

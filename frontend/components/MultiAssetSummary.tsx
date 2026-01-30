@@ -1,5 +1,7 @@
-'use client';
-
+import React, { useState } from 'react';
+import { DICTIONARY, LangType } from '@/data/dictionary';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { GMSHeaderSection } from '@/components/GMSHeaderSection';
 import { PulseTile } from '@/components/PulseTile';
 import { useDevice } from '@/hooks/useDevice';
 import { useTheme } from "@/components/ThemeProvider";
