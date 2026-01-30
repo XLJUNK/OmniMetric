@@ -1,14 +1,14 @@
 {
     "metrics": {
-        "avg_vix_defensive": 16.73,
+        "avg_vix_defensive": 16.78,
         "avg_vix_neutral": 16.15,
         "avg_vix_accumulate": 14.49,
         "sample_count": 21,
-        "last_updated": "2026-01-30T02:49:23.613230+00:00"
+        "last_updated": "2026-01-30T14:44:26.399107+00:00"
     },
     "summaries": {
-        "EN": "Over the past 21 entries, market volatility (VIX) was 3.6% higher during GMS Defensive regimes (<40) compared to Neutral, validating the signal's sensitivity to structural stress.",
-        "JP": "過去21回の観測データにおいて、GMSが「ディフェンシブ（40以下）」を示した期間のVIX指数は平均16.73となり、ニュートラル期間より3.6%高く推移しました。これは、本アルゴリズムが市場の構造的ストレスを正確に捉えていることを客観的に示しています。"
+        "EN": "Over the past 21 entries, market volatility (VIX) was 3.9% higher during GMS Defensive regimes (<40) compared to Neutral, validating the signal's sensitivity to structural stress.",
+        "JP": "過去21回の観測データにおいて、GMSが「ディフェンシブ（40以下）」を示した期間のVIX指数は平均16.78となり、ニュートラル期間より3.9%高く推移しました。これは、本アルゴリズムが市場の構造的ストレスを正確に捉えていることを客観的に示しています。"
     },
     "history": [
         {
@@ -413,7 +413,7 @@
         },
         {
             "date": "2026-01-30",
-            "gms_score": 35,
+            "gms_score": 31,
             "net_liquidity": 5661.67,
             "move_price": 60.73,
             "real_rate": 1.9,
@@ -421,14 +421,14 @@
             "dxy_price": 96.64,
             "hy_spread": 2.72,
             "nfci_price": -0.6,
-            "breadth_spread": -0.83,
-            "gold_price": 5243.1,
-            "btc_price": 81952.99,
-            "copper_gold_ratio": 1.15,
-            "vix_price": 16.88,
-            "spy_price": 694.04,
-            "qqq_price": 629.43,
-            "iwm_price": 263.37,
+            "breadth_spread": -0.46,
+            "gold_price": 5127.6,
+            "btc_price": 83260.04,
+            "copper_gold_ratio": 1.18,
+            "vix_price": 17.83,
+            "spy_price": 692.72,
+            "qqq_price": 626.92,
+            "iwm_price": 262.68,
             "crypto_sentiment": 16
         }
     ]

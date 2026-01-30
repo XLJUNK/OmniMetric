@@ -1,9 +1,9 @@
 {
-    "last_updated": "2026-01-30T02:49:23.600189+00:00",
-    "last_successful_update": "2026-01-30T02:49:23.600203+00:00",
-    "gms_score": 35,
+    "last_updated": "2026-01-30T14:44:26.383943+00:00",
+    "last_successful_update": "2026-01-30T14:44:26.383949+00:00",
+    "gms_score": 31,
     "sector_scores": {
-        "STOCKS": 50,
+        "STOCKS": 35,
         "CRYPTO": 25,
         "FOREX": 55,
         "COMMODITIES": 55
@@ -218,13 +218,12 @@
             ]
         },
         "VIX": {
-            "price": 16.88,
-            "prev_price": 16.35,
-            "daily_chg": 3.24,
-            "change_percent": 4.91,
+            "price": 17.83,
+            "prev_price": 16.88,
+            "daily_chg": 5.63,
+            "change_percent": 10.4,
             "trend": "UP",
             "sparkline": [
-                14.2,
                 14.33,
                 14.95,
                 14.51,
@@ -245,7 +244,8 @@
                 16.15,
                 16.35,
                 16.35,
-                16.88
+                16.88,
+                17.83
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
@@ -360,13 +360,12 @@
             ]
         },
         "SPY": {
-            "price": 694.04,
-            "prev_price": 695.42,
-            "daily_chg": -0.2,
-            "change_percent": 0.7,
+            "price": 692.72,
+            "prev_price": 694.04,
+            "daily_chg": -0.19,
+            "change_percent": -0.0,
             "trend": "DOWN",
             "sparkline": [
-                687.85,
                 687.01,
                 681.92,
                 683.17,
@@ -387,17 +386,17 @@
                 692.73,
                 695.49,
                 695.42,
-                694.04
+                694.04,
+                692.72
             ]
         },
         "TNX": {
-            "price": 4.23,
-            "prev_price": 4.25,
-            "daily_chg": -0.56,
-            "change_percent": -0.28,
-            "trend": "DOWN",
+            "price": 4.24,
+            "prev_price": 4.23,
+            "daily_chg": 0.38,
+            "change_percent": 0.71,
+            "trend": "UP",
             "sparkline": [
-                4.12,
                 4.13,
                 4.16,
                 4.19,
@@ -418,17 +417,17 @@
                 4.21,
                 4.22,
                 4.25,
-                4.23
+                4.23,
+                4.24
             ]
         },
         "QQQ": {
-            "price": 629.43,
-            "prev_price": 633.22,
-            "daily_chg": -0.6,
-            "change_percent": 1.08,
+            "price": 626.92,
+            "prev_price": 629.43,
+            "daily_chg": -0.4,
+            "change_percent": 0.23,
             "trend": "DOWN",
             "sparkline": [
-                620.87,
                 619.43,
                 614.31,
                 613.12,
@@ -449,17 +448,17 @@
                 625.46,
                 631.13,
                 633.22,
-                629.43
+                629.43,
+                626.92
             ]
         },
         "IWM": {
-            "price": 263.37,
-            "prev_price": 263.3,
-            "daily_chg": 0.03,
-            "change_percent": -0.54,
-            "trend": "UP",
+            "price": 262.68,
+            "prev_price": 263.37,
+            "daily_chg": -0.26,
+            "change_percent": -0.49,
+            "trend": "DOWN",
             "sparkline": [
-                249.88,
                 248.03,
                 246.16,
                 248.78,
@@ -480,17 +479,17 @@
                 263.98,
                 264.73,
                 263.3,
-                263.37
+                263.37,
+                262.68
             ]
         },
         "RSP": {
-            "price": 198.52,
-            "prev_price": 198.26,
-            "daily_chg": 0.13,
-            "change_percent": -0.13,
-            "trend": "UP",
+            "price": 198.33,
+            "prev_price": 198.52,
+            "daily_chg": -0.1,
+            "change_percent": -0.46,
+            "trend": "DOWN",
             "sparkline": [
-                193.52,
                 193.21,
                 191.56,
                 192.86,
@@ -511,17 +510,17 @@
                 199.24,
                 198.93,
                 198.26,
-                198.52
+                198.52,
+                198.33
             ]
         },
         "HYG": {
-            "price": 81.03,
-            "prev_price": 81.04,
-            "daily_chg": -0.01,
-            "change_percent": -0.14,
-            "trend": "DOWN",
+            "price": 81.04,
+            "prev_price": 81.03,
+            "daily_chg": 0.01,
+            "change_percent": -0.17,
+            "trend": "UP",
             "sparkline": [
-                80.63,
                 80.71,
                 80.63,
                 80.67,
@@ -542,17 +541,17 @@
                 81.18,
                 81.17,
                 81.04,
-                81.03
+                81.03,
+                81.04
             ]
         },
         "NIFTY": {
-            "price": 25418.9,
-            "prev_price": 25342.75,
-            "daily_chg": 0.3,
-            "change_percent": 0.51,
-            "trend": "UP",
+            "price": 25320.65,
+            "prev_price": 25418.9,
+            "daily_chg": -0.39,
+            "change_percent": 1.09,
+            "trend": "DOWN",
             "sparkline": [
-                25942.1,
                 25938.85,
                 26129.6,
                 26146.55,
@@ -573,17 +572,17 @@
                 25048.65,
                 25175.4,
                 25342.75,
-                25418.9
+                25418.9,
+                25320.65
             ]
         },
         "BTC": {
-            "price": 81952.99,
-            "prev_price": 89184.57,
-            "daily_chg": -8.11,
-            "change_percent": -5.34,
+            "price": 83260.04,
+            "prev_price": 84561.59,
+            "daily_chg": -1.54,
+            "change_percent": -5.67,
             "trend": "DOWN",
             "sparkline": [
-                91027.12,
                 90513.1,
                 90386.65,
                 90827.46,
@@ -604,17 +603,17 @@
                 88267.14,
                 89102.57,
                 89184.57,
-                81952.99
+                84561.59,
+                83260.04
             ]
         },
         "ETH": {
-            "price": 2738.66,
-            "prev_price": 3006.61,
-            "daily_chg": -8.91,
-            "change_percent": -2.74,
+            "price": 2740.99,
+            "prev_price": 2818.23,
+            "daily_chg": -2.74,
+            "change_percent": -6.34,
             "trend": "DOWN",
             "sparkline": [
-                3104.38,
                 3083.05,
                 3082.4,
                 3118.89,
@@ -635,17 +634,17 @@
                 2926.46,
                 3022.21,
                 3006.61,
-                2738.66
+                2818.23,
+                2740.99
             ]
         },
         "SOL": {
-            "price": 114.07,
-            "prev_price": 125.12,
-            "daily_chg": -8.83,
-            "change_percent": -3.96,
+            "price": 116.67,
+            "prev_price": 117.61,
+            "daily_chg": -0.8,
+            "change_percent": -6.02,
             "trend": "DOWN",
             "sparkline": [
-                138.29,
                 135.76,
                 135.73,
                 139.49,
@@ -666,17 +665,17 @@
                 124.14,
                 127.05,
                 125.12,
-                114.07
+                117.61,
+                116.67
             ]
         },
         "DXY": {
             "price": 96.64,
-            "prev_price": 96.45,
-            "daily_chg": 0.19,
-            "change_percent": -0.99,
+            "prev_price": 96.28,
+            "daily_chg": 0.37,
+            "change_percent": -0.41,
             "trend": "UP",
             "sparkline": [
-                98.04,
                 98.24,
                 98.28,
                 98.42,
@@ -697,14 +696,15 @@
                 97.04,
                 96.22,
                 96.45,
+                96.28,
                 96.64
             ]
         },
         "USDJPY": {
-            "price": 153.88,
+            "price": 154.34,
             "prev_price": 153.1,
-            "daily_chg": 0.52,
-            "change_percent": -0.83,
+            "daily_chg": 0.81,
+            "change_percent": -0.53,
             "trend": "UP",
             "sparkline": [
                 156.41,
@@ -728,14 +728,14 @@
                 154.34,
                 152.45,
                 153.1,
-                153.88
+                154.34
             ]
         },
         "EURUSD": {
             "price": 1.19,
             "prev_price": 1.2,
-            "daily_chg": -0.47,
-            "change_percent": 0.53,
+            "daily_chg": -0.5,
+            "change_percent": 0.5,
             "trend": "DOWN",
             "sparkline": [
                 1.17,
@@ -763,10 +763,10 @@
             ]
         },
         "USDINR": {
-            "price": 91.82,
+            "price": 91.88,
             "prev_price": 92.04,
-            "daily_chg": -0.23,
-            "change_percent": 0.35,
+            "daily_chg": -0.18,
+            "change_percent": 0.41,
             "trend": "DOWN",
             "sparkline": [
                 89.77,
@@ -790,13 +790,13 @@
                 91.71,
                 91.53,
                 92.04,
-                91.82
+                91.88
             ]
         },
         "USDSAR": {
             "price": 3.75,
             "prev_price": 3.75,
-            "daily_chg": 0.11,
+            "daily_chg": 0.12,
             "change_percent": 0.15,
             "trend": "UP",
             "sparkline": [
@@ -825,13 +825,12 @@
             ]
         },
         "GOLD": {
-            "price": 5243.1,
-            "prev_price": 5301.6,
-            "daily_chg": -1.1,
-            "change_percent": 5.36,
+            "price": 5127.6,
+            "prev_price": 5318.4,
+            "daily_chg": -3.59,
+            "change_percent": 0.94,
             "trend": "DOWN",
             "sparkline": [
-                4325.1,
                 4370.1,
                 4325.6,
                 4314.4,
@@ -852,17 +851,17 @@
                 5079.7,
                 5079.9,
                 5301.6,
-                5243.1
+                5318.4,
+                5127.6
             ]
         },
         "OIL": {
-            "price": 64.17,
-            "prev_price": 63.21,
-            "daily_chg": 1.52,
-            "change_percent": 5.08,
+            "price": 65.86,
+            "prev_price": 65.42,
+            "daily_chg": 0.67,
+            "change_percent": 8.63,
             "trend": "UP",
             "sparkline": [
-                58.08,
                 57.95,
                 57.42,
                 57.32,
@@ -883,17 +882,17 @@
                 60.63,
                 62.39,
                 63.21,
-                64.17
+                65.42,
+                65.86
             ]
         },
         "COPPER": {
-            "price": 6.01,
-            "prev_price": 5.89,
-            "daily_chg": 1.97,
-            "change_percent": 1.65,
-            "trend": "UP",
+            "price": 6.05,
+            "prev_price": 6.18,
+            "daily_chg": -2.11,
+            "change_percent": 1.02,
+            "trend": "DOWN",
             "sparkline": [
-                5.49,
                 5.73,
                 5.63,
                 5.64,
@@ -914,17 +913,17 @@
                 5.98,
                 5.83,
                 5.89,
-                6.01
+                6.18,
+                6.05
             ]
         },
         "NATGAS": {
-            "price": 3.84,
-            "prev_price": 7.46,
-            "daily_chg": -48.55,
-            "change_percent": -27.24,
-            "trend": "DOWN",
+            "price": 4.06,
+            "prev_price": 3.92,
+            "daily_chg": 3.65,
+            "change_percent": -40.28,
+            "trend": "UP",
             "sparkline": [
-                4.69,
                 3.97,
                 3.69,
                 3.62,
@@ -945,12 +944,13 @@
                 6.8,
                 6.95,
                 7.46,
-                3.84
+                3.92,
+                4.06
             ]
         },
         "MOVE": {
             "price": 60.73,
-            "change_percent": 5.75,
+            "change_percent": 5.74,
             "trend": "NORMAL",
             "sparkline": [
                 63.98,
@@ -977,7 +977,7 @@
             ]
         },
         "BREADTH": {
-            "price": -0.83,
+            "price": -0.46,
             "change_percent": 0.0,
             "trend": "HEALTHY",
             "sparkline": [
@@ -1001,11 +1001,12 @@
                 2.29,
                 1.73,
                 1.39,
-                1.73
+                1.73,
+                1.82
             ]
         },
         "SPY_MOMENTUM": {
-            "price": 0.83,
+            "price": 0.46,
             "change_percent": 0,
             "trend": "BALANCED",
             "sparkline": [
@@ -1042,40 +1043,40 @@
             ]
         },
         "COPPER_GOLD": {
-            "price": 1.15,
+            "price": 1.18,
             "change_percent": 0,
             "trend": "RISK-OFF",
             "sparkline": [
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15
+                1.18,
+                1.18,
+                1.18,
+                1.18,
+                1.18,
+                1.18,
+                1.18,
+                1.18,
+                1.18,
+                1.18,
+                1.18,
+                1.18,
+                1.18,
+                1.18,
+                1.18,
+                1.18,
+                1.18,
+                1.18,
+                1.18,
+                1.18,
+                1.18,
+                1.18,
+                1.18,
+                1.18,
+                1.18,
+                1.18,
+                1.18,
+                1.18,
+                1.18,
+                1.18
             ]
         }
     },
@@ -1107,22 +1108,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS score 35 signals a Defensive regime, with momentum flat after pushing from 32. Rising DXY (Dollar strength/Liquidity) and VIX (Fear/Volatility) reinforce caution. Yet, robust Apple sales suggest underlying consumer resilience, a potential positive catalyst against broad risk-off sentiment. Maintain defensive stance, while noting selective sector strength.",
+        "content": "GMS score pushed to 31, signaling a Defensive (Risk-Off) regime. Rising DXY (Dollar strength) and increasing VIX (Fear/Volatility) reflect mounting caution and risk aversion, reinforced by contracting liquidity and a potentially hawkish Fed nominee. However, this immediate downturn from the nomination may be overextended, possibly setting conditions for a short-term technical rebound. Maintain a defensive posture while monitoring key support levels.",
         "reports": {
-            "JP": "GMSスコア35は防衛的な市場を示し、32から上昇後、勢いは横ばいです。DXY（ドル高/流動性）とVIX（恐怖/変動性）の上昇は警戒を強めます。しかし、Appleの堅調な売上は消費者の底堅さを示唆し、広範なリスクオフの中で潜在的な好材料となり得ます。防衛姿勢を維持しつつ、一部セクターの強さに注目。",
-            "EN": "GMS score 35 signals a Defensive regime, with momentum flat after pushing from 32. Rising DXY (Dollar strength/Liquidity) and VIX (Fear/Volatility) reinforce caution. Yet, robust Apple sales suggest underlying consumer resilience, a potential positive catalyst against broad risk-off sentiment. Maintain defensive stance, while noting selective sector strength.",
-            "CN": "GMS指数35表明市场处于防御态势，动能从32推升后趋平。美元指数（DXY，美元走强/流动性）和VIX指数（恐惧/波动性）上升，加剧了谨慎情绪。然而，苹果强劲的销售额预示消费者韧性，这可能是对抗普遍避险情绪的潜在积极催化剂。保持防御立场，但关注特定板块的优势。",
-            "ES": "Puntuación GMS 35 indica régimen Defensivo, con impulso plano tras subir desde 32. El aumento de DXY (fortaleza dólar/liquidez) y VIX (miedo/volatilidad) refuerza la cautela. Sin embargo, las robustas ventas de Apple sugieren resiliencia del consumidor, un catalizador positivo contra el riesgo general. Mantener postura defensiva, observando fortaleza sectorial.",
-            "HI": "GMS स्कोर 35 रक्षात्मक मोड का संकेत देता है, 32 से बढ़ने के बाद गति सपाट है। DXY (डॉलर की मजबूती/तरलता) और VIX (भय/अस्थिरता) में वृद्धि सावधानी बढ़ाती है। फिर भी, Apple की मजबूत बिक्री उपभोक्ता की अंतर्निहित लचीलापन दर्शाती है, जो जोखिम-रहित माहौल में संभावित सकारात्मक उत्प्रेरक है। रक्षात्मक रुख बनाए रखें, पर चुनिंदा क्षेत्रों की मजबूती पर ध्यान दें।",
-            "ID": "Skor GMS 35 menandakan rezim Defensif, dengan momentum datar setelah mendorong dari 32. Kenaikan DXY (kekuatan Dolar/Likuiditas) dan VIX (Ketakutan/Volatilitas) memperkuat kehati-hatian. Namun, penjualan Apple yang kuat menunjukkan ketahanan konsumen, katalis positif potensial melawan sentimen risk-off. Pertahankan posisi defensif, sambil mencatat kekuatan sektor.",
-            "AR": "يشير مؤشر GMS 35 إلى نظام دفاعي، مع استقرار الزخم بعد الارتفاع من 32. صعود مؤشر الدولار (DXY، قوة الدولار/السيولة) ومؤشر VIX (الخوف/التقلب) يعزز الحذر. لكن مبيعات Apple القوية تشير إلى مرونة المستهلك الأساسية، وهو حافز إيجابي محتمل ضد معنويات المخاطرة العامة. حافظ على موقف دفاعي، مع ملاحظة قوة قطاعية."
+            "JP": "GMSスコアは31まで押し下げられ、防御的（リスクオフ）な状況を示唆。DXY（ドル高）とVIX（恐怖/変動性）の上昇は警戒感とリスク回避の高まりを反映し、流動性収縮とタカ派的なFRB議長候補のニュースで補強されています。しかし、この直近の下降は過剰反応の可能性があり、短期的なテクニカル反発の条件となるかもしれません。主要なサポートレベルを監視しつつ、防御的なスタンスを維持してください。",
+            "EN": "GMS score pushed to 31, signaling a Defensive (Risk-Off) regime. Rising DXY (Dollar strength) and increasing VIX (Fear/Volatility) reflect mounting caution and risk aversion, reinforced by contracting liquidity and a potentially hawkish Fed nominee. However, this immediate downturn from the nomination may be overextended, possibly setting conditions for a short-term technical rebound. Maintain a defensive posture while monitoring key support levels.",
+            "CN": "GMS评分降至31，预示防御性（避险）状态。美元指数（美元走强）和VIX（恐慌/波动性）上升反映市场谨慎与避险情绪加剧，流动性收缩及潜在鹰派美联储主席提名进一步强化此趋势。然而，此轮因提名导致的即时下跌可能反应过度，或为短期技术性反弹创造条件。在密切关注关键支撑位的同时，保持防御性头寸。",
+            "ES": "La puntuación GMS se redujo a 31, señalando un régimen Defensivo (Aversión al Riesgo). El DXY (fortaleza del dólar) al alza y el VIX (miedo/volatilidad) creciente reflejan mayor cautela y aversión al riesgo, reforzados por la contracción de liquidez y un posible nominado de la Fed más restrictivo. No obstante, esta caída inmediata por la nominación podría ser exagerada, preparando el terreno para un rebote técnico a corto plazo. Mantenga una postura defensiva vigilando los niveles de soporte clave.",
+            "HI": "जीएमएस स्कोर 31 पर धकेल दिया गया, जो रक्षात्मक (जोखिम-बंद) स्थिति का संकेत है। बढ़ता DXY (डॉलर की मजबूती) और VIX (भय/अस्थिरता) बढ़ती सावधानी और जोखिम-विरोध को दर्शाते हैं, जिसे घटती तरलता और संभावित आक्रामक फेड उम्मीदवार के समाचार ने और पुख्ता किया है। हालांकि, नामांकन के कारण यह तत्काल गिरावट अत्यधिक हो सकती है, जिससे अल्पकालिक तकनीकी उछाल के लिए स्थितियाँ बन सकती हैं। प्रमुख समर्थन स्तरों की निगरानी करते हुए रक्षात्मक स्थिति बनाए रखें।",
+            "ID": "Skor GMS terdorong ke 31, menandakan rezim Defensif (Penghindaran Risiko). Kenaikan DXY (kekuatan Dolar) dan VIX (Ketakutan/Volatilitas) mencerminkan peningkatan kehati-hatian dan penghindaran risiko, diperkuat oleh kontraksi likuiditas dan nominasi ketua Fed yang berpotensi hawkish. Namun, penurunan segera akibat nominasi ini mungkin berlebihan, berpotensi menciptakan kondisi untuk pantulan teknis jangka pendek. Pertahankan posisi defensif sambil memantau level support utama.",
+            "AR": "تراجعت نقاط GMS إلى 31، مما يشير إلى نظام دفاعي (تجنب المخاطر). يعكس ارتفاع مؤشر الدولار (قوة الدولار) ومؤشر VIX (الخوف/التقلب) تزايد الحذر وتجنب المخاطر، مدعوماً بتقلص السيولة ومرشح محتمل للبنك الاحتياطي الفيدرالي ذي ميول متشددة. ومع ذلك، قد يكون هذا الانخفاض الفوري بسبب الترشيح مبالغاً فيه، مما يهيئ الظروف لانتعاش فني قصير المدى. حافظ على موقف دفاعي مع مراقبة مستويات الدعم الرئيسية."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-28T04:53:41Z",
-            "score": 40
-        },
         {
             "date": "2026-01-28T05:17:03Z",
             "score": 40
@@ -1358,92 +1355,96 @@
         {
             "date": "2026-01-30T02:49:23Z",
             "score": 35
+        },
+        {
+            "date": "2026-01-30T14:44:26Z",
+            "score": 31
         }
     ],
     "intelligence": {
         "news": [
             {
-                "title": "Apple sales surge 16% on ‘staggering’ iPhone demand",
-                "link": "https://www.cnbc.com/2026/01/29/apple-aapl-earnings-report-q1-2026.html",
-                "isoDate": "2026-01-30T00:36:51+00:00Z"
+                "title": "Trump nominates Kevin Warsh for Federal Reserve chair to succeed Jerome Powell",
+                "link": "https://www.cnbc.com/2026/01/30/trump-nominates-kevin-warsh-for-federal-reserve-chair-to-succeed-jerome-powell.html",
+                "isoDate": "2026-01-30T14:41:14+00:00Z"
             },
             {
-                "title": "Trump says he will announce a replacement for Powell as Fed chair Friday morning",
-                "link": "https://www.cnbc.com/2026/01/29/trump-says-he-will-announce-a-replacement-for-powell-as-fed-chair-friday-morning.html",
-                "isoDate": "2026-01-30T01:24:54+00:00Z"
+                "title": "Trump finally makes his Fed chair pick — What Kevin Warsh means for investors",
+                "link": "https://www.cnbc.com/2026/01/30/trump-finally-makes-his-fed-chair-pick-what-kevin-warsh-means-for-investors.html",
+                "isoDate": "2026-01-30T14:33:15+00:00Z"
             },
             {
-                "title": "Microsoft lost $357 billion in market cap as stock plunged most since 2020",
-                "link": "https://www.cnbc.com/2026/01/29/microsoft-market-cap-earnings.html",
-                "isoDate": "2026-01-29T21:41:49+00:00Z"
+                "title": "Sen. Tillis will oppose Trump Fed chair pick Warsh until Powell probe resolved",
+                "link": "https://www.cnbc.com/2026/01/30/fed-warsh-tillis-trump-powell-doj.html",
+                "isoDate": "2026-01-30T14:35:35+00:00Z"
             },
             {
-                "title": "Trump, two sons, Trump Org sue IRS, Treasury for $10 billion over tax records leak",
-                "link": "https://www.cnbc.com/2026/01/29/trump-sues-irs-and-treasury-for-10-billion-over-leak-of-tax-records.html",
-                "isoDate": "2026-01-30T01:21:21+00:00Z"
+                "title": "Stocks fall as investors weigh latest earnings, Warsh Fed chair pick; S&P 500 on pace for January gain: Live updates",
+                "link": "https://www.cnbc.com/2026/01/29/stock-market-today-live-updates.html",
+                "isoDate": "2026-01-30T14:39:32+00:00Z"
             },
             {
-                "title": "Gold prices fall over 4%; Asia-Pacific shares trade mixed after Trump says he will name new Fed chair",
-                "link": "https://www.cnbc.com/2026/01/30/asia-pacific-markets-today-friday-nikkei-225-kospi-jakarta-composite-index-us-shutdown-deal-trump.html",
-                "isoDate": "2026-01-30T02:30:18+00:00Z"
+                "title": "Here are Friday's biggest analyst calls: Nvidia, Apple, Tesla, Spotify, Broadcom, Southwest, AMD & more",
+                "link": "https://www.cnbc.com/2026/01/30/friday-wall-street-analyst-calls.html",
+                "isoDate": "2026-01-30T13:42:15+00:00Z"
             },
             {
-                "title": "These stocks posting earnings next week have a history of topping expectations",
-                "link": "https://www.cnbc.com/2026/01/29/these-stocks-posting-earnings-have-a-history-of-topping-expectations.html",
-                "isoDate": "2026-01-29T21:04:08+00:00Z"
+                "title": "Ford to record $600 million pretax pension charge in fourth quarter",
+                "link": "https://www.cnbc.com/2026/01/30/ford-q4-earnings-pension-charge.html",
+                "isoDate": "2026-01-30T13:03:19+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "iPhone需要「驚異的」でApple売上高16%急増",
-                "トランプ氏、パウエルFRB議長の後任を金曜朝に発表すると表明",
-                "マイクロソフト株が2020年以来最大の急落、時価総額3570億ドル失う",
-                "トランプ氏、息子2人、トランプ・オーガニゼーションが税記録流出でIRS、財務省を100億ドルで提訴",
-                "トランプ氏が新FRB議長指名を表明後、金価格4%超下落、アジア太平洋株はまちまち",
-                "来週決算発表、予想を上回る業績を続ける傾向にある銘柄"
+                "トランプ氏、パウエル議長の後任にワルシュ氏を連邦準備制度理事会（FRB）議長に指名",
+                "トランプ氏、FRB議長選出を最終決定　投資家にとってケビン・ワルシュ氏の意味",
+                "ティリス上院議員、パウエル氏の調査解決までトランプ氏のFRB議長候補ワルシュ氏に反対",
+                "最新決算、ワルシュ氏FRB議長候補を検討し株価下落　S&P500は1月上昇ペース：ライブアップデート",
+                "金曜日の主要アナリスト評価：Nvidia、Apple、Tesla、Spotify、Broadcom、Southwest、AMDなど",
+                "フォード、第4四半期に6億ドルの税引前年金費用を計上へ"
             ],
             "CN": [
-                "iPhone需求“惊人”提振苹果销售额增长16%",
-                "特朗普表示将于周五上午宣布鲍威尔美联储主席继任者",
-                "微软市值蒸发3570亿美元，股价跌幅创2020年来最大",
-                "特朗普及其两个儿子、特朗普集团就税务记录泄露起诉IRS、财政部索赔100亿美元",
-                "特朗普称将任命新美联储主席后，金价下跌逾4%；亚太股市涨跌互现",
-                "下周公布财报的这些股票有业绩超出预期的历史"
+                "特朗普提名凯文·沃什接任美联储主席，接替鲍威尔",
+                "特朗普终于做出美联储主席人选决定——凯文·沃什对投资者意味着什么",
+                "参议员蒂利斯：在鲍威尔调查解决之前，将反对特朗普的美联储主席人选沃什",
+                "股市下跌，投资者权衡最新财报和沃什的美联储主席提名；标普500指数有望实现1月上涨：实时更新",
+                "周五最大的分析师评级变动：英伟达、苹果、特斯拉、Spotify、博通、西南航空、AMD等",
+                "福特第四季度将记录6亿美元税前养老金费用"
             ],
             "ES": [
-                "Las ventas de Apple se disparan un 16% por la \"asombrosa\" demanda del iPhone",
-                "Trump dice que anunciará un reemplazo para Powell como presidente de la Fed el viernes por la mañana",
-                "Microsoft pierde 357 mil millones de dólares en capitalización de mercado al caer sus acciones lo más desde 2020",
-                "Trump, dos hijos, Trump Org demandan al IRS y al Tesoro por 10 mil millones de dólares por filtración de registros fiscales",
-                "Los precios del oro caen más del 4%; las acciones de Asia-Pacífico cotizan mixtas después de que Trump dijera que nombrará un nuevo presidente de la Fed",
-                "Estas acciones que publican resultados la próxima semana tienen un historial de superar las expectativas"
+                "Trump nomina a Kevin Warsh como presidente de la Reserva Federal para suceder a Jerome Powell",
+                "Trump finalmente hace su elección para presidente de la Fed: Lo que Kevin Warsh significa para los inversores",
+                "El senador Tillis se opondrá al candidato de Trump para presidente de la Fed, Warsh, hasta que se resuelva la investigación de Powell",
+                "Las acciones caen mientras los inversores sopesan los últimos resultados y la nominación de Warsh como presidente de la Fed; el S&P 500 va camino de una ganancia en enero: Actualizaciones en vivo",
+                "Estas son las mayores llamadas de analistas del viernes: Nvidia, Apple, Tesla, Spotify, Broadcom, Southwest, AMD y más",
+                "Ford registrará un cargo por pensiones antes de impuestos de 600 millones de dólares en el cuarto trimestre"
             ],
             "HI": [
-                "iPhone की 'स्तब्ध' मांग पर 16% बढ़ी Apple की बिक्री",
-                "ट्रम्प ने कहा कि वह शुक्रवार सुबह पॉवेल के फेड अध्यक्ष के प्रतिस्थापन की घोषणा करेंगे",
-                "माइक्रोसॉफ्ट ने बाजार पूंजीकरण में 357 बिलियन डॉलर का नुकसान उठाया क्योंकि स्टॉक 2020 के बाद से सबसे ज्यादा गिरा",
-                "ट्रम्प, दो बेटे, ट्रम्प ऑर्ग ने टैक्स रिकॉर्ड लीक पर 10 बिलियन डॉलर के लिए आईआरएस, ट्रेजरी पर मुकदमा किया",
-                "ट्रम्प ने कहा कि वह नए फेड अध्यक्ष का नाम लेंगे, जिसके बाद सोने की कीमतों में 4% से अधिक की गिरावट आई; एशिया-प्रशांत शेयरों में मिश्रित कारोबार",
-                "अगले हफ्ते कमाई पेश करने वाले इन स्टॉक्स में उम्मीदों से आगे निकलने का इतिहास रहा है"
+                "ट्रम्प ने जेरोम पॉवेल के उत्तराधिकारी के तौर पर फेडरल रिजर्व के अध्यक्ष पद के लिए केविन वॉर्श को नामित किया",
+                "ट्रम्प ने आखिरकार अपना फेड अध्यक्ष पद का चुनाव किया - निवेशकों के लिए केविन वॉर्श का क्या मतलब है",
+                "सीनेटर टिलिस: पॉवेल की जांच हल होने तक वॉर्श को ट्रम्प के फेड अध्यक्ष पद के उम्मीदवार का विरोध करेंगे",
+                "निवेशक नवीनतम आय, वॉर्श फेड अध्यक्ष पद के उम्मीदवार का मूल्यांकन करते हुए शेयर गिरे; एस एंड पी 500 जनवरी में बढ़त की राह पर: लाइव अपडेट",
+                "शुक्रवार को विश्लेषकों की सबसे बड़ी कॉलें: Nvidia, Apple, Tesla, Spotify, Broadcom, Southwest, AMD और अन्य",
+                "फोर्ड चौथी तिमाही में 600 मिलियन डॉलर का प्री-टैक्स पेंशन चार्ज दर्ज करेगा"
             ],
             "ID": [
-                "Penjualan Apple melonjak 16% berkat permintaan iPhone yang 'mencengangkan'",
-                "Trump mengatakan akan mengumumkan pengganti Powell sebagai ketua Fed pada Jumat pagi",
-                "Microsoft kehilangan kapitalisasi pasar $357 miliar karena sahamnya anjlok paling dalam sejak 2020",
-                "Trump, dua putra, Trump Org menuntut IRS, Departemen Keuangan sebesar $10 miliar atas kebocoran catatan pajak",
-                "Harga emas jatuh lebih dari 4%; saham Asia-Pasifik diperdagangkan beragam setelah Trump mengatakan akan menunjuk ketua Fed baru",
-                "Saham-saham ini yang memposting pendapatan minggu depan memiliki rekam jejak melampaui ekspektasi"
+                "Trump menominasikan Kevin Warsh sebagai ketua Federal Reserve untuk menggantikan Jerome Powell",
+                "Trump akhirnya membuat pilihan ketua Fed-nya — Apa arti Kevin Warsh bagi investor",
+                "Senator Tillis akan menentang pilihan ketua Fed Trump, Warsh, sampai penyelidikan Powell diselesaikan",
+                "Saham jatuh saat investor menimbang pendapatan terbaru, pilihan ketua Fed Warsh; S&P 500 dalam jalur untuk kenaikan Januari: Pembaruan langsung",
+                "Ini adalah panggilan analis terbesar hari Jumat: Nvidia, Apple, Tesla, Spotify, Broadcom, Southwest, AMD & lainnya",
+                "Ford akan mencatat biaya pensiun sebelum pajak sebesar $600 juta pada kuartal keempat"
             ],
             "AR": [
-                "مبيعات أبل تقفز 16% بفضل طلب آيفون \"المذهل\"",
-                "ترامب يقول إنه سيعلن عن بديل باول كرئيس للاحتياطي الفيدرالي صباح الجمعة",
-                "مايكروسوفت تخسر 357 مليار دولار من القيمة السوقية مع هبوط أسهمها الأكثر منذ 2020",
-                "ترامب وابناه ومنظمة ترامب يقاضون مصلحة الضرائب والخزانة بـ 10 مليارات دولار بسبب تسريب السجلات الضريبية",
-                "أسعار الذهب تنخفض بأكثر من 4٪؛ أسهم آسيا والمحيط الهادئ تتداول بشكل متباين بعد أن قال ترامب إنه سيسمي رئيسًا جديدًا للاحتياطي الفيدرالي",
-                "هذه الأسهم التي تعلن عن أرباح الأسبوع المقبل لديها تاريخ في تجاوز التوقعات"
+                "ترامب يرشح كيفن ورش لرئاسة الاحتياطي الفيدرالي خلفًا لجيروم باول",
+                "ترامب يتخذ أخيرًا قراره بشأن رئيس الاحتياطي الفيدرالي - ماذا يعني كيفن ورش للمستثمرين",
+                "السيناتور تيليس سيعارض مرشح ترامب لرئاسة الاحتياطي الفيدرالي ورش حتى يتم حل تحقيق باول",
+                "الأسهم تنخفض مع تقييم المستثمرين لأحدث الأرباح وترشيح ورش لرئاسة الاحتياطي الفيدرالي؛ مؤشر S&P 500 في طريقه لتحقيق مكاسب يناير: تحديثات مباشرة",
+                "أكبر مكالمات المحللين ليوم الجمعة: Nvidia، Apple، Tesla، Spotify، Broadcom، Southwest، AMD والمزيد",
+                "فورد ستسجل رسومًا للمعاشات التقاعدية قبل الضرائب بقيمة 600 مليون دولار في الربع الرابع"
             ]
         },
-        "last_updated": "2026-01-30T02:49:23.599441+00:00Z"
+        "last_updated": "2026-01-30T14:44:26.383456+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
