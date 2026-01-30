@@ -180,16 +180,20 @@ export default function MarketChart({ data, visibleIndicators, colors }: MarketC
 
 
 
-        const handleResize = () => {
-            if (chartContainerRef.current) {
-                chart.applyOptions({ width: chartContainerRef.current.clientWidth });
-            }
+        const handleResize = (entries: ResizeObserverEntry[]) => {
+            if (entries.length === 0 || !entries[0].contentRect) return;
+            // Use contentRect width for smoother resizing
+            const newWidth = entries[0].contentRect.width;
+            chart.applyOptions({ width: newWidth });
         };
 
-        window.addEventListener('resize', handleResize);
+        const resizeObserver = new ResizeObserver(handleResize);
+        if (chartContainerRef.current) {
+            resizeObserver.observe(chartContainerRef.current);
+        }
 
         return () => {
-            window.removeEventListener('resize', handleResize);
+            resizeObserver.disconnect();
             chart.remove();
         };
     }, []);

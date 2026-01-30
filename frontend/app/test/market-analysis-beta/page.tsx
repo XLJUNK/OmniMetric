@@ -3,6 +3,7 @@
 
 import React, { useEffect, useState } from 'react';
 import MarketChart from '@/components/analysis/MarketChart';
+import { TVPartnerCard } from '@/components/TVPartnerCard';
 // import Link from 'next/link';
 
 // Types matching JSON structure
@@ -67,8 +68,8 @@ export default function MarketAnalysisPage() {
                             key={sym}
                             onClick={() => setSelectedSymbol(sym)}
                             className={`px-4 py-2 rounded font-semibold transition-all ${selectedSymbol === sym
-                                    ? 'bg-blue-600 text-white shadow-lg shadow-blue-900/50'
-                                    : 'bg-slate-800 text-slate-400 hover:bg-slate-700'
+                                ? 'bg-blue-600 text-white shadow-lg shadow-blue-900/50'
+                                : 'bg-slate-800 text-slate-400 hover:bg-slate-700'
                                 }`}
                         >
                             {sym}
@@ -98,8 +99,8 @@ export default function MarketAnalysisPage() {
                                         key={tf}
                                         onClick={() => setSelectedTimeframe(tf)}
                                         className={`px-3 py-1 text-xs rounded transition-colors ${selectedTimeframe === tf
-                                                ? 'bg-slate-700 text-white'
-                                                : 'text-slate-500 hover:text-slate-300'
+                                            ? 'bg-slate-700 text-white'
+                                            : 'text-slate-500 hover:text-slate-300'
                                             }`}
                                     >
                                         {tf}
@@ -199,33 +200,8 @@ export default function MarketAnalysisPage() {
                     </div>
 
                     {/* TradingView Affiliate */}
-                    <div className="bg-gradient-to-br from-[#131722] to-slate-900 border border-slate-700 rounded-lg overflow-hidden relative p-4">
-                        <div className="absolute top-0 right-0 w-24 h-24 bg-blue-500/10 rounded-full blur-2xl -mr-10 -mt-10"></div>
-                        <div className="mb-4">
-                            <h3 className="text-white font-bold flex items-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-                                    <path d="M21 17.5h-2.5v-11h-3v11H13v-6.5h-3v6.5H7.5v-4h-3v4H3V20h18v-2.5zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
-                                </svg>
-                                TradingView
-                            </h3>
-                        </div>
-                        <div className="space-y-4">
-                            <p className="text-sm text-slate-300">
-                                Need more advanced tools? Access 100+ indicators, custom scripts, and real-time global data on TradingView.
-                            </p>
-                            <a
-                                href="https://www.tradingview.com/pricing/?share_your_love=omnimetric"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="block w-full text-center py-2 px-4 bg-[#2962FF] hover:bg-[#1E53E5] text-white rounded font-medium transition-colors"
-                            >
-                                Try Pro for Free
-                            </a>
-                            <p className="text-xs text-slate-500 text-center">
-                                *Supports OmniMetric via affiliate link.
-                            </p>
-                        </div>
-                    </div>
+                    {/* TradingView Affiliate */}
+                    <TVPartnerCard lang="JP" variant="sidebar" />
 
                     <div className="text-xs text-slate-600">
                         <p>Data provided for informational purposes only. Not financial advice.</p>
