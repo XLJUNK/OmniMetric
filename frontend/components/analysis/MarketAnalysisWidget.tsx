@@ -3,15 +3,24 @@
 import React, { useEffect, useState } from 'react';
 import MarketChart from '@/components/analysis/MarketChart';
 import { useTheme } from '@/components/ThemeProvider';
-import { LangType, DICTIONARY } from '@/data/dictionary';
+import { LangType } from '@/data/dictionary';
 
 // Types matching JSON structure
 type Instrument = "DXY" | "US10Y" | "SPX";
 type Timeframe = "1h" | "4h";
 
+interface MarketDataPoint {
+    time: number;
+    open: number;
+    high: number;
+    low: number;
+    close: number;
+    // Add other fields as needed
+}
+
 interface AnalysisData {
     [symbol: string]: {
-        [tf: string]: any[]; // MarketData[]
+        [tf: string]: MarketDataPoint[];
     }
 }
 

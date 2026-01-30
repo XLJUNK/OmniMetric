@@ -223,6 +223,16 @@ export const MultiAssetSummary = ({ initialData }: MultiAssetSummaryProps) => {
                 <div className="w-full h-32 animate-pulse bg-slate-100 dark:bg-white/5" />
             )}
 
+            {/* Market Analysis Widget (Replaces static ad images contextually) */}
+            <div className="max-w-[1600px] mx-auto w-full px-4 md:px-6 mb-8">
+                <MarketAnalysisWidget lang={lang} />
+            </div>
+
+            {/* PARTNER BANNER (Strategic Placement: Below AI Insight) */}
+            <div className="max-w-[1600px] mx-auto w-full px-4 md:px-6 mb-8">
+                <TVPartnerCard lang={lang} />
+            </div>
+
             {/* 5. Pulse Tiles (Sectors) - 4th Position (Indicators) */}
             <div className="max-w-[1600px] mx-auto w-full px-4 md:px-8 mb-12">
                 <div className="flex items-center gap-3 mb-6 group cursor-pointer" onClick={() => router.push(`/wiki/macro-strategy?lang=${lang}`)}>
