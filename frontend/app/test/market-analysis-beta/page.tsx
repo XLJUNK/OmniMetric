@@ -61,20 +61,20 @@ export default function MarketAnalysisPage() {
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 p-4 font-sans transition-colors duration-300">
             <header className="mb-6">
-                <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-emerald-600 dark:from-blue-400 dark:to-emerald-400 flex items-center gap-3">
-                    Market Analysis <span className="text-xs bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 px-2 py-1 rounded border border-slate-300 dark:border-slate-700">BETA</span>
+                <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-emerald-700 dark:from-blue-400 dark:to-emerald-400 flex items-center gap-3 tracking-tight">
+                    Market Analysis <span className="text-xs bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-400 px-2 py-1 rounded border border-slate-200 dark:border-slate-700 font-bold shadow-sm">BETA</span>
                 </h1>
-                <p className="text-slate-600 dark:text-slate-500 text-sm mt-1">
+                <p className="text-slate-700 dark:text-slate-400 text-sm mt-2 font-medium">
                     Professional-grade technical indicators for macro assets.
                 </p>
             </header>
 
             {/* Unified Toolbar */}
             <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 mb-6 flex flex-col md:flex-row gap-6 md:items-center justify-between shadow-sm transition-colors duration-300">
-                
+
                 {/* Left Group: Selectors */}
                 <div className="flex flex-col sm:flex-row gap-6 sm:items-center w-full md:w-auto">
-                    
+
                     {/* Symbols (Blue Theme) */}
                     <div className="flex gap-2">
                         {(["DXY", "US10Y", "SPX"] as Instrument[]).map(sym => (
@@ -108,8 +108,8 @@ export default function MarketAnalysisPage() {
                     </div>
                 </div>
 
-                 {/* Right Group: Indicators (Violet Theme) */}
-                 <div className="flex flex-wrap gap-2 items-center justify-end w-full md:w-auto">
+                {/* Right Group: Indicators (Violet Theme) */}
+                <div className="flex flex-wrap gap-2 items-center justify-end w-full md:w-auto">
                     <button
                         onClick={() => setIndicators({ ...indicators, bb: !indicators.bb })}
                         className={`px-4 py-2 rounded-lg font-bold text-xs transition-all shadow-sm flex items-center gap-2 ${indicators.bb
@@ -137,7 +137,7 @@ export default function MarketAnalysisPage() {
                     >
                         RSI(14) {indicators.rsi && <span className="text-white">✓</span>}
                     </button>
-                    
+
                     {/* Test Simulation Button */}
                     <button
                         onClick={() => setSimulatedSignal(prev => prev === "none" ? "bullish" : prev === "bullish" ? "bearish" : "none")}
