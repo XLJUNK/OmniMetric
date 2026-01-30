@@ -1,0 +1,39 @@
+
+name: Update Market Analysis
+
+on:
+  schedule:
+    # Run every 4 hours
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-analysis:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install yfinance pandas pandas_ta
+        # We don't need all requirements.txt if we just run tech_analysis.py
+        # But if tech_analysis depends on other things... it only imports yfinance, pandas, pandas_ta, json, os, datetime
+        
+    - name: Run Technical Analysis Script
+      run: python backend/tech_analysis.py
+      
+    - name: Commit and push changes
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "data: update market analysis [skip ci]"
+        file_pattern: "frontend/public/data/market_analysis.json"
