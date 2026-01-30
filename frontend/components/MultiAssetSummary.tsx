@@ -17,7 +17,7 @@ import { useSignalData } from '@/hooks/useSignalData';
 import { ToastNotification } from '@/components/ToastNotification';
 import dynamic from 'next/dynamic';
 
-import { TVPartnerCard } from '@/components/TVPartnerCard';
+
 
 const TerminalSettings = dynamic(() => import('@/components/TerminalSettings').then(mod => mod.TerminalSettings), {
     ssr: false,
@@ -227,10 +227,7 @@ export const MultiAssetSummary = ({ initialData }: MultiAssetSummaryProps) => {
 
 
 
-            {/* PARTNER BANNER (Strategic Placement: Below AI Insight) */}
-            <div className="max-w-[1600px] mx-auto w-full px-4 md:px-6 mb-8">
-                <TVPartnerCard lang={lang} />
-            </div>
+
 
             {/* 5. Pulse Tiles (Sectors) - 4th Position (Indicators) */}
             <div className="max-w-[1600px] mx-auto w-full px-4 md:px-8 mb-12">
