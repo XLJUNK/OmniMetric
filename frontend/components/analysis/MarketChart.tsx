@@ -85,13 +85,17 @@ export default function MarketChart({ data, visibleIndicators, colors }: MarketC
             priceFormat: {
                 type: 'volume',
             },
-            priceScaleId: '', // Overlay
+            priceScaleId: 'volume', // Set explicit ID for volume scale
+        });
+        volumeSeriesRef.current = volumeSeries;
+
+        // Configure Volume Scale (Overlay at bottom 20%)
+        chart.priceScale('volume').applyOptions({
             scaleMargins: {
-                top: 0.8, // Place at bottom 20%
+                top: 0.8,
                 bottom: 0,
             },
         });
-        volumeSeriesRef.current = volumeSeries;
 
         // Candlestick
         const candleSeries = chart.addSeries(CandlestickSeries, {});
