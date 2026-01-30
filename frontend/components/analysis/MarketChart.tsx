@@ -172,7 +172,8 @@ export default function MarketChart({ data, visibleIndicators, colors }: MarketC
                     shape: 'arrowDown',
                     text: 'Bear Div',
                     size: 1
-                }
+                });
+            }
         });
         (candleSeries as any).setMarkers(markers);
 
