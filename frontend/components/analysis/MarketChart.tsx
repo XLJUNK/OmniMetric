@@ -175,7 +175,8 @@ export default function MarketChart({ data, visibleIndicators, colors }: MarketC
                 });
             }
         });
-        (candleSeries as any).setMarkers(markers);
+        // FIXME: setMarkers not found in v5 runtime (API change?). Disabling for now to prevent crash.
+        // (candleSeries as any).setMarkers(markers);
 
 
 
@@ -209,7 +210,8 @@ export default function MarketChart({ data, visibleIndicators, colors }: MarketC
             if (d.is_bullish) markers.push({ time: d.time as UTCTimestamp, position: 'belowBar', color: '#2196F3', shape: 'arrowUp', text: 'Bull Div', size: 1 });
             if (d.is_bearish) markers.push({ time: d.time as UTCTimestamp, position: 'aboveBar', color: '#FF5252', shape: 'arrowDown', text: 'Bear Div', size: 1 });
         });
-        (candleSeriesRef.current as any)?.setMarkers(markers);
+        // FIXME: setMarkers disabled
+        // (candleSeriesRef.current as any)?.setMarkers(markers);
 
         volumeSeriesRef.current?.setData(sortedData.filter(d => d.volume !== undefined).map(d => ({
             time: d.time as UTCTimestamp,
