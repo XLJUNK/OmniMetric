@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Shield, Activity, Globe, Zap, Clock, ChevronDown, Check, Info, X, Settings, Layers, ShieldCheck } from 'lucide-react';
+import { Activity, Zap, ChevronDown, Info, X, Settings } from 'lucide-react';
 import { RiskGauge, HistoryChart } from '@/components/Charts';
 import { DICTIONARY, LangType } from '@/data/dictionary';
 import { useDevice } from '@/hooks/useDevice';
@@ -22,10 +22,10 @@ interface GMSHeaderProps {
     onOpenSettings?: () => void;
 }
 
-export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSettings }: GMSHeaderProps) => {
+export const GMSHeaderSection = ({ data, lang, onOpenSettings }: GMSHeaderProps) => {
     const [showInfo, setShowInfo] = useState(false);
     const [isLangOpen, setIsLangOpen] = useState(false);
-    const { isMobile } = useDevice();
+
     const { theme } = useTheme();
     const router = useRouter();
 
@@ -45,7 +45,7 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
     // 3 Dynamic Professional Fallbacks based on GMS Regime
     const getDynamicFallback = () => {
         const score = data?.gms_score || 50;
-        const statusObj = (MESSAGES as any).ai_status;
+        const statusObj = (MESSAGES as Record<string, any>).ai_status;
         let regimeKey = "NEUTRAL";
         if (score > 60) regimeKey = "RISK_ON";
         else if (score < 40) regimeKey = "RISK_OFF";
@@ -55,8 +55,8 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
     };
 
     // AI Report Logic
-    const aiRaw = (data?.analysis?.reports as any)?.[lang]
-        || (data?.analysis?.reports as any)?.[lang?.toUpperCase()]
+    const aiRaw = (data?.analysis?.reports as Record<string, string>)?.[lang]
+        || (data?.analysis?.reports as Record<string, string>)?.[lang?.toUpperCase()]
         || data?.analysis?.content;
 
     let aiContent = aiRaw || getDynamicFallback();
@@ -216,7 +216,7 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
                                 className="text-[9px] font-mono font-bold tracking-widest text-slate-500 hover:text-slate-800 dark:hover:text-white transition-colors cursor-pointer border border-slate-200 dark:border-[#1E293B] px-2 py-0.5 rounded hover:bg-slate-100 dark:hover:bg-white/5"
                                 onClick={() => setShowInfo(true)}
                             >
-                                [ What's GMS ]
+                                [ What&apos;s GMS ]
                             </button>
                         </div>
                         <RiskGauge score={data.gms_score} lang={lang} />
@@ -245,14 +245,14 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
 
                     <div className="flex-grow mt-2">
                         <p className={`text-slate-700 dark:text-slate-300 text-fluid-base leading-relaxed font-serif italic rtl:font-arabic rtl:not-italic rtl:text-right ${lang === 'AR' ? 'text-lg leading-loose' : ''}`}>
-                            "{aiContent}"
+                            &quot;{aiContent}&quot;
                         </p>
                     </div>
 
                     {/* AIO: Citation Footer (Disclaimer stays, Citation removed) */}
                     <div className="mt-6 pt-3 border-t border-slate-100 dark:border-[#1E293B] flex flex-col items-end gap-1">
                         <p className={`text-[0.56rem] text-slate-400 dark:text-slate-500 font-sans tracking-tight max-w-[90%] text-right leading-relaxed ${lang === 'AR' ? 'font-arabic' : ''}`}>
-                            {(t.titles as any).ai_disclaimer}
+                            {(t.titles as Record<string, string>).ai_disclaimer}
                         </p>
                     </div>
 
@@ -310,7 +310,7 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
                     className="border border-slate-200 dark:border-[#1E293B] rounded-xl overflow-hidden transition-colors duration-300 bg-[#F1F5F9] dark:bg-[#111]"
                 >
                     <div className="bg-slate-100 dark:bg-black/40 px-6 py-4 border-b border-slate-200 dark:border-[#1E293B]">
-                        <h3 className="text-slate-400 text-[10px] font-black uppercase tracking-[0.2em]">{(t.titles as any).live_stream || "LIVE INTELLIGENCE STREAM"}</h3>
+                        <h3 className="text-slate-400 text-[10px] font-black uppercase tracking-[0.2em]">{(t.titles as Record<string, string>).live_stream || "LIVE INTELLIGENCE STREAM"}</h3>
                     </div>
                     <NewsTicker lang={lang} />
                 </div>
@@ -331,7 +331,7 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
                                         [{evt.date}]
                                     </span>
                                     <span className="text-sm font-bold text-slate-800 dark:text-slate-200 uppercase tracking-wide rtl:text-right">
-                                        {(t.events as any)?.[evt.code] || evt.name}
+                                        {(t.events as Record<string, string>)?.[evt.code] || evt.name}
                                     </span>
                                 </div>
                             </div>

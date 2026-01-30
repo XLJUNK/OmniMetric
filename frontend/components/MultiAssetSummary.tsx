@@ -209,8 +209,7 @@ export const MultiAssetSummary = ({ initialData }: MultiAssetSummaryProps) => {
 
     return (
         <div
-            className={`w-full font-sans min-h-screen flex flex-col pb-24 relative transition-colors duration-300`}
-            style={{ backgroundColor: theme === 'dark' ? '#0A0A0A' : '#F1F5F9' }}
+            className={`w-full font-sans min-h-screen flex flex-col pb-24 relative transition-colors duration-300 bg-[#F1F5F9] dark:bg-[#0A0A0A]`}
         >
             {/* 1. Global Header Status & GMS Dashboard */}
             {data ? (
