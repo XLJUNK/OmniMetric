@@ -144,7 +144,7 @@ export const MarketAnalysisWidget = ({ lang }: MarketAnalysisWidgetProps) => {
             </div>
 
             {/* Chart Area */}
-            <div className={`bg-slate-50 dark:bg-[#111] border border-slate-200 dark:border-slate-800 rounded-xl shadow-inner overflow-hidden relative group transition-all duration-300 ${indicators.rsi ? 'h-[400px]' : 'h-[300px]'}`}>
+            <div className={`bg-slate-50 dark:bg-[#111] border border-slate-200 dark:border-slate-800 rounded-xl shadow-inner overflow-hidden relative group transition-all duration-500 ease-in-out ${indicators.rsi ? 'h-[400px]' : 'h-[300px]'}`}>
                 {/* Header Overlay */}
                 <div className="absolute top-2 left-2 z-20 flex flex-col gap-1 pointer-events-none">
                     <h2 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2 drop-shadow-sm bg-white/70 dark:bg-slate-900/70 backdrop-blur-[2px] px-3 py-1 rounded shadow-sm border border-slate-200/50 dark:border-slate-800/50">

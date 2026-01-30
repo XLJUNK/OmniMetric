@@ -60,7 +60,7 @@ export default function MarketChart({ data, visibleIndicators, colors }: MarketC
                 textColor: colors?.textColor || '#d1d5db',
             },
             width: chartContainerRef.current.clientWidth,
-            height: 280, // Reduced from 400
+            height: chartContainerRef.current.clientHeight || 280,
             grid: {
                 vertLines: { color: '#333' },
                 horzLines: { color: '#333' },
@@ -183,7 +183,7 @@ export default function MarketChart({ data, visibleIndicators, colors }: MarketC
         const handleResize = (entries: ResizeObserverEntry[]) => {
             if (entries.length === 0 || !entries[0].contentRect) return;
             const { width, height } = entries[0].contentRect;
-            chart.applyOptions({ width, height: height - (visibleIndicators.rsi ? 110 : 10) }); // Account for internal padding/RSI space
+            chart.applyOptions({ width, height: height - 10 }); // Just a small padding, no longer subtracting 110
         };
 
         const resizeObserver = new ResizeObserver(handleResize);
@@ -298,8 +298,8 @@ export default function MarketChart({ data, visibleIndicators, colors }: MarketC
 
 
     return (
-        <div className="flex flex-col w-full relative">
-            <div ref={chartContainerRef} className="w-full h-[280px]" />
+        <div className="flex flex-col w-full h-full relative">
+            <div ref={chartContainerRef} className="w-full flex-1" />
             {visibleIndicators.rsi && (
                 <div ref={rsiContainerRef} className="w-full h-[100px] border-t border-slate-800/50" />
             )}
