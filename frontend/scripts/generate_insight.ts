@@ -60,76 +60,71 @@ async function main() {
 
     const prompt = await getPrompt();
 
-    // DYNAMIC MODEL SELECTION
-    // GMS Analysis (High Priority) -> gemini-3-flash
-    // News Translation (Routine) -> gemini-2.5-flash
-    const isNewsTask = /translator|Translate/i.test(prompt);
-    // V4.7-777: Unified Strategy with Quota Straddling
-    // 1. News Translation -> Rotation: Lite (0-20) -> Standard (21-24) -> High (Emergency)
-    // 2. Others -> Use Env Model (Single Shot, caller handles retry if needed)
+    // DEFINED MODEL PAIRS (User Specification)
+    // Structure: { vercel: "google/...", direct: "..." }
 
-    let candidates: string[] = [];
-
-    if (isNewsTask) {
-        console.error(`[AI ROUTER] News Translation detected. Strategy: Lite -> Standard -> High (Quota Straddling)`);
-        candidates = [
-            'gemini-2.5-flash-lite', // Primary: Free Tier (Runs 1-20)
-            'gemini-2.5-flash',      // Secondary: Shared Buffer (Runs 21-24)
-            'gemini-3-flash'         // Emergency: High Quality
-        ];
-    } else {
-        // Default behavior for other tasks
-        const envModel = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
-        candidates = [envModel];
+    interface ModelPair {
+        vercel: string;
+        direct: string;
     }
 
-    for (let i = 0; i < candidates.length; i++) {
-        const modelName = candidates[i];
-        // Ensure 'google/' prefix for Vercel SDK
-        const targetModel = modelName.startsWith('google/') ? modelName : `google/${modelName}`;
-        const taskName = isNewsTask ? 'NEWS_TRANSLATION' : 'GMS_ANALYSIS';
+    const GMS_MODELS: ModelPair[] = [
+        { vercel: 'google/gemini-3-flash', direct: 'gemini-3-flash' },           // Priority 1
+        { vercel: 'google/gemini-2.5-flash', direct: 'gemini-2.5-flash' },       // Priority 2
+        { vercel: 'google/gemini-2.5-flash-lite', direct: 'gemini-2.5-flash-lite' } // Priority 3
+    ];
 
-        console.error(`[AI LOOP] Attempt ${i + 1}/${candidates.length}: Using ${targetModel}...`);
+    const NEWS_MODELS: ModelPair[] = [
+        { vercel: 'google/gemini-2.5-flash-lite', direct: 'gemini-2.5-flash-lite' }, // Priority 1
+        { vercel: 'google/gemini-2.5-flash', direct: 'gemini-2.5-flash-TTS' },       // Priority 2
+        { vercel: 'google/gemini-3-flash', direct: 'gemini-2.5-flash' }              // Priority 3 (Standard Flash as Fallback)
+    ];
+
+    const isNewsTask = /translator|Translate/i.test(prompt);
+    let candidates: ModelPair[] = isNewsTask ? NEWS_MODELS : GMS_MODELS;
+
+    console.error(`[AI ROUTER] Task: ${isNewsTask ? 'NEWS_TRANSLATION' : 'GMS_ANALYSIS'}`);
+
+    for (let i = 0; i < candidates.length; i++) {
+        const pair = candidates[i];
+        console.error(`[AI LOOP] Attempt ${i + 1}/${candidates.length}: Vercel=${pair.vercel} | Direct=${pair.direct}`);
 
         let result;
         try {
-            // TRIAL 1: Vercel AI Gateway (Universal V3)
-            // console.error(`[AI GATEWAY] [${taskName}] Trial 1...`); // Reduced verbosity
+            // TRIAL 1: Vercel AI Gateway
+            // console.error(`[AI GATEWAY] Trying ${pair.vercel}...`);
             result = await generateText({
-                model: gateway.languageModel(targetModel),
+                model: gateway.languageModel(pair.vercel),
                 prompt: prompt,
                 headers: {
                     'x-vercel-ai-gateway-cache': 'enable',
                     'x-vercel-ai-gateway-cache-ttl': '3600',
                 }
             });
-            console.error(`[AI GATEWAY] Success: ${modelName} completed.`);
+            console.error(`[AI GATEWAY] Success: ${pair.vercel} completed.`);
 
         } catch (error: any) {
             const errorMsg = error.message || String(error);
-            const isRateLimit = errorMsg.includes('429') || error.statusCode === 429;
-
-            console.error(`[AI GATEWAY] FAILED (${modelName}): ${errorMsg}`);
+            console.error(`[AI GATEWAY] FAILED (${pair.vercel}): ${errorMsg}`);
 
             // TRIAL 2: Direct Google API Fallback
-            console.error(`[AI DIRECT] Failing over to Google AI SDK (Direct)...`);
+            console.error(`[AI DIRECT] Failing over to Google Native (${pair.direct})...`);
             try {
+                // Determine model for google SDK
+                // Note: google() SDK usually takes the model name without 'models/' prefix.
                 result = await generateText({
-                    model: google(targetModel.replace('google/', '')),
+                    model: google(pair.direct),
                     prompt: prompt
                 });
-                console.error(`[AI DIRECT] Success: ${modelName} secured via Direct API.`);
+                console.error(`[AI DIRECT] Success: ${pair.direct} secured via Direct API.`);
             } catch (directError: any) {
-                console.error(`[AI DIRECT] FAILED (${modelName}): ${directError.message}`);
+                console.error(`[AI DIRECT] FAILED (${pair.direct}): ${directError.message}`);
 
-                // If this was the last candidate, or if error is NOT a 429 (and we want to fail fast?), 
-                // strictly speaking we should probably rotate on 429s. 
-                // For robustness, we rotate on ANY failure in this script for News, as the goal is "Just get it done".
                 if (i === candidates.length - 1) {
                     console.error(`[AI FATAL] All candidates failed.`);
                     process.exit(1);
                 } else {
-                    console.error(`[AI LOOP] Switching to next model...`);
+                    console.error(`[AI LOOP] Switching to next priority...`);
                     continue; // Next candidate
                 }
             }

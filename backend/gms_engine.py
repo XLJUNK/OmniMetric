@@ -1371,13 +1371,13 @@ Output JSON:
     # VERCEL AI GATEWAY - RESILIENCE PROTOCOL (PRIMARY)
     # Strategy: Env Var Target > Flash-Targeted Speed > High-Tier Reasoning > Efficient Fallbacks
     
-    target_model = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+    # Updated Priority per User Request (Tier 1 > Tier 2 > Tier 3)
+    target_model = os.getenv("GEMINI_MODEL", "gemini-3-flash")
     
     models = [
-        target_model,              # [ENV PRIORITY]
-        "gemini-3-flash",          # [TIER 1] High Reasoning (Newest)
-        "gemini-2.5-flash",        # [TIER 2] Standard Balanced
-        "gemini-2.5-flash-lite"    # [TIER 3] Quota Extension (High RPD)
+        target_model,              # [PRIORITY 1] Defaults to gemini-3-flash
+        "gemini-2.5-flash",        # [PRIORITY 2] Standard Balanced
+        "gemini-2.5-flash-lite"    # [PRIORITY 3] Quota Extension
     ]
     
     # Remove duplicates while preserving order
