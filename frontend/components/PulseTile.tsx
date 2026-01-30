@@ -133,7 +133,7 @@ export const PulseTile = ({ title, score, ticker, data, onClick, lang, wikiSlug,
                     border: theme === 'dark' ? '1px solid #1E293B' : '1px solid #E2E8F0',
                     borderRadius: '0.75rem',
                     overflow: 'hidden',
-                    backgroundColor: theme === 'dark' ? '#0A0A0A' : '#ffffff',
+                    backgroundColor: theme === 'dark' ? '#111111' : '#ffffff',
                     cursor: 'pointer',
                     boxShadow: theme === 'dark' ? 'none' : '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)'
                 }}

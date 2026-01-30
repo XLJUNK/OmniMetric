@@ -42,15 +42,18 @@ export const GMSHeaderSection = ({ data, lang, onOpenSettings }: GMSHeaderProps)
         router.push(`${window.location.pathname}?${currentParams.toString()}`);
     };
 
-    // 3 Dynamic Professional Fallbacks based on GMS Regime
     const getDynamicFallback = () => {
         const score = data?.gms_score || 50;
-        const statusObj = (MESSAGES as Record<string, any>).ai_status;
+        const statusObj = MESSAGES.ai_status as Record<string, string | Record<string, string>>;
         let regimeKey = "NEUTRAL";
         if (score > 60) regimeKey = "RISK_ON";
         else if (score < 40) regimeKey = "RISK_OFF";
 
-        const fallback = statusObj[regimeKey]?.[lang] || statusObj[regimeKey]?.["EN"] || t.status.ai;
+        const regimeData = statusObj[regimeKey];
+        if (typeof regimeData === 'string') return regimeData;
+
+        const regimeObj = regimeData as Record<string, string>;
+        const fallback = regimeObj?.[lang] || regimeObj?.["EN"] || t.status.ai;
         return fallback;
     };
 
@@ -86,60 +89,96 @@ export const GMSHeaderSection = ({ data, lang, onOpenSettings }: GMSHeaderProps)
             {/* METHODOLOGY MODAL (Abolished ALL transparency for maximum structural solidity) */}
             {showInfo && (
                 <div
-                    className="fixed inset-0 z-[9999] flex items-center justify-center p-4 !opacity-100 bg-[#0F172ACC] dark:bg-black"
+                    className="fixed inset-0 z-[9999] flex items-center justify-center p-4"
+                    style={{ backgroundColor: theme === 'dark' ? '#000000' : '#0F172A' }}
                     onClick={() => setShowInfo(false)}
                 >
                     <div
-                        className="border border-slate-200 dark:border-slate-700 rounded-xl w-full max-w-2xl p-6 shadow-2xl relative !opacity-100 bg-white dark:bg-black"
+                        className="border rounded-xl w-full max-w-2xl p-6 shadow-2xl relative"
+                        style={{
+                            backgroundColor: theme === 'dark' ? '#0A0A0A' : '#FFFFFF',
+                            borderColor: theme === 'dark' ? '#1E293B' : '#E2E8F0'
+                        }}
                         onClick={e => e.stopPropagation()}
                     >
-                        <div className="flex justify-between items-start mb-4 border-b border-slate-200 dark:border-slate-800 pb-2">
+                        <div className="flex justify-between items-start mb-4 border-b pb-2"
+                            style={{ borderColor: theme === 'dark' ? '#1E293B' : '#F1F5F9' }}>
                             <div>
-                                <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tighter">
+                                <h2 className="text-2xl font-black uppercase tracking-tighter"
+                                    style={{ color: theme === 'dark' ? '#FFFFFF' : '#0F172A' }}>
                                     {t.methodology.title}
                                 </h2>
-                                <p className="text-[10px] text-slate-500 dark:text-slate-400 font-mono mt-1">Institutional Quant Logic v2.4</p>
+                                <p className="text-[10px] font-mono mt-1"
+                                    style={{ color: theme === 'dark' ? '#94A3B8' : '#64748B' }}>Institutional Quant Logic v2.4</p>
                             </div>
                             <button
                                 onClick={() => setShowInfo(false)}
-                                className="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors group"
+                                className="p-2 rounded-full transition-colors group"
+                                style={{ backgroundColor: 'transparent' }}
                                 aria-label="Close"
                             >
-                                <X className="w-6 h-6 text-slate-400 dark:text-slate-500 group-hover:text-slate-900 dark:group-hover:text-white" />
+                                <X className="w-6 h-6" style={{ color: theme === 'dark' ? '#64748B' : '#94A3B8' }} />
                             </button>
                         </div>
 
                         <div className="space-y-6 max-h-[70vh] overflow-y-auto pr-2 custom-scrollbar">
                             <section>
-                                <h3 className="text-xs font-bold text-slate-900 dark:text-slate-200 uppercase tracking-widest mb-3 flex items-center gap-2">
+                                <h3 className="text-xs font-bold uppercase tracking-widest mb-3 flex items-center gap-2"
+                                    style={{ color: theme === 'dark' ? '#E2E8F0' : '#0F172A' }}>
                                     <Activity className="w-3.5 h-3.5 text-sky-500" />
                                     CORE LOGIC
                                 </h3>
-                                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-sans">
+                                <p className="text-sm leading-relaxed font-sans"
+                                    style={{ color: theme === 'dark' ? '#94A3B8' : '#334155' }}>
                                     {t.methodology.desc}
                                 </p>
                             </section>
 
                             <div className="space-y-4">
-                                <div className="p-3 bg-blue-50 dark:bg-blue-900/10 rounded-lg border border-blue-100 dark:border-blue-900/20">
-                                    <span className="block text-blue-600 dark:text-blue-400 font-bold mb-1">{t.methodology.zone_accumulate}</span>
-                                    <p className="text-xs text-slate-600 dark:text-slate-400">{t.methodology.zone_accumulate_desc}</p>
+                                <div className="p-4 rounded-lg border"
+                                    style={{
+                                        backgroundColor: theme === 'dark' ? '#1E1B4B' : '#EEF2FF',
+                                        borderColor: theme === 'dark' ? '#312E81' : '#C7D2FE'
+                                    }}>
+                                    <span className="block font-bold mb-1"
+                                        style={{ color: theme === 'dark' ? '#A5B4FC' : '#1E40AF' }}>{t.methodology.zone_accumulate}</span>
+                                    <p className="text-xs font-medium"
+                                        style={{ color: theme === 'dark' ? '#C7D2FE' : '#1E40AF' }}>{t.methodology.zone_accumulate_desc}</p>
                                 </div>
-                                <div className="p-3 bg-slate-50 dark:bg-slate-900/30 rounded-lg border border-slate-100 dark:border-slate-800">
-                                    <span className="block text-slate-500 dark:text-slate-400 font-bold mb-1">{t.methodology.zone_neutral}</span>
-                                    <p className="text-xs text-slate-600 dark:text-slate-400">{t.methodology.zone_neutral_desc}</p>
+                                <div className="p-4 rounded-lg border"
+                                    style={{
+                                        backgroundColor: theme === 'dark' ? '#0F172A' : '#F8FAFC',
+                                        borderColor: theme === 'dark' ? '#1E293B' : '#E2E8F0'
+                                    }}>
+                                    <span className="block font-bold mb-1"
+                                        style={{ color: theme === 'dark' ? '#94A3B8' : '#475569' }}>{t.methodology.zone_neutral}</span>
+                                    <p className="text-xs font-medium"
+                                        style={{ color: theme === 'dark' ? '#CBD5E1' : '#475569' }}>{t.methodology.zone_neutral_desc}</p>
                                 </div>
-                                <div className="p-3 bg-red-50 dark:bg-red-900/10 rounded-lg border border-red-100 dark:border-red-900/20">
-                                    <span className="block text-red-600 dark:text-red-400 font-bold mb-1">{t.methodology.zone_defensive}</span>
-                                    <p className="text-xs text-slate-600 dark:text-slate-400">{t.methodology.zone_defensive_desc}</p>
+                                <div className="p-4 rounded-lg border"
+                                    style={{
+                                        backgroundColor: theme === 'dark' ? '#450A0A' : '#FEF2F2',
+                                        borderColor: theme === 'dark' ? '#7F1D1D' : '#FECACA'
+                                    }}>
+                                    <span className="block font-bold mb-1"
+                                        style={{ color: theme === 'dark' ? '#FCA5A5' : '#991B1B' }}>{t.methodology.zone_defensive}</span>
+                                    <p className="text-xs font-medium"
+                                        style={{ color: theme === 'dark' ? '#FECACA' : '#991B1B' }}>{t.methodology.zone_defensive_desc}</p>
                                 </div>
                             </div>
 
-                            <div className="border-t border-slate-100 dark:border-slate-800 pt-4 flex flex-col gap-2">
-                                <span className="text-[10px] text-slate-500 uppercase tracking-widest mb-1">{t.methodology.inputs}</span>
+                            <div className="border-t pt-4 flex flex-col gap-2"
+                                style={{ borderColor: theme === 'dark' ? '#1E293B' : '#F1F5F9' }}>
+                                <span className="text-[10px] uppercase tracking-widest mb-1"
+                                    style={{ color: theme === 'dark' ? '#64748B' : '#94A3B8' }}>{t.methodology.inputs}</span>
                                 <div className="flex flex-wrap gap-2">
                                     {["VIX", "MOVE", "HY OAS", "NFCI", "M2"].map(tag => (
-                                        <span key={tag} className="text-[9px] font-mono px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded border border-slate-200 dark:border-slate-700">{tag}</span>
+                                        <span key={tag} className="text-[9px] font-mono px-2 py-1 rounded border"
+                                            style={{
+                                                backgroundColor: theme === 'dark' ? '#1E293B' : '#F1F5F9',
+                                                borderColor: theme === 'dark' ? '#334155' : '#E2E8F0',
+                                                color: theme === 'dark' ? '#94A3B8' : '#64748B'
+                                            }}>{tag}</span>
                                     ))}
                                 </div>
                             </div>
@@ -150,7 +189,7 @@ export const GMSHeaderSection = ({ data, lang, onOpenSettings }: GMSHeaderProps)
 
             {/* 1. Global Header Status */}
             <div
-                className="max-w-[1600px] mx-auto w-full px-4 md:px-6 py-3 border-b border-slate-200 dark:border-slate-800 relative z-50 transition-colors duration-300 bg-[#F1F5F9] dark:bg-[#0A0A0A]"
+                className="max-w-[1600px] mx-auto w-full px-4 md:px-6 py-3 border-b border-slate-200 dark:border-slate-800 relative z-50 transition-colors duration-300 bg-white dark:bg-[#0A0A0A]"
             >
                 <div className="flex justify-between items-start">
                     {/* TITLE AREA */}
@@ -166,12 +205,19 @@ export const GMSHeaderSection = ({ data, lang, onOpenSettings }: GMSHeaderProps)
                         <div className="relative z-[10000]">
                             <button
                                 onClick={() => setIsLangOpen(!isLangOpen)}
-                                className="flex items-center gap-2 h-7 px-3 text-[10px] font-bold uppercase tracking-widest rounded transition-all outline-none focus:outline-none appearance-none hover:opacity-80 border border-transparent text-black dark:text-[#FEF3C7] bg-[#F1F5F9] dark:bg-black"
+                                className="flex items-center gap-2 h-7 px-3 text-[10px] font-bold uppercase tracking-widest rounded transition-all outline-none focus:outline-none appearance-none hover:opacity-80 border border-transparent"
+                                style={{
+                                    backgroundColor: theme === 'dark' ? '#000000' : '#F1F5F9',
+                                    color: theme === 'dark' ? '#FEF3C7' : '#000000'
+                                }}
                             >
                                 {lang} <ChevronDown className="w-3 h-3" />
                             </button>
                             {isLangOpen && (
-                                <div className="absolute top-full right-0 mt-1 w-24 rounded-md overflow-hidden z-[10001] pointer-events-auto border border-neutral-200 dark:border-neutral-800 outline-none shadow-lg flex flex-col p-1 bg-white dark:bg-black opacity-100">
+                                <div
+                                    className="absolute top-full right-0 mt-1 w-24 rounded-md overflow-hidden z-[10001] pointer-events-auto border border-neutral-200 dark:border-neutral-800 outline-none shadow-lg flex flex-col p-1 opacity-100"
+                                    style={{ backgroundColor: theme === 'dark' ? '#000000' : '#FFFFFF' }}
+                                >
                                     {(Object.keys(DICTIONARY) as LangType[]).map((l) => (
                                         <button
                                             key={l}
@@ -192,7 +238,8 @@ export const GMSHeaderSection = ({ data, lang, onOpenSettings }: GMSHeaderProps)
                         {onOpenSettings && (
                             <button
                                 onClick={onOpenSettings}
-                                className="flex items-center justify-center p-0 h-7 w-7 rounded border border-transparent transition-all bg-transparent hover:bg-neutral-100 dark:hover:bg-neutral-800 dark:border-neutral-800 text-[#525252] dark:text-[#FEF3C7]"
+                                className="flex items-center justify-center p-0 h-7 w-7 rounded border border-transparent transition-all bg-transparent hover:bg-neutral-100 dark:hover:bg-neutral-800 dark:border-neutral-800"
+                                style={{ color: theme === 'dark' ? '#FEF3C7' : '#525252' }}
                                 aria-label="Customize Terminal"
                                 title="Customize Terminal"
                             >
@@ -207,7 +254,7 @@ export const GMSHeaderSection = ({ data, lang, onOpenSettings }: GMSHeaderProps)
             <div className="max-w-[1600px] mx-auto w-full p-4 md:p-6 grid grid-cols-1 lg:grid-cols-3 gap-4">
                 {/* GMS SCORE CARD */}
                 <div
-                    className="lg:col-span-1 !rounded-xl !border !border-slate-200 dark:!border-[#1E293B] !ring-0 !outline-none !shadow-none p-4 flex flex-col items-center gap-4 relative overflow-visible group transition-colors duration-300 bg-[#F1F5F9] dark:bg-[#111]"
+                    className="lg:col-span-1 !rounded-xl !border !border-slate-200 dark:!border-[#1E293B] !ring-0 !outline-none !shadow-sm p-4 flex flex-col items-center gap-4 relative overflow-visible group transition-colors duration-300 bg-white dark:bg-[#111]"
                 >
                     {/* RISK GAUGE & INFO */}
                     <div className="w-full px-1 pt-2 pb-6">
@@ -233,7 +280,7 @@ export const GMSHeaderSection = ({ data, lang, onOpenSettings }: GMSHeaderProps)
 
                 {/* AI INSIGHT */}
                 <div
-                    className="lg:col-span-2 !rounded-xl !border !border-slate-200 dark:!border-[#1E293B] !ring-0 !outline-none !shadow-none p-6 flex flex-col relative overflow-hidden group min-h-[14rem] transition-colors duration-300 bg-[#F1F5F9] dark:bg-[#111]"
+                    className="lg:col-span-2 !rounded-xl !border !border-slate-200 dark:!border-[#1E293B] !ring-0 !outline-none !shadow-sm p-6 flex flex-col relative overflow-hidden group min-h-[14rem] transition-colors duration-300 bg-white dark:bg-[#111]"
                 >
                     <div className="flex items-center gap-2 mb-4 border-b !border-slate-100 dark:!border-[#1E293B] pb-3">
                         <Zap className="w-3.5 h-3.5 text-sky-500" />
@@ -307,9 +354,9 @@ export const GMSHeaderSection = ({ data, lang, onOpenSettings }: GMSHeaderProps)
             {/* 3. News (Live Intelligence Stream) */}
             <div className="max-w-[1600px] mx-auto w-full px-4 md:px-6 mb-4">
                 <div
-                    className="border border-slate-200 dark:border-[#1E293B] rounded-xl overflow-hidden transition-colors duration-300 bg-[#F1F5F9] dark:bg-[#111]"
+                    className="border border-slate-200 dark:border-[#1E293B] rounded-xl overflow-hidden transition-colors duration-300 bg-white dark:bg-[#111]"
                 >
-                    <div className="bg-slate-100 dark:bg-black/40 px-6 py-4 border-b border-slate-200 dark:border-[#1E293B]">
+                    <div className="bg-slate-50 dark:bg-black/40 px-6 py-4 border-b border-slate-200 dark:border-[#1E293B]">
                         <h3 className="text-slate-400 text-[10px] font-black uppercase tracking-[0.2em]">{(t.titles as Record<string, string>).live_stream || "LIVE INTELLIGENCE STREAM"}</h3>
                     </div>
                     <NewsTicker lang={lang} />
@@ -319,7 +366,7 @@ export const GMSHeaderSection = ({ data, lang, onOpenSettings }: GMSHeaderProps)
             {/* 4. Breaking News / Risk Events */}
             <div className="max-w-[1600px] mx-auto w-full px-4 md:px-8 mb-4">
                 <div
-                    className="border border-slate-200 dark:border-[#1E293B] rounded-xl p-0 transition-colors duration-300 bg-[#F1F5F9] dark:bg-black"
+                    className="border border-slate-200 dark:border-[#1E293B] rounded-xl p-0 transition-colors duration-300 bg-white dark:bg-black"
                 >
                     {(!data.events || data.events.length === 0) ? (
                         <div className="p-4 text-xs text-slate-600 font-mono">NO UPCOMING RISK EVENTS DETECTED.</div>

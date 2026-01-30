@@ -3,15 +3,13 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { DICTIONARY, LangType } from '@/data/dictionary';
-import { useTheme } from '@/components/ThemeProvider';
+
 
 // Professional stack approach (v5.5 UI Optimization)
 // Purpose: Instant situational awareness via "simultaneity of information"
 
 export const NewsTicker = ({ lang }: { lang: LangType }) => {
     const [news, setNews] = useState<{ title: string, link: string, isoDate?: string }[]>([]);
-    const [now, setNow] = useState(Date.now());
-    const { theme } = useTheme();
     const t = DICTIONARY[lang] || DICTIONARY['EN'];
 
     useEffect(() => {
@@ -20,10 +18,10 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
                 const res = await fetch(`/api/news?lang=${lang}`);
                 const json = await res.json();
                 const decodeEntities = (str: string) => {
-                    const entities: any = { '&apos;': "'", '&amp;': "&", '&quot;': '"', '&lt;': "<", '&gt;': ">" };
+                    const entities: Record<string, string> = { '&apos;': "'", '&amp;': "&", '&quot;': '"', '&lt;': "<", '&gt;': ">" };
                     return str.replace(/&(apos|amp|quot|lt|gt);/g, match => entities[match] || match);
                 };
-                const decodedNews = (json.news || []).map((item: any, index: number) => {
+                const decodedNews = (json.news || []).map((item: { title: string; link?: string; url?: string; isoDate?: string; published?: string }, index: number) => {
                     // v5.5: Multi-language Support (Check translations first)
                     // If we are in EN, use item.title (English).
                     // If we are in JP/CN/etc, check `json.translations[lang][index]`.
@@ -48,14 +46,14 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
                             timestamp: Date.now(),
                             news: finalNews
                         }));
-                    } catch (err) {
+                    } catch {
                         // Storage full or disabled, ignore
                     }
                 } else {
                     // If API returns empty, try cache before fallback
                     throw new Error("Empty API response");
                 }
-            } catch (e) {
+            } catch {
                 // v5.5 FIX: Robust Fallback with Caching Strategy
                 // 1. Try Cache
                 try {
@@ -68,7 +66,7 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
                             return; // Successfully used cache
                         }
                     }
-                } catch (cacheErr) {
+                } catch {
                     // Cache corrupt, ignore
                 }
 
@@ -84,13 +82,9 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
         // Update news feed every 5 mins to ensure fresh data
         const interval = setInterval(fetchNews, 300000);
         return () => clearInterval(interval);
-    }, [lang]);
+    }, [lang, t.status.market]);
 
-    // Keep "now" current every minute to refresh relative timestamps
-    useEffect(() => {
-        const timer = setInterval(() => setNow(Date.now()), 60000);
-        return () => clearInterval(timer);
-    }, []);
+
 
     const isRTL = lang === 'AR';
 
@@ -141,9 +135,8 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
 
     return (
         <div
-            className="w-full bg-[#F1F5F9] dark:bg-[#050505] border-y border-slate-200 dark:border-white/5 shadow-2xl relative z-10 select-none"
+            className="w-full bg-white dark:bg-black border-y border-slate-200 dark:border-[#1E293B] shadow-2xl relative z-10 select-none"
             dir={isRTL ? 'rtl' : 'ltr'}
-            style={{ backgroundColor: theme === 'dark' ? '#050505' : '#F1F5F9' }}
         >
             <div className={`flex flex-col divide-y divide-slate-100 dark:divide-white/5 min-h-[102px]`}>
                 {news.map((item, i) => (
@@ -152,24 +145,18 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
                         href={item.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group flex items-center justify-between h-[40px] px-3 md:px-5 hover:bg-slate-50 dark:hover:bg-white/[0.03] transition-all cursor-pointer border-l-2 border-transparent hover:border-red-600/80"
-                        style={{ textDecoration: 'none', color: 'inherit' }}
+                        className="group flex items-center justify-between h-[40px] px-3 md:px-5 hover:bg-slate-50 dark:hover:bg-white/[0.03] transition-all cursor-pointer border-l-2 border-transparent hover:border-red-600/80 no-underline text-inherit"
                     >
                         <div
-                            className={`flex items-center overflow-hidden flex-1 ${isRTL ? 'flex-row-reverse' : 'flex-row'}`}
-                            style={{ gap: '20px' }}
+                            className={`flex items-center overflow-hidden flex-1 gap-5 ${isRTL ? 'flex-row-reverse' : 'flex-row'}`}
                         >
                             {/* LIVE BADGE - Designer Red Gradient - Professional Look */}
                             <div
-                                className="shrink-0 flex items-center gap-1.5 px-2.5 py-0.5 rounded-[2px] shadow-sm border border-red-700/30"
-                                style={{
-                                    background: 'linear-gradient(135deg, #ef4444 0%, #991b1b 100%)',
-                                    minWidth: '76px',
-                                    justifyContent: 'center'
-                                }}
+                                className="shrink-0 flex items-center gap-1.5 px-2.5 py-0.5 rounded-[2px] shadow-sm border border-red-700/30 min-w-[76px] justify-center bg-[linear-gradient(to_bottom_right,#ef4444,#991b1b)]"
+
                             >
                                 <span className="w-1 h-1 bg-white rounded-full animate-pulse shadow-[0_0_4px_rgba(255,255,255,0.8)]"></span>
-                                <span className="text-[9px] md:text-[10px] font-black text-white tracking-[0.05em] uppercase whitespace-nowrap">
+                                <span className="text-[9px] md:text-[10px] font-black !text-white tracking-[0.05em] uppercase whitespace-nowrap">
                                     {i === 0 ? (t.titles.live || "LIVE") : (t.titles.breaking || "BREAKING")}
                                 </span>
                             </div>
@@ -177,8 +164,7 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
 
                             {/* TITLE - Institutional Slate - Theme Responsive */}
                             <span
-                                className={`text-[11px] md:text-xs font-bold truncate group-hover:text-red-700 dark:group-hover:text-white transition-colors tracking-tight flex-1 ${isRTL ? 'text-right pr-2 font-arabic' : 'text-left'} !text-slate-700 dark:!text-slate-200`}
-                                style={{ color: 'var(--foreground)' }}
+                                className={`text-[11px] md:text-xs font-bold truncate group-hover:text-red-700 dark:group-hover:text-white transition-colors tracking-tight flex-1 ${isRTL ? 'text-right pr-2 font-arabic' : 'text-left'} !text-slate-700 dark:!text-slate-200 text-[var(--foreground)]`}
                             >
                                 {item.title}
                             </span>

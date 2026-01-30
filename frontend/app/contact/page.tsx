@@ -24,7 +24,7 @@ function ContactContent() {
     const isJP = lang === 'JP';
 
     return (
-        <div className="min-h-screen dark:bg-[#0A0A0A] text-slate-800 dark:text-[#E0E0E0] font-sans selection:bg-cyan-100 dark:selection:bg-sky-500 selection:text-cyan-900 dark:selection:text-white">
+        <div className="min-h-screen text-slate-800 dark:text-[#E0E0E0] font-sans selection:bg-cyan-100 dark:selection:bg-sky-500 selection:text-cyan-900 dark:selection:text-white">
             <div className="max-w-[1400px] mx-auto px-6 py-12 md:py-20 lg:px-24">
                 {/* Breadcrumb / Top Nav */}
                 <div className="flex justify-end items-center mb-16 opacity-100">

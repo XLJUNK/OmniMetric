@@ -59,9 +59,8 @@ export const AdUnit = () => {
             </div>
 
             {/* Horizontal Display Unit */}
-            <ins className="adsbygoogle"
+            <ins className="adsbygoogle block w-full h-full"
                 ref={insRef}
-                style={{ display: 'block', width: '100%', height: '100%' }}
                 data-ad-client="ca-pub-1230621442620902"
                 data-ad-slot="1234567890"
                 data-ad-format="horizontal"

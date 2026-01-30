@@ -46,7 +46,6 @@ export default function MarketChart({ data, visibleIndicators, colors }: MarketC
     const sma25SeriesRef = useRef<ISeriesApi<"Line"> | null>(null);
     const bbUpperSeriesRef = useRef<ISeriesApi<"Line"> | null>(null);
     const bbLowerSeriesRef = useRef<ISeriesApi<"Line"> | null>(null);
-    const rsiSeriesRef = useRef<ISeriesApi<"Line"> | null>(null);
 
     // RSI Subchart container
     const rsiContainerRef = useRef<HTMLDivElement>(null);
@@ -152,7 +151,8 @@ export default function MarketChart({ data, visibleIndicators, colors }: MarketC
         })));
 
         // Markers
-        const markers: any[] = [];
+        type Marker = { time: UTCTimestamp; position: 'belowBar' | 'aboveBar'; color: string; shape: 'arrowUp' | 'arrowDown'; text: string; size: number };
+        const markers: Marker[] = [];
         sortedData.forEach(d => {
             if (d.is_bullish) {
                 markers.push({
@@ -182,9 +182,8 @@ export default function MarketChart({ data, visibleIndicators, colors }: MarketC
 
         const handleResize = (entries: ResizeObserverEntry[]) => {
             if (entries.length === 0 || !entries[0].contentRect) return;
-            // Use contentRect width for smoother resizing
-            const newWidth = entries[0].contentRect.width;
-            chart.applyOptions({ width: newWidth });
+            const { width, height } = entries[0].contentRect;
+            chart.applyOptions({ width, height: height - (visibleIndicators.rsi ? 110 : 10) }); // Account for internal padding/RSI space
         };
 
         const resizeObserver = new ResizeObserver(handleResize);
@@ -196,7 +195,7 @@ export default function MarketChart({ data, visibleIndicators, colors }: MarketC
             resizeObserver.disconnect();
             chart.remove();
         };
-    }, []);
+    }, [colors?.backgroundColor, colors?.textColor, data, visibleIndicators.rsi]);
 
     // Update Data
     useEffect(() => {
@@ -209,7 +208,8 @@ export default function MarketChart({ data, visibleIndicators, colors }: MarketC
             open: d.open, high: d.high, low: d.low, close: d.close
         })));
 
-        const markers: any[] = [];
+        type Marker = { time: UTCTimestamp; position: 'belowBar' | 'aboveBar'; color: string; shape: 'arrowUp' | 'arrowDown'; text: string; size: number };
+        const markers: Marker[] = [];
         sortedData.forEach(d => {
             if (d.is_bullish) markers.push({ time: d.time as UTCTimestamp, position: 'belowBar', color: '#2196F3', shape: 'arrowUp', text: 'Bull Div', size: 1 });
             if (d.is_bearish) markers.push({ time: d.time as UTCTimestamp, position: 'aboveBar', color: '#FF5252', shape: 'arrowDown', text: 'Bear Div', size: 1 });

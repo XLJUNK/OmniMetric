@@ -133,7 +133,7 @@ export const GlossaryClient = ({ lang, data, pageTitle, pageDesc, searchItems, s
                                                     <div className={`flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6`}>
                                                         <h3 className={`text-xl md:text-2xl font-bold text-slate-800 dark:text-slate-100 flex items-center gap-3`}>
                                                             {item.term}
-                                                            <a href={`#${item.id}`} className="text-slate-400 dark:text-slate-700 hover:text-sky-500 transition-colors opacity-0 group-hover:opacity-100">
+                                                            <a href={`#${item.id}`} aria-label="Link to term" className="text-slate-400 dark:text-slate-700 hover:text-sky-500 transition-colors opacity-0 group-hover:opacity-100">
                                                                 <LinkIcon className="w-4 h-4" />
                                                             </a>
                                                         </h3>

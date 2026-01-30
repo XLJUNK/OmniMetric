@@ -33,7 +33,7 @@ export const SectorDashboard = ({ sectorKey }: SectorDashboardProps) => {
         router.push(`${pathname}?lang=${l}`);
     };
 
-    if (!data) return <div className="min-h-screen bg-slate-50 dark:bg-[#0A0A0A] flex items-center justify-center text-slate-500 font-mono text-xs animate-pulse space-y-4 flex-col">
+    if (!data) return <div className="min-h-screen flex items-center justify-center text-slate-500 font-mono text-xs animate-pulse space-y-4 flex-col">
         <SkeletonCard />
         <span>LOADING SECTOR DATA...</span>
     </div>;
@@ -59,7 +59,7 @@ export const SectorDashboard = ({ sectorKey }: SectorDashboardProps) => {
     });
 
     return (
-        <div className="w-full bg-slate-50 dark:bg-[#0A0A0A] text-slate-800 dark:text-slate-200 font-sans min-h-screen flex flex-col">
+        <div className="w-full text-slate-800 dark:text-slate-200 font-sans min-h-screen flex flex-col">
             <GMSHeaderSection data={data} lang={lang} isSafeMode={isSafeMode} />
             <div className="max-w-[1600px] mx-auto p-4 md:p-8 space-y-8 w-full">
 

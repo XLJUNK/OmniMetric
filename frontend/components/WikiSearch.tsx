@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useState, useMemo, useRef, useEffect } from 'react';
-import { Search, X, ChevronRight } from 'lucide-react';
+import { Search, X } from 'lucide-react';
 import { WikiItem } from '@/lib/wiki';
 import Link from 'next/link';
-import { LangType, DICTIONARY } from '@/data/dictionary';
+import { LangType } from '@/data/dictionary';
 
 interface WikiSearchProps {
     items: WikiItem[];
@@ -71,6 +71,7 @@ export const WikiSearch = ({ items, lang, placeholder }: WikiSearchProps) => {
                     {query && (
                         <button
                             onClick={clearSearch}
+                            aria-label="Clear search"
                             className="flex items-center justify-center w-8 h-8 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-white transition-colors"
                         >
                             <X className="w-5 h-5" />
@@ -115,7 +116,7 @@ export const WikiSearch = ({ items, lang, placeholder }: WikiSearchProps) => {
                         </ul>
                     ) : (
                         <div className="p-4 text-center text-slate-500 text-sm">
-                            No matches found for "{query}"
+                            No matches found for &quot;{query}&quot;
                         </div>
                     )}
                 </div>

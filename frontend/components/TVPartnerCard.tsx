@@ -45,8 +45,8 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
     }
     const affiliateUrl = `${baseUrl}?aff_id=${AFFILIATE_ID}&source=omnimetric_ad_${segment.id}`;
 
-    // Helper for Button Text - MERGED CLEANLY
-    let baseAction = (DICTIONARY[lang] as any)?.partner?.action || "Start Analysis";
+    const t_base = (DICTIONARY[lang] || DICTIONARY['EN']) as typeof DICTIONARY['EN'];
+    let baseAction = t_base?.partner?.action || "Start Analysis";
 
     // Split by half OR full width parenthesis and take key part
     // This handles "分析を開始する (15ドルの特典付き)" or similar
@@ -60,8 +60,9 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
 
     // VARIANT: Text Link
     if (variant === 'text-link') {
-        const titleLink = (DICTIONARY[lang] as any)?.partner?.title || adContent.main;
-        const linkText = (DICTIONARY[lang] as any)?.partner?.link_text || "Analyze on TradingView ($15 Bonus)";
+        const t = (DICTIONARY[lang] || DICTIONARY['EN']) as typeof DICTIONARY['EN'];
+        const titleLink = t?.partner?.title || adContent.main;
+        const linkText = t?.partner?.link_text || "Analyze on TradingView ($15 Bonus)";
         return (
             <a
                 href={affiliateUrl}
@@ -84,7 +85,7 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
 
     // VARIANT: Minimal
     if (variant === 'minimal') {
-        const badgeText = (DICTIONARY[lang] as any)?.partner?.badge || "TradingView Partner";
+        const badgeText = (DICTIONARY[lang] as typeof DICTIONARY['EN'])?.partner?.badge || "TradingView Partner";
         const offerText = adContent.bonus.replace(/。$/, '');
 
         return (
@@ -118,7 +119,7 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
     // VARIANT: Default (Main Banner) - COMPACT INTEGRATED DESIGN
     return (
         <div
-            className="w-full relative group overflow-hidden bg-[#F1F5F9] dark:bg-[#0A0A0A] border border-slate-200 dark:border-slate-800 rounded-xl transition-all duration-300 shadow-sm dark:shadow-none my-6"
+            className="w-full relative group overflow-hidden bg-white dark:bg-[#111] border border-slate-200 dark:border-slate-800 rounded-xl transition-all duration-300 shadow-sm dark:shadow-none my-6"
         >
 
             {/* Added: Specific min-height to ensure structure visibility */}
@@ -131,7 +132,7 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
                     {/* Badge: TradingView Official Partner */}
                     <div className="flex justify-center mb-3">
                         <span className="text-[10px] font-bold text-sky-500 uppercase tracking-widest border border-sky-500/30 px-2 py-0.5 rounded bg-sky-500/5 dark:bg-sky-500/10 dark:text-sky-400">
-                            {(DICTIONARY[lang] as any)?.partner?.badge || "TradingView Official Partner"}
+                            {(DICTIONARY[lang] as typeof DICTIONARY['EN'])?.partner?.badge || "TradingView Official Partner"}
                         </span>
                     </div>
 
@@ -146,10 +147,10 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
                             href={affiliateUrl}
                             target="_blank"
                             rel="noopener noreferrer nofollow"
-                            className="inline-flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#2962FF] hover:bg-[#1E53E5] !text-white text-[10px] xs:text-xs sm:text-sm font-bold rounded shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all text-center whitespace-normal leading-tight overflow-hidden text-white"
+                            className="inline-flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#2962FF] hover:bg-[#1E53E5] text-white visited:text-white !text-white visited:!text-white hover:!text-white active:!text-white text-[10px] xs:text-xs sm:text-sm font-bold rounded shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all text-center whitespace-normal leading-tight overflow-hidden"
                         >
                             <Zap className="w-3.5 h-3.5 fill-current text-white shrink-0" />
-                            <span className="text-white relative top-[0.5px]">{fullButtonText}</span>
+                            <span className="!text-white relative top-[0.5px]">{fullButtonText}</span>
                         </a>
                     </div>
                 </div>

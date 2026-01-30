@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { LangType, DICTIONARY } from '@/data/dictionary';
+import { DICTIONARY } from '@/data/dictionary';
 import { useDevice } from '@/hooks/useDevice';
 import { useCurrentLang } from '@/hooks/useCurrentLang';
 import { useTheme } from '@/components/ThemeProvider';
@@ -9,18 +9,16 @@ import { Zap } from 'lucide-react';
 
 export const LegalFooter = () => {
     const lang = useCurrentLang();
-    const t = DICTIONARY[lang];
+    const t = DICTIONARY[lang] || DICTIONARY['EN'];
     const { isMobile } = useDevice();
-    const { theme } = useTheme();
     const lowerLang = lang.toLowerCase();
 
     return (
         <footer
-            className="w-full bg-[#F1F5F9] dark:bg-[#050505] border-t border-slate-200 dark:border-slate-800 mt-auto transition-colors duration-300"
-            style={{ backgroundColor: theme === 'dark' ? '#050505' : '#F1F5F9' }}
+            className="w-full bg-white dark:bg-black border-t border-slate-200 dark:border-slate-800 mt-auto transition-colors duration-300"
         >
             {/* Minimal Link Bar */}
-            <div className="w-full bg-[#F1F5F9] dark:bg-[#0a0a0a] border-b border-slate-200 dark:border-slate-800/50 py-3">
+            <div className="w-full bg-white dark:bg-black border-b border-slate-200 dark:border-slate-800/50 py-3">
                 <div className={`max-w-[1600px] mx-auto flex flex-wrap justify-center items-center gap-x-4 gap-y-3 px-4 text-[10px] font-mono tracking-wider`}>
                     <Link href={`/about?lang=${lang}`} className="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-slate-200 uppercase transition-colors px-2 py-1">
                         {t.labels.about}
@@ -52,7 +50,7 @@ export const LegalFooter = () => {
                     </p>
                     {/* Partner Disclaimer */}
                     <p className="text-[10px] leading-[1.3] text-slate-600 max-w-4xl mx-auto whitespace-pre-line opacity-80">
-                        {(t as any).partner?.disclaimer}
+                        {t.partner.disclaimer}
                     </p>
 
                     {/* Attribution */}

@@ -55,7 +55,8 @@ function ArchiveDetailContent() {
     const isBull = score > 60;
     const isBear = score < 40;
     const regimeLabel = isBull ? t.regime.bull : (isBear ? t.regime.bear : t.regime.neutral);
-    const regimeColor = isBull ? "#00D4FF" : (isBear ? "#FF4D4D" : "#FFC107");
+    const regimeColorClass = isBull ? "bg-[#00D4FF]" : (isBear ? "bg-[#FF4D4D]" : "bg-[#FFC107]");
+    const regimeTextClass = isBull ? "text-[#00D4FF]" : (isBear ? "text-[#FF4D4D]" : "text-[#FFC107]");
 
     return (
         <TerminalPage pageKey="archive">
@@ -73,7 +74,7 @@ function ArchiveDetailContent() {
                             <span className="text-xs font-mono text-slate-500 tracking-widest uppercase">{data.last_updated}</span>
                         </div>
                         <div className="flex items-center gap-4">
-                            <div className="w-4 h-4 rounded-full" style={{ backgroundColor: regimeColor }}></div>
+                            <div className={`w-4 h-4 rounded-full ${regimeColorClass}`}></div>
                             <h2 className="text-3xl font-black italic uppercase italic tracking-tighter">{regimeLabel}</h2>
                         </div>
                         <p className="text-[10px] text-sky-500/60 font-mono uppercase tracking-[0.2em]">{t.titles.analysis_history || "Analysis History"}</p>
@@ -81,7 +82,7 @@ function ArchiveDetailContent() {
                     <div className="flex items-center gap-6">
                         <div className="text-right">
                             <span className="block text-[10px] text-slate-500 font-bold tracking-widest uppercase">HISTORICAL GMS</span>
-                            <span className="text-6xl font-black italic leading-none" style={{ color: regimeColor }}>{score}</span>
+                            <span className={`text-6xl font-black italic leading-none ${regimeTextClass}`}>{score}</span>
                         </div>
                     </div>
                 </div>

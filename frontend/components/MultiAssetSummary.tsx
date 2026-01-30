@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { DICTIONARY, LangType } from '@/data/dictionary';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -195,7 +197,7 @@ export const MultiAssetSummary = ({ initialData }: MultiAssetSummaryProps) => {
 
     return (
         <div
-            className={`w-full font-sans min-h-screen flex flex-col pb-24 relative transition-colors duration-300 bg-[#F1F5F9] dark:bg-[#0A0A0A]`}
+            className={`w-full font-sans min-h-screen flex flex-col pb-24 relative transition-colors duration-300`}
         >
             {/* 1. Global Header Status & GMS Dashboard */}
             {data ? (

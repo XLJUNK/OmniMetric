@@ -136,16 +136,16 @@ export const HistoryChart = ({ data, lang = 'EN', color = '#0ea5e9' }: { data: H
                             showgrid: false,
                             zeroline: false,
                             showline: false,
-                            tickfont: { color: '#475569', size: 8 },
+                            tickfont: { color: normalizedLang === 'JP' ? '#475569' : '#64748b', size: 9 }, // Slate-500
                             type: 'category'
                         },
                         yaxis: {
                             range: [0, 100],
                             showgrid: true,
-                            gridcolor: 'rgba(255,255,255,0.03)',
+                            gridcolor: 'rgba(0,0,0,0.05)', // Default Light Grid
                             zeroline: false,
                             showline: false,
-                            tickfont: { color: '#475569', size: 8 }
+                            tickfont: { color: normalizedLang === 'JP' ? '#475569' : '#64748b', size: 9 }
                         },
                         font: { family: 'var(--font-inter), sans-serif' }
                     }}
