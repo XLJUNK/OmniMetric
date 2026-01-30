@@ -26,7 +26,6 @@ export default function MarketAnalysisPage() {
         sma: true,
         rsi: false
     });
-    const [simulatedSignal, setSimulatedSignal] = useState<"none" | "bullish" | "bearish">("none");
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -49,14 +48,7 @@ export default function MarketAnalysisPage() {
     const currentData = data?.[selectedSymbol]?.[selectedTimeframe] || [];
 
     // Get latest data point for display
-    const rawLatest = currentData.length > 0 ? currentData[currentData.length - 1] : null;
-
-    // Apply simulation overrides if active
-    const latest = rawLatest ? {
-        ...rawLatest,
-        is_bullish: simulatedSignal === "bullish" ? true : simulatedSignal === "bearish" ? false : rawLatest.is_bullish,
-        is_bearish: simulatedSignal === "bearish" ? true : simulatedSignal === "bullish" ? false : rawLatest.is_bearish
-    } : null;
+    const latest = currentData.length > 0 ? currentData[currentData.length - 1] : null;
 
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 p-4 font-sans transition-colors duration-300">
