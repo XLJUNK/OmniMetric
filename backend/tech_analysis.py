@@ -149,82 +149,7 @@ def fetch_and_process(symbol_code, interval_name):
         # (Price - SMA200) / SMA200 * 100
         df['Deviation'] = ((df['Close'] - df['SMA_200']) / df['SMA_200']) * 100
         
-        # --- Divergence Logic ---
-        # Pivot High/Low for price
-        # We need check local extrema. 
-        # Simple approach: Look at last N candles (e.g. 5).
-        # A bit complex to do robustly on full history efficiently in one pass. 
-        # We will iterate or use rolling.
-        # Let's focus on "Recent" signals or full history flags? 
-        # "Flag... in JSON". Ideally for the whole chart or just tip? 
-        # For charting, usually we want to see past divergences too.
-        
-        # Simplified Divergence Detector:
-        # Bearish: Price makes High > PrevHigh, but RSI < PrevRSIHigh
-        # Bullish: Price makes Low < PrevLow, but RSI > PrevRSILow
-        
-        # This is heavy to do perfectly. We will implement a simplified localized version.
-        # Find peaks/valleys in Price & RSI. 
-        # If Price Peak(t) > Price Peak(t-k) AND RSI Peak(t) < RSI Peak(t-k) -> Bearish Div at t
-        
-        # Using a rolling window to detect local extrema
-        window = 5
-        df['is_high'] = df['Close'].rolling(window=window*2+1, center=True).max() == df['Close']
-        df['is_low'] = df['Close'].rolling(window=window*2+1, center=True).min() == df['Close']
-        
-        # Now iterate to find divergences
-        bullish_divs = []
-        bearish_divs = []
-        
-        # Get indices of highs and lows
-        highs = df[df['is_high']].index
-        lows = df[df['is_low']].index
-        
-        # Check consecutive highs for Bearish Div
-        # We need to look at the corresponding RSI values
-        # This loop is fast enough for 1-2 years of data (approx 500-1000 rows).
-        
-        current_bull_flags = [False] * len(df)
-        current_bear_flags = [False] * len(df)
-        
-        # Improve: Vectorized or just loop over peaks
-        # For valid comparison, peaks should be somewhat close (not years apart).
-        
-        # Bearish
-        last_high_idx = None
-        for idx in highs:
-            if last_high_idx is not None:
-                # Check condition
-                price_curr = df.loc[idx, 'Close']
-                price_prev = df.loc[last_high_idx, 'Close']
-                rsi_curr = df.loc[idx, 'RSI']
-                rsi_prev = df.loc[last_high_idx, 'RSI']
-                
-                if price_curr > price_prev and rsi_curr < rsi_prev:
-                    # Mark current idx as bearish div
-                    # Find integer location
-                    loc = df.index.get_loc(idx)
-                    current_bear_flags[loc] = True
-            
-            last_high_idx = idx
-
-        # Bullish
-        last_low_idx = None
-        for idx in lows:
-            if last_low_idx is not None:
-                price_curr = df.loc[idx, 'Close']
-                price_prev = df.loc[last_low_idx, 'Close']
-                rsi_curr = df.loc[idx, 'RSI']
-                rsi_prev = df.loc[last_low_idx, 'RSI']
-                
-                if price_curr < price_prev and rsi_curr > rsi_prev:
-                    loc = df.index.get_loc(idx)
-                    current_bull_flags[loc] = True
-                    
-            last_low_idx = idx
-            
-        df['is_bullish_div'] = current_bull_flags
-        df['is_bearish_div'] = current_bear_flags
+        # Divergence logic removed by user request
         
         # Clean up NaNs
         df = df.dropna(subset=['SMA_200']) # Indicators need startup
@@ -254,9 +179,7 @@ def fetch_and_process(symbol_code, interval_name):
                 "bb_middle": row.get('BB_middle'),
                 "bb_lower": row.get('BB_lower'),
                 "rsi": row['RSI'],
-                "deviation": row['Deviation'],
-                "is_bullish": bool(row['is_bullish_div']),
-                "is_bearish": bool(row['is_bearish_div'])
+                "deviation": row['Deviation']
             }
             # Handle potential NaNs (JSON doesn't like NaN)
             processed_item = {}

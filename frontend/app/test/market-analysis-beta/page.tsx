@@ -137,18 +137,6 @@ export default function MarketAnalysisPage() {
                     >
                         RSI(14) {indicators.rsi && <span className="text-white">✓</span>}
                     </button>
-
-                    {/* Test Simulation Button */}
-                    <button
-                        onClick={() => setSimulatedSignal(prev => prev === "none" ? "bullish" : prev === "bullish" ? "bearish" : "none")}
-                        className={`px-3 py-2 rounded-lg font-bold text-xs transition-all shadow-sm border ${simulatedSignal !== "none"
-                            ? 'bg-amber-500 text-black border-amber-400'
-                            : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-500 border-slate-200 dark:border-slate-700 hover:text-slate-800 dark:hover:text-slate-300'
-                            }`}
-                        title="Simulate Signal (Test Only)"
-                    >
-                        ⚡ {simulatedSignal === "none" ? "Test" : simulatedSignal === "bullish" ? "Bull" : "Bear"}
-                    </button>
                 </div>
             </div>
 
@@ -162,21 +150,6 @@ export default function MarketAnalysisPage() {
                             <h2 className="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2 drop-shadow-sm bg-white/70 dark:bg-slate-900/70 backdrop-blur-[2px] px-3 py-1.5 rounded shadow-sm border border-slate-200/50 dark:border-slate-800/50">
                                 {selectedSymbol} <span className="text-slate-500 dark:text-slate-400 font-normal text-sm">/ {selectedTimeframe}</span>
                             </h2>
-                            {/* Conditional Signals in Header - Moved below title */}
-                            <div className="flex gap-2 mt-1">
-                                {latest?.is_bullish && (
-                                    <div className="flex items-center gap-1 bg-white/90 dark:bg-slate-900/90 border border-emerald-500/50 px-2 py-1 rounded shadow-md backdrop-blur-md">
-                                        <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse ring-2 ring-emerald-500/30"></span>
-                                        <span className="text-emerald-700 dark:text-emerald-400 text-xs font-bold">Bullish Div</span>
-                                    </div>
-                                )}
-                                {latest?.is_bearish && (
-                                    <div className="flex items-center gap-1 bg-white/90 dark:bg-slate-900/90 border border-red-500/50 px-2 py-1 rounded shadow-md backdrop-blur-md">
-                                        <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse ring-2 ring-red-500/30"></span>
-                                        <span className="text-red-700 dark:text-red-400 text-xs font-bold">Bearish Div</span>
-                                    </div>
-                                )}
-                            </div>
                         </div>
 
                         {/* Price Overlay */}
