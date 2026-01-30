@@ -16,6 +16,7 @@ import { SignalData } from '@/lib/signal';
 import { useSignalData } from '@/hooks/useSignalData';
 import { ToastNotification } from '@/components/ToastNotification';
 import dynamic from 'next/dynamic';
+import { MarketAnalysisWidget } from '@/components/analysis/MarketAnalysisWidget';
 
 const TerminalSettings = dynamic(() => import('@/components/TerminalSettings').then(mod => mod.TerminalSettings), {
     ssr: false,
