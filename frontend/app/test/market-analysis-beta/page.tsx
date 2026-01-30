@@ -140,10 +140,21 @@ export default function MarketAnalysisPage() {
                     {/* Chart Container */}
                     <div className="bg-slate-900 border border-slate-800 rounded-xl shadow-lg overflow-hidden relative group">
                         {/* Header Overlay */}
-                        <div className="absolute top-4 left-4 z-10 pointer-events-none opacity-50 group-hover:opacity-100 transition-opacity">
+                        <div className="absolute top-4 left-4 z-10 pointer-events-none opacity-50 group-hover:opacity-100 transition-opacity flex flex-col gap-1">
                             <h2 className="text-lg font-bold text-white flex items-center gap-2 drop-shadow-md">
                                 {selectedSymbol} <span className="text-slate-400 font-normal text-sm">/ {selectedTimeframe}</span>
                             </h2>
+                            {/* Conditional Signals in Header */}
+                            {latest?.is_bullish && (
+                                <span className="text-emerald-400 text-xs font-bold bg-emerald-950/80 border border-emerald-500/30 px-2 py-0.5 rounded backdrop-blur-sm w-fit">
+                                    Bullish Div
+                                </span>
+                            )}
+                            {latest?.is_bearish && (
+                                <span className="text-red-400 text-xs font-bold bg-red-950/80 border border-red-500/30 px-2 py-0.5 rounded backdrop-blur-sm w-fit">
+                                    Bearish Div
+                                </span>
+                            )}
                         </div>
 
                         {/* Price Overlay */}
@@ -169,32 +180,6 @@ export default function MarketAnalysisPage() {
                                         textColor: '#64748b' // slate-500
                                     }}
                                 />
-                            )}
-                        </div>
-                    </div>
-
-                    {/* Stats Compact */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                        <div className="bg-slate-900/50 border border-slate-800 rounded-lg p-3">
-                            <div className="text-[10px] text-slate-500 uppercase">RSI (14)</div>
-                            <div className={`text-xl font-mono font-bold ${(latest?.rsi || 50) > 70 ? 'text-red-400' : (latest?.rsi || 50) < 30 ? 'text-emerald-400' : 'text-slate-300'}`}>
-                                {latest?.rsi?.toFixed(1) || '-'}
-                            </div>
-                        </div>
-                        <div className="bg-slate-900/50 border border-slate-800 rounded-lg p-3">
-                            <div className="text-[10px] text-slate-500 uppercase">Deviation (200SMA)</div>
-                            <div className="text-xl font-mono font-bold text-slate-300">
-                                {latest?.deviation ? `${latest.deviation > 0 ? '+' : ''}${latest.deviation.toFixed(2)}%` : '-'}
-                            </div>
-                        </div>
-                        <div className="bg-slate-900/50 border border-slate-800 rounded-lg p-3 md:col-span-2 flex items-center">
-                            {latest?.is_bullish || latest?.is_bearish ? (
-                                <div className="flex gap-2">
-                                    {latest?.is_bullish && <span className="text-emerald-400 text-xs font-bold border border-emerald-500/30 bg-emerald-500/10 px-2 py-1 rounded">Possible Bullish Div</span>}
-                                    {latest?.is_bearish && <span className="text-red-400 text-xs font-bold border border-red-500/30 bg-red-500/10 px-2 py-1 rounded">Possible Bearish Div</span>}
-                                </div>
-                            ) : (
-                                <span className="text-slate-600 text-xs">No active divergence signals detected.</span>
                             )}
                         </div>
                     </div>
