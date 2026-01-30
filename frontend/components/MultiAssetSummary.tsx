@@ -16,7 +16,7 @@ import { SignalData } from '@/lib/signal';
 import { useSignalData } from '@/hooks/useSignalData';
 import { ToastNotification } from '@/components/ToastNotification';
 import dynamic from 'next/dynamic';
-import { MarketAnalysisWidget } from '@/components/analysis/MarketAnalysisWidget';
+
 import { TVPartnerCard } from '@/components/TVPartnerCard';
 
 const TerminalSettings = dynamic(() => import('@/components/TerminalSettings').then(mod => mod.TerminalSettings), {
@@ -225,10 +225,7 @@ export const MultiAssetSummary = ({ initialData }: MultiAssetSummaryProps) => {
                 <div className="w-full h-32 animate-pulse bg-slate-100 dark:bg-white/5" />
             )}
 
-            {/* Market Analysis Widget (Replaces static ad images contextually) */}
-            <div className="max-w-[1600px] mx-auto w-full px-4 md:px-6 mb-8">
-                <MarketAnalysisWidget lang={lang} />
-            </div>
+
 
             {/* PARTNER BANNER (Strategic Placement: Below AI Insight) */}
             <div className="max-w-[1600px] mx-auto w-full px-4 md:px-6 mb-8">

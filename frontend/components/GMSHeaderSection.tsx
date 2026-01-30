@@ -11,6 +11,7 @@ import { NewsTicker } from '@/components/NewsTicker';
 import { AdUnit } from '@/components/AdUnit';
 import MESSAGES from '@/data/messages.json';
 import { TVPartnerCard } from '@/components/TVPartnerCard';
+import { MarketAnalysisWidget } from '@/components/analysis/MarketAnalysisWidget';
 
 import { SignalData } from '@/lib/signal';
 
@@ -299,6 +300,11 @@ export const GMSHeaderSection = ({ data, lang, isSafeMode = false, onOpenSetting
                         }}
                     />
                 </div>
+            </div>
+
+            {/* Market Analysis Widget (Strategic Placement: Below AI Insight) */}
+            <div className="max-w-[1600px] mx-auto w-full px-4 md:px-6 mb-8">
+                <MarketAnalysisWidget lang={lang} />
             </div>
 
             {/* PARTNER BANNER (Strategic Placement: Below AI Insight) */}
