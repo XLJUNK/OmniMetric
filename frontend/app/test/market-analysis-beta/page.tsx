@@ -20,9 +20,9 @@ export default function MarketAnalysisPage() {
     const [selectedSymbol, setSelectedSymbol] = useState<Instrument>("DXY");
     const [selectedTimeframe, setSelectedTimeframe] = useState<Timeframe>("4h");
     const [indicators, setIndicators] = useState({
-        bb: true,
+        bb: false,
         sma: true,
-        rsi: true
+        rsi: false
     });
     const [loading, setLoading] = useState(true);
 
