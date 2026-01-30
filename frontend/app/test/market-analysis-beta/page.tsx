@@ -158,23 +158,23 @@ export default function MarketAnalysisPage() {
                     {/* Chart Container */}
                     <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-lg overflow-hidden relative group transition-colors duration-300">
                         {/* Header Overlay */}
-                        <div className="absolute top-4 left-4 z-20 flex flex-col gap-2 pointer-events-none">
-                            <h2 className="text-lg font-bold text-slate-700 dark:text-white flex items-center gap-2 drop-shadow-sm dark:drop-shadow-md bg-white/50 dark:bg-slate-900/30 backdrop-blur-[2px] px-2 py-1 rounded">
-                                {selectedSymbol} <span className="text-slate-500 dark:text-slate-300 font-normal text-sm">/ {selectedTimeframe}</span>
+                        <div className="absolute top-2 left-2 z-20 flex flex-col gap-1 pointer-events-none">
+                            <h2 className="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2 drop-shadow-sm bg-white/70 dark:bg-slate-900/70 backdrop-blur-[2px] px-3 py-1.5 rounded shadow-sm border border-slate-200/50 dark:border-slate-800/50">
+                                {selectedSymbol} <span className="text-slate-500 dark:text-slate-400 font-normal text-sm">/ {selectedTimeframe}</span>
                             </h2>
-                            {/* Conditional Signals in Header */}
-                            <div className="flex gap-2">
+                            {/* Conditional Signals in Header - Moved below title */}
+                            <div className="flex gap-2 mt-1">
                                 {latest?.is_bullish && (
-                                    <span className="text-emerald-600 dark:text-emerald-400 text-xs font-bold bg-white/90 dark:bg-slate-900/80 border border-emerald-500/50 px-2 py-1 rounded backdrop-blur-md shadow-lg flex items-center gap-1">
-                                        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                                        Bullish Div
-                                    </span>
+                                    <div className="flex items-center gap-1 bg-white/90 dark:bg-slate-900/90 border border-emerald-500/50 px-2 py-1 rounded shadow-md backdrop-blur-md">
+                                        <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse ring-2 ring-emerald-500/30"></span>
+                                        <span className="text-emerald-700 dark:text-emerald-400 text-xs font-bold">Bullish Div</span>
+                                    </div>
                                 )}
                                 {latest?.is_bearish && (
-                                    <span className="text-red-500 dark:text-red-400 text-xs font-bold bg-white/90 dark:bg-slate-900/80 border border-red-500/50 px-2 py-1 rounded backdrop-blur-md shadow-lg flex items-center gap-1">
-                                        <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-                                        Bearish Div
-                                    </span>
+                                    <div className="flex items-center gap-1 bg-white/90 dark:bg-slate-900/90 border border-red-500/50 px-2 py-1 rounded shadow-md backdrop-blur-md">
+                                        <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse ring-2 ring-red-500/30"></span>
+                                        <span className="text-red-700 dark:text-red-400 text-xs font-bold">Bearish Div</span>
+                                    </div>
                                 )}
                             </div>
                         </div>
