@@ -69,7 +69,10 @@ export const MarketAnalysisWidget = ({ lang }: MarketAnalysisWidgetProps) => {
 
     return (
         <div className="w-full bg-white dark:bg-[#0A0A0A] border border-slate-200 dark:border-slate-800 rounded-xl p-3 md:p-4 transition-colors duration-300">
-            <div className="flex flex-col md:flex-row md:items-center justify-end gap-4 mb-3">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-3">
+                <p className="text-slate-500 dark:text-slate-500 text-xs font-mono font-bold uppercase tracking-wider">
+                    Professional-grade technical indicators.
+                </p>
 
 
                 {/* Controls */}
