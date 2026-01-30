@@ -68,18 +68,9 @@ export const MarketAnalysisWidget = ({ lang }: MarketAnalysisWidgetProps) => {
     };
 
     return (
-        <div className="w-full bg-white dark:bg-[#0A0A0A] border border-slate-200 dark:border-slate-800 rounded-xl p-4 md:p-6 transition-colors duration-300">
-            {/* Header & Toolbar */}
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-                <div>
-                    <h2 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-emerald-700 dark:from-blue-400 dark:to-emerald-400 flex items-center gap-3 tracking-tight">
-                        {t_widget.title}
-                        <span className="text-xs bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-400 px-2 py-1 rounded border border-slate-200 dark:border-slate-700 font-bold shadow-sm">{t_widget.beta}</span>
-                    </h2>
-                    <p className="text-slate-500 dark:text-slate-500 text-xs mt-1">
-                        Professional-grade technical indicators.
-                    </p>
-                </div>
+        <div className="w-full bg-white dark:bg-[#0A0A0A] border border-slate-200 dark:border-slate-800 rounded-xl p-3 md:p-4 transition-colors duration-300">
+            <div className="flex flex-col md:flex-row md:items-center justify-end gap-4 mb-3">
+
 
                 {/* Controls */}
                 <div className="flex flex-col sm:flex-row gap-4">
