@@ -1,11 +1,11 @@
 {
-    "last_updated": "2026-01-31T15:35:34.731587+00:00",
-    "last_successful_update": "2026-01-31T15:35:34.731594+00:00",
-    "gms_score": 29,
+    "last_updated": "2026-01-31T16:43:34.179058+00:00",
+    "last_successful_update": "2026-01-31T16:43:34.179065+00:00",
+    "gms_score": 30,
     "sector_scores": {
         "STOCKS": 30,
         "CRYPTO": 25,
-        "FOREX": 45,
+        "FOREX": 55,
         "COMMODITIES": 60
     },
     "market_data": {
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 81206.17,
+            "price": 80877.48,
             "prev_price": 84128.66,
-            "daily_chg": -3.47,
-            "change_percent": -8.86,
+            "daily_chg": -3.86,
+            "change_percent": -9.23,
             "trend": "DOWN",
             "sparkline": [
                 90386.65,
@@ -604,14 +604,14 @@
                 89184.57,
                 84561.59,
                 84128.66,
-                81206.17
+                80877.48
             ]
         },
         "ETH": {
-            "price": 2541.47,
+            "price": 2520.2,
             "prev_price": 2702.38,
-            "daily_chg": -5.95,
-            "change_percent": -15.91,
+            "daily_chg": -6.74,
+            "change_percent": -16.61,
             "trend": "DOWN",
             "sparkline": [
                 3082.4,
@@ -635,14 +635,14 @@
                 3006.61,
                 2818.23,
                 2702.38,
-                2541.47
+                2520.2
             ]
         },
         "SOL": {
-            "price": 109.25,
+            "price": 107.84,
             "prev_price": 117.36,
-            "daily_chg": -6.91,
-            "change_percent": -14.01,
+            "daily_chg": -8.12,
+            "change_percent": -15.12,
             "trend": "DOWN",
             "sparkline": [
                 135.73,
@@ -666,7 +666,7 @@
                 125.12,
                 117.61,
                 117.36,
-                109.25
+                107.84
             ]
         },
         "DXY": {
@@ -701,10 +701,10 @@
             ]
         },
         "USDJPY": {
-            "price": 154.78,
+            "price": 154.73,
             "prev_price": 153.1,
-            "daily_chg": 1.1,
-            "change_percent": -0.25,
+            "daily_chg": 1.07,
+            "change_percent": -0.28,
             "trend": "UP",
             "sparkline": [
                 156.41,
@@ -728,14 +728,14 @@
                 154.34,
                 152.45,
                 153.1,
-                154.78
+                154.73
             ]
         },
         "EURUSD": {
             "price": 1.19,
             "prev_price": 1.2,
-            "daily_chg": -1.03,
-            "change_percent": -0.04,
+            "daily_chg": -0.73,
+            "change_percent": 0.27,
             "trend": "DOWN",
             "sparkline": [
                 1.17,
@@ -763,10 +763,10 @@
             ]
         },
         "USDINR": {
-            "price": 91.64,
+            "price": 91.9,
             "prev_price": 92.04,
-            "daily_chg": -0.43,
-            "change_percent": 0.15,
+            "daily_chg": -0.15,
+            "change_percent": 0.44,
             "trend": "DOWN",
             "sparkline": [
                 89.77,
@@ -790,7 +790,7 @@
                 91.71,
                 91.53,
                 92.04,
-                91.64
+                91.9
             ]
         },
         "USDSAR": {
@@ -1107,22 +1107,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS score at 29 signals a DEFENSIVE (Risk-Off) regime, with flat momentum pushing it lower. Rising DXY (Dollar strength/Liquidity) and VIX (Fear/Volatility) confirm broad risk aversion and tightening liquidity. Gold's extreme -11.37% drop suggests forced selling or a liquidity grab, possibly signaling short-term capitulation. Maintain defensive posture; monitor DXY and liquidity for potential shifts.",
+        "content": "GMS score 30 maintains a Defensive status. Rising VIX (fear/volatility) and strengthening DXY (Dollar strength/Liquidity) drive this caution, with credit spreads widening and liquidity slightly contracting. While current data indicates risk-off, speculative shifts regarding potential future central bank leadership could introduce a significant, overlooked tailwind. Maintain vigilance.",
         "reports": {
-            "JP": "GMSスコア29はDEFENSIVE（リスクオフ）体制を示し、フラットなモメンタムがスコアを押し下げています。DXY（ドル高/流動性）とVIX（恐怖/変動性）の上昇は、広範なリスク回避と流動性逼迫を確認。金の大幅な-11.37%下落は、強制的な売却または流動性確保を示唆し、短期的な降伏の可能性。防衛的な姿勢を維持し、DXYと流動性の変化に注目。",
-            "EN": "GMS score at 29 signals a DEFENSIVE (Risk-Off) regime, with flat momentum pushing it lower. Rising DXY (Dollar strength/Liquidity) and VIX (Fear/Volatility) confirm broad risk aversion and tightening liquidity. Gold's extreme -11.37% drop suggests forced selling or a liquidity grab, possibly signaling short-term capitulation. Maintain defensive posture; monitor DXY and liquidity for potential shifts.",
-            "CN": "GMS评分29表明市场处于防御性（规避风险）状态，平稳的动能将其推低。美元指数DXY（美元走强/流动性）和VIX（恐惧/波动性）的上升证实了普遍的避险情绪和流动性收紧。黄金暴跌-11.37%预示着强制抛售或流动性套现，可能暗示短期投降。维持防御姿态；关注DXY和流动性变化。",
-            "ES": "El GMS de 29 indica un régimen DEFENSIVO (Aversión al riesgo), con impulso plano empujando la puntuación a la baja. El DXY (fortaleza del dólar/liquidez) y el VIX (miedo/volatilidad) en alza confirman la aversión al riesgo y la restricción de liquidez. La caída extrema del oro (-11.37%) sugiere ventas forzadas o búsqueda de liquidez, indicando posible capitulación a corto plazo. Mantenga una postura defensiva; observe DXY y liquidez.",
-            "HI": "GMS स्कोर 29 DEFENSIVE (जोखिम-बंद) व्यवस्था का संकेत देता है, जिसमें सपाट गति इसे नीचे धकेल रही है। बढ़ते DXY (डॉलर मजबूती/तरलता) और VIX (भय/अस्थिरता) व्यापक जोखिम से बचाव और तरलता कसने की पुष्टि करते हैं। सोने में -11.37% की अत्यधिक गिरावट जबरन बिक्री या तरलता हड़पने का सुझाव देती है, जो संभवतः अल्पकालिक आत्मसमर्पण का संकेत है। रक्षात्मक रुख बनाए रखें; संभावित बदलावों के लिए DXY और तरलता पर नज़र रखें।",
-            "ID": "Skor GMS 29 mengindikasikan rezim DEFENSif (Penghindaran Risiko), dengan momentum datar mendorongnya lebih rendah. Kenaikan DXY (kekuatan Dolar/Likuiditas) dan VIX (Ketakutan/Volatilitas) mengkonfirmasi penghindaran risiko luas dan pengetatan likuiditas. Penurunan ekstrem Emas -11.37% menyiratkan penjualan paksa atau perebutan likuiditas, mungkin menandakan kapitulasi jangka pendek. Pertahankan posisi defensif; pantau DXY dan likuiditas untuk potensi pergeseran.",
-            "AR": "يشير مؤشر GMS البالغ 29 إلى نظام دفاعي (تجنب المخاطر)، مع دفع الزخم الثابت له نحو الأسفل. يؤكد ارتفاع مؤشر الدولار DXY (قوة الدولار/السيولة) ومؤشر VIX (الخوف/التقلب) على النفور الواسع من المخاطر وتشديد السيولة. يشير الانخفاض الشديد للذهب بنسبة -11.37% إلى بيع قسري أو سحب للسيولة، مما قد يشير إلى استسلام قصير المدى. حافظ على موقف دفاعي؛ راقب DXY والسيولة للتحولات المحتملة."
+            "JP": "GMSスコア30は防衛的姿勢を維持。VIX上昇（恐怖/変動性）とDXY強化（ドル高/流動性）がこの警戒感を促し、信用スプレッド拡大と流動性縮小が続く。現状はリスクオフを示すが、将来の中央銀行指導者に関する投機的な変化が、見過ごされがちな追い風となる可能性。警戒を怠らないこと。",
+            "EN": "GMS score 30 maintains a Defensive status. Rising VIX (fear/volatility) and strengthening DXY (Dollar strength/Liquidity) drive this caution, with credit spreads widening and liquidity slightly contracting. While current data indicates risk-off, speculative shifts regarding potential future central bank leadership could introduce a significant, overlooked tailwind. Maintain vigilance.",
+            "CN": "GMS分数为30，维持防御性立场。VIX（恐慌/波动性）上升和DXY（美元走强/流动性）强化推动了这种谨慎，信用利差扩大且流动性略有收缩。尽管当前数据表明风险规避，但关于未来央行领导层的投机性转变可能带来一个被忽视的顺风。保持警惕。",
+            "ES": "La puntuación GMS de 30 mantiene un estado Defensivo. El aumento del VIX (miedo/volatilidad) y el fortalecimiento del DXY (fortaleza del dólar/liquidez) impulsan esta cautela, con diferenciales de crédito ampliándose y liquidez ligeramente contrayéndose. Aunque los datos actuales indican aversión al riesgo, los cambios especulativos en el posible futuro liderazgo del banco central podrían introducir un impulso positivo pasado por alto. Mantenga la vigilancia.",
+            "HI": "GMS स्कोर 30 रक्षात्मक स्थिति बनाए हुए है। बढ़ता VIX (भय/अस्थिरता) और मजबूत होता DXY (डॉलर की ताकत/तरलता) इस सावधानी को प्रेरित करता है, जिसमें क्रेडिट स्प्रेड बढ़ रहा है और तरलता थोड़ी सिकुड़ रही है। जबकि वर्तमान डेटा जोखिम-बंद का संकेत देता है, संभावित भविष्य के केंद्रीय बैंक नेतृत्व के संबंध में सट्टा परिवर्तन एक महत्वपूर्ण, अनदेखी पूंछ-पवन पेश कर सकते हैं। सतर्कता बनाए रखें।",
+            "ID": "Skor GMS 30 mempertahankan status Defensif. Kenaikan VIX (ketakutan/volatilitas) dan penguatan DXY (kekuatan Dolar/Likuiditas) mendorong kehati-hatian ini, dengan spread kredit melebar dan likuiditas sedikit berkontraksi. Meskipun data saat ini menunjukkan penghindaran risiko, pergeseran spekulatif terkait potensi kepemimpinan bank sentral di masa depan dapat memperkenalkan pendorong positif yang terabaikan. Tetap waspada.",
+            "AR": "درجة GMS 30 تحافظ على وضع دفاعي. ارتفاع مؤشر VIX (الخوف/التقلب) وتعزيز مؤشر DXY (قوة الدولار/السيولة) يدفعان هذا الحذر، مع اتساع فروق الائتمان وانكماش السيولة قليلاً. بينما تشير البيانات الحالية إلى تجنب المخاطر، قد تؤدي التغييرات التكهنية بشأن قيادة البنك المركزي المستقبلية إلى رياح إيجابية مهمة وغير ملحوظة. حافظ على اليقظة."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-28T18:52:12Z",
-            "score": 36
-        },
         {
             "date": "2026-01-28T19:40:04Z",
             "score": 37
@@ -1358,6 +1354,10 @@
         {
             "date": "2026-01-31T15:35:34Z",
             "score": 29
+        },
+        {
+            "date": "2026-01-31T16:43:34Z",
+            "score": 30
         }
     ],
     "intelligence": {
@@ -1375,7 +1375,7 @@
             {
                 "title": "Epstein files: Trump, Howard Lutnick, Steve Tisch among prominent names that appear in latest Justice Department release",
                 "link": "https://www.cnbc.com/2026/01/31/epstein-files-trump-howard-lutnick-steve-tisch.html",
-                "isoDate": "2026-01-31T15:15:40+00:00Z"
+                "isoDate": "2026-01-31T16:26:39+00:00Z"
             },
             {
                 "title": "Buffett Watch: American Express challenges Apple for No. 1 slot in Berkshire's portfolio",
@@ -1395,55 +1395,55 @@
         ],
         "translations": {
             "JP": [
-                "連邦準備制度理事会（FRB）トップ候補、ケビン・ウォルシュ氏について知っておくべきことすべて",
-                "米政府一部閉鎖、月曜までに再開の可能性も　下院採決次第",
-                "エプスタイン氏関連書類：トランプ氏、ハワード・ラトニック氏、スティーブ・ティッシュ氏など著名人の名前が司法省最新公開書類に",
-                "ウォーレン・バフェット氏の動向：バークシャーのポートフォリオ、アメリカン・エキスプレスがアップルを抜いて首位に",
-                "イランの港湾都市バンダル・アッバースで爆発、1人死亡、14人負傷　イランメディア報道",
-                "ゴールドマン・サックス、決算発表前に乗り遅れるな、これらの5銘柄を買えと推奨"
+                "FRB総裁候補、ケビン・ウォルシュ氏について知っておくべきことすべて",
+                "米政府、一部閉鎖。月曜までに再開の可能性、下院採決へ",
+                "エプスタイン氏事件：トランプ氏、ハワード・ラトニック氏、スティーブ・ティッシュ氏らが司法省最新公開資料に登場",
+                "バフェット氏動向：アメリカン・エキスプレス、バークシャーのポートフォリオでアップルを抜き1位に",
+                "イラン・バンダルアッバス港で爆発、1人死亡、14人負傷と国営メディア報道",
+                "ゴールドマン、決算発表前にこの5銘柄を買うべき理由：もう時間がない"
             ],
             "CN": [
                 "关于特朗普提名的美联储主席候选人凯文·沃什，你需要知道的一切",
-                "美国政府部分关门；众议院投票或可在周一前恢复运作",
-                "爱泼斯坦文件：特朗普、霍华德·卢特尼克、史蒂夫·蒂施等知名人士出现在最新司法部公布的文件中",
-                "巴菲特动态：美国运通挑战苹果，争夺伯克希尔投资组合头号地位",
-                "伊朗媒体报道：伊朗港口城市阿巴斯港发生爆炸，一人死亡，14人受伤",
-                "高盛称：在财报季来临前，买入这五只股票，以免为时过晚"
+                "美国政府部分停摆；众议院投票可能在周一前使其重新开放",
+                "爱泼斯坦文件：特朗普、霍华德·卢特尼克、史蒂夫·蒂施等知名人士出现在司法部最新公布的文件中",
+                "巴菲特观察：美国运通挑战苹果，争夺伯克希尔投资组合的头号地位",
+                "伊朗媒体报道：伊朗南部港口阿巴斯港发生爆炸，一人死亡，14人受伤",
+                "高盛称：在财报季来临前，赶紧买入这五只股票，否则就太晚了"
             ],
             "ES": [
                 "Todo lo que necesitas saber sobre Kevin Warsh, la elección de Trump para dirigir la Reserva Federal",
-                "El gobierno de EE. UU. cierra parcialmente; la votación en la Cámara de Representantes podría reabrirlo el lunes",
-                "Archivos de Epstein: Trump, Howard Lutnick, Steve Tisch entre los nombres prominentes que aparecen en la última publicación del Departamento de Justicia",
-                "Observando a Buffett: American Express desafía a Apple por el puesto número 1 en la cartera de Berkshire",
-                "Un muerto y 14 heridos en una explosión en el puerto iraní de Bandar Abbas, informan medios iraníes",
-                "Goldman dice: compren estas cinco acciones antes de los resultados, antes de que sea demasiado tarde"
+                "Gobierno de EE. UU. se cierra parcialmente; la votación en la Cámara podría reabrirlo para el lunes",
+                "Archivos Epstein: Trump, Howard Lutnick, Steve Tisch entre los nombres prominentes que aparecen en la última publicación del Departamento de Justicia",
+                "Observatorio Buffett: American Express desafía a Apple por el puesto número 1 en la cartera de Berkshire",
+                "Una persona muerta, 14 heridos en explosión en el puerto iraní de Bandar Abbas, informan medios iraníes",
+                "Goldman Sachs dice: compren estas cinco acciones antes de los resultados de ganancias, antes de que sea demasiado tarde"
             ],
             "HI": [
-                "केविन वॉर्श के बारे में आपको जो कुछ जानने की ज़रूरत है, जो फेडरल रिजर्व का नेतृत्व करने के लिए ट्रम्प की पसंद हैं",
-                "अमेरिकी सरकार आंशिक रूप से बंद; हाउस का वोट सोमवार तक इसे फिर से खोल सकता है",
-                "एपस्टीन फाइलें: ट्रम्प, हॉवर्ड लुटिनिक, स्टीव टिश प्रमुख नामों में से हैं जो न्याय विभाग के नवीनतम प्रकाशन में दिखाई देते हैं",
-                "बफ़ेट वॉच: अमेरिकन एक्सप्रेस बर्कशायर के पोर्टफोलियो में नंबर 1 स्लॉट के लिए एप्पल को चुनौती देता है",
-                "ईरानी बंदरगाह बंदर अब्बास में विस्फोट में एक व्यक्ति की मौत, 14 घायल, ईरानी मीडिया की रिपोर्ट",
-                "गोल्डमैन का कहना है कि कमाई से पहले इन पांच शेयरों को खरीदें, इससे पहले कि बहुत देर हो जाए"
+                "केविन वॉर्श के बारे में सब कुछ जो आपको जानना चाहिए, फेडरल रिजर्व का नेतृत्व करने के लिए ट्रम्प की पसंद",
+                "अमेरिकी सरकार आंशिक रूप से बंद; सोमवार तक इसे फिर से खोलने के लिए सदन में मतदान हो सकता है",
+                "एपस्टीन फाइलें: ट्रम्प, हॉवर्ड ल्यूटिक, स्टीव टिस्क हालिया न्याय विभाग के रिलीज में प्रमुख नामों में से हैं",
+                "बफे वॉच: अमेरिकन एक्सप्रेस बर्कशायर के पोर्टफोलियो में नंबर 1 स्थान के लिए ऐप्पल को चुनौती देता है",
+                "ईरानी मीडिया रिपोर्ट: ईरानी बंदरगाह बंदर अब्बास में विस्फोट में एक व्यक्ति की मौत, 14 घायल",
+                "गोल्डमैन का कहना है: कमाई से पहले इन पांच शेयरों को खरीदें, इससे पहले कि बहुत देर हो जाए"
             ],
             "ID": [
                 "Segala yang perlu Anda ketahui tentang Kevin Warsh, pilihan Trump untuk memimpin Federal Reserve",
-                "Pemerintah AS sebagian tutup; pemungutan suara DPR bisa membukanya kembali pada hari Senin",
-                "Berkas Epstein: Trump, Howard Lutnick, Steve Tisch di antara nama-nama terkemuka yang muncul dalam rilis terbaru Departemen Kehakiman",
-                "Pantauan Buffett: American Express menantang Apple untuk posisi No. 1 dalam portofolio Berkshire",
-                "Satu orang tewas, 14 terluka dalam ledakan di pelabuhan Iran Bandar Abbas, lapor media Iran",
-                "Goldman mengatakan beli lima saham ini sebelum laporan keuangan sebelum terlambat"
+                "Pemerintah AS sebagian tutup; pemungutan suara DPR dapat membukanya kembali pada hari Senin",
+                "File Epstein: Trump, Howard Lutnick, Steve Tisch di antara nama-nama terkemuka yang muncul dalam rilis terbaru Departemen Kehakiman",
+                "Pantauan Buffett: American Express menantang Apple untuk posisi No. 1 di portofolio Berkshire",
+                "Satu orang tewas, 14 luka dalam ledakan di pelabuhan Iran Bandar Abbas, lapor media Iran",
+                "Goldman mengatakan: beli lima saham ini sebelum laporan pendapatan sebelum terlambat"
             ],
             "AR": [
                 "كل ما تحتاج لمعرفته عن كيفن وارش، اختيار ترامب لقيادة الاحتياطي الفيدرالي",
-                "الحكومة الأمريكية تغلق جزئياً؛ تصويت مجلس النواب قد يعيد فتحها بحلول يوم الاثنين",
-                "ملفات إبستين: ترامب، هوارد لوتنيك، ستيف تيش من بين الأسماء البارزة التي تظهر في أحدث إصدار لوزارة العدل",
-                "مراقبة بوفيه: أمريكان إكسبريس تتحدى آبل للحصول على المركز الأول في محفظة بيركشاير",
+                "الحكومة الأمريكية تغلق جزئيًا؛ تصويت مجلس النواب قد يعيد فتحها بحلول يوم الاثنين",
+                "ملفات إبشتاين: ترامب، هوارد لوتنيك، ستيف تييش من بين الأسماء البارزة التي تظهر في أحدث إصدار لوزارة العدل",
+                "مراقبة بافيت: أمريكان إكسبريس تتحدى آبل على المركز الأول في محفظة بيركشاير",
                 "مقتل شخص وإصابة 14 في انفجار بميناء بندر عباس الإيراني، حسبما أفادت وسائل إعلام إيرانية",
-                "جولدمان تقول اشتروا هذه الأسهم الخمسة قبل الأرباح قبل فوات الأوان"
+                "جولدمان تقول: اشتروا هذه الأسهم الخمسة قبل الأرباح قبل فوات الأوان"
             ]
         },
-        "last_updated": "2026-01-31T15:35:34.731128+00:00Z"
+        "last_updated": "2026-01-31T16:43:34.178546+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
