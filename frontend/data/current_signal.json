@@ -1,11 +1,11 @@
 {
-    "last_updated": "2026-01-31T11:32:14.364542+00:00",
-    "last_successful_update": "2026-01-31T11:32:14.364549+00:00",
-    "gms_score": 29,
+    "last_updated": "2026-01-31T13:08:21.853990+00:00",
+    "last_successful_update": "2026-01-31T13:08:21.853996+00:00",
+    "gms_score": 30,
     "sector_scores": {
         "STOCKS": 30,
         "CRYPTO": 25,
-        "FOREX": 45,
+        "FOREX": 55,
         "COMMODITIES": 60
     },
     "market_data": {
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 82893.39,
+            "price": 82658.52,
             "prev_price": 84128.66,
-            "daily_chg": -1.47,
-            "change_percent": -6.97,
+            "daily_chg": -1.75,
+            "change_percent": -7.23,
             "trend": "DOWN",
             "sparkline": [
                 90386.65,
@@ -604,14 +604,14 @@
                 89184.57,
                 84561.59,
                 84128.66,
-                82893.39
+                82658.52
             ]
         },
         "ETH": {
-            "price": 2644.17,
+            "price": 2627.97,
             "prev_price": 2702.38,
-            "daily_chg": -2.15,
-            "change_percent": -12.51,
+            "daily_chg": -2.75,
+            "change_percent": -13.04,
             "trend": "DOWN",
             "sparkline": [
                 3082.4,
@@ -635,14 +635,14 @@
                 3006.61,
                 2818.23,
                 2702.38,
-                2644.17
+                2627.97
             ]
         },
         "SOL": {
-            "price": 116.38,
+            "price": 114.97,
             "prev_price": 117.36,
-            "daily_chg": -0.83,
-            "change_percent": -8.4,
+            "daily_chg": -2.04,
+            "change_percent": -9.51,
             "trend": "DOWN",
             "sparkline": [
                 135.73,
@@ -666,7 +666,7 @@
                 125.12,
                 117.61,
                 117.36,
-                116.38
+                114.97
             ]
         },
         "DXY": {
@@ -701,10 +701,10 @@
             ]
         },
         "USDJPY": {
-            "price": 154.78,
+            "price": 154.73,
             "prev_price": 153.1,
-            "daily_chg": 1.1,
-            "change_percent": -0.25,
+            "daily_chg": 1.07,
+            "change_percent": -0.28,
             "trend": "UP",
             "sparkline": [
                 156.41,
@@ -728,14 +728,14 @@
                 154.34,
                 152.45,
                 153.1,
-                154.78
+                154.73
             ]
         },
         "EURUSD": {
             "price": 1.19,
             "prev_price": 1.2,
-            "daily_chg": -1.03,
-            "change_percent": -0.04,
+            "daily_chg": -0.73,
+            "change_percent": 0.27,
             "trend": "DOWN",
             "sparkline": [
                 1.17,
@@ -763,10 +763,10 @@
             ]
         },
         "USDINR": {
-            "price": 91.64,
+            "price": 91.9,
             "prev_price": 92.04,
-            "daily_chg": -0.43,
-            "change_percent": 0.15,
+            "daily_chg": -0.15,
+            "change_percent": 0.44,
             "trend": "DOWN",
             "sparkline": [
                 89.77,
@@ -790,7 +790,7 @@
                 91.71,
                 91.53,
                 92.04,
-                91.64
+                91.9
             ]
         },
         "USDSAR": {
@@ -1107,22 +1107,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS score 29 indicates a Defensive regime. DXY (Dollar strength/Liquidity) is rising, alongside VIX (Fear/Volatility) and HY spreads, signaling tightening conditions and risk-off sentiment. Net Liquidity slightly contracts. While broad assets decline, VIX, though up, is not at extreme panic levels. A potential peak in VIX could signal a short-term bottom. Maintain caution, but monitor VIX for tactical opportunities.",
+        "content": "GMS score 30 signals a DEFENSIVE regime. Rising DXY (Dollar strength/Liquidity) and VIX (Fear/Volatility) confirm risk aversion. Momentum pushed the score to 30. Potential new Fed leadership introduces policy uncertainty; an unexpected dovish pivot could offer a tailwind. Maintain defensive posture, monitor policy cues.",
         "reports": {
-            "JP": "GMSスコア29は防御的な局面を示唆。DXY（ドル高/流動性）がVIX（恐怖/変動性）やHYスプレッドと共に上昇し、引き締めとリスクオフを示唆。純流動性は微減。広範な資産は下落も、VIXは上昇するが極端なパニック水準ではない。VIXの潜在的なピークは短期的な底打ちを示唆する可能性。警戒を維持しつつ、VIXを注視し戦術的な機会を探る。",
-            "EN": "GMS score 29 indicates a Defensive regime. DXY (Dollar strength/Liquidity) is rising, alongside VIX (Fear/Volatility) and HY spreads, signaling tightening conditions and risk-off sentiment. Net Liquidity slightly contracts. While broad assets decline, VIX, though up, is not at extreme panic levels. A potential peak in VIX could signal a short-term bottom. Maintain caution, but monitor VIX for tactical opportunities.",
-            "CN": "GMS分数29表明防御性局面。DXY（美元走强/流动性）随VIX（恐慌/波动性）及高收益利差同步上升，预示金融条件收紧和避险情绪增强。净流动性略有收缩。尽管广泛资产下跌，VIX虽有所升高，但尚未达到极端恐慌水平。VIX的潜在见顶可能预示着短期底部形成。请保持警惕，并密切关注VIX以寻找战术性机会。",
-            "ES": "Puntuación GMS 29 indica régimen Defensivo. El DXY (fortaleza del Dólar/liquidez) sube junto al VIX (miedo/volatilidad) y spreads HY, señalando condiciones restrictivas y aversión al riesgo. Liquidez neta ligeramente a la baja. Aunque los activos bajan, el VIX, pese a su alza, no está en pánico extremo. Un posible pico en VIX podría indicar un suelo a corto plazo. Mantener cautela, monitorear VIX para oportunidades tácticas.",
-            "HI": "जीएमएस स्कोर 29 रक्षात्मक स्थिति दर्शाता है। DXY (डॉलर की मजबूती/तरलता) VIX (भय/अस्थिरता) और HY स्प्रेड के साथ बढ़ रहा है, जो कड़े हालात और जोखिम-बंद भावना का संकेत है। शुद्ध तरलता थोड़ी घटती है। हालांकि परिसंपत्तियां गिर रही हैं, VIX, बढ़ने के बावजूद, अत्यधिक घबराहट के स्तर पर नहीं है। VIX में संभावित चोटी अल्पकालिक निचले स्तर का संकेत दे सकती है। सावधानी बनाए रखें, लेकिन सामरिक अवसरों के लिए VIX पर नज़र रखें।",
-            "ID": "Skor GMS 29 menunjukkan rezim Defensif. DXY (kekuatan Dolar/Likuiditas) naik bersama VIX (Ketakutan/Volatilitas) dan spread HY, menandakan kondisi ketat dan sentimen penghindaran risiko. Likuiditas bersih sedikit menyusut. Meskipun aset luas menurun, VIX, meski naik, tidak pada tingkat panik ekstrem. Puncak potensial di VIX bisa menandakan dasar jangka pendek. Pertahankan kehati-hatian, pantau VIX untuk peluang taktis.",
-            "AR": "يشير مؤشر GMS البالغ 29 إلى نظام دفاعي. يرتفع مؤشر DXY (قوة الدولار/السيولة) مع VIX (الخوف/التقلب) وفروقات العائد المرتفع، مما يشير إلى ظروف أكثر صرامة ومشاعر العزوف عن المخاطرة. تتقلص السيولة الصافية قليلاً. بينما تتراجع الأصول على نطاق واسع، فإن VIX، بالرغم من ارتفاعه، ليس عند مستويات الذعر القصوى. قد تشير ذروة محتملة في VIX إلى قاع قصير الأجل. حافظ على الحذر، وراقب VIX بحثًا عن فرص تكتيكية."
+            "JP": "GMSスコア30は防御的体制を示唆。DXY上昇（ドル高/流動性）とVIX上昇（恐怖/変動性）はリスク回避を確認。モメンタムはスコアを30に押し上げた。FRB新体制の可能性は政策の不確実性をもたらし、予期せぬハト派転換は追い風となる可能性。防御的姿勢を維持し、政策手掛かりを注視。",
+            "EN": "GMS score 30 signals a DEFENSIVE regime. Rising DXY (Dollar strength/Liquidity) and VIX (Fear/Volatility) confirm risk aversion. Momentum pushed the score to 30. Potential new Fed leadership introduces policy uncertainty; an unexpected dovish pivot could offer a tailwind. Maintain defensive posture, monitor policy cues.",
+            "CN": "GMS评分30预示防御性状态。DXY（美元走强/流动性）和VIX（恐慌/波动性）上升证实避险情绪。动能将分数推至30。潜在的美联储新领导层带来政策不确定性；意外的鸽派转向可能提供顺风。保持防御姿态，密切关注政策信号。",
+            "ES": "GMS 30 sugiere régimen DEFENSIVO. DXY al alza (fortaleza dólar/liquidez) y VIX (miedo/volatilidad) confirman aversión al riesgo. El impulso empujó la puntuación a 30. Un nuevo liderazgo en la Fed introduce incertidumbre; un giro dovish inesperado podría impulsar. Mantenga postura defensiva, monitoree señales.",
+            "HI": "जीएमएस स्कोर 30 रक्षात्मक व्यवस्था का संकेत देता है। डीएक्सवाई (डॉलर की मजबूती/तरलता) और वीआईएक्स (भय/अस्थिरता) में वृद्धि जोखिम से बचने की पुष्टि करती है। गति ने स्कोर को 30 तक पहुँचाया। फेड नेतृत्व में संभावित बदलाव नीतिगत अनिश्चितता लाता है; अप्रत्याशित नरम मोड़ एक सकारात्मक कारक हो सकता है। रक्षात्मक रुख बनाए रखें, नीतिगत संकेतों पर नज़र रखें।",
+            "ID": "Skor GMS 30 mengindikasikan rezim DEFENSif. Kenaikan DXY (kekuatan Dolar/Likuiditas) dan VIX (Ketakutan/Volatilitas) mengonfirmasi penghindaran risiko. Momentum mendorong skor ke 30. Potensi kepemimpinan baru Fed menimbulkan ketidakpastian kebijakan; perubahan dovish tak terduga bisa menjadi pendorong. Pertahankan posisi defensif, pantau sinyal kebijakan.",
+            "AR": "يشير مؤشر GMS البالغ 30 إلى نظام دفاعي. يؤكد ارتفاع مؤشر الدولار (قوة الدولار/السيولة) ومؤشر VIX (الخوف/التقلب) تجنب المخاطر. دفع الزخم النتيجة إلى 30. يقدم قيادة الفيدرالي الجديدة المحتملة عدم يقين في السياسة؛ قد يوفر تحول مفاجئ نحو التيسير دفعة إيجابية. حافظ على موقف دفاعي، راقب إشارات السياسة."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-28T15:46:53Z",
-            "score": 37
-        },
         {
             "date": "2026-01-28T16:54:11Z",
             "score": 36
@@ -1358,6 +1354,10 @@
         {
             "date": "2026-01-31T11:32:14Z",
             "score": 29
+        },
+        {
+            "date": "2026-01-31T13:08:21Z",
+            "score": 30
         }
     ],
     "intelligence": {
@@ -1373,19 +1373,19 @@
                 "isoDate": "2026-01-31T05:01:44+00:00Z"
             },
             {
-                "title": "Is 'America First' starting to backfire as Washington's allies go it alone?",
-                "link": "https://www.cnbc.com/2026/01/31/trump-america-first-policy-tariffs-hostility-backfire-trade-deals.html",
-                "isoDate": "2026-01-31T09:03:39+00:00Z"
+                "title": "Epstein files: Trump, Howard Lutnick, Steve Tisch among prominent names that appear in latest Justice Department release",
+                "link": "https://www.cnbc.com/2026/01/31/epstein-files-trump-howard-lutnick-steve-tisch.html",
+                "isoDate": "2026-01-31T12:39:55+00:00Z"
+            },
+            {
+                "title": "Big Food gets leaner with divestitures and breakups as consumers turn away from packaged snacks",
+                "link": "https://www.cnbc.com/2026/01/31/kraft-heinz-kellogg-breakups-show-big-food-is-getting-smaller.html",
+                "isoDate": "2026-01-31T13:00:01+00:00Z"
             },
             {
                 "title": "Disney board expected to meet next week to decide CEO Bob Iger's successor",
                 "link": "https://www.cnbc.com/video/2026/01/30/disney-board-expected-to-meet-next-week-to-decide-ceo-bob-igers-successor.html",
                 "isoDate": "2026-01-30T23:46:33+00:00Z"
-            },
-            {
-                "title": "Epstein files show Elon Musk apparently discussed plans to visit sex offender's island, host him at SpaceX",
-                "link": "https://www.cnbc.com/2026/01/30/epstein-files-show-elon-musk-planned-visit-to-island-host-at-spacex.html",
-                "isoDate": "2026-01-31T05:56:33+00:00Z"
             },
             {
                 "title": "Palantir and these other stocks reporting next week have earnings momentum at their back",
@@ -1396,54 +1396,54 @@
         "translations": {
             "JP": [
                 "連邦準備制度理事会（FRB）トップ候補、ケビン・ウォーシュ氏について知っておくべきことすべて",
-                "米政府一部閉鎖、月曜日までに再開なるか下院の採決に注目",
-                "「アメリカ・ファースト」は裏目に出始めているのか？ワシントンの同盟国が独自行動",
-                "ディズニー取締役会、来週ボブ・アイガーCEOの後任者決定へ",
-                "エプスタイン氏の資料、イーロン・マスク氏が性犯罪者の島訪問やSpaceXでの歓待を計画していた可能性を示す",
-                "来週決算発表のパランティアやその他銘柄、好決算を追い風に"
+                "米国政府一部閉鎖、月曜日までに再開の可能性、下院投票へ",
+                "エプスタイン事件：トランプ氏、ハワード・ラトニック氏、スティーブ・ティッシュ氏らが検察当局発表の最新リストに登場",
+                "消費者のスナック離れで「ビッグフード」が事業売却・分割でスリム化",
+                "ディズニー取締役会、来週CEOボブ・アイガー氏の後継者決定へ",
+                "来週決算発表のパランティアやその他、業績モメンタムを味方につける銘柄"
             ],
             "CN": [
-                "关于特朗普提名的美联储主席候选人凯文·沃什，你需要知道的一切",
-                "美国政府部分关门，众议院投票可能在周一重新开放",
-                "“美国优先”是否开始适得其反，华盛顿的盟友们单干？",
+                "关于特朗普的候任美联储主席凯文·沃什，你需要知道的一切",
+                "美国政府部分停摆，众议院投票可能在周一前使其重新开放",
+                "爱泼斯坦文件：特朗普、霍华德·卢特尼克、史蒂夫·蒂施等知名人士出现在司法部最新公布的文件中",
+                "随着消费者转向非包装零食，“大食品”通过剥离和拆分实现瘦身",
                 "迪士尼董事会预计下周开会决定CEO鲍勃·艾格的继任者",
-                "爱泼斯坦文件显示，埃隆·马斯克似乎曾讨论过访问性犯罪者岛屿并在SpaceX接待他的计划",
-                "下周公布财报的Palantir等股票，其盈利势头强劲"
+                "下周将公布财报的Palantir及其他股票，其盈利势头强劲"
             ],
             "ES": [
                 "Todo lo que necesitas saber sobre Kevin Warsh, la elección de Trump para dirigir la Reserva Federal",
-                "El gobierno de EE. UU. cierra parcialmente; la votación en la Cámara de Representantes podría reabrirlo el lunes",
-                "¿Está la política de 'America First' empezando a ser contraproducente mientras los aliados de Washington actúan por su cuenta?",
-                "La junta directiva de Disney se reunirá la próxima semana para decidir el sucesor del CEO Bob Iger",
-                "Los archivos de Epstein muestran que Elon Musk aparentemente discutió planes para visitar la isla del delincuente sexual y recibirlo en SpaceX",
-                "Palantir y estas otras acciones que reportan la próxima semana tienen impulso de ganancias a su favor"
+                "El gobierno de EE. UU. se cierra parcialmente; la votación en la Cámara de Representantes podría reabrirlo para el lunes",
+                "Archivos de Epstein: Trump, Howard Lutnick, Steve Tisch entre los nombres prominentes que aparecen en la última publicación del Departamento de Justicia",
+                "La 'Gran Comida' se adelgaza con desinversiones y divisiones a medida que los consumidores se alejan de los snacks envasados",
+                "Se espera que la junta directiva de Disney se reúna la próxima semana para decidir el sucesor del CEO Bob Iger",
+                "Palantir y estas otras acciones que informan la próxima semana tienen el impulso de ganancias a su favor"
             ],
             "HI": [
-                "केविन वॉर्श के बारे में आपको जो कुछ जानने की ज़रूरत है, जिन्हें फेडरल रिजर्व का प्रमुख बनाने की ट्रंप की पसंद",
-                "अमेरिकी सरकार आंशिक रूप से बंद; सदन का वोट सोमवार तक इसे फिर से खोल सकता है",
-                "क्या 'अमेरिका फर्स्ट' उल्टा पड़ना शुरू हो गया है क्योंकि वाशिंगटन के सहयोगी अकेले चल रहे हैं?",
-                "डिज़्नी बोर्ड अगले हफ़्ते सीईओ बॉब इगर के उत्तराधिकारी तय करने के लिए बैठक करने की उम्मीद है",
-                "एपस्टीन की फ़ाइलों से पता चलता है कि एलोन मस्क ने यौन अपराधी के द्वीप की यात्रा की योजना पर और स्पेसएक्स में उनका स्वागत करने पर चर्चा की थी",
-                "पालंटिर और अन्य स्टॉक जो अगले सप्ताह रिपोर्ट कर रहे हैं, उन्हें कमाई की गति का समर्थन प्राप्त है"
+                "सब कुछ जो आपको केविन वॉर्श के बारे में जानना चाहिए, फेडरल रिजर्व का नेतृत्व करने के लिए ट्रम्प की पसंद",
+                "अमेरिकी सरकार आंशिक रूप से बंद; सोमवार तक इसे फिर से खोल सकती है सदन की वोटिंग",
+                "एपस्टीन की फाइलें: ट्रम्प, हावर्ड लुटिनिक, स्टीव टिश प्रमुख नामों में से हैं जो न्याय विभाग की नवीनतम रिहाई में दिखाई देते हैं",
+                "पैकेज्ड स्नैक्स से उपभोक्ताओं के दूर जाने के साथ 'बिग फूड' विनिवेश और विभाजन के साथ अधिक दुबला हो रहा है",
+                "डिज़्नी बोर्ड अगले सप्ताह सीईओ बॉब इगर के उत्तराधिकारी का फैसला करने के लिए मिलने की उम्मीद है",
+                "पालेंटिर और ये अन्य स्टॉक जो अगले सप्ताह रिपोर्ट कर रहे हैं, उनके पास कमाई की गति है"
             ],
             "ID": [
                 "Segala yang perlu Anda ketahui tentang Kevin Warsh, pilihan Trump untuk memimpin Federal Reserve",
-                "Pemerintah AS sebagian ditutup; pemungutan suara di DPR dapat membukanya kembali pada hari Senin",
-                "Apakah 'America First' mulai menjadi bumerang karena sekutu Washington bertindak sendiri?",
-                "Dewan direksi Disney diharapkan bertemu minggu depan untuk memutuskan pengganti CEO Bob Iger",
-                "File Epstein menunjukkan Elon Musk tampaknya mendiskusikan rencana untuk mengunjungi pulau pelaku pelecehan seksual dan menjamunya di SpaceX",
+                "Pemerintah AS sebagian ditutup; pemungutan suara DPR dapat membukanya kembali pada hari Senin",
+                "Berkas Epstein: Trump, Howard Lutnick, Steve Tisch di antara nama-nama terkemuka yang muncul dalam rilis terbaru Departemen Kehakiman",
+                "Big Food menjadi lebih ramping dengan divestasi dan pemisahan karena konsumen menjauh dari camilan kemasan",
+                "Dewan direksi Disney diharapkan bertemu minggu depan untuk memutuskan penerus CEO Bob Iger",
                 "Palantir dan saham lainnya yang melaporkan minggu depan memiliki momentum pendapatan di belakangnya"
             ],
             "AR": [
-                "كل ما تحتاج لمعرفته عن كيفن وارش، اختيار ترامب لقيادة الاحتياطي الفيدرالي",
-                "الحكومة الأمريكية تغلق جزئيًا؛ تصويت مجلس النواب قد يعيد فتحها بحلول يوم الاثنين",
-                "هل بدأت سياسة \"أمريكا أولاً\" تأتي بنتائج عكسية مع ذهاب حلفاء واشنطن بمفردهم؟",
+                "كل ما تحتاج لمعرفته عن كيفن وورش، اختيار ترامب لقيادة الاحتياطي الفيدرالي",
+                "الحكومة الأمريكية تغلق جزئياً؛ تصويت مجلس النواب قد يعيد فتحها بحلول يوم الاثنين",
+                "ملفات إبشتاين: ترامب، هوارد لوتنيك، ستيف تيش من بين الأسماء البارزة التي تظهر في أحدث إصدار لوزارة العدل",
+                "الغذاء الكبير يصبح أكثر رشاقة مع عمليات البيع والفصل حيث يبتعد المستهلكون عن الوجبات الخفيفة المعبأة",
                 "من المتوقع أن يجتمع مجلس إدارة ديزني الأسبوع المقبل لتحديد خليفة الرئيس التنفيذي بوب إيجر",
-                "تظهر ملفات إبشتاين أن إيلون ماسك ناقش على ما يبدو خططًا لزيارة جزيرة الجاني الجنسي واستضافته في سبيس إكس",
-                "بالانتير والأسهم الأخرى التي تقدم تقارير الأسبوع المقبل لديها زخم أرباح يدعمها"
+                "بالانتير وهذه الأسهم الأخرى التي تقدم تقاريرها الأسبوع المقبل لديها زخم أرباح خلفها"
             ]
         },
-        "last_updated": "2026-01-31T11:32:14.364069+00:00Z"
+        "last_updated": "2026-01-31T13:08:21.853473+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
