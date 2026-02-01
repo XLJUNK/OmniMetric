@@ -1,12 +1,12 @@
 {
-    "last_updated": "2026-02-01T21:27:25.550662+00:00",
-    "last_successful_update": "2026-02-01T21:27:25.550672+00:00",
-    "gms_score": 26,
+    "last_updated": "2026-02-01T21:35:28.546598+00:00",
+    "last_successful_update": "2026-02-01T21:35:28.546606+00:00",
+    "gms_score": 28,
     "sector_scores": {
         "STOCKS": 25,
         "CRYPTO": 25,
-        "FOREX": 25,
-        "COMMODITIES": 60
+        "FOREX": 35,
+        "COMMODITIES": 75
     },
     "market_data": {
         "CRYPTO_SENTIMENT": {
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 76673.91,
+            "price": 76996.58,
             "prev_price": 78621.12,
-            "daily_chg": -2.48,
-            "change_percent": -14.03,
+            "daily_chg": -2.07,
+            "change_percent": -13.67,
             "trend": "DOWN",
             "sparkline": [
                 90827.46,
@@ -604,14 +604,14 @@
                 84561.59,
                 84128.66,
                 78621.12,
-                76673.91
+                76996.58
             ]
         },
         "ETH": {
-            "price": 2302.05,
+            "price": 2310.29,
             "prev_price": 2445.09,
-            "daily_chg": -5.85,
-            "change_percent": -23.43,
+            "daily_chg": -5.51,
+            "change_percent": -23.16,
             "trend": "DOWN",
             "sparkline": [
                 3118.89,
@@ -635,14 +635,14 @@
                 2818.23,
                 2702.38,
                 2445.09,
-                2302.05
+                2310.29
             ]
         },
         "SOL": {
-            "price": 100.41,
+            "price": 100.76,
             "prev_price": 105.44,
-            "daily_chg": -4.77,
-            "change_percent": -19.75,
+            "daily_chg": -4.44,
+            "change_percent": -19.47,
             "trend": "DOWN",
             "sparkline": [
                 139.49,
@@ -666,7 +666,7 @@
                 117.61,
                 117.36,
                 105.44,
-                100.41
+                100.76
             ]
         },
         "DXY": {
@@ -701,10 +701,10 @@
             ]
         },
         "USDJPY": {
-            "price": 154.78,
+            "price": 154.73,
             "prev_price": 153.1,
-            "daily_chg": 1.1,
-            "change_percent": -0.25,
+            "daily_chg": 1.07,
+            "change_percent": -0.28,
             "trend": "UP",
             "sparkline": [
                 156.41,
@@ -728,14 +728,14 @@
                 154.34,
                 152.45,
                 153.1,
-                154.78
+                154.73
             ]
         },
         "EURUSD": {
             "price": 1.19,
             "prev_price": 1.2,
-            "daily_chg": -1.03,
-            "change_percent": -0.04,
+            "daily_chg": -0.73,
+            "change_percent": 0.27,
             "trend": "DOWN",
             "sparkline": [
                 1.17,
@@ -763,10 +763,10 @@
             ]
         },
         "USDINR": {
-            "price": 91.64,
+            "price": 91.9,
             "prev_price": 92.04,
-            "daily_chg": -0.43,
-            "change_percent": 0.15,
+            "daily_chg": -0.15,
+            "change_percent": 0.44,
             "trend": "DOWN",
             "sparkline": [
                 89.77,
@@ -790,7 +790,7 @@
                 91.71,
                 91.53,
                 92.04,
-                91.64
+                91.9
             ]
         },
         "USDSAR": {
@@ -825,10 +825,10 @@
             ]
         },
         "GOLD": {
-            "price": 4745.1,
+            "price": 5067.5,
             "prev_price": 5318.4,
-            "daily_chg": -10.78,
-            "change_percent": -6.59,
+            "daily_chg": -4.72,
+            "change_percent": -0.24,
             "trend": "DOWN",
             "sparkline": [
                 4370.1,
@@ -852,15 +852,15 @@
                 5079.9,
                 5301.6,
                 5318.4,
-                4745.1
+                5067.5
             ]
         },
         "OIL": {
-            "price": 65.21,
+            "price": 65.55,
             "prev_price": 65.42,
-            "daily_chg": -0.32,
-            "change_percent": 7.55,
-            "trend": "DOWN",
+            "daily_chg": 0.2,
+            "change_percent": 8.11,
+            "trend": "UP",
             "sparkline": [
                 57.95,
                 57.42,
@@ -883,14 +883,14 @@
                 62.39,
                 63.21,
                 65.42,
-                65.21
+                65.55
             ]
         },
         "COPPER": {
-            "price": 5.92,
+            "price": 6.01,
             "prev_price": 6.18,
-            "daily_chg": -4.07,
-            "change_percent": -1.0,
+            "daily_chg": -2.6,
+            "change_percent": 0.52,
             "trend": "DOWN",
             "sparkline": [
                 5.73,
@@ -914,14 +914,14 @@
                 5.83,
                 5.89,
                 6.18,
-                5.92
+                6.01
             ]
         },
         "NATGAS": {
-            "price": 4.35,
+            "price": 4.09,
             "prev_price": 3.92,
-            "daily_chg": 11.13,
-            "change_percent": -35.97,
+            "daily_chg": 4.44,
+            "change_percent": -39.82,
             "trend": "UP",
             "sparkline": [
                 3.97,
@@ -945,7 +945,7 @@
                 6.95,
                 7.46,
                 3.92,
-                4.35
+                4.09
             ]
         },
         "MOVE": {
@@ -1042,40 +1042,40 @@
             ]
         },
         "COPPER_GOLD": {
-            "price": 1.25,
+            "price": 1.19,
             "change_percent": 0,
             "trend": "RISK-OFF",
             "sparkline": [
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19
             ]
         }
     },
@@ -1356,10 +1356,94 @@
             "score": 26
         },
         {
-            "date": "2026-02-01T21:27:25Z",
-            "score": 26
+            "date": "2026-02-01T21:35:28Z",
+            "score": 28
         }
     ],
-    "intelligence": null,
+    "intelligence": {
+        "news": [
+            {
+                "title": "Speaker Johnson: 'Confident' government shutdown will end by Tuesday",
+                "link": "https://www.cnbc.com/2026/02/01/government-shutdown-mike-johnson.html",
+                "isoDate": "2026-02-01T17:07:06+00:00Z"
+            },
+            {
+                "title": "'Melania' earns a surprising $7 million, best non-music documentary debut in a decade",
+                "link": "https://www.cnbc.com/2026/02/01/melania-documentary-posts-7-million-domestic-opening.html",
+                "isoDate": "2026-02-01T16:34:11+00:00Z"
+            },
+            {
+                "title": "Epstein files: Ro Khanna says DOJ's latest release is 'not good enough'",
+                "link": "https://www.cnbc.com/2026/02/01/epstein-files-ro-khanna-says-dojs-release-is-not-good-enough.html",
+                "isoDate": "2026-02-01T19:04:50+00:00Z"
+            },
+            {
+                "title": "United Arab Emirates' 'Spy Sheikh' bought secret stake in Trump crypto company: WSJ",
+                "link": "https://www.cnbc.com/2026/02/01/spy-sheikh-stake-trump-crypto.html",
+                "isoDate": "2026-02-01T20:36:33+00:00Z"
+            },
+            {
+                "title": "Political risk: How Trump 2.0 is affecting investment in U.S. assets",
+                "link": "https://www.cnbc.com/2026/02/01/political-risk-how-trump-2point0-is-affecting-investment-in-us-assets.html",
+                "isoDate": "2026-02-01T13:47:00+00:00Z"
+            },
+            {
+                "title": "Elon Musk is stressing robots over cars. Here are three humanoid parts suppliers that Morgan Stanley recommends",
+                "link": "https://www.cnbc.com/2026/02/01/musk-is-stressing-robots-over-cars-these-suppliers-make-humanoid-parts.html",
+                "isoDate": "2026-02-01T13:36:17+00:00Z"
+            }
+        ],
+        "translations": {
+            "JP": [
+                "ジョンソン下院議長：政府閉鎖は火曜日までに終了すると「確信」",
+                "『メラニア』が予想外の700万ドルを獲得、10年間で最高の非音楽ドキュメンタリーデビュー",
+                "エプスタイン文書：ロー・カーナ下院議員、DOJの最新公開は「不十分」と発言",
+                "UAEの「スパイシェイク」がトランプ氏の暗号資産会社に秘密裏に株式購入：WSJ",
+                "政治リスク：トランプ2.0は米国資産への投資にどう影響するか",
+                "イーロン・マスク氏、自動車よりロボットを重視：モルガン・スタンレーが推奨する3つの人型ロボット部品サプライヤー"
+            ],
+            "CN": [
+                "约翰逊议长：‘有信心’政府停摆将在周二结束",
+                "《梅拉尼娅》意外斩获700万美元，创十年来最佳非音乐纪录片首秀",
+                "爱泼斯坦文件：罗·康纳称司法部最新公布的材料‘不够好’",
+                "阿联酋‘间谍酋长’收购特朗普加密货币公司秘密股权：华尔街日报",
+                "政治风险：特朗普2.0如何影响美国资产投资",
+                "埃隆·马斯克：机器人比汽车更受重视，摩根士丹利推荐三家人形机器人零部件供应商"
+            ],
+            "ES": [
+                "Presidente Johnson: 'Confiado' en que el cierre del gobierno terminará el martes",
+                "'Melania' gana sorprendentes $7 millones, el mejor debut de un documental no musical en una década",
+                "Archivos Epstein: Ro Khanna dice que la última publicación del DOJ 'no es lo suficientemente buena'",
+                "El 'Jeque Espía' de los Emiratos Árabes Unidos compró una participación secreta en la empresa de criptomonedas de Trump: WSJ",
+                "Riesgo político: Cómo Trump 2.0 está afectando la inversión en activos de EE. UU.",
+                "Elon Musk está priorizando los robots sobre los autos. Aquí hay tres proveedores de piezas humanoides que Morgan Stanley recomienda"
+            ],
+            "HI": [
+                "स्पीकर जॉनसन: 'आत्मविश्वास' से कहा, सरकारी शटडाउन मंगलवार तक खत्म हो जाएगा",
+                "'मेलानिया' ने चौंकाने वाले $7 मिलियन कमाए, एक दशक में किसी गैर-संगीत डॉक्यूमेंट्री की सबसे अच्छी शुरुआत",
+                "एपस्टीन फाइलें: रो खन्ना का कहना है कि डीओजे की नवीनतम रिहाई 'पर्याप्त अच्छी नहीं है'",
+                "संयुक्त अरब अमीरात के 'स्पाई शेख' ने ट्रंप की क्रिप्टो कंपनी में गुप्त हिस्सेदारी खरीदी: WSJ",
+                "राजनीतिक जोखिम: ट्रंप 2.0 अमेरिकी संपत्तियों में निवेश को कैसे प्रभावित कर रहा है",
+                "एलोन मस्क कारों से ज़्यादा रोबोट पर ज़ोर दे रहे हैं। यहाँ तीन ह्यूमनॉइड पार्ट सप्लायर दिए गए हैं जिनकी मॉर्गन स्टेनली सिफ़ारिश करता है"
+            ],
+            "ID": [
+                "Pembicara Johnson: 'Yakin' penutupan pemerintahan akan berakhir pada Selasa",
+                "'Melania' menghasilkan $7 juta yang mengejutkan, debut dokumenter non-musik terbaik dalam satu dekade",
+                "File Epstein: Ro Khanna mengatakan rilis terbaru DOJ 'tidak cukup baik'",
+                "'Spy Sheikh' Uni Emirat Arab membeli saham rahasia di perusahaan kripto Trump: WSJ",
+                "Risiko politik: Bagaimana Trump 2.0 memengaruhi investasi di aset AS",
+                "Elon Musk lebih fokus pada robot daripada mobil. Berikut adalah tiga pemasok suku cadang humanoid yang direkomendasikan Morgan Stanley"
+            ],
+            "AR": [
+                "رئيس مجلس النواب جونسون: 'واثقون' من انتهاء إغلاق الحكومة بحلول الثلاثاء",
+                "'ميلانيا' تحقق 7 ملايين دولار مفاجئة، أفضل ظهور أول وثائقي غير موسيقي في عقد",
+                "ملفات إبشتاين: رو خانا يقول إن أحدث إصدار لوزارة العدل 'ليس جيدًا بما فيه الكفاية'",
+                "'الشيخ الجاسوس' الإماراتي اشترى حصة سرية في شركة ترامب للعملات المشفرة: وول ستريت جورنال",
+                "المخاطر السياسية: كيف يؤثر ترامب 2.0 على الاستثمار في الأصول الأمريكية",
+                "إيلون ماسك يركز على الروبوتات أكثر من السيارات. إليك ثلاثة موردين لأجزاء الروبوتات الشبيهة بالبشر توصي بهم مورجان ستانلي"
+            ]
+        },
+        "last_updated": "2026-02-01T21:35:28.546140+00:00Z"
+    },
     "system_status": "OPERATIONAL"
 }
