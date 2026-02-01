@@ -1,11 +1,11 @@
 {
-    "last_updated": "2026-02-01T03:35:38.588165+00:00",
-    "last_successful_update": "2026-02-01T03:35:38.588172+00:00",
-    "gms_score": 30,
+    "last_updated": "2026-02-01T04:05:07.578335+00:00",
+    "last_successful_update": "2026-02-01T04:05:07.578341+00:00",
+    "gms_score": 29,
     "sector_scores": {
         "STOCKS": 30,
         "CRYPTO": 25,
-        "FOREX": 55,
+        "FOREX": 45,
         "COMMODITIES": 60
     },
     "market_data": {
@@ -546,13 +546,12 @@
             ]
         },
         "NIFTY": {
-            "price": 25320.65,
-            "prev_price": 25418.9,
-            "daily_chg": -0.39,
-            "change_percent": 1.09,
+            "price": 25307.5,
+            "prev_price": 25320.65,
+            "daily_chg": -0.05,
+            "change_percent": 0.52,
             "trend": "DOWN",
             "sparkline": [
-                25938.85,
                 26129.6,
                 26146.55,
                 26328.55,
@@ -573,14 +572,15 @@
                 25175.4,
                 25342.75,
                 25418.9,
-                25320.65
+                25320.65,
+                25307.5
             ]
         },
         "BTC": {
-            "price": 78666.15,
+            "price": 78767.7,
             "prev_price": 84128.66,
-            "daily_chg": -6.49,
-            "change_percent": -11.71,
+            "daily_chg": -6.37,
+            "change_percent": -11.6,
             "trend": "DOWN",
             "sparkline": [
                 90386.65,
@@ -604,14 +604,14 @@
                 89184.57,
                 84561.59,
                 84128.66,
-                78666.15
+                78767.7
             ]
         },
         "ETH": {
-            "price": 2442.59,
+            "price": 2442.19,
             "prev_price": 2702.38,
-            "daily_chg": -9.61,
-            "change_percent": -19.18,
+            "daily_chg": -9.63,
+            "change_percent": -19.19,
             "trend": "DOWN",
             "sparkline": [
                 3082.4,
@@ -635,14 +635,14 @@
                 3006.61,
                 2818.23,
                 2702.38,
-                2442.59
+                2442.19
             ]
         },
         "SOL": {
-            "price": 104.91,
+            "price": 104.85,
             "prev_price": 117.36,
-            "daily_chg": -10.61,
-            "change_percent": -17.43,
+            "daily_chg": -10.66,
+            "change_percent": -17.48,
             "trend": "DOWN",
             "sparkline": [
                 135.73,
@@ -666,7 +666,7 @@
                 125.12,
                 117.61,
                 117.36,
-                104.91
+                104.85
             ]
         },
         "DXY": {
@@ -701,10 +701,10 @@
             ]
         },
         "USDJPY": {
-            "price": 154.73,
+            "price": 154.78,
             "prev_price": 153.1,
-            "daily_chg": 1.07,
-            "change_percent": -0.28,
+            "daily_chg": 1.1,
+            "change_percent": -0.25,
             "trend": "UP",
             "sparkline": [
                 156.41,
@@ -728,14 +728,14 @@
                 154.34,
                 152.45,
                 153.1,
-                154.73
+                154.78
             ]
         },
         "EURUSD": {
             "price": 1.19,
             "prev_price": 1.2,
-            "daily_chg": -0.73,
-            "change_percent": 0.27,
+            "daily_chg": -1.03,
+            "change_percent": -0.04,
             "trend": "DOWN",
             "sparkline": [
                 1.17,
@@ -763,10 +763,10 @@
             ]
         },
         "USDINR": {
-            "price": 91.9,
+            "price": 91.64,
             "prev_price": 92.04,
-            "daily_chg": -0.15,
-            "change_percent": 0.44,
+            "daily_chg": -0.43,
+            "change_percent": 0.15,
             "trend": "DOWN",
             "sparkline": [
                 89.77,
@@ -790,7 +790,7 @@
                 91.71,
                 91.53,
                 92.04,
-                91.9
+                91.64
             ]
         },
         "USDSAR": {
@@ -1107,22 +1107,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS remains Defensive at 30, with flat momentum. DXY (Dollar strength/Liquidity) is rising, signaling tightening global liquidity, while VIX (Fear/Volatility) is up, reflecting market apprehension. HY spreads are widening. Despite clear risk-off signals and broad asset sell-offs (crypto, gold, copper), the MOVE index (bond volatility) remains stable. This suggests underlying market stability, but a defensive posture is still warranted. Capital preservation is key.",
+        "content": "GMS status is Defensive (Score 29). Rising DXY (Dollar strength/Liquidity) and VIX (Fear/Volatility) signal broad risk aversion. Net Liquidity is marginally down, and HY spreads widen. While market momentum is flat, this defensive regime persists. However, steep crypto/gold declines could indicate localized capitulation, potentially setting a short-term floor if not systemic. Maintain caution and monitor liquidity.",
         "reports": {
-            "JP": "GMSスコア30は防御的で、勢いは横ばいです。DXY（ドル高/流動性）は上昇し、世界的な流動性引き締めを示唆。VIX（恐怖/変動性）も上昇し、市場の懸念を反映。HYスプレッドも拡大。広範なリスクオフと資産売却（暗号通貨、金、銅）にもかかわらず、MOVE指数（債券変動性）は安定。これは基礎的な市場の安定性を示唆しますが、防御的な姿勢が引き続き必要です。資本保全が鍵です。",
-            "EN": "GMS remains Defensive at 30, with flat momentum. DXY (Dollar strength/Liquidity) is rising, signaling tightening global liquidity, while VIX (Fear/Volatility) is up, reflecting market apprehension. HY spreads are widening. Despite clear risk-off signals and broad asset sell-offs (crypto, gold, copper), the MOVE index (bond volatility) remains stable. This suggests underlying market stability, but a defensive posture is still warranted. Capital preservation is key.",
-            "CN": "GMS评分30，处于防御模式，动能持平。DXY（美元走强/流动性）上升，表明全球流动性收紧；VIX（恐惧/波动性）亦走高，反映市场担忧。高收益利差扩大。尽管风险偏好明显下降，资产普遍抛售（加密货币、黄金、铜），但MOVE指数（债券波动性）保持稳定。这表明市场存在潜在稳定性，但仍需保持防御姿态。资本保全是关键。",
-            "ES": "GMS permanece en Defensivo con 30 y momentum plano. El DXY (fortaleza del dólar/liquidez) sube, indicando ajuste de liquidez global, mientras el VIX (miedo/volatilidad) aumenta, reflejando aprensión del mercado. Los diferenciales HY se amplían. A pesar de claras señales de aversión al riesgo y ventas generalizadas (cripto, oro, cobre), el índice MOVE (volatilidad de bonos) se mantiene estable. Esto sugiere estabilidad subyacente, pero una postura defensiva es prudente. La preservación del capital es clave.",
-            "HI": "GMS स्कोर 30 पर रक्षात्मक बना हुआ है, गति सपाट है। DXY (डॉलर मजबूती/तरलता) बढ़ रहा है, जो वैश्विक तरलता में कमी का संकेत है, जबकि VIX (भय/अस्थिरता) ऊपर है, जो बाजार की चिंता को दर्शाता है। HY स्प्रेड बढ़ रहे हैं। स्पष्ट जोखिम-बंद संकेतों और व्यापक परिसंपत्ति बिकवाली (क्रिप्टो, सोना, तांबा) के बावजूद, MOVE सूचकांक (बॉन्ड अस्थिरता) स्थिर है। यह अंतर्निहित बाजार स्थिरता का सुझाव देता है, लेकिन एक रक्षात्मक रुख अभी भी उचित है। पूंजी संरक्षण महत्वपूर्ण है।",
-            "ID": "GMS tetap Defensif di 30, dengan momentum datar. DXY (kekuatan Dolar/Likuiditas) naik, menandakan pengetatan likuiditas global, sementara VIX (Ketakutan/Volatilitas) juga naik, mencerminkan kekhawatiran pasar. Spread HY melebar. Meskipun sinyal risk-off jelas dan penjualan aset meluas (kripto, emas, tembaga), indeks MOVE (volatilitas obligasi) tetap stabil. Ini menunjukkan stabilitas pasar yang mendasari, tetapi sikap defensif tetap diperlukan. Pelestarian modal adalah kunci.",
-            "AR": "GMS لا يزال دفاعيًا عند 30، مع زخم ثابت. يرتفع مؤشر DXY (قوة الدولار/السيولة)، مما يشير إلى تشديد السيولة العالمية، بينما يرتفع مؤشر VIX (الخوف/التقلب)، مما يعكس قلق السوق. فروقات HY تتسع. على الرغم من إشارات الابتعاد عن المخاطرة الواضحة وعمليات البيع الواسعة للأصول (العملات المشفرة، الذهب، النحاس)، يظل مؤشر MOVE (تقلب السندات) مستقرًا. هذا يشير إلى استقرار السوق الأساسي، ولكن لا يزال الموقف الدفاعي مبررًا. الحفاظ على رأس المال أمر أساسي."
+            "JP": "GMSステータスは「防御的」（スコア29）。DXY（ドル高/流動性）とVIX（恐怖/変動性）の上昇が広範なリスク回避を示唆。流動性は微減し、HYスプレッドが拡大。市場の勢いは横ばいだが、防御的レジームは続く。しかし、暗号資産や金の急落は局所的な降伏を示唆し、システム的でなければ短期的な底打ちとなる可能性。警戒を維持し、流動性を注視。",
+            "EN": "GMS status is Defensive (Score 29). Rising DXY (Dollar strength/Liquidity) and VIX (Fear/Volatility) signal broad risk aversion. Net Liquidity is marginally down, and HY spreads widen. While market momentum is flat, this defensive regime persists. However, steep crypto/gold declines could indicate localized capitulation, potentially setting a short-term floor if not systemic. Maintain caution and monitor liquidity.",
+            "CN": "GMS状态为防御（得分29）。DXY（美元走强/流动性）和VIX（恐惧/波动性）上升，预示普遍风险规避。净流动性微降，高收益利差扩大。市场动能持平，防御性态势持续。然而，加密货币/黄金的急剧下跌可能表明局部投降，若非系统性，或形成短期底部。保持谨慎，密切关注流动性。",
+            "ES": "El GMS está en estado Defensivo (Puntuación 29). El DXY (fortaleza del dólar/liquidez) y el VIX (miedo/volatilidad) en aumento señalan aversión al riesgo. La liquidez neta disminuye levemente y los diferenciales de alto rendimiento se amplían. El momentum es plano, pero el régimen defensivo persiste. Caídas bruscas en cripto/oro pueden indicar capitulación localizada, estableciendo un piso a corto plazo si no es sistémico. Mantenga cautela y observe la liquidez.",
+            "HI": "जीएमएस स्थिति रक्षात्मक है (स्कोर 29)। डीएक्सवाई (डॉलर मजबूती/तरलता) और वीआईएक्स (भय/अस्थिरता) में वृद्धि व्यापक जोखिम से बचाव का संकेत है। नेट तरलता थोड़ी कम हुई, हाई यील्ड स्प्रेड बढ़े। बाजार की गति सपाट है, पर रक्षात्मक व्यवस्था जारी है। क्रिप्टो/सोने की तेज गिरावट स्थानीय कैपिटुलेशन दिखा सकती है, यदि यह प्रणालीगत नहीं तो यह अल्पकालिक तल बना सकती है। सतर्क रहें और तरलता पर नजर रखें।",
+            "ID": "Status GMS adalah Defensif (Skor 29). Kenaikan DXY (kekuatan Dolar/Likuiditas) dan VIX (Ketakutan/Volatilitas) menandakan penghindaran risiko luas. Likuiditas Bersih sedikit menurun, dan spread HY melebar. Momentum pasar datar, namun rezim defensif ini bertahan. Namun, penurunan tajam kripto/emas bisa menunjukkan kapitulasi lokal, berpotensi membentuk dasar jangka pendek jika tidak sistemik. Tetap waspada dan pantau likuiditas.",
+            "AR": "وضع GMS دفاعي (النتيجة 29). ارتفاع مؤشر DXY (قوة الدولار/السيولة) و VIX (الخوف/التقلب) يشير إلى نفور واسع من المخاطر. السيولة الصافية انخفضت بشكل هامشي، وفروقات العائد المرتفع تتسع. زخم السوق ثابت، لكن النظام الدفاعي مستمر. ومع ذلك، قد يشير الانخفاض الحاد في العملات المشفرة/الذهب إلى استسلام موضعي، مما قد يحدد قاعًا قصير الأجل إذا لم يكن منهجيًا. حافظ على الحذر وراقب السيولة."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-29T03:09:55Z",
-            "score": 34
-        },
         {
             "date": "2026-01-29T04:47:12Z",
             "score": 33
@@ -1358,6 +1354,10 @@
         {
             "date": "2026-02-01T03:35:38Z",
             "score": 30
+        },
+        {
+            "date": "2026-02-01T04:05:07Z",
+            "score": 29
         }
     ],
     "intelligence": {
@@ -1395,55 +1395,55 @@
         ],
         "translations": {
             "JP": [
-                "ビットコイン、市場が銀の売りとトランプ氏のFRB議長候補を消化し7万9000ドルを下回る",
-                "エプスタイン氏の訴訟書類：トランプ氏、ハワード・ラトニック氏、スティーブ・ティッシュ氏らが司法省最新公開資料に登場",
+                "ビットコイン、銀の売りとトランプ氏のFRB議長人事消化で7万9000ドル割れ",
+                "エプスタイン氏関連文書：トランプ氏、ハワード・ルットニック氏、スティーブ・ティッシュ氏らが司法省最新公開文書に著名人として登場",
                 "米政府一部閉鎖、月曜までに再開か、下院採決次第",
-                "連邦裁判事、ミネソタ州でのICE（移民税関執行局）作戦「メトロ・サージ」終了の申し立てを却下",
-                "Nvidia CEOの黄氏、OpenAIへの不満を否定、「兆ドルディナー」で「巨額」投資計画を明かす",
-                "ゴールドマン、決算前に買うべき5銘柄、手遅れになる前に"
+                "連邦判事、ミネソタ州でのICE（移民税関執行局）作戦「メトロ・サージ」終了の申し立てを却下",
+                "Nvidia CEOの黄氏、OpenAIへの不満を否定、「1兆ドルディナー」で「巨額」投資計画を表明",
+                "ゴールドマン、決算前に買うべき5銘柄、時間切れ前に推奨"
             ],
             "CN": [
-                "比特币跌破7.9万美元，市场消化白银抛售及特朗普的联储主席人选",
-                "爱泼斯坦文件：特朗普、霍华德·卢特尼克、史蒂夫·蒂施等知名人士出现在最新司法部公布的文件中",
-                "美国政府部分停摆；众议院投票可能在周一前恢复运作",
-                "联邦法官驳回结束明尼苏达州ICE“地铁搜查行动”的请求",
-                "英伟达CEO黄仁勋否认对OpenAI不满，称计划在“万亿美元晚宴”上进行“巨额”投资",
-                "高盛：在财报季来临前买入这五只股票，以免为时过晚"
+                "比特币跌破79,000美元，市场消化白银抛售和特朗普的联储主席人选",
+                "爱泼斯坦文件：特朗普、霍华德·卢特尼克、史蒂夫·蒂施等知名人士出现在最新司法部解密文件中",
+                "美国政府部分停摆；众议院投票可能在周一重新开放",
+                "联邦法官驳回结束明尼苏达州ICE（移民与海关执法局）“地铁突击行动”的请求",
+                "英伟达CEO黄仁勋否认对OpenAI不满，称“万亿美元晚宴”上计划进行“巨额”投资",
+                "高盛：财报季前是买入这五只股票的好时机，切勿错过"
             ],
             "ES": [
-                "Bitcoin cae por debajo de los $79,000 mientras el mercado digiere la venta de plata y la elección de Trump como presidente de la Fed",
+                "Bitcoin cae por debajo de $79,000 mientras el mercado digiere la venta de plata y la elección de Trump como presidente de la Fed",
                 "Archivos de Epstein: Trump, Howard Lutnick, Steve Tisch entre los nombres prominentes que aparecen en la última publicación del Departamento de Justicia",
-                "Gobierno de EE. UU. se cierra parcialmente; la votación en la Cámara de Representantes podría reabrirlo para el lunes",
-                "Juez federal niega solicitud para poner fin a la Operación Metro Surge del ICE en Minnesota",
-                "CEO de Nvidia, Huang, niega estar descontento con OpenAI, dice que se planea una inversión 'enorme' en una 'cena de billones de dólares'",
-                "Goldman dice que compren estas cinco acciones antes de los resultados, antes de que sea demasiado tarde"
+                "El gobierno de EE. UU. se cierra parcialmente; la votación en la Cámara podría reabrirlo para el lunes",
+                "Juez federal niega intento de poner fin a la Operación Metro Surge de ICE en Minnesota",
+                "CEO de Nvidia, Huang, niega estar insatisfecho con OpenAI y dice que planea una inversión 'enorme' en una 'cena de billones de dólares'",
+                "Goldman dice que compre estas cinco acciones antes de los resultados, antes de que sea demasiado tarde"
             ],
             "HI": [
-                "बिटकॉइन 79,000 डॉलर से नीचे गिरा, बाज़ार में चांदी की बिकवाली और ट्रंप की फेड अध्यक्ष की पसंद पर विचार",
-                "एपस्टीन फ़ाइलें: ट्रंप, हॉवर्ड लुटनिक, स्टीव टिस्क नवीनतम न्याय विभाग की रिलीज़ में प्रमुख नामों में शामिल",
-                "अमेरिकी सरकार आंशिक रूप से बंद; सदन का वोट सोमवार तक फिर से खोल सकता है",
-                "संघीय न्यायाधीश ने मिनेसोटा में ICE ऑपरेशन मेट्रो सर्ज को समाप्त करने की बोली से इनकार किया",
-                "एनवीडिया के सीईओ हुआंग ने ओपनएआई से नाखुश होने से इनकार किया, कहा 'खरबों डॉलर की डिनर' में 'भारी' निवेश की योजना",
-                "गोल्डमैन का कहना है कि कमाई से पहले इन पांच शेयरों को खरीदें, इससे पहले कि बहुत देर हो जाए"
+                "बिटकॉइन 79,000 डॉलर से नीचे गिरा, बाज़ार चांदी की बिकवाली और ट्रंप की फेड अध्यक्ष की पसंद को पचा रहा है",
+                "एपस्टीन फाइलें: ट्रंप, हॉवर्ड लुटिनिक, स्टीव टिश्क नवीनतम न्याय विभाग की विज्ञप्ति में दिखाई देने वाले प्रमुख नामों में से",
+                "अमेरिकी सरकार आंशिक रूप से बंद; सोमवार तक इसे फिर से खोल सकती है सदन की वोटिंग",
+                "संघीय न्यायाधीश ने मिनेसोटा में ICE ऑपरेशन मेट्रो सर्ज को समाप्त करने की अर्जी खारिज की",
+                "एनवीडिया के सीईओ हुआंग ने OpenAI से असंतुष्ट होने से इनकार किया, कहा 'खरबों डॉलर की डिनर' में 'भारी' निवेश की योजना",
+                "गोल्डमैन ने कहा कि कमाई से पहले इन पांच शेयरों को खरीदें, इससे पहले कि बहुत देर हो जाए"
             ],
             "ID": [
-                "Bitcoin turun di bawah $79.000 seiring pasar mencerna penjualan perak, pilihan Trump sebagai ketua The Fed",
+                "Bitcoin turun di bawah $79.000 saat pasar mencerna penjualan perak, pilihan Trump sebagai ketua Fed",
                 "File Epstein: Trump, Howard Lutnick, Steve Tisch di antara nama-nama terkemuka yang muncul dalam rilis terbaru Departemen Kehakiman",
-                "Pemerintah AS sebagian ditutup; pemungutan suara DPR dapat membukanya kembali pada hari Senin",
+                "Pemerintah AS sebagian ditutup; pemungutan suara DPR bisa membukanya kembali pada hari Senin",
                 "Hakim federal menolak upaya untuk mengakhiri Operasi Metro Surge ICE di Minnesota",
-                "CEO Nvidia Huang membantah tidak senang dengan OpenAI, mengatakan investasi 'besar' direncanakan di 'makan malam triliunan dolar'",
-                "Goldman mengatakan beli lima saham ini sebelum laporan keuangan, sebelum terlambat"
+                "CEO Nvidia Huang menyangkal tidak puas dengan OpenAI, mengatakan investasi 'besar' direncanakan pada 'makan malam triliunan dolar'",
+                "Goldman mengatakan beli lima saham ini sebelum laporan laba, sebelum terlambat"
             ],
             "AR": [
-                "البيتكوين ينخفض دون 79,000 دولار مع استيعاب السوق لعمليات بيع الفضة واختيار ترامب لمنصب رئيس الفيدرالي",
-                "ملفات إبستاين: ترامب، هوارد لوتنيك، ستيف تيش من بين الأسماء البارزة التي تظهر في أحدث إصدار لوزارة العدل",
-                "الحكومة الأمريكية تغلق جزئيًا؛ تصويت مجلس النواب قد يعيد فتحها بحلول يوم الاثنين",
-                "قاضٍ فيدرالي يرفض محاولة إنهاء عملية مترو سيرج التابعة لوكالة الهجرة والجمارك في مينيسوتا",
-                "الرئيس التنفيذي لشركة Nvidia هوانغ ينفي عدم رضاه عن OpenAI، ويقول إن استثمارًا \"ضخمًا\" مخطط له في \"عشاء بمليارات الدولارات\"",
-                "جولدمان تقول اشتروا هذه الأسهم الخمسة قبل الأرباح قبل فوات الأوان"
+                "بيتكوين ينخفض دون 79,000 دولار مع استيعاب السوق لبيع الفضة واختيار ترامب لرئاسة الفيدرالي",
+                "ملفات إبستين: ترامب، هوارد لوتنيك، ستيف تييش من بين الأسماء البارزة التي تظهر في أحدث إصدار لوزارة العدل",
+                "الحكومة الأمريكية تغلق جزئيًا؛ تصويت مجلس النواب قد يعيد فتحها بحلول الاثنين",
+                "قاضٍ فيدرالي يرفض محاولة إنهاء عملية مترو سيرج التابعة لهجرة الجمارك (ICE) في مينيسوتا",
+                "رئيس انفيديا هوانغ ينفي عدم رضاه عن OpenAI، ويقول إن استثمارًا \"ضخمًا\" مخطط له في \"عشاء بتريليونات الدولارات\"",
+                "جولدمان يقول اشتروا هذه الأسهم الخمسة قبل الأرباح قبل فوات الأوان"
             ]
         },
-        "last_updated": "2026-02-01T03:35:38.587636+00:00Z"
+        "last_updated": "2026-02-01T04:05:07.577855+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
