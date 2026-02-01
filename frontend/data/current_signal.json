@@ -1,12 +1,12 @@
 {
-    "last_updated": "2026-02-01T22:38:52.036932+00:00",
-    "last_successful_update": "2026-02-01T22:38:52.036939+00:00",
-    "gms_score": 28,
+    "last_updated": "2026-02-01T23:36:58.422649+00:00",
+    "last_successful_update": "2026-02-01T23:36:58.422675+00:00",
+    "gms_score": 26,
     "sector_scores": {
         "STOCKS": 25,
         "CRYPTO": 25,
-        "FOREX": 35,
-        "COMMODITIES": 75
+        "FOREX": 25,
+        "COMMODITIES": 60
     },
     "market_data": {
         "CRYPTO_SENTIMENT": {
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 77323.62,
+            "price": 77142.62,
             "prev_price": 78621.12,
-            "daily_chg": -1.65,
-            "change_percent": -13.3,
+            "daily_chg": -1.88,
+            "change_percent": -13.5,
             "trend": "DOWN",
             "sparkline": [
                 90827.46,
@@ -604,14 +604,14 @@
                 84561.59,
                 84128.66,
                 78621.12,
-                77323.62
+                77142.62
             ]
         },
         "ETH": {
-            "price": 2318.23,
+            "price": 2272.11,
             "prev_price": 2445.09,
-            "daily_chg": -5.19,
-            "change_percent": -22.9,
+            "daily_chg": -7.07,
+            "change_percent": -24.43,
             "trend": "DOWN",
             "sparkline": [
                 3118.89,
@@ -635,14 +635,14 @@
                 2818.23,
                 2702.38,
                 2445.09,
-                2318.23
+                2272.11
             ]
         },
         "SOL": {
-            "price": 101.94,
+            "price": 100.69,
             "prev_price": 105.44,
-            "daily_chg": -3.33,
-            "change_percent": -18.53,
+            "daily_chg": -4.5,
+            "change_percent": -19.52,
             "trend": "DOWN",
             "sparkline": [
                 139.49,
@@ -666,17 +666,16 @@
                 117.61,
                 117.36,
                 105.44,
-                101.94
+                100.69
             ]
         },
         "DXY": {
-            "price": 97.15,
-            "prev_price": 96.28,
-            "daily_chg": 0.9,
-            "change_percent": 0.11,
+            "price": 97.28,
+            "prev_price": 96.99,
+            "daily_chg": 0.29,
+            "change_percent": 1.1,
             "trend": "UP",
             "sparkline": [
-                98.24,
                 98.28,
                 98.42,
                 98.27,
@@ -697,14 +696,15 @@
                 96.22,
                 96.45,
                 96.28,
-                97.15
+                96.99,
+                97.28
             ]
         },
         "USDJPY": {
-            "price": 154.73,
+            "price": 154.78,
             "prev_price": 153.1,
-            "daily_chg": 1.07,
-            "change_percent": -0.28,
+            "daily_chg": 1.1,
+            "change_percent": -0.25,
             "trend": "UP",
             "sparkline": [
                 156.41,
@@ -728,14 +728,14 @@
                 154.34,
                 152.45,
                 153.1,
-                154.73
+                154.78
             ]
         },
         "EURUSD": {
             "price": 1.19,
             "prev_price": 1.2,
-            "daily_chg": -0.73,
-            "change_percent": 0.27,
+            "daily_chg": -1.05,
+            "change_percent": -0.05,
             "trend": "DOWN",
             "sparkline": [
                 1.17,
@@ -763,10 +763,10 @@
             ]
         },
         "USDINR": {
-            "price": 91.9,
+            "price": 91.64,
             "prev_price": 92.04,
-            "daily_chg": -0.15,
-            "change_percent": 0.44,
+            "daily_chg": -0.43,
+            "change_percent": 0.15,
             "trend": "DOWN",
             "sparkline": [
                 89.77,
@@ -790,7 +790,7 @@
                 91.71,
                 91.53,
                 92.04,
-                91.9
+                91.64
             ]
         },
         "USDSAR": {
@@ -825,13 +825,12 @@
             ]
         },
         "GOLD": {
-            "price": 5067.5,
-            "prev_price": 5318.4,
-            "daily_chg": -4.72,
-            "change_percent": -0.24,
-            "trend": "DOWN",
+            "price": 4751.3,
+            "prev_price": 4713.9,
+            "daily_chg": 0.79,
+            "change_percent": -6.47,
+            "trend": "UP",
             "sparkline": [
-                4370.1,
                 4325.6,
                 4314.4,
                 4436.9,
@@ -852,17 +851,17 @@
                 5079.9,
                 5301.6,
                 5318.4,
-                5067.5
+                4713.9,
+                4751.3
             ]
         },
         "OIL": {
-            "price": 65.55,
-            "prev_price": 65.42,
-            "daily_chg": 0.2,
-            "change_percent": 8.11,
-            "trend": "UP",
+            "price": 63.44,
+            "prev_price": 65.21,
+            "daily_chg": -2.71,
+            "change_percent": 1.68,
+            "trend": "DOWN",
             "sparkline": [
-                57.95,
                 57.42,
                 57.32,
                 58.32,
@@ -883,17 +882,17 @@
                 62.39,
                 63.21,
                 65.42,
-                65.55
+                65.21,
+                63.44
             ]
         },
         "COPPER": {
-            "price": 6.01,
-            "prev_price": 6.18,
-            "daily_chg": -2.6,
-            "change_percent": 0.52,
+            "price": 5.79,
+            "prev_price": 5.9,
+            "daily_chg": -1.78,
+            "change_percent": -0.63,
             "trend": "DOWN",
             "sparkline": [
-                5.73,
                 5.63,
                 5.64,
                 5.92,
@@ -914,17 +913,17 @@
                 5.83,
                 5.89,
                 6.18,
-                6.01
+                5.9,
+                5.79
             ]
         },
         "NATGAS": {
-            "price": 4.09,
-            "prev_price": 3.92,
-            "daily_chg": 4.44,
-            "change_percent": -39.82,
-            "trend": "UP",
+            "price": 3.67,
+            "prev_price": 4.35,
+            "daily_chg": -15.73,
+            "change_percent": -47.24,
+            "trend": "DOWN",
             "sparkline": [
-                3.97,
                 3.69,
                 3.62,
                 3.52,
@@ -945,7 +944,8 @@
                 6.95,
                 7.46,
                 3.92,
-                4.09
+                4.35,
+                3.67
             ]
         },
         "MOVE": {
@@ -1042,40 +1042,40 @@
             ]
         },
         "COPPER_GOLD": {
-            "price": 1.19,
+            "price": 1.22,
             "change_percent": 0,
             "trend": "RISK-OFF",
             "sparkline": [
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22
             ]
         }
     },
@@ -1107,22 +1107,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS Status: DEFENSIVE (Score 28). DXY (Dollar strength/Liquidity) is strengthening, and VIX (Fear/Volatility) is rising, underscoring a risk-off environment. While this points to caution, the MOVE index (bond market volatility) remains stable, suggesting underlying financial stability despite equity jitters. Maintain a defensive stance.",
+        "content": "GMS score 26 signals a DEFENSIVE market regime. Rising DXY (Dollar strength/Liquidity) and VIX (Fear/Volatility) reflect tightening global liquidity and increased risk aversion. While caution is advised, the sharp declines in crypto and commodities suggest an oversold market, potentially triggering a short-term technical bounce. Maintain vigilance.",
         "reports": {
-            "JP": "GMSステータス: 防衛的 (スコア28)。DXY (ドル高/流動性) が強化され、VIX (恐怖/変動性) が上昇し、リスクオフ環境を示唆。警戒が必要ですが、MOVE指数 (債券市場の変動性) は安定しており、株式市場の動揺にもかかわらず根底にある金融の安定性を示唆。防衛的なスタンスを維持してください。",
-            "EN": "GMS Status: DEFENSIVE (Score 28). DXY (Dollar strength/Liquidity) is strengthening, and VIX (Fear/Volatility) is rising, underscoring a risk-off environment. While this points to caution, the MOVE index (bond market volatility) remains stable, suggesting underlying financial stability despite equity jitters. Maintain a defensive stance.",
-            "CN": "GMS状态：防御性（得分28）。DXY（美元走强/流动性）正在增强，VIX（恐慌/波动性）上升，表明市场处于避险环境。尽管这预示着谨慎，但MOVE指数（债券市场波动性）保持稳定，表明尽管股市波动，但存在潜在的金融稳定性。请保持防御姿态。",
-            "ES": "Estado GMS: DEFENSIVO (Puntuación 28). El DXY (fortaleza del dólar/liquidez) se fortalece y el VIX (miedo/volatilidad) sube, señalando un entorno de aversión al riesgo. Aunque esto sugiere precaución, el índice MOVE (volatilidad del mercado de bonos) se mantiene estable, indicando estabilidad financiera subyacente pese a las turbulencias bursátiles. Mantenga una postura defensiva.",
-            "HI": "GMS स्थिति: रक्षात्मक (स्कोर 28)। DXY (डॉलर की मजबूती/तरलता) बढ़ रहा है और VIX (भय/अस्थिरता) ऊपर जा रहा है, जो जोखिम-मुक्त माहौल को दर्शाता है। यह सावधानी की ओर इशारा करता है, लेकिन MOVE इंडेक्स (बॉन्ड बाजार की अस्थिरता) स्थिर है, जो इक्विटी की घबराहट के बावजूद अंतर्निहित वित्तीय स्थिरता का सुझाव देता है। रक्षात्मक रुख बनाए रखें।",
-            "ID": "Status GMS: DEFENSIF (Skor 28). DXY (kekuatan Dolar/Likuiditas) menguat, dan VIX (Ketakutan/Volatilitas) meningkat, menggarisbawahi lingkungan penghindaran risiko. Meskipun ini menunjukkan kehati-hatian, indeks MOVE (volatilitas pasar obligasi) tetap stabil, menyiratkan stabilitas keuangan mendasar terlepas dari gejolak ekuitas. Pertahankan sikap defensif.",
-            "AR": "حالة GMS: دفاعية (النتيجة 28). يتزايد مؤشر DXY (قوة الدولار/السيولة) ويرتفع مؤشر VIX (الخوف/التقلب)، مما يؤكد بيئة الابتعاد عن المخاطر. بينما يشير هذا إلى الحذر، يظل مؤشر MOVE (تقلب سوق السندات) مستقرًا، مما يوحي باستقرار مالي أساسي رغم اضطرابات الأسهم. حافظ على وضع دفاعي."
+            "JP": "GMSスコア26は防御的市場を示唆。DXY (ドル高/流動性)とVIX (恐怖/変動性)の上昇は、世界的な流動性引き締めとリスク回避を反映しています。警戒が必要ですが、暗号資産やコモディティの急激な下落は売られ過ぎを示唆し、短期的なテクニカル反発が起こる可能性もあります。引き続き警戒を怠らないでください。",
+            "EN": "GMS score 26 signals a DEFENSIVE market regime. Rising DXY (Dollar strength/Liquidity) and VIX (Fear/Volatility) reflect tightening global liquidity and increased risk aversion. While caution is advised, the sharp declines in crypto and commodities suggest an oversold market, potentially triggering a short-term technical bounce. Maintain vigilance.",
+            "CN": "GMS得分26表明市场处于防御模式。DXY（美元走强/流动性）和VIX（恐慌/波动性）上升反映全球流动性收紧和避险情绪增加。虽然需保持谨慎，但加密货币和大宗商品的急剧下跌可能预示市场超卖，或将引发短期技术性反弹。请保持警惕。",
+            "ES": "La puntuación GMS 26 indica un régimen de mercado DEFENSIVO. El aumento del DXY (fortaleza del dólar/liquidez) y VIX (miedo/volatilidad) refleja un ajuste global de liquidez y mayor aversión al riesgo. Aunque se aconseja cautela, las fuertes caídas en cripto y materias primas sugieren un mercado sobrevendido, lo que podría provocar un rebote técnico a corto plazo. Mantenga la vigilancia.",
+            "HI": "जीएमएस स्कोर 26 एक रक्षात्मक बाजार व्यवस्था का संकेत देता है। बढ़ते DXY (डॉलर की मजबूती/तरलता) और VIX (भय/अस्थिरता) वैश्विक तरलता में कमी और जोखिम से बचने को दर्शाते हैं। सावधानी बरतनी चाहिए, लेकिन क्रिप्टो और कमोडिटीज में तेज गिरावट बाजार के अत्यधिक बिके होने का सुझाव देती है, जिससे अल्पकालिक तकनीकी उछाल आ सकता है। सतर्क रहें।",
+            "ID": "Skor GMS 26 menandakan rezim pasar DEFENSif. Kenaikan DXY (kekuatan Dolar/Likuiditas) dan VIX (Ketakutan/Volatilitas) mencerminkan pengetatan likuiditas global dan peningkatan penghindaran risiko. Meskipun disarankan hati-hati, penurunan tajam pada kripto dan komoditas menunjukkan pasar oversold, berpotensi memicu pantulan teknis jangka pendek. Tetap waspada.",
+            "AR": "يشير مؤشر GMS البالغ 26 إلى نظام سوق دفاعي. يعكس ارتفاع مؤشر الدولار (DXY) (قوة الدولار/السيولة) ومؤشر VIX (الخوف/التقلب) تشديد السيولة العالمية وزيادة النفور من المخاطرة. بينما يُنصح بالحذر، فإن الانخفاضات الحادة في العملات المشفرة والسلع تشير إلى سوق مبالغ في بيعه، مما قد يؤدي إلى ارتداد فني قصير الأجل. ابقوا يقظين."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-30T14:50:33Z",
-            "score": 31
-        },
         {
             "date": "2026-01-30T14:54:43Z",
             "score": 31
@@ -1358,10 +1354,19 @@
         {
             "date": "2026-02-01T22:38:52Z",
             "score": 28
+        },
+        {
+            "date": "2026-02-01T23:36:58Z",
+            "score": 26
         }
     ],
     "intelligence": {
         "news": [
+            {
+                "title": "Stock futures fall after silver, bitcoin sell off; questions loom over AI trade: Live updates",
+                "link": "https://www.cnbc.com/2026/02/01/stock-market-today-live-updates.html",
+                "isoDate": "2026-02-01T23:30:01+00:00Z"
+            },
             {
                 "title": "Speaker Johnson: 'Confident' government shutdown will end by Tuesday",
                 "link": "https://www.cnbc.com/2026/02/01/government-shutdown-mike-johnson.html",
@@ -1383,11 +1388,6 @@
                 "isoDate": "2026-02-01T20:36:33+00:00Z"
             },
             {
-                "title": "Political risk: How Trump 2.0 is affecting investment in U.S. assets",
-                "link": "https://www.cnbc.com/2026/02/01/political-risk-how-trump-2point0-is-affecting-investment-in-us-assets.html",
-                "isoDate": "2026-02-01T13:47:00+00:00Z"
-            },
-            {
                 "title": "Elon Musk is stressing robots over cars. Here are three humanoid parts suppliers that Morgan Stanley recommends",
                 "link": "https://www.cnbc.com/2026/02/01/musk-is-stressing-robots-over-cars-these-suppliers-make-humanoid-parts.html",
                 "isoDate": "2026-02-01T13:36:17+00:00Z"
@@ -1395,55 +1395,55 @@
         ],
         "translations": {
             "JP": [
-                "ジョンソン下院議長：「政府閉鎖は火曜までに終了すると確信」",
-                "「メラニア」が予想外の700万ドルを獲得、10年間で最高の非音楽ドキュメンタリーデビュー",
-                "エプスタイン氏関連文書：ロー・カナ氏、DOJの最新公開は「不十分」",
-                "アラブ首長国連邦（UAE）の「スパイシェイク」、トランプ氏の暗号資産会社に秘密裏に株式購入：WSJ",
-                "政治リスク：トランプ2.0は米国資産への投資にどう影響するか",
-                "イーロン・マスク氏、車よりロボットを重視：モルガン・スタンレーが推奨する3つの人型ロボット部品サプライヤー"
+                "銀・ビットコインの売却を受け株価先物は下落、AI取引への疑問も浮上：ライブアップデート",
+                "ジョンソン下院議長：「火曜日までに政府閉鎖は終結する」と確信",
+                "「メラニア」が700万ドルを稼ぎ、10年間で最高の非音楽ドキュメンタリーデビュー",
+                "エプスタイン文書：ロー・カンナ議員、「 DOJ の最新公開は『十分ではない』」と発言",
+                "UAEの「スパイシェイク」、トランプ氏の仮想通貨企業に秘密裏に株式購入：WSJ",
+                "イーロン・マスク氏、車よりもロボットを重視：モルガン・スタンレーが推奨する3つの人型ロボット部品サプライヤー"
             ],
             "CN": [
-                "约翰逊议长：‘有信心’政府停摆将在周二结束",
-                "《梅拉尼娅》意外斩获700万美元，创十年来最佳非音乐纪录片首秀",
-                "爱泼斯坦文件：罗·克兰纳称司法部最新披露‘不够好’",
-                "《华尔街日报》：阿联酋‘间谍大亨’收购特朗普加密货币公司秘密股权",
-                "政治风险：特朗普2.0如何影响美国资产投资",
-                "埃隆·马斯克：机器人优先于汽车，摩根士丹利推荐三家人形机器人零部件供应商"
+                "白銀、比特币抛售后股指期货下跌；人工智能交易引疑虑：实时更新",
+                "约翰逊议长：“有信心”政府停摆将在周二结束",
+                "《梅拉尼娅》斩获700万美元，创十年非音乐纪录片最佳首映纪录",
+                "埃普斯泰因文件：罗·康纳表示司法部最新披露“不够好”",
+                "阿联酋“间谍大亨”收购特朗普加密货币公司秘密股份：《华尔街日报》",
+                "埃隆·马斯克：机器人比汽车更受关注；摩根士丹利推荐三家人形机器人零件供应商"
             ],
             "ES": [
-                "Presidente Johnson: 'Confiado' en que el cierre del gobierno terminará el martes",
+                "Futuros de acciones caen tras venta de plata y bitcoin; surgen dudas sobre el comercio de IA: actualizaciones en vivo",
+                "Presidente Johnson: \"Confiado\" en que el cierre del gobierno terminará el martes",
                 "'Melania' gana sorprendentes $7 millones, el mejor debut de documental no musical en una década",
                 "Archivos Epstein: Ro Khanna dice que la última publicación del DOJ 'no es suficiente'",
-                "El 'Jeque Espía' de los Emiratos Árabes Unidos compró una participación secreta en la empresa de criptomonedas de Trump: WSJ",
-                "Riesgo político: Cómo Trump 2.0 está afectando la inversión en activos de EE. UU.",
+                "El 'Jeque Espía' de los Emiratos Árabes Unidos compró participación secreta en la empresa de criptomonedas de Trump: WSJ",
                 "Elon Musk prioriza los robots sobre los autos. Aquí hay tres proveedores de piezas humanoides que Morgan Stanley recomienda"
             ],
             "HI": [
-                "स्पीकर जॉनसन: 'आत्मविश्वास' है कि सरकारी शटडाउन मंगलवार तक खत्म हो जाएगा",
-                "'मेलानिया' ने चौंकाने वाली $7 मिलियन की कमाई की, एक दशक में सर्वश्रेष्ठ गैर-संगीत वृत्तचित्र की शुरुआत",
-                "एपस्टीन फाइलें: रो खन्ना का कहना है कि डीओजे की नवीनतम रिलीज 'पर्याप्त नहीं है'",
-                "संयुक्त अरब अमीरात के 'जासूस शेख' ने ट्रम्प की क्रिप्टो कंपनी में गुप्त हिस्सेदारी खरीदी: WSJ",
-                "राजनीतिक जोखिम: ट्रम्प 2.0 अमेरिकी संपत्तियों में निवेश को कैसे प्रभावित कर रहा है",
-                "एलोन मस्क कारों पर रोबोटों पर जोर दे रहे हैं। यहां तीन ह्यूमनॉइड पार्ट्स आपूर्तिकर्ता हैं जिनकी मॉर्गन स्टेनली सिफारिश करता है"
+                "चांदी, बिटकॉइन की बिक्री के बाद स्टॉक फ्यूचर्स गिरे; AI ट्रेडिंग पर सवालिया निशान: लाइव अपडेट्स",
+                "स्पीकर जॉनसन: 'आत्मविश्वासी' कि सरकारी शटडाउन मंगलवार तक समाप्त हो जाएगा",
+                "'मेलानिया' ने कमाए आश्चर्यजनक $7 मिलियन, एक दशक में सर्वश्रेष्ठ गैर-संगीत वृत्तचित्र की शुरुआत",
+                "एपस्टीन फाइलें: रो खन्ना कहते हैं कि DOJ की नवीनतम रिलीज 'पर्याप्त नहीं है'",
+                "संयुक्त अरब अमीरात के 'स्पाई शेख' ने ट्रम्प की क्रिप्टो कंपनी में गुप्त हिस्सेदारी खरीदी: WSJ",
+                "एलोन मस्क कारों से ज़्यादा रोबोट पर ज़ोर दे रहे हैं। यहाँ तीन ह्यूमनॉइड पार्ट्स सप्लायर हैं जिनकी मॉर्गन स्टेनली सिफ़ारिश करता है"
             ],
             "ID": [
-                "Pembicara Johnson: 'Yakin' penutupan pemerintah akan berakhir pada Selasa",
-                "'Melania' menghasilkan kejutan $7 juta, debut dokumenter non-musik terbaik dalam satu dekade",
+                "Futures saham jatuh setelah jual perak, bitcoin; pertanyaan muncul tentang perdagangan AI: Pembaruan langsung",
+                "Ketua DPR Johnson: 'Yakin' penutupan pemerintah akan berakhir pada hari Selasa",
+                "'Melania' menghasilkan $7 juta yang mengejutkan, debut dokumenter non-musik terbaik dalam satu dekade",
                 "Berkas Epstein: Ro Khanna mengatakan rilis terbaru DOJ 'tidak cukup baik'",
                 "'Spy Sheikh' Uni Emirat Arab membeli saham rahasia di perusahaan kripto Trump: WSJ",
-                "Risiko politik: Bagaimana Trump 2.0 memengaruhi investasi di aset AS",
-                "Elon Musk menekankan robot daripada mobil. Berikut adalah tiga pemasok komponen humanoid yang direkomendasikan Morgan Stanley"
+                "Elon Musk lebih fokus pada robot daripada mobil. Berikut tiga pemasok komponen humanoid yang direkomendasikan Morgan Stanley"
             ],
             "AR": [
-                "رئيس مجلس النواب جونسون: 'واثق' من انتهاء إغلاق الحكومة بحلول الثلاثاء",
-                "فيلم 'ميلانيا' يحقق مفاجأة بـ 7 ملايين دولار، أفضل ظهور وثائقي غير موسيقي في عقد",
-                "ملفات إبستين: رو خانا يقول إن أحدث إصدار لوزارة العدل 'ليس جيدًا بما فيه الكفاية'",
-                "الشيخ 'جاسوس' الإمارات العربية المتحدة اشترى حصة سرية في شركة ترمب للعملات المشفرة: وول ستريت جورنال",
-                "المخاطر السياسية: كيف يؤثر ترمب 2.0 على الاستثمار في الأصول الأمريكية",
-                "إيلون ماسك يركز على الروبوتات أكثر من السيارات. إليك ثلاثة موردين لقطع الروبوتات الشبيهة بالبشر توصي بهم مورغان ستانلي"
+                "انخفاض العقود الآجلة للأسهم بعد تراجع الفضة والبيتكوين؛ تساؤلات حول تجارة الذكاء الاصطناعي: تحديثات مباشرة",
+                "رئيس مجلس النواب جونسون: 'واثق' من انتهاء إغلاق الحكومة بحلول يوم الثلاثاء",
+                "\"ميلانيا\" تحقق 7 ملايين دولار مفاجئة، أفضل ظهور وثائقي غير موسيقي في عقد",
+                "ملفات إبستين: رو خانا يقول إن أحدث إصدار لوزارة العدل \"ليس جيدًا بما يكفي\"",
+                "\"الشيخ الجاسوس\" الإماراتي اشترى حصة سرية في شركة كريبتو لترامب: وول ستريت جورنال",
+                "إيلون ماسك يركز على الروبوتات بدلاً من السيارات. إليك ثلاثة موردين لأجزاء الروبوتات البشرية توصي بهم مورغان ستانلي"
             ]
         },
-        "last_updated": "2026-02-01T22:38:52.036442+00:00Z"
+        "last_updated": "2026-02-01T23:36:58.422193+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
