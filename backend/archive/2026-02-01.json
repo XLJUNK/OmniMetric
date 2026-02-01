@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-02-01T15:37:00.868332+00:00",
-    "last_successful_update": "2026-02-01T15:37:00.868341+00:00",
+    "last_updated": "2026-02-01T16:43:55.531667+00:00",
+    "last_successful_update": "2026-02-01T16:43:55.531674+00:00",
     "gms_score": 28,
     "sector_scores": {
         "STOCKS": 25,
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 76945.38,
+            "price": 77357.21,
             "prev_price": 78621.12,
-            "daily_chg": -2.13,
-            "change_percent": -13.72,
+            "daily_chg": -1.61,
+            "change_percent": -13.26,
             "trend": "DOWN",
             "sparkline": [
                 90827.46,
@@ -604,14 +604,14 @@
                 84561.59,
                 84128.66,
                 78621.12,
-                76945.38
+                77357.21
             ]
         },
         "ETH": {
-            "price": 2299.17,
+            "price": 2311.12,
             "prev_price": 2445.09,
-            "daily_chg": -5.97,
-            "change_percent": -23.53,
+            "daily_chg": -5.48,
+            "change_percent": -23.13,
             "trend": "DOWN",
             "sparkline": [
                 3118.89,
@@ -635,14 +635,14 @@
                 2818.23,
                 2702.38,
                 2445.09,
-                2299.17
+                2311.12
             ]
         },
         "SOL": {
-            "price": 100.91,
+            "price": 101.98,
             "prev_price": 105.44,
-            "daily_chg": -4.3,
-            "change_percent": -19.35,
+            "daily_chg": -3.28,
+            "change_percent": -18.49,
             "trend": "DOWN",
             "sparkline": [
                 139.49,
@@ -666,7 +666,7 @@
                 117.61,
                 117.36,
                 105.44,
-                100.91
+                101.98
             ]
         },
         "DXY": {
@@ -1107,22 +1107,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS indicates a Defensive status at 28, with flat momentum. DXY (Dollar strength/Liquidity) rose while VIX (Fear/Volatility) surged, reflecting heightened market caution and tightening liquidity. Despite this risk-off posture, a potential peaking in VIX might signal short-term oversold conditions. Maintain defensive positioning, observing volatility for stabilization cues.",
+        "content": "GMS status is Defensive at 28. Rising DXY (Dollar strength/Liquidity) and increasing VIX (Fear/Volatility) signal tightening liquidity and heightened risk aversion, impacting risk assets. While caution is warranted, a stable MOVE index (bond market volatility) suggests systemic risk isn't escalating, possibly limiting downside. Maintain defensive posture, monitoring for stabilization.",
         "reports": {
-            "JP": "GMSはスコア28で防御的、モメンタムは横ばいです。DXY（ドル高/流動性）上昇とVIX（恐怖/変動性）急増は、市場の警戒感と流動性の引き締まりを示唆。このリスクオフ姿勢にもかかわらず、VIXの天井打ちが短期的な売られ過ぎの兆候となる可能性。防御的ポジションを維持し、ボラティリティの安定化シグナルを注視してください。",
-            "EN": "GMS indicates a Defensive status at 28, with flat momentum. DXY (Dollar strength/Liquidity) rose while VIX (Fear/Volatility) surged, reflecting heightened market caution and tightening liquidity. Despite this risk-off posture, a potential peaking in VIX might signal short-term oversold conditions. Maintain defensive positioning, observing volatility for stabilization cues.",
-            "CN": "GMS显示防御性状态，评分为28，动能平稳。DXY（美元走强/流动性）上涨，VIX（恐慌/波动性）飙升，反映市场警惕性升高和流动性收紧。尽管市场情绪偏向避险，VIX可能筑顶，预示短期超卖。维持防御性头寸，密切关注波动性，以寻找稳定信号。",
-            "ES": "GMS indica un estado Defensivo con puntuación 28 y momentum plano. El DXY (fortaleza del dólar/liquidez) subió y el VIX (miedo/volatilidad) se disparó, reflejando mayor cautela y liquidez ajustada. A pesar de esta postura de riesgo, un posible pico en el VIX podría indicar condiciones de sobreventa a corto plazo. Mantener una posición defensiva y observar la volatilidad para señales de estabilización.",
-            "HI": "GMS 28 के स्कोर के साथ रक्षात्मक स्थिति दर्शा रहा है, मोमेंटम सपाट है। DXY (डॉलर की मजबूती/तरलता) बढ़ी, जबकि VIX (भय/अस्थिरता) में उछाल आया, जो बाजार में बढ़ती सतर्कता और तरलता में कमी को दर्शाता है। इस जोखिम-मुक्त स्थिति के बावजूद, VIX में संभावित उच्चतम स्तर अल्पकालिक ओवरसोल्ड स्थितियों का संकेत दे सकता है। रक्षात्मक स्थिति बनाए रखें और स्थिरता के संकेतों के लिए अस्थिरता पर नज़र रखें।",
-            "ID": "GMS menunjukkan status Defensif di angka 28, dengan momentum datar. DXY (kekuatan Dolar/Likuiditas) naik sementara VIX (Ketakutan/Volatilitas) melonjak, mencerminkan kehati-hatian pasar yang meningkat dan likuiditas yang mengetat. Meskipun posisi risk-off ini, potensi puncak VIX mungkin menandakan kondisi oversold jangka pendek. Pertahankan posisi defensif, amati volatilitas untuk isyarat stabilisasi.",
-            "AR": "GMS يشير إلى حالة دفاعية عند 28، بزخم ثابت. ارتفع مؤشر الدولار DXY (قوة الدولار/السيولة) وقفز مؤشر VIX (الخوف/التقلب)، مما يعكس تزايد حذر السوق وتشديد السيولة. على الرغم من هذا التوجه لتجنب المخاطر، قد يشير بلوغ VIX ذروته إلى ظروف بيع مفرط على المدى القصير. حافظ على موقف دفاعي، وراقب التقلبات بحثًا عن إشارات استقرار."
+            "JP": "GMSスコア28で防御的。DXY高騰（ドル高/流動性引き締め）とVIX上昇（恐怖/変動性）は、流動性逼迫とリスク回避を示唆。警戒必要だが、MOVE指数（債券市場変動性）の安定は、システミックリスクが限定的である可能性を示唆。防御的な姿勢を維持し、安定化を監視。",
+            "EN": "GMS status is Defensive at 28. Rising DXY (Dollar strength/Liquidity) and increasing VIX (Fear/Volatility) signal tightening liquidity and heightened risk aversion, impacting risk assets. While caution is warranted, a stable MOVE index (bond market volatility) suggests systemic risk isn't escalating, possibly limiting downside. Maintain defensive posture, monitoring for stabilization.",
+            "CN": "GMS状态为防御性28。DXY走强（美元强度/流动性）和VIX上升（恐惧/波动性）预示全球流动性收紧及避险情绪高涨，影响风险资产。虽需谨慎，但MOVE指数（债券市场波动性）稳定表明系统性风险未升级，可能限制下行空间。维持防御姿态，关注市场企稳。",
+            "ES": "El GMS es Defensivo en 28. Un DXY creciente (fortaleza del dólar/liquidez) y el VIX en alza (miedo/volatilidad) señalan liquidez ajustada y aversión al riesgo. Aunque se requiere cautela, la estabilidad del índice MOVE (volatilidad del mercado de bonos) sugiere que el riesgo sistémico no escala. Mantener postura defensiva, atento a la estabilización.",
+            "HI": "जीएमएस स्थिति 28 पर रक्षात्मक है। बढ़ते DXY (डॉलर की मजबूती/तरलता) और VIX (भय/अस्थिरता) वैश्विक तरलता में कमी और जोखिम से बचने का संकेत देते हैं, जो जोखिम वाली संपत्तियों को प्रभावित करता है। हालांकि सावधानी आवश्यक है, MOVE सूचकांक (बॉन्ड बाजार अस्थिरता) की स्थिरता बताती है कि प्रणालीगत जोखिम बढ़ नहीं रहा, संभावित रूप से गिरावट को सीमित कर रहा है। रक्षात्मक रुख बनाए रखें, स्थिरीकरण पर नजर रखें।",
+            "ID": "Status GMS bertahan di 28 (Defensif). DXY (kekuatan Dolar/Likuiditas) yang naik dan VIX (Ketakutan/Volatilitas) yang meningkat menunjukkan pengetatan likuiditas global dan penghindaran risiko, berdampak pada aset berisiko. Meskipun kehati-hatian diperlukan, indeks MOVE (volatilitas pasar obligasi) yang stabil mengindikasikan risiko sistemik tidak meningkat, berpotensi membatasi penurunan. Pertahankan posisi defensif, awasi stabilisasi.",
+            "AR": "وضع GMS دفاعي عند 28. ارتفاع مؤشر DXY (قوة الدولار/السيولة) وزيادة VIX (الخوف/التقلب) يشيران إلى تشديد السيولة العالمية وتزايد النفور من المخاطر، مما يؤثر على الأصول الخطرة. بينما يجب توخي الحذر، يشير استقرار مؤشر MOVE (تقلب سوق السندات) إلى أن المخاطر النظامية لا تتصاعد، مما قد يحد من الانخفاض. حافظ على موقف دفاعي، وراقب الاستقرار."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-29T21:39:27Z",
-            "score": 35
-        },
         {
             "date": "2026-01-29T22:41:02Z",
             "score": 35
@@ -1358,24 +1354,28 @@
         {
             "date": "2026-02-01T15:37:00Z",
             "score": 28
+        },
+        {
+            "date": "2026-02-01T16:43:55Z",
+            "score": 28
         }
     ],
     "intelligence": {
         "news": [
             {
-                "title": "AstraZeneca is listing in New York, as Big Pharma balances the huge U.S. market with China's tempting innovation",
-                "link": "https://www.cnbc.com/2026/02/01/astrazeneca-nyse-listing-china-pharma-pours-15-billion-into-china.html",
-                "isoDate": "2026-02-01T10:51:30+00:00Z"
-            },
-            {
                 "title": "Speaker Johnson: 'Confident' government shutdown will end by Tuesday",
                 "link": "https://www.cnbc.com/2026/02/01/government-shutdown-mike-johnson.html",
-                "isoDate": "2026-02-01T15:35:27+00:00Z"
+                "isoDate": "2026-02-01T15:57:53+00:00Z"
             },
             {
                 "title": "Political risk: How Trump 2.0 is affecting investment in U.S. assets",
                 "link": "https://www.cnbc.com/2026/02/01/political-risk-how-trump-2point0-is-affecting-investment-in-us-assets.html",
                 "isoDate": "2026-02-01T13:47:00+00:00Z"
+            },
+            {
+                "title": "'Melania' earns a surprising $7 million, best non-music documentary debut in a decade",
+                "link": "https://www.cnbc.com/2026/02/01/melania-documentary-posts-7-million-domestic-opening.html",
+                "isoDate": "2026-02-01T16:34:11+00:00Z"
             },
             {
                 "title": "How the EV pullback is affecting factories and jobs in the South",
@@ -1385,7 +1385,7 @@
             {
                 "title": "As American retail store anchors fade, private clubs are taking over more commercial real estate",
                 "link": "https://www.cnbc.com/2026/02/01/retail-mall-stores-closures-private-clubs-commercial-real-estate.html",
-                "isoDate": "2026-02-01T14:34:46+00:00Z"
+                "isoDate": "2026-02-01T16:27:30+00:00Z"
             },
             {
                 "title": "Elon Musk is stressing robots over cars. Here are three humanoid parts suppliers that Morgan Stanley recommends",
@@ -1395,55 +1395,55 @@
         ],
         "translations": {
             "JP": [
-                "アストラゼネカ、ニューヨークに上場、大手製薬企業は巨大な米国市場と中国の魅力的なイノベーションのバランスを取る",
-                "ジョンソン議長：「火曜日までに政府閉鎖は終わる」と確信",
-                "政治リスク：トランプ2.0が米国資産への投資にどう影響するか",
-                "EVの減速が南部の工場と雇用にどう影響するか",
-                "アメリカの小売店のアンカーが衰退するにつれて、プライベートクラブが商業用不動産をさらに支配",
-                "イーロン・マスクは車よりロボットを強調。モルガン・スタンレーが推奨する3つの人型ロボット部品サプライヤー"
+                "ジョンソン下院議長：「火曜日までに政府閉鎖は終わる」と自信を示す",
+                "政治リスク：トランプ2.0は米国資産への投資にどう影響しているか",
+                "「メラニア」、驚きの700万ドル獲得、10年間で最高の非音楽ドキュメンタリーデビュー",
+                "EVの縮小は南部の工場と雇用にどう影響しているか",
+                "アメリカの小売店アンカーが衰退する中、プライベートクラブが商業用不動産をさらに買収",
+                "イーロン・マスクは車よりもロボットを強調。モルガン・スタンレーが推奨する3つの人型ロボット部品サプライヤー"
             ],
             "CN": [
-                "阿斯利康在美国上市，大型制药公司平衡庞大的美国市场与中国诱人的创新",
-                "众议院议长约翰逊：“有信心”政府停摆将在周二结束",
-                "政治风险：特朗普2.0如何影响美国资产投资",
-                "电动汽车回落如何影响南方工厂和就业",
-                "随着美国零售店锚点褪色，私人俱乐部占据更多商业地产",
-                "埃隆·马斯克更关注机器人而非汽车。以下是摩根士丹利推荐的三家人形机器人零件供应商"
+                "约翰逊议长：有信心政府停摆将在周二结束",
+                "政治风险：特朗普2.0对美国资产投资有何影响",
+                "《梅拉尼娅》收入令人惊讶的700万美元，创十年最佳非音乐纪录片首映纪录",
+                "电动汽车撤退如何影响美国南部的工厂和就业",
+                "随着美国零售店的“锚点”消失，私人俱乐部正在接管更多商业地产",
+                "埃隆·马斯克更看重机器人而非汽车。摩根士丹利推荐的三家人形机器人零部件供应商"
             ],
             "ES": [
-                "AstraZeneca cotiza en Nueva York, mientras las grandes farmacéuticas equilibran el enorme mercado estadounidense con la tentadora innovación de China",
-                "Portavoz Johnson: \"Confiado\" en que el cierre del gobierno terminará el martes",
+                "Johnson: 'Confiado' en que el cierre del gobierno terminará el martes",
                 "Riesgo político: Cómo Trump 2.0 está afectando la inversión en activos de EE. UU.",
+                "'Melania' gana sorprendentes $7 millones, el mejor debut de un documental no musical en una década",
                 "Cómo la desaceleración de los vehículos eléctricos está afectando a las fábricas y los empleos en el Sur",
                 "A medida que los anclajes de las tiendas minoristas estadounidenses se desvanecen, los clubes privados se apoderan de más bienes raíces comerciales",
-                "Elon Musk está priorizando los robots sobre los autos. Aquí hay tres proveedores de componentes humanoides que Morgan Stanley recomienda"
+                "Elon Musk se enfoca en robots más que en autos. Aquí hay tres proveedores de partes humanoides que Morgan Stanley recomienda"
             ],
             "HI": [
-                "एस्ट्राजेनेका न्यूयॉर्क में सूचीबद्ध हो रहा है, क्योंकि बिग फार्मा विशाल अमेरिकी बाजार को चीन के मोहक नवाचार के साथ संतुलित करता है",
-                "स्पीकर जॉनसन: 'आत्मविश्वासी' सरकारी शटडाउन मंगलवार तक समाप्त हो जाएगा",
+                "स्पीकर जॉनसन: 'आत्मविश्वास' है कि मंगलवार तक सरकारी शटडाउन खत्म हो जाएगा",
                 "राजनीतिक जोखिम: ट्रम्प 2.0 अमेरिकी संपत्तियों में निवेश को कैसे प्रभावित कर रहा है",
-                "ईवी में गिरावट का दक्षिण में कारखानों और नौकरियों पर क्या असर हो रहा है",
-                "जैसे-जैसे अमेरिकी खुदरा स्टोर के एंकर फीके पड़ते जा रहे हैं, निजी क्लब अधिक वाणिज्यिक अचल संपत्ति पर कब्जा कर रहे हैं",
-                "एलन मस्क कारों की तुलना में रोबोट पर जोर दे रहे हैं। यहां तीन ह्यूमनॉइड पार्ट्स सप्लायर दिए गए हैं जिनकी मॉर्गन स्टेनली ने सिफारिश की है"
+                "'मेलानिया' ने चौंकाने वाले $7 मिलियन कमाए, एक दशक में सर्वश्रेष्ठ गैर-संगीत वृत्तचित्र की शुरुआत",
+                "ईवी की वापसी दक्षिण में कारखानों और नौकरियों को कैसे प्रभावित कर रही है",
+                "जैसे-जैसे अमेरिकी खुदरा स्टोर के एंकर फीके पड़ रहे हैं, निजी क्लब अधिक वाणिज्यिक अचल संपत्ति पर कब्जा कर रहे हैं",
+                "एलन मस्क कारों पर रोबोट पर जोर दे रहे हैं। यहाँ तीन ह्यूमनॉइड पार्ट्स सप्लायर हैं जिनकी मॉर्गन स्टेनली सिफारिश करता है"
             ],
             "ID": [
-                "AstraZeneca terdaftar di New York, saat Big Pharma menyeimbangkan pasar AS yang besar dengan inovasi Tiongkok yang menggoda",
-                "Pembicara Johnson: \"Yakin\" penutupan pemerintah akan berakhir pada hari Selasa",
-                "Risiko politik: Bagaimana Trump 2.0 memengaruhi investasi di aset AS",
+                "Pembicara Johnson: 'Yakin' penutupan pemerintah akan berakhir pada hari Selasa",
+                "Risiko politik: Bagaimana Trump 2.0 memengaruhi investasi pada aset AS",
+                "'Melania' menghasilkan $7 juta yang mengejutkan, debut dokumenter non-musik terbaik dalam satu dekade",
                 "Bagaimana penarikan EV memengaruhi pabrik dan pekerjaan di Selatan",
                 "Saat jangkar toko ritel Amerika memudar, klub pribadi mengambil alih lebih banyak real estat komersial",
                 "Elon Musk menekankan robot daripada mobil. Berikut adalah tiga pemasok suku cadang humanoid yang direkomendasikan Morgan Stanley"
             ],
             "AR": [
-                "أسترازينيكا تدرج في نيويورك، بينما توازن شركات الأدوية الكبرى بين السوق الأمريكية الضخمة وابتكار الصين المغري",
-                "الرئيس جونسون: \"واثق\" من انتهاء إغلاق الحكومة بحلول يوم الثلاثاء",
+                "رئيس مجلس النواب جونسون: 'واثق' من انتهاء إغلاق الحكومة بحلول الثلاثاء",
                 "المخاطر السياسية: كيف يؤثر ترامب 2.0 على الاستثمار في الأصول الأمريكية",
+                "ملانيا تحقق 7 ملايين دولار مفاجئة، أفضل ظهور لفيلم وثائقي غير موسيقي في عقد",
                 "كيف يؤثر تراجع السيارات الكهربائية على المصانع والوظائف في الجنوب",
-                "مع تلاشي المراسي الرئيسية لمتاجر التجزئة الأمريكية، تستولي الأندية الخاصة على المزيد من العقارات التجارية",
-                "إيلون ماسك يركز على الروبوتات بدلاً من السيارات. إليك ثلاثة موردين لأجزاء روبوتات شبيهة بالبشر توصي بهم مورغان ستانلي"
+                "مع تلاشي مرساة متاجر التجزئة الأمريكية، تستولي الأندية الخاصة على المزيد من العقارات التجارية",
+                "إيلون ماسك يركز على الروبوتات بدلاً من السيارات. إليك ثلاثة موردين لأجزاء بشرية توصي بهم مورغان ستانلي"
             ]
         },
-        "last_updated": "2026-02-01T15:37:00.867856+00:00Z"
+        "last_updated": "2026-02-01T16:43:55.531198+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
