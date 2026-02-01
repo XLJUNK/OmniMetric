@@ -1,12 +1,12 @@
 {
-    "last_updated": "2026-02-01T13:41:01.686204+00:00",
-    "last_successful_update": "2026-02-01T13:41:01.686211+00:00",
-    "gms_score": 28,
+    "last_updated": "2026-02-01T13:54:43.817944+00:00",
+    "last_successful_update": "2026-02-01T13:54:43.817951+00:00",
+    "gms_score": 26,
     "sector_scores": {
         "STOCKS": 25,
         "CRYPTO": 25,
-        "FOREX": 35,
-        "COMMODITIES": 75
+        "FOREX": 25,
+        "COMMODITIES": 60
     },
     "market_data": {
         "CRYPTO_SENTIMENT": {
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 78473.9,
+            "price": 78336.3,
             "prev_price": 78621.12,
-            "daily_chg": -0.19,
-            "change_percent": -12.01,
+            "daily_chg": -0.36,
+            "change_percent": -12.16,
             "trend": "DOWN",
             "sparkline": [
                 90827.46,
@@ -604,14 +604,14 @@
                 84561.59,
                 84128.66,
                 78621.12,
-                78473.9
+                78336.3
             ]
         },
         "ETH": {
-            "price": 2392.28,
+            "price": 2382.16,
             "prev_price": 2445.09,
-            "daily_chg": -2.16,
-            "change_percent": -20.43,
+            "daily_chg": -2.57,
+            "change_percent": -20.77,
             "trend": "DOWN",
             "sparkline": [
                 3118.89,
@@ -635,14 +635,14 @@
                 2818.23,
                 2702.38,
                 2445.09,
-                2392.28
+                2382.16
             ]
         },
         "SOL": {
-            "price": 105.23,
+            "price": 104.71,
             "prev_price": 105.44,
-            "daily_chg": -0.2,
-            "change_percent": -15.9,
+            "daily_chg": -0.69,
+            "change_percent": -16.31,
             "trend": "DOWN",
             "sparkline": [
                 139.49,
@@ -666,7 +666,7 @@
                 117.61,
                 117.36,
                 105.44,
-                105.23
+                104.71
             ]
         },
         "DXY": {
@@ -701,10 +701,10 @@
             ]
         },
         "USDJPY": {
-            "price": 154.73,
+            "price": 154.78,
             "prev_price": 153.1,
-            "daily_chg": 1.07,
-            "change_percent": -0.28,
+            "daily_chg": 1.1,
+            "change_percent": -0.25,
             "trend": "UP",
             "sparkline": [
                 156.41,
@@ -728,14 +728,14 @@
                 154.34,
                 152.45,
                 153.1,
-                154.73
+                154.78
             ]
         },
         "EURUSD": {
             "price": 1.19,
             "prev_price": 1.2,
-            "daily_chg": -0.73,
-            "change_percent": 0.27,
+            "daily_chg": -1.03,
+            "change_percent": -0.04,
             "trend": "DOWN",
             "sparkline": [
                 1.17,
@@ -763,10 +763,10 @@
             ]
         },
         "USDINR": {
-            "price": 91.9,
+            "price": 91.64,
             "prev_price": 92.04,
-            "daily_chg": -0.15,
-            "change_percent": 0.44,
+            "daily_chg": -0.43,
+            "change_percent": 0.15,
             "trend": "DOWN",
             "sparkline": [
                 89.77,
@@ -790,7 +790,7 @@
                 91.71,
                 91.53,
                 92.04,
-                91.9
+                91.64
             ]
         },
         "USDSAR": {
@@ -825,10 +825,10 @@
             ]
         },
         "GOLD": {
-            "price": 5067.5,
+            "price": 4745.1,
             "prev_price": 5318.4,
-            "daily_chg": -4.72,
-            "change_percent": -0.24,
+            "daily_chg": -10.78,
+            "change_percent": -6.59,
             "trend": "DOWN",
             "sparkline": [
                 4370.1,
@@ -852,15 +852,15 @@
                 5079.9,
                 5301.6,
                 5318.4,
-                5067.5
+                4745.1
             ]
         },
         "OIL": {
-            "price": 65.55,
+            "price": 65.21,
             "prev_price": 65.42,
-            "daily_chg": 0.2,
-            "change_percent": 8.11,
-            "trend": "UP",
+            "daily_chg": -0.32,
+            "change_percent": 7.55,
+            "trend": "DOWN",
             "sparkline": [
                 57.95,
                 57.42,
@@ -883,14 +883,14 @@
                 62.39,
                 63.21,
                 65.42,
-                65.55
+                65.21
             ]
         },
         "COPPER": {
-            "price": 6.01,
+            "price": 5.92,
             "prev_price": 6.18,
-            "daily_chg": -2.6,
-            "change_percent": 0.52,
+            "daily_chg": -4.07,
+            "change_percent": -1.0,
             "trend": "DOWN",
             "sparkline": [
                 5.73,
@@ -914,14 +914,14 @@
                 5.83,
                 5.89,
                 6.18,
-                6.01
+                5.92
             ]
         },
         "NATGAS": {
-            "price": 4.09,
+            "price": 4.35,
             "prev_price": 3.92,
-            "daily_chg": 4.44,
-            "change_percent": -39.82,
+            "daily_chg": 11.13,
+            "change_percent": -35.97,
             "trend": "UP",
             "sparkline": [
                 3.97,
@@ -945,7 +945,7 @@
                 6.95,
                 7.46,
                 3.92,
-                4.09
+                4.35
             ]
         },
         "MOVE": {
@@ -1042,40 +1042,40 @@
             ]
         },
         "COPPER_GOLD": {
-            "price": 1.19,
+            "price": 1.25,
             "change_percent": 0,
             "trend": "RISK-OFF",
             "sparkline": [
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25
             ]
         }
     },
@@ -1107,22 +1107,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS score 28 indicates a Defensive market regime; momentum is flat. DXY (Dollar strength/Liquidity) rose, with VIX (Fear/Volatility) also increasing, tightening liquidity and elevating uncertainty. Though caution is warranted, the MOVE index (bond volatility) remained stable. This divergence suggests systemic risk might not be fully escalating, potentially limiting deep downside. Maintain prudence, but watch for bond market stability to potentially offer resilience.",
+        "content": "GMS score 26 confirms a DEFENSIVE (Risk-Off) regime, with momentum pushing the score lower. Rising DXY (Dollar strength/Liquidity) and VIX (Fear/Volatility) signal tightening conditions and heightened apprehension. While caution persists, the significant fall in Gold suggests deep deleveraging, potentially exhausting sellers and hinting at a tactical rebound. Maintain defensive allocation; monitor for potential short-term bounce signals.",
         "reports": {
-            "JP": "GMSスコア28は防御的な市場体制を示し、モメンタムは横ばいです。DXY（ドル高/流動性）とVIX（恐怖/変動性）が上昇し、流動性の引き締まりと不確実性の高まりを示唆。警戒が必要ですが、MOVE指数（債券変動性）は安定。この乖離は、システミックリスクの本格的な拡大を限定し、下値を抑制する可能性を示唆。慎重を期しつつ、債券市場の安定性がレジリエンスを提供するか注目。",
-            "EN": "GMS score 28 indicates a Defensive market regime; momentum is flat. DXY (Dollar strength/Liquidity) rose, with VIX (Fear/Volatility) also increasing, tightening liquidity and elevating uncertainty. Though caution is warranted, the MOVE index (bond volatility) remained stable. This divergence suggests systemic risk might not be fully escalating, potentially limiting deep downside. Maintain prudence, but watch for bond market stability to potentially offer resilience.",
-            "CN": "GMS评分28表明市场处于防御模式，动能持平。DXY（美元走强/流动性）和VIX（恐慌/波动性）均上升，预示流动性收紧及不确定性加剧。虽需警惕，但MOVE指数（债券波动性）保持稳定。这种背离表明系统性风险可能未完全升级，或能限制下跌空间。应保持审慎，但关注债市稳定性是否提供韧性。",
-            "ES": "GMS 28 indica régimen Defensivo; impulso plano. DXY (fortaleza dólar/liquidez) y VIX (miedo/volatilidad) subieron, ajustando liquidez y elevando incertidumbre. Aunque se justifica cautela, MOVE (volatilidad bonos) se mantuvo estable. Esta divergencia sugiere que el riesgo sistémico podría no escalar del todo, limitando caídas profundas. Mantenga prudencia, observando la estabilidad del mercado de bonos para resiliencia.",
-            "HI": "जीएमएस स्कोर 28 रक्षात्मक बाजार व्यवस्था दर्शाता है; गति सपाट। DXY (डॉलर की मजबूती/तरलता) और VIX (भय/अस्थिरता) बढ़े, तरलता कसी और अनिश्चितता बढ़ी। सावधानी आवश्यक, पर MOVE (बॉन्ड अस्थिरता) स्थिर रहा। यह विचलन बताता है कि प्रणालीगत जोखिम पूरी तरह बढ़ नहीं रहा, जिससे गहरी गिरावट सीमित हो सकती है। सतर्क रहें, पर देखें कि बॉन्ड बाजार की स्थिरता लचीलापन देती है या नहीं।",
-            "ID": "Skor GMS 28 menunjukkan rezim pasar Defensif; momentum datar. DXY (kekuatan Dolar/Likuiditas) dan VIX (Ketakutan/Volatilitas) naik, memperketat likuiditas serta meningkatkan ketidakpastian. Kehati-hatian diperlukan, namun indeks MOVE (volatilitas obligasi) stabil. Divergensi ini mengisyaratkan risiko sistemik mungkin tidak sepenuhnya meningkat, berpotensi membatasi penurunan tajam. Tetap waspada, amati stabilitas pasar obligasi.",
-            "AR": "يشير GMS 28 لنظام سوق دفاعي؛ الزخم ثابت. ارتفع DXY (قوة الدولار/السيولة) وVIX (الخوف/التقلب)، مشددًا السيولة ورافعًا عدم اليقين. رغم وجوب الحذر، ظل MOVE (تقلب السندات) مستقرًا. هذا التباين يوحي بأن المخاطر النظامية قد لا تتصاعد كليًا، مما قد يحد من الانخفاضات العميقة. حافظ على الحكمة، وراقب استقرار سوق السندات للمرونة."
+            "JP": "GMSスコア26は防御的（リスクオフ）体制を示し、モメンタムはスコアを押し下げた。DXY（ドル高/流動性）とVIX（恐怖/変動性）の上昇は、引き締まる状況と高まる懸念を示唆。警戒は続くものの、金の大幅下落は深いレバレッジ解消を示唆し、売り圧力を枯渇させ、戦術的反発の可能性を示唆する。防御的配分を維持し、短期的な反発シグナルを監視。",
+            "EN": "GMS score 26 confirms a DEFENSIVE (Risk-Off) regime, with momentum pushing the score lower. Rising DXY (Dollar strength/Liquidity) and VIX (Fear/Volatility) signal tightening conditions and heightened apprehension. While caution persists, the significant fall in Gold suggests deep deleveraging, potentially exhausting sellers and hinting at a tactical rebound. Maintain defensive allocation; monitor for potential short-term bounce signals.",
+            "CN": "GMS分数26确认防御性（避险）状态，动能将分数推低。DXY（美元走强/流动性）和VIX（恐惧/波动性）上升预示流动性收紧及担忧加剧。尽管谨慎情绪持续，黄金显著下跌表明深度去杠杆化，可能耗尽卖方，暗示战术性反弹。维持防御性配置；关注潜在短期反弹信号。",
+            "ES": "Puntuación GMS 26 confirma un régimen DEFENSIVO (Riesgo-Off), con impulso a la baja. El DXY (fortaleza del dólar/liquidez) y el VIX (miedo/volatilidad) al alza señalan condiciones más estrictas y mayor aprensión. Aunque la cautela persiste, la caída significativa del Oro sugiere un desapalancamiento profundo, agotando vendedores y apuntando a un rebote táctico. Mantener asignación defensiva; monitorear señales de rebote a corto plazo.",
+            "HI": "जीएमएस स्कोर 26 रक्षात्मक (रिस्क-ऑफ) स्थिति की पुष्टि करता है, जिसमें गति ने स्कोर को नीचे धकेला। बढ़ता DXY (डॉलर की मजबूती/तरलता) और VIX (डर/अस्थिरता) कड़ी होती स्थितियों और बढ़ी हुई आशंका का संकेत देते हैं। हालांकि सतर्कता बनी हुई है, सोने में महत्वपूर्ण गिरावट गहन डी-लीवरेजिंग का सुझाव देती है, संभवतः विक्रेताओं को थका देती है और एक सामरिक वापसी का संकेत देती है। रक्षात्मक आवंटन बनाए रखें; संभावित अल्पकालिक उछाल संकेतों की निगरानी करें।",
+            "ID": "Skor GMS 26 menegaskan rezim DEFENSIF (Risk-Off), dengan momentum mendorong skor lebih rendah. Kenaikan DXY (kekuatan Dolar/Likuiditas) dan VIX (Ketakutan/Volatilitas) menandakan kondisi pengetatan dan kekhawatiran yang meningkat. Meskipun kehati-hatian tetap ada, penurunan signifikan pada Emas menunjukkan deleveraging mendalam, berpotensi menghabiskan penjual dan mengisyaratkan rebound taktis. Pertahankan alokasi defensif; pantau sinyal rebound jangka pendek.",
+            "AR": "يشير مؤشر GMS 26 إلى نظام دفاعي (تجنب المخاطر)، مع دفع الزخم للمؤشر للأسفل. ارتفاع مؤشر الدولار (قوة الدولار/السيولة) ومؤشر VIX (الخوف/التقلب) يشيران إلى تشديد الظروف وزيادة القلق. بينما يستمر الحذر، يشير الانخفاض الكبير في الذهب إلى تصفية عميقة، مما قد يستنفد البائعين ويلمح إلى انتعاش تكتيكي. حافظ على تخصيص دفاعي؛ راقب إشارات الارتداد قصير الأجل المحتملة."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-29T14:53:36Z",
-            "score": 37
-        },
         {
             "date": "2026-01-29T15:50:36Z",
             "score": 31
@@ -1358,6 +1354,10 @@
         {
             "date": "2026-02-01T13:41:01Z",
             "score": 28
+        },
+        {
+            "date": "2026-02-01T13:54:43Z",
+            "score": 26
         }
     ],
     "intelligence": {
@@ -1368,9 +1368,9 @@
                 "isoDate": "2026-02-01T10:51:30+00:00Z"
             },
             {
-                "title": "Epstein files: Trump, Howard Lutnick, Steve Tisch among prominent names that appear in latest Justice Department release",
-                "link": "https://www.cnbc.com/2026/01/31/epstein-files-trump-howard-lutnick-steve-tisch.html",
-                "isoDate": "2026-02-01T10:41:15+00:00Z"
+                "title": "Political risk: How Trump 2.0 is affecting investment in U.S. assets",
+                "link": "https://www.cnbc.com/2026/02/01/political-risk-how-trump-2point0-is-affecting-investment-in-us-assets.html",
+                "isoDate": "2026-02-01T13:47:00+00:00Z"
             },
             {
                 "title": "How the EV pullback is affecting factories and jobs in the South",
@@ -1378,72 +1378,72 @@
                 "isoDate": "2026-02-01T12:00:01+00:00Z"
             },
             {
+                "title": "Epstein files: Trump, Howard Lutnick, Steve Tisch among prominent names that appear in latest Justice Department release",
+                "link": "https://www.cnbc.com/2026/01/31/epstein-files-trump-howard-lutnick-steve-tisch.html",
+                "isoDate": "2026-02-01T13:51:09+00:00Z"
+            },
+            {
                 "title": "U.S. government partially shuts down; House vote could reopen it by Monday",
                 "link": "https://www.cnbc.com/2026/01/30/government-shutdown-senate-vote-dhs.html",
                 "isoDate": "2026-01-31T05:01:44+00:00Z"
             },
             {
-                "title": "Everything you need to know about Kevin Warsh, Trump's pick to lead the Federal Reserve",
-                "link": "https://www.cnbc.com/2026/01/30/who-is-kevin-warsh-trumps-fed-chair-pick.html",
-                "isoDate": "2026-01-30T18:28:58+00:00Z"
-            },
-            {
-                "title": "Earnings playbook: Amazon and Alphabet headline the busiest week of the reporting period",
-                "link": "https://www.cnbc.com/2026/02/01/earnings-playbook-amazon-alphabet-lead-busiest-week-of-reporting-period.html",
-                "isoDate": "2026-02-01T13:33:08+00:00Z"
+                "title": "Elon Musk is stressing robots over cars. Here are three humanoid parts suppliers that Morgan Stanley recommends",
+                "link": "https://www.cnbc.com/2026/02/01/musk-is-stressing-robots-over-cars-these-suppliers-make-humanoid-parts.html",
+                "isoDate": "2026-02-01T13:36:17+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "アストラゼネカがニューヨークに上場、大手製薬会社が巨大な米国市場と中国の魅力的なイノベーションのバランスを取る",
-                "エプスタイン氏の訴訟書類：トランプ氏、ハワード・ラトニック氏、スティーブ・ティッシュ氏などが司法省の最新公開文書に登場",
-                "EVの減速が南部の工場と雇用に与える影響",
-                "米国政府一部閉鎖、下院の採決で月曜までに再開の可能性",
-                "連邦準備制度理事会（FRB）のトップ候補、トランプ氏指名のケビン・ウォーシュ氏について知っておくべきことすべて",
-                "決算プレイブック：アマゾンとアルファベットが最も忙しい決算発表期間をリード"
+                "アストラゼネカがニューヨークに上場、大手製薬会社は巨大な米国市場と魅力的な中国のイノベーションとのバランスを取る",
+                "政治的リスク：トランプ2.0は米国資産への投資にどう影響しているか",
+                "EVの減速は南部の工場と雇用にどう影響しているか",
+                "エプスタイン文書：トランプ氏、ハワード・ラトニック氏、スティーブ・ティッシュ氏らが司法省の最新公開文書に登場する著名な名前の中に",
+                "米国政府一部閉鎖、月曜までに再開の可能性も",
+                "イーロン・マスク氏は車よりロボットを重視、モルガン・スタンレーが推奨する3つの人型ロボット部品サプライヤー"
             ],
             "CN": [
-                "阿斯利康在纽约上市，大型制药公司在美国这个庞大市场和中国诱人的创新之间寻求平衡",
-                "爱泼斯坦文件：特朗普、霍华德·卢特尼克、史蒂夫·蒂什等知名人士出现在司法部最新公布的文件中",
-                "电动汽车销量下滑如何影响南部地区的工厂和就业",
-                "美国政府部分关门，众议院投票或能在周一前重启",
-                "你需要知道的关于特朗普提名的美联储主席人选凯文·沃什的一切",
-                "财报季攻略：亚马逊和Alphabet领衔最繁忙的财报发布周"
+                "阿斯利康在纽约上市，大型制药公司在平衡巨大的美国市场与中国诱人的创新",
+                "政治风险：特朗普2.0如何影响美国资产投资",
+                "电动汽车回撤如何影响南部地区的工厂和就业",
+                "爱泼斯坦文件：特朗普、霍华德·拉特尼克、史蒂夫·蒂什等知名人士出现在司法部最新发布的名单中",
+                "美国政府部分停摆，众议院投票可能在周一之前重新开放",
+                "埃隆·马斯克将重心放在机器人而非汽车上，摩根士丹利推荐三家人形机器人零部件供应商"
             ],
             "ES": [
                 "AstraZeneca cotiza en Nueva York, mientras las grandes farmacéuticas equilibran el enorme mercado estadounidense con la tentadora innovación de China",
-                "Archivos Epstein: Trump, Howard Lutnick, Steve Tisch, entre los nombres prominentes que aparecen en la última publicación del Departamento de Justicia",
+                "Riesgo político: Cómo el regreso de Trump está afectando la inversión en activos estadounidenses",
                 "Cómo la desaceleración de los vehículos eléctricos está afectando a las fábricas y empleos en el Sur",
-                "El gobierno de EE. UU. cierra parcialmente; la votación en la Cámara de Representantes podría reabrirlo el lunes",
-                "Todo lo que necesitas saber sobre Kevin Warsh, la elección de Trump para dirigir la Reserva Federal",
-                "Manual de resultados: Amazon y Alphabet encabezan la semana más intensa del período de informes"
+                "Archivos Epstein: Trump, Howard Lutnick, Steve Tisch entre los nombres prominentes que aparecen en la última publicación del Departamento de Justicia",
+                "Gobierno de EE. UU. se cierra parcialmente; votación en la Cámara de Representantes podría reabrirlo el lunes",
+                "Elon Musk se enfoca en robots en lugar de autos. Aquí hay tres proveedores de componentes humanoides que Morgan Stanley recomienda"
             ],
             "HI": [
-                "एस्ट्राजेनेका न्यूयॉर्क में सूचीबद्ध, जैसे बिग फ़ार्मा विशाल अमेरिकी बाज़ार को चीन के आकर्षक नवाचार के साथ संतुलित कर रहा है",
-                "एपस्टीन फाइलें: ट्रम्प, हॉवर्ड लुटनिक, स्टीव टिश जैसे प्रमुख नाम न्याय विभाग की नवीनतम विज्ञप्ति में दिखाई देते हैं",
-                "ईवी की वापसी दक्षिण में कारखानों और नौकरियों को कैसे प्रभावित कर रही है",
-                "अमेरिकी सरकार आंशिक रूप से बंद; हाउस का वोट सोमवार तक इसे फिर से खोल सकता है",
-                "केविन वॉर्श के बारे में आपको जो कुछ भी जानने की ज़रूरत है, वह फेडरल रिजर्व का नेतृत्व करने के लिए ट्रम्प की पसंद",
-                "कमाई की प्लेबुक: अमेज़ॅन और अल्फाबेट रिपोर्टिंग अवधि के सबसे व्यस्त सप्ताह का नेतृत्व करते हैं"
+                "एस्ट्रोजेनेका न्यूयॉर्क में सूचीबद्ध हो रहा है, क्योंकि बड़ी फार्मा कंपनियां विशाल अमेरिकी बाजार को चीन के आकर्षक नवाचार के साथ संतुलित कर रही हैं",
+                "राजनीतिक जोखिम: ट्रम्प 2.0 अमेरिकी संपत्तियों में निवेश को कैसे प्रभावित कर रहा है",
+                "ईवी की वापसी दक्षिणी क्षेत्रों में कारखानों और नौकरियों को कैसे प्रभावित कर रही है",
+                "एपस्टीन फाइलें: ट्रम्प, हावर्ड लुटनिक, स्टीव टिश न्याय विभाग की नवीनतम विज्ञप्ति में दिखाई देने वाले प्रमुख नामों में से हैं",
+                "अमेरिकी सरकार आंशिक रूप से बंद; सोमवार तक इसे फिर से खोलने के लिए सदन में मतदान हो सकता है",
+                "ई.एल.ओ.एन. मस्क कारों से ज्यादा रोबोट पर जोर दे रहे हैं। यहां तीन ह्यूमनॉइड पार्ट्स सप्लायर हैं जिनकी मॉर्गन स्टेनली सिफारिश करता है"
             ],
             "ID": [
-                "AstraZeneca terdaftar di New York, karena Big Pharma menyeimbangkan pasar AS yang besar dengan inovasi China yang menggoda",
-                "Berkas Epstein: Trump, Howard Lutnick, Steve Tisch, di antara nama-nama terkemuka yang muncul dalam rilis terbaru Departemen Kehakiman",
+                "AstraZeneca terdaftar di New York, saat Big Pharma menyeimbangkan pasar AS yang besar dengan inovasi China yang menggoda",
+                "Risiko politik: Bagaimana Trump 2.0 memengaruhi investasi di aset AS",
                 "Bagaimana penarikan EV memengaruhi pabrik dan pekerjaan di Selatan",
+                "Berkas Epstein: Trump, Howard Lutnick, Steve Tisch di antara nama-nama terkemuka yang muncul dalam rilis terbaru Departemen Kehakiman",
                 "Pemerintah AS sebagian ditutup; pemungutan suara DPR dapat membukanya kembali pada hari Senin",
-                "Segala sesuatu yang perlu Anda ketahui tentang Kevin Warsh, pilihan Trump untuk memimpin Federal Reserve",
-                "Buku pedoman pendapatan: Amazon dan Alphabet memimpin minggu tersibuk periode pelaporan"
+                "Elon Musk menekankan robot daripada mobil. Berikut adalah tiga pemasok komponen humanoid yang direkomendasikan Morgan Stanley"
             ],
             "AR": [
-                "أسترازينيكا تُدرج في نيويورك، حيث توازن شركات الأدوية الكبرى بين السوق الأمريكية الضخمة وابتكار الصين المغري",
-                "ملفات إبشتاين: ترامب، هوارد لوتنيك، ستيف تيش، من بين الأسماء البارزة التي تظهر في أحدث إصدار لوزارة العدل",
+                "أسترازينيكا تدرج في نيويورك، بينما توازن شركات الأدوية الكبرى السوق الأمريكية الضخمة مع ابتكارات الصين المغرية",
+                "المخاطر السياسية: كيف يؤثر ترامب 2.0 على الاستثمار في الأصول الأمريكية",
                 "كيف يؤثر تراجع السيارات الكهربائية على المصانع والوظائف في الجنوب",
+                "ملفات إبستين: ترامب، هوارد لوتنيك، ستيف تيش من بين الأسماء البارزة التي تظهر في أحدث إصدار لوزارة العدل",
                 "الحكومة الأمريكية تغلق جزئيًا؛ تصويت مجلس النواب قد يعيد فتحها بحلول يوم الاثنين",
-                "كل ما تحتاج لمعرفته عن كيفن وورش، اختيار ترامب لقيادة الاحتياطي الفيدرالي",
-                "دليل الأرباح: أمازون وألفابت يتصدران الأسبوع الأكثر ازدحامًا في فترة الإبلاغ"
+                "إيلون ماسك يؤكد على الروبوتات بدلاً من السيارات. إليك ثلاثة موردين لقطع الغيار البشرية توصي بهم مورغان ستانلي"
             ]
         },
-        "last_updated": "2026-02-01T13:41:01.685715+00:00Z"
+        "last_updated": "2026-02-01T13:54:43.817448+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
