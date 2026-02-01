@@ -1,12 +1,12 @@
 {
-    "last_updated": "2026-02-01T14:23:12.804129+00:00",
-    "last_successful_update": "2026-02-01T14:23:12.804136+00:00",
-    "gms_score": 28,
+    "last_updated": "2026-02-01T14:25:52.881132+00:00",
+    "last_successful_update": "2026-02-01T14:25:52.881142+00:00",
+    "gms_score": 26,
     "sector_scores": {
         "STOCKS": 25,
         "CRYPTO": 25,
-        "FOREX": 35,
-        "COMMODITIES": 75
+        "FOREX": 25,
+        "COMMODITIES": 60
     },
     "market_data": {
         "CRYPTO_SENTIMENT": {
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 78004.32,
+            "price": 77960.97,
             "prev_price": 78621.12,
-            "daily_chg": -0.78,
-            "change_percent": -12.54,
+            "daily_chg": -0.84,
+            "change_percent": -12.58,
             "trend": "DOWN",
             "sparkline": [
                 90827.46,
@@ -604,14 +604,14 @@
                 84561.59,
                 84128.66,
                 78621.12,
-                78004.32
+                77960.97
             ]
         },
         "ETH": {
-            "price": 2369.95,
+            "price": 2367.46,
             "prev_price": 2445.09,
-            "daily_chg": -3.07,
-            "change_percent": -21.18,
+            "daily_chg": -3.18,
+            "change_percent": -21.26,
             "trend": "DOWN",
             "sparkline": [
                 3118.89,
@@ -635,14 +635,14 @@
                 2818.23,
                 2702.38,
                 2445.09,
-                2369.95
+                2367.46
             ]
         },
         "SOL": {
-            "price": 104.01,
+            "price": 103.85,
             "prev_price": 105.44,
-            "daily_chg": -1.36,
-            "change_percent": -16.87,
+            "daily_chg": -1.51,
+            "change_percent": -17.0,
             "trend": "DOWN",
             "sparkline": [
                 139.49,
@@ -666,7 +666,7 @@
                 117.61,
                 117.36,
                 105.44,
-                104.01
+                103.85
             ]
         },
         "DXY": {
@@ -701,10 +701,10 @@
             ]
         },
         "USDJPY": {
-            "price": 154.73,
+            "price": 154.78,
             "prev_price": 153.1,
-            "daily_chg": 1.07,
-            "change_percent": -0.28,
+            "daily_chg": 1.1,
+            "change_percent": -0.25,
             "trend": "UP",
             "sparkline": [
                 156.41,
@@ -728,14 +728,14 @@
                 154.34,
                 152.45,
                 153.1,
-                154.73
+                154.78
             ]
         },
         "EURUSD": {
             "price": 1.19,
             "prev_price": 1.2,
-            "daily_chg": -0.73,
-            "change_percent": 0.27,
+            "daily_chg": -1.03,
+            "change_percent": -0.04,
             "trend": "DOWN",
             "sparkline": [
                 1.17,
@@ -763,10 +763,10 @@
             ]
         },
         "USDINR": {
-            "price": 91.9,
+            "price": 91.64,
             "prev_price": 92.04,
-            "daily_chg": -0.15,
-            "change_percent": 0.44,
+            "daily_chg": -0.43,
+            "change_percent": 0.15,
             "trend": "DOWN",
             "sparkline": [
                 89.77,
@@ -790,7 +790,7 @@
                 91.71,
                 91.53,
                 92.04,
-                91.9
+                91.64
             ]
         },
         "USDSAR": {
@@ -825,10 +825,10 @@
             ]
         },
         "GOLD": {
-            "price": 5067.5,
+            "price": 4745.1,
             "prev_price": 5318.4,
-            "daily_chg": -4.72,
-            "change_percent": -0.24,
+            "daily_chg": -10.78,
+            "change_percent": -6.59,
             "trend": "DOWN",
             "sparkline": [
                 4370.1,
@@ -852,15 +852,15 @@
                 5079.9,
                 5301.6,
                 5318.4,
-                5067.5
+                4745.1
             ]
         },
         "OIL": {
-            "price": 65.55,
+            "price": 65.21,
             "prev_price": 65.42,
-            "daily_chg": 0.2,
-            "change_percent": 8.11,
-            "trend": "UP",
+            "daily_chg": -0.32,
+            "change_percent": 7.55,
+            "trend": "DOWN",
             "sparkline": [
                 57.95,
                 57.42,
@@ -883,14 +883,14 @@
                 62.39,
                 63.21,
                 65.42,
-                65.55
+                65.21
             ]
         },
         "COPPER": {
-            "price": 6.01,
+            "price": 5.92,
             "prev_price": 6.18,
-            "daily_chg": -2.6,
-            "change_percent": 0.52,
+            "daily_chg": -4.07,
+            "change_percent": -1.0,
             "trend": "DOWN",
             "sparkline": [
                 5.73,
@@ -914,14 +914,14 @@
                 5.83,
                 5.89,
                 6.18,
-                6.01
+                5.92
             ]
         },
         "NATGAS": {
-            "price": 4.09,
+            "price": 4.35,
             "prev_price": 3.92,
-            "daily_chg": 4.44,
-            "change_percent": -39.82,
+            "daily_chg": 11.13,
+            "change_percent": -35.97,
             "trend": "UP",
             "sparkline": [
                 3.97,
@@ -945,7 +945,7 @@
                 6.95,
                 7.46,
                 3.92,
-                4.09
+                4.35
             ]
         },
         "MOVE": {
@@ -1042,40 +1042,40 @@
             ]
         },
         "COPPER_GOLD": {
-            "price": 1.19,
+            "price": 1.25,
             "change_percent": 0,
             "trend": "RISK-OFF",
             "sparkline": [
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25
             ]
         }
     },
@@ -1107,22 +1107,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS score 28 signals a defensive market. DXY (Dollar strength/Liquidity) rose alongside VIX (Fear/Volatility), indicating risk aversion and tightening conditions. While caution is advised, momentum pushed the score slightly higher from 26 to 28, hinting at some resilience. Maintain a defensive posture; monitor DXY/VIX for trend shifts.",
+        "content": "GMS score 26 signals a DEFENSIVE (Risk-Off) regime, with momentum flat. Rising DXY (Dollar strength/Liquidity) and VIX (Fear/Volatility) drive caution, amplified by widening HY spreads. Gold's sharp 10.78% drop and broad equity declines confirm heightened risk aversion. While defensive, stable US 10-year and real interest rates hint sentiment may be temporary. Maintain caution; monitor for shifts.",
         "reports": {
-            "JP": "GMSスコア28は防衛的な市場を示唆。DXY（ドル高/流動性）がVIX（恐怖/変動性）と共に上昇し、リスク回避と金融引き締めが進行中。警戒は必要だが、モメンタムがスコアを26から28へ僅かに押し上げ、現行範囲内でのある程度の回復力を示唆している。防衛的な姿勢を維持し、DXY/VIXのトレンド変化を監視すべきだ。",
-            "EN": "GMS score 28 signals a defensive market. DXY (Dollar strength/Liquidity) rose alongside VIX (Fear/Volatility), indicating risk aversion and tightening conditions. While caution is advised, momentum pushed the score slightly higher from 26 to 28, hinting at some resilience. Maintain a defensive posture; monitor DXY/VIX for trend shifts.",
-            "CN": "GMS得分28表明市场处于防御态势。DXY（美元走强/流动性）与VIX（恐慌/波动性）同步上升，清晰预示避险情绪和紧缩的金融环境。尽管需保持高度警惕，但动能将得分从26推高至28，暗示当前防御区间内存在一定韧性。维持防御性配置，密切关注DXY/VIX趋势变化是关键。",
-            "ES": "GMS con 28 puntos indica mercado defensivo. DXY (fortaleza del dólar/liquidez) y VIX (miedo/volatilidad) subieron, señalando aversión al riesgo y condiciones ajustadas. Aunque se aconseja precaución, el impulso elevó la puntuación de 26 a 28, sugiriendo cierta resiliencia. Mantenga una postura defensiva; monitoree DXY/VIX por cambios de tendencia.",
-            "HI": "जीएमएस स्कोर 28 रक्षात्मक बाजार दर्शाता है। DXY (डॉलर की मजबूती/तरलता) VIX (भय/अस्थिरता) के साथ बढ़ा, जो जोखिम से बचाव और सख्त होती स्थितियों का संकेत है। हालांकि सावधानी बरतनी चाहिए, गति ने स्कोर को 26 से 28 तक थोड़ा ऊपर धकेला, जो कुछ लचीलेपन का संकेत देता है। रक्षात्मक स्थिति बनाए रखें; DXY/VIX रुझानों की निगरानी करें।",
-            "ID": "Skor GMS 28 menandakan pasar defensif. DXY (kekuatan Dolar/likuiditas) naik bersama VIX (ketakutan/volatilitas), menunjukkan penghindaran risiko dan kondisi yang mengetat. Meskipun kehati-hatian disarankan, momentum mendorong skor sedikit lebih tinggi dari 26 ke 28, mengisyaratkan ketahanan. Pertahankan posisi defensif; pantau DXY/VIX untuk perubahan tren.",
-            "AR": "يشير مؤشر GMS 28 إلى سوق دفاعي. ارتفع مؤشر DXY (قوة الدولار/السيولة) مع VIX (الخوف/التقلب)، مما يدل على النفور من المخاطرة وتشديد الظروف. بينما ينصح بالحذر، دفع الزخم النتيجة قليلاً من 26 إلى 28، مما يشير إلى بعض المرونة. حافظ على وضع دفاعي؛ راقب DXY/VIX لتحولات الاتجاه."
+            "JP": "GMSスコア26はDEFENSIVE（リスクオフ）体制を示し、勢いは横ばいです。DXY（ドル高/流動性）とVIX（恐怖/変動性）の上昇が警戒感を高め、HYスプレッドの拡大がこれを強化。金の大幅な10.78%下落と広範な株安は、リスク回避の強まりを裏付けます。守りの姿勢が賢明ですが、米10年債と実質金利の安定は、現在のセンチメントが一時的である可能性を示唆。警戒を維持し、変化を監視してください。",
+            "EN": "GMS score 26 signals a DEFENSIVE (Risk-Off) regime, with momentum flat. Rising DXY (Dollar strength/Liquidity) and VIX (Fear/Volatility) drive caution, amplified by widening HY spreads. Gold's sharp 10.78% drop and broad equity declines confirm heightened risk aversion. While defensive, stable US 10-year and real interest rates hint sentiment may be temporary. Maintain caution; monitor for shifts.",
+            "CN": "GMS得分26表明DEFENSIVE（避险）状态，动能持平。DXY（美元走强/流动性）和VIX（恐慌/波动性）上升加剧市场谨慎情绪，高收益利差扩大进一步证实。黄金急跌10.78%及股市普遍下跌，证实避险情绪加剧。虽需防御，但美国10年期国债和实际利率稳定，暗示当前情绪或为暂时。保持谨慎，关注变化。",
+            "ES": "Puntuación GMS 26 indica régimen DEFENSIVO (Riesgo-Off), con impulso plano. DXY (Fortaleza del dólar/Liquidez) y VIX (Miedo/Volatilidad) al alza aumentan cautela, reforzada por spreads HY crecientes. Caída del 10.78% del oro y debilidad bursátil confirman aversión al riesgo. Aunque defensivo, la estabilidad de rendimientos de bonos a 10 años y tasas reales sugiere que el sentimiento puede ser temporal. Mantenga precaución, vigile cambios.",
+            "HI": "जीएमएस स्कोर 26 DEFENSIVE (जोखिम-बंद) व्यवस्था का संकेत देता है, गति सपाट है। DXY (डॉलर की मजबूती/तरलता) और VIX (भय/अस्थिरता) में वृद्धि सावधानी बढ़ा रही है, जो HY स्प्रेड के विस्तार से और मजबूत होती है। सोने में 10.78% की तेज गिरावट और व्यापक इक्विटी में गिरावट जोखिम से बचने की पुष्टि करती है। हालांकि रक्षात्मक, अमेरिकी 10-वर्षीय और वास्तविक ब्याज दरों की स्थिरता संकेत देती है कि वर्तमान भावना अस्थायी हो सकती है। सावधानी बनाए रखें, बदलावों पर नज़र रखें।",
+            "ID": "Skor GMS 26 menandakan rezim DEFENSIVE (Risiko-Mati), dengan momentum datar. Kenaikan DXY (kekuatan Dolar/Likuiditas) dan VIX (Ketakutan/Volatilitas) mendorong kehati-hatian, diperkuat oleh spread HY yang melebar. Penurunan tajam 10,78% pada emas dan pelemahan ekuitas secara luas mengonfirmasi peningkatan penghindaran risiko. Meskipun defensif, stabilitas imbal hasil obligasi AS 10 tahun dan suku bunga riil mengisyaratkan sentimen saat ini mungkin sementara. Tetap waspada, pantau perubahan.",
+            "AR": "يشير مؤشر GMS البالغ 26 إلى نظام دفاعي (تجنب المخاطر)، مع زخم ثابت. ارتفاع مؤشر الدولار (قوة الدولار/السيولة) ومؤشر التقلبات (الخوف/التقلب) يدفع الحذر، معززاً باتساع هوامش السندات عالية العائد. يؤكد الانخفاض الحاد بنسبة 10.78% في الذهب وضعف الأسهم الواسع تفاقم النفور من المخاطر. بينما يتطلب الأمر دفاعًا، يشير استقرار عوائد سندات الخزانة الأمريكية لأجل 10 سنوات وأسعار الفائدة الحقيقية إلى أن الشعور الحالي قد يكون مؤقتًا. حافظ على الحذر، راقب التحولات."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-29T19:02:48Z",
-            "score": 35
-        },
         {
             "date": "2026-01-29T19:39:24Z",
             "score": 35
@@ -1358,6 +1354,10 @@
         {
             "date": "2026-02-01T14:23:12Z",
             "score": 28
+        },
+        {
+            "date": "2026-02-01T14:25:52Z",
+            "score": 26
         }
     ],
     "intelligence": {
@@ -1395,55 +1395,55 @@
         ],
         "translations": {
             "JP": [
-                "アストラゼネカ、ニューヨークに上場：巨大製薬企業が巨大米国市場と中国の魅力的なイノベーションのバランスを取る",
-                "政治的リスク：トランプ2.0が米国資産への投資にどう影響しているか",
+                "アストラゼネカ、ニューヨークに上場：大手製薬は巨大な米国市場と中国の魅力的なイノベーションのバランスを取る",
+                "政治的リスク：トランプ2.0は米国資産への投資にどう影響しているか",
                 "EVの減速は南部の工場と雇用にどう影響しているか",
-                "アメリカの小売店アンカーが衰退する中、プライベートクラブが商業用不動産をより多く占拠",
-                "エプスタイン事件の書類：トランプ氏、ハワード・ラトニック氏、スティーブ・ティッシュ氏らが法務省の最新公開資料に登場",
-                "イーロン・マスク氏、自動車よりもロボットを重視：モルガン・スタンレーが推奨する3つの人型ロボット部品サプライヤー"
+                "アメリカの小売店の主力店が衰退する中、プライベートクラブが商業用不動産をさらに占拠",
+                "エプスタイン文書：トランプ氏、ハワード・ラトニック氏、スティーブ・ティッシュ氏らが最新の司法省発表に登場",
+                "イーロン・マスクは自動車よりロボットを重視：モルガン・スタンレーが推奨する3つの人型ロボット部品サプライヤー"
             ],
             "CN": [
-                "阿斯利康在纽约上市，大型制药公司权衡巨大的美国市场与中国诱人的创新",
+                "阿斯利康在美国纽约上市，大型药企在庞大的美国市场与中国诱人的创新之间寻求平衡",
                 "政治风险：特朗普2.0如何影响美国资产投资",
-                "电动汽车行业低迷如何影响南部工厂和就业",
-                "随着美国零售店巨头的衰落，私人俱乐部正占据更多商业地产",
-                "爱泼斯坦文件：特朗普、霍华德·卢特尼克、史蒂夫·蒂施等知名人士出现在司法部最新公布的文件中",
-                "埃隆·马斯克更加关注机器人而非汽车。摩根士丹利推荐的三家人形机器人零部件供应商"
+                "电动汽车（EV）的撤退对南部地区的工厂和就业有何影响",
+                "随着美国零售店主力店的衰退，私人俱乐部正在接管更多商业地产",
+                "爱泼斯坦文件：特朗普、霍华德·卢特尼克、史蒂夫·蒂施等知名人士出现在最新司法部发布的文件中",
+                "埃隆·马斯克：他比汽车更看重机器人。以下是摩根士丹利推荐的三家人形机器人零部件供应商"
             ],
             "ES": [
                 "AstraZeneca cotiza en Nueva York, mientras las grandes farmacéuticas equilibran el enorme mercado estadounidense con la tentadora innovación de China",
-                "Riesgo político: Cómo el 'Trump 2.0' está afectando la inversión en activos estadounidenses",
-                "Cómo la desaceleración de los vehículos eléctricos está afectando a las fábricas y al empleo en el sur",
-                "A medida que los grandes almacenes minoristas estadounidenses se desvanecen, los clubes privados se apoderan de más bienes raíces comerciales",
+                "Riesgo político: Cómo Trump 2.0 está afectando la inversión en activos estadounidenses",
+                "Cómo la desaceleración de los vehículos eléctricos está afectando a las fábricas y los empleos en el Sur",
+                "A medida que los anclajes de las tiendas minoristas estadounidenses se desvanecen, los clubes privados se apoderan de más bienes raíces comerciales",
                 "Archivos Epstein: Trump, Howard Lutnick, Steve Tisch entre los nombres prominentes que aparecen en la última publicación del Departamento de Justicia",
                 "Elon Musk prioriza los robots sobre los coches. Aquí hay tres proveedores de piezas humanoides que Morgan Stanley recomienda"
             ],
             "HI": [
-                "एस्ट्राजेनेका न्यूयॉर्क में सूचीबद्ध हो रहा है, क्योंकि बड़ी फार्मास्युटिकल कंपनियां विशाल अमेरिकी बाजार को चीन के लुभावने नवाचार के साथ संतुलित कर रही हैं",
+                "एस्ट्राजेनेका न्यूयॉर्क में सूचीबद्ध हो रहा है, क्योंकि बिग फार्मा विशाल अमेरिकी बाजार को चीन के लुभावने नवाचार के साथ संतुलित कर रहा है",
                 "राजनीतिक जोखिम: ट्रम्प 2.0 अमेरिकी संपत्तियों में निवेश को कैसे प्रभावित कर रहा है",
-                "ईवी में गिरावट दक्षिण में कारखानों और नौकरियों को कैसे प्रभावित कर रही है",
-                "जैसे-जैसे अमेरिकी खुदरा स्टोरों के एंकर फीके पड़ते जा रहे हैं, निजी क्लब अधिक वाणिज्यिक अचल संपत्ति पर कब्जा कर रहे हैं",
-                "एपस्टीन फाइलें: ट्रम्प, हावर्ड लुटनिक, स्टीव टिश न्याय विभाग की नवीनतम विज्ञप्ति में दिखाई देने वाले प्रमुख नामों में से हैं",
-                "एलन मस्क कारों पर रोबोट पर जोर दे रहे हैं। यहां तीन ह्यूमनॉइड पार्ट्स सप्लायर दिए गए हैं जिनकी मॉर्गन स्टेनली सिफारिश करता है"
+                "ईवी की गिरावट दक्षिण में कारखानों और नौकरियों को कैसे प्रभावित कर रही है",
+                "जैसे-जैसे अमेरिकी खुदरा स्टोर के एंकर फीके पड़ रहे हैं, निजी क्लब अधिक वाणिज्यिक अचल संपत्ति ले रहे हैं",
+                "एपस्टीन फाइलें: ट्रम्प, हॉवर्ड लुटनिक, स्टीव टिस्क न्याय विभाग की नवीनतम विज्ञप्ति में दिखाई देने वाले प्रमुख नामों में से हैं",
+                "एलन मस्क कारों पर रोबोट को प्राथमिकता दे रहे हैं। यहाँ तीन ह्यूमनॉइड पार्ट्स आपूर्तिकर्ता हैं जिनकी मॉर्गन स्टेनली अनुशंसा करता है"
             ],
             "ID": [
-                "AstraZeneca terdaftar di New York, saat Big Pharma menyeimbangkan pasar AS yang besar dengan inovasi Tiongkok yang menggiurkan",
-                "Risiko politik: Bagaimana 'Trump 2.0' memengaruhi investasi di aset AS",
+                "AstraZeneca terdaftar di New York, saat Big Pharma menyeimbangkan pasar AS yang besar dengan inovasi China yang menggoda",
+                "Risiko politik: Bagaimana Trump 2.0 memengaruhi investasi di aset AS",
                 "Bagaimana penarikan EV memengaruhi pabrik dan pekerjaan di Selatan",
                 "Saat jangkar toko ritel Amerika memudar, klub pribadi mengambil alih lebih banyak real estat komersial",
-                "Berkas Epstein: Trump, Howard Lutnick, Steve Tisch di antara nama-nama terkemuka yang muncul dalam rilis terbaru Departemen Kehakiman",
-                "Elon Musk menekankan robot daripada mobil. Berikut adalah tiga pemasok suku cadang humanoid yang direkomendasikan Morgan Stanley"
+                "File Epstein: Trump, Howard Lutnick, Steve Tisch di antara nama-nama terkemuka yang muncul dalam rilis terbaru Departemen Kehakiman",
+                "Elon Musk lebih menekankan robot daripada mobil. Berikut adalah tiga pemasok komponen humanoid yang direkomendasikan Morgan Stanley"
             ],
             "AR": [
-                "أسترازينيكا تُدرج أسهمها في نيويورك، بينما توازن شركات الأدوية الكبرى بين السوق الأمريكية الضخمة وابتكار الصين المغري",
-                "مخاطر سياسية: كيف يؤثر ترامب 2.0 على الاستثمار في الأصول الأمريكية",
+                "أسترازينيكا تُدرج في نيويورك، حيث توازن شركات الأدوية الكبرى بين السوق الأمريكية الضخمة وابتكار الصين المغري",
+                "المخاطر السياسية: كيف يؤثر ترامب 2.0 على الاستثمار في الأصول الأمريكية",
                 "كيف يؤثر تراجع السيارات الكهربائية على المصانع والوظائف في الجنوب",
-                "مع تلاشي المتاجر الأمريكية الرئيسية، تستحوذ الأندية الخاصة على المزيد من العقارات التجارية",
-                "ملفات إبشتاين: ترامب، هوارد لوتنيك، ستيف تيش من بين الأسماء البارزة التي تظهر في أحدث إصدار لوزارة العدل",
-                "إيلون ماسك يركز على الروبوتات بدلاً من السيارات. إليك ثلاثة موردين لقطع الغيار البشرية توصي بهم مورجان ستانلي"
+                "مع تراجع المتاجر الرئيسية لتجزئة الملابس الأمريكية، تستولي الأندية الخاصة على المزيد من العقارات التجارية",
+                "ملفات إبستين: ترامب، هوارد لوتنيك، ستيف تيش من بين الأسماء البارزة التي تظهر في أحدث إصدار لوزارة العدل",
+                "إيلون ماسك يؤكد على الروبوتات بدلاً من السيارات. إليك ثلاثة موردين لقطع الغيار البشرية توصي بهم مورجان ستانلي"
             ]
         },
-        "last_updated": "2026-02-01T14:23:12.803665+00:00Z"
+        "last_updated": "2026-02-01T14:25:52.880637+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
