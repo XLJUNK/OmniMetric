@@ -5,6 +5,8 @@ import { LangType, DICTIONARY } from '@/data/dictionary';
 import { getWikiItem, getAllSlugs, WikiItem, getWikiData } from '@/lib/wiki';
 import { DynamicStructuredData } from '@/components/DynamicStructuredData';
 import { AdSenseSlot } from '@/components/AdSenseSlot';
+import { LiveWikiData } from '@/components/LiveWikiData';
+import { DataSourceFooter } from '@/components/DataSourceFooter';
 import { ArrowLeft, Share2, TrendingUp, BookOpen, Quote, Activity, Home, ChevronRight, Globe, Cpu, Scale, Zap, Users } from 'lucide-react';
 import { Metadata } from 'next';
 
@@ -321,6 +323,9 @@ export default async function WikiDetailPage({ params }: Props) {
                             {getContentDescription(item, normalizedLang)}
                         </p>
 
+                        {/* LIVE DATA INJECTION (E-E-A-T UTILITY) */}
+                        <LiveWikiData slug={slug} lang={normalizedLang} />
+
                         {/* V4.7 HEAVY: Deep Dive */}
                         {item.heavy?.deep_dive && (
                             <div className={`mt-8 p-6 bg-slate-50 dark:bg-slate-900/50 border-sky-500 text-sm leading-8 text-slate-700 dark:text-slate-300 font-serif ${isRTL ? 'border-r-4 text-right' : 'border-l-4 text-left'}`}>
@@ -436,6 +441,7 @@ export default async function WikiDetailPage({ params }: Props) {
                     </div>
 
                 </article>
+                <DataSourceFooter />
 
                 {/* Related Strategy Knowledge (Internal Linking) */}
                 <div className="mt-20 pt-12 border-t border-border">
