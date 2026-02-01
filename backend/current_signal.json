@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-02-01T14:39:34.498536+00:00",
-    "last_successful_update": "2026-02-01T14:39:34.498543+00:00",
+    "last_updated": "2026-02-01T15:37:00.868332+00:00",
+    "last_successful_update": "2026-02-01T15:37:00.868341+00:00",
     "gms_score": 28,
     "sector_scores": {
         "STOCKS": 25,
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 77483.46,
+            "price": 76945.38,
             "prev_price": 78621.12,
-            "daily_chg": -1.45,
-            "change_percent": -13.12,
+            "daily_chg": -2.13,
+            "change_percent": -13.72,
             "trend": "DOWN",
             "sparkline": [
                 90827.46,
@@ -604,14 +604,14 @@
                 84561.59,
                 84128.66,
                 78621.12,
-                77483.46
+                76945.38
             ]
         },
         "ETH": {
-            "price": 2343.49,
+            "price": 2299.17,
             "prev_price": 2445.09,
-            "daily_chg": -4.16,
-            "change_percent": -22.06,
+            "daily_chg": -5.97,
+            "change_percent": -23.53,
             "trend": "DOWN",
             "sparkline": [
                 3118.89,
@@ -635,14 +635,14 @@
                 2818.23,
                 2702.38,
                 2445.09,
-                2343.49
+                2299.17
             ]
         },
         "SOL": {
-            "price": 103.03,
+            "price": 100.91,
             "prev_price": 105.44,
-            "daily_chg": -2.29,
-            "change_percent": -17.66,
+            "daily_chg": -4.3,
+            "change_percent": -19.35,
             "trend": "DOWN",
             "sparkline": [
                 139.49,
@@ -666,7 +666,7 @@
                 117.61,
                 117.36,
                 105.44,
-                103.03
+                100.91
             ]
         },
         "DXY": {
@@ -1120,10 +1120,6 @@
     },
     "history_chart": [
         {
-            "date": "2026-01-29T20:45:19Z",
-            "score": 35
-        },
-        {
             "date": "2026-01-29T21:39:27Z",
             "score": 35
         },
@@ -1358,6 +1354,10 @@
         {
             "date": "2026-02-01T14:39:34Z",
             "score": 28
+        },
+        {
+            "date": "2026-02-01T15:37:00Z",
+            "score": 28
         }
     ],
     "intelligence": {
@@ -1366,6 +1366,11 @@
                 "title": "AstraZeneca is listing in New York, as Big Pharma balances the huge U.S. market with China's tempting innovation",
                 "link": "https://www.cnbc.com/2026/02/01/astrazeneca-nyse-listing-china-pharma-pours-15-billion-into-china.html",
                 "isoDate": "2026-02-01T10:51:30+00:00Z"
+            },
+            {
+                "title": "Speaker Johnson: 'Confident' government shutdown will end by Tuesday",
+                "link": "https://www.cnbc.com/2026/02/01/government-shutdown-mike-johnson.html",
+                "isoDate": "2026-02-01T15:35:27+00:00Z"
             },
             {
                 "title": "Political risk: How Trump 2.0 is affecting investment in U.S. assets",
@@ -1383,11 +1388,6 @@
                 "isoDate": "2026-02-01T14:34:46+00:00Z"
             },
             {
-                "title": "Epstein files: Trump, Howard Lutnick, Steve Tisch among prominent names that appear in latest Justice Department release",
-                "link": "https://www.cnbc.com/2026/01/31/epstein-files-trump-howard-lutnick-steve-tisch.html",
-                "isoDate": "2026-02-01T13:51:09+00:00Z"
-            },
-            {
                 "title": "Elon Musk is stressing robots over cars. Here are three humanoid parts suppliers that Morgan Stanley recommends",
                 "link": "https://www.cnbc.com/2026/02/01/musk-is-stressing-robots-over-cars-these-suppliers-make-humanoid-parts.html",
                 "isoDate": "2026-02-01T13:36:17+00:00Z"
@@ -1395,55 +1395,55 @@
         ],
         "translations": {
             "JP": [
-                "アストラゼネカがニューヨークに上場、大手製薬会社は巨大な米国市場と中国の魅力的なイノベーションのバランスを取る",
-                "政治的リスク：トランプ2.0が米国資産への投資にどう影響しているか",
-                "EV（電気自動車）市場の回调が南部の工場と雇用にどう影響しているか",
-                "アメリカの小売店が衰退する中、プライベートクラブがより多くの商業用不動産を占拠している",
-                "エプスタイン文書：最新の司法省公開文書にトランプ、ハワード・ルトニック、スティーブ・ティッシュなどの著名な名前が登場",
-                "イーロン・マスクは車よりもロボットを重視している。モルガン・スタンレーが推奨する人型ロボット部品サプライヤー3社"
+                "アストラゼネカ、ニューヨークに上場、大手製薬企業は巨大な米国市場と中国の魅力的なイノベーションのバランスを取る",
+                "ジョンソン議長：「火曜日までに政府閉鎖は終わる」と確信",
+                "政治リスク：トランプ2.0が米国資産への投資にどう影響するか",
+                "EVの減速が南部の工場と雇用にどう影響するか",
+                "アメリカの小売店のアンカーが衰退するにつれて、プライベートクラブが商業用不動産をさらに支配",
+                "イーロン・マスクは車よりロボットを強調。モルガン・スタンレーが推奨する3つの人型ロボット部品サプライヤー"
             ],
             "CN": [
-                "阿斯利康在纽约上市，大型制药公司在美国庞大市场与中国诱人创新之间取得平衡",
-                "政治风险：特朗普2.0如何影响对美国资产的投资",
-                "电动汽车市场回调如何影响南部地区的工厂和就业",
-                "随着美国零售主力店的衰落，私人俱乐部正在占据更多商业地产",
-                "爱泼斯坦文件：特朗普、霍华德·卢特尼克、史蒂夫·蒂施等知名人士出现在司法部最新公布的文件中",
-                "埃隆·马斯克强调机器人而非汽车。以下是摩根士丹利推荐的三家类人机器人部件供应商"
+                "阿斯利康在美国上市，大型制药公司平衡庞大的美国市场与中国诱人的创新",
+                "众议院议长约翰逊：“有信心”政府停摆将在周二结束",
+                "政治风险：特朗普2.0如何影响美国资产投资",
+                "电动汽车回落如何影响南方工厂和就业",
+                "随着美国零售店锚点褪色，私人俱乐部占据更多商业地产",
+                "埃隆·马斯克更关注机器人而非汽车。以下是摩根士丹利推荐的三家人形机器人零件供应商"
             ],
             "ES": [
                 "AstraZeneca cotiza en Nueva York, mientras las grandes farmacéuticas equilibran el enorme mercado estadounidense con la tentadora innovación de China",
-                "Riesgo político: Cómo Trump 2.0 está afectando la inversión en activos estadounidenses",
-                "Cómo el retroceso del mercado de vehículos eléctricos está afectando a las fábricas y empleos en el Sur",
-                "A medida que los pilares de las tiendas minoristas estadounidenses se desvanecen, los clubes privados están apoderándose de más bienes raíces comerciales",
-                "Archivos Epstein: Trump, Howard Lutnick, Steve Tisch entre los nombres prominentes que aparecen en la última publicación del Departamento de Justicia",
-                "Elon Musk está priorizando los robots sobre los coches. Aquí hay tres proveedores de piezas humanoides que Morgan Stanley recomienda"
+                "Portavoz Johnson: \"Confiado\" en que el cierre del gobierno terminará el martes",
+                "Riesgo político: Cómo Trump 2.0 está afectando la inversión en activos de EE. UU.",
+                "Cómo la desaceleración de los vehículos eléctricos está afectando a las fábricas y los empleos en el Sur",
+                "A medida que los anclajes de las tiendas minoristas estadounidenses se desvanecen, los clubes privados se apoderan de más bienes raíces comerciales",
+                "Elon Musk está priorizando los robots sobre los autos. Aquí hay tres proveedores de componentes humanoides que Morgan Stanley recomienda"
             ],
             "HI": [
-                "एस्ट्राजेनेका न्यूयॉर्क में सूचीबद्ध हो रहा है, क्योंकि बड़ी फार्मा कंपनियां विशाल अमेरिकी बाजार और चीन के लुभावने नवाचार के बीच संतुलन बना रही हैं",
-                "राजनीतिक जोखिम: ट्रंप 2.0 अमेरिकी संपत्तियों में निवेश को कैसे प्रभावित कर रहा है",
-                "ईवी (इलेक्ट्रिक वाहन) बाजार की गिरावट दक्षिण में कारखानों और नौकरियों को कैसे प्रभावित कर रही है",
-                "जैसे-जैसे अमेरिकी खुदरा स्टोर एंकर फीके पड़ रहे हैं, निजी क्लब अधिक वाणिज्यिक रियल एस्टेट पर कब्जा कर रहे हैं",
-                "एपस्टीन फ़ाइलें: ट्रंप, हॉवर्ड लटनिक, स्टीव टिश नवीनतम न्याय विभाग की विज्ञप्ति में दिखाई देने वाले प्रमुख नामों में शामिल",
-                "एलन मस्क कारों के बजाय रोबोट पर जोर दे रहे हैं। यहां तीन मानवरोपी पुर्जे आपूर्तिकर्ता हैं जिनकी मॉर्गन स्टेनली सिफारिश करता है"
+                "एस्ट्राजेनेका न्यूयॉर्क में सूचीबद्ध हो रहा है, क्योंकि बिग फार्मा विशाल अमेरिकी बाजार को चीन के मोहक नवाचार के साथ संतुलित करता है",
+                "स्पीकर जॉनसन: 'आत्मविश्वासी' सरकारी शटडाउन मंगलवार तक समाप्त हो जाएगा",
+                "राजनीतिक जोखिम: ट्रम्प 2.0 अमेरिकी संपत्तियों में निवेश को कैसे प्रभावित कर रहा है",
+                "ईवी में गिरावट का दक्षिण में कारखानों और नौकरियों पर क्या असर हो रहा है",
+                "जैसे-जैसे अमेरिकी खुदरा स्टोर के एंकर फीके पड़ते जा रहे हैं, निजी क्लब अधिक वाणिज्यिक अचल संपत्ति पर कब्जा कर रहे हैं",
+                "एलन मस्क कारों की तुलना में रोबोट पर जोर दे रहे हैं। यहां तीन ह्यूमनॉइड पार्ट्स सप्लायर दिए गए हैं जिनकी मॉर्गन स्टेनली ने सिफारिश की है"
             ],
             "ID": [
-                "AstraZeneca terdaftar di New York, karena Big Pharma menyeimbangkan pasar AS yang besar dengan inovasi menarik Tiongkok",
+                "AstraZeneca terdaftar di New York, saat Big Pharma menyeimbangkan pasar AS yang besar dengan inovasi Tiongkok yang menggoda",
+                "Pembicara Johnson: \"Yakin\" penutupan pemerintah akan berakhir pada hari Selasa",
                 "Risiko politik: Bagaimana Trump 2.0 memengaruhi investasi di aset AS",
-                "Bagaimana kemunduran pasar EV memengaruhi pabrik dan lapangan kerja di Selatan",
-                "Seiring memudarnya toko-toko utama ritel Amerika, klub-klub pribadi mengambil alih lebih banyak properti komersial",
-                "Berkas Epstein: Trump, Howard Lutnick, Steve Tisch termasuk nama-nama terkemuka yang muncul dalam rilis terbaru Departemen Kehakiman",
-                "Elon Musk lebih menekankan robot daripada mobil. Berikut tiga pemasok suku cadang humanoid yang direkomendasikan Morgan Stanley"
+                "Bagaimana penarikan EV memengaruhi pabrik dan pekerjaan di Selatan",
+                "Saat jangkar toko ritel Amerika memudar, klub pribadi mengambil alih lebih banyak real estat komersial",
+                "Elon Musk menekankan robot daripada mobil. Berikut adalah tiga pemasok suku cadang humanoid yang direkomendasikan Morgan Stanley"
             ],
             "AR": [
-                "أسترازينيكا تدرج في نيويورك، بينما توازن شركات الأدوية الكبرى بين السوق الأمريكي الضخم وابتكار الصين المغري",
+                "أسترازينيكا تدرج في نيويورك، بينما توازن شركات الأدوية الكبرى بين السوق الأمريكية الضخمة وابتكار الصين المغري",
+                "الرئيس جونسون: \"واثق\" من انتهاء إغلاق الحكومة بحلول يوم الثلاثاء",
                 "المخاطر السياسية: كيف يؤثر ترامب 2.0 على الاستثمار في الأصول الأمريكية",
-                "كيف يؤثر تراجع سوق السيارات الكهربائية على المصانع والوظائف في الجنوب",
-                "مع تضاؤل متاجر التجزئة الأمريكية الرئيسية، تستولي النوادي الخاصة على المزيد من العقارات التجارية",
-                "ملفات إبستين: ترامب، هوارد لوتنيك، ستيف تيش من بين الأسماء البارزة التي تظهر في أحدث إصدار لوزارة العدل",
-                "إيلون ماسك يركز على الروبوتات أكثر من السيارات. إليك ثلاثة موردين لأجزاء الروبوتات الشبيهة بالبشر توصي بهم مورجان ستانلي"
+                "كيف يؤثر تراجع السيارات الكهربائية على المصانع والوظائف في الجنوب",
+                "مع تلاشي المراسي الرئيسية لمتاجر التجزئة الأمريكية، تستولي الأندية الخاصة على المزيد من العقارات التجارية",
+                "إيلون ماسك يركز على الروبوتات بدلاً من السيارات. إليك ثلاثة موردين لأجزاء روبوتات شبيهة بالبشر توصي بهم مورغان ستانلي"
             ]
         },
-        "last_updated": "2026-02-01T14:39:34.498074+00:00Z"
+        "last_updated": "2026-02-01T15:37:00.867856+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
