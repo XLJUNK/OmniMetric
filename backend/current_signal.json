@@ -1,12 +1,12 @@
 {
-    "last_updated": "2026-02-01T10:41:24.059952+00:00",
-    "last_successful_update": "2026-02-01T10:41:24.059992+00:00",
-    "gms_score": 26,
+    "last_updated": "2026-02-01T11:32:39.065772+00:00",
+    "last_successful_update": "2026-02-01T11:32:39.065779+00:00",
+    "gms_score": 28,
     "sector_scores": {
         "STOCKS": 25,
         "CRYPTO": 25,
-        "FOREX": 25,
-        "COMMODITIES": 60
+        "FOREX": 35,
+        "COMMODITIES": 75
     },
     "market_data": {
         "CRYPTO_SENTIMENT": {
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 78432.07,
+            "price": 78356.8,
             "prev_price": 78621.12,
-            "daily_chg": -0.24,
-            "change_percent": -12.06,
+            "daily_chg": -0.34,
+            "change_percent": -12.14,
             "trend": "DOWN",
             "sparkline": [
                 90827.46,
@@ -604,14 +604,14 @@
                 84561.59,
                 84128.66,
                 78621.12,
-                78432.07
+                78356.8
             ]
         },
         "ETH": {
-            "price": 2396.66,
+            "price": 2385.93,
             "prev_price": 2445.09,
-            "daily_chg": -1.98,
-            "change_percent": -20.29,
+            "daily_chg": -2.42,
+            "change_percent": -20.64,
             "trend": "DOWN",
             "sparkline": [
                 3118.89,
@@ -635,14 +635,14 @@
                 2818.23,
                 2702.38,
                 2445.09,
-                2396.66
+                2385.93
             ]
         },
         "SOL": {
-            "price": 105.06,
+            "price": 103.96,
             "prev_price": 105.44,
-            "daily_chg": -0.36,
-            "change_percent": -16.03,
+            "daily_chg": -1.41,
+            "change_percent": -16.91,
             "trend": "DOWN",
             "sparkline": [
                 139.49,
@@ -666,7 +666,7 @@
                 117.61,
                 117.36,
                 105.44,
-                105.06
+                103.96
             ]
         },
         "DXY": {
@@ -701,10 +701,10 @@
             ]
         },
         "USDJPY": {
-            "price": 154.78,
+            "price": 154.73,
             "prev_price": 153.1,
-            "daily_chg": 1.1,
-            "change_percent": -0.25,
+            "daily_chg": 1.07,
+            "change_percent": -0.28,
             "trend": "UP",
             "sparkline": [
                 156.41,
@@ -728,14 +728,14 @@
                 154.34,
                 152.45,
                 153.1,
-                154.78
+                154.73
             ]
         },
         "EURUSD": {
             "price": 1.19,
             "prev_price": 1.2,
-            "daily_chg": -1.03,
-            "change_percent": -0.04,
+            "daily_chg": -0.73,
+            "change_percent": 0.27,
             "trend": "DOWN",
             "sparkline": [
                 1.17,
@@ -763,10 +763,10 @@
             ]
         },
         "USDINR": {
-            "price": 91.64,
+            "price": 91.9,
             "prev_price": 92.04,
-            "daily_chg": -0.43,
-            "change_percent": 0.15,
+            "daily_chg": -0.15,
+            "change_percent": 0.44,
             "trend": "DOWN",
             "sparkline": [
                 89.77,
@@ -790,7 +790,7 @@
                 91.71,
                 91.53,
                 92.04,
-                91.64
+                91.9
             ]
         },
         "USDSAR": {
@@ -825,10 +825,10 @@
             ]
         },
         "GOLD": {
-            "price": 4745.1,
+            "price": 5067.5,
             "prev_price": 5318.4,
-            "daily_chg": -10.78,
-            "change_percent": -6.59,
+            "daily_chg": -4.72,
+            "change_percent": -0.24,
             "trend": "DOWN",
             "sparkline": [
                 4370.1,
@@ -852,15 +852,15 @@
                 5079.9,
                 5301.6,
                 5318.4,
-                4745.1
+                5067.5
             ]
         },
         "OIL": {
-            "price": 65.21,
+            "price": 65.55,
             "prev_price": 65.42,
-            "daily_chg": -0.32,
-            "change_percent": 7.55,
-            "trend": "DOWN",
+            "daily_chg": 0.2,
+            "change_percent": 8.11,
+            "trend": "UP",
             "sparkline": [
                 57.95,
                 57.42,
@@ -883,14 +883,14 @@
                 62.39,
                 63.21,
                 65.42,
-                65.21
+                65.55
             ]
         },
         "COPPER": {
-            "price": 5.92,
+            "price": 6.01,
             "prev_price": 6.18,
-            "daily_chg": -4.07,
-            "change_percent": -1.0,
+            "daily_chg": -2.6,
+            "change_percent": 0.52,
             "trend": "DOWN",
             "sparkline": [
                 5.73,
@@ -914,14 +914,14 @@
                 5.83,
                 5.89,
                 6.18,
-                5.92
+                6.01
             ]
         },
         "NATGAS": {
-            "price": 4.35,
+            "price": 4.09,
             "prev_price": 3.92,
-            "daily_chg": 11.13,
-            "change_percent": -35.97,
+            "daily_chg": 4.44,
+            "change_percent": -39.82,
             "trend": "UP",
             "sparkline": [
                 3.97,
@@ -945,7 +945,7 @@
                 6.95,
                 7.46,
                 3.92,
-                4.35
+                4.09
             ]
         },
         "MOVE": {
@@ -1042,40 +1042,40 @@
             ]
         },
         "COPPER_GOLD": {
-            "price": 1.25,
+            "price": 1.19,
             "change_percent": 0,
             "trend": "RISK-OFF",
             "sparkline": [
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25,
-                1.25
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19
             ]
         }
     },
@@ -1107,22 +1107,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS score 26 indicates a DEFENSIVE (Risk-Off) regime, driven lower by downward momentum. Rising VIX (fear) and DXY (Dollar strength) affirm market risk aversion, with declining liquidity and widening credit spreads. While caution deepens, Gold's sharp 10.78% drop, possibly linked to a silver sell-off, could signal capitulation in precious metals, potentially preceding short-term market stabilization. Maintain a defensive posture; monitor liquidity and credit spreads.",
+        "content": "The GMS score of 28 signals a Defensive market regime, with momentum flat, reinforcing caution. DXY (Dollar strength/Liquidity) is rising, and VIX (Fear/Volatility) is up, indicating increased risk-off sentiment. While gold saw a notable decline, suggesting a strong flight to USD cash, persistent high credit spreads (HY Spread) warn of tightening financial conditions. Maintain capital preservation and monitor for broader stabilization.",
         "reports": {
-            "JP": "GMSスコア26はDEFENSIVE（リスクオフ）体制を示し、下降モメンタムにより押し下げられました。VIX（恐怖指数）とDXY（ドル高/流動性）の上昇は市場のリスク回避を確認し、流動性低下と信用スプレッド拡大が金融状況を引き締めます。警戒感が深まる中、金（GOLD）の10.78%の急落は、シルバーの売りが波及した可能性があり、貴金属の降伏局面を示すかもしれません。これは短期的な市場安定化に先行する可能性があります。防衛的姿勢を維持し、流動性と信用スプレッドを監視してください。",
-            "EN": "GMS score 26 indicates a DEFENSIVE (Risk-Off) regime, driven lower by downward momentum. Rising VIX (fear) and DXY (Dollar strength) affirm market risk aversion, with declining liquidity and widening credit spreads. While caution deepens, Gold's sharp 10.78% drop, possibly linked to a silver sell-off, could signal capitulation in precious metals, potentially preceding short-term market stabilization. Maintain a defensive posture; monitor liquidity and credit spreads.",
-            "CN": "GMS评分26表示DEFENSIVE（避险）状态，受下降势头推动。VIX（恐慌）和DXY（美元走强）上升证实市场普遍避险情绪，流动性下降和信用利差扩大收紧了金融条件。尽管市场谨慎加深，黄金（GOLD）急剧下跌10.78%，可能与白银抛售有关，这可能预示着贵金属的投降性抛售阶段，可能先于短期市场稳定。维持防御态势，密切关注流动性和信用利差。",
-            "ES": "El GMS con 26 puntos señala un régimen DEFENSIVE (riesgo-off), impulsado por el impulso bajista. El aumento del VIX (miedo) y del DXY (fortaleza del dólar) confirman la aversión al riesgo, con liquidez decreciente y spreads de crédito ampliándose. Aunque la cautela se profundiza, la fuerte caída del 10.78% del Oro, posiblemente ligada a una venta masiva de plata, podría señalar una fase de capitulación en metales preciosos, antecediendo una estabilización a corto plazo. Mantener una postura defensiva; monitorear liquidez y spreads.",
-            "HI": "जीएमएस स्कोर 26 DEFENSIVE (रिस्क-ऑफ) व्यवस्था का संकेत देता है, जो नीचे की ओर गति से प्रेरित है। VIX (भय) और DXY (डॉलर की मजबूती) में वृद्धि बाजार की जोखिम से बचने की प्रवृत्ति की पुष्टि करती है, साथ ही तरलता में गिरावट और क्रेडिट स्प्रेड का चौड़ा होना वित्तीय स्थितियों को कसता है। हालांकि सावधानी गहरी होती जा रही है, सोने (GOLD) में 10.78% की तेज गिरावट, संभवतः चांदी की बिकवाली से जुड़ी, कीमती धातुओं में आत्मसमर्पण का संकेत दे सकती है, जो अल्पकालिक बाजार स्थिरीकरण से पहले हो सकता है। रक्षात्मक रुख बनाए रखें; तरलता और क्रेडिट स्प्रेड पर नज़र रखें।",
-            "ID": "Skor GMS 26 menunjukkan rezim DEFENSIVE (Risk-Off), didorong lebih rendah oleh momentum penurunan. Kenaikan VIX (ketakutan) dan DXY (kekuatan Dolar) menegaskan penghindaran risiko pasar, dengan likuiditas menurun dan spread kredit melebar memperketat kondisi keuangan. Meskipun kehati-hatian semakin dalam, penurunan tajam 10.78% pada Emas (GOLD), kemungkinan terkait penjualan perak, bisa menandakan fase kapitulasi pada logam mulia, yang berpotensi mendahului stabilisasi pasar jangka pendek. Pertahankan posisi defensif; pantau likuiditas dan spread kredit.",
-            "AR": "تشير نتيجة GMS البالغة 26 إلى نظام دفاعي (تجنب المخاطر)، مدفوعًا بزخم هبوطي. يؤكد ارتفاع مؤشر VIX (الخوف) ومؤشر DXY (قوة الدولار) نفور السوق من المخاطر، مع انخفاض السيولة وتوسع فروقات الائتمان مما يشدد الظروف المالية. بينما يتعمق الحذر، فإن الانخفاض الحاد بنسبة 10.78% في الذهب، ربما المرتبط ببيع الفضة، يمكن أن يشير إلى مرحلة استسلام في المعادن الثمينة، مما قد يسبق استقرار السوق على المدى القصير. حافظ على موقف دفاعي؛ راقب السيولة وفروقات الائتمان."
+            "JP": "GMSスコア28はディフェンシブな市場レジームを示し、フラットなモメンタムは警戒を強めています。DXY（ドル高/流動性）が上昇し、VIX（恐怖/変動性）も上昇しており、リスク回避感情が高まっています。金が顕著に下落し、ドルへの強い資金逃避を示唆する一方で、高水準のクレジットスプレッド（HYスプレッド）は金融状況の引き締まりを警告しています。資本保全を維持し、広範な安定化を監視してください。",
+            "EN": "The GMS score of 28 signals a Defensive market regime, with momentum flat, reinforcing caution. DXY (Dollar strength/Liquidity) is rising, and VIX (Fear/Volatility) is up, indicating increased risk-off sentiment. While gold saw a notable decline, suggesting a strong flight to USD cash, persistent high credit spreads (HY Spread) warn of tightening financial conditions. Maintain capital preservation and monitor for broader stabilization.",
+            "CN": "GMS评分28显示市场处于防御性状态，动能持平，需加强警惕。DXY（美元走强/流动性）和VIX（恐慌/波动性）均上升，表明避险情绪加剧。尽管黄金显著下跌，暗示资金正强力流向美元现金，但持续高企的信用利差（高收益利差）警示金融状况正在收紧。请保持资本保全，并关注市场更广泛的稳定迹象。",
+            "ES": "La puntuación GMS de 28 indica un régimen de mercado defensivo, con un momentum plano que refuerza la cautela. El DXY (fortaleza del dólar/liquidez) y el VIX (miedo/volatilidad) están al alza, señalando un mayor sentimiento de aversión al riesgo. Aunque el oro experimentó un descenso notable, sugiriendo una fuerte huida hacia el efectivo en USD, los altos diferenciales de crédito (HY Spread) advierten sobre un endurecimiento de las condiciones financieras. Mantenga la preservación del capital y monitoree una estabilización más amplia.",
+            "HI": "जीएमएस स्कोर 28 एक रक्षात्मक बाजार व्यवस्था का संकेत देता है, स्थिर गति के साथ, जो सावधानी को पुष्ट करता है। DXY (डॉलर की मजबूती/तरलता) बढ़ रहा है, और VIX (भय/अस्थिरता) भी ऊपर है, जो जोखिम-से-दूर भावना में वृद्धि दर्शाता है। जबकि सोने में उल्लेखनीय गिरावट आई, जो अमेरिकी डॉलर नकदी की ओर मजबूत पलायन का सुझाव देता है, उच्च क्रेडिट स्प्रेड (HY स्प्रेड) वित्तीय स्थितियों में सख्ती की चेतावनी देते हैं। पूंजी संरक्षण बनाए रखें और व्यापक स्थिरीकरण की निगरानी करें।",
+            "ID": "Skor GMS 28 menandakan rezim pasar Defensif, dengan momentum datar, memperkuat kehati-hatian. DXY (kekuatan Dolar/Likuiditas) naik, dan VIX (Ketakutan/Volatilitas) juga meningkat, menunjukkan sentimen penghindaran risiko yang lebih tinggi. Meskipun emas mengalami penurunan signifikan, mengindikasikan pelarian kuat ke kas USD, spread kredit tinggi (HY Spread) memperingatkan kondisi keuangan yang mengetat. Pertahankan pelestarian modal dan pantau stabilisasi yang lebih luas.",
+            "AR": "تشير نتيجة GMS البالغة 28 إلى نظام سوق دفاعي، مع زخم ثابت، مما يعزز الحذر. يرتفع مؤشر DXY (قوة الدولار/السيولة)، ويرتفع مؤشر VIX (الخوف/التقلب)، مما يشير إلى زيادة في معنويات الابتعاد عن المخاطر. بينما شهد الذهب تراجعًا ملحوظًا، مما يشير إلى هروب قوي نحو النقد بالدولار الأمريكي، فإن فروق ائتمان السندات عالية العائد (HY Spread) تحذر من تشديد الأوضاع المالية. حافظ على الحفاظ على رأس المال وراقب الاستقرار الأوسع."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-29T09:56:49Z",
-            "score": 40
-        },
         {
             "date": "2026-01-29T10:53:39Z",
             "score": 38
@@ -1358,19 +1354,23 @@
         {
             "date": "2026-02-01T10:41:24Z",
             "score": 26
+        },
+        {
+            "date": "2026-02-01T11:32:39Z",
+            "score": 28
         }
     ],
     "intelligence": {
         "news": [
             {
-                "title": "Bitcoin dips below $79,000 as market digests silver sell-off, Trump's Fed chair pick",
-                "link": "https://www.cnbc.com/2026/01/31/bitcoin-dips-below-78000-after-silver-selloff.html",
-                "isoDate": "2026-02-01T00:03:19+00:00Z"
+                "title": "AstraZeneca is listing in New York, as Big Pharma balances the huge U.S. market with China's tempting innovation",
+                "link": "https://www.cnbc.com/2026/02/01/astrazeneca-nyse-listing-china-pharma-pours-15-billion-into-china.html",
+                "isoDate": "2026-02-01T10:51:30+00:00Z"
             },
             {
                 "title": "Epstein files: Trump, Howard Lutnick, Steve Tisch among prominent names that appear in latest Justice Department release",
                 "link": "https://www.cnbc.com/2026/01/31/epstein-files-trump-howard-lutnick-steve-tisch.html",
-                "isoDate": "2026-01-31T23:17:47+00:00Z"
+                "isoDate": "2026-02-01T10:41:15+00:00Z"
             },
             {
                 "title": "U.S. government partially shuts down; House vote could reopen it by Monday",
@@ -1378,14 +1378,14 @@
                 "isoDate": "2026-01-31T05:01:44+00:00Z"
             },
             {
-                "title": "AstraZeneca is listing in New York, as Big Pharma balances the huge U.S. market with China's tempting innovation",
-                "link": "https://www.cnbc.com/2026/02/01/astrazeneca-nyse-listing-china-pharma-pours-15-billion-into-china.html",
-                "isoDate": "2026-02-01T07:49:01+00:00Z"
-            },
-            {
                 "title": "India's finance minister projects modest fiscal consolidation in budget",
                 "link": "https://www.cnbc.com/2026/02/01/indias-finance-minister-sees-modest-fiscal-consolidation-in-budget.html",
                 "isoDate": "2026-02-01T08:31:21+00:00Z"
+            },
+            {
+                "title": "Trump says India will buy oil from Venezuela",
+                "link": "https://www.cnbc.com/2026/02/01/trump-says-india-will-buy-oil-from-venezuela.html",
+                "isoDate": "2026-02-01T10:15:47+00:00Z"
             },
             {
                 "title": "Goldman says buy these five stocks ahead of earnings before it's too late",
@@ -1395,55 +1395,55 @@
         ],
         "translations": {
             "JP": [
-                "ビットコイン、シルバーの暴落とトランプ氏のFRB議長候補を消化し、7万9000ドルを下回る",
-                "エプスタイン文書：トランプ氏、ハワード・ルットニック氏、スティーブ・ティッシュ氏らが最新の司法省発表に登場",
-                "米国政府一部閉鎖、月曜日までに再開の可能性、下院採決",
-                "アストラゼネカ、NYに上場、大手製薬は巨大な米国市場と中国の魅力的なイノベーションのバランスを取る",
-                "インド財務相、予算で緩やかな財政再建を予測",
-                "ゴールドマン、決算前にこれらの5銘柄を買うべき、手遅れになる前に"
+                "アストラゼネカ、ニューヨークに上場：巨大製薬企業が巨大米国市場と魅力的な中国イノベーションのバランスを取る",
+                "エプスタイン氏関連文書：トランプ氏、ハワード・ラトニック氏、スティーブ・ティッシュ氏らが最新の司法省発表に登場",
+                "米政府一部閉鎖：下院の採決で月曜日までに再開の可能性",
+                "インド財務相、予算で穏健な財政再建を予測",
+                "トランプ氏、インドがベネズエラから原油購入と発言",
+                "ゴールドマン、決算前にこれらの5銘柄を買う、手遅れになる前に"
             ],
             "CN": [
-                "比特币跌破79,000美元，市场消化白银抛售和特朗普的美联储主席人选",
-                "爱泼斯坦文件：特朗普、霍华德·卢特尼克、史蒂夫·蒂施等知名人士出现在最新司法部发布的文件中",
-                "美国政府部分关闭，众议院投票可能在周一前重新开放",
-                "阿斯利康在纽约上市，大型制药公司在庞大的美国市场与中国诱人的创新之间取得平衡",
-                "印度财政部长预计预算将实现温和的财政整顿",
-                "高盛称：在财报季前买入这五只股票，以免为时过晚"
+                "阿斯利康在纽约上市，大型制药公司在大力开拓美国市场的同时，也看中了中国诱人的创新",
+                "爱泼斯坦文件：特朗普、霍华德·卢特尼克、史蒂夫·蒂施等知名人士出现在司法部最新发布的文件中",
+                "美国政府部分停摆；众议院投票或能使其在周一前重新开放",
+                "印度财政部长预测预算将实现温和的财政整顿",
+                "特朗普表示印度将从委内瑞拉购买石油",
+                "高盛建议在财报季前买入这五只股票，以免为时过晚"
             ],
             "ES": [
-                "Bitcoin cae por debajo de los 79.000 dólares mientras el mercado digiere la venta de plata y la elección de Trump como presidente de la Fed",
-                "Archivos de Epstein: Trump, Howard Lutnick, Steve Tisch, entre los nombres destacados que aparecen en la última publicación del Departamento de Justicia",
-                "El gobierno de EE.UU. cierra parcialmente; la votación en la Cámara de Representantes podría reabrirlo el lunes",
                 "AstraZeneca cotiza en Nueva York, mientras las grandes farmacéuticas equilibran el enorme mercado estadounidense con la tentadora innovación de China",
+                "Archivos de Epstein: Trump, Howard Lutnick, Steve Tisch entre los nombres prominentes que aparecen en la última publicación del Departamento de Justicia",
+                "El gobierno de EE. UU. se cierra parcialmente; la votación en la Cámara podría reabrirlo el lunes",
                 "La ministra de Finanzas de la India proyecta una modesta consolidación fiscal en el presupuesto",
+                "Trump dice que India comprará petróleo de Venezuela",
                 "Goldman recomienda comprar estas cinco acciones antes de los resultados, antes de que sea demasiado tarde"
             ],
             "HI": [
-                "बिटकॉइन 79,000 डॉलर से नीचे गिरा, बाजार चांदी की बिकवाली और ट्रम्प की फेड अध्यक्ष पसंद को पचा रहा है",
-                "एपस्टीन फाइलें: ट्रम्प, हॉवर्ड लुटनिक, स्टीव टिश्क नवीनतम न्याय विभाग की रिलीज में प्रमुख नामों में शामिल",
-                "अमेरिकी सरकार आंशिक रूप से बंद; सोमवार तक इसे फिर से खोलने के लिए सदन में मतदान",
-                "एस्ट्राजेनेका न्यूयॉर्क में सूचीबद्ध हो रही है, क्योंकि बड़ी फार्मा कंपनियां विशाल अमेरिकी बाजार को चीन के आकर्षक नवाचार के साथ संतुलित कर रही हैं",
-                "भारत की वित्त मंत्री बजट में मामूली राजकोषीय समेकन का अनुमान लगाती हैं",
-                "गोल्डमैन का कहना है कि कमाई से पहले इन पांच शेयरों को खरीदें, इससे पहले कि बहुत देर हो जाए"
+                "एस्ट्राजेनेका न्यूयॉर्क में सूचीबद्ध हो रहा है, क्योंकि बड़ी फार्मा कंपनियों ने विशाल अमेरिकी बाजार को चीन के आकर्षक नवाचार के साथ संतुलित किया है",
+                "एपस्टीन फाइलें: नवीनतम न्याय विभाग की रिलीज में ट्रंप, हॉवर्ड लुटनिक, स्टीव टिश जैसे प्रमुख नाम दिखाई देते हैं",
+                "अमेरिकी सरकार आंशिक रूप से बंद; सदन का वोट सोमवार तक इसे फिर से खोल सकता है",
+                "भारत की वित्त मंत्री ने बजट में मामूली राजकोषीय समेकन का अनुमान लगाया",
+                "ट्रंप ने कहा कि भारत वेनेजुएला से तेल खरीदेगा",
+                "गोल्डमैन का सुझाव है कि कमाई से पहले इन पांच शेयरों को खरीदें, इससे पहले कि बहुत देर हो जाए"
             ],
             "ID": [
-                "Bitcoin merosot di bawah $79.000 saat pasar mencerna aksi jual perak, pilihan ketua Fed Trump",
-                "File Epstein: Trump, Howard Lutnick, Steve Tisch di antara nama-nama terkemuka yang muncul dalam rilis terbaru Departemen Kehakiman",
-                "Pemerintah AS sebagian tutup; pemungutan suara DPR dapat membukanya kembali pada hari Senin",
-                "AstraZeneca terdaftar di New York, saat Big Pharma menyeimbangkan pasar AS yang besar dengan inovasi China yang menggoda",
+                "AstraZeneca terdaftar di New York, saat Big Pharma menyeimbangkan pasar AS yang besar dengan inovasi Tiongkok yang menggoda",
+                "Berkas Epstein: Trump, Howard Lutnick, Steve Tisch di antara nama-nama terkemuka yang muncul dalam rilis terbaru Departemen Kehakiman",
+                "Pemerintah AS sebagian ditutup; pemungutan suara DPR dapat membukanya kembali pada hari Senin",
                 "Menteri keuangan India memproyeksikan konsolidasi fiskal yang moderat dalam anggaran",
-                "Goldman mengatakan beli lima saham ini menjelang pendapatan sebelum terlambat"
+                "Trump mengatakan India akan membeli minyak dari Venezuela",
+                "Goldman mengatakan beli lima saham ini sebelum laporan keuangan, sebelum terlambat"
             ],
             "AR": [
-                "بيتكوين تنخفض دون 79 ألف دولار مع استيعاب السوق لبيع الفضة واختيار ترامب لرئاسة الاحتياطي الفيدرالي",
-                "ملفات إبستاين: ترامب، هوارد لوتنيك، ستيف تيش من بين الأسماء البارزة التي تظهر في أحدث إصدار لوزارة العدل",
-                "الحكومة الأمريكية تغلق جزئيًا؛ تصويت مجلس النواب قد يعيد فتحها بحلول الاثنين",
-                "أسترا زينيكا تدرج في نيويورك، بينما توازن شركات الأدوية الكبرى بين السوق الأمريكي الضخم وابتكار الصين المغري",
-                "وزيرة المالية الهندية تتوقع انضباطًا ماليًا متواضعًا في الميزانية",
-                "جولدمان تقول اشتروا هذه الأسهم الخمسة قبل أرباحها قبل فوات الأوان"
+                "أسترازينيكا تدرج في نيويورك، حيث توازن شركات الأدوية الكبرى بين السوق الأمريكية الضخمة وابتكار الصين المغري",
+                "ملفات إبستين: ترامب، هوارد لوتنيك، ستيف تيش من بين الأسماء البارزة التي تظهر في أحدث إصدار لوزارة العدل",
+                "الحكومة الأمريكية تغلق جزئيًا؛ تصويت مجلس النواب قد يعيد فتحها بحلول يوم الاثنين",
+                "وزير المالية الهندي يتوقع تعزيزًا ماليًا متواضعًا في الميزانية",
+                "ترامب يقول إن الهند ستشتري النفط من فنزويلا",
+                "جولدمان ينصح بشراء هذه الأسهم الخمسة قبل الأرباح قبل فوات الأوان"
             ]
         },
-        "last_updated": "2026-02-01T10:41:24.059478+00:00Z"
+        "last_updated": "2026-02-01T11:32:39.065306+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
