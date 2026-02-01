@@ -1,24 +1,19 @@
 {
-    "last_updated": "2026-01-27T13:54:16.509312+00:00",
-    "last_successful_update": "2026-01-27T13:54:16.509312+00:00",
-    "gms_score": 40,
+    "last_updated": "2026-02-01T03:35:38.588165+00:00",
+    "last_successful_update": "2026-02-01T03:35:38.588172+00:00",
+    "gms_score": 30,
     "sector_scores": {
-        "STOCKS": 70,
+        "STOCKS": 30,
         "CRYPTO": 25,
         "FOREX": 55,
-        "COMMODITIES": 55
+        "COMMODITIES": 60
     },
     "market_data": {
         "CRYPTO_SENTIMENT": {
-            "price": 29,
+            "price": 14,
             "change_percent": 0.0,
-            "trend": "BEARISH",
+            "trend": "FEAR",
             "sparkline": [
-                24,
-                23,
-                21,
-                20,
-                28,
                 29,
                 25,
                 26,
@@ -43,18 +38,19 @@
                 25,
                 25,
                 20,
-                29
+                29,
+                29,
+                26,
+                16,
+                20,
+                14
             ]
         },
         "YIELD_SPREAD": {
-            "price": 0.55,
+            "price": 0.59,
             "change_percent": 0.0,
             "trend": "NORMAL",
             "sparkline": [
-                0.51,
-                0.52,
-                0.5,
-                0.54,
                 0.53,
                 0.53,
                 0.46,
@@ -80,20 +76,20 @@
                 0.56,
                 0.55,
                 0.54,
-                0.55
+                0.55,
+                0.57,
+                0.58,
+                0.57,
+                0.59
             ]
         },
         "HY_SPREAD": {
-            "price": 2.68,
-            "prev_price": 2.64,
-            "daily_chg": 1.52,
-            "change_percent": 1.52,
+            "price": 2.77,
+            "prev_price": 2.72,
+            "daily_chg": 1.84,
+            "change_percent": 1.84,
             "trend": "CALM",
             "sparkline": [
-                2.91,
-                2.98,
-                2.99,
-                2.95,
                 2.9,
                 2.88,
                 2.83,
@@ -119,39 +115,39 @@
                 2.73,
                 2.69,
                 2.64,
-                2.68
+                2.68,
+                2.69,
+                2.71,
+                2.72,
+                2.77
             ]
         },
         "NFCI": {
-            "price": -0.59,
+            "price": -0.6,
             "change_percent": 0.0,
             "trend": "CALM",
             "sparkline": [
                 -0.52,
                 -0.51,
                 -0.51,
-                -0.51,
-                -0.51,
                 -0.52,
                 -0.52,
                 -0.53,
+                -0.54,
                 -0.55,
                 -0.56,
                 -0.58,
-                -0.59
+                -0.59,
+                -0.6
             ]
         },
         "NET_LIQUIDITY": {
-            "price": 5713.83,
-            "prev_price": 5714.39,
-            "daily_chg": -0.01,
-            "change_percent": -1.47,
+            "price": 5654.9,
+            "prev_price": 5661.67,
+            "daily_chg": -0.12,
+            "change_percent": -1.03,
             "trend": "CONTRACTION",
             "sparkline": [
-                5678.8,
-                5713.41,
-                5712.06,
-                5720.72,
                 5722.24,
                 5717.88,
                 5739.31,
@@ -177,18 +173,18 @@
                 5711.98,
                 5713.26,
                 5714.39,
-                5713.83
+                5713.83,
+                5714.07,
+                5663.42,
+                5661.67,
+                5654.9
             ]
         },
         "BREAKEVEN_INFLATION": {
-            "price": 2.32,
+            "price": 2.36,
             "change_percent": 0.0,
             "trend": "STABLE",
             "sparkline": [
-                2.23,
-                2.24,
-                2.24,
-                2.24,
                 2.23,
                 2.24,
                 2.24,
@@ -214,19 +210,20 @@
                 2.34,
                 2.31,
                 2.32,
-                2.32
+                2.32,
+                2.34,
+                2.36,
+                2.35,
+                2.36
             ]
         },
         "VIX": {
-            "price": 16.07,
-            "prev_price": 16.15,
-            "daily_chg": -0.5,
-            "change_percent": -4.91,
-            "trend": "DOWN",
+            "price": 17.44,
+            "prev_price": 16.88,
+            "daily_chg": 3.32,
+            "change_percent": 7.99,
+            "trend": "UP",
             "sparkline": [
-                13.47,
-                13.6,
-                14.2,
                 14.33,
                 14.95,
                 14.51,
@@ -245,18 +242,17 @@
                 15.64,
                 16.09,
                 16.15,
-                16.07
+                16.35,
+                16.35,
+                16.88,
+                17.44
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
-            "price": 0.66,
+            "price": 0.74,
             "change_percent": 0.0,
             "trend": "NEUTRAL",
             "sparkline": [
-                0.67,
-                0.67,
-                0.66,
-                0.68,
                 0.73,
                 0.7,
                 0.68,
@@ -282,7 +278,11 @@
                 0.66,
                 0.65,
                 0.64,
-                0.66
+                0.66,
+                0.71,
+                0.7,
+                0.71,
+                0.74
             ]
         },
         "US_10Y_YIELD": {
@@ -290,10 +290,6 @@
             "change_percent": 0.0,
             "trend": "STABLE",
             "sparkline": [
-                4.18,
-                4.15,
-                4.16,
-                4.12,
                 4.16,
                 4.17,
                 4.18,
@@ -319,18 +315,18 @@
                 4.3,
                 4.26,
                 4.26,
+                4.24,
+                4.22,
+                4.24,
+                4.26,
                 4.24
             ]
         },
         "REAL_INTEREST_RATE": {
-            "price": 1.92,
+            "price": 1.89,
             "change_percent": 0.0,
             "trend": "STABLE",
             "sparkline": [
-                1.93,
-                1.92,
-                1.92,
-                1.88,
                 1.92,
                 1.94,
                 1.94,
@@ -356,20 +352,20 @@
                 1.97,
                 1.92,
                 1.95,
-                1.92
+                1.92,
+                1.9,
+                1.9,
+                1.9,
+                1.89
             ]
         },
         "SPY": {
-            "price": 692.73,
-            "prev_price": 689.23,
-            "daily_chg": 0.51,
-            "change_percent": 2.24,
-            "trend": "UP",
+            "price": 691.97,
+            "prev_price": 694.04,
+            "daily_chg": -0.3,
+            "change_percent": -0.11,
+            "trend": "DOWN",
             "sparkline": [
-                687.96,
-                690.38,
-                690.31,
-                687.85,
                 687.01,
                 681.92,
                 683.17,
@@ -387,19 +383,20 @@
                 685.4,
                 688.98,
                 689.23,
-                692.73
+                692.73,
+                695.49,
+                695.42,
+                694.04,
+                691.97
             ]
         },
         "TNX": {
-            "price": 4.23,
-            "prev_price": 4.21,
-            "daily_chg": 0.43,
-            "change_percent": -0.52,
+            "price": 4.24,
+            "prev_price": 4.23,
+            "daily_chg": 0.33,
+            "change_percent": 0.66,
             "trend": "UP",
             "sparkline": [
-                4.14,
-                4.14,
-                4.12,
                 4.13,
                 4.16,
                 4.19,
@@ -418,20 +415,19 @@
                 4.25,
                 4.24,
                 4.21,
-                4.23
+                4.22,
+                4.25,
+                4.23,
+                4.24
             ]
         },
         "QQQ": {
-            "price": 625.46,
-            "prev_price": 622.72,
-            "daily_chg": 0.44,
-            "change_percent": 2.86,
-            "trend": "UP",
+            "price": 621.87,
+            "prev_price": 629.43,
+            "daily_chg": -1.2,
+            "change_percent": -0.57,
+            "trend": "DOWN",
             "sparkline": [
-                622.11,
-                623.93,
-                623.89,
-                620.87,
                 619.43,
                 614.31,
                 613.12,
@@ -449,20 +445,20 @@
                 616.28,
                 620.76,
                 622.72,
-                625.46
+                625.46,
+                631.13,
+                633.22,
+                629.43,
+                621.87
             ]
         },
         "IWM": {
-            "price": 263.98,
-            "prev_price": 264.81,
-            "daily_chg": -0.31,
-            "change_percent": 0.53,
+            "price": 259.65,
+            "prev_price": 263.37,
+            "daily_chg": -1.41,
+            "change_percent": -1.64,
             "trend": "DOWN",
             "sparkline": [
-                252.08,
-                252.71,
-                251.42,
-                249.88,
                 248.03,
                 246.16,
                 248.78,
@@ -480,20 +476,20 @@
                 267.79,
                 269.79,
                 264.81,
-                263.98
+                263.98,
+                264.73,
+                263.3,
+                263.37,
+                259.65
             ]
         },
         "RSP": {
-            "price": 199.24,
-            "prev_price": 198.77,
-            "daily_chg": 0.24,
-            "change_percent": 1.61,
-            "trend": "UP",
+            "price": 198.08,
+            "prev_price": 198.52,
+            "daily_chg": -0.22,
+            "change_percent": -0.58,
+            "trend": "DOWN",
             "sparkline": [
-                193.09,
-                193.79,
-                193.84,
-                193.52,
                 193.21,
                 191.56,
                 192.86,
@@ -511,20 +507,20 @@
                 199.4,
                 199.66,
                 198.77,
-                199.24
+                199.24,
+                198.93,
+                198.26,
+                198.52,
+                198.08
             ]
         },
         "HYG": {
-            "price": 81.18,
-            "prev_price": 81.14,
-            "daily_chg": 0.05,
-            "change_percent": 0.37,
+            "price": 81.12,
+            "prev_price": 81.03,
+            "daily_chg": 0.11,
+            "change_percent": -0.07,
             "trend": "UP",
             "sparkline": [
-                80.49,
-                80.64,
-                80.6,
-                80.63,
                 80.71,
                 80.63,
                 80.67,
@@ -542,19 +538,20 @@
                 81.12,
                 81.18,
                 81.14,
-                81.18
+                81.18,
+                81.17,
+                81.04,
+                81.03,
+                81.12
             ]
         },
         "NIFTY": {
-            "price": 25175.4,
-            "prev_price": 25048.65,
-            "daily_chg": 0.51,
-            "change_percent": -0.23,
-            "trend": "UP",
+            "price": 25320.65,
+            "prev_price": 25418.9,
+            "daily_chg": -0.39,
+            "change_percent": 1.09,
+            "trend": "DOWN",
             "sparkline": [
-                26142.1,
-                26042.3,
-                25942.1,
                 25938.85,
                 26129.6,
                 26146.55,
@@ -573,20 +570,19 @@
                 25157.5,
                 25289.9,
                 25048.65,
-                25175.4
+                25175.4,
+                25342.75,
+                25418.9,
+                25320.65
             ]
         },
         "BTC": {
-            "price": 87812.15,
-            "prev_price": 88267.14,
-            "daily_chg": -0.52,
-            "change_percent": -1.89,
+            "price": 78666.15,
+            "prev_price": 84128.66,
+            "daily_chg": -6.49,
+            "change_percent": -11.71,
             "trend": "DOWN",
             "sparkline": [
-                93729.03,
-                91308.05,
-                91027.12,
-                90513.1,
                 90386.65,
                 90827.46,
                 91192.99,
@@ -604,20 +600,20 @@
                 89110.73,
                 86572.22,
                 88267.14,
-                87812.15
+                89102.57,
+                89184.57,
+                84561.59,
+                84128.66,
+                78666.15
             ]
         },
         "ETH": {
-            "price": 2906.48,
-            "prev_price": 2926.46,
-            "daily_chg": -0.68,
-            "change_percent": -1.58,
+            "price": 2442.59,
+            "prev_price": 2702.38,
+            "daily_chg": -9.61,
+            "change_percent": -19.18,
             "trend": "DOWN",
             "sparkline": [
-                3295.95,
-                3166.84,
-                3104.38,
-                3083.05,
                 3082.4,
                 3118.89,
                 3092.33,
@@ -635,20 +631,20 @@
                 2948.74,
                 2815.9,
                 2926.46,
-                2906.48
+                3022.21,
+                3006.61,
+                2818.23,
+                2702.38,
+                2442.59
             ]
         },
         "SOL": {
-            "price": 123.26,
-            "prev_price": 124.14,
-            "daily_chg": -0.71,
-            "change_percent": -3.22,
+            "price": 104.91,
+            "prev_price": 117.36,
+            "daily_chg": -10.61,
+            "change_percent": -17.43,
             "trend": "DOWN",
             "sparkline": [
-                141.1,
-                136.31,
-                138.29,
-                135.76,
                 135.73,
                 139.49,
                 139.14,
@@ -666,19 +662,20 @@
                 127.05,
                 118.77,
                 124.14,
-                123.26
+                127.05,
+                125.12,
+                117.61,
+                117.36,
+                104.91
             ]
         },
         "DXY": {
-            "price": 96.58,
-            "prev_price": 97.04,
-            "daily_chg": -0.47,
-            "change_percent": -2.21,
-            "trend": "DOWN",
+            "price": 96.99,
+            "prev_price": 96.28,
+            "daily_chg": 0.74,
+            "change_percent": -0.05,
+            "trend": "UP",
             "sparkline": [
-                97.98,
-                98.02,
-                98.04,
                 98.24,
                 98.28,
                 98.42,
@@ -697,19 +694,19 @@
                 98.36,
                 97.6,
                 97.04,
-                96.58
+                96.22,
+                96.45,
+                96.28,
+                96.99
             ]
         },
         "USDJPY": {
-            "price": 153.28,
-            "prev_price": 155.17,
-            "daily_chg": -1.22,
-            "change_percent": -3.09,
-            "trend": "DOWN",
+            "price": 154.73,
+            "prev_price": 153.1,
+            "daily_chg": 1.07,
+            "change_percent": -0.28,
+            "trend": "UP",
             "sparkline": [
-                156.09,
-                156.46,
-                156.01,
                 156.41,
                 156.73,
                 156.99,
@@ -728,19 +725,19 @@
                 158.46,
                 158.5,
                 155.17,
-                153.28
+                154.34,
+                152.45,
+                153.1,
+                154.73
             ]
         },
         "EURUSD": {
             "price": 1.19,
-            "prev_price": 1.19,
-            "daily_chg": 0.55,
-            "change_percent": 1.67,
-            "trend": "UP",
+            "prev_price": 1.2,
+            "daily_chg": -0.73,
+            "change_percent": 0.27,
+            "trend": "DOWN",
             "sparkline": [
-                1.18,
-                1.18,
-                1.18,
                 1.17,
                 1.18,
                 1.17,
@@ -759,19 +756,19 @@
                 1.17,
                 1.18,
                 1.19,
+                1.19,
+                1.2,
+                1.2,
                 1.19
             ]
         },
         "USDINR": {
-            "price": 91.59,
-            "prev_price": 91.5,
-            "daily_chg": 0.09,
-            "change_percent": 0.51,
-            "trend": "UP",
+            "price": 91.9,
+            "prev_price": 92.04,
+            "daily_chg": -0.15,
+            "change_percent": 0.44,
+            "trend": "DOWN",
             "sparkline": [
-                90.11,
-                89.83,
-                89.9,
                 89.77,
                 89.96,
                 90.01,
@@ -790,50 +787,50 @@
                 91.54,
                 91.56,
                 91.5,
-                91.59
+                91.71,
+                91.53,
+                92.04,
+                91.9
             ]
         },
         "USDSAR": {
             "price": 3.75,
-            "prev_price": 3.74,
-            "daily_chg": 0.13,
-            "change_percent": 0.11,
+            "prev_price": 3.75,
+            "daily_chg": 0.12,
+            "change_percent": 0.15,
             "trend": "UP",
             "sparkline": [
                 3.75,
                 3.75,
+                3.75,
+                3.75,
+                3.75,
+                3.75,
+                3.75,
+                3.75,
+                3.75,
+                3.75,
+                3.75,
+                3.75,
+                3.75,
+                3.75,
+                3.75,
+                3.75,
+                3.75,
                 3.74,
                 3.75,
                 3.75,
                 3.75,
-                3.75,
-                3.75,
-                3.75,
-                3.75,
-                3.75,
-                3.75,
-                3.75,
-                3.75,
-                3.75,
-                3.75,
-                3.75,
-                3.75,
-                3.75,
-                3.75,
-                3.74,
                 3.75
             ]
         },
         "GOLD": {
-            "price": 5069.2,
-            "prev_price": 5079.7,
-            "daily_chg": -0.21,
-            "change_percent": 4.91,
+            "price": 4713.9,
+            "prev_price": 5318.4,
+            "daily_chg": -11.37,
+            "change_percent": -7.2,
             "trend": "DOWN",
             "sparkline": [
-                4480.6,
-                4529.1,
-                4325.1,
                 4370.1,
                 4325.6,
                 4314.4,
@@ -852,19 +849,19 @@
                 4908.8,
                 4976.2,
                 5079.7,
-                5069.2
+                5079.9,
+                5301.6,
+                5318.4,
+                4713.9
             ]
         },
         "OIL": {
-            "price": 61.57,
-            "prev_price": 60.63,
-            "daily_chg": 1.55,
-            "change_percent": 1.57,
-            "trend": "UP",
+            "price": 65.21,
+            "prev_price": 65.42,
+            "daily_chg": -0.32,
+            "change_percent": 7.55,
+            "trend": "DOWN",
             "sparkline": [
-                58.35,
-                56.74,
-                58.08,
                 57.95,
                 57.42,
                 57.32,
@@ -883,19 +880,19 @@
                 59.36,
                 61.07,
                 60.63,
-                61.57
+                62.39,
+                63.21,
+                65.42,
+                65.21
             ]
         },
         "COPPER": {
-            "price": 5.89,
-            "prev_price": 5.98,
-            "daily_chg": -1.58,
-            "change_percent": 2.79,
+            "price": 5.9,
+            "prev_price": 6.18,
+            "daily_chg": -4.51,
+            "change_percent": -1.45,
             "trend": "DOWN",
             "sparkline": [
-                5.5,
-                5.77,
-                5.49,
                 5.73,
                 5.63,
                 5.64,
@@ -914,19 +911,19 @@
                 5.74,
                 5.91,
                 5.98,
-                5.89
+                5.83,
+                5.89,
+                6.18,
+                5.9
             ]
         },
         "NATGAS": {
-            "price": 3.78,
-            "prev_price": 6.8,
-            "daily_chg": -44.47,
-            "change_percent": -22.54,
-            "trend": "DOWN",
+            "price": 4.35,
+            "prev_price": 3.92,
+            "daily_chg": 11.13,
+            "change_percent": -35.97,
+            "trend": "UP",
             "sparkline": [
-                4.24,
-                4.37,
-                4.69,
                 3.97,
                 3.69,
                 3.62,
@@ -945,16 +942,17 @@
                 5.05,
                 5.28,
                 6.8,
-                3.78
+                6.95,
+                7.46,
+                3.92,
+                4.35
             ]
         },
         "MOVE": {
-            "price": 55.77,
-            "change_percent": -0.85,
+            "price": 59.2,
+            "change_percent": -2.52,
             "trend": "NORMAL",
             "sparkline": [
-                59.21,
-                63.98,
                 63.96,
                 62.36,
                 64.71,
@@ -971,37 +969,43 @@
                 59.56,
                 56.5,
                 56.25,
-                55.77
+                55.77,
+                56.12,
+                57.43,
+                60.73,
+                59.2
             ]
         },
         "BREADTH": {
-            "price": -0.63,
+            "price": -0.47,
             "change_percent": 0.0,
             "trend": "HEALTHY",
             "sparkline": [
                 0.0,
-                -0.04,
-                -0.15,
-                0.34,
-                0.6,
-                1.22,
-                0.4,
-                1.28,
-                1.2,
-                1.14,
-                1.34,
-                2.3,
+                0.5,
+                0.76,
+                1.39,
+                0.56,
+                1.44,
+                1.37,
+                1.31,
+                1.51,
                 2.48,
-                2.3,
-                2.82,
-                3.39,
-                3.01,
-                2.51,
-                2.25
+                2.66,
+                2.48,
+                3.0,
+                3.58,
+                3.19,
+                2.69,
+                2.42,
+                1.86,
+                1.52,
+                1.86,
+                1.93
             ]
         },
         "SPY_MOMENTUM": {
-            "price": 0.63,
+            "price": 0.47,
             "change_percent": 0,
             "trend": "BALANCED",
             "sparkline": [
@@ -1038,52 +1042,44 @@
             ]
         },
         "COPPER_GOLD": {
-            "price": 1.16,
+            "price": 1.25,
             "change_percent": 0,
             "trend": "RISK-OFF",
             "sparkline": [
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25,
+                1.25
             ]
         }
     },
     "events": [
-        {
-            "code": "fomc",
-            "name": "FOMC RATE DECISION",
-            "date": "2026-01-28",
-            "day": "WED",
-            "time": "14:00 EST",
-            "impact": "critical"
-        },
         {
             "code": "nfp",
             "name": "NON-FARM PAYROLLS",
@@ -1099,263 +1095,355 @@
             "day": "THU",
             "time": "08:30 EST",
             "impact": "high"
+        },
+        {
+            "code": "fomc",
+            "name": "FOMC RATE DECISION",
+            "date": "2026-03-18",
+            "day": "WED",
+            "time": "14:00 EST",
+            "impact": "critical"
         }
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS Status remains DEFENSIVE with a score of 39. Momentum pushed the score to 39. DXY (Dollar strength/Liquidity) rose slightly, alongside a minor increase in VIX (Fear/Volatility) and widening HY spreads, indicating growing market caution. While this suggests a defensive posture, a swift resolution of global trade tensions could shift sentiment back towards neutral quickly. Maintain vigilance...",
+        "content": "GMS remains Defensive at 30, with flat momentum. DXY (Dollar strength/Liquidity) is rising, signaling tightening global liquidity, while VIX (Fear/Volatility) is up, reflecting market apprehension. HY spreads are widening. Despite clear risk-off signals and broad asset sell-offs (crypto, gold, copper), the MOVE index (bond volatility) remains stable. This suggests underlying market stability, but a defensive posture is still warranted. Capital preservation is key.",
         "reports": {
-            "JP": "GMSステータスは「防御的」でスコアは39。モメンタムがスコアを39に押し下げた。DXY（ドル高/流動性）はわずかに上昇し、VIX（恐怖/変動性）も小幅上昇、HYスプレッド拡大と共に市場の警戒感が高まっている。防御的姿勢が示唆されるが、世界的な貿易摩擦の迅速な解決があれば、センチメントは急速に中立へ戻る可能性もある。引き続き警戒を。..",
-            "EN": "GMS Status remains DEFENSIVE with a score of 39. Momentum pushed the score to 39. DXY (Dollar strength/Liquidity) rose slightly, alongside a minor increase in VIX (Fear/Volatility) and widening HY spreads, indicating growing market caution. While this suggests a defensive posture, a swift resolution of global trade tensions could shift sentiment back towards neutral quickly. Maintain vigilance...",
-            "CN": "GMS状态仍为“防御性”，得分为39。动量将分数推至39。DXY（美元走强/流动性）小幅上涨，VIX（恐慌/波动性）亦略有升高，高收益债利差扩大，表明市场谨慎情绪加剧。虽然这暗示需采取防御性立场，但全球贸易紧张局势的迅速解决，可能迅速将市场情绪推回中性。保持警惕。..",
-            "ES": "El estado GMS sigue siendo DEFENSIVO con una puntuación de 39. El impulso llevó la puntuación a 39. El DXY (fortaleza del dólar/liquidez) subió ligeramente, junto con un pequeño aumento en el VIX (miedo/volatilidad) y spreads de alto rendimiento más amplios, indicando una creciente cautela del mercado. Aunque esto sugiere una postura defensiva, una rápida resolución de las tensiones comerciales globales podría cambiar el sentimiento rápidamente a neutral. Mantenga la vigilancia...",
-            "HI": "जीएमएस स्थिति 39 के स्कोर के साथ रक्षात्मक बनी हुई है। गति ने स्कोर को 39 पर धकेल दिया। डीएक्सवाई (डॉलर की मजबूती/तरलता) में मामूली वृद्धि हुई, साथ ही वीआईएक्स (भय/अस्थिरता) में भी थोड़ी वृद्धि हुई और उच्च-उपज स्प्रेड चौड़े हुए, जो बढ़ती बाजार सावधानी का संकेत देते हैं। हालांकि यह एक रक्षात्मक रुख का सुझाव देता है, वैश्विक व्यापार तनावों का त्वरित समाधान भावना को तेजी से तटस्थ की ओर बदल सकता है। सतर्क रहें।..",
-            "ID": "Status GMS tetap DEFENSif dengan skor 39. Momentum mendorong skor ke 39. DXY (kekuatan Dolar/Likuiditas) sedikit naik, bersama dengan sedikit peningkatan VIX (Ketakutan/Volatilitas) dan pelebaran spread HY, menunjukkan kehati-hatian pasar yang meningkat. Meskipun ini menyarankan posisi defensif, resolusi cepat ketegangan perdagangan global dapat dengan cepat menggeser sentimen kembali ke netral. Tetap waspada...",
-            "AR": "لا يزال وضع GMS دفاعيًا بنتيجة 39. دفع الزخم النتيجة إلى 39. ارتفع مؤشر الدولار (DXY) (قوة الدولار/السيولة) بشكل طفيف، إلى جانب زيادة طفيفة في مؤشر VIX (الخوف/التقلب) واتساع هوامش السندات ذات العائد المرتفع، مما يشير إلى تزايد حذر السوق. بينما يشير هذا إلى موقف دفاعي، فإن الحل السريع للتوترات التجارية العالمية يمكن أن يحول المعنويات بسرعة إلى محايدة. حافظ على اليقظة..."
+            "JP": "GMSスコア30は防御的で、勢いは横ばいです。DXY（ドル高/流動性）は上昇し、世界的な流動性引き締めを示唆。VIX（恐怖/変動性）も上昇し、市場の懸念を反映。HYスプレッドも拡大。広範なリスクオフと資産売却（暗号通貨、金、銅）にもかかわらず、MOVE指数（債券変動性）は安定。これは基礎的な市場の安定性を示唆しますが、防御的な姿勢が引き続き必要です。資本保全が鍵です。",
+            "EN": "GMS remains Defensive at 30, with flat momentum. DXY (Dollar strength/Liquidity) is rising, signaling tightening global liquidity, while VIX (Fear/Volatility) is up, reflecting market apprehension. HY spreads are widening. Despite clear risk-off signals and broad asset sell-offs (crypto, gold, copper), the MOVE index (bond volatility) remains stable. This suggests underlying market stability, but a defensive posture is still warranted. Capital preservation is key.",
+            "CN": "GMS评分30，处于防御模式，动能持平。DXY（美元走强/流动性）上升，表明全球流动性收紧；VIX（恐惧/波动性）亦走高，反映市场担忧。高收益利差扩大。尽管风险偏好明显下降，资产普遍抛售（加密货币、黄金、铜），但MOVE指数（债券波动性）保持稳定。这表明市场存在潜在稳定性，但仍需保持防御姿态。资本保全是关键。",
+            "ES": "GMS permanece en Defensivo con 30 y momentum plano. El DXY (fortaleza del dólar/liquidez) sube, indicando ajuste de liquidez global, mientras el VIX (miedo/volatilidad) aumenta, reflejando aprensión del mercado. Los diferenciales HY se amplían. A pesar de claras señales de aversión al riesgo y ventas generalizadas (cripto, oro, cobre), el índice MOVE (volatilidad de bonos) se mantiene estable. Esto sugiere estabilidad subyacente, pero una postura defensiva es prudente. La preservación del capital es clave.",
+            "HI": "GMS स्कोर 30 पर रक्षात्मक बना हुआ है, गति सपाट है। DXY (डॉलर मजबूती/तरलता) बढ़ रहा है, जो वैश्विक तरलता में कमी का संकेत है, जबकि VIX (भय/अस्थिरता) ऊपर है, जो बाजार की चिंता को दर्शाता है। HY स्प्रेड बढ़ रहे हैं। स्पष्ट जोखिम-बंद संकेतों और व्यापक परिसंपत्ति बिकवाली (क्रिप्टो, सोना, तांबा) के बावजूद, MOVE सूचकांक (बॉन्ड अस्थिरता) स्थिर है। यह अंतर्निहित बाजार स्थिरता का सुझाव देता है, लेकिन एक रक्षात्मक रुख अभी भी उचित है। पूंजी संरक्षण महत्वपूर्ण है।",
+            "ID": "GMS tetap Defensif di 30, dengan momentum datar. DXY (kekuatan Dolar/Likuiditas) naik, menandakan pengetatan likuiditas global, sementara VIX (Ketakutan/Volatilitas) juga naik, mencerminkan kekhawatiran pasar. Spread HY melebar. Meskipun sinyal risk-off jelas dan penjualan aset meluas (kripto, emas, tembaga), indeks MOVE (volatilitas obligasi) tetap stabil. Ini menunjukkan stabilitas pasar yang mendasari, tetapi sikap defensif tetap diperlukan. Pelestarian modal adalah kunci.",
+            "AR": "GMS لا يزال دفاعيًا عند 30، مع زخم ثابت. يرتفع مؤشر DXY (قوة الدولار/السيولة)، مما يشير إلى تشديد السيولة العالمية، بينما يرتفع مؤشر VIX (الخوف/التقلب)، مما يعكس قلق السوق. فروقات HY تتسع. على الرغم من إشارات الابتعاد عن المخاطرة الواضحة وعمليات البيع الواسعة للأصول (العملات المشفرة، الذهب، النحاس)، يظل مؤشر MOVE (تقلب السندات) مستقرًا. هذا يشير إلى استقرار السوق الأساسي، ولكن لا يزال الموقف الدفاعي مبررًا. الحفاظ على رأس المال أمر أساسي."
         }
     },
     "history_chart": [
         {
-            "date": "2026-01-25T19:46:15Z",
-            "score": 32
-        },
-        {
-            "date": "2026-01-25T20:36:33Z",
-            "score": 32
-        },
-        {
-            "date": "2026-01-25T20:53:55Z",
-            "score": 32
-        },
-        {
-            "date": "2026-01-25T21:30:00Z",
-            "score": 32
-        },
-        {
-            "date": "2026-01-25T21:47:32Z",
-            "score": 32
-        },
-        {
-            "date": "2026-01-25T22:35:11Z",
-            "score": 32
-        },
-        {
-            "date": "2026-01-25T22:52:05Z",
-            "score": 32
-        },
-        {
-            "date": "2026-01-25T23:31:23Z",
-            "score": 32
-        },
-        {
-            "date": "2026-01-25T23:48:34Z",
-            "score": 32
-        },
-        {
-            "date": "2026-01-26T02:39:53Z",
-            "score": 32
-        },
-        {
-            "date": "2026-01-26T03:34:56Z",
-            "score": 32
-        },
-        {
-            "date": "2026-01-26T04:25:47Z",
-            "score": 32
-        },
-        {
-            "date": "2026-01-26T04:47:42Z",
-            "score": 32
-        },
-        {
-            "date": "2026-01-26T05:11:11Z",
-            "score": 32
-        },
-        {
-            "date": "2026-01-26T05:58:30Z",
-            "score": 32
-        },
-        {
-            "date": "2026-01-26T06:54:51Z",
-            "score": 32
-        },
-        {
-            "date": "2026-01-26T07:39:39Z",
-            "score": 32
-        },
-        {
-            "date": "2026-01-26T08:50:16Z",
+            "date": "2026-01-29T03:09:55Z",
             "score": 34
         },
         {
-            "date": "2026-01-26T09:35:26Z",
-            "score": 34
+            "date": "2026-01-29T04:47:12Z",
+            "score": 33
         },
         {
-            "date": "2026-01-26T09:47:53Z",
-            "score": 34
+            "date": "2026-01-29T05:56:19Z",
+            "score": 31
         },
         {
-            "date": "2026-01-26T10:41:40Z",
-            "score": 34
+            "date": "2026-01-29T07:03:26Z",
+            "score": 38
         },
         {
-            "date": "2026-01-26T11:32:26Z",
-            "score": 34
+            "date": "2026-01-29T07:52:12Z",
+            "score": 38
         },
         {
-            "date": "2026-01-26T11:49:39Z",
-            "score": 34
+            "date": "2026-01-29T08:08:52Z",
+            "score": 38
         },
         {
-            "date": "2026-01-26T13:10:34Z",
-            "score": 34
+            "date": "2026-01-29T08:14:41Z",
+            "score": 38
         },
         {
-            "date": "2026-01-26T14:03:27Z",
+            "date": "2026-01-29T08:56:45Z",
+            "score": 40
+        },
+        {
+            "date": "2026-01-29T09:56:49Z",
+            "score": 40
+        },
+        {
+            "date": "2026-01-29T10:53:39Z",
+            "score": 38
+        },
+        {
+            "date": "2026-01-29T11:42:05Z",
+            "score": 38
+        },
+        {
+            "date": "2026-01-29T13:21:11Z",
+            "score": 37
+        },
+        {
+            "date": "2026-01-29T14:53:36Z",
+            "score": 37
+        },
+        {
+            "date": "2026-01-29T15:50:36Z",
+            "score": 31
+        },
+        {
+            "date": "2026-01-29T16:56:38Z",
+            "score": 32
+        },
+        {
+            "date": "2026-01-29T17:50:28Z",
             "score": 36
         },
         {
-            "date": "2026-01-26T14:46:13Z",
-            "score": 40
+            "date": "2026-01-29T19:02:48Z",
+            "score": 35
         },
         {
-            "date": "2026-01-26T15:41:06Z",
-            "score": 40
+            "date": "2026-01-29T19:39:24Z",
+            "score": 35
         },
         {
-            "date": "2026-01-26T16:50:51Z",
-            "score": 40
+            "date": "2026-01-29T20:45:19Z",
+            "score": 35
         },
         {
-            "date": "2026-01-26T17:41:36Z",
-            "score": 40
+            "date": "2026-01-29T21:39:27Z",
+            "score": 35
         },
         {
-            "date": "2026-01-26T18:54:03Z",
-            "score": 40
+            "date": "2026-01-29T22:41:02Z",
+            "score": 35
         },
         {
-            "date": "2026-01-26T19:34:07Z",
-            "score": 40
+            "date": "2026-01-29T23:37:53Z",
+            "score": 36
         },
         {
-            "date": "2026-01-26T19:51:46Z",
-            "score": 40
+            "date": "2026-01-30T01:10:48Z",
+            "score": 35
         },
         {
-            "date": "2026-01-26T20:39:48Z",
-            "score": 40
+            "date": "2026-01-30T01:18:28Z",
+            "score": 35
         },
         {
-            "date": "2026-01-26T21:36:33Z",
-            "score": 40
+            "date": "2026-01-30T02:49:23Z",
+            "score": 35
         },
         {
-            "date": "2026-01-26T21:55:25Z",
-            "score": 40
+            "date": "2026-01-30T14:44:26Z",
+            "score": 31
         },
         {
-            "date": "2026-01-26T22:36:24Z",
-            "score": 40
+            "date": "2026-01-30T14:50:33Z",
+            "score": 31
         },
         {
-            "date": "2026-01-26T22:56:24Z",
-            "score": 40
+            "date": "2026-01-30T14:54:43Z",
+            "score": 31
         },
         {
-            "date": "2026-01-26T23:23:49Z",
-            "score": 40
+            "date": "2026-01-30T15:49:59Z",
+            "score": 32
         },
         {
-            "date": "2026-01-26T23:34:43Z",
-            "score": 40
+            "date": "2026-01-30T16:55:52Z",
+            "score": 32
         },
         {
-            "date": "2026-01-26T23:49:00Z",
-            "score": 40
+            "date": "2026-01-30T17:48:30Z",
+            "score": 32
         },
         {
-            "date": "2026-01-26T23:52:56Z",
-            "score": 40
+            "date": "2026-01-30T19:00:43Z",
+            "score": 32
         },
         {
-            "date": "2026-01-26T23:58:26Z",
-            "score": 40
+            "date": "2026-01-30T19:41:19Z",
+            "score": 32
         },
         {
-            "date": "2026-01-27T00:12:04Z",
-            "score": 40
+            "date": "2026-01-30T20:44:29Z",
+            "score": 30
         },
         {
-            "date": "2026-01-27T00:19:47Z",
-            "score": 40
+            "date": "2026-01-30T21:38:23Z",
+            "score": 30
         },
         {
-            "date": "2026-01-27T00:26:05Z",
-            "score": 40
+            "date": "2026-01-30T22:40:15Z",
+            "score": 30
         },
         {
-            "date": "2026-01-27T00:35:27Z",
-            "score": 40
+            "date": "2026-01-30T23:36:55Z",
+            "score": 27
         },
         {
-            "date": "2026-01-27T00:46:51Z",
-            "score": 40
+            "date": "2026-01-31T02:44:15Z",
+            "score": 30
         },
         {
-            "date": "2026-01-27T02:34:24Z",
-            "score": 40
+            "date": "2026-01-31T04:42:45Z",
+            "score": 30
         },
         {
-            "date": "2026-01-27T04:02:21Z",
-            "score": 39
+            "date": "2026-01-31T05:50:41Z",
+            "score": 30
         },
         {
-            "date": "2026-01-27T04:55:30Z",
-            "score": 39
+            "date": "2026-01-31T06:55:47Z",
+            "score": 30
         },
         {
-            "date": "2026-01-27T05:40:12Z",
-            "score": 39
+            "date": "2026-01-31T07:39:22Z",
+            "score": 30
         },
         {
-            "date": "2026-01-27T06:53:31Z",
-            "score": 39
+            "date": "2026-01-31T08:44:58Z",
+            "score": 30
         },
         {
-            "date": "2026-01-27T07:38:31Z",
-            "score": 39
+            "date": "2026-01-31T09:39:36Z",
+            "score": 29
         },
         {
-            "date": "2026-01-27T08:49:17Z",
-            "score": 39
+            "date": "2026-01-31T10:39:05Z",
+            "score": 29
         },
         {
-            "date": "2026-01-27T09:45:55Z",
-            "score": 39
+            "date": "2026-01-31T11:32:14Z",
+            "score": 29
         },
         {
-            "date": "2026-01-27T10:44:30Z",
-            "score": 40
+            "date": "2026-01-31T13:08:21Z",
+            "score": 30
         },
         {
-            "date": "2026-01-27T11:33:52Z",
-            "score": 40
+            "date": "2026-01-31T14:37:09Z",
+            "score": 29
         },
         {
-            "date": "2026-01-27T11:53:04Z",
-            "score": 40
+            "date": "2026-01-31T15:35:34Z",
+            "score": 29
         },
         {
-            "date": "2026-01-27T13:12:31Z",
-            "score": 40
+            "date": "2026-01-31T16:43:34Z",
+            "score": 30
         },
         {
-            "date": "2026-01-27T13:54:16Z",
-            "score": 40
+            "date": "2026-01-31T17:36:00Z",
+            "score": 30
+        },
+        {
+            "date": "2026-01-31T18:49:04Z",
+            "score": 30
+        },
+        {
+            "date": "2026-01-31T19:30:49Z",
+            "score": 30
+        },
+        {
+            "date": "2026-01-31T20:37:49Z",
+            "score": 30
+        },
+        {
+            "date": "2026-01-31T21:33:35Z",
+            "score": 29
+        },
+        {
+            "date": "2026-01-31T22:36:02Z",
+            "score": 30
+        },
+        {
+            "date": "2026-01-31T23:34:00Z",
+            "score": 29
+        },
+        {
+            "date": "2026-02-01T02:53:10Z",
+            "score": 30
+        },
+        {
+            "date": "2026-02-01T03:26:50Z",
+            "score": 29
+        },
+        {
+            "date": "2026-02-01T03:35:38Z",
+            "score": 30
         }
     ],
-    "intelligence": null,
+    "intelligence": {
+        "news": [
+            {
+                "title": "Bitcoin dips below $79,000 as market digests silver sell-off, Trump's Fed chair pick",
+                "link": "https://www.cnbc.com/2026/01/31/bitcoin-dips-below-78000-after-silver-selloff.html",
+                "isoDate": "2026-02-01T00:03:19+00:00Z"
+            },
+            {
+                "title": "Epstein files: Trump, Howard Lutnick, Steve Tisch among prominent names that appear in latest Justice Department release",
+                "link": "https://www.cnbc.com/2026/01/31/epstein-files-trump-howard-lutnick-steve-tisch.html",
+                "isoDate": "2026-01-31T23:17:47+00:00Z"
+            },
+            {
+                "title": "U.S. government partially shuts down; House vote could reopen it by Monday",
+                "link": "https://www.cnbc.com/2026/01/30/government-shutdown-senate-vote-dhs.html",
+                "isoDate": "2026-01-31T05:01:44+00:00Z"
+            },
+            {
+                "title": "Federal judge denies bid to end ICE Operation Metro Surge in Minnesota",
+                "link": "https://www.cnbc.com/2026/01/31/federal-judge-denies-bid-to-end-ice-operation-metro-surge-in-minnesota.html",
+                "isoDate": "2026-01-31T19:12:14+00:00Z"
+            },
+            {
+                "title": "Nvidia CEO Huang denies he is unhappy with OpenAI, says 'huge' investment planned at 'trillion-dollar dinner'",
+                "link": "https://www.cnbc.com/2026/01/31/nvidia-ceo-huang-denies-hes-unhappy-with-openai.html",
+                "isoDate": "2026-01-31T14:37:37+00:00Z"
+            },
+            {
+                "title": "Goldman says buy these five stocks ahead of earnings before it's too late",
+                "link": "https://www.cnbc.com/2026/01/31/goldmans-five-stocks-to-buy-before-earnings.html",
+                "isoDate": "2026-01-31T14:05:08+00:00Z"
+            }
+        ],
+        "translations": {
+            "JP": [
+                "ビットコイン、市場が銀の売りとトランプ氏のFRB議長候補を消化し7万9000ドルを下回る",
+                "エプスタイン氏の訴訟書類：トランプ氏、ハワード・ラトニック氏、スティーブ・ティッシュ氏らが司法省最新公開資料に登場",
+                "米政府一部閉鎖、月曜までに再開か、下院採決次第",
+                "連邦裁判事、ミネソタ州でのICE（移民税関執行局）作戦「メトロ・サージ」終了の申し立てを却下",
+                "Nvidia CEOの黄氏、OpenAIへの不満を否定、「兆ドルディナー」で「巨額」投資計画を明かす",
+                "ゴールドマン、決算前に買うべき5銘柄、手遅れになる前に"
+            ],
+            "CN": [
+                "比特币跌破7.9万美元，市场消化白银抛售及特朗普的联储主席人选",
+                "爱泼斯坦文件：特朗普、霍华德·卢特尼克、史蒂夫·蒂施等知名人士出现在最新司法部公布的文件中",
+                "美国政府部分停摆；众议院投票可能在周一前恢复运作",
+                "联邦法官驳回结束明尼苏达州ICE“地铁搜查行动”的请求",
+                "英伟达CEO黄仁勋否认对OpenAI不满，称计划在“万亿美元晚宴”上进行“巨额”投资",
+                "高盛：在财报季来临前买入这五只股票，以免为时过晚"
+            ],
+            "ES": [
+                "Bitcoin cae por debajo de los $79,000 mientras el mercado digiere la venta de plata y la elección de Trump como presidente de la Fed",
+                "Archivos de Epstein: Trump, Howard Lutnick, Steve Tisch entre los nombres prominentes que aparecen en la última publicación del Departamento de Justicia",
+                "Gobierno de EE. UU. se cierra parcialmente; la votación en la Cámara de Representantes podría reabrirlo para el lunes",
+                "Juez federal niega solicitud para poner fin a la Operación Metro Surge del ICE en Minnesota",
+                "CEO de Nvidia, Huang, niega estar descontento con OpenAI, dice que se planea una inversión 'enorme' en una 'cena de billones de dólares'",
+                "Goldman dice que compren estas cinco acciones antes de los resultados, antes de que sea demasiado tarde"
+            ],
+            "HI": [
+                "बिटकॉइन 79,000 डॉलर से नीचे गिरा, बाज़ार में चांदी की बिकवाली और ट्रंप की फेड अध्यक्ष की पसंद पर विचार",
+                "एपस्टीन फ़ाइलें: ट्रंप, हॉवर्ड लुटनिक, स्टीव टिस्क नवीनतम न्याय विभाग की रिलीज़ में प्रमुख नामों में शामिल",
+                "अमेरिकी सरकार आंशिक रूप से बंद; सदन का वोट सोमवार तक फिर से खोल सकता है",
+                "संघीय न्यायाधीश ने मिनेसोटा में ICE ऑपरेशन मेट्रो सर्ज को समाप्त करने की बोली से इनकार किया",
+                "एनवीडिया के सीईओ हुआंग ने ओपनएआई से नाखुश होने से इनकार किया, कहा 'खरबों डॉलर की डिनर' में 'भारी' निवेश की योजना",
+                "गोल्डमैन का कहना है कि कमाई से पहले इन पांच शेयरों को खरीदें, इससे पहले कि बहुत देर हो जाए"
+            ],
+            "ID": [
+                "Bitcoin turun di bawah $79.000 seiring pasar mencerna penjualan perak, pilihan Trump sebagai ketua The Fed",
+                "File Epstein: Trump, Howard Lutnick, Steve Tisch di antara nama-nama terkemuka yang muncul dalam rilis terbaru Departemen Kehakiman",
+                "Pemerintah AS sebagian ditutup; pemungutan suara DPR dapat membukanya kembali pada hari Senin",
+                "Hakim federal menolak upaya untuk mengakhiri Operasi Metro Surge ICE di Minnesota",
+                "CEO Nvidia Huang membantah tidak senang dengan OpenAI, mengatakan investasi 'besar' direncanakan di 'makan malam triliunan dolar'",
+                "Goldman mengatakan beli lima saham ini sebelum laporan keuangan, sebelum terlambat"
+            ],
+            "AR": [
+                "البيتكوين ينخفض دون 79,000 دولار مع استيعاب السوق لعمليات بيع الفضة واختيار ترامب لمنصب رئيس الفيدرالي",
+                "ملفات إبستاين: ترامب، هوارد لوتنيك، ستيف تيش من بين الأسماء البارزة التي تظهر في أحدث إصدار لوزارة العدل",
+                "الحكومة الأمريكية تغلق جزئيًا؛ تصويت مجلس النواب قد يعيد فتحها بحلول يوم الاثنين",
+                "قاضٍ فيدرالي يرفض محاولة إنهاء عملية مترو سيرج التابعة لوكالة الهجرة والجمارك في مينيسوتا",
+                "الرئيس التنفيذي لشركة Nvidia هوانغ ينفي عدم رضاه عن OpenAI، ويقول إن استثمارًا \"ضخمًا\" مخطط له في \"عشاء بمليارات الدولارات\"",
+                "جولدمان تقول اشتروا هذه الأسهم الخمسة قبل الأرباح قبل فوات الأوان"
+            ]
+        },
+        "last_updated": "2026-02-01T03:35:38.587636+00:00Z"
+    },
     "system_status": "OPERATIONAL"
 }
