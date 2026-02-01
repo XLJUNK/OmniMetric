@@ -1,8 +1,8 @@
 name: SNS Publisher (Independent)
 
 on:
-#  schedule:
-#    - cron: '35 * * * *' # Run at :35 (15m buffer after Main Engine finishes)
+  schedule:
+    - cron: '35 * * * *' # Run at :35 (15m buffer after Main Engine finishes)
   workflow_dispatch:
     inputs:
       force_post:
