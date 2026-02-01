@@ -36,9 +36,9 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
                         isoDate: item.isoDate || item.published
                     };
                 });
-                // Strictly take top 3 for the vertical stack
+                // Strictly take top 5 for the vertical stack
                 // Success: Update Cache
-                const finalNews = decodedNews.length > 0 ? decodedNews.slice(0, 3) : [];
+                const finalNews = decodedNews.length > 0 ? decodedNews.slice(0, 5) : [];
                 if (finalNews.length > 0) {
                     setNews(finalNews);
                     try {
@@ -91,9 +91,9 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
     // Skeleton container with fixed height matching final render to prevent CLS
     if (news.length === 0) {
         return (
-            <div className="w-full bg-white dark:bg-[#050505] border-y border-slate-200 dark:border-white/5 min-h-[102px] flex flex-col divide-y divide-slate-100 dark:divide-white/5 overflow-hidden">
-                {[1, 2, 3].map((v) => (
-                    <div key={v} className="h-[34px] bg-slate-50/50 dark:bg-white/[0.02]"></div>
+            <div className="w-full bg-white dark:bg-[#050505] border-y border-slate-200 dark:border-white/5 min-h-[160px] flex flex-col divide-y divide-slate-100 dark:divide-white/5 overflow-hidden">
+                {[1, 2, 3, 4, 5].map((v) => (
+                    <div key={v} className="h-[32px] bg-slate-50/50 dark:bg-white/[0.02]"></div>
                 ))}
             </div>
         );
@@ -138,14 +138,14 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
             className="w-full bg-white dark:bg-black border-y border-slate-200 dark:border-[#1E293B] shadow-2xl relative z-10 select-none"
             dir={isRTL ? 'rtl' : 'ltr'}
         >
-            <div className={`flex flex-col divide-y divide-slate-100 dark:divide-white/5 min-h-[102px]`}>
+            <div className={`flex flex-col divide-y divide-slate-100 dark:divide-white/5 min-h-[160px]`}>
                 {news.map((item, i) => (
                     <Link
                         key={i}
                         href={item.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group flex items-center justify-between h-[40px] px-3 md:px-5 hover:bg-slate-50 dark:hover:bg-white/[0.03] transition-all cursor-pointer border-l-2 border-transparent hover:border-red-600/80 no-underline text-inherit"
+                        className="group flex items-center justify-between h-[32px] px-3 md:px-5 hover:bg-slate-50 dark:hover:bg-white/[0.03] transition-all cursor-pointer border-l-2 border-transparent hover:border-red-600/80 no-underline text-inherit"
                     >
                         <div
                             className={`flex items-center overflow-hidden flex-1 gap-5 ${isRTL ? 'flex-row-reverse' : 'flex-row'}`}
