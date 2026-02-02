@@ -1,14 +1,14 @@
 {
     "metrics": {
-        "avg_vix_defensive": 16.86,
+        "avg_vix_defensive": 16.84,
         "avg_vix_neutral": 16.15,
         "avg_vix_accumulate": 14.49,
         "sample_count": 24,
-        "last_updated": "2026-02-02T07:16:53.638865+00:00"
+        "last_updated": "2026-02-02T09:00:01.743104+00:00"
     },
     "summaries": {
-        "EN": "Over the past 24 entries, market volatility (VIX) was 4.4% higher during GMS Defensive regimes (<40) compared to Neutral, validating the signal's sensitivity to structural stress.",
-        "JP": "過去24回の観測データにおいて、GMSが「ディフェンシブ（40以下）」を示した期間のVIX指数は平均16.86となり、ニュートラル期間より4.4%高く推移しました。これは、本アルゴリズムが市場の構造的ストレスを正確に捉えていることを客観的に示しています。"
+        "EN": "Over the past 24 entries, market volatility (VIX) was 4.3% higher during GMS Defensive regimes (<40) compared to Neutral, validating the signal's sensitivity to structural stress.",
+        "JP": "過去24回の観測データにおいて、GMSが「ディフェンシブ（40以下）」を示した期間のVIX指数は平均16.84となり、ニュートラル期間より4.3%高く推移しました。これは、本アルゴリズムが市場の構造的ストレスを正確に捉えていることを客観的に示しています。"
     },
     "history": [
         {
@@ -473,7 +473,7 @@
         },
         {
             "date": "2026-02-02",
-            "gms_score": 25,
+            "gms_score": 29,
             "net_liquidity": 5654.9,
             "move_price": 59.2,
             "real_rate": 1.89,
@@ -482,10 +482,10 @@
             "hy_spread": 2.77,
             "nfci_price": -0.6,
             "breadth_spread": -0.47,
-            "gold_price": 4550.4,
-            "btc_price": 76399.39,
-            "copper_gold_ratio": 1.24,
-            "vix_price": 17.44,
+            "gold_price": 5067.5,
+            "btc_price": 76960.12,
+            "copper_gold_ratio": 1.19,
+            "vix_price": 17.01,
             "spy_price": 691.97,
             "qqq_price": 621.87,
             "iwm_price": 259.65,
