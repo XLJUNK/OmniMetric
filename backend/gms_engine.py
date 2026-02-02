@@ -1372,7 +1372,7 @@ Output JSON:
     # Strategy: Env Var Target > Flash-Targeted Speed > High-Tier Reasoning > Efficient Fallbacks
     
     # Updated Priority per User Request (Tier 1 > Tier 2 > Tier 3)
-    target_model = os.getenv("GEMINI_MODEL", "gemini-3-flash")
+    target_model = os.getenv("GEMINI_MODEL", "gemini-3-flash-preview")
     
     models = [
         target_model,              # [PRIORITY 1] Defaults to gemini-3-flash

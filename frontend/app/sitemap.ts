@@ -25,9 +25,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const getAlternates = (path: string) => {
         const languagesMap: Record<string, string> = {};
         lowerLangs.forEach(lang => {
-            languagesMap[hreflangMap[lang]] = `${baseUrl}/${lang}${path}`;
+            if (path === '') {
+                // Root special case: EN is at root /, others at /lang
+                languagesMap[hreflangMap[lang]] = lang === 'en' ? `${baseUrl}/` : `${baseUrl}/${lang}`;
+            } else {
+                languagesMap[hreflangMap[lang]] = `${baseUrl}/${lang}${path}`;
+            }
         });
-        languagesMap['x-default'] = `${baseUrl}/en${path}`;
+
+        // x-default
+        if (path === '') {
+            languagesMap['x-default'] = `${baseUrl}/`;
+        } else {
+            languagesMap['x-default'] = `${baseUrl}/en${path}`;
+        }
+
         return { languages: languagesMap };
     };
 

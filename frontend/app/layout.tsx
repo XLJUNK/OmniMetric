@@ -41,10 +41,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.omnimetric.net'),
   title: "Global Macro Signal (OmniMetric Terminal) | AI-Driven Financial Insight",
   description: "機関投資家品質の市場リスク分析を提供するAI駆動型金融・経済分析プラットフォーム。独自スコアによりグローバルマクロのリスク許容度をリアルタイムで可視化します。",
-  icons: {
-    icon: '/icon.png',
-    apple: '/icon.png',
-  },
+  /* icons: handled by app/icon.png */
   appleWebApp: {
     capable: true,
     title: 'Global Macro Signal',

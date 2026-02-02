@@ -29,37 +29,34 @@ export function getMultilingualMetadata(
     const alternates: Record<string, string> = {};
 
     // Generate all 7 languages
+    // Generate all 7 languages (Path-based strict)
     Object.entries(LANGUAGES).forEach(([code, hreflang]) => {
-        if (style === 'path') {
-            alternates[hreflang] = `${BASE_URL}/${code.toLowerCase()}${cleanPath}`;
+        if (cleanPath === '/') {
+            // Root special case (Homepage)
+            alternates[hreflang] = code === 'EN'
+                ? `${BASE_URL}/`
+                : `${BASE_URL}/${code.toLowerCase()}`;
         } else {
-            // Home or other query-param pages
-            alternates[hreflang] = `${BASE_URL}${cleanPath}${cleanPath === '/' ? '' : ''}${cleanPath === '/' ? '?lang=' + code : '?lang=' + code}`;
-            // Refine root path logic
-            if (cleanPath === '/') {
-                alternates[hreflang] = `${BASE_URL}/?lang=${code}`;
-            } else {
-                alternates[hreflang] = `${BASE_URL}${cleanPath}?lang=${code}`;
-            }
+            // Standard Paths (/wiki, /forex, etc)
+            alternates[hreflang] = `${BASE_URL}/${code.toLowerCase()}${cleanPath}`;
         }
     });
 
-    // Special case for root EN if query style (often bare URL)
-    if (style === 'query' && cleanPath === '/') {
-        // alternates['en'] = `${BASE_URL}`;
-    }
-
-    // Set x-default
-    if (style === 'path') {
-        alternates['x-default'] = `${BASE_URL}/en${cleanPath}`;
+    // Set x-default (English Path is default)
+    if (cleanPath === '/') {
+        alternates['x-default'] = `${BASE_URL}/`;
     } else {
-        alternates['x-default'] = cleanPath === '/' ? `${BASE_URL}/` : `${BASE_URL}${cleanPath}`;
+        alternates['x-default'] = `${BASE_URL}/en${cleanPath}`;
     }
 
-    // Canonical
-    const canonical = style === 'path'
-        ? `${BASE_URL}/${langCode.toLowerCase()}${cleanPath}`
-        : (cleanPath === '/' && langCode === 'EN' ? `${BASE_URL}/` : `${BASE_URL}${cleanPath}?lang=${langCode}`);
+    // Canonical (Self-referencing path)
+    let canonical = `${BASE_URL}/${langCode.toLowerCase()}${cleanPath}`;
+
+    // Special Case: English Homepage is Root
+    if (langCode === 'EN' && cleanPath === '/') {
+        canonical = `${BASE_URL}/`;
+    }
+
 
     return {
         title: title || "Global Macro Signal | Institutional Market Intelligence",

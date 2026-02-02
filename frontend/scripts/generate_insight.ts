@@ -69,7 +69,7 @@ async function main() {
     }
 
     const GMS_MODELS: ModelPair[] = [
-        { vercel: 'google/gemini-3-flash', direct: 'gemini-3-flash' },           // Priority 1
+        { vercel: 'google/gemini-3-flash-preview', direct: 'gemini-3-flash-preview' },           // Priority 1
         { vercel: 'google/gemini-2.5-flash', direct: 'gemini-2.5-flash' },       // Priority 2
         { vercel: 'google/gemini-2.5-flash-lite', direct: 'gemini-2.5-flash-lite' } // Priority 3
     ];
