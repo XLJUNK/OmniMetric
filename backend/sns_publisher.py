@@ -239,9 +239,12 @@ class SNSPublisher:
             for (lang, phase, force_post) in sorted_matches:
                 self._log(f"Executing Task: {lang} (Phase {phase}, Force: {force_post})")
                 
-                # Check Skip Logic (Global Score check)
-                if bsky_pub.should_skip(score) and not force_post and not parent_post:
-                     self._log(f"[{lang}] BlueSky Smart-Skip triggered (Score Unchanged).")
+                # 0. Generate Text (for Hash Check)
+                text = bsky_pub.format_post(data, lang=lang)
+
+                # Check Skip Logic (Content Hash check)
+                if bsky_pub.should_skip(text, lang) and not force_post and not parent_post:
+                     self._log(f"[{lang}] BlueSky Smart-Skip triggered (Content Unchanged).")
                      results[f"BSKY_{lang}"] = "SKIPPED"
                 else:
                      # 1. Generate OGP Image (Disposable)
@@ -264,7 +267,7 @@ class SNSPublisher:
                              root=models.ComAtprotoRepoStrongRef.Main(cid=parent_post.cid, uri=parent_post.uri)
                          )
 
-                     res_post = bsky_pub.publish(data, image_path=img_path, reply_to=reply_to, force=force_post, lang=lang) 
+                     res_post = bsky_pub.publish(data, image_path=img_path, reply_to=reply_to, force=force_post, lang=lang, text=text) 
                      
                      if res_post:
                          results[f"BSKY_{lang}"] = "SUCCESS"

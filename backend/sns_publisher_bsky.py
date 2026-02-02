@@ -130,36 +130,60 @@ class BlueskyPublisher:
         if score < 40: return "DEFENSIVE (Risk-Off)"
         return "NEUTRAL (Wait & See)"
 
-    def should_skip(self, current_score):
-        """Smart-skip logic to prevent redundant posts."""
+    def should_skip(self, content, lang):
+        """Checks if the exact content has already been posted for this language."""
+        import hashlib
         try:
             if os.path.exists(self.state_file):
                 with open(self.state_file, 'r') as f:
                     state = json.load(f)
-                    last_score = state.get("last_bsky_score")
-                    if last_score == current_score:
-                        self._log(f"Smart-skip: Current score ({current_score}) matches last posted score. Skipping.")
-                        return True
+                    
+                last_hashes = state.get("last_content_hashes", {})
+                last_hash = last_hashes.get(lang)
+                
+                # Compute current hash
+                current_hash = hashlib.md5(content.encode('utf-8')).hexdigest()
+                
+                if last_hash == current_hash:
+                    self._log(f"[{lang}] Smart-skip: Content identical to last post. Skipping.")
+                    return True
         except Exception as e:
             self._log(f"State check failed: {e}", is_error=True)
         return False
 
-    def update_state(self, score):
+    def update_state(self, content, lang):
+        import hashlib
         try:
+            state = {}
+            if os.path.exists(self.state_file):
+                with open(self.state_file, 'r') as f:
+                    state = json.load(f)
+            
+            # Update Hash
+            if "last_content_hashes" not in state:
+                state["last_content_hashes"] = {}
+                
+            current_hash = hashlib.md5(content.encode('utf-8')).hexdigest()
+            state["last_content_hashes"][lang] = current_hash
+            state["last_post_at"] = datetime.now(timezone.utc).isoformat()
+            
             with open(self.state_file, 'w') as f:
-                json.dump({"last_bsky_score": score, "last_post_at": datetime.now(timezone.utc).isoformat()}, f)
+                json.dump(state, f, indent=4)
         except Exception as e:
             self._log(f"Failed to update state file: {e}", is_error=True)
 
-    def publish(self, data, image_path=None, reply_to=None, force=False, lang="EN"):
+    def publish(self, data, image_path=None, reply_to=None, force=False, lang="EN", text=None):
         """Main entry point for Bluesky publishing."""
-        score = data.get("gms_score", 50)
         
-        if self.should_skip(score) and not force:
-            return None # Not an error, just a skip
+        if text is None:
+            text = self.format_post(data, lang=lang)
+            
+        # We assume skip check is done by caller if they passed text, OR we check here if we want double safety.
+        # But usually caller (sns_publisher) checks before generating OGP.
+        # If called independently:
+        if self.should_skip(text, lang) and not force:
+             return None
 
-        text = self.format_post(data, lang=lang)
-        
         bsky_user = os.getenv("BLUESKY_HANDLE")
         bsky_pass = os.getenv("BLUESKY_PASSWORD")
         
@@ -185,9 +209,12 @@ class BlueskyPublisher:
             # Send post with optional threading
             post = client.send_post(text=text, reply_to=reply_to, embed=embed)
             
+            # Extract score just for log, though strictly we aren't using it for state anymore
+            score = data.get("gms_score", 50)
             self._log(f"Success: Posted GMS Score {score} ({lang}) to Bluesky.")
+            
             if not reply_to: # Only update state for top-level posts
-                self.update_state(score)
+                self.update_state(text, lang)
                 
             return post # Returns models.AppBskyFeedPost.CreateRecordResponse
         except Exception as e:
