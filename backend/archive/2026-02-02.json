@@ -1,12 +1,12 @@
 {
-    "last_updated": "2026-02-02T14:56:41.178060+00:00",
-    "last_successful_update": "2026-02-02T14:56:41.178067+00:00",
-    "gms_score": 25,
+    "last_updated": "2026-02-02T15:49:59.311268+00:00",
+    "last_successful_update": "2026-02-02T15:49:59.311275+00:00",
+    "gms_score": 29,
     "sector_scores": {
         "STOCKS": 25,
         "CRYPTO": 25,
-        "FOREX": 30,
-        "COMMODITIES": 45
+        "FOREX": 35,
+        "COMMODITIES": 75
     },
     "market_data": {
         "CRYPTO_SENTIMENT": {
@@ -84,13 +84,12 @@
             ]
         },
         "HY_SPREAD": {
-            "price": 2.77,
-            "prev_price": 2.72,
-            "daily_chg": 1.84,
-            "change_percent": 1.84,
+            "price": 2.8,
+            "prev_price": 2.77,
+            "daily_chg": 1.08,
+            "change_percent": 1.08,
             "trend": "CALM",
             "sparkline": [
-                2.9,
                 2.88,
                 2.83,
                 2.84,
@@ -119,7 +118,8 @@
                 2.69,
                 2.71,
                 2.72,
-                2.77
+                2.77,
+                2.8
             ]
         },
         "NFCI": {
@@ -218,12 +218,13 @@
             ]
         },
         "VIX": {
-            "price": 17.61,
-            "prev_price": 17.44,
-            "daily_chg": 0.97,
-            "change_percent": 7.71,
+            "price": 17.01,
+            "prev_price": 16.88,
+            "daily_chg": 0.77,
+            "change_percent": 5.33,
             "trend": "UP",
             "sparkline": [
+                14.33,
                 14.95,
                 14.51,
                 14.9,
@@ -244,8 +245,7 @@
                 16.35,
                 16.35,
                 16.88,
-                17.44,
-                17.61
+                17.01
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
@@ -360,10 +360,10 @@
             ]
         },
         "SPY": {
-            "price": 693.32,
+            "price": 694.82,
             "prev_price": 691.97,
-            "daily_chg": 0.2,
-            "change_percent": -0.31,
+            "daily_chg": 0.41,
+            "change_percent": -0.1,
             "trend": "UP",
             "sparkline": [
                 681.92,
@@ -387,14 +387,14 @@
                 695.42,
                 694.04,
                 691.97,
-                693.32
+                694.82
             ]
         },
         "TNX": {
-            "price": 4.25,
+            "price": 4.28,
             "prev_price": 4.24,
-            "daily_chg": 0.14,
-            "change_percent": 0.57,
+            "daily_chg": 0.8,
+            "change_percent": 1.23,
             "trend": "UP",
             "sparkline": [
                 4.16,
@@ -418,14 +418,14 @@
                 4.25,
                 4.23,
                 4.24,
-                4.25
+                4.28
             ]
         },
         "QQQ": {
-            "price": 624.18,
+            "price": 626.26,
             "prev_price": 621.87,
-            "daily_chg": 0.37,
-            "change_percent": -1.1,
+            "daily_chg": 0.71,
+            "change_percent": -0.77,
             "trend": "UP",
             "sparkline": [
                 614.31,
@@ -449,14 +449,14 @@
                 633.22,
                 629.43,
                 621.87,
-                624.18
+                626.26
             ]
         },
         "IWM": {
-            "price": 260.86,
+            "price": 262.78,
             "prev_price": 259.65,
-            "daily_chg": 0.47,
-            "change_percent": -1.46,
+            "daily_chg": 1.21,
+            "change_percent": -0.74,
             "trend": "UP",
             "sparkline": [
                 246.16,
@@ -480,14 +480,14 @@
                 263.3,
                 263.37,
                 259.65,
-                260.86
+                262.78
             ]
         },
         "RSP": {
-            "price": 198.38,
+            "price": 198.73,
             "prev_price": 198.08,
-            "daily_chg": 0.15,
-            "change_percent": -0.28,
+            "daily_chg": 0.33,
+            "change_percent": -0.1,
             "trend": "UP",
             "sparkline": [
                 191.56,
@@ -511,14 +511,14 @@
                 198.26,
                 198.52,
                 198.08,
-                198.38
+                198.73
             ]
         },
         "HYG": {
-            "price": 80.76,
+            "price": 80.71,
             "prev_price": 81.12,
-            "daily_chg": -0.44,
-            "change_percent": -0.51,
+            "daily_chg": -0.5,
+            "change_percent": -0.57,
             "trend": "DOWN",
             "sparkline": [
                 80.63,
@@ -542,7 +542,7 @@
                 81.04,
                 81.03,
                 81.12,
-                80.76
+                80.71
             ]
         },
         "NIFTY": {
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 78365.8,
+            "price": 78982.12,
             "prev_price": 76974.45,
-            "daily_chg": 1.81,
-            "change_percent": -7.33,
+            "daily_chg": 2.61,
+            "change_percent": -6.6,
             "trend": "UP",
             "sparkline": [
                 91192.99,
@@ -604,14 +604,14 @@
                 84128.66,
                 78621.12,
                 76974.45,
-                78365.8
+                78982.12
             ]
         },
         "ETH": {
-            "price": 2346.29,
+            "price": 2376.07,
             "prev_price": 2267.96,
-            "daily_chg": 3.45,
-            "change_percent": -16.75,
+            "daily_chg": 4.77,
+            "change_percent": -15.69,
             "trend": "UP",
             "sparkline": [
                 3092.33,
@@ -635,14 +635,14 @@
                 2702.38,
                 2445.09,
                 2267.96,
-                2346.29
+                2376.07
             ]
         },
         "SOL": {
-            "price": 104.14,
+            "price": 105.56,
             "prev_price": 100.85,
-            "daily_chg": 3.26,
-            "change_percent": -11.45,
+            "daily_chg": 4.67,
+            "change_percent": -10.25,
             "trend": "UP",
             "sparkline": [
                 139.14,
@@ -666,14 +666,14 @@
                 117.36,
                 105.44,
                 100.85,
-                104.14
+                105.56
             ]
         },
         "DXY": {
-            "price": 97.38,
+            "price": 97.55,
             "prev_price": 96.99,
-            "daily_chg": 0.41,
-            "change_percent": 1.21,
+            "daily_chg": 0.58,
+            "change_percent": 1.38,
             "trend": "UP",
             "sparkline": [
                 98.28,
@@ -697,14 +697,14 @@
                 96.45,
                 96.28,
                 96.99,
-                97.38
+                97.55
             ]
         },
         "USDJPY": {
-            "price": 154.78,
+            "price": 154.73,
             "prev_price": 153.1,
-            "daily_chg": 1.1,
-            "change_percent": -0.25,
+            "daily_chg": 1.07,
+            "change_percent": -0.28,
             "trend": "UP",
             "sparkline": [
                 156.41,
@@ -728,14 +728,14 @@
                 154.34,
                 152.45,
                 153.1,
-                154.78
+                154.73
             ]
         },
         "EURUSD": {
-            "price": 1.18,
+            "price": 1.19,
             "prev_price": 1.2,
-            "daily_chg": -1.23,
-            "change_percent": -0.24,
+            "daily_chg": -0.73,
+            "change_percent": 0.27,
             "trend": "DOWN",
             "sparkline": [
                 1.17,
@@ -759,14 +759,14 @@
                 1.19,
                 1.2,
                 1.2,
-                1.18
+                1.19
             ]
         },
         "USDINR": {
-            "price": 91.45,
+            "price": 91.9,
             "prev_price": 92.04,
-            "daily_chg": -0.64,
-            "change_percent": -0.05,
+            "daily_chg": -0.15,
+            "change_percent": 0.44,
             "trend": "DOWN",
             "sparkline": [
                 89.77,
@@ -790,14 +790,14 @@
                 91.71,
                 91.53,
                 92.04,
-                91.45
+                91.9
             ]
         },
         "USDSAR": {
             "price": 3.75,
             "prev_price": 3.75,
-            "daily_chg": 0.1,
-            "change_percent": 0.14,
+            "daily_chg": 0.12,
+            "change_percent": 0.15,
             "trend": "UP",
             "sparkline": [
                 3.75,
@@ -825,12 +825,13 @@
             ]
         },
         "GOLD": {
-            "price": 4770.1,
-            "prev_price": 4713.9,
-            "daily_chg": 1.19,
-            "change_percent": -6.1,
-            "trend": "UP",
+            "price": 5067.5,
+            "prev_price": 5318.4,
+            "daily_chg": -4.72,
+            "change_percent": -0.24,
+            "trend": "DOWN",
             "sparkline": [
+                4370.1,
                 4325.6,
                 4314.4,
                 4436.9,
@@ -851,17 +852,17 @@
                 5079.9,
                 5301.6,
                 5318.4,
-                4713.9,
-                4770.1
+                5067.5
             ]
         },
         "OIL": {
-            "price": 62.19,
-            "prev_price": 65.21,
-            "daily_chg": -4.63,
-            "change_percent": -0.32,
-            "trend": "DOWN",
+            "price": 65.55,
+            "prev_price": 65.42,
+            "daily_chg": 0.2,
+            "change_percent": 8.11,
+            "trend": "UP",
             "sparkline": [
+                57.95,
                 57.42,
                 57.32,
                 58.32,
@@ -882,17 +883,17 @@
                 62.39,
                 63.21,
                 65.42,
-                65.21,
-                62.19
+                65.55
             ]
         },
         "COPPER": {
-            "price": 5.83,
-            "prev_price": 5.9,
-            "daily_chg": -1.2,
-            "change_percent": -0.03,
+            "price": 6.01,
+            "prev_price": 6.18,
+            "daily_chg": -2.6,
+            "change_percent": 0.52,
             "trend": "DOWN",
             "sparkline": [
+                5.73,
                 5.63,
                 5.64,
                 5.92,
@@ -913,17 +914,17 @@
                 5.83,
                 5.89,
                 6.18,
-                5.9,
-                5.83
+                6.01
             ]
         },
         "NATGAS": {
-            "price": 3.54,
-            "prev_price": 4.35,
-            "daily_chg": -18.67,
-            "change_percent": -49.08,
-            "trend": "DOWN",
+            "price": 4.09,
+            "prev_price": 3.92,
+            "daily_chg": 4.44,
+            "change_percent": -39.82,
+            "trend": "UP",
             "sparkline": [
+                3.97,
                 3.69,
                 3.62,
                 3.52,
@@ -944,8 +945,7 @@
                 6.95,
                 7.46,
                 3.92,
-                4.35,
-                3.54
+                4.09
             ]
         },
         "MOVE": {
@@ -976,7 +976,7 @@
             ]
         },
         "BREADTH": {
-            "price": 0.03,
+            "price": 0.0,
             "change_percent": 0.0,
             "trend": "HEALTHY",
             "sparkline": [
@@ -1000,11 +1000,11 @@
                 1.01,
                 1.34,
                 1.42,
-                1.37
+                1.33
             ]
         },
         "SPY_MOMENTUM": {
-            "price": -0.03,
+            "price": 0.0,
             "change_percent": 0,
             "trend": "BALANCED",
             "sparkline": [
@@ -1041,40 +1041,40 @@
             ]
         },
         "COPPER_GOLD": {
-            "price": 1.22,
+            "price": 1.19,
             "change_percent": 0,
             "trend": "RISK-OFF",
             "sparkline": [
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19
             ]
         }
     },
@@ -1106,22 +1106,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS at 25 signifies a Defensive regime. Flat momentum pushed the score from 27 to 25, driven by a rising DXY (Dollar strength/Liquidity) and VIX (Fear/Volatility). While widening HY Spreads suggest credit stress, technical resilience in SPY hints at a potential floor. Priority remains capital preservation; watch for a VIX peak as a signal for stabilization before increasing risk exposure. Caution is required until momentum shifts.",
+        "content": "GMS Score 29 maintains a Defensive regime. While momentum pushed the score to 29, rising DXY (Dollar strength/Liquidity) and a 1.08% climb in HY Spreads (Credit risk) signal tightening conditions. VIX (Fear/Volatility) at 17 reflects continued market caution. However, the sharp 4.7% drop in Gold might signal a rotation from safe havens that could support equities if DXY stabilizes. Maintain defensive positioning and monitor for a liquidity floor before increasing risk exposure.",
         "reports": {
-            "JP": "GMSスコア25は「防御的」局面を示唆。モメンタムがスコアを27から25へ押し下げました。強いドル（DXY/流動性指標）とVIX（恐怖指数/ボラティリティ）の上昇が市場を圧迫しています。信用スプレッドの拡大はリスク増大を警告しますが、主要指数の底堅さは短期的な底打ちの可能性を残します。VIXの沈静化を確認するまで、資本保護を最優先し慎重なスタンスを維持してください。",
-            "EN": "GMS at 25 signifies a Defensive regime. Flat momentum pushed the score from 27 to 25, driven by a rising DXY (Dollar strength/Liquidity) and VIX (Fear/Volatility). While widening HY Spreads suggest credit stress, technical resilience in SPY hints at a potential floor. Priority remains capital preservation; watch for a VIX peak as a signal for stabilization before increasing risk exposure. Caution is required until momentum shifts.",
-            "CN": "GMS分数为25，处于防御模式。动量将分数从27推至25，主因是美元(DXY/流动性)和波动率(VIX/恐慌指数)上升导致环境收紧。尽管高收益债利差预示信用压力，但美股的韧性暗示可能存在短期支撑。当前应以资本保全为主，密切关注VIX是否见顶。在动量企稳并出现明确的反转信号前，建议保持审慎，避免过度增加风险仓位。",
-            "ES": "El GMS en 25 indica un régimen defensivo. El impulso empujó la puntuación de 27 a 25, debido al fortalecimiento del dólar (DXY/liquidez) y el aumento del VIX (miedo/volatilidad). Aunque los diferenciales de crédito sugieren mayor estrés, la resiliencia del SPY insinúa un posible suelo técnico. Se recomienda preservar capital hasta que el VIX alcance su pico, señalando una estabilización. Mantenga la cautela hasta que el impulso mejore significativamente.",
-            "HI": "GMS स्कोर 25 एक रक्षात्मक शासन का संकेत देता है। मोमेंटम ने स्कोर को 27 से 25 पर धकेल दिया है, जिसका मुख्य कारण मजबूत डॉलर (DXY/तरलता) और बढ़ता VIX (डर/अस्थिरता) है जो बाजार को दबा रहा है। हालांकि क्रेडिट जोखिम बढ़ रहा है, SPY में तकनीकी लचीलापन एक संभावित बाजार तल का संकेत देता है। वर्तमान में पूंजी सुरक्षा को प्राथमिकता दें और VIX के कम होने का इंतजार करें। गति स्थिर होने तक सावधानी बरतें और जोखिम कम रखें।",
-            "ID": "Skor GMS 25 menunjukkan rezim Defensif. Momentum mendorong skor turun dari 27 ke 25, didorong oleh penguatan DXY (Dolar/Likuiditas) dan kenaikan VIX (Ketakutan/Volatilitas). Meskipun pelebaran spread kredit menunjukkan risiko, ketahanan teknis SPY memberi sinyal potensi dasar pasar. Prioritaskan pelestarian modal hingga VIX mencapai puncaknya dan momentum stabil. Tetap waspada terhadap risiko likuiditas sebelum meningkatkan eksposur pada aset berisiko.",
-            "AR": "يشير مؤشر GMS عند 25 إلى نظام دفاعي. دفع الزخم النتيجة من 27 إلى 25، مدفوعاً بقوة الدولار (DXY/السيولة) وارتفاع مؤشر التقلب (VIX/الخوف). رغم أن اتساع فروق الائتمان يشير لضغوط مالية، إلا أن استقرار الأسهم يلمح لقاع محتمل. يوصى بالحذر وإعطاء الأولوية لحماية رأس المال حتى يتراجع VIX وتستقر الحركة. لا ينصح بزيادة المخاطر حتى تظهر إشارات واضحة على استقرار السيولة العالمية وتحسن الزخم."
+            "JP": "GMSスコア29は「防御」レジームを維持しています。モメンタムがスコアを29まで押し上げましたが、DXY（ドルの強さ/流動性）の上昇と信用リスクを示すHYスプレッドの1.08%拡大は市場の警戒感を示唆しています。VIX（恐怖指数）17は慎重な姿勢を裏付けます。ただ、金の4.7%急落は安全資産からの資金流出を意味し、DXYが安定すれば反発の契機となる可能性があります。今は現金を確保し、流動性の底打ちを待ちましょう。",
+            "EN": "GMS Score 29 maintains a Defensive regime. While momentum pushed the score to 29, rising DXY (Dollar strength/Liquidity) and a 1.08% climb in HY Spreads (Credit risk) signal tightening conditions. VIX (Fear/Volatility) at 17 reflects continued market caution. However, the sharp 4.7% drop in Gold might signal a rotation from safe havens that could support equities if DXY stabilizes. Maintain defensive positioning and monitor for a liquidity floor before increasing risk exposure.",
+            "CN": "GMS分数29维持在“防御”区间。虽然动量将分数推升至29，但DXY（美元强度/流动性）上升及高收益债利差（信用风险）增长1.08%显示流动性收紧。VIX（恐慌指数）处于17，反映了谨慎情绪。然而，黄金大幅下跌4.7%可能预示着避险资金的转移，若DXY走势企稳，市场可能迎来短期反弹。建议保持高现金比例，在流动性筑底前继续观望，关注市场后续变动。",
+            "ES": "El puntaje GMS de 29 mantiene un régimen Defensivo. Aunque el impulso elevó el puntaje a 29, el aumento del DXY (fortaleza del Dólar/Liquidez) y el alza del 1.08% en los diferenciales HY (riesgo crediticio) indican una liquidez ajustada. El VIX (Miedo/Volatilidad) en 17 refleja cautela. Sin embargo, la caída del 4.7% en el Oro podría señalar un cambio en el capital de refugio hacia otros activos si el DXY se estabiliza. Mantenga una postura defensiva y observe la estabilidad del mercado antes de actuar.",
+            "HI": "GMS स्कोर 29 'रक्षात्मक' स्थिति बनाए हुए है। हालांकि मोमेंटम ने स्कोर को 29 तक पहुँचाया, लेकिन DXY (डॉलर की मजबूती/तरलता) में वृद्धि और क्रेडिट जोखिम (HY Spread) में 1.08% की बढ़त तरलता में कमी का संकेत देती है। VIX (डर/अस्थिरता) 17 पर है, जो बाजार की सावधानी दर्शाता है। फिर भी, सोने में 4.7% की गिरावट सुरक्षित निवेश से फंड के बदलाव का संकेत हो सकती है। DXY के स्थिर होने तक नकद सुरक्षित रखें और बाजार के निचले स्तर की पुष्टि होने का इंतजार करें।",
+            "ID": "Skor GMS 29 mempertahankan rezim Defensif. Meskipun momentum mendorong skor ke 29, kenaikan DXY (kekuatan Dolar/Likuiditas) dan kenaikan 1,08% pada HY Spread (risiko kredit) menandakan pengetatan pasar. VIX (Indeks ketakutan) di level 17 mencerminkan kewaspadaan investor. Namun, penurunan tajam Emas sebesar 4,7% mungkin menandakan pergeseran modal dari aset aman yang dapat menguntungkan saham jika DXY stabil. Pertahankan cadangan kas tinggi dan pantau titik balik likuiditas sebelum risiko ditingkatkan.",
+            "AR": "يحافظ سجل GMS عند 29 على وضع دفاعي. بينما دفع الزخم النتيجة إلى 29، فإن ارتفاع DXY (قوة الدولار/السيولة) وزيادة مخاطر الائتمان (HY Spread) بنسبة 1.08% يشيران إلى تضيق مالي. يعكس مؤشر VIX (الخوف/التقلب) عند 17 حالة من الحذر. ومع ذلك، قد يشير الانخفاض الحاد في الذهب بنسبة 4.7% إلى تحول في رؤوس الأموال الملاذ الآمن، مما قد يدعم الأسهم إذا استقر الدولار. حافظ على سيولة نقدية عالية وراقب استقرار الأسواق بعناية قبل الدخول."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-31T04:42:45Z",
-            "score": 30
-        },
         {
             "date": "2026-01-31T05:50:41Z",
             "score": 30
@@ -1357,34 +1353,38 @@
         {
             "date": "2026-02-02T14:56:41Z",
             "score": 25
+        },
+        {
+            "date": "2026-02-02T15:49:59Z",
+            "score": 29
         }
     ],
     "intelligence": {
         "news": [
             {
-                "title": "Stocks rise to start a new month of trading: Live updates",
+                "title": "S&P 500 rises to start February as traders shake off silver, bitcoin decline: Live updates",
                 "link": "https://www.cnbc.com/2026/02/01/stock-market-today-live-updates.html",
-                "isoDate": "2026-02-02T14:55:14+00:00Z"
+                "isoDate": "2026-02-02T15:45:37+00:00Z"
             },
             {
                 "title": "Nvidia shares are down after a report that its OpenAI investment stalled. Here's what's happening",
                 "link": "https://www.cnbc.com/2026/02/02/nvidia-stock-price-openai-funding.html",
-                "isoDate": "2026-02-02T13:48:55+00:00Z"
+                "isoDate": "2026-02-02T15:23:07+00:00Z"
             },
             {
-                "title": "Erratic behavior in bitcoin, silver and memory stocks threatens to unnerve bull market",
-                "link": "https://www.cnbc.com/2026/02/02/erratic-behavior-in-bitcoin-silver-and-memory-stocks-threatens-to-unnerve-bull-market.html",
-                "isoDate": "2026-02-02T14:50:09+00:00Z"
+                "title": "Strategy slides after bitcoin briefly dips below crypto firm's key breakeven level",
+                "link": "https://www.cnbc.com/2026/02/02/strategy-slides-after-bitcoin-briefly-dips-below-crypto-firms-key-breakeven-level-.html",
+                "isoDate": "2026-02-02T15:19:30+00:00Z"
             },
             {
                 "title": "Oracle rises 5% after company announces $50 billion fundraising plans. Here's why",
                 "link": "https://www.cnbc.com/2026/02/02/oracle-stock-price-funding-plans.html",
-                "isoDate": "2026-02-02T14:47:09+00:00Z"
+                "isoDate": "2026-02-02T15:14:55+00:00Z"
             },
             {
-                "title": "Rare earth miners jump as Trump is eyeing mineral stockpile to reduce China dependence",
-                "link": "https://www.cnbc.com/2026/02/02/rare-earth-miners-jump-as-trump-is-reportedly-eyeing-mineral-stockpile-.html",
-                "isoDate": "2026-02-02T14:40:02+00:00Z"
+                "title": "Disney signals its next CEO will take over a company with strong momentum",
+                "link": "https://www.cnbc.com/2026/02/02/disney-signals-next-ceo-strong-momentum.html",
+                "isoDate": "2026-02-02T15:41:20+00:00Z"
             },
             {
                 "title": "Here are Monday's biggest analyst calls of the day: Nvidia, Apple, Tesla, Palantir, DoorDash, McDonald's & more",
@@ -1394,55 +1394,55 @@
         ],
         "translations": {
             "JP": [
-                "取引新月、株価上昇：ライブアップデート",
-                "OpenAIへの投資停滞報道、Nvidia株下落。現状は？",
-                "ビットコイン、銀、メモリ株の不安定な動きが強気相場を動揺させる恐れ",
-                "オラクル、500億ドルの資金調達計画発表で5%上昇。その理由は？",
-                "トランプ氏、中国依存軽減のため鉱物備蓄を検討、レアアース鉱業株が急騰",
-                "月曜日の最大アナリストコール：Nvidia、Apple、Tesla、Palantir、DoorDash、McDonald'sなど"
+                "S&P 500、2月に入り上昇、トレーダーは銀・ビットコイン下落を乗り越える：ライブアップデート",
+                "Nvidia株、OpenAIへの投資が停滞との報道で下落。現状を解説",
+                "ビットコイン、一時的に暗号資産企業の損益分岐点を下回った後、戦略は下落",
+                "Oracle、500億ドルの資金調達計画発表で5%上昇。その理由は",
+                "Disney、次期CEOは力強い勢いを持つ企業を引き継ぐと示唆",
+                "月曜日の主要アナリスト評価：Nvidia、Apple、Tesla、Palantir、DoorDash、McDonald'sなど"
             ],
             "CN": [
-                "股市上涨迎新月交易：实时更新",
-                "英伟达股价下跌，此前有报道称其OpenAI投资停滞。发生了什么？",
-                "比特币、白银和内存股的剧烈波动威胁着牛市",
-                "甲骨文宣布500亿美元融资计划后股价上涨5%。原因如下",
-                "特朗普考虑增加稀土矿物储备以减少对华依赖，稀土矿业股飙升",
-                "周一最大的分析师评级：英伟达、苹果、特斯拉、Palantir、DoorDash、麦当劳等"
+                "标普500指数2月开盘上涨，交易员忽视白银、比特币下跌：实时更新",
+                "英伟达股价下跌，此前有报道称其对OpenAI的投资停滞。目前情况如何",
+                "比特币一度跌破加密货币公司关键盈亏平衡点后，策略下滑",
+                "甲骨文股价上涨5%，此前公司宣布500亿美元融资计划。原因在此",
+                "迪士尼预示其下一任CEO将接手一家势头强劲的公司",
+                "以下是周一最大的分析师评级：英伟达、苹果、特斯拉、Palantir、DoorDash、麦当劳等"
             ],
             "ES": [
-                "Las acciones suben para comenzar un nuevo mes de operaciones: Actualizaciones en vivo",
-                "Las acciones de Nvidia caen tras un informe de que su inversión en OpenAI se estancó. Esto es lo que está sucediendo",
-                "El comportamiento errático del bitcoin, la plata y las acciones de memoria amenaza con inquietar al mercado alcista",
-                "Oracle sube un 5% tras anunciar planes de recaudación de fondos de 50.000 millones de dólares. He aquí por qué",
-                "Los mineros de tierras raras saltan mientras Trump contempla una reserva de minerales para reducir la dependencia de China",
-                "Estas son las mayores llamadas de analistas del lunes: Nvidia, Apple, Tesla, Palantir, DoorDash, McDonald's y más"
+                "El S&P 500 sube para comenzar febrero mientras los operadores superan la caída de la plata y el bitcoin: Actualizaciones en vivo",
+                "Las acciones de Nvidia caen tras un informe que dice que su inversión en OpenAI se estancó. Esto es lo que está sucediendo",
+                "La estrategia cae después de que el bitcoin cayera brevemente por debajo del nivel clave de equilibrio de la firma de criptomonedas",
+                "Oracle sube un 5% tras anunciar planes de recaudación de fondos por 50.000 millones de dólares. He aquí por qué",
+                "Disney señala que su próximo CEO asumirá una empresa con un fuerte impulso",
+                "Aquí están las llamadas de analistas más importantes del lunes: Nvidia, Apple, Tesla, Palantir, DoorDash, McDonald's y más"
             ],
             "HI": [
-                "व्यापार के नए महीने की शुरुआत में स्टॉक में उछाल: लाइव अपडेट",
-                "ओपनएआई में निवेश में रुकावट की रिपोर्ट के बाद एनवीडिया के शेयर गिरे। क्या हो रहा है",
-                "बिटकॉइन, चांदी और मेमोरी स्टॉक में अनियमित व्यवहार से बुल मार्केट को झकझोरने का खतरा",
-                "ओरेकल की $50 बिलियन की फंडरेज़िंग योजना की घोषणा के बाद 5% की वृद्धि। यहाँ कारण बताया गया है",
-                "ट्रम्प चीन पर निर्भरता कम करने के लिए खनिज भंडार पर विचार कर रहे हैं, दुर्लभ पृथ्वी खनिकों में उछाल",
-                "सोमवार की सबसे बड़ी विश्लेषक कॉलें: एनवीडिया, एप्पल, टेस्ला, पेलेंटिर, डोरडैश, मैकडॉनल्ड्स और अधिक"
+                "S&P 500 फरवरी की शुरुआत में बढ़ा, क्योंकि व्यापारियों ने चांदी, बिटकॉइन की गिरावट को नजरअंदाज किया: लाइव अपडेट",
+                "एनवीडिया के शेयर गिर गए, एक रिपोर्ट के बाद कि उसका ओपनएआई निवेश रुक गया। यहाँ क्या हो रहा है",
+                "रणनीति में गिरावट, क्योंकि बिटकॉइन थोड़ी देर के लिए क्रिप्टो फर्म के प्रमुख ब्रेकइवन स्तर से नीचे चला गया",
+                "ओरेकल 5% बढ़ा, कंपनी ने $50 बिलियन की फंडरेज़िंग योजनाओं की घोषणा की। यहाँ क्यों",
+                "डिज़्नी ने संकेत दिया कि उसके अगले सीईओ एक मजबूत गति वाली कंपनी का पदभार संभालेंगे",
+                "यहां सोमवार की सबसे बड़ी विश्लेषक कॉल दी गई हैं: एनवीडिया, एप्पल, टेस्ला, पलंतीर, डोरडैश, मैकडॉनल्ड्स और बहुत कुछ"
             ],
             "ID": [
-                "Saham menguat untuk memulai bulan perdagangan baru: Pembaruan langsung",
-                "Saham Nvidia turun setelah laporan investasi OpenAI-nya macet. Inilah yang terjadi",
-                "Perilaku tak menentu di bitcoin, perak, dan saham memori mengancam akan mengusik pasar bullish",
+                "S&P 500 naik di awal Februari saat para pedagang mengabaikan penurunan perak dan bitcoin: Pembaruan langsung",
+                "Saham Nvidia turun setelah laporan investasi OpenAI-nya terhenti. Inilah yang terjadi",
+                "Strategi merosot setelah bitcoin sempat turun di bawah level impas utama perusahaan kripto",
                 "Oracle naik 5% setelah perusahaan mengumumkan rencana penggalangan dana $50 miliar. Inilah alasannya",
-                "Penambang tanah jarang melonjak saat Trump mengincar cadangan mineral untuk mengurangi ketergantungan pada China",
+                "Disney mengisyaratkan CEO berikutnya akan mengambil alih perusahaan dengan momentum yang kuat",
                 "Berikut adalah panggilan analis terbesar hari Senin: Nvidia, Apple, Tesla, Palantir, DoorDash, McDonald's & lainnya"
             ],
             "AR": [
-                "الأسهم ترتفع لبدء شهر جديد من التداول: تحديثات مباشرة",
-                "أسهم Nvidia تتراجع بعد تقرير عن توقف استثمارها في OpenAI. إليك ما يحدث",
-                "السلوك المتقلب في البيتكوين والفضة وأسهم الذاكرة يهدد بزعزعة السوق الصاعدة",
-                "ارتفاع سهم أوراكل 5٪ بعد إعلان الشركة عن خطط لجمع 50 مليار دولار. إليك السبب",
-                "قفزة في أسهم شركات التعدين للمعادن الأرضية النادرة مع نظر ترامب في مخزون المعادن لتقليل الاعتماد على الصين",
-                "هذه هي أكبر مكالمات المحللين ليوم الاثنين: Nvidia، Apple، Tesla، Palantir، DoorDash، McDonald's والمزيد"
+                "مؤشر S&P 500 يرتفع لبدء فبراير بينما يتجاوز المتداولون انخفاض الفضة والبيتكوين: تحديثات مباشرة",
+                "أسهم Nvidia تتراجع بعد تقرير يفيد بتوقف استثمارها في OpenAI. إليك ما يحدث",
+                "الهبوط الاستراتيجي بعد هبوط البيتكوين لفترة وجيزة دون مستوى التعادل الرئيسي لشركة العملات المشفرة",
+                "ارتفاع أسهم Oracle بنسبة 5% بعد إعلان الشركة عن خطط لجمع 50 مليار دولار. إليك السبب",
+                "ديزني تشير إلى أن رئيسها التنفيذي التالي سيتولى شركة ذات زخم قوي",
+                "إليك أكبر مكالمات المحللين يوم الاثنين: Nvidia، Apple، Tesla، Palantir، DoorDash، McDonald's والمزيد"
             ]
         },
-        "last_updated": "2026-02-02T14:56:41.177583+00:00Z"
+        "last_updated": "2026-02-02T15:49:59.310620+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
