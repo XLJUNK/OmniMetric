@@ -1,12 +1,12 @@
 {
-    "last_updated": "2026-02-02T05:39:45.851010+00:00",
-    "last_successful_update": "2026-02-02T05:39:45.851017+00:00",
-    "gms_score": 28,
+    "last_updated": "2026-02-02T07:16:51.755150+00:00",
+    "last_successful_update": "2026-02-02T07:16:51.755157+00:00",
+    "gms_score": 25,
     "sector_scores": {
         "STOCKS": 25,
         "CRYPTO": 25,
         "FOREX": 35,
-        "COMMODITIES": 75
+        "COMMODITIES": 45
     },
     "market_data": {
         "CRYPTO_SENTIMENT": {
@@ -546,10 +546,10 @@
             ]
         },
         "NIFTY": {
-            "price": 24728.7,
+            "price": 24878.6,
             "prev_price": 25320.65,
-            "daily_chg": -2.34,
-            "change_percent": -1.77,
+            "daily_chg": -1.75,
+            "change_percent": -1.18,
             "trend": "DOWN",
             "sparkline": [
                 26129.6,
@@ -573,17 +573,16 @@
                 25342.75,
                 25418.9,
                 25320.65,
-                24728.7
+                24878.6
             ]
         },
         "BTC": {
-            "price": 75137.46,
-            "prev_price": 78621.12,
-            "daily_chg": -4.43,
-            "change_percent": -15.75,
+            "price": 76399.39,
+            "prev_price": 76974.45,
+            "daily_chg": -0.75,
+            "change_percent": -9.65,
             "trend": "DOWN",
             "sparkline": [
-                90827.46,
                 91192.99,
                 95321.78,
                 96929.33,
@@ -604,17 +603,17 @@
                 84561.59,
                 84128.66,
                 78621.12,
-                75137.46
+                76974.45,
+                76399.39
             ]
         },
         "ETH": {
-            "price": 2198.41,
-            "prev_price": 2445.09,
-            "daily_chg": -10.09,
-            "change_percent": -26.88,
+            "price": 2225.67,
+            "prev_price": 2267.96,
+            "daily_chg": -1.86,
+            "change_percent": -21.03,
             "trend": "DOWN",
             "sparkline": [
-                3118.89,
                 3092.33,
                 3322.1,
                 3354.72,
@@ -635,17 +634,17 @@
                 2818.23,
                 2702.38,
                 2445.09,
-                2198.41
+                2267.96,
+                2225.67
             ]
         },
         "SOL": {
-            "price": 98.51,
-            "prev_price": 105.44,
-            "daily_chg": -6.58,
-            "change_percent": -21.27,
-            "trend": "DOWN",
+            "price": 101.18,
+            "prev_price": 100.85,
+            "daily_chg": 0.33,
+            "change_percent": -13.96,
+            "trend": "UP",
             "sparkline": [
-                139.49,
                 139.14,
                 145.36,
                 146.75,
@@ -666,14 +665,15 @@
                 117.61,
                 117.36,
                 105.44,
-                98.51
+                100.85,
+                101.18
             ]
         },
         "DXY": {
-            "price": 97.19,
+            "price": 97.12,
             "prev_price": 96.99,
-            "daily_chg": 0.2,
-            "change_percent": 1.0,
+            "daily_chg": 0.13,
+            "change_percent": 0.93,
             "trend": "UP",
             "sparkline": [
                 98.28,
@@ -697,14 +697,14 @@
                 96.45,
                 96.28,
                 96.99,
-                97.19
+                97.12
             ]
         },
         "USDJPY": {
-            "price": 154.73,
+            "price": 154.78,
             "prev_price": 153.1,
-            "daily_chg": 1.07,
-            "change_percent": -0.28,
+            "daily_chg": 1.1,
+            "change_percent": -0.25,
             "trend": "UP",
             "sparkline": [
                 156.41,
@@ -728,14 +728,14 @@
                 154.34,
                 152.45,
                 153.1,
-                154.73
+                154.78
             ]
         },
         "EURUSD": {
             "price": 1.19,
             "prev_price": 1.2,
-            "daily_chg": -0.73,
-            "change_percent": 0.27,
+            "daily_chg": -0.99,
+            "change_percent": 0.01,
             "trend": "DOWN",
             "sparkline": [
                 1.17,
@@ -763,10 +763,10 @@
             ]
         },
         "USDINR": {
-            "price": 91.9,
+            "price": 91.61,
             "prev_price": 92.04,
-            "daily_chg": -0.15,
-            "change_percent": 0.44,
+            "daily_chg": -0.47,
+            "change_percent": 0.11,
             "trend": "DOWN",
             "sparkline": [
                 89.77,
@@ -790,7 +790,7 @@
                 91.71,
                 91.53,
                 92.04,
-                91.9
+                91.61
             ]
         },
         "USDSAR": {
@@ -825,13 +825,12 @@
             ]
         },
         "GOLD": {
-            "price": 5067.5,
-            "prev_price": 5318.4,
-            "daily_chg": -4.72,
-            "change_percent": -0.24,
+            "price": 4550.4,
+            "prev_price": 4713.9,
+            "daily_chg": -3.47,
+            "change_percent": -10.42,
             "trend": "DOWN",
             "sparkline": [
-                4370.1,
                 4325.6,
                 4314.4,
                 4436.9,
@@ -852,17 +851,17 @@
                 5079.9,
                 5301.6,
                 5318.4,
-                5067.5
+                4713.9,
+                4550.4
             ]
         },
         "OIL": {
-            "price": 65.55,
-            "prev_price": 65.42,
-            "daily_chg": 0.2,
-            "change_percent": 8.11,
-            "trend": "UP",
+            "price": 62.02,
+            "prev_price": 65.21,
+            "daily_chg": -4.89,
+            "change_percent": -0.59,
+            "trend": "DOWN",
             "sparkline": [
-                57.95,
                 57.42,
                 57.32,
                 58.32,
@@ -883,17 +882,17 @@
                 62.39,
                 63.21,
                 65.42,
-                65.55
+                65.21,
+                62.02
             ]
         },
         "COPPER": {
-            "price": 6.01,
-            "prev_price": 6.18,
-            "daily_chg": -2.6,
-            "change_percent": 0.52,
+            "price": 5.64,
+            "prev_price": 5.9,
+            "daily_chg": -4.3,
+            "change_percent": -3.17,
             "trend": "DOWN",
             "sparkline": [
-                5.73,
                 5.63,
                 5.64,
                 5.92,
@@ -914,17 +913,17 @@
                 5.83,
                 5.89,
                 6.18,
-                6.01
+                5.9,
+                5.64
             ]
         },
         "NATGAS": {
-            "price": 4.09,
-            "prev_price": 3.92,
-            "daily_chg": 4.44,
-            "change_percent": -39.82,
-            "trend": "UP",
+            "price": 3.62,
+            "prev_price": 4.35,
+            "daily_chg": -16.77,
+            "change_percent": -47.89,
+            "trend": "DOWN",
             "sparkline": [
-                3.97,
                 3.69,
                 3.62,
                 3.52,
@@ -945,7 +944,8 @@
                 6.95,
                 7.46,
                 3.92,
-                4.09
+                4.35,
+                3.62
             ]
         },
         "MOVE": {
@@ -1042,40 +1042,40 @@
             ]
         },
         "COPPER_GOLD": {
-            "price": 1.19,
+            "price": 1.24,
             "change_percent": 0,
             "trend": "RISK-OFF",
             "sparkline": [
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19
+                1.24,
+                1.24,
+                1.24,
+                1.24,
+                1.24,
+                1.24,
+                1.24,
+                1.24,
+                1.24,
+                1.24,
+                1.24,
+                1.24,
+                1.24,
+                1.24,
+                1.24,
+                1.24,
+                1.24,
+                1.24,
+                1.24,
+                1.24,
+                1.24,
+                1.24,
+                1.24,
+                1.24,
+                1.24,
+                1.24,
+                1.24,
+                1.24,
+                1.24,
+                1.24
             ]
         }
     },
@@ -1107,22 +1107,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS Score 28 maintains a Defensive regime as flat momentum limits upward movement. Rising DXY (Dollar strength) and a 3.32% jump in VIX (Market fear) signal tightening liquidity, driving the sell-off in SPY and QQQ. While the historic crash in Gold and Crypto suggests aggressive de-leveraging, the stable MOVE index (Bond volatility) provides a critical divergence, suggesting the broader debt market is not yet in total panic. The logical conclusion is to remain cautious; the market requires a stabilization in Dollar strength and a cooling VIX before any meaningful risk-on accumulation can be justified.",
+        "content": "[GMS Status] Score 25 indicates a Defensive regime. Momentum pushed the score down to 25 from 26. [Macro Root] Rising VIX (Fear) at 17.44 and DXY (Dollar strength) at 97.12 reflect tightening liquidity and a flight to cash. [Risk/Reward] High-yield spreads widening by 1.84% and a crash in Gold/Oil signal a broad deleveraging event across asset classes. [Conclusion] Maintain heavy cash positions; the sharp drop in commodities suggests a growth slowdown and elevated systemic risk.",
         "reports": {
-            "JP": "GMSスコア28は、フラットなモメンタムを伴う「守備的（Defensive）」レジームを継続しています。DXY（ドル強弱）の上昇とVIX（恐怖指数）の3.32%急騰は、市場の流動性が急速に引き締まっていることを示しており、これが株式市場やコモディティの下落を招く直接的な要因です。金や仮想通貨で見られる歴史的な暴落は投資家のレバレッジ解消を反映していますが、債券のボラティリティを示すMOVE指数が一定水準を維持している点は、全面的なパニックへの発展を食い止める材料です。ドル高が沈静化するまで警戒を怠らず、資本保護を優先すべき局面です。",
-            "EN": "GMS Score 28 maintains a Defensive regime as flat momentum limits upward movement. Rising DXY (Dollar strength) and a 3.32% jump in VIX (Market fear) signal tightening liquidity, driving the sell-off in SPY and QQQ. While the historic crash in Gold and Crypto suggests aggressive de-leveraging, the stable MOVE index (Bond volatility) provides a critical divergence, suggesting the broader debt market is not yet in total panic. The logical conclusion is to remain cautious; the market requires a stabilization in Dollar strength and a cooling VIX before any meaningful risk-on accumulation can be justified.",
-            "CN": "目前GMS得分为28，动能保持平稳，市场处于明确的“防御”模式。DXY（美元指数）的走强以及VIX（恐慌指数）上升3.32%共同预示着全球流动性的收紧，这导致了SPY和QQQ等风险资产的明显调整。尽管黄金和加密货币出现了剧烈的抛售，反映出市场正在经历激烈的去杠杆进程，但衡量美债波动的MOVE指数依然平稳，暗示信贷市场尚未陷入完全崩溃的恐慌。逻辑核心在于：美元走强压制了资产估值。在流动性指标好转前，应保持审慎，重点关注美元见顶及波动率回落的信号。",
-            "ES": "El GMS Score 28 mantiene un régimen Defensivo con un impulso plano. El fortalecimiento del DXY (Dólar) y el aumento del 3.32% en el VIX (Índice de miedo) señalan una liquidez restringida, lo que impacta negativamente en acciones y criptoactivos. Aunque la caída histórica en el Oro y Bitcoin refleja una desapalancamiento masivo, la estabilidad en el índice MOVE (Volatilidad de bonos) sugiere que el mercado de deuda aún no está en pánico total. Se recomienda precaución extrema mientras el dólar continúe su ascenso; es necesario esperar a que la volatilidad alcance un pico y la liquidez regrese antes de buscar entradas.",
-            "HI": "जीएमएस स्कोर 28 एक रक्षात्मक (Defensive) शासन को दर्शाता है क्योंकि सपाट मोमेंटम ने स्कोर को इसी स्तर पर बनाए रखा है। DXY (डॉलर की मजबूती) में वृद्धि और VIX (डर सूचकांक) में 3.32% की उछाल तरलता की कमी का संकेत देती है, जिससे शेयर बाजार में गिरावट आई है। हालांकि सोने और क्रिप्टो में ऐतिहासिक बिकवाली डी-लीवरेजिंग को दर्शाती है, लेकिन MOVE इंडेक्स (बॉन्ड अस्थिरता) की स्थिरता बताती है कि ऋण बाजार अभी पूरी तरह से पैनिक में नहीं है। निष्कर्ष यह है कि जब तक डॉलर की मजबूती स्थिर नहीं होती और तरलता वापस नहीं आती, तब तक पूंजी की सुरक्षा करना और जोखिम भरे निवेशों से बचना ही समझदारी है।",
-            "ID": "Skor GMS 28 mempertahankan rezim Defensif dengan momentum yang mendatar. Penguatan DXY (Kekuatan Dolar) dan kenaikan 3,32% pada VIX (Indeks Ketakutan) mengindikasikan pengetatan likuiditas, yang menekan indeks SPY dan QQQ secara signifikan. Meskipun aksi jual besar-besaran pada Emas dan Kripto menunjukkan pengurangan risiko yang agresif atau margin calls, indeks MOVE (Volatilitas Obligasi) yang stabil memberikan tanda bahwa pasar utang belum sepenuhnya panik. Investor disarankan tetap waspada dan menunggu DXY mencapai puncaknya serta volatilitas menurun sebelum mempertimbangkan akumulasi aset berisiko kembali.",
-            "AR": "يشير مؤشر GMS البالغ 28 إلى نظام دفاعي مع استقرار الزخم الذي أبقى النتيجة عند هذا المستوى. أدى ارتفاع مؤشر DXY (قوة الدولار) وزيادة بنسبة 3.32% في مؤشر VIX (الخوف) إلى انكماش السيولة، مما أثر سلبًا على الأصول الخطرة. ورغم الانهيار التاريخي في الذهب والعملات المشفرة الذي يعكس تصفية المراكز المالية، إلا أن استقرار مؤشر MOVE (تذبذب السندات) يوحي بأن سوق الدين لم يدخل مرحلة الذعر الشامل بعد. تظل النصيحة هي توخي الحذر الشديد حتى يستقر الدولار وتعود السيولة، مع مراقبة مستويات التقلب بدقة قبل اتخاذ أي قرارات استثمارية جديدة."
+            "JP": "【GMS状況】スコア25で「守備的（リスクオフ）」局面です。モメンタムがスコアを26から25へ押し下げました。【マクロ根拠】VIX（恐怖指数）の17.44への上昇とDXY（ドル強弱）の97.12への推移は、流動性の低下と現金回避を物語っています。【リスク警告】ゴールドや原油の急落、ハイイールド債スプレッドの拡大は、市場のレバレッジ解消を示唆します。【結論】成長鈍化の懸念が強いため、現金比率を高め慎重な姿勢を維持すべきです。",
+            "EN": "[GMS Status] Score 25 indicates a Defensive regime. Momentum pushed the score down to 25 from 26. [Macro Root] Rising VIX (Fear) at 17.44 and DXY (Dollar strength) at 97.12 reflect tightening liquidity and a flight to cash. [Risk/Reward] High-yield spreads widening by 1.84% and a crash in Gold/Oil signal a broad deleveraging event across asset classes. [Conclusion] Maintain heavy cash positions; the sharp drop in commodities suggests a growth slowdown and elevated systemic risk.",
+            "CN": "[GMS 状态] 分数 25 表明处于“防御（避险）”模式。动量将分数从 26 推至 25。[宏观根源] VIX（恐慌指数）升至 17.44 且 DXY（美元强度）达 97.12，反映出流动性收紧和现金偏好。[风险预警] 黄金与原油价格大幅跳水，配合高收益债利差走阔，预示着市场正在进行剧烈的去杠杆。[结论/行动] 鉴于大宗商品暴跌暗示经济增长放缓，建议保持高度警惕，增加现金储备以应对波动。",
+            "ES": "[Estado GMS] El puntaje 25 indica un régimen Defensivo. El momentum empujó el puntaje de 26 a 25. [Raíz Macro] El aumento del VIX (Miedo) a 17.44 y el DXY (Fuerza del dólar) en 97.12 reflejan liquidez ajustada y refugio en efectivo. [Riesgo] La caída del Oro y Petróleo, junto con el aumento de diferenciales de alto rendimiento, señala un desapalancamiento masivo del mercado. [Conclusión] Mantenga posturas cautelosas y liquidez; el desplome de materias primas sugiere una desaceleración del crecimiento global.",
+            "HI": "[GMS स्थिति] स्कोर 25 'रक्षात्मक' शासन को दर्शाता है। मोमेंटम ने स्कोर को 26 से 25 पर धकेल दिया है। [मैक्रो कारण] VIX (डर) का 17.44 तक बढ़ना और DXY (डॉलर की मजबूती) का 97.12 होना तरलता की कमी और नकदी की ओर झुकाव दिखाता है। [जोखिम चेतावनी] सोने और तेल में भारी गिरावट और हाई-यिल्ड स्प्रेड में बढ़त बाजार में डीलेवरेजिंग का संकेत है। [निष्कर्ष] नकद स्थिति मजबूत रखें; कमोडिटी में आई यह गिरावट वैश्विक विकास में मंदी और उच्च बाजार जोखिम का स्पष्ट संकेत देती है।",
+            "ID": "[Status GMS] Skor 25 menunjukkan rezim Defensif. Momentum menekan skor turun dari 26 ke 25. [Akar Makro] Kenaikan VIX (Ketakutan) ke 17.44 dan DXY (Kekuatan Dolar) di 97.12 mencerminkan pengetatan likuiditas dan pelarian ke tunai. [Risiko] Anjloknya harga Emas dan Minyak, serta pelebaran spread imbal hasil tinggi, menandakan peristiwa deleveraging pasar yang besar. [Kesimpulan] Pertahankan posisi kas yang kuat; penurunan tajam pada komoditas mengindikasikan kekhawatiran perlambatan pertumbuhan ekonomi global.",
+            "AR": "[حالة GMS] يشير سجل 25 إلى نظام دفاعي. دفع الزخم النتيجة هبوطاً من 26 إلى 25. [الجذر الماكرو] ارتفاع VIX (الخوف) إلى 17.44 وقوة DXY (الدولار) عند 97.12 يعكسان ضيق السيولة والهروب نحو النقد. [مخاطر] انهيار الذهب والنفط مع اتساع هوامش العائد المرتفع يشير إلى عملية تصفية واسعة للمراكز المالية في السوق. [الخلاصة] يجب الحفاظ على مستويات نقدية عالية؛ الهبوط الحاد في السلع الأساسية ينذر بتباطؤ اقتصادي محتمل، مما يتطلب الحذر الشديد."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-30T19:00:43Z",
-            "score": 32
-        },
         {
             "date": "2026-01-30T19:41:19Z",
             "score": 32
@@ -1358,14 +1354,18 @@
         {
             "date": "2026-02-02T05:39:45Z",
             "score": 28
+        },
+        {
+            "date": "2026-02-02T07:16:51Z",
+            "score": 25
         }
     ],
     "intelligence": {
         "news": [
             {
-                "title": "Gold dives 5% and silver crashes 10%, extending sell-off in precious metals after historic plunge",
+                "title": "Gold dives 6% and silver crashes 12%, extending sell-off in precious metals after historic plunge",
                 "link": "https://www.cnbc.com/2026/02/02/gold-silver-sell-off-historic-plunge-.html",
-                "isoDate": "2026-02-02T04:41:46+00:00Z"
+                "isoDate": "2026-02-02T05:55:50+00:00Z"
             },
             {
                 "title": "Speaker Johnson: 'Confident' government shutdown will end by Tuesday",
@@ -1378,14 +1378,14 @@
                 "isoDate": "2026-02-01T23:30:01+00:00Z"
             },
             {
-                "title": "Oil slides over 4% as Trump signals Iran talks, easing supply shock fears",
-                "link": "https://www.cnbc.com/2026/02/02/oil-slides-as-trump-signals-iran-talks-easing-supply-shock-fears.html",
-                "isoDate": "2026-02-02T05:18:06+00:00Z"
+                "title": "European stocks set for sharp declines as global market fears are reignited",
+                "link": "https://www.cnbc.com/2026/02/02/european-markets-sotxx-600-ftse-dax-cac-global-markets-silver-gold-bitcoin.html",
+                "isoDate": "2026-02-02T06:34:38+00:00Z"
             },
             {
-                "title": "Chinese organized crime networks moved $16 billion in crypto in 2025, according to report",
-                "link": "https://www.cnbc.com/2026/02/02/chinese-money-laundering-networks-crypto-telegram-2025-chainalysis-scam-southeast-asia-cambodia.html",
-                "isoDate": "2026-02-02T04:22:36+00:00Z"
+                "title": "Why the catastrophe bond market is so hot right now",
+                "link": "https://www.cnbc.com/2026/02/02/catastrophe-bonds-insurance-climate-change-markets.html",
+                "isoDate": "2026-02-02T06:31:19+00:00Z"
             },
             {
                 "title": "Elon Musk is stressing robots over cars. Here are three humanoid parts suppliers that Morgan Stanley recommends",
@@ -1395,55 +1395,55 @@
         ],
         "translations": {
             "JP": [
-                "金、5%下落、銀は10%急落、歴史的な急落を経て貴金属の売りが拡大",
+                "金（ゴールド）6%下落、銀12%急落、貴金属の歴史的急落に続く売り継続",
                 "ジョンソン下院議長：「火曜日までに政府閉鎖は終わると確信」",
-                "銀・ビットコインの売り、AIトレードへの疑問がくすぶる中、株式先物は下落：ライブ速報",
-                "トランプ氏、イランとの協議示唆、供給ショック懸念後退で原油は4%以上下落",
-                "報告書によると、中国の組織犯罪ネットワークが2025年に160億ドルの仮想通貨を移動",
-                "イーロン・マスク氏、車よりロボットを重視。モルガン・スタンレーが推奨する3つの人型ロボット部品サプライヤー"
+                "銀・ビットコインの売りを受けて株価先物は下落、AI取引への疑問が浮上：ライブ更新",
+                "欧州株、世界市場への懸念再燃で大幅下落の見通し",
+                "カタストロフ債券市場が今、これほど熱い理由",
+                "イーロン・マスク、自動車よりロボットを重視。モルガン・スタンレーが推奨する3つの人型ロボット部品サプライヤー"
             ],
             "CN": [
-                "黄金下跌5%，白银暴跌10%，贵金属在历史性暴跌后继续抛售",
-                "约翰逊议长：“有信心”政府停摆将在周二结束",
-                "在白银、比特币抛售后，股指期货下跌；人工智能交易受到质疑：实时更新",
-                "在特朗普暗示伊朗会谈，缓解供应冲击担忧后，油价下跌逾4%",
-                "报告显示，中国有组织犯罪网络在2025年转移了160亿美元的加密货币",
-                "埃隆·马斯克更看重机器人而非汽车。摩根士丹利推荐三家人形机器人零部件供应商"
+                "黄金下跌6%，白银暴跌12%，贵金属抛售潮延续历史性暴跌",
+                "约翰逊议长：‘有信心’政府停摆将在周二结束",
+                "白银、比特币抛售后股指期货下跌；人工智能交易疑云重重：实时更新",
+                "欧洲股市预计将大幅下跌，全球市场恐慌情绪重燃",
+                "为何巨灾债券市场目前如此火爆",
+                "埃隆·马斯克：机器人比汽车更受重视。摩根士丹利推荐的三家人形机器人零部件供应商"
             ],
             "ES": [
-                "El oro cae un 5% y la plata se desploma un 10%, extendiendo la liquidación en metales preciosos tras una caída histórica",
-                "Portavoz Johnson: 'Confía' en que el cierre del gobierno terminará el martes",
-                "Futuros de acciones caen tras la liquidación de plata y bitcoin; surgen dudas sobre el comercio de IA: Actualizaciones en vivo",
-                "El petróleo se desliza más de un 4% ya que Trump señala conversaciones con Irán, aliviando los temores de shock de suministro",
-                "Las redes del crimen organizado chino movieron $16 mil millones en criptomonedas en 2025, según un informe",
-                "Elon Musk está dando más importancia a los robots que a los coches. Aquí hay tres proveedores de piezas humanoides que Morgan Stanley recomienda"
+                "El oro se hunde un 6% y la plata se desploma un 12%, extendiendo la venta de metales preciosos tras una caída histórica",
+                "Presidente Johnson: 'Confiado' en que el cierre del gobierno terminará el martes",
+                "Los futuros de acciones caen tras la venta de plata y bitcoin; surgen dudas sobre el 'trading' de IA: Actualizaciones en vivo",
+                "Las acciones europeas se preparan para fuertes caídas al reavivarse los temores del mercado mundial",
+                "Por qué el mercado de bonos de catástrofe está tan caliente ahora mismo",
+                "Elon Musk da prioridad a los robots sobre los coches. Aquí hay tres proveedores de piezas humanoides que Morgan Stanley recomienda"
             ],
             "HI": [
-                "सोना 5% गिरा, चांदी 10% गिर गई, ऐतिहासिक गिरावट के बाद कीमती धातुओं में बिकवाली का विस्तार",
-                "स्पीकर जॉनसन: 'आत्मविश्वासी' सरकारी शटडाउन मंगलवार तक समाप्त हो जाएगा",
-                "चांदी, बिटकॉइन की बिकवाली के बाद स्टॉक फ्यूचर्स गिरे; एआई व्यापार पर सवालिया निशान: लाइव अपडेट",
-                "ट्रम्प द्वारा ईरान वार्ता का संकेत देने से तेल 4% से अधिक गिरा, आपूर्ति झटके की आशंका कम हुई",
-                "रिपोर्ट के अनुसार, 2025 में चीनी संगठित अपराध नेटवर्क ने 16 अरब डॉलर की क्रिप्टो का लेन-देन किया",
-                "एलन मस्क कारों से ज्यादा रोबोट पर जोर दे रहे हैं। यहाँ तीन ह्यूमनॉइड पार्ट्स आपूर्तिकर्ता हैं जिनकी मॉर्गन स्टेनली सिफ़ारिश करती है"
+                "सोना 6% गिरा, चांदी 12% धरा， ऐतिहासिक गिरावट के बाद कीमती धातुओं में बिकवाली जारी",
+                "स्पीकर जॉनसन: 'विश्वास' है कि सरकारी शटडाउन मंगलवार तक खत्म हो जाएगा",
+                "चांदी, बिटकॉइन की बिकवाली के बाद स्टॉक फ्यूचर्स में गिरावट; एआई ट्रेडिंग पर सवाल: लाइव अपडेट",
+                "वैश्विक बाजार के डर के फिर से भड़कने से यूरोपीय स्टॉक में तेज गिरावट की संभावना",
+                "कैटास्ट्रॉफी बॉन्ड बाजार अभी इतना गर्म क्यों है",
+                "एलन मस्क कारों से ज्यादा रोबोट पर जोर दे रहे हैं। यहां तीन ह्यूमनॉइड पार्ट्स आपूर्तिकर्ता हैं जिनकी मॉर्गन स्टेनली सिफारिश करता है"
             ],
             "ID": [
-                "Emas anjlok 5% dan perak jatuh 10%, memperpanjang aksi jual di logam mulia setelah penurunan bersejarah",
-                "Pembicara Johnson: 'Yakin' penghentian pemerintahan akan berakhir pada hari Selasa",
-                "Futures saham jatuh setelah perak, bitcoin dijual; pertanyaan muncul atas perdagangan AI: Pembaruan Langsung",
-                "Minyak merosot lebih dari 4% saat Trump mengisyaratkan pembicaraan Iran, meredakan kekhawatiran guncangan pasokan",
-                "Jaringan kejahatan terorganisir Tiongkok memindahkan $16 miliar dalam bentuk kripto pada tahun 2025, menurut laporan",
+                "Emas merosot 6% dan perak anjlok 12%, memperpanjang aksi jual di logam mulia setelah penurunan bersejarah",
+                "Speaker Johnson: 'Yakin' penutupan pemerintahan akan berakhir pada hari Selasa",
+                "Kontrak berjangka saham jatuh setelah jual beli perak, bitcoin; pertanyaan muncul atas perdagangan AI: Pembaruan Langsung",
+                "Saham Eropa diproyeksikan turun tajam saat ketakutan pasar global kembali menyala",
+                "Mengapa pasar obligasi bencana begitu panas saat ini",
                 "Elon Musk menekankan robot daripada mobil. Berikut adalah tiga pemasok suku cadang humanoid yang direkomendasikan Morgan Stanley"
             ],
             "AR": [
-                "الذهب يهبط 5% والفضة تنهار 10%، لتوسع البيع في المعادن الثمينة بعد انهيار تاريخي",
-                "رئيس مجلس النواب جونسون: \"واثق\" من انتهاء الإغلاق الحكومي بحلول يوم الثلاثاء",
-                "عقود الأسهم الآجلة تتراجع بعد تراجع الفضة والبيتكوين؛ تساؤلات تحوم حول تجارة الذكاء الاصطناعي: تحديثات مباشرة",
-                "النفط ينزلق بأكثر من 4% مع إشارة ترامب لمحادثات مع إيران، مما يخفف مخاوف صدمة الإمدادات",
-                "شبكات الجريمة المنظمة الصينية حولت 16 مليار دولار من العملات المشفرة في عام 2025، وفقًا لتقرير",
-                "إيلون ماسك يركز على الروبوتات أكثر من السيارات. إليك ثلاثة موردين لأجزاء بشرية توصي بهم مورجان ستانلي"
+                "انخفاض الذهب 6% وانهيار الفضة 12%، مما يوسع نطاق البيع في المعادن الثمينة بعد انخفاض تاريخي",
+                "الرئيس جونسون: \"واثق\" من انتهاء الإغلاق الحكومي بحلول يوم الثلاثاء",
+                "انخفاض العقود الآجلة للأسهم بعد بيع الفضة والبيتكوين؛ تساؤلات تلوح في الأفق حول تجارة الذكاء الاصطناعي: تحديثات مباشرة",
+                "الأسهم الأوروبية تتجه نحو انخفاضات حادة مع تجدد مخاوف السوق العالمية",
+                "لماذا سوق سندات الكوارث ساخن جدًا الآن",
+                "إيلون ماسك يؤكد على الروبوتات فوق السيارات. إليك ثلاثة موردين لأجزاء بشرية توصي بهم مورغان ستانلي"
             ]
         },
-        "last_updated": "2026-02-02T05:39:45.850560+00:00Z"
+        "last_updated": "2026-02-02T07:16:51.754670+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
