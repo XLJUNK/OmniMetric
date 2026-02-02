@@ -1,12 +1,12 @@
 {
-    "last_updated": "2026-02-02T10:04:07.228857+00:00",
-    "last_successful_update": "2026-02-02T10:04:07.228864+00:00",
-    "gms_score": 29,
+    "last_updated": "2026-02-02T11:03:24.496437+00:00",
+    "last_successful_update": "2026-02-02T11:03:24.496443+00:00",
+    "gms_score": 25,
     "sector_scores": {
         "STOCKS": 25,
         "CRYPTO": 25,
         "FOREX": 35,
-        "COMMODITIES": 75
+        "COMMODITIES": 45
     },
     "market_data": {
         "CRYPTO_SENTIMENT": {
@@ -218,13 +218,12 @@
             ]
         },
         "VIX": {
-            "price": 17.01,
-            "prev_price": 16.88,
-            "daily_chg": 0.77,
-            "change_percent": 5.33,
+            "price": 19.33,
+            "prev_price": 17.44,
+            "daily_chg": 10.84,
+            "change_percent": 18.23,
             "trend": "UP",
             "sparkline": [
-                14.33,
                 14.95,
                 14.51,
                 14.9,
@@ -245,7 +244,8 @@
                 16.35,
                 16.35,
                 16.88,
-                17.01
+                17.44,
+                19.33
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 77616.34,
+            "price": 77416.77,
             "prev_price": 76974.45,
-            "daily_chg": 0.83,
-            "change_percent": -8.21,
+            "daily_chg": 0.57,
+            "change_percent": -8.45,
             "trend": "UP",
             "sparkline": [
                 91192.99,
@@ -604,14 +604,14 @@
                 84128.66,
                 78621.12,
                 76974.45,
-                77616.34
+                77416.77
             ]
         },
         "ETH": {
-            "price": 2287.92,
+            "price": 2275.22,
             "prev_price": 2267.96,
-            "daily_chg": 0.88,
-            "change_percent": -18.82,
+            "daily_chg": 0.32,
+            "change_percent": -19.27,
             "trend": "UP",
             "sparkline": [
                 3092.33,
@@ -635,14 +635,14 @@
                 2702.38,
                 2445.09,
                 2267.96,
-                2287.92
+                2275.22
             ]
         },
         "SOL": {
-            "price": 102.73,
+            "price": 102.75,
             "prev_price": 100.85,
-            "daily_chg": 1.86,
-            "change_percent": -12.65,
+            "daily_chg": 1.89,
+            "change_percent": -12.63,
             "trend": "UP",
             "sparkline": [
                 139.14,
@@ -666,14 +666,14 @@
                 117.36,
                 105.44,
                 100.85,
-                102.73
+                102.75
             ]
         },
         "DXY": {
-            "price": 97.08,
+            "price": 97.1,
             "prev_price": 96.99,
-            "daily_chg": 0.1,
-            "change_percent": 0.9,
+            "daily_chg": 0.11,
+            "change_percent": 0.91,
             "trend": "UP",
             "sparkline": [
                 98.28,
@@ -697,14 +697,14 @@
                 96.45,
                 96.28,
                 96.99,
-                97.08
+                97.1
             ]
         },
         "USDJPY": {
-            "price": 154.73,
+            "price": 154.78,
             "prev_price": 153.1,
-            "daily_chg": 1.07,
-            "change_percent": -0.28,
+            "daily_chg": 1.1,
+            "change_percent": -0.25,
             "trend": "UP",
             "sparkline": [
                 156.41,
@@ -728,14 +728,14 @@
                 154.34,
                 152.45,
                 153.1,
-                154.73
+                154.78
             ]
         },
         "EURUSD": {
             "price": 1.19,
             "prev_price": 1.2,
-            "daily_chg": -0.73,
-            "change_percent": 0.27,
+            "daily_chg": -0.89,
+            "change_percent": 0.1,
             "trend": "DOWN",
             "sparkline": [
                 1.17,
@@ -763,10 +763,10 @@
             ]
         },
         "USDINR": {
-            "price": 91.9,
+            "price": 91.53,
             "prev_price": 92.04,
-            "daily_chg": -0.15,
-            "change_percent": 0.44,
+            "daily_chg": -0.56,
+            "change_percent": 0.03,
             "trend": "DOWN",
             "sparkline": [
                 89.77,
@@ -790,14 +790,14 @@
                 91.71,
                 91.53,
                 92.04,
-                91.9
+                91.53
             ]
         },
         "USDSAR": {
             "price": 3.75,
             "prev_price": 3.75,
-            "daily_chg": 0.12,
-            "change_percent": 0.15,
+            "daily_chg": 0.11,
+            "change_percent": 0.14,
             "trend": "UP",
             "sparkline": [
                 3.75,
@@ -825,13 +825,12 @@
             ]
         },
         "GOLD": {
-            "price": 5067.5,
-            "prev_price": 5318.4,
-            "daily_chg": -4.72,
-            "change_percent": -0.24,
-            "trend": "DOWN",
+            "price": 4714.1,
+            "prev_price": 4713.9,
+            "daily_chg": 0.0,
+            "change_percent": -7.2,
+            "trend": "UP",
             "sparkline": [
-                4370.1,
                 4325.6,
                 4314.4,
                 4436.9,
@@ -852,17 +851,17 @@
                 5079.9,
                 5301.6,
                 5318.4,
-                5067.5
+                4713.9,
+                4714.1
             ]
         },
         "OIL": {
-            "price": 65.55,
-            "prev_price": 65.42,
-            "daily_chg": 0.2,
-            "change_percent": 8.11,
-            "trend": "UP",
+            "price": 61.82,
+            "prev_price": 65.21,
+            "daily_chg": -5.2,
+            "change_percent": -0.91,
+            "trend": "DOWN",
             "sparkline": [
-                57.95,
                 57.42,
                 57.32,
                 58.32,
@@ -883,17 +882,17 @@
                 62.39,
                 63.21,
                 65.42,
-                65.55
+                65.21,
+                61.82
             ]
         },
         "COPPER": {
-            "price": 6.01,
-            "prev_price": 6.18,
-            "daily_chg": -2.6,
-            "change_percent": 0.52,
+            "price": 5.8,
+            "prev_price": 5.9,
+            "daily_chg": -1.56,
+            "change_percent": -0.4,
             "trend": "DOWN",
             "sparkline": [
-                5.73,
                 5.63,
                 5.64,
                 5.92,
@@ -914,17 +913,17 @@
                 5.83,
                 5.89,
                 6.18,
-                6.01
+                5.9,
+                5.8
             ]
         },
         "NATGAS": {
-            "price": 4.09,
-            "prev_price": 3.92,
-            "daily_chg": 4.44,
-            "change_percent": -39.82,
-            "trend": "UP",
+            "price": 3.62,
+            "prev_price": 4.35,
+            "daily_chg": -16.97,
+            "change_percent": -48.02,
+            "trend": "DOWN",
             "sparkline": [
-                3.97,
                 3.69,
                 3.62,
                 3.52,
@@ -945,7 +944,8 @@
                 6.95,
                 7.46,
                 3.92,
-                4.09
+                4.35,
+                3.62
             ]
         },
         "MOVE": {
@@ -1042,40 +1042,40 @@
             ]
         },
         "COPPER_GOLD": {
-            "price": 1.19,
+            "price": 1.23,
             "change_percent": 0,
             "trend": "RISK-OFF",
             "sparkline": [
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19
+                1.23,
+                1.23,
+                1.23,
+                1.23,
+                1.23,
+                1.23,
+                1.23,
+                1.23,
+                1.23,
+                1.23,
+                1.23,
+                1.23,
+                1.23,
+                1.23,
+                1.23,
+                1.23,
+                1.23,
+                1.23,
+                1.23,
+                1.23,
+                1.23,
+                1.23,
+                1.23,
+                1.23,
+                1.23,
+                1.23,
+                1.23,
+                1.23,
+                1.23,
+                1.23
             ]
         }
     },
@@ -1107,22 +1107,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS stands at 29, maintaining a Defensive regime. While momentum pushed the score higher from 26 to 29, a rising VIX (Fear index) and DXY (Dollar strength/Liquidity) indicate tightening market conditions. The massive 5% drop in Gold signals sharp volatility and a potential liquidity drain, while widening high-yield spreads suggest elevated credit risk. Investors should remain cautious and prioritize capital preservation until these macro volatility indicators stabilize, as the current environment favors a risk-averse posture over aggressive accumulation.",
+        "content": "GMS score 25 confirms a Defensive regime. Bearish momentum pushed the score lower as VIX (fear) jumped 10.8% and net liquidity tightened. Rising high-yield spreads signal increasing credit stress, while plunging oil prices reflect cooling global demand. Although crypto shows minor resilience, the spike in volatility warrants extreme caution. Conclusion: Prioritize capital preservation and avoid aggressive positioning until VIX stabilizes and liquidity returns to the system.",
         "reports": {
-            "JP": "GMS指標は29を記録し、依然として「守備的（リスクオフ）」な市場体制を示しています。直近のモメンタムがスコアを26から29へと押し上げたものの、VIX（恐怖指数）の上昇とDXY（ドル強さ）の推移は流動性の引き締まりを物語っています。金価格の歴史的な5%急落は、市場全体のボラティリティが極めて高いことを示唆しており、ハイイールド債スプレッドの拡大は信用リスクの高まりを警告しています。現段階では積極的な投資を控え、慎重なポジション管理を優先すべき局面です。",
-            "EN": "GMS stands at 29, maintaining a Defensive regime. While momentum pushed the score higher from 26 to 29, a rising VIX (Fear index) and DXY (Dollar strength/Liquidity) indicate tightening market conditions. The massive 5% drop in Gold signals sharp volatility and a potential liquidity drain, while widening high-yield spreads suggest elevated credit risk. Investors should remain cautious and prioritize capital preservation until these macro volatility indicators stabilize, as the current environment favors a risk-averse posture over aggressive accumulation.",
-            "CN": "目前GMS得分为29，维持“防御（风险规避）”体制。虽然近期动量推动得分由26小幅回升至29，但VIX（恐慌指数）的上行与DXY（美元走强）反映出市场流动性持续受压。黄金价格5%的剧烈下挫揭示了极高的市场波动风险，而高收益债利差的走阔进一步确认了信用环境的紧缩。在关键风险指标企稳之前，该阶段应以资产保护为主，警惕大宗商品波动带来的连锁反应，建议在市场波动率回归正常水平前避免盲目增加风险敞口。",
-            "ES": "El GMS se sitúa en 29, manteniendo un régimen Defensivo. Aunque el impulso elevó la puntuación de 26 a 29, el aumento del VIX (índice de miedo) y del DXY (fortaleza del dólar) indica una liquidez más restringida. La caída del 5% en el Oro refleja una volatilidad extrema, mientras que la expansión de los diferenciales de crédito de alto rendimiento advierte sobre riesgos crecientes. Es prudente mantener la cautela y proteger el capital hasta que la volatilidad se estabilice, ya que el entorno actual sigue siendo desfavorable para la acumulación de activos de riesgo.",
-            "HI": "GMS स्कोर 29 पर है, जो एक 'रक्षात्मक' (Defensive) व्यवस्था को दर्शाता है। हालांकि गति (Momentum) ने स्कोर को 26 से 29 तक पहुँचाया है, लेकिन VIX (डर का सूचकांक) और DXY (डॉलर की मजबूती) में वृद्धि तरलता की कमी का संकेत देती है। सोने की कीमतों में 5% की भारी गिरावट बाजार में अत्यधिक अस्थिरता को उजागर करती है, और हाई-यिल्ड स्प्रेड का बढ़ना क्रेडिट जोखिम की चेतावनी देता है। जब तक ये जोखिम संकेतक स्थिर नहीं होते, निवेशकों को सावधानी बरतनी चाहिए और पूंजी की सुरक्षा को प्राथमिकता देनी चाहिए, क्योंकि बाजार में अभी भी भारी अनिश्चितता बनी हुई है।",
-            "ID": "Skor GMS berada di 29, mempertahankan rezim Defensif. Meskipun momentum mendorong skor naik dari 26 ke 29, kenaikan VIX (indeks ketakutan) dan DXY (kekuatan dolar) menunjukkan pengetatan likuiditas global. Penurunan harga emas sebesar 5% menandakan volatilitas yang sangat tinggi, sementara pelebaran spread obligasi imbal hasil tinggi memperingatkan adanya peningkatan risiko kredit. Investor disarankan untuk tetap waspada dan mengutamakan perlindungan modal di tengah ketidakpastian ini, setidaknya sampai indikator risiko utama menunjukkan tanda-tanda stabilisasi yang lebih kuat.",
-            "AR": "يستقر مؤشر GMS عند 29، مما يحافظ على النظام الدفاعي. بينما دفع الزخم الدرجة للارتفاع من 26 إلى 29، فإن ارتفاع مؤشر VIX (مؤشر الخوف) وDXY (قوة الدولار) يشير إلى ضيق السيولة. يعكس الهبوط التاريخي للذهب بنسبة 5% تقلبات حادة، كما أن اتساع فروق أسعار السندات عالية العائد يحذر من مخاطر ائتمانية متزايدة. يُنصح بالبقاء في حالة حذر ومنح الأولوية لحماية رأس المال حتى تستقر المؤشرات وتتراجع حدة المخاطر، حيث أن البيئة الحالية لا تزال تدعم التوجه الدفاعي والابتعاد عن الأصول ذات المخاطر العالية."
+            "JP": "GMSスコア25は「守備的（リスクオフ）」体制を維持。VIX（恐怖指数）が10.8%急騰し、市場の流動性が低下したことで、勢いがスコアを25まで押し下げました。ハイイールド債のスプレッド拡大は信用リスクの上昇を示唆し、原油安は世界的な需要減退を反映しています。仮想通貨に僅かな底堅さが見られるものの、全体的なボラティリティの高さから警戒が必要です。結論：VIXが安定し流動性が回復するまで、資本保護を最優先すべき局面です。",
+            "EN": "GMS score 25 confirms a Defensive regime. Bearish momentum pushed the score lower as VIX (fear) jumped 10.8% and net liquidity tightened. Rising high-yield spreads signal increasing credit stress, while plunging oil prices reflect cooling global demand. Although crypto shows minor resilience, the spike in volatility warrants extreme caution. Conclusion: Prioritize capital preservation and avoid aggressive positioning until VIX stabilizes and liquidity returns to the system.",
+            "CN": "GMS分数为25，确认处于防御（避险）模式。由于VIX（恐慌指数）飙升10.8%且净流动性收紧，下行动能将分数推至25。高收益债利差扩大暗示信用压力增加，而油价大跌反映了全球需求的放缓。尽管加密货币在低位表现出微弱韧性，但波动率的激增仍需高度警惕。结论：在VIX企稳和流动性回升之前，应优先采取资本保护策略，当前并非激进抄底的时机。",
+            "ES": "El puntaje GMS de 25 confirma un régimen Defensivo. El impulso bajista empujó el puntaje a la baja mientras el VIX (miedo) saltó un 10.8% y la liquidez se contrajo. Los diferenciales de alto rendimiento aumentaron, señalando estrés crediticio, mientras que la caída del petróleo refleja una menor demanda global. Aunque las criptomonedas muestran cierta resistencia, la alta volatilidad exige cautela. Conclusión: Priorizar la preservación de capital hasta que el VIX se estabilice y la liquidez regrese al mercado.",
+            "HI": "GMS स्कोर 25 'सुरक्षात्मक' (रिस्क-ऑफ) शासन की पुष्टि करता है। VIX (डर) में 10.8% की वृद्धि और शुद्ध तरलता में कमी के कारण मंदी के मोमेंटम ने स्कोर को 25 तक धकेल दिया। हाई-यील्ड स्प्रेड में बढ़ोतरी क्रेडिट जोखिम का संकेत देती है, जबकि तेल की कीमतों में भारी गिरावट वैश्विक मांग में कमी को दर्शाती है। हालांकि क्रिप्टो में मामूली मजबूती है, लेकिन उच्च अस्थिरता सावधानी की मांग करती है। निष्कर्ष: जब तक VIX स्थिर न हो और तरलता वापस न आए, तब तक पूंजी संरक्षण को प्राथमिकता देना ही बुद्धिमानी है।",
+            "ID": "Skor GMS 25 mengonfirmasi rezim Defensif. Momentum bearish mendorong skor turun karena VIX (indeks ketakutan) melonjak 10,8% dan likuiditas bersih menyusut. Spread imbal hasil tinggi yang meningkat menandakan tekanan kredit, sementara jatuhnya harga minyak mencerminkan penurunan permintaan global. Meskipun kripto menunjukkan ketahanan kecil, lonjakan volatilitas memerlukan kewaspadaan tinggi. Kesimpulan: Prioritaskan pelestarian modal dan hindari posisi agresif hingga VIX stabil dan likuiditas kembali mengalir ke pasar.",
+            "AR": "تؤكد درجة GMS البالغة 25 نظاماً دفاعياً (تجنب المخاطر). دفع الزخم الهبوطي النتيجة للانخفاض مع قفزة مؤشر VIX (الخوف) بنسبة 10.8% وتقلص السيولة الصافية. يشير اتساع فروق أسعار السندات عالية العائد إلى ضغوط ائتمانية، بينما يعكس تراجع النفط ضعف الطلب العالمي. رغم صمود العملات الرقمية الطفيف، إلا أن تقلبات السوق تستوجب الحذر الشديد. الخلاصة: يجب إعطاء الأولوية لحماية رأس المال وتجنب المراكز المحفوفة بالمخاطر حتى يستقر مؤشر VIX وتعود السيولة للنظام."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-30T21:38:23Z",
-            "score": 30
-        },
         {
             "date": "2026-01-30T22:40:15Z",
             "score": 30
@@ -1358,14 +1354,23 @@
         {
             "date": "2026-02-02T10:04:07Z",
             "score": 29
+        },
+        {
+            "date": "2026-02-02T11:03:24Z",
+            "score": 25
         }
     ],
     "intelligence": {
         "news": [
             {
-                "title": "Gold dives 5% and silver crashes 7%, extending sell-off in precious metals after historic plunge",
-                "link": "https://www.cnbc.com/2026/02/02/gold-silver-sell-off-historic-plunge-.html",
-                "isoDate": "2026-02-02T08:28:53+00:00Z"
+                "title": "Oracle dips 3% after announcing $50 billion fundraising plans. Here's why",
+                "link": "https://www.cnbc.com/2026/02/02/oracle-stock-price-funding-plans.html",
+                "isoDate": "2026-02-02T10:21:37+00:00Z"
+            },
+            {
+                "title": "How to trade the market spiral as investors dump gold, silver and oil",
+                "link": "https://www.cnbc.com/2026/02/02/gold-silver-oil-prices-fed-warsh-markets-investors.html",
+                "isoDate": "2026-02-02T10:28:14+00:00Z"
             },
             {
                 "title": "Speaker Johnson: 'Confident' government shutdown will end by Tuesday",
@@ -1373,77 +1378,72 @@
                 "isoDate": "2026-02-01T17:07:06+00:00Z"
             },
             {
-                "title": "Stock futures fall after silver, bitcoin sell off; questions loom over AI trade: Live updates",
-                "link": "https://www.cnbc.com/2026/02/01/stock-market-today-live-updates.html",
-                "isoDate": "2026-02-01T23:30:01+00:00Z"
+                "title": "Here's what to expect when Disney reports earnings before the bell",
+                "link": "https://www.cnbc.com/2026/02/02/disney-dis-earnings-q1-26.html",
+                "isoDate": "2026-02-02T05:01:01+00:00Z"
             },
             {
-                "title": "European stocks slide as precious metals sell-off weighs on markets; Mining stocks drop 3%",
-                "link": "https://www.cnbc.com/2026/02/02/european-markets-sotxx-600-ftse-dax-cac-global-markets-silver-gold-bitcoin.html",
-                "isoDate": "2026-02-02T08:36:20+00:00Z"
+                "title": "Earnings playbook: Amazon and Alphabet headline the busiest week of the reporting period",
+                "link": "https://www.cnbc.com/2026/02/01/earnings-playbook-amazon-alphabet-lead-busiest-week-of-reporting-period.html",
+                "isoDate": "2026-02-01T13:33:08+00:00Z"
             },
             {
-                "title": "Why the catastrophe bond market is so hot right now",
-                "link": "https://www.cnbc.com/2026/02/02/catastrophe-bonds-insurance-climate-change-markets.html",
-                "isoDate": "2026-02-02T06:31:19+00:00Z"
-            },
-            {
-                "title": "Elon Musk is stressing robots over cars. Here are three humanoid parts suppliers that Morgan Stanley recommends",
-                "link": "https://www.cnbc.com/2026/02/01/musk-is-stressing-robots-over-cars-these-suppliers-make-humanoid-parts.html",
-                "isoDate": "2026-02-01T13:36:17+00:00Z"
+                "title": "Gold dives 5% and silver crashes 7%, extending sell-off in precious metals after historic plunge",
+                "link": "https://www.cnbc.com/2026/02/02/gold-silver-sell-off-historic-plunge-.html",
+                "isoDate": "2026-02-02T08:28:53+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "金が5%下落、銀は7%急落、貴金属の歴史的暴落に続く売りが拡大",
-                "ジョンソン下院議長「火曜日までに政府閉鎖は終わると確信」",
-                "銀・ビットコインの売り、AIトレードへの疑問で株価先物は下落：ライブ速報",
-                "貴金属の売りが市場を圧迫、欧州株は下落、鉱業株は3%下落",
-                "なぜカタストロフィボンド市場は今、これほど熱いのか",
-                "イーロン・マスク、車よりロボットを重視：モルガン・スタンレーが推奨する3つの人型ロボット部品サプライヤー"
+                "オラクル、500億ドルの資金調達計画発表で3%下落、その理由は？",
+                "投資家が金、銀、石油を投げ売りする中、市場の急落をどう取引するか",
+                "ジョンソン議長：「火曜日までに政府閉鎖は終わると確信」",
+                "ディズニーの決算発表前に何が期待できるか",
+                "決算プレイブック：アマゾンとアルファベットが報告期間の最も忙しい週をリード",
+                "金が5%、銀が7%下落、歴史的な急落後の貴金属の売りが続く"
             ],
             "CN": [
-                "黄金暴跌5%，白银暴跌7%，贵金属抛售潮延续历史性暴跌",
-                "约翰逊议长： \"有信心\" 政府停摆将在周二前结束",
-                "白银、比特币抛售后股指期货下跌；人工智能交易疑虑重重：实时更新",
-                "欧洲股市下跌，贵金属抛售拖累市场；矿业股下跌3%",
-                "为何巨灾债券市场目前如此火爆",
-                "埃隆·马斯克对机器人的重视程度超过汽车：摩根士丹利推荐的三家人形机器人零部件供应商"
+                "甲骨文宣布500亿美元融资计划后下跌3%，原因何在",
+                "投资者抛售黄金、白银和石油，如何交易市场螺旋式下跌",
+                "约翰逊议长：“有信心”政府停摆将在周二结束",
+                "迪士尼盘前公布财报，市场有哪些看点",
+                "财报季指南：亚马逊和Alphabet领衔本报告期最繁忙的一周",
+                "黄金下跌5%，白银暴跌7%，此前贵金属在历史性暴跌后延续跌势"
             ],
             "ES": [
-                "El oro se hunde un 5% y la plata se desploma un 7%, extendiendo la venta de metales preciosos tras una caída histórica",
-                "Presidente Johnson: \"Confía\" en que el cierre del gobierno terminará el martes",
-                "Los futuros de acciones caen tras la venta de plata y bitcoin; surgen dudas sobre el comercio de IA: Actualizaciones en vivo",
-                "Las acciones europeas se deslizan mientras la venta de metales preciosos lastra los mercados; las acciones mineras caen un 3%",
-                "Por qué el mercado de bonos de catástrofe está tan caliente en este momento",
-                "Elon Musk prioriza robots sobre coches. Aquí hay tres proveedores de piezas humanoides que Morgan Stanley recomienda"
+                "Oracle cae un 3% tras anunciar planes de recaudación de fondos de 50.000 millones de dólares. He aquí por qué",
+                "Cómo operar en la espiral del mercado mientras los inversores descartan oro, plata y petróleo",
+                "Presidente Johnson: 'Confiado' de que el cierre del gobierno terminará el martes",
+                "Esto es lo que se espera cuando Disney reporte ganancias antes de la apertura",
+                "Manual de resultados: Amazon y Alphabet encabezan la semana más activa del período de informes",
+                "El oro se hunde un 5% y la plata se desploma un 7%, extendiendo la venta de metales preciosos tras una caída histórica"
             ],
             "HI": [
-                "सोना 5% गिरा, चांदी 7% लुढ़का, ऐतिहासिक गिरावट के बाद कीमती धातुओं में बिकवाली का सिलसिला जारी",
-                "स्पीकर जॉनसन: 'आत्मविश्वास' है कि सरकारी शटडाउन मंगलवार तक खत्म हो जाएगा",
-                "चांदी, बिटकॉइन की बिकवाली के बाद स्टॉक फ्यूचर्स में गिरावट; एआई व्यापार पर सवाल: लाइव अपडेट",
-                "कीमती धातुओं की बिकवाली से बाजार पर दबाव, यूरोपीय शेयर गिरे; खनन स्टॉक 3% लुढ़के",
-                "कैटस्ट्रॉफी बॉन्ड मार्केट अभी इतना गर्म क्यों है",
-                "एलोन मस्क कारों से ज़्यादा रोबोट पर जोर दे रहे हैं। यहां तीन ह्यूमनॉइड पार्ट्स सप्लायर हैं जिनकी मॉर्गन स्टेनली सिफारिश करता है"
+                "50 अरब डॉलर की धन उगाहने की योजनाओं की घोषणा के बाद ओरेकल 3% गिरा। यहां बताया गया है क्यों",
+                "निवेशक सोना, चांदी और तेल छोड़ रहे हैं, ऐसे में बाज़ार के सर्पिल में कैसे ट्रेड करें",
+                "स्पीकर जॉनसन: 'आत्मविश्वासी' कि सरकारी शटडाउन मंगलवार तक समाप्त हो जाएगा",
+                "यहाँ बताया गया है कि डिज़्नी की कमाई की घोषणा से पहले क्या उम्मीद करें",
+                "कमाई की पुस्तक: अमेज़न और अल्फाबेट रिपोर्टिंग अवधि के सबसे व्यस्त सप्ताह की सुर्खियां",
+                "सोना 5% गिरा और चांदी 7% क्रैश हो गई, ऐतिहासिक गिरावट के बाद कीमती धातुओं में बिकवाली जारी"
             ],
             "ID": [
-                "Emas terjun 5% dan perak anjlok 7%, memperpanjang aksi jual di logam mulia setelah penurunan bersejarah",
-                "Speaker Johnson: 'Yakin' penutupan pemerintah akan berakhir pada Selasa",
-                "Saham berjangka jatuh setelah perak, bitcoin dijual; pertanyaan membayangi perdagangan AI: Pembaruan Langsung",
-                "Saham Eropa merosot karena aksi jual logam mulia membebani pasar; saham pertambangan turun 3%",
-                "Mengapa pasar obligasi bencana begitu panas saat ini",
-                "Elon Musk menekankan robot daripada mobil. Berikut adalah tiga pemasok suku cadang humanoid yang direkomendasikan Morgan Stanley"
+                "Oracle turun 3% setelah mengumumkan rencana penggalangan dana $50 miliar. Inilah alasannya",
+                "Cara memperdagangkan spiral pasar saat investor membuang emas, perak, dan minyak",
+                "Pembicara Johnson: 'Yakin' penutupan pemerintah akan berakhir pada Selasa",
+                "Inilah yang diharapkan saat Disney melaporkan pendapatan sebelum bel",
+                "Buku pedoman pendapatan: Amazon dan Alphabet menjadi berita utama minggu tersibuk periode pelaporan",
+                "Emas anjlok 5% dan perak jatuh 7%, memperpanjang aksi jual di logam mulia setelah penurunan bersejarah"
             ],
             "AR": [
-                "الذهب يهوي 5% والفضة تنهار 7%، موسعًا عمليات البيع في المعادن الثمينة بعد هبوط تاريخي",
+                "أوراكل تتراجع 3٪ بعد الإعلان عن خطط لجمع 50 مليار دولار. إليك السبب",
+                "كيفية تداول دوامة السوق مع تخلص المستثمرين من الذهب والفضة والنفط",
                 "الرئيس جونسون: \"واثق\" من انتهاء إغلاق الحكومة بحلول يوم الثلاثاء",
-                "انخفاض عقود الأسهم الآجلة بعد بيع الفضة والبيتكوين؛ تساؤلات تلوح في الأفق حول تداول الذكاء الاصطناعي: تحديثات مباشرة",
-                "الأسهم الأوروبية تنزلق مع ثقل مبيعات المعادن الثمينة على الأسواق؛ أسهم التعدين تنخفض 3%",
-                "لماذا سوق سندات الكوارث ساخن جدًا في الوقت الحالي",
-                "إيلون ماسك يركز على الروبوتات أكثر من السيارات. إليك ثلاثة موردين لقطع الغيار البشرية التي توصي بها مورجان ستانلي"
+                "إليك ما يمكن توقعه عندما تعلن ديزني عن أرباحها قبل الافتتاح",
+                "دليل الأرباح: أمازون وألفابت يتصدران جدول أعمال أكثر أسابيع فترة التقارير ازدحامًا",
+                "الذهب يهبط 5٪ والفضة تنهار 7٪، مما يوسع البيع في المعادن الثمينة بعد انهيار تاريخي"
             ]
         },
-        "last_updated": "2026-02-02T10:04:07.228394+00:00Z"
+        "last_updated": "2026-02-02T11:03:24.495969+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
