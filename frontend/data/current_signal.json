@@ -1,12 +1,12 @@
 {
-    "last_updated": "2026-02-02T11:47:55.197757+00:00",
-    "last_successful_update": "2026-02-02T11:47:55.197764+00:00",
-    "gms_score": 29,
+    "last_updated": "2026-02-02T13:23:29.197514+00:00",
+    "last_successful_update": "2026-02-02T13:23:29.197521+00:00",
+    "gms_score": 24,
     "sector_scores": {
         "STOCKS": 25,
         "CRYPTO": 25,
-        "FOREX": 35,
-        "COMMODITIES": 75
+        "FOREX": 25,
+        "COMMODITIES": 45
     },
     "market_data": {
         "CRYPTO_SENTIMENT": {
@@ -218,13 +218,12 @@
             ]
         },
         "VIX": {
-            "price": 17.01,
-            "prev_price": 16.88,
-            "daily_chg": 0.77,
-            "change_percent": 5.33,
+            "price": 18.75,
+            "prev_price": 17.44,
+            "daily_chg": 7.51,
+            "change_percent": 14.68,
             "trend": "UP",
             "sparkline": [
-                14.33,
                 14.95,
                 14.51,
                 14.9,
@@ -245,7 +244,8 @@
                 16.35,
                 16.35,
                 16.88,
-                17.01
+                17.44,
+                18.75
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 77752.19,
+            "price": 77830.37,
             "prev_price": 76974.45,
-            "daily_chg": 1.01,
-            "change_percent": -8.05,
+            "daily_chg": 1.11,
+            "change_percent": -7.96,
             "trend": "UP",
             "sparkline": [
                 91192.99,
@@ -604,14 +604,14 @@
                 84128.66,
                 78621.12,
                 76974.45,
-                77752.19
+                77830.37
             ]
         },
         "ETH": {
-            "price": 2284.58,
+            "price": 2305.3,
             "prev_price": 2267.96,
-            "daily_chg": 0.73,
-            "change_percent": -18.94,
+            "daily_chg": 1.65,
+            "change_percent": -18.2,
             "trend": "UP",
             "sparkline": [
                 3092.33,
@@ -635,14 +635,14 @@
                 2702.38,
                 2445.09,
                 2267.96,
-                2284.58
+                2305.3
             ]
         },
         "SOL": {
-            "price": 103.02,
+            "price": 102.83,
             "prev_price": 100.85,
-            "daily_chg": 2.15,
-            "change_percent": -12.4,
+            "daily_chg": 1.96,
+            "change_percent": -12.56,
             "trend": "UP",
             "sparkline": [
                 139.14,
@@ -666,14 +666,14 @@
                 117.36,
                 105.44,
                 100.85,
-                103.02
+                102.83
             ]
         },
         "DXY": {
-            "price": 97.04,
+            "price": 97.29,
             "prev_price": 96.99,
-            "daily_chg": 0.05,
-            "change_percent": 0.85,
+            "daily_chg": 0.31,
+            "change_percent": 1.11,
             "trend": "UP",
             "sparkline": [
                 98.28,
@@ -697,14 +697,14 @@
                 96.45,
                 96.28,
                 96.99,
-                97.04
+                97.29
             ]
         },
         "USDJPY": {
-            "price": 154.73,
+            "price": 154.78,
             "prev_price": 153.1,
-            "daily_chg": 1.07,
-            "change_percent": -0.28,
+            "daily_chg": 1.1,
+            "change_percent": -0.25,
             "trend": "UP",
             "sparkline": [
                 156.41,
@@ -728,14 +728,14 @@
                 154.34,
                 152.45,
                 153.1,
-                154.73
+                154.78
             ]
         },
         "EURUSD": {
-            "price": 1.19,
+            "price": 1.18,
             "prev_price": 1.2,
-            "daily_chg": -0.73,
-            "change_percent": 0.27,
+            "daily_chg": -1.19,
+            "change_percent": -0.19,
             "trend": "DOWN",
             "sparkline": [
                 1.17,
@@ -759,14 +759,14 @@
                 1.19,
                 1.2,
                 1.2,
-                1.19
+                1.18
             ]
         },
         "USDINR": {
-            "price": 91.9,
+            "price": 91.53,
             "prev_price": 92.04,
-            "daily_chg": -0.15,
-            "change_percent": 0.44,
+            "daily_chg": -0.56,
+            "change_percent": 0.03,
             "trend": "DOWN",
             "sparkline": [
                 89.77,
@@ -790,14 +790,14 @@
                 91.71,
                 91.53,
                 92.04,
-                91.9
+                91.53
             ]
         },
         "USDSAR": {
             "price": 3.75,
             "prev_price": 3.75,
-            "daily_chg": 0.12,
-            "change_percent": 0.15,
+            "daily_chg": 0.1,
+            "change_percent": 0.14,
             "trend": "UP",
             "sparkline": [
                 3.75,
@@ -825,13 +825,12 @@
             ]
         },
         "GOLD": {
-            "price": 5067.5,
-            "prev_price": 5318.4,
-            "daily_chg": -4.72,
-            "change_percent": -0.24,
-            "trend": "DOWN",
+            "price": 4808.3,
+            "prev_price": 4713.9,
+            "daily_chg": 2.0,
+            "change_percent": -5.35,
+            "trend": "UP",
             "sparkline": [
-                4370.1,
                 4325.6,
                 4314.4,
                 4436.9,
@@ -852,17 +851,17 @@
                 5079.9,
                 5301.6,
                 5318.4,
-                5067.5
+                4713.9,
+                4808.3
             ]
         },
         "OIL": {
-            "price": 65.55,
-            "prev_price": 65.42,
-            "daily_chg": 0.2,
-            "change_percent": 8.11,
-            "trend": "UP",
+            "price": 61.93,
+            "prev_price": 65.21,
+            "daily_chg": -5.03,
+            "change_percent": -0.74,
+            "trend": "DOWN",
             "sparkline": [
-                57.95,
                 57.42,
                 57.32,
                 58.32,
@@ -883,17 +882,17 @@
                 62.39,
                 63.21,
                 65.42,
-                65.55
+                65.21,
+                61.93
             ]
         },
         "COPPER": {
-            "price": 6.01,
-            "prev_price": 6.18,
-            "daily_chg": -2.6,
-            "change_percent": 0.52,
+            "price": 5.82,
+            "prev_price": 5.9,
+            "daily_chg": -1.33,
+            "change_percent": -0.17,
             "trend": "DOWN",
             "sparkline": [
-                5.73,
                 5.63,
                 5.64,
                 5.92,
@@ -914,17 +913,17 @@
                 5.83,
                 5.89,
                 6.18,
-                6.01
+                5.9,
+                5.82
             ]
         },
         "NATGAS": {
-            "price": 4.09,
-            "prev_price": 3.92,
-            "daily_chg": 4.44,
-            "change_percent": -39.82,
-            "trend": "UP",
+            "price": 3.61,
+            "prev_price": 4.35,
+            "daily_chg": -17.16,
+            "change_percent": -48.13,
+            "trend": "DOWN",
             "sparkline": [
-                3.97,
                 3.69,
                 3.62,
                 3.52,
@@ -945,7 +944,8 @@
                 6.95,
                 7.46,
                 3.92,
-                4.09
+                4.35,
+                3.61
             ]
         },
         "MOVE": {
@@ -1042,40 +1042,40 @@
             ]
         },
         "COPPER_GOLD": {
-            "price": 1.19,
+            "price": 1.21,
             "change_percent": 0,
             "trend": "RISK-OFF",
             "sparkline": [
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19,
-                1.19
+                1.21,
+                1.21,
+                1.21,
+                1.21,
+                1.21,
+                1.21,
+                1.21,
+                1.21,
+                1.21,
+                1.21,
+                1.21,
+                1.21,
+                1.21,
+                1.21,
+                1.21,
+                1.21,
+                1.21,
+                1.21,
+                1.21,
+                1.21,
+                1.21,
+                1.21,
+                1.21,
+                1.21,
+                1.21,
+                1.21,
+                1.21,
+                1.21,
+                1.21,
+                1.21
             ]
         }
     },
@@ -1107,22 +1107,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "[GMS Status]: A score of 29 confirms a Defensive regime. Momentum pushed the score to 29, indicating a flat trend. [Macro Root]: Rising DXY (Dollar strength) and VIX 17.01 (Fear Index) signal tightening liquidity. [Risk/Warning]: While high yields pressure equities, Disney's strong earnings suggest consumer resilience that could buffer the downside. [Conclusion]: Maintain a defensive posture; a potential peaking in the VIX might signal a short-term bottom for opportunistic re-entry.",
+        "content": "GMS status is Defensive at 24. Downward momentum pushed the score down from 26, reflecting a spike in VIX (fear/volatility) and DXY (dollar strength/liquidity) which restricts market capital. While widening high-yield spreads indicate rising credit stress, Disney’s robust earnings offer a counter-narrative of consumer resilience. Exercise extreme caution as macro volatility intensifies; maintain high cash reserves but monitor the divergence in crypto for potential short-term stabilization and bottoming signals.",
         "reports": {
-            "JP": "【GMS状況】スコア29は守備的（リスクオフ）局面を確認。モメンタムがスコアを29へ押し上げ、横ばいの推移です。【マクロ要因】DXY（ドル強気）の上昇とVIX（恐怖指数）17.01は流動性の引き締まりを示唆します。【リスク/警告】利回り上昇がハイテク株を圧迫する一方、ディズニーの好決算は消費の底堅さという逆説的な強みを示しています。【結論】守備的な姿勢を維持。VIXがピークに達するまで、慎重なポジション管理が求められます。",
-            "EN": "[GMS Status]: A score of 29 confirms a Defensive regime. Momentum pushed the score to 29, indicating a flat trend. [Macro Root]: Rising DXY (Dollar strength) and VIX 17.01 (Fear Index) signal tightening liquidity. [Risk/Warning]: While high yields pressure equities, Disney's strong earnings suggest consumer resilience that could buffer the downside. [Conclusion]: Maintain a defensive posture; a potential peaking in the VIX might signal a short-term bottom for opportunistic re-entry.",
-            "CN": "【GMS状态】得分29确认市场处于防御型（避险）模式。动量将得分推至29，呈现平稳趋势。【宏观根源】DXY（美元走强）上升与VIX（恐慌指数）17.01反映流动性正在收紧。【风险/警告】尽管高收益率对权重股构成压力，但迪士尼强劲的财报显示出消费韧性，可能延缓跌势。【结论】保持防御姿态，需等待VIX指标见顶信号明确后，再考虑增加风险敞口以寻求反弹机会。",
-            "ES": "[GMS Status]: El puntaje 29 confirma un régimen Defensivo. El impulso empujó el puntaje a 29, con tendencia plana. [Macro]: El DXY (fortaleza del dólar) al alza y el VIX (miedo) en 17.01 señalan liquidez ajustada. [Riesgo]: Mientras los rendimientos presionan la renta variable, los sólidos resultados de Disney sugieren una resiliencia que limita las caídas. [Conclusión]: Mantener postura defensiva; un posible pico en el VIX podría señalar un suelo a corto plazo para ajustar posiciones.",
-            "HI": "[GMS Status]: 29 का स्कोर डिफेंसिव (जोखिम-कम) व्यवस्था की पुष्टि करता है। मोमेंटम ने स्कोर को 29 तक पहुँचाया, जो स्थिर रुझान दिखाता है। [Macro Root]: बढ़ता DXY (डॉलर की मजबूती) और VIX (डर सूचकांक) 17.01 लिक्विडिटी में कमी का संकेत देते हैं। [Warning]: ऊंचे यील्ड बाजार पर दबाव डाल रहे हैं, लेकिन डिज्नी की मजबूत कमाई उपभोक्ता लचीलेपन का संकेत देती है। [Conclusion]: रक्षात्मक रुख बनाए रखें; जोखिम बढ़ाने से पहले VIX के चरम पर पहुंचने का इंतजार करना बुद्धिमानी होगी।",
-            "ID": "[Status GMS]: Skor 29 mengonfirmasi rezim Defensif. Momentum mendorong skor ke 29, menunjukkan tren datar. [Akar Makro]: Kenaikan DXY (kekuatan Dolar) dan VIX 17,01 (Indeks Ketakutan) menandakan pengetatan likuiditas global. [Risiko/Peringatan]: Meskipun imbal hasil tinggi menekan pasar, laba Disney yang kuat menunjukkan ketahanan konsumen yang dapat menahan kejatuhan. [Kesimpulan]: Pertahankan posisi defensif; perhatikan puncak VIX sebagai sinyal potensi dasar harga jangka pendek.",
-            "AR": "[وضع GMS]: تؤكد الدرجة 29 النظام الدفاعي. دفع الزخم النتيجة إلى 29، مع اتجاه مستقر. [الجذر الكلي]: يشير ارتفاع DXY (قوة الدولار) وVIX (مؤشر الخوف) عند 17.01 إلى تقلص السيولة المتاحة. [المخاطر/تحذير]: بينما تضغط العوائد المرتفعة على الأسهم، تشير أرباح ديزني القوية إلى مرونة استهلاكية قد تمنع الانهيار الكامل. [الخلاصة]: حافظ على موقف دفاعي؛ قد يشير وصول مؤشر VIX إلى ذروته إلى قاع مؤقت وبداية فرصة للمخاطرة."
+            "JP": "GMSステータスは24で「守備的（リスクオフ）」な領域にあります。モメンタムがスコアを26から押し下げており、これはVIX（恐怖指数）の急騰とDXY（米ドル強さ）の上昇による市場流動性の低下を直接的に反映したものです。ハイイールド債のスプレッド拡大は信用リスクの増大を示唆していますが、ディズニーの好決算が示す消費の底堅さが下値を支える可能性があります。マクロ経済の不透明感が強まる中、現金比率を高めつつ、暗号資産に見られる独自の反発を注視すべき局面です。",
+            "EN": "GMS status is Defensive at 24. Downward momentum pushed the score down from 26, reflecting a spike in VIX (fear/volatility) and DXY (dollar strength/liquidity) which restricts market capital. While widening high-yield spreads indicate rising credit stress, Disney’s robust earnings offer a counter-narrative of consumer resilience. Exercise extreme caution as macro volatility intensifies; maintain high cash reserves but monitor the divergence in crypto for potential short-term stabilization and bottoming signals.",
+            "CN": "GMS状态为24，属于“防御（避险）”模式。动量将得分从26推低，反映出VIX（恐慌指数）大幅跳升和DXY（美元强度）走强所导致的流动性枯竭。虽然高收益债利差扩大预示着信用压力增加，但迪士尼超预期的财报揭示了消费端的韧性。在宏观波动性加剧的背景下，建议投资者保持审慎并增加现金储备，同时关注加密货币市场出现的局部底部分歧信号，这可能预示短期情绪的回暖。",
+            "ES": "El estatus GMS es Defensivo en 24. El momentum impulsó la puntuación a la baja desde 26, reflejando el repunte del VIX (miedo/volatilidad) y del DXY (fortaleza del dólar) que reduce la liquidez global. Aunque los diferenciales de crédito indican una mayor tensión financiera, los sólidos resultados de Disney sugieren una resiliencia del consumo. Se requiere máxima precaución ante el aumento de la volatilidad macroeconómica; mantenga reservas de efectivo mientras vigila la divergencia positiva en las criptomonedas como posible señal de estabilización.",
+            "HI": "GMS की स्थिति 24 पर 'रक्षात्मक' है। मोमेंटम ने स्कोर को 26 से नीचे धकेला है, जो VIX (डर/अस्थिरता) में उछाल और DXY (डॉलर की मजबूती/तरलता) को दर्शाता है, जिससे पूंजी प्रवाह सीमित हो रहा है। हालांकि बढ़ता हुआ क्रेडिट स्प्रेड वित्तीय दबाव का संकेत देता है, लेकिन डिज़नी के मजबूत वित्तीय नतीजे उपभोक्ता मांग में लचीलापन दिखाते हैं। मैक्रो अस्थिरता के बीच अत्यधिक सावधानी बरतें और नकद भंडार बनाए रखें, जबकि क्रिप्टो संपत्तियों में दिख रहे सुधार के संकेतों पर कड़ी नजर रखें जो शॉर्ट-टर्म बॉटम का संकेत दे सकते हैं।",
+            "ID": "Status GMS berada pada level 24 (Defensif). Momentum menekan skor turun dari 26, mencerminkan lonjakan VIX (indeks ketakutan) dan DXY (kekuatan dolar) yang membatasi likuiditas pasar. Meskipun pelebaran spread kredit menunjukkan tekanan finansial, laporan laba Disney yang kuat memberikan narasi tandingan mengenai ketahanan konsumen. Diperlukan kewaspadaan tinggi seiring meningkatnya volatilitas makro; pertahankan cadangan kas sambil memantau divergensi positif di pasar kripto untuk potensi stabilisasi jangka pendek.",
+            "AR": "حالة مؤشر GMS هي 'دفاعي' عند 24. دفع الزخم النتيجة للهبوط من 26، مما يعكس قفزة في مؤشر VIX (الخوف) وقوة DXY (قوة الدولار) التي تؤدي لتقلص السيولة. وبينما يشير اتساع هوامش الائتمان إلى ضغوط مالية متزايدة، توفر أرباح ديزني القوية دليلاً على مرونة الاستهلاك. يُنصح بالحذر الشديد مع تصاعد تقلبات الماكرو، والحفاظ على مستويات عالية من السيولة النقدية، مع مراقبة التباين الإيجابي في سوق الكريبتو كإشارة محتملة لبداية استقرار الأسعار في المدى القصير."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-30T23:36:55Z",
-            "score": 27
-        },
         {
             "date": "2026-01-31T02:44:15Z",
             "score": 30
@@ -1358,6 +1354,10 @@
         {
             "date": "2026-02-02T11:47:55Z",
             "score": 29
+        },
+        {
+            "date": "2026-02-02T13:23:29Z",
+            "score": 24
         }
     ],
     "intelligence": {
@@ -1365,85 +1365,85 @@
             {
                 "title": "Disney beats Wall Street expectations propelled by theme parks and streaming",
                 "link": "https://www.cnbc.com/2026/02/02/disney-dis-earnings-q1-26.html",
-                "isoDate": "2026-02-02T11:42:50+00:00Z"
+                "isoDate": "2026-02-02T13:23:07+00:00Z"
             },
             {
-                "title": "Oracle dips 3% after announcing $50 billion fundraising plans. Here's why",
+                "title": "Erratic behavior in bitcoin, silver and memory stocks threatens to unnerve bull market",
+                "link": "https://www.cnbc.com/2026/02/02/erratic-behavior-in-bitcoin-silver-and-memory-stocks-threatens-to-unnerve-bull-market.html",
+                "isoDate": "2026-02-02T13:21:02+00:00Z"
+            },
+            {
+                "title": "Nvidia shares are down 2% after a report that its OpenAI investment stalled. Here's what's happening",
+                "link": "https://www.cnbc.com/2026/02/02/nvidia-stock-price-openai-funding.html",
+                "isoDate": "2026-02-02T13:20:09+00:00Z"
+            },
+            {
+                "title": "Oracle rises 5% after announcing $50 billion fundraising plans. Here's why",
                 "link": "https://www.cnbc.com/2026/02/02/oracle-stock-price-funding-plans.html",
-                "isoDate": "2026-02-02T10:21:37+00:00Z"
-            },
-            {
-                "title": "How to trade the market spiral as investors dump gold, silver and oil",
-                "link": "https://www.cnbc.com/2026/02/02/gold-silver-oil-prices-fed-warsh-markets-investors.html",
-                "isoDate": "2026-02-02T11:40:10+00:00Z"
-            },
-            {
-                "title": "Gold dives and silver crashes, extending sell-off in precious metals after historic plunge",
-                "link": "https://www.cnbc.com/2026/02/02/gold-silver-sell-off-historic-plunge-.html",
-                "isoDate": "2026-02-02T11:43:14+00:00Z"
-            },
-            {
-                "title": "Earnings playbook: Amazon and Alphabet headline the busiest week of the reporting period",
-                "link": "https://www.cnbc.com/2026/02/01/earnings-playbook-amazon-alphabet-lead-busiest-week-of-reporting-period.html",
-                "isoDate": "2026-02-01T13:33:08+00:00Z"
+                "isoDate": "2026-02-02T13:17:08+00:00Z"
             },
             {
                 "title": "Bitcoin is under pressure after a brutal week. Here's why",
                 "link": "https://www.cnbc.com/2026/02/02/bitcoin-btc-price-today-cryptocurrency.html",
-                "isoDate": "2026-02-02T10:48:08+00:00Z"
+                "isoDate": "2026-02-02T12:02:28+00:00Z"
+            },
+            {
+                "title": "BTIG turns bullish on McDonald’s as value push lifts store traffic",
+                "link": "https://www.cnbc.com/2026/02/02/btig-turns-bullish-on-mcdonalds-as-value-push-lifts-store-traffic.html",
+                "isoDate": "2026-02-02T12:54:19+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "ディズニー、テーマパークとストリーミングの好調でウォール街の予想を上回る",
-                "オラクル、500億ドルの資金調達計画発表で3%下落。その理由は",
-                "投資家が金、銀、石油を売却する中、市場の急落をどう取引するか",
-                "歴史的な急落後、貴金属の売りが継続し、金は急落、銀は暴落",
-                "決算プレイブック：アマゾンとアルファベットが最も忙しい決算発表週の主役",
-                "ビットコイン、厳しい1週間の後、圧力を受ける。その理由は"
+                "ディズニー、テーマパークとストリーミングに後押しされ、ウォール街の予想を上回る",
+                "ビットコイン、銀、メモリ株の不安定な値動きが強気市場を動揺させる恐れ",
+                "Nvidia株、OpenAIへの投資が頓挫したとの報道で2%下落。その理由は？",
+                "Oracle、500億ドルの資金調達計画発表で5%上昇。その理由は？",
+                "ビットコイン、厳しい1週間の後、圧力を受ける。その理由は？",
+                "BTIG、バリュー推進が店舗トラフィックを押し上げ、マクドナルドに強気姿勢"
             ],
             "CN": [
-                "迪士尼受益于主题公园和流媒体业务，业绩超出华尔街预期",
-                "甲骨文公布500亿美元融资计划后股价下跌3%。原因如下",
-                "投资者抛售黄金、白银和石油，如何交易市场螺旋式下跌",
-                "黄金暴跌、白银崩盘，贵金属历史性下跌后抛售潮延续",
-                "财报季指南：亚马逊和Alphabet领衔最繁忙的财报周",
-                "比特币经历残酷一周后承压。原因如下"
+                "迪士尼乐园和流媒体业务推动，迪士尼业绩超出华尔街预期",
+                "比特币、白银和内存股的剧烈波动威胁着牛市",
+                "据报道英伟达对OpenAI的投资停滞，其股价下跌2%。发生了什么？",
+                "甲骨文宣布500亿美元融资计划后股价上涨5%。原因如下",
+                "比特币在一周的暴跌后承压。原因如下",
+                "BTIG看好麦当劳，因价值驱动提升客流量"
             ],
             "ES": [
                 "Disney supera las expectativas de Wall Street impulsada por parques temáticos y streaming",
-                "Oracle cae un 3% tras anunciar planes de recaudación de fondos de 50.000 millones de dólares. Aquí el porqué",
-                "Cómo operar en la espiral del mercado mientras los inversores descartan oro, plata y petróleo",
-                "El oro se hunde y la plata se desploma, extendiendo la liquidación en metales preciosos tras una caída histórica",
-                "Manual de resultados: Amazon y Alphabet encabezan la semana más ajetreada del período de informes",
-                "Bitcoin bajo presión tras una semana brutal. Aquí el porqué"
+                "El comportamiento errático del bitcoin, la plata y las acciones de memoria amenaza con desconcertar al mercado alcista",
+                "Las acciones de Nvidia caen un 2% tras un informe que indica que su inversión en OpenAI se estancó. Esto es lo que está sucediendo",
+                "Oracle sube un 5% tras anunciar planes de recaudación de fondos por 50.000 millones de dólares. He aquí por qué",
+                "El Bitcoin está bajo presión tras una semana brutal. He aquí por qué",
+                "BTIG se vuelve optimista sobre McDonald's a medida que el impulso del valor aumenta el tráfico en las tiendas"
             ],
             "HI": [
-                "डिज़्नी ने थीम पार्कों और स्ट्रीमिंग से प्रेरित होकर वॉल स्ट्रीट की उम्मीदों को पार किया",
-                "ओरेकल ने 50 अरब डॉलर की धन उगाहने की योजना की घोषणा के बाद 3% की गिरावट दर्ज की। यहाँ क्यों",
-                "निवेशक सोना, चांदी और तेल बेच रहे हैं, इसलिए बाजार की गिरावट में कैसे करें ट्रेडिंग",
-                "ऐतिहासिक गिरावट के बाद कीमती धातुओं में बिकवाली का सिलसिला जारी, सोना गिरा और चांदी धराशायी",
-                "कमाई की किताब: अमेज़ॅन और अल्फाबेट रिपोर्टिंग अवधि के सबसे व्यस्त सप्ताह की सुर्खियाँ",
-                "क्रूर सप्ताह के बाद बिटकॉइन दबाव में है। यहाँ क्यों"
+                "डिज़्नी थीम पार्क और स्ट्रीमिंग से प्रेरित होकर वॉल स्ट्रीट की उम्मीदों से बेहतर प्रदर्शन",
+                "बिटकॉइन, चांदी और मेमोरी स्टॉक्स में अनियमित व्यवहार से बुल मार्केट को झटका लगने का खतरा",
+                "Nvidia के शेयर 2% गिरे, OpenAI में निवेश रुकने की रिपोर्ट के बाद। यहाँ बताया गया है कि क्या हो रहा है",
+                "Oracle की $50 बिलियन फंडरेज़िंग योजनाओं की घोषणा के बाद 5% की वृद्धि। यहाँ बताया गया है क्यों",
+                "क्रूर सप्ताह के बाद बिटकॉइन दबाव में है। यहाँ बताया गया है क्यों",
+                "BTIG ने मैकडॉनल्ड्स पर तेजी दिखाई क्योंकि मूल्य को बढ़ावा देने से स्टोर ट्रैफिक में वृद्धि हुई"
             ],
             "ID": [
-                "Disney lampaui ekspektasi Wall Street didorong oleh taman hiburan dan streaming",
-                "Oracle turun 3% setelah mengumumkan rencana penggalangan dana $50 miliar. Ini alasannya",
-                "Cara memperdagangkan spiral pasar saat investor membuang emas, perak, dan minyak",
-                "Emas merosot dan perak anjlok, memperpanjang aksi jual di logam mulia setelah penurunan bersejarah",
-                "Buku panduan pendapatan: Amazon dan Alphabet memimpin minggu tersibuk periode pelaporan",
-                "Bitcoin berada di bawah tekanan setelah minggu yang brutal. Ini alasannya"
+                "Disney mengalahkan ekspektasi Wall Street yang didorong oleh taman hiburan dan streaming",
+                "Perilaku tidak menentu di bitcoin, perak, dan saham memori mengancam akan membuat pasar bullish gelisah",
+                "Saham Nvidia turun 2% setelah laporan bahwa investasi OpenAI-nya terhenti. Inilah yang terjadi",
+                "Oracle naik 5% setelah mengumumkan rencana penggalangan dana $50 miliar. Inilah alasannya",
+                "Bitcoin berada di bawah tekanan setelah minggu yang brutal. Inilah alasannya",
+                "BTIG menjadi bullish pada McDonald's karena dorongan nilai meningkatkan lalu lintas toko"
             ],
             "AR": [
-                "ديزني تتجاوز توقعات وول ستريت مدعومة بالحدائق الترفيهية والبث المباشر",
-                "أوراكل تنخفض 3% بعد إعلان خطط جمع 50 مليار دولار. إليك السبب",
-                "كيفية تداول دوامة السوق مع تخلي المستثمرين عن الذهب والفضة والنفط",
-                "الذهب يغوص والفضة تنهار، مما يوسع البيع في المعادن الثمينة بعد انخفاض تاريخي",
-                "دليل الأرباح: أمازون وألفابت يتصدران الأسبوع الأكثر ازدحامًا في فترة الإبلاغ",
-                "البيتكوين تحت الضغط بعد أسبوع قاسٍ. إليك السبب"
+                "ديزني تتجاوز توقعات وول ستريت مدعومة بالمنتزهات والترفيه والبث المباشر",
+                "السلوك المتقلب في البيتكوين والفضة وأسهم الذاكرة يهدد بزعزعة استقرار السوق الصاعدة",
+                "أسهم Nvidia تنخفض بنسبة 2٪ بعد تقرير يفيد بتوقف استثمارها في OpenAI. إليك ما يحدث",
+                "أوركل ترتفع 5٪ بعد إعلان خطط لجمع 50 مليار دولار. إليك السبب",
+                "البيتكوين تحت الضغط بعد أسبوع قاسٍ. إليك السبب",
+                "BTIG يتحول إلى التفاؤل بشأن ماكدونالدز مع ارتفاع حركة المتاجر بفضل دفعة القيمة"
             ]
         },
-        "last_updated": "2026-02-02T11:47:55.197315+00:00Z"
+        "last_updated": "2026-02-02T13:23:29.197045+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
