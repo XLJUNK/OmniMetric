@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-02-02T23:40:38.051684+00:00",
-    "last_successful_update": "2026-02-02T23:40:38.051691+00:00",
+    "last_updated": "2026-02-03T02:54:59.048966+00:00",
+    "last_successful_update": "2026-02-03T02:54:59.048974+00:00",
     "gms_score": 32,
     "sector_scores": {
         "STOCKS": 40,
@@ -10,11 +10,10 @@
     },
     "market_data": {
         "CRYPTO_SENTIMENT": {
-            "price": 14,
+            "price": 17,
             "change_percent": 0.0,
             "trend": "FEAR",
             "sparkline": [
-                25,
                 26,
                 44,
                 42,
@@ -43,7 +42,8 @@
                 16,
                 20,
                 14,
-                14
+                14,
+                17
             ]
         },
         "YIELD_SPREAD": {
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 78846.47,
+            "price": 77945.2,
             "prev_price": 76974.45,
-            "daily_chg": 2.43,
-            "change_percent": -6.76,
+            "daily_chg": 1.26,
+            "change_percent": -7.82,
             "trend": "UP",
             "sparkline": [
                 91192.99,
@@ -604,14 +604,14 @@
                 84128.66,
                 78621.12,
                 76974.45,
-                78846.47
+                77945.2
             ]
         },
         "ETH": {
-            "price": 2349.32,
+            "price": 2304.29,
             "prev_price": 2267.96,
-            "daily_chg": 3.59,
-            "change_percent": -16.64,
+            "daily_chg": 1.6,
+            "change_percent": -18.24,
             "trend": "UP",
             "sparkline": [
                 3092.33,
@@ -635,14 +635,14 @@
                 2702.38,
                 2445.09,
                 2267.96,
-                2349.32
+                2304.29
             ]
         },
         "SOL": {
-            "price": 104.6,
+            "price": 102.67,
             "prev_price": 100.85,
-            "daily_chg": 3.71,
-            "change_percent": -11.06,
+            "daily_chg": 1.8,
+            "change_percent": -12.7,
             "trend": "UP",
             "sparkline": [
                 139.14,
@@ -666,14 +666,14 @@
                 117.36,
                 105.44,
                 100.85,
-                104.6
+                102.67
             ]
         },
         "DXY": {
-            "price": 97.6,
+            "price": 97.52,
             "prev_price": 96.99,
-            "daily_chg": 0.63,
-            "change_percent": 1.44,
+            "daily_chg": 0.55,
+            "change_percent": 1.35,
             "trend": "UP",
             "sparkline": [
                 98.28,
@@ -697,17 +697,16 @@
                 96.45,
                 96.28,
                 96.99,
-                97.6
+                97.52
             ]
         },
         "USDJPY": {
-            "price": 155.5,
-            "prev_price": 153.16,
-            "daily_chg": 1.53,
-            "change_percent": 0.76,
+            "price": 155.54,
+            "prev_price": 155.2,
+            "daily_chg": 0.22,
+            "change_percent": 2.02,
             "trend": "UP",
             "sparkline": [
-                156.73,
                 156.99,
                 156.63,
                 156.68,
@@ -728,17 +727,17 @@
                 152.45,
                 153.1,
                 153.16,
-                155.5
+                155.2,
+                155.54
             ]
         },
         "EURUSD": {
             "price": 1.18,
-            "prev_price": 1.2,
-            "daily_chg": -1.38,
-            "change_percent": -0.64,
+            "prev_price": 1.18,
+            "daily_chg": -0.36,
+            "change_percent": -1.76,
             "trend": "DOWN",
             "sparkline": [
-                1.18,
                 1.17,
                 1.17,
                 1.17,
@@ -759,17 +758,17 @@
                 1.2,
                 1.2,
                 1.2,
+                1.18,
                 1.18
             ]
         },
         "USDINR": {
-            "price": 91.25,
-            "prev_price": 91.78,
-            "daily_chg": -0.57,
-            "change_percent": -0.5,
+            "price": 90.27,
+            "prev_price": 91.69,
+            "daily_chg": -1.54,
+            "change_percent": -1.38,
             "trend": "DOWN",
             "sparkline": [
-                89.96,
                 90.01,
                 90.23,
                 90.17,
@@ -790,17 +789,17 @@
                 91.53,
                 92.04,
                 91.78,
-                91.25
+                91.69,
+                90.27
             ]
         },
         "USDSAR": {
             "price": 3.75,
             "prev_price": 3.75,
-            "daily_chg": 0.1,
+            "daily_chg": 0.07,
             "change_percent": 0.12,
             "trend": "UP",
             "sparkline": [
-                3.75,
                 3.75,
                 3.75,
                 3.75,
@@ -821,14 +820,15 @@
                 3.75,
                 3.75,
                 3.75,
+                3.75,
                 3.75
             ]
         },
         "GOLD": {
-            "price": 4762.9,
+            "price": 4786.6,
             "prev_price": 4713.9,
-            "daily_chg": 1.04,
-            "change_percent": -6.24,
+            "daily_chg": 1.54,
+            "change_percent": -5.77,
             "trend": "UP",
             "sparkline": [
                 4325.6,
@@ -852,14 +852,14 @@
                 5301.6,
                 5318.4,
                 4713.9,
-                4762.9
+                4786.6
             ]
         },
         "OIL": {
-            "price": 62.03,
+            "price": 61.63,
             "prev_price": 65.21,
-            "daily_chg": -4.88,
-            "change_percent": -0.58,
+            "daily_chg": -5.49,
+            "change_percent": -1.22,
             "trend": "DOWN",
             "sparkline": [
                 57.42,
@@ -883,14 +883,14 @@
                 63.21,
                 65.42,
                 65.21,
-                62.03
+                61.63
             ]
         },
         "COPPER": {
-            "price": 5.89,
+            "price": 5.85,
             "prev_price": 5.9,
-            "daily_chg": -0.15,
-            "change_percent": 1.02,
+            "daily_chg": -0.78,
+            "change_percent": 0.39,
             "trend": "DOWN",
             "sparkline": [
                 5.63,
@@ -914,14 +914,14 @@
                 5.89,
                 6.18,
                 5.9,
-                5.89
+                5.85
             ]
         },
         "NATGAS": {
-            "price": 3.25,
+            "price": 3.23,
             "prev_price": 4.35,
-            "daily_chg": -25.45,
-            "change_percent": -53.32,
+            "daily_chg": -25.75,
+            "change_percent": -53.51,
             "trend": "DOWN",
             "sparkline": [
                 3.69,
@@ -945,7 +945,7 @@
                 7.46,
                 3.92,
                 4.35,
-                3.25
+                3.23
             ]
         },
         "MOVE": {
@@ -1040,40 +1040,40 @@
             ]
         },
         "COPPER_GOLD": {
-            "price": 1.24,
+            "price": 1.22,
             "change_percent": 0,
             "trend": "RISK-OFF",
             "sparkline": [
-                1.24,
-                1.24,
-                1.24,
-                1.24,
-                1.24,
-                1.24,
-                1.24,
-                1.24,
-                1.24,
-                1.24,
-                1.24,
-                1.24,
-                1.24,
-                1.24,
-                1.24,
-                1.24,
-                1.24,
-                1.24,
-                1.24,
-                1.24,
-                1.24,
-                1.24,
-                1.24,
-                1.24,
-                1.24,
-                1.24,
-                1.24,
-                1.24,
-                1.24,
-                1.24
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22
             ]
         }
     },
@@ -1105,22 +1105,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS Status: Defensive (32/100). Momentum pushed the score to 32, signaling cautious sentiment. Macro Root: DXY (Dollar strength/Liquidity) rose to 97.6, tightening global conditions. While VIX (Fear index) fell to 16.34, widening credit spreads indicate underlying stress. Warning: The collapse in energy prices suggests significant demand risks or a slowdown. Action: Maintain a defensive posture; monitor if AI sector resilience can decouple from broader liquidity drains.",
+        "content": "GMS score 32 indicates a Defensive regime. Flat momentum pushed the score upward, but rising DXY (Dollar strength) restricts global liquidity. While a lower VIX (Fear index) suggests brief stabilization, widening high-yield spreads signal underlying credit stress. Strong AI demand provides a tactical cushion, yet the macro setup remains restrictive. Maintain a cautious stance and wait for a liquidity reversal before increasing risk exposure.",
         "reports": {
-            "JP": "GMS状況：守備的（32/100）。モメンタムがスコアを32に押し上げましたが、依然としてリスクオフの圏内です。マクロ要因：DXY（ドルの強さ/流動性）が97.6へ上昇し、世界的な流動性が低下しています。VIX（恐怖指数）は16.34へ低下したものの、信用スプレッドの拡大が潜在的リスクを示唆。警戒：エネルギー価格の急落は需要減退のサインです。結論：慎重な防御姿勢を維持しつつ、AI需要の底堅さがマクロの停滞を補えるかに注目してください。",
-            "EN": "GMS Status: Defensive (32/100). Momentum pushed the score to 32, signaling cautious sentiment. Macro Root: DXY (Dollar strength/Liquidity) rose to 97.6, tightening global conditions. While VIX (Fear index) fell to 16.34, widening credit spreads indicate underlying stress. Warning: The collapse in energy prices suggests significant demand risks or a slowdown. Action: Maintain a defensive posture; monitor if AI sector resilience can decouple from broader liquidity drains.",
-            "CN": "GMS状态：防御型 (32/100)。动能将得分推至32，显示市场依然处于谨慎的风险规避模式。宏观逻辑：DXY（美元强度/流动性）升至97.6，导致全球资本环境收紧。虽然VIX（恐慌指数）回落至16.34，但高收益债利差的扩大暗示了潜在的信贷压力。风险预警：能源价格（原油与天然气）的暴跌预示着需求端的显著放缓。结论：目前应保持防御姿态，关注AI等高需求板块能否在宏观流动性枯竭中维持独立增长。",
-            "ES": "Estado GMS: Defensivo (32/100). El momentum impulsó la puntuación a 32, indicando un sesgo de cautela. Raíz Macro: El DXY (fortaleza del dólar/liquidez) subió a 97.6, reduciendo la liquidez global. Aunque el VIX (índice de miedo) cayó a 16.34, los diferenciales de crédito sugieren tensión interna. Advertencia: La caída en energía (petróleo/gas) indica riesgos de demanda o desaceleración. Acción: Mantener postura defensiva; observar si la resiliencia en IA compensa la falta de liquidez global.",
-            "HI": "GMS स्थिति: रक्षात्मक (32/100)। मोमेंटम ने स्कोर को 32 तक पहुँचाया, जो बाजार में सावधानी का संकेत है। मैक्रो रूट: DXY (डॉलर मजबूती/तरलता) 97.6 पर चढ़ गया, जिससे वैश्विक तरलता कम हुई। हालाँकि VIX (डर सूचकांक) 16.34 तक गिरा, पर क्रेडिट स्प्रेड का बढ़ना आंतरिक तनाव दिखाता है। चेतावनी: ऊर्जा (तेल/गैस) की कीमतों में गिरावट मांग में कमी का संकेत है। कार्रवाई: रक्षात्मक रुख बनाए रखें; देखें कि क्या AI क्षेत्र की मजबूती तरलता की कमी को दूर कर सकती है।",
-            "ID": "Status GMS: Defensif (32/100). Momentum mendorong skor ke 32, menunjukkan sentimen pasar yang masih hati-hati. Akar Makro: DXY (kekuatan dolar/likuiditas) naik ke 97,6, memperketat kondisi global. Meskipun VIX (indeks ketakutan) turun ke 16,34, pelebaran spread kredit menandakan stres keuangan. Peringatan: Harga energi (Minyak/Gas) yang anjlok mengisyaratkan risiko perlambatan permintaan. Kesimpulan: Tetap defensif; pantau apakah ketahanan sektor AI mampu melawan pengetatan likuiditas dunia.",
-            "AR": "حالة GMS: دفاعي (32/100). دفع الزخم النتيجة إلى 32، مما يعكس استمرار حذر المستثمرين. الجذر الماكرو: ارتفع DXY (قوة الدولار/السيولة) إلى 97.6، مما قلص السيولة العالمية. رغم انخفاض VIX (مؤشر الخوف) إلى 16.34، إلا أن اتساع هوامش الائتمان يشير لضغوط مالية. تحذير: انهيار أسعار الطاقة (النفط والغاز) يوحي بمخاطر ضعف الطلب أو التباطؤ. الاستنتاج: الحفاظ على موقف دفاعي؛ مع مراقبة قدرة قطاع الذكاء الاصطناعي على الصمود أمام شح السيولة."
+            "JP": "GMSスコア32は「守備的」局面を示します。横ばいのモメンタムがスコアを押し上げましたが、DXY（ドル強さ）の上昇が流動性を抑制しています。VIX（恐怖指数）の低下は短期的な安定を示唆する一方、信用スプレッドの拡大はリスクを警告しています。AIセクターの好決算が下支えとなりますが、マクロ環境は依然として引き締まった状態です。流動性の改善を確認するまで、資本保護を優先し慎重な姿勢を維持すべきです。",
+            "EN": "GMS score 32 indicates a Defensive regime. Flat momentum pushed the score upward, but rising DXY (Dollar strength) restricts global liquidity. While a lower VIX (Fear index) suggests brief stabilization, widening high-yield spreads signal underlying credit stress. Strong AI demand provides a tactical cushion, yet the macro setup remains restrictive. Maintain a cautious stance and wait for a liquidity reversal before increasing risk exposure.",
+            "CN": "GMS分数为32，处于“防御”模式。平稳的动能将分数推高，但DXY（美元强度）的上涨持续抑制流动性。虽然VIX（恐慌指数）回落暗示短期情绪企稳，但信用利差的扩大警示潜在风险。尽管AI领域的强劲需求提供了战术性支撑，但整体宏观环境依然紧缩。建议投资者在流动性出现明确转机前保持谨慎，将资产保全置于首位，避免盲目追高，等待市场情绪与基本面的进一步协调。",
+            "ES": "El puntaje GMS de 32 indica un régimen Defensivo. El impulso plano empujó la puntuación al alza, pero la fortaleza del DXY (Dólar/Liquidez) limita el riesgo. Aunque la caída del VIX (Índice de miedo) sugiere estabilidad, el aumento de diferenciales advierte sobre el crédito. Los resultados en IA ofrecen un respiro, pero el entorno macro sigue ajustado. Se recomienda cautela y priorizar la preservación de capital hasta que la liquidez mejore, evitando movimientos agresivos en este entorno.",
+            "HI": "GMS स्कोर 32 'रक्षात्मक' शासन को दर्शाता है। फ्लैट मोमेंटम ने स्कोर को ऊपर धकेला, लेकिन बढ़ते DXY (डॉलर की मजबूती) ने लिक्विडिटी को सीमित रखा है। जबकि VIX (डर का सूचकांक) में गिरावट स्थिरता का संकेत देती है, बढ़ते क्रेडिट स्प्रेड जोखिम की चेतावनी देते हैं। AI क्षेत्र की मांग एक सहारा प्रदान करती है, लेकिन मैक्रो सेटअप अब भी संकुचित है। निवेशकों को सावधानी बरतनी चाहिए और लिक्विडिटी में सुधार होने तक पूंजी सुरक्षा को प्राथमिकता देनी चाहिए।",
+            "ID": "Skor GMS 32 menunjukkan rezim Defensif. Momentum yang mendatar mendorong skor naik, namun penguatan DXY (Kekuatan Dolar) membatasi likuiditas global. Meski penurunan VIX (Indeks Ketakutan) mengisyaratkan stabilitas singkat, pelebaran spread kredit memperingatkan risiko mendasar. Permintaan AI yang kuat memberikan bantalan taktis, namun kondisi makro tetap ketat. Tetaplah waspada dan prioritaskan pelestarian modal hingga ada tanda pembalikan likuiditas yang lebih jelas di pasar.",
+            "AR": "يشير سجل GMS البالغ 32 إلى نظام دفاعي. دفع الزخم المستقر السجل للأعلى، لكن قوة مؤشر DXY (قوة الدولار) تحد من السيولة. بينما يوحي تراجع VIX (مؤشر الخوف) باستقرار مؤقت، فإن اتساع فروق الائتمان ينذر بمخاطر خفية. توفر أرباح الذكاء الاصطناعي دعماً تكتيكياً، لكن المشهد الماكرو لا يزال متشدداً. يُنصح بالحذر وإعطاء الأولوية لحماية رأس المال حتى يتحسن وضع السيولة، مع مراقبة التحولات في عوائد السندات والائتمان بدقة."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-31T09:39:36Z",
-            "score": 29
-        },
         {
             "date": "2026-01-31T10:39:05Z",
             "score": 29
@@ -1356,6 +1352,10 @@
         {
             "date": "2026-02-02T23:40:38Z",
             "score": 32
+        },
+        {
+            "date": "2026-02-03T02:54:59Z",
+            "score": 32
         }
     ],
     "intelligence": {
@@ -1366,19 +1366,19 @@
                 "isoDate": "2026-02-02T22:19:37+00:00Z"
             },
             {
-                "title": "Trump says U.S. and India reached trade deal, will lower tariffs immediately",
-                "link": "https://www.cnbc.com/2026/02/02/trump-india-trade-deal-tariffs.html",
-                "isoDate": "2026-02-02T20:38:14+00:00Z"
+                "title": "'GameStop in 2026': How silver market has morphed into meme trading",
+                "link": "https://www.cnbc.com/2026/02/03/gamestop-in-2026-how-silver-market-has-morphed-into-meme-trading-.html",
+                "isoDate": "2026-02-03T02:24:07+00:00Z"
             },
             {
                 "title": "Elon Musk's SpaceX acquiring AI startup xAI ahead of potential IPO",
                 "link": "https://www.cnbc.com/2026/02/02/elon-musk-spacex-xai-ipo.html",
-                "isoDate": "2026-02-02T23:38:02+00:00Z"
+                "isoDate": "2026-02-02T23:45:55+00:00Z"
             },
             {
-                "title": "Friday's jobs report will be delayed because of the partial government shutdown",
-                "link": "https://www.cnbc.com/2026/02/02/fridays-jobs-report-will-be-delayed-because-of-the-partial-government-shutdown.html",
-                "isoDate": "2026-02-02T18:44:43+00:00Z"
+                "title": "Trump says U.S. and India reached trade deal, will lower tariffs immediately",
+                "link": "https://www.cnbc.com/2026/02/02/trump-india-trade-deal-tariffs.html",
+                "isoDate": "2026-02-02T20:38:14+00:00Z"
             },
             {
                 "title": "Investor Joe Terranova likes Merck despite pharmaceutical firm's move to lower drug price",
@@ -1386,62 +1386,62 @@
                 "isoDate": "2026-02-02T22:30:58+00:00Z"
             },
             {
-                "title": "Trump says DOJ should continue Fed Chair Powell probe 'to the end'",
-                "link": "https://www.cnbc.com/2026/02/02/trump-powell-pirro-warsh-fed-tillis.html",
-                "isoDate": "2026-02-02T23:24:20+00:00Z"
+                "title": "Friday's jobs report will be delayed because of the partial government shutdown",
+                "link": "https://www.cnbc.com/2026/02/02/fridays-jobs-report-will-be-delayed-because-of-the-partial-government-shutdown.html",
+                "isoDate": "2026-02-02T18:44:43+00:00Z"
             }
         ],
         "translations": {
             "JP": [
                 "パランティア、AIと防衛需要の力で第4四半期予測を上回る",
-                "トランプ氏、米印が貿易合意に達し、即時に関税を引き下げると発言",
+                "「2026年のゲームストップ」：銀市場はいかにミーム取引へと変貌したか",
                 "イーロン・マスク氏のスペースX、IPOの可能性を前にAIスタートアップxAIを買収",
-                "金曜日の雇用統計は、一部政府閉鎖のため延期される",
-                "投資家のジョー・テラノバ氏、製薬会社の薬価引き下げの動きにもかかわらずメルクを好む",
-                "トランプ氏、司法省にパウエルFRB議長捜査を「最後まで」続けるよう指示"
+                "トランプ氏、米印が貿易協定に達し、直ちに関税を引き下げると発言",
+                "投資家ジョー・テラノバ氏、製薬会社の薬価引き下げ方針にもかかわらずメルクに好感",
+                "一部政府閉鎖により、金曜日の雇用統計は延期される"
             ],
             "CN": [
-                "Palantir 凭借人工智能和国防需求第四季度业绩超预期",
-                "特朗普称美印达成贸易协议，将立即降低关税",
-                "埃隆·马斯克旗下 SpaceX 在潜在 IPO 前收购人工智能初创公司 xAI",
-                "由于政府部分停摆，周五的就业报告将推迟发布",
-                "投资者 Joe Terranova 尽管制药公司降低药品价格，仍看好默克",
-                "特朗普称司法部应“坚持到底”继续调查美联储主席鲍威尔"
+                "Palantir：人工智能和国防需求强劲，第四季度业绩超预期",
+                "“2026年的GameStop”：白银市场如何演变成模因交易",
+                "埃隆·马斯克旗下的SpaceX在潜在IPO前收购AI初创公司xAI",
+                "特朗普表示，美国和印度达成贸易协议，将立即降低关税",
+                "投资者Joe Terranova看好默克，尽管这家制药公司计划降低药品价格",
+                "由于部分政府停摆，周五的就业报告将延迟发布"
             ],
             "ES": [
                 "Palantir supera las estimaciones del cuarto trimestre gracias a la demanda de IA y defensa",
+                "«GameStop en 2026»: Cómo el mercado de la plata se ha transformado en comercio de memes",
+                "SpaceX de Elon Musk adquiere la startup de IA xAI antes de una posible OPV",
                 "Trump dice que EE.UU. e India alcanzaron un acuerdo comercial y reducirán aranceles de inmediato",
-                "SpaceX de Elon Musk adquiere la startup de IA xAI antes de una posible OPI",
-                "El informe de empleos del viernes se retrasará debido al cierre parcial del gobierno",
-                "Al inversor Joe Terranova le gusta Merck a pesar de que la farmacéutica reduzca el precio de los medicamentos",
-                "Trump dice que el DOJ debería continuar la investigación del presidente de la Fed, Powell, 'hasta el final'"
+                "El inversor Joe Terranova prefiere Merck a pesar de la medida de la farmacéutica de reducir el precio de los medicamentos",
+                "El informe de empleo del viernes se retrasará debido al cierre parcial del gobierno"
             ],
             "HI": [
-                "पैलान्टिर ने AI और रक्षा मांग की मजबूती पर चौथी तिमाही के अनुमानों को पार किया",
-                "ट्रम्प ने कहा कि अमेरिका और भारत ने व्यापार समझौता किया, तुरंत टैरिफ कम करेंगे",
-                "एलन मस्क की स्पेसएक्स संभावित आईपीओ से पहले AI स्टार्टअप xAI का अधिग्रहण कर रही है",
-                "आंशिक सरकारी शटडाउन के कारण शुक्रवार की नौकरियों की रिपोर्ट में देरी होगी",
-                "निवेशक जो टेरानोवा, फार्मास्युटिकल फर्म के दवा की कीमत कम करने के बावजूद मर्क को पसंद करते हैं",
-                "ट्रम्प ने कहा कि न्याय विभाग को फेड अध्यक्ष पॉवेल की जांच 'अंत तक' जारी रखनी चाहिए"
+                "पालान्टिर ने AI और रक्षा की मांग के दम पर चौथी तिमाही के अनुमानों को पार किया",
+                "“2026 में गेमस्टॉप”: चांदी का बाजार मेम ट्रेडिंग में कैसे बदल गया है",
+                "एलन मस्क की स्पेसएक्स, संभावित आईपीओ से पहले AI स्टार्टअप xAI का अधिग्रहण करेगी",
+                "ट्रम्प ने कहा, अमेरिका और भारत ने व्यापार सौदा किया, तुरंत टैरिफ कम करेंगे",
+                "निवेशक जो टेरानोवा, दवा कंपनी द्वारा दवा की कीमत कम करने के कदम के बावजूद मर्क को पसंद करते हैं",
+                "आंशिक सरकारी शटडाउन के कारण शुक्रवार की नौकरी रिपोर्ट में देरी होगी"
             ],
             "ID": [
                 "Palantir mengalahkan perkiraan kuartal keempat berkat permintaan AI dan pertahanan",
+                "“GameStop pada 2026”: Bagaimana pasar perak telah berubah menjadi perdagangan meme",
+                "SpaceX Elon Musk mengakuisisi startup AI xAI menjelang potensi IPO",
                 "Trump mengatakan AS dan India mencapai kesepakatan dagang, akan segera menurunkan tarif",
-                "SpaceX milik Elon Musk mengakuisisi startup AI xAI menjelang potensi IPO",
-                "Laporan pekerjaan hari Jumat akan tertunda karena penutupan pemerintah parsial",
-                "Investor Joe Terranova menyukai Merck meskipun perusahaan farmasi menurunkan harga obat",
-                "Trump mengatakan DOJ harus melanjutkan penyelidikan Ketua The Fed Powell 'sampai akhir'"
+                "Investor Joe Terranova menyukai Merck meskipun langkah perusahaan farmasi menurunkan harga obat",
+                "Laporan pekerjaan hari Jumat akan tertunda karena penutupan pemerintah parsial"
             ],
             "AR": [
-                "بالانتير تتجاوز تقديرات الربع الرابع بفضل الطلب على الذكاء الاصطناعي والدفاع",
-                "ترامب يقول إن الولايات المتحدة والهند توصلتا إلى اتفاق تجاري وسيتم تخفيض التعريفات الجمركية فوراً",
+                "بلانتير تتجاوز تقديرات الربع الرابع بفضل قوة الذكاء الاصطناعي والطلب الدفاعي",
+                "\"جيم ستوب في 2026\": كيف تحول سوق الفضة إلى تداول الميمات",
                 "سبيس إكس التابعة لإيلون ماسك تستحوذ على شركة الذكاء الاصطناعي الناشئة xAI قبل طرح عام أولي محتمل",
-                "تقرير الوظائف يوم الجمعة سيتأخر بسبب الإغلاق الحكومي الجزئي",
-                "المستثمر جو تيرانوفا يفضل شركة ميرك على الرغم من تحرك الشركة الدوائية لخفض أسعار الأدوية",
-                "ترامب يقول إن وزارة العدل يجب أن تواصل التحقيق مع رئيس الاحتياطي الفيدرالي باول \"حتى النهاية\""
+                "ترامب: الولايات المتحدة والهند توصلتا إلى اتفاق تجاري وسيتم تخفيض الرسوم الجمركية فورًا",
+                "المستثمر جو تيرانوفا يفضل شركة ميرك على الرغم من تحرك شركة الأدوية لخفض أسعار الأدوية",
+                "سيتم تأخير تقرير الوظائف ليوم الجمعة بسبب الإغلاق الحكومي الجزئي"
             ]
         },
-        "last_updated": "2026-02-02T23:40:38.051231+00:00Z"
+        "last_updated": "2026-02-03T02:54:59.048463+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
