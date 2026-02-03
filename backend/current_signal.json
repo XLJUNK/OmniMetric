@@ -1,9 +1,9 @@
 {
-    "last_updated": "2026-02-03T10:57:00.395757+00:00",
-    "last_successful_update": "2026-02-03T10:57:00.395764+00:00",
-    "gms_score": 33,
+    "last_updated": "2026-02-03T11:47:20.145515+00:00",
+    "last_successful_update": "2026-02-03T11:47:20.145522+00:00",
+    "gms_score": 30,
     "sector_scores": {
-        "STOCKS": 45,
+        "STOCKS": 35,
         "CRYPTO": 25,
         "FOREX": 40,
         "COMMODITIES": 60
@@ -218,11 +218,11 @@
             ]
         },
         "VIX": {
-            "price": 16.25,
+            "price": 16.36,
             "prev_price": 16.34,
-            "daily_chg": -0.55,
-            "change_percent": -0.61,
-            "trend": "DOWN",
+            "daily_chg": 0.12,
+            "change_percent": 0.06,
+            "trend": "UP",
             "sparkline": [
                 14.51,
                 14.9,
@@ -245,7 +245,7 @@
                 16.88,
                 17.44,
                 16.34,
-                16.25
+                16.36
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 78017.3,
+            "price": 78173.8,
             "prev_price": 78688.77,
-            "daily_chg": -0.85,
-            "change_percent": -7.26,
+            "daily_chg": -0.65,
+            "change_percent": -7.08,
             "trend": "DOWN",
             "sparkline": [
                 95321.78,
@@ -604,14 +604,14 @@
                 78621.12,
                 76974.45,
                 78688.77,
-                78017.3
+                78173.8
             ]
         },
         "ETH": {
-            "price": 2277.37,
+            "price": 2275.88,
             "prev_price": 2344.36,
-            "daily_chg": -2.86,
-            "change_percent": -15.73,
+            "daily_chg": -2.92,
+            "change_percent": -15.78,
             "trend": "DOWN",
             "sparkline": [
                 3322.1,
@@ -635,14 +635,14 @@
                 2445.09,
                 2267.96,
                 2344.36,
-                2277.37
+                2275.88
             ]
         },
         "SOL": {
-            "price": 102.7,
+            "price": 103.11,
             "prev_price": 104.47,
-            "daily_chg": -1.69,
-            "change_percent": -12.49,
+            "daily_chg": -1.31,
+            "change_percent": -12.15,
             "trend": "DOWN",
             "sparkline": [
                 145.36,
@@ -666,7 +666,7 @@
                 105.44,
                 100.85,
                 104.47,
-                102.7
+                103.11
             ]
         },
         "DXY": {
@@ -701,10 +701,10 @@
             ]
         },
         "USDJPY": {
-            "price": 155.93,
+            "price": 155.91,
             "prev_price": 155.2,
-            "daily_chg": 0.47,
-            "change_percent": 2.28,
+            "daily_chg": 0.45,
+            "change_percent": 2.27,
             "trend": "UP",
             "sparkline": [
                 156.99,
@@ -728,14 +728,14 @@
                 153.1,
                 153.16,
                 155.2,
-                155.93
+                155.91
             ]
         },
         "EURUSD": {
             "price": 1.18,
             "prev_price": 1.18,
-            "daily_chg": -0.48,
-            "change_percent": -1.87,
+            "daily_chg": -0.47,
+            "change_percent": -1.86,
             "trend": "DOWN",
             "sparkline": [
                 1.17,
@@ -763,10 +763,10 @@
             ]
         },
         "USDINR": {
-            "price": 90.19,
+            "price": 90.26,
             "prev_price": 91.69,
-            "daily_chg": -1.63,
-            "change_percent": -1.47,
+            "daily_chg": -1.56,
+            "change_percent": -1.4,
             "trend": "DOWN",
             "sparkline": [
                 90.01,
@@ -790,7 +790,7 @@
                 92.04,
                 91.78,
                 91.69,
-                90.19
+                90.26
             ]
         },
         "USDSAR": {
@@ -825,10 +825,10 @@
             ]
         },
         "GOLD": {
-            "price": 4939.2,
+            "price": 4934.3,
             "prev_price": 4622.5,
-            "daily_chg": 6.85,
-            "change_percent": -6.84,
+            "daily_chg": 6.75,
+            "change_percent": -6.93,
             "trend": "UP",
             "sparkline": [
                 4314.4,
@@ -852,14 +852,14 @@
                 5318.4,
                 4713.9,
                 4622.5,
-                4939.2
+                4934.3
             ]
         },
         "OIL": {
-            "price": 62.25,
+            "price": 62.2,
             "prev_price": 62.14,
-            "daily_chg": 0.18,
-            "change_percent": -1.52,
+            "daily_chg": 0.1,
+            "change_percent": -1.6,
             "trend": "UP",
             "sparkline": [
                 57.32,
@@ -883,14 +883,14 @@
                 65.42,
                 65.21,
                 62.14,
-                62.25
+                62.2
             ]
         },
         "COPPER": {
-            "price": 6.02,
+            "price": 6.03,
             "prev_price": 5.8,
-            "daily_chg": 3.74,
-            "change_percent": 2.14,
+            "daily_chg": 3.96,
+            "change_percent": 2.36,
             "trend": "UP",
             "sparkline": [
                 5.64,
@@ -914,15 +914,15 @@
                 6.18,
                 5.9,
                 5.8,
-                6.02
+                6.03
             ]
         },
         "NATGAS": {
-            "price": 3.24,
+            "price": 3.22,
             "prev_price": 3.24,
-            "daily_chg": 0.15,
-            "change_percent": -56.54,
-            "trend": "UP",
+            "daily_chg": -0.4,
+            "change_percent": -56.78,
+            "trend": "DOWN",
             "sparkline": [
                 3.62,
                 3.52,
@@ -945,7 +945,7 @@
                 3.92,
                 4.35,
                 3.24,
-                3.24
+                3.22
             ]
         },
         "MOVE": {
@@ -1105,22 +1105,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS 33 maintains a Defensive regime, though upward momentum pushed the score from 28, signaling a sentiment bottom. DXY (Dollar strength) remains stable, while a slight VIX (Fear index) decline eased immediate panic. Strong tech earnings provide a tailwind, but a widening HY Spread (Credit risk) warrants caution. Remain defensive until the score clears 40 to signal a neutral shift.",
+        "content": "[GMS Status] GMS is 30/100, maintaining a Defensive regime. Momentum pushed the score down from 33. [Macro Root] DXY (Dollar strength) at 97.63 and rising HY spreads signal tightening liquidity; VIX (Volatility/Fear) remains elevated. [Risk/Reward] Rising yields pressure markets, yet the US-India trade deal boosts Nifty significantly. [Conclusion] Stay defensive. Await a cooling DXY or VIX drop before increasing exposure.",
         "reports": {
-            "JP": "GMSスコアは33で「守備的」レジームにありますが、上昇モメンタムがスコアを28から押し上げ、市場の底打ちを示唆しています。DXY（ドル強弱）が安定し、VIX（恐怖指数）の低下がパニックを抑制。テック企業の好決算が下値を支える一方、HYスプレッド（信用リスク）の拡大が上値を抑える要因です。40突破の兆しを注視しつつ、慎重なポジション管理を維持すべき局面です。",
-            "EN": "GMS 33 maintains a Defensive regime, though upward momentum pushed the score from 28, signaling a sentiment bottom. DXY (Dollar strength) remains stable, while a slight VIX (Fear index) decline eased immediate panic. Strong tech earnings provide a tailwind, but a widening HY Spread (Credit risk) warrants caution. Remain defensive until the score clears 40 to signal a neutral shift.",
-            "CN": "GMS得分33显示处于防御格局，但上升动能已将分数从28推高，暗示市场情绪正在筑底回升。DXY（美元强度）维持稳定，而VIX（恐慌指数）的微幅回落缓解了紧迫压力。尽管科技股强劲财报提供了支撑，但高收益债利差（信用风险）的走扩仍是隐患。在得分突破40进入中性区间前，建议继续保持谨慎，关注信用市场波动带来的限制。",
-            "ES": "El GMS de 33 indica un régimen defensivo, pero el impulso alcista empujó la puntuación desde 28, señalando una estabilización. El DXY (fortaleza del dólar) se mantiene constante y el VIX (índice de miedo) bajó ligeramente, reduciendo el pánico. Aunque los resultados tecnológicos positivos ayudan, el aumento en el diferencial HY (riesgo crediticio) sugiere precaución. Mantenga una postura defensiva hasta que el indicador supere 40 para un cambio a neutral.",
-            "HI": "GMS स्कोर 33 'रक्षात्मक' शासन का संकेत देता है, लेकिन सकारात्मक मोमेंटम ने स्कोर को 28 से ऊपर धकेला है, जो बाजार के स्थिर होने का संकेत है। DXY (डॉलर की मजबूती) स्थिर है और VIX (डर का सूचकांक) में गिरावट ने घबराहट को कम किया है। तकनीकी क्षेत्र की कमाई से सहारा मिल रहा है, फिर भी बढ़ता HY स्प्रेड (क्रेडिट जोखिम) एक चेतावनी है। 40 का स्तर पार करने तक सतर्क रहें और तटस्थ बदलाव के लिए बाजार की निगरानी जारी रखें।",
-            "ID": "Skor GMS 33 menunjukkan posisi defensif, namun momentum ke atas mendorong skor dari 28, menandakan sentimen mulai stabil. DXY (kekuatan Dolar) yang stabil dan penurunan VIX (indeks ketakutan) meredakan tekanan likuiditas. Meskipun laba teknologi kuat memberi dorongan, pelebaran spread HY (risiko kredit) tetap menjadi hambatan. Tetap waspada hingga skor melampaui 40 untuk mengonfirmasi transisi menuju zona netral.",
-            "AR": "يشير مؤشر GMS عند 33 إلى نظام دفاعي، لكن الزخم الصعودي دفع النتيجة من 28، مما يعكس استقراراً في المعنويات. استقرار مؤشر DXY (قوة الدولار) وتراجع VIX (مؤشر الخوف) قلل من حدة التوتر. بينما توفر أرباح التكنولوجيا دعماً ملحوظاً، فإن اتساع هوامش السندات عالية العائد (مخاطر الائتمان) يمثل تحذيراً. يجب البقاء في وضعية دفاعية حتى اختراق حاجز 40 للانتقال للحياد ومراقبة استدامة هذا التعافي."
+            "JP": "[GMS状況] スコアは30で「守備的」体制。33からの低下が下押し圧力を示唆します。[マクロ要因] DXY（ドル強さ）上昇とHYスプレッド拡大は流動性低下を意味し、VIX（恐怖指数）も高止まりです。[リスク/警告] 利回り上昇が重石ですが、米印貿易協定はNIFTYの追い風です。[結論] 慎重姿勢を維持。ドルの沈静化やVIX低下を確認するまで現金を確保すべき局面です。",
+            "EN": "[GMS Status] GMS is 30/100, maintaining a Defensive regime. Momentum pushed the score down from 33. [Macro Root] DXY (Dollar strength) at 97.63 and rising HY spreads signal tightening liquidity; VIX (Volatility/Fear) remains elevated. [Risk/Reward] Rising yields pressure markets, yet the US-India trade deal boosts Nifty significantly. [Conclusion] Stay defensive. Await a cooling DXY or VIX drop before increasing exposure.",
+            "CN": "[GMS 状态] 得分为 30/100，处于“防御”阶段。势头从 33 下滑反映压力增加。[宏观根源] DXY（美元走强）维持高位，高收益债利差扩大显示流动性收紧，VIX（恐慌指数）依然高企。[风险/警告] 尽管利率压制资产，但美印贸易协议显著提振了印度 Nifty 指数。[结论] 建议保持高现金比例。在美元走弱或 VIX 回落前，应维持守势，避免盲目抄底。",
+            "ES": "[GMS Status] El puntaje es 30/100, manteniendo un régimen Defensivo. El impulso bajista desde 33 indica debilidad. [Macro Root] El DXY (fortaleza del dólar) y el alza en diferenciales HY sugieren baja liquidez; el VIX (miedo) sigue alto. [Riesgo/Advertencia] Los rendimientos presionan, pero el pacto EE.UU.-India impulsa al Nifty. [Conclusión] Mantenga cautela y liquidez. Espere a que el DXY se estabilice o el VIX baje antes de asumir más riesgos.",
+            "HI": "[GMS स्थिति] स्कोर 30/100 है, जो 'रक्षात्मक' मोड को दर्शाता है। 33 से गिरावट कमजोरी का संकेत है। [मैक्रो रूट] DXY (डॉलर की मजबूती) और HY स्प्रेड में वृद्धि तरलता में कमी दिखाती है; VIX (डर) ऊपर बना हुआ है। [जोखिम/चेतावनी] बढ़ती दरें दबाव डाल रही हैं, लेकिन अमेरिका-भारत व्यापार समझौता निफ्टी के लिए सकारात्मक है। [निष्कर्ष] वर्तमान में नकदी बचाकर रखें। जोखिम बढ़ाने से पहले डॉलर (DXY) की मजबूती या VIX के गिरने का इंतज़ार करना ही सही होगा।",
+            "ID": "[Status GMS] Skor 30/100, tetap dalam rezim Defensif. Momentum turun dari 33 mencerminkan tekanan. [Macro Root] DXY (Kekuatan Dolar) naik dan HY spread melebar tanda likuiditas ketat; VIX (Ketakutan) tetap tinggi. [Risiko/Peringatan] Imbal hasil tinggi menekan aset, namun kesepakatan dagang AS-India memicu penguatan Nifty. [Kesimpulan] Pertahankan posisi defensif. Tunggu penurunan DXY atau VIX sebelum menambah eksposur risiko di pasar global.",
+            "AR": "[حالة GMS] السجل 30/100، مما يبقينا في نظام دفاعي. الزخم المتراجع من 33 يعكس ضغوطًا. [الجذر الماكرو] ارتفاع DXY (قوة الدولار) واتساع هوامش HY يشير لضيق السيولة؛ VIX (الخوف) يظل مرتفعًا. [المخاطر/التنبيه] رغم ضغط العوائد، يوفر الاتفاق التجاري بين أمريكا والهند دفعة لمؤشر Nifty. [الخلاصة] التزم بالحذر مع سيولة عالية. انتظر استقرار الدولار أو تراجع VIX قبل التحول من الموقف الدفاعي الحالي لزيادة الاستثمار."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-31T17:36:00Z",
-            "score": 30
-        },
         {
             "date": "2026-01-31T18:49:04Z",
             "score": 30
@@ -1356,92 +1352,96 @@
         {
             "date": "2026-02-03T10:57:00Z",
             "score": 33
+        },
+        {
+            "date": "2026-02-03T11:47:20Z",
+            "score": 30
         }
     ],
     "intelligence": {
         "news": [
+            {
+                "title": "Trump refuses to be outdone by Europe, signing his own U.S.-India trade deal",
+                "link": "https://www.cnbc.com/2026/02/03/trump-us-india-trade-deal-europe-india-deal-compared.html",
+                "isoDate": "2026-02-03T10:36:45+00:00Z"
+            },
+            {
+                "title": "Merck tops quarterly estimates, posts modest 2026 guidance as generic competition looms",
+                "link": "https://www.cnbc.com/2026/02/03/merck-mrk-earnings-q4-2025.html",
+                "isoDate": "2026-02-03T11:31:59+00:00Z"
+            },
+            {
+                "title": "PepsiCo's drink sales are improving, and it's planning to cut snack prices",
+                "link": "https://www.cnbc.com/2026/02/03/pepsico-pep-q4-2025-earnings.html",
+                "isoDate": "2026-02-03T11:41:39+00:00Z"
+            },
             {
                 "title": "Palantir surges 10% after beating earnings estimates. Here's what's happening",
                 "link": "https://www.cnbc.com/2026/02/03/palantir-stock-earnings.html",
                 "isoDate": "2026-02-03T10:15:10+00:00Z"
             },
             {
-                "title": "Rare earth stocks jump after Trump launches $12 billion critical minerals stockpile",
-                "link": "https://www.cnbc.com/2026/02/03/rare-earths-stocks-trump-critical-minerals-stockpile-project-vault.html",
-                "isoDate": "2026-02-03T10:29:39+00:00Z"
+                "title": "Retail traders aren't giving up on 'SLV' even after silver's plunge",
+                "link": "https://www.cnbc.com/2026/02/02/retail-traders-arent-giving-up-on-slv-after-silvers-plunge.html",
+                "isoDate": "2026-02-02T21:16:43+00:00Z"
             },
             {
-                "title": "Gold and silver rebound, pulling global mining stocks and precious metal ETFs higher",
-                "link": "https://www.cnbc.com/2026/02/03/gold-and-silver-rebound-after-historic-wipeout-as-analysts-say-thematic-drivers-stay-intact-.html",
-                "isoDate": "2026-02-03T10:16:59+00:00Z"
-            },
-            {
-                "title": "Elon Musk's SpaceX acquiring AI startup xAI ahead of potential IPO",
-                "link": "https://www.cnbc.com/2026/02/02/elon-musk-spacex-xai-ipo.html",
-                "isoDate": "2026-02-02T23:45:55+00:00Z"
-            },
-            {
-                "title": "Investor Joe Terranova likes Merck despite pharmaceutical firm's move to lower drug price",
-                "link": "https://www.cnbc.com/2026/02/02/investor-joe-terranova-likes-merck-despite-move-to-lower-januvia-price-.html",
-                "isoDate": "2026-02-02T22:30:58+00:00Z"
-            },
-            {
-                "title": "Jim Cramer says 'prisoners of pessimism' will not make money in this stock market",
-                "link": "https://www.cnbc.com/2026/02/02/jim-cramer-prisoners-of-pessimism-will-not-make-money.html",
-                "isoDate": "2026-02-02T23:11:09+00:00Z"
+                "title": "House hardliners complicate ending government shutdown as Speaker Johnson moves ahead",
+                "link": "https://www.cnbc.com/2026/02/02/government-shutdown-house-mike-johnson.html",
+                "isoDate": "2026-02-03T01:16:20+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "パランティア、決算予想を上回り10％急騰。その理由はこちら",
-                "トランプ氏、120億ドルの重要鉱物備蓄を開始、レアアース株が急騰",
-                "金と銀が反発、世界の鉱業株と貴金属ETFを押し上げる",
-                "イーロン・マスク氏のSpaceX、IPOの可能性を前にAI新興企業xAIを買収",
-                "投資家のジョー・テラノバ氏、製薬会社の薬価引き下げにもかかわらずメルクを好む",
-                "ジム・クレイマー氏、「悲観論の囚人」はこの株式市場で儲からないと述べる"
+                "トランプ氏、欧州に負けじとインドとの独自の貿易協定に署名",
+                "メルク、四半期予想を上回るも、ジェネリック医薬品の競争が迫る中、2026年のガイダンスは控えめ",
+                "ペプシコ、飲料販売は改善、スナック菓子の値下げを計画",
+                "パランティア、決算予想を上回り10%急騰。その背景は？",
+                "銀価格急落後も、個人投資家は「SLV」への投資を諦めず",
+                "ジョンソン下院議長が進める中、強硬派が政府閉鎖解除を複雑化"
             ],
             "CN": [
-                "Palantir 财报超预期，股价飙升 10%，原因如下",
-                "特朗普启动 120 亿美元关键矿产储备，稀土股票大涨",
-                "黄金和白银反弹，带动全球矿业股票和贵金属 ETF 上涨",
-                "埃隆·马斯克旗下 SpaceX 拟在 IPO 前收购 AI 初创公司 xAI",
-                "投资者 Joe Terranova 尽管药企拟降药价，仍看好默克",
-                "Jim Cramer 表示，“悲观主义的囚徒”在本轮股市中赚不到钱"
+                "特朗普拒绝被欧洲超越，签署自己的美印贸易协定",
+                "默克药业季度业绩超预期，但面临仿制药竞争，2026年指引保守",
+                "百事公司饮料销量回升，并计划削减零食价格",
+                "Palantir 财报超预期，股价飙升10%。发生了什么？",
+                "白银暴跌后，散户交易者仍不放弃 \"SLV\"",
+                "强硬派令政府停摆僵局复杂化，而众议长约翰逊仍在推进"
             ],
             "ES": [
-                "Palantir se dispara un 10% tras superar las estimaciones de ganancias. Esto es lo que está sucediendo",
-                "Las acciones de tierras raras se disparan después de que Trump lanzara un plan de reserva de minerales críticos de 12 mil millones de dólares",
-                "El oro y la plata se recuperan, impulsando al alza las acciones mineras globales y los ETF de metales preciosos",
-                "SpaceX de Elon Musk adquiere la startup de IA xAI antes de una posible IPO",
-                "Al inversor Joe Terranova le gusta Merck a pesar de que la farmacéutica planea bajar el precio de los medicamentos",
-                "Jim Cramer dice que los 'prisioneros del pesimismo' no ganarán dinero en este mercado bursátil"
+                "Trump se niega a ser superado por Europa y firma su propio acuerdo comercial EE.UU.-India",
+                "Merck supera las estimaciones trimestrales, publica una modesta guía para 2026 ante la inminente competencia de genéricos",
+                "Las ventas de bebidas de PepsiCo mejoran y planea reducir los precios de los snacks",
+                "Palantir se dispara un 10% tras superar las estimaciones de beneficios. Esto es lo que está pasando",
+                "Los operadores minoristas no renuncian a 'SLV' a pesar de la caída de la plata",
+                "Los sectores más duros de la Cámara complican el fin del cierre del gobierno mientras el presidente Johnson avanza"
             ],
             "HI": [
-                "पालान्टिर कमाई के अनुमानों को पार करने के बाद 10% उछला। यहाँ क्या हो रहा है",
-                "ट्रम्प द्वारा $12 बिलियन की महत्वपूर्ण खनिज भंडार शुरू करने के बाद दुर्लभ पृथ्वी स्टॉक में उछाल",
-                "सोना और चांदी में उछाल, वैश्विक खनन स्टॉक और कीमती धातु ईटीएफ को ऊपर ले जा रहे हैं",
-                "एलोन मस्क की स्पेसएक्स संभावित आईपीओ से पहले एआई स्टार्टअप xAI का अधिग्रहण कर रही है",
-                "निवेशक जो टेरानोवा को मर्क पसंद है, दवा कंपनी द्वारा दवा की कीमत कम करने के बावजूद",
-                "जिम क्रैमर कहते हैं कि 'निराशावाद के कैदी' इस शेयर बाजार में पैसा नहीं कमाएंगे"
+                "ट्रम्प यूरोप से पिछड़ने से इनकार, अपने स्वयं के अमेरिका-भारत व्यापार समझौते पर हस्ताक्षर किए",
+                "मर्क ने तिमाही अनुमानों को पीछे छोड़ा, जेनेरिक प्रतिस्पर्धा के मंडराने के कारण 2026 के लिए मामूली मार्गदर्शन पोस्ट किया",
+                "पेप्सिको की पेय बिक्री में सुधार हो रहा है, और यह स्नैक की कीमतें घटाने की योजना बना रहा है",
+                "पालंतिर की कमाई का अनुमान पार करने के बाद 10% की उछाल। क्या हो रहा है",
+                "चांदी की गिरावट के बाद भी खुदरा व्यापारी 'SLV' को नहीं छोड़ रहे हैं",
+                "स्पीकर जॉनसन के आगे बढ़ने के साथ ही कट्टरपंथी सरकारी शटडाउन को समाप्त करने को जटिल बना रहे हैं"
             ],
             "ID": [
-                "Palantir melonjak 10% setelah mengalahkan estimasi pendapatan. Inilah yang terjadi",
-                "Saham tanah jarang melonjak setelah Trump meluncurkan cadangan mineral kritis senilai $12 miliar",
-                "Emas dan perak rebound, menarik saham pertambangan global dan ETF logam mulia lebih tinggi",
-                "SpaceX milik Elon Musk mengakuisisi startup AI xAI menjelang potensi IPO",
-                "Investor Joe Terranova menyukai Merck meskipun perusahaan farmasi bergerak untuk menurunkan harga obat",
-                "Jim Cramer mengatakan 'tawanan pesimisme' tidak akan menghasilkan uang di pasar saham ini"
+                "Trump menolak kalah dari Eropa, menandatangani perjanjian dagang AS-India sendiri",
+                "Merck lampaui perkiraan kuartalan, berikan panduan 2026 yang moderat seiring ancaman persaingan generik",
+                "Penjualan minuman PepsiCo membaik, dan berencana memotong harga camilan",
+                "Palantir melonjak 10% setelah mengalahkan perkiraan pendapatan. Inilah yang terjadi",
+                "Pedagang ritel tidak menyerah pada 'SLV' bahkan setelah perak anjlok",
+                "Kaum garis keras DPR mempersulit pengakhiran penutupan pemerintah saat Ketua Johnson bergerak maju"
             ],
             "AR": [
-                "بالانتير ترتفع 10٪ بعد تجاوز تقديرات الأرباح. إليك ما يحدث",
-                "أسهم المعادن الأرضية النادرة تقفز بعد إطلاق ترامب مخزونًا للمعادن الحيوية بقيمة 12 مليار دولار",
-                "الذهب والفضة يتعافيان، مما يدفع أسهم التعدين العالمية وصناديق الاستثمار المتداولة للمعادن الثمينة إلى الارتفاع",
-                "سبيس إكس التابعة لإيلون ماسك تستحوذ على شركة ناشئة في مجال الذكاء الاصطناعي xAI قبل طرح عام أولي محتمل",
-                "المستثمر جو تييرانوفا معجب بشركة ميرك على الرغم من تحرك شركة الأدوية لخفض أسعار الأدوية",
-                "يقول جيم كرامر إن \"سجناء التشاؤم\" لن يكسبوا المال في سوق الأسهم هذا"
+                "ترامب يرفض أن تتفوق عليه أوروبا، ويوقع اتفاقية تجارية أمريكية هندية خاصة به",
+                "ميرك تتجاوز تقديرات الربع سنوي، وتنشر توجيهات متواضعة لعام 2026 مع اقتراب المنافسة من الأدوية الجنيسة",
+                "مبيعات مشروبات بيبسيكو تتحسن، وتخطط لخفض أسعار الوجبات الخفيفة",
+                "بالانتير تقفز 10% بعد تجاوز تقديرات الأرباح. إليك ما يحدث",
+                "تجار التجزئة لا يتخلون عن \"SLV\" حتى بعد هبوط الفضة",
+                "المتشددون في مجلس النواب يعقدون إنهاء الإغلاق الحكومي بينما يتقدم الرئيس جونسون"
             ]
         },
-        "last_updated": "2026-02-03T10:57:00.395250+00:00Z"
+        "last_updated": "2026-02-03T11:47:20.145044+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
