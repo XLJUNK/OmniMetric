@@ -1,9 +1,9 @@
 {
-    "last_updated": "2026-02-03T14:59:11.717806+00:00",
-    "last_successful_update": "2026-02-03T14:59:11.717813+00:00",
-    "gms_score": 34,
+    "last_updated": "2026-02-03T16:01:23.546126+00:00",
+    "last_successful_update": "2026-02-03T16:01:23.546133+00:00",
+    "gms_score": 32,
     "sector_scores": {
-        "STOCKS": 50,
+        "STOCKS": 45,
         "CRYPTO": 25,
         "FOREX": 40,
         "COMMODITIES": 60
@@ -84,13 +84,12 @@
             ]
         },
         "HY_SPREAD": {
-            "price": 2.88,
-            "prev_price": 2.8,
-            "daily_chg": 2.86,
-            "change_percent": 2.86,
+            "price": 2.81,
+            "prev_price": 2.88,
+            "daily_chg": -2.43,
+            "change_percent": -2.43,
             "trend": "CALM",
             "sparkline": [
-                2.83,
                 2.84,
                 2.84,
                 2.86,
@@ -119,7 +118,8 @@
                 2.72,
                 2.77,
                 2.8,
-                2.88
+                2.88,
+                2.81
             ]
         },
         "NFCI": {
@@ -218,11 +218,11 @@
             ]
         },
         "VIX": {
-            "price": 16.32,
+            "price": 17.26,
             "prev_price": 16.34,
-            "daily_chg": -0.12,
-            "change_percent": -0.18,
-            "trend": "DOWN",
+            "daily_chg": 5.63,
+            "change_percent": 5.57,
+            "trend": "UP",
             "sparkline": [
                 14.51,
                 14.9,
@@ -245,7 +245,7 @@
                 16.88,
                 17.44,
                 16.34,
-                16.32
+                17.26
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
@@ -360,10 +360,10 @@
             ]
         },
         "SPY": {
-            "price": 693.9,
+            "price": 692.97,
             "prev_price": 695.41,
-            "daily_chg": -0.22,
-            "change_percent": -0.22,
+            "daily_chg": -0.35,
+            "change_percent": -0.35,
             "trend": "DOWN",
             "sparkline": [
                 683.17,
@@ -387,14 +387,14 @@
                 694.04,
                 691.97,
                 695.41,
-                693.9
+                692.97
             ]
         },
         "TNX": {
-            "price": 4.29,
+            "price": 4.28,
             "prev_price": 4.28,
-            "daily_chg": 0.35,
-            "change_percent": 0.92,
+            "daily_chg": 0.21,
+            "change_percent": 0.78,
             "trend": "UP",
             "sparkline": [
                 4.19,
@@ -418,14 +418,14 @@
                 4.23,
                 4.24,
                 4.28,
-                4.29
+                4.28
             ]
         },
         "QQQ": {
-            "price": 621.36,
+            "price": 620.32,
             "prev_price": 626.14,
-            "daily_chg": -0.76,
-            "change_percent": -1.87,
+            "daily_chg": -0.93,
+            "change_percent": -2.04,
             "trend": "DOWN",
             "sparkline": [
                 613.12,
@@ -449,14 +449,14 @@
                 629.43,
                 621.87,
                 626.14,
-                621.36
+                620.32
             ]
         },
         "IWM": {
-            "price": 263.24,
+            "price": 264.38,
             "prev_price": 262.18,
-            "daily_chg": 0.41,
-            "change_percent": -0.02,
+            "daily_chg": 0.84,
+            "change_percent": 0.41,
             "trend": "UP",
             "sparkline": [
                 248.78,
@@ -480,14 +480,14 @@
                 263.37,
                 259.65,
                 262.18,
-                263.24
+                264.38
             ]
         },
         "RSP": {
-            "price": 199.39,
+            "price": 199.65,
             "prev_price": 199.1,
-            "daily_chg": 0.15,
-            "change_percent": 0.57,
+            "daily_chg": 0.27,
+            "change_percent": 0.7,
             "trend": "UP",
             "sparkline": [
                 192.86,
@@ -511,14 +511,14 @@
                 198.52,
                 198.08,
                 199.1,
-                199.39
+                199.65
             ]
         },
         "HYG": {
-            "price": 80.71,
+            "price": 80.68,
             "prev_price": 80.77,
-            "daily_chg": -0.07,
-            "change_percent": 0.09,
+            "daily_chg": -0.12,
+            "change_percent": 0.04,
             "trend": "DOWN",
             "sparkline": [
                 80.27,
@@ -542,7 +542,7 @@
                 80.63,
                 80.72,
                 80.77,
-                80.71
+                80.68
             ]
         },
         "NIFTY": {
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 77552.58,
+            "price": 78031.62,
             "prev_price": 78688.77,
-            "daily_chg": -1.44,
-            "change_percent": -7.82,
+            "daily_chg": -0.84,
+            "change_percent": -7.25,
             "trend": "DOWN",
             "sparkline": [
                 95321.78,
@@ -604,14 +604,14 @@
                 78621.12,
                 76974.45,
                 78688.77,
-                77552.58
+                78031.62
             ]
         },
         "ETH": {
-            "price": 2266.04,
+            "price": 2302.79,
             "prev_price": 2344.36,
-            "daily_chg": -3.34,
-            "change_percent": -16.15,
+            "daily_chg": -1.77,
+            "change_percent": -14.79,
             "trend": "DOWN",
             "sparkline": [
                 3322.1,
@@ -635,14 +635,14 @@
                 2445.09,
                 2267.96,
                 2344.36,
-                2266.04
+                2302.79
             ]
         },
         "SOL": {
-            "price": 101.42,
+            "price": 102.22,
             "prev_price": 104.47,
-            "daily_chg": -2.92,
-            "change_percent": -13.59,
+            "daily_chg": -2.15,
+            "change_percent": -12.9,
             "trend": "DOWN",
             "sparkline": [
                 145.36,
@@ -666,14 +666,14 @@
                 105.44,
                 100.85,
                 104.47,
-                101.42
+                102.22
             ]
         },
         "DXY": {
-            "price": 97.54,
+            "price": 97.43,
             "prev_price": 97.61,
-            "daily_chg": -0.07,
-            "change_percent": 1.13,
+            "daily_chg": -0.19,
+            "change_percent": 1.01,
             "trend": "DOWN",
             "sparkline": [
                 98.42,
@@ -697,14 +697,14 @@
                 96.28,
                 96.99,
                 97.61,
-                97.54
+                97.43
             ]
         },
         "USDJPY": {
-            "price": 155.86,
+            "price": 155.73,
             "prev_price": 155.2,
-            "daily_chg": 0.42,
-            "change_percent": 2.23,
+            "daily_chg": 0.34,
+            "change_percent": 2.15,
             "trend": "UP",
             "sparkline": [
                 156.99,
@@ -728,14 +728,14 @@
                 153.1,
                 153.16,
                 155.2,
-                155.86
+                155.73
             ]
         },
         "EURUSD": {
             "price": 1.18,
             "prev_price": 1.18,
-            "daily_chg": -0.42,
-            "change_percent": -1.82,
+            "daily_chg": -0.28,
+            "change_percent": -1.68,
             "trend": "DOWN",
             "sparkline": [
                 1.17,
@@ -763,10 +763,10 @@
             ]
         },
         "USDINR": {
-            "price": 90.18,
+            "price": 90.26,
             "prev_price": 91.69,
-            "daily_chg": -1.64,
-            "change_percent": -1.48,
+            "daily_chg": -1.56,
+            "change_percent": -1.4,
             "trend": "DOWN",
             "sparkline": [
                 90.01,
@@ -790,7 +790,7 @@
                 92.04,
                 91.78,
                 91.69,
-                90.18
+                90.26
             ]
         },
         "USDSAR": {
@@ -825,10 +825,10 @@
             ]
         },
         "GOLD": {
-            "price": 4943.8,
+            "price": 4947.9,
             "prev_price": 4622.5,
-            "daily_chg": 6.95,
-            "change_percent": -6.75,
+            "daily_chg": 7.04,
+            "change_percent": -6.67,
             "trend": "UP",
             "sparkline": [
                 4314.4,
@@ -852,14 +852,14 @@
                 5318.4,
                 4713.9,
                 4622.5,
-                4943.8
+                4947.9
             ]
         },
         "OIL": {
-            "price": 62.9,
+            "price": 62.91,
             "prev_price": 62.14,
-            "daily_chg": 1.22,
-            "change_percent": -0.49,
+            "daily_chg": 1.24,
+            "change_percent": -0.47,
             "trend": "UP",
             "sparkline": [
                 57.32,
@@ -883,14 +883,14 @@
                 65.42,
                 65.21,
                 62.14,
-                62.9
+                62.91
             ]
         },
         "COPPER": {
-            "price": 6.09,
+            "price": 6.06,
             "prev_price": 5.8,
-            "daily_chg": 4.9,
-            "change_percent": 3.28,
+            "daily_chg": 4.48,
+            "change_percent": 2.87,
             "trend": "UP",
             "sparkline": [
                 5.64,
@@ -914,14 +914,14 @@
                 6.18,
                 5.9,
                 5.8,
-                6.09
+                6.06
             ]
         },
         "NATGAS": {
-            "price": 3.31,
+            "price": 3.36,
             "prev_price": 3.24,
-            "daily_chg": 2.29,
-            "change_percent": -55.62,
+            "daily_chg": 3.86,
+            "change_percent": -54.93,
             "trend": "UP",
             "sparkline": [
                 3.62,
@@ -945,7 +945,7 @@
                 3.92,
                 4.35,
                 3.24,
-                3.31
+                3.36
             ]
         },
         "MOVE": {
@@ -976,7 +976,7 @@
             ]
         },
         "BREADTH": {
-            "price": 0.79,
+            "price": 1.05,
             "change_percent": 0.0,
             "trend": "BROAD",
             "sparkline": [
@@ -1000,13 +1000,13 @@
                 1.07,
                 1.14,
                 1.17,
-                1.53
+                1.8
             ]
         },
         "SPY_MOMENTUM": {
-            "price": -0.79,
+            "price": -1.05,
             "change_percent": 0,
-            "trend": "BALANCED",
+            "trend": "SKEWED",
             "sparkline": [
                 0,
                 0,
@@ -1041,40 +1041,40 @@
             ]
         },
         "COPPER_GOLD": {
-            "price": 1.23,
+            "price": 1.22,
             "change_percent": 0,
             "trend": "RISK-OFF",
             "sparkline": [
-                1.23,
-                1.23,
-                1.23,
-                1.23,
-                1.23,
-                1.23,
-                1.23,
-                1.23,
-                1.23,
-                1.23,
-                1.23,
-                1.23,
-                1.23,
-                1.23,
-                1.23,
-                1.23,
-                1.23,
-                1.23,
-                1.23,
-                1.23,
-                1.23,
-                1.23,
-                1.23,
-                1.23,
-                1.23,
-                1.23,
-                1.23,
-                1.23,
-                1.23,
-                1.23
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22,
+                1.22
             ]
         }
     },
@@ -1106,22 +1106,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS Score stands at 34 (Defensive). Positive momentum pushed the score from 32 to 34, yet the regime remains firmly risk-off. While DXY (Dollar strength/Liquidity) eased slightly and VIX (Fear index) stabilized at 16.32, the widening HY Spreads (Credit risk) signal underlying market stress. The significant surge in Gold suggests a strategic pivot toward safety assets. Investors should remain cautious; a shift to a Neutral stance requires liquidity to improve and push the score toward the 40-point threshold. Monitor credit stability as a primary catalyst for any trend reversal.",
+        "content": "A GMS score of 32 maintains a Defensive regime as momentum remains flat. While the VIX (Fear Index) rose 5.6% signaling heightened caution, the Gold spike reflects a clear flight to safety despite a slight dip in the DXY (Dollar strength). However, the historic xAI and SpaceX merger could act as a massive liquidity catalyst to break the current stagnation. Investors should remain cautious but monitor the tech sector for a potential reversal driven by this high-impact news.",
         "reports": {
-            "JP": "GMSスコアは34となり「防衛的（リスクオフ）」レジームにあります。モメンタムがスコアを32から34へと押し上げたものの、依然として低水準です。DXY（ドル指数/流動性）の微減とVIX（恐怖指数）の16.32での安定はプラス要因ですが、HYスプレッド（信用リスク）の拡大が市場のストレスを示唆しています。金価格の急騰は安全資産への逃避を裏付けており、流動性が改善しスコアが40の節目を越えるまでは、慎重な資産配分を維持すべき局面と言えます。信用リスクの動向に注視が必要です。",
-            "EN": "GMS Score stands at 34 (Defensive). Positive momentum pushed the score from 32 to 34, yet the regime remains firmly risk-off. While DXY (Dollar strength/Liquidity) eased slightly and VIX (Fear index) stabilized at 16.32, the widening HY Spreads (Credit risk) signal underlying market stress. The significant surge in Gold suggests a strategic pivot toward safety assets. Investors should remain cautious; a shift to a Neutral stance requires liquidity to improve and push the score toward the 40-point threshold. Monitor credit stability as a primary catalyst for any trend reversal.",
-            "CN": "GMS评分为34，处于“防御型”避险模式。动量将得分从32推升至34，显示市场情绪虽有微弱改善但仍极其谨慎。尽管DXY（美元强度）有所回落且VIX（恐慌指数）稳定在16.32，但高收益债利差（信用风险）的走扩预示着潜在的财务压力。黄金价格的飙升进一步印证了投资者对避险资产的渴求。在流动性未能推动评分突破40这一中性门槛之前，建议保持防御姿态，密切关注信用利差与宏观波动。当前市场动量尚不足以支撑全面回归风险资产。",
-            "ES": "El GMS se sitúa en 34 (Defensivo). El impulso alcista empujó la puntuación de 32 a 34, manteniendo un régimen de cautela. Aunque el DXY (fuerza del Dólar) bajó ligeramente y el VIX (índice de miedo) se estabilizó en 16.32, el ensanchamiento de los diferenciales HY (riesgo crediticio) advierte sobre tensiones financieras. El repunte del oro confirma una clara rotación hacia activos de refugio. Se recomienda una postura defensiva hasta que la liquidez mejore y el marcador se acerque al umbral de 40. Observe los diferenciales de crédito como indicador clave antes de aumentar la exposición al riesgo.",
-            "HI": "GMS स्कोर 34 (रक्षात्मक) पर है। सकारात्मक मोमेंटम ने स्कोर को 32 से 34 तक धकेला है, लेकिन बाजार अभी भी 'रिस्क-ऑफ' मोड में है। जबकि DXY (डॉलर की मजबूती) में मामूली कमी आई है और VIX (डर सूचकांक) 16.32 पर स्थिर है, HY स्प्रेड (क्रेडिट जोखिम) का बढ़ना वित्तीय तनाव का संकेत देता है। सोने की कीमतों में उछाल सुरक्षित संपत्तियों की ओर झुकाव को दर्शाता है। जब तक लिक्विडिटी में सुधार नहीं होता और स्कोर 40 के स्तर को पार नहीं करता, तब तक रक्षात्मक रणनीति अपनाना और क्रेडिट जोखिम पर नजर रखना अनिवार्य है। बाजार में स्थिरता के लिए अभी और सुधार की आवश्यकता है।",
-            "ID": "Skor GMS berada di angka 34 (Defensif). Momentum positif mendorong skor naik dari 32 ke 34, namun pasar tetap dalam rezim waspada. Meskipun DXY (kekuatan Dolar) sedikit menurun dan VIX (indeks ketakutan) stabil di level 16.32, pelebaran Spread HY (risiko kredit) menunjukkan adanya tekanan sistemik yang belum hilang. Kenaikan tajam harga emas memperkuat narasi pelarian modal ke aset aman. Investor disarankan tetap defensif hingga likuiditas membaik dan mendorong skor mendekati ambang batas 40. Pantau stabilitas kredit dengan cermat untuk mendeteksi tanda-tanda pembalikan arah pasar.",
-            "AR": "استقر مؤشر GMS عند 34 (دفاعي). دفع الزخم الإيجابي النتيجة من 32 إلى 34، لكن السوق لا يزال في وضع تجنب المخاطر. بينما شهد مؤشر DXY (قوة الدولار) تراجعاً طفيفاً واستقر VIX (مؤشر الخوف) عند 16.32، فإن اتساع فروق الائتمان HY يشير إلى ضغوط مالية كامنة. يؤكد الارتفاع الملحوظ في أسعار الذهب التوجه نحو الملاذات الآمنة. يجب على المستثمرين التزام الحذر؛ حيث يتطلب الانتقال إلى وضع محايد تحسن السيولة ودفع المؤشر لتجاوز حاجز 40 نقطة. راقب استقرار الائتمان بدقة كعامل حاسم قبل تغيير التوجه الاستثماري الحالي."
+            "JP": "GMSスコア32は依然として「防衛的」な局面を維持しており、モメンタムは停滞しています。VIX（恐怖指数）が5.6%上昇し市場の警戒感が高まる中、DXY（ドル強数）の低下とゴールドの急騰は安全資産への逃避を反映しています。しかし、xAIとSpaceXの歴史的合併は、現在の停滞を打破する強力な触媒となる可能性があります。短期的なボラティリティを警戒しつつ、テックセクターの反転を注視すべき局面です。",
+            "EN": "A GMS score of 32 maintains a Defensive regime as momentum remains flat. While the VIX (Fear Index) rose 5.6% signaling heightened caution, the Gold spike reflects a clear flight to safety despite a slight dip in the DXY (Dollar strength). However, the historic xAI and SpaceX merger could act as a massive liquidity catalyst to break the current stagnation. Investors should remain cautious but monitor the tech sector for a potential reversal driven by this high-impact news.",
+            "CN": "GMS分数为32，维持“防御”模式，动能表现持平。VIX（恐慌指数）上涨5.6%，反映出风险偏好下降，黄金的急剧飙升则进一步证实了市场对避险资产的追捧。DXY（美元指数）小幅回调。值得注意的是，xAI与SpaceX的历史级合并可能成为打破当前僵局的重大催化剂。在保持防御姿态的同时，需密切关注该巨额交易是否会引发科技领域的流动性反弹，从而抵消目前的市场波动压力。",
+            "ES": "El puntaje GMS de 32 mantiene un régimen Defensivo con un impulso plano. El aumento del 5.6% en el VIX (índice de miedo) y el salto en el Oro sugieren una huida hacia la seguridad, mientras el DXY (fuerza del dólar) se debilita levemente. Sin embargo, la megafusión de xAI y SpaceX representa un catalizador masivo de liquidez que podría romper el estancamiento actual. Se recomienda precaución extrema, vigilando una posible reversión impulsada por noticias tecnológicas de alto impacto en el corto plazo.",
+            "HI": "GMS स्कोर 32 'डिफेंसिव' मोड को बनाए रखता है क्योंकि मोमेंटम स्थिर है। VIX (डर सूचकांक) में 5.6% की वृद्धि और सोने की कीमतों में उछाल सुरक्षित निवेश की ओर झुकाव दर्शाते हैं। DXY (डॉलर की मजबूती) में मामूली गिरावट आई है। हालांकि, xAI और SpaceX का ऐतिहासिक विलय एक बड़ा लिक्विडिटी उत्प्रेरक बन सकता है जो वर्तमान ठहराव को तोड़ सकता है। निवेशकों को सतर्क रहना चाहिए और तकनीकी क्षेत्र में संभावित सुधार पर पैनी नजर रखनी चाहिए, जो बाजार के मौजूदा रुख को बदल सकता है।",
+            "ID": "Skor GMS 32 mempertahankan rezim Defensif karena momentum tetap datar. Kenaikan VIX (indeks ketakutan) sebesar 5,6% dan lonjakan emas menunjukkan pelarian ke aset aman, sementara DXY (kekuatan dolar) sedikit melemah. Namun, merger historis antara xAI dan SpaceX dapat menjadi katalis likuiditas masif yang berpotensi memecah stagnasi saat ini. Investor disarankan tetap waspada namun memantau sektor teknologi untuk potensi pembalikan arah yang didorong oleh sentimen berita besar di tengah volatilitas.",
+            "AR": "يحافظ سجل GMS البالغ 32 على نظام دفاعي مع استقرار الزخم. يشير ارتفاع VIX (مؤشر الخوف) بنسبة 5.6% وقفزة الذهب إلى الهروب نحو الأمان، بينما ضعف DXY (قوة الدولار) قليلاً. ومع ذلك، قد يعمل اندماج xAI وSpaceX الضخم كمحفز سيولة هائل لكسر الركود الحالي. يجب على المستثمرين توخي الحذر الشديد مع مراقبة قطاع التكنولوجيا بحثاً عن علامات انعكاس مدفوعة بهذه الأخبار الكبرى، رغم استمرار ضغوط التقلبات التي تفرضها المؤشرات الحالية."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-01-31T20:37:49Z",
-            "score": 30
-        },
         {
             "date": "2026-01-31T21:33:35Z",
             "score": 29
@@ -1357,92 +1353,96 @@
         {
             "date": "2026-02-03T14:59:11Z",
             "score": 34
+        },
+        {
+            "date": "2026-02-03T16:01:23Z",
+            "score": 32
         }
     ],
     "intelligence": {
         "news": [
             {
+                "title": "Musk's xAI, SpaceX combo is the biggest merger of all time, valued at $1.25 trillion",
+                "link": "https://www.cnbc.com/2026/02/03/musk-xai-spacex-biggest-merger-ever.html",
+                "isoDate": "2026-02-03T15:45:01+00:00Z"
+            },
+            {
                 "title": "Disney names parks boss Josh D’Amaro as its next CEO to succeed Bob Iger, effective March 18",
                 "link": "https://www.cnbc.com/2026/02/03/disney-ceo-josh-damaro-successor-bob-iger.html",
-                "isoDate": "2026-02-03T14:30:19+00:00Z"
+                "isoDate": "2026-02-03T15:52:14+00:00Z"
             },
             {
                 "title": "Ray Dalio warns the world is ‘on the brink’ of a capital war",
                 "link": "https://www.cnbc.com/2026/02/03/ray-dalio-warns-capital-war-gold-hedge.html",
-                "isoDate": "2026-02-03T13:13:24+00:00Z"
+                "isoDate": "2026-02-03T15:11:58+00:00Z"
             },
             {
-                "title": "Musk's xAI, SpaceX combo is the biggest merger of all time, valued at $1.25 trillion",
-                "link": "https://www.cnbc.com/2026/02/03/musk-xai-spacex-biggest-merger-ever.html",
-                "isoDate": "2026-02-03T14:42:44+00:00Z"
+                "title": "Dow touches new high, S&P 500 falls as traders rotate out of tech stocks: Live updates",
+                "link": "https://www.cnbc.com/2026/02/02/stock-market-today-live-updates.html",
+                "isoDate": "2026-02-03T15:45:07+00:00Z"
             },
             {
-                "title": "Rocket Companies shares jump 6% after CEO says mortgage loan volume is surging",
-                "link": "https://www.cnbc.com/2026/02/03/rocket-companies-shares-jump-6percent-after-ceo-says-mortgage-loan-volume-is-surging.html",
-                "isoDate": "2026-02-03T13:32:19+00:00Z"
+                "title": "Walmart hits $1 trillion market cap, fueled by growth of e-commerce, new businesses",
+                "link": "https://www.cnbc.com/2026/02/03/walmart-wmt-hits-1-trillion-market-cap.html",
+                "isoDate": "2026-02-03T15:56:45+00:00Z"
             },
             {
-                "title": "House hardliners complicate ending government shutdown as Speaker Johnson moves ahead",
-                "link": "https://www.cnbc.com/2026/02/02/government-shutdown-house-mike-johnson.html",
-                "isoDate": "2026-02-03T13:34:23+00:00Z"
-            },
-            {
-                "title": "Here are Tuesday's biggest analyst calls: Nvidia, Broadcom, Palantir, SoFi, Affirm, FedEx, Amazon & more",
-                "link": "https://www.cnbc.com/2026/02/03/tuesdays-biggest-stocks-by-analyst-calls.html",
-                "isoDate": "2026-02-03T13:37:55+00:00Z"
+                "title": "Buy the dip: Microsoft is the best 'pure play' on AI adoption, says Piper Sandler",
+                "link": "https://www.cnbc.com/2026/02/03/microsoft-is-the-best-pure-play-on-ai-adoption-says-piper-sandler.html",
+                "isoDate": "2026-02-03T15:43:21+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "ディズニー、パーク責任者のジョシュ・ダマロ氏を次期CEOに指名、ボブ・アイガー氏の後任、3月18日発効",
-                "レイ・ダリオ氏、世界は資本戦争の「瀬戸際」にあると警告",
-                "マスク氏のxAI、SpaceXとの合併は史上最大の合併、評価額1兆2500億ドル",
-                "CEOが住宅ローン貸出額の急増を語った後、ロケット・カンパニーズ株が6%上昇",
-                "ジョンソン下院議長が進める中、下院強硬派が政府閉鎖終結を複雑化",
-                "火曜日の主要アナリスト評価：Nvidia、Broadcom、Palantir、SoFi、Affirm、FedEx、Amazonなど"
+                "マスク氏のxAIとSpaceXの合併、史上最大の1兆2500億ドルの価値",
+                "ディズニー、パーク部門トップのジョシュ・ダマロ氏を次期CEOに任命、ボブ・アイガー氏の後任、3月18日発効",
+                "レイ・ダリオ氏、世界は「資本戦争の瀬戸際」にあると警告",
+                "ダウ平均は過去最高値、S&P500は下落、テクノロジー株から資金が流出：ライブアップデート",
+                "ウォルマート、Eコマースと新事業の成長に後押しされ時価総額1兆ドルに到達",
+                "「押し目買い」：マイクロソフトはAI採用の「純粋なプレイ」として最高だとパイパー・サンドラーが指摘"
             ],
             "CN": [
-                "迪士尼任命公园业务主管乔希·达马罗为下一任CEO，接替鲍勃·艾格，18日生效",
-                "瑞·达利欧警告世界正处于资本战争的“边缘”",
-                "马斯克的xAI与SpaceX合并为有史以来最大规模合并，估值1.25万亿美元",
-                "Rocket Companies股价上涨6%，此前CEO表示抵押贷款额激增",
-                "众议院强硬派使政府停摆结束复杂化，议长约翰逊继续推进",
-                "周二最大分析师评级：英伟达、博通、Palantir、SoFi、Affirm、FedEx、亚马逊等"
+                "马斯克的xAI与SpaceX合并，估值1.25万亿美元，创下史上最大规模合并",
+                "迪士尼任命乐园主管Josh D'Amaro为下一任CEO，接替Bob Iger，3月18日生效",
+                "Ray Dalio警告世界“正处于”资本战争的边缘",
+                "道指触及新高，标普500指数下跌，交易员纷纷撤出科技股：实时更新",
+                "沃尔玛市值达1万亿美元，电子商务和新业务的增长是推力",
+                "逢低买入：Piper Sandler称微软是AI采用的“纯粹玩法”的最佳选择"
             ],
             "ES": [
-                "Disney nombra al jefe de parques Josh D’Amaro como su próximo CEO para suceder a Bob Iger, efectivo el 18 de marzo",
-                "Ray Dalio advierte que el mundo está \"al borde\" de una guerra de capital",
-                "La combinación de xAI y SpaceX de Musk es la mayor fusión de todos los tiempos, valorada en 1.25 billones de dólares",
-                "Las acciones de Rocket Companies suben un 6% después de que el CEO dijera que el volumen de préstamos hipotecarios está aumentando",
-                "Los intransigentes de la Cámara de Representantes complican el fin del cierre del gobierno mientras el presidente Johnson avanza",
-                "Estas son las mayores llamadas de analistas del martes: Nvidia, Broadcom, Palantir, SoFi, Affirm, FedEx, Amazon y más"
+                "La combinación xAI y SpaceX de Musk es la mayor fusión de todos los tiempos, valorada en 1,25 billones de dólares",
+                "Disney nombra a Josh D’Amaro, jefe de parques, como su próximo CEO para suceder a Bob Iger, efectivo el 18 de marzo",
+                "Ray Dalio advierte que el mundo está “al borde” de una guerra de capital",
+                "El Dow Jones alcanza un nuevo máximo, el S&P 500 cae mientras los operadores rotan fuera de las acciones tecnológicas: actualizaciones en vivo",
+                "Walmart alcanza los 1 billón de dólares de capitalización bursátil, impulsado por el crecimiento del comercio electrónico y nuevos negocios",
+                "Compra la caída: Microsoft es el mejor 'recurso puro' para la adopción de IA, dice Piper Sandler"
             ],
             "HI": [
-                "डिज़्नी ने बॉब इगर के उत्तराधिकारी के रूप में पार्क प्रमुख जोश डी'अमारो को अपना अगला सीईओ नामित किया, 18 मार्च से प्रभावी",
-                "रे डेलियो ने चेतावनी दी कि दुनिया पूंजी युद्ध के \"कगार\" पर है",
-                "मस्क का xAI, SpaceX का संयोजन अब तक का सबसे बड़ा विलय है, जिसका मूल्य 1.25 ट्रिलियन डॉलर है",
-                "CEO द्वारा बंधक ऋण की मात्रा में वृद्धि बताने के बाद रॉकेट कंपनी के शेयर 6% उछले",
-                "स्पीकर जॉनसन के आगे बढ़ने के साथ ही हाउस हार्डलाइनर्स सरकारी शटडाउन को समाप्त करना जटिल बनाते हैं",
-                "मंगलवार को विश्लेषकों के सबसे बड़े कॉल यहां दिए गए हैं: Nvidia, Broadcom, Palantir, SoFi, Affirm, FedEx, Amazon और अन्य"
+                "मस्क की xAI, स्पेसएक्स का संगम 1.25 ट्रिलियन डॉलर के मूल्यांकन के साथ अब तक का सबसे बड़ा विलय है",
+                "डिज़्नी ने बॉब इगर के उत्तराधिकारी के रूप में पार्क प्रमुख जोश डी'अमारो को अगले सीईओ के रूप में नियुक्त किया, 18 मार्च से प्रभावी",
+                "रे डेलियो ने चेतावनी दी है कि दुनिया पूंजी युद्ध की \"कगार\" पर है",
+                "डॉव नए उच्च स्तर पर, S&P 500 गिरा क्योंकि व्यापारियों ने टेक स्टॉक से बाहर घूमे: लाइव अपडेट",
+                "वॉलमार्ट ई-कॉमर्स, नए व्यवसायों की वृद्धि से प्रेरित होकर 1 ट्रिलियन डॉलर के बाजार कैप तक पहुंचा",
+                "गिरावट में खरीदें: पाइपर सैंडलर का कहना है कि माइक्रोसॉफ्ट एआई अपनाने का सबसे अच्छा 'शुद्ध प्ले' है"
             ],
             "ID": [
-                "Disney menamai bos taman Josh D’Amaro sebagai CEO berikutnya menggantikan Bob Iger, efektif 18 Maret",
-                "Ray Dalio memperingatkan dunia berada di \"ambang\" perang modal",
-                "Kombinasi xAI dan SpaceX Musk adalah merger terbesar sepanjang masa, bernilai $1,25 triliun",
-                "Saham Rocket Companies melonjak 6% setelah CEO mengatakan volume pinjaman hipotek melonjak",
-                "Kaum garis keras DPR mempersulit penghentian penutupan pemerintah saat Ketua Johnson bergerak maju",
-                "Berikut adalah panggilan analis terbesar Selasa: Nvidia, Broadcom, Palantir, SoFi, Affirm, FedEx, Amazon & lainnya"
+                "Kombinasi xAI dan SpaceX milik Musk adalah merger terbesar sepanjang masa, bernilai $1,25 triliun",
+                "Disney menunjuk kepala taman Josh D'Amaro sebagai CEO berikutnya untuk menggantikan Bob Iger, efektif 18 Maret",
+                "Ray Dalio memperingatkan dunia berada di \"ambang\" perang kapital",
+                "Dow menyentuh rekor tertinggi baru, S&P 500 jatuh saat pedagang beralih dari saham teknologi: Pembaruan langsung",
+                "Walmart mencapai kapitalisasi pasar $1 triliun, didorong oleh pertumbuhan e-commerce, bisnis baru",
+                "Beli saat turun: Microsoft adalah 'pemain murni' terbaik untuk adopsi AI, kata Piper Sandler"
             ],
             "AR": [
-                "ديزني تسمي رئيس المتنزهات جوش د'أمارو رئيسها التنفيذي التالي خلفًا لبوب إيغر، اعتبارًا من 18 مارس",
+                "دمج xAI وSpaceX الخاص بماسك هو أكبر اندماج على الإطلاق، بقيمة 1.25 تريليون دولار",
+                "ديزني تسمي رئيس المتنزهات جوش د'أمارو كعضو مجلس إدارتها القادم ليحل محل بوب إيجر، اعتبارًا من 18 مارس",
                 "راي داليو يحذر من أن العالم \"على وشك\" حرب رؤوس أموال",
-                "اندماج xAI و SpaceX التابعين لـ Musk هو أكبر اندماج على الإطلاق، بقيمة 1.25 تريليون دولار",
-                "أسهم Rocket Companies تقفز 6٪ بعد أن قال الرئيس التنفيذي إن حجم قروض الرهن العقاري يتزايد",
-                "المتشددون في مجلس النواب يعقدون إنهاء إغلاق الحكومة مع تقدم المتحدث جونسون",
-                "هذه هي أكبر مكالمات المحللين يوم الثلاثاء: Nvidia، Broadcom، Palantir، SoFi، Affirm، FedEx، Amazon والمزيد"
+                "داو يتجه نحو أعلى مستوى جديد، بينما يسقط مؤشر S&P 500 مع دوران المتداولين للخارج من أسهم التكنولوجيا: تحديثات مباشرة",
+                "وول مارت تصل إلى القيمة السوقية البالغة تريليون دولار، مدعومة بنمو التجارة الإلكترونية والأعمال الجديدة",
+                "اشترِ الانخفاض: مايكروسوفت هي أفضل 'استثمار مباشر' لتبني الذكاء الاصطناعي، حسب قول بايبر ساندلر"
             ]
         },
-        "last_updated": "2026-02-03T14:59:11.717334+00:00Z"
+        "last_updated": "2026-02-03T16:01:23.545672+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
