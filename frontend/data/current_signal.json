@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-02-03T23:39:18.012571+00:00",
-    "last_successful_update": "2026-02-03T23:39:18.012581+00:00",
+    "last_updated": "2026-02-04T02:50:55.388740+00:00",
+    "last_successful_update": "2026-02-04T02:50:55.388747+00:00",
     "gms_score": 32,
     "sector_scores": {
         "STOCKS": 40,
@@ -10,11 +10,10 @@
     },
     "market_data": {
         "CRYPTO_SENTIMENT": {
-            "price": 17,
+            "price": 14,
             "change_percent": 0.0,
             "trend": "FEAR",
             "sparkline": [
-                26,
                 44,
                 42,
                 28,
@@ -43,7 +42,8 @@
                 20,
                 14,
                 14,
-                17
+                17,
+                14
             ]
         },
         "YIELD_SPREAD": {
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 75766.68,
+            "price": 75923.43,
             "prev_price": 78688.77,
-            "daily_chg": -3.71,
-            "change_percent": -9.94,
+            "daily_chg": -3.51,
+            "change_percent": -9.75,
             "trend": "DOWN",
             "sparkline": [
                 95321.78,
@@ -604,14 +604,14 @@
                 78621.12,
                 76974.45,
                 78688.77,
-                75766.68
+                75923.43
             ]
         },
         "ETH": {
-            "price": 2241.17,
+            "price": 2253.35,
             "prev_price": 2344.36,
-            "daily_chg": -4.4,
-            "change_percent": -17.07,
+            "daily_chg": -3.88,
+            "change_percent": -16.62,
             "trend": "DOWN",
             "sparkline": [
                 3322.1,
@@ -635,7 +635,7 @@
                 2445.09,
                 2267.96,
                 2344.36,
-                2241.17
+                2253.35
             ]
         },
         "SOL": {
@@ -670,10 +670,10 @@
             ]
         },
         "DXY": {
-            "price": 97.38,
+            "price": 97.39,
             "prev_price": 97.61,
-            "daily_chg": -0.23,
-            "change_percent": 0.97,
+            "daily_chg": -0.22,
+            "change_percent": 0.98,
             "trend": "DOWN",
             "sparkline": [
                 98.42,
@@ -697,17 +697,16 @@
                 96.28,
                 96.99,
                 97.61,
-                97.38
+                97.39
             ]
         },
         "USDJPY": {
-            "price": 155.82,
-            "prev_price": 155.2,
-            "daily_chg": 0.39,
-            "change_percent": 2.21,
+            "price": 156.26,
+            "prev_price": 155.44,
+            "daily_chg": 0.52,
+            "change_percent": 2.06,
             "trend": "UP",
             "sparkline": [
-                156.99,
                 156.63,
                 156.68,
                 156.73,
@@ -728,17 +727,17 @@
                 153.1,
                 153.16,
                 155.2,
-                155.82
+                155.44,
+                156.26
             ]
         },
         "EURUSD": {
             "price": 1.18,
             "prev_price": 1.18,
-            "daily_chg": -0.27,
-            "change_percent": -1.67,
-            "trend": "DOWN",
+            "daily_chg": 0.25,
+            "change_percent": -1.24,
+            "trend": "UP",
             "sparkline": [
-                1.17,
                 1.17,
                 1.17,
                 1.17,
@@ -758,18 +757,18 @@
                 1.2,
                 1.2,
                 1.2,
+                1.18,
                 1.18,
                 1.18
             ]
         },
         "USDINR": {
-            "price": 90.37,
-            "prev_price": 91.69,
-            "daily_chg": -1.43,
-            "change_percent": -1.27,
-            "trend": "DOWN",
+            "price": 90.3,
+            "prev_price": 90.25,
+            "daily_chg": 0.06,
+            "change_percent": -1.89,
+            "trend": "UP",
             "sparkline": [
-                90.01,
                 90.23,
                 90.17,
                 89.86,
@@ -790,17 +789,17 @@
                 92.04,
                 91.78,
                 91.69,
-                90.37
+                90.25,
+                90.3
             ]
         },
         "USDSAR": {
             "price": 3.75,
             "prev_price": 3.75,
-            "daily_chg": 0.04,
-            "change_percent": 0.09,
+            "daily_chg": 0.09,
+            "change_percent": 0.08,
             "trend": "UP",
             "sparkline": [
-                3.75,
                 3.75,
                 3.75,
                 3.75,
@@ -821,14 +820,15 @@
                 3.75,
                 3.75,
                 3.75,
+                3.75,
                 3.75
             ]
         },
         "GOLD": {
-            "price": 4951.1,
+            "price": 5063.3,
             "prev_price": 4622.5,
-            "daily_chg": 7.11,
-            "change_percent": -6.61,
+            "daily_chg": 9.54,
+            "change_percent": -4.49,
             "trend": "UP",
             "sparkline": [
                 4314.4,
@@ -852,14 +852,14 @@
                 5318.4,
                 4713.9,
                 4622.5,
-                4951.1
+                5063.3
             ]
         },
         "OIL": {
-            "price": 63.78,
+            "price": 63.85,
             "prev_price": 62.14,
-            "daily_chg": 2.64,
-            "change_percent": 0.9,
+            "daily_chg": 2.75,
+            "change_percent": 1.01,
             "trend": "UP",
             "sparkline": [
                 57.32,
@@ -883,14 +883,14 @@
                 65.42,
                 65.21,
                 62.14,
-                63.78
+                63.85
             ]
         },
         "COPPER": {
-            "price": 6.06,
+            "price": 6.05,
             "prev_price": 5.8,
-            "daily_chg": 4.52,
-            "change_percent": 2.9,
+            "daily_chg": 4.29,
+            "change_percent": 2.68,
             "trend": "UP",
             "sparkline": [
                 5.64,
@@ -914,14 +914,14 @@
                 6.18,
                 5.9,
                 5.8,
-                6.06
+                6.05
             ]
         },
         "NATGAS": {
-            "price": 3.35,
+            "price": 3.34,
             "prev_price": 3.24,
-            "daily_chg": 3.4,
-            "change_percent": -55.13,
+            "daily_chg": 3.31,
+            "change_percent": -55.17,
             "trend": "UP",
             "sparkline": [
                 3.62,
@@ -945,12 +945,12 @@
                 3.92,
                 4.35,
                 3.24,
-                3.35
+                3.34
             ]
         },
         "MOVE": {
             "price": 57.54,
-            "change_percent": -2.96,
+            "change_percent": -2.97,
             "trend": "NORMAL",
             "sparkline": [
                 64.71,
@@ -1042,40 +1042,40 @@
             ]
         },
         "COPPER_GOLD": {
-            "price": 1.22,
+            "price": 1.19,
             "change_percent": 0,
             "trend": "RISK-OFF",
             "sparkline": [
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22,
-                1.22
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19,
+                1.19
             ]
         }
     },
@@ -1107,22 +1107,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "The GMS score of 32 confirms a Defensive regime, as flat momentum pushed the metric lower from 33. This shift is driven by a 10.16% surge in the VIX (Fear Index), indicating heightened volatility despite a softer DXY (Dollar strength). Disappointing tech forecasts further weighed on major indices. While risk-off sentiment dominates, the -2.43% compression in High Yield Spreads suggests credit markets remain resilient, potentially limiting downside. Conclusion: Maintain a cautious stance; monitor if credit stability leads to a volatility mean reversion before increasing risk exposure.",
+        "content": "GMS Score is 32, placing market in a Defensive regime. Momentum pushed the score to 32, but a 10% rise in VIX (Fear/Volatility) signals caution. While DXY (Dollar strength/Liquidity) eased, AMD's forecast weighed on Tech. Gold/Copper surged as hedges. Conclusion: Keep high cash and prioritize capital safety as volatility persists.",
         "reports": {
-            "JP": "GMSスコアは32となり、フラットなモメンタムが数値を33から引き下げたことで「防衛」レジームが継続しています。マクロ面では、VIX（恐怖指数）が10.16%急騰し、ハイテク銘柄の弱気な見通しが市場を圧迫しています。DXY（ドル安）による流動性の下支えはあるものの、ボラティリティの上昇が先行しています。一方で、ハイイールド債スプレッドの縮小（-2.43%）は信用市場の安定を示唆しており、これが下値を支える可能性があります。現在は慎重な姿勢を維持し、ボラティリティの沈静化を待つ局面です。",
-            "EN": "The GMS score of 32 confirms a Defensive regime, as flat momentum pushed the metric lower from 33. This shift is driven by a 10.16% surge in the VIX (Fear Index), indicating heightened volatility despite a softer DXY (Dollar strength). Disappointing tech forecasts further weighed on major indices. While risk-off sentiment dominates, the -2.43% compression in High Yield Spreads suggests credit markets remain resilient, potentially limiting downside. Conclusion: Maintain a cautious stance; monitor if credit stability leads to a volatility mean reversion before increasing risk exposure.",
-            "CN": "GMS指数为32，平稳的动能将分值从33推低，市场处于“防御”模式。宏观上，VIX（恐慌指数）大幅飙升10.16%，科技股盈利预期下调加剧了避险情绪。尽管DXY（美元强度）小幅下跌有利于流动性，但短期波动性占据主导。值得注意的是，高收益债利差收窄2.43%，显示信用市场尚未进入恐慌状态，这可能预示着市场下行空间有限。结论：目前应保持防御姿态，关注波动率是否回归均值，在信用环境恶化前无需过度恐慌，维持观察。",
-            "ES": "El puntaje GMS de 32 confirma un régimen defensivo, con un impulso plano que empujó la cifra desde 33. En el ámbito macro, el aumento del 10.16% en el VIX (índice de miedo) domina el sentimiento, impulsado por pronósticos débiles en tecnología. Aunque el DXY (fuerza del dólar) bajó ligeramente, la volatilidad limita el apetito de riesgo. Sin embargo, la compresión de los diferenciales de alto rendimiento (-2.43%) sugiere que los mercados de crédito no ven un colapso inminente. Conclusión: Mantener cautela y observar si la estabilidad crediticia permite una reversión de la volatilidad a corto plazo.",
-            "HI": "GMS स्कोर 32 एक 'रक्षात्मक' शासन की पुष्टि करता है, क्योंकि फ्लैट मोमेंटम ने इसे 33 से नीचे धकेल दिया है। मैक्रो स्तर पर, VIX (डर सूचकांक) में 10.16% की वृद्धि और कमजोर टेक अर्निंग्स ने बाजार पर दबाव डाला है। हालांकि DXY (डॉलर की मजबूती) में गिरावट से तरलता को समर्थन मिला है, लेकिन उच्च अस्थिरता जोखिम-मुक्त व्यवहार को बढ़ावा दे रही है। विपरीत संकेत यह है कि हाई-यिल्ड स्प्रेड में -2.43% की कमी आई है, जो क्रेडिट बाजार की स्थिरता को दर्शाता है। निष्कर्ष: सतर्क रहें और एक्सपोजर बढ़ाने से पहले अस्थिरता के कम होने का इंतजार करें, क्योंकि क्रेडिट बाजार अब भी मजबूत है।",
-            "ID": "Skor GMS 32 mengonfirmasi rezim Defensif, setelah momentum datar mendorong skor turun dari 33. Secara makro, lonjakan VIX (Indeks Ketakutan) sebesar 10,16% mendominasi pasar di tengah perkiraan sektor teknologi yang mengecewakan. Meskipun DXY (kekuatan Dolar) melemah yang biasanya mendukung likuiditas, volatilitas tetap menjadi hambatan utama bagi aset berisiko. Namun, penyempitan spread High-Yield sebesar -2,43% menunjukkan pasar kredit tetap tangguh, yang bisa membatasi penurunan lebih lanjut. Kesimpulan: Pertahankan posisi defensif; amati apakah stabilitas kredit memicu pembalikan volatilitas.",
-            "AR": "يؤكد مؤشر GMS البالغ 32 الدخول في نظام دفاعي، حيث دفع الزخم المستقر الدرجة للانخفاض من 33. من الناحية الماكرو، أدى ارتفاع مؤشر VIX (الخوف) بنسبة 10.16% وضعف توقعات قطاع التكنولوجيا إلى ضغوط بيعية واضحة. ورغم تراجع مؤشر DXY (قوة الدولار) الذي يدعم السيولة، إلا أن التقلبات تظل العائق الأكبر حالياً. لكن انكماش هوامش العائد المرتفع بنسبة -2.43% يشير إلى مرونة أسواق الائتمان، مما قد يحد من مستويات الهبوط. الخلاصة: يجب الحفاظ على الحذر ومراقبة ما إذا كان استقرار الائتمان سيؤدي إلى تهدئة التقلبات قبل زيادة التعرض للمخاطر."
+            "JP": "GMSスコアは32であり、現在は「防衛的」なレジームに位置しています。モメンタムがスコアを32まで押し上げましたが、VIX（恐怖指数/ボラティリティ）が10%急騰したことで、市場の警戒感は非常に強まっています。DXY（ドルの強さ）は微減したものの、半導体指数の低迷がハイテク株の重石です。一方で、金や銅の実物資産が急騰しており、資金の逃避先となっています。結論：不安定な状況が続くため、現金比率を高く保ち、資本の安全を最優先にすべきです。",
+            "EN": "GMS Score is 32, placing market in a Defensive regime. Momentum pushed the score to 32, but a 10% rise in VIX (Fear/Volatility) signals caution. While DXY (Dollar strength/Liquidity) eased, AMD's forecast weighed on Tech. Gold/Copper surged as hedges. Conclusion: Keep high cash and prioritize capital safety as volatility persists.",
+            "CN": "GMS分数为32，当前市场处于“防御”模式中。虽然近期动能将分数推升至32，但VIX（反映市场恐惧与波动率的指数）大幅飙升超过10%，显示出极高的宏观不确定性。尽管DXY（美元强度/流动性）略有回落，但受半导体板块负面预期影响，科技股表现疲软。与此同时，黄金和铜等实物资产的大幅上涨暗示了资金正在转向避险领域。结论：鉴于当前显著的波动性，建议投资者维持高比例现金储备，并将资本保全作为核心策略。",
+            "ES": "El puntaje GMS es 32, situando al mercado en un régimen Defensivo. El impulso llevó el puntaje a 32, pero el salto del 10% en el VIX (índice de miedo y volatilidad) señala una fuerte alerta. Mientras el DXY (fuerza del dólar/liquidez) baja, el sector tecnológico cae por pronósticos débiles. El Oro y el Cobre ofrecen cobertura. Conclusión: Mantenga liquidez elevada y priorice la seguridad del capital ante la volatilidad.",
+            "HI": "GMS स्कोर 32 है (रक्षात्मक शासन)। मोमेंटम ने स्कोर को 32 तक पहुँचाया, पर VIX (डर/अस्थिरता सूचकांक) में 10% की वृद्धि गहरी चिंता का विषय है। DXY (डॉलर की मजबूती/तरलता) घटने के बावजूद तकनीकी शेयरों में गिरावट आई। सोने और तांबे में तेजी सुरक्षा की ओर स्पष्ट संकेत है। निष्कर्ष: बाजार की उच्च अस्थिरता के बीच नकदी स्तर बढ़ाएं और पूंजी की सुरक्षा को हर हाल में सबसे ऊपर रखें।",
+            "ID": "Skor GMS berada di angka 32, menempatkan pasar dalam rezim Defensif. Momentum telah mendorong skor ke 32, namun lonjakan VIX (Indeks Ketakutan/Volatilitas) sebesar 10% menandakan meningkatnya risiko. Meskipun DXY (Kekuatan Dolar/Likuiditas) menurun, sektor teknologi terbebani proyeksi lemah. Kenaikan Emas dan Tembaga menunjukkan rotasi ke aset aman. Kesimpulan: Pertahankan posisi kas kuat dan prioritaskan keamanan modal hingga kondisi stabil.",
+            "AR": "مؤشر GMS عند 32، مما يعني نظاماً دفاعياً. دفع الزخم النتيجة لـ 32، لكن ارتفاع VIX (مؤشر الخوف والتقلب) بنسبة 10% يتطلب الحذر الشديد. رغم تراجع DXY (قوة الدولار والسيولة)، ضغطت توقعات التكنولوجيا سلباً على الأسواق. ارتفع الذهب والنحاس كأصول تحوط قوية. الخلاصة: حافظ على مستويات سيولة نقدية عالية واعطِ الأولوية لسلامة رأس المال وحمايته خلال هذه الفترة المتقلبة."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-01T04:05:07Z",
-            "score": 29
-        },
         {
             "date": "2026-02-01T05:35:48Z",
             "score": 28
@@ -1358,6 +1354,10 @@
         {
             "date": "2026-02-03T23:39:18Z",
             "score": 32
+        },
+        {
+            "date": "2026-02-04T02:50:55Z",
+            "score": 32
         }
     ],
     "intelligence": {
@@ -1366,6 +1366,11 @@
                 "title": "AMD shares drop as forecast comes up short of some expectations",
                 "link": "https://www.cnbc.com/2026/02/03/amd-earnings-report-q4-2025.html",
                 "isoDate": "2026-02-03T23:35:34+00:00Z"
+            },
+            {
+                "title": "Fed's Stephen Miran resigns from White House post",
+                "link": "https://www.cnbc.com/2026/02/03/feds-stephen-miran-resigns-from-white-house-post.html",
+                "isoDate": "2026-02-04T00:37:24+00:00Z"
             },
             {
                 "title": "Nvidia, OpenAI appear stalled on their mega deal. But the AI giants still need each other",
@@ -1378,14 +1383,9 @@
                 "isoDate": "2026-02-03T21:48:46+00:00Z"
             },
             {
-                "title": "U.S. military says it shot down Iranian drone that 'aggressively approached' aircraft carrier",
-                "link": "https://www.cnbc.com/2026/02/03/us-military-shoots-down-iranian-drone-that-aggressively-approached-aircraft-carrier.html",
-                "isoDate": "2026-02-03T21:15:07+00:00Z"
-            },
-            {
-                "title": "Chipotle stock sinks as restaurant chain reports falling traffic, weak guidance",
-                "link": "https://www.cnbc.com/2026/02/03/chipotle-cmg-q4-2025-earnings.html",
-                "isoDate": "2026-02-03T22:54:05+00:00Z"
+                "title": "Pinterest CEO rebukes, fires 'obstructionist' employees who created tool to track layoffs",
+                "link": "https://www.cnbc.com/2026/02/03/pinterest-ceo-puts-staffers-on-blast-who-created-tool-to-track-layoffs.html",
+                "isoDate": "2026-02-04T02:49:44+00:00Z"
             },
             {
                 "title": "Why Kevin Warsh's efforts to shrink the Fed balance sheet might not wreck markets this time",
@@ -1396,54 +1396,54 @@
         "translations": {
             "JP": [
                 "AMD株、一部の予想を下回る見通しで下落",
-                "NvidiaとOpenAI、大型契約は停滞か？AI大手の相互依存は続く",
-                "Nvidiaのジェンスン・フアンCEO、OpenAIとの取引の噂を否定「ドラマはない」",
-                "米軍、航空母艦に「攻撃的に接近」したイラン製ドローンを撃墜と発表",
-                "Chipotle株、来店客数減少と弱いガイダンスで急落",
-                "ケビン・ウォルシュ氏のFRBバランスシート縮小計画は、今回市場を破壊しないかもしれない理由"
+                "FRBのステファン・ミラン氏、ホワイトハウスの役職を辞任",
+                "NvidiaとOpenAI、大型契約が停滞か - しかしAI大手は互いを必要としている",
+                "Nvidiaのジェンスン・フアンCEO、OpenAIとの契約の噂を否定「ドラマはない」",
+                "Pinterest CEO、人員削減追跡ツールを作成した「妨害者」従業員を叱責、解雇",
+                "ケビン・ウォルシュ氏のFRBバランスシート縮小への取り組みが、今回は市場を混乱させないかもしれない理由"
             ],
             "CN": [
-                "AMD股价下跌，因业绩预期不及部分预期",
-                "英伟达和OpenAI的巨额交易似乎陷入停滞。但这两家AI巨头仍相互需要",
-                "英伟达黄仁勋否认与OpenAI的交易传闻：‘没有什么戏剧性’",
-                "美军称击落了‘侵略性接近’航母的伊朗无人机",
-                " Chipotle股价下跌，因餐厅连锁店报告客流量下降、指引疲软",
-                "为什么Kevin Warsh缩减美联储资产负债表的努力这次可能不会摧毁市场"
+                "AMD股价下跌，因业绩预测不及部分预期",
+                "美联储的斯蒂芬·米兰辞去白宫职务",
+                "英伟达、OpenAI的巨额交易似乎停滞。但这两家AI巨头仍需彼此",
+                "英伟达CEO黄仁勋否认OpenAI交易传闻：“没有戏剧性”",
+                "Pinterest CEO训斥并解雇了创建裁员追踪工具的“阻碍者”员工",
+                "为什么凯文·沃什试图缩减美联储资产负债表可能不会破坏市场"
             ],
             "ES": [
-                "Las acciones de AMD caen al no cumplir las previsiones con algunas expectativas",
-                "Nvidia y OpenAI parecen estancadas en su mega acuerdo. Pero los gigantes de la IA todavía se necesitan mutuamente",
-                "Jensen Huang de Nvidia niega los rumores del acuerdo con OpenAI: 'No hay drama'",
-                "El ejército de EE. UU. dice que derribó un dron iraní que 'se acercó agresivamente' a un portaaviones",
-                "Las acciones de Chipotle se hunden al reportar la cadena de restaurantes una caída en el tráfico y una guía débil",
-                "Por qué los esfuerzos de Kevin Warsh para reducir el balance de la Fed podrían no destrozar los mercados esta vez"
+                "Las acciones de AMD caen al pronóstico no cumplir algunas expectativas",
+                "Stephen Miran de la Fed renuncia a su cargo en la Casa Blanca",
+                "Nvidia y OpenAI parecen estancadas en su mega acuerdo. Pero los gigantes de la IA aún se necesitan mutuamente",
+                "Jensen Huang de Nvidia niega los rumores de un acuerdo con OpenAI: 'No hay drama'",
+                "El CEO de Pinterest reprende y despide a empleados 'obstruccionistas' que crearon una herramienta para rastrear despidos",
+                "Por qué los esfuerzos de Kevin Warsh para reducir el balance de la Fed podrían no desestabilizar los mercados esta vez"
             ],
             "HI": [
-                "AMD के शेयर अनुमान से कुछ कम रहने पर गिरे",
-                "एनवीडिया, ओपनएआई अपने बड़े सौदे पर अटके हुए लगते हैं। लेकिन एआई दिग्गजों को अभी भी एक-दूसरे की जरूरत है",
-                "एनवीडिया के जेन्सेन हुआंग ने ओपनएआई सौदे की अफवाहों का खंडन किया: 'कोई ड्रामा नहीं है'",
-                "अमेरिकी सेना ने कहा कि उसने ईरानी ड्रोन को मार गिराया जो विमान वाहक के 'आक्रामक रूप से करीब' पहुंच गया था",
-                "चिपोटल का स्टॉक गिरता है क्योंकि रेस्तरां श्रृंखला ने घटते ट्रैफिक, कमजोर मार्गदर्शन की रिपोर्ट दी",
+                "AMD के शेयर पूर्वानुमान के कुछ उम्मीदों पर खरा न उतरने से गिरे",
+                "फेड के स्टीफन मिरन ने व्हाइट हाउस के पद से इस्तीफा दिया",
+                "एनवीडिया, ओपनएआई अपने मेगा डील पर अटके हुए लगते हैं। लेकिन एआई दिग्गजों को अभी भी एक-दूसरे की ज़रूरत है",
+                "एनवीडिया के जेन्सेन हुआंग ने ओपनएआई डील की अफवाहों का खंडन किया: 'कोई ड्रामा नहीं है'",
+                "पिंटरेस्ट के सीईओ ने छंटनी को ट्रैक करने के लिए टूल बनाने वाले 'बाधाकारी' कर्मचारियों को फटकारा, बर्खास्त किया",
                 "केविन वॉर्श के फेड बैलेंस शीट को सिकोड़ने के प्रयासों से इस बार बाजार क्यों नहीं बिगड़ सकता है"
             ],
             "ID": [
-                "Saham AMD Anjlok Karena Prediksi Tidak Memenuhi Beberapa Ekspektasi",
-                "Nvidia, OpenAI Tampaknya Terjebak dalam Kesepakatan Besar Mereka. Namun, Raksasa AI Itu Masih Saling Membutuhkan",
-                "Jensen Huang Nvidia Menyangkal Rumor Kesepakatan OpenAI: 'Tidak Ada Drama'",
-                "Militer AS Nyatakan Tembak Jatuh Drone Iran yang 'Mendekat Agresif' ke Kapal Induk",
-                "Saham Chipotle Anjlok Saat Rantai Restoran Laporkan Penurunan Lalu Lintas, Panduan Lemah",
-                "Mengapa Upaya Kevin Warsh Mengecilkan Neraca The Fed Mungkin Tidak Merusak Pasar Kali Ini"
+                "Saham AMD turun karena perkiraan meleset dari beberapa ekspektasi",
+                "Stephen Miran dari Fed mengundurkan diri dari pos Gedung Putih",
+                "Nvidia, OpenAI Tampak Terhenti pada Kesepakatan Besar Mereka. Tapi Raksasa AI Ini Masih Saling Membutuhkan",
+                "Jensen Huang Nvidia Bantah Rumor Kesepakatan OpenAI: 'Tidak Ada Drama'",
+                "CEO Pinterest Tegur, Pecat Karyawan 'Obstruksionis' yang Buat Alat Lacak PHK",
+                "Mengapa Upaya Kevin Warsh untuk Menyusutkan Neraca Fed Mungkin Tidak Merusak Pasar Kali Ini"
             ],
             "AR": [
-                "أسهم AMD تنخفض مع فشل التوقعات في تلبية بعض التوقعات",
+                "أسهم AMD تنخفض مع عدم تحقيق التوقعات لبعض التوقعات",
+                "ستيفن ميران من الاحتياطي الفيدرالي يستقيل من منصبه في البيت الأبيض",
                 "تبدو Nvidia و OpenAI عالقتين في صفقة ضخمة. لكن عمالقة الذكاء الاصطناعي لا يزالون بحاجة إلى بعضهم البعض",
-                "جينسن هوانغ من Nvidia ينفي شائعات صفقة OpenAI: 'لا يوجد دراما'",
-                "الجيش الأمريكي يقول إنه أسقط طائرة إيرانية مسيرة اقتربت \"بشكل عدواني\" من حاملة طائرات",
-                "أسهم Chipotle تغرق مع إبلاغ سلسلة المطاعم عن انخفاض حركة المرور وتوجيهات ضعيفة",
-                "لماذا قد لا تؤدي جهود كيفن وورش لتقليص الميزانية العمومية للاحتياطي الفيدرالي إلى تدمير الأسواق هذه المرة"
+                "جنسن هوانغ من Nvidia ينفي شائعات صفقة OpenAI: \"لا يوجد دراما\"",
+                "رئيس Pinterest يوبخ ويفصل الموظفين \"المعترضين\" الذين أنشأوا أداة لتتبع عمليات التسريح",
+                "لماذا قد لا تؤدي جهود كيفن وورش لتقليص ميزانية الاحتياطي الفيدرالي إلى إحداث فوضى في الأسواق هذه المرة"
             ]
         },
-        "last_updated": "2026-02-03T23:39:18.012079+00:00Z"
+        "last_updated": "2026-02-04T02:50:55.388274+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
