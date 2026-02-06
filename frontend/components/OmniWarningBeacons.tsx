@@ -1,10 +1,9 @@
 'use client';
 
 import React from 'react';
-import { AlertTriangle, TrendingUp, Info } from 'lucide-react';
+import { AlertTriangle, TrendingUp, Zap } from 'lucide-react';
 import { DICTIONARY, LangType } from '@/data/dictionary';
 
-// Warning Beacons Component (System Health / Market Stress)
 interface BeaconsProps {
     data: any;
     lang: LangType;
@@ -12,60 +11,73 @@ interface BeaconsProps {
 
 export const OmniWarningBeacons = ({ data, lang }: BeaconsProps) => {
     const t = DICTIONARY[lang] || DICTIONARY['EN'];
-
-    // Beacon Logic derived from Signal Data
     const market = data.market_data || {};
     const beacons = [];
 
-    // 1. VIX Spike Beacon
-    if (market.VIX?.price > 25) {
+    // 1. VIX Spike (RED)
+    if (market.VIX?.price > 20) {
         beacons.push({
-            id: 'VIX_SPIKE',
-            level: 'CRITICAL',
-            label: "VIX > 25",
-            desc: t.beacons?.vix_spike || "Vol Spike",
+            id: 'VIX',
+            label: "VIX",
+            sub: "> 25",
             color: "text-red-500",
-            bg: "bg-red-500/10",
-            border: "border-red-500/30"
+            border: "border-red-600",
+            glow: "shadow-[0_0_30px_rgba(220,38,38,0.6)]",
+            bg: "bg-red-950",
+            core: "from-red-200 via-red-500 to-red-950"
         });
     }
 
-    // 2. Yield Inversion Beacon
-    if (market.YIELD_SPREAD?.price < -0.5) {
+    // 2. Yield Inversion (AMBER/ORANGE)
+    if (market.YIELD_SPREAD?.price < 0) {
         beacons.push({
-            id: 'YIELD_INVERT',
-            level: 'WARNING',
-            label: "10Y-3M INV",
-            desc: t.beacons?.yield_invert || "Deep Inversion",
+            id: 'YIELD',
+            label: "YIELD",
+            sub: "INV",
             color: "text-orange-500",
-            bg: "bg-orange-500/10",
-            border: "border-orange-500/30"
+            border: "border-orange-500",
+            glow: "shadow-[0_0_30px_rgba(249,115,22,0.6)]",
+            bg: "bg-orange-950",
+            core: "from-orange-200 via-orange-500 to-orange-950"
         });
     }
 
-    // 3. Oil Surge Beacon
+    // 3. Oil Surge (YELLOW)
     if (market.OIL?.change_percent > 3.0) {
         beacons.push({
-            id: 'OIL_SURGE',
-            level: 'ALERT',
-            label: "OIL +3%",
-            desc: t.beacons?.oil_surge || "Energy Shock",
-            color: "text-yellow-500",
-            bg: "bg-yellow-500/10",
-            border: "border-yellow-500/30"
+            id: 'OIL',
+            label: "OIL",
+            sub: "SURGE",
+            color: "text-yellow-400",
+            border: "border-yellow-400",
+            glow: "shadow-[0_0_30px_rgba(250,204,21,0.6)]",
+            bg: "bg-yellow-950",
+            core: "from-yellow-100 via-yellow-400 to-yellow-900"
         });
     }
 
     if (beacons.length === 0) return null;
 
     return (
-        <div className="w-full flex flex-wrap gap-4 mt-6 animate-in fade-in slide-in-from-top-4 duration-700">
+        <div className="w-full flex justify-center gap-6 mt-8 mb-4 animate-in fade-in zoom-in duration-500">
             {beacons.map((b) => (
-                <div key={b.id} className={`flex items-center gap-3 px-4 py-2 rounded-lg border ${b.bg} ${b.border} shadow-sm backdrop-blur-sm`}>
-                    <AlertTriangle className={`w-4 h-4 ${b.color} animate-pulse`} />
-                    <div className="flex flex-col">
-                        <span className={`text-[0.65rem] font-black tracking-widest uppercase ${b.color}`}>{b.level}</span>
-                        <span className="text-xs font-bold text-slate-200 uppercase tracking-wide">{b.desc}</span>
+                <div key={b.id} className="flex flex-col items-center gap-2 group cursor-help">
+                    {/* INDUSTRIAL LAMP (80px) */}
+                    <div className={`w-[80px] h-[80px] rounded-full border-[5px] ${b.border} ${b.bg} ${b.glow} relative flex items-center justify-center shadow-2xl overflow-hidden animate-pulse-slow`}>
+                        {/* Inner Reflector */}
+                        <div className="absolute inset-1 rounded-full border border-black/50 opacity-50"></div>
+
+                        {/* CORE GLOW (Uniform) */}
+                        <div className={`w-[40%] h-[40%] rounded-full bg-radial-gradient ${b.core} blur-md opacity-90 animate-pulse`}></div>
+
+                        {/* Glossy Lens Effect */}
+                        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/40 via-transparent to-black/60 pointer-events-none mix-blend-overlay"></div>
+                    </div>
+
+                    {/* LABEL */}
+                    <div className="text-center leading-tight">
+                        <div className={`text-[10px] font-black tracking-widest uppercase ${b.color} drop-shadow-md`}>{b.label}</div>
+                        <div className="text-[9px] font-mono text-slate-500 font-bold">{b.sub}</div>
                     </div>
                 </div>
             ))}
