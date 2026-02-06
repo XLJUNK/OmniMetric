@@ -1,7 +1,26 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Shield, Activity, Globe, Zap, Clock, ChevronDown, Check, TrendingUp, TrendingDown, Minus, Info, X } from 'lucide-react';
+import { OmniWarningBeacons } from '@/components/OmniWarningBeacons';
+
+// ... existing imports
+
+export const Dashboard = ({ lang, setLang }: DashboardProps) => {
+    // ... existing setup
+
+    return (
+        <div className="w-full bg-[#0A0A0A] text-slate-200 font-sans selection:bg-sky-500/30 flex flex-col">
+            <div className="max-w-[1600px] mx-auto p-4 md:p-8 space-y-12 relative w-full">
+                {/* ... existing header */}
+
+                {/* 2. OMNIMETRIC REGIME INDEX (Structural Fix) */}
+                <div className="w-full max-w-[1400px] mx-auto pt-8 pb-4 flex flex-col items-center justify-center gap-2 border-b border-gray-800">
+                    {/* ... regime content */}
+                    
+                    {/* NEW: WARNING BEACONS INJECTION */}
+                    <OmniWarningBeacons data={data} lang={lang} />
+                </div>
+
 import { RiskGauge, HistoryChart, MetricChart } from '@/components/Charts';
 import { DICTIONARY, LangType } from '@/data/dictionary';
 import { useRouter, usePathname } from 'next/navigation';

@@ -65,6 +65,11 @@ export const DICTIONARY = {
                 neutral: "Neutral (50)",
                 greed: "Accumulate (100)"
             },
+            beacons: {
+                vix_spike: "Vol Spike",
+                yield_invert: "Deep Inversion",
+                oil_surge: "Energy Shock"
+            },
             factors: { VOL: "VOL", MOM: "MOM", CRED: "CRED", SENT: "SENT", RATES: "RATES", BREADTH: "BREADTH", LIQ: "LIQ", INFL: "INFL", EXP: "EXP", MACRO: "MACRO" },
             factors_status: {
                 LOW: "LOW", HIGH: "HIGH",
