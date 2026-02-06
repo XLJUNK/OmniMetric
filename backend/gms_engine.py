@@ -1829,16 +1829,17 @@ def update_signal(force_news=False):
 
             # 2. SNS Strategic Publication
             github_event = os.getenv("GITHUB_EVENT_NAME", "manual")
-            if github_event == "push":
-                print("[AIO] SNS Skipped (Reason: Triggered by git push / deploy)")
-            else:
-                try:
-                    sns = SNSPublisher(log_callback=log_diag)
-                    sns.publish_update(payload)
-                except Exception as e:
-                    print(f"[AIO] SNS Module Error: {e}")
-                    import traceback
-                    traceback.print_exc()
+            # [MOVED] SNS Logic moved to dedicated workflow (sns_publish.yml) for independent control
+            # if github_event == "push":
+            #     print("[AIO] SNS Skipped (Reason: Triggered by git push / deploy)")
+            # else:
+            #     try:
+            #         sns = SNSPublisher(log_callback=log_diag)
+            #         sns.publish_update(payload)
+            #     except Exception as e:
+            #         print(f"[AIO] SNS Module Error: {e}")
+            #         import traceback
+            #         traceback.print_exc()
 
             # 3. Performance Audit (Archive & Summary)
             try:
