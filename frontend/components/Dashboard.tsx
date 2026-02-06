@@ -5,21 +5,8 @@ import { OmniWarningBeacons } from '@/components/OmniWarningBeacons';
 
 // ... existing imports
 
-export const Dashboard = ({ lang, setLang }: DashboardProps) => {
-    // ... existing setup
-
-    return (
-        <div className="w-full bg-[#0A0A0A] text-slate-200 font-sans selection:bg-sky-500/30 flex flex-col">
-            <div className="max-w-[1600px] mx-auto p-4 md:p-8 space-y-12 relative w-full">
-                {/* ... existing header */}
-
-                {/* 2. OMNIMETRIC REGIME INDEX (Structural Fix) */}
-                <div className="w-full max-w-[1400px] mx-auto pt-8 pb-4 flex flex-col items-center justify-center gap-2 border-b border-gray-800">
-                    {/* ... regime content */}
-                    
-                    {/* NEW: WARNING BEACONS INJECTION */}
-                    <OmniWarningBeacons data={data} lang={lang} />
-                </div>
+// ... existing imports
+// Removed duplicate Dashboard definition and misplaced OmniWarningBeacons usage
 
 import { RiskGauge, HistoryChart, MetricChart } from '@/components/Charts';
 import { DICTIONARY, LangType } from '@/data/dictionary';
@@ -209,37 +196,10 @@ export const Dashboard = ({ lang, setLang }: DashboardProps) => {
                         </span>
                     </div>
 
-                    {/* Gradient Risk Scale (Always Visible) */}
-                    <div className="w-full max-w-[320px] mx-auto mt-4 mb-2">
-                        <div
-                            style={{
-                                width: '100%',
-                                height: '12px',
-                                background: 'linear-gradient(90deg, #ef4444 0%, #eab308 50%, #3b82f6 100%)',
-                                borderRadius: '999px',
-                                position: 'relative',
-                                boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.5)'
-                            }}
-                        >
-                            <div
-                                style={{
-                                    position: 'absolute',
-                                    left: `${data ? data.gms_score : 0}%`,
-                                    top: '-4px',
-                                    transform: 'translateX(-50%)',
-                                    width: '4px',
-                                    height: '20px',
-                                    backgroundColor: '#fff',
-                                    boxShadow: '0 0 10px rgba(255,255,255,0.8)',
-                                    zIndex: 10
-                                }}
-                            />
-                        </div>
-                        <div className="flex justify-between text-[10px] text-gray-500 mt-2 uppercase tracking-widest font-mono">
-                            <span>{t.methodology.scale_labels.panic}</span>
-                            <span>{t.methodology.scale_labels.neutral}</span>
-                            <span>{t.methodology.scale_labels.greed}</span>
-                        </div>
+                    {/* V5 VISUAL SYSTEM RESTORED */}
+                    <div className="w-full max-w-[360px] mx-auto mt-4 mb-2 flex flex-col items-center gap-4">
+                        <RiskGauge score={data.gms_score} lang={lang} />
+                        <OmniWarningBeacons data={data} lang={lang} />
                     </div>
                 </div>
 
