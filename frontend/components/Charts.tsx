@@ -15,12 +15,52 @@ export const RiskGauge = ({ score, lang = 'EN' }: GaugeProps) => {
     const pct = Math.min(100, Math.max(0, score));
     const isRTL = lang === 'AR';
 
+    // Dynamic Neon Styling (V5 Polish)
+    let borderColor = "#94a3b8"; // Neutral Gray
+    let shadowColor = "rgba(148, 163, 184, 0.5)"; // Neutral Glow
+    let textColor = "#FFFFFF";
+
+    if (score > 60) {
+        borderColor = "#3b82f6"; // Blue (Accumulate)
+        shadowColor = "rgba(59, 130, 246, 0.6)";
+        textColor = "#60a5fa"; // Light Blue Text
+    } else if (score < 40) {
+        borderColor = "#ef4444"; // Red (Defensive)
+        shadowColor = "rgba(239, 68, 68, 0.6)";
+        textColor = "#f87171"; // Light Red Text
+    } else {
+        borderColor = "#eab308"; // Yellow (Neutral)
+        shadowColor = "rgba(234, 179, 8, 0.6)";
+        textColor = "#facc15"; // Light Yellow Text
+    }
+
     return (
         <div className="w-full relative mt-2 mb-2 gms-container">
-            {/* Gradient Bar Wrapper (Height Fixed) */}
-            <div className="relative w-full" style={{ height: '1.625rem' }}>
+            {/* Gradient Bar Wrapper (Height Increased for Touchability) */}
+            <div className="relative w-full" style={{ height: '2.0rem' }}>
                 {/* 1. The Gradient Background (Overflow Hidden for Rounded Corners) */}
-                <div className="absolute inset-0 w-full h-full !rounded-xl !border border-slate-300 dark:border-[#1E293B] overflow-hidden">
+                <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-[0.5rem] bg-slate-800 rounded-full overflow-hidden">
+                    {/* Track Background - Darker */}
+                </div>
+
+                {/* 2. active Gradient Track */}
+                <div className="absolute inset-0 w-full h-full !rounded-xl overflow-hidden opacity-80 mix-blend-screen pointer-events-none">
+                    <div
+                        className="absolute inset-0 w-full h-full"
+                        style={{
+                            backgroundImage: isRTL
+                                ? 'linear-gradient(90deg, #3b82f6 0%, #94a3b8 50%, #ef4444 100%)'
+                                : 'linear-gradient(90deg, #ef4444 0%, #94a3b8 50%, #3b82f6 100%)',
+                            maskImage: 'linear-gradient(black, black)',
+                            WebkitMaskImage: 'linear-gradient(black, black)',
+                            height: '100%',
+                            opacity: 0.3
+                        }}
+                    />
+                </div>
+
+                {/* 3. The Actual Gradient Bar (Thin Line) */}
+                <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-[0.5rem] !rounded-full overflow-hidden border border-slate-700/50">
                     <div
                         className="absolute inset-0 w-full h-full"
                         style={{
@@ -31,9 +71,9 @@ export const RiskGauge = ({ score, lang = 'EN' }: GaugeProps) => {
                     />
                 </div>
 
-                {/* 2. The Marker (Outside overflow-hidden, so it acts as an overlay) */}
+                {/* 4. The Marker (Neon Pill) */}
                 <div
-                    className="absolute top-1/2 flex flex-col items-center z-50 transition-all duration-700 ease-out pointer-events-none"
+                    className="absolute top-1/2 flex flex-col items-center z-50 transition-all duration-700 ease-out"
                     style={{
                         left: isRTL ? 'auto' : `${pct}%`,
                         right: isRTL ? `${pct}%` : 'auto',
@@ -41,21 +81,32 @@ export const RiskGauge = ({ score, lang = 'EN' }: GaugeProps) => {
                         ['--dir' as any]: isRTL ? 1 : -1
                     }}
                 >
-                    <div className="bg-[#1e293b] border border-[#1e293b] px-1.5 py-0.5 rounded shadow-xl mb-1 transition-colors duration-300">
-                        <span className="text-[0.75rem] font-black text-white leading-none tabular-nums tracking-tighter" style={{ color: '#FFFFFF' }}>
+                    {/* Glow Effect */}
+                    <div
+                        className="absolute inset-0 rounded-lg blur-md opacity-40"
+                        style={{ backgroundColor: borderColor }}
+                    ></div>
+
+                    {/* The Pill */}
+                    <div
+                        className="relative bg-[#0f172a] px-3 py-1 rounded-md shadow-2xl flex items-center justify-center min-w-[3.5rem]"
+                        style={{
+                            border: `2px solid ${borderColor}`,
+                            boxShadow: `0 0 10px ${shadowColor}`
+                        }}
+                    >
+                        <span className="text-[0.9rem] font-black leading-none tabular-nums tracking-tighter" style={{ color: "white" }}>
                             {Math.round(score)}
                         </span>
                     </div>
-                    {/* Arrow */}
-                    <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-[#1e293b] drop-shadow-sm transition-colors duration-300"></div>
                 </div>
             </div>
 
             {/* Labels */}
             <div className={`flex justify-between px-1 mt-1 relative z-0`}>
-                <span className="text-fluid-xs font-bold text-[#ef4444] uppercase tracking-widest drop-shadow-sm">Defensive</span>
-                <span className="text-fluid-xs font-bold text-slate-400 uppercase tracking-widest drop-shadow-sm">Neutral</span>
-                <span className="text-fluid-xs font-bold text-[#3b82f6] uppercase tracking-widest drop-shadow-sm">Accumulate</span>
+                <span className="text-fluid-xs font-bold text-[#ef4444] uppercase tracking-widest drop-shadow-sm opacity-80">Defensive</span>
+                <span className="text-fluid-xs font-bold text-slate-400 uppercase tracking-widest drop-shadow-sm opacity-50">Neutral</span>
+                <span className="text-fluid-xs font-bold text-[#3b82f6] uppercase tracking-widest drop-shadow-sm opacity-80">Accumulate</span>
             </div>
         </div>
     );
