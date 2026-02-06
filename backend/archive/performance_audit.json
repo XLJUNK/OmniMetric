@@ -1,14 +1,14 @@
 {
     "metrics": {
-        "avg_vix_defensive": 17.23,
+        "avg_vix_defensive": 17.17,
         "avg_vix_neutral": 16.15,
         "avg_vix_accumulate": 14.49,
         "sample_count": 28,
-        "last_updated": "2026-02-06T14:52:15.690454+00:00"
+        "last_updated": "2026-02-06T22:24:58.917061+00:00"
     },
     "summaries": {
-        "EN": "Over the past 28 entries, market volatility (VIX) was 6.7% higher during GMS Defensive regimes (<40) compared to Neutral, validating the signal's sensitivity to structural stress.",
-        "JP": "過去28回の観測データにおいて、GMSが「ディフェンシブ（40以下）」を示した期間のVIX指数は平均17.23となり、ニュートラル期間より6.7%高く推移しました。これは、本アルゴリズムが市場の構造的ストレスを正確に捉えていることを客観的に示しています。"
+        "EN": "Over the past 28 entries, market volatility (VIX) was 6.3% higher during GMS Defensive regimes (<40) compared to Neutral, validating the signal's sensitivity to structural stress.",
+        "JP": "過去28回の観測データにおいて、GMSが「ディフェンシブ（40以下）」を示した期間のVIX指数は平均17.17となり、ニュートラル期間より6.3%高く推移しました。これは、本アルゴリズムが市場の構造的ストレスを正確に捉えていることを客観的に示しています。"
     },
     "history": [
         {
@@ -554,21 +554,21 @@
         {
             "date": "2026-02-06",
             "gms_score": 34,
-            "net_liquidity": 5695.39,
-            "move_price": 62.16,
-            "real_rate": 1.94,
-            "breakeven_inflation": 2.32,
-            "dxy_price": 97.6,
-            "hy_spread": 2.86,
+            "net_liquidity": 5694.02,
+            "move_price": 63.62,
+            "real_rate": 1.89,
+            "breakeven_inflation": 2.34,
+            "dxy_price": 97.68,
+            "hy_spread": 2.97,
             "nfci_price": -0.56,
-            "breadth_spread": 2.29,
-            "gold_price": 4949.6,
-            "btc_price": 68403.54,
+            "breadth_spread": 2.28,
+            "gold_price": 4988.6,
+            "btc_price": 70501.1,
             "copper_gold_ratio": 1.18,
-            "vix_price": 19.49,
-            "spy_price": 686.21,
-            "qqq_price": 605.47,
-            "iwm_price": 262.37,
+            "vix_price": 17.76,
+            "spy_price": 690.62,
+            "qqq_price": 609.65,
+            "iwm_price": 265.02,
             "crypto_sentiment": 9
         }
     ]

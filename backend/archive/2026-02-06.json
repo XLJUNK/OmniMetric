@@ -1,11 +1,11 @@
 {
-    "last_updated": "2026-02-06T14:52:15.676747+00:00",
-    "last_successful_update": "2026-02-06T14:52:15.676754+00:00",
+    "last_updated": "2026-02-06T22:24:58.903618+00:00",
+    "last_successful_update": "2026-02-06T22:24:58.903625+00:00",
     "gms_score": 34,
     "sector_scores": {
-        "STOCKS": 50,
+        "STOCKS": 55,
         "CRYPTO": 25,
-        "FOREX": 60,
+        "FOREX": 40,
         "COMMODITIES": 55
     },
     "market_data": {
@@ -51,7 +51,6 @@
             "change_percent": 0.0,
             "trend": "NORMAL",
             "sparkline": [
-                0.5,
                 0.44,
                 0.49,
                 0.51,
@@ -80,17 +79,17 @@
                 0.6,
                 0.59,
                 0.6,
+                0.54,
                 0.54
             ]
         },
         "HY_SPREAD": {
-            "price": 2.86,
-            "prev_price": 2.85,
-            "daily_chg": 0.35,
-            "change_percent": 0.35,
+            "price": 2.97,
+            "prev_price": 2.86,
+            "daily_chg": 3.85,
+            "change_percent": 3.85,
             "trend": "CALM",
             "sparkline": [
-                2.86,
                 2.87,
                 2.84,
                 2.81,
@@ -119,7 +118,8 @@
                 2.88,
                 2.81,
                 2.85,
-                2.86
+                2.86,
+                2.97
             ]
         },
         "NFCI": {
@@ -142,13 +142,12 @@
             ]
         },
         "NET_LIQUIDITY": {
-            "price": 5695.39,
-            "prev_price": 5694.72,
-            "daily_chg": 0.01,
-            "change_percent": 0.72,
-            "trend": "EXPANSION",
+            "price": 5694.02,
+            "prev_price": 5695.39,
+            "daily_chg": -0.02,
+            "change_percent": 0.71,
+            "trend": "CONTRACTION",
             "sparkline": [
-                5723.77,
                 5733.56,
                 5731.51,
                 5697.32,
@@ -177,15 +176,15 @@
                 5654.11,
                 5662.74,
                 5694.72,
-                5695.39
+                5695.39,
+                5694.02
             ]
         },
         "BREAKEVEN_INFLATION": {
-            "price": 2.32,
+            "price": 2.34,
             "change_percent": 0.0,
             "trend": "STABLE",
             "sparkline": [
-                2.23,
                 2.22,
                 2.24,
                 2.25,
@@ -214,14 +213,15 @@
                 2.35,
                 2.36,
                 2.35,
-                2.32
+                2.32,
+                2.34
             ]
         },
         "VIX": {
-            "price": 19.49,
+            "price": 17.76,
             "prev_price": 21.77,
-            "daily_chg": -10.47,
-            "change_percent": 19.28,
+            "daily_chg": -18.42,
+            "change_percent": 8.69,
             "trend": "DOWN",
             "sparkline": [
                 15.38,
@@ -245,15 +245,14 @@
                 18.0,
                 18.64,
                 21.77,
-                19.49
+                17.76
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
-            "price": 0.74,
+            "price": 0.72,
             "change_percent": 0.0,
             "trend": "NEUTRAL",
             "sparkline": [
-                0.68,
                 0.67,
                 0.69,
                 0.71,
@@ -282,15 +281,15 @@
                 0.72,
                 0.71,
                 0.72,
-                0.74
+                0.74,
+                0.72
             ]
         },
         "US_10Y_YIELD": {
-            "price": 4.29,
+            "price": 4.21,
             "change_percent": 0.0,
             "trend": "STABLE",
             "sparkline": [
-                4.15,
                 4.14,
                 4.12,
                 4.14,
@@ -319,15 +318,15 @@
                 4.26,
                 4.29,
                 4.28,
-                4.29
+                4.29,
+                4.21
             ]
         },
         "REAL_INTEREST_RATE": {
-            "price": 1.94,
+            "price": 1.89,
             "change_percent": 0.0,
             "trend": "STABLE",
             "sparkline": [
-                1.91,
                 1.91,
                 1.9,
                 1.9,
@@ -356,14 +355,15 @@
                 1.9,
                 1.94,
                 1.92,
-                1.94
+                1.94,
+                1.89
             ]
         },
         "SPY": {
-            "price": 686.21,
+            "price": 690.62,
             "prev_price": 677.62,
-            "daily_chg": 1.27,
-            "change_percent": -1.32,
+            "daily_chg": 1.92,
+            "change_percent": -0.69,
             "trend": "UP",
             "sparkline": [
                 689.58,
@@ -387,14 +387,14 @@
                 689.53,
                 686.19,
                 677.62,
-                686.21
+                690.62
             ]
         },
         "TNX": {
-            "price": 4.2,
+            "price": 4.21,
             "prev_price": 4.21,
-            "daily_chg": -0.24,
-            "change_percent": -1.75,
+            "daily_chg": -0.1,
+            "change_percent": -1.61,
             "trend": "DOWN",
             "sparkline": [
                 4.14,
@@ -418,14 +418,14 @@
                 4.27,
                 4.28,
                 4.21,
-                4.2
+                4.21
             ]
         },
         "QQQ": {
-            "price": 605.47,
+            "price": 609.65,
             "prev_price": 597.03,
-            "daily_chg": 1.41,
-            "change_percent": -3.3,
+            "daily_chg": 2.11,
+            "change_percent": -2.63,
             "trend": "UP",
             "sparkline": [
                 624.02,
@@ -449,14 +449,14 @@
                 616.52,
                 605.75,
                 597.03,
-                605.47
+                609.65
             ]
         },
         "IWM": {
-            "price": 262.37,
+            "price": 265.02,
             "prev_price": 255.83,
-            "daily_chg": 2.56,
-            "change_percent": 0.07,
+            "daily_chg": 3.59,
+            "change_percent": 1.08,
             "trend": "UP",
             "sparkline": [
                 255.48,
@@ -480,14 +480,14 @@
                 262.78,
                 260.52,
                 255.83,
-                262.37
+                265.02
             ]
         },
         "RSP": {
-            "price": 201.04,
+            "price": 202.26,
             "prev_price": 198.56,
-            "daily_chg": 1.25,
-            "change_percent": 0.97,
+            "daily_chg": 1.86,
+            "change_percent": 1.59,
             "trend": "UP",
             "sparkline": [
                 194.79,
@@ -511,14 +511,14 @@
                 198.57,
                 200.3,
                 198.56,
-                201.04
+                202.26
             ]
         },
         "HYG": {
-            "price": 80.68,
+            "price": 80.81,
             "prev_price": 80.53,
-            "daily_chg": 0.18,
-            "change_percent": -0.12,
+            "daily_chg": 0.35,
+            "change_percent": 0.05,
             "trend": "UP",
             "sparkline": [
                 80.48,
@@ -542,7 +542,7 @@
                 80.72,
                 80.62,
                 80.53,
-                80.68
+                80.81
             ]
         },
         "NIFTY": {
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 68403.54,
+            "price": 70501.1,
             "prev_price": 62702.1,
-            "daily_chg": 9.09,
-            "change_percent": -13.07,
+            "daily_chg": 12.44,
+            "change_percent": -10.41,
             "trend": "UP",
             "sparkline": [
                 95525.12,
@@ -604,14 +604,14 @@
                 75633.55,
                 73019.7,
                 62702.1,
-                68403.54
+                70501.1
             ]
         },
         "ETH": {
-            "price": 1992.44,
+            "price": 2054.58,
             "prev_price": 1821.68,
-            "daily_chg": 9.37,
-            "change_percent": -15.01,
+            "daily_chg": 12.78,
+            "change_percent": -12.36,
             "trend": "UP",
             "sparkline": [
                 3295.48,
@@ -635,14 +635,14 @@
                 2227.56,
                 2143.5,
                 1821.68,
-                1992.44
+                2054.58
             ]
         },
         "SOL": {
-            "price": 84.67,
+            "price": 88.53,
             "prev_price": 78.19,
-            "daily_chg": 8.3,
-            "change_percent": -18.95,
+            "daily_chg": 13.23,
+            "change_percent": -15.25,
             "trend": "UP",
             "sparkline": [
                 144.86,
@@ -666,14 +666,14 @@
                 97.56,
                 92.03,
                 78.19,
-                84.67
+                88.53
             ]
         },
         "DXY": {
-            "price": 97.6,
+            "price": 97.68,
             "prev_price": 97.82,
-            "daily_chg": -0.22,
-            "change_percent": -0.01,
+            "daily_chg": -0.14,
+            "change_percent": 0.07,
             "trend": "DOWN",
             "sparkline": [
                 98.68,
@@ -697,15 +697,15 @@
                 97.44,
                 97.62,
                 97.82,
-                97.6
+                97.68
             ]
         },
         "USDJPY": {
-            "price": 156.85,
+            "price": 157.18,
             "prev_price": 156.92,
-            "daily_chg": -0.04,
-            "change_percent": 1.06,
-            "trend": "DOWN",
+            "daily_chg": 0.17,
+            "change_percent": 1.28,
+            "trend": "UP",
             "sparkline": [
                 156.73,
                 156.88,
@@ -728,14 +728,14 @@
                 155.44,
                 155.8,
                 156.92,
-                156.85
+                157.18
             ]
         },
         "EURUSD": {
             "price": 1.18,
             "prev_price": 1.18,
-            "daily_chg": 0.23,
-            "change_percent": -0.17,
+            "daily_chg": 0.16,
+            "change_percent": -0.24,
             "trend": "UP",
             "sparkline": [
                 1.17,
@@ -763,10 +763,10 @@
             ]
         },
         "USDINR": {
-            "price": 90.46,
+            "price": 90.56,
             "prev_price": 90.12,
-            "daily_chg": 0.37,
-            "change_percent": -1.34,
+            "daily_chg": 0.48,
+            "change_percent": -1.23,
             "trend": "UP",
             "sparkline": [
                 89.86,
@@ -790,7 +790,7 @@
                 90.25,
                 90.42,
                 90.12,
-                90.46
+                90.56
             ]
         },
         "USDSAR": {
@@ -825,10 +825,10 @@
             ]
         },
         "GOLD": {
-            "price": 4949.6,
+            "price": 4988.6,
             "prev_price": 4861.4,
-            "daily_chg": 1.81,
-            "change_percent": 7.08,
+            "daily_chg": 2.62,
+            "change_percent": 7.92,
             "trend": "UP",
             "sparkline": [
                 4449.3,
@@ -852,15 +852,15 @@
                 4903.7,
                 4920.4,
                 4861.4,
-                4949.6
+                4988.6
             ]
         },
         "OIL": {
-            "price": 63.1,
+            "price": 63.5,
             "prev_price": 63.29,
-            "daily_chg": -0.3,
-            "change_percent": 1.54,
-            "trend": "DOWN",
+            "daily_chg": 0.33,
+            "change_percent": 2.19,
+            "trend": "UP",
             "sparkline": [
                 55.99,
                 57.76,
@@ -883,14 +883,14 @@
                 63.21,
                 65.14,
                 63.29,
-                63.1
+                63.5
             ]
         },
         "COPPER": {
-            "price": 5.85,
+            "price": 5.89,
             "prev_price": 5.8,
-            "daily_chg": 0.8,
-            "change_percent": 0.76,
+            "daily_chg": 1.53,
+            "change_percent": 1.48,
             "trend": "UP",
             "sparkline": [
                 5.81,
@@ -914,15 +914,15 @@
                 6.06,
                 5.83,
                 5.8,
-                5.85
+                5.89
             ]
         },
         "NATGAS": {
-            "price": 3.55,
+            "price": 3.4,
             "prev_price": 3.51,
-            "daily_chg": 1.03,
-            "change_percent": 9.51,
-            "trend": "UP",
+            "daily_chg": -2.96,
+            "change_percent": 5.19,
+            "trend": "DOWN",
             "sparkline": [
                 3.53,
                 3.41,
@@ -945,15 +945,14 @@
                 3.31,
                 3.46,
                 3.51,
-                3.55
+                3.4
             ]
         },
         "MOVE": {
-            "price": 62.16,
-            "change_percent": 8.08,
+            "price": 63.62,
+            "change_percent": 2.34,
             "trend": "NORMAL",
             "sparkline": [
-                65.82,
                 66.15,
                 66.94,
                 61.55,
@@ -974,11 +973,12 @@
                 59.3,
                 57.54,
                 57.51,
-                62.16
+                62.16,
+                63.62
             ]
         },
         "BREADTH": {
-            "price": 2.29,
+            "price": 2.28,
             "change_percent": 0.0,
             "trend": "BROAD",
             "sparkline": [
@@ -1003,11 +1003,11 @@
                 1.95,
                 3.32,
                 3.67,
-                3.67
+                3.68
             ]
         },
         "SPY_MOMENTUM": {
-            "price": -2.29,
+            "price": -2.28,
             "change_percent": 0,
             "trend": "SKEWED",
             "sparkline": [
@@ -1109,22 +1109,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS score 34 maintains a Defensive regime, yet upward momentum indicates a bottoming process. A 10.5% drop in VIX (Fear/Volatility) and easing DXY (Dollar strength/Liquidity) drive this recovery. Despite Big Tech AI bubble fears, broad-market and Crypto strength point to stabilizing sentiment. Caution remains as high credit spreads signal underlying risk, but momentum pushed the score from 28 to 34, marking a tactical relief rally in a risk-off environment. Monitor if VIX compression continues to support this stabilization.",
+        "content": "Status: GMS 34 (Defensive). Upward momentum pushed the score to 34, signaling a sentiment floor. Logic: A sharp 18% drop in VIX (Fear index) and a softening DXY (Dollar strength) facilitated a major relief rally, lifting the Dow above 50,000. Risk: While equity markets recover, widening high-yield spreads suggest underlying credit stress remains. Action: Maintain defensive positioning; a breakout above the 40 threshold is required to confirm a transition into a neutral regime. Monitor if liquidity expansion continues to offset these credit warnings.",
         "reports": {
-            "JP": "GMSスコア34は防衛的体制を維持していますが、上昇モメンタムは市場の底打ちプロセスが進行中であることを示唆しています。VIX（恐怖指数）の10.5%急落とDXY（ドル強気/流動性）の緩和が、今回の回復を主導する形となりました。大手テック株にはAIバブルの懸念が残りますが、仮想通貨や中小型株の底堅さはセンチメントの安定化を暗示しています。信用リスクには依然警戒が必要ですが、モメンタムがスコアを28から34へ押し上げたことは、リスクオフ環境下での戦術的なリリーフラリー形成を示しています。",
-            "EN": "GMS score 34 maintains a Defensive regime, yet upward momentum indicates a bottoming process. A 10.5% drop in VIX (Fear/Volatility) and easing DXY (Dollar strength/Liquidity) drive this recovery. Despite Big Tech AI bubble fears, broad-market and Crypto strength point to stabilizing sentiment. Caution remains as high credit spreads signal underlying risk, but momentum pushed the score from 28 to 34, marking a tactical relief rally in a risk-off environment. Monitor if VIX compression continues to support this stabilization.",
-            "CN": "GMS得分34目前维持防御模式，但上升动量明确显示出市场正处于筑底企稳阶段。VIX（恐慌/波动率指数）大跌10.5%以及DXY（美元强度/流动性）的走软，是推动本轮情绪修复的核心驱动力。尽管大型科技股仍受AI泡沫破裂隐忧的困扰，但加密货币及宽基指数的同步反弹暗示整体情绪正在回暖。虽然利差提示信用风险，但动量将得分从28推升至34，反映出在风险厌恶环境下的战术性反弹正在形成，需关注流动性持续性。",
-            "ES": "El puntaje GMS 34 mantiene un régimen Defensivo, pero el impulso alcista sugiere un proceso de suelo. La caída del 10.5% en VIX (Miedo/Volatilidad) y un DXY (Dólar/Liquidez) más débil impulsan esta mejora. Pese a los temores de burbuja de IA en Big Tech, la fuerza en Cripto indica estabilización. Los diferenciales de crédito advierten precaución, pero el impulso que empujó el puntaje de 28 a 34 señala un repunte táctico dentro de este entorno de aversión al riesgo. Es vital vigilar si la volatilidad continúa cediendo.",
-            "HI": "GMS स्कोर 34 रक्षात्मक शासन बनाए रखता है, लेकिन ऊपर की ओर गति बाजार के निचले स्तर से उबरने का संकेत देती है। VIX (डर/अस्थिरता) में 10.5% गिरावट और DXY (डॉलर की मजबूती/तरलता) में कमी इस रिकवरी को बढ़ावा दे रही है। हालांकि बिग टेक में AI बबल की चिंता बनी हुई है, लेकिन क्रिप्टो की मजबूती सेंटिमेंट में स्थिरता का संकेत है। क्रेडिट जोखिम के कारण सावधानी जरूरी है, फिर भी मोमेंटम द्वारा स्कोर को 28 से 34 पर ले जाना इस रिस्क-ऑफ माहौल में एक रणनीतिक सुधार की शुरुआत को दर्शाता है। तरलता की निरंतरता पर नज़र रखें।",
-            "ID": "Skor GMS 34 mempertahankan rezim Defensif, namun momentum kenaikan menunjukkan proses pembentukan dasar pasar. Penurunan 10,5% pada VIX (Ketakutan/Volatilitas) dan pelonggaran DXY (Kekuatan Dolar/Likuiditas) mendorong pemulihan ini. Meskipun ada kekhawatiran gelembung AI pada Big Tech, kekuatan pasar luas dan Kripto menunjukkan sentimen yang menstabil. Risiko kredit tetap ada seiring spread yang tinggi, namun momentum yang mendorong skor dari 28 ke 34 menandakan reli bantuan taktis dalam lingkungan yang masih dalam kategori waspada risiko.",
-            "AR": "يشير مؤشر GMS البالغ 34 إلى نظام دفاعي، لكن الزخم الصعودي يشير إلى بدء استقرار السوق. أدى انخفاض VIX (الخوف/التقلب) بنسبة 10.5% وتراجع DXY (الدولار/السيولة) إلى دعم هذا التعافي. رغم مخاوف فقاعة الذكاء الاصطناعي في شركات التكنولوجيا، فإن قوة الكريبتو تعكس استقرار المشاعر. تحذر هوامش الائتمان العالية من المخاطر الكامنة، لكن دفع الزخم للسكور من 28 إلى 34 يشير إلى ارتداد تكتيكي ضمن بيئة العزوف عن المخاطرة، مما يتطلب مراقبة مدى استمرار تحسن مستويات السيولة العالمية."
+            "JP": "GMS現状：34（防御的局面）。上昇モーメンタムがスコアを34まで押し上げ、市場心理の底打ちを明確に示しています。論理構成：VIX（恐怖指数）の18%急落とDXY（ドル指数）の軟化が流動性を改善させ、ダウの5万ドル突破を支えました。警戒点：株価は力強く反発していますが、ハイイールド債スプレッドの拡大は信用リスクの残存を警告しています。行動方針：依然としてリスクオフ領域に留まっているため、防御姿勢を維持しつつ、スコアが40を突破して「中立」へ転換するかを注視すべき段階です。",
+            "EN": "Status: GMS 34 (Defensive). Upward momentum pushed the score to 34, signaling a sentiment floor. Logic: A sharp 18% drop in VIX (Fear index) and a softening DXY (Dollar strength) facilitated a major relief rally, lifting the Dow above 50,000. Risk: While equity markets recover, widening high-yield spreads suggest underlying credit stress remains. Action: Maintain defensive positioning; a breakout above the 40 threshold is required to confirm a transition into a neutral regime. Monitor if liquidity expansion continues to offset these credit warnings.",
+            "CN": "当前状态：GMS 34（防御型）。上升动能将分数推升至34，显示出市场情绪正从底部稳步回升。逻辑分析：VIX（恐慌指数）大幅下挫18%且DXY（美元强度）走势趋缓，共同触发了超跌反弹，推动道指突破五万点大关。潜在风险：尽管股市表现乐观，但高收益债利差持续走阔，暗示信用市场仍存在结构性压力。操作建议：目前应保持谨慎防御姿态，需等待分数有效突破40分界线，方可确认市场进入中性区间，在此之前需警惕信用端的负面扰动。",
+            "ES": "Estado: GMS 34 (Defensivo). El impulso alcista elevó la puntuación a 34, indicando una estabilización del sentimiento. Lógica: La caída del 18% en el VIX (miedo/volatilidad) y la debilidad del DXY (fuerza del dólar) permitieron un rally de alivio, con el Dow superando los 50,000 puntos. Riesgo: El aumento de los diferenciales de crédito de alto rendimiento advierte sobre tensiones financieras subyacentes. Conclusión: Se debe mantener la cautela; el sistema requiere superar el nivel de 40 para validar un cambio hacia un régimen neutral y confirmar la sostenibilidad del rebote actual.",
+            "HI": "स्थिति: GMS 34 (रक्षात्मक)। सकारात्मक मोमेंटम ने स्कोर को 34 तक पहुंचाया, जो बाजार की स्थिरता का संकेत है। तर्क: VIX (डर सूचकांक) में 18% की भारी गिरावट और DXY (डॉलर की मजबूती) में कमी ने तरलता में सुधार किया, जिससे डॉव 50,000 के ऐतिहासिक स्तर को पार कर गया। जोखिम: हालांकि इक्विटी में सुधार है, लेकिन हाई-यिल्ड स्प्रेड में वृद्धि क्रेडिट बाजार के छिपे तनाव को दर्शाती है। निष्कर्ष: फिलहाल रक्षात्मक रुख बनाए रखें; बाजार के न्यूट्रल क्षेत्र में प्रवेश करने के लिए स्कोर का 40 से ऊपर जाना अनिवार्य है। क्रेडिट संकेतों पर बारीकी से नजर रखें।",
+            "ID": "Status: GMS 34 (Defensif). Momentum naik mendorong skor ke 34, menandakan pembentukan dasar sentimen. Logika: Penurunan tajam 18% pada VIX (Indeks ketakutan) dan pelemahan DXY (Kekuatan dolar) memicu reli pemulihan hingga Dow menembus level 50.000. Risiko: Meskipun pasar saham pulih, pelebaran spread imbal hasil tinggi menunjukkan adanya tekanan kredit yang belum hilang. Kesimpulan: Tetap dalam posisi defensif; perhatikan penembusan ambang skor 40 sebagai konfirmasi peralihan ke rezim netral. Waspadai divergensi antara sentimen ekuitas dan kondisi pasar kredit.",
+            "AR": "الحالة: مؤشر GMS 34 (دفاعي). دفع الزخم الصعودي النتيجة إلى 34، مما يشير إلى استقرار معنويات السوق. المنطق: أدى الانخفاض الحاد بنسبة 18% في VIX (مؤشر الخوف) وضعف DXY (قوة الدولار) إلى تحسن السيولة، مما ساعد داو جونز على تجاوز 50 ألف نقطة. المخاطر: اتساع فروق الائتمان للعوائد المرتفعة يشير إلى ضغوط مالية مخفية رغم صعود الأسهم. الخلاصة: يجب الحفاظ على التمركز الدفاعي في الوقت الحالي؛ حيث يتطلب الأمر تجاوز النتيجة لـ 40 للتأكيد على الانتقال إلى النظام المحايد، مع مراقبة استدامة هذا التعافي الفني."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-01T17:36:21Z",
-            "score": 28
-        },
         {
             "date": "2026-02-01T18:52:23Z",
             "score": 26
@@ -1360,92 +1356,96 @@
         {
             "date": "2026-02-06T14:52:15Z",
             "score": 34
+        },
+        {
+            "date": "2026-02-06T22:24:58Z",
+            "score": 34
         }
     ],
     "intelligence": {
         "news": [
             {
-                "title": "Amazon plunges 9%, continues Big Tech's $1 trillion wipeout as AI bubble fears ignite sell-off",
-                "link": "https://www.cnbc.com/2026/02/06/ai-sell-off-stocks-amazon-oracle.html",
-                "isoDate": "2026-02-06T14:39:53+00:00Z"
-            },
-            {
-                "title": "How America’s EV retreat is increasing China's control of global markets",
-                "link": "https://www.cnbc.com/2026/02/06/automakers-ev-china-ford-gm.html",
-                "isoDate": "2026-02-06T14:19:34+00:00Z"
-            },
-            {
-                "title": "Stellantis CEO says automaker is stronger together as stock plummets amid $26 billion charge",
-                "link": "https://www.cnbc.com/2026/02/06/stellantis-stla-ceo-antonio-filosa.html",
-                "isoDate": "2026-02-06T14:35:34+00:00Z"
-            },
-            {
-                "title": "Stocks rebound after three-day slide as tech shares pop, bitcoin stabilizes: Live updates",
+                "title": "Dow surges 1,200 points for first close above 50,000 in sharp rebound from tech rout: Live updates",
                 "link": "https://www.cnbc.com/2026/02/05/stock-market-today-live-updates.html",
-                "isoDate": "2026-02-06T14:51:28+00:00Z"
+                "isoDate": "2026-02-06T21:26:42+00:00Z"
             },
             {
-                "title": "Trump posts racist image of Obamas, White House defends it and slams 'fake outrage'",
-                "link": "https://www.cnbc.com/2026/02/06/trump-obama-post-white-house.html",
-                "isoDate": "2026-02-06T14:28:39+00:00Z"
+                "title": "This week provided more evidence that a softening labor market is the economy's biggest threat",
+                "link": "https://www.cnbc.com/2026/02/06/a-weakening-labor-market-has-become-the-economys-biggest-threat.html",
+                "isoDate": "2026-02-06T20:42:45+00:00Z"
             },
             {
-                "title": "Here are Friday's biggest analyst calls: Nvidia, Amazon, Micron, Reddit, Roblox, Estee Lauder, Palantir & more",
-                "link": "https://www.cnbc.com/2026/02/06/friday-top-wall-street-analyst-calls-like-nvidia.html",
-                "isoDate": "2026-02-06T13:24:27+00:00Z"
+                "title": "Tech AI spending may approach $700 billion this year, but the blow to cash raises red flags",
+                "link": "https://www.cnbc.com/2026/02/06/google-microsoft-meta-amazon-ai-cash.html",
+                "isoDate": "2026-02-06T21:45:15+00:00Z"
+            },
+            {
+                "title": "Bitcoin rebounds back above $70,000 after nearly breaking below $60,000 a day ago",
+                "link": "https://www.cnbc.com/2026/02/06/bitcoin-price-today-60000-in-focus.html",
+                "isoDate": "2026-02-06T20:17:17+00:00Z"
+            },
+            {
+                "title": "How the regular investor can participate in the lucrative, high-yielding bank loan market",
+                "link": "https://www.cnbc.com/2026/02/06/how-the-regular-investor-can-participate-in-the-lucrative-high-yielding-bank-loan-market.html",
+                "isoDate": "2026-02-06T20:19:40+00:00Z"
+            },
+            {
+                "title": "Nvidia shares rise 8% as Jensen Huang says $660 billion capex buildout is sustainable",
+                "link": "https://www.cnbc.com/2026/02/06/nvidia-rises-7percent-as-ceo-says-660-billion-capex-buildout-is-sustainable.html",
+                "isoDate": "2026-02-06T21:07:39+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "アマゾン株、9%下落：AIバブル懸念が売りを誘発し、ビッグテックの1兆ドル規模の流出が続く",
-                "アメリカのEV撤退が、いかに中国の世界市場支配力を高めているか",
-                "ステランティスCEO、260億ドルの特別損失計上、株価急落の中「結束した方が強い」と発言",
-                "3日続落後、ハイテク株が急騰し、ビットコインが安定したため株式市場は反発：ライブアップデート",
-                "トランプ氏、オバマ夫妻の差別的な画像を投稿、ホワイトハウスは「偽りの怒り」と批判し擁護",
-                "金曜日の主要アナリスト評価：Nvidia、Amazon、Micron、Reddit、Roblox、Estee Lauder、Palantirなど"
+                "ダウ平均、1200ドル高で5万ドル台初終値、テクノロジー株暴落からの急反発（ライブ速報）",
+                "今週、労働市場の軟化が経済最大の脅威である証拠がさらに示される",
+                "テクノロジーAIの支出は今年7000億ドルに達する可能性、しかしキャッシュへの打撃は警鐘を鳴らす",
+                "ビットコイン、1日前に6万ドルを割り込む寸前から7万ドル台に回復",
+                "一般投資家がいかにして儲かる高利回りの銀行ローン市場に参加できるか",
+                "Nvidia株8%上昇、ジェンセン・フアンCEOが6600億ドルの設備投資拡大は持続可能と発言"
             ],
             "CN": [
-                "亚马逊股价大跌9%，延续大型科技股1万亿美元市值蒸发，人工智能泡沫担忧引发抛售",
-                "美国电动汽车战略撤退如何增加中国对全球市场的控制",
-                "Stellantis首席执行官表示，在260亿美元巨额支出导致股价暴跌之际，公司团结在一起将更强大",
-                "科技股飙升，比特币稳定，股市在连续三天下跌后反弹：实时更新",
-                "特朗普发布奥巴马夫妇的种族主义图片，白宫辩护并抨击“虚假愤怒”",
-                "周五最大的分析师评级：英伟达、亚马逊、美光、Reddit、Roblox、雅诗兰黛、Palantir等"
+                "道琼斯指数飙升1200点，首次收于50000点上方，科技股暴跌后强劲反弹：实时更新",
+                "本周有更多证据表明，劳动力市场疲软是经济的最大威胁",
+                "今年科技AI支出可能接近7000亿美元，但对现金的冲击敲响警钟",
+                "比特币在一天前几乎跌破60000美元后，反弹回70000美元上方",
+                "普通投资者如何参与有利可图、收益丰厚的银行贷款市场",
+                "英伟达股价上涨8%，黄仁勋表示6600亿美元的资本支出扩张是可持续的"
             ],
             "ES": [
-                "Amazon cae un 9% y continúa la eliminación de $1 billón de Big Tech a medida que los temores de burbuja de IA encienden la venta",
-                "Cómo la retirada de EE. UU. de los vehículos eléctricos está aumentando el control de China sobre los mercados globales",
-                "El CEO de Stellantis dice que el fabricante de automóviles está más fuerte unido mientras las acciones se desploman en medio de un cargo de $26 mil millones",
-                "Las acciones se recuperan después de una caída de tres días, ya que las acciones tecnológicas repuntan y el bitcoin se estabiliza: actualizaciones en vivo",
-                "Trump publica imagen racista de los Obama, la Casa Blanca la defiende y critica la 'falsa indignación'",
-                "Aquí están las mayores llamadas de analistas del viernes: Nvidia, Amazon, Micron, Reddit, Roblox, Estee Lauder, Palantir y más"
+                "Dow sube 1.200 puntos y cierra por encima de 50.000 por primera vez en fuerte rebote tras la caída tecnológica: Actualizaciones en vivo",
+                "Esta semana brindó más evidencia de que un mercado laboral en enfriamiento es la mayor amenaza para la economía",
+                "El gasto en IA tecnológica podría acercarse a los 700.000 millones de dólares este año, pero el golpe a la liquidez enciende las alarmas",
+                "Bitcoin se recupera por encima de los 70.000 dólares tras casi caer por debajo de los 60.000 un día antes",
+                "Cómo el inversor habitual puede participar en el lucrativo mercado de préstamos bancarios de alto rendimiento",
+                "Las acciones de Nvidia suben un 8% mientras Jensen Huang dice que la expansión de 660.000 millones de dólares en gastos de capital es sostenible"
             ],
             "HI": [
-                " अमेज़ॅन 9% गिरा, एआई बबल के डर से बिकवाली शुरू होने से बिग टेक का $1 ट्रिलियन का सफाया जारी",
-                "अमेरिका की ईवी वापसी कैसे वैश्विक बाजारों पर चीन का नियंत्रण बढ़ा रही है",
-                "स्टेलेंटिस के सीईओ ने कहा कि ऑटोमेकर एक साथ मजबूत है क्योंकि स्टॉक $26 बिलियन के शुल्क के बीच गिरता है",
-                "टेक शेयरों में उछाल और बिटकॉइन के स्थिर होने से तीन दिवसीय गिरावट के बाद स्टॉक में उछाल: लाइव अपडेट",
-                "ट्रम्प ने ओबामा की नस्लवादी छवि पोस्ट की, व्हाइट हाउस ने इसका बचाव किया और 'नकली गुस्से' की निंदा की",
-                "यहाँ शुक्रवार की सबसे बड़ी विश्लेषक कॉल हैं: Nvidia, Amazon, Micron, Reddit, Roblox, Estee Lauder, Palantir और बहुत कुछ"
+                "डाउ 1,200 अंक उछला, 50,000 के पार पहली बार बंद, टेक मंदी से जोरदार वापसी: लाइव अपडेट्स",
+                "इस हफ्ते इस बात के और सबूत मिले हैं कि नरमी वाला श्रम बाजार अर्थव्यवस्था के लिए सबसे बड़ा खतरा है",
+                "टेक एआई खर्च इस साल 700 अरब डॉलर के करीब पहुंच सकता है, लेकिन नकदी पर चोट लाल झंडे उठाती है",
+                "एक दिन पहले 60,000 डॉलर से नीचे जाने के करीब आने के बाद बिटकॉइन 70,000 डॉलर से ऊपर वापस उछला",
+                "साधारण निवेशक आकर्षक, उच्च-उपज वाले बैंक ऋण बाजार में कैसे भाग ले सकते हैं",
+                "जेनसेन हुआंग द्वारा 660 बिलियन डॉलर के कैपेक्स बिल्डआउट को टिकाऊ बताए जाने पर Nvidia के शेयर 8% बढ़े"
             ],
             "ID": [
-                "Amazon anjlok 9%, melanjutkan penghapusan $1 triliun Big Tech karena ketakutan gelembung AI memicu aksi jual",
-                "Bagaimana penarikan mundur EV Amerika meningkatkan kontrol Tiongkok atas pasar global",
-                "CEO Stellantis mengatakan pembuat mobil lebih kuat bersama-sama saat saham anjlok di tengah biaya $26 miliar",
-                "Saham rebound setelah penurunan tiga hari saat saham teknologi melonjak, bitcoin stabil: Pembaruan langsung",
-                "Trump memposting gambar rasis Obama, Gedung Putih membelanya dan mencela 'kemarahan palsu'",
-                "Berikut adalah panggilan analis terbesar hari Jumat: Nvidia, Amazon, Micron, Reddit, Roblox, Estee Lauder, Palantir & lainnya"
+                "Dow melonjak 1.200 poin untuk penutupan pertama di atas 50.000 dalam rebound tajam dari kehancuran teknologi: Pembaruan langsung",
+                "Minggu ini memberikan lebih banyak bukti bahwa pasar tenaga kerja yang melunak adalah ancaman terbesar bagi ekonomi",
+                "Belanja AI teknologi bisa mencapai hampir $700 miliar tahun ini, tetapi pukulan terhadap kas menimbulkan bendera merah",
+                "Bitcoin kembali melonjak di atas $70.000 setelah hampir menembus di bawah $60.000 sehari sebelumnya",
+                "Bagaimana investor biasa dapat berpartisipasi dalam pasar pinjaman bank yang menguntungkan dan menghasilkan imbal hasil tinggi",
+                "Saham Nvidia naik 8% saat Jensen Huang mengatakan pembangunan belanja modal $660 miliar berkelanjutan"
             ],
             "AR": [
-                "أمازون تهبط 9%، وتواصل محو 1 تريليون دولار من أسهم التكنولوجيا الكبرى وسط مخاوف فقاعة الذكاء الاصطناعي التي أشعلت البيع",
-                "كيف تزيد انسحاب أمريكا من السيارات الكهربائية من سيطرة الصين على الأسواق العالمية",
-                "رئيس ستيلانتيس التنفيذي يقول إن صانع السيارات أقوى معاً بينما ينخفض السهم وسط رسوم بقيمة 26 مليار دولار",
-                "الأسهم تنتعش بعد انخفاض دام ثلاثة أيام مع ارتفاع أسهم التكنولوجيا واستقرار البيتكوين: تحديثات مباشرة",
-                "ترامب ينشر صورة عنصرية لأوباما، والبيت الأبيض يدافع عنها وينتقد \"الغضب المزيف\"",
-                "هنا أكبر تقييمات المحللين ليوم الجمعة: Nvidia، Amazon، Micron، Reddit، Roblox، Estee Lauder، Palantir والمزيد"
+                "داو جونز يقفز 1200 نقطة ليغلق فوق 50000 لأول مرة في انتعاش حاد من انهيار التكنولوجيا: تحديثات مباشرة",
+                "قدم هذا الأسبوع المزيد من الأدلة على أن سوق العمل المتباطئ هو أكبر تهديد للاقتصاد",
+                "قد يقترب الإنفاق على الذكاء الاصطناعي في قطاع التكنولوجيا من 700 مليار دولار هذا العام، لكن الضربة على النقد تثير القلق",
+                "بيتكوين ينتعش فوق 70000 دولار بعد أن كاد أن ينخفض إلى ما دون 60000 دولار قبل يوم واحد",
+                "كيف يمكن للمستثمر العادي المشاركة في سوق القروض المصرفية المربح وعالي العائد",
+                "أسهم نفيديا ترتفع 8% مع قول جينسن هوانغ إن الإنفاق الرأسمالي البالغ 660 مليار دولار قابل للاستدامة"
             ]
         },
-        "last_updated": "2026-02-06T14:52:15.676299+00:00Z"
+        "last_updated": "2026-02-06T22:24:58.903164+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
