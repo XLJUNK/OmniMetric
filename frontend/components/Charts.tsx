@@ -36,15 +36,13 @@ export const RiskGauge = ({ score, lang = 'EN' }: GaugeProps) => {
 
     return (
         <div className="w-full relative mt-2 mb-2 gms-container">
-            {/* Gradient Bar Wrapper (Height Increased for Touchability) */}
-            <div className="relative w-full" style={{ height: '2.0rem' }}>
-                {/* 1. The Gradient Background (Overflow Hidden for Rounded Corners) */}
-                <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-[0.5rem] bg-slate-800 rounded-full overflow-hidden">
-                    {/* Track Background - Darker */}
-                </div>
+            {/* V5 NEON PILL SLIDER (h-6 / 1.5rem) */}
+            <div className="relative w-full" style={{ height: '1.5rem' }}>
+                {/* 1. Track Background */}
+                <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-[0.5rem] bg-slate-800 rounded-full overflow-hidden"></div>
 
-                {/* 2. active Gradient Track */}
-                <div className="absolute inset-0 w-full h-full !rounded-xl overflow-hidden opacity-80 mix-blend-screen pointer-events-none">
+                {/* 2. active Gradient Track (Screen Blend) */}
+                <div className="absolute inset-0 w-full h-full rounded-full overflow-hidden opacity-80 mix-blend-screen pointer-events-none">
                     <div
                         className="absolute inset-0 w-full h-full"
                         style={{
@@ -59,19 +57,7 @@ export const RiskGauge = ({ score, lang = 'EN' }: GaugeProps) => {
                     />
                 </div>
 
-                {/* 3. The Actual Gradient Bar (Thin Line) */}
-                <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-[0.5rem] !rounded-full overflow-hidden border border-slate-700/50">
-                    <div
-                        className="absolute inset-0 w-full h-full"
-                        style={{
-                            backgroundImage: isRTL
-                                ? 'linear-gradient(90deg, #3b82f6 0%, #94a3b8 50%, #ef4444 100%)' // Blue(Acc) -> Red(Def) (Right is Def)
-                                : 'linear-gradient(90deg, #ef4444 0%, #94a3b8 50%, #3b82f6 100%)'
-                        }}
-                    />
-                </div>
-
-                {/* 4. The Marker (Neon Pill) */}
+                {/* 3. The Marker (Neon Pill V2) */}
                 <div
                     className="absolute top-1/2 flex flex-col items-center z-50 transition-all duration-700 ease-out"
                     style={{
@@ -83,19 +69,19 @@ export const RiskGauge = ({ score, lang = 'EN' }: GaugeProps) => {
                 >
                     {/* Glow Effect */}
                     <div
-                        className="absolute inset-0 rounded-lg blur-md opacity-40"
+                        className="absolute inset-0 rounded-full blur-md opacity-60"
                         style={{ backgroundColor: borderColor }}
                     ></div>
 
-                    {/* The Pill */}
+                    {/* The Pill (Strong Border) */}
                     <div
-                        className="relative bg-[#0f172a] px-3 py-1 rounded-md shadow-2xl flex items-center justify-center min-w-[3.5rem]"
+                        className="relative bg-[#0f172a] px-3 py-0.5 rounded-full shadow-2xl flex items-center justify-center min-w-[3.5rem]"
                         style={{
                             border: `2px solid ${borderColor}`,
                             boxShadow: `0 0 10px ${shadowColor}`
                         }}
                     >
-                        <span className="text-[0.9rem] font-black leading-none tabular-nums tracking-tighter" style={{ color: "white" }}>
+                        <span className="text-[0.85rem] font-black leading-none tabular-nums tracking-tighter" style={{ color: "white" }}>
                             {Math.round(score)}
                         </span>
                     </div>
