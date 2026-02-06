@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { OmniWarningBeacons } from '@/components/OmniWarningBeacons';
+import { Globe, ChevronDown, Check, Clock, Info, Zap } from 'lucide-react';
 
 // ... existing imports
 
