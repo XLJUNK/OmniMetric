@@ -1,11 +1,7 @@
 name: GMS Daily Maintenance
 on:
   schedule:
-    - cron: '0 21 * * *' # Midnight JST (approx 15:00 UTC? No, 21:00 UTC is 06:00 JST. User wanted Midnight UTC aka 9AM JST?)
-    # Existing daily_archive.yml had 21:00 UTC. 
-    # daily_maintenance.yml (old) had 0 0 * * * (Midnight UTC).
-    # Let's stick to Midnight UTC (09:00 JST) which is standard for "Day Close".
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * *' # Midnight UTC (09:00 JST) - 3 hours after US Close
   workflow_dispatch:
 
 concurrency:
