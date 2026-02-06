@@ -1,12 +1,12 @@
 {
-    "last_updated": "2026-02-06T11:35:37.284673+00:00",
-    "last_successful_update": "2026-02-06T11:35:37.284681+00:00",
-    "gms_score": 29,
+    "last_updated": "2026-02-06T13:03:37.540708+00:00",
+    "last_successful_update": "2026-02-06T13:03:37.540716+00:00",
+    "gms_score": 31,
     "sector_scores": {
         "STOCKS": 45,
         "CRYPTO": 25,
         "FOREX": 40,
-        "COMMODITIES": 40
+        "COMMODITIES": 55
     },
     "market_data": {
         "CRYPTO_SENTIMENT": {
@@ -218,10 +218,10 @@
             ]
         },
         "VIX": {
-            "price": 20.1,
+            "price": 20.26,
             "prev_price": 21.77,
-            "daily_chg": -7.67,
-            "change_percent": 23.01,
+            "daily_chg": -6.94,
+            "change_percent": 23.99,
             "trend": "DOWN",
             "sparkline": [
                 15.38,
@@ -245,7 +245,7 @@
                 18.0,
                 18.64,
                 21.77,
-                20.1
+                20.26
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
@@ -577,10 +577,10 @@
             ]
         },
         "BTC": {
-            "price": 65961.85,
+            "price": 66455.77,
             "prev_price": 62702.1,
-            "daily_chg": 5.2,
-            "change_percent": -16.17,
+            "daily_chg": 5.99,
+            "change_percent": -15.55,
             "trend": "UP",
             "sparkline": [
                 95525.12,
@@ -604,14 +604,14 @@
                 75633.55,
                 73019.7,
                 62702.1,
-                65961.85
+                66455.77
             ]
         },
         "ETH": {
-            "price": 1924.67,
+            "price": 1920.47,
             "prev_price": 1821.68,
-            "daily_chg": 5.65,
-            "change_percent": -17.9,
+            "daily_chg": 5.42,
+            "change_percent": -18.08,
             "trend": "UP",
             "sparkline": [
                 3295.48,
@@ -635,14 +635,14 @@
                 2227.56,
                 2143.5,
                 1821.68,
-                1924.67
+                1920.47
             ]
         },
         "SOL": {
-            "price": 80.95,
+            "price": 81.65,
             "prev_price": 78.19,
-            "daily_chg": 3.53,
-            "change_percent": -22.51,
+            "daily_chg": 4.43,
+            "change_percent": -21.84,
             "trend": "UP",
             "sparkline": [
                 144.86,
@@ -666,14 +666,14 @@
                 97.56,
                 92.03,
                 78.19,
-                80.95
+                81.65
             ]
         },
         "DXY": {
-            "price": 97.82,
+            "price": 97.83,
             "prev_price": 97.82,
-            "daily_chg": 0.0,
-            "change_percent": 0.22,
+            "daily_chg": 0.01,
+            "change_percent": 0.23,
             "trend": "UP",
             "sparkline": [
                 98.68,
@@ -697,14 +697,14 @@
                 97.44,
                 97.62,
                 97.82,
-                97.82
+                97.83
             ]
         },
         "USDJPY": {
-            "price": 157.05,
+            "price": 157.06,
             "prev_price": 156.92,
-            "daily_chg": 0.08,
-            "change_percent": 1.19,
+            "daily_chg": 0.09,
+            "change_percent": 1.2,
             "trend": "UP",
             "sparkline": [
                 156.73,
@@ -728,14 +728,14 @@
                 155.44,
                 155.8,
                 156.92,
-                157.05
+                157.06
             ]
         },
         "EURUSD": {
             "price": 1.18,
             "prev_price": 1.18,
-            "daily_chg": -0.07,
-            "change_percent": -0.47,
+            "daily_chg": -0.01,
+            "change_percent": -0.41,
             "trend": "DOWN",
             "sparkline": [
                 1.17,
@@ -763,10 +763,10 @@
             ]
         },
         "USDINR": {
-            "price": 90.62,
+            "price": 90.64,
             "prev_price": 90.12,
-            "daily_chg": 0.55,
-            "change_percent": -1.16,
+            "daily_chg": 0.57,
+            "change_percent": -1.14,
             "trend": "UP",
             "sparkline": [
                 89.86,
@@ -790,7 +790,7 @@
                 90.25,
                 90.42,
                 90.12,
-                90.62
+                90.64
             ]
         },
         "USDSAR": {
@@ -825,10 +825,10 @@
             ]
         },
         "GOLD": {
-            "price": 4910.5,
+            "price": 4919.6,
             "prev_price": 4861.4,
-            "daily_chg": 1.01,
-            "change_percent": 6.23,
+            "daily_chg": 1.2,
+            "change_percent": 6.43,
             "trend": "UP",
             "sparkline": [
                 4449.3,
@@ -852,14 +852,14 @@
                 4903.7,
                 4920.4,
                 4861.4,
-                4910.5
+                4919.6
             ]
         },
         "OIL": {
-            "price": 63.28,
+            "price": 63.11,
             "prev_price": 63.29,
-            "daily_chg": -0.02,
-            "change_percent": 1.83,
+            "daily_chg": -0.28,
+            "change_percent": 1.56,
             "trend": "DOWN",
             "sparkline": [
                 55.99,
@@ -883,15 +883,15 @@
                 63.21,
                 65.14,
                 63.29,
-                63.28
+                63.11
             ]
         },
         "COPPER": {
-            "price": 5.8,
+            "price": 5.81,
             "prev_price": 5.8,
-            "daily_chg": 0.0,
-            "change_percent": -0.04,
-            "trend": "DOWN",
+            "daily_chg": 0.21,
+            "change_percent": 0.16,
+            "trend": "UP",
             "sparkline": [
                 5.81,
                 5.75,
@@ -914,14 +914,14 @@
                 6.06,
                 5.83,
                 5.8,
-                5.8
+                5.81
             ]
         },
         "NATGAS": {
-            "price": 3.54,
+            "price": 3.65,
             "prev_price": 3.51,
-            "daily_chg": 0.83,
-            "change_percent": 9.3,
+            "daily_chg": 4.1,
+            "change_percent": 12.85,
             "trend": "UP",
             "sparkline": [
                 3.53,
@@ -945,7 +945,7 @@
                 3.31,
                 3.46,
                 3.51,
-                3.54
+                3.65
             ]
         },
         "MOVE": {
@@ -1109,22 +1109,18 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS status is Defensive at 29. Momentum pushed the score from 28 to 29, indicating stagnant risk appetite. A high VIX (Fear/Volatility) of 20.1 and equity declines reflect macro stress, amplified by the Stellantis shock. However, a -7.6% drop in VIX and strong Crypto gains suggest a potential local bottom despite the sector-specific turmoil. Action: Maintain defensive hedges while watching for broader liquidity stabilization.",
+        "content": "GMS Score 31 maintains a Defensive regime. Positive momentum pushed the score to 31, yet Big Tech sell-offs due to AI bubble fears weigh heavily on sentiment. While DXY (Dollar strength) remains stable, the VIX (Fear index) drop to 20.26 suggests volatility is beginning to cool. Interestingly, BTC’s surge provides a liquidity hedge against equity weakness. Maintain a cautious stance until SPY stabilizes; watch for a VIX floor to signal a potential short-term bottom.",
         "reports": {
-            "JP": "GMS現状は29で「防御（Defensive）」体制です。モメンタムがスコアを28から29へ僅かに押し上げましたが、市場の警戒感は依然として強いままです。VIX（恐怖指数/ボラティリティ）は20.1と高く、ステランティスの急落が製造業への懸念を広げています。一方で、VIXの7.6%低下と仮想通貨の反発は、短期的な売られ過ぎを示唆しています。結論：防御的姿勢を維持しつつ、流動性の改善を注視してください。",
-            "EN": "GMS status is Defensive at 29. Momentum pushed the score from 28 to 29, indicating stagnant risk appetite. A high VIX (Fear/Volatility) of 20.1 and equity declines reflect macro stress, amplified by the Stellantis shock. However, a -7.6% drop in VIX and strong Crypto gains suggest a potential local bottom despite the sector-specific turmoil. Action: Maintain defensive hedges while watching for broader liquidity stabilization.",
-            "CN": "GMS状态当前为29，属于“防御”模式。动能将分数从28微升至29，显示风险偏好依旧疲软。VIX（恐慌与波动指数）报20.1，受Stellantis业绩重挫影响，股市普遍承压。但值得注意的是，VIX单日下降7.6%且加密货币强劲反弹，暗示市场可能存在短期底部。操作建议：在维持防御性配置的同时，密切关注宏观流动性是否能够持续回升。",
-            "ES": "El estado GMS es Defensivo en 29. El impulso empujó la puntuación de 28 a 29, indicando un apetito de riesgo estancado. El VIX (miedo/volatilidad) en 20.1 y las caídas en renta variable reflejan estrés macro, agravado por el desplome de Stellantis. No obstante, la caída del 7.6% en el VIX y el repunte en Cripto sugieren que el pánico podría estar tocando fondo. Acción: Mantener cautela y monitorear la estabilización de la liquidez global.",
-            "HI": "GMS की स्थिति 29 पर 'Defensive' है। मोमेंटम ने स्कोर को 28 से 29 तक धकेला है, जो जोखिम के प्रति सतर्कता को दर्शाता है। VIX (डर और अस्थिरता सूचकांक) 20.1 पर है, और स्टेलेंटिस के शेयरों में गिरावट ने बाजार पर दबाव बनाया है। हालांकि, VIX में 7.6% की कमी और क्रिप्टो में तेजी यह संकेत देती है कि बाजार जल्द संभल सकता है। निष्कर्ष: रक्षात्मक रुख बनाए रखें और तरलता (Liquidity) में सुधार के संकेतों पर कड़ी नजर रखें।",
-            "ID": "Status GMS berada pada level Defensif di angka 29. Momentum mendorong skor dari 28 ke 29, mencerminkan selera risiko yang masih tertahan. VIX (Indeks Ketakutan) di level 20.1 dan penurunan saham akibat guncangan Stellantis menunjukkan tekanan pasar yang nyata. Namun, penurunan VIX sebesar 7.6% serta penguatan aset Kripto memberikan sinyal potensi pemulihan jangka pendek. Kesimpulan: Tetap waspada dan pantau pergerakan likuiditas untuk konfirmasi arah.",
-            "AR": "حالة مؤشر GMS هي 'دفاعية' عند 29. دفع الزخم النتيجة من 28 إلى 29، مما يوضح ضعف الشهية للمخاطر. يعكس مؤشر VIX (الخوف والتقلب) عند 20.1 وتراجع الأسهم ضغوطاً كلية، زادت حدتها بعد صدمة شركة ستيلانتس. ومع ذلك، فإن انخفاض VIX بنسبة 7.6% وقوة العملات الرقمية قد يشيران إلى وصول السوق للقاع. الخلاصة: حافظ على استراتيجية دفاعية مع مراقبة مؤشرات السيولة بحثاً عن استقرار حقيقي."
+            "JP": "GMSスコア31は「防衛的（リスクオフ）」な市場体制を維持しています。直近のモメンタムがスコアを31へと押し上げましたが、AIバブルへの懸念からテック株を中心に多額の時価総額が消失し、強い下押し圧力が継続しています。DXY（ドル強度）が横ばいの中、VIX（恐怖指数）が20.26へ低下したことはパニックの沈静化を示唆します。BTCの逆行高はリスク分散の動きとも取れますが、SPYの底打ちを確認するまで警戒を緩めず、VIXの動向を注視すべき局面です。",
+            "EN": "GMS Score 31 maintains a Defensive regime. Positive momentum pushed the score to 31, yet Big Tech sell-offs due to AI bubble fears weigh heavily on sentiment. While DXY (Dollar strength) remains stable, the VIX (Fear index) drop to 20.26 suggests volatility is beginning to cool. Interestingly, BTC’s surge provides a liquidity hedge against equity weakness. Maintain a cautious stance until SPY stabilizes; watch for a VIX floor to signal a potential short-term bottom.",
+            "CN": "GMS指数31表明市场处于“防御”体制。虽然近期动能将分数推升至31，但由于AI泡沫担忧引发的大规模科技股抛售，市场情绪依然承压。DXY（美元强度）基本持平，而VIX（恐慌指数）下降至20.26，暗示短期波动正趋于缓和。值得注意的是，BTC在股市动荡中表现出较强的流动性避险特征。在标普500指数（SPY）确认企稳前，建议投资者保持审慎，密切关注VIX是否在当前水平筑底，以捕捉潜在的风险转向信号。",
+            "ES": "El puntaje GMS de 31 mantiene el régimen Defensivo. El impulso positivo empujó el puntaje a 31, pero la liquidación masiva en tecnología por temores de burbuja de IA genera presión. Mientras el DXY (fuerza del dólar) es estable, la caída del VIX (índice de miedo) a 20.26 sugiere que la volatilidad extrema se está calmando. El repunte de BTC ofrece un refugio de liquidez frente a la debilidad de las acciones. Se recomienda cautela hasta que el SPY se estabilice; vigile de cerca el suelo del VIX.",
+            "HI": "GMS स्कोर 31 'रक्षात्मक' (Defensive) बाजार व्यवस्था को दर्शाता है। सकारात्मक मोमेंटम ने स्कोर को 31 तक पहुँचाया है, लेकिन AI बबल के डर से टेक शेयरों में बड़ी गिरावट बाजार पर भारी दबाव डाल रही है। जहाँ DXY (डॉलर की मजबूती) स्थिर बनी हुई है, वहीं VIX (डर सूचकांक) का 20.26 तक गिरना अस्थिरता में कमी का संकेत है। BTC में आई तेजी शेयरों के मुकाबले एक वैकल्पिक सुरक्षा प्रदान कर रही है। जब तक SPY इंडेक्स में स्थिरता नहीं आती, तब तक सावधानी बनाए रखें और VIX के निचले स्तरों पर पैनी नजर रखें।",
+            "ID": "Skor GMS 31 mengonfirmasi rezim Defensif. Meskipun momentum mendorong skor ke 31, aksi jual sektor teknologi akibat kekhawatiran gelembung AI tetap menekan pasar secara signifikan. DXY (kekuatan Dolar) stabil, dan penurunan VIX (indeks ketakutan) ke 20.26 menunjukkan volatilitas mulai mereda dari puncaknya. Lonjakan BTC menjadi pelindung likuiditas yang unik di tengah pelemahan indeks saham. Tetap waspada hingga SPY menunjukkan stabilisasi; pantau pergerakan VIX sebagai indikator dasar pasar.",
+            "AR": "يشير مؤشر GMS البالغ 31 إلى نظام دفاعي مستمر. دفع الزخم النتيجة إلى 31، لكن مبيعات شركات التكنولوجيا الكبرى بسبب مخاوف فقاعة الذكاء الاصطناعي تضغط بقوة على المعنويات. بينما يظل DXY (قوة الدولار) مستقراً، يشير انخفاض VIX (مؤشر الخوف) إلى 20.26 إلى هدوء حدة التقلبات. يوفر ارتفاع BTC تحوطاً فريداً للسيولة ضد تراجع الأسهم التقليدية. يُنصح بالحذر حتى يستقر مؤشر SPY؛ مع مراقبة مستويات VIX كإشارة محتملة لتشكل قاع سعري قريب."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-01T14:39:34Z",
-            "score": 28
-        },
         {
             "date": "2026-02-01T15:37:00Z",
             "score": 28
@@ -1360,14 +1356,23 @@
         {
             "date": "2026-02-06T11:35:37Z",
             "score": 29
+        },
+        {
+            "date": "2026-02-06T13:03:37Z",
+            "score": 31
         }
     ],
     "intelligence": {
         "news": [
             {
-                "title": "Stellantis shares plunge 23% after automaker announces $26 billion hit from business overhaul",
+                "title": "Big Tech sees over $1 trillion wiped from stocks as fears of AI bubble ignite sell-off",
+                "link": "https://www.cnbc.com/2026/02/06/ai-sell-off-stocks-amazon-oracle.html",
+                "isoDate": "2026-02-06T12:16:15+00:00Z"
+            },
+            {
+                "title": "Stellantis shares plunge 27% after automaker announces $26 billion hit from business overhaul",
                 "link": "https://www.cnbc.com/2026/02/06/stellantis-reset-business-electric-vehicles.html",
-                "isoDate": "2026-02-06T10:17:24+00:00Z"
+                "isoDate": "2026-02-06T12:28:48+00:00Z"
             },
             {
                 "title": "Goldman Sachs is tapping Anthropic’s AI model to automate accounting, compliance roles",
@@ -1375,77 +1380,72 @@
                 "isoDate": "2026-02-06T10:16:05+00:00Z"
             },
             {
+                "title": "Stocks making the biggest moves premarket: Amazon, Reddit, Strategy, Molina, Strategy, Eli Lilly & more",
+                "link": "https://www.cnbc.com/2026/02/06/stocks-making-the-biggest-moves-premarket-amzn-rddt-mstr-moh-lly.html",
+                "isoDate": "2026-02-06T12:14:23+00:00Z"
+            },
+            {
+                "title": "Amazon is dipping on margin and capex concerns. Wall Street analysts still see upside",
+                "link": "https://www.cnbc.com/2026/02/06/amazon-is-dipping-on-margin-and-capex-concerns-wall-street-analysts-still-see-upside.html",
+                "isoDate": "2026-02-06T12:48:22+00:00Z"
+            },
+            {
                 "title": "Bitcoin narrowly avoids falling under $60,000 as it bounces off lows",
                 "link": "https://www.cnbc.com/2026/02/06/bitcoin-price-today-60000-in-focus.html",
-                "isoDate": "2026-02-06T10:47:11+00:00Z"
-            },
-            {
-                "title": "Why Amazon’s CEO is ‘confident’ with $200 billion spending plan",
-                "link": "https://www.cnbc.com/2026/02/05/why-amazons-ceo-is-confident-with-200-billion-spending-plan.html",
-                "isoDate": "2026-02-06T02:35:29+00:00Z"
-            },
-            {
-                "title": "Dan Ives names 5 stocks to buy amid software 'Armageddon'",
-                "link": "https://www.cnbc.com/2026/02/05/dan-ives-names-5-stocks-to-buy-amid-software-armageddon.html",
-                "isoDate": "2026-02-05T21:45:23+00:00Z"
-            },
-            {
-                "title": "AI fears pummel software stocks: Is it 'illogical' panic or a SaaS apocalypse?",
-                "link": "https://www.cnbc.com/2026/02/06/ai-anthropic-tools-saas-software-stocks-selloff.html",
-                "isoDate": "2026-02-06T05:10:42+00:00Z"
+                "isoDate": "2026-02-06T12:51:07+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "ステランティス株、事業再編で260億ドルの損失を発表後23％急落",
+                "AIバブル懸念が売りを誘発、ビッグテック株が1兆ドル超下落",
+                "ステランティス株、事業再編で260億ドルの損失発表後27%急落",
                 "ゴールドマン・サックス、会計・コンプライアンス業務自動化へAnthropicのAIモデルを活用",
-                "ビットコイン、6万ドル割れを辛うじて回避、安値から反発",
-                "アマゾンCEOが2000億ドルの支出計画に「自信」を持つ理由",
-                "ダン・アイブス氏、ソフトウェア「ハルマゲドン」の中で購入すべき5銘柄を挙げる",
-                "AIへの懸念がソフトウェア株を直撃：非論理的なパニックか、SaaSの黙示録か？"
+                "アマゾン、Reddit、Strategy、Molina、Eli Lillyなどがプレマーケットで最も動いた銘柄",
+                "アマゾンは利益率と設備投資懸念で下落、ウォール街アナリストは依然として上昇余地を見込む",
+                "ビットコイン、6万ドル割れをかろうじて回避、安値から反発"
             ],
             "CN": [
-                "Stellantis股价大跌23%，此前这家汽车制造商宣布业务重组将带来260亿美元损失",
-                "高盛正在利用Anthropic的AI模型来自动化会计和合规岗位",
-                "比特币险些跌破6万美元，从低点反弹",
-                "亚马逊CEO对2000亿美元的支出计划“充满信心”的原因",
-                "Dan Ives称在软件“末日”中应买入的5只股票",
-                "AI的担忧重创软件股：是“非理性”的恐慌还是SaaS的末日？"
+                "人工智能泡沫恐慌引发抛售，科技巨头市值蒸发超1万亿美元",
+                "Stellantis（Stellantis）股价暴跌27%，此前该公司宣布业务重组损失260亿美元",
+                "高盛（Goldman Sachs）正在利用Anthropic的人工智能模型自动化会计和合规岗位",
+                "盘前涨跌幅居前的股票：亚马逊、Reddit、Strategy、Molina、Strategy、礼来等",
+                "亚马逊因利润率和资本支出担忧股价下跌，华尔街分析师仍看好其上涨空间",
+                "比特币险守6万美元关口，从低点反弹"
             ],
             "ES": [
-                "Las acciones de Stellantis caen un 23% tras anunciar el fabricante de automóviles un golpe de 26.000 millones de dólares por una reestructuración empresarial",
-                "Goldman Sachs está aprovechando el modelo de IA de Anthropic para automatizar puestos de contabilidad y cumplimiento",
-                "Bitcoin evita por poco caer por debajo de los 60.000 dólares al rebotar desde mínimos",
-                "Por qué el CEO de Amazon está \"confiado\" con un plan de gasto de 200.000 millones de dólares",
-                "Dan Ives nombra 5 acciones para comprar en medio del \"Armagedón\" del software",
-                "Los temores a la IA golpean a las acciones de software: ¿Es un pánico \"ilógico\" o un apocalipsis SaaS?"
+                "Las 'Big Tech' pierden más de 1 billón de dólares en bolsa por temores de una burbuja de IA que desata ventas",
+                "Las acciones de Stellantis se desploman un 27% tras anunciar el fabricante de automóviles un impacto de 26.000 millones de dólares por la reestructuración empresarial",
+                "Goldman Sachs recurre al modelo de IA de Anthropic para automatizar roles de contabilidad y cumplimiento",
+                "Las acciones que más se mueven en premarket: Amazon, Reddit, Strategy, Molina, Strategy, Eli Lilly y más",
+                "Amazon cae por preocupaciones sobre márgenes y gastos de capital. Analistas de Wall Street ven potencial alcista",
+                "Bitcoin evita por poco caer por debajo de los 60.000 dólares al rebotar desde mínimos"
             ],
             "HI": [
-                "ऑटोमेकर द्वारा व्यापार पुनर्गठन से 26 अरब डॉलर के नुकसान की घोषणा के बाद स्टेलेंटिस के शेयर 23% गिरे",
-                "गोल्डमैन सैक्स लेखांकन, अनुपालन भूमिकाओं को स्वचालित करने के लिए एंथ्रोपिक के एआई मॉडल का लाभ उठा रहा है",
-                "बिटकॉइन $60,000 से नीचे गिरने से बाल-बाल बचा, क्योंकि यह निम्नतम स्तर से उछला",
-                "अमेज़ॅन के सीईओ $200 बिलियन की खर्च योजना के साथ \"आत्मविश्वासी\" क्यों हैं",
-                "डैन आइव्स सॉफ्टवेयर 'आर्मागेडन' के बीच खरीदने के लिए 5 स्टॉक बताते हैं",
-                "एआई का डर सॉफ्टवेयर शेयरों पर भारी पड़ रहा है: क्या यह 'अतार्किक' घबराहट है या एक एसएएएस सर्वनाश?"
+                "AI बबल की आशंकाओं से बिकवाली तेज, बिग टेक के शेयरों से $1 ट्रिलियन से अधिक का सफाया",
+                "Stellantis के शेयर 27% गिरे, ऑटोमेकर ने व्यावसायिक पुनर्गठन से $26 बिलियन के नुकसान की घोषणा की",
+                "गोल्डमैन सैक्स लेखांकन, अनुपालन भूमिकाओं को स्वचालित करने के लिए एंथ्रोपिक के AI मॉडल का उपयोग कर रहा है",
+                "प्री-मार्केट में सबसे बड़ी हलचल वाले स्टॉक: अमेज़ॅन, रेडिट, स्ट्रैटेजी, मोलिना, स्ट्रैटेजी, एली लिली और अन्य",
+                "अमेज़ॅन मार्जिन और कैपेक्स चिंताओं पर गिरावट पर, वॉल स्ट्रीट विश्लेषकों को अभी भी तेजी की उम्मीद",
+                "बिटकॉइन $60,000 से नीचे गिरने से बाल-बाल बचा, निम्नतम स्तर से उछला"
             ],
             "ID": [
-                "Saham Stellantis anjlok 23% setelah produsen mobil mengumumkan pukulan $26 miliar dari perombakan bisnis",
-                "Goldman Sachs memanfaatkan model AI Anthropic untuk mengotomatiskan peran akuntansi dan kepatuhan",
-                "Bitcoin nyaris menghindari penurunan di bawah $60.000 saat memantul dari titik terendah",
-                "Mengapa CEO Amazon \"yakin\" dengan rencana pengeluaran $200 miliar",
-                "Dan Ives menamai 5 saham untuk dibeli di tengah 'Armagedon' perangkat lunak",
-                "Ketakutan AI menghantam saham perangkat lunak: Apakah ini kepanikan 'tidak logis' atau kiamat SaaS?"
+                "Teknologi Raksasa Kehilangan Lebih dari $1 Triliun dari Sahamnya Akibat Ketakutan Gelembung AI Memicu Penjualan",
+                "Saham Stellantis Anjlok 27% Setelah Produsen Mobil Mengumumkan Kerugian $26 Miliar Akibat Perombakan Bisnis",
+                "Goldman Sachs Manfaatkan Model AI Anthropic untuk Otomatisasi Peran Akuntansi dan Kepatuhan",
+                "Saham dengan Pergerakan Terbesar di Pasar Pra-Bursa: Amazon, Reddit, Strategy, Molina, Strategy, Eli Lilly & Lainnya",
+                "Amazon Turun Akibat Kekhawatiran Margin dan Capex. Analis Wall Street Masih Melihat Potensi Kenaikan",
+                "Bitcoin Nyaris Terhindar dari Jatuh di Bawah $60.000 Saat Memantul dari Titik Terendah"
             ],
             "AR": [
-                "أسهم ستيلانتس تهوي 23% بعد إعلان صانع السيارات عن ضربة بقيمة 26 مليار دولار من إصلاح الأعمال",
-                "جولدمان ساكس يستفيد من نموذج الذكاء الاصطناعي الخاص بـ Anthropic لأتمتة أدوار المحاسبة والامتثال",
-                "البيتكوين يتجنب بصعوبة السقوط دون 60 ألف دولار وهو يرتد عن أدنى مستوياته",
-                "لماذا \"واثق\" الرئيس التنفيذي لأمازون من خطة إنفاق بقيمة 200 مليار دولار",
-                "دان آيفز يسمي 5 أسهم للشراء وسط \"هرمجدون\" البرمجيات",
-                "مخاوف الذكاء الاصطناعي تسحق أسهم البرمجيات: هل هو ذعر \"غير منطقي\" أم نهاية العالم للبرمجيات كخدمة (SaaS)؟"
+                "بينغ التكنولوجيا الكبرى تشهد خسارة أكثر من تريليون دولار من أسهمها مع اشتعال مخاوف فقاعة الذكاء الاصطناعي عمليات البيع",
+                "أسهم ستيلانتس تهوي 27% بعد إعلان صانع السيارات عن ضربة بقيمة 26 مليار دولار من إعادة هيكلة الأعمال",
+                "غولدمان ساكس يستعين بنموذج الذكاء الاصطناعي الخاص بـ Anthropic لأتمتة أدوار المحاسبة والامتثال",
+                "الأسهم التي تشهد أكبر تحركات قبل الافتتاح: أمازون، ريديت، ستراتيجى، مولينا، ستراتيجى، إيلي ليلي والمزيد",
+                "أمازون تهبط بسبب مخاوف تتعلق بهامش الربح والنفقات الرأسمالية. يرى محللو وول ستريت لا يزال هناك مجال للارتفاع",
+                "البيتكوين تتجنب بصعوبة السقوط تحت 60 ألف دولار مع ارتدادها من أدنى مستوياتها"
             ]
         },
-        "last_updated": "2026-02-06T11:35:37.284192+00:00Z"
+        "last_updated": "2026-02-06T13:03:37.540249+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
