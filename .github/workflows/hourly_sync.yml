@@ -79,18 +79,7 @@ jobs:
           
           # NOTE: OGV update moved to daily_maintenance.yml
           
-          # Run Technical Analysis (Chart Data)
-          python backend/tech_analysis.py
-          
-          # SKILL CHECK
-          python scripts/verify_skills.py
-
-          # FRONTEND SYNC
-          mkdir -p frontend/data
-          # Copy merged data (gms_engine now does atomic save to market_data.json but we need to ensure path consistency)
-          # backend/gms_engine writes to frontend/public/data/market_data.json
-          
-          git add backend/current_signal.json backend/history.json frontend/public/data/market_data.json
+          git add backend/current_signal.json backend/history.json frontend/public/data/market_data.json frontend/public/data/market_analysis.json
           git commit -m "Auto-update hourly signal [bot]" || echo "No changes to commit"
           
           git pull --rebase origin main || echo "Already up to date"

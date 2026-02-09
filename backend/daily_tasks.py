@@ -5,6 +5,7 @@ import logging
 from datetime import datetime, timezone
 # import update_ogv_beacons # Removed to avoid import error if missing
 from utils.file_ops import safe_json_merge
+import tech_analysis
 
 # Configuration
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -100,7 +101,14 @@ def main():
     # 1. OGV Update (Heavy)
     run_ogv_update()
     
-    # 2. Archive (Snapshot)
+    # 2. Technical Analysis Update (Charts)
+    try:
+        logger.info("Starting Technical Analysis Update...")
+        tech_analysis.main()
+    except Exception as e:
+        logger.error(f"Technical Analysis Update failed: {e}")
+
+    # 3. Archive (Snapshot)
     run_archive()
     
     logger.info("=== DAILY MAINTENANCE TASKS COMPLETE ===")

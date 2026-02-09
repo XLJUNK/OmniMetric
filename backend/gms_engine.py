@@ -18,6 +18,7 @@ import sys
 from seo_monitor import SEOMonitor
 from sns_publisher import SNSPublisher
 import fetch_news
+import tech_analysis
 from utils.file_ops import safe_json_merge
 
 # Economic Calendar Mapping (New v5.3)
@@ -653,17 +654,28 @@ def fetch_crypto_sentiment():
             elif val > 55: trend = "BULLISH"
             elif val < 45: trend = "BEARISH"
             
-            # Calculate daily change percent
+            # Calculate metrics
             daily_chg = 0.0
+            change_5d = 0.0
+            
             if len(sparkline) >= 2:
                 today_val = sparkline[-1]
                 yesterday_val = sparkline[-2]
-                if yesterday_val != 0:
+                if yesterday_val > 0:
                     daily_chg = round(((today_val - yesterday_val) / yesterday_val) * 100, 2)
+            
+            if len(sparkline) >= 5:
+                current_val = sparkline[-1]
+                base_val = sparkline[-5]
+                if base_val > 0:
+                    change_5d = round(((current_val - base_val) / base_val) * 100, 2)
+            else:
+                change_5d = daily_chg
 
             return {
                 "price": val,
-                "change_percent": daily_chg,
+                "daily_chg": daily_chg,
+                "change_percent": change_5d,
                 "trend": trend,
                 "sparkline": sparkline
             }
@@ -1675,10 +1687,11 @@ def get_next_event_dates():
     ]
     
     # Add a few more placeholders to reach 5 items
-    next_week = now + timedelta(days=7)
-    next_next_week = now + timedelta(days=14)
-    all_events.append({"code": "generic", "name": "JPY Bank of Japan Policy Meeting", "date": (now + timedelta(days=5)).strftime("%Y-%m-%d"), "day": (now + timedelta(days=5)).strftime("%a").upper(), "time": "12:00 JST", "impact": "high"})
-    all_events.append({"code": "generic", "name": "EUR ECB Monetary Policy Press Conference", "date": (now + timedelta(days=10)).strftime("%Y-%m-%d"), "day": (now + timedelta(days=10)).strftime("%a").upper(), "time": "14:45 CET", "impact": "high"})
+    all_events.append({"code": "boj", "name": "JPY Bank of Japan Policy Meeting", "date": (now + timedelta(days=5)).strftime("%Y-%m-%d"), "day": (now + timedelta(days=5)).strftime("%a").upper(), "time": "12:00 JST", "impact": "high"})
+    all_events.append({"code": "ecb", "name": "EUR ECB Monetary Policy Press Conference", "date": (now + timedelta(days=10)).strftime("%Y-%m-%d"), "day": (now + timedelta(days=10)).strftime("%a").upper(), "time": "14:45 CET", "impact": "high"})
+    all_events.append({"code": "retail_sales", "name": "USD Retail Sales (MoM)", "date": (now + timedelta(days=3)).strftime("%Y-%m-%d"), "day": (now + timedelta(days=3)).strftime("%a").upper(), "time": "08:30 EST", "impact": "high"})
+    all_events.append({"code": "ppi", "name": "USD Producer Price Index (PPI)", "date": (now + timedelta(days=13)).strftime("%Y-%m-%d"), "day": (now + timedelta(days=13)).strftime("%a").upper(), "time": "08:30 EST", "impact": "high"})
+    all_events.append({"code": "powell", "name": "USD Fed Chair Powell Testifies", "date": (now + timedelta(days=8)).strftime("%Y-%m-%d"), "day": (now + timedelta(days=8)).strftime("%a").upper(), "time": "10:00 EST", "impact": "high"})
 
     # Sort and filter
     all_events.sort(key=lambda x: x["date"])
