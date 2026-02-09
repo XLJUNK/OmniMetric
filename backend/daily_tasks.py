@@ -3,7 +3,11 @@ import sys
 import json
 import logging
 from datetime import datetime, timezone
+<<<<<<< HEAD
 import update_ogv_beacons
+=======
+# import update_ogv_beacons # Removed to avoid import error if missing
+>>>>>>> origin/main
 from utils.file_ops import safe_json_merge
 
 # Configuration
@@ -78,6 +82,7 @@ def run_archive():
 def run_ogv_update():
     logger.info("Starting OGV Moving Fortress Update...")
     try:
+<<<<<<< HEAD
         # Run the existing OGV logic
         # We invoke the main function of update_ogv_beacons directly or via subprocess?
         # Direct import is better if refactored, but subprocess ensures clean env.
@@ -92,6 +97,15 @@ def run_ogv_update():
         # Let's call the script via subprocess to keep it isolated and safe
         import subprocess
         result = subprocess.run([sys.executable, os.path.join(SCRIPT_DIR, "update_ogv_beacons.py")], capture_output=True, text=True)
+=======
+        ogv_script = os.path.join(SCRIPT_DIR, "update_ogv_beacons.py")
+        if not os.path.exists(ogv_script):
+             logger.warning(f"OGV Script not found at {ogv_script}. Skipping OGV update.")
+             return
+
+        import subprocess
+        result = subprocess.run([sys.executable, ogv_script], capture_output=True, text=True)
+>>>>>>> origin/main
         if result.returncode == 0:
             logger.info("OGV Update Success")
             logger.info(result.stdout)

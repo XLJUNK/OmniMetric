@@ -38,6 +38,7 @@ export const RiskGauge = ({ score = 0, lang = 'EN' }: GaugeProps) => {
 
     return (
         <div className="w-full relative mt-2 mb-2 gms-container">
+<<<<<<< HEAD
             {/* Gradient Bar Wrapper (Height Fixed) */}
             <div className="relative w-full h-[1.625rem]">
                 {/* 1. The Gradient Background (Overflow Hidden for Rounded Corners) */}
@@ -52,6 +53,32 @@ export const RiskGauge = ({ score = 0, lang = 'EN' }: GaugeProps) => {
                 {/* 2. The Marker (Overlay on top of the bar, matching height) */}
                 <div
                     className="absolute top-0 bottom-0 h-full flex flex-col items-center justify-center z-50 transition-all duration-700 ease-out pointer-events-none"
+=======
+            {/* V5 NEON PILL SLIDER (h-6 / 1.5rem) */}
+            <div className="relative w-full" style={{ height: '1.5rem' }}>
+                {/* 1. Track Background */}
+                <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-[0.5rem] bg-slate-800 rounded-full overflow-hidden"></div>
+
+                {/* 2. active Gradient Track (Screen Blend) */}
+                <div className="absolute inset-0 w-full h-full rounded-full overflow-hidden opacity-80 mix-blend-screen pointer-events-none">
+                    <div
+                        className="absolute inset-0 w-full h-full"
+                        style={{
+                            backgroundImage: isRTL
+                                ? 'linear-gradient(90deg, #3b82f6 0%, #94a3b8 50%, #ef4444 100%)'
+                                : 'linear-gradient(90deg, #ef4444 0%, #94a3b8 50%, #3b82f6 100%)',
+                            maskImage: 'linear-gradient(black, black)',
+                            WebkitMaskImage: 'linear-gradient(black, black)',
+                            height: '100%',
+                            opacity: 0.3
+                        }}
+                    />
+                </div>
+
+                {/* 3. The Marker (Neon Pill V2) */}
+                <div
+                    className="absolute top-1/2 flex flex-col items-center z-50 transition-all duration-700 ease-out"
+>>>>>>> origin/main
                     style={{
                         left: isRTL ? 'auto' : `${pct}%`,
                         right: isRTL ? `${pct}%` : 'auto',
@@ -59,6 +86,7 @@ export const RiskGauge = ({ score = 0, lang = 'EN' }: GaugeProps) => {
                         ['--dir' as string]: isRTL ? 1 : 1
                     }}
                 >
+<<<<<<< HEAD
                     <div
                         className="h-full flex items-center justify-center border-slate-700 px-2 rounded-md transition-colors duration-300 border !bg-black shadow-sm"
                         style={{ backgroundColor: 'black' }}
@@ -74,13 +102,41 @@ export const RiskGauge = ({ score = 0, lang = 'EN' }: GaugeProps) => {
                         className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-black"
                         style={{ borderTopColor: 'black' }}
                     ></div>
+=======
+                    {/* Glow Effect */}
+                    <div
+                        className="absolute inset-0 rounded-full blur-md opacity-60"
+                        style={{ backgroundColor: borderColor }}
+                    ></div>
+
+                    {/* The Pill (Strong Border) */}
+                    <div
+                        className="relative bg-[#0f172a] px-3 py-0.5 rounded-full shadow-2xl flex items-center justify-center min-w-[3.5rem]"
+                        style={{
+                            border: `2px solid ${borderColor}`,
+                            boxShadow: `0 0 10px ${shadowColor}`
+                        }}
+                    >
+                        <span className="text-[0.85rem] font-black leading-none tabular-nums tracking-tighter" style={{ color: "white" }}>
+                            {Math.round(score)}
+                        </span>
+                    </div>
+>>>>>>> origin/main
                 </div>
             </div>
 
             {/* Labels */}
+<<<<<<< HEAD
             <div className="absolute top-[35%] left-[5%] text-[8px] sm:text-[10px] font-black text-rose-500 tracking-tighter sm:tracking-normal">DEFENSIVE</div>
             <div className="absolute top-[35%] left-[45%] text-[8px] sm:text-[10px] font-black text-slate-500 tracking-tighter sm:tracking-normal">NEUTRAL</div>
             <div className="absolute top-[35%] right-[5%] text-[8px] sm:text-[10px] font-black text-sky-500 tracking-tighter sm:tracking-normal">ACCUMULATE</div>
+=======
+            <div className={`flex justify-between px-1 mt-1 relative z-0`}>
+                <span className="text-fluid-xs font-bold text-[#ef4444] uppercase tracking-widest drop-shadow-sm opacity-80">Defensive</span>
+                <span className="text-fluid-xs font-bold text-slate-400 uppercase tracking-widest drop-shadow-sm opacity-50">Neutral</span>
+                <span className="text-fluid-xs font-bold text-[#3b82f6] uppercase tracking-widest drop-shadow-sm opacity-80">Accumulate</span>
+            </div>
+>>>>>>> origin/main
         </div>
     );
 };

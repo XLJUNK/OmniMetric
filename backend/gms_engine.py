@@ -33,6 +33,8 @@ FMP_KEY = os.getenv("FMP_API_KEY", "").strip()
 ALPHA_VANTAGE_KEY = os.getenv("ALPHA_VANTAGE_API_KEY", "").strip()
 FINNHUB_KEY = os.getenv("FINNHUB_API_KEY", "").strip()
 AI_GATEWAY_KEY = os.getenv("AI_GATEWAY_API_KEY", "").strip()
+ALPHA_VANTAGE_KEY = os.getenv("ALPHA_VANTAGE_API_KEY", "").strip()
+FINNHUB_KEY = os.getenv("FINNHUB_API_KEY", "").strip()
 
 # Centralized logging
 from utils.log_utils import create_logger
@@ -670,7 +672,19 @@ def fetch_crypto_sentiment():
     return None
 
 
+def get_next_event_dates():
+    """Returns the schedule for major upcoming economic events in 2026."""
+    events = [
+        {"code": "fomc", "name": "FOMC Meeting", "date": "2026-03-18", "day": "WED", "time": "14:00 EST", "impact": "critical"},
+        {"code": "nfp", "name": "Non-Farm Payrolls", "date": "2026-04-03", "day": "FRI", "time": "08:30 EST", "impact": "critical"},
+        {"code": "cpi", "name": "CPI Inflation Data", "date": "2026-04-10", "day": "FRI", "time": "08:30 EST", "impact": "critical"},
+        {"code": "fomc", "name": "FOMC Meeting", "date": "2026-05-06", "day": "WED", "time": "14:00 EST", "impact": "critical"},
+        {"code": "nfp", "name": "Non-Farm Payrolls", "date": "2026-05-08", "day": "FRI", "time": "08:30 EST", "impact": "critical"}
+    ]
+    return sorted(events, key=lambda x: x["date"])
+
 def fetch_economic_calendar():
+<<<<<<< HEAD
     """FETCH ECONOMIC CALENDAR FROM MULTIPLE SOURCES (Alpha Vantage, Finnhub, FMP)"""
     priority_currencies = ["USD", "EUR", "CNY", "JPY"]
     keyword_map = {
@@ -682,6 +696,55 @@ def fetch_economic_calendar():
 
     # 1. TRY ALPHA VANTAGE (Highly Reliable Free Tier)
     if ALPHA_VANTAGE_KEY:
+=======
+    """Fetches calendar from multiple providers with fallback."""
+    # 1. Try Alpha Vantage
+    if ALPHA_VANTAGE_KEY:
+        try:
+            log_diag("[ALPHA_VANTAGE] Fetching calendar...")
+            url = f"https://www.alphavantage.co/query?function=ECONOMIC_CALENDAR&apikey={ALPHA_VANTAGE_KEY}"
+            r = requests.get(url, timeout=10)
+            if r.status_code == 200 and "date" in r.text:
+                pass 
+        except: pass
+
+    # 2. Try Finnhub
+    if FINNHUB_KEY:
+        try:
+            log_diag("[FINNHUB] Fetching calendar...")
+            now = datetime.now().strftime("%Y-%m-%d")
+            future = (datetime.now() + timedelta(days=30)).strftime("%Y-%m-%d")
+            url = f"https://finnhub.io/api/v1/calendar/economic?from={now}&to={future}&token={FINNHUB_KEY}"
+            r = requests.get(url, timeout=10)
+            if r.status_code == 200:
+                data = r.json().get("economicCalendar", [])
+                if data:
+                    events = []
+                    for item in data[:5]:
+                        events.append({
+                            "code": "generic",
+                            "name": f"{item.get('country')} {item.get('event')}",
+                            "date": item.get("time")[:10],
+                            "day": "",
+                            "time": item.get("time")[11:16],
+                            "impact": item.get("impact", "medium")
+                        })
+                    return events
+        except: pass
+
+    # 3. Try FMP (legacy)
+    try:
+        log_diag("[FMP] Fetching calendar...")
+        
+        # Add User-Agent to avoid mod_security/WAF blocks
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "Accept": "application/json"
+        }
+        
+        log_diag("[IN] API_CALL: { provider: 'FMP', endpoint: '/calendar', timeout: 10s }")
+        
+>>>>>>> origin/main
         try:
             url = f"https://www.alphavantage.co/query?function=ECONOMIC_CALENDAR&apikey={ALPHA_VANTAGE_KEY}"
             log_diag("[ALPHA_VANTAGE] Fetching calendar...")

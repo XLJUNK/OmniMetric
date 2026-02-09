@@ -1,9 +1,22 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { Globe, Zap, Clock, ChevronDown, Check, Info } from 'lucide-react';
 import { HistoryChart, MetricChart } from '@/components/Charts';
 import { LangType, DICTIONARY } from '@/data/dictionary';
+=======
+import { OmniWarningBeacons } from '@/components/OmniWarningBeacons';
+import { Globe, ChevronDown, Check, Clock, Info, Zap } from 'lucide-react';
+
+// ... existing imports
+
+// ... existing imports
+// Removed duplicate Dashboard definition and misplaced OmniWarningBeacons usage
+
+import { RiskGauge, HistoryChart, MetricChart } from '@/components/Charts';
+import { DICTIONARY, LangType } from '@/data/dictionary';
+>>>>>>> origin/main
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { NewsTicker } from '@/components/NewsTicker';
@@ -170,6 +183,7 @@ export const Dashboard = ({ lang, setLang }: DashboardProps) => {
                         </span>
                     </div>
 
+<<<<<<< HEAD
                     {/* Gradient Risk Scale (Always Visible) */}
                     <div className="w-full max-w-[320px] mx-auto mt-4 mb-2">
                         <div
@@ -187,6 +201,12 @@ export const Dashboard = ({ lang, setLang }: DashboardProps) => {
                             <span>{t.methodology.scale_labels.neutral}</span>
                             <span>{t.methodology.scale_labels.greed}</span>
                         </div>
+=======
+                    {/* V5 VISUAL SYSTEM RESTORED */}
+                    <div className="w-full max-w-[360px] mx-auto mt-4 mb-2 flex flex-col items-center gap-4">
+                        <RiskGauge score={data.gms_score} lang={lang} />
+                        <OmniWarningBeacons data={data} lang={lang} />
+>>>>>>> origin/main
                     </div>
                 </div>
 
