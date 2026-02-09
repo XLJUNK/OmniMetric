@@ -210,9 +210,9 @@ const StatusBeacon = ({ label, status, dangerLabel, normalLabel, warnLabel }: {
     normalLabel: string,
     warnLabel: string
 }) => {
-    // High-Saturation "Neon" Palette with Multi-layered "Soft Bloom" shadows
+    // High-Saturation "Neon" Palette with Enhanced Multi-layered "Soft Bloom" shadows
     let baseColor = "bg-[#00ff9f]"; // Matrix/Neon Green
-    let glowColor = "shadow-[0_0_15px_rgba(0,255,159,0.8),0_0_50px_rgba(0,255,159,0.4),0_0_100px_rgba(0,255,159,0.2)]";
+    let glowColor = "shadow-[0_0_30px_rgba(0,255,159,1),0_0_60px_rgba(0,255,159,0.7),0_0_120px_rgba(0,255,159,0.5),0_0_200px_rgba(0,255,159,0.3)]";
     let auraColor = "bg-[#00ff9f]/20";
     let ringColor = "border-[#00ff9f]/50";
     let textColor = "text-[#00ff9f]";
@@ -223,14 +223,14 @@ const StatusBeacon = ({ label, status, dangerLabel, normalLabel, warnLabel }: {
 
     if (isDanger) {
         baseColor = "bg-[#ff073a]"; // Neon Pulse Red
-        glowColor = "shadow-[0_0_20px_rgba(255,7,58,0.9),0_0_60px_rgba(255,7,58,0.5),0_0_120px_rgba(255,7,58,0.3)]";
+        glowColor = "shadow-[0_0_35px_rgba(255,7,58,1),0_0_70px_rgba(255,7,58,0.7),0_0_140px_rgba(255,7,58,0.5),0_0_220px_rgba(255,7,58,0.3)]";
         auraColor = "bg-[#ff073a]/20";
         ringColor = "border-[#ff073a]/60";
         textColor = "text-[#ff073a]";
         displayText = dangerLabel;
     } else if (isWarning) {
         baseColor = "bg-[#fff01f]"; // Cyberpunk Yellow
-        glowColor = "shadow-[0_0_15px_rgba(255,240,31,0.9),0_0_50px_rgba(255,240,31,0.5),0_0_110px_rgba(255,240,31,0.3)]";
+        glowColor = "shadow-[0_0_30px_rgba(255,240,31,1),0_0_60px_rgba(255,240,31,0.7),0_0_130px_rgba(255,240,31,0.5),0_0_210px_rgba(255,240,31,0.3)]";
         auraColor = "bg-[#fff01f]/20";
         ringColor = "border-[#fff01f]/50";
         textColor = "text-[#fff01f]";
@@ -245,11 +245,12 @@ const StatusBeacon = ({ label, status, dangerLabel, normalLabel, warnLabel }: {
                 flex items-center justify-center transition-all duration-700
                 bg-white dark:bg-[#050505] overflow-visible
             `}>
-                {/* Atmospheric "Blurred Aura" (Surrounding Fog) */}
-                <div className={`absolute -inset-8 rounded-full ${auraColor} blur-2xl opacity-40 transition-opacity duration-1000 ${isDanger ? 'animate-pulse-fast' : (isWarning ? 'animate-pulse' : '')}`} />
+                {/* Atmospheric "Blurred Aura" (Surrounding Fog) - Enhanced */}
+                <div className={`absolute -inset-12 rounded-full ${auraColor} blur-3xl opacity-60 transition-opacity duration-1000 ${isDanger ? 'animate-pulse-fast' : (isWarning ? 'animate-pulse' : '')}`} />
 
-                {/* Vibrant Glow Boundary */}
-                <div className={`absolute -inset-1 rounded-full ${glowColor} opacity-50`} />
+                {/* Vibrant Glow Boundary - Enhanced with additional outer layer */}
+                <div className={`absolute -inset-2 rounded-full ${glowColor} opacity-40 blur-md`} />
+                <div className={`absolute -inset-1 rounded-full ${glowColor} opacity-60`} />
 
                 {/* The Lamp Core (No border, uniform glow) */}
                 <div className={`

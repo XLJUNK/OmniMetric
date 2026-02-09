@@ -52,7 +52,7 @@ export const DICTIONARY: Record<LangType, any> = {
         },
         methodology: {
             title: "GMS QUANT METHODOLOGY",
-            desc: "The GMS Score integrates Market 'Fear', 'Credit Stress', and 'Momentum' into a proprietary 0-100 quantitative risk index.",
+            desc: "The GMS Score is OmniMetric's proprietary quantitative risk index that integrates Market 'Fear', 'Credit Stress', and 'Momentum' into a 0-100 scale.",
             owb_title: "Omni Warning Beacons (OWB)",
             owb_desc: "Real-time monitoring system for critical market stress indicators. Watch for 'INVERTED' Yield Curves or 'STRESS' in Credit Markets as early warning signs of recession.",
             ogv_title: "Omni Gravity Vector (OGV)",
@@ -97,21 +97,21 @@ export const DICTIONARY: Record<LangType, any> = {
             ogv: {
                 title: "Omni Gravity Vector (OGV)",
                 func_title: "FUNCTION",
-                func_desc: "Projects the relative position of major assets (Stocks, Gold, BTC, USD, Bonds) onto a four-quadrant map composed of 'Economic Growth' and 'Inflation/Prices'. Draws a 60-day 'Trail' to visualize market inertia and trends.",
+                func_desc: "OmniMetric's proprietary visualization that projects the relative position of major assets (Stocks, Gold, BTC, USD, Bonds) onto a four-quadrant map composed of 'Economic Growth' and 'Inflation/Prices'. Draws a 60-day 'Trail' to visualize market inertia and trends.",
                 purpose_title: "PURPOSE",
                 purpose_desc: "To determine at a glance whether the current macro environment is 'Goldilocks', 'Overheating', 'Stagflation', or 'Recession'. Acts as a compass to read which quadrant assets are gravitating towards, helping to decide portfolio 'safe havens' or 'attack opportunities'."
             },
             owb: {
                 title: "Omni Warning Beacons (OWB)",
                 func_title: "FUNCTION",
-                func_desc: "A traffic light system monitoring 3 critical macro indicators (Yield Curve, Credit Risk, Volatility) 24/7. Signals change from 'NORMAL / CALM' to 'DANGER / STRESS' upon detecting anomalies.",
+                func_desc: "OmniMetric's proprietary traffic light system monitoring 3 critical macro indicators (Yield Curve, Credit Risk, Volatility) 24/7. Signals change from 'NORMAL / CALM' to 'DANGER / STRESS' upon detecting anomalies.",
                 purpose_title: "PURPOSE",
                 purpose_desc: "To detect systemic risk (market collapse) early. Even if individual stocks are strong, 'Red' beacons indicate a catastrophic shock is smoldering behind the scenes. Serves as the 'final line of defense'."
             },
             otg: {
                 title: "Omni Thermal Grid (OTG)",
                 func_title: "FUNCTION",
-                func_desc: "A heatmap visualizing the 'heat' of sectors (Tech, Energy, Finance, Crypto) based on the GMS algorithm. Uses color intensity to show in real-time where funds are concentrating and where they are fleeing.",
+                func_desc: "OmniMetric's proprietary heatmap visualizing the 'heat' of sectors (Tech, Energy, Finance, Crypto) based on the GMS algorithm. Uses color intensity to show in real-time where funds are concentrating and where they are fleeing.",
                 purpose_title: "PURPOSE",
                 purpose_desc: "To capture waves of Sector Rotation. While OGV shows the 'ocean currents', OTG identifies 'active schools of fish'. Supports efficient capital allocation by spotting locally heating sectors even in a cooling market."
             }
@@ -383,7 +383,7 @@ export const DICTIONARY: Record<LangType, any> = {
         },
         methodology: {
             title: "GMS QUANT METHODOLOGY",
-            desc: "GMSスコアは、市場の「恐怖」「信用」「勢い」を統合し、0〜100で数値化した独自の定量的リスク指標です。",
+            desc: "GMSスコアは、当サイトオリジナルの定量的リスク指標であり、市場の「恐怖」「信用」「勢い」を統合し、0〜100で数値化します。",
             zone_accumulate: "60-100: ACCUMULATE (リスク選好)",
             zone_accumulate_desc: "株式・コモディティ・ハイイールド債への資金流入が推奨される拡大局面。",
             zone_neutral: "40-60: NEUTRAL (中立)",
@@ -416,21 +416,21 @@ export const DICTIONARY: Record<LangType, any> = {
             ogv: {
                 title: "オムニ・グラビティ・ベクトル (OGV)",
                 func_title: "機能",
-                func_desc: "主要資産（株、金、ビットコイン、ドル、債券）の相対的な立ち位置を、「経済成長（景気）」と「物価（インフレ/デフレ）」の2軸で構成される四象限マップに投影します。過去60日間の「航跡（Trail）」を描画することで、市場の慣性とトレンドを可視化します。",
+                func_desc: "当サイトオリジナルの可視化ツールで、主要資産（株、金、ビットコイン、ドル、債券）の相対的な立ち位置を、「経済成長（景気）」と「物価（インフレ/デフレ）」の2軸で構成される四象限マップに投影します。過去60日間の「航跡（Trail）」を描画することで、市場の慣性とトレンドを可視化します。",
                 purpose_title: "目的",
                 purpose_desc: "現在のマクロ経済環境が「適温（Goldilocks）」「過熱（Overheating）」「停滞（Stagflation）」「不況（Recession）」のどこに位置しているかを一目で判別することです。資産がどの象限へ引き寄せられているか（重力）を読み解き、ポートフォリオの「逃げ先」や「攻め時」を判断するための羅針盤として機能します。"
             },
             owb: {
                 title: "オムニ・ワーニング・ビーコン (OWB)",
                 func_title: "機能",
-                func_desc: "市場の「急所」である3つのマクロ指標（イールドカーブ、クレジットリスク、ボラティリティ）を24時間監視する信号機システムです。正常時は「NORMAL / CALM」、異常検知時は「DANGER / STRESS」へと色が変化し、警告を発します。",
+                func_desc: "当サイトオリジナルの信号機システムで、市場の「急所」である3つのマクロ指標（イールドカーブ、クレジットリスク、ボラティリティ）を24時間監視します。正常時は「NORMAL / CALM」、異常検知時は「DANGER / STRESS」へと色が変化し、警告を発します。",
                 purpose_title: "目的",
                 purpose_desc: "システミック・リスク（市場全体の崩壊リスク）を早期に察知することです。個別の株価が堅調であっても、ビーコンが「赤」を点灯させている場合は、裏側で壊滅的なショックの火種が燻っていることを意味します。投資判断における「最終的な防衛線」としての役割を担います。"
             },
             otg: {
                 title: "オムニ・サーマル・グリッド (OTG)",
                 func_title: "機能",
-                func_desc: "ハイテク、エネルギー、金融、クリプトといった各セクターの「熱量」を、独自アルゴリズム（GMSスコア）に基づいてヒートマップ化したものです。どの分野に資金が集中し、どの分野から資金が抜けているかを色の濃淡でリアルタイムに表現します。",
+                func_desc: "当サイトオリジナルのヒートマップで、ハイテク、エネルギー、金融、クリプトといった各セクターの「熱量」を、独自アルゴリズム（GMSスコア）に基づいて可視化します。どの分野に資金が集中し、どの分野から資金が抜けているかを色の濃淡でリアルタイムに表現します。",
                 purpose_title: "目的",
                 purpose_desc: "セクター・ローテーション（資金の循環）の波を捉えることです。OGVが「市場全体の海流」を示すのに対し、OTGは「どの魚群が活発か」を特定します。相場全体が冷え込んでいる中でも、局所的に熱を帯びているセクターを見つけ出し、効率的な資金配分をサポートします。"
             }
@@ -702,7 +702,7 @@ export const DICTIONARY: Record<LangType, any> = {
         },
         methodology: {
             title: "GMS QUANT METHODOLOGY",
-            desc: "GMS评分将市场的“恐惧”、“信贷压力”和“动量”整合为一个0-100的专有量化风险指数。",
+            desc: "GMS评分是本站独家的量化风险指数,将市场的\"恐惧\"、\"信贷压力\"和\"动量\"整合为一个0-100的专有量化风险指数。",
             zone_accumulate: "60-100: ACCUMULATE (风险偏好)",
             zone_accumulate_desc: "扩张阶段。建议资金流入股票、大宗商品和高收益债券。",
             zone_neutral: "40-60: NEUTRAL (中立)",
@@ -735,21 +735,21 @@ export const DICTIONARY: Record<LangType, any> = {
             ogv: {
                 title: "全向重力向量 (OGV)",
                 func_title: "功能",
-                func_desc: "将主要资产（股票、黄金、比特币、美元、债券）的相对位置映射到由“经济增长”和“通胀/价格”构成的四象限地图上。绘制60天的“轨迹”以可视化市场惯性和趋势。",
+                func_desc: "本站独家的可视化工具,将主要资产（股票、黄金、比特币、美元、债券）的相对位置映射到由\"经济增长\"和\"通胀/价格\"构成的四象限地图上。绘制60天的\"轨迹\"以可视化市场惯性和趋势。",
                 purpose_title: "目的",
                 purpose_desc: "一眼识别当前宏观环境处于“金发姑娘（Goldilocks）”、“过热（Overheating）”、“滞胀（Stagflation）”还是“衰退（Recession）”。作为指南针，解读资产正被吸引向哪个象限（重力），帮助判断投资组合的“避风港”或“进攻时机”。"
             },
             owb: {
                 title: "全向警示灯塔 (OWB)",
                 func_title: "功能",
-                func_desc: "这是一个24小时监控市场“要害”三大宏观指标（收益率曲线、信用风险、波动率）的信号灯系统。正常时显示为“NORMAL / CALM”，检测到异常时颜色会变为“DANGER / STRESS”并发出警报。",
+                func_desc: "本站独家的信号灯系统,24小时监控市场“要害”三大宏观指标（收益率曲线、信用风险、波动率）。正常时显示为“NORMAL / CALM”，检测到异常时颜色会变为“DANGER / STRESS”并发出警报。",
                 purpose_title: "目的",
                 purpose_desc: "尽早察觉系统性风险（整个市场崩盘的风险）。即使个别股价稳健，如果灯塔点亮“红色”，则意味着背后潜伏着毁灭性冲击的火种。在投资决策中担任“最后防线”的角色。"
             },
             otg: {
                 title: "全向热力网格 (OTG)",
                 func_title: "功能",
-                func_desc: "基于专有算法（GMS评分），将科技、能源、金融、加密等各板块的“热量”热力图化。实时通过色彩深浅表现资金正集中在哪些领域，又从哪些领域流出。",
+                func_desc: "本站独家的热力图,基于专有算法（GMS评分）将科技、能源、金融、加密等各板块的\"热量\"可视化。实时通过色彩深浅表现资金正集中在哪些领域,又从哪些领域流出。",
                 purpose_title: "目的",
                 purpose_desc: "把握行业轮动（资金循环）的浪潮。OGV显示“整个市场的洋流”，而OTG则识别“哪些鱼群活跃”。即使在整体行情低迷时，也能找出局部受热的板块，支持高效的资金配置。"
             }
@@ -975,7 +975,7 @@ export const DICTIONARY: Record<LangType, any> = {
         },
         methodology: {
             title: "METODOLOGÍA CUANTITATIVA GMS",
-            desc: "El puntaje GMS integra el 'Miedo', 'Estrés Crediticio' y 'Momento' del mercado en un índice de riesgo cuantitativo propietario de 0-100.",
+            desc: "El GMS Score es el índice cuantitativo de riesgo propietario de OmniMetric que integra el 'Miedo', 'Estrés Crediticio' y 'Momento' del mercado en una escala de 0-100.",
             zone_accumulate: "60-100: ACUMULAR (Risk On)",
             zone_accumulate_desc: "Fase de expansión. Se sugieren entradas en Acciones, Materias Primas y Bonos de Alto Rendimiento.",
             zone_neutral: "40-60: NEUTRAL (Sin Tendencia)",
@@ -1008,14 +1008,14 @@ export const DICTIONARY: Record<LangType, any> = {
             ogv: {
                 title: "Omni Gravity Vector (OGV)",
                 func_title: "FUNCIÓN",
-                func_desc: "Proyecta la posición relativa de los principales activos (Acciones, Oro, BTC, USD, Bonos) en un mapa de cuatro cuadrantes compuesto por 'Crecimiento Económico' e 'Inflación/Precios'. Dibuja un 'Trayecto' de 60 días para visualizar la inercia y las tendencias del mercado.",
+                func_desc: "Visualización propietaria de OmniMetric que proyecta la posición relativa de los principales activos (Acciones, Oro, BTC, USD, Bonos) en un mapa de cuatro cuadrantes compuesto por 'Crecimiento Económico' e 'Inflación/Precios'. Dibuja un 'Trayecto' de 60 días para visualizar la inercia y las tendencias del mercado.",
                 purpose_title: "PROPÓSITO",
                 purpose_desc: "Identificar de un vistazo si el entorno macro actual es 'Goldilocks', 'Recalentamiento', 'Estanflación' o 'Recesión'. Funciona como una brújula para interpretar hacia qué cuadrante se ven atraídos los activos (gravedad), ayudando a decidir los 'refugios' o 'momentos de ataque' de la cartera."
             },
             owb: {
                 title: "Omni Warning Beacons (OWB)",
                 func_title: "FUNCIÓN",
-                func_desc: "Sistema de semáforos macro que monitorea 24 h tres indicadores críticos (Curva de tipos, Riesgo de crédito, Volatilidad). Cambia de color a 'DANGER / STRESS' cuando detecta anomalías.",
+                func_desc: "Sistema de semáforos propietario de OmniMetric que monitorea 24 h tres indicadores macro críticos (Curva de tipos, Riesgo de crédito, Volatilidad). Cambia de color a 'DANGER / STRESS' cuando detecta anomalías.",
                 purpose_title: "PROPÓSITO",
                 purpose_desc: "Detectar tempranamente riesgos sistémicos. Si los faros están en 'Rojo', hay peligro oculto aunque los precios parezcan estables. Es la 'última línea de defensa' en la inversión.",
             },
@@ -1038,7 +1038,7 @@ export const DICTIONARY: Record<LangType, any> = {
             otg: {
                 title: "Omni Thermal Grid (OTG)",
                 func_title: "FUNCIÓN",
-                func_desc: "Mapa de calor basado en el GMS Score que muestra la 'energía' en sectores como Tech, Energía, Finanzas y Crypto. Expresa en tiempo real dónde se concentra el capital.",
+                func_desc: "Mapa de calor propietario de OmniMetric basado en el GMS Score que muestra la 'energía' en sectores como Tech, Energía, Finanzas y Crypto. Expresa en tiempo real dónde se concentra el capital.",
                 purpose_title: "PROPÓSITO",
                 purpose_desc: "Capturar las olas de rotación sectorial. Mientras OGV muestra la 'corriente oceánica', OTG identifica qué 'sectores' están activos, apoyando una asignación eficiente de fondos."
             }
@@ -1248,7 +1248,7 @@ export const DICTIONARY: Record<LangType, any> = {
         },
         methodology: {
             title: "GMS मात्रात्मक पद्धति",
-            desc: "GMS स्कोर बाज़ार के 'डर', 'क्रेडिट तनाव' and 'मोमेंटम' को 0-100 के स्वामित्व वाले मात्रात्मक जोखिम सूचकांक में एकीकृत करता है।",
+            desc: "GMS स्कोर OmniMetric का मूल मात्रात्मक जोखिम सूचकांक है जो बाज़ार के 'डर', 'क्रेडिट तनाव' और 'मोमेंटम' को 0-100 के पैमाने में एकीकृत करता है।",
             zone_accumulate: "60-100: संचय (Risk On)",
             zone_accumulate_desc: "विस्तार चरण। इक्विटी, कमोडिटी और हाई यील्ड बॉन्ड में निवेश का सुझाव।",
             zone_neutral: "40-60: तटस्थ (Trendless)",
@@ -1281,21 +1281,21 @@ export const DICTIONARY: Record<LangType, any> = {
             ogv: {
                 title: "ओम्नी ग्रेविटी वेक्टर (OGV)",
                 func_title: "कार्य",
-                func_desc: "प्रमुख संपत्तियों (स्टॉक, सोना, BTC, USD, बॉन्ड) की सापेक्ष स्थिति को 'आर्थिक विकास' और 'मुद्रास्फीति/कीमतों' से बने चार-चतुर्थांश मानचित्र पर प्रोजेक्ट करता है। बाजार की जड़ता और रुझानों की कल्पना करने के लिए 60-दिवसीय 'ट्रेल' खींचता है।",
+                func_desc: "OmniMetric का मूल विज़ुअलाइज़ेशन जो प्रमुख संपत्तियों (स्टॉक, सोना, BTC, USD, बॉन्ड) की सापेक्ष स्थिति को 'आर्थिक विकास' और 'मुद्रास्फीति/कीमतों' से बने चार-चतुर्थांश मानचित्र पर प्रोजेक्ट करता है। बाजार की जड़ता और रुझानों की कल्पना करने के लिए 60-दिवसीय 'ट्रेल' खींचता है।",
                 purpose_title: "उद्देश्य",
                 purpose_desc: "एक नज़र में यह निर्धारित करना कि वर्तमान मैक्रो वातावरण 'गोल्डिलॉक्स', 'ओवरहीटिंग', 'स्टैगफ्लेशन' या 'मंदी' है। यह समझने के लिए एक कम्पास के रूप में कार्य करता है कि संपत्ति किस चतुर्थांश की ओर आकर्षित हो रही है (गुरुत्वाकर्षण)।"
             },
             owb: {
                 title: "ओम्नी चेतावनी बीकन (OWB)",
                 func_title: "कार्य",
-                func_desc: "ट्रैफ़िक लाइट सिस्टम जो बाज़ार के तीन महत्वपूर्ण संकेतकों (यील्ड कर्व, क्रेडिट ज़ोखिम, अस्थिरता) की 24 घंटे निगरानी करता है। विसंगतियों का पता चलने पर रंग 'DANGER / STRESS' में बदल जाता है।",
+                func_desc: "OmniMetric का मूल ट्रैफ़िक लाइट सिस्टम जो बाज़ार के तीन महत्वपूर्ण संकेतकों (यील्ड कर्व, क्रेडिट ज़ोखिम, अस्थिरता) की 24 घंटे निगरानी करता है। विसंगतियों का पता चलने पर रंग 'DANGER / STRESS' में बदल जाता है।",
                 purpose_title: "उद्देश्य",
                 purpose_desc: "प्रणालीगत जोखिमों का जल्द पता लगाना। यदि बीकन 'लाल' दिखा रहे हैं, तो इसका मतलब है कि पृष्ठभूमि में झटके सुलग रहे हैं, भले ही व्यक्तिगत स्टॉक की कीमतें स्थिर लगें।"
             },
             otg: {
                 title: "ओम्नी थर्मल ग्रिड (OTG)",
                 func_title: "कार्य",
-                func_desc: "GMS स्कोर के आधार पर टेक, एनर्जी, फाइनेंस और क्रिप्टो जैसे क्षेत्रों की 'गर्मी' का हीटमैप। रीयल-टाइम में दिखाता है कि पूंजी कहाँ केंद्रित हो रही है।",
+                func_desc: "OmniMetric का मूल हीटमैप जो GMS स्कोर के आधार पर टेक, एनर्जी, फाइनेंस और क्रिप्टो जैसे क्षेत्रों की 'गर्मी' दिखाता है। रीयल-टाइम में दिखाता है कि पूंजी कहाँ केंद्रित हो रही है।",
                 purpose_title: "उद्देश्य",
                 purpose_desc: "सेक्टर रोटेशन की लहरों को पकड़ना। जबकि OGV 'समुद्री धारा' दिखाता है, OTG पहचानता है कि 'मछलियों के झुंड' (पूंजी प्रवाह) कहाँ सक्रिय हैं।"
             }
@@ -1521,7 +1521,7 @@ export const DICTIONARY: Record<LangType, any> = {
         },
         methodology: {
             title: "METODOLOGI KUANTITATIF GMS",
-            desc: "Skor GMS mengintegrasikan 'Ketakutan', 'Stres Kredit', dan 'Momentum' pasar ke dalam indeks risiko kuantitatif 0-100.",
+            desc: "Skor GMS adalah indeks risiko kuantitatif proprietary OmniMetric yang mengintegrasikan 'Ketakutan', 'Stres Kredit', dan 'Momentum' pasar ke dalam skala 0-100.",
             zone_accumulate: "60-100: AKUMULASI (Risk On)",
             zone_accumulate_desc: "Fase ekspansi. Arus masuk ke Saham, Komoditas, dan Obligasi High Yield disarankan.",
             zone_neutral: "40-60: NETRAL (Tanpa Tren)",
@@ -1554,21 +1554,21 @@ export const DICTIONARY: Record<LangType, any> = {
             ogv: {
                 title: "Omni Gravity Vector (OGV)",
                 func_title: "FUNGSI",
-                func_desc: "Memproyeksikan posisi relatif aset utama (Saham, Emas, BTC, USD, Obligasi) ke dalam peta empat kuadran (Pertumbuhan vs Inflasi). Menggambar 'Trail' 60 hari untuk memvisualisasikan inersia.",
+                func_desc: "Visualisasi proprietary OmniMetric yang memproyeksikan posisi relatif aset utama (Saham, Emas, BTC, USD, Obligasi) ke dalam peta empat kuadran (Pertumbuhan vs Inflasi). Menggambar 'Trail' 60 hari untuk memvisualisasikan inersia.",
                 purpose_title: "TUJUAN",
                 purpose_desc: "Menentukan apakah lingkungan makro saat ini adalah 'Goldilocks', 'Overheating', 'Stagflation', atau 'Recession'. Bertindak sebagai kompas untuk melihat ke mana aset gravitasi."
             },
             owb: {
                 title: "Omni Warning Beacons (OWB)",
                 func_title: "FUNGSI",
-                func_desc: "Sistem lampu lalu lintas yang memantau 3 indikator makro kritis (Yield Curve, Risiko Kredit, Volatilitas). Berubah menjadi 'DANGER / STRESS' saat ada anomali.",
+                func_desc: "Sistem lampu lalu lintas proprietary OmniMetric yang memantau 3 indikator makro kritis (Yield Curve, Risiko Kredit, Volatilitas). Berubah menjadi 'DANGER / STRESS' saat ada anomali.",
                 purpose_title: "TUJUAN",
                 purpose_desc: "Deteksi dini risiko sistemik. Jika beacon 'Merah', berarti ada guncangan di latar belakang meskipun harga saham stabil."
             },
             otg: {
                 title: "Omni Thermal Grid (OTG)",
                 func_title: "FUNGSI",
-                func_desc: "Heatmap 'panas' di sektor-sektor seperti Teknologi, Energi, Keuangan, dan Kripto berdasarkan GMS Score. Menunjukkan konsentrasi kapital secara real-time.",
+                func_desc: "Heatmap proprietary OmniMetric yang menunjukkan 'panas' di sektor-sektor seperti Teknologi, Energi, Keuangan, dan Kripto berdasarkan GMS Score. Menunjukkan konsentrasi kapital secara real-time.",
                 purpose_title: "TUJUAN",
                 purpose_desc: "Menangkap gelombang rotasi sektor. OGV menunjukkan 'arus laut', OTG mengidentifikasi 'kelompok ikan' yang aktif."
             }
@@ -1797,7 +1797,7 @@ export const DICTIONARY: Record<LangType, any> = {
         },
         methodology: {
             title: "منهجية GMS الكمية",
-            desc: "تدمج درجة GMS 'الخوف' و 'الضغط الائتماني' و 'الزخم' في السوق في مؤشر مخاطر كمي خاص من 0-100.",
+            desc: "درجة GMS هي مؤشر المخاطر الكمي الأصلي لـ OmniMetric الذي يدمج 'الخوف' و 'الضغط الائتماني' و 'الزخم' في السوق في مقياس من 0-100.",
             zone_accumulate: "60-100: تجميع (مخاطر)",
             zone_accumulate_desc: "مرحلة التوسع. يُقترح تدفق الأموال إلى الأسهم والسلع والسندات ذات العائد المرتفع.",
             zone_neutral: "40-60: محايد (بلا اتجاه)",
@@ -1830,21 +1830,21 @@ export const DICTIONARY: Record<LangType, any> = {
             ogv: {
                 title: "Omni Gravity Vector (OGV)",
                 func_title: "الوظيفة",
-                func_desc: "يسقط الموضع النسبي للأصول الرئيسية (الأسهم، الذهب، BTC، USD، السندات) على خريطة رباعية (النمو مقابل التضخم). يرسم 'أثراً' لمدة 60 يوماً لتصور العطالة.",
+                func_desc: "التصور الأصلي لـ OmniMetric الذي يسقط الموضع النسبي للأصول الرئيسية (الأسهم، الذهب، BTC، USD، السندات) على خريطة رباعية (النمو مقابل التضخم). يرسم 'أثراً' لمدة 60 يوماً لتصور العطالة.",
                 purpose_title: "الغرض",
                 purpose_desc: "تحديد ما إذا كانت البيئة الكلية الحالية هي 'Goldilocks' أو 'Surchauffe' أو 'Stagflation' أو 'Recession'. يعمل كبوصلة لمعرفة الاتجاه الذي تنجذب إليه الأصول."
             },
             owb: {
                 title: "Omni Warning Beacons (OWB)",
                 func_title: "الوظيفة",
-                func_desc: "نظام إشارات مرور يراقب 3 مؤشرات كلية حرجة (منحنى العائد، الائتمان، التقلب). يتغير إلى 'DANGER / STRESS' عند حدوث خلل.",
+                func_desc: "نظام إشارات المرور الأصلي لـ OmniMetric الذي يراقب 3 مؤشرات كلية حرجة (منحنى العائد، الائتمان، التقلب). يتغير إلى 'DANGER / STRESS' عند حدوث خلل.",
                 purpose_title: "الغرض",
                 purpose_desc: "الكشف المبكر عن المخاطر النظامية. إذا كانت التنبيهات باللون الأحمر، فهذا يعني وجود صدمات في الخلفية."
             },
             otg: {
                 title: "Omni Thermal Grid (OTG)",
                 func_title: "الوظيفة",
-                func_desc: "خريطة حرارية للقطاعات بناءً على درجة GMS. توضح في الوقت الفعلي أماكن تركيز رأس المال.",
+                func_desc: "الخريطة الحرارية الأصلية لـ OmniMetric للقطاعات بناءً على درجة GMS. توضح في الوقت الفعلي أماكن تركيز رأس المال.",
                 purpose_title: "الغرض",
                 purpose_desc: "التقاط موجات دوران القطاع. يوضح OGV 'تيار المحيط'، بينما يحدد OTG 'أسراب الأسماك' النشطة."
             }
@@ -2059,7 +2059,7 @@ export const DICTIONARY: Record<LangType, any> = {
         },
         methodology: {
             title: "GMS QUANT METHODIK",
-            desc: "Der GMS Score integriert Markt-'Angst', 'Kreditstress' und 'Momentum' in einen proprietären quantitativen Risikoindex von 0-100.",
+            desc: "Der GMS Score ist OmniMetrics proprietärer quantitativer Risikoindex, der Markt-'Angst', 'Kreditstress' und 'Momentum' in eine 0-100-Skala integriert.",
             zone_accumulate: "60-100: AKKUMULIEREN (Risk On)",
             zone_accumulate_desc: "Expansionsphase. Zuflüsse in Aktien, Rohstoffe und Hochzinsanleihen empfohlen.",
             zone_neutral: "40-60: NEUTRAL (Trendlos)",
@@ -2072,21 +2072,21 @@ export const DICTIONARY: Record<LangType, any> = {
             ogv: {
                 title: "Omni Gravity Vector (OGV)",
                 func_title: "FUNKTION",
-                func_desc: "Projiziert die relative Position wichtiger Vermögenswerte (Aktien, Gold, BTC, USD, Anleihen) auf eine Vier-Quadranten-Karte aus 'Wirtschaftswachstum' und 'Inflation'. Zeichnet eine 60-Tage-'Spur', um Trägheit und Trends zu visualisieren.",
+                func_desc: "OmniMetrics proprietäre Visualisierung, die die relative Position wichtiger Vermögenswerte (Aktien, Gold, BTC, USD, Anleihen) auf eine Vier-Quadranten-Karte aus 'Wirtschaftswachstum' und 'Inflation' projiziert. Zeichnet eine 60-Tage-'Spur', um Trägheit und Trends zu visualisieren.",
                 purpose_title: "ZWECK",
                 purpose_desc: "Auf einen Blick erkennen, ob das Makroumfeld 'Goldilocks', 'Überhitzung', 'Stagflation' oder 'Rezession' ist. Dient als Kompass, um zu sehen, zu welchem Quadranten Assets tendieren (Gravitation)."
             },
             owb: {
                 title: "Omni Warning Beacons (OWB)",
                 func_title: "FUNKTION",
-                func_desc: "Ampelsystem zur 24h-Überwachung kritischer Makroindikatoren (Zinskurve, Kreditrisiko, Volatilidad). Wechselt bei Anomalien auf 'DANGER / STRESS'.",
+                func_desc: "OmniMetrics proprietäres Ampelsystem zur 24h-Überwachung kritischer Makroindikatoren (Zinskurve, Kreditrisiko, Volatilität). Wechselt bei Anomalien auf 'DANGER / STRESS'.",
                 purpose_title: "ZWECK",
                 purpose_desc: "Frühzeitige Erkennung systemischer Risiken. Wenn die Beacons 'Rot' zeigen, schwelen im Hintergrund Schocks, auch wenn Einzelaktien stabil scheinen. Die 'letzte Verteidigungslinie'."
             },
             otg: {
                 title: "Omni Thermal Grid (OTG)",
                 func_title: "FUNKTION",
-                func_desc: "Heatmap der 'Hitze' in Sektoren wie Tech, Energie, Finanzen und Krypto basierend auf dem GMS-Score. Zeigt in Echtzeit, wo sich Kapital konzentriert.",
+                func_desc: "OmniMetrics proprietäre Heatmap der 'Hitze' in Sektoren wie Tech, Energie, Finanzen und Krypto basierend auf dem GMS-Score. Zeigt in Echtzeit, wo sich Kapital konzentriert.",
                 purpose_title: "ZWECK",
                 purpose_desc: "Erfassen von Sektor-Rotationen. Während OGV die 'Meeresströmung' zeigt, identifiziert OTG, welche 'Fischschwärme' aktiv sind."
             }
@@ -2375,7 +2375,7 @@ export const DICTIONARY: Record<LangType, any> = {
         },
         methodology: {
             title: "MÉTHODOLOGIE QUANT GMS",
-            desc: "Le score GMS intègre la 'peur', le 'stress du crédit' et le 'momentum' du marché dans un indice de risque quantitatif exclusif de 0 à 100.",
+            desc: "Le Score GMS est l'indice de risque quantitatif propriétaire d'OmniMetric qui intègre la 'Peur', le 'Stress de Crédit' et le 'Momentum' du marché sur une échelle de 0-100.",
             zone_accumulate: "60-100 : ACCUMULER (Risk On)",
             zone_accumulate_desc: "Phase d'expansion. Entrées suggérées sur les actions, les matières premières et les obligations à haut rendement.",
             zone_neutral: "40-60 : NEUTRE (Sans tendance)",
@@ -2388,21 +2388,21 @@ export const DICTIONARY: Record<LangType, any> = {
             ogv: {
                 title: "Omni Gravity Vector (OGV)",
                 func_title: "FONCTION",
-                func_desc: "Projette la position relative des principaux actifs (Actions, Or, BTC, USD, Obligations) sur une carte à quatre quadrants (Croissance vs Inflation). Trace une 'traîne' de 60 jours pour visualiser l'inertie.",
+                func_desc: "Visualisation propriétaire d'OmniMetric qui projette la position relative des principaux actifs (Actions, Or, BTC, USD, Obligations) sur une carte à quatre quadrants composée de 'Croissance Économique' et 'Inflation/Prix'. Trace un 'Sentier' de 60 jours pour visualiser l'inertie et les tendances du marché.",
                 purpose_title: "OBJECTIF",
                 purpose_desc: "Identifier d'un coup d'œil si l'environnement macro est 'Boucle d'or', 'Surchauffe', 'Stagflation' ou 'Récession'. Sert de boussole pour voir vers quel quadrant les actifs gravitent."
             },
             owb: {
                 title: "Omni Warning Beacons (OWB)",
                 func_title: "FONCTION",
-                func_desc: "Système de feux de signalisation surveillant 24h/24 les indicateurs macro critiques (Courbe des taux, risque de crédit, volatilité). Passe au 'DANGER / STRESS' en cas d'anomalie.",
+                func_desc: "Système de feux tricolores propriétaire d'OmniMetric surveillant 24h/24 trois indicateurs macro critiques (Courbe des taux, Risque de crédit, Volatilité). Passe en 'DANGER / STRESS' lors de la détection d'anomalies.",
                 purpose_title: "OBJECTIF",
                 purpose_desc: "Détection précoce des risques systémiques. Si les balises sont 'Rouge', un choc couve malgré la stabilité apparente des prix. C'est la 'dernière ligne de défense'."
             },
             otg: {
                 title: "Omni Thermal Grid (OTG)",
                 func_title: "FONCTION",
-                func_desc: "Carte thermique de la 'chaleur' des secteurs basée sur le score GMS. Exprime en temps réel où le capital se concentre.",
+                func_desc: "Carte thermique propriétaire d'OmniMetric visualisant la 'chaleur' des secteurs (Tech, Énergie, Finance, Crypto) basée sur l'algorithme GMS. Utilise l'intensité des couleurs pour montrer en temps réel où les fonds se concentrent et d'où ils fuient.",
                 purpose_title: "OBJECTIF",
                 purpose_desc: "Capturer les vagues de rotation sectorielle. OGV montre le 'courant marin', OTG identifie les 'bancs de poissons' actifs."
             }
