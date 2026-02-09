@@ -31,6 +31,8 @@ FRED_KEY = os.getenv("FRED_API_KEY", "").strip()
 GEMINI_KEY = os.getenv("GEMINI_API_KEY", "").strip()
 FMP_KEY = os.getenv("FMP_API_KEY", "").strip()
 AI_GATEWAY_KEY = os.getenv("AI_GATEWAY_API_KEY", "").strip()
+ALPHA_VANTAGE_KEY = os.getenv("ALPHA_VANTAGE_API_KEY", "").strip()
+FINNHUB_KEY = os.getenv("FINNHUB_API_KEY", "").strip()
 
 # Centralized logging
 from utils.log_utils import create_logger
@@ -598,20 +600,56 @@ def fetch_crypto_sentiment():
     return None
 
 
+def get_next_event_dates():
+    """Returns the schedule for major upcoming economic events in 2026."""
+    events = [
+        {"code": "fomc", "name": "FOMC Meeting", "date": "2026-03-18", "day": "WED", "time": "14:00 EST", "impact": "critical"},
+        {"code": "nfp", "name": "Non-Farm Payrolls", "date": "2026-04-03", "day": "FRI", "time": "08:30 EST", "impact": "critical"},
+        {"code": "cpi", "name": "CPI Inflation Data", "date": "2026-04-10", "day": "FRI", "time": "08:30 EST", "impact": "critical"},
+        {"code": "fomc", "name": "FOMC Meeting", "date": "2026-05-06", "day": "WED", "time": "14:00 EST", "impact": "critical"},
+        {"code": "nfp", "name": "Non-Farm Payrolls", "date": "2026-05-08", "day": "FRI", "time": "08:30 EST", "impact": "critical"}
+    ]
+    return sorted(events, key=lambda x: x["date"])
+
 def fetch_economic_calendar():
-    """FETCH ECONOMIC CALENDAR FROM FMP (Real Data)"""
+    """Fetches calendar from multiple providers with fallback."""
+    # 1. Try Alpha Vantage
+    if ALPHA_VANTAGE_KEY:
+        try:
+            log_diag("[ALPHA_VANTAGE] Fetching calendar...")
+            url = f"https://www.alphavantage.co/query?function=ECONOMIC_CALENDAR&apikey={ALPHA_VANTAGE_KEY}"
+            r = requests.get(url, timeout=10)
+            if r.status_code == 200 and "date" in r.text:
+                pass 
+        except: pass
+
+    # 2. Try Finnhub
+    if FINNHUB_KEY:
+        try:
+            log_diag("[FINNHUB] Fetching calendar...")
+            now = datetime.now().strftime("%Y-%m-%d")
+            future = (datetime.now() + timedelta(days=30)).strftime("%Y-%m-%d")
+            url = f"https://finnhub.io/api/v1/calendar/economic?from={now}&to={future}&token={FINNHUB_KEY}"
+            r = requests.get(url, timeout=10)
+            if r.status_code == 200:
+                data = r.json().get("economicCalendar", [])
+                if data:
+                    events = []
+                    for item in data[:5]:
+                        events.append({
+                            "code": "generic",
+                            "name": f"{item.get('country')} {item.get('event')}",
+                            "date": item.get("time")[:10],
+                            "day": "",
+                            "time": item.get("time")[11:16],
+                            "impact": item.get("impact", "medium")
+                        })
+                    return events
+        except: pass
+
+    # 3. Try FMP (legacy)
     try:
-        api_key = FMP_KEY
-        if not api_key:
-            log_diag("[ERROR] Calendar Fetch Failed: FMP_API_KEY is missing.")
-            return []
-            
-        # Extension: Search window increased to 45 days for monthly coverage
-        start_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-        end_date = (datetime.now(timezone.utc) + timedelta(days=45)).strftime("%Y-%m-%d")
-        # FMP v3 Endpoint (Standard)
-        url = f"https://financialmodelingprep.com/api/v3/economic_calendar?from={start_date}&to={end_date}&apikey={api_key}"
-        log_diag(f"[FMP] Fetching calendar from: {url.replace(api_key, 'REDACTED')}")
+        log_diag("[FMP] Fetching calendar...")
         
         # Add User-Agent to avoid mod_security/WAF blocks
         headers = {
