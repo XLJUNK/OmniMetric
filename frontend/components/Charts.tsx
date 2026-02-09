@@ -77,7 +77,7 @@ export const RiskGauge = ({ score = 0, lang = 'EN' }: GaugeProps) => {
 
                     {/* The Pill (Strong Border) */}
                     <div
-                        className="relative bg-[#0f172a] px-3 py-0.5 rounded-full shadow-2xl flex items-center justify-center min-w-[3.5rem]"
+                        className="relative bg-[#0f172a] px-2 py-0.5 rounded-full shadow-2xl flex items-center justify-center min-w-[2.8rem]"
                         style={{
                             border: `2px solid ${borderColor}`,
                             boxShadow: `0 0 10px ${shadowColor}`
