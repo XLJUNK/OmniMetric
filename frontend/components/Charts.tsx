@@ -23,17 +23,17 @@ export const RiskGauge = ({ score = 0, lang = 'EN' }: GaugeProps) => {
     let textColor = "#FFFFFF";
 
     if (score > 60) {
-        borderColor = "#3b82f6"; // Blue (Accumulate)
-        shadowColor = "rgba(59, 130, 246, 0.6)";
-        textColor = "#60a5fa"; // Light Blue Text
+        borderColor = "#00f2ff"; // Neon Blue (V5 Polish)
+        shadowColor = "rgba(0, 242, 255, 0.6)";
+        textColor = "#67e8f9";
     } else if (score < 40) {
         borderColor = "#ef4444"; // Red (Defensive)
         shadowColor = "rgba(239, 68, 68, 0.6)";
-        textColor = "#f87171"; // Light Red Text
+        textColor = "#f87171";
     } else {
-        borderColor = "#eab308"; // Yellow (Neutral)
-        shadowColor = "rgba(234, 179, 8, 0.6)";
-        textColor = "#facc15"; // Light Yellow Text
+        borderColor = "#94a3b8"; // Gray (Neutral - User Req)
+        shadowColor = "rgba(148, 163, 184, 0.6)";
+        textColor = "#cbd5e1";
     }
 
     return (
@@ -49,12 +49,12 @@ export const RiskGauge = ({ score = 0, lang = 'EN' }: GaugeProps) => {
                         className="absolute inset-0 w-full h-full"
                         style={{
                             backgroundImage: isRTL
-                                ? 'linear-gradient(90deg, #3b82f6 0%, #94a3b8 50%, #ef4444 100%)'
-                                : 'linear-gradient(90deg, #ef4444 0%, #94a3b8 50%, #3b82f6 100%)',
+                                ? 'linear-gradient(90deg, #00f2ff 0%, #94a3b8 50%, #ef4444 100%)'
+                                : 'linear-gradient(90deg, #ef4444 0%, #94a3b8 50%, #00f2ff 100%)',
                             maskImage: 'linear-gradient(black, black)',
                             WebkitMaskImage: 'linear-gradient(black, black)',
                             height: '100%',
-                            opacity: 0.3
+                            opacity: 0.4
                         }}
                     />
                 </div>
@@ -65,7 +65,7 @@ export const RiskGauge = ({ score = 0, lang = 'EN' }: GaugeProps) => {
                     style={{
                         left: isRTL ? 'auto' : `${pct}%`,
                         right: isRTL ? `${pct}%` : 'auto',
-                        transform: 'translateX(calc(-50% * var(--dir)))',
+                        transform: 'translate(calc(-50% * var(--dir)), -50%)',
                         ['--dir' as string]: isRTL ? 1 : 1
                     }}
                 >
