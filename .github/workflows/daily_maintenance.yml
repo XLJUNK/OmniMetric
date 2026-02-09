@@ -1,11 +1,7 @@
 name: GMS Daily Maintenance
 on:
   schedule:
-<<<<<<< HEAD
-    - cron: '0 0 * * *' # Midnight UTC (09:00 JST)
-=======
     - cron: '0 0 * * *' # Midnight UTC (09:00 JST) - 3 hours after US Close
->>>>>>> origin/main
   workflow_dispatch:
 
 concurrency:
@@ -17,11 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-<<<<<<< HEAD
     timeout-minutes: 20 # Longer timeout for 60-day OGV fetch
-=======
-    timeout-minutes: 20
->>>>>>> origin/main
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
@@ -51,10 +43,6 @@ jobs:
           
           # Run AI Performance Analysis
           python backend/performance_analyzer.py
-<<<<<<< HEAD
-=======
-          
->>>>>>> origin/main
           # FRONTEND SYNC (Files updated by daily_tasks: market_data.json, archive/*.json)
           git add backend/archive/*.json frontend/public/data/archive/*.json frontend/public/data/archive/index.json frontend/public/data/market_data.json
           git commit -m "Daily maintenance (OGV & Archive) [bot]" || echo "No changes to commit"

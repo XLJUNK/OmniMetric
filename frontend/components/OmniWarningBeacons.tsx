@@ -1,15 +1,11 @@
 'use client';
 
 import React from 'react';
-<<<<<<< HEAD
-import { useSignalData } from '@/hooks/useSignalData';
 import { Siren } from 'lucide-react';
-import { LangType, DICTIONARY } from '@/data/dictionary';
+import { LangType } from '@/data/dictionary';
 import { IndicatorHelpButton } from '@/components/IndicatorHelpButton';
-import { ExplanationModal } from '@/components/ExplanationModal';
-import { useSearchParams } from 'next/navigation';
 
-// Localization Map for OWB
+// Localization Map for OWB (Component-specific states)
 const TRANSLATIONS: Record<string, {
     yield_curve: string;
     credit_risk: string;
@@ -132,28 +128,27 @@ const TRANSLATIONS: Record<string, {
     }
 };
 
+interface BeaconsProps {
+    data: any;
+    lang: LangType;
+    onOpenInfo?: () => void;
+}
+
 /**
  * OmniWarning Beacons (Industrial Refinement Phase 2)
  * Branding: Institutional Grade "OmniWarning Beacons"
- * Updates: 76px diameter, 5px thick rings, no center point highlight.
+ * V5 Version: 76px diameter, 5px thick rings, Neon Glow logic.
  */
-export const OmniWarningBeacons = ({ onOpenInfo }: { onOpenInfo?: () => void }) => {
-    const { data } = useSignalData();
+export const OmniWarningBeacons = ({ data, lang, onOpenInfo }: BeaconsProps) => {
     const beacons = data?.beacons;
-    const params = useSearchParams();
-    const lang = (params.get('lang') as LangType) || 'EN';
     const t = TRANSLATIONS[lang] || TRANSLATIONS.EN;
-
-    // Modal logic moved to parent via onOpenInfo prop
 
     if (!beacons) return null;
 
     return (
         <div className="w-full relative">
-            {/* Removed Absolute Help Button */}
-
             <div className="w-full max-w-[420px] mx-auto lg:mx-0 p-1 sm:p-2 flex flex-col items-center gap-2 sm:gap-6 origin-center">
-                {/* Title Header - Row 1: Centered Title */}
+                {/* Title Header - Centered Title */}
                 <div className="w-full flex justify-center px-2">
                     <div className="flex items-center gap-2 opacity-80">
                         <Siren className="w-4 h-4 text-sky-500" />
@@ -163,15 +158,13 @@ export const OmniWarningBeacons = ({ onOpenInfo }: { onOpenInfo?: () => void }) 
                     </div>
                 </div>
 
-                {/* Header - Row 2: Right-Aligned Help Button */}
+                {/* Help Button */}
                 <div className="w-full flex justify-end mb-2">
                     <IndicatorHelpButton
                         label="What's OWB"
                         onClick={() => onOpenInfo?.()}
                     />
                 </div>
-
-
 
                 {/* Lamp Array (Dynamic States) */}
                 <div className="grid grid-cols-3 gap-2 sm:gap-4 w-full justify-items-center">
@@ -197,8 +190,6 @@ export const OmniWarningBeacons = ({ onOpenInfo }: { onOpenInfo?: () => void }) 
                         warnLabel={t.warn}
                     />
                 </div>
-
-                {/* Modal rendered by parent */}
             </div>
         </div>
     );
@@ -240,33 +231,33 @@ const StatusBeacon = ({ label, status, dangerLabel, normalLabel, warnLabel }: {
 
     return (
         <div className="flex flex-col items-center gap-3 transition-transform duration-300 hover:scale-[1.02]">
-            {/* Thick Ring: border-[5px], Diameter: 76px */}
+            {/* Thick Ring: Diameter 76px */}
             <div className={`
                 relative w-[60px] h-[60px] sm:w-[76px] sm:h-[76px] rounded-full border-[3px] sm:border-[5px] ${ringColor} 
                 flex items-center justify-center transition-all duration-700
                 bg-white dark:bg-[#050505] overflow-visible
             `}>
-                {/* Atmospheric "Blurred Aura" (Surrounding Fog) - Enhanced */}
+                {/* Atmospheric Aura */}
                 <div className={`absolute -inset-12 rounded-full ${auraColor} blur-3xl opacity-60 transition-opacity duration-1000 ${isDanger ? 'animate-pulse-fast' : (isWarning ? 'animate-pulse' : '')}`} />
 
-                {/* Vibrant Glow Boundary - Enhanced with additional outer layer */}
+                {/* Vibrant Glow */}
                 <div className={`absolute -inset-2 rounded-full ${glowColor} opacity-40 blur-md`} />
                 <div className={`absolute -inset-1 rounded-full ${glowColor} opacity-60`} />
 
-                {/* The Lamp Core (No border, uniform glow) */}
+                {/* The Lamp Core */}
                 <div className={`
                     w-8 h-8 sm:w-11 sm:h-11 rounded-full ${baseColor} ${glowColor}
                     ${isDanger ? 'animate-pulse-fast' : ''}
                     ${isWarning ? 'animate-pulse' : ''}
                     relative z-10
                 `}>
-                    {/* Soft Reflection (Not a point) */}
+                    {/* Soft Reflection */}
                     <div className="absolute top-2 left-2 w-4 h-4 rounded-full bg-white/30 blur-[2px]" />
                     <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-black/20" />
                 </div>
             </div>
 
-            {/* Direct Status Labels */}
+            {/* Labels */}
             <div className="text-center">
                 <div className="text-[8px] sm:text-[9px] font-bold text-slate-500 dark:text-slate-500 uppercase tracking-widest leading-none mb-1">
                     {label}
@@ -275,88 +266,6 @@ const StatusBeacon = ({ label, status, dangerLabel, normalLabel, warnLabel }: {
                     {displayText}
                 </div>
             </div>
-=======
-import { AlertTriangle, TrendingUp, Zap } from 'lucide-react';
-import { DICTIONARY, LangType } from '@/data/dictionary';
-
-interface BeaconsProps {
-    data: any;
-    lang: LangType;
-}
-
-export const OmniWarningBeacons = ({ data, lang }: BeaconsProps) => {
-    const t = DICTIONARY[lang] || DICTIONARY['EN'];
-    const market = data.market_data || {};
-    const beacons = [];
-
-    // 1. VIX Spike (RED)
-    if (market.VIX?.price > 20) {
-        beacons.push({
-            id: 'VIX',
-            label: "VIX",
-            sub: "> 25",
-            color: "text-red-500",
-            border: "border-red-600",
-            glow: "shadow-[0_0_30px_rgba(220,38,38,0.6)]",
-            bg: "bg-red-950",
-            core: "from-red-200 via-red-500 to-red-950"
-        });
-    }
-
-    // 2. Yield Inversion (AMBER/ORANGE)
-    if (market.YIELD_SPREAD?.price < 0) {
-        beacons.push({
-            id: 'YIELD',
-            label: "YIELD",
-            sub: "INV",
-            color: "text-orange-500",
-            border: "border-orange-500",
-            glow: "shadow-[0_0_30px_rgba(249,115,22,0.6)]",
-            bg: "bg-orange-950",
-            core: "from-orange-200 via-orange-500 to-orange-950"
-        });
-    }
-
-    // 3. Oil Surge (YELLOW)
-    if (market.OIL?.change_percent > 3.0) {
-        beacons.push({
-            id: 'OIL',
-            label: "OIL",
-            sub: "SURGE",
-            color: "text-yellow-400",
-            border: "border-yellow-400",
-            glow: "shadow-[0_0_30px_rgba(250,204,21,0.6)]",
-            bg: "bg-yellow-950",
-            core: "from-yellow-100 via-yellow-400 to-yellow-900"
-        });
-    }
-
-    if (beacons.length === 0) return null;
-
-    return (
-        <div className="w-full flex justify-center gap-6 mt-8 mb-4 animate-in fade-in zoom-in duration-500">
-            {beacons.map((b) => (
-                <div key={b.id} className="flex flex-col items-center gap-2 group cursor-help">
-                    {/* INDUSTRIAL LAMP (80px) */}
-                    <div className={`w-[80px] h-[80px] rounded-full border-[5px] ${b.border} ${b.bg} ${b.glow} relative flex items-center justify-center shadow-2xl overflow-hidden animate-pulse-slow`}>
-                        {/* Inner Reflector */}
-                        <div className="absolute inset-1 rounded-full border border-black/50 opacity-50"></div>
-
-                        {/* CORE GLOW (Uniform) */}
-                        <div className={`w-[40%] h-[40%] rounded-full bg-radial-gradient ${b.core} blur-md opacity-90 animate-pulse`}></div>
-
-                        {/* Glossy Lens Effect */}
-                        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/40 via-transparent to-black/60 pointer-events-none mix-blend-overlay"></div>
-                    </div>
-
-                    {/* LABEL */}
-                    <div className="text-center leading-tight">
-                        <div className={`text-[10px] font-black tracking-widest uppercase ${b.color} drop-shadow-md`}>{b.label}</div>
-                        <div className="text-[9px] font-mono text-slate-500 font-bold">{b.sub}</div>
-                    </div>
-                </div>
-            ))}
->>>>>>> origin/main
         </div>
     );
 };

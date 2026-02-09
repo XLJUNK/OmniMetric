@@ -3,11 +3,7 @@ import sys
 import json
 import logging
 from datetime import datetime, timezone
-<<<<<<< HEAD
-import update_ogv_beacons
-=======
 # import update_ogv_beacons # Removed to avoid import error if missing
->>>>>>> origin/main
 from utils.file_ops import safe_json_merge
 
 # Configuration
@@ -82,22 +78,6 @@ def run_archive():
 def run_ogv_update():
     logger.info("Starting OGV Moving Fortress Update...")
     try:
-<<<<<<< HEAD
-        # Run the existing OGV logic
-        # We invoke the main function of update_ogv_beacons directly or via subprocess?
-        # Direct import is better if refactored, but subprocess ensures clean env.
-        # Let's import it as a module for now, assuming it has a 'run_update' or 'main' we can call.
-        # Looking at update_ogv_beacons.py, it has a main() block.
-        # We can just call main() logic.
-        
-        # ACTUALLY: The user wanted OGV logic moved here.
-        # But `update_ogv_beacons.py` is already a dedicated script for this!
-        # So `daily_tasks.py` is essentially a wrapper that calls `update_ogv_beacons` AND `archiving`.
-        
-        # Let's call the script via subprocess to keep it isolated and safe
-        import subprocess
-        result = subprocess.run([sys.executable, os.path.join(SCRIPT_DIR, "update_ogv_beacons.py")], capture_output=True, text=True)
-=======
         ogv_script = os.path.join(SCRIPT_DIR, "update_ogv_beacons.py")
         if not os.path.exists(ogv_script):
              logger.warning(f"OGV Script not found at {ogv_script}. Skipping OGV update.")
@@ -105,7 +85,6 @@ def run_ogv_update():
 
         import subprocess
         result = subprocess.run([sys.executable, ogv_script], capture_output=True, text=True)
->>>>>>> origin/main
         if result.returncode == 0:
             logger.info("OGV Update Success")
             logger.info(result.stdout)
