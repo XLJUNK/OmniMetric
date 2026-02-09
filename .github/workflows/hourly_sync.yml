@@ -70,7 +70,16 @@ jobs:
           # Run Hourly Engine (Score, AI, News, SEO)
           python backend/gms_engine.py
           
+<<<<<<< HEAD
           # NOTE: OGV update moved to daily_maintenance.yml
+=======
+          # Run Technical Analysis (Chart Data)
+          python backend/tech_analysis.py
+          
+          # FORCE NEWS UPDATE (Fix for empty translations)
+          # [DISABLED] Redundant: gms_engine.py already calls fetch_news (Double Billing Fix)
+          # python backend/fetch_news.py
+>>>>>>> 941de79662b5871ff011a52fbab625a9f93c0ac7
           
           # SKILL CHECK
           python scripts/verify_skills.py

@@ -17,6 +17,25 @@ export const RiskGauge = ({ score = 0, lang = 'EN' }: GaugeProps) => {
     const pct = Math.min(100, Math.max(0, validScore));
     const isRTL = lang === 'AR';
 
+    // Dynamic Neon Styling (V5 Polish)
+    let borderColor = "#94a3b8"; // Neutral Gray
+    let shadowColor = "rgba(148, 163, 184, 0.5)"; // Neutral Glow
+    let textColor = "#FFFFFF";
+
+    if (score > 60) {
+        borderColor = "#3b82f6"; // Blue (Accumulate)
+        shadowColor = "rgba(59, 130, 246, 0.6)";
+        textColor = "#60a5fa"; // Light Blue Text
+    } else if (score < 40) {
+        borderColor = "#ef4444"; // Red (Defensive)
+        shadowColor = "rgba(239, 68, 68, 0.6)";
+        textColor = "#f87171"; // Light Red Text
+    } else {
+        borderColor = "#eab308"; // Yellow (Neutral)
+        shadowColor = "rgba(234, 179, 8, 0.6)";
+        textColor = "#facc15"; // Light Yellow Text
+    }
+
     return (
         <div className="w-full relative mt-2 mb-2 gms-container">
             {/* Gradient Bar Wrapper (Height Fixed) */}

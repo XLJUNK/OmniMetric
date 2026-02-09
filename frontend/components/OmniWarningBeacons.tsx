@@ -46,15 +46,15 @@ const TRANSLATIONS: Record<string, {
         warn: "警戒"
     },
     CN: {
-        yield_curve: "收益率曲线 (10Y-3M)",
-        credit_risk: "信用风险",
-        volatility: "波动率",
+        yield_curve: "收益率曲線 (10Y-3M)",
+        credit_risk: "信用風險",
+        volatility: "波動率",
         inverted: "倒挂",
         normal: "正常",
-        stress: "压力",
-        calm: "平静",
+        stress: "壓力",
+        calm: "平靜",
         panic: "恐慌",
-        stable: "稳定",
+        stable: "穩定",
         warn: "警告"
     },
     ES: {

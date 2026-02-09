@@ -357,7 +357,7 @@ export const Dashboard = ({ lang, setLang }: DashboardProps) => {
                                                 <span className="text-slate-200 text-xs font-bold uppercase tracking-wider group-hover:text-cyan-400 transition-colors">
                                                     [{evt.date.slice(5)} {evt.day}] {(t.events as Record<string, string>)[evt.code] || evt.name}
                                                 </span>
-                                                <span className="text-[#444] text-[9px] uppercase tracking-widest">
+                                                <span className="#444] text-[9px] uppercase tracking-widest">
                                                     {evt.impact} • {evt.time || 'TBA'}
                                                 </span>
                                             </div>
