@@ -18,6 +18,16 @@ import sys
 from seo_monitor import SEOMonitor
 from sns_publisher import SNSPublisher
 import fetch_news
+from utils.file_ops import safe_json_merge
+
+# Economic Calendar Mapping (New v5.3)
+priority_currencies = ["USD", "EUR", "JPY", "GBP", "AUD", "CAD", "CHF"]
+keyword_map = {
+    "fed": ["fed", "fomc", "powell", "interest rate", "beige book", "rate decision"],
+    "employment": ["nfp", "employment", "jobless", "unemployment", "payrolls"],
+    "inflation": ["cpi", "pce", "inflation", "ppi", "cost index"],
+    "growth": ["gdp", "pmi", "growth", "retail sales", "industrial production"]
+}
 
 # Trigger AI generation with new secrets
 
@@ -670,28 +680,50 @@ def fetch_crypto_sentiment():
     return None
 
 
-def get_next_event_dates():
-    """Returns the schedule for major upcoming economic events in 2026."""
-    events = [
-        {"code": "fomc", "name": "FOMC Meeting", "date": "2026-03-18", "day": "WED", "time": "14:00 EST", "impact": "critical"},
-        {"code": "nfp", "name": "Non-Farm Payrolls", "date": "2026-04-03", "day": "FRI", "time": "08:30 EST", "impact": "critical"},
-        {"code": "cpi", "name": "CPI Inflation Data", "date": "2026-04-10", "day": "FRI", "time": "08:30 EST", "impact": "critical"},
-        {"code": "fomc", "name": "FOMC Meeting", "date": "2026-05-06", "day": "WED", "time": "14:00 EST", "impact": "critical"},
-        {"code": "nfp", "name": "Non-Farm Payrolls", "date": "2026-05-08", "day": "FRI", "time": "08:30 EST", "impact": "critical"}
-    ]
-    return sorted(events, key=lambda x: x["date"])
 
 def fetch_economic_calendar():
     """Fetches calendar from multiple providers with fallback."""
-    # 1. Try Alpha Vantage
+    events = []
+    
+    # 1. Try Alpha Vantage (Direct CSV) - Highest Reliability for 2026
     if ALPHA_VANTAGE_KEY:
         try:
             log_diag("[ALPHA_VANTAGE] Fetching calendar...")
             url = f"https://www.alphavantage.co/query?function=ECONOMIC_CALENDAR&apikey={ALPHA_VANTAGE_KEY}"
-            r = requests.get(url, timeout=10)
-            if r.status_code == 200 and "date" in r.text:
-                pass 
-        except: pass
+            response = requests.get(url, timeout=10)
+            if response.status_code == 200:
+                import csv
+                from io import StringIO
+                f = StringIO(response.text)
+                reader = csv.DictReader(f)
+                for row in reader:
+                    currency = row.get("currency", "")
+                    event_name = row.get("event", "")
+                    name_lower = event_name.lower()
+                    
+                    if currency in priority_currencies:
+                        code = "generic"
+                        for cat, keywords in keyword_map.items():
+                            if any(kw in name_lower for kw in keywords):
+                                code = cat
+                                break
+                        
+                        try:
+                            date_str = row.get("date", "")[:10]
+                            events.append({
+                                "code": code,
+                                "name": f"{currency} {event_name}",
+                                "date": date_str,
+                                "day": "",
+                                "time": row.get("date", "")[11:16],
+                                "impact": "high" if code != "generic" else "medium"
+                            })
+                        except: continue
+                if events: 
+                    log_diag(f"[AI SUCCESS] Fetched {len(events)} events via Alpha Vantage.")
+                    return events
+        except Exception as e:
+            log_diag(f"[ALPHA_VANTAGE] Error: {e}")
 
     # 2. Try Finnhub
     if FINNHUB_KEY:
@@ -705,7 +737,7 @@ def fetch_economic_calendar():
                 data = r.json().get("economicCalendar", [])
                 if data:
                     events = []
-                    for item in data[:5]:
+                    for item in data[:10]:
                         events.append({
                             "code": "generic",
                             "name": f"{item.get('country')} {item.get('event')}",
@@ -715,133 +747,44 @@ def fetch_economic_calendar():
                             "impact": item.get("impact", "medium")
                         })
                     return events
-        except: pass
-
-    # 3. Try FMP (legacy)
-    try:
-        log_diag("[FMP] Fetching calendar...")
-        
-        # Add User-Agent to avoid mod_security/WAF blocks
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-            "Accept": "application/json"
-        }
-        
-        log_diag("[IN] API_CALL: { provider: 'FMP', endpoint: '/calendar', timeout: 10s }")
-        try:
-            url = f"https://www.alphavantage.co/query?function=ECONOMIC_CALENDAR&apikey={ALPHA_VANTAGE_KEY}"
-            log_diag("[ALPHA_VANTAGE] Fetching calendar...")
-            response = requests.get(url, timeout=10)
-            if response.status_code == 200:
-                # Alpha Vantage returns CSV for this endpoint
-                import csv
-                from io import StringIO
-                f = StringIO(response.text)
-                reader = csv.DictReader(f)
-                for row in reader:
-                    currency = row.get("currency", "")
-                    impact = row.get("estimate", "") # AV doesn't give explicit impact, but we can infer or use defaults
-                    event_name = row.get("event", "")
-                    name_lower = event_name.lower()
-                    
-                    if currency in priority_currencies:
-                        code = "generic"
-                        for cat, keywords in keyword_map.items():
-                            if any(kw in name_lower for kw in keywords):
-                                code = cat
-                                break
-                        
-                        try:
-                            date_str = row.get("date", "")[:10]
-                            dt = datetime.strptime(date_str, "%Y-%m-%d")
-                            events.append({
-                                "code": code,
-                                "name": f"{currency} {event_name}",
-                                "date": date_str,
-                                "day": dt.strftime("%a").upper(),
-                                "time": "TBD",
-                                "impact": "high" if code != "generic" else "medium"
-                            })
-                        except: continue
-                if events:
-                    log_diag(f"[SUCCESS] Calendar fetched from Alpha Vantage: {len(events)} items")
         except Exception as e:
-            log_diag(f"[WARN] Alpha Vantage calendar fetch failed: {e}")
+            log_diag(f"[FINNHUB] Error: {e}")
 
-    # 2. TRY FINNHUB (Fallback)
-    if not events and FINNHUB_KEY:
+    # 3. Try FMP (Legacy)
+    if FMP_KEY:
         try:
-            url = f"https://finnhub.io/api/v1/calendar/economic?token={FINNHUB_KEY}"
-            log_diag("[FINNHUB] Fetching calendar...")
-            response = requests.get(url, timeout=10)
-            if response.status_code == 200:
-                data = response.json().get("economicCalendar", [])
-                for item in data:
-                    currency = item.get("currency", "")
-                    impact = int(item.get("impact", 1)) # 1-3
-                    event_name = item.get("event", "")
-                    name_lower = event_name.lower()
-                    
-                    if currency in priority_currencies and impact >= 2:
-                        code = "generic"
-                        for cat, keywords in keyword_map.items():
-                            if any(kw in name_lower for kw in keywords):
-                                code = cat
-                                break
-                        
-                        try:
-                            date_str = item.get("time", "")[:10]
-                            dt = datetime.strptime(date_str, "%Y-%m-%d")
+            log_diag("[FMP] Fetching calendar via legacy...")
+            start = datetime.now().strftime("%Y-%m-%d")
+            end = (datetime.now() + timedelta(days=14)).strftime("%Y-%m-%d")
+            url = f"https://financialmodelingprep.com/api/v3/economic_calendar?from={start}&to={end}&apikey={FMP_KEY}"
+            
+            headers = {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+                "Accept": "application/json"
+            }
+            r = requests.get(url, headers=headers, timeout=10)
+            if r.status_code == 200:
+                data = r.json()
+                if isinstance(data, list):
+                    events = []
+                    for item in data[:10]:
+                        cur = item.get("currency", "USD")
+                        if cur in priority_currencies:
                             events.append({
-                                "code": code,
-                                "name": f"{currency} {event_name}",
-                                "date": date_str,
-                                "day": dt.strftime("%a").upper(),
-                                "time": item.get("time", "")[11:16] + " GMT",
-                                "impact": "critical" if impact == 3 else "high"
+                                "code": "generic",
+                                "name": f"{cur} {item.get('event')}",
+                                "date": item.get("date")[:10],
+                                "day": "",
+                                "time": item.get("date")[11:16],
+                                "impact": item.get("impact", "medium").lower()
                             })
-                        except: continue
-                if events:
-                    log_diag(f"[SUCCESS] Calendar fetched from Finnhub: {len(events)} items")
+                    if events: return events
         except Exception as e:
-            log_diag(f"[WARN] Finnhub calendar fetch failed: {e}")
+            log_diag(f"[FMP] Error: {e}")
 
-    # 3. TRY FMP (Legacy/Tertiary)
-    if not events and FMP_KEY:
-        try:
-            # ... (Existing FMP logic simplified to skip 403 blocks earlier)
-            # Re-implementing the core logic we know was there
-            start_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-            end_date = (datetime.now(timezone.utc) + timedelta(days=45)).strftime("%Y-%m-%d")
-            url = f"https://financialmodelingprep.com/api/v3/economic_calendar?from={start_date}&to={end_date}&apikey={FMP_KEY}"
-            response = requests.get(url, timeout=10)
-            if response.status_code == 200:
-                data = response.json()
-                for item in data:
-                    currency = item.get("currency", "")
-                    if currency in priority_currencies:
-                        # ... mapping logic ...
-                        pass # Skipping detailed re-implementation as it's the 403 failing source
-        except: pass
+    return []
 
-    # FINAL PROCESSING
-    if not events:
-        log_diag("[INFO] No external calendar data available. Switching to Smart Fallback.")
-        return get_next_event_dates()
 
-    # Sort and Deduplicate
-    events.sort(key=lambda x: (x["date"], 0 if x["code"] != "generic" else 1))
-    
-    unique_events = []
-    seen = set()
-    for e in events:
-        key = (e["date"], e["code"]) if e["code"] != "generic" else (e["date"], e["name"])
-        if key not in seen:
-            unique_events.append(e)
-            seen.add(key)
-    
-    # Return top 5
-    return unique_events[:5]
 
 def fetch_market_data():
     """Fetches multi-asset data from Yahoo Finance."""
@@ -1391,30 +1334,46 @@ Output JSON:
             if not shutil.which("npx"):
                 log_diag("[AI BRIDGE WARN] npx not found in PATH. Skipping Bridge.")
             else:
-                cmd = ["npx", "-y", "tsx", script_path, prompt]
+                cmd = ["npx", "tsx", script_path] 
+                log_diag(f"[AI BRIDGE] Executing: {' '.join(cmd)} (using stdin)")
                 
-                log_diag(f"[AI BRIDGE] Executing: {' '.join(cmd[:3])}...")
-                
-                process = subprocess.run(
+                process_obj = subprocess.Popen(
                     cmd,
-                    capture_output=True,
+                    stdin=subprocess.PIPE,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
                     text=True,
                     encoding='utf-8',
-                    creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0,
-                timeout=120,
-                shell=(os.name == 'nt') # Mandatory for npx on Windows
-            )
+                    shell=(os.name == 'nt'),
+                    cwd=frontend_dir,
+                    creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
+                )
+                
+                stdout_str, stderr_str = process_obj.communicate(input=prompt, timeout=120)
+                bridge_success = (process_obj.returncode == 0)
+                
+                if not bridge_success:
+                    log_diag(f"[AI BRIDGE WARN] Bridge execution failed (Code {process_obj.returncode}).")
+                    if stderr_str: log_diag(f"[STDERR] {stderr_str[:500]}")
+                
+                # Assign to compatible identifiers for the rest of the function
+                stdout_content = stdout_str if bridge_success else ""
+                current_returncode = process_obj.returncode
 
-            if process.returncode != 0:
-                log_diag(f"[AI BRIDGE WARN] Bridge execution failed (Code {process.returncode}). Trying direct node fallback...")
-                # Try locating the JS build if TS execution fails in CI
+            if current_returncode != 0:
+                log_diag(f"[AI BRIDGE WARN] Bridge execution failed (Code {current_returncode}). Trying direct node fallback...")
+                # Try locating the JS build if TS execution fails
                 js_script = os.path.join(frontend_dir, "dist", "generate_insight.js")
                 if os.path.exists(js_script):
-                    cmd = ["node", js_script, prompt]
-                    process = subprocess.run(cmd, capture_output=True, text=True, encoding='utf-8', env=os.environ.copy(), cwd=frontend_dir, timeout=60)
+                    cmd = ["node", js_script] # Use stdin
+                    log_diag(f"[AI BRIDGE FALLBACK] Executing: {' '.join(cmd)} (using stdin)")
+                    p = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, encoding='utf-8', cwd=frontend_dir, shell=(os.name == 'nt'))
+                    stdout_str, stderr_str = p.communicate(input=prompt, timeout=60)
+                    if p.returncode == 0:
+                        stdout_content = stdout_str
+                        current_returncode = 0
 
-            if process.returncode == 0:
-                    stdout_content = process.stdout
+            if current_returncode == 0:
                     log_diag(f"[AI BRIDGE] Received {len(stdout_content)} bytes of output. Head: {stdout_content[:100].strip()}...")
                     
                     # LOGGING: Output Audit (Bridge)
@@ -1435,13 +1394,23 @@ Output JSON:
                         clean_lines = [line for line in lines if not line.strip().startswith("Note:") and "[dotenv" not in line]
                         clean_stdout = "\n".join(clean_lines)
 
-                        # 2. Find JSON boundaries
+                        # 2. Logic to find the JSON envelope within potentially noisy stdout
+                        # We look for the FIRST '{' and the LAST '}' to extract the main JSON object
                         json_start = clean_stdout.find('{')
                         json_end = clean_stdout.rfind('}') + 1
 
                         if json_start != -1 and json_end > json_start:
                             final_json_str = clean_stdout[json_start:json_end]
-                            wrapper = json.loads(final_json_str)
+                            
+                            # Validate if it's potentially a JSON string
+                            try:
+                                wrapper = json.loads(final_json_str)
+                            except json.JSONDecodeError:
+                                # If parse fails on cleaned, try raw as last resort (maybe '{' was removed?)
+                                json_start = stdout_content.find('{')
+                                json_end = stdout_content.rfind('}') + 1
+                                final_json_str = stdout_content[json_start:json_end]
+                                wrapper = json.loads(final_json_str)
                             
                             if "text" in wrapper:
                                 inner_text = wrapper["text"]
@@ -1480,9 +1449,8 @@ Output JSON:
                     except Exception as e:
                         log_diag(f"[AI ERROR] Bridge JSON parse failed: {e}")
             else:
-                log_diag(f"[AI BRIDGE FAIL] Final Exit Code {process.returncode}")
-                if process.stderr:
-                    log_diag(f"[AI BRIDGE ERR STREAM] {process.stderr.strip()[:200]}")
+                log_diag(f"[AI BRIDGE FAIL] Final Exit Code {current_returncode}")
+                # stderr is already logged in the bridge_success block
                 
         except Exception as e:
             log_diag(f"[AI BRIDGE CRITICAL] {e}")

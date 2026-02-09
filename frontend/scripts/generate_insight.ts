@@ -11,8 +11,8 @@ const envPath = path.resolve(__dirname, '../../.env');
 const backendEnvPath = path.resolve(__dirname, '../../backend/.env');
 
 try {
-    dotenv.config({ path: envPath });
-    dotenv.config({ path: backendEnvPath });
+    dotenv.config({ path: envPath, quiet: true });
+    dotenv.config({ path: backendEnvPath, quiet: true });
 } catch (e) {
     // Ignore dotenv errors in production if envs are already set
 }
