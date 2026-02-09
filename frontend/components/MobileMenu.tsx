@@ -1,5 +1,5 @@
 'use client';
-import { Home, LineChart, Bitcoin, Banknote, Gem, Globe } from 'lucide-react';
+import { Home, LineChart, Bitcoin, Banknote, Gem } from 'lucide-react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { LangType } from '@/data/dictionary';
 

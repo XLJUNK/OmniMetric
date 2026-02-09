@@ -1,0 +1,23 @@
+{
+    "slug": "crypto-sentiment",
+    "lang": "EN",
+    "title": "Crypto Fear & Greed Index",
+    "type": "indicator",
+    "category": "Thematic",
+    "sections": {
+        "summary": "The 'VIX of Digital Assets'. An emotional thermometer that aggregates volatility, volume, social media sentiment, and market dominance to measure investor psychology.",
+        "deep_dive": "In 2026, the Crypto Fear & Greed Index has matured as institutional flows (ETFs) have dampened retail volatility but increased the speed of 'Liquidity Cascades'. It serves as the ultimate contrarian signal. Historically, buying when the index is in 'Extreme Fear' (0-20) and selling in 'Extreme Greed' (80-100) has been the most profitable macro strategy in crypto. In the current regime, the index is hyper-sensitive to 'Regulatory News' and 'Fed Liquidity'. Because crypto has no 'Earnings', sentiment is the only fundamental variable. The index now utilizes advanced AI to scrub Telegram, X, and Farcaster to detect 'Bot-driven euphoria' before it hits the price charts. For macro traders, this index is the 'Speedometer of Speculation'; if greed is high while the stock market is flat, it signals that 'Dumb Money' has reached its peak and a flush-out is imminent.",
+        "council_debate": {
+            "macro": "The index moves in 1:1 lockstep with 'Global M2 USD Liquidity'. When central banks expand balance sheets, greed spikes instantly.",
+            "quant": "Mean-reversion quants target the 'Inertia zones'. If the index stays in greed (>70) for more than 20 days, the probability of a 20% crash is 85%.",
+            "social": "Sentiment analysis of 'Farcaster' and 'X' now accounts for 25% of the score. It tracks the 'Velocity of Hype'.",
+            "technical": "Watch for 'Sentiment Divergence': if the Bitcoin price makes a new high but 'Greed' is lower, it signals an exhausted trend.",
+            "policy": "SEC and EU (MiCA) announcements create 'Sentiment Shocks' that move the index from Greed to Fear in less than 48 hours.",
+            "tech": "On-chain data (stablecoin inflows/outflows) is now the primary weight in 'Greed' calculation, replacing older survey-based metrics."
+        },
+        "forecast_risks": "The 'Sentiment Trap': A scenario where the index stays pinned to 'Extreme Fear' (0-15) for months during a structural bear market, causing 'Dip-Buyers' to get liquidated.",
+        "gms_conclusion": "The speedometer of digital speculation and the contrarian’s best friend."
+    },
+    "model": "Antigravity-GMS-v1 (Institutional Edition)",
+    "generated_at": "2026-02-04T00:04:12.130426"
+}

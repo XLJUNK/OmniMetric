@@ -60,7 +60,7 @@ export function errorResponse(
     error: string,
     options?: {
         status?: number;
-        details?: any[];
+        details?: unknown[];
         code?: string;
     }
 ): NextResponse {
@@ -83,7 +83,7 @@ export function errorResponse(
  */
 export function validationErrorResponse(
     message: string,
-    details?: any[]
+    details?: unknown[]
 ): NextResponse {
     return errorResponse(message, {
         status: 400,
@@ -109,7 +109,7 @@ export function notFoundResponse(
  */
 export function internalErrorResponse(
     message: string = 'Internal server error',
-    details?: any
+    details?: unknown
 ): NextResponse {
     // Don't expose internal error details in production
     const isDev = process.env.NODE_ENV === 'development';
@@ -117,7 +117,7 @@ export function internalErrorResponse(
     return errorResponse(message, {
         status: 500,
         code: 'INTERNAL_ERROR',
-        details: isDev ? details : undefined
+        details: isDev ? [details] : undefined
     });
 }
 

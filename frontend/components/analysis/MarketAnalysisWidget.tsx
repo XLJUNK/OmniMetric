@@ -3,7 +3,8 @@
 import React, { useEffect, useState } from 'react';
 import MarketChart from '@/components/analysis/MarketChart';
 import { useTheme } from '@/components/ThemeProvider';
-import { LangType } from '@/data/dictionary';
+import { LangType, DICTIONARY } from '@/data/dictionary';
+import { ExplanationModal } from '@/components/ExplanationModal';
 
 // Types matching JSON structure
 type Instrument = "DXY" | "US10Y" | "SPX";
@@ -29,7 +30,7 @@ interface MarketAnalysisWidgetProps {
     lang: LangType;
 }
 
-export const MarketAnalysisWidget = ({ lang }: MarketAnalysisWidgetProps) => {
+export const MarketAnalysisWidget = ({ lang, onOpenInfo }: MarketAnalysisWidgetProps & { onOpenInfo?: () => void }) => {
     const { theme } = useTheme();
     const [data, setData] = useState<AnalysisData | null>(null);
     const [selectedSymbol, setSelectedSymbol] = useState<Instrument>("DXY");
@@ -68,25 +69,33 @@ export const MarketAnalysisWidget = ({ lang }: MarketAnalysisWidgetProps) => {
         loading: lang === 'JP' ? 'データ読み込み中...' : 'Loading Market Data...',
     };
 
-    return (
-        <div className="w-full bg-white dark:bg-[#0A0A0A] border border-slate-200 dark:border-slate-800 rounded-xl p-3 md:p-4 transition-colors duration-300">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-3">
-                <p className="text-slate-500 dark:text-slate-500 text-xs font-mono font-bold uppercase tracking-wider">
-                    Professional-grade technical indicators.
-                </p>
+    // Modal logic moved to parent via onOpenInfo prop
 
+    return (
+        <div className="w-full bg-black border-0 rounded-xl p-3 md:p-4 transition-colors duration-300">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-3">
+                <div className="flex items-center gap-4">
+                    <div className="flex flex-col gap-1">
+                        <div className="flex items-center gap-2">
+                            <p className="text-slate-500 dark:text-slate-500 text-[10px] font-black uppercase tracking-[0.2em]">
+                                Market Analysis
+                            </p>
+                        </div>
+                        <p className="text-slate-400 text-[9px] font-mono">Dynamic technical charts and multi-asset price action.</p>
+                    </div>
+                </div>
 
                 {/* Controls */}
                 <div className="flex flex-col sm:flex-row gap-4">
-                    {/* Symbols */}
-                    <div className="flex gap-2">
+                    {/* Symbols Segmented Control */}
+                    <div className="flex bg-slate-900/50 p-1 rounded-lg">
                         {(["DXY", "US10Y", "SPX"] as Instrument[]).map(sym => (
                             <button
                                 key={sym}
                                 onClick={() => setSelectedSymbol(sym)}
-                                className={`px-3 py-1.5 rounded-lg font-bold text-xs transition-all shadow-sm flex items-center gap-2 ${selectedSymbol === sym
-                                    ? '!bg-blue-600 !text-white ring-1 ring-blue-400 shadow-blue-500/30'
-                                    : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700'
+                                className={`px-4 py-1 rounded-md font-bold text-xs transition-all flex items-center gap-2 ${selectedSymbol === sym
+                                    ? 'bg-white dark:bg-blue-600 text-blue-600 dark:text-white shadow-sm'
+                                    : 'text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'
                                     }`}
                             >
                                 {sym}
@@ -94,15 +103,15 @@ export const MarketAnalysisWidget = ({ lang }: MarketAnalysisWidgetProps) => {
                         ))}
                     </div>
 
-                    {/* Timeframes */}
-                    <div className="flex gap-2">
+                    {/* Timeframes Segmented Control */}
+                    <div className="flex bg-slate-100 dark:bg-slate-900 p-1 rounded-lg">
                         {(["1h", "4h"] as Timeframe[]).map(tf => (
                             <button
                                 key={tf}
                                 onClick={() => setSelectedTimeframe(tf)}
-                                className={`px-3 py-1.5 rounded-lg font-bold text-xs transition-all shadow-sm flex items-center gap-2 ${selectedTimeframe === tf
-                                    ? '!bg-emerald-600 !text-white ring-1 ring-emerald-400 shadow-emerald-500/30'
-                                    : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700'
+                                className={`px-4 py-1 rounded-md font-bold text-xs transition-all flex items-center gap-2 ${selectedTimeframe === tf
+                                    ? 'bg-white dark:bg-emerald-600 text-emerald-600 dark:text-white shadow-sm'
+                                    : 'text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'
                                     }`}
                             >
                                 {tf}
@@ -110,44 +119,44 @@ export const MarketAnalysisWidget = ({ lang }: MarketAnalysisWidgetProps) => {
                         ))}
                     </div>
 
-                    {/* Indicators */}
-                    <div className="flex gap-2">
+                    {/* Indicators Segmented Control */}
+                    <div className="flex bg-slate-100 dark:bg-slate-900 p-1 rounded-lg">
                         <button
                             onClick={() => setIndicators({ ...indicators, bb: !indicators.bb })}
-                            className={`px-3 py-1.5 rounded-lg font-bold text-xs transition-all shadow-sm flex items-center gap-2 ${indicators.bb
-                                ? '!bg-violet-600 !text-white ring-1 ring-violet-400 shadow-violet-500/30'
-                                : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700'
+                            className={`px-3 py-1 rounded-md font-bold text-xs transition-all flex items-center gap-2 ${indicators.bb
+                                ? 'bg-white dark:bg-violet-600 text-violet-600 dark:text-white shadow-sm'
+                                : 'text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'
                                 }`}
                         >
-                            BB {indicators.bb && <span className="text-white">✓</span>}
+                            BB {indicators.bb && <span className="">✓</span>}
                         </button>
                         <button
                             onClick={() => setIndicators({ ...indicators, sma: !indicators.sma })}
-                            className={`px-3 py-1.5 rounded-lg font-bold text-xs transition-all shadow-sm flex items-center gap-2 ${indicators.sma
-                                ? '!bg-violet-600 !text-white ring-1 ring-violet-400 shadow-violet-500/30'
-                                : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700'
+                            className={`px-3 py-1 rounded-md font-bold text-xs transition-all flex items-center gap-2 ${indicators.sma
+                                ? 'bg-white dark:bg-violet-600 text-violet-600 dark:text-white shadow-sm'
+                                : 'text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'
                                 }`}
                         >
-                            MA {indicators.sma && <span className="text-white">✓</span>}
+                            MA {indicators.sma && <span className="">✓</span>}
                         </button>
                         <button
                             onClick={() => setIndicators({ ...indicators, rsi: !indicators.rsi })}
-                            className={`px-3 py-1.5 rounded-lg font-bold text-xs transition-all shadow-sm flex items-center gap-2 ${indicators.rsi
-                                ? '!bg-violet-600 !text-white ring-1 ring-violet-400 shadow-violet-500/30'
-                                : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700'
+                            className={`px-3 py-1 rounded-md font-bold text-xs transition-all flex items-center gap-2 ${indicators.rsi
+                                ? 'bg-white dark:bg-violet-600 text-violet-600 dark:text-white shadow-sm'
+                                : 'text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'
                                 }`}
                         >
-                            RSI {indicators.rsi && <span className="text-white">✓</span>}
+                            RSI {indicators.rsi && <span className="">✓</span>}
                         </button>
                     </div>
                 </div>
             </div>
 
             {/* Chart Area */}
-            <div className={`bg-slate-50 dark:bg-[#111] border border-slate-200 dark:border-slate-800 rounded-xl shadow-inner overflow-hidden relative group transition-all duration-500 ease-in-out ${indicators.rsi ? 'h-[400px]' : 'h-[300px]'}`}>
+            <div className={`bg-[#0a0a0b] border border-slate-800/50 rounded-xl shadow-inner overflow-hidden relative group transition-all duration-500 ease-in-out ${indicators.rsi ? 'h-[400px]' : 'h-[300px]'}`}>
                 {/* Header Overlay */}
                 <div className="absolute top-2 left-2 z-20 flex flex-col gap-1 pointer-events-none">
-                    <h2 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2 drop-shadow-sm bg-white/70 dark:bg-slate-900/70 backdrop-blur-[2px] px-3 py-1 rounded shadow-sm border border-slate-200/50 dark:border-slate-800/50">
+                    <h2 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2 drop-shadow-sm bg-white/70 dark:bg-slate-900/70 backdrop-blur-[2px] px-3 py-1 rounded shadow-sm border-0">
                         {selectedSymbol} <span className="text-slate-500 dark:text-slate-400 font-normal text-xs">/ {selectedTimeframe}</span>
                     </h2>
                 </div>
@@ -178,6 +187,8 @@ export const MarketAnalysisWidget = ({ lang }: MarketAnalysisWidgetProps) => {
                     )}
                 </div>
             </div>
+
+            {/* Modal rendered by parent */}
         </div>
     );
 };

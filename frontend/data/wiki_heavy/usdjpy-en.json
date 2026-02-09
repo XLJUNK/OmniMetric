@@ -1,0 +1,23 @@
+{
+    "slug": "usdjpy",
+    "lang": "EN",
+    "title": "USD/JPY (The Carry Trade)",
+    "type": "indicator",
+    "category": "Forex",
+    "sections": {
+        "summary": "The 'Widowmaker'. This pair represents the exchange rate between the US Dollar and the Japanese Yen. It is the world's primary indicator for the 'Carry Trade'.",
+        "deep_dive": "USD/JPY is the most rate-sensitive pair in the world. It tracks the difference between US 10-Year yields and Japanese Government Bond (JGB) yields almost perfectly. In 2026, the story is the 'Great Unwind'. After 20 years of near-zero rates, the Bank of Japan is finally allowing yields to rise. This is forcing global hedge funds to close their 'Yen Carry Trades'—where they borrowed Yen for free to buy everything from US Tech to Mexican Pesos. When USD/JPY falls (Yen strengthens), it usually signals a global 'De-risking' event as leverage is removed from the system. For macro traders, USD/JPY is the heartbeat of global liquidity. If it remains stable at high levels (140-150), global markets can stay calm. If it starts to plunge, a systemic liquidation of risk assets is likely underway.",
+        "council_debate": {
+            "macro": "The interest rate differential between the Fed and the BOJ is the 'Gravity' for this pair.",
+            "policy": "Direct intervention by the Japanese Ministry of Finance. They step in to 'Buy Yen' when the pair gets north of 150.",
+            "geopolitics": "Japan handles 10%+ of US Treasury holdings. If they need to defend the Yen, they sell US Treasuries, spiking US yields.",
+            "quant": "The primary indicator for 'Risk-Off' liquidation. Quants use Yen strength as a signal to cut equity exposure.",
+            "technical": "152.00 has been the 'Line in the Sand' for years. Breaking below 130.00 would represent a generational shift.",
+            "tech": "CBDC development: The 'Digital Yen' is being tested as a way to improve cross-border settlement and reduce some carry-trade friction."
+        },
+        "forecast_risks": "The 'Carry Trade Blow-up': A sudden, 10% move in the Yen that triggers a margin call on $20 Trillion in global leveraged positions.",
+        "gms_conclusion": "The heartbeat of global leverage and the most dangerous trade in macro."
+    },
+    "model": "Antigravity-GMS-v1 (Institutional Edition)",
+    "generated_at": "2026-02-04T00:04:12.269192"
+}

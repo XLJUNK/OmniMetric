@@ -61,9 +61,53 @@ SECTORS = {
         "invert": ["DXY", "USDINR", "USDSAR"]
     },
     "COMMODITIES": {
-        "tickers": {"GOLD": "GC=F", "OIL": "CL=F", "COPPER": "HG=F", "NATGAS": "NG=F"},
+        "tickers": {"GOLD": "GC=F", "OIL": "CL=F", "COPPER": "HG=F", "NATGAS": "NG=F", "SILVER": "SI=F"},
         "weights": {"GOLD": 0.4, "OIL": 0.3, "COPPER": 0.3},
         "invert": ["GOLD"]
+    },
+    "GLOBAL_INDICES": {
+        "tickers": {
+             "DAX": "^GDAXI", "CAC40": "^FCHI", "STOXX600": "^STOXX", "FTSE": "^FTSE",
+             "NIKKEI": "^N225", "HANGSENG": "^HSI", "NIFTY": "^NSEI", "SHANGHAI": "000001.SS",
+             "SENSEX": "^BSESN", "BOVESPA": "^BVSP", "ASX200": "^AXJO"
+        },
+        "weights": {}, 
+        "invert": []
+    },
+    "REAL_ESTATE": {
+        "tickers": {
+            "G_REIT": "REET", "US_HOUSING": "XHB", "LOGISTICS": "INDS", "INFRA": "IGF"
+        },
+        "weights": {},
+        "invert": []
+    },
+    "CREDIT": {
+        "tickers": {
+            "HY_BOND": "HYG", "IG_BOND": "LQD", "TIPS": "TIP", "SHY": "SHY"
+        },
+        "weights": {},
+        "invert": []
+    },
+    "TRADE_LOGISTICS": {
+        "tickers": {
+            "BALTIC": "BDRY", "SHIPPING": "BOAT", "AGRI": "DBA"
+        },
+        "weights": {},
+        "invert": []
+    },
+    "THEMATIC": {
+        "tickers": {
+            "SEMIS": "SOXX", "DEFENSE": "ITA", "RARE_EARTH": "REMX", "CYBER": "CIBR"
+        },
+        "weights": {},
+        "invert": []
+    },
+    "GLOBAL_FX": {
+        "tickers": {
+            "GBPUSD": "GBP=X", "AUDUSD": "AUD=X", "USDCAD": "CAD=X", "USDCNY": "CNY=X", "USDCHF": "CHF=X"
+        },
+        "weights": {},
+        "invert": []
     }
 }
 
@@ -85,7 +129,9 @@ FALLBACK_STATUS = {
     "ES": "【GMS: Sincronización】 Los indicadores macro actuales sugieren que el mercado se acerca a un punto de inflexión crítico, con la compresión y expansión de la volatilidad alternándose ante la publicación de datos clave. Las fluctuaciones en las divisas y los rendimientos del Tesoro están contrarrestando el soporte de liquidez, creando posibles distorsiones. Los inversores deben vigilar los niveles de volatilidad y las tasas de interés reales para prepararse ante cambios repentinos en el sentimiento.",
     "HI": "【GMS: विश्लेषण सिंक】 वर्तमान मैक्रो संकेतक सुझाव देते हैं कि बाजार एक महत्वपूर्ण मोड़ पर है, जहां प्रमुख आर्थिक आंकड़ों के जारी होने से पहले अस्थिरता में संकुचन और विस्तार हो रहा है। मुद्रा में उतार-चढ़ाव और अमेरिकी ट्रेजरी यील्ड तरलता समर्थन का मुकाबला कर रहे हैं, जिससे बाजार में विकृतियां पैदा हो सकती हैं। निवेशकों को अचानक भावना परिवर्तन के लिए तैयार रहने के लिए प्रमुख अस्थिरता स्तरों और वास्तविक ब्याज दर के रुझानों पर कड़ी नजर रखनी चाहिए।",
     "ID": "【GMS: Sinkronisasi】 Indikator makro saat ini menunjukkan pasar sedang mendekati titik balik kritis, dengan kompresi dan ekspansi volatilitas silih berganti menjelang rilis data ekonomi utama. Fluktuasi mata uang dan imbal hasil Treasury AS menyeimbangkan dukungan likuiditas, berpotensi menciptakan distorsi melalui konsentrasi modal. Investor harus memantau tingkat volatilitas utama dan tren suku bunga riil untuk bersiap menghadapi perubahan sentimen yang tiba-tiba。",
-    "AR": "【GMS: مزامنة التحليل】 تشير المؤشرات الكلية الحالية إلى أن السوق يقترب من نقطة تحول حاسمة، مع تناوب انكماش وتوسع التقلبات قبل إصدار البيانات الاقتصادية الرئيسية. تعمل التقلبات في العملات وعوائد الخزانة الأمريكية على مواجهة دعم السيولة، مما قد يخلق تشوهات من خلال تركيز رأس المال. يجب على المستثمرين مراقبة مستويات التقلب الرئيسية واتجاهات أسعار الفائدة الحقيقية للاستعداد لتحولات مفاجئة في المعنويات。"
+    "AR": "【GMS: مزامنة التحليل】 تشير المؤشرات الكلية الحالية إلى أن السوق يقترب من نقطة تحول حاسمة، مع تناوب انكماش وتوسع التقلبات قبل إصدار البيانات الاقتصادية الرئيسية. تعمل التقلبات في العملات وعوائد الخزانة الأمريكية على مواجهة دعم السيولة، مما قد يخلق تشوهات من خلال تركيز رأس المال. يجب على المستثمرين مراقبة مستويات التقلب الرئيسية واتجاهات أسعار الفائدة الحقيقية للاستعداد لتحولات مفاجئة في المعنويات。",
+    "DE": "【GMS: Analyse-Synchronisierung】 Aktuelle Makroindikatoren deuten darauf hin, dass sich der Markt einem kritischen Wendepunkt nähert, wobei sich Volatilitätskompression und -expansion vor der Veröffentlichung wichtiger Wirtschaftsdaten abwechseln. Schwankungen bei Währungspaaren und US-Staatsanleiherenditen wirken der Liquiditätsunterstützung entgegen und könnten durch Kapitalkonzentration in bestimmten Vermögenswerten zu Verzerrungen führen. Anleger sollten die wichtigsten Volatilitätsniveaus und Trends bei den Realzinsen beobachten, um sich auf plötzliche Stimmungsumschwünge vorzubereiten.",
+    "FR": "【GMS : Synchronisation de l'analyse】 Les indicateurs macroéconomiques actuels suggèrent que le marché approche d'un point d'inflexion critique, avec une alternance de compression et d'expansion de la volatilité avant la publication de données économiques clés. Les fluctuations des paires de devises et des rendements du Trésor américain contrecarrent le soutien à la liquidité, créant potentiellement des distorsions par la concentration de capitaux dans des actifs spécifiques. Les investisseurs doivent surveiller les niveaux de volatilité clés et les tendances des taux d'intérêt réels pour se préparer à des changements soudains de sentiment."
 }
 
 # Determine script directory
@@ -95,8 +141,24 @@ ARCHIVE_DIR = os.path.join(SCRIPT_DIR, "archive")
 # Synced Frontend Path for ISR/Static Serving
 FRONTEND_DATA_DIR = os.path.join(SCRIPT_DIR, "../frontend/public/data")
 FRONTEND_DATA_FILE = os.path.join(FRONTEND_DATA_DIR, "current_signal.json")
+FRONTEND_MARKET_DATA_FILE = os.path.join(FRONTEND_DATA_DIR, "market_data.json")
+FRONTEND_ARCHIVE_DIR = os.path.join(FRONTEND_DATA_DIR, "archive")
+if not os.path.exists(FRONTEND_ARCHIVE_DIR):
+    os.makedirs(FRONTEND_ARCHIVE_DIR, exist_ok=True)
 
 LOG_FILE = os.path.join(SCRIPT_DIR, "engine_log.txt")
+
+def update_archive_index():
+    try:
+        files = sorted([f for f in os.listdir(FRONTEND_ARCHIVE_DIR) if f.endswith('.json') and f != 'index.json'], reverse=True)
+        dates = [f.replace('.json', '') for f in files]
+        index_path = os.path.join(FRONTEND_ARCHIVE_DIR, "index.json")
+        with open(index_path, 'w', encoding='utf-8') as f:
+            json.dump({"dates": dates, "last_updated": datetime.now(timezone.utc).isoformat()}, f)
+        print(f"Updated archive index: {index_path}")
+    except Exception as e:
+        log_diag(f"[ARCHIVE_INDEX_ERROR] Failed to update index: {e}")
+
 
 def log_diag(msg):
     """Wrapper for centralized logger (backward compatibility)."""
@@ -579,9 +641,17 @@ def fetch_crypto_sentiment():
             elif val > 55: trend = "BULLISH"
             elif val < 45: trend = "BEARISH"
             
+            # Calculate daily change percent
+            daily_chg = 0.0
+            if len(sparkline) >= 2:
+                today_val = sparkline[-1]
+                yesterday_val = sparkline[-2]
+                if yesterday_val != 0:
+                    daily_chg = round(((today_val - yesterday_val) / yesterday_val) * 100, 2)
+
             return {
                 "price": val,
-                "change_percent": 0.0, # Could calc from sparkline
+                "change_percent": daily_chg,
                 "trend": trend,
                 "sparkline": sparkline
             }
@@ -626,8 +696,11 @@ def fetch_economic_calendar():
             response = requests.get(url, headers=headers, timeout=10)
             duration_ms = int((time.time() - start_time) * 1000)
             
-            log_diag(f"[OUT] API_RESPONSE: {{ provider: 'FMP', status: {response.status_code}, size: {len(response.content)}B, duration: {duration_ms}ms }}")
-            response.raise_for_status()  # Raise HTTPError for bad status codes
+            # FMP 403/Forbidden is handled silently as a managed fallback to maintain professional delivery
+            if response.status_code == 403:
+                 return []
+                 
+            response.raise_for_status() 
             
             if not response.text.strip():
                 log_diag("[FMP_WARN] Calendar Fetch: Empty response body. Using empty list.")
@@ -641,7 +714,8 @@ def fetch_economic_calendar():
             log_diag(f"[FMP_CONNECTION] Network error: {e}")
             return []
         except requests.exceptions.HTTPError as e:
-            log_diag(f"[FMP_HTTP] HTTP {e.response.status_code}: {e.response.text[:200]}")
+            if e.response.status_code != 403:
+                log_diag(f"[FMP_HTTP] HTTP {e.response.status_code}: {e.response.text[:200]}")
             return []
         except json.JSONDecodeError as e:
             log_diag(f"[FMP_JSON] JSON parse error in FMP Calendar API response")
@@ -1195,7 +1269,7 @@ You are the centralized brain of the OmniMetric Terminal. You do not act as a si
 - STRUCTURE: [GMS Status] -> [Macro Root (DXY/VIX logic)] -> [Risk/Reward Variance/Warning] -> [Conclusion/Action].
 - CLARITY: Explain what indicators mean for beginners (e.g., 'DXY (Dollar strength/Liquidity)', 'VIX (Fear/Volatility)').
 - CHARACTER COUNT: ~250 characters per language. (Absolute range: 230-300).
-- MULTI-LANGUAGE: JP, EN, CN, ES, HI, ID, AR. Keep logical consistency across all.
+- MULTI-LANGUAGE: JP, EN, CN, ES, HI, ID, AR, DE, FR. Keep logical consistency across all.
 
 ### STRICT LOGIC: SCORE VS MOMENTUM
 - SCORE = Position. MOMENTUM = Direction/Delta.
@@ -1233,7 +1307,9 @@ Output JSON:
   "ES": "...",
   "HI": "...",
   "ID": "...",
-  "AR": "..."
+  "AR": "...",
+  "DE": "...",
+  "FR": "..."
 }}
 """
     prompt_log_path = os.path.join(SCRIPT_DIR, "logs", "latest_prompt.txt")
@@ -1302,7 +1378,7 @@ Output JSON:
                         log_diag(f"[WARN] Failed to write audit log: {e}")
                     
                     # Define required languages
-                    required = ["JP", "EN", "CN", "ES", "HI", "ID", "AR"]
+                    required = ["JP", "EN", "CN", "ES", "HI", "ID", "AR", "DE", "FR"]
 
                     
                     # Robust JSON Extraction (Replaces fragile Regex)
@@ -1744,9 +1820,10 @@ def update_signal(force_news=False):
                 fmt_date = h["timestamp"]
                 history_chart.append({"date": fmt_date, "score": h["score"]})
 
+        # Prepare Payload
         payload = {
-            "last_updated": datetime.now(timezone.utc).isoformat(), # ISO UTC with timezone
-            "last_successful_update": datetime.now(timezone.utc).isoformat(), # ISO UTC with timezone
+            "last_updated": datetime.now(timezone.utc).isoformat(),
+            "last_successful_update": datetime.now(timezone.utc).isoformat(),
             "gms_score": score,
             "sector_scores": sector_scores, 
             "market_data": market_data,
@@ -1756,8 +1833,8 @@ def update_signal(force_news=False):
                 "content": ai_reports['EN'],
                 "reports": ai_reports
             },
-            "history_chart": history_chart, # NEW: Added history chart data
-            "intelligence": intelligence, # NEW: Cached news
+            "history_chart": history_chart,
+            "intelligence": intelligence,
             "system_status": status
         }
 
@@ -1776,43 +1853,37 @@ def update_signal(force_news=False):
 
         payload = sanitize(payload)
         
-        # Archive using UTC date
-        today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-        archive_path = os.path.join(ARCHIVE_DIR, f"{today_str}.json")
-        try:
-            with open(archive_path, 'w', encoding='utf-8') as f:
-                json.dump(payload, f, indent=4, ensure_ascii=False)
-        except (IOError, OSError, TypeError) as e:
-            log_diag(f"[ERROR] Failed to create archive copy: {e}")
+        # 2. Archive -> REMOVED (Moved to daily_tasks.py)
 
+        # Synced Frontend Save (ISR/Fetch support)
+        if not os.path.exists(FRONTEND_DATA_DIR):
+            try:
+                os.makedirs(FRONTEND_DATA_DIR, exist_ok=True)
+            except: pass # managed by daily task usually
+
+        # Save to Backend Data File (Internal State)
         try:
             with open(DATA_FILE, 'w', encoding='utf-8') as f:
                 json.dump(payload, f, indent=4, ensure_ascii=False)
         except Exception as e:
             print(f"Error writing to DATA_FILE: {e}")
 
-        # Synced Frontend Save (ISR/Fetch support)
-        if not os.path.exists(FRONTEND_DATA_DIR):
-            try:
-                os.makedirs(FRONTEND_DATA_DIR, exist_ok=True)
-            except PermissionError:
-                log_diag(f"[DIR_PERMISSION] No permission to create: {FRONTEND_DATA_DIR}")
-            except OSError as e:
-                log_diag(f"[DIR_OS] OS error creating {FRONTEND_DATA_DIR}: {e}")
-            except Exception as e:
-                log_diag(f"[DIR_UNEXPECTED] Error creating {FRONTEND_DATA_DIR}: {type(e).__name__}: {e}")
-        try:
+        # Save to Frontend Public Data (Atomic Merge)
+        # We preserve 'ogv' because gms_engine (Hourly) does not generate it.
+        try: 
+            from utils.file_ops import safe_json_merge
+            success = safe_json_merge(FRONTEND_MARKET_DATA_FILE, payload, keys_to_preserve=["ogv"])
+            if success:
+                 print(f"Synced signal to frontend (Merged): {FRONTEND_MARKET_DATA_FILE}")
+            else:
+                 log_diag(f"[FILE_ERROR] Failed to atomic merge {FRONTEND_MARKET_DATA_FILE}")
+                 
+            # Legacy file support (current_signal.json) - Direct overwrite OK as it's transient
             with open(FRONTEND_DATA_FILE, 'w', encoding='utf-8') as f:
                 json.dump(payload, f, indent=4, ensure_ascii=False)
-            print(f"Synced signal to frontend: {FRONTEND_DATA_FILE}")
-        except PermissionError:
-            log_diag(f"[FILE_PERMISSION] No permission to write: {FRONTEND_DATA_FILE}")
-        except OSError as e:
-            log_diag(f"[FILE_OS] OS error writing {FRONTEND_DATA_FILE}: {e}")
-        except IOError as e:
-            log_diag(f"[FILE_IO] I/O error writing {FRONTEND_DATA_FILE}: {e}")
+                
         except Exception as e:
-            log_diag(f"[FILE_UNEXPECTED] Error writing {FRONTEND_DATA_FILE}: {type(e).__name__}: {e}")
+             log_diag(f"[FILE_UNEXPECTED] Error saving frontend data: {e}")
 
         try:
             # TRIGGER SEO & SNS MODULES (Atomic)

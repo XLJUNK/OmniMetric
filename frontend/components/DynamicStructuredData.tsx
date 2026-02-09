@@ -5,29 +5,19 @@ import { useEffect, useState } from 'react';
 interface MarketData {
     gms_score: number;
     market_data: {
-        NET_LIQUIDITY?: { price: number };
-        MOVE?: { price: number };
-        VIX?: { price: number };
-        HY_SPREAD?: { price: number };
+        [key: string]: { price: number } | undefined;
     };
     last_updated: string;
 }
 
-export const DynamicStructuredData = ({ data: externalData }: { data?: any }) => {
+export const DynamicStructuredData = ({ data: externalData }: { data?: unknown }) => {
     const [data, setData] = useState<MarketData | null>(null);
-
-    // If external data is provided, use it directly (Static Mode)
-    if (externalData) {
-        return (
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(externalData) }}
-            />
-        );
-    }
+    const [isStatic] = useState(!!externalData);
 
     // Otherwise, fetch market data (Dashboard Mode)
     useEffect(() => {
+        if (isStatic) return;
+
         const controller = new AbortController();
         const fetchData = async () => {
             try {
@@ -38,8 +28,8 @@ export const DynamicStructuredData = ({ data: externalData }: { data?: any }) =>
                         setData(json);
                     }
                 }
-            } catch (e: any) {
-                if (e.name !== 'AbortError' && e.name !== 'TimeoutError') {
+            } catch (e: unknown) {
+                if ((e as Error).name !== 'AbortError' && (e as Error).name !== 'TimeoutError') {
                     // Silent fail for structured data to avoid console spam during dev
                 }
             }
@@ -51,7 +41,17 @@ export const DynamicStructuredData = ({ data: externalData }: { data?: any }) =>
             controller.abort();
             clearInterval(interval);
         };
-    }, []);
+    }, [isStatic]);
+
+    // If external data is provided, use it directly (Static Mode)
+    if (externalData) {
+        return (
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(externalData) }}
+            />
+        );
+    }
 
     if (!data) return null;
 

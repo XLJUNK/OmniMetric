@@ -216,7 +216,7 @@ export const GlossaryClient = ({ lang, data, pageTitle, pageDesc, searchItems, s
                                                                 Context 2026
                                                             </h4>
                                                             <p className={`text-sky-800/80 dark:text-sky-200/80 text-xs md:text-sm font-serif italic leading-relaxed relative z-10 ${isRTL ? 'pr-2 border-r-2 border-sky-500/30' : 'pl-2 border-l-2 border-sky-500/30'}`}>
-                                                                "{item.context_2026}"
+                                                                &quot;{item.context_2026}&quot;
                                                             </p>
                                                         </div>
                                                     </div>

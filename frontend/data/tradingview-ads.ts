@@ -75,5 +75,23 @@ export const TRADINGVIEW_ADS: Record<LangType, AdContent> = {
             { id: "intermediate", text: "“المعدات القياسية للمستثمرين.” تزامن مع المستثمرين العالميين في الوقت الفعلي. تنبأ بالمستقبل بذكاء جماعي.", image: "analyst.png" },
             { id: "advanced", text: "“المعدات القياسية للمستثمرين.” تصور كل استراتيجية مع أداء الرسوم البيانية الرائد في الصناعة. حول التحليل الدقيق إلى قناعة.", image: "analyst.png" }
         ]
+    },
+    FR: {
+        main: "L'équipement standard pour les investisseurs analysant le monde. TradingView fusionne l'analyse technique avancée avec un flux social mondial.",
+        bonus: "Obtenez un bonus de 15 $ lors de votre inscription via ce site.",
+        segments: [
+            { id: "beginner", text: "Simplifiez l'analyse de marché complexe avec le indicateur technique. Un jugement de niveau professionnel, intuitivement le vôtre.", image: "analyst.png" },
+            { id: "intermediate", text: "Synchronisez avec les investisseurs mondiaux en temps réel. Prédisez l'avenir grâce à l'intelligence collective.", image: "analyst.png" },
+            { id: "advanced", text: "Visualisez chaque stratégie avec des performances graphiques de pointe. Transformez l'analyse précise en conviction.", image: "analyst.png" }
+        ]
+    },
+    DE: {
+        main: "Die Standardausrüstung für Investoren, die die Welt analysieren. TradingView verbindet fortschrittliche technische Analyse mit einem globalen sozialen Feed.",
+        bonus: "Erhalten Sie einen Bonus von 15 $, wenn Sie sich über diese Seite anmelden.",
+        segments: [
+            { id: "beginner", text: "Vereinfachen Sie komplexe Marktanalysen mit dem technischen Indikator. Urteilsvermögen auf Profi-Niveau, intuitiv für Sie.", image: "analyst.png" },
+            { id: "intermediate", text: "Synchronisieren Sie sich in Echtzeit mit globalen Investoren. Sagen Sie die Zukunft mit kollektiver Intelligenz voraus.", image: "analyst.png" },
+            { id: "advanced", text: "Visualisieren Sie jede Strategie mit branchenführender Chart-Performance. Verwandeln Sie präzise Analysen in Überzeugung.", image: "analyst.png" }
+        ]
     }
 };

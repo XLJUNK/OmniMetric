@@ -1,0 +1,23 @@
+{
+    "slug": "nfci",
+    "lang": "EN",
+    "title": "National Financial Conditions Index",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "The Chicago Fed's NFCI provides a comprehensive weekly update on US financial conditions across money markets, debt markets, and the shadow banking system.",
+        "deep_dive": "The NFCI aggregates 105 different indicators to determine if financial conditions are 'looser' or 'tighter' than historical norms. A negative reading indicates a loose, accommodative environment favoring growth and risk-taking. In 2026, the NFCI is the gold standard for tracking 'Shadow Banking' stress—the opaque area of the market where repo trades and private credit live. Because the NFCI captures data on leverage and risk appetite that traditional banking surveys miss, it is a leading indicator for industrial production and future GDP. A sharp upward move in the index (even if still negative) indicates that the 'Financial Plumbing' is clogging, which precedes stock market corrections by several weeks. It is divided into three sub-indices: Risk, Credit, and Leverage, each providing a specific diagnostic of where systemic pressure is building.",
+        "council_debate": {
+            "macro": "The most accurate leading indicator for recession. When NFCI crosses above its long-term average (0.0), a recession is typically imminent.",
+            "policy": "The Fed's 'Financial Stability Board' monitors the NFCI's Leverage sub-index to detect bubbles in private equity and commercial real estate.",
+            "quant": "Quants trade the 'Momentum' of financial conditions. Decelerating NFCI (becoming more negative) is the ultimate buy signal for high-beta equities.",
+            "technical": "There is no 'price chart' for NFCI, but its relationship with the S&P 500 is a powerful divergence tool. Stocks rising while NFCI tightens is a 'Bearish Divergence'.",
+            "geopolitics": "Captures the impact of global USD strength on international banking liquidity through the Eurodollar components.",
+            "tech": "New integration of real-time digital payment volumes and fintech delinquency data has made the NFCI more reactive to consumer struggles in 2026."
+        },
+        "forecast_risks": "The 'Black Box' risk: A sudden spike in the Leverage sub-index caused by a collapse in a major private credit vehicle, leading to a systemic freeze.",
+        "gms_conclusion": "The definitive map of the global financial plumbing and credit health."
+    },
+    "model": "Antigravity-GMS-v1 (Institutional Edition)",
+    "generated_at": "2026-02-04T00:04:11.994169"
+}

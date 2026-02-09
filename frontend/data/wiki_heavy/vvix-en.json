@@ -1,0 +1,23 @@
+{
+    "slug": "vvix",
+    "lang": "EN",
+    "title": "VIX-of-VIX (VVIX)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "The 'Volatility of Volatility'. Measures the implied volatility of VIX options, serving as the leading indicator for 'Vol-Spikes' in the S&P 500.",
+        "deep_dive": "In 2026, the VVIX is the 'Insurance on the Insurance'. While the VIX tells you how much protection costs, the VVIX tells you how fast that cost is changing. A rising VVIX is the first sign that 'Tail Risk' is being priced in by institutional players. It often leads the VIX by 3-5 days. If the market is calm but the VVIX is spiking, it is a signal that 'Smart Money' is bracing for a crash. For macro traders, the VVIX is the ultimate 'Regime Indicator'—levels above 110 indicate a high probability of a 'Vol-mageddon' style liquidation event in the options market.",
+        "council_debate": {
+            "quant": "Used by vol-arb funds to determine the pricing of VIX option 'Wings' (tail-risk protection).",
+            "tech": "AI-driven hedging algorithms use VVIX to adjust their 'Dynamic Delta' exposure in real-time.",
+            "macro": "Reflects the 'Institutional Anxiety' level regarding central bank policy surprises.",
+            "technical": "Mean reverts aggressively. Buy VVIX calls when the index is below 80; sell when it hits 130.",
+            "policy": "A rising VVIX often forces the Fed to issue 'Clarifying Statements' to calm the derivatives market.",
+            "geopolitics": "Captures the 'Shock' factor of geopolitical events before they impact the underlying spot price."
+        },
+        "forecast_risks": "A 'Hedging Failure': A scenario where VVIX spikes so fast that liquidity in the options market evaporates, leaving SPX unprotected.",
+        "gms_conclusion": "The early warning system for the early warning system."
+    },
+    "model": "Antigravity-GMS-v1 (Institutional Edition)",
+    "generated_at": "2026-02-04T00:04:12.864433"
+}

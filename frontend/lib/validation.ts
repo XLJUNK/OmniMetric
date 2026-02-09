@@ -77,13 +77,13 @@ export function parseQueryParamWithDefault<T extends z.ZodTypeAny>(
 /**
  * Validate and parse multiple query parameters
  */
-export function validateQueryParams<T extends z.ZodObject<any>>(
+export function validateQueryParams<T extends z.ZodObject<Record<string, any>>>(
     schema: T,
     searchParams: URLSearchParams
-): { success: true; data: z.infer<T> } | { success: false; error: string; details: any[] } {
+): { success: true; data: z.infer<T> } | { success: false; error: string; details: unknown[] } {
     try {
         // Convert URLSearchParams to object
-        const params: Record<string, any> = {};
+        const params: Record<string, string> = {};
         searchParams.forEach((value, key) => {
             params[key] = value;
         });

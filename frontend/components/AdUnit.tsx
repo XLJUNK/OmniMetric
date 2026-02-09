@@ -1,6 +1,11 @@
 'use client';
-
 import React, { useEffect, useRef } from 'react';
+
+declare global {
+    interface Window {
+        adsbygoogle: Array<Record<string, unknown>>;
+    }
+}
 
 export const AdUnit = () => {
     const initialized = useRef(false);
@@ -26,14 +31,14 @@ export const AdUnit = () => {
 
                                     // STRICT CHECK: Must have physical dimensions and be visible
                                     if (rect.width > 0 && rect.height > 0 && style.display !== 'none' && style.visibility !== 'hidden') {
-                                        // @ts-ignore
                                         (window.adsbygoogle = window.adsbygoogle || []).push({});
                                     } else {
                                         console.warn("AdSense: Skipped push due to zero dimensions or hidden state.");
                                     }
                                 }
-                            } catch (err: any) {
+                            } catch (error: unknown) {
                                 // Silently suppress errors to avoid console spam
+                                console.error("AdSense Error:", error);
                             }
                         }, 500);
 
@@ -53,7 +58,7 @@ export const AdUnit = () => {
     }, []);
 
     return (
-        <div className="relative w-full min-h-[90px] flex items-center justify-center overflow-hidden !bg-transparent !shadow-none !ring-0 !outline-none border-y border-slate-200 dark:border-[#1E293B] my-2">
+        <div className="relative w-full min-h-[90px] flex items-center justify-center overflow-hidden !bg-transparent !shadow-none !ring-0 !outline-none border-0 my-2">
             <div className="absolute top-1 right-2 z-10 opacity-30 hover:opacity-100 transition-opacity">
                 <span className="text-[8px] font-mono text-slate-400 dark:text-slate-500 uppercase tracking-widest">ADS</span>
             </div>

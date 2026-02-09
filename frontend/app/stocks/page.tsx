@@ -1,33 +1,15 @@
 import { SectorDashboard } from '@/components/SectorDashboard';
 import { Metadata } from 'next';
-export const dynamic = 'force-dynamic';
-
 import { getMultilingualMetadata } from '@/data/seo';
+import { LangType } from '@/data/dictionary';
 
-export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
-    const s = await searchParams;
-    return getMultilingualMetadata('/stocks', s.lang || 'EN',
-        "Global Stocks Analysis | OmniMetric",
-        "Real-time institutional analysis of global equity markets including S&P 500, NASDAQ, and VIX volatility index."
+export async function generateMetadata(): Promise<Metadata> {
+    return getMultilingualMetadata('/stocks', 'EN',
+        "Global Equity Markets | OmniMetric",
+        "Analysis of major indices (SPY, QQQ, VIX) and market breadth."
     );
 }
 
-const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FinancialProduct",
-    "name": "OmniMetric Stocks Module",
-    "description": "Professional grade equity market risk analysis.",
-    "brand": "OmniMetric"
-};
-
 export default function StocksPage() {
-    return (
-        <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-            />
-            <SectorDashboard sectorKey="STOCKS" />
-        </>
-    );
+    return <SectorDashboard sectorKey="STOCKS" lang="EN" />;
 }

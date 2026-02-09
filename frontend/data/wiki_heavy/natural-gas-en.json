@@ -1,0 +1,23 @@
+{
+    "slug": "natural-gas",
+    "lang": "EN",
+    "title": "Natural Gas",
+    "type": "indicator",
+    "category": "Commodities",
+    "sections": {
+        "summary": "Infamously known as the 'Widowmaker' due to its extreme volatility, Natural Gas is a weather-sensitive energy resource critical for global power generation and heating. It serves as the primary 'bridge fuel' in the global energy transition, displacing coal and acting as a cleaner alternative during the shift to renewables.",
+        "deep_dive": "The natural gas market has evolved from fragmented regional pipeline networks into a globally integrated commodity via the Liquefied Natural Gas (LNG) trade. The US shale revolution and Europe's subsequent pivot away from Russian pipeline gas have redefined global flow patterns. Prices are driven by a strict seasonal cycle and 'inventory deviations.' Short-term price action is dominated by meteorology; predictions of Cooling Degree Days (CDD) in summer or Heating Degree Days (HDD) in winter can move markets by double-digit percentages in hours.",
+        "council_debate": {
+            "macro": "Natural gas is the bedrock of industrial cost structures, particularly for fertilizers and petrochemicals. Spikes in gas prices represent a direct inflationary tax on food security and manufacturing margins.",
+            "tech": "Modular LNG liquefaction and Floating Storage Regasification Units (FSRUs) are lowering the barrier to entry for emerging markets, allowing for more dynamic energy arbitrage across the globe.",
+            "geopolitics": "Energy has been weaponized as a tool of statecraft. The destruction of the Nord Stream pipeline and the growth of US/Qatari export capacity have created a new hierarchy of energy alliances.",
+            "quant": "Quants focus on the deviation from the 5-year seasonal storage average. When stocks fall below the standard deviation band, risk premiums explode as 'short squeezes' become inevitable.",
+            "policy": "The Global Methane Pledge is forcing producers to invest heavily in leak detection and carbon capture. This environmental premium is ending the era of 'cheap' natural gas and raising the marginal cost of production.",
+            "technical": "The shape of the futures curve—specifically the switch between contango and backwardation—is the purest signal of prompt physical tightness. Extreme backwardation is a clear warning of a looming supply crunch."
+        },
+        "forecast_risks": "Record-warm winters leading to massive inventory gluts and price collapses. Infrastructure risks, such as accidental outages at major export terminals (e.g., Freeport LNG), can create immediate supply-demand imbalances.",
+        "gms_conclusion": "A high-stakes asset that sits at the intersection of climate uncertainty and geopolitical strategy. It remains the key benchmark for evaluating regional energy security and industrial competitiveness."
+    },
+    "model": "Antigravity-GMS-v1 (Expert Analysis)",
+    "generated_at": "2026-02-09T08:15:00Z"
+}

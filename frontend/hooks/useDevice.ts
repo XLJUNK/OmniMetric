@@ -28,15 +28,19 @@ export const useDevice = () => {
         };
 
         if (initialDevice) {
-            setDevice(prev => ({
-                ...prev,
-                isMobile: initialDevice === 'mobile',
-                isTablet: initialDevice === 'tablet',
-                isDesktop: initialDevice === 'desktop',
-                width: window.innerWidth
-            }));
+            const timer = setTimeout(() => {
+                setDevice(prev => ({
+                    ...prev,
+                    isMobile: initialDevice === 'mobile',
+                    isTablet: initialDevice === 'tablet',
+                    isDesktop: initialDevice === 'desktop',
+                    width: window.innerWidth
+                }));
+            }, 0);
+            return () => clearTimeout(timer);
         } else {
-            handleResize();
+            const timer = setTimeout(() => handleResize(), 0);
+            return () => clearTimeout(timer);
         }
 
         window.addEventListener('resize', handleResize);

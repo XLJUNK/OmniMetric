@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { DICTIONARY } from '@/data/dictionary';
 import { useDevice } from '@/hooks/useDevice';
 import { useCurrentLang } from '@/hooks/useCurrentLang';
-import { useTheme } from '@/components/ThemeProvider';
 import { Zap } from 'lucide-react';
 
 export const LegalFooter = () => {
@@ -12,6 +11,7 @@ export const LegalFooter = () => {
     const t = DICTIONARY[lang] || DICTIONARY['EN'];
     const { isMobile } = useDevice();
     const lowerLang = lang.toLowerCase();
+    const getLink = (path: string) => lang.toUpperCase() === 'EN' ? path : `/${lowerLang}${path}`;
 
     return (
         <footer
@@ -20,23 +20,23 @@ export const LegalFooter = () => {
             {/* Minimal Link Bar */}
             <div className="w-full bg-white dark:bg-black border-b border-slate-200 dark:border-slate-800/50 py-3">
                 <div className={`max-w-[1600px] mx-auto flex flex-wrap justify-center items-center gap-x-4 gap-y-3 px-4 text-[10px] font-mono tracking-wider`}>
-                    <Link href={`/about?lang=${lang}`} className="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-slate-200 uppercase transition-colors px-2 py-1">
+                    <Link href={getLink('/about')} className="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-slate-200 uppercase transition-colors px-2 py-1">
                         {t.labels.about}
                     </Link>
                     {!isMobile && <span className="text-slate-300 dark:text-slate-800">|</span>}
-                    <Link href={`/${lowerLang}/legal/privacy-policy`} className="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-slate-200 uppercase transition-colors px-2 py-1">
-                        Privacy
+                    <Link href={getLink('/privacy')} className="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-slate-200 uppercase transition-colors px-2 py-1">
+                        {t.labels.privacy}
                     </Link>
                     {!isMobile && <span className="text-slate-300 dark:text-slate-800">|</span>}
-                    <Link href={`/${lowerLang}/legal/terms`} className="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-slate-200 uppercase transition-colors px-2 py-1">
-                        Terms
+                    <Link href={getLink('/legal')} className="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-slate-200 uppercase transition-colors px-2 py-1">
+                        {t.labels.terms}
                     </Link>
                     {!isMobile && <span className="text-slate-300 dark:text-slate-800">|</span>}
-                    <Link href={`/contact?lang=${lang}`} className="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-slate-200 uppercase transition-colors px-2 py-1">
-                        Contact
+                    <Link href={getLink('/contact')} className="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-slate-200 uppercase transition-colors px-2 py-1">
+                        {t.labels.contact}
                     </Link>
                     {!isMobile && <span className="text-slate-300 dark:text-slate-800">|</span>}
-                    <Link href={`/archive?lang=${lang}`} className="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-slate-200 uppercase transition-colors px-2 py-1">
+                    <Link href={getLink('/archive')} className="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-slate-200 uppercase transition-colors px-2 py-1">
                         {t.labels.archive}
                     </Link>
                 </div>

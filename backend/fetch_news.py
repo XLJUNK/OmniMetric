@@ -123,7 +123,7 @@ def translate_news_batch(items):
 
     titles = [item['title'] for item in items]
     prompt = f"""You are a professional financial translator.
-Translate these {len(titles)} headlines into JP, CN, ES, HI, ID, AR.
+Translate these {len(titles)} headlines into JP, CN, ES, HI, ID, AR, DE, FR.
 Input: {json.dumps(titles)}
 Output JSON format: {{ "JP": [...], "CN": [...], ... }} only."""
 
@@ -202,7 +202,7 @@ Output JSON format: {{ "JP": [...], "CN": [...], ... }} only."""
         final_json_str = json_match.group(1)
         data = json.loads(final_json_str)
         
-        required = ["JP", "CN", "ES", "HI", "ID", "AR"]
+        required = ["JP", "CN", "ES", "HI", "ID", "AR", "DE", "FR"]
         if not all(k in data for k in required):
             log_diag(f"[FATAL] Missing languages in translation. Got: {list(data.keys())}")
             create_failure_flag("Missing Languages")

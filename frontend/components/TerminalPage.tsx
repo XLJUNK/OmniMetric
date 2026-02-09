@@ -1,20 +1,19 @@
 'use client';
-
-import React from 'react';
-import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import { DICTIONARY, LangType } from '@/data/dictionary';
-import { ChevronDown, Shield, Activity, Globe } from 'lucide-react';
+import { LangType, DICTIONARY } from '@/data/dictionary';
 import { LanguageSelector } from '@/components/LanguageSelector';
+import { useTheme } from '@/components/ThemeProvider';
+import React, { Suspense } from 'react';
 
 interface TerminalPageProps {
-    pageKey: 'about' | 'legal' | 'archive';
+    pageKey: 'about' | 'legal' | 'archive' | 'wiki';
     children: React.ReactNode;
     lang?: LangType; // Optional: If provided, overrides searchParams
     selectorMode?: 'query' | 'path'; // Optional: Defaults to 'query'
 }
 
-export const TerminalPage = ({ pageKey, children, lang: propLang, selectorMode = 'query' }: TerminalPageProps) => {
+const TerminalPageContent = ({ pageKey, children, lang: propLang, selectorMode = 'query' }: TerminalPageProps) => {
+    const { theme } = useTheme();
     const searchParams = useSearchParams();
     // Use propLang if available (path mode), otherwise fallback to query param
     const lang = propLang || (searchParams.get('lang') as LangType) || 'JP';
@@ -22,10 +21,12 @@ export const TerminalPage = ({ pageKey, children, lang: propLang, selectorMode =
 
     if (!t) return null;
 
-    const pageData = t.subpages[pageKey] as any;
+    const pageData = t.subpages[pageKey as keyof typeof t.subpages] as Record<string, string> || { title: pageKey.toUpperCase() };
 
     return (
-        <div className="min-h-screen text-slate-800 dark:text-[#E0E0E0] font-sans selection:bg-sky-500 selection:text-white">
+        <div
+            className={`min-h-screen text-slate-200 font-sans selection:bg-sky-500 selection:text-white bg-black`}
+        >
             <div className="max-w-[1400px] mx-auto px-6 py-12 md:py-20 lg:px-24">
                 {/* 1. TOP NAV / BREADCRUMB */}
                 <div className="flex justify-end items-center mb-16 opacity-100">
@@ -53,5 +54,13 @@ export const TerminalPage = ({ pageKey, children, lang: propLang, selectorMode =
                 </div>
             </div>
         </div>
+    );
+};
+
+export const TerminalPage = (props: TerminalPageProps) => {
+    return (
+        <Suspense fallback={<div className="min-h-screen opacity-0" />}>
+            <TerminalPageContent {...props} />
+        </Suspense>
     );
 };

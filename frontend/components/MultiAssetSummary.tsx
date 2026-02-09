@@ -3,10 +3,10 @@
 import React, { useState } from 'react';
 import { DICTIONARY, LangType } from '@/data/dictionary';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { Activity, Settings } from 'lucide-react';
 import { GMSHeaderSection } from '@/components/GMSHeaderSection';
 import { PulseTile } from '@/components/PulseTile';
 import { useDevice } from '@/hooks/useDevice';
-import { useTheme } from "@/components/ThemeProvider";
 import { SignalData } from '@/lib/signal';
 import { useSignalData } from '@/hooks/useSignalData';
 import { ToastNotification } from '@/components/ToastNotification';
@@ -19,32 +19,33 @@ const TerminalSettings = dynamic(() => import('@/components/TerminalSettings').t
     loading: () => null
 });
 
+const DEFAULT_ORDER = [
+    "US10Y", "10Y BEI", "Real Interest Rate", "DXY",
+    "VIX", "MOVE", "HY Spread", "S&P 500",
+    "Net Liq", "10Y-3M", "Breadth", "Copper",
+    "Gold", "BTC", "ETH", "Oil"
+];
+
 interface MultiAssetSummaryProps {
     initialData?: SignalData | null;
+    lang?: LangType;
 }
 
-export const MultiAssetSummary = ({ initialData }: MultiAssetSummaryProps) => {
-    const { data, liveData, isSafeMode } = useSignalData(initialData);
+export const MultiAssetSummary = ({ initialData, lang: propLang }: MultiAssetSummaryProps) => {
+    const { data, isSafeMode } = useSignalData(initialData);
     const { isMobile } = useDevice();
 
     const router = useRouter();
-    const searchParams = useSearchParams();
+    // const searchParams = useSearchParams(); // Removed
 
     // Safety: Ensure lang is always valid and uppercase for DICTIONARY access
-    const langParam = (searchParams.get('lang') || 'EN').toUpperCase();
-    const lang = (Object.keys(DICTIONARY).includes(langParam) ? langParam : 'EN') as LangType;
-    const t = DICTIONARY[lang] || DICTIONARY['EN'];
+    // const langParam = (searchParams.get('lang') || 'EN').toUpperCase(); // Removed
+    // const lang = (Object.keys(DICTIONARY).includes(langParam) ? langParam : 'EN') as LangType; // Removed
+    const lang = propLang || 'EN';
 
-    // Correctly call the hook
-    const { theme, toggleTheme } = useTheme();
+    // Theme is enforced dark
 
     // --- STRATEGIC DASHBOARD STATE ---
-    const DEFAULT_ORDER = [
-        "US10Y", "10Y BEI", "Real Interest Rate", "DXY",
-        "VIX", "MOVE", "HY Spread", "S&P 500",
-        "Net Liq", "10Y-3M", "Breadth", "Copper",
-        "Gold", "BTC", "ETH", "Oil"
-    ];
 
     const [tiles, setTiles] = useState<string[]>([]);
     const [hiddenTiles, setHiddenTiles] = useState<string[]>([]);
@@ -87,7 +88,7 @@ export const MultiAssetSummary = ({ initialData }: MultiAssetSummaryProps) => {
             if (saved && saved !== "null" && saved !== "undefined") {
                 try {
                     currentConfig = JSON.parse(saved);
-                } catch (e) {
+                } catch {
                     currentConfig = {};
                 }
             }
@@ -139,46 +140,52 @@ export const MultiAssetSummary = ({ initialData }: MultiAssetSummaryProps) => {
     const getSectorScore = (key: string) => data?.sector_scores?.[key] ?? 50;
 
     const getMarketData = (key: string) => {
-        let val = data?.market_data?.[key] || {
-            price: t.status.market,
+        const raw = data?.market_data?.[key] || {
+            price: 0,
             change_percent: 0,
-            sparkline: []
+            sparkline: [] as number[]
         };
 
-        if (isMobile && Array.isArray(val.sparkline)) {
+        let val = {
+            ...raw,
+            price: typeof raw.price === 'string' ? parseFloat(raw.price) || 0 : raw.price,
+            sparkline: Array.isArray(raw.sparkline) ? raw.sparkline : [] as number[]
+        };
+
+        if (isMobile && val.sparkline.length > 0) {
             val = { ...val, sparkline: val.sparkline.slice(-10) };
         }
 
         if (isSafeMode) {
             if (typeof val.price !== 'number') {
-                val = { ...val, price: t.status.market };
+                val = { ...val, price: 0 };
             }
         }
-        if (liveData && liveData[key]) {
-            val = { ...val, price: liveData[key].price, change_percent: liveData[key].change_percent };
-        }
+
         return val;
     };
+
+    const getLink = (path: string) => lang === 'EN' ? `/${path}` : `/${lang.toLowerCase()}/${path}`;
 
     // Card Renderer Helper
     const renderTile = (id: string) => {
         switch (id) {
-            case "US10Y": return <PulseTile key={id} title="US10Y" score={getSectorScore("BONDS")} ticker="^TNX" data={getMarketData("TNX")} chartColor="#0ea5e9" onClick={() => { }} lang={lang} wikiSlug="us10y-yield" theme={theme} />;
-            case "10Y BEI": return <PulseTile key={id} title="10Y BEI" score={getSectorScore("BONDS")} ticker="US 10Y BEI" data={getMarketData("BREAKEVEN_INFLATION")} chartColor="#f43f5e" onClick={() => { }} lang={lang} wikiSlug="breakeven-inflation" theme={theme} />;
-            case "Real Interest Rate": return <PulseTile key={id} title="Real Interest Rate" score={getSectorScore("BONDS")} ticker="US REAL 10Y" data={getMarketData("REAL_INTEREST_RATE")} chartColor="#8b5cf6" onClick={() => { }} lang={lang} wikiSlug="real-interest-rate" theme={theme} />;
-            case "DXY": return <PulseTile key={id} title="DXY" score={getSectorScore("FOREX")} ticker="DX-Y.NYB" data={getMarketData("DXY")} chartColor="#22c55e" onClick={() => router.push(`/forex?lang=${lang}`)} lang={lang} wikiSlug="dxy-index" theme={theme} />;
-            case "VIX": return <PulseTile key={id} title="VIX" score={getSectorScore("STOCKS")} ticker="^VIX" data={getMarketData("VIX")} chartColor="#ef4444" onClick={() => router.push(`/stocks?lang=${lang}`)} lang={lang} wikiSlug="vix" theme={theme} />;
-            case "MOVE": return <PulseTile key={id} title="MOVE" score={getSectorScore("BONDS")} ticker="^MOVE" data={getMarketData("MOVE")} chartColor="#a855f7" onClick={() => { }} lang={lang} wikiSlug="move-index" theme={theme} />;
-            case "HY Spread": return <PulseTile key={id} title="HY Spread" score={getSectorScore("BONDS")} ticker="HY OAS" data={getMarketData("HY_SPREAD")} chartColor="#f97316" onClick={() => { }} lang={lang} wikiSlug="sovereign-credit-spread" theme={theme} />;
-            case "S&P 500": return <PulseTile key={id} title="S&P 500" score={getSectorScore("STOCKS")} ticker="SPY" data={getMarketData("SPY")} chartColor="#3b82f6" onClick={() => router.push(`/stocks?lang=${lang}`)} lang={lang} wikiSlug="sp500-index" theme={theme} />;
-            case "Net Liq": return <PulseTile key={id} title="Net Liq" score={data?.gms_score || 50} ticker="USD NET LIQ" data={getMarketData("NET_LIQUIDITY")} chartColor="#3b82f6" onClick={() => { }} lang={lang} wikiSlug="net-liquidity" theme={theme} />;
-            case "10Y-3M": return <PulseTile key={id} title="10Y-3M" score={getSectorScore("BONDS")} ticker="10Y-3M" data={getMarketData("YIELD_SPREAD")} chartColor="#64748b" onClick={() => { }} lang={lang} wikiSlug="yield-curve-10y2y" theme={theme} />;
-            case "Breadth": return <PulseTile key={id} title="Breadth" score={getSectorScore("STOCKS")} ticker="RSP/SPY" data={getMarketData("BREADTH")} chartColor="#6366f1" onClick={() => router.push(`/stocks?lang=${lang}`)} lang={lang} wikiSlug="market-breadth" theme={theme} />;
-            case "Copper": return <PulseTile key={id} title="Copper" score={getSectorScore("COMMODITIES")} ticker="HG=F" data={getMarketData("COPPER")} chartColor="#f97316" onClick={() => router.push(`/commodities?lang=${lang}`)} lang={lang} wikiSlug="copper-price" theme={theme} />;
-            case "Gold": return <PulseTile key={id} title="Gold" score={getSectorScore("COMMODITIES")} ticker="GC=F" data={getMarketData("GOLD")} chartColor="#eab308" onClick={() => router.push(`/commodities?lang=${lang}`)} lang={lang} wikiSlug="gold-price" theme={theme} />;
-            case "BTC": return <PulseTile key={id} title="BTC" score={getSectorScore("CRYPTO")} ticker="BTC-USD" data={getMarketData("BTC")} chartColor="#f59e0b" onClick={() => router.push(`/crypto?lang=${lang}`)} lang={lang} wikiSlug="bitcoin" theme={theme} />;
-            case "ETH": return <PulseTile key={id} title="ETH" score={getSectorScore("CRYPTO")} ticker="ETH-USD" data={getMarketData("ETH")} chartColor="#a855f7" onClick={() => router.push(`/crypto?lang=${lang}`)} lang={lang} wikiSlug="ethereum" theme={theme} />;
-            case "Oil": return <PulseTile key={id} title="Oil" score={getSectorScore("COMMODITIES")} ticker="CL=F" data={getMarketData("OIL")} chartColor="#ef4444" onClick={() => router.push(`/commodities?lang=${lang}`)} lang={lang} wikiSlug="wti-oil" theme={theme} />;
+            case "US10Y": return <PulseTile key={id} title="US10Y" score={getSectorScore("BONDS")} ticker="^TNX" data={getMarketData("TNX")} chartColor="#0ea5e9" onClick={() => { }} lang={lang} wikiSlug="us10y-yield" />;
+            case "10Y BEI": return <PulseTile key={id} title="10Y BEI" score={getSectorScore("BONDS")} ticker="US 10Y BEI" data={getMarketData("BREAKEVEN_INFLATION")} chartColor="#f43f5e" onClick={() => { }} lang={lang} wikiSlug="breakeven-inflation" />;
+            case "Real Interest Rate": return <PulseTile key={id} title="Real Interest Rate" score={getSectorScore("BONDS")} ticker="US REAL 10Y" data={getMarketData("REAL_INTEREST_RATE")} chartColor="#8b5cf6" onClick={() => { }} lang={lang} wikiSlug="real-interest-rate" />;
+            case "DXY": return <PulseTile key={id} title="DXY" score={getSectorScore("FOREX")} ticker="DX-Y.NYB" data={getMarketData("DXY")} chartColor="#22c55e" onClick={() => router.push(getLink('forex'))} lang={lang} wikiSlug="dxy-index" />;
+            case "VIX": return <PulseTile key={id} title="VIX" score={getSectorScore("STOCKS")} ticker="^VIX" data={getMarketData("VIX")} chartColor="#ef4444" onClick={() => router.push(getLink('stocks'))} lang={lang} wikiSlug="vix" />;
+            case "MOVE": return <PulseTile key={id} title="MOVE" score={getSectorScore("BONDS")} ticker="^MOVE" data={getMarketData("MOVE")} chartColor="#a855f7" onClick={() => { }} lang={lang} wikiSlug="move-index" />;
+            case "HY Spread": return <PulseTile key={id} title="HY Spread" score={getSectorScore("BONDS")} ticker="HY OAS" data={getMarketData("HY_SPREAD")} chartColor="#f97316" onClick={() => { }} lang={lang} wikiSlug="sovereign-credit-spread" />;
+            case "S&P 500": return <PulseTile key={id} title="S&P 500" score={getSectorScore("STOCKS")} ticker="SPY" data={getMarketData("SPY")} chartColor="#3b82f6" onClick={() => router.push(getLink('stocks'))} lang={lang} wikiSlug="sp500-index" />;
+            case "Net Liq": return <PulseTile key={id} title="Net Liq" score={data?.gms_score || 50} ticker="USD NET LIQ" data={getMarketData("NET_LIQUIDITY")} chartColor="#3b82f6" onClick={() => { }} lang={lang} wikiSlug="net-liquidity" />;
+            case "10Y-3M": return <PulseTile key={id} title="10Y-3M" score={getSectorScore("BONDS")} ticker="10Y-3M" data={getMarketData("YIELD_SPREAD")} chartColor="#64748b" onClick={() => { }} lang={lang} wikiSlug="yield-curve-10y2y" />;
+            case "Breadth": return <PulseTile key={id} title="Breadth" score={getSectorScore("STOCKS")} ticker="RSP/SPY" data={getMarketData("BREADTH")} chartColor="#6366f1" onClick={() => router.push(getLink('stocks'))} lang={lang} wikiSlug="market-breadth" />;
+            case "Copper": return <PulseTile key={id} title="Copper" score={getSectorScore("COMMODITIES")} ticker="HG=F" data={getMarketData("COPPER")} chartColor="#f97316" onClick={() => router.push(getLink('commodities'))} lang={lang} wikiSlug="copper-price" />;
+            case "Gold": return <PulseTile key={id} title="Gold" score={getSectorScore("COMMODITIES")} ticker="GC=F" data={getMarketData("GOLD")} chartColor="#eab308" onClick={() => router.push(getLink('commodities'))} lang={lang} wikiSlug="gold-price" />;
+            case "BTC": return <PulseTile key={id} title="BTC" score={getSectorScore("CRYPTO")} ticker="BTC-USD" data={getMarketData("BTC")} chartColor="#f59e0b" onClick={() => router.push(getLink('crypto'))} lang={lang} wikiSlug="bitcoin" />;
+            case "ETH": return <PulseTile key={id} title="ETH" score={getSectorScore("CRYPTO")} ticker="ETH-USD" data={getMarketData("ETH")} chartColor="#a855f7" onClick={() => router.push(getLink('crypto'))} lang={lang} wikiSlug="ethereum" />;
+            case "Oil": return <PulseTile key={id} title="Oil" score={getSectorScore("COMMODITIES")} ticker="CL=F" data={getMarketData("OIL")} chartColor="#ef4444" onClick={() => router.push(getLink('commodities'))} lang={lang} wikiSlug="wti-oil" />;
             default: return null;
         }
     };
@@ -197,7 +204,7 @@ export const MultiAssetSummary = ({ initialData }: MultiAssetSummaryProps) => {
 
     return (
         <div
-            className={`w-full font-sans min-h-screen flex flex-col pb-24 relative transition-colors duration-300`}
+            className={`w-full bg-black font-sans min-h-screen flex flex-col pb-24 relative`}
         >
             {/* 1. Global Header Status & GMS Dashboard */}
             {data ? (
@@ -209,7 +216,7 @@ export const MultiAssetSummary = ({ initialData }: MultiAssetSummaryProps) => {
                 />
             ) : (
                 // Skeleton Loader or Safe Header
-                <div className="w-full h-32 animate-pulse bg-slate-100 dark:bg-white/5" />
+                <div className="w-full h-32 animate-pulse bg-white/5" />
             )}
 
 
@@ -217,13 +224,23 @@ export const MultiAssetSummary = ({ initialData }: MultiAssetSummaryProps) => {
 
 
             {/* 5. Pulse Tiles (Sectors) - 4th Position (Indicators) */}
-            <div className="max-w-[1600px] mx-auto w-full px-4 md:px-8 mb-12">
-                <div className="flex items-center gap-3 mb-6 group cursor-pointer" onClick={() => router.push(`/wiki/macro-strategy?lang=${lang}`)}>
-                    <h2 className="text-slate-500 text-[10px] font-black uppercase tracking-[0.2em] group-hover:text-blue-400 transition-colors">Market Pulse</h2>
-                    <div className="h-[1px] flex-1 bg-slate-800/50 group-hover:bg-blue-500/30 transition-colors" />
-                    <span className="text-[9px] text-slate-600 font-bold opacity-0 group-hover:opacity-100 transition-all transform translate-x-[-10px] group-hover:translate-x-0">STRATEGY WIKI →</span>
+            <div className="w-full mb-12">
+                <div className="flex items-center gap-3 mb-6">
+                    <div className="flex items-center gap-2">
+                        <Activity className="w-4 h-4 text-sky-500" />
+                        <h2 className="text-slate-500 text-[10px] font-black uppercase tracking-[0.2em]">Market Pulse</h2>
+                    </div>
+                    <div className="h-[1px] flex-1 bg-slate-800/50" />
+                    <button
+                        onClick={() => setIsSettingsOpen(true)}
+                        className="flex items-center justify-center p-0 h-6 w-6 rounded border border-transparent transition-all bg-transparent hover:bg-neutral-800 text-[#FEF3C7]"
+                        aria-label="Customize Terminal"
+                        title="Customize Terminal"
+                    >
+                        <Settings className="w-3.5 h-3.5" />
+                    </button>
                 </div>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                     {(tiles.length > 0 ? tiles : DEFAULT_ORDER).map(id => renderTile(id))}
                 </div>
             </div>
@@ -239,8 +256,6 @@ export const MultiAssetSummary = ({ initialData }: MultiAssetSummaryProps) => {
                 hiddenTiles={hiddenTiles}
                 onUpdate={handleUpdateConfig}
                 onReset={handleReset}
-                isDark={theme === 'dark'}
-                onToggleTheme={toggleTheme}
                 lang={lang}
                 systemInfo={{
                     lastUpdated: getFormattedDate(),

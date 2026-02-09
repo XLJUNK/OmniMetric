@@ -95,14 +95,13 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         {/* @ts-expect-error: Impact.com requires non-standard 'value' attribute */}
         <meta name="impact-site-verification" value="077c2f6e-dfc6-4a7e-a10e-65c42ed1337e" />
       </head>
       <body
-        className={`${inter.variable} ${notoJP.variable} ${notoAR.variable} ${notoHI.variable} antialiased selection:bg-cyan-500/30`}
-        style={{ overflowX: 'hidden' }}
+        className={`${inter.variable} ${notoJP.variable} ${notoAR.variable} ${notoHI.variable} antialiased selection:bg-cyan-500/30 overflow-x-hidden`}
       >
         <script
           type="application/ld+json"
@@ -128,10 +127,10 @@ export default function RootLayout({
             </Suspense>
 
             {/* MAIN CONTENT AREA with Offset for Fixed Sidebar (Hidden on Mobile) */}
-            <div className="flex-1 flex flex-col relative min-w-0 md:ms-[60px] transition-all duration-300 pt-[54px] md:pt-0 pb-0">
+            <div className="flex-1 flex flex-col relative min-w-0 md:ms-[60px] transition-all duration-300 pt-[54px] md:pt-0 pb-0 overflow-hidden">
               {/* TOP AD BANNER (Desktop Only - Optional) */}
-              <div className="hidden md:flex justify-center py-4 bg-[#0a0a0a] border-b border-[#1E293B]">
-                <div className="w-[728px] h-[90px] bg-[#111]">
+              <div className="hidden md:flex justify-center py-4 bg-black border-b border-[#1E293B]">
+                <div className="w-[728px] h-[90px] bg-black">
                   <AdUnit />
                 </div>
               </div>
@@ -143,8 +142,7 @@ export default function RootLayout({
               #nextjs-dev-indicator,
               [data-nextjs-static-indicator],
               #__next-prerender-indicator,
-              .next-route-announcer,
-              [data-nextjs-portal] { 
+              .next-route-announcer { 
                 display: none !important; 
                 opacity: 0 !important; 
                 visibility: hidden !important; 
@@ -152,7 +150,7 @@ export default function RootLayout({
               }
             ` }} />
 
-              <main className="flex-grow">
+              <main className="flex-grow flex flex-col w-full max-w-[1600px] mx-auto px-4 md:px-6">
                 {children}
               </main>
 
@@ -174,7 +172,9 @@ export default function RootLayout({
           <Analytics />
           <SpeedInsights />
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ''} />
-          <CookieBanner />
+          <Suspense fallback={null}>
+            <CookieBanner />
+          </Suspense>
         </ThemeProvider>
       </body>
     </html>

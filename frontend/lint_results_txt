@@ -1,0 +1,340 @@
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\app\[lang]\legal\privacy-policy\page.tsx
+    6:10  warning  'LanguageSelector' is defined but never used  @typescript-eslint/no-unused-vars
+  119:68  error    Unexpected any. Specify a different type      @typescript-eslint/no-explicit-any
+  123:70  error    Unexpected any. Specify a different type      @typescript-eslint/no-explicit-any
+  142:69  error    Unexpected any. Specify a different type      @typescript-eslint/no-explicit-any
+  161:62  error    Unexpected any. Specify a different type      @typescript-eslint/no-explicit-any
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\app\[lang]\legal\terms\page.tsx
+    5:10  warning  'LanguageSelector' is defined but never used  @typescript-eslint/no-unused-vars
+  105:66  error    Unexpected any. Specify a different type      @typescript-eslint/no-explicit-any
+  147:68  error    Unexpected any. Specify a different type      @typescript-eslint/no-explicit-any
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\app\[lang]\wiki\[slug]\page.tsx
+   10:21   warning  'Share2' is defined but never used                               @typescript-eslint/no-unused-vars
+   10:41   warning  'BookOpen' is defined but never used                             @typescript-eslint/no-unused-vars
+   10:51   warning  'Quote' is defined but never used                                @typescript-eslint/no-unused-vars
+   10:68   warning  'Home' is defined but never used                                 @typescript-eslint/no-unused-vars
+  191:48   warning  'lang' is defined but never used                                 @typescript-eslint/no-unused-vars
+  214:85   error    Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+  423:99   error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  425:110  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\app\[lang]\wiki\page.tsx
+  8:10  warning  'ClientDirectionProvider' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\app\analysis\[date]\page.tsx
+  5:17  warning  'Clock' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\app\api\archive\[date]\route.ts
+  7:35  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\app\api\archive\list\route.ts
+  6:5  warning  'request' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\app\api\health\route.ts
+  17:27  warning  'request' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\app\api\live\route.ts
+   4:27  warning  'internalErrorResponse' is defined but never used  @typescript-eslint/no-unused-vars
+  10:27  warning  'request' is defined but never used                @typescript-eslint/no-unused-vars
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\app\api\og\commodities\route.tsx
+  155:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\app\api\og\main\route.tsx
+  138:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  161:34  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\app\api\proxy\fmp\route.ts
+  37:25  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  43:14  warning  'error' is defined but never used         @typescript-eslint/no-unused-vars
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\app\api\proxy\fred\route.ts
+  33:25  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  39:14  warning  'error' is defined but never used         @typescript-eslint/no-unused-vars
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\app\api\signal\route.ts
+   9:27  warning  'request' is defined but never used             @typescript-eslint/no-unused-vars
+  25:17  warning  'foundPath' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\app\api\test-gateway\route.ts
+   7:27  warning  'request' is defined but never used       @typescript-eslint/no-unused-vars
+  22:20  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  29:37  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  42:21  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\app\archive\[date]\page.tsx
+    7:10  warning  'Activity' is defined but never used      @typescript-eslint/no-unused-vars
+   15:38  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  108:85  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  109:54  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\app\archive\page.tsx
+    9:67  warning  'TrendingUp' is defined but never used    @typescript-eslint/no-unused-vars
+   16:48  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  120:80  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\app\contact\page.tsx
+  3:8  warning  'Link' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\app\glossary\page.tsx
+  8:10  warning  'WikiSearch' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\app\legal\disclaimer\page.tsx
+  23:60  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  23:70  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\app\maxims\page.tsx
+   72:7   warning  'getSubtitle' is assigned a value but never used                 @typescript-eslint/no-unused-vars
+  184:57  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  184:70  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\app\privacy\page.tsx
+  19:74   error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  19:82   error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  19:147  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\app\technical\page.tsx
+  71:7  warning  'getSubtitle' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\app\test-heatmap\page.tsx
+  8:36  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\components\AdUnit.tsx
+  29:41  error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  35:38  warning  'err' is defined but never used                                                                                      @typescript-eslint/no-unused-vars
+  35:43  error    Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\components\Charts.tsx
+    4:10   warning  'PieChart' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+    4:20   warning  'Pie' is defined but never used                                                                                      @typescript-eslint/no-unused-vars
+    4:25   warning  'Cell' is defined but never used                                                                                     @typescript-eslint/no-unused-vars
+    4:69   warning  'XAxis' is defined but never used                                                                                    @typescript-eslint/no-unused-vars
+    4:83   warning  'Tooltip' is defined but never used                                                                                  @typescript-eslint/no-unused-vars
+    4:92   warning  'LineChart' is defined but never used                                                                                @typescript-eslint/no-unused-vars
+    4:103  warning  'Line' is defined but never used                                                                                     @typescript-eslint/no-unused-vars
+   41:37   error    Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   65:74   error    Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   73:5    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  107:18   warning  'e' is defined but never used                                                                                        @typescript-eslint/no-unused-vars
+  173:44   warning  'currentPrice' is defined but never used                                                                             @typescript-eslint/no-unused-vars
+  173:58   warning  'startDate' is defined but never used                                                                                @typescript-eslint/no-unused-vars
+  173:69   warning  'endDate' is defined but never used                                                                                  @typescript-eslint/no-unused-vars
+  173:78   warning  'yRange' is defined but never used                                                                                   @typescript-eslint/no-unused-vars
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\components\ClientDirectionProvider.tsx
+  3:10  warning  'DICTIONARY' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\components\CookieBanner.tsx
+  15:13  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\components\CookieBanner.tsx:15:13
+  13 |         const consent = localStorage.getItem('cookie_consent');
+  14 |         if (!consent) {
+> 15 |             setIsVisible(true);
+     |             ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  16 |         } else if (consent === 'granted') {
+  17 |             loadScripts();
+  18 |         }  react-hooks/set-state-in-effect
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\components\DynamicStructuredData.tsx
+  16:72  error  Unexpected any. Specify a different type                                                                                      @typescript-eslint/no-explicit-any
+  30:5   error  React Hook "useEffect" is called conditionally. React Hooks must be called in the exact same order in every component render  react-hooks/rules-of-hooks
+  41:25  error  Unexpected any. Specify a different type                                                                                      @typescript-eslint/no-explicit-any
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\components\GlossaryClient.tsx
+  219:65  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  219:85  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\components\LegalFooter.tsx
+  7:10  warning  'useTheme' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\components\LiveWikiData.tsx
+  37:38  warning  'lang' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\components\MobileMenu.tsx
+  2:51  warning  'Globe' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\components\MobileNav.tsx
+  13:13  warning  'theme' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\components\MultiAssetSummary.tsx
+  77:8   warning  React Hook React.useEffect has a missing dependency: 'DEFAULT_ORDER'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  90:26  warning  'e' is defined but never used                                                                                           @typescript-eslint/no-unused-vars
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\components\PulseTile.tsx
+   12:102  error    Unexpected any. Specify a different type       @typescript-eslint/no-explicit-any
+   13:13   warning  'isMobile' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  110:72   error    Unexpected any. Specify a different type       @typescript-eslint/no-explicit-any
+  111:77   error    Unexpected any. Specify a different type       @typescript-eslint/no-explicit-any
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\components\Sidebar.tsx
+  2:51  warning  'ChevronRight' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\components\TerminalPage.tsx
+   4:8   warning  'Link' is defined but never used          @typescript-eslint/no-unused-vars
+   7:10  warning  'ChevronDown' is defined but never used   @typescript-eslint/no-unused-vars
+   7:23  warning  'Shield' is defined but never used        @typescript-eslint/no-unused-vars
+   7:31  warning  'Activity' is defined but never used      @typescript-eslint/no-unused-vars
+   7:41  warning  'Globe' is defined but never used         @typescript-eslint/no-unused-vars
+  25:45  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\components\TerminalSettings.tsx
+  35:14  warning  'e' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                @typescript-eslint/no-unused-vars
+  59:21  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\components\TerminalSettings.tsx:59:21
+  57 |     // Animation handling
+  58 |     useEffect(() => {
+> 59 |         if (isOpen) setMount(true);
+     |                     ^^^^^^^^ Avoid calling setState() directly within an effect
+  60 |         else setTimeout(() => setMount(false), 300);
+  61 |     }, [isOpen]);
+  62 |  react-hooks/set-state-in-effect
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\components\ThemeBackgroundWrapper.tsx
+  9:11  warning  'pathname' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\components\ThemeProvider.tsx
+  20:9   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\components\ThemeProvider.tsx:20:9
+  18 |
+  19 |     useEffect(() => {
+> 20 |         setMounted(true);
+     |         ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  21 |         // FORCE DEFAULT DARK: Only load from storage if present.
+  22 |         // We explicitly DO NOT check window.matchMedia('(prefers-color-scheme: dark)')
+  23 |         // so that the default is always dark regardless of OS settings  react-hooks/set-state-in-effect
+  52:18  warning  'e' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\components\ToastNotification.tsx
+  17:13  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\components\ToastNotification.tsx:17:13
+  15 |     useEffect(() => {
+  16 |         if (isVisible) {
+> 17 |             setShouldRender(true);
+     |             ^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  18 |             const timer = setTimeout(() => {
+  19 |                 onClose();
+  20 |             }, 2000); // 2 seconds display  react-hooks/set-state-in-effect
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\data\seo.ts
+  22:5  warning  'style' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\dist\generate_insight.js
+  36:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  37:19  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  38:29  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  39:27  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\dist\test_no_dotenv.js
+  3:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  4:19  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\hooks\useDevice.ts
+  31:13  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\hooks\useDevice.ts:31:13
+  29 |
+  30 |         if (initialDevice) {
+> 31 |             setDevice(prev => ({
+     |             ^^^^^^^^^ Avoid calling setState() directly within an effect
+  32 |                 ...prev,
+  33 |                 isMobile: initialDevice === 'mobile',
+  34 |                 isTablet: initialDevice === 'tablet',  react-hooks/set-state-in-effect
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\hooks\useSignalData.ts
+  10:46  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  55:22  warning  'e' is defined but never used             @typescript-eslint/no-unused-vars
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\lib\api-response.ts
+   63:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   86:15  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  112:15  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\lib\validation.ts
+  80:59  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  83:84  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  86:38  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\lib\wiki.ts
+    2:10  warning  'GlossaryTerm' is defined but never used  @typescript-eslint/no-unused-vars
+   41:11  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   59:37  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   60:38  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   61:35  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   99:14  warning  'e' is defined but never used             @typescript-eslint/no-unused-vars
+  131:67  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  147:26  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  148:38  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  178:25  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  179:36  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\next.config.ts
+  3:7   warning  'withPWA' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  3:17  error    A `require()` style import is forbidden       @typescript-eslint/no-require-imports
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\scripts\audit_coverage.js
+    1:12  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+    2:14  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+   97:34  warning  'e' is defined but never used            @typescript-eslint/no-unused-vars
+  106:22  warning  'e' is defined but never used            @typescript-eslint/no-unused-vars
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\scripts\fix_wiki_json.js
+   1:12  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+   2:14  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  30:14  warning  'e' is defined but never used            @typescript-eslint/no-unused-vars
+  75:18  warning  'e2' is defined but never used           @typescript-eslint/no-unused-vars
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\scripts\generate_insight.ts
+   15:10  warning  'e' is defined but never used                          @typescript-eslint/no-unused-vars
+   59:14  warning  'e' is defined but never used                          @typescript-eslint/no-unused-vars
+   84:9   error    'candidates' is never reassigned. Use 'const' instead  prefer-const
+  106:25  error    Unexpected any. Specify a different type               @typescript-eslint/no-explicit-any
+  120:35  error    Unexpected any. Specify a different type               @typescript-eslint/no-explicit-any
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\test-security.js
+   6:14  error    A `require()` style import is forbidden    @typescript-eslint/no-require-imports
+  50:17  warning  'data' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\test_ai.js
+  1:15  warning  'createGoogleGenerativeAI' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  1:44  error    A `require()` style import is forbidden                        @typescript-eslint/no-require-imports
+
+笨・149 problems (82 errors, 67 warnings)
+  1 error and 0 warnings potentially fixable with the `--fix` option.
+

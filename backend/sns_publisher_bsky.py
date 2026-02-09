@@ -24,6 +24,8 @@ class BlueskyPublisher:
             "HI": {"UP": "ऊपर", "DOWN": "नीचे", "NEUTRAL": "तठस्थ", "RISK-ON": "जोखिम-पर", "RISK-OFF": "जोखिम-मना"},
             "ID": {"UP": "NAIK", "DOWN": "TURUN", "NEUTRAL": "NETRAL", "RISK-ON": "RISK-ON", "RISK-OFF": "RISK-OFF"},
             "AR": {"UP": "صعود", "DOWN": "هبوط", "NEUTRAL": "محايد", "RISK-ON": "مخاطرة", "RISK-OFF": "تجنب"},
+            "DE": {"UP": "TOP", "DOWN": "FLOP", "NEUTRAL": "NEUTRAL", "RISK-ON": "RISK-ON", "RISK-OFF": "RISK-OFF"},
+            "FR": {"UP": "HAUSSE", "DOWN": "BAISSE", "NEUTRAL": "NEUTRE", "RISK-ON": "RISK-ON", "RISK-OFF": "RISK-OFF"},
         }
         
         score = data.get("gms_score", 50)
@@ -73,6 +75,8 @@ class BlueskyPublisher:
         elif lang == "ID": tags += " #Saham #Forex #Investasi"
         elif lang == "HI": tags += " #बाजार #निवेश #वित्त"
         elif lang == "AR": tags += " #استثمار #اقتصاد"
+        elif lang == "DE": tags += " #Börse #Finanzen #DAX"
+        elif lang == "FR": tags += " #Bourse #Finance #CAC40"
 
         # Construct Post
         # Format: 【GMS Score: XX/100】 [Trend] + [AI Insight] + Tags

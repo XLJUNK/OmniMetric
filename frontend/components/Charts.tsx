@@ -1,8 +1,9 @@
 'use client';
 
 import React from 'react';
-import { PieChart, Pie, Cell, ResponsiveContainer, AreaChart, Area, XAxis, YAxis, Tooltip, LineChart, Line } from 'recharts';
+import { ResponsiveContainer, AreaChart, Area, YAxis } from 'recharts';
 import { DICTIONARY } from '@/data/dictionary';
+import dynamic from 'next/dynamic';
 
 // --- RISK BAR COMPONENT (LINEAR GRADIENT) ---
 interface GaugeProps {
@@ -10,59 +11,65 @@ interface GaugeProps {
     lang?: string;
 }
 // --- REFINED RISK GAUGE: OVERLAY STYLE ---
-export const RiskGauge = ({ score, lang = 'EN' }: GaugeProps) => {
-    // Clamp score
-    const pct = Math.min(100, Math.max(0, score));
+export const RiskGauge = ({ score = 0, lang = 'EN' }: GaugeProps) => {
+    // Clamp score and handle NaN
+    const validScore = isNaN(score) ? 0 : score;
+    const pct = Math.min(100, Math.max(0, validScore));
     const isRTL = lang === 'AR';
 
     return (
         <div className="w-full relative mt-2 mb-2 gms-container">
             {/* Gradient Bar Wrapper (Height Fixed) */}
-            <div className="relative w-full" style={{ height: '1.625rem' }}>
+            <div className="relative w-full h-[1.625rem]">
                 {/* 1. The Gradient Background (Overflow Hidden for Rounded Corners) */}
-                <div className="absolute inset-0 w-full h-full !rounded-xl !border border-slate-300 dark:border-[#1E293B] overflow-hidden">
-                    <div
-                        className="absolute inset-0 w-full h-full"
-                        style={{
-                            backgroundImage: isRTL
-                                ? 'linear-gradient(90deg, #3b82f6 0%, #94a3b8 50%, #ef4444 100%)' // Blue(Acc) -> Red(Def) (Right is Def)
-                                : 'linear-gradient(90deg, #ef4444 0%, #94a3b8 50%, #3b82f6 100%)'
-                        }}
-                    />
+                <div
+                    className={`absolute inset-0 w-full h-full rounded-full border border-slate-700 overflow-hidden ${isRTL
+                        ? 'bg-gradient-to-r from-[#3b82f6] via-[#94a3b8] to-[#ef4444]'
+                        : 'bg-gradient-to-r from-[#ef4444] via-[#94a3b8] to-[#3b82f6]'
+                        }`}
+                >
                 </div>
 
-                {/* 2. The Marker (Outside overflow-hidden, so it acts as an overlay) */}
+                {/* 2. The Marker (Overlay on top of the bar, matching height) */}
                 <div
-                    className="absolute top-1/2 flex flex-col items-center z-50 transition-all duration-700 ease-out pointer-events-none"
+                    className="absolute top-0 bottom-0 h-full flex flex-col items-center justify-center z-50 transition-all duration-700 ease-out pointer-events-none"
                     style={{
                         left: isRTL ? 'auto' : `${pct}%`,
                         right: isRTL ? `${pct}%` : 'auto',
-                        transform: 'translateY(-50%) translateX(calc(50% * var(--dir)))',
-                        ['--dir' as any]: isRTL ? 1 : -1
+                        transform: 'translateX(calc(-50% * var(--dir)))',
+                        ['--dir' as string]: isRTL ? 1 : 1
                     }}
                 >
-                    <div className="bg-[#1e293b] border border-[#1e293b] px-1.5 py-0.5 rounded shadow-xl mb-1 transition-colors duration-300">
-                        <span className="text-[0.75rem] font-black text-white leading-none tabular-nums tracking-tighter" style={{ color: '#FFFFFF' }}>
-                            {Math.round(score)}
+                    <div
+                        className="h-full flex items-center justify-center border-slate-700 px-2 rounded-md transition-colors duration-300 border !bg-black shadow-sm"
+                        style={{ backgroundColor: 'black' }}
+                    >
+                        <span
+                            className="text-[0.75rem] font-black leading-none tabular-nums tracking-tighter !text-white mt-[1px]"
+                        >
+                            {Math.round(validScore)}
                         </span>
                     </div>
-                    {/* Arrow */}
-                    <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-[#1e293b] drop-shadow-sm transition-colors duration-300"></div>
+                    {/* Arrow (Restored) */}
+                    <div
+                        className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-black"
+                        style={{ borderTopColor: 'black' }}
+                    ></div>
                 </div>
             </div>
 
             {/* Labels */}
-            <div className={`flex justify-between px-1 mt-1 relative z-0`}>
-                <span className="text-fluid-xs font-bold text-[#ef4444] uppercase tracking-widest drop-shadow-sm">Defensive</span>
-                <span className="text-fluid-xs font-bold text-slate-400 uppercase tracking-widest drop-shadow-sm">Neutral</span>
-                <span className="text-fluid-xs font-bold text-[#3b82f6] uppercase tracking-widest drop-shadow-sm">Accumulate</span>
-            </div>
+            <div className="absolute top-[35%] left-[5%] text-[8px] sm:text-[10px] font-black text-rose-500 tracking-tighter sm:tracking-normal">DEFENSIVE</div>
+            <div className="absolute top-[35%] left-[45%] text-[8px] sm:text-[10px] font-black text-slate-500 tracking-tighter sm:tracking-normal">NEUTRAL</div>
+            <div className="absolute top-[35%] right-[5%] text-[8px] sm:text-[10px] font-black text-sky-500 tracking-tighter sm:tracking-normal">ACCUMULATE</div>
         </div>
     );
 };
 
-import dynamic from 'next/dynamic';
-const Plot = dynamic(() => import('react-plotly.js'), { ssr: false }) as any;
+const Plot = dynamic(() => import('@/components/PlotlyChart'), {
+    ssr: false,
+    loading: () => <div className="h-full w-full flex items-center justify-center text-[10px] text-slate-600 font-mono uppercase animate-pulse">Loading Chart...</div>
+});
 
 // --- HISTORY CHART (PLOTLY IMPLEMENTATION) ---
 interface HistoryEntry {
@@ -70,7 +77,7 @@ interface HistoryEntry {
     score: number;
 }
 export const HistoryChart = ({ data, lang = 'EN', color = '#0ea5e9' }: { data: HistoryEntry[], lang?: string, color?: string }) => {
-    // @ts-ignore
+    // @ts-expect-error: DICTIONARY indexing might be slightly off for some LangType values
     const t = DICTIONARY[lang] || DICTIONARY['EN'];
 
     if (!data || data.length === 0) return (
@@ -104,7 +111,7 @@ export const HistoryChart = ({ data, lang = 'EN', color = '#0ea5e9' }: { data: H
                 ...d,
                 date: `${m}/${day} ${h}:${min}`
             };
-        } catch (e) {
+        } catch {
             return d;
         }
     });
@@ -170,7 +177,7 @@ interface MetricChartProps {
     yRange?: [number, number];
 }
 
-export const MetricChart = ({ data, color, currentPrice, startDate, endDate, yRange }: MetricChartProps) => {
+export const MetricChart = ({ data, color }: MetricChartProps) => {
     if (!data || data.length === 0) return null;
 
     // Convert array to object array for Recharts

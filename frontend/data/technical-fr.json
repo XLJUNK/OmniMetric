@@ -1,0 +1,177 @@
+[
+    {
+        "category": "Indicateurs de tendance (Trend Indicators)",
+        "indicators": [
+            {
+                "name": "Moyenne mobile (SMA/EMA)",
+                "description": "Ligne de base pour les tendances de prix.",
+                "usage": "Prix au-dessus de SMA = Tendance haussière. Prix en dessous de SMA = Tendance baissière."
+            },
+            {
+                "name": "Bandes de Bollinger (Bollinger Bands)",
+                "description": "Mesure le prix par rapport à la volatilité ; le 'squeeze' signale de grands mouvements.",
+                "usage": "Prix touche bande supérieure = Suracheté. Bande inférieure = Survendu. Squeeze = Cassure imminente."
+            },
+            {
+                "name": "Nuage d'Ichimoku (Ichimoku Cloud)",
+                "description": "Système japonais complet de suivi de tendance (Kumo).",
+                "usage": "Prix au-dessus du nuage = Haussier. Sous le nuage = Baissier. Épaisseur du nuage indique force support/résistance."
+            },
+            {
+                "name": "ADX (Average Directional Index)",
+                "description": "Mesure la force de la tendance indépendamment de la direction.",
+                "usage": "ADX > 25 = Tendance forte. ADX < 20 = Tendance faible/latérale."
+            },
+            {
+                "name": "Parabolic SAR",
+                "description": "Identifie les retournements potentiels dans les marchés tendanciels.",
+                "usage": "Points sous la bougie = Tendance haussière. Points au-dessus de la bougie = Tendance baissière."
+            },
+            {
+                "name": "SuperTrend",
+                "description": "Indicateur de suivi de tendance simplifié basé sur l'ATR.",
+                "usage": "Ligne verte sous le prix = Signal d'achat. Ligne rouge au-dessus du prix = Signal de vente."
+            },
+            {
+                "name": "MACD",
+                "description": "Mesure la force de la tendance et les changements de momentum.",
+                "usage": "Croisement de ligne de signal = Signal d'entrée/sortie. Histogramme montre force du momentum."
+            }
+        ]
+    },
+    {
+        "category": "Indicateurs de volatilité (Volatility Indicators)",
+        "indicators": [
+            {
+                "name": "ATR (Average True Range)",
+                "description": "Étalon-or pour mesurer la volatilité du marché et placer les stops.",
+                "usage": "ATR élevé = Haute volatilité. Utilisé pour calculer la distance du stop-loss."
+            },
+            {
+                "name": "Canaux de Keltner (Keltner Channels)",
+                "description": "Enveloppes basées sur la volatilité similaires aux Bandes de Bollinger mais utilisant l'ATR.",
+                "usage": "Clôture du prix hors du canal = Forte continuation de tendance."
+            },
+            {
+                "name": "Volatilité de Chaikin (Chaikin Volatility)",
+                "description": "Compare l'écart entre les hauts et les bas.",
+                "usage": "Volatilité croissante signale souvent distribution large (sommet) ou panique (creux)."
+            },
+            {
+                "name": "Écart-type (Standard Deviation)",
+                "description": "Base mathématique pour mesurer la dispersion des prix.",
+                "usage": "Écart-type élevé = Risque élevé (grande volatilité). Faible = Cohésion."
+            }
+        ]
+    },
+    {
+        "category": "Momentum & Oscillateurs (Momentum & Oscillators)",
+        "indicators": [
+            {
+                "name": "RSI (Relative Strength Index)",
+                "description": "Identifie les conditions de surachat ou de survente.",
+                "usage": "> 70 = Suracheté (risque de vente). < 30 = Survendu (opportunité d'achat)."
+            },
+            {
+                "name": "Oscillateur stochastique (Stochastic Oscillator)",
+                "description": "Compare le prix de clôture à sa fourchette de prix dans le temps.",
+                "usage": "> 80 = Suracheté. < 20 = Survendu. Les croisements signalent des retournements."
+            },
+            {
+                "name": "CCI (Commodity Channel Index)",
+                "description": "Mesure les écarts par rapport à la moyenne statistique.",
+                "usage": "> +100 = Forte tendance haussière. < -100 = Forte tendance baissière."
+            },
+            {
+                "name": "Williams %R",
+                "description": "Indicateur de momentum mesurant les niveaux de surachat/survente.",
+                "usage": "0 à -20 = Suracheté. -80 à -100 = Survendu."
+            },
+            {
+                "name": "Taux de changement (ROC)",
+                "description": "Momentum pur mesurant le changement de prix en pourcentage.",
+                "usage": "Positif et en hausse = Accélération. Négatif = Ralentissement."
+            },
+            {
+                "name": "Indice de flux monétaire (MFI)",
+                "description": "'RSI pondéré par le volume' montrant pression d'achat/vente.",
+                "usage": "> 80 = Suracheté (confirmé par volume). < 20 = Survendu."
+            }
+        ]
+    },
+    {
+        "category": "Volume & Liquidité (Volume & Liquidity)",
+        "indicators": [
+            {
+                "name": "On-Balance Volume (OBV)",
+                "description": "Utilise le flux de volume pour prédire les changements de prix des actions.",
+                "usage": "OBV en hausse confirme tendance haussière. Divergence (prix haut, OBV bas) avertit du retournement."
+            },
+            {
+                "name": "VWAP (Volume Weighted Average Price)",
+                "description": "Référence institutionnelle pour le prix moyen.",
+                "usage": "Les institutions achètent sous VWAP, vendent au-dessus de VWAP. Support/résistance intraday."
+            },
+            {
+                "name": "Profil de volume (Volume Profile)",
+                "description": "Montre l'activité de trading à des niveaux de prix spécifiques (zone de valeur).",
+                "usage": "Point de contrôle (POC) agit comme un aimant de prix."
+            },
+            {
+                "name": "Chaikin Money Flow (CMF)",
+                "description": "Mesure le volume du flux monétaire sur une période.",
+                "usage": "Au-dessus de 0 = Pression d'achat. En dessous de 0 = Pression de vente."
+            },
+            {
+                "name": "Ligne d'accumulation/distribution (A/D Line)",
+                "description": "Évalue le flux monétaire cumulatif entrant et sortant d'un actif.",
+                "usage": "Ligne A/D monte pendant que prix plat = Accumulation (haussier)."
+            }
+        ]
+    },
+    {
+        "category": "Mathématique & Structurel (Mathematical & Structural)",
+        "indicators": [
+            {
+                "name": "Retracement de Fibonacci (Fibonacci Retracement)",
+                "description": "Identifie les niveaux de support et résistance stratégiques.",
+                "usage": "Niveaux clés : 38,2%, 50%, 61,8% (Nombre d'or) agissent comme support/résistance."
+            },
+            {
+                "name": "Points pivots (Pivot Points)",
+                "description": "Indicateurs prédictifs pour identifier support et résistance.",
+                "usage": "Calculés à partir du haut, bas et clôture de la veille. Utilisés pour objectifs de trading intraday."
+            },
+            {
+                "name": "Pente de régression linéaire (Linear Regression Slope)",
+                "description": "Mesure la vitesse du changement de prix en utilisant les statistiques.",
+                "usage": "Pente positive forte = Tendance forte. Pente plate = Oscillation."
+            },
+            {
+                "name": "Fractales (Fractals)",
+                "description": "Identifie les points de retournement basés sur des motifs répétitifs.",
+                "usage": "Fractale haussière signale sommet potentiel. Fractale baissière signale creux potentiel."
+            },
+            {
+                "name": "Z-Score",
+                "description": "Mesure combien d'écarts-types le prix est éloigné de la moyenne.",
+                "usage": "Z-score positif élevé = Statistiquement cher. Négatif élevé = Bon marché."
+            },
+            {
+                "name": "Coefficient de corrélation (Correlation Coefficient)",
+                "description": "Analyse comment deux actifs différents se déplacent l'un par rapport à l'autre.",
+                "usage": "+1 = Corrélation parfaite. -1 = Corrélation inverse. 0 = Pas de corrélation."
+            },
+            {
+                "name": "Largeur du marché (Market Breadth)",
+                "description": "Analyse le nombre d'actions en hausse vs en baisse.",
+                "usage": "Largeur croissante confirme marché haussier sain."
+            },
+            {
+                "name": "Excursion adverse maximale (MAE)",
+                "description": "Mesure la plus grande perte non réalisée pendant un trade.",
+                "usage": "Utilisé pour analyse post-trade pour optimiser placement du stop-loss."
+            }
+        ]
+    }
+]

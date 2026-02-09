@@ -1,6 +1,5 @@
 'use client';
 
-import { DICTIONARY } from '@/data/dictionary';
 import { useCurrentLang } from '@/hooks/useCurrentLang';
 import { useEffect } from 'react';
 

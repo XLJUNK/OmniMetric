@@ -1,17 +1,24 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Activity, Zap, ChevronDown, Info, X, Settings } from 'lucide-react';
+import { Activity, Zap, ChevronDown, Info, Settings, X } from 'lucide-react';
 import { RiskGauge, HistoryChart } from '@/components/Charts';
 import { DICTIONARY, LangType } from '@/data/dictionary';
 
-import { useRouter } from 'next/navigation';
-import { useTheme } from '@/components/ThemeProvider';
+import { useRouter, usePathname } from 'next/navigation';
 import { NewsTicker } from '@/components/NewsTicker';
 import { AdUnit } from '@/components/AdUnit';
 import MESSAGES from '@/data/messages.json';
 import { TVPartnerCard } from '@/components/TVPartnerCard';
 import { MarketAnalysisWidget } from '@/components/analysis/MarketAnalysisWidget';
+import { createPortal } from 'react-dom';
+import { MarketHeatmap } from '@/components/MarketHeatmap';
+import { OmniWarningBeacons } from '@/components/OmniWarningBeacons';
+import { OmniGravityVector } from '@/components/OmniGravityVector';
+import { ExplanationModal } from '@/components/ExplanationModal';
+import { LanguageSelector } from '@/components/LanguageSelector';
+import { IndicatorHelpButton } from '@/components/IndicatorHelpButton';
+
 
 import { SignalData } from '@/lib/signal';
 
@@ -24,10 +31,16 @@ interface GMSHeaderProps {
 
 export const GMSHeaderSection = ({ data, lang, onOpenSettings }: GMSHeaderProps) => {
     const [showInfo, setShowInfo] = useState(false);
-    const [isLangOpen, setIsLangOpen] = useState(false);
-
-    const { theme } = useTheme();
+    const [showOwbInfo, setShowOwbInfo] = useState(false);
+    const [showOgvInfo, setShowOgvInfo] = useState(false);
+    const [showOtgInfo, setShowOtgInfo] = useState(false);
+    const [mounted, setMounted] = useState(false);
     const router = useRouter();
+    const pathname = usePathname();
+
+    React.useEffect(() => {
+        setMounted(true);
+    }, []);
 
     // 0. Safety Guard: Immediate Exit if No Data
     if (!data) return null;
@@ -36,11 +49,6 @@ export const GMSHeaderSection = ({ data, lang, onOpenSettings }: GMSHeaderProps)
     const t = DICTIONARY[lang] || DICTIONARY['EN'];
 
     // Helper to change language via URL
-    const setLang = (l: LangType) => {
-        const currentParams = new URLSearchParams(window.location.search);
-        currentParams.set('lang', l);
-        router.push(`${window.location.pathname}?${currentParams.toString()}`);
-    };
 
     const getDynamicFallback = () => {
         const score = data?.gms_score || 50;
@@ -85,186 +93,42 @@ export const GMSHeaderSection = ({ data, lang, onOpenSettings }: GMSHeaderProps)
     }
 
     return (
-        <div className="w-full gms-container">
-            {/* METHODOLOGY MODAL (Abolished ALL transparency for maximum structural solidity) */}
-            {showInfo && (
-                <div
-                    className="fixed inset-0 z-[9999] flex items-center justify-center p-4"
-                    style={{ backgroundColor: theme === 'dark' ? '#000000' : '#0F172A' }}
-                    onClick={() => setShowInfo(false)}
-                >
-                    <div
-                        className="border rounded-xl w-full max-w-2xl p-6 shadow-2xl relative"
-                        style={{
-                            backgroundColor: theme === 'dark' ? '#0A0A0A' : '#FFFFFF',
-                            borderColor: theme === 'dark' ? '#1E293B' : '#E2E8F0'
-                        }}
-                        onClick={e => e.stopPropagation()}
-                    >
-                        <div className="flex justify-between items-start mb-4 border-b pb-2"
-                            style={{ borderColor: theme === 'dark' ? '#1E293B' : '#F1F5F9' }}>
-                            <div>
-                                <h2 className="text-2xl font-black uppercase tracking-tighter"
-                                    style={{ color: theme === 'dark' ? '#FFFFFF' : '#0F172A' }}>
-                                    {t.methodology.title}
-                                </h2>
-                                <p className="text-[10px] font-mono mt-1"
-                                    style={{ color: theme === 'dark' ? '#94A3B8' : '#64748B' }}>Institutional Quant Logic v2.4</p>
-                            </div>
-                            <button
-                                onClick={() => setShowInfo(false)}
-                                className="p-2 rounded-full transition-colors group"
-                                style={{ backgroundColor: 'transparent' }}
-                                aria-label="Close"
-                            >
-                                <X className="w-6 h-6" style={{ color: theme === 'dark' ? '#64748B' : '#94A3B8' }} />
-                            </button>
-                        </div>
+        <div className="w-full">
 
-                        <div className="space-y-6 max-h-[70vh] overflow-y-auto pr-2 custom-scrollbar">
-                            <section>
-                                <h3 className="text-xs font-bold uppercase tracking-widest mb-3 flex items-center gap-2"
-                                    style={{ color: theme === 'dark' ? '#E2E8F0' : '#0F172A' }}>
-                                    <Activity className="w-3.5 h-3.5 text-sky-500" />
-                                    CORE LOGIC
-                                </h3>
-                                <p className="text-sm leading-relaxed font-sans"
-                                    style={{ color: theme === 'dark' ? '#94A3B8' : '#334155' }}>
-                                    {t.methodology.desc}
-                                </p>
-                            </section>
-
-                            <div className="space-y-4">
-                                <div className="p-4 rounded-lg border"
-                                    style={{
-                                        backgroundColor: theme === 'dark' ? '#1E1B4B' : '#EEF2FF',
-                                        borderColor: theme === 'dark' ? '#312E81' : '#C7D2FE'
-                                    }}>
-                                    <span className="block font-bold mb-1"
-                                        style={{ color: theme === 'dark' ? '#A5B4FC' : '#1E40AF' }}>{t.methodology.zone_accumulate}</span>
-                                    <p className="text-xs font-medium"
-                                        style={{ color: theme === 'dark' ? '#C7D2FE' : '#1E40AF' }}>{t.methodology.zone_accumulate_desc}</p>
-                                </div>
-                                <div className="p-4 rounded-lg border"
-                                    style={{
-                                        backgroundColor: theme === 'dark' ? '#0F172A' : '#F8FAFC',
-                                        borderColor: theme === 'dark' ? '#1E293B' : '#E2E8F0'
-                                    }}>
-                                    <span className="block font-bold mb-1"
-                                        style={{ color: theme === 'dark' ? '#94A3B8' : '#475569' }}>{t.methodology.zone_neutral}</span>
-                                    <p className="text-xs font-medium"
-                                        style={{ color: theme === 'dark' ? '#CBD5E1' : '#475569' }}>{t.methodology.zone_neutral_desc}</p>
-                                </div>
-                                <div className="p-4 rounded-lg border"
-                                    style={{
-                                        backgroundColor: theme === 'dark' ? '#450A0A' : '#FEF2F2',
-                                        borderColor: theme === 'dark' ? '#7F1D1D' : '#FECACA'
-                                    }}>
-                                    <span className="block font-bold mb-1"
-                                        style={{ color: theme === 'dark' ? '#FCA5A5' : '#991B1B' }}>{t.methodology.zone_defensive}</span>
-                                    <p className="text-xs font-medium"
-                                        style={{ color: theme === 'dark' ? '#FECACA' : '#991B1B' }}>{t.methodology.zone_defensive_desc}</p>
-                                </div>
-                            </div>
-
-                            <div className="border-t pt-4 flex flex-col gap-2"
-                                style={{ borderColor: theme === 'dark' ? '#1E293B' : '#F1F5F9' }}>
-                                <span className="text-[10px] uppercase tracking-widest mb-1"
-                                    style={{ color: theme === 'dark' ? '#64748B' : '#94A3B8' }}>{t.methodology.inputs}</span>
-                                <div className="flex flex-wrap gap-2">
-                                    {["VIX", "MOVE", "HY OAS", "NFCI", "M2"].map(tag => (
-                                        <span key={tag} className="text-[9px] font-mono px-2 py-1 rounded border"
-                                            style={{
-                                                backgroundColor: theme === 'dark' ? '#1E293B' : '#F1F5F9',
-                                                borderColor: theme === 'dark' ? '#334155' : '#E2E8F0',
-                                                color: theme === 'dark' ? '#94A3B8' : '#64748B'
-                                            }}>{tag}</span>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            )}
 
             {/* 1. Global Header Status */}
             <div
-                className="max-w-[1600px] mx-auto w-full px-4 md:px-6 py-3 border-b border-slate-200 dark:border-slate-800 relative z-50 transition-colors duration-300 bg-white dark:bg-[#0A0A0A]"
+                className="w-full px-2 md:px-6 py-3 border-0 relative z-50 bg-black"
             >
-                <div className="flex justify-between items-start">
+                <div className="flex flex-nowrap justify-between items-start gap-3">
                     {/* TITLE AREA */}
-                    <div className="pointer-events-auto cursor-pointer" onClick={() => router.push(`/?lang=${lang}`)}>
-                        <h1 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tighter mb-0 leading-none hover:text-sky-500 transition-colors text-slate-900 dark:text-white uppercase">OMNIMETRIC TERMINAL</h1>
+                    <div className="pointer-events-auto cursor-pointer min-w-0 flex-1" onClick={() => router.push(lang === 'EN' ? '/' : `/${lang.toLowerCase()}`)}>
+                        <h1 className="text-base sm:text-2xl md:text-3xl font-black tracking-tighter mb-0 leading-tight hover:text-sky-500 transition-colors text-slate-900 dark:text-white uppercase whitespace-normal break-normal">OMNIMETRIC TERMINAL</h1>
                         <h2 className="text-[10px] sm:text-sm md:text-base font-bold text-sky-500 tracking-[0.2em] uppercase mt-1">Global Macro Signal (GMS)</h2>
-                        <div className="h-px w-full mt-2 bg-slate-200 dark:bg-[#1E293B]" />
                     </div>
 
                     {/* CONTROLS AREA (TOP RIGHT) */}
                     <div className="flex items-center gap-3">
                         {/* LANGUAGE */}
-                        <div className="relative z-[10000]">
-                            <button
-                                onClick={() => setIsLangOpen(!isLangOpen)}
-                                className="flex items-center gap-2 h-7 px-3 text-[10px] font-bold uppercase tracking-widest rounded transition-all outline-none focus:outline-none appearance-none hover:opacity-80 border border-transparent"
-                                style={{
-                                    backgroundColor: theme === 'dark' ? '#000000' : '#F1F5F9',
-                                    color: theme === 'dark' ? '#FEF3C7' : '#000000'
-                                }}
-                            >
-                                {lang} <ChevronDown className="w-3 h-3" />
-                            </button>
-                            {isLangOpen && (
-                                <div
-                                    className="absolute top-full right-0 mt-1 w-24 rounded-md overflow-hidden z-[10001] pointer-events-auto border border-neutral-200 dark:border-neutral-800 outline-none shadow-lg flex flex-col p-1 opacity-100"
-                                    style={{ backgroundColor: theme === 'dark' ? '#000000' : '#FFFFFF' }}
-                                >
-                                    {(Object.keys(DICTIONARY) as LangType[]).map((l) => (
-                                        <button
-                                            key={l}
-                                            onClick={() => { setLang(l); setIsLangOpen(false); }}
-                                            className={`block w-full text-left px-3 py-2 text-[10px] uppercase transition-colors outline-none focus:outline-none appearance-none border-none rounded ${lang === l
-                                                ? 'bg-neutral-900 dark:bg-white text-white dark:text-black font-black'
-                                                : `bg-transparent font-bold ${theme === 'dark' ? 'text-[#FEF3C7] hover:bg-neutral-900 hover:text-white' : 'text-neutral-500 hover:bg-neutral-100 hover:text-neutral-900'}`
-                                                }`}
-                                        >
-                                            {l}
-                                        </button>
-                                    ))}
-                                </div>
-                            )}
-                        </div>
+                        <LanguageSelector currentLang={lang} mode="path" />
 
-                        {/* SETTINGS TRIGGER */}
-                        {onOpenSettings && (
-                            <button
-                                onClick={onOpenSettings}
-                                className="flex items-center justify-center p-0 h-7 w-7 rounded border border-transparent transition-all bg-transparent hover:bg-neutral-100 dark:hover:bg-neutral-800 dark:border-neutral-800"
-                                style={{ color: theme === 'dark' ? '#FEF3C7' : '#525252' }}
-                                aria-label="Customize Terminal"
-                                title="Customize Terminal"
-                            >
-                                <Settings className="w-4 h-4" />
-                            </button>
-                        )}
                     </div>
                 </div>
             </div>
 
             {/* 2. Primary GMS Score & AI Insight */}
-            <div className="max-w-[1600px] mx-auto w-full p-4 md:p-6 grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <div className="w-full p-2 md:p-6 grid grid-cols-1 lg:grid-cols-3 gap-4">
                 {/* GMS SCORE CARD */}
                 <div
-                    className="lg:col-span-1 !rounded-xl !border !border-slate-200 dark:!border-[#1E293B] !ring-0 !outline-none !shadow-sm p-4 flex flex-col items-center gap-4 relative overflow-visible group transition-colors duration-300 bg-white dark:bg-[#111]"
+                    className="lg:col-span-1 !rounded-xl !border-0 !shadow-none p-3 md:p-4 flex flex-col items-center gap-4 relative overflow-visible group transition-colors duration-300 bg-black"
                 >
                     {/* RISK GAUGE & INFO */}
                     <div className="w-full px-1 pt-2 pb-6">
-                        <div className="flex justify-end rtl:justify-start mb-1.5">
-                            <button
-                                className="text-[9px] font-mono font-bold tracking-widest text-slate-500 hover:text-slate-800 dark:hover:text-white transition-colors cursor-pointer border border-slate-200 dark:border-[#1E293B] px-2 py-0.5 rounded hover:bg-slate-100 dark:hover:bg-white/5"
+                        <div className="flex justify-end mb-1.5">
+                            <IndicatorHelpButton
+                                label="What's GMS"
                                 onClick={() => setShowInfo(true)}
-                            >
-                                [ What&apos;s GMS ]
-                            </button>
+                            />
                         </div>
                         <RiskGauge score={data.gms_score} lang={lang} />
                     </div>
@@ -276,13 +140,17 @@ export const GMSHeaderSection = ({ data, lang, onOpenSettings }: GMSHeaderProps)
                             color={data.gms_score > 60 ? "#3b82f6" : (data.gms_score < 40 ? "#ef4444" : "#eab308")}
                         />
                     </div>
+
+                    <div className="w-full mt-2">
+                        <OmniWarningBeacons onOpenInfo={() => setShowOwbInfo(true)} />
+                    </div>
                 </div>
 
                 {/* AI INSIGHT */}
                 <div
-                    className="lg:col-span-2 !rounded-xl !border !border-slate-200 dark:!border-[#1E293B] !ring-0 !outline-none !shadow-sm p-6 flex flex-col relative overflow-hidden group min-h-[14rem] transition-colors duration-300 bg-white dark:bg-[#111]"
+                    className="lg:col-span-2 !rounded-xl !border-0 !shadow-none p-4 md:p-6 pt-5 md:pt-7 pb-3 md:pb-4 flex flex-col relative overflow-hidden group min-h-[12rem] transition-colors duration-300 bg-black"
                 >
-                    <div className="flex items-center gap-2 mb-4 border-b !border-slate-100 dark:!border-[#1E293B] pb-3">
+                    <div className="flex items-center gap-2 mb-0 border-0 pb-0 leading-none">
                         <Zap className="w-3.5 h-3.5 text-sky-500" />
                         <h3 className="text-slate-400 text-[10px] font-semibold uppercase tracking-[0.2em] flex-grow">OmniMetric AI-Driven Global Insights</h3>
                         <div className="hidden sm:flex items-center gap-1 opacity-50 text-[9px] text-slate-500 font-mono">
@@ -290,14 +158,14 @@ export const GMSHeaderSection = ({ data, lang, onOpenSettings }: GMSHeaderProps)
                         </div>
                     </div>
 
-                    <div className="flex-grow mt-2">
-                        <p className={`text-slate-700 dark:text-slate-300 text-fluid-base leading-relaxed font-serif italic rtl:font-arabic rtl:not-italic rtl:text-right ${lang === 'AR' ? 'text-lg leading-loose' : ''}`}>
+                    <div className="mt-0 leading-none">
+                        <p className={`text-slate-700 dark:text-slate-300 text-fluid-base leading-[1.2] font-serif italic rtl:font-arabic rtl:not-italic rtl:text-right ${lang === 'AR' ? 'text-lg leading-loose' : ''}`}>
                             &quot;{aiContent}&quot;
                         </p>
                     </div>
 
                     {/* AIO: Citation Footer (Disclaimer stays, Citation removed) */}
-                    <div className="mt-6 pt-3 border-t border-slate-100 dark:border-[#1E293B] flex flex-col items-end gap-1">
+                    <div className="mt-0 pt-0 border-0 flex flex-col items-end gap-1">
                         <p className={`text-[0.56rem] text-slate-400 dark:text-slate-500 font-sans tracking-tight max-w-[90%] text-right leading-relaxed ${lang === 'AR' ? 'font-arabic' : ''}`}>
                             {(t.titles as Record<string, string>).ai_disclaimer}
                         </p>
@@ -341,39 +209,49 @@ export const GMSHeaderSection = ({ data, lang, onOpenSettings }: GMSHeaderProps)
                 </div>
             </div>
 
+            {/* OGV (Relocated Below AI Insight) */}
+            <div className="w-full px-2 md:px-6 mb-8 mt-4">
+                <OmniGravityVector lang={lang} onOpenInfo={() => setShowOgvInfo(true)} />
+            </div>
+
             {/* Market Analysis Widget (Strategic Placement: Below AI Insight) */}
-            <div className="max-w-[1600px] mx-auto w-full px-4 md:px-6 mb-8">
-                <MarketAnalysisWidget lang={lang} />
+            <div className="w-full px-2 md:px-6 mb-8">
+                <MarketAnalysisWidget lang={lang} onOpenInfo={() => setShowOtgInfo(true)} />
             </div>
 
             {/* PARTNER BANNER (Strategic Placement: Below AI Insight) */}
-            <div className="max-w-[1600px] mx-auto w-full px-4 md:px-6 mb-8">
+            <div className="w-full px-2 md:px-6 mb-8">
                 <TVPartnerCard lang={lang} />
             </div>
 
             {/* 3. News (Live Intelligence Stream) */}
-            <div className="max-w-[1600px] mx-auto w-full px-4 md:px-6 mb-4">
+            <div className="w-full px-2 md:px-6 mb-4">
                 <div
-                    className="border border-slate-200 dark:border-[#1E293B] rounded-xl overflow-hidden transition-colors duration-300 bg-white dark:bg-[#111]"
+                    className="border-0 rounded-xl overflow-hidden transition-colors duration-300 bg-black shadow-none"
                 >
-                    <div className="bg-slate-50 dark:bg-black/40 px-6 py-4 border-b border-slate-200 dark:border-[#1E293B]">
-                        <h3 className="text-slate-400 text-[10px] font-black uppercase tracking-[0.2em]">{(t.titles as Record<string, string>).live_stream || "LIVE INTELLIGENCE STREAM"}</h3>
+                    <div className="bg-black/40 px-6 py-4 border-0">
+                        <h3
+                            className="text-white !text-white text-[10px] font-black uppercase tracking-[0.2em]"
+                            style={{ color: 'white' }}
+                        >
+                            {(t.titles as Record<string, string>).live_stream || "LIVE INTELLIGENCE STREAM"}
+                        </h3>
                     </div>
                     <NewsTicker lang={lang} />
                 </div>
             </div>
 
             {/* 4. Breaking News / Risk Events */}
-            <div className="max-w-[1600px] mx-auto w-full px-4 md:px-8 mb-4">
+            <div className="w-full px-4 md:px-8 mb-4">
                 <div
-                    className="border border-slate-200 dark:border-[#1E293B] rounded-xl p-0 transition-colors duration-300 bg-white dark:bg-black"
+                    className="border-0 rounded-xl p-0 transition-colors duration-300 bg-black shadow-none"
                 >
                     {(!data.events || data.events.length === 0) ? (
                         <div className="p-4 text-xs text-slate-600 font-mono">NO UPCOMING RISK EVENTS DETECTED.</div>
                     ) : (
                         ([...(data.events || [])].sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()).slice(0, 3)).map((evt, i) => (
-                            <div key={i} className="flex flex-col border-b border-slate-100 dark:border-[#1E293B] last:border-0 py-3 px-4 hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
-                                <div className="flex items-center gap-2 rtl:flex-row-reverse rtl:justify-end">
+                            <div key={i} className="flex flex-col border-0 py-3 px-4 hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                <div className="flex items-center gap-2">
                                     <span dir="ltr" className={`text-xs font-bold font-mono whitespace-nowrap ${evt.impact === 'CRITICAL' ? 'text-red-500' : 'text-slate-500 dark:text-slate-300'}`}>
                                         [{evt.date}]
                                     </span>
@@ -387,9 +265,98 @@ export const GMSHeaderSection = ({ data, lang, onOpenSettings }: GMSHeaderProps)
                 </div>
             </div>
 
-            <div className="max-w-[1600px] mx-auto w-full px-4 md:px-8 mb-8">
+            <div className="w-full px-4 md:px-8 mb-8">
                 <AdUnit />
             </div>
-        </div >
+
+            {/* 7. Market Heatmap Section */}
+            <div className="w-full px-4 md:px-8 mb-12">
+                <MarketHeatmap data={data} lang={lang} />
+            </div>
+
+            {/* Standardized GMS Modal */}
+            {mounted && (
+                <ExplanationModal
+                    isOpen={showInfo}
+                    onClose={() => setShowInfo(false)}
+                    title={t.methodology.title}
+                >
+                    <div className="space-y-8">
+                        <section>
+                            <h3 className="text-xs font-bold uppercase tracking-widest mb-3 flex items-center gap-2 text-slate-200">
+                                <Activity className="w-3.5 h-3.5 text-sky-500" />
+                                CORE LOGIC
+                            </h3>
+                            <p className="text-sm leading-relaxed font-sans text-slate-400">
+                                {t.methodology.desc}
+                            </p>
+                        </section>
+
+                        <div className="space-y-4">
+                            <div className="p-4 rounded-lg border bg-blue-900/20 border-blue-800/50">
+                                <span className="block font-bold mb-1 text-blue-300">{t.methodology.zone_accumulate}</span>
+                                <p className="text-xs font-medium text-blue-400">{t.methodology.zone_accumulate_desc}</p>
+                            </div>
+                            <div className="p-4 rounded-lg border bg-slate-900/50 border-slate-800">
+                                <span className="block font-bold mb-1 text-slate-400">{t.methodology.zone_neutral}</span>
+                                <p className="text-xs font-medium text-slate-500">{t.methodology.zone_neutral_desc}</p>
+                            </div>
+                            <div className="p-4 rounded-lg border bg-red-900/20 border-red-900/50">
+                                <span className="block font-bold mb-1 text-red-300">{t.methodology.zone_defensive}</span>
+                                <p className="text-xs font-medium text-red-400">{t.methodology.zone_defensive_desc}</p>
+                            </div>
+                        </div>
+
+                        <div className="border-t border-slate-800 pt-4 pb-10 flex flex-col gap-3">
+                            <span className="text-[10px] uppercase tracking-widest mb-1 text-slate-500 font-bold">{t.methodology.inputs}</span>
+                            <div className="flex flex-wrap gap-2">
+                                {["VIX", "MOVE", "HY OAS", "NFCI", "M2", "10Y BEI", "DXY", "NET LIQ"].map(tag => (
+                                    <span key={tag} className="text-[9px] font-mono px-3 py-1 rounded border bg-slate-800 border-slate-700 text-slate-300 shadow-sm">{tag}</span>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </ExplanationModal>
+            )}
+
+            {/* OWB MODAL */}
+            {mounted && showOwbInfo && (
+                <ExplanationModal
+                    isOpen={showOwbInfo}
+                    onClose={() => setShowOwbInfo(false)}
+                    title={DICTIONARY[lang]?.modals?.owb?.title || DICTIONARY.EN.modals.owb.title}
+                    funcTitle={DICTIONARY[lang]?.modals?.owb?.func_title || DICTIONARY.EN.modals.owb.func_title}
+                    funcDesc={DICTIONARY[lang]?.modals?.owb?.func_desc || DICTIONARY.EN.modals.owb.func_desc}
+                    purposeTitle={DICTIONARY[lang]?.modals?.owb?.purpose_title || DICTIONARY.EN.modals.owb.purpose_title}
+                    purposeDesc={DICTIONARY[lang]?.modals?.owb?.purpose_desc || DICTIONARY.EN.modals.owb.purpose_desc}
+                />
+            )}
+
+            {/* OGV MODAL */}
+            {mounted && showOgvInfo && (
+                <ExplanationModal
+                    isOpen={showOgvInfo}
+                    onClose={() => setShowOgvInfo(false)}
+                    title={DICTIONARY[lang]?.modals?.ogv?.title || DICTIONARY.EN.modals.ogv.title}
+                    funcTitle={DICTIONARY[lang]?.modals?.ogv?.func_title || DICTIONARY.EN.modals.ogv.func_title}
+                    funcDesc={DICTIONARY[lang]?.modals?.ogv?.func_desc || DICTIONARY.EN.modals.ogv.func_desc}
+                    purposeTitle={DICTIONARY[lang]?.modals?.ogv?.purpose_title || DICTIONARY.EN.modals.ogv.purpose_title}
+                    purposeDesc={DICTIONARY[lang]?.modals?.ogv?.purpose_desc || DICTIONARY.EN.modals.ogv.purpose_desc}
+                />
+            )}
+
+            {/* OTG MODAL */}
+            {mounted && showOtgInfo && (
+                <ExplanationModal
+                    isOpen={showOtgInfo}
+                    onClose={() => setShowOtgInfo(false)}
+                    title={DICTIONARY[lang]?.modals?.otg?.title || DICTIONARY.EN.modals.otg.title}
+                    funcTitle={DICTIONARY[lang]?.modals?.otg?.func_title || DICTIONARY.EN.modals.otg.func_title}
+                    funcDesc={DICTIONARY[lang]?.modals?.otg?.func_desc || DICTIONARY.EN.modals.otg.func_desc}
+                    purposeTitle={DICTIONARY[lang]?.modals?.otg?.purpose_title || DICTIONARY.EN.modals.otg.purpose_title}
+                    purposeDesc={DICTIONARY[lang]?.modals?.otg?.purpose_desc || DICTIONARY.EN.modals.otg.purpose_desc}
+                />
+            )}
+        </div>
     );
 };

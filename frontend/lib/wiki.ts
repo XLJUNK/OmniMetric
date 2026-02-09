@@ -1,8 +1,4 @@
 import { LangType } from '@/data/dictionary';
-import { GlossaryTerm } from '@/types/glossary';
-// Server-side imports for Heavy Data
-import fs from 'fs';
-import path from 'path';
 
 // Import all data (Standard Light Data)
 import glossaryEn from '@/data/glossary-en.json';
@@ -12,6 +8,8 @@ import glossaryEs from '@/data/glossary-es.json';
 import glossaryHi from '@/data/glossary-hi.json';
 import glossaryId from '@/data/glossary-id.json';
 import glossaryAr from '@/data/glossary-ar.json';
+import glossaryFr from '@/data/glossary-fr.json';
+import glossaryDe from '@/data/glossary-de.json';
 
 import technicalEn from '@/data/technical-en.json';
 import technicalJa from '@/data/technical-ja.json';
@@ -20,6 +18,8 @@ import technicalEs from '@/data/technical-es.json';
 import technicalHi from '@/data/technical-hi.json';
 import technicalId from '@/data/technical-id.json';
 import technicalAr from '@/data/technical-ar.json';
+import technicalFr from '@/data/technical-fr.json';
+import technicalDe from '@/data/technical-de.json';
 
 import maximsEn from '@/data/maxims-en.json';
 import maximsJa from '@/data/maxims-ja.json';
@@ -28,9 +28,11 @@ import maximsEs from '@/data/maxims-es.json';
 import maximsHi from '@/data/maxims-hi.json';
 import maximsId from '@/data/maxims-id.json';
 import maximsAr from '@/data/maxims-ar.json';
+import maximsFr from '@/data/maxims-fr.json';
+import maximsDe from '@/data/maxims-de.json';
 
 // Types
-type WikiType = 'glossary' | 'technical' | 'maxim';
+export type WikiType = 'glossary' | 'technical' | 'maxim' | 'indicator' | 'asset';
 
 export interface WikiItem {
     slug: string;
@@ -38,7 +40,7 @@ export interface WikiItem {
     category: string;
     title: string;
     tags: string[];
-    data: any; // Light data
+    data: unknown; // Light data
     heavy?: {
         summary: string;
         deep_dive: string;
@@ -56,9 +58,9 @@ export interface WikiItem {
     };
 }
 
-const glossaryMap: Record<LangType, any> = { EN: glossaryEn, JP: glossaryJa, CN: glossaryCn, ES: glossaryEs, HI: glossaryHi, ID: glossaryId, AR: glossaryAr };
-const technicalMap: Record<LangType, any> = { EN: technicalEn, JP: technicalJa, CN: technicalCn, ES: technicalEs, HI: technicalHi, ID: technicalId, AR: technicalAr };
-const maximsMap: Record<LangType, any> = { EN: maximsEn, JP: maximsJa, CN: maximsCn, ES: maximsEs, HI: maximsHi, ID: maximsId, AR: maximsAr };
+const glossaryMap: Record<LangType, unknown[]> = { EN: glossaryEn, JP: glossaryJa, CN: glossaryCn, ES: glossaryEs, HI: glossaryHi, ID: glossaryId, AR: glossaryAr, FR: glossaryFr, DE: glossaryDe };
+const technicalMap: Record<LangType, unknown[]> = { EN: technicalEn, JP: technicalJa, CN: technicalCn, ES: technicalEs, HI: technicalHi, ID: technicalId, AR: technicalAr, FR: technicalFr, DE: technicalDe };
+const maximsMap: Record<LangType, unknown[]> = { EN: maximsEn, JP: maximsJa, CN: maximsCn, ES: maximsEs, HI: maximsHi, ID: maximsId, AR: maximsAr, FR: maximsFr, DE: maximsDe };
 
 // Utility to slugify string
 export const slugify = (text: string) => {
@@ -69,37 +71,6 @@ export const slugify = (text: string) => {
         .replace(/\-\-+/g, '-')         // Replace multiple - with single -
         .replace(/^-+/, '')             // Trim - from start
         .replace(/-+$/, '');            // Trim - from end
-};
-
-// Helper: Try Load Heavy Data
-const loadHeavyData = (slug: string, lang: LangType) => {
-    try {
-        // Look in frontend/data/wiki_heavy
-        const filePath = path.join(process.cwd(), 'data', 'wiki_heavy', `${slug}-${lang.toLowerCase()}.json`);
-        if (fs.existsSync(filePath)) {
-            const raw = fs.readFileSync(filePath, 'utf-8');
-            const heavy = JSON.parse(raw);
-
-            // Parse council_debate if stringified
-            if (heavy.sections && heavy.sections.council_debate && typeof heavy.sections.council_debate === 'string') {
-                try {
-                    heavy.sections.council_debate = JSON.parse(heavy.sections.council_debate);
-                } catch { }
-            }
-
-            return {
-                summary: heavy.sections?.summary || "",
-                deep_dive: heavy.sections?.deep_dive || "",
-                council_debate: heavy.sections?.council_debate || {},
-                forecast_risks: heavy.sections?.forecast_risks || "",
-                gms_conclusion: heavy.sections?.gms_conclusion || "",
-                generated_at: heavy.generated_at
-            };
-        }
-    } catch (e) {
-        // Fail silent, return undefined (Hybrid Fallback)
-    }
-    return undefined;
 };
 
 // Helper: Clean Mixed English/Localized Titles
@@ -128,15 +99,18 @@ const cleanLocalizedTitle = (text: string, lang: LangType): string => {
 
 export const getWikiData = (lang: LangType) => {
     // 1. Glossary
-    const glossary = (glossaryMap[lang] || glossaryEn).map((item: any) => ({
-        slug: item.id,
-        type: 'glossary' as WikiType,
-        category: cleanLocalizedTitle(item.category, lang),
-        title: cleanLocalizedTitle(item.term, lang),
-        tags: item.seo_keywords || [],
-        data: item,
-        heavy: loadHeavyData(item.id, lang)
-    }));
+    const glossary = (glossaryMap[lang] as unknown[] || glossaryEn).map((item: unknown) => {
+        const i = item as { id: string; category: string; term: string; seo_keywords?: string[] };
+        return {
+            slug: i.id,
+            type: 'glossary' as WikiType,
+            category: cleanLocalizedTitle(i.category, lang),
+            title: cleanLocalizedTitle(i.term, lang),
+            tags: i.seo_keywords || [],
+            data: i,
+            heavy: undefined
+        };
+    });
 
     // 2. Technical
     const techEn = technicalEn;
@@ -144,11 +118,11 @@ export const getWikiData = (lang: LangType) => {
     const techTarget = technicalMap[lang] || technicalEn;
 
     const technical: WikiItem[] = [];
-    techEn.forEach((cat: any, catIdx: number) => {
-        cat.indicators.forEach((ind: any, indIdx: number) => {
+    techEn.forEach((cat: { category: string; indicators: { name: string; seo_keywords?: string[] }[] }, catIdx: number) => {
+        cat.indicators.forEach((ind: { name: string; seo_keywords?: string[] }, indIdx: number) => {
             // Safely access target category and indicator
-            const targetCat = techTarget[catIdx] || cat;
-            const targetInd = targetCat?.indicators?.[indIdx];
+            const targetCat = (techTarget[catIdx] || cat) as { category: string; indicators: { name: string; seo_keywords?: string[] }[] };
+            const targetInd = targetCat?.indicators?.[indIdx] as { name: string; seo_keywords?: string[] } | undefined;
             const finalInd = targetInd || ind;
 
             if (finalInd) {
@@ -164,7 +138,7 @@ export const getWikiData = (lang: LangType) => {
                     title: cleanLocalizedTitle(rawTitle, lang),
                     tags: finalInd.seo_keywords || [],
                     data: finalInd,
-                    heavy: loadHeavyData(slug, lang)
+                    heavy: undefined
                 });
             }
         });
@@ -172,24 +146,18 @@ export const getWikiData = (lang: LangType) => {
 
     // 3. Maxims
     const maxEn = maximsEn;
-    const maxTarget = maximsMap[lang] || maximsEn;
+    const maxTarget = maximsMap[lang] as { category: string; quotes: { id: string; text: string; meaning?: string; attribution?: string; seo_keywords?: string[] }[] }[] || maximsEn;
 
     const maxims: WikiItem[] = [];
-    maxEn.forEach((cat: any, catIdx: number) => {
-        cat.quotes.forEach((quote: any, quoteIdx: number) => {
-            const targetCat = maxTarget[catIdx] || cat;
+    maxEn.forEach((cat: { category: string; quotes: { id: string; text: string; meaning?: string; attribution?: string; seo_keywords?: string[] }[] }, catIdx: number) => {
+        cat.quotes.forEach((quote: { id: string; text: string; meaning?: string; attribution?: string; seo_keywords?: string[] }, quoteIdx: number) => {
+            const targetCat = (maxTarget[catIdx] || cat) as { category: string; quotes: { id: string; text: string; meaning?: string; attribution?: string; seo_keywords?: string[] }[] };
             const targetQuote = targetCat?.quotes?.[quoteIdx];
             const finalQuote = targetQuote || quote;
 
             if (finalQuote) {
-                // For Maxims:
-                // If EN: Title = text ("The trend is your friend")
-                // If Non-EN: Title = meaning ("趋势是你的朋友") because 'text' is usually left in English even in localized files
-
                 let displayTitle = `"${finalQuote.text}"`;
                 if (lang !== 'EN' && finalQuote.meaning) {
-                    // Check if meaning is different from text (i.e. it is actually translated)
-                    // In maxims-cn.json: text is English, meaning is Chinese.
                     displayTitle = `"${finalQuote.meaning}"`;
                 }
 
@@ -200,11 +168,14 @@ export const getWikiData = (lang: LangType) => {
                     title: displayTitle,
                     tags: [finalQuote.attribution || ''],
                     data: finalQuote,
-                    heavy: loadHeavyData(quote.id, lang)
+                    heavy: undefined
                 });
             }
         });
     });
+
+    // Note: Heavy-Only items are excluded in Client-Side data to avoid fs usage.
+    // Use getWikiDataWithHeavy from lib/wiki-server.ts for full data.
 
     return [...glossary, ...technical, ...maxims];
 };

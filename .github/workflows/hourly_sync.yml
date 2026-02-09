@@ -1,0 +1,102 @@
+name: GMS Hourly Sync
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '5 * * * *' # Every hour at :05
+  workflow_dispatch:
+
+concurrency:
+  group: hourly-sync
+  cancel-in-progress: true
+
+jobs:
+  hourly_update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    timeout-minutes: 10 # Reduced timeout for efficiency
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+          cache: 'pip' 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r backend/requirements.txt
+          pip install --no-deps pandas-ta
+      - name: Install Node dependencies
+        working-directory: ./frontend
+        run: npm ci
+      
+      - name: Cache Fonts
+        id: cache-fonts
+        uses: actions/cache@v3
+        with:
+          path: backend/assets/fonts
+          key: noto-fonts-v1
+      
+      - name: Install Fonts
+        if: steps.cache-fonts.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p backend/assets/fonts
+          curl -fL -o backend/assets/fonts/NotoSansJP-Bold.ttf "https://github.com/google/fonts/raw/main/ofl/notosansjp/NotoSansJP-Bold.ttf" || echo "Failed to download JP font"
+          curl -fL -o backend/assets/fonts/NotoSansSC-Bold.ttf "https://github.com/google/fonts/raw/main/ofl/notosanssc/NotoSansSC-Bold.ttf" || echo "Failed to download SC font"
+          curl -fL -o backend/assets/fonts/NotoSansDevanagari-Bold.ttf "https://github.com/google/fonts/raw/main/ofl/notosansdevanagari/NotoSansDevanagari-Bold.ttf" || echo "Failed to download Devanagari font"
+          curl -fL -o backend/assets/fonts/NotoSansArabic-Bold.ttf "https://github.com/google/fonts/raw/main/ofl/notosansarabic/NotoSansArabic-Bold.ttf" || echo "Failed to download Arabic font"
+      
+      - name: Run Hourly Engine
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
+          AI_GATEWAY_API_KEY: ${{ secrets.AI_GATEWAY_API_KEY }}
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --hard origin/main
+          
+          # Run Hourly Engine (Score, AI, News, SEO)
+          python backend/gms_engine.py
+          
+          # NOTE: OGV update moved to daily_maintenance.yml
+          
+          # SKILL CHECK
+          python scripts/verify_skills.py
+
+          # FRONTEND SYNC
+          mkdir -p frontend/data
+          # Copy merged data (gms_engine now does atomic save to market_data.json but we need to ensure path consistency)
+          # backend/gms_engine writes to frontend/public/data/market_data.json
+          
+          git add backend/current_signal.json backend/history.json frontend/public/data/market_data.json
+          git commit -m "Auto-update hourly signal [bot]" || echo "No changes to commit"
+          
+          git pull --rebase origin main || echo "Already up to date"
+          git push origin main
+          
+          echo "=== ENGINE LOG ==="
+          cat backend/engine_log.txt || echo "No engine log found"
+
+      - name: Ping IndexNow
+        if: success()
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: |
+          if [ -n "$INDEXNOW_KEY" ]; then
+            URLS="https://omnimetric.net/en https://omnimetric.net/jp https://omnimetric.net/api/og/main?lang=EN"
+            for url in $URLS; do
+              curl -v "https://www.bing.com/indexnow?url=$url&key=$INDEXNOW_KEY"
+            done
+          fi

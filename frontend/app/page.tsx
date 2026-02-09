@@ -1,50 +1,45 @@
 import { MultiAssetSummary } from '@/components/MultiAssetSummary';
 import { Metadata } from 'next';
 import { getSignalData } from '@/lib/signal';
-
-export const dynamic = 'force-dynamic';
-
 import { getMultilingualMetadata } from '@/data/seo';
+import { DICTIONARY } from '@/data/dictionary';
+import { Suspense } from 'react';
 
-export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
-  const s = await searchParams;
+export async function generateMetadata(): Promise<Metadata> {
+  const lang = 'EN';
   const initialData = await getSignalData();
-  const lang = s.lang || 'EN';
+  const d = DICTIONARY.EN;
 
   // Default fallback
-  let title = "Global Macro Signal (OmniMetric) | Institutional Market Intelligence";
-  let desc = "Real-time global market risk analysis covering Stocks, Crypto, Forex, and Commodities. AI-driven insights for professional investors.";
+  let title = d.subpages.about.title || "Global Macro Signal";
+  let desc = d.subpages.about.subtitle || "Institutional Market Intelligence";
 
   if (initialData) {
     const score = initialData.gms_score;
-    // Format Date: "Jan 23"
     const dateObj = new Date(initialData.last_updated);
-    // Force JST for "Freshness" logic as requested, or just use UTC/Local.
-    // User asked for "Jan 23 (JST)" context effectively.
-    // Using simple format options.
-    const dateStr = dateObj.toLocaleDateString("en-US", { month: 'short', day: 'numeric', timeZone: 'Asia/Tokyo' });
+    const dateStr = dateObj.toLocaleDateString("en-US", { month: 'short', day: 'numeric', timeZone: 'UTC' });
 
-    // Calculate Momentum (Simple derivative of backend logic)
-    let momentum = "Neutral";
+    // Calculate Momentum
+    let momentum = d.momentum.stable;
     if (initialData.history_chart && initialData.history_chart.length >= 5) {
       const recent = initialData.history_chart.slice(0, 5);
       const latest = recent[0].score;
       const old = recent[recent.length - 1].score;
       const diff = latest - old;
 
-      if (latest < 40 && diff > 0) momentum = "Bottoming Out";
-      else if (latest > 60 && diff < 0) momentum = "Peaking";
-      else if (diff > 2) momentum = "Rising";
-      else if (diff < -2) momentum = "Falling";
-      else momentum = "Stable";
+      if (latest < 40 && diff > 0) momentum = d.momentum.bottoming;
+      else if (latest > 60 && diff < 0) momentum = d.momentum.peaking;
+      else if (diff > 2) momentum = d.momentum.rising;
+      else if (diff < -2) momentum = d.momentum.falling;
+      else momentum = d.momentum.stable;
     }
 
-    title = `GMS Score ${score}: ${momentum} | Market Intelligence ${dateStr}`;
-    desc = `Latest GMS Score: ${score} (${momentum}). Global market risk analysis updated ${dateStr}. Insight: ${initialData.analysis?.title || 'Market Outlook'}`;
+    title = `${d.titles.gms_score} ${score}: ${momentum} | ${d.titles.insights} ${dateStr}`;
+    desc = `${d.titles.gms_score}: ${score} (${momentum}). ${d.methodology.desc} ${dateStr}. Insight: ${initialData.analysis?.title || 'Market Outlook'}`;
   }
 
+  // Pass '/' as path to execute special root logic in seo.ts
   const metadata = getMultilingualMetadata('/', lang, title, desc);
-
   return metadata;
 }
 
@@ -69,7 +64,9 @@ export default async function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <MultiAssetSummary initialData={initialData} />
+      <Suspense fallback={<div className="min-h-screen"></div>}>
+        <MultiAssetSummary initialData={initialData} lang="EN" />
+      </Suspense>
     </>
   );
 }

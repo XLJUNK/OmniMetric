@@ -4,13 +4,11 @@ import { Home, LineChart, Bitcoin, Banknote, Gem, Globe, ScrollText, Activity } 
 import { usePathname, useRouter } from 'next/navigation';
 import { DICTIONARY } from '@/data/dictionary';
 import { useCurrentLang } from '@/hooks/useCurrentLang';
-import { useTheme } from '@/components/ThemeProvider';
 
 export const MobileNav = () => {
     const pathname = usePathname();
     const router = useRouter();
     const lang = useCurrentLang();
-    const { theme } = useTheme();
     const t = DICTIONARY[lang];
 
     const tabs = [
@@ -29,7 +27,11 @@ export const MobileNav = () => {
         >
             <div className="grid grid-cols-8 h-full w-full items-center px-0">
                 {tabs.map((tab) => {
-                    const isActive = pathname === tab.path;
+                    const localizedPath = lang.toUpperCase() === 'EN'
+                        ? tab.path
+                        : (tab.path === '/' ? `/${lang.toLowerCase()}` : `/${lang.toLowerCase()}${tab.path}`);
+                    const isActive = pathname === localizedPath;
+
                     // Full labels allowing resize/wrap - No Truncation
                     const label = tab.label;
 
@@ -40,7 +42,7 @@ export const MobileNav = () => {
                     return (
                         <button
                             key={tab.key}
-                            onClick={() => router.push(`${tab.path}?lang=${lang}`)}
+                            onClick={() => router.push(localizedPath)}
                             className={`group flex flex-col items-center justify-center w-full h-full transition-all relative p-0.5`}
                         >
                             {/* Icon: Active=Blue, Inactive=Slate-500(Light)/Slate-300(Dark), Hover=Slate-900(Light)/Slate-100(Dark) */}

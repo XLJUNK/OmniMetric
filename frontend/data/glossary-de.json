@@ -1,0 +1,970 @@
+[
+    {
+        "id": "net-liquidity",
+        "category": "Liquidität (Liquidity)",
+        "term": "Nettoliquidität (Net Liquidity)",
+        "definition": "Maß für die tatsächliche Liquidität, die dem Markt zugeführt wird, berechnet durch Subtraktion des Treasury General Account (TGA) und der Reverse Repo-Guthaben (RRP) von der Fed-Bilanz.",
+        "market_impact": {
+            "up": "Preisanstieg bei Risikoanlagen (Aktien, Krypto). Schafft ein tolerantes Umfeld für KGV-Expansion.",
+            "down": "Erhöhte Marktvolatilität. Begünstigt Bewertungskorrekturen, insbesondere bei Wachstumsaktien."
+        },
+        "context_2026": "Im Jahr 2026, mit dem Ende der quantitativen Straffung (QT) und CBDC-Reservenanpassungen, stehen qualitative Veränderungen der quantitativen Politik im Fokus. Diese echte Liquiditätsvolatilität bestimmt die Marktresilienz mehr als einfache Zinssätze.",
+        "gms_relevance": "Sehr hoch. Bildet die Grundlage für den GMS-Score und fungiert als primäre Variable zur Messung der 'Kaufkraft' des Marktes.",
+        "seo_keywords": [
+            "Nettoliquidität",
+            "Fed-Bilanz",
+            "Liquiditätsgetriebener Markt",
+            "Reverse Repo-Guthaben"
+        ]
+    },
+    {
+        "id": "vix",
+        "category": "Stimmung (Sentiment)",
+        "term": "VIX (Angstindex)",
+        "definition": "Maß für die erwartete 30-Tage-Volatilität basierend auf S&P 500-Optionspreisen. Quantifiziert die psychologische Angst der Anleger.",
+        "market_impact": {
+            "up": "Risikoaversion der Anleger. Schnelle Anstiege signalisieren panikgetriebene Verkäufe, aber extreme Spitzen können Kaufgelegenheiten (überverkauft) anzeigen.",
+            "down": "Anlegeroptimismus. Stabile Niveaus fördern Carry Trades und gehebeltes Investieren."
+        },
+        "context_2026": "Mit KI-gesteuertem Hochfrequenzhandel als Mainstream neigen VIX-Spitzen dazu, kurzlebig zu sein ('Flash Spike'). Auch stark beeinflusst durch 0DTE-Optionen.",
+        "gms_relevance": "Hoch. Wird als inverser Korrelationsindikator zur Erkennung von Risikobereitschaftsumkehrungen verwendet. Algorithmen senken den Score erheblich, wenn über 20.",
+        "seo_keywords": [
+            "VIX-Index",
+            "Volatilität",
+            "Angstindex",
+            "Marktstimmung"
+        ]
+    },
+    {
+        "id": "real-interest-rate",
+        "category": "Zinssätze (Interest Rates)",
+        "term": "Realzins (Real Interest Rate)",
+        "definition": "Nominalzins (z.B. 10-Jahres-Rendite) minus erwartete Inflationsrate. Die tatsächlichen Kosten der Kreditaufnahme.",
+        "market_impact": {
+            "up": "Gegenwind für Gold, Bitcoin und Tech-Aktien mit hohem KGV. Faktor für Dollar-Stärke.",
+            "down": "Steigert Vermögenspreise. Beschleunigt Risikokapitalfluss in KI-Startups und andere Sektoren."
+        },
+        "context_2026": "KI-getriebene Steigerungen der potenziellen Wachstumsraten haben den neutralen Realzins (r-star) angehoben. Das Verständnis des 'neuen Normalzustands' von Aktienrallyes bei positiven Realzinsen ist 2026 entscheidend.",
+        "gms_relevance": "Hoch. Fungiert als Diskontsatz. Primärer Gewichtungsfaktor zur Messung der Bewertungsangemessenheit im GMS-Score.",
+        "seo_keywords": [
+            "Realzins",
+            "10-Jahres-Rendite",
+            "Erwartete Inflation",
+            "TIPS"
+        ]
+    },
+    {
+        "id": "gms-score",
+        "category": "Proprietär (Proprietary)",
+        "term": "GMS-Score",
+        "definition": "Umfassender proprietärer Markt-Frühindikator, berechnet von OmniMetric, der Liquidität, Fundamentaldaten, Social-Media-Stimmung und KI-Nachfrageprognosen integriert.",
+        "market_impact": {
+            "up": "Verbesserung des gesamten Markterwartungswerts. Zunehmender Vorteil für Trendfolgestrategien.",
+            "down": "Warnung vor potenziellen Abwärtsrisiken. Empfiehlt Absicherung oder Erhöhung der Cash-Quoten."
+        },
+        "context_2026": "Nutzt neueste LLM-Engines (einschließlich Gemini 3) im Jahr 2026. Next-Gen-Kompass, der qualitative SNS-Informationen mit Echtzeit-Wirtschaftsstatistiken synchronisiert, um Informationsasymmetrie zu eliminieren.",
+        "gms_relevance": "Kernindikator. Alle anderen Elemente sind als Komponenten zum Aufbau dieses Scores positioniert.",
+        "seo_keywords": [
+            "GMS-Score",
+            "OmniMetric",
+            "Makroindikator",
+            "KI-Marktprognose"
+        ]
+    },
+    {
+        "id": "pce-price-index",
+        "category": "Inflation (Inflation)",
+        "term": "PCE (Preisindex für persönliche Konsumausgaben)",
+        "definition": "Bevorzugtes Inflationsmaß der Fed. Spiegelt Änderungen in Verbraucherausgabenmustern wider und deckt ein breiteres Spektrum von Preisbewegungen ab als CPI.",
+        "market_impact": {
+            "up": "Verstärkt Fed-Hawkishness, führt zu höheren Endzinsen. Belastet Tech-Aktien.",
+            "down": "Erhöht Hoffnungen auf Fed-Dovish-Pivot, gibt allgemeine Markterleichterung."
+        },
+        "context_2026": "Sinkende Mietanteile und deflationärer Druck bei 'immateriellen Vermögensdienstleistungen' aufgrund von KI-Produktivitätsgewinnen stabilisieren PCE. Hält den Schlüssel für die Fed, ihr 2%-Ziel zu erreichen.",
+        "gms_relevance": "Hoch. Als genauere Eingabedaten als CPI zur Vorhersage von Zinsänderungen übernommen.",
+        "seo_keywords": [
+            "PCE-Preisindex",
+            "Federal Reserve",
+            "Geldpolitik",
+            "Deflationsdruck"
+        ]
+    },
+    {
+        "id": "non-farm-payrolls",
+        "category": "Arbeitsmarkt (Labor Market)",
+        "term": "Nichtlandwirtschaftliche Beschäftigung (NFP)",
+        "definition": "Wichtigster monatlicher Indikator für die US-Wirtschaftsgesundheit. Arbeitsmarktstärke unterstützt den Konsum.",
+        "market_impact": {
+            "up": "Beweis für starke Wirtschaft, aber Überhitzung kann zu vorübergehendem Aktienrückgang aufgrund von Zinserhöhungsängsten führen (Gutes ist schlecht).",
+            "down": "Aktienrückgang aufgrund von Verlangsamungs-/Rezessionsängsten oder Rallyes in Hoffnung auf frühe Zinssenkungen."
+        },
+        "context_2026": "Intensivierte KI-Adoption hat die Arbeitsmobilität verstärkt. 'Wiedereinstellungsraten für Büroangestellte' und 'Lohnwachstum für KI-qualifizierte Arbeitskräfte' beeinflussen nun Marktreaktionen mehr als einfache Beschäftigungszahlen.",
+        "gms_relevance": "Hoch. Treiber zur Messung der wirtschaftlichen Gesundheit. Direkt mit der Rezessionsrisikobewertung im GMS-Score verknüpft.",
+        "seo_keywords": [
+            "Nichtlandwirtschaftliche Beschäftigung",
+            "NFP",
+            "Arbeitsmarkt",
+            "Rezession"
+        ]
+    },
+    {
+        "id": "ff-rate",
+        "category": "Zinssätze (Interest Rates)",
+        "term": "Federal Funds Rate (FF Rate)",
+        "definition": "US-Leitzins. Quelle aller Zinssätze und regelt globale Kapitalströme.",
+        "market_impact": {
+            "up": "Stärkerer Dollar, niedrigere Vermögenspreise, erhöhte Unternehmensschuldenlast.",
+            "down": "Schwächerer Dollar, Risikomärkte, Wiederbelebung des Immobilienmarktes."
+        },
+        "context_2026": "Mit steigendem neutralen Zinssatz (r-star) wird keine Rückkehr zur Nullzinsära der 2010er Jahre erwartet. Ertragsmodelle, die in einer 'Welt mit Zinsen' funktionieren (bei 3-4% gehalten), sind erforderlich.",
+        "gms_relevance": "Sehr hoch. Direkte Eingabe für Diskontsatz. Beeinflusst 'Hebelempfehlung' im GMS-Score.",
+        "seo_keywords": [
+            "FF-Rate",
+            "Leitzins",
+            "Zinserhöhung",
+            "Zinssenkung"
+        ]
+    },
+    {
+        "id": "ai-demand-forecast-index",
+        "category": "Technologie (Technology)",
+        "term": "KI-Nachfrageprognoseindex (OmniMetric Proprietary)",
+        "definition": "Next-Gen-Wirtschaftsfrühindikator, der Rechenzentrum-CapEx, GPU-Lieferzeiten und LLM-Token-Verbrauch integriert.",
+        "market_impact": {
+            "up": "Starkes Kaufsignal für Halbleiter-, Energie- und Tech-Sektoren. CapEx-Expansion.",
+            "down": "Ängste vor KI-Blasenplatzen. Signalisiert sinkende Kapitaleffizienz durch Überinvestition."
+        },
+        "context_2026": "KI ist nicht mehr nur eine Sektorstory, sondern eine Makrovariable, die die Produktivität über alle Branchen hinweg bestimmt. Ein Rückgang dieses Index kündigt BIP-Wachstumsrückgänge in späteren Quartalen an.",
+        "gms_relevance": "Hoch. Im GMS-Score 2026 als 'neuer Frühindikator' bewertet, der den traditionellen ISM Manufacturing PMI ersetzt.",
+        "seo_keywords": [
+            "KI-Nachfrage",
+            "Rechenzentrum-Investition",
+            "Halbleiter",
+            "GPU-Lieferzeit"
+        ]
+    },
+    {
+        "id": "dxy-index",
+        "category": "Forex (Forex)",
+        "term": "US-Dollar-Index (DXY)",
+        "definition": "Maß für den Wert des US-Dollars gegenüber einem Korb ausländischer Währungen der US-Handelspartner.",
+        "market_impact": {
+            "up": "Signalisiert typischerweise globalen Liquiditätsdruck und Risk-off-Stimmung. Negativ für Schwellenländer und Rohstoffe.",
+            "down": "Signalisiert reichliche Dollar-Liquidität und Risk-on-Stimmung. Steigert globalen Handel und multinationale Unternehmensgewinne."
+        },
+        "context_2026": "Die 'Dollar-Lächeln'-Theorie bleibt dominant. In der Makroumgebung 2026 fungiert DXY als 'Sicherheitsventil' für die globale Finanzmaschine.",
+        "gms_relevance": "Hoch. Fungiert als Proxy for 'globalen Liquiditätsdruck' in der Multi-Asset-Matrix.",
+        "seo_keywords": [
+            "DXY",
+            "Dollar-Index",
+            "Forex",
+            "Devisenmarkt",
+            "Globale Liquidität"
+        ]
+    },
+    {
+        "id": "sp500-index",
+        "category": "Aktien (Equities)",
+        "term": "S&P 500 Index (SPY)",
+        "definition": "Aktienmarktindex, der die Performance von Aktien von 500 der größten an US-Börsen notierten Unternehmen verfolgt.",
+        "market_impact": {
+            "up": "Repräsentativ for breiten wirtschaftlichen Optimismus und Risikobereitschaft.",
+            "down": "Spiegelt Gewinnkontraktion, Rezessionsängste oder systemische Risiken wider."
+        },
+        "context_2026": "KI-integrierte Giganten dominieren zunehmend den Index. Die Ära des 'Magnificent AI' hat traditionelle KGV-Benchmarks neu definiert.",
+        "gms_relevance": "Zielbenchmark. GMS-Score zielt darauf ab, führende und nachlaufende Kanten der Bewegungen dieses Index vorherzusagen.",
+        "seo_keywords": [
+            "S&P 500",
+            "SPY",
+            "Aktienmarkt-Benchmark",
+            "Wall Street"
+        ]
+    },
+    {
+        "id": "bitcoin",
+        "category": "Krypto (Crypto)",
+        "term": "Bitcoin (BTC)",
+        "definition": "Erste dezentrale Kryptowährung. Oft als 'digitales Gold' bezeichnet und ein Frühindikator for High-Beta-Risikostimmung.",
+        "market_impact": {
+            "up": "Maximale Risk-on-Stimmung. Spiegelt Liquiditätsüberfluss und spekulative Nachfrage wider.",
+            "down": "Deleveraging-Phase. Signalisiert Rückgang der spekulativen Liquidität und erhöhte Risikoaversion."
+        },
+        "context_2026": "Institutionelle Adoption durch ETFs abgeschlossen. BTC ist nun ein permanentes Element in globalen Makro-Asset-Allokationsmodellen.",
+        "gms_relevance": "Hoch. Fungiert als 'Liquiditätsthermometer'. BTC-Preissensitivität gegenüber Nettoliquiditätsänderungen ist ein Schlüsselsignal.",
+        "seo_keywords": [
+            "Bitcoin",
+            "BTC",
+            "Digitales Gold",
+            "Krypto und Makro"
+        ]
+    },
+    {
+        "id": "gold-price",
+        "category": "Rohstoffe (Commodities)",
+        "term": "Goldpreis",
+        "definition": "Ultimativer sicherer Hafen und Wertaufbewahrungsmittel. Fungiert als Absicherung gegen Inflation und Währungsabwertung.",
+        "market_impact": {
+            "up": "Signalisiert Angst, hohe Inflation oder Schwächung der Fiat-Währungen. Negativ for Realzinsen.",
+            "down": "Risk-on-Stimmung. Signalisiert Vertrauen in das Finanzsystem und steigende Realrenditen."
+        },
+        "context_2026": "Gold bleibt 'Anti-Dollar'. In einer Welt steigender Staatsschulden erreichten Zentralbank-Goldkäufe 2026 Rekordniveaus.",
+        "gms_relevance": "Mittel. Wird als 'Versicherungsvariable' zur Messung des systemischen Vertrauensniveaus im GMS-Modell verwendet.",
+        "seo_keywords": [
+            "Goldpreis",
+            "Sicherer Hafen",
+            "Inflationsabsicherung",
+            "Edelmetalle"
+        ]
+    },
+    {
+        "id": "copper-price",
+        "category": "Rohstoffe (Commodities)",
+        "term": "Kupferpreis (Dr. Copper)",
+        "definition": "Industrielles Basismetall, das oft als Proxy for die globale Wirtschaftsgesundheit angesehen wird, aufgrund seiner breiten Verwendung in Fertigung und Bau.",
+        "market_impact": {
+            "up": "Zeichen starker globaler Industrieaktivität. Positiv for wachstumsorientierte Sektoren.",
+            "down": "Signalisiert potenzielle Verlangsamung der globalen CapEx und Fertigung. Vorbote wirtschaftlicher Schwäche."
+        },
+        "context_2026": "Mit massiver Expansion von KI-Rechenzentren und Elektrifizierung ist Kupfer nun das 'Öl des digitalen Zeitalters'.",
+        "gms_relevance": "Mittel. Fungiert als Indikator for 'thermische Energie der Realwirtschaft' im Rohstoffset.",
+        "seo_keywords": [
+            "Kupferpreis",
+            "Dr. Copper",
+            "Industriemetalle",
+            "Wirtschaftsindikator"
+        ]
+    },
+    {
+        "id": "wti-oil",
+        "category": "Rohstoffe (Commodities)",
+        "term": "West Texas Intermediate (WTI)",
+        "definition": "Benchmark for globale Energiepreise. Spiegelt globale Wachstumserwartungen und geopolitische Risikoprämien wider.",
+        "market_impact": {
+            "up": "Nachfrage nach wirtschaftlicher Expansion oder Angebotsschocks. Hohe Ölpreise können eine inflationäre 'Steuer' for Verbraucher sein.",
+            "down": "Nachfragezerstörung oder Angebotserhöhung. Normalerweise mit wirtschaftlicher Verlangsamung verbunden."
+        },
+        "context_2026": "Das Tauziehen zwischen KI-getriebener Energienachfrage und Übergang zu erneuerbaren Energien setzt sich fort. Effiziente Energieerzeugung ist der Wachstumstreiber 2026.",
+        "gms_relevance": "Mittel. Schlüsselvariable in der 'Energie- und Wachstums'-Komponente des GMS-Modells.",
+        "seo_keywords": [
+            "WTI-Öl",
+            "Rohöl",
+            "Energiepreise",
+            "Rohstoffhandel"
+        ]
+    },
+    {
+        "id": "yield-curve-10y2y",
+        "category": "Anleihen (Bonds)",
+        "term": "Zinskurveninversion (10Y-2Y)",
+        "definition": "Phänomen, bei dem die 10-Jahres-Treasury-Rendite unter die 2-Jahres-Rendite fällt. Historisch ein føhrender Rezessionsindikator.",
+        "market_impact": {
+            "up": "(Versteilerung) Erwartungen wirtschaftlicher Erholung oder Reflation. Positiv for Finanzaktien.",
+            "down": "(Abflachung/Vertiefung der Inversion) Rezessionszeichen. Mittelfristige bis langfristige Risikoaversion."
+        },
+        "context_2026": "Nach Auflösung einer langanhaltenden Inversion (Versteilerung) steht 2026 am Scheideweg: Ist die Wirtschaft zurück auf Wachstumskurs oder fällt sie in eine Stagflation?",
+        "gms_relevance": "Mittel. Aufgrund struktureller Veränderungen in Anleihenangebot/-nachfrage hat sich die Vorhersagegenauigkeit verringert, daher wird sie in Verbindung mit anderen Indikatoren bewertet.",
+        "seo_keywords": [
+            "Zinskurveninversion",
+            "Renditekurve",
+            "10Y2Y",
+            "Rezession"
+        ]
+    },
+    {
+        "id": "market-breadth",
+        "category": "Aktien (Equities)",
+        "term": "Marktbreite (Market Breadth)",
+        "definition": "Verhältnis des gleichgewichteten S&P 500 zum nach Marktkapitalisierung gewichteten S&P 500 (RSP/SPY). Misst Gesundheit und Beteiligungsniveau der Rally.",
+        "market_impact": {
+            "up": "Breite Beteiligung. Signalisiert gesunden, nachhaltigen Bullenmarkt øber mehrere Sektoren hinweg.",
+            "down": "Enge Führung (normalerweise nur eine Handvoll Tech-Giganten). Signalisiert potenzielle Fragilität auf Gesamtindexebene."
+        },
+        "context_2026": "Die Identifizierung, ob die KI-Rally auf Mid-Caps und Industriesektoren 'übergreift', ist der primäre Alpha-Treiber 2026.",
+        "gms_relevance": "Mittel. Wird verwendet, um jene Veränderungen in 'Qualität und Beteiligung' zu erkennen, die einfache Indexpreise verbergen.",
+        "seo_keywords": [
+            "Marktbreite",
+            "Gleichgewichtet",
+            "RSP",
+            "Aktienbeteiligung"
+        ]
+    },
+    {
+        "id": "fear-and-greed-index",
+        "category": "Stimmung (Sentiment)",
+        "term": "Angst- und Gier-Index",
+        "definition": "Quantifiziert Marktbegeisterung (0-100) aus mehreren Datenpunkten wie Aktienmomentum, Volatilität und Junk-Bond-Nachfrage.",
+        "market_impact": {
+            "up": "(Gier) Bullenmarkt, aber øber 80 signalisiert hohes Korrekturrisiko aufgrund Überhitzung.",
+            "down": "(Angst) Bärenmarkt, aber unter 20 signalisiert, dass eine technische Erholung aufgrund Überverkauftheit nahe ist."
+        },
+        "context_2026": "Konträrer algorithmischer Handel ist populär geworden, was Erholungen von extremer Angst extrem schnell macht. Obligatorischer Indikator for kurzfristigen Swing-Handel.",
+        "gms_relevance": "Mittel. Trägt als 'konträre Momentum'-Komponente zum GMS-Score bei.",
+        "seo_keywords": [
+            "Angst- und Gier-Index",
+            "Marktpsychologie",
+            "Überhitzung",
+            "Überverkauft"
+        ]
+    },
+    {
+        "id": "m2-money-supply",
+        "category": "Liquidität (Liquidity)",
+        "term": "Geldmenge M2",
+        "definition": "Gesamtgeldangebot einschließlich Bargeld, Einlagen und Geldmarktfonds. Langfristiger Treiber for Inflation und Vermögenspreise.",
+        "market_impact": {
+            "up": "Mittelfristiger/langfristiger Inflationsdruck. Währungsabwertung (schwächerer Dollar) und Vermögensinflation.",
+            "down": "Deflationsdruck. Kontraktion der Wirtschaftsaktivität. Bildung von Aktienmarkt-Tops."
+        },
+        "context_2026": "Beachten Sie, dass Geld von Bankeinlagen zu On-Chain-Vermögenswerten (Stablecoins) wandert, sodass traditionelle M2-Statistiken allein nicht mehr das vollständige Liquiditätsbild erfassen.",
+        "gms_relevance": "Mittel. Ergänzende Daten for Liquiditätsanalyse. Wird auf Divergenz von Nettoliquidität überprüft.",
+        "seo_keywords": [
+            "M2",
+            "Geldmenge",
+            "Währungsangebot",
+            "Stablecoins"
+        ]
+    },
+    {
+        "id": "rrp-balance",
+        "category": "Liquidität (Liquidity)",
+        "term": "Reverse Repo-Guthaben (RRP)",
+        "definition": "Guthaben überschüssiger Mittel, die von Geldmarktfonds und anderen bei der Fed hinterlegt werden. Reservoir von 'Reservegeldern', die zurück in den Markt fließen können.",
+        "market_impact": {
+            "up": "Entzieht Liquidität aus dem Markt. Neutral bis negativ for Aktien.",
+            "down": "Setzt Liquidität in den Markt frei. Starker Unterstützungsfaktor for Risikoanlagen (Liquiditätsangebot)."
+        },
+        "context_2026": "Wie sich das RRP-Guthaben, das von 2024-2025 stark gefallen ist, unter dem neuen regulatorischen Umfeld 2026 bewegt, bestimmt Markt-Tail-Risiken.",
+        "gms_relevance": "Hoch. Kernvariable zur Berechnung der Nettoliquidität. Niedrige Guthaben signalisieren verringerte Marktresilienz.",
+        "seo_keywords": [
+            "Reverse Repo",
+            "RRP",
+            "Federal Reserve",
+            "Reservegelder"
+        ]
+    },
+    {
+        "id": "us10y-yield",
+        "category": "Zinssätze (Interest Rates)",
+        "term": "US 10-Jahres-Treasury-Rendite",
+        "definition": "Rendite auf 10-jährige US-Staatsanleihen. Eckpfeiler der globalen Finanzmärkte und Benchmark for alle Kreditkosten.",
+        "market_impact": {
+            "up": "Steigende Kreditkosten for Unternehmen und Verbraucher. Belastet Aktienbewertungen, insbesondere im Tech-Sektor.",
+            "down": "Sinkende Zinslast und stimulierender Effekt auf die Wirtschaft. Rückenwind for Aktien und langfristige Vermögenswerte."
+        },
+        "context_2026": "Fungiert als Anker for den globalen Diskontsatz. In der Makroumgebung 2026 ist die 'Term Premium' in den positiven Bereich zurückgekehrt, was Renditeniveaus øber 4,5% zu einer kritischen Schwelle for Risikoanlagen macht.",
+        "gms_relevance": "Sehr hoch. Kernvariable in GMS-Punkten zur Messung des risikofreien Preisdrucks.",
+        "seo_keywords": [
+            "US 10Y-Rendite",
+            "Treasury-Anleihen",
+            "Benchmark-Zinssatz",
+            "Risikofreier Zinssatz"
+        ]
+    },
+    {
+        "id": "nasdaq-100",
+        "category": "Aktien (Equities)",
+        "term": "Nasdaq 100",
+        "definition": "Technologielastiger Index, der die 100 größten nicht-finanziellen Unternehmen an der Nasdaq abbildet.",
+        "market_impact": {
+            "up": "Signalisiert starke Risikobereitschaft und Wachstum im Technologiesektor.",
+            "down": "Indiziert Tech-Ausverkauf oder steigenden Zinsdruck."
+        },
+        "context_2026": "KI-getriebenes Gewinnwachstum bei Mega-Cap-Tech erhält die US-Outperformance.",
+        "seo_keywords": [
+            "Nasdaq 100",
+            "QQQ",
+            "Tech-Aktien",
+            "KI-Unternehmen"
+        ]
+    },
+    {
+        "id": "russell-2000",
+        "category": "Aktien (Equities)",
+        "term": "Russell 2000",
+        "definition": "Bildet 2.000 US-Small-Cap-Unternehmen ab und dient als Pulsgeber für die Binnenwirtschaft.",
+        "market_impact": {
+            "up": "Spiegelt breites inländisches Wachstum und Risk-on-Stimmung wider.",
+            "down": "Signalisiert wirtschaftliche Fragilität oder Auswirkungen einer Kreditverknappung."
+        },
+        "context_2026": "Könnte aufgrund geringerer KI-Exposition hinter Large Caps zurückbleiben.",
+        "seo_keywords": [
+            "Russell 2000",
+            "Small-Caps",
+            "US-Wirtschaft"
+        ]
+    },
+    {
+        "id": "dax-index",
+        "category": "Aktien (Equities)",
+        "term": "DAX 40 (Deutschland)",
+        "definition": "Benchmark-Index für den deutschen Aktienmarkt, fokussiert auf Blue-Chip-Industriewerte.",
+        "market_impact": {
+            "up": "Indiziert robuste europäische Industrie- und Exportaktivität.",
+            "down": "Signalisiert Schwäche im verarbeitenden Gewerbe oder Handelsspannungen."
+        },
+        "context_2026": "Unterstützt durch Infrastrukturausgaben, belastet durch Energiekosten.",
+        "seo_keywords": [
+            "DAX 40",
+            "Deutsche Aktien",
+            "Frankfurter Börse"
+        ]
+    },
+    {
+        "id": "cac40-index",
+        "category": "Aktien (Equities)",
+        "term": "CAC 40 (Frankreich)",
+        "definition": "Primärer Benchmark für den französischen Aktienmarkt, geprägt von Luxus und Industrie.",
+        "market_impact": {
+            "up": "Spiegelt Luxusnachfrage und europäische Unternehmensgesundheit wider.",
+            "down": "Signalisiert Konsumverlangsamung oder regionale Fiskalinstabilität."
+        },
+        "context_2026": "Getrieben durch globalen Luxuskonsum und Energiewende.",
+        "seo_keywords": [
+            "CAC 40",
+            "Französische Aktien",
+            "Euronext Paris"
+        ]
+    },
+    {
+        "id": "ftse-100",
+        "category": "Aktien (Equities)",
+        "term": "FTSE 100 (UK)",
+        "definition": "Bildet die 100 größten Unternehmen der Londoner Börse ab, Schwerpunkt Energie und Finanzen.",
+        "market_impact": {
+            "up": "Profitiert von höheren Rohstoffpreisen und finanzieller Stabilität.",
+            "down": "Belastet durch sinkende Energienachfrage oder UK-Stagnation."
+        },
+        "context_2026": "Energie- und Finanzgewichtung bietet Renditeschutz im reifenden Zyklus.",
+        "seo_keywords": [
+            "FTSE 100",
+            "Londoner Börse",
+            "UK Blue-Chips"
+        ]
+    },
+    {
+        "id": "stoxx-600",
+        "category": "Aktien (Equities)",
+        "term": "STOXX Europe 600",
+        "definition": "Repräsentiert Unternehmen verschiedener Größe aus 17 europäischen Ländern.",
+        "market_impact": {
+            "up": "Breiter europäischer Marktoptimismus und regionales Wachstum.",
+            "down": "Signalisiert fragmentierte Eurozone-Risiken oder geopolitischen Druck."
+        },
+        "context_2026": "Überwacht europäische Produktivität inmitten fragmentierter Energiepolitik.",
+        "seo_keywords": [
+            "STOXX 600",
+            "Europäische Aktien",
+            "Regionale Benchmark"
+        ]
+    },
+    {
+        "id": "nikkei-225",
+        "category": "Aktien (Equities)",
+        "term": "Nikkei 225",
+        "definition": "Japans führender Aktienindex, bestehend aus 225 liquiden Großunternehmen.",
+        "market_impact": {
+            "up": "Getrieben durch Yen-Schwäche (Exporte) und interne Reformen.",
+            "down": "Beeinflusst durch Yen-Stärke oder BoJ-Straffungsängste."
+        },
+        "context_2026": "Wachstum nach der Deflation und Halbleiter-Reshoring treiben Alpha.",
+        "seo_keywords": [
+            "Nikkei 225",
+            "Japanische Aktien",
+            "Börse Tokio"
+        ]
+    },
+    {
+        "id": "hang-seng",
+        "category": "Aktien (Equities)",
+        "term": "Hang Seng Index",
+        "definition": "Hauptindikator für die Performance des Aktienmarktes in Hongkong.",
+        "market_impact": {
+            "up": "Signalisiert Erfolg chinesischer Stimuli und Handelsentspannung.",
+            "down": "Spiegelt Chinas Wachstumssorgen oder geopolitische Reibungen wider."
+        },
+        "context_2026": "Proxy für Chinas Tech-Regulierung und Stimulus-Effektivität.",
+        "seo_keywords": [
+            "Hang Seng",
+            "Hongkong Aktien",
+            "China-Proxy"
+        ]
+    },
+    {
+        "id": "nifty-50",
+        "category": "Aktien (Equities)",
+        "term": "Nifty 50 (Indien)",
+        "definition": "Benchmark-Index für den indischen Aktienmarkt, repräsentiert 50 Top-Unternehmen.",
+        "market_impact": {
+            "up": "Starke Inlandsnachfrage und strukturelles Langzeitwachstum.",
+            "down": "Beeinflusst durch Abflüsse aus Schwellenländern oder Inflationsspitzen."
+        },
+        "context_2026": "KI-Dienstleistungsexporte und demografische Dividende stützen Wachstum.",
+        "seo_keywords": [
+            "Nifty 50",
+            "Indische Aktien",
+            "Emerging Markets"
+        ]
+    },
+    {
+        "id": "asx-200",
+        "category": "Aktien (Equities)",
+        "term": "ASX 200 (Australien)",
+        "definition": "Benchmark-Index für Australien, dominiert durch Banken und Bergbau.",
+        "market_impact": {
+            "up": "Signalisiert Rohstoffnachfrage und Gesundheit des Finanzsektors.",
+            "down": "Belastet durch verlangsamten Ressourcenverbrauch in China."
+        },
+        "context_2026": "Kritische Mineralien und Exporte der Energiewende bleiben Haupttreiber.",
+        "seo_keywords": [
+            "ASX 200",
+            "Australische Aktien",
+            "Bergbau & Finanzen"
+        ]
+    },
+    {
+        "id": "global-reit",
+        "category": "Immobilien (Real Estate)",
+        "term": "Globaler REIT",
+        "definition": "Verfolgt Immobilien-Investmenttrusts in globalen Märkten.",
+        "market_impact": {
+            "up": "Signalisiert sinkende Zinsen und stabile Mieteinahmen.",
+            "down": "Belastet durch hohe Kreditkosten und Stress im Bürosektor."
+        },
+        "context_2026": "Rechenzentren und KI-Einrichtungen treiben neue Renditen für REITs.",
+        "seo_keywords": [
+            "Globaler REIT",
+            "Immobilieninvestments",
+            "Renditen"
+        ]
+    },
+    {
+        "id": "us-housing",
+        "category": "Immobilien (Real Estate)",
+        "term": "US-Immobilienmarkt (XHB)",
+        "definition": "Überwacht die Gesundheit des US-Wohnungsbaus und Bausektors.",
+        "market_impact": {
+            "up": "Starkes Verbrauchervertrauen und günstige Hypothekenzinsen.",
+            "down": "Signalisiert Rezessionsrisiko oder unbezahlbare Kreditzinsen."
+        },
+        "context_2026": "Smart-Home-Tech und nachhaltiges Bauen treiben Branchenmargen.",
+        "seo_keywords": [
+            "US-Immobilien",
+            "XHB",
+            "Hausbauer",
+            "Hypothekenzinsen"
+        ]
+    },
+    {
+        "id": "logistics-reit",
+        "category": "Immobilien (Real Estate)",
+        "term": "Logistik-REIT",
+        "definition": "Fokussiert auf Lagerhäuser und Verteilzentren für den E-Commerce.",
+        "market_impact": {
+            "up": "Spiegelt robuste Lieferkettenaktivität und Konsumausgaben wider.",
+            "down": "Signalisiert nachlassende Einzelhandelsnachfrage oder Inventarüberhang."
+        },
+        "context_2026": "Autonome Logistik und Last-Mile-Robotik steigern Vermögenswerte.",
+        "seo_keywords": [
+            "Logistik-REIT",
+            "Lagerhaltung",
+            "Lieferkette",
+            "E-Commerce"
+        ]
+    },
+    {
+        "id": "infrastructure",
+        "category": "Immobilien (Real Estate)",
+        "term": "Infrastruktur",
+        "definition": "Anlagen in Verkehr, Versorgungsunternehmen und Kommunikationsnetzen.",
+        "market_impact": {
+            "up": "Signalisiert langfristige Staatsausgaben und Energiesicherheit.",
+            "down": "Spiegelt Budgetkürzungen oder steigende Baukosten wider."
+        },
+        "context_2026": "Grüner Wasserstoff und Smart Grids definieren den Boom 2026.",
+        "seo_keywords": [
+            "Infrastruktur",
+            "Versorger",
+            "Energienetz"
+        ]
+    },
+    {
+        "id": "high-yield-bond",
+        "category": "Kredit (Credit)",
+        "term": "Hochzinsanleihen (Junk Bonds)",
+        "definition": "Anleihen mit niedrigerem Rating und höheren Renditechancen.",
+        "market_impact": {
+            "up": "Extreme Risikobereitschaft; sinkende Spreads signalisieren Vertrauen.",
+            "down": "Steigende Spreads signalisieren Ausfallängste und Kreditklemme."
+        },
+        "context_2026": "Unternehmens-Refinanzierungszyklen testen 2026 die Haltbarkeit.",
+        "seo_keywords": [
+            "High-Yield",
+            "Junk Bonds",
+            "Kreditspreads",
+            "HYG"
+        ]
+    },
+    {
+        "id": "investment-grade-bond",
+        "category": "Kredit (Credit)",
+        "term": "Investment-Grade-Anleihen",
+        "definition": "Hochwertige Unternehmensanleihen mit geringem Ausfallrisiko.",
+        "market_impact": {
+            "up": "Signalisiert stetigen institutionellen Zufluss und Zinshoffnungen.",
+            "down": "Belastet durch steigende Inflation oder Ertragsschwäche."
+        },
+        "context_2026": "Stabile Renditen KI-lastiger Firmen fungieren als 'Qualitätsanker'.",
+        "seo_keywords": [
+            "Investment Grade",
+            "LQD",
+            "Unternehmensanleihen"
+        ]
+    },
+    {
+        "id": "tips",
+        "category": "Anleihen (Bonds)",
+        "term": "TIPS",
+        "definition": "Inflationsgeschützte US-Staatsanleihen.",
+        "market_impact": {
+            "up": "Spiegelt steigende Inflationserwartungen oder Realrenditenachfrage wider.",
+            "down": "Signalisiert Disinflation oder wirtschaftliche Abkühlung."
+        },
+        "context_2026": "Zentrale Absicherung gegen potenzielle KI-bedingte Reflation 2026.",
+        "seo_keywords": [
+            "TIPS",
+            "Inflationsschutz",
+            "Realrenditen",
+            "TIP"
+        ]
+    },
+    {
+        "id": "short-treasury",
+        "category": "Anleihen (Bonds)",
+        "term": "Kurzläufer-Staatsanleihen",
+        "definition": "Staatsanleihen mit kurzer Laufzeit (1-3 Jahre), sensitiv zur Fed-Politik.",
+        "market_impact": {
+            "up": "Spiegelt 'Cash is King' in Hochzins- oder Panikszenarien wider.",
+            "down": "Signalisiert Rotation in längere Laufzeiten oder Risikoanlagen."
+        },
+        "context_2026": "Hohe Nominalrenditen bieten 'risikofreien Hafen' für KI-Kapital.",
+        "seo_keywords": [
+            "Kurzläufer",
+            "SHY",
+            "Zinssensitivität",
+            "US-Anleihen"
+        ]
+    },
+    {
+        "id": "baltic-dry-index",
+        "category": "Handel (Trade)",
+        "term": "Baltic Dry Index",
+        "definition": "Benchmark für die Kosten des Seetransports von Rohstoffen.",
+        "market_impact": {
+            "up": "Signalisiert globalen Industrieboom und hohe Rohstoffnachfrage.",
+            "down": "Frühwarnung vor globalem Handelsrückgang oder Überangebot."
+        },
+        "context_2026": "Volatil aufgrund klimabedingter Schifffahrtswege und Onshoring.",
+        "seo_keywords": [
+            "Baltic Dry",
+            "Schifffahrt",
+            "Welthandel",
+            "Rohstoffe"
+        ]
+    },
+    {
+        "id": "shipping-index",
+        "category": "Handel (Trade)",
+        "term": "Schifffahrts-Index",
+        "definition": "Verfolgt die Performance globaler Seetransportunternehmen.",
+        "market_impact": {
+            "up": "Signalisiert Engpässe in der Lieferkette und steigende Frachtraten.",
+            "down": "Spiegelt sinkenden globalen Konsum und Überkapazitäten wider."
+        },
+        "context_2026": "Autonome Flotten und Dekarbonisierung prägen die Margen 2026.",
+        "seo_keywords": [
+            "Schifffahrt",
+            "Logistik-Aktien",
+            "Container"
+        ]
+    },
+    {
+        "id": "agriculture-commodities",
+        "category": "Rohstoffe (Commodities)",
+        "term": "Agrarrohstoffe (DBA)",
+        "definition": "Verfolgt Agrargüter wie Weizen, Mais und Soja.",
+        "market_impact": {
+            "up": "Steigende Lebensmittelinflation und Klimaschocks.",
+            "down": "Deflatorischer Druck oder Rekordernten."
+        },
+        "context_2026": "Smart-Farming und bio-engineered Nutzpflanzen treiben das Angebot.",
+        "seo_keywords": [
+            "Landwirtschaft",
+            "Agrarpreise",
+            "Lebensmittel"
+        ]
+    },
+    {
+        "id": "semiconductors",
+        "category": "Technologie (Technology)",
+        "term": "Halbleiter",
+        "definition": "Unternehmen, die Computerchips entwerfen und herstellen.",
+        "market_impact": {
+            "up": "Maximaler Tech-Rückenwind; signalisiert KI-Einführungsphase.",
+            "down": "Signalisiert Inventarspitzen oder Kürzung von Investitionen."
+        },
+        "context_2026": "Nächste Generation von GPUs und Custom-Silicon treiben den Superzyklus.",
+        "seo_keywords": [
+            "Halbleiter",
+            "SOXX",
+            "KI-Chips",
+            "GPU-Zyklus"
+        ]
+    },
+    {
+        "id": "defense-sector",
+        "category": "Thematisch (Thematic)",
+        "term": "Verteidigungssektor",
+        "definition": "Unternehmen in Luftfahrt, Verteidigung und nationaler Sicherheit.",
+        "market_impact": {
+            "up": "Steigende geopolitische Spannungen und Verteidigungsausgaben.",
+            "down": "Signalisiert Deeskalation von Konflikten oder Budgetkürzungen."
+        },
+        "context_2026": "KI-gesteuerte Drohnen und autonome Sicherheit dominieren Verträge.",
+        "seo_keywords": [
+            "Verteidigung",
+            "ITA",
+            "Luftfahrt",
+            "Sicherheit"
+        ]
+    },
+    {
+        "id": "rare-earth-metals",
+        "category": "Thematisch (Thematic)",
+        "term": "Seltene Erden",
+        "definition": "Kritische Mineralien für Magnete, Motoren und High-Tech-Hardware.",
+        "market_impact": {
+            "up": "Signalisiert Hardware-Engpässe und Handelskriege.",
+            "down": "Spiegelt neue Quellen oder Recycling-Effizienz wider."
+        },
+        "context_2026": "Tauziehen zwischen Ressourcen-Nationalismus und KI-Hardwarenachfrage.",
+        "seo_keywords": [
+            "Seltene Erden",
+            "Kritische Mineralien",
+            "Tech-Lieferkette"
+        ]
+    },
+    {
+        "id": "cybersecurity",
+        "category": "Technologie (Technology)",
+        "term": "Cyber-Sicherheit",
+        "definition": "Schützt Netzwerke und Daten vor KI-gestützten Cyber-Bedrohungen.",
+        "market_impact": {
+            "up": "Steigende Unternehmensrisiken und Hacks kritischer Infrastruktur.",
+            "down": "Signalisiert Konsolidierung bei Tech-Ausgaben oder bessere Abwehr."
+        },
+        "context_2026": "KI-gegen-KI 'Stealth-Kriege' machen Sicherheit zur Pflichtaufgabe.",
+        "seo_keywords": [
+            "Cybersecurity",
+            "CIBR",
+            "KI-Bedrohungen"
+        ]
+    },
+    {
+        "id": "silver-price",
+        "category": "Rohstoffe (Commodities)",
+        "term": "Silber",
+        "definition": "Edelmetall mit hohem industriellem Nutzen in Elektronik und Solar.",
+        "market_impact": {
+            "up": "Signalisiert industrielle Expansion und Währungsabsicherung.",
+            "down": "Spiegelt industrielle Verlangsamung oder höhere Realzinsen wider."
+        },
+        "context_2026": "Solar 2.0 und E-Auto-Batterien halten die Nachfrage hoch.",
+        "seo_keywords": [
+            "Silberpreis",
+            "Industriemetall",
+            "Edelmetall"
+        ]
+    },
+    {
+        "id": "natural-gas",
+        "category": "Rohstoffe (Commodities)",
+        "term": "Erdgas",
+        "definition": "Energiequelle, kritisch für Stromerzeugung und Heizung.",
+        "market_impact": {
+            "up": "Energiekrise-Angst oder extreme Wetterauswirkungen.",
+            "down": "Reichliche Vorräte und milde Winter; geringere Inflation."
+        },
+        "context_2026": "Die 'Brückentechnologie' zur Deckung des KI-Rechenzentrum-Bedarfs.",
+        "seo_keywords": [
+            "Erdgas",
+            "Energie",
+            "LNG",
+            "Utilities"
+        ]
+    },
+    {
+        "id": "eurusd",
+        "category": "Forex (Forex)",
+        "term": "EUR/USD",
+        "definition": "Wechselkurs zwischen dem Euro und dem US-Dollar.",
+        "market_impact": {
+            "up": "Dollar-Schwäche oder europäische wirtschaftliche Outperformance.",
+            "down": "Dollar-Stärke/Flucht in Sicherheit oder Eurozonen-Instabilität."
+        },
+        "context_2026": "Überwacht die Divergenz zwischen EZB- und Fed-Geldpolitik.",
+        "seo_keywords": [
+            "EURUSD",
+            "Forex",
+            "Euro",
+            "Dollar"
+        ]
+    },
+    {
+        "id": "usdjpy",
+        "category": "Forex (Forex)",
+        "term": "USD/JPY",
+        "definition": "Wechselkurs zwischen dem US-Dollar und dem japanischen Yen.",
+        "market_impact": {
+            "up": "Yen-Schwäche; Carry-Trades florieren und Exporte steigen.",
+            "down": "Yen-Stärke; Risk-off-Stimmung oder BoJ-Normalisierung."
+        },
+        "context_2026": "Abschluss der Yen-Carry-Trade-Auflösung bestimmt globale Flüsse.",
+        "seo_keywords": [
+            "USDJPY",
+            "Forex",
+            "Yen",
+            "Carry-Trade"
+        ]
+    },
+    {
+        "id": "usdcny",
+        "category": "Forex (Forex)",
+        "term": "USD/CNY",
+        "definition": "Wechselkurs zwischen dem US-Dollar und dem chinesischen Yuan.",
+        "market_impact": {
+            "up": "Yuan-Schwäche; signalisiert Handelsdruck oder China-Verlangsamung.",
+            "down": "Yuan-Stärke; spiegelt Erfolg chinesischer Stimuli wider."
+        },
+        "context_2026": "Brennpunkt für US-China-Handelskonflikte und Zollkriege.",
+        "seo_keywords": [
+            "USDCNY",
+            "Forex",
+            "Yuan",
+            "China-Handel"
+        ]
+    },
+    {
+        "id": "solana",
+        "category": "Krypto",
+        "term": "Solana (SOL)",
+        "definition": "Eine Hochleistungs-Blockchain für dezentrale Anwendungen. Bekannt für hohen Durchsatz und niedrige Kosten.",
+        "market_impact": {
+            "up": "Signaliert hohes Interesse an DeFi und Web3-Innovationen.",
+            "down": "Rotation aus High-Beta-Altcoins oder Netzwerkbedenken."
+        },
+        "context_2026": "Solana hat sich als 'Hochgeschwindigkeitsnetz' für DePIN und KI-Apps etabliert.",
+        "seo_keywords": [
+            "Solana",
+            "SOL",
+            "Blockchain",
+            "DeFi"
+        ]
+    },
+    {
+        "id": "nasdaq-100",
+        "category": "Aktien",
+        "term": "Nasdaq 100",
+        "definition": "Die 100 größten nicht-finanziellen Unternehmen der Nasdaq-Börse, dominiert von Tech-Giganten.",
+        "market_impact": {
+            "up": "Risk-on-Stimmung; Fokus auf Wachstum und Innovation.",
+            "down": "Steigende Zinsen oder regulatorischer Druck auf Big Tech."
+        },
+        "context_2026": "KI-Monetarisierung ist der Haupttreiber für die Nasdaq-Bewertungen.",
+        "seo_keywords": [
+            "Nasdaq",
+            "Tech-Aktien",
+            "QQQ",
+            "Wachstum"
+        ]
+    },
+    {
+        "id": "russell-2000",
+        "category": "Aktien",
+        "term": "Russell 2000",
+        "definition": "Ein Index, der 2.000 US-Small-Cap-Unternehmen abbildet.",
+        "market_impact": {
+            "up": "Optimismus für die Binnenkonjunktur; Breite Marktteilnahme.",
+            "down": "Kreditverknappung oder Rezessionssorgen in den USA."
+        },
+        "context_2026": "Profitabilität von kleinen Unternehmen in einem Umfeld höherer Zinsen.",
+        "seo_keywords": [
+            "Russell 2000",
+            "Small Caps",
+            "US-Wirtschaft"
+        ]
+    },
+    {
+        "id": "dax-index",
+        "category": "Aktien",
+        "term": "DAX 40",
+        "definition": "Die 40 größten Unternehmen am deutschen Aktienmarkt.",
+        "market_impact": {
+            "up": "Starke globale Industrie-Nachfrage; Euro-Schwäche begünstigt Exporte.",
+            "down": "Energiekrise oder Rezession in der Eurozone."
+        },
+        "context_2026": "Transformation der deutschen Automobil- und Chemieindustrie.",
+        "seo_keywords": [
+            "DAX",
+            "Aktien Deutschland",
+            "Industrie"
+        ]
+    },
+    {
+        "id": "cac40-index",
+        "category": "Aktien",
+        "term": "CAC 40",
+        "definition": "Leitindex der französischen Börse, stark gewichtet in Luxusgütern.",
+        "market_impact": {
+            "up": "Wachsende globale Wohlstandsbildung; Luxusboom in Asien.",
+            "down": "Steigende Zölle oder globale Konsumzurückhaltung."
+        },
+        "context_2026": "Resilienz des Luxussektors gegenüber makroökonomischem Gegenwind.",
+        "seo_keywords": [
+            "CAC 40",
+            "Luxusgüter",
+            "Börse Paris"
+        ]
+    },
+    {
+        "id": "usdinr",
+        "category": "Forex",
+        "term": "USD/INR",
+        "definition": "Wechselkurs zwischen US-Dollar und Indischer Rupie.",
+        "market_impact": {
+            "up": "Rupie-Schwäche; Kapitalabfluss aus Schwellenländern.",
+            "down": "Vertrauen in Indiens strukturelles Wachstum."
+        },
+        "context_2026": "Indiens Aufstieg zur globalen Produktionsalternative zu China.",
+        "seo_keywords": [
+            "USDINR",
+            "Rupie",
+            "Indien Wirtschaft"
+        ]
+    },
+    {
+        "id": "usdsar",
+        "category": "Forex",
+        "term": "USD/SAR",
+        "definition": "Wechselkurs zwischen US-Dollar und Saudi-Riyal.",
+        "market_impact": {
+            "up": "Druck auf die Bindung (Peg); extremes Ölpreistief.",
+            "down": "Stabiler Peg; starke Einnahmen aus Vision 2030 Projekten."
+        },
+        "context_2026": "Stabilität des Petrodollars und regionale Geopolitik.",
+        "seo_keywords": [
+            "USDSAR",
+            "Saudi-Riyal",
+            "Ölmarkt"
+        ]
+    }
+]

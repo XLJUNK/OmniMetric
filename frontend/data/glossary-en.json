@@ -523,6 +523,24 @@
         ]
     },
     {
+        "id": "solana",
+        "category": "Crypto",
+        "term": "Solana (SOL)",
+        "definition": "A high-performance blockchain supporting builders globally. Known for its high throughput and low transaction costs.",
+        "market_impact": {
+            "up": "Signals high retail and DeFi appetite. Expansion of the decentralized app ecosystem.",
+            "down": "Signals rotation out of high-beta altcoins or network stability concerns."
+        },
+        "context_2026": "Solana has solidified its position as the 'High-Speed Rail' of crypto. In 2026, its integration with AI-decentralized physical infrastructure (DePIN) is a primary growth factor.",
+        "gms_relevance": "Medium. Acts as a proxy for 'Innovation Beta' within the crypto sector reporting.",
+        "seo_keywords": [
+            "Solana",
+            "SOL",
+            "DePIN",
+            "High Performance Blockchain"
+        ]
+    },
+    {
         "id": "wti-oil",
         "category": "Commodities",
         "term": "WTI Crude Oil",
@@ -556,6 +574,536 @@
             "Investment Framework",
             "Multi-Asset Analysis",
             "GMS Framework"
+        ]
+    },
+    {
+        "id": "nasdaq-100",
+        "category": "Equities",
+        "term": "Nasdaq 100",
+        "definition": "A technology-heavy index tracking the 100 largest non-financial companies listed on the Nasdaq.",
+        "market_impact": {
+            "up": "Signals strong risk appetite and tech sector growth.",
+            "down": "Indicates tech sell-off or rising interest rate pressures."
+        },
+        "context_2026": "AI-driven profit growth in mega-cap tech maintains U.S. outperformance.",
+        "seo_keywords": [
+            "Nasdaq 100",
+            "QQQ",
+            "Tech Stocks",
+            "AI Companies"
+        ]
+    },
+    {
+        "id": "russell-2000",
+        "category": "Equities",
+        "term": "Russell 2000",
+        "definition": "Tracks 2,000 small-cap U.S. companies, serving as a pulse for the domestic economy.",
+        "market_impact": {
+            "up": "Reflects broad domestic growth and risk-on sentiment.",
+            "down": "Signals economic fragility or credit tightening impacts on small firms."
+        },
+        "context_2026": "May lag large-caps due to limited AI exposure, but supports cyclical recovery.",
+        "seo_keywords": [
+            "Russell 2000",
+            "IWM",
+            "Small Cap",
+            "US Economy"
+        ]
+    },
+    {
+        "id": "dax-index",
+        "category": "Equities",
+        "term": "DAX 40 (Germany)",
+        "definition": "The benchmark index for the German equity market, focusing on blue-chip industrials.",
+        "market_impact": {
+            "up": "Indicates robust European industrial and export activity.",
+            "down": "Signals manufacturing weakness or trade tensions in the Eurozone."
+        },
+        "context_2026": "Supported by infrastructure spending, constrained by energy costs.",
+        "seo_keywords": [
+            "DAX 40",
+            "German Stocks",
+            "Frankfurt Exchange"
+        ]
+    },
+    {
+        "id": "cac40-index",
+        "category": "Equities",
+        "term": "CAC 40 (France)",
+        "definition": "The primary benchmark for the French stock market, featuring luxury and global industrials.",
+        "market_impact": {
+            "up": "Reflects luxury demand and European corporate health.",
+            "down": "Signals consumer slowdown or regional fiscal instability."
+        },
+        "context_2026": "Driven by global luxury consumption and energy-tech transitions.",
+        "seo_keywords": [
+            "CAC 40",
+            "French Stocks",
+            "Euronext Paris"
+        ]
+    },
+    {
+        "id": "ftse-100",
+        "category": "Equities",
+        "term": "FTSE 100 (UK)",
+        "definition": "Tracks the 100 largest companies on the London Stock Exchange, biased towards energy and finance.",
+        "market_impact": {
+            "up": "Boosted by higher commodity prices and financial stability.",
+            "down": "Pressured by falling energy demand or UK economic stagnation."
+        },
+        "context_2026": "Heavy energy/finance weight provides yield support in a maturing cycle.",
+        "seo_keywords": [
+            "FTSE 100",
+            "London Stock Exchange",
+            "UK Blue Chips"
+        ]
+    },
+    {
+        "id": "stoxx-600",
+        "category": "Equities",
+        "term": "STOXX Europe 600",
+        "definition": "Represents large, mid, and small-cap companies across 17 European countries.",
+        "market_impact": {
+            "up": "Broad European market optimism and regional growth.",
+            "down": "Signals fragmented Eurozone risk or geopolitical drag."
+        },
+        "context_2026": "Monitors European productivity amidst fragmented energy policy.",
+        "seo_keywords": [
+            "STOXX 600",
+            "European Equities",
+            "Regional Benchmark"
+        ]
+    },
+    {
+        "id": "nikkei-225",
+        "category": "Equities",
+        "term": "Nikkei 225",
+        "definition": "Japan's premier stock index, consisting of 225 large, liquid companies.",
+        "market_impact": {
+            "up": "Driven by Yen weakness (exports) and domestic corporate reform.",
+            "down": "Affected by Yen strength or BoJ tightening fears."
+        },
+        "context_2026": "Post-deflation growth and semiconductor re-shoring drive alpha.",
+        "seo_keywords": [
+            "Nikkei 225",
+            "Japan Stocks",
+            "Tokyo Stock Exchange"
+        ]
+    },
+    {
+        "id": "hang-seng",
+        "category": "Equities",
+        "term": "Hang Seng Index",
+        "definition": "The main indicator of performance for the Hong Kong stock market.",
+        "market_impact": {
+            "up": "Signals China stimulus success and trade easing.",
+            "down": "Reflects China growth concerns or geopolitical friction."
+        },
+        "context_2026": "A proxy for China's tech-platform regulation and stimulus efficacy.",
+        "seo_keywords": [
+            "Hang Seng",
+            "HK Stocks",
+            "China Market Proxy"
+        ]
+    },
+    {
+        "id": "nifty-50",
+        "category": "Equities",
+        "term": "Nifty 50 (India)",
+        "definition": "Benchmark index for the Indian equity market, representing 50 major companies.",
+        "market_impact": {
+            "up": "Strong domestic demand and long-term structural growth.",
+            "down": "Affected by emerging market outflows or inflationary spikes."
+        },
+        "context_2026": "AI service exports and demographic dividends sustain high growth.",
+        "seo_keywords": [
+            "Nifty 50",
+            "India Stocks",
+            "Emerging Markets"
+        ]
+    },
+    {
+        "id": "asx-200",
+        "category": "Equities",
+        "term": "ASX 200 (Australia)",
+        "definition": "The benchmark index for Australia, dominated by banks and mining.",
+        "market_impact": {
+            "up": "Signals commodity demand and financial sector health.",
+            "down": "Pressured by China's slowing resource consumption."
+        },
+        "context_2026": "Critical minerals and energy transition exports remain key drivers.",
+        "seo_keywords": [
+            "ASX 200",
+            "Australian Stocks",
+            "Mining & Finance"
+        ]
+    },
+    {
+        "id": "global-reit",
+        "category": "Real Estate",
+        "term": "Global REIT",
+        "definition": "Tracks Real Estate Investment Trusts across global markets.",
+        "market_impact": {
+            "up": "Signals falling interest rates and stable rental income.",
+            "down": "Pressured by high borrowing costs and office sector stress."
+        },
+        "context_2026": "Data centers and AI facilities drive new yields for REITs.",
+        "seo_keywords": [
+            "Global REIT",
+            "Real Estate Investment",
+            "Yields"
+        ]
+    },
+    {
+        "id": "us-housing",
+        "category": "Real Estate",
+        "term": "US Housing Market (XHB)",
+        "definition": "Tracks the health of the U.S. residential construction and building sector.",
+        "market_impact": {
+            "up": "Strong consumer confidence and favorable mortgage rates.",
+            "down": "Signals recession risk or unaffordable lending rates."
+        },
+        "context_2026": "Smart home tech and sustainable building drive industry margins.",
+        "seo_keywords": [
+            "US Housing",
+            "XHB",
+            "Homebuilders",
+            "Mortgage Rates"
+        ]
+    },
+    {
+        "id": "logistics-reit",
+        "category": "Real Estate",
+        "term": "Logistics REIT",
+        "definition": "Focuses on warehouses and distribution centers critical for e-commerce.",
+        "market_impact": {
+            "up": "Reflects robust supply chain activity and consumer spending.",
+            "down": "Signals waning retail demand or inventory gluts."
+        },
+        "context_2026": "Autonomous logistics and last-mile robotics enhance asset value.",
+        "seo_keywords": [
+            "Logistics REIT",
+            "Warehousing",
+            "Supply Chain",
+            "E-commerce"
+        ]
+    },
+    {
+        "id": "infrastructure",
+        "category": "Real Estate",
+        "term": "Infrastructure",
+        "definition": "Assets involved in transport, utilities, and communication networks.",
+        "market_impact": {
+            "up": "Signals long-term fiscal spending and energy security.",
+            "down": "Reflects budget cuts or rising construction costs."
+        },
+        "context_2026": "Green hydrogen and smart grids define the 2026 infrastructure boom.",
+        "seo_keywords": [
+            "Infrastructure",
+            "Utilities",
+            "Energy Grid"
+        ]
+    },
+    {
+        "id": "high-yield-bond",
+        "category": "Credit",
+        "term": "High Yield Bonds",
+        "definition": "Bonds with lower credit ratings offering higher yields (Junk Bonds).",
+        "market_impact": {
+            "up": "Extreme risk-on appetite; narrowing spreads signal confidence.",
+            "down": "Widening spreads signal rising default fears and credit crunch."
+        },
+        "context_2026": "Corporate refinancing cycles in 2026 test the durability of junk credit.",
+        "seo_keywords": [
+            "High Yield",
+            "Junk Bonds",
+            "Credit Spreads",
+            "HYG"
+        ]
+    },
+    {
+        "id": "investment-grade-bond",
+        "category": "Credit",
+        "term": "Investment Grade Bonds",
+        "definition": "High-quality corporate debt with lower default risk.",
+        "market_impact": {
+            "up": "Signals steady institutional inflow and lower rate expectations.",
+            "down": "Pressured by rising inflation or corporate earnings stress."
+        },
+        "context_2026": "Steady yields for AI-heavy corporations act as 'Quality Bonds'.",
+        "seo_keywords": [
+            "Investment Grade",
+            "LQD",
+            "Corporate Bonds",
+            "Credit Quality"
+        ]
+    },
+    {
+        "id": "tips",
+        "category": "Bonds",
+        "term": "TIPS",
+        "definition": "U.S. Treasury Inflation-Protected Securities.",
+        "market_impact": {
+            "up": "Reflects rising inflation expectations or real yield demand.",
+            "down": "Signals disinflation or economic cooling."
+        },
+        "context_2026": "A key hedge against potential 2026 reflationary AI spending.",
+        "seo_keywords": [
+            "TIPS",
+            "Inflation Protection",
+            "Real Yields",
+            "TIP"
+        ]
+    },
+    {
+        "id": "short-treasury",
+        "category": "Bonds",
+        "term": "Short-Term Treasury",
+        "definition": "Gov bonds with shorter maturities (1-3 years), sensitive to Fed policy.",
+        "market_impact": {
+            "up": "Reflects 'Cash as King' in high-rate or panic environments.",
+            "down": "Signals rotation into duration or risk assets."
+        },
+        "context_2026": "High nominal yields offer a 'Risk-Free AI Hub' for idle cash.",
+        "seo_keywords": [
+            "Short Treasury",
+            "SHY",
+            "Rate Sensitivity",
+            "US Bonds"
+        ]
+    },
+    {
+        "id": "baltic-dry-index",
+        "category": "Trade",
+        "term": "Baltic Dry Index",
+        "definition": "Benchmark for the price of moving raw materials by sea.",
+        "market_impact": {
+            "up": "Signals global industrial boom and high raw material demand.",
+            "down": "Early warning of global trade contraction or supply glut."
+        },
+        "context_2026": "Volatile due to climate-impacted shipping lanes and on-shoring.",
+        "seo_keywords": [
+            "Baltic Dry",
+            "Shipping",
+            "Global Trade",
+            "Commodities"
+        ]
+    },
+    {
+        "id": "shipping-index",
+        "category": "Trade",
+        "term": "Shipping Index",
+        "definition": "Tracks the performance of global maritime transportation companies.",
+        "market_impact": {
+            "up": "Signals supply chain tightness and rising freight rates.",
+            "down": "Reflects waning global consumption and overcapacity."
+        },
+        "context_2026": "Autonomous fleets and decarbonization costs reshape shipping margins.",
+        "seo_keywords": [
+            "Shipping Index",
+            "Container Shipping",
+            "Logistics Stocks"
+        ]
+    },
+    {
+        "id": "agriculture-commodities",
+        "category": "Commodities",
+        "term": "Agri Commodities (DBA)",
+        "definition": "Tracks soft commodities like wheat, corn, and soy.",
+        "market_impact": {
+            "up": "Rising food inflation and potential climate-supply shocks.",
+            "down": "Deflationary pressure or bumper harvest years."
+        },
+        "context_2026": "Smart-farming and bio-engineered resilient crops drive supply.",
+        "seo_keywords": [
+            "Agriculture",
+            "Soft Commodities",
+            "Food Price Index"
+        ]
+    },
+    {
+        "id": "semiconductors",
+        "category": "Technology",
+        "term": "Semiconductors",
+        "definition": "Companies designing and manufacturing computer chips.",
+        "market_impact": {
+            "up": "Maximum tech sector tailwind; signals AI deployment phase.",
+            "down": "Signals inventory peak or capital expenditure cuts."
+        },
+        "context_2026": "Next-gen GPU Blackwell and custom silicon drive the super-cycle.",
+        "seo_keywords": [
+            "Semiconductors",
+            "SOXX",
+            "AI Chips",
+            "GPU Cycle"
+        ]
+    },
+    {
+        "id": "defense-sector",
+        "category": "Thematic",
+        "term": "Defense Sector",
+        "definition": "Companies in aerospace, defense, and national security.",
+        "market_impact": {
+            "up": "Rising geopolitical tensions and increased defense budgets.",
+            "down": "Signals de-escalation of conflict or budget austerity."
+        },
+        "context_2026": "AI-empowered drones and autonomous security dominate contracts.",
+        "seo_keywords": [
+            "Defense Sector",
+            "ITA",
+            "Aerospace",
+            "Security"
+        ]
+    },
+    {
+        "id": "rare-earth-metals",
+        "category": "Thematic",
+        "term": "Rare Earth Metals",
+        "definition": "Critical minerals used in magnets, motors, and high-tech hardware.",
+        "market_impact": {
+            "up": "Signals hardware supply constraints and trade warfare.",
+            "down": "Reflects new supply sources or hardware recycling efficiency."
+        },
+        "context_2026": "Tug-of-war between resource nationalism and AI hardware demand.",
+        "seo_keywords": [
+            "Rare Earth",
+            "Critical Minerals",
+            "Tech Supply Chain"
+        ]
+    },
+    {
+        "id": "cybersecurity",
+        "category": "Technology",
+        "term": "Cybersecurity",
+        "definition": "Protects networks and data from AI-enhanced cyber threats.",
+        "market_impact": {
+            "up": "Increasing enterprise risk and critical infrastructure hacks.",
+            "down": "Signals consolidation in tech spending or improved defense."
+        },
+        "context_2026": "AI vs AI 'Stealth Wars' make security a mandatory utility.",
+        "seo_keywords": [
+            "Cybersecurity",
+            "CIBR",
+            "AI Threats",
+            "Network Security"
+        ]
+    },
+    {
+        "id": "silver-price",
+        "category": "Commodities",
+        "term": "Silver",
+        "definition": "A precious metal with massive industrial utility in electronics and solar.",
+        "market_impact": {
+            "up": "Signals industrial expansion and monetary hedge demand.",
+            "down": "Reflects industrial slowdown or higher real rates."
+        },
+        "context_2026": "Solar 2.0 and EV batteries demand keep silver floor high.",
+        "seo_keywords": [
+            "Silver Price",
+            "Industrial Metal",
+            "Precious Metal"
+        ]
+    },
+    {
+        "id": "natural-gas",
+        "category": "Commodities",
+        "term": "Natural Gas",
+        "definition": "Clean-burning energy source critical for electricity and heating.",
+        "market_impact": {
+            "up": "Energy crisis fears or extreme weather impacts.",
+            "down": "Ample storage and warm winters; lower localized inflation."
+        },
+        "context_2026": "The 'Bridge Fuel' supporting massive AI data center energy needs.",
+        "seo_keywords": [
+            "Natural Gas",
+            "Energy",
+            "LNG",
+            "Utilities"
+        ]
+    },
+    {
+        "id": "eurusd",
+        "category": "Forex",
+        "term": "EUR/USD",
+        "definition": "The exchange rate between the Euro and the U.S. Dollar.",
+        "market_impact": {
+            "up": "Dollar weakness or European economic outperformance.",
+            "down": "Dollar strength/flight to safety or Eurozone instability."
+        },
+        "context_2026": "Monitors the divergence between ECB and Fed monetary paths.",
+        "seo_keywords": [
+            "EURUSD",
+            "Forex",
+            "Euro",
+            "Dollar"
+        ]
+    },
+    {
+        "id": "usdjpy",
+        "category": "Forex",
+        "term": "USD/JPY",
+        "definition": "The exchange rate between the U.S. Dollar and the Japanese Yen.",
+        "market_impact": {
+            "up": "Yen weakness; carry trades flourish and exports boosted.",
+            "down": "Yen strength; risk-off sentiment or BoJ normalization."
+        },
+        "context_2026": "The final stage of Yen carry-trade unwinding determines global flow.",
+        "seo_keywords": [
+            "USDJPY",
+            "Forex",
+            "Yen",
+            "Carry Trade"
+        ]
+    },
+    {
+        "id": "usdcny",
+        "category": "Forex",
+        "term": "USD/CNY",
+        "definition": "The exchange rate between the U.S. Dollar and the Chinese Yuan.",
+        "market_impact": {
+            "up": "CNY weakness; signals trade pressure or China slowing.",
+            "down": "CNY strength; reflects China stimulus success or rate parity."
+        },
+        "context_2026": "A focal point for U.S.-China trade friction and tariff wars.",
+        "seo_keywords": [
+            "USDCNY",
+            "Forex",
+            "Yuan",
+            "China Trade"
+        ]
+    },
+    {
+        "id": "usdinr",
+        "category": "Forex",
+        "term": "USD/INR",
+        "definition": "The exchange rate between the U.S. Dollar and the Indian Rupee.",
+        "market_impact": {
+            "up": "Rupee weakness; reflects capital outflows from emerging markets or high energy import costs for India.",
+            "down": "Rupee strength; signals confidence in India's structural growth and FDI inflows."
+        },
+        "context_2026": "India's rise as a global manufacturing hub makes this pair a key barometer for EM risk appetite.",
+        "seo_keywords": [
+            "USDINR",
+            "Indian Rupee",
+            "Forex",
+            "Emerging Markets"
+        ]
+    },
+    {
+        "id": "usdsar",
+        "category": "Forex",
+        "term": "USD/SAR",
+        "definition": "The exchange rate between the U.S. Dollar and the Saudi Riyal.",
+        "market_impact": {
+            "up": "Pressure on the peg; reflects extreme oil price weakness or regional geopolitical stress.",
+            "down": "Stable peg; signals robust energy revenues and successful economic diversification (Vision 2030)."
+        },
+        "context_2026": "The stability of the SAR peg remains a cornerstone of petrodollar recycling and Middle Eastern financial stability.",
+        "seo_keywords": [
+            "USDSAR",
+            "Saudi Riyal",
+            "Forex",
+            "Oil Economy"
         ]
     }
 ]

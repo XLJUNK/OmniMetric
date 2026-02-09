@@ -13,7 +13,7 @@ export const Skeleton = ({ className = '', variant = 'pulse' }: SkeletonProps) =
 };
 
 export const SkeletonCard = () => (
-    <div className="bg-[#111] border border-slate-800 rounded-xl p-6 flex flex-col gap-4">
+    <div className="bg-black border border-slate-800 rounded-xl p-6 flex flex-col gap-4">
         <div className="h-4 w-1/3 skeleton" />
         <div className="flex-grow flex items-center justify-center">
             <div className="h-12 w-full skeleton-shimmer" />
@@ -23,7 +23,7 @@ export const SkeletonCard = () => (
 );
 
 export const SkeletonPulseTile = () => (
-    <div className="bg-[#111] border border-slate-800 rounded-xl p-4 flex flex-col gap-3 h-[180px]">
+    <div className="bg-black border border-slate-800 rounded-xl p-4 flex flex-col gap-3 h-[180px]">
         <div className="flex justify-between items-start">
             <div className="h-3 w-20 skeleton" />
             <div className="h-3 w-10 skeleton" />

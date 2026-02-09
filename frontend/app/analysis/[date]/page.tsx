@@ -2,45 +2,37 @@ import React from 'react';
 import { Metadata } from 'next';
 import fs from 'fs';
 import path from 'path';
-import { Globe, Clock, Shield } from 'lucide-react';
+import { Globe, Shield } from 'lucide-react';
 import Link from 'next/link';
-
-// Component imports (Mocking props logic as we normally fetch from API)
-// We'll just build a clean static version of the report
-
-export async function generateStaticParams() {
-    const archiveDir = path.join(process.cwd(), '../backend/archive');
-    if (!fs.existsSync(archiveDir)) return [];
-
-    const files = fs.readdirSync(archiveDir);
-    // Only include YYYY-MM-DD.json files
-    return files
-        .filter(file => /^\d{4}-\d{2}-\d{2}\.json$/.test(file))
-        .map((file) => ({
-            date: file.replace('.json', ''),
-        }));
-}
+import { getMultilingualMetadata } from '@/data/seo';
 
 async function getReportData(date: string) {
-    const filePath = path.join(process.cwd(), '../backend/archive', `${date}.json`);
+    const filePath = path.join(process.cwd(), 'public', 'data', 'archive', `${date}.json`);
     if (fs.existsSync(filePath)) {
         return JSON.parse(fs.readFileSync(filePath, 'utf8'));
     }
     return null;
 }
 
-import { getMultilingualMetadata } from '@/data/seo';
+export async function generateStaticParams() {
+    const archiveDir = path.join(process.cwd(), 'public', 'data', 'archive');
+    let dates: string[] = [];
+    if (fs.existsSync(archiveDir)) {
+        const files = fs.readdirSync(archiveDir);
+        dates = files
+            .filter(file => /^\d{4}-\d{2}-\d{2}\.json$/.test(file))
+            .map(file => file.replace('.json', ''));
+    }
+    return dates.map(date => ({ date }));
+}
 
 type Props = {
     params: Promise<{ date: string }>;
-    searchParams: Promise<{ lang?: string }>;
 };
 
-export async function generateMetadata({ params, searchParams }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { date } = await params;
-    const { lang } = await searchParams;
-    const l = lang || 'EN';
-
+    const l = 'EN';
     const data = await getReportData(date);
 
     if (!data || !data.analysis) {
@@ -58,11 +50,11 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
     return getMultilingualMetadata(`/analysis/${date}`, l, title, description);
 }
 
-export default async function AnalysisPage({ params }: { params: Promise<{ date: string }> }) {
+export default async function AnalysisPage({ params }: Props) {
     const { date } = await params;
     const data = await getReportData(date);
 
-    if (!data || !data.analysis) return <div>Report not found</div>;
+    if (!data || !data.analysis) return <div className="p-8 text-center text-slate-500 font-mono">Report not found</div>;
 
     const jsonLd = {
         "@context": "https://schema.org",
@@ -81,12 +73,10 @@ export default async function AnalysisPage({ params }: { params: Promise<{ date:
             />
 
             <div className="max-w-4xl mx-auto space-y-12">
-                {/* Back Nav */}
                 <Link href="/archive" className="text-xs text-sky-500 uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2">
                     ← Back to Archive
                 </Link>
 
-                {/* Header */}
                 <div className="border-b border-slate-200 dark:border-white/10 pb-8 flex justify-between items-end">
                     <div>
                         <div className="flex items-center gap-3 mb-2">
@@ -103,7 +93,6 @@ export default async function AnalysisPage({ params }: { params: Promise<{ date:
                     </div>
                 </div>
 
-                {/* Content */}
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
                     <div className="md:col-span-8 space-y-8">
                         <section>
@@ -112,18 +101,6 @@ export default async function AnalysisPage({ params }: { params: Promise<{ date:
                             </h2>
                             <div className="bg-white dark:bg-slate-900/50 p-8 rounded border border-slate-200 dark:border-white/5 leading-relaxed text-slate-700 dark:text-slate-300 font-mono text-sm whitespace-pre-wrap shadow-sm dark:shadow-none">
                                 {typeof data.analysis.content === 'string' ? data.analysis.content : JSON.stringify(data.analysis.content, null, 2)}
-                            </div>
-                        </section>
-
-                        <section className="bg-white dark:bg-white/[0.02] p-6 rounded border border-slate-200 dark:border-white/5 shadow-sm dark:shadow-none">
-                            <h3 className="text-[10px] text-slate-500 uppercase tracking-widest mb-4">Multi-Language Reports</h3>
-                            <div className="space-y-4 opacity-70">
-                                {data.analysis.reports?.JP && (
-                                    <div>
-                                        <div className="text-[9px] text-sky-600 font-bold mb-1">JP // JAPANESE</div>
-                                        <p className="text-[11px] leading-relaxed italic">{data.analysis.reports.JP}</p>
-                                    </div>
-                                )}
                             </div>
                         </section>
                     </div>

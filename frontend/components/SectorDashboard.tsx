@@ -1,39 +1,25 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Globe, ChevronDown, Check, TrendingUp, TrendingDown, Minus, Info, X } from 'lucide-react';
-import { RiskGauge, HistoryChart, MetricChart } from '@/components/Charts';
+import { Globe, X } from 'lucide-react';
+import { PulseTile } from '@/components/PulseTile';
 import { DICTIONARY, LangType } from '@/data/dictionary';
 import { SECTOR_CONFIG, SECTOR_LABELS } from '@/data/sectors';
-import { useRouter, usePathname, useSearchParams } from 'next/navigation';
-import { NewsTicker } from '@/components/NewsTicker';
-import { AdUnit } from '@/components/AdUnit';
 import { GMSHeaderSection } from '@/components/GMSHeaderSection';
-import { PulseTile } from '@/components/PulseTile';
-import { useDevice } from '@/hooks/useDevice';
-import { Skeleton, SkeletonCard, SkeletonPulseTile } from '@/components/Skeleton';
-
-import { useSignalData, SignalData } from '@/hooks/useSignalData';
+import { SkeletonCard } from '@/components/Skeleton';
+import { useSignalData } from '@/hooks/useSignalData';
 
 interface SectorDashboardProps {
     sectorKey: 'STOCKS' | 'CRYPTO' | 'FOREX' | 'COMMODITIES';
+    lang: string;
 }
 
-export const SectorDashboard = ({ sectorKey }: SectorDashboardProps) => {
-    const { data, liveData, isSafeMode } = useSignalData();
-    const [isLangOpen, setIsLangOpen] = useState(false);
+export const SectorDashboard = ({ sectorKey, lang: langProp }: SectorDashboardProps) => {
+    const { data, isSafeMode } = useSignalData();
     const [showInfo, setShowInfo] = useState(false);
-    const { isMobile } = useDevice();
-    const router = useRouter();
-    const pathname = usePathname();
-    const searchParams = useSearchParams();
-    const lang = (searchParams.get('lang') as LangType) || 'EN';
+    const lang = (langProp as LangType) || 'EN';
 
-    const setLang = (l: LangType) => {
-        router.push(`${pathname}?lang=${l}`);
-    };
-
-    if (!data) return <div className="min-h-screen flex items-center justify-center text-slate-500 font-mono text-xs animate-pulse space-y-4 flex-col">
+    if (!data) return <div className="min-h-screen bg-black flex items-center justify-center text-slate-500 font-mono text-xs animate-pulse space-y-4 flex-col">
         <SkeletonCard />
         <span>LOADING SECTOR DATA...</span>
     </div>;
@@ -42,16 +28,13 @@ export const SectorDashboard = ({ sectorKey }: SectorDashboardProps) => {
     const sectorName = SECTOR_LABELS[sectorKey][lang];
     const sectorScore = data.sector_scores?.[sectorKey] ?? 50;
 
-    // Determine Color Status
-    const isBlue = sectorScore > 60;
-    const isRed = sectorScore < 40;
-    const themeColor = isBlue ? "text-blue-500" : (isRed ? "text-red-500" : "text-yellow-500");
-    const themeHex = isBlue ? "#3b82f6" : (isRed ? "#ef4444" : "#eab308");
-
     // Filter Indicators
     const targetKeys = SECTOR_CONFIG[sectorKey] || [];
     const indicators = targetKeys.map(k => {
-        const item = data.market_data[k] || { price: t.status.market, change_percent: 0, trend: "NEUTRAL", sparkline: [] };
+        const rawItem = data.market_data[k] || { price: 0, change_percent: 0, trend: "NEUTRAL", sparkline: [] };
+        // Clone item to avoid mutation
+        const item = { ...rawItem, price: rawItem.price.toString() };
+
         if (isSafeMode) {
             item.price = t.status.market; // Safe Mode override
         }
@@ -59,59 +42,52 @@ export const SectorDashboard = ({ sectorKey }: SectorDashboardProps) => {
     });
 
     return (
-        <div className="w-full text-slate-800 dark:text-slate-200 font-sans min-h-screen flex flex-col">
+        <div
+            className="w-full bg-black text-slate-200 font-sans min-h-screen flex flex-col"
+        >
             <GMSHeaderSection data={data} lang={lang} isSafeMode={isSafeMode} />
             <div className="max-w-[1600px] mx-auto p-4 md:p-8 space-y-8 w-full">
 
                 {/* METHODOLOGY MODAL */}
                 {showInfo && (
-                    <div className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setShowInfo(false)}>
-                        <div className="bg-white dark:bg-[#111] border border-slate-200 dark:border-[#1E293B] rounded-xl w-full max-w-2xl p-6 shadow-2xl relative" onClick={e => e.stopPropagation()}>
-                            <div className="flex justify-between items-start mb-4 border-b border-slate-100 dark:border-[#1E293B] pb-2">
-                                <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tighter">
+                    <div className="bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 fixed inset-0 z-[100]" onClick={() => setShowInfo(false)}>
+                        <div className="bg-black border border-slate-700/50 rounded-xl w-full max-w-2xl p-6 shadow-2xl relative" onClick={e => e.stopPropagation()}>
+                            <div className="flex justify-between items-start mb-4 border-b border-slate-800 pb-2">
+                                <h2 className="text-2xl font-black text-white uppercase tracking-tighter">
                                     {t.methodology.title}
                                 </h2>
                                 <button
-                                    className="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors p-1"
+                                    className="text-slate-400 hover:text-white transition-colors p-1"
                                     onClick={() => setShowInfo(false)}
                                     aria-label="Close"
                                 >
                                     <X className="w-6 h-6" />
                                 </button>
                             </div>
-                            <div className="space-y-6 text-sm text-slate-600 dark:text-slate-300 font-mono">
+                            <div className="space-y-6 text-sm text-slate-300 font-mono">
                                 <p>{t.methodology.desc}</p>
-                                {/* Removed repetitive logic for brevity since GMSHeaderSection handles much of this context now */}
                             </div>
                         </div>
                     </div>
                 )}
 
                 {/* SECTION HEADER */}
-                <div className="flex items-center gap-3 border-b border-slate-200 dark:border-[#1E293B] pb-4 mb-8">
+                <div className="flex items-center gap-3 border-b border-slate-800 pb-4 mb-8">
                     <Globe className="w-5 h-5 text-sky-500" />
-                    <h2 className="text-xl font-black text-slate-800 dark:text-white uppercase tracking-tighter hover:text-sky-400 transition-colors">
+                    <h2 className="text-xl font-black text-white uppercase tracking-tighter hover:text-sky-400 transition-colors">
                         OMNIMETRIC / {sectorName}
                     </h2>
                 </div>
 
                 {/* 4. INDICATOR GRID (UNIFIED WITH PULSE TILE) */}
-                <div className={`grid gap-4 md:gap-6 ${isMobile ? 'grid-cols-1' : 'grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'}`}>
+                <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                     {indicators.map((val) => {
-                        // LIVE OVERRIDE
-                        if (liveData && liveData[val.key]) {
-                            val.price = liveData[val.key].price;
-                            val.change_percent = liveData[val.key].change_percent;
-                        }
-
                         // Determine Color based on Change %
-                        // Green for up, Red for down is standard, but keeping "Stealth" palette
-                        const isUp = val.change_percent >= 0;
+                        const isUp = (val.change_percent ?? 0) >= 0;
                         const cardColor = isUp ? "#22c55e" : "#ef4444"; // Green/Red
 
                         // Safety check for localized title
-                        // @ts-ignore
-                        const locTitle = t.tickers?.[val.key] || t.labels?.[val.key.toLowerCase()] || val.key;
+                        const locTitle = (t.tickers as any)?.[val.key] || (t.labels as any)?.[val.key.toLowerCase()] || val.key;
 
                         // Use PulseTile here
                         return (

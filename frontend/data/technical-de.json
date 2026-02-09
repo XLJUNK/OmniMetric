@@ -1,0 +1,177 @@
+[
+    {
+        "category": "Trendindikatoren (Trend Indicators)",
+        "indicators": [
+            {
+                "name": "Gleitender Durchschnitt (SMA/EMA)",
+                "description": "Grundlinie für Preistrends.",
+                "usage": "Preis über SMA = Aufwärtstrend. Preis unter SMA = Abwärtstrend."
+            },
+            {
+                "name": "Bollinger Bänder (Bollinger Bands)",
+                "description": "Misst Preis relativ zur Volatilität; 'Squeeze' signalisiert große Bewegungen.",
+                "usage": "Preis berührt oberes Band = Überkauft. Unteres Band = Überverkauft. Squeeze = Bevorstehender Ausbruch."
+            },
+            {
+                "name": "Ichimoku-Wolke (Ichimoku Cloud)",
+                "description": "Umfassendes japanisches Trendfolgesystem (Kumo).",
+                "usage": "Preis über Wolke = Bullisch. Unter Wolke = Bärisch. Wolkendicke zeigt Unterstützungs-/Widerstandsstärke."
+            },
+            {
+                "name": "ADX (Average Directional Index)",
+                "description": "Misst Trendstärke unabhängig von der Richtung.",
+                "usage": "ADX > 25 = Starker Trend. ADX < 20 = Schwacher/Seitwärtstrend."
+            },
+            {
+                "name": "Parabolic SAR",
+                "description": "Identifiziert potenzielle Umkehrungen in Trendmärkten.",
+                "usage": "Punkte unter Kerze = Aufwärtstrend. Punkte über Kerze = Abwärtstrend."
+            },
+            {
+                "name": "SuperTrend",
+                "description": "Vereinfachter ATR-basierter Trendfolgeindikator.",
+                "usage": "Grüne Linie unter Preis = Kaufsignal. Rote Linie über Preis = Verkaufssignal."
+            },
+            {
+                "name": "MACD",
+                "description": "Misst Trendstärke und Momentumverschiebungen.",
+                "usage": "Signallinienkreuzung = Ein-/Ausstiegssignal. Histogramm zeigt Momentumstärke."
+            }
+        ]
+    },
+    {
+        "category": "Volatilitätsindikatoren (Volatility Indicators)",
+        "indicators": [
+            {
+                "name": "ATR (Average True Range)",
+                "description": "Goldstandard für Marktvolatilitätsmessung und Stop-Platzierung.",
+                "usage": "Hoher ATR = Hohe Volatilität. Wird zur Berechnung des Stop-Loss-Abstands verwendet."
+            },
+            {
+                "name": "Keltner-Kanäle (Keltner Channels)",
+                "description": "Volatilitätsbasierte Umschläge ähnlich Bollinger Bändern, aber mit ATR.",
+                "usage": "Preisschluss außerhalb des Kanals = Starke Trendfortsetzung."
+            },
+            {
+                "name": "Chaikin-Volatilität (Chaikin Volatility)",
+                "description": "Vergleicht die Spanne zwischen Hochs und Tiefs.",
+                "usage": "Steigende Volatilität signalisiert oft breite Distribution (Top) oder Panik (Bottom)."
+            },
+            {
+                "name": "Standardabweichung (Standard Deviation)",
+                "description": "Mathematische Grundlage zur Messung der Preisstreuung.",
+                "usage": "Hohe Standardabweichung = Hohes Risiko (große Volatilität). Niedrig = Kohäsion."
+            }
+        ]
+    },
+    {
+        "category": "Momentum & Oszillatoren (Momentum & Oscillators)",
+        "indicators": [
+            {
+                "name": "RSI (Relative Strength Index)",
+                "description": "Identifiziert überkaufte oder überverkaufte Bedingungen.",
+                "usage": "> 70 = Überkauft (Verkaufsrisiko). < 30 = Überverkauft (Kaufchance)."
+            },
+            {
+                "name": "Stochastik-Oszillator (Stochastic Oscillator)",
+                "description": "Vergleicht Schlusskurs mit seiner Preisspanne über Zeit.",
+                "usage": "> 80 = Überkauft. < 20 = Überverkauft. Kreuzungen signalisieren Umkehrungen."
+            },
+            {
+                "name": "CCI (Commodity Channel Index)",
+                "description": "Misst Abweichungen vom statistischen Durchschnitt.",
+                "usage": "> +100 = Starker Aufwärtstrend. < -100 = Starker Abwärtstrend."
+            },
+            {
+                "name": "Williams %R",
+                "description": "Momentum-Indikator zur Messung überkaufter/überverkaufter Niveaus.",
+                "usage": "0 bis -20 = Überkauft. -80 bis -100 = Überverkauft."
+            },
+            {
+                "name": "Änderungsrate (ROC)",
+                "description": "Reines Momentum, das prozentuale Preisänderung misst.",
+                "usage": "Positiv und steigend = Beschleunigung. Negativ = Verlangsamung."
+            },
+            {
+                "name": "Geldflussindex (MFI)",
+                "description": "'Volumengewichteter RSI' zeigt Kauf-/Verkaufsdruck.",
+                "usage": "> 80 = Überkauft (volumenbestätigt). < 20 = Überverkauft."
+            }
+        ]
+    },
+    {
+        "category": "Volumen & Liquidität (Volume & Liquidity)",
+        "indicators": [
+            {
+                "name": "On-Balance Volume (OBV)",
+                "description": "Nutzt Volumenfluss zur Vorhersage von Aktienkursänderungen.",
+                "usage": "Steigendes OBV bestätigt Aufwärtstrend. Divergenz (Preis hoch, OBV niedrig) warnt vor Umkehr."
+            },
+            {
+                "name": "VWAP (Volume Weighted Average Price)",
+                "description": "Institutioneller Benchmark für Durchschnittspreis.",
+                "usage": "Institutionen kaufen unter VWAP, verkaufen über VWAP. Intraday-Unterstützung/Widerstand."
+            },
+            {
+                "name": "Volumenprofil (Volume Profile)",
+                "description": "Zeigt Handelsaktivität bei bestimmten Preisniveaus (Wertbereich).",
+                "usage": "Point of Control (POC) wirkt als Preismagnet."
+            },
+            {
+                "name": "Chaikin Money Flow (CMF)",
+                "description": "Misst das Volumen des Geldflusses über einen Zeitraum.",
+                "usage": "Über 0 = Kaufdruck. Unter 0 = Verkaufsdruck."
+            },
+            {
+                "name": "Akkumulations-/Distributionslinie (A/D Line)",
+                "description": "Bewertet kumulativen Geldfluss in und aus einem Vermögenswert.",
+                "usage": "A/D-Linie steigt während Preis flach = Akkumulation (bullisch)."
+            }
+        ]
+    },
+    {
+        "category": "Mathematisch & Strukturell (Mathematical & Structural)",
+        "indicators": [
+            {
+                "name": "Fibonacci-Retracement (Fibonacci Retracement)",
+                "description": "Identifiziert strategische Unterstützungs- und Widerstandsniveaus.",
+                "usage": "Schlüsselniveaus: 38,2%, 50%, 61,8% (Goldener Schnitt) wirken als Unterstützung/Widerstand."
+            },
+            {
+                "name": "Pivot-Punkte (Pivot Points)",
+                "description": "Prädiktive Indikatoren zur Identifizierung von Unterstützung und Widerstand.",
+                "usage": "Berechnet aus Hoch, Tief und Schluss des Vortages. Für Intraday-Handelsziele verwendet."
+            },
+            {
+                "name": "Lineare Regressionssteigung (Linear Regression Slope)",
+                "description": "Misst Geschwindigkeit der Preisänderung mittels Statistik.",
+                "usage": "Steile positive Steigung = Starker Trend. Flache Steigung = Oszillation."
+            },
+            {
+                "name": "Fraktale (Fractals)",
+                "description": "Identifiziert Umkehrpunkte basierend auf sich wiederholenden Mustern.",
+                "usage": "Aufwärtsfraktal signalisiert potenzielles Top. Abwärtsfraktal signalisiert potenzielles Bottom."
+            },
+            {
+                "name": "Z-Score",
+                "description": "Misst, wie viele Standardabweichungen der Preis vom Mittelwert entfernt ist.",
+                "usage": "Hoher positiver Z-Score = Statistisch teuer. Hoher negativer = Billig."
+            },
+            {
+                "name": "Korrelationskoeffizient (Correlation Coefficient)",
+                "description": "Analysiert, wie sich zwei verschiedene Vermögenswerte zueinander bewegen.",
+                "usage": "+1 = Perfekte Korrelation. -1 = Inverse Korrelation. 0 = Keine Korrelation."
+            },
+            {
+                "name": "Marktbreite (Market Breadth)",
+                "description": "Analysiert Anzahl steigender vs. fallender Aktien.",
+                "usage": "Zunehmende Breite bestätigt gesunden Bullenmarkt."
+            },
+            {
+                "name": "Maximale Adverse Excursion (MAE)",
+                "description": "Misst größten unrealisierten Verlust während eines Trades.",
+                "usage": "Für Post-Trade-Analyse zur Optimierung der Stop-Loss-Platzierung verwendet."
+            }
+        ]
+    }
+]

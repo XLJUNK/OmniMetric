@@ -1,0 +1,23 @@
+{
+    "slug": "hy-bonds",
+    "lang": "EN",
+    "title": "High Yield Bonds (HY)",
+    "type": "indicator",
+    "category": "Bonds",
+    "sections": {
+        "summary": "High Yield Bonds (also known as Junk Bonds) are corporate debt instruments rated below investment grade (BB and lower). They are the definitive 'thermometer of credit risk,' reflecting the market's collective willingness to lend to riskier borrowers and acting as a primary barometer for overall risk appetite.",
+        "deep_dive": "The high yield market is governed by the 'Credit Spread'—the additional yield investors demand over risk-free Treasuries. During expansionary phases, narrowing spreads signal confidence in corporate earnings and low default expectations. Conversely, widening spreads are often the 'canary in the coal mine' for an approaching economic downturn. A critical focus in the current regime is the 'Maturity Wall'—the staggering volume of debt issued during the low-rate era of 2020-2021 that must now be refinanced at significantly higher terminal rates. This creates a structural test of corporate balance sheet resilience.",
+        "council_debate": {
+            "macro": "High Yield spreads exhibit a strong positive correlation (+0.80) with the S&P 500. As a 'Risk-On' asset class, it thrives in periods of growth but serves as a leading indicator of equity stress when credit conditions tighten.",
+            "tech": "The explosive growth of 'Private Credit' has decoupled some traditional lending from the public HY market. This shift has left the remaining public market more sensitive to news and idiosyncratic credit events.",
+            "geopolitics": "A widening gap between US and European HY spreads highlights the structural energy-cost disadvantage facing EU-based manufacturers. Geopolitical risk is being priced directly into corporate credit risk premiums.",
+            "quant": "The Option-Adjusted Spread (OAS) is the primary lens for analysis. Spreads below 350bps indicate market complacency, while moves above 500bps signal systemic structural stress.",
+            "policy": "The 'Fed Put' for credit markets serves as a psychological backstop. Investors historically anticipate central bank intervention if spreads blow out beyond 800bps, as seen during the 2020 liquidity crisis.",
+            "technical": "The dominance of ETFs (JNK, HYG) creates a liquidity paradox. While they offer easy entry/exit for retail, mass outflows during a panic can force 'fire sales' of the less-liquid underlying bonds, leading to violent price gaps."
+        },
+        "forecast_risks": "A systemic default wave triggered by the refinancing cliff, or a broad 'credit crunch' where banks pull back from lending. In a stagflationary environment, HY bonds face a double threat from rising rates and deteriorating corporate cash flows.",
+        "gms_conclusion": "The ultimate high-reward asset for gauging the health of the corporate credit cycle. Narrowing spreads are the green light for broader risk assets, signaling that the 'lifeblood of capital' is flowing freely through the economy."
+    },
+    "model": "Antigravity-GMS-v1 (Expert Analysis)",
+    "generated_at": "2026-02-09T08:21:00Z"
+}

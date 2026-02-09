@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { generateText } from 'ai';
 import { gateway } from '@ai-sdk/gateway';
 import { google } from '@ai-sdk/google';
@@ -81,7 +82,7 @@ async function main() {
     ];
 
     const isNewsTask = /translator|Translate/i.test(prompt);
-    let candidates: ModelPair[] = isNewsTask ? NEWS_MODELS : GMS_MODELS;
+    const candidates: ModelPair[] = isNewsTask ? NEWS_MODELS : GMS_MODELS;
 
     console.error(`[AI ROUTER] Task: ${isNewsTask ? 'NEWS_TRANSLATION' : 'GMS_ANALYSIS'}`);
 

@@ -71,7 +71,7 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
                 className="group inline-flex items-center gap-2 text-xs font-bold text-slate-500 hover:text-sky-500 transition-colors"
                 title={titleLink}
             >
-                <div className="w-5 h-5 rounded bg-slate-100 dark:bg-[#131722] flex items-center justify-center shrink-0 border border-slate-200 dark:border-slate-700 group-hover:border-sky-500 transition-colors">
+                <div className="w-5 h-5 rounded bg-slate-100 dark:bg-black flex items-center justify-center shrink-0 border border-slate-200 dark:border-slate-700 group-hover:border-sky-500 transition-colors">
                     <svg viewBox="0 0 24 24" className="w-3 h-3 text-slate-900 dark:text-white fill-current">
                         <path d="M12 0L0 12h5v12h14V12h5L12 0zm0 4.8l7.2 7.2h-2.4v9.6H7.2V12H4.8L12 4.8z" />
                         <path d="M21 12L12 3 3 12h4v8h10v-8h4z" />
@@ -93,7 +93,7 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
                 href={affiliateUrl}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                className="group block w-full mt-4 bg-[#F1F5F9] dark:bg-gradient-to-r dark:from-[#131722] dark:to-[#0A0A0A] border border-slate-200 dark:border-[#1E293B] hover:border-sky-500/50 rounded-lg p-3 transition-all duration-300 shadow-sm dark:shadow-none"
+                className="group block w-full mt-4 bg-[#F1F5F9] dark:bg-black border border-slate-200 dark:border-[#1E293B] hover:border-sky-500/50 rounded-lg p-3 transition-all duration-300 shadow-sm dark:shadow-none"
             >
                 <div className={`flex items-center justify-between gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
                     <div className={`flex items-center gap-2 ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
@@ -119,7 +119,7 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
     // VARIANT: Default (Main Banner) - COMPACT INTEGRATED DESIGN
     return (
         <div
-            className="w-full relative group overflow-hidden bg-white dark:bg-[#111] border border-slate-200 dark:border-slate-800 rounded-xl transition-all duration-300 shadow-sm dark:shadow-none my-6"
+            className="w-full relative group overflow-hidden bg-white dark:bg-black border-0 rounded-xl transition-all duration-300 shadow-none my-6"
         >
 
             {/* Added: Specific min-height to ensure structure visibility */}
@@ -131,7 +131,7 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
 
                     {/* Badge: TradingView Official Partner */}
                     <div className="flex justify-center mb-3">
-                        <span className="text-[10px] font-bold text-sky-500 uppercase tracking-widest border border-sky-500/30 px-2 py-0.5 rounded bg-sky-500/5 dark:bg-sky-500/10 dark:text-sky-400">
+                        <span className="text-[10px] font-bold text-sky-500 uppercase tracking-widest px-2 py-0.5 rounded bg-sky-500/5 dark:bg-sky-500/10 dark:text-sky-400">
                             {(DICTIONARY[lang] as typeof DICTIONARY['EN'])?.partner?.badge || "TradingView Official Partner"}
                         </span>
                     </div>
@@ -147,11 +147,16 @@ export const TVPartnerCard = ({ lang, variant = 'default' }: TVPartnerCardProps)
                             href={affiliateUrl}
                             target="_blank"
                             rel="noopener noreferrer nofollow"
-                            style={{ color: '#ffffff' }} // Force White (Inline Style Priority)
-                            className="inline-flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#2962FF] hover:bg-[#1E53E5] text-white dark:text-white !text-white visited:text-white hover:text-white active:text-white text-[10px] xs:text-xs sm:text-sm font-bold rounded shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all text-center whitespace-normal leading-tight overflow-hidden"
+                            className="inline-flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#2962FF] hover:bg-[#1E53E5] !text-white text-[10px] xs:text-xs sm:text-sm font-bold rounded shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all text-center whitespace-normal leading-tight overflow-hidden"
+                            style={{ color: 'white' }}
                         >
-                            <Zap className="w-3.5 h-3.5 fill-current text-white shrink-0" style={{ fill: '#ffffff', color: '#ffffff' }} />
-                            <span className="!text-white relative top-[0.5px]" style={{ color: '#ffffff' }}>{fullButtonText}</span>
+                            <Zap className="w-3.5 h-3.5 !fill-white !text-white shrink-0" />
+                            <span
+                                className="!text-white relative top-[0.5px] text-white decoration-transparent"
+                                style={{ color: 'white' }}
+                            >
+                                {fullButtonText}
+                            </span>
                         </a>
                     </div>
                 </div>

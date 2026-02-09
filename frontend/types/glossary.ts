@@ -10,7 +10,7 @@ export interface GlossaryTerm {
     definition: string;
     market_impact: MarketImpact;
     context_2026: string;
-    gms_relevance: string;
+    gms_relevance?: string;
     seo_keywords: string[];
 }
 

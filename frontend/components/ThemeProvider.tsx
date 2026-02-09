@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 type Theme = 'dark' | 'light';
 
@@ -13,60 +13,32 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-    const [theme, setThemeState] = useState<Theme>('dark');
+    const [theme] = useState<Theme>('dark');
     const [mounted, setMounted] = useState(false);
 
-    useEffect(() => {
+    React.useLayoutEffect(() => {
         setMounted(true);
-        // FORCE DEFAULT DARK: Only load from storage if present.
-        // We explicitly DO NOT check window.matchMedia('(prefers-color-scheme: dark)')
-        // so that the default is always dark regardless of OS settings.
-        try {
-            const savedConfig = localStorage.getItem('gms_terminal_config_v1');
-            if (savedConfig) {
-                const config = JSON.parse(savedConfig);
-                if (config.theme) {
-                    setThemeState(config.theme);
-                }
-            }
-        } catch (e) {
-            console.warn('Failed to load theme preference', e);
-        }
+        // FORCE DARK MODE ALWAYS
+        const root = window.document.documentElement;
+        root.classList.remove('light');
+        root.classList.add('dark');
+        // Clear legacy config to prevent confusion, or just ignore it.
     }, []);
 
-    useEffect(() => {
-        if (!mounted) return;
-        const root = window.document.documentElement;
-        root.classList.remove('light', 'dark');
-        root.classList.add(theme);
-
-        // Sync with legacy config storage for MultiAssetSummary compatibility
-        // This ensures if user refreshes, MultiAssetSummary reads the correct theme from local storage
-        try {
-            const saved = localStorage.getItem('gms_terminal_config_v1');
-            const config = saved ? JSON.parse(saved) : {};
-            if (config.theme !== theme) {
-                config.theme = theme;
-                localStorage.setItem('gms_terminal_config_v1', JSON.stringify(config));
-            }
-        } catch (e) {
-            // Ignore storage errors
-        }
-
-    }, [theme, mounted]);
+    // No effect needed for theme changes since it's constant.
 
     const toggleTheme = () => {
-        setThemeState(prev => prev === 'dark' ? 'light' : 'dark');
+        // No-op
     };
 
-    const setTheme = (newTheme: Theme) => {
-        setThemeState(newTheme);
+    const setTheme = (_newTheme: Theme) => {
+        // No-op
     };
 
     return (
         <ThemeContext.Provider value={{ theme, toggleTheme, setTheme }}>
             {children}
-            {!mounted && <div style={{ visibility: 'hidden' }} />}
+            {!mounted && <div className="invisible" />}
         </ThemeContext.Provider>
     );
 };

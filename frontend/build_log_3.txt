@@ -1,28 +1,24 @@
 
-> frontend@0.1.0 build
+> frontend@5.1.0 build
 > next build
 
-笆ｲ Next.js 16.1.1 (Turbopack)
+▲ Next.js 16.1.6 (Turbopack)
 - Environments: .env.local
 
-笞 The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
   Creating an optimized production build ...
-笨・Compiled successfully in 12.0s
+✓ Compiled successfully in 8.9s
   Running TypeScript ...
-  Collecting page data using 11 workers ...
-笞 Using edge runtime on a page currently disables static generation for that page
-  Generating static pages using 11 workers (0/23) ...
-筧ｯ useSearchParams() should be wrapped in a suspense boundary at page "/about". Read more: https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
-    at Q (C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\.next\server\chunks\ssr\_7bf3b8d6._.js:2:2111)
-    at o (C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\.next\server\chunks\ssr\_7bf3b8d6._.js:4:5284)
-    at C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\.next\server\chunks\ssr\_e4f8b32b._.js:11:1736
-    at an (C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.prod.js:2:84360)
-    at ai (C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.prod.js:2:86179)
-    at ai (C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.prod.js:2:104708)
-    at al (C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.prod.js:2:107953)
-    at as (C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.prod.js:2:105368)
-    at am (C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.prod.js:2:112882)
-    at au (C:\Users\shingo_kosaka.ARGOGRAPHICS\Desktop\GlobalMacroSignal\frontend\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.prod.js:2:109985)
-Error occurred prerendering page "/about". Read more: https://nextjs.org/docs/messages/prerender-error
-Export encountered an error on /about/page: /about, exiting the build.
-筧ｯ Next.js build worker exited with code: 1 and signal: null
+Failed to compile.
+
+./app/commodities/page.tsx:18:9
+Type error: This comparison appears to be unintentional because the types '"EN"' and '"ES"' have no overlap.
+
+[0m [90m 16 |[39m
+ [90m 17 |[39m     [90m// Logic for Spanish "Ratio Cobre Oro" (Copper/Gold) SEO Hack[39m
+[31m[1m>[22m[39m[90m 18 |[39m     [36mif[39m (lang [33m===[39m [32m'ES'[39m) {
+ [90m    |[39m         [31m[1m^[22m[39m
+ [90m 19 |[39m         [36mconst[39m data [33m=[39m [36mawait[39m getSignalData()[33m;[39m
+ [90m 20 |[39m         [36mif[39m (data [33m&&[39m data[33m.[39mmarket_data [33m&&[39m data[33m.[39mmarket_data[33m.[39m[33mCOPPER_GOLD[39m) {
+ [90m 21 |[39m             [36mconst[39m cg [33m=[39m data[33m.[39mmarket_data[33m.[39m[33mCOPPER_GOLD[39m[33m;[39m[0m
+Next.js build worker exited with code: 1 and signal: null

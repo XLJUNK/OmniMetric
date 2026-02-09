@@ -2,12 +2,13 @@ import React from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { LangType, DICTIONARY } from '@/data/dictionary';
-import { getWikiItem, getAllSlugs, WikiItem, getWikiData } from '@/lib/wiki';
+import { getAllSlugs, WikiItem, getWikiData } from '@/lib/wiki';
+import { getWikiItemWithHeavy } from '@/lib/wiki-server';
 import { DynamicStructuredData } from '@/components/DynamicStructuredData';
 import { AdSenseSlot } from '@/components/AdSenseSlot';
 import { LiveWikiData } from '@/components/LiveWikiData';
 import { DataSourceFooter } from '@/components/DataSourceFooter';
-import { ArrowLeft, Share2, TrendingUp, BookOpen, Quote, Activity, Home, ChevronRight, Globe, Cpu, Scale, Zap, Users } from 'lucide-react';
+import { ArrowLeft, TrendingUp, Activity, ChevronRight, Globe, Cpu, Scale, Zap, Users } from 'lucide-react';
 import { Metadata } from 'next';
 
 // LABELS Dictionary
@@ -151,12 +152,52 @@ const WIKI_LABELS = {
         launch: "تشغيل المحطة",
         hidden_meaning: "المعنى الخفي",
         related: "معرفة الاستراتيجية ذات الصلة"
+    },
+    FR: {
+        deep_dive: "Contexte approfondi",
+        council_debate: "Le débat du conseil",
+        geopolitics: "Géopolitique",
+        macro: "Macro",
+        quant: "Quant",
+        technical: "Technique",
+        policy: "Politique",
+        tech: "Tech",
+        market_impact: "Impact sur le marché",
+        rising: "HAUSSIER",
+        falling: "BAISSIER",
+        context: "Contexte 2026",
+        relevance: "Pertinence OmniMetric",
+        usage: "Utilisation & Signaux",
+        view_chart: "Voir graphique en direct",
+        launch: "Lancer le terminal",
+        hidden_meaning: "Sens caché",
+        related: "Connaissances stratégiques"
+    },
+    DE: {
+        deep_dive: "Tiefgehender Kontext",
+        council_debate: "Die Ratsdebatte",
+        geopolitics: "Geopolitik",
+        macro: "Makro",
+        quant: "Quant",
+        technical: "Technisch",
+        policy: "Politik",
+        tech: "Tech",
+        market_impact: "Marktauswirkungen",
+        rising: "STEIGEND / BULLISH",
+        falling: "FALLEND / BEARISH",
+        context: "Kontext 2026",
+        relevance: "OmniMetric-Relevanz",
+        usage: "Nutzung & Signale",
+        view_chart: "Live-Chart ansehen",
+        launch: "Terminal starten",
+        hidden_meaning: "Verborgene Bedeutung",
+        related: "Verwandtes Strategiewissen"
     }
 };
 
 // Generate params for SSG
 export async function generateStaticParams() {
-    const langs = Object.keys(DICTIONARY).map(l => l.toLowerCase());
+    const langs = Object.keys(DICTIONARY).filter(l => l !== 'EN').map(l => l.toLowerCase());
     const slugs = getAllSlugs();
 
     // Cross product
@@ -173,8 +214,13 @@ type Props = {
     params: Promise<{ lang: string; slug: string }>;
 };
 
-// Localized SEO helper
+// Localized SEO helper (Hydrated with Heavy Summary if available)
 function getLocalizedSEODescription(item: WikiItem, lang: string): string {
+    // Priority 1: Heavy Summary (Expert analysis)
+    if (item.heavy?.summary) {
+        return item.heavy.summary.slice(0, 160);
+    }
+
     const title = item.title;
     const descriptions: Record<string, string> = {
         en: `What is ${title}? Understand this macro indicator's impact on 2026 market risk and institutional strategies.`,
@@ -183,16 +229,42 @@ function getLocalizedSEODescription(item: WikiItem, lang: string): string {
         es: `¿Qué es ${title}? Comprenda el impacto de este indicador macro en el riesgo de mercado de 2026.`,
         hi: `${title} क्या है? 2026 के बाजार जोखिम और संस्थागत रणनीतियों पर इसके प्रभाव को समझें।`,
         id: `Apa itu ${title}? Pahami dampak indikator makro ini terhadap risiko pasar 2026 dan strategi investasi.`,
-        ar: `ما هو ${title}؟ افهم تأثير هذا المؤشر الماكرو على مخاطر السوق لعام 2026 واستراتيجيات المؤسسات.`
+        ar: `ما هو ${title}؟ افهم تأثير هذا المؤشر الماكرو على مخاطر السوق لعام 2026 واستراتيجيات المؤسسات.`,
+        fr: `Qu'est-ce que ${title} ? Découvrez l'impact de cet indicateur macro sur les risques de marché de 2026.`,
+        de: `Was ist ${title}? Verstehen Sie die Auswirkungen dieses Makro-Indikators auf das Marktrisiko 2026.`
     };
     return descriptions[lang.toLowerCase()] || descriptions['en'];
 }
 
-function getContentDescription(item: WikiItem, lang: LangType): string {
-    if (item.type === 'glossary') return item.data.definition;
-    if (item.type === 'technical') return item.data.description;
-    if (item.type === 'maxim') return item.data.meaning;
-    return "";
+interface GlossaryData {
+    definition: string;
+    market_impact: { up: string; down: string };
+    context_2026: string;
+    gms_relevance: string;
+}
+
+interface TechnicalData {
+    description: string;
+    usage?: string;
+}
+
+interface MaximData {
+    meaning: string;
+    text: string;
+    attribution: string;
+}
+
+function getContentDescription(item: WikiItem): string {
+    if (item.type === 'glossary') {
+        return (item.data as GlossaryData).definition;
+    }
+    if (item.type === 'technical') {
+        return (item.data as TechnicalData).description;
+    }
+    if (item.type === 'maxim') {
+        return (item.data as MaximData).meaning;
+    }
+    return item.heavy?.summary || "";
 }
 
 import { getMultilingualMetadata } from '@/data/seo';
@@ -201,17 +273,27 @@ import { getMultilingualMetadata } from '@/data/seo';
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { lang, slug } = await params;
     const normalizedLang = lang.toUpperCase() as LangType;
-    const item = getWikiItem(slug, normalizedLang);
+    const item = getWikiItemWithHeavy(slug, normalizedLang);
 
     if (!item) return { title: 'Not Found' };
 
-    const metadata = getMultilingualMetadata(`/wiki/${slug}`, lang, `${item.title} - ${item.type.toUpperCase()} | OmniMetric`, getLocalizedSEODescription(item, lang).slice(0, 120), 'path');
+    const metadata = getMultilingualMetadata(`/wiki/${slug}`, lang, `${item.title} - ${item.type.toUpperCase()} | OmniMetric`, getLocalizedSEODescription(item, lang).slice(0, 120));
 
     return metadata;
 }
 
 // UI Helpers
-const ExpertCard = ({ role, icon: Icon, color, bg, content, isRTL, localizedRole }: any) => {
+interface ExpertCardProps {
+    role: string;
+    icon: React.ElementType; // Replaced any
+    color: string;
+    bg: string;
+    content?: string;
+    isRTL: boolean;
+    localizedRole?: string;
+}
+
+const ExpertCard = ({ role, icon: Icon, color, bg, content, isRTL, localizedRole }: ExpertCardProps) => {
     if (!content) return null;
     return (
         <div className={`p-4 rounded-xl border border-border bg-transparent hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors ${isRTL ? 'text-right' : 'text-left'}`}>
@@ -236,7 +318,7 @@ export default async function WikiDetailPage({ params }: Props) {
     // Get localized labels
     const LABELS = WIKI_LABELS[normalizedLang] || WIKI_LABELS['EN'];
 
-    const item = getWikiItem(slug, normalizedLang);
+    const item = getWikiItemWithHeavy(slug, normalizedLang);
     if (!item) notFound();
 
     // JSON-LD Article
@@ -247,7 +329,7 @@ export default async function WikiDetailPage({ params }: Props) {
         "author": { "@type": "Organization", "name": "OmniMetric" },
         "publisher": { "@type": "Organization", "name": "OmniMetric", "logo": { "@type": "ImageObject", "url": "https://omnimetric.net/icon.png" } },
         "datePublished": "2026-01-01",
-        "description": getContentDescription(item, normalizedLang)
+        "description": getContentDescription(item)
     };
 
     // JSON-LD Breadcrumbs
@@ -320,17 +402,19 @@ export default async function WikiDetailPage({ params }: Props) {
                             {item.title}
                         </h1>
                         <p className="text-lg text-slate-400 font-serif leading-relaxed">
-                            {getContentDescription(item, normalizedLang)}
+                            {getContentDescription(item)}
                         </p>
 
                         {/* LIVE DATA INJECTION (E-E-A-T UTILITY) */}
                         <LiveWikiData slug={slug} lang={normalizedLang} />
 
                         {/* V4.7 HEAVY: Deep Dive */}
-                        {item.heavy?.deep_dive && (
+                        {(item.heavy?.deep_dive || item.heavy?.summary) && (
                             <div className={`mt-8 p-6 bg-slate-50 dark:bg-slate-900/50 border-sky-500 text-sm leading-8 text-slate-700 dark:text-slate-300 font-serif ${isRTL ? 'border-r-4 text-right' : 'border-l-4 text-left'}`}>
-                                <h3 className="text-xs font-black text-sky-500 uppercase tracking-widest mb-2 font-sans">{LABELS.deep_dive}</h3>
-                                {item.heavy.deep_dive}
+                                <h2 className="text-xs font-black text-sky-500 uppercase tracking-widest mb-2 font-sans">
+                                    {item.heavy?.deep_dive ? LABELS.deep_dive : LABELS.context}
+                                </h2>
+                                {item.heavy?.deep_dive || item.heavy?.summary}
                             </div>
                         )}
                     </header>
@@ -363,78 +447,99 @@ export default async function WikiDetailPage({ params }: Props) {
                         {/* GLOSSARY SPECIFIC */}
                         {item.type === 'glossary' && (
                             <>
-                                <section>
-                                    <h3 className={`text-sm font-bold text-slate-500 uppercase tracking-wider mb-4 ${isRTL ? 'text-right' : ''}`}>{LABELS.market_impact}</h3>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                        <div className={`p-4 bg-emerald-50 dark:bg-emerald-900/10 border border-emerald-100 dark:border-emerald-900/30 rounded-lg ${isRTL ? 'text-right' : ''}`}>
-                                            <span className="text-emerald-600 dark:text-emerald-400 font-bold block mb-2 text-xs">{LABELS.rising}</span>
-                                            <p className="text-sm text-slate-700 dark:text-slate-300">{item.data.market_impact.up}</p>
-                                        </div>
-                                        <div className={`p-4 bg-red-50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/30 rounded-lg ${isRTL ? 'text-right' : ''}`}>
-                                            <span className="text-red-600 dark:text-red-400 font-bold block mb-2 text-xs">{LABELS.falling}</span>
-                                            <p className="text-sm text-slate-700 dark:text-slate-300">{item.data.market_impact.down}</p>
-                                        </div>
-                                    </div>
-                                </section>
+                                {(() => {
+                                    const gData = item.data as GlossaryData;
+                                    return (
+                                        <>
+                                            <section>
+                                                <h2 className={`text-sm font-bold text-slate-500 uppercase tracking-wider mb-4 ${isRTL ? 'text-right' : ''}`}>{LABELS.market_impact}</h2>
+                                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                    <div className={`p-4 bg-emerald-50 dark:bg-emerald-900/10 border border-emerald-100 dark:border-emerald-900/30 rounded-lg ${isRTL ? 'text-right' : ''}`}>
+                                                        <span className="text-emerald-600 dark:text-emerald-400 font-bold block mb-2 text-xs">{LABELS.rising}</span>
+                                                        <p className="text-sm text-slate-700 dark:text-slate-300">{gData.market_impact?.up}</p>
+                                                    </div>
+                                                    <div className={`p-4 bg-red-50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/30 rounded-lg ${isRTL ? 'text-right' : ''}`}>
+                                                        <span className="text-red-600 dark:text-red-400 font-bold block mb-2 text-xs">{LABELS.falling}</span>
+                                                        <p className="text-sm text-slate-700 dark:text-slate-300">{gData.market_impact?.down}</p>
+                                                    </div>
+                                                </div>
+                                            </section>
 
-                                <section className={`bg-sky-50 dark:bg-[#0F172A] p-6 rounded-xl border border-sky-200 dark:border-sky-900/30 ${isRTL ? 'text-right' : ''}`}>
-                                    <h3 className={`text-sky-400 font-black uppercase tracking-widest text-sm mb-4 flex items-center gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                                        <TrendingUp className="w-4 h-4" /> {LABELS.context}
-                                    </h3>
-                                    <p className="text-slate-700 dark:text-slate-300 leading-relaxed font-serif">
-                                        {item.data.context_2026}
-                                    </p>
-                                </section>
+                                            <section className={`bg-sky-50 dark:bg-[#0F172A] p-6 rounded-xl border border-sky-200 dark:border-sky-900/30 ${isRTL ? 'text-right' : ''}`}>
+                                                <h2 className={`text-sky-400 font-black uppercase tracking-widest text-sm mb-4 flex items-center gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                                                    <TrendingUp className="w-4 h-4" /> {LABELS.context}
+                                                </h2>
+                                                <p className="text-slate-700 dark:text-slate-300 leading-relaxed font-serif">
+                                                    {gData.context_2026}
+                                                </p>
+                                            </section>
 
-                                <section>
-                                    <h3 className={`text-xs font-bold text-slate-600 uppercase mb-2 ${isRTL ? 'text-right' : ''}`}>{LABELS.relevance}</h3>
-                                    <div className={`p-4 border border-border rounded text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-mono ${isRTL ? 'text-right' : ''}`}>
-                                        {item.data.gms_relevance}
-                                    </div>
-                                </section>
+                                            <section>
+                                                <h3 className={`text-xs font-bold text-slate-600 uppercase mb-2 ${isRTL ? 'text-right' : ''}`}>{LABELS.relevance}</h3>
+                                                <div className={`p-4 border border-border rounded text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-mono ${isRTL ? 'text-right' : ''}`}>
+                                                    {gData.gms_relevance}
+                                                </div>
+                                            </section>
+                                        </>
+                                    );
+                                })()}
                             </>
                         )}
 
                         {/* TECHNICAL SPECIFIC */}
                         {item.type === 'technical' && (
                             <>
-                                <section className={`p-6 bg-transparent dark:bg-[#0A0A0A] border border-border rounded-lg ${isRTL ? 'text-right' : ''}`}>
-                                    <h3 className="text-purple-600 dark:text-purple-400 font-bold text-sm uppercase mb-3">{LABELS.usage}</h3>
-                                    <p className="text-slate-700 dark:text-slate-300 text-lg font-medium leading-relaxed">
-                                        {item.data.usage}
-                                    </p>
-                                </section>
+                                {(() => {
+                                    const tData = item.data as TechnicalData;
+                                    return (
+                                        <>
+                                            <section className={`p-6 bg-transparent dark:bg-[#0A0A0A] border border-border rounded-lg ${isRTL ? 'text-right' : ''}`}>
+                                                <h3 className="text-purple-600 dark:text-purple-400 font-bold text-sm uppercase mb-3">{LABELS.usage}</h3>
+                                                <p className="text-slate-700 dark:text-slate-300 text-lg font-medium leading-relaxed">
+                                                    {tData.usage || item.heavy?.gms_conclusion || "Refer to live signals."}
+                                                </p>
+                                            </section>
 
-                                {/* Link to Chart Terminal (Mock) */}
-                                <div className="mt-8 p-8 border border-dashed border-border rounded-lg text-center hover:border-purple-500/50 transition-colors">
-                                    <h4 className="text-slate-400 text-sm mb-4">{LABELS.view_chart}</h4>
-                                    <Link href={`/?lang=${normalizedLang}#chart`} className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 hover:bg-purple-500 text-white font-bold rounded-full transition-colors">
-                                        <Activity className="w-4 h-4" />
-                                        {LABELS.launch}
-                                    </Link>
-                                </div>
+                                            {/* Link to Chart Terminal (Mock) */}
+                                            <div className="mt-8 p-8 border border-dashed border-border rounded-lg text-center hover:border-purple-500/50 transition-colors">
+                                                <h4 className="text-slate-400 text-sm mb-4">{LABELS.view_chart}</h4>
+                                                <Link href={`/?lang=${normalizedLang}#chart`} className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 hover:bg-purple-500 text-white font-bold rounded-full transition-colors">
+                                                    <Activity className="w-4 h-4" />
+                                                    {LABELS.launch}
+                                                </Link>
+                                            </div>
+                                        </>
+                                    );
+                                })()}
                             </>
                         )}
 
                         {/* MAXIM SPECIFIC */}
                         {item.type === 'maxim' && (
                             <>
-                                <blockquote className={`text-2xl md:text-4xl font-black text-foreground leading-snug my-12 ${isRTL ? 'text-right' : 'text-center'}`}>
-                                    <span className="text-sky-600 opacity-50 text-6xl block mb-4">"</span>
-                                    {item.data.text}
-                                    <span className="text-sky-600 opacity-50 text-6xl block mt-4 text-right">"</span>
-                                </blockquote>
+                                {(() => {
+                                    const mData = item.data as MaximData;
+                                    return (
+                                        <>
+                                            <blockquote className={`text-2xl md:text-4xl font-black text-foreground leading-snug my-12 ${isRTL ? 'text-right' : 'text-center'}`}>
+                                                <span className="text-sky-600 opacity-50 text-6xl block mb-4">&quot;</span>
+                                                {mData.text}
+                                                <span className="text-sky-600 opacity-50 text-6xl block mt-4 text-right">&quot;</span>
+                                            </blockquote>
 
-                                <div className={`flex items-center justify-center gap-4 text-sky-400 font-mono text-sm font-bold uppercase tracking-widest mb-12`}>
-                                    <span>— {item.data.attribution}</span>
-                                </div>
+                                            <div className={`flex items-center justify-center gap-4 text-sky-400 font-mono text-sm font-bold uppercase tracking-widest mb-12`}>
+                                                <span>— {mData.attribution}</span>
+                                            </div>
 
-                                <section className={`bg-sky-50 dark:bg-[#0F172A] p-8 rounded-xl border-sky-500 ${isRTL ? 'border-r-4 text-right' : 'border-l-4 text-left'}`}>
-                                    <h3 className="text-slate-500 font-bold text-xs uppercase mb-4">{LABELS.hidden_meaning}</h3>
-                                    <p className="text-xl text-slate-900 dark:text-white font-serif italic">
-                                        {item.data.meaning}
-                                    </p>
-                                </section>
+                                            <section className={`bg-sky-50 dark:bg-[#0F172A] p-8 rounded-xl border-sky-500 ${isRTL ? 'border-r-4 text-right' : 'border-l-4 text-left'}`}>
+                                                <h3 className="text-slate-500 font-bold text-xs uppercase mb-4">{LABELS.hidden_meaning}</h3>
+                                                <p className="text-xl text-slate-900 dark:text-white font-serif italic">
+                                                    {mData.meaning}
+                                                </p>
+                                            </section>
+                                        </>
+                                    );
+                                })()}
                             </>
                         )}
 
@@ -445,10 +550,10 @@ export default async function WikiDetailPage({ params }: Props) {
 
                 {/* Related Strategy Knowledge (Internal Linking) */}
                 <div className="mt-20 pt-12 border-t border-border">
-                    <h3 className={`text-xs font-bold text-slate-500 uppercase tracking-widest mb-8 ${isRTL ? 'text-right' : ''}`}>{LABELS.related}</h3>
+                    <h2 className={`text-xs font-bold text-slate-500 uppercase tracking-widest mb-8 ${isRTL ? 'text-right' : ''}`}>{LABELS.related}</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {related.map(r => (
-                            <Link key={r.slug} href={`/${lang.toLowerCase()}/wiki/${r.slug}`} className="group block">
+                            <Link key={r.slug} href={lang.toLowerCase() === 'en' ? `/wiki/${r.slug}` : `/${lang.toLowerCase()}/wiki/${r.slug}`} className="group block">
                                 <div className={`p-6 bg-transparent dark:bg-[#0A0A0A] border border-border group-hover:border-sky-500/50 transition-all h-full flex flex-col justify-between ${isRTL ? 'text-right' : 'text-left'}`}>
                                     <h4 className="text-sm font-bold text-foreground group-hover:text-sky-500 transition-colors mb-2">
                                         {r.title}

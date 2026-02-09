@@ -1,0 +1,49 @@
+name: GMS Daily Maintenance
+on:
+  schedule:
+    - cron: '0 0 * * *' # Midnight UTC (Daily)
+  workflow_dispatch:
+
+concurrency:
+  group: daily-maintenance
+  cancel-in-progress: true
+
+jobs:
+  daily_tasks:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    timeout-minutes: 20 # Longer timeout for 60-day OGV fetch
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r backend/requirements.txt
+          pip install --no-deps pandas-ta
+      
+      - name: Run Daily Tasks (OGV + Archive)
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --hard origin/main
+          
+          # Run Daily Tasks (OGV History + Archiving)
+          python backend/daily_tasks.py
+          
+          # FRONTEND SYNC (Files updated by daily_tasks: market_data.json, archive/*.json)
+          git add backend/archive/*.json frontend/public/data/archive/*.json frontend/public/data/archive/index.json frontend/public/data/market_data.json
+          git commit -m "Daily maintenance (OGV & Archive) [bot]" || echo "No changes to commit"
+          
+          git pull --rebase origin main || echo "Already up to date"
+          git push origin main

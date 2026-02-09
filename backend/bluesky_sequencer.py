@@ -20,6 +20,8 @@ class BlueskySequencer:
         "ID": [(10, 35), (16, 5)],        # Jakarta
         "HI": [(12, 35), (16, 35)],       # Mumbai
         "AR": [(16, 5), (19, 35)],        # Riyadh/Dubai
+        "DE": [(17, 35)],                 # Frankfurt Open (approx)
+        "FR": [(17, 5)],                  # Paris Open (approx)
         "ES": [(17, 5), (23, 35)]         # Madrid/Latam
     }
 

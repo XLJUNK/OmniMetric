@@ -1,0 +1,23 @@
+{
+    "slug": "tips-bond",
+    "lang": "EN",
+    "title": "US Treasury Inflation-Protected Securities (TIPS)",
+    "type": "indicator",
+    "category": "Bonds",
+    "sections": {
+        "summary": "Treasury Inflation-Protected Securities (TIPS) are US government bonds whose principal is adjusted based on changes in the Consumer Price Index (CPI). They serve as the definitive hedge against purchasing power erosion and are the primary market instruments used to derive expectations for future inflation.",
+        "deep_dive": "The critical role of TIPS in the financial ecosystem is providing a direct reading of 'Real Yields'—the interest rate adjusted for inflation. Real yields act as the 'Gravity of Finance'; they are a fundamental variable that dictates the valuation of zero-yielding assets like Gold and high-multiple growth stocks. When real yields rise, the discounted present value of future earnings falls, making TIPS an essential leading indicator for equity market corrections. Furthermore, the spread between nominal 10-year Treasury yields and 10-year TIPS yields is known as the 'Breakeven Inflation Rate' (BEI), reflecting the market's collective consensus on average inflation over the next decade.",
+        "council_debate": {
+            "macro": "Real yields represent the 'true' cost of capital for the global economy. A sustained move into positive real territory marks the end of the 'free money' era and forces a rigorous re-selection of business models.",
+            "tech": "AI-driven algorithmic trading in the TIPS market has sharpened price discovery during CPI volatility. Quants treat TIPS as the ultimate high-fidelity sensor for real-time inflation shocks.",
+            "geopolitics": "As the global order becomes more multipolar, TIPS are increasingly viewed by foreign central banks as the most secure USD asset, providing a hedge against the fiscal debasement of the greenback.",
+            "quant": "The '5-Year, 5-Year Forward' inflation expectation is often derived using TIPS data. Monitoring whether this stays 'anchored' below 2.5% is crucial for identifying structural shifts in the inflation regime.",
+            "policy": "The Federal Reserve monitors TIPS spreads to gauge the credibility of its 2% inflation target. If BEI rates diverge significantly, it signals a loss of confidence in the Fed's dual mandate.",
+            "technical": "TIPS suffer from lower liquidity compared to nominal Treasuries. In periods of extreme market stress, the 'liquidity premium' can distort real yield readings, creating 'fake' signals of tightening."
+        },
+        "forecast_risks": "The primary risk is a severe deflationary shock, which would cause the principal to adjust downward, leading to underperformance against nominal bonds. Additionally, a rapid central bank pivot toward aggressive tightening can spike real rates, triggering a broad asset re-pricing.",
+        "gms_conclusion": "The single most 'honest' indicator in the fixed-income world. Understanding the trajectory of TIPS yields is non-negotiable for any risk-management framework in a modern macro-driven market."
+    },
+    "model": "Antigravity-GMS-v1 (Expert Analysis)",
+    "generated_at": "2026-02-09T08:18:00Z"
+}

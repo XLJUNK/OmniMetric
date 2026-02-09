@@ -5,16 +5,17 @@ import { getWikiData, WikiItem } from '@/lib/wiki';
 import { BookOpen, Activity, Quote, Hash } from 'lucide-react';
 import { Metadata } from 'next';
 import { AdSenseSlot } from '@/components/AdSenseSlot';
-import { ClientDirectionProvider } from '@/components/ClientDirectionProvider';
 import { WikiSearch } from '@/components/WikiSearch';
 import { LanguageSelector } from '@/components/LanguageSelector';
 import { DynamicStructuredData } from '@/components/DynamicStructuredData';
 
-// Enable Static Params for all languages defined in dictionary
+// Enable Static Params for all localized languages (excluding English)
 export async function generateStaticParams() {
-    return Object.keys(DICTIONARY).map((lang) => ({
-        lang: lang.toLowerCase(),
-    }));
+    return Object.keys(DICTIONARY)
+        .filter(lang => lang !== 'EN')
+        .map((lang) => ({
+            lang: lang.toLowerCase(),
+        }));
 }
 
 type Props = {
@@ -28,7 +29,9 @@ const WIKI_DESCRIPTIONS: Record<string, string> = {
     es: "Base de conocimientos macro global: índice completo de indicadores económicos, análisis técnico y máximas de inversión.",
     hi: "ग्लोबल मैक्रो नॉलेज बेस: आर्थिक संकेतकों, तकनीकी विश्लेषण और निवेश सिद्धांतों का व्यापक सूचकांक।",
     id: "Basis Pengetahuan Makro Global: Indeks komprehensif indikator ekonomi, analisis teknis, dan maksim investasi.",
-    ar: "قاعدة المعرفة الكليّة العالمية: فهرس شامل للمؤشرات الاقتصادية والتحليل الفني وحكم الاستثمار."
+    ar: "قاعدة المعرفة الكليّة العالمية: فهرس شامل للمؤشرات الاقتصادية والتحليل الفني وحكم الاستثمار.",
+    de: "Globale Makro-Wissensdatenbank: Umfassender Index von Wirtschaftsindikatoren, technischer Analyse und Marktmaximen.",
+    fr: "Base de connaissances macroéconomiques mondiales : index complet des indicateurs économiques, de l'analyse technique et des maximes du marché."
 };
 
 import { getMultilingualMetadata } from '@/data/seo';
@@ -36,7 +39,7 @@ import { getMultilingualMetadata } from '@/data/seo';
 // Helper for metadata
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { lang } = await params;
-    return getMultilingualMetadata('/wiki', lang, `OmniMetric Wiki Index (${lang.toUpperCase()})`, WIKI_DESCRIPTIONS[lang.toLowerCase()] || WIKI_DESCRIPTIONS['en'], 'path');
+    return getMultilingualMetadata('/wiki', lang, `OmniMetric Wiki Index (${lang.toUpperCase()})`, WIKI_DESCRIPTIONS[lang.toLowerCase()] || WIKI_DESCRIPTIONS['en']);
 }
 
 export default async function WikiIndexPage({ params }: Props) {
@@ -69,20 +72,27 @@ export default async function WikiIndexPage({ params }: Props) {
     const grouped: Record<string, Record<string, WikiItem[]>> = {
         glossary: {},
         technical: {},
-        maxim: {}
+        maxim: {},
+        indicator: {}
     };
 
     wikiData.forEach(item => {
-        if (!grouped[item.type][item.category]) {
-            grouped[item.type][item.category] = [];
+        // Map 'asset' type to 'indicator' for UI grouping, but be defensive for unknown types
+        const effectiveType = item.type === 'asset' ? 'indicator' : item.type;
+
+        if (grouped[effectiveType]) {
+            if (!grouped[effectiveType][item.category]) {
+                grouped[effectiveType][item.category] = [];
+            }
+            grouped[effectiveType][item.category].push(item);
         }
-        grouped[item.type][item.category].push(item);
     });
 
     const getSectionTitle = (type: string) => {
         switch (type) {
             case 'glossary': return DICTIONARY[normalizedLang].labels.wiki || 'Macro Wiki';
             case 'technical': return DICTIONARY[normalizedLang].labels.technical || 'Technical';
+            case 'indicator': return DICTIONARY[normalizedLang].labels.indicator || 'Assets & Indicators';
             case 'maxim': return DICTIONARY[normalizedLang].labels.maxims || 'Investment Maxims';
             default: return type;
         }
@@ -91,6 +101,7 @@ export default async function WikiIndexPage({ params }: Props) {
     const getIcon = (type: string) => {
         switch (type) {
             case 'glossary': return <BookOpen className="w-5 h-5 text-emerald-400" />;
+            case 'indicator': return <Activity className="w-5 h-5 text-sky-400" />;
             case 'technical': return <Activity className="w-5 h-5 text-purple-400" />;
             case 'maxim': return <Quote className="w-5 h-5 text-sky-400" />;
         }
@@ -117,7 +128,7 @@ export default async function WikiIndexPage({ params }: Props) {
                                     OmniMetric <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-purple-400">Wiki Index</span>
                                 </h1>
                             </div>
-                            <LanguageSelector currentLang={normalizedLang} mode="path" isDark={false} />
+                            <LanguageSelector currentLang={normalizedLang} mode="path" />
                         </div>
                         <p className="text-slate-400 font-mono text-sm ml-1">
                             The complete knowledge base for the 2026 Macro-Economic Landscape.
@@ -132,7 +143,7 @@ export default async function WikiIndexPage({ params }: Props) {
                     />
 
                     <div className="grid grid-cols-1 gap-16">
-                        {['glossary', 'technical', 'maxim'].map((type) => (
+                        {['glossary', 'indicator', 'technical', 'maxim'].map((type) => (
                             <section key={type} className="space-y-6">
                                 <div className={`flex items-center gap-3 border-b border-border pb-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
                                     {getIcon(type)}
@@ -151,7 +162,7 @@ export default async function WikiIndexPage({ params }: Props) {
                                                 {items.map(item => (
                                                     <li key={item.slug} className={`flex ${isRTL ? 'justify-end' : 'justify-start'}`}>
                                                         <Link
-                                                            href={`/${normalizedLang.toLowerCase()}/wiki/${item.slug}`}
+                                                            href={normalizedLang === 'EN' ? `/wiki/${item.slug}` : `/${normalizedLang.toLowerCase()}/wiki/${item.slug}`}
                                                             className={`text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500 transition-colors truncate block max-w-full ${isRTL ? 'text-right' : 'text-left'}`}
                                                         >
                                                             {item.title}

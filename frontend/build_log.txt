@@ -1,11 +1,27 @@
 
-> frontend@0.1.0 build
-> node scripts/verify-env.js && next build
+> frontend@5.1.0 build
+> next build
 
---- [DEPLOY GUARD] Checking environment variables... ---
-[CRITICAL ERROR] Missing required environment variables:
- - FRED_API_KEY
- - GEMINI_API_KEY
- - FMP_API_KEY
- - NEXT_PUBLIC_GEMINI_API_KEY
-Build blocked to prevent user-facing technical errors.
+笆ｲ Next.js 16.1.6 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 1 errors:
+./app/wiki/[slug]/page.tsx:4:1
+Export getWikiItemWithHeavy doesn't exist in target module
+  2 | import { notFound } from 'next/navigation';
+  3 | import { Metadata } from 'next';
+> 4 | import { getWikiData, getWikiItemWithHeavy } from '@/lib/wiki';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { WikiSearch } from '@/components/WikiSearch';
+  6 | import { DICTIONARY } from '@/data/dictionary';
+  7 | import { BookOpen, Calendar, Clock, Tag, ChevronLeft, ArrowRight } from 'lucide-react';
+
+The export getWikiItemWithHeavy was not found in module [project]/lib/wiki.ts [app-rsc] (ecmascript).
+Did you mean to import getWikiItem?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+
+    at <unknown> (./app/wiki/[slug]/page.tsx:4:1)

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import useSWR from 'swr';
 import { DICTIONARY, LangType } from '@/data/dictionary';
 
 
@@ -12,22 +13,27 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
     const [news, setNews] = useState<{ title: string, link: string, isoDate?: string }[]>([]);
     const t = DICTIONARY[lang] || DICTIONARY['EN'];
 
+    // SWR Integration for Static Data
+    const fetcher = (url: string) => fetch(url).then(r => r.json());
+    const { data: marketData, error } = useSWR('/data/market_data.json', fetcher, {
+        refreshInterval: 60000
+    });
+
     useEffect(() => {
-        const fetchNews = async () => {
-            try {
-                const res = await fetch(`/api/news?lang=${lang}`);
-                const json = await res.json();
+        const processNews = () => {
+            if (marketData && marketData.intelligence) {
+                const intelligence = marketData.intelligence;
+                const rawNews = intelligence.news || [];
+
                 const decodeEntities = (str: string) => {
                     const entities: Record<string, string> = { '&apos;': "'", '&amp;': "&", '&quot;': '"', '&lt;': "<", '&gt;': ">" };
                     return str.replace(/&(apos|amp|quot|lt|gt);/g, match => entities[match] || match);
                 };
-                const decodedNews = (json.news || []).map((item: { title: string; link?: string; url?: string; isoDate?: string; published?: string }, index: number) => {
-                    // v5.5: Multi-language Support (Check translations first)
-                    // If we are in EN, use item.title (English).
-                    // If we are in JP/CN/etc, check `json.translations[lang][index]`.
+
+                const decodedNews = rawNews.map((item: { title: string; link?: string; url?: string; isoDate?: string; published?: string }, index: number) => {
                     let displayTitle = item.title;
-                    if (lang !== 'EN' && json?.translations && json.translations[lang] && json.translations[lang][index]) {
-                        displayTitle = json.translations[lang][index];
+                    if (lang !== 'EN' && intelligence.translations && intelligence.translations[lang] && intelligence.translations[lang][index]) {
+                        displayTitle = intelligence.translations[lang][index];
                     }
 
                     return {
@@ -36,8 +42,7 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
                         isoDate: item.isoDate || item.published
                     };
                 });
-                // Strictly take top 5 for the vertical stack
-                // Success: Update Cache
+
                 const finalNews = decodedNews.length > 0 ? decodedNews.slice(0, 5) : [];
                 if (finalNews.length > 0) {
                     setNews(finalNews);
@@ -49,40 +54,34 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
                     } catch {
                         // Storage full or disabled, ignore
                     }
-                } else {
-                    // If API returns empty, try cache before fallback
-                    throw new Error("Empty API response");
+                    return;
                 }
-            } catch {
-                // v5.5 FIX: Robust Fallback with Caching Strategy
-                // 1. Try Cache
-                try {
-                    const cachedRaw = localStorage.getItem(`gms_news_cache_${lang}`);
-                    if (cachedRaw) {
-                        const cached = JSON.parse(cachedRaw);
-                        // Optional: Check expiration (e.g. 24h?) - For now, show last known valid news to maintain utility
-                        if (cached.news && Array.isArray(cached.news) && cached.news.length > 0) {
-                            setNews(cached.news);
-                            return; // Successfully used cache
-                        }
-                    }
-                } catch {
-                    // Cache corrupt, ignore
-                }
-
-                // 2. Final Fallback: System Synchronizing Status
-                setNews([{
-                    title: t.status.market || "Synchronizing market intelligence...",
-                    link: "#",
-                    isoDate: new Date().toISOString()
-                }]);
             }
+
+            // Fallback Logic (Cache or Error)
+            try {
+                const cachedRaw = localStorage.getItem(`gms_news_cache_${lang}`);
+                if (cachedRaw) {
+                    const cached = JSON.parse(cachedRaw);
+                    if (cached.news && Array.isArray(cached.news) && cached.news.length > 0) {
+                        setNews(cached.news);
+                        return;
+                    }
+                }
+            } catch { }
+
+            // Final Fallback
+            if (!marketData && !error) return; // Wait for loading if no cache
+
+            setNews([{
+                title: t.status.market || "Synchronizing market intelligence...",
+                link: "#",
+                isoDate: new Date().toISOString()
+            }]);
         };
-        fetchNews();
-        // Update news feed every 5 mins to ensure fresh data
-        const interval = setInterval(fetchNews, 300000);
-        return () => clearInterval(interval);
-    }, [lang, t.status.market]);
+
+        processNews();
+    }, [marketData, lang, t.status.market, error]);
 
 
 
@@ -91,9 +90,9 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
     // Skeleton container with fixed height matching final render to prevent CLS
     if (news.length === 0) {
         return (
-            <div className="w-full bg-white dark:bg-[#050505] border-y border-slate-200 dark:border-white/5 min-h-[160px] flex flex-col divide-y divide-slate-100 dark:divide-white/5 overflow-hidden">
+            <div className="w-full bg-white dark:bg-black border-0 min-h-[160px] flex flex-col divide-0 overflow-hidden">
                 {[1, 2, 3, 4, 5].map((v) => (
-                    <div key={v} className="h-[32px] bg-slate-50/50 dark:bg-white/[0.02]"></div>
+                    <div key={v} className="h-[32px] bg-slate-50/50 dark:bg-black"></div>
                 ))}
             </div>
         );
@@ -135,17 +134,17 @@ export const NewsTicker = ({ lang }: { lang: LangType }) => {
 
     return (
         <div
-            className="w-full bg-white dark:bg-black border-y border-slate-200 dark:border-[#1E293B] shadow-2xl relative z-10 select-none"
+            className="w-full bg-white dark:bg-black border-0 shadow-2xl relative z-10 select-none"
             dir={isRTL ? 'rtl' : 'ltr'}
         >
-            <div className={`flex flex-col divide-y divide-slate-100 dark:divide-white/5 min-h-[160px]`}>
+            <div className={`flex flex-col divide-0 min-h-[160px]`}>
                 {news.map((item, i) => (
                     <Link
                         key={i}
                         href={item.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group flex items-center justify-between h-[32px] px-3 md:px-5 hover:bg-slate-50 dark:hover:bg-white/[0.03] transition-all cursor-pointer border-l-2 border-transparent hover:border-red-600/80 no-underline text-inherit"
+                        className="group flex items-center justify-between h-[32px] px-3 md:px-5 hover:bg-slate-50 dark:hover:bg-white/[0.03] transition-all cursor-pointer border-0 no-underline text-inherit"
                     >
                         <div
                             className={`flex items-center overflow-hidden flex-1 gap-5 ${isRTL ? 'flex-row-reverse' : 'flex-row'}`}

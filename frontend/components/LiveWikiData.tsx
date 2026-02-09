@@ -1,7 +1,9 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Activity, ArrowUp, ArrowDown, Zap } from 'lucide-react';
+import useSWR from 'swr';
+import { useSignalData } from '@/hooks/useSignalData';
 
 type MarketData = {
     metadata: {
@@ -13,10 +15,8 @@ type MarketData = {
     }>;
 };
 
-type LiveDataProps = {
-    slug: string;
-    lang: string;
-};
+// Simple fetcher for SWR
+const fetcher = (url: string) => fetch(url).then(res => res.json());
 
 // Mapping Wiki Slugs to Market Tickers (Simple heuristic)
 const TICKER_MAP: Record<string, string> = {
@@ -34,37 +34,18 @@ const TICKER_MAP: Record<string, string> = {
     'inflation': 'US10Y', // Proxy context
 };
 
-export const LiveWikiData = ({ slug, lang }: LiveDataProps) => {
-    const [data, setData] = useState<MarketData | null>(null);
-    const [gmsScore, setGmsScore] = useState<number | null>(null);
-    const [loading, setLoading] = useState(true);
+export const LiveWikiData = ({ slug }: { slug: string; lang: string }) => {
+    // 1. Fetch Market Analysis Data
+    const { data, isLoading: marketLoading } = useSWR<MarketData>(
+        '/data/market_analysis.json',
+        fetcher
+    );
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                // Parallel Fetch: Market Data & GMS Score
-                const [marketRes, gmsRes] = await Promise.all([
-                    fetch('/data/market_analysis.json'),
-                    fetch('/data/current_signal.json')
-                ]);
+    // 2. Fetch GMS Score (Centralized Hook)
+    const { data: signalData, isLoading: signalLoading } = useSignalData(null);
+    const gmsScore = signalData?.gms_score;
 
-                if (marketRes.ok) {
-                    const mJson = await marketRes.json();
-                    setData(mJson);
-                }
-                if (gmsRes.ok) {
-                    const gJson = await gmsRes.json();
-                    setGmsScore(gJson.gms_score);
-                }
-            } catch (e) {
-                console.error("Failed to load live wiki data", e);
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        fetchData();
-    }, []);
+    const loading = marketLoading || signalLoading;
 
     // Determine Ticker
     const ticker = TICKER_MAP[slug.toLowerCase()] || '';

@@ -1,5 +1,5 @@
 'use client';
-import { Home, LineChart, Bitcoin, Banknote, Gem, ChevronRight, BookOpen } from 'lucide-react';
+import { Home, LineChart, Bitcoin, Banknote, Gem, BookOpen } from 'lucide-react';
 import { usePathname, useRouter } from 'next/navigation';
 import { DICTIONARY } from '@/data/dictionary';
 import { useCurrentLang } from '@/hooks/useCurrentLang';
@@ -29,11 +29,14 @@ export const Sidebar = () => {
             {/* Navigation - Icon Only + Tooltips */}
             <nav className="flex-1 flex flex-col justify-start pt-10 gap-8 items-center">
                 {tabs.map((tab) => {
-                    const isActive = pathname === tab.path;
+                    const localizedPath = lang.toUpperCase() === 'EN'
+                        ? tab.path
+                        : (tab.path === '/' ? `/${lang.toLowerCase()}` : `/${lang.toLowerCase()}${tab.path}`);
+                    const isActive = pathname === localizedPath;
                     return (
                         <button
                             key={tab.key}
-                            onClick={() => router.push(`${tab.path}?lang=${lang}`)}
+                            onClick={() => router.push(localizedPath)}
                             className={`group relative flex items-center justify-center p-3 rounded-lg transition-all duration-300 border border-transparent ${isActive
                                 ? 'bg-slate-100 dark:bg-[#333] border-slate-200 dark:border-[#555] shadow-sm dark:shadow-lg'
                                 : 'bg-transparent hover:bg-slate-50 dark:hover:bg-[#222] hover:border-slate-200 dark:hover:border-[#333]'
@@ -54,8 +57,7 @@ export const Sidebar = () => {
 
                             {/* Tooltip (Label) - TYPOGRAPHY MASTERPIECE */}
                             <div
-                                className="absolute ltr:left-full rtl:right-full top-1/2 -translate-y-1/2 ms-4 px-3 py-2 bg-black border border-[#333] !text-[#F1F5F9] text-[10.5px] font-semibold tracking-[0.15em] uppercase rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap shadow-[0_4px_20px_rgba(0,0,0,1)] z-[9999]"
-                                style={{ color: '#F1F5F9' }}
+                                className="absolute ltr:left-full rtl:right-full top-1/2 -translate-y-1/2 ms-4 px-3 py-2 bg-black border border-[#333] text-[#F1F5F9] text-[10.5px] font-semibold tracking-[0.15em] uppercase rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap shadow-[0_4px_20px_rgba(0,0,0,1)] z-[9999]"
                             >
                                 {tab.label}
                             </div>

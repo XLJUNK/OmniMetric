@@ -30,6 +30,16 @@ class SNSPublisher:
         if score > 60: return "ACUMULAR (Apetito de Riesgo)"
         if score < 40: return "DEFENSIVA (Aversión al Riesgo)"
         return "NEUTRAL (Paridad de Riesgo)"
+
+    def get_regime_name_de(self, score):
+        if score > 60: return "AKKUMULIEREN (Risikoappetit)"
+        if score < 40: return "DEFENSIV (Risikoavers)"
+        return "NEUTRAL (Marktbeobachtung)"
+
+    def get_regime_name_fr(self, score):
+        if score > 60: return "ACCUMULER (Appétence au risque)"
+        if score < 40: return "DÉFENSIF (Aversion au risque)"
+        return "NEUTRE (Attente)"
         
     # OGP Image Generation Removed - Using Static Link Previews (Logic moved to ogp_generator.py)
 

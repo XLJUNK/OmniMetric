@@ -8,6 +8,8 @@ export const LANGUAGES: Record<string, string> = {
     'HI': 'hi',
     'ID': 'id',
     'AR': 'ar',
+    'FR': 'fr',
+    'DE': 'de',
 };
 
 export const BASE_URL = 'https://www.omnimetric.net';
@@ -18,8 +20,7 @@ export function getMultilingualMetadata(
     path: string,
     currentLang: string,
     title?: string,
-    description?: string,
-    style: MetadataStyle = 'query'
+    description?: string
 ): Metadata {
     const langCode = currentLang.toUpperCase();
     // Normalize path to not have leading slash if style is path to avoid double slashes later if needed, 
@@ -63,7 +64,15 @@ export function getMultilingualMetadata(
         description: description || "Real-time global market risk analysis. AI-driven insights for professional investors.",
         alternates: {
             canonical,
-            languages: alternates,
+            languages: Object.keys(LANGUAGES).reduce((acc: Record<string, string>, l: string) => {
+                const hreflang = LANGUAGES[l];
+                if (cleanPath === '/') {
+                    acc[hreflang] = l === 'EN' ? `${BASE_URL}/` : `${BASE_URL}/${l.toLowerCase()}`;
+                } else {
+                    acc[hreflang] = `${BASE_URL}/${l.toLowerCase()}${cleanPath}`;
+                }
+                return acc;
+            }, {} as Record<string, string>),
         },
     };
 }

@@ -1,0 +1,603 @@
+[
+    {
+        "id": "net-liquidity",
+        "category": "Liquidité",
+        "term": "Liquidité nette",
+        "definition": "Mesure de la liquidité réelle fournie au marché, calculée en soustrayant le compte général du Trésor (TGA) et les soldes de repo inversé (RRP) du bilan de la Fed.",
+        "market_impact": {
+            "up": "Hausse des prix des actifs risqués (actions, crypto).",
+            "down": "Volatilité accrue et ajustements de valorisation."
+        },
+        "context_2026": "En 2026, cette volatilité réelle détermine la résilience du marché plus que les taux d'intérêt.",
+        "gms_relevance": "Très élevé. Forme la base du score GMS.",
+        "seo_keywords": [
+            "Liquidité nette",
+            "Bilan de la Fed",
+            "RRP"
+        ]
+    },
+    {
+        "id": "vix",
+        "category": "Sentiment",
+        "term": "VIX (Indice de la peur)",
+        "definition": "Indice mesurant la volatilité attendue du S&P 500 sur 30 jours.",
+        "market_impact": {
+            "up": "Peur du marché ; vente massive potentielle.",
+            "down": "Complaisance ou stabilité ; environnement favorable au risque."
+        },
+        "context_2026": "Fortement influencé par les options 0DTE et le trading algorithmique.",
+        "gms_relevance": "Élevé. Indicateur de peur systémique.",
+        "seo_keywords": [
+            "VIX",
+            "Volatilité",
+            "Peur"
+        ]
+    },
+    {
+        "id": "real-interest-rate",
+        "category": "Taux d'intérêt",
+        "term": "Taux d'intérêt réel",
+        "definition": "Taux nominal moins l'inflation attendue.",
+        "market_impact": {
+            "up": "Négatif pour l'or et le Bitcoin ; dollar fort.",
+            "down": "Stimule les bulles d'actifs et l'investissement tech."
+        },
+        "context_2026": "L'IA a relevé le taux neutre 'r-star'.",
+        "gms_relevance": "Élevé. Sert de taux d'actualisation majeur.",
+        "seo_keywords": [
+            "Taux réel",
+            "Rendement",
+            "TIPS"
+        ]
+    },
+    {
+        "id": "gms-score",
+        "category": "Propriétaire",
+        "term": "Score GMS",
+        "definition": "Indice quantitatif propriétaire (0-100) mesurant le risque macro global.",
+        "market_impact": {
+            "up": "Signale une phase d'accumulation (Risk-on).",
+            "down": "Signale une phase défensive (Risk-off)."
+        },
+        "context_2026": "Utilise Gemini 3 pour synchroniser les données SNS et économiques.",
+        "gms_relevance": "Cœur du système.",
+        "seo_keywords": [
+            "Score GMS",
+            "OmniMetric",
+            "Algorithme macro"
+        ]
+    },
+    {
+        "id": "pce-price-index",
+        "category": "Inflation",
+        "term": "PCE (Indice des prix)",
+        "definition": "Indicateur d'inflation préféré de la Fed.",
+        "market_impact": {
+            "up": "Hawkish Fed ; taux plus hauts.",
+            "down": "Dovish Fed ; espoir de pivot."
+        },
+        "context_2026": "L'IA stabilize le PCE via des gains de productivité.",
+        "gms_relevance": "Élevé. Prédit les changements de taux.",
+        "seo_keywords": [
+            "PCE",
+            "Inflation",
+            "Fed"
+        ]
+    },
+    {
+        "id": "non-farm-payrolls",
+        "category": "Emploi",
+        "term": "Emplois non agricoles (NFP)",
+        "definition": "Rapport mensuel sur l'emploi aux États-Unis.",
+        "market_impact": {
+            "up": "Économie forte, mais risque de hausse des taux.",
+            "down": "Craintes de récession ou baisse des taux."
+        },
+        "context_2026": "L'IA redéfinit la productivité des cols blancs.",
+        "gms_relevance": "Élevé. Mesure la santé de la consommation.",
+        "seo_keywords": [
+            "NFP",
+            "Emploi",
+            "Chômage"
+        ]
+    },
+    {
+        "id": "yield-curve-10y2y",
+        "category": "Obligations",
+        "term": "Courbe des taux (10Y-2Y)",
+        "definition": "Différence entre les rendements à 10 ans et 2 ans.",
+        "market_impact": {
+            "up": "Pentification ; reprise économique.",
+            "down": "Inversion ; signal de récession."
+        },
+        "context_2026": "L'inversion prolongée a perdu de sa précision prédictive.",
+        "gms_relevance": "Moyen. Indicateur de cycle économique.",
+        "seo_keywords": [
+            "Courbe des taux",
+            "Récession",
+            "Obligations"
+        ]
+    },
+    {
+        "id": "ff-rate",
+        "category": "Taux d'intérêt",
+        "term": "Taux Fed Funds",
+        "definition": "Taux directeur de la Réserve Fédérale.",
+        "market_impact": {
+            "up": "Dollar fort, actifs sous pression.",
+            "down": "Liquidité abondante, actifs en hausse."
+        },
+        "context_2026": "Le monde s'adapte à des taux 'plus hauts plus longtemps'.",
+        "gms_relevance": "Très élevé. Coût marginal du capital.",
+        "seo_keywords": [
+            "Taux Fed",
+            "Taux directeur",
+            "Pivot"
+        ]
+    },
+    {
+        "id": "ai-demand-forecast-index",
+        "category": "Technologie",
+        "term": "Indice de demande IA",
+        "definition": "Indicateur propriétaire mesurant les CapEx centres de données et l'usage LLM.",
+        "market_impact": {
+            "up": "Explosion des revenus tech et semiconducteurs.",
+            "down": "Signale un surinvestissement ou une saturation."
+        },
+        "context_2026": "Remplacent l'ISM Manufacturing comme indicateur avancé.",
+        "gms_relevance": "Élevé. Moteur de croissance de la productivité.",
+        "seo_keywords": [
+            "Demande IA",
+            "GPU",
+            "Tech CapEx"
+        ]
+    },
+    {
+        "id": "move-index",
+        "category": "Sentiment",
+        "term": "Indice MOVE",
+        "definition": "Le 'VIX' du marché obligataire. Mesure la volatilité des taux.",
+        "market_impact": {
+            "up": "Stress dans le collatéral ; risque systémique.",
+            "down": "Marchés obligataires stables."
+        },
+        "context_2026": "Crucial pour surveiller la liquidité des bons du Trésor.",
+        "gms_relevance": "Élevé. Indique un stress du financement.",
+        "seo_keywords": [
+            "Indice MOVE",
+            "Volatilité obligataire",
+            "Stress"
+        ]
+    },
+    {
+        "id": "fear-and-greed-index",
+        "category": "Sentiment",
+        "term": "Indice Peur & Cupidité",
+        "definition": "Indicateur de sentiment global combinant plusieurs mesures.",
+        "market_impact": {
+            "up": "Cupidité ; risque de correction.",
+            "down": "Peur ; opportunité d'achat contrariante."
+        },
+        "context_2026": "Les algos exploitent les extrêmes plus rapidement que jamais.",
+        "gms_relevance": "Moyen. Filtre de momentum.",
+        "seo_keywords": [
+            "Peur",
+            "Cupidité",
+            "Sentiment"
+        ]
+    },
+    {
+        "id": "copper-gold-ratio",
+        "category": "Matières premières",
+        "term": "Ratio Cuivre/Or",
+        "definition": "Indicateur de croissance vs refuge.",
+        "market_impact": {
+            "up": "Croissance économique forte, taux en hausse.",
+            "down": "Ralentissement mondial, fuite vers la sécurité."
+        },
+        "context_2026": "Reflète la demande IA (cuivre) vs risque systémique (or).",
+        "gms_relevance": "Moyen. Indicateur de cycle industriel.",
+        "seo_keywords": [
+            "Cuivre",
+            "Or",
+            "Ratio macro"
+        ]
+    },
+    {
+        "id": "m2-money-supply",
+        "category": "Liquidité",
+        "term": "Masse monétaire M2",
+        "definition": "Offre monétaire totale aux États-Unis.",
+        "market_impact": {
+            "up": "Inflation des actifs à long terme.",
+            "down": "Déflation et contraction des bénéfices."
+        },
+        "context_2026": "L'émergence des stablecoins modifie la vélocité de M2.",
+        "gms_relevance": "Moyen. Liquidité structurelle.",
+        "seo_keywords": [
+            "M2",
+            "Monnaie",
+            "Fed"
+        ]
+    },
+    {
+        "id": "ism-manufacturing-pmi",
+        "category": "Économie",
+        "term": "ISM Manufacturing PMI",
+        "definition": "Indice de santé du secteur manufacturier américain.",
+        "market_impact": {
+            "up": "Expansion de l'économie réelle.",
+            "down": "Contraction et risque de récession."
+        },
+        "context_2026": "Moins influent que l'indice de demande IA en 2026.",
+        "gms_relevance": "Moyen. Indicateur cyclique traditionnel.",
+        "seo_keywords": [
+            "ISM",
+            "PMI",
+            "Industrie"
+        ]
+    },
+    {
+        "id": "sovereign-credit-spread",
+        "category": "Crédit",
+        "term": "Spread de crédit souverain",
+        "definition": "Différence de rendement entre les dettes de différents pays.",
+        "market_impact": {
+            "up": "Instabilité de la zone euro ou des marchés émergents.",
+            "down": "Convergence et stabilité politique."
+        },
+        "context_2026": "Surveille la soutenabilité de la dette en Europe.",
+        "gms_relevance": "Moyen. Risque de fragmentation.",
+        "seo_keywords": [
+            "BTP Bund",
+            "Spread",
+            "Dette souveraine"
+        ]
+    },
+    {
+        "id": "rrp-balance",
+        "category": "Liquidité",
+        "term": "Solde Repo Inversé (RRP)",
+        "definition": "Réservoir de liquidités excédentaires à la Fed.",
+        "market_impact": {
+            "up": "Retrait de la liquidité du marché.",
+            "down": "Injection massive de liquidités (Bullish)."
+        },
+        "context_2026": "Prédit la fin du Quantitative Tightening (QT).",
+        "gms_relevance": "Élevé. Variable de liquidité nette.",
+        "seo_keywords": [
+            "RRP",
+            "Repo",
+            "Fed liquidité"
+        ]
+    },
+    {
+        "id": "us10y-yield",
+        "category": "Taux d'intérêt",
+        "term": "Rendement US 10 ans",
+        "definition": "Taux sans risque de référence mondiale.",
+        "market_impact": {
+            "up": "Pression sur les valorisations tech.",
+            "down": "Vent arrière pour les actifs à longue durée."
+        },
+        "context_2026": "Pivot autour de la barre des 4,5%.",
+        "gms_relevance": "Très élevé. Taux d'actualisation.",
+        "seo_keywords": [
+            "10Y",
+            "Trésor US",
+            "Bons du trésor"
+        ]
+    },
+    {
+        "id": "breakeven-inflation",
+        "category": "Inflation",
+        "term": "Inflation Point Mort 10 ans",
+        "definition": "Attentes d'inflation du marché dérivées des TIPS.",
+        "market_impact": {
+            "up": "Craintes inflationnistes, bon pour les matières premières.",
+            "down": "Désinflation, bon pour les actions de croissance."
+        },
+        "context_2026": "Mesure la crédibilité de la Fed face à l'IA.",
+        "gms_relevance": "Élevé. Détermine les taux réels.",
+        "seo_keywords": [
+            "Breakeven",
+            "Inflation",
+            "Attentes"
+        ]
+    },
+    {
+        "id": "dxy-index",
+        "category": "Forex",
+        "term": "Indice Dollar (DXY)",
+        "definition": "Valeur du dollar face à un panier de devises.",
+        "market_impact": {
+            "up": "Stress de liquidité, Risk-off.",
+            "down": "Abondance de liquidité, Risk-on."
+        },
+        "context_2026": "Baromètre de la tension financière mondiale.",
+        "gms_relevance": "Élevé. Proxy de liquidité globale.",
+        "seo_keywords": [
+            "DXY",
+            "Dollar",
+            "Devises"
+        ]
+    },
+    {
+        "id": "sp500-index",
+        "category": "Actions",
+        "term": "Indice S&P 500",
+        "definition": "Benchmark des 500 plus grandes entreprises US.",
+        "market_impact": {
+            "up": "Optimisme économique large.",
+            "down": "Pessimisme ou risque systémique."
+        },
+        "context_2026": "Dominé par le 'Magnificent AI'.",
+        "gms_relevance": "Benchmark cible.",
+        "seo_keywords": [
+            "S&P 500",
+            "Wall Street",
+            "Bourse"
+        ]
+    },
+    {
+        "id": "market-breadth",
+        "category": "Actions",
+        "term": "Largeur du marché",
+        "definition": "Participation des différentes actions au rallye.",
+        "market_impact": {
+            "up": "Haut niveau de confiance, rallye sain.",
+            "down": "Leadership étroit, fragilité de l'indice."
+        },
+        "context_2026": "Indique si l'IA profite à toute l'économie.",
+        "gms_relevance": "Moyen. Qualité du rallye.",
+        "seo_keywords": [
+            "Breadth",
+            "RSP",
+            "Participation"
+        ]
+    },
+    {
+        "id": "copper-price",
+        "category": "Matières premières",
+        "term": "Prix du Cuivre",
+        "definition": "Indicateur de l'activité industrielle mondiale.",
+        "market_impact": {
+            "up": "Forte demande industrielle et énergétique.",
+            "down": "Ralentissement des dépenses d'infrastructure."
+        },
+        "context_2026": "Le 'pétrole de l'ère numérique'.",
+        "gms_relevance": "Moyen. Économie réelle.",
+        "seo_keywords": [
+            "Cuivre",
+            "Dr. Copper",
+            "Industrie"
+        ]
+    },
+    {
+        "id": "gold-price",
+        "category": "Matières premières",
+        "term": "Prix de l'Or",
+        "definition": "Valeur refuge et couverture d'inflation.",
+        "market_impact": {
+            "up": "Peur, dévaluation monétaire.",
+            "down": "Confiance dans le système financier."
+        },
+        "context_2026": "L'actif 'anti-dette' par excellence.",
+        "gms_relevance": "Moyen. Confiance systémique.",
+        "seo_keywords": [
+            "Or",
+            "Safe Haven",
+            "Inflation"
+        ]
+    },
+    {
+        "id": "bitcoin",
+        "category": "Crypto",
+        "term": "Bitcoin (BTC)",
+        "definition": "Indicateur de liquidité à bêta élevé.",
+        "market_impact": {
+            "up": "Risk-on maximal, liquidité abondante.",
+            "down": "Désendettement, fuite vers la sécurité."
+        },
+        "context_2026": "Actif institutionnel via les ETF.",
+        "gms_relevance": "Élevé. Thermomètre de liquidité.",
+        "seo_keywords": [
+            "Bitcoin",
+            "BTC",
+            "Crypto"
+        ]
+    },
+    {
+        "id": "ethereum",
+        "category": "Crypto",
+        "term": "Ethereum (ETH)",
+        "definition": "Couche d'infrastructure pour la finance programmable.",
+        "market_impact": {
+            "up": "Expansion de l'économie décentralisée.",
+            "down": "Contraction ou frais de réseau excessifs."
+        },
+        "context_2026": "Lié à la demande de calcul pour les agents IA.",
+        "gms_relevance": "Moyen. Utilité crypto.",
+        "seo_keywords": [
+            "Ethereum",
+            "ETH",
+            "Web3"
+        ]
+    },
+    {
+        "id": "solana",
+        "category": "Crypto",
+        "term": "Solana (SOL)",
+        "definition": "Blockchain ultra-rapide pour les dApps.",
+        "market_impact": {
+            "up": "Fort intérêt pour la DeFi et le DePIN.",
+            "down": "Rotation ou doutes sur la stabilité du réseau."
+        },
+        "context_2026": "Le 'TGV' de la crypto pour l'IA et la logistique.",
+        "gms_relevance": "Moyen. Bêta d'innovation.",
+        "seo_keywords": [
+            "Solana",
+            "SOL"
+        ]
+    },
+    {
+        "id": "wti-oil",
+        "category": "Matières premières",
+        "term": "Pétrole WTI",
+        "definition": "Benchmark de l'énergie mondiale.",
+        "market_impact": {
+            "up": "Inflation énergétique, demande forte.",
+            "down": "Excès d'offre ou récession mondiale."
+        },
+        "context_2026": "Bras de fer entre IA et renouvelables.",
+        "gms_relevance": "Moyen. Croissance et énergie.",
+        "seo_keywords": [
+            "WTI",
+            "Pétrole",
+            "Énergie"
+        ]
+    },
+    {
+        "id": "nasdaq-100",
+        "category": "Actions",
+        "term": "Nasdaq 100",
+        "definition": "Indice des 100 plus grandes entreprises tech.",
+        "market_impact": {
+            "up": "Appétit pour la croissance et l'IA.",
+            "down": "Vente massive de tech ou hausse des taux."
+        },
+        "context_2026": "Monétisation de l'IA comme moteur principal.",
+        "seo_keywords": [
+            "Nasdaq",
+            "QQQ",
+            "Tech"
+        ]
+    },
+    {
+        "id": "russell-2000",
+        "category": "Actions",
+        "term": "Russell 2000",
+        "definition": "2 000 petites capitalisations américaines.",
+        "market_impact": {
+            "up": "Confiance dans l'économie domestique US.",
+            "down": "Stress sur les crédits aux PME."
+        },
+        "context_2026": "Indique la santé des entreprises hors-IA.",
+        "seo_keywords": [
+            "Russell 2000",
+            "Small Cap"
+        ]
+    },
+    {
+        "id": "dax-index",
+        "category": "Actions",
+        "term": "DAX 40",
+        "definition": "Indice des 40 plus grandes entreprises allemandes.",
+        "market_impact": {
+            "up": "Dextérité industrielle, euro faible.",
+            "down": "Crise de l'énergie en Europe."
+        },
+        "context_2026": "Baromètre de l'industrie européenne.",
+        "seo_keywords": [
+            "DAX",
+            "Allemagne",
+            "Industrie"
+        ]
+    },
+    {
+        "id": "cac40-index",
+        "category": "Actions",
+        "term": "CAC 40",
+        "definition": "Indice des 40 géants français (Luxe, Finance).",
+        "market_impact": {
+            "up": "Boom du luxe mondial.",
+            "down": "Tensions commerciales ou fiscalité européenne."
+        },
+        "context_2026": "Exposition majeure au luxe et à l'énergie.",
+        "seo_keywords": [
+            "CAC 40",
+            "Paris",
+            "Luxe"
+        ]
+    },
+    {
+        "id": "eurusd",
+        "category": "Forex",
+        "term": "EUR/USD",
+        "definition": "Taux de change Euro/Dollar.",
+        "market_impact": {
+            "up": "Faiblesse du dollar, espoir européen.",
+            "down": "Force du dollar, stress en zone euro."
+        },
+        "context_2026": "Divergence Fed vs BCE.",
+        "seo_keywords": [
+            "EURUSD",
+            "Euro",
+            "Forex"
+        ]
+    },
+    {
+        "id": "usdjpy",
+        "category": "Forex",
+        "term": "USD/JPY",
+        "definition": "Taux de change Dollar/Yen.",
+        "market_impact": {
+            "up": "Carry trade florissant, yen faible.",
+            "down": "Dénouement du carry trade, Risk-off."
+        },
+        "context_2026": "Normalisation de la BoJ.",
+        "seo_keywords": [
+            "USDJPY",
+            "Yen",
+            "Carry trade"
+        ]
+    },
+    {
+        "id": "usdcny",
+        "category": "Forex",
+        "term": "USD/CNY",
+        "definition": "Taux de change Dollar/Yuan.",
+        "market_impact": {
+            "up": "Pression commerciale, yuan faible.",
+            "down": "Efficacité des stimulus chinois."
+        },
+        "context_2026": "Point focal de la guerre commerciale.",
+        "seo_keywords": [
+            "USDCNY",
+            "Yuan",
+            "Chine"
+        ]
+    },
+    {
+        "id": "usdinr",
+        "category": "Forex",
+        "term": "USD/INR",
+        "definition": "Taux de change entre le dollar américain et la roupie indienne.",
+        "market_impact": {
+            "up": "Faiblesse de la roupie ; sorties de capitaux des marchés émergents.",
+            "down": "Confiance dans la croissance structurelle de l'Inde."
+        },
+        "context_2026": "L'ascension de l'Inde comme alternative manufacturière mondiale à la Chine.",
+        "seo_keywords": [
+            "USDINR",
+            "Roupie",
+            "Économie Inde"
+        ]
+    },
+    {
+        "id": "usdsar",
+        "category": "Forex",
+        "term": "USD/SAR",
+        "definition": "Taux de change entre le dollar américain et le riyal saoudien.",
+        "market_impact": {
+            "up": "Pression sur l'ancrage (peg) ; chute extrême des prix du pétrole.",
+            "down": "Ancrage stable ; revenus solides issus des projets Vision 2030."
+        },
+        "context_2026": "Stabilité du pétrodollar et géopolitique régionale.",
+        "seo_keywords": [
+            "USDSAR",
+            "Riyal Saoudien",
+            "Marché Pétrole"
+        ]
+    }
+]

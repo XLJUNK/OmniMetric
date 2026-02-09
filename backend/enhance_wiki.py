@@ -5,6 +5,9 @@ import requests
 import re
 import sys
 from datetime import datetime, timezone
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # --- CONFIGURATION (V4.7-777 OPTIMIZATION) ---
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -12,13 +15,14 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "..", "frontend", "data", "wiki_heavy")
 FRONTEND_DATA_DIR = os.path.join(BASE_DIR, "..", "frontend", "data")
 PROGRESS_FILE = os.path.join(DATA_DIR, "progress.json")
-LANGS = ["EN", "JP", "CN", "ES", "HI", "ID", "AR"]
+LANGS = ["EN", "JP", "CN", "ES", "HI", "ID", "AR", "DE", "FR"]
 
-# CRITICAL: MODEL SELECTION
+# --- CRITICAL: MODEL SELECTION ---
+# --- CRITICAL: MODEL SELECTION ---
 MODEL_NAME = "gemini-2.5-flash"
 API_KEY = os.getenv("GEMINI_API_KEY")
 
-# CRITICAL: RATE LIMIT SETTINGS
+# --- CRITICAL: RATE LIMIT SETTINGS ---
 REQUEST_INTERVAL = 5   # Increased to 5s for Safety (Max 12 RPM)
 MAX_RETRIES = 2        # Reduced from 5 (Fail Fast)
 BASE_BACKOFF = 30      # Reduced from 60s
@@ -30,7 +34,9 @@ PERSONA_LABELS = {
     "ES": { "geopolitics": "Estratega Geopolítico", "macro": "Analista Macroeconómico", "quant": "Científico de Datos y Quant", "technical": "Analista Técnico", "policy": "Asesor de Políticas y Regulación", "tech": "Investigador de IA y Tecnología Futura" },
     "HI": { "geopolitics": "भू-राजनीतिक रणनीतिकार", "macro": "मैक्रोइकॉनॉमिक एनालिस्ट", "quant": "क्वांट और डेटा वैज्ञानिक", "technical": "तकनीकी विश्लेषक", "policy": "नीति और नियामक सलाहकार", "tech": "एआई और भविष्य के तकनीकी शोधकर्ता" },
     "ID": { "geopolitics": "Ahli Strategi Geopolitik", "macro": "Analis Makroekonomi", "quant": "Ilmuwan Data & Kuant", "technical": "Analis Teknikal", "policy": "Penasihat Kebijakan & Regulasi", "tech": "Peneliti AI & Teknologi Masa Depan" },
-    "AR": { "geopolitics": "خبير استراتيجي جيوسياسي", "macro": "محلل اقتصاد كلي", "quant": "عالم كوانت وبيانات", "technical": "محلل فني", "policy": "مستشار السياسات والتنظيم", "tech": "باحث في الذكاء الاصطناعي وتكنولوجيا المستقبل" }
+    "AR": { "geopolitics": "خبير استراتيجي جيوسياسي", "macro": "محلل اقتصاد كلي", "quant": "عالم كوانت وبيانات", "technical": "محلل فني", "policy": "مستشار السياسات والتنظيم", "tech": "باحث في الذكاء الاصطناعي وتكنولوجيا المستقبل" },
+    "DE": { "geopolitics": "Geopolitischer Stratege", "macro": "Makroökonomischer Analyst", "quant": "Quant & Data Scientist", "technical": "Technischer Analyst", "policy": "Politik- und Regulierungsberater", "tech": "Forscher für KI und Zukunftstechnologien" },
+    "FR": { "geopolitics": "Stratège géopolitique", "macro": "Analiste macroéconomique", "quant": "Mathématicien financier & Data Scientist", "technical": "Analyste technique", "policy": "Conseiller en politiques et réglementation", "tech": "Chercheur en IA et technologies futures" }
 }
 
 class WikiEnhancer:
@@ -99,6 +105,22 @@ class WikiEnhancer:
             return False
 
         print(f"  [GENERATE] {slug} ({lang})...")
+        
+        # --- QUALITY GUARD (V4.9) ---
+        if os.path.exists(save_path):
+            try:
+                with open(save_path, "r", encoding="utf-8") as f:
+                    existing = json.load(f)
+                    # If the file matches known expert patterns or manually curated signatures, skip it.
+                    # Expert content typically has "v1" model or human-like phrasing in council_debate.
+                    if existing.get("model") == "Antigravity-GMS-v1" or "geographical neutral reserve asset" in str(existing):
+                        print(f"  [GUARD] {task_id} (Expert-curated content detected. Skipping to prevent regression.)")
+                        self._save_progress(task_id)
+                        return False
+            except:
+                pass
+        # ----------------------------
+
         prompt = self._build_prompt(item, lang)
         
         try:
@@ -248,56 +270,68 @@ if __name__ == "__main__":
             print("[ERROR] GEMINI_API_KEY not found.")
             sys.exit(1)
             
+        # --- MODIFIED: Flexible Batching & Time Management ---
+        BATCH_SIZE = int(os.getenv("WIKI_BATCH_SIZE", "1"))
+        MAX_RUN_TIME = int(os.getenv("WIKI_MAX_RUN_TIME", "0")) # Seconds. 0 means 1 batch only.
+        start_time = time.time()
+        
         enhancer = WikiEnhancer()
-        items = enhancer.get_all_items()
         
-        print(f"--- STARTING WIKI GENERATION STREAM (V4.7-777) ---")
-        
-        # 1. Calculate Global Progress
-        total_tasks = len(items) * len(LANGS)
-        existing_files = [f for f in os.listdir(DATA_DIR) if f.endswith('.json')]
-        existing_count = len(existing_files)
-        progress_pct = (existing_count / total_tasks) * 100 if total_tasks > 0 else 0
-        
-        print(f"Progress: {existing_count}/{total_tasks} ({progress_pct:.2f}%)")
-        
-        if existing_count >= total_tasks:
-            print("ALL_WIKI_GENERATED_SIGNAL")
-            sys.exit(0)
+        print(f"--- STARTING WIKI GENERATION STREAM (V4.8-PRO) ---")
+        print(f"Config: BATCH_SIZE={BATCH_SIZE}, MAX_RUN_TIME={MAX_RUN_TIME}s")
 
-        # 2. Select Batch (Max 1 Items that are incomplete)
-        BATCH_SIZE = 1
-        batch_items = []
-        
-        for item in items:
-            # Check if this item is fully complete
-            is_complete = True
-            for lang in LANGS:
-                # Check file existence directly
-                fname = f"{item['slug']}-{lang.lower()}.json"
-                if not os.path.exists(os.path.join(DATA_DIR, fname)):
-                    is_complete = False
-                    break
+        while True:
+            # 1. Reload items & Calculate Global Progress
+            items = enhancer.get_all_items()
+            total_tasks = len(items) * len(LANGS)
+            existing_files = [f for f in os.listdir(DATA_DIR) if f.endswith('.json')]
+            existing_count = len(existing_files)
+            progress_pct = (existing_count / total_tasks) * 100 if total_tasks > 0 else 0
             
-            if not is_complete:
-                batch_items.append(item)
-                if len(batch_items) >= BATCH_SIZE:
-                    break
-        
-        print(f"Batch Target: {len(batch_items)} items (Max {BATCH_SIZE})")
-        
-        # 3. Process Batch
-        processed_count = 0
-        for item in batch_items:
-            print(f"Processing Item: {item['slug']}...")
-            for lang in LANGS:
-                generated = enhancer.generate_report(item, lang)
-                # STRICT INTERVAL (Flow Control) - Only sleep if we actually hit the API
-                if generated:
-                    time.sleep(REQUEST_INTERVAL)
-            processed_count += 1
+            print(f"\nProgress: {existing_count}/{total_tasks} ({progress_pct:.2f}%)")
             
-        print(f"Batch Complete. Processed {processed_count} items.")
+            if existing_count >= total_tasks:
+                print("ALL_WIKI_GENERATED_SIGNAL")
+                break
+
+            # 2. Select Batch
+            batch_items = []
+            for item in items:
+                is_complete = True
+                for lang in LANGS:
+                    fname = f"{item['slug']}-{lang.lower()}.json"
+                    if not os.path.exists(os.path.join(DATA_DIR, fname)):
+                        is_complete = False
+                        break
+                
+                if not is_complete:
+                    batch_items.append(item)
+                    if len(batch_items) >= BATCH_SIZE:
+                        break
+            
+            if not batch_items:
+                print("No more items to process.")
+                break
+
+            print(f"Batch Target: {len(batch_items)} items")
+            
+            # 3. Process Batch
+            for item in batch_items:
+                print(f"Processing Item: {item['slug']}...")
+                for lang in LANGS:
+                    generated = enhancer.generate_report(item, lang)
+                    if generated:
+                        time.sleep(REQUEST_INTERVAL)
+            
+            # 4. Check Time Limit
+            elapsed = time.time() - start_time
+            if MAX_RUN_TIME > 0 and elapsed > MAX_RUN_TIME:
+                print(f"Time limit reached ({elapsed:.1f}s > {MAX_RUN_TIME}s). Stopping.")
+                break
+            
+            if MAX_RUN_TIME == 0:
+                print("Single batch mode complete.")
+                break
                 
     except KeyboardInterrupt:
         print("\n[STOP] Generation interrupted by user.")
