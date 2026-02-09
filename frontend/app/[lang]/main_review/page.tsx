@@ -9,7 +9,7 @@ export function generateStaticParams() {
     }));
 }
 
-// export const dynamic = 'force-dynamic';
+// 100% Static Review Page (Pre-rendered via generateStaticParams)
 
 export const metadata: Metadata = {
     title: "UI Review | OmniMetric Terminal",

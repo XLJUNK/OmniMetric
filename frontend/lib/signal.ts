@@ -25,16 +25,36 @@ export interface SignalData {
     };
 }
 
+import fs from 'fs';
+import path from 'path';
+
 /**
- * Edge-compatible data fetcher.
- * Exclusively uses 'fetch' to avoid any Node.js module leaks (fs, path).
+ * Edge-safe and Static-friendly data fetcher.
+ * Uses 'fs' during build-time (Node.js) and 'fetch' relative path for client-side.
  */
 export async function getSignalData(): Promise<SignalData | null> {
-    console.log("[getSignalData] Initializing Edge-Safe Fetch...");
+    console.log("[getSignalData] Initializing Data Acquisition...");
 
+    // Build-time (Node.js environment)
+    if (typeof window === 'undefined') {
+        try {
+            const filePath = path.join(process.cwd(), 'public', 'data', 'market_data.json');
+            if (fs.existsSync(filePath)) {
+                const raw = fs.readFileSync(filePath, 'utf-8');
+                const data = JSON.parse(raw);
+                if (data && data.last_updated) {
+                    console.log("[getSignalData] Data successfully loaded from local filesystem (Build-time)");
+                    return data;
+                }
+            }
+        } catch (error) {
+            console.warn("[getSignalData] Local filesystem read failed, falling back to network:", error);
+        }
+    }
+
+    // Client-side or fallback (Relative path fetch to avoid external dependencies)
     try {
-        const rawUrl = 'https://raw.githubusercontent.com/XLJUNK/OmniMetric/main/backend/current_signal.json';
-        const res = await fetch(rawUrl, {
+        const res = await fetch('/data/market_data.json', {
             next: { revalidate: 60 },
             headers: { 'Cache-Control': 'no-cache' }
         });
@@ -42,20 +62,11 @@ export async function getSignalData(): Promise<SignalData | null> {
         if (res.ok) {
             const data = await res.json();
             if (data && data.last_updated) {
-                console.log("[getSignalData] Data successfully retrieved from GitHub Registry");
                 return data;
             }
-            console.warn("[getSignalData] Data format invalid or missing last_updated");
-        } else {
-            const errorBody = await res.text().catch(() => "N/A");
-            console.warn(`[getSignalData] Registry fetch failed | Status: ${res.status} | Body Snippet: ${errorBody.substring(0, 100)}`);
         }
-    } catch (error: unknown) {
-        const err = error as Error;
-        console.error("[getSignalData] Edge Fetch Critical Error:", {
-            message: err.message,
-            stack: err.stack
-        });
+    } catch (error) {
+        console.error("[getSignalData] Fetch failed:", error);
     }
 
     return {
