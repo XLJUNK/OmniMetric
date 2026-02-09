@@ -142,7 +142,7 @@ export const GMSHeaderSection = ({ data, lang, onOpenSettings }: GMSHeaderProps)
                     </div>
 
                     <div className="w-full mt-2">
-                        <OmniWarningBeacons onOpenInfo={() => setShowOwbInfo(true)} />
+                        <OmniWarningBeacons data={data} lang={lang} onOpenInfo={() => setShowOwbInfo(true)} />
                     </div>
                 </div>
 

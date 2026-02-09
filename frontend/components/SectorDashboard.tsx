@@ -75,12 +75,12 @@ export const SectorDashboard = ({ sectorKey, lang: langProp }: SectorDashboardPr
                 <div className="flex items-center gap-3 border-b border-slate-800 pb-4 mb-8">
                     <Globe className="w-5 h-5 text-sky-500" />
                     <h2 className="text-xl font-black text-white uppercase tracking-tighter hover:text-sky-400 transition-colors">
-                        OMNIMETRIC / {sectorName}
+                        MARKET PULSE / {sectorName}
                     </h2>
                 </div>
 
                 {/* 4. INDICATOR GRID (UNIFIED WITH PULSE TILE) */}
-                <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                <div className="grid gap-4 md:gap-6 grid-cols-2 lg:grid-cols-4">
                     {indicators.map((val) => {
                         // Determine Color based on Change %
                         const isUp = (val.change_percent ?? 0) >= 0;
