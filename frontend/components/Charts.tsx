@@ -38,22 +38,6 @@ export const RiskGauge = ({ score = 0, lang = 'EN' }: GaugeProps) => {
 
     return (
         <div className="w-full relative mt-2 mb-2 gms-container">
-<<<<<<< HEAD
-            {/* Gradient Bar Wrapper (Height Fixed) */}
-            <div className="relative w-full h-[1.625rem]">
-                {/* 1. The Gradient Background (Overflow Hidden for Rounded Corners) */}
-                <div
-                    className={`absolute inset-0 w-full h-full rounded-full border border-slate-700 overflow-hidden ${isRTL
-                        ? 'bg-gradient-to-r from-[#3b82f6] via-[#94a3b8] to-[#ef4444]'
-                        : 'bg-gradient-to-r from-[#ef4444] via-[#94a3b8] to-[#3b82f6]'
-                        }`}
-                >
-                </div>
-
-                {/* 2. The Marker (Overlay on top of the bar, matching height) */}
-                <div
-                    className="absolute top-0 bottom-0 h-full flex flex-col items-center justify-center z-50 transition-all duration-700 ease-out pointer-events-none"
-=======
             {/* V5 NEON PILL SLIDER (h-6 / 1.5rem) */}
             <div className="relative w-full" style={{ height: '1.5rem' }}>
                 {/* 1. Track Background */}
@@ -78,7 +62,6 @@ export const RiskGauge = ({ score = 0, lang = 'EN' }: GaugeProps) => {
                 {/* 3. The Marker (Neon Pill V2) */}
                 <div
                     className="absolute top-1/2 flex flex-col items-center z-50 transition-all duration-700 ease-out"
->>>>>>> origin/main
                     style={{
                         left: isRTL ? 'auto' : `${pct}%`,
                         right: isRTL ? `${pct}%` : 'auto',
@@ -86,23 +69,6 @@ export const RiskGauge = ({ score = 0, lang = 'EN' }: GaugeProps) => {
                         ['--dir' as string]: isRTL ? 1 : 1
                     }}
                 >
-<<<<<<< HEAD
-                    <div
-                        className="h-full flex items-center justify-center border-slate-700 px-2 rounded-md transition-colors duration-300 border !bg-black shadow-sm"
-                        style={{ backgroundColor: 'black' }}
-                    >
-                        <span
-                            className="text-[0.75rem] font-black leading-none tabular-nums tracking-tighter !text-white mt-[1px]"
-                        >
-                            {Math.round(validScore)}
-                        </span>
-                    </div>
-                    {/* Arrow (Restored) */}
-                    <div
-                        className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-black"
-                        style={{ borderTopColor: 'black' }}
-                    ></div>
-=======
                     {/* Glow Effect */}
                     <div
                         className="absolute inset-0 rounded-full blur-md opacity-60"
@@ -121,22 +87,15 @@ export const RiskGauge = ({ score = 0, lang = 'EN' }: GaugeProps) => {
                             {Math.round(score)}
                         </span>
                     </div>
->>>>>>> origin/main
                 </div>
             </div>
 
             {/* Labels */}
-<<<<<<< HEAD
-            <div className="absolute top-[35%] left-[5%] text-[8px] sm:text-[10px] font-black text-rose-500 tracking-tighter sm:tracking-normal">DEFENSIVE</div>
-            <div className="absolute top-[35%] left-[45%] text-[8px] sm:text-[10px] font-black text-slate-500 tracking-tighter sm:tracking-normal">NEUTRAL</div>
-            <div className="absolute top-[35%] right-[5%] text-[8px] sm:text-[10px] font-black text-sky-500 tracking-tighter sm:tracking-normal">ACCUMULATE</div>
-=======
             <div className={`flex justify-between px-1 mt-1 relative z-0`}>
                 <span className="text-fluid-xs font-bold text-[#ef4444] uppercase tracking-widest drop-shadow-sm opacity-80">Defensive</span>
                 <span className="text-fluid-xs font-bold text-slate-400 uppercase tracking-widest drop-shadow-sm opacity-50">Neutral</span>
                 <span className="text-fluid-xs font-bold text-[#3b82f6] uppercase tracking-widest drop-shadow-sm opacity-80">Accumulate</span>
             </div>
->>>>>>> origin/main
         </div>
     );
 };

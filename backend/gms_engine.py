@@ -33,8 +33,6 @@ FMP_KEY = os.getenv("FMP_API_KEY", "").strip()
 ALPHA_VANTAGE_KEY = os.getenv("ALPHA_VANTAGE_API_KEY", "").strip()
 FINNHUB_KEY = os.getenv("FINNHUB_API_KEY", "").strip()
 AI_GATEWAY_KEY = os.getenv("AI_GATEWAY_API_KEY", "").strip()
-ALPHA_VANTAGE_KEY = os.getenv("ALPHA_VANTAGE_API_KEY", "").strip()
-FINNHUB_KEY = os.getenv("FINNHUB_API_KEY", "").strip()
 
 # Centralized logging
 from utils.log_utils import create_logger
@@ -684,19 +682,6 @@ def get_next_event_dates():
     return sorted(events, key=lambda x: x["date"])
 
 def fetch_economic_calendar():
-<<<<<<< HEAD
-    """FETCH ECONOMIC CALENDAR FROM MULTIPLE SOURCES (Alpha Vantage, Finnhub, FMP)"""
-    priority_currencies = ["USD", "EUR", "CNY", "JPY"]
-    keyword_map = {
-        "cpi": ["consumer price index", "cpi", "inflation"],
-        "fomc": ["fomc", "fed interest rate", "interest rate decision", "fed meeting"],
-        "nfp": ["non farm payrolls", "employment situation", "unemployment rate"]
-    }
-    events = []
-
-    # 1. TRY ALPHA VANTAGE (Highly Reliable Free Tier)
-    if ALPHA_VANTAGE_KEY:
-=======
     """Fetches calendar from multiple providers with fallback."""
     # 1. Try Alpha Vantage
     if ALPHA_VANTAGE_KEY:
@@ -743,8 +728,6 @@ def fetch_economic_calendar():
         }
         
         log_diag("[IN] API_CALL: { provider: 'FMP', endpoint: '/calendar', timeout: 10s }")
-        
->>>>>>> origin/main
         try:
             url = f"https://www.alphavantage.co/query?function=ECONOMIC_CALENDAR&apikey={ALPHA_VANTAGE_KEY}"
             log_diag("[ALPHA_VANTAGE] Fetching calendar...")

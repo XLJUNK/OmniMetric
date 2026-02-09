@@ -1,22 +1,10 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import { Globe, Zap, Clock, ChevronDown, Check, Info } from 'lucide-react';
-import { HistoryChart, MetricChart } from '@/components/Charts';
-import { LangType, DICTIONARY } from '@/data/dictionary';
-=======
 import { OmniWarningBeacons } from '@/components/OmniWarningBeacons';
-import { Globe, ChevronDown, Check, Clock, Info, Zap } from 'lucide-react';
-
-// ... existing imports
-
-// ... existing imports
-// Removed duplicate Dashboard definition and misplaced OmniWarningBeacons usage
-
+import { Globe, Zap, Clock, ChevronDown, Check, Info } from 'lucide-react';
 import { RiskGauge, HistoryChart, MetricChart } from '@/components/Charts';
-import { DICTIONARY, LangType } from '@/data/dictionary';
->>>>>>> origin/main
+import { LangType, DICTIONARY } from '@/data/dictionary';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { NewsTicker } from '@/components/NewsTicker';
@@ -183,30 +171,10 @@ export const Dashboard = ({ lang, setLang }: DashboardProps) => {
                         </span>
                     </div>
 
-<<<<<<< HEAD
-                    {/* Gradient Risk Scale (Always Visible) */}
-                    <div className="w-full max-w-[320px] mx-auto mt-4 mb-2">
-                        <div
-                            className="w-full h-3 rounded-full relative shadow-[inset_0_2px_4px_rgba(0,0,0,0.5)] bg-gradient-to-r from-[#ef4444] via-[#eab308] to-[#3b82f6]"
-                        >
-                            <div
-                                className="absolute top-[-4px] w-1 h-5 bg-white shadow-[0_0_10px_rgba(255,255,255,0.8)] z-10 -translate-x-1/2"
-                                style={{
-                                    left: `${data ? data.gms_score : 0}%`,
-                                } as React.CSSProperties}
-                            />
-                        </div>
-                        <div className="flex justify-between text-[10px] text-gray-500 mt-2 uppercase tracking-widest font-mono">
-                            <span>{t.methodology.scale_labels.panic}</span>
-                            <span>{t.methodology.scale_labels.neutral}</span>
-                            <span>{t.methodology.scale_labels.greed}</span>
-                        </div>
-=======
                     {/* V5 VISUAL SYSTEM RESTORED */}
                     <div className="w-full max-w-[360px] mx-auto mt-4 mb-2 flex flex-col items-center gap-4">
                         <RiskGauge score={data.gms_score} lang={lang} />
                         <OmniWarningBeacons data={data} lang={lang} />
->>>>>>> origin/main
                     </div>
                 </div>
 
