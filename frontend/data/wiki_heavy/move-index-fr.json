@@ -1,0 +1,23 @@
+{
+    "slug": "move-index",
+    "lang": "FR",
+    "title": "MOVE Index (Le VIX du marché obligataire)",
+    "type": "indicator",
+    "category": "Volatility",
+    "sections": {
+        "summary": "L'indice ICE BofA MOVE (Merrill Lynch Option Volatility Estimate) mesure la volatilité implicite des obligations du Trésor américain sur un panier d'options à différentes échéances. Il est considéré comme « l'indice de la peur » du marché obligataire. En 2026, l'indice MOVE est un indicateur critique des risques de liquidité systémique et de l'incertitude monétaire.",
+        "deep_dive": "La dynamique de l'indice MOVE en 2026 est dominée par « l'angoisse des taux ». Chez GMS, nous analysons le MOVE comme le baromètre de la stabilité des fondations du système financier mondial : le marché des Treasuries américains. Une valeur élevée (supérieure à 100) indique une incertitude extrême sur la trajectoire future des taux de la Fed. Nous surveillons particulièrement la corrélation entre le MOVE et le S&P 500 : une explosion du MOVE précède souvent les krachs boursiers, car les taux d'actualisation de tous les actifs deviennent incertains. La particularité en 2026 réside dans la sensibilité du MOVE face au resserrement quantitatif (QT) et aux adjudications du Trésor. Nous intégrons les données de dette souveraine dans nos modèles GMS pour évaluer l'impact budgétaire sur la volatilité obligataire. Un MOVE en baisse signale un retour de la confiance dans un régime de taux stable.",
+        "council_debate": {
+            "geopolitics": "La réallocation des capitaux mondiaux hors des Treasuries pour cause de diversification géopolitique pousse le MOVE à la hausse en 2026. Nous analysons comment la transition vers un système post-pétrodollar accroît la volatilité des benchmarks. Le MOVE est l'étalon de la confiance dans l'actif jugé « sans risque ».",
+            "macro": "Nous corrélons le MOVE avec l'inversion de la courbe des taux. Dans les phases où la Fed combat une inflation tenace, le MOVE reflète la fracture des anticipations de marché. En 2026, nous l'utilisons pour identifier la « dominance budgétaire », où la dette publique dicte le niveau des taux.",
+            "tech": "Les traders obligataires algorithmiques utilisent le MOVE pour calibrer leur levier. Nous observons en 2026 comment des pics soudains du MOVE déclenchent des liquidations forcées sur les « basis trades ». La technologie amplifie le risque de contagion lors des poussées de volatilité obligataire.",
+            "policy": "Les interventions des banques centrales sur le marché obligataire (ex: contrôle de la courbe des taux) visent directement à comprimer le MOVE. Nous évaluons l'efficacité de la communication et des achats directs pour apaiser le sentiment. La politique est l'acteur principal de la répression de l'angoisse obligataire.",
+            "quant": "Nos modèles utilisent le MOVE comme paramètre de risque pour l'allocation globale. Nous avons noté qu'un MOVE supérieur à 120 en 2026 pronostique une correction majeure sur les actions de croissance. Nous calculons quotidiennement des « Bond Volatility Impact Scores ».",
+            "technical": "Nous utilisons le MOVE pour valider les cassures sur les rendements à 10 ans. Une hausse de taux accompagnée d'une poussée du MOVE est structurellement plus dangereuse qu'un mouvement calme. Le MOVE est le stress-test de n'importe quel graphique obligataire."
+        },
+        "forecast_risks": "Le risque principal de l'indice MOVE est sa dépendance à la liquidité même du marché du Trésor. En période de tension extrême, le MOVE peut devenir erratique par manque d'activité sur les options. De plus, il peut réagir avec retard aux changements structurels de politique monétaire, tout en gardant une force d'impact massive sur les événements soudains.",
+        "gms_conclusion": "Gardien stratégique des taux. L'indice MOVE est en 2026 la métrique la plus importante pour juger de la stabilité de la monnaie de réserve mondiale. Quand le MOVE s'agite, le marché action doit s'inquiéter. C'est la mère de tous les indices de volatilité."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-09T23:59:00+00:00"
+}

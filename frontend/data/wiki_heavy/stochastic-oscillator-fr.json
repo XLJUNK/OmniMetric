@@ -1,0 +1,23 @@
+{
+    "slug": "stochastic-oscillator",
+    "lang": "FR",
+    "title": "Oscillateur Stochastique (L'Outil de Précision du Momentum)",
+    "type": "indicator",
+    "category": "Technicals",
+    "sections": {
+        "summary": "L'oscillateur stochastique est un indicateur de momentum qui compare le cours de clôture d'un actif à sa fourchette de prix sur une période donnée. Développé par George Lane, il sert à identifier les zones de surachat ou de survente. En 2026, la stochastique est l'outil standard des swing traders pour déceler avec précision les points de retournement dans des marchés volatils.",
+        "deep_dive": "La dynamique de la stochastique en 2026 repose sur l'observation que les prix tendent à clôturer près de leurs hauts dans une tendance haussière, et près de leurs bas dans une tendance baissière. Chez GMS, nous l'analysons comme un « indicateur de vitesse du momentum ». Il se compose de deux lignes : %K (la rapide) et %D (la moyenne mobile de %K). Nous surveillons particulièrement les « divergences stochastiques » — quand le prix marque un nouveau sommet mais pas l'oscillateur — comme l'un des signaux d'alerte les plus fiables d'un retournement imminent. La particularité en 2026 est l'usage de la « Full Stochastic », qui permet un lissage supplémentaire pour réduire les faux signaux dans des marchés numériques ultra-rapides. Nous intégrons les valeurs stochastiques dans nos modèles GMS pour optimiser le timing des rééquilibrages de portefeuille. Les valeurs supérieures à 80 sont jugées surachetées, et inférieures à 20 survendues, bien que dans une tendance forte, l'indicateur puisse rester longtemps dans ces zones extrêmes (stochastique « embarquée »).",
+        "council_debate": {
+            "geopolitics": "La panique boursière liée aux crises géopolitiques propulse instantanément la stochastique en zone de survente. Nous analysons la vitesse de récupération de l'oscillateur après de tels chocs pour mesurer la résilience psychologique du marché. C'est un capteur de pics de peur mondiale.",
+            "macro": "Nous corrélons les cycles stochastiques avec les cycles de crédit à court terme. En phase d'excès de liquidité, la stochastique a tendance à plafonner en zone de surachat. L'oscillateur nous montre quand l'enthousiasme macroéconomique devient techniquement excessif.",
+            "tech": "Les algorithmes de trading modernes utilisent la stochastique pour affiner leurs points d'entrée et de sortie. Nous observons en 2026 une recrudescence de la « chasse aux stops » dans les zones extrêmes de l'oscillateur, là où de nombreux modèles programmés réagissent simultanément. C'est un champ de bataille pour la liquidité.",
+            "policy": "Les décisions surprises sur les taux d'intérêt provoquent souvent un « reset » de la stochastique. Nous évaluons si un croisement de lignes suite à une déclaration de banque centrale amorce une nouvelle tendance durable. La stochastique nous aide à quantifier la réaction immédiate du marché.",
+            "quant": "Nos modèles utilisent la corrélation croisée entre la stochastique et le RSI pour confirmer les signaux. Nous avons constaté qu'en 2026, les combinaisons « Stoch-RSI » sont particulièrement efficaces pour prédire les retournements intraday. Nous calculons des scores de persistance du surachat.",
+            "technical": "Nous utilisons la stochastique principalement pour identifier des configurations haussières ou baissières en combinaison avec des filtres de tendance. Un croisement des lignes %K et %D en zone de survente est un signal d'achat classique. Nous surveillons la pente de la remontée comme mesure de la force du momentum."
+        },
+        "forecast_risks": "Le risque principal de la stochastique est le signal prématuré. Dans une tendance puissante, l'oscillateur peut rester en surachat alors que les prix continuent de grimper massivement. Vendre aveuglément au-dessus de 80 peut être désastreux en marché haussier. De plus, elle est sujette au « bruit » et aux croisements sans signification dans les marchés sans tendance.",
+        "gms_conclusion": "Capteur stratégique de timing. En 2026, la stochastique est indispensable pour affiner vos transactions. Ne l'utilisez pas de manière isolée, mais toujours dans le contexte de la tendance de fond. Le timing, c'est de l'argent, et la stochastique en est l'horloge."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-09T20:27:00+00:00"
+}

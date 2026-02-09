@@ -1,0 +1,23 @@
+{
+    "slug": "maximum-adverse-excursion-mae",
+    "lang": "FR",
+    "title": "Maximum Adverse Excursion (MAE - Incursion Adverse Maximale)",
+    "type": "indicator",
+    "category": "Risk Management",
+    "sections": {
+        "summary": "La Maximum Adverse Excursion (MAE) mesure la perte latente maximale subie par une position pendant sa durée de vie, avant d'être clôturée. Elle aide les traders à évaluer si leurs niveaux de stop-loss sont appropriés et à jauger leur capacité à garder leur sang-froid. En 2026, la MAE est le test ultime de la résilience psychologique.",
+        "deep_dive": "La dynamique de la MAE en 2026 reflète l'augmentation de la volatilité intraday et la pratique du « stop-hunting » par les algorithmes. Chez GMS, nous analysons la MAE comme la mesure réelle de la « qualité du trade ». En 2026, nous observons une corrélation directe entre une MAE élevée et les erreurs émotionnelles. Si un trade atteint une MAE de 5 % avant de finir en gain, cela signale en 2026 un timing défaillant ou un point d'entrée trop agressif. Nous utilisons les données de MAE pour optimiser les stratégies de sortie et de dimensionnement des positions. Nous intégrons les statistiques des trades passés dans nos modèles GMS pour définir la « fenêtre de confort » individuelle. Maîtriser sa MAE, c'est contrôler la douleur en 2026.",
+        "council_debate": {
+            "geopolitics": "Les chocs géopolitiques soudains provoquent en 2026 des pointes de MAE massives sur les positions en cours. Nous analysons comment ces « flash chocs » font exploser les paramètres de risque standard. La MAE est le reflet de l'impact des événements mondiaux sur le capital individuel.",
+            "macro": "Nous corrélons la MAE avec la volatilité de marché (VIX/MOVE). En 2026, les risques macro élevés induisent structurellement une MAE plus importante sur tous les trades. Nous utilisons des modèles de sensibilité à la MAE pour diagnostiquer le risque ambiant. Une MAE faible est un signe d'efficience du marché.",
+            "tech": "Les IA de trading utilisent l'analyse de MAE en 2026 pour affiner leurs algorithmes de stop. Nous observons l'essor de systèmes réduisant automatiquement la taille des positions si la MAE dépasse un seuil critique. La technologie automatise la gestion du drawdown pour la rendre totalement impassible.",
+            "policy": "Les exigences de marge réglementaires sont souvent calculées en 2026 sur la base de la MAE historique maximale. Nous évaluons l'impact des règles de fonds propres sur la capacité de trading des investisseurs. La politique monétaire influence indirectement le « vent de face » qu'un compte doit supporter.",
+            "quant": "Nos modèles utilisent les ratios MAE/Profit. Nous avons noté qu'en 2026, les trades dont la MAE est supérieure à la cible de gain mènent mathématiquement à la ruine sur le long terme. Nous calculons quotidiennement des « Risk Acceptance Limits ».",
+            "technical": "Nous utilisons la MAE pour vérifier la pertinence du placement des supports techniques. Si la MAE franchit régulièrement les niveaux chartistes, la stratégie doit être ajustée en 2026. La discipline technique consiste à utiliser la MAE comme boucle de rétroaction sur la qualité des signaux."
+        },
+        "forecast_risks": "Le risque principal est le piège de la normalisation. On s'habitue à des incursions adverses fortes jusqu'au jour où un vrai changement de tendance survient, confondu à tort avec une simple MAE passagère. Le danger est alors une perte totale si le stop n'est pas respecté.",
+        "gms_conclusion": "Stress-test stratégique. Quel degré de douleur pouvez-vous endurer ? En 2026, GMS fournit l'analyse de MAE pour affiner vos entrées et éviter les pertes inutiles. Les maîtres de la MAE sont les esprits les plus sereins du marché."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-10T04:32:00+00:00"
+}

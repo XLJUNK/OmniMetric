@@ -1,0 +1,23 @@
+{
+    "slug": "money-flow-index-mfi",
+    "lang": "FR",
+    "title": "Money Flow Index (MFI - Le RSI du Volume)",
+    "type": "indicator",
+    "category": "Technicals",
+    "sections": {
+        "summary": "Le Money Flow Index (MFI) est un oscillateur technique qui utilise à la fois les données de prix et de volume pour identifier les conditions de surachat ou de survente d'un actif. Contrairement au Relative Strength Index (RSI) classique qui ne considère que le prix, le MFI pondère les mouvements de cours par le volume de transactions. En 2026, il constitue un indicateur clé pour mesurer l'enthousiasme réel du marché.",
+        "deep_dive": "La dynamique du MFI en 2026 repose sur le concept de « Typical Price » et du flux monétaire (positif ou négatif) qui en découle. Chez GMS, nous analysons le MFI comme un « baromètre du momentum de volume ». Des valeurs supérieures à 80 sont jugées surachetées, tandis que celles sous 20 indiquent un état de survente. Une particularité en 2026 réside dans l'identification des « failure swings » et des divergences : quand le MFI atteint un extrême puis délivre un signal de retournement avant même que le prix ne réagisse, il offre des signaux de trading de haute précision. Nous intégrons les flux de liquidité mondiaux dans l'analyse MFI pour illustrer l'impact des mouvements de capitaux institutionnels en 2026. Une cassure sur le MFI est souvent plus fiable qu'une cassure RSI car elle confirme la « conviction » derrière le mouvement de prix par le volume.",
+        "council_debate": {
+            "geopolitics": "En période de crise, le MFI révèle souvent les ventes ou achats de panique des acteurs étatiques. Nous analysons comment le MFI sur les devises émergentes visualise en 2026 les sorties de capitaux soudaines. C'est l'appareil de mesure de la fuite des capitaux induite par la géopolitique.",
+            "macro": "Nous corrélons le MFI avec la masse monétaire réelle et la croissance du crédit. Une hausse systémique du MFI sur plusieurs secteurs signale souvent une bulle inflationniste alimentée par un excès de liquidité. En 2026, nous utilisons le MFI pour identifier les déséquilibres macroéconomiques.",
+            "tech": "Les algorithmes de trading haute fréquence (HFT) utilisent les divergences MFI pour déboucler des positions en millisecondes. Cependant, nous observons le risque de « wash trading » qui peut gonfler artificiellement le MFI sur des marchés illiquides. La technologie rend le MFI plus réactif mais aussi plus sensible au bruit.",
+            "policy": "Les réglementations de refroidissement du marché (type taxes sur les transactions) influencent le volume et donc directement le MFI. Nous évaluons l'impact des interventions fiscales sur la pertinence du flux monétaire. La politique définit souvent l'intensité des amplitudes du MFI.",
+            "quant": "Nos modèles utilisent le MFI pour des stratégies de « flow-reversal ». Nous avons noté qu'un retournement du MFI depuis un extrême (ex: 90+) en 2026 possède une forte significativité statistique de changement de tendance. Nous calculons quotidiennement des scores de force de volume.",
+            "technical": "Nous combinons le MFI avec les profils de volume pour identifier les zones de prix à forte accumulation. Si le MFI dépasse 80 alors que le prix bute sur une résistance historique, le risque de « double-top » est extrêmement élevé. C'est la conscience quantitative de l'analyse technique."
+        },
+        "forecast_risks": "Le risque principal du MFI est son maintien en zones extrêmes lors de tendances très fortes. Un actif peut garder un MFI > 80 pendant des semaines tout en continuant de monter. Agir à contre-courant trop tôt peut entraîner des pertes massives. De plus, l'inclusion du volume sur des marchés à forte part de « dark pools » peut mener à des valeurs MFI incomplètes.",
+        "gms_conclusion": "Mesureur de conviction stratégique. En 2026, le Money Flow Index est le complément indispensable du RSI. N'ignorez jamais le flux monétaire lors de l'évaluation de la force d'une tendance. C'est la différence entre une simple correction et un vrai retournement."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-09T23:17:00+00:00"
+}

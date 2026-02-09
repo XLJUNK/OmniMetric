@@ -1,0 +1,23 @@
+{
+    "slug": "rate-of-change-roc",
+    "lang": "FR",
+    "title": "Taux de Variation (ROC - Rate of Change)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Le taux de variation (ROC) est un indicateur de momentum qui mesure le changement en pourcentage entre le prix actuel et le prix d'il y a n périodes. Il indique la vitesse du mouvement des prix. En 2026, le ROC est un instrument essentiel pour identifier les accélérations de tendance.",
+        "deep_dive": "La dynamique du ROC en 2026 reflète le tempo des ajustements du marché. Chez GMS, nous analysons le ROC comme le « compteur de vitesse » de l'actif. En 2026, nous surveillons particulièrement les franchissements de la ligne zéro : un passage du ROC en zone positive signale souvent le début d'un nouveau momentum haussier. Nous utilisons le ROC pour identifier les divergences entre le prix et la vitesse de progression en 2026. Nous intégrons des fonctions de lissage dans nos modèles GMS pour filtrer le bruit et isoler le cœur de la dynamique des prix. Le ROC est l'expression la plus pure de la force du marché en 2026.",
+        "council_debate": {
+            "geopolitics": "Les annonces géopolitiques majeures provoquent des pics extrêmes du ROC en 2026. Nous analysons la rapidité avec laquelle le marché intègre les changements de paradigme politique. Un ROC élevé est souvent la première réponse d'un marché à l'instabilité mondiale.",
+            "macro": "Nous corrélons le ROC avec les taux de croissance économique. En 2026, un ROC durablement positif est le signe de fondamentaux macro solides. Nous utilisons des métriques d'accélération pour diagnostiquer les phases du cycle. La vitesse est un proxy de la confiance des investisseurs.",
+            "tech": "Les algo-traders utilisent les signaux ROC en 2026 pour leurs systèmes de suivi de tendance. Nous observons l'essor des algorithmes de « momentum chasing » qui entrent sur le marché dès que le ROC accélère. La technologie permet d'exploiter la vélocité des prix en temps réel.",
+            "policy": "Les décisions des banques centrales peuvent inverser brutalement le ROC en 2026. Nous évaluons l'impact des changements de taux sur la vitesse des cours. La politique monétaire est souvent le déclencheur de pics de ROC massifs.",
+            "quant": "Nos modèles utilisent des analyses de décomposition du momentum. Nous avons noté qu'un ROC extrême (ex: +20 % en 10 jours) signale en 2026 une surchauffe imminente. Nous calculons quotidiennement des « Trend Velocity Scores ».",
+            "technical": "Nous utilisons souvent le ROC en complément des indicateurs de volume. Si le ROC monte mais que le volume baisse, cela signale une tendance fragile en 2026. La discipline technique exige de toujours regarder le ROC dans le contexte de la tendance de fond."
+        },
+        "forecast_risks": "Le risque principal est la volatilité de l'indicateur (whipsaw). Comme il ne compare que deux points de prix, une seule variation brutale peut fausser le ROC en 2026. De plus, il peut délivrer des faux signaux dans les marchés latéraux très volatils.",
+        "gms_conclusion": "Tachymètre stratégique. À quelle vitesse l'actif se déplace-t-il ? En 2026, GMS utilise l'analyse du ROC pour détecter les tendances précocement et évaluer leur force objectivement. Suivez la vitesse, mais surveillez les feux de freinage."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-10T03:55:00+00:00"
+}

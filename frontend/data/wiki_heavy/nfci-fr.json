@@ -1,0 +1,23 @@
+{
+    "slug": "nfci",
+    "lang": "FR",
+    "title": "NFCI (Chicago Fed National Financial Conditions Index)",
+    "type": "indicator",
+    "category": "Macro",
+    "sections": {
+        "summary": "Le National Financial Conditions Index (NFCI) de la Fed de Chicago fournit une mise à jour hebdomadaire des conditions financières américaines dans les marchés monétaires, les marchés de la dette et des actions, ainsi que dans le système bancaire traditionnel et le système bancaire fantôme. En 2026, il est la mesure ultime de la « rareté » ou de la « souplesse » du capital.",
+        "deep_dive": "La dynamique du NFCI en 2026 repose sur l'agrégation de 105 indicateurs financiers en un score unique. Chez GMS, nous analysons le NFCI comme le « tensiomètre » de l'économie. Une valeur négative indique des conditions plus souples (capital facile) que la moyenne historique ; une valeur positive signale des tensions. Nous surveillons particulièrement le franchissement du seuil zéro : en 2026, un passage en territoire positif est souvent le premier signe d'un resserrement du crédit (credit crunch) imminent. La particularité en 2026 est l'inclusion de la liquidité DeFi et des marchés de crédit crypto dans les sous-indicateurs de la Fed de Chicago. Nous intégrons les tendances du NFCI dans nos modèles GMS pour évaluer l'efficacité réelle de la politique monétaire. C'est le filtre qui montre si les taux directeurs infusent réellement dans l'économie réelle.",
+        "council_debate": {
+            "geopolitics": "La fragmentation mondiale et les sanctions en 2026 influencent les composantes du NFCI liées aux prêts transfrontaliers. Nous analysons comment le NFCI reflète l'isolement de certains marchés de capitaux. C'est l'indice mondial de l'ouverture financière.",
+            "macro": "Nous corrélons le NFCI avec les taux de faillite des PME. Dans les phases de hausse du NFCI, le risque des « entreprises zombies » augmente massivement. En 2026, nous l'utilisons pour prédire les cycles d'investissement. Il révèle le coût réel de la croissance.",
+            "tech": "Les modèles d'IA apprennent à utiliser les shifts du NFCI comme signal de réallocation de portefeuille. Nous observons comment les systèmes de gestion des risques automatisés réduisent instantanément le levier dès que le NFCI remonte. La technologie fait du NFCI le déclencheur systémique du désendettement.",
+            "policy": "La Fed utilise le NFCI pour affiner sa communication (forward guidance). Nous évaluons l'impact des interventions pour compresser le NFCI. La politique vise un NFCI durablement stable et légèrement négatif pour sécuriser la croissance sans nourrir de bulles.",
+            "quant": "Nos modèles utilisent le NFCI comme proxy du « cost of carry ». Nous avons noté qu'un changement de tendance sur le NFCI en 2026 est un indicateur de récession plus fiable que le simple écart de taux. Nous calculons quotidiennement des « Credit Accessibility Scores ».",
+            "technical": "Nous utilisons le NFCI comme confirmation des retournements de tendance sur les petites capitalisations (Russell 2000). Les small caps ont besoin de conditions souples pour survivre. Un NFCI en baisse est le tueur du vent de face pour les valeurs moyennes en 2026."
+        },
+        "forecast_risks": "Le risque principal du NFCI est son retard potentiel face aux chocs soudains. Basé sur 105 valeurs reportées à des fréquences diverses, un « flash crash » peut n'être visible dans le NFCI que plusieurs jours plus tard. De plus, une concentration excessive sur les données US peut faire sous-estimer les effets de contagion mondiaux qui dominent en 2026.",
+        "gms_conclusion": "Baromètre de liquidité stratégique. En 2026, le NFCI est la métrique indispensable pour juger de la santé des marchés de capitaux. Quand le capital s'assèche, la tendance meurt. Restez vigilant si le NFCI franchit la ligne zéro vers le haut."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-09T23:59:30+00:00"
+}

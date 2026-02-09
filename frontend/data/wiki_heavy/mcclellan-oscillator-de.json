@@ -1,0 +1,23 @@
+{
+    "slug": "mcclellan-oscillator",
+    "lang": "DE",
+    "title": "McClellan Oscillator (Der McClellan-Oszillator - Das Breiten-Momentum)",
+    "type": "indicator",
+    "category": "Technicals",
+    "sections": {
+        "summary": "Der McClellan-Oszillator ist ein Marktbreite-Indikator, der auf der Differenz zwischen der Anzahl der steigenden und fallenden Aktien an der New York Stock Exchange (oder einem anderen Index) basiert. Er wird verwendet, um das Momentum der Marktbreite zu messen und überkaufte oder überverkaufte Zustände zu identifizieren. Im Jahr 2026 ist er ein unverzichtbares Werkzeug für die Analyse von Trendwenden.",
+        "deep_dive": "Die Dynamik des McClellan-Oszillators im Jahr 2026 basiert auf der exponentiellen Glättung der täglichen Advance-Decline-Differenz. GMS analysiert den Oszillator als das 'Stethoskop am Herzen des Marktes'. Ein Wert über Null signalisiert, dass das Breiten-Momentum bullisch ist, während ein Wert unter Null auf bärisches Momentum hindeutet. Bei GMS beobachten wir insbesondere 'Breadth Thrusts': Ein schneller Anstieg von tiefgreifend überverkauften Niveaus (z.B. -150) auf ein stark überkauftes Niveau (+50) innerhalb weniger Tage gilt in 2026 als eines der stärksten Signale für den Beginn eines neuen Bullenmarktes. Die Besonderheit im Jahr 2026 ist die Anpassung des Oszillators an die hocheffizienten algorithmischen Märkte. Wir integrieren Tick-Daten-Aggregation in unsere GMS-Modelle, um die Signalintegrität des McClellan-Oszillators im Jahr 2026 zu schärfen. Er ist der präziseste Prädiktor für kurzfristige Erschöpfungsphasen.",
+        "council_debate": {
+            "geopolitics": "In Zeiten globaler politischer Krisen zeigt der McClellan-Oszillator oft extreme Ausschläge, noch bevor der Index selbst reagiert. Wir analysieren, wie die 'innere Panik' im Jahr 2026 durch diesen Oszillator visualisiert wird. Er ist der Seismograph für die emotionale Reaktion der breiten Masse auf geopolitische Ereignisse.",
+            "macro": "Wir korrelieren den McClellan-Oszillator mit den täglichen Liquiditätsänderungen auf den Repo-Märkten. Wenn die institutionelle Liquidität versiegt, bricht das Breiten-Momentum oft zuerst zusammen. Im Jahr 2026 nutzen wir den Oszillator zur Identifizierung von strukturellen Schwächen im Bankensystem. Er zeigt, ob das Geld 'breit' fließt.",
+            "tech": "Algo-Trader nutzen McClellan-Signale zur Kalibrierung ihrer Mean-Reversion-Bots. Wir beobachten im Jahr 2026 die Entstehung von 'McClellan-Frontrunning', bei dem KI-Systeme die AD-Differenz bereits Minuten vor Handelsschluss prognostizieren. Technologie erhöht die Sensitivität für Breiten-Umkehrungen.",
+            "policy": "Änderungen in der Börsenordnung oder bei Leerverkaufsregeln können die AD-Differenz künstlich beeinflussen. Wir bewerten die Auswirkungen von Marktregulierungen auf die Oszillator-Extrema. Die Politik bestimmt oft die Elastizität des Breiten-Momentums im Jahr 2026.",
+            "quant": "Unsere Modelle nutzen den McClellan-Oszillator als Filter für Volatilitätsregimes. Wir haben festgestellt, dass Oszillator-Werte unter -100 im Jahr 2026 oft mit einer signifikanten Zunahme der Intraday-VIX-Volatilität korrelieren. Wir berechnen für unsere Nutzer täglich 'Mean-Reversion-Probabilities'.",
+            "technical": "Wir kombinieren den McClellan-Oszillator mit der AD-Linie. Während die AD-Linie den Trend zeigt, offenbart der Oszillator die Energie hinter dem Trend. Eine Divergenz zwischen Kurs und Oszillator bei einem Markthoch ist das klassische Warnsignal für eine unmittelbar bevorstehende Korrektur. Er ist die technischer Lupe für die Marktstruktur."
+        },
+        "forecast_risks": "Das Hauptrisiko beim McClellan-Oszillator ist seine Sensitivität gegenüber saisonalen Effekten oder außergewöhnlichen Ereignissen (wie Rebalancing-Tage), die zu kurzfristigen Verzerrungen der AD-Daten führen können. Es ist kein Stand-alone-Signalgeber für Long-Term-Investments, sondern ein Werkzeug für das Markt-Timing und die Bestimmung der Trend-Qualität.",
+        "gms_conclusion": "Strategischer \"Energie-Messwert\". Der McClellan-Oszillator ist im Jahr 2026 der ultimative Indikator, um zu sehen, wie viel Kraft wirklich hinter einer Marktbewegung steckt. Wenn der Oszillator schwächelt, während die Preise steigen, ist Vorsicht geboten. Vertrauen Sie dem Momentum der Partizipation."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-10T00:35:00+00:00"
+}

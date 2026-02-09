@@ -1,0 +1,23 @@
+{
+    "slug": "donchian-channels",
+    "lang": "FR",
+    "title": "Canaux de Donchian (Donchian Channels - L'Indicateur de Cassure)",
+    "type": "indicator",
+    "category": "Technicals",
+    "sections": {
+        "summary": "Les canaux de Donchian sont un indicateur de suivi de tendance développé par Richard Donchian. Ils se composent de trois lignes : une bande supérieure (le plus haut de la période donnée), une bande inférieure (le plus bas de la période) et une ligne médiane (la moyenne des deux). En 2026, les canaux de Donchian sont l'outil fondamental pour les stratégies de cassure (breakout trading) et servent de socle aux systèmes modernes de « Turtle Trading ».",
+        "deep_dive": "La force des canaux de Donchian en 2026 réside dans la visualisation claire des extrêmes de prix. Chez GMS, nous les analysons comme une « boîte de volatilité ». Lorsqu'un prix touche ou franchit la bande supérieure, c'est un signal de force ; un franchissement de la bande inférieure indique une nouvelle faiblesse. Nous utilisons la ligne médiane comme niveau d'équilibre dynamique. La particularité en 2026 est la « compression de canal » : plus les bandes sont serrées, plus la volatilité est faible et plus une cassure violente est probable. Nous intégrons ces données dans nos modèles GMS pour identifier les « squeezes ». Une cassure d'un canal stable depuis 20 jours est aujourd'hui considérée comme l'un des signaux les plus fiables d'amorce de tendance sur les grands marchés de devises et de matières premières.",
+        "council_debate": {
+            "geopolitics": "Les changements d'ordre géopolitique entraînent souvent des bonds hors des bandes de Donchian. Nous analysons si une cassure est soutenue par des changements structurels ou s'il s'agit d'un simple bruit passager. Le canal définit la zone de confort économique d'une nation.",
+            "macro": "Nous corrélons la largeur des canaux avec l'incertitude macroéconomique. Des canaux larges indiquent un environnement instable où la formation des prix est erratique. L'indicateur nous montre les limites historiquement pertinentes pour le marché.",
+            "tech": "Les bots de cassure automatisés utilisent Donchian pour déclencher des ordres « buy-stop » ou « sell-stop ». Nous observons en 2026 une hausse des « fakeouts » (fausses cassures) provoqués par les algorithmes pour drainer la liquidité. La surveillance des bandes en temps réel est devenue indispensable.",
+            "policy": "Les interventions des banques centrales visent souvent à maintenir un cours dans un canal de Donchian spécifique. Une sortie durable signale l'échec des politques monétaires à contrôler la tendance. Nous évaluons l'intégrité du canal après chaque décision majeure.",
+            "quant": "Nos modèles calculent les probabilités statistiques de continuation de tendance après un breakout. Nous avons noté qu'en 2026, les canaux de Donchian combinés aux profils de volume sont extrêmement prédictifs. Nous calculons quotidiennement des scores de conviction de cassure.",
+            "technical": "Nous utilisons Donchian principalement pour définir les niveaux de stop-loss. De nombreux traders institutionnels placent leur stop derrière la ligne médiane ou la bande opposée. Le réglage standard sur 20 jours reste la référence absolue en 2026 pour les suiveurs de tendance."
+        },
+        "forecast_risks": "Le risque principal avec Donchian est le retard à l'entrée. Comme l'indicateur réagit par définition après qu'un nouveau plus haut ou plus bas a été atteint, on entre souvent en fin de mouvement. De plus, les canaux sont inopérants dans les marchés latéraux et génèrent de nombreux faux signaux coûteux (whipsaws).",
+        "gms_conclusion": "Radar stratégique de cassure. En 2026, les canaux de Donchian sont indispensables pour identifier les phases de transition du marché. Utilisez-les pour détecter le moment où le marché quitte son équilibre passé. Restez patient jusqu'à ce que la cassure soit confirmée."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-09T20:52:00+00:00"
+}

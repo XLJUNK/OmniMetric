@@ -1,0 +1,23 @@
+{
+    "slug": "vvix",
+    "lang": "FR",
+    "title": "VVIX (Le VIX du VIX - La volatilité de la volatilité)",
+    "type": "indicator",
+    "category": "Volatility",
+    "sections": {
+        "summary": "L'indice VVIX mesure la volatilité de l'indice de volatilité CBOE (VIX). Alors que le VIX indique la volatilité attendue de l'indice S&P 500, le VVIX montre la vitesse à laquelle les attentes concernant cette volatilité changent elles-mêmes. En 2026, le VVIX est un « accélérateur de peur » crucial, annonçant des mouvements de marché hautement explosifs.",
+        "deep_dive": "La dynamique du VVIX en 2026 est régie par la « convexité de la volatilité ». Chez GMS, nous analysons le VVIX comme le système d'alerte précoce des événements de « risque de queue » (tail-risk). Une hausse du VVIX alors que le VIX est bas suggère que le coût de protection contre un effondrement soudain augmente, souvent avant que l'indice de référence ne réagisse. Nous surveillons la zone au-dessus de 110 comme seuil de vigilance accrue. La particularité en 2026 est l'utilisation du VVIX pour identifier les effets « Vanna » et « Charm » sur le marché des options, capables de déclencher des désendettements massifs (de-leveraging). Nous intégrons les données de positionnement sur options dans nos modèles GMS pour évaluer la fragilité du marché. Un pic de VVIX ne signale pas seulement la peur, mais une instabilité structurelle de la liquidité globale.",
+        "council_debate": {
+            "geopolitics": "Les chocs géopolitiques en 2026 provoquent souvent un « gamma squeeze » sur les options VIX, faisant grimper le VVIX verticalement. Nous analysons comment le VVIX visualise l'incertitude liée aux escalades diplomatiques. C'est le sismographe des chocs d'incertitude mondiaux.",
+            "macro": "Nous corrélons le VVIX avec les injections de liquidité des banques centrales. Quand les marchés, habitués à l'argent gratuit, montrent des signes de manque, la volatilité de la volatilité explose en premier. En 2026, nous utilisons le VVIX comme mesure de la « vulnérabilité du soutien monétaire ».",
+            "tech": "Les bots d'arbitrage de volatilité pilotés par IA sont extrêmement sensibles aux variations du VVIX. Nous observons en 2026 comment le débouclage algorithmique des couvertures (hedging) alimente le VVIX dans une boucle de rétroaction. La technologie a doublé la vitesse des pics de VVIX.",
+            "policy": "Les exigences réglementaires en gestion des risques bancaires intègrent de plus en plus le VVIX dans les stress-tests. Nous évaluons l'impact des exigences de fonds propres sur la stabilité. La politique utilise le VVIX comme thermomètre des risques systémiques.",
+            "quant": "Nos modèles utilisent le VVIX comme donnée pour les stratégies de « volatility-targeting ». Nous avons noté qu'un retournement de tendance du VVIX en 2026 précède souvent de 48 heures une hausse significative du VIX. Nous calculons quotidiennement des « Fragility Scores ».",
+            "technical": "Nous utilisons le ratio VVIX/VIX pour évaluer la peur relative du marché. Si le VVIX monte alors que le VIX baisse (divergence), c'est souvent le dernier avertissement avant une explosion de volatilité générale. C'est la pièce maîtresse pour les stratégies de couverture avancées."
+        },
+        "forecast_risks": "Le risque principal du VVIX est son comportement extrêmement instable. Il peut varier de 30 % en quelques heures. De plus, étant un pur indicateur de dérivés, il est vulnérable aux « squeezes » sur les marchés d'options sous-jacents qui ne reflètent pas forcément une peur macro fondamentale. Sa manipulation requiert une haute expertise des Grecs d'options.",
+        "gms_conclusion": "Multiplicateur de peur stratégique. En 2026, le VVIX est l'outil indispensable des professionnels pour mesurer la vélocité de la tempête à venir. N'ignorez jamais la volatilité de la volatilité ; elle est le moteur de la panique boursière."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-09T23:57:00+00:00"
+}

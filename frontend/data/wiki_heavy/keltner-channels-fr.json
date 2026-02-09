@@ -1,0 +1,23 @@
+{
+    "slug": "keltner-channels",
+    "lang": "FR",
+    "title": "Canaux de Keltner (Keltner Channels - L'Indicateur de Tendance-Volatilité)",
+    "type": "indicator",
+    "category": "Technicals",
+    "sections": {
+        "summary": "Les canaux de Keltner sont un indicateur basé sur la volatilité, composé d'une moyenne mobile centrale (généralement une moyenne mobile exponentielle, EMA) et de deux bandes externes basées sur l'Average True Range (ATR). Introduits par Chester Keltner et affinés par Linda Raschke, ils sont en 2026 l'outil privilégié des traders pour analyser les tendances en lien avec les cycles de volatilité.",
+        "deep_dive": "La dynamique des canaux de Keltner en 2026 réside dans leur capacité à distinguer les « vraies » cassures de tendance du simple bruit de marché. Comme les bandes reposent sur l'ATR, elles s'élargissent en période de turbulences et se resserrent lors des phases de calme. Chez GMS, nous les analysons comme un « système de navigation de tendance ». Une cassure au-dessus de la bande supérieure avec un volume croissant est un signal haussier fort. Nous surveillons particulièrement le « Keltner Squeeze » — quand les bandes se contractent fortement — ce qui annonce souvent un mouvement explosif. La particularité en 2026 est l'utilisation des canaux pour identifier des opportunités de « retour à la moyenne » au sein de tendances fortes : les traders cherchent des points d'entrée sur l'EMA (ligne centrale) lorsque le prix revient temporairement des bandes externes. Nous intégrons ces données dans nos modèles GMS pour calculer la probabilité de continuation de tendance.",
+        "council_debate": {
+            "geopolitics": "L'incertitude sur la scène mondiale entraîne un élargissement des canaux de Keltner sur les actifs risqués. Nous analysons comment les chocs politiques modifient la structure de volatilité. Le canal nous indique les limites de tolérance du marché face au bruit géopolitique.",
+            "macro": "Nous corrélons la largeur du canal avec les indices de volatilité macro (comme le VIX ou le MOVE). Une sortie des canaux de Keltner en base hebdomadaire indique souvent une réévaluation fondamentale de l'actif suite à des données macroéconomiques majeures. C'est le filtre de qualité des tendances macro.",
+            "tech": "Les algorithmes de trading modernes utilisent les canaux de Keltner pour définir des états de « sur-extension ». Nous observons en 2026 une hausse des ventes automatisées dès que le prix s'écarte significativement de la bande supérieure (indicateur de stretch). C'est un limiteur numérique de cupidité.",
+            "policy": "Les déclarations des banques centrales peuvent projeter le prix hors des canaux à court terme. Nous évaluons la rapidité du retour dans le canal ou si un nouveau canal s'établit à un niveau supérieur. Keltner nous aide à mesurer la durabilité des effets des politiques monétaires.",
+            "quant": "Nos modèles utilisent le ratio prix/distance de bande pour l'arbitrage statistique. Nous avons constaté qu'en 2026, les canaux de Keltner surpassent les bandes de Bollinger dans les marchés directionnels car ils sont moins sujets aux faux signaux. Nous calculons quotidiennement des scores d'étirement de canal.",
+            "technical": "Nous utilisons les canaux de Keltner principalement pour confirmer la force d'un mouvement. Une clôture hors du canal est souvent le début d'une accélération de tendance. Nous surveillons l'inclinaison de l'EMA comme mesure primaire de la direction."
+        },
+        "forecast_risks": "Le risque principal avec les canaux de Keltner est de mal interpréter une cassure comme un simple excès passager plutôt que comme le début d'une tendance. Dans les marchés très volatils, les bandes peuvent être si larges que les signaux arrivent trop tard. De plus, de mauvais réglages d'ATR peuvent rendre l'indicateur soit trop sensible, soit trop léthargique.",
+        "gms_conclusion": "Filtre de volatilité stratégique. En 2026, les canaux de Keltner sont l'outil indispensable pour les traders qui veulent sentir le pouls du marché. Utilisez-les pour traiter les tendances avec la sécurité statistique nécessaire. Respectez les bandes, mais suivez l'EMA."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-09T20:57:00+00:00"
+}

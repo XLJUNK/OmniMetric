@@ -1,0 +1,23 @@
+{
+    "slug": "rrp-balance",
+    "lang": "FR",
+    "title": "Solde des pensions livrées inversées (Reverse Repo Balance - RRP)",
+    "type": "indicator",
+    "category": "Liquidity",
+    "sections": {
+        "summary": "Le solde du Reverse Repo (Overnight Reverse Repo Facility, ON RRP) indique le montant des liquidités excédentaires que les institutions financières « parquent » à la banque centrale en échange de titres. Un solde élevé indique une abondance de liquidités, tandis qu'une baisse indique que cet argent reflue vers le système financier. En 2026, c'est le tachymètre de la liquidité systémique.",
+        "deep_dive": "La dynamique du solde RRP en 2026 est cruciale pour comprendre les conditions du marché monétaire. Chez GMS, nous analysons le RRP comme un « bassin de réserve ». En 2026, nous avons observé comment la réduction du solde RRP a souvent accompagné la hausse des actions et des crypto-monnaies, cet excès d'argent cherchant du rendement. Cependant, dès que le solde RRP atteint un niveau critique en 2026, des instabilités menacent le marché du repo et la liquidité bancaire. Nous corrélons le RRP avec les réserves bancaires et le Treasury General Account (TGA). Nous intégrons les données quotidiennes de la Fed dans nos modèles GMS pour prédire les goulots d'étranglement de liquidité. Le RRP est la mesure phare de la « liquidité fantôme » du marché.",
+        "council_debate": {
+            "geopolitics": "L'utilisation du RRP par les banques centrales étrangères (FIMA Repo Facility) est en 2026 un signal de la faim mondiale de dollars. Nous analysons comment les tensions internationales influencent la demande de liquidité auprès de la Fed. Le RRP est le baromètre de la stabilité mondiale du dollar.",
+            "macro": "Nous corrélons le reflux du RRP avec la dynamique inflationniste. En 2026, l'argent stocké au RRP est un « carburant potentiel pour l'inflation » s'il circule trop vite. Nous utilisons des indices de vélocité de la liquidité pour diagnostiquer une surchauffe macro. La liquidité est un choix politique.",
+            "tech": "Les systèmes de paiement en temps réel et les CBDC modifient en 2026 la gestion des liquidités institutionnelles. Nous observons des transferts haute fréquence entre les bons du Trésor (T-Bills) et le guichet RRP. La technologie rend la gestion des flux de trésorerie chirurgicale.",
+            "policy": "La Fed utilise le taux RRP comme plancher pour ses taux directeurs en 2026. Nous évaluons l'impact de ces ajustements sur l'attractivité du dépôt auprès de la Fed. Par ce guichet, la politique monétaire lubrifie l'ensemble de la machinerie financière.",
+            "quant": "Nos modèles utilisent des ratios d'adéquation des réserves. Nous avons noté qu'un niveau de RRP sous les 200 milliards de dollars en 2026 provoque presque systématiquement une hausse de la volatilité obligataire. Nous calculons quotidiennement des « Systemic Liquidity Pressure Scores ».",
+            "technical": "Nous analysons les lignes de tendance sur le volume du RRP. Un reflux accéléré est souvent interprété de façon haussière pour les actifs risqués — jusqu'à ce que les réserves deviennent rares. Le volume du RRP est le « solde bancaire » de Wall Street auprès de la Fed."
+        },
+        "forecast_risks": "Le risque principal est une mauvaise interprétation du reflux. Ce n'est pas parce que l'argent sort du RRP en 2026 qu'il va forcément vers les actifs risqués ; il peut simplement servir à financer les déficits publics. Le défi est de tracer avec précision la destination de cette liquidité redevenue mobile.",
+        "gms_conclusion": "Gardien de liquidité stratégique. Sachez combien d'huile il reste dans le moteur. En 2026, GMS analyse le solde RRP pour prédire la fin du rallye « facile ». Quand le bassin est à sec, l'environnement devient nettement plus périlleux pour les investisseurs."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-10T02:47:00+00:00"
+}

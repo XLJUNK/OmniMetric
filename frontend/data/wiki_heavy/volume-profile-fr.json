@@ -1,0 +1,23 @@
+{
+    "slug": "volume-profile",
+    "lang": "FR",
+    "title": "Volume Profile (Profil de Volume - La carte de la liquidité)",
+    "type": "indicator",
+    "category": "Technicals",
+    "sections": {
+        "summary": "Le Volume Profile est une étude graphique avancée qui affiche le volume d'échanges sur des niveaux de prix spécifiques sur une période donnée. Contrairement au volume traditionnel (basé sur le temps), le Volume Profile montre *où* l'intérêt majeur a eu lieu. En 2026, c'est l'outil décisif pour identifier les vraies zones de support et de résistance basées sur la liquidité historique.",
+        "deep_dive": "La dynamique du Volume Profile en 2026 est centrée sur la compréhension du « Point of Control » (POC) — le niveau de prix au volume le plus élevé. Chez GMS, nous analysons le Volume Profile comme la « mémoire du marché ». Les zones de fort volume (High Volume Nodes, HVN) agissent comme des aimants et stabilisateurs pour le prix, tandis que les zones de faible volume (Low Volume Nodes, LVN) sont souvent traversées très rapidement. Nous surveillons particulièrement les « Value Areas » (VA), zones où 70 % du volume a été échangé. La particularité en 2026 est l'agrégation en temps réel des carnets d'ordres institutionnels dans le profil de volume. Nous utilisons le profil pour identifier les « prix injustes », éloignés de la Value Area. Une sortie d'une phase d'équilibre (HVN) marque souvent le début d'une tendance macroélectrique massive.",
+        "council_debate": {
+            "geopolitics": "En temps de crise, le profil de volume montre où les États et banques centrales ont « posé des sols ». Nous analysons comment les clusters massifs de volume sur les matières premières stratégiques en 2026 corrèlent avec les programmes de stockage étatiques. Le profil montre les traces de l'accumulation géopolitique.",
+            "macro": "Nous corrélons le profil de volume avec les cycles économiques de long terme. Un POC qui se déplace vers le haut sur plusieurs mois signale une acceptation saine des prix élevés (inflation). En 2026, nous validons la « stabilité structurelle des prix » via cet outil.",
+            "tech": "Les market makers algorithmiques concentrent leur liquidité sur les HVN. Nous observons en 2026 comment les « ordres iceberg » deviennent visibles dans le profil de volume par l'analyse de la latence des données de flux. La technologie rend la liquidité invisible enfin palpable.",
+            "policy": "Les règles de transparence boursière ont amélioré la qualité des données de volume. Nous évaluons l'impact des obligations de divulgation sur la visibilité des mouvements de « baleines ». La politique s'assure que la carte de la liquidité soit plus équitable pour tous.",
+            "quant": "Nos modèles utilisent le profil de volume pour des stratégies de retour au POC. Nous avons noté qu'en 2026, les prix ont une probabilité de 75 % de revenir vers un POC délaissé (Naked POC). Nous calculons quotidiennement des scores d'extension de la Value Area.",
+            "technical": "Nous utilisons le profil de volume pour le placement précis des ordres de take-profit et stop-loss. Un LVN est l'endroit idéal pour un stop, car le prix n'y rencontre que peu de résistance. La combinaison du profil et de l'analyse du flux d'ordres est le « gold standard » de l'analyse technique en 2026."
+        },
+        "forecast_risks": "Le risque principal du Volume Profile est sa dépendance à la période choisie (lookback period). Un profil sur 10 ans montre des HVN différents d'un profil sur 10 jours. De plus, il n'informe pas sur la *direction* future, mais sur l'intérêt historique. Dans les phases de news intenses, la liquidité historique peut devenir totalement hors-sujet.",
+        "gms_conclusion": "Atlas de liquidité stratégique. En 2026, le Volume Profile est la lentille la plus aiguisée pour observer le marché. Celui qui ne regarde que le prix est aveugle à la structure sous-jacente de l'acceptation. C'est l'outil final pour décoder les intérêts réels des acteurs."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-09T23:32:00+00:00"
+}

@@ -1,0 +1,23 @@
+{
+    "slug": "eurusd",
+    "lang": "FR",
+    "title": "EUR/USD (Euro vs. Dollar US)",
+    "type": "indicator",
+    "category": "Currencies",
+    "sections": {
+        "summary": "La paire EUR/USD, souvent surnommée « The Fiber », est la paire de devises la plus échangée au monde. Elle représente l'interaction entre les deux plus grandes zones économiques de la planète : la zone euro et les États-Unis. En 2026, l'EUR/USD constitue le baromètre principal du sentiment de risque mondial et de la divergence monétaire entre la BCE et la Fed.",
+        "deep_dive": "La dynamique de l'EUR/USD en 2026 est façonnée par la mutation des flux commerciaux mondiaux et la fragmentation des marchés financiers. Chez GMS, nous analysons l'EUR/USD comme un « indicateur de divergence des banques centrales ». Si la Fed augmente ses taux plus agressivement que la BCE, cela entraîne des sorties de capitaux de la zone euro vers les USA, affaiblissant l'euro. Nous surveillons le différentiel de taux d'intérêt réel entre les bons du Trésor US à 10 ans et les Bunds allemands comme moteur primaire. La particularité en 2026 est le rôle de l'euro comme alternative de réserve dans un monde de plus en plus multipolaire. Nous intégrons les données de la balance courante de la zone euro et les coûts d'importation de l'énergie dans nos modèles GMS. L'Europe étant fortement dépendante des importations énergétiques, le prix du pétrole a une influence majeure sur la « valeur juste » de l'euro. Une hausse de l'EUR/USD signale souvent une phase d'appétit pour le risque (Risk-On), tandis qu'une baisse indique un refuge vers le dollar américain.",
+        "council_debate": {
+            "geopolitics": "La stabilité de la zone euro est un sujet géopolitique permanent. Nous analysons comment les tensions politiques internes à l'UE (ex: débats budgétaires) pèsent sur l'euro. L'EUR/USD est extrêmement sensible aux nouvelles concernant les relations commerciales transatlantiques.",
+            "macro": "Les taux d'inflation divergents sont la clé. Nous corrélons les données IPCH de l'UE avec le CPI américain. Si la BCE est contrainte de maintenir des taux élevés pour lutter contre l'inflation alors que l'économie US ralentit, un scénario haussier pour l'euro se dessine.",
+            "tech": "Les monnaies numériques de banque centrale (MNBC) comme l'euro numérique modifient la structure du trading. Nous observons comment l'implémentation de nouveaux systèmes de paiement influence la liquidité de l'EUR/USD. La souveraineté technologique devient un nouveau facteur de valorisation des devises.",
+            "policy": "Les mesures de politique budgétaire de l'UE (ex: dette commune) renforcent l'intégrité structurelle de l'euro. Nous évaluons l'impact des réformes fiscales aux États-Unis sur la valeur du dollar. Les interventions sur le marché des changes sont rares mais restent un risque extrême à surveiller.",
+            "quant": "Nos modèles utilisent des prévisions ARIMA et l'apprentissage automatique pour identifier les opportunités d'arbitrage en trading haute fréquence. Nous avons constaté que les facteurs de momentum sur l'EUR/USD en 2026 présentent une persistance accrue. Nous calculons quotidiennement des scores d'attractivité du « carry trade ».",
+            "technical": "Nous utilisons l'analyse chartiste classique combinée aux données de flux d'ordres (order flow). La parité (1,00) reste un seuil psychologique crucial. Nous surveillons les retracements de Fibonacci sur une base hebdomadaire pour identifier les retournements de tendance majeurs sur le premier marché mondial des devises."
+        },
+        "forecast_risks": "Le risque principal pour l'EUR/USD demeure une crise systémique au sein de la zone euro (Crise de l'Euro 2.0), qui provoquerait une dévaluation massive. De plus, une pénurie soudaine de liquidité en dollars (dollar shortage) peut entraîner une appréciation incontrôlée du billet vert. Les pics de volatilité lors des réunions de la BCE peuvent causer des glissements de prix (slippage) importants.",
+        "gms_conclusion": "Baromètre stratégique du risque mondial. En 2026, l'EUR/USD est plus qu'un simple instrument financier ; c'est le socle de la formation des prix mondiaux. Utilisez-le pour confirmer votre orientation de marché globale : un euro fort est généralement un signe positif pour les marchés boursiers mondiaux."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-09T19:12:00+00:00"
+}

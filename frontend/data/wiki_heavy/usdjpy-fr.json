@@ -1,0 +1,23 @@
+{
+    "slug": "usdjpy",
+    "lang": "FR",
+    "title": "USD/JPY (Dollar US vs. Yen Japonais)",
+    "type": "indicator",
+    "category": "Currencies",
+    "sections": {
+        "summary": "La paire USD/JPY, connue sous le nom de « The Ninja », est la deuxième paire de devises la plus traitée au monde. Elle reflète la dynamique entre la première économie mondiale et la troisième (le Japon). En 2026, l'USD/JPY est l'indicateur clé du « carry trade » mondial et de l'appétit pour le risque des investisseurs, fonctionnant comme un pivot central entre les différentiels de taux d'intérêt.",
+        "deep_dive": "La dynamique de l'USD/JPY en 2026 est dominée par le virage historique de la politique monétaire japonaise après des décennies de déflation. Chez GMS, nous analysons l'USD/JPY comme un « thermomètre d'arbitrage ». Longtemps, le yen a été la devise privilégiée pour financer les carry trades (emprunter en yen à taux quasi nul pour investir dans des actifs à meilleur rendement). Nous surveillons les décisions de la Banque du Japon (BoJ) et leur impact sur les marchés obligataires mondiaux comme facteur primaire. La particularité en 2026 est le « débouclage du carry trade » — un scénario où la hausse des taux japonais entraîne un rapatriement massif de capitaux vers le Japon, renforçant le yen et mettant sous pression les marchés mondiaux de risque. Nous intégrons les données de la balance commerciale japonaise et des réserves de change dans nos modèles GMS. L'USD/JPY reste également extrêmement sensible au rendement des bons du Trésor US à 10 ans : si les taux US montent plus vite que les taux japonais, le dollar s'apprécie face au yen.",
+        "council_debate": {
+            "geopolitics": "Le rôle du Japon en Asie et son partenariat avec les USA sont cruciaux. Nous analysons comment les tensions en mer de Chine peuvent renforcer le yen en tant que valeur refuge. L'USD/JPY est souvent un sismographe de la stabilité régionale.",
+            "macro": "Nous corrélons l'évolution de l'inflation au Japon avec la dynamique des salaires. Si le Japon sort durablement de la spirale déflationniste, la valorisation fondamentale du yen change radicalement. Nous utilisons des modèles macro pour anticiper les interventions du ministère des Finances nippon.",
+            "tech": "La numérisation du marché financier japonais et les nouveaux robots de trading influencent la volatilité intraday de l'USD/JPY. Nous observons l'influence des investisseurs particuliers japonais (« Mrs. Watanabe »), très actifs sur le change via des applications mobiles de nouvelle génération.",
+            "policy": "Le contrôle de la courbe des taux (YCC) a longtemps été l'arme de la BoJ. Nous évaluons les conséquences de l'abandon définitif de cette politique sur les structures de taux mondiales. L'USD/JPY est le champ de bataille entre les forces de marché et le pilotage monétaire dirigiste.",
+            "quant": "Nos modèles utilisent des stratégies d'arbitrage statistique basées sur la corrélation inverse entre l'USD/JPY et le Nikkei 225. Une appréciation du yen est traditionnellement négative pour les valeurs exportatrices japonaises. Nous calculons des indicateurs de risque de retournement.",
+            "technical": "Nous utilisons les moyennes mobiles quotidiennes et hebdomadaires. Le seuil des 150 JPY pour un dollar est considéré comme une zone psychologique critique et un niveau potentiel d'intervention étatique. Nous surveillons la session de Tokyo, qui donne souvent le ton pour la journée entière de trading."
+        },
+        "forecast_risks": "Le risque principal demeure une intervention agressive et non planifiée de la Banque du Japon, provoquant des liquidations massives de positions longues. De plus, une crise financière mondiale soudaine pourrait entraîner une appréciation explosive du yen par débouclage de positions spéculatives. L'endettement public massif du Japon constitue un risque extrême de longue traîne pour la stabilité monétaire.",
+        "gms_conclusion": "Indicateur stratégique de divergence des rendements. En 2026, l'USD/JPY est l'outil indispensable pour surveiller les flux de liquidité mondiaux. Gardez un œil constant sur la Banque du Japon : ses mouvements dictent souvent la volatilité des autres classes d'actifs."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-09T19:17:00+00:00"
+}

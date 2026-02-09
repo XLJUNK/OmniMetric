@@ -1,0 +1,23 @@
+{
+    "slug": "mcclellan-oscillator",
+    "lang": "FR",
+    "title": "McClellan Oscillator (L'oscillateur de McClellan - Le momentum de la largeur)",
+    "type": "indicator",
+    "category": "Technicals",
+    "sections": {
+        "summary": "L'oscillateur de McClellan est un indicateur de largeur de marché basé sur la différence entre le nombre d'actions en hausse et en baisse sur le NYSE (ou un autre indice majeur). Il est utilisé pour mesurer le momentum de l'étendue du marché et identifier les conditions de surachat ou de survente extrême. En 2026, il est un outil indispensable pour l'analyse des retournements de tendance majeurs.",
+        "deep_dive": "La dynamique de l'oscillateur de McClellan en 2026 repose sur le lissage exponentiel de la différence Advance-Decline quotidienne. Chez GMS, nous analysons cet oscillateur comme le « stéthoscope au cœur du marché ». Une valeur positive signale un momentum de participation haussier, tandis qu'une valeur négative indique une érosion interne. Nous surveillons particulièrement les « Breadth Thrusts » : une remontée rapide de niveaux de survente profonde (-150) vers des sommets (+50) en quelques jours est considérée en 2026 comme l'un des signaux les plus puissants du début d'un bull market séculaire. La particularité en 2026 est l'ajustement du calcul aux marchés algorithmiques ultra-rapides. Nous intégrons l'agrégation de données tick-par-tick dans nos modèles GMS pour affiner la précision des signaux. C'est le prédicteur le plus exact des phases d'épuisement à court terme.",
+        "council_debate": {
+            "geopolitics": "En période de crise politique mondiale, l'oscillateur de McClellan affiche souvent des extrêmes bien avant que les indices ne décrochent. Nous analysons comment la « panique interne » est visualisée par cet oscillateur en 2026. C'est le sismographe de la réaction émotionnelle de la masse aux événements géopolitiques.",
+            "macro": "Nous corrélons l'oscillateur de McClellan avec les variations de liquidité sur les marchés de pensions (Repos). Quand la liquidité institutionnelle s'assèche, le momentum de largeur s'effondre en premier. En 2026, nous l'utilisons pour identifier les faiblesses structurelles du système bancaire. Il montre si le flux de capitaux est « large » ou concentré.",
+            "tech": "Les traders algorithmiques utilisent les signaux de McClellan pour calibrer leurs bots de retour à la moyenne. Nous observons en 2026 l'émergence du « front-running de McClellan », où l'IA prédit la différence AD quelques minutes avant la clôture. La technologie accroît la sensibilité aux retournements de largeur.",
+            "policy": "Les changements dans les règles de vente à découvert ou de structure de marché peuvent influencer artificiellement la différence AD. Nous évaluons l'impact des régulations boursières sur les extrêmes de l'oscillateur. La politique définit souvent l'élasticité du momentum de participation en 2026.",
+            "quant": "Nos modèles utilisent l'oscillateur de McClellan comme filtre pour les régimes de volatilité. Nous avons noté que des valeurs inférieures à -100 en 2026 corrèlent souvent avec une augmentation brutale de la volatilité intraday du VIX. Nous calculons quotidiennement des probabilités de retour à la moyenne.",
+            "technical": "Nous combinons l'oscillateur avec la ligne AD. Alors que la ligne AD montre la tendance, l'oscillateur révèle l'énergie sous-jacente. Une divergence entre le prix et l'oscillateur à un sommet de marché est le signal d'alerte classique d'une correction imminente. C'est la loupe technique pour l'analyse structurelle."
+        },
+        "forecast_risks": "Le risque principal de l'oscillateur de McClellan est sa sensibilité aux effets saisonniers ou aux événements exceptionnels (comme les jours de rééquilibrage massif) qui peuvent fausser les données AD sur un temps court. Ce n'est pas un indicateur autonome pour l'investissement à long terme, mais un outil précis pour le timing et le diagnostic de tendance.",
+        "gms_conclusion": "Mesure d'énergie stratégique. L'oscillateur de McClellan est en 2026 l'indicateur ultime pour quantifier la force réelle d'un mouvement de marché. Si l'oscillateur faiblit alors que les prix montent, la prudence s'impose. Faites confiance au momentum de la participation."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-10T00:37:00+00:00"
+}

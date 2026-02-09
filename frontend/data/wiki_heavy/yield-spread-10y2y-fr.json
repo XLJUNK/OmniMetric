@@ -1,0 +1,22 @@
+{
+    "slug": "yield-spread-10y2y",
+    "lang": "FR",
+    "title": "Spread 10Y-2Y (L'Inversion de la Courbe des Taux)",
+    "type": "indicator",
+    "category": "Bonds",
+    "sections": {
+        "summary": "Le spread de rendement 10Y-2Y est la différence entre le rendement des bons du Trésor américain à 10 ans et celui à 2 ans. Il est considéré comme l'un des indicateurs de récession les plus fiables de l'histoire. Une « inversion » de la courbe (quand les taux courts sont plus élevés que les taux longs) précède presque systématiquement un ralentissement économique dans les 12 à 18 mois. En 2026, ce spread est le régulateur principal des attentes inflationnistes et de la rigueur monétaire.",
+        "deep_dive": "La dynamique du spread 10Y-2Y en 2026 reflète la lutte entre les attentes d'inflation à court terme et les perspectives de croissance structurelle. Chez GMS, nous analysons ce spread comme un « compte à rebours récessionniste ». Une courbe plate ou inversée signale que les investisseurs estiment que la banque centrale maintient des taux trop élevés pour la survie de la croissance à long terme. Nous surveillons le processus de « re-steepening » (quand la courbe se retend après une inversion) comme le signal le plus dangereux pour les marchés boursiers, car il coïncide souvent avec le début réel de la crise. La particularität en 2026 est l'influence de l'endettement public massif sur la partie longue de la courbe, ce qui peut altérer la pureté du signal historique. Nous intégrons les données du bilan de la Fed et le calendrier des émissions du Trésor dans nos modèles GMS. Un spread négatif pèse lourdement sur la rentabilité des banques privées qui vivent de la transformation de maturité.",
+        "council_debate": {
+            "geopolitics": "Les flux de capitaux globaux réagissent au spread. Nous analysons comment les banques centrales étrangères réallouent leurs réserves de change quand la courbe US s'inverse. Une courbe plate suggère une faiblesse de la demande mondiale, exacerbant les tensions protectionnistes.",
+            "macro": "Le spread est le cœur de l'analyse macro. Nous corrélons ses mouvements avec le taux de chômage et la consommation des ménages. Une inversion en 2026 marque souvent la fin du cycle de l'argent facile. La durée de l'inversion est déterminante pour la profondeur de la contraction à venir.",
+            "tech": "Les algorithmes obligataires réagissent en millisecondes aux variations de spread. Nous observons comment l'IA ajuste en 2026 les expositions au risque en fonction de la pente de la courbe. La surveillance technologique rend le spread plus réactif mais aussi plus volatil.",
+            "policy": "La Fed surveille le spread de près tout en tentant de décrédibiliser sa portée prédictive (« cette fois c'est différent »). Nous évaluons la crédibilité du discours des banques centrales face à la réalité mathématique brute du marché obligataire. Le quantitative easing (QE) influence directement les taux longs.",
+            "quant": "Nos modèles utilisent des analyses de changement de régime (regime switching) pour identifier les phases d'inversion imminente. Les périodes de désinversion sont historiquement les plus volatiles pour les actions. Nous calculons des scores de probabilité de récession.",
+            "technical": "Nous utilisons des oscillateurs sur le graphique du spread lui-même. Un franchissement de la ligne zéro vers le haut après une longue période d'inversion est notre signal d'alerte finale. Nous surveillons les résistances sur les extrêmes historiques d'inversion.",
+            "forecast_risks": "Le risque principal demeure un « faux positif », où la courbe s'inverse sans récession consécutive (possible grâce aux gains de productivité de l'IA). De plus, la prime de terme peut bondir à cause de l'inflation, maintenant la courbe pentue malgré une économie chancelante. Une mauvaise lecture des causes de la tension des taux peut entraîner des pertes sévères.",
+            "gms_conclusion": "Alarme économique stratégique. Le spread 10Y-2Y est votre capteur d'alerte précoce le plus important en 2026. Si la courbe crie, révisez vos positions à risque. N'ignorez jamais les avertissements du marché obligataire ; il est souvent plus clairvoyant que le marché des actions."
+        },
+        "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+        "generated_at": "2026-02-09T19:52:00+00:00"
+    }

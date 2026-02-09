@@ -1,0 +1,23 @@
+{
+    "slug": "atr-average-true-range",
+    "lang": "FR",
+    "title": "ATR (Average True Range - Moyenne de la Plage Véritable)",
+    "type": "indicator",
+    "category": "Technicals",
+    "sections": {
+        "summary": "L'Average True Range (ATR) est un indicateur technique développé par J. Welles Wilder Jr., conçu pour mesurer la volatilité d'un marché. Contrairement à de nombreux autres indicateurs, l'ATR ne fournit aucune information sur la direction de la tendance, mais exclusivement sur l'ampleur des mouvements de prix. En 2026, l'ATR est l'outil indispensable pour la gestion du risque et la détermination des niveaux de stop-loss.",
+        "deep_dive": "La dynamique de l'ATR en 2026 est marquée par l'omniprésence de la volatilité algorithmique. Chez GMS, nous analysons l'ATR comme un « sismographe de marché ». L'ATR calcule la « plage véritable » (True Range), qui prend en compte les gaps (écarts de cours) entre les sessions, ce qui le rend supérieur aux mesures de volatilité classiques. Nous utilisons l'ATR sur différentes unités de temps pour identifier les « régimes de volatilité ». La particularité en 2026 est l'utilisation de l'ATR pour le dimensionnement dynamique des positions : en phase d'ATR élevé, les traders professionnels réduisent la taille de leurs positions pour maintenir un profil de risque stable. Nous intégrons les données ATR dans nos modèles GMS pour émettre des alertes sur les « explosions de volatilité », qui annoncent souvent des retournements de tendance. Un ATR croissant lors d'une baisse des cours signale des ventes de panique, tandis qu'un ATR en hausse lors d'une progression indique une forte conviction haussière.",
+        "council_debate": {
+            "geopolitics": "Les chocs géopolitiques se reflètent instantanément dans l'ATR. Nous analysons comment les événements politiques étirent les bandes de volatilité. L'ATR nous sert de mesure de l'incertitude globale. En période de tensions internationales, l'ATR est souvent le premier indicateur à sortir de sa zone de confort.",
+            "macro": "Nous corrélons l'ATR avec les publications macroéconomiques majeures, comme les décisions de la Fed. Un ATR durablement élevé suggère un environnement macro instable où la formation des prix est perturbée. L'ATR est l'indice de stress des marchés physiques.",
+            "tech": "Les algorithmes de trading haute fréquence utilisent des métriques similaires à l'ATR pour assurer la liquidité. Nous observons comment les marchés technicisés peuvent compresser artificiellement l'ATR avant des cascades de prix brutales. En 2026, l'ATR est un tensiomètre numérique.",
+            "policy": "Les banques centrales tentent souvent de lisser la volatilité via leur communication. Nous évaluons l'efficacité de cette « forward guidance » par la compression de l'ATR. Un ATR trop bas peut être le signe d'une complaisance dangereuse du marché.",
+            "quant": "Nos modèles utilisent l'ATR pour normaliser les données de performance (rendements ajustés au risque). Nous avons constaté qu'une combinaison d'ATR et de RSI en 2026 fournit des signaux très fiables d'épuisement de tendance. Nous calculons quotidiennement des « Z-scores de volatilité ».",
+            "technical": "Nous utilisons l'ATR principalement pour le « Chandelier Exit » et d'autres stops suiveurs dynamiques. Un multiplicateur standard de 2x ou 3x l'ATR est couramment employé pour laisser le marché « respirer » sans risquer de sorties prématurées. L'identification des contractions d'ATR est la clé pour anticiper les cassures (breakouts)."
+        },
+        "forecast_risks": "Le risque principal lié à l'utilisation de l'ATR est son retard (lag), car il s'agit d'une moyenne mobile. Un événement de type « cygne noir » peut faire en sorte que l'ATR sous-estime massivement le risque avant qu'il ne soit trop tard. De plus, un ATR élevé dans des marchés sans tendance peut provoquer de nombreux faux signaux (whipsaws).",
+        "gms_conclusion": "Boussole de risque stratégique. En 2026, l'ATR est la mesure la plus critique pour votre survie sur les marchés. Celui qui ne mesure pas la volatilité finit par être dévoré par elle. Utilisez l'ATR pour placer vos stops de manière intelligente."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-09T20:12:00+00:00"
+}

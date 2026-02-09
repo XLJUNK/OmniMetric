@@ -1,0 +1,23 @@
+{
+    "slug": "moving-average-sma-ema",
+    "lang": "FR",
+    "title": "Moving Averages (SMA & EMA - Les compagnons de tendance)",
+    "type": "indicator",
+    "category": "Technicals",
+    "sections": {
+        "summary": "Les moyennes mobiles (Moving Averages) sont l'un des indicateurs techniques les plus anciens et les plus utilisés. Elles lissent les mouvements de prix en calculant un prix moyen sur une période donnée. La moyenne mobile simple (SMA) accorde un poids égal à toutes les données, tandis que la moyenne mobile exponentielle (EMA) donne plus d'importance aux données récentes. En 2026, elles constituent la colonne vertébrale visuelle de l'analyse de tendance.",
+        "deep_dive": "La dynamique des moyennes mobiles en 2026 est définie par leur rôle de « barrières psychologiques ». Chez GMS, nous analysons la moyenne à 200 jours (SMA 200) comme la ligne de démarcation entre un marché haussier (bull) et baissier (bear) pour les investisseurs institutionnels. L'EMA est quant à elle privilégiée par les traders à court terme en 2026 pour sa réactivité aux changements rapides du marché. Nous surveillons particulièrement le « Golden Cross » (croisement de la 50 au-dessus de la 200) et le « Death Cross » (croisement de la 50 sous la 200) comme signaux de changement de tendance à long terme. La particularité en 2026 est la combinaison de plusieurs rubans d'EMA (ribbons) pour mesurer l'intensité d'une tendance. Nous intégrons les moyennes pondérées par le volume dans nos modèles GMS pour affiner la pertinence de la tendance. Un prix se maintenant au-dessus d'une SMA 50 ascendante est jugé en tendance haussière stable.",
+        "council_debate": {
+            "geopolitics": "En période de bouleversements géopolitiques, les moyennes de long terme servent d'ancres à la confiance. Nous analysons comment la moyenne hebdomadaire à 50 semaines sur l'or en 2026 fait office de support ultime en temps de crise. La géopolitique teste souvent la résistance des moyennes techniques.",
+            "macro": "Nous corrélons la pente des moyennes mobiles avec la croissance économique. Une ligne à 200 jours qui s'aplatit sur les indices majeurs est souvent le signe avant-coureur d'une stagnation ou d'une récession macroéconomique. En 2026, nous utilisons les moyennes comme indicateurs d'inertie économique.",
+            "tech": "Les traders algorithmiques utilisent les moyennes mobiles pour des systèmes de suivi de tendance (trend-following). Nous observons en 2026 le phénomène du « magnétisme de retour à la moyenne », où les prix trop éloignés de leurs moyennes sont attirés avec une grande vélocité. La technologie automatise les réactions sur ces lignes.",
+            "policy": "Les banquiers centraux observent souvent les moyennes mobiles des taux d'inflation sous-jacents pour lisser les tendances. Nous évaluons l'impact des signaux monétaires sur la stabilité des tendances techniques. La politique décide souvent de la durée du maintien d'une tendance au-dessus de ses moyennes.",
+            "quant": "Nos modèles utilisent la « Moving Average Distance » pour identifier les marchés sur-étendus. Nous avons noté qu'en 2026, des écarts de plus de 20 % par rapport à la SMA 200 entraînent souvent des replis significatifs. Nous calculons quotidiennement des scores de convergence de tendance.",
+            "technical": "Nous utilisons la combinaison de la SMA 200 et de l'EMA 20 pour le « trend-stacking ». Quand les moyennes courtes sont au-dessus des longues et que toutes montent, le marché a la dynamique haussière la plus forte. Elles sont les boussoles indispensables de tout analyste en 2026."
+        },
+        "forecast_risks": "Le risque principal des moyennes mobiles est leur nature d'indicateur retardé (lagging indicator). Elles montrent ce qui s'est passé, pas ce qui va arriver. Dans les marchés sans tendance (latéraux), les moyennes multiplient les « whipsaws » (faux signaux) car le prix croise les lignes sans cesse. Se fier aveuglément aux moyennes peut faire rater le moment optimal d'entrée.",
+        "gms_conclusion": "Compas de tendance stratégique. Les moyennes mobiles sont en 2026 le fondement de toute analyse de graphique professionnelle. Elles filtrent le bruit et révèlent la vérité de la tendance. N'ignorez jamais la direction de la ligne à 200 jours si vous visez le succès à long terme."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-09T23:47:00+00:00"
+}

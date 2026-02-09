@@ -1,0 +1,23 @@
+{
+    "slug": "chaikin-money-flow-cmf",
+    "lang": "FR",
+    "title": "Chaikin Money Flow (CMF - Le Flux Institutionnel)",
+    "type": "indicator",
+    "category": "Technicals",
+    "sections": {
+        "summary": "Le Chaikin Money Flow (CMF) est un oscillateur conçu pour mesurer le degré d'accumulation ou de distribution sur une période donnée. Il combine prix et volume pour déterminer si un actif subit une pression acheteuse (valeurs positives) ou une pression vendeuse (valeurs négatives). En 2026, le CMF est considéré comme l'un des indicateurs les plus fiables pour mesurer l'engagement institutionnel.",
+        "deep_dive": "La dynamique du CMF en 2026 repose sur le calcul quotidien du « Money Flow Multiplier », qui positionne le cours de clôture par rapport à l'amplitude de la séance. Chez GMS, nous analysons le CMF comme un « détecteur de flux de capitaux ». Un CMF positif au-dessus de la ligne zéro signale que la « Smart Money » accumule, ce qui précède souvent une cassure de prix. Nous surveillons particulièrement le maintien du CMF dans des zones extrêmes (+0,25 ou plus) comme signe d'une force de tendance exceptionnelle. La particularité en 2026 est la capacité du CMF à démasquer les « rebonds de marché baissier » (bear market rallies) : si les prix montent alors que le CMF reste négatif, la reprise est souvent éphémère et n'est pas soutenue par un volume institutionnel réel. Nous intégrons des données de volume pondérées pour optimiser la qualité des signaux CMF dans des marchés fragmentés.",
+        "council_debate": {
+            "geopolitics": "En période de crise, le CMF révèle souvent la « fuite vers la qualité ». Nous analysons comment le CMF sur les obligations du Trésor US ou l'or explose en 2026 pendant qu'il plonge sur les actifs risqués. Il visualise l'aversion au risque géopolitique.",
+            "macro": "Nous corrélons le CMF avec la politique de liquidité des banques centrales. Quand la Fed retire des liquidités, cela se traduit immédiatement par une baisse du CMF sur les indices actions larges. C'est le baromètre de l'effet de marée monétaire en macroéconomie.",
+            "tech": "Les bots d'IA utilisent le CMF pour valider les cassures. Nous observons en 2026 comment certains achats algorithmiques sont timés pour maintenir artificiellement un CMF positif et attirer d'autres algos. Une compréhension fine des métriques de volume est cruciale pour déjouer ces « pièges à bots ».",
+            "policy": "Les déclarations réglementaires des grands investisseurs (filings 13F) confirment souvent a posteriori les tendances déjà indiquées par le CMF des semaines auparavant. Nous évaluons l'efficacité de la régulation sur l'intégrité du marché. La politique influence indirectement la sincérité du volume.",
+            "quant": "Nos modèles utilisent le CMF pour calculer des « Money Consistency Scores ». Nous avons noté qu'une divergence positive du CMF en 2026 possède un pouvoir prédictif de retournement bien supérieur aux indicateurs de prix seuls. Nous calculons quotidiennement les niveaux d'accumulation institutionnelle.",
+            "technical": "Nous combinons le CMF avec le RSI pour obtenir une image complète du momentum et des flux de capitaux. Un signal d'achat est d'autant plus puissant que la tendance des prix et le flux CMF sont alignés à la hausse. Le CMF est la validation de l'intérêt fondamental sur le graphique."
+        },
+        "forecast_risks": "Le risque principal du CMF est la distorsion causée par des ordres « fat finger » ou un trading de programme massif en fin de séance. Le cours de clôture jouant un rôle central, des achats ciblés dans les dernières minutes peuvent manipuler le CMF. De plus, dans les phases latérales volatiles, le CMF peut osciller autour de zéro et multiplier les faux signaux.",
+        "gms_conclusion": "Analyste de liquidité stratégique. En 2026, le Chaikin Money Flow est votre fenêtre sur l'esprit des grands acteurs du marché. Ne vous fiez pas uniquement au prix ; suivez la trace de l'argent. Une tendance saine nécessite un CMF positif comme carburant."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-09T23:12:00+00:00"
+}

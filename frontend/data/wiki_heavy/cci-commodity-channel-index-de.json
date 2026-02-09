@@ -1,0 +1,23 @@
+{
+    "slug": "cci-commodity-channel-index",
+    "lang": "DE",
+    "title": "CCI (Commodity Channel Index - Der Zyklus-Detektor)",
+    "type": "indicator",
+    "category": "Technicals",
+    "sections": {
+        "summary": "Der Commodity Channel Index (CCI) ist ein vielseitiger Oszillator, der von Donald Lambert entwickelt wurde, um neue Trends zu identifizieren oder vor extremen überkauften/überverkauften Bedingungen zu warnen. Ursprünglich für Rohstoffmärkte konzipiert, wird er im Jahr 2026 universell für alle Anlageklassen eingesetzt, um zyklische Wendepunkte mit hoher Präzision zu bestimmen.",
+        "deep_dive": "Die Dynamik des CCI im Jahr 2026 basiert auf dem Vergleich des aktuellen Preises mit einem gleitenden Durchschnitt über einen bestimmten Zeitraum, normalisiert durch die mittlere Abweichung. GMS analysiert den CCI als 'Zyklus-Kompass'. Werte über +100 signalisieren den Beginn eines starken Aufwärtstrends, während Werte über +200 auf eine extreme Überhitzung hindeuten. Bei GMS beobachten wir den CCI insbesondere auf Tages- und Wochenbasis, um die 'Trend-Erschöpfung' frühzeitig zu erkennen. Die Besonderheit im Jahr 2026 ist die hohe Sensitivität des CCI gegenüber plötzlichen Volatilitätsschüben, was ihn ideal für den algorithmischen Handel macht. Wir integrieren statistische Standardabweichungen in unsere GMS-Modelle, um die Signale des CCI gegen Marktrauschen zu filtern. Ein Sprung des CCI von negativen Werten über die Nulllinie gilt als klassisches Kaufsignal der neuen Marktzyklus-Generation.",
+        "council_debate": {
+            "geopolitics": "In Rohstoffmärkten reflektiert der CCI oft die plötzliche Verknappung durch Handelskonflikte. Wir analysieren, wie der CCI bei Öl oder Seltenen Erden im Jahr 2026 'geopolitische Ausbrüche' visualisiert, bevor die Nachrichtenlage den Massenmarkt erreicht. Er ist das Frühwarnsystem der Ressourcen-Macht.",
+            "macro": "Wir korrelieren den CCI mit globalen Inflationszyklen. Ein anhaltend hoher CCI über viele Rohstoffgruppen hinweg deutet auf einen strukturellen Inflationsdruck hin. Im Jahr 2026 nutzen wir den CCI als makroökonomisches Barometer für die 'Überhitzung' der Weltwirtschaft.",
+            "tech": "Moderne Arbitrage-Bots nutzen den CCI, um Diskrepanzen zwischen verwandten Assets (z.B. Gold vs. Silber) auszubeuten. Wir beobachten, wie KI-Modelle den CCI-Parameter (Standardmäßig 20 Perioden) dynamisch an die aktuelle Marktvolatilität anpassen. Technologie optimiert die Treffgenauigkeit.",
+            "policy": "Notenbankinterventionen können CCI-Trends abrupt brechen. Wir bewerten die Auswirkungen von Zinsentscheidungen auf die zyklische Dynamik, die der CCI misst. Die Politik bestimmt oft die Wellenlänge, auf der die CCI-Oszillationen stattfinden.",
+            "quant": "Unsere Modelle nutzen den CCI für 'Mean-Reversion'-Strategien. Wir haben festgestellt, dass Werte über +300 im Jahr 2026 eine 85%ige Wahrscheinlichkeit für eine kurzfristige Preiskorrektur aufweisen. Wir berechnen für unsere Nutzer täglich 'Cyclical-Extreme-Scores'.",
+            "technical": "Wir nutzen Divergenzen zwischen Preis und CCI, um das Ende von Trends zu prognostizieren. Macht der Preis ein neues Hoch, der CCI aber nicht, ist Vorsicht geboten. Die Kombination aus CCI und Bollinger Bändern ist eine der effektivsten Strategien zur Identifizierung von Trendwenden im Jahr 2026."
+        },
+        "forecast_risks": "Das Hauptrisiko beim CCI ist seine Volatilität. Da der Indikator nicht begrenzt ist (im Gegensatz zum RSI), kann er in starken Trends extrem hohe Werte annehmen und dort verharren, was zu verfrühten 'Short'-Signalen führt. Zudem neigt der CCI in Seitwärtsmärkten zu vielen 'Whipsaws' (Fehlsignalen), die ohne zusätzliche Filter kostspielig sein können.",
+        "gms_conclusion": "Strategischer \"Zyklus-Wächter\". Der CCI ist im Jahr 2026 ein unverzichtbares Instrument, um die Phase eines Markttrends objektiv zu bewerten. Er schützt den Investor davor, am absoluten Hochpunkt einer Euphorie einzusteigen. Nutzen Sie ihn als Thermometer für die Markthitze."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-09T23:05:00+00:00"
+}

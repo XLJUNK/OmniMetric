@@ -1,0 +1,23 @@
+{
+    "slug": "supertrend",
+    "lang": "DE",
+    "title": "Supertrend (Der Trendfolge-Wächter)",
+    "type": "indicator",
+    "category": "Technicals",
+    "sections": {
+        "summary": "Der Supertrend-Indikator ist ein effizientes Werkzeug zur Identifizierung von Markttrends und zur Bestimmung von Kauf- oder Verkaufssignalen. Er basiert auf dem Average True Range (ATR) und passt sich dynamisch der Marktvolatilität an. Im Jahr 2026 ist der Supertrend bei Privatanlegern und institutionellen Tradern gleichermaßen beliebt, da er komplexe Trendstrukturen in ein einfaches binäres Signal übersetzt.",
+        "deep_dive": "Die Dynamik des Supertrends im Jahr 2026 liegt in seiner Einfachheit und Robustheit. GMS analysiert den Supertrend als 'Trend-Filter-System'. Der Indikator wechselt seine Farbe (meist Grün für Aufwärtstrend, Rot für Abwärtstrend) und seine Position zum Preis, sobald ein Volatilitätsband durchbrochen wird. Bei GMS beobachten wir den Supertrend vor allem auf 4-Stunden- und Tagescharts, um klares Rauschen von echten Trendwenden zu unterscheiden. Die Besonderheit im Jahr 2026 ist die Kombination des Supertrends mit Volumen-Clustern: Ein Signal ist nur dann valide, wenn es durch einen Anstieg des institutionellen Handelsvolumens bestätigt wird. Wir integrieren den Supertrend in unsere GMS-Modelle, um 'Stop-and-Reverse' (SAR) Strategien zu optimieren. In starken Trendphasen fungiert der Supertrend als exzellenter Trailing-Stop, der Gewinne schützt, während er dem Asset genügend Raum für natürliche Schwankungen lässt.",
+        "council_debate": {
+            "geopolitics": "Langfristige Trends werden durch geopolitische Weichenstellungen getrieben. Wir analysieren, wie der Supertrend bei strategischen Rohstoffen (wie Lithium oder Seltene Erden) auf politische Abkommen reagiert. Er visualisiert den 'politischen Rückenwind' oder Gegenwind für Assetklassen.",
+            "macro": "Wir korrelieren den Supertrend mit der globalen Liquiditätsentwicklung. Ein Wechsel des Supertrends beim S&P 500 auf 'Rot' ist oft ein Zeichen dafür, dass das Makro-Umfeld (Zinsen, Inflation) zu restriktiv geworden ist. Der Supertrend ist der 'Reality-Check' für optimistische Makro-Prognosen.",
+            "tech": "Algo-Trading-Plattformen nutzen den Supertrend als Basis für 'No-Code' Strategien. Wir beobachten, wie im Jahr 2026 durch die massenhafte Nutzung desselben Indikators 'Clustering-Effekte' entstehen, die Ausbrüche beschleunigen. Der Supertrend ist Teil der kollektiven Marktintelligenz.",
+            "policy": "Notenbankrhetorik kann kurzfristige Richtungskämpfe auslösen, aber der Supertrend zeigt uns, ob die Marktteilnehmer die Politik wirklich 'kaufen'. Wir bewerten die Persistenz von Trends nach wichtigen Policy-Shifts. Der Supertrend lügt nicht, auch wenn Politiker es tun.",
+            "quant": "Unsere Modelle nutzen statistische Wahrscheinlichkeiten für die Dauer eines Supertrend-Signals. Wir haben festgestellt, dass Trends im Jahr 2026 tendenziell kürzer, aber heftiger sind ('Fast Trends'). Wir berechnen täglich 'Trend-Exhaustion-Scores'.",
+            "technical": "Wir nutzen den Standard-Multiplikator (meist 3) und die Periode (meist 10), passen diese jedoch im Jahr 2026 adaptiv an das historische Volatilitätsregime des jeweiligen Assets an. Die Überschneidung mehrerer Zeitebenen (Multi-Timeframe-Supertrend) erhöht die Trefferquote signifikant."
+        },
+        "forecast_risks": "Das Hauptrisiko beim Supertrend ist das 'Whipsaw'-Risiko in Seitwärtsphasen. Da er stur einem Trend folgt, kann er in trendlosen Märkten viele kleine Verluste in Folge generieren. Zudem reagiert er konstruktionsbedingt verzögert auf plötzliche Preisumkehrungen ('V-Bottoms'), was zu einem späten Ausstieg führen kann.",
+        "gms_conclusion": "Strategischer \"Trend-Wächter\". Der Supertrend ist im Jahr 2026 Ihr wichtigster Schutz vor emotionalen Fehlentscheidungen. Folgen Sie dem Signal, bis der Markt Ihnen etwas anderes sagt. Disziplin ist der Schlüssel zum Erfolg mit diesem Indikator."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-09T20:20:00+00:00"
+}

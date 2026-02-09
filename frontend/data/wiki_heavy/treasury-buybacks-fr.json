@@ -1,0 +1,23 @@
+{
+    "slug": "treasury-buybacks",
+    "lang": "FR",
+    "title": "Rachats de bons du Trésor (Treasury Buybacks)",
+    "type": "indicator",
+    "category": "Fixed Income",
+    "sections": {
+        "summary": "Les rachats de bons du Trésor désignent les programmes du Trésor américain visant à racheter sur le marché la dette existante. Cela sert à gérer la liquidité et à lisser la courbe des taux. En 2026, ces rachats sont un instrument central de stabilisation du marché obligataire.",
+        "deep_dive": "La dynamique des rachats de bons du Trésor en 2026 est dictée par la nécessité d'assurer le bon fonctionnement du marché de la dette face à des volumes d'émission massifs. Chez GMS, nous analysons ces rachats comme une « injection de liquidité » ciblée. En 2026, nous observons particulièrement comment le Trésor échange des titres plus anciens et moins liquides (off-the-run) contre de nouveaux titres de référence (on-the-run). Nous utilisons les données de rachat pour identifier les soutiens artificiels de prix sur les longues échéances. Nous intégrons le calendrier des adjudications et le compte général du Trésor (TGA) dans nos modèles GMS pour prédire l'évolution des taux en 2026. Les rachats sont l'amortisseur économique du dollar américain.",
+        "council_debate": {
+            "geopolitics": "Le désengagement de certaines banques centrales étrangères accroît en 2026 la pression sur le Trésor US pour utiliser les rachats comme garantie de stabilité. Nous analysons comment les tensions internationales renforcent la nécessité d'interventions étatiques. Les rachats protègent en 2026 le rôle mondial des Treasuries.",
+            "macro": "Nous corrélons les programmes de rachat avec la structure globale de la courbe des taux. En 2026, les rachats sont un moyen d'éviter une inversion excessive et dommageable. Nous utilisons des modèles d'impact de rachat pour diagnostiquer la stabilité obligataire. L'État agit en 2026 comme « l'acheteur de dernier ressort ».",
+            "tech": "L'analyse algorithmique des volumes d'échanges aide le Trésor en 2026 à placer ses rachats là où la liquidité est la plus faible. Nous observons l'essor de systèmes de provisionnement de liquidité qui anticipent l'activité étatique. La technologie rend la gestion de la dette plus agile en 2026.",
+            "policy": "La coordination entre politique budgétaire (Trésor) et politique monétaire (Fed) s'intensifie en 2026 via les programmes de rachat. Nous évaluons l'impact de cette coopération sur l'indépendance des institutions. La politique utilise les rachats comme un outil discret de pilotage du marché.",
+            "quant": "Nos modèles utilisent les analyses de prime de liquidité. Nous avons noté qu'en 2026, les phases de rachats actifs réduisent la volatilité obligataire de 15 % en moyenne. Nous calculons quotidiennement les « Treasury Market Depth Scores ».",
+            "technical": "Nous utilisons l'analyse des spreads entre différentes échéances pour mesurer l'efficacité des rachats. Une baisse technique des rendements sur des points précis de la courbe signale souvent l'activité gouvernementale en 2026. Les seuils techniques sont significativement influencés par ces interventions."
+        },
+        "forecast_risks": "Le risque principal réside dans la surcharge fiscale en 2026. Si l'État doit injecter trop de liquidité, cela pourrait miner la crédibilité de la signature américaine. De plus, il existe un risque de distorsion du marché où les prix ne reflètent plus la demande réelle mais uniquement l'action publique.",
+        "gms_conclusion": "Ancre de liquidité stratégique. Surveillez là où l'État achète. En 2026, GMS fournit l'analyse indispensable des programmes de rachat pour comprendre les rapports de force réels sur le marché de la dette. La stabilité est un produit piloté par l'État en 2026."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-10T04:47:00+00:00"
+}

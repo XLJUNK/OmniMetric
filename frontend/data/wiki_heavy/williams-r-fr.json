@@ -1,0 +1,23 @@
+{
+    "slug": "williams-r",
+    "lang": "FR",
+    "title": "Williams %R (Williams Percent Range - L'Anticipateur de Momentum)",
+    "type": "indicator",
+    "category": "Technicals",
+    "sections": {
+        "summary": "Le Williams %R, également connu sous le nom de Williams Percent Range, est un indicateur de momentum qui mesure le niveau du cours de clôture par rapport aux plus hauts et plus bas d'une période donnée (généralement 14 jours). Développé par Larry Williams, il est étroitement lié à l'oscillateur stochastique mais s'affiche sur une échelle inversée de 0 à -100. En 2026, le Williams %R est un outil clé pour les traders cherchant à anticiper les états de surachat ou de survente extrêmes lors de mouvements de marché rapides.",
+        "deep_dive": "La dynamique du Williams %R en 2026 souligne son caractère d'indicateur « avancé ». Larry Williams lui-même a observé que cet oscillateur atteint souvent des sommets et des creux avant le prix lui-même. Chez GMS, nous l'analysons comme un « capteur d'épuisement du marché ». Les valeurs entre 0 et -20 sont jugées surachetées, tandis que celles entre -80 et -100 sont survendues. Nous surveillons particulièrement le motif de « failure swing » : lorsque l'indicateur quitte la zone de survente, forme un sommet local puis se retourne sans marquer de nouveau plus bas, cela est interprété comme un signal haussier puissant. La particularité en 2026 est son application aux données intraday haute fréquence pour identifier les « flash-reversals ». Nous intégrons ces données dans nos modèles GMS pour émettre des alertes sur les retournements de tendance à court terme provoqués par des crises de liquidité.",
+        "council_debate": {
+            "geopolitics": "Les nouvelles géopolitiques soudaines provoquent des mouvements verticaux du %R. Nous analysons la vitesse à laquelle l'indicateur bascule d'une zone extrême à l'autre pour cartographier la « nervosité politique ». Il nous indique quand une nouvelle est déjà totalement intégrée par le marché.",
+            "macro": "Nous corrélons le Williams %R avec les anticipations de taux à court terme. Un %R durablement suracheté sur les obligations d'État indique souvent une fuite vers la qualité (flight to quality). L'oscillateur révèle l'immédiateté de la cupidité et de la peur des acteurs macro.",
+            "tech": "Les bots de trading basés sur l'IA utilisent le Williams %R pour calibrer des stratégies de retour à la moyenne (mean reversion). Nous observons en 2026 une concentration des ordres sur les seuils précis de -80 ou -20. C'est un déclencheur numérique pour les systèmes automatisés.",
+            "policy": "Les déclarations des banques centrales entraînent souvent une oscillation violente du %R. Nous évaluons la force de rappel du marché après ces événements. Le Williams %R nous aide à comprendre si une réaction est exagérée ou s'il s'agit d'une réelle réévaluation fondamentale.",
+            "quant": "Nos modèles combinent le Williams %R avec des moyennes mobiles (SMA 200) pour ne traiter que les signaux allant dans le sens de la tendance. Nous avons constaté qu'en 2026, il est particulièrement efficace pour identifier les « rallyes de marché baissier ». Nous calculons quotidiennement des probabilités de retournement.",
+            "technical": "Nous portons une attention particulière à la force de la sortie des zones extrêmes. Le simple fait d'atteindre -10 n'est pas un signal de vente ; c'est la cassure de cette zone vers le bas qui génère le signal. Nous l'utilisons aussi pour confirmer des figures comme les doubles sommets."
+        },
+        "forecast_risks": "Le risque principal du Williams %R est sa sensibilité aux petites fluctuations de prix, ce qui peut générer de nombreux faux signaux dans un marché en tendance forte. Un actif peut rester « suracheté » très longtemps alors que le cours continue de grimper. À l'inverse, un %R extrêmement bas peut indiquer une dynamique baissière si forte que le point bas est encore loin.",
+        "gms_conclusion": "Détecteur stratégique de points d'inflexion. En 2026, le Williams %R est votre système d'alerte précoce contre les excès de marché. Utilisez-le pour vous positionner à contre-courant quand le marché atteint ses limites, mais restez vigilant face aux tendances de fond puissantes."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-09T20:42:00+00:00"
+}

@@ -1,0 +1,23 @@
+{
+    "slug": "parabolic-sar",
+    "lang": "FR",
+    "title": "SAR Parabolique (Stop and Reverse - L'Accélérateur de Tendance)",
+    "type": "indicator",
+    "category": "Technicals",
+    "sections": {
+        "summary": "Le SAR Parabolique (Stop and Reverse) est un indicateur technique développé par J. Welles Wilder Jr. pour identifier les points de retournement potentiels des tendances de marché. Il se présente sous la forme d'une série de points placés au-dessus ou au-dessous des bougies de prix. En 2026, le SAR Parabolique est l'outil de référence pour les traders souhaitant déterminer le moment optimal de sortie dans des marchés fortement directionnels tout en intégrant le facteur temps dans leur stratégie.",
+        "deep_dive": "La dynamique du SAR Parabolique en 2026 repose sur son « facteur d'accélération » intégré. Plus une tendance dure et plus le prix se déplace rapidement, plus les points se rapprochent du cours. Chez GMS, nous l'analysons comme un « système de discipline de tendance ». Lorsque les points passent de dessous à dessus le prix, cela signale la fin d'une tendance haussière. Nous surveillons particulièrement le SAR en conjonction avec l'ADX : il est optimal quand la force de la tendance est élevée (ADX > 25). La particularité en 2026 est son utilisation pour les stops suiveurs automatisés qui s'adaptent de manière exponentielle à la vélocité des prix. Nous intégrons les renversements de SAR dans nos modèles GMS pour identifier les « gaps d'épuisement ». Un signal SAR seul ne suffit pas, mais il constitue une confirmation majeure au sein d'une cascade d'indicateurs de retournement.",
+        "council_debate": {
+            "geopolitics": "Le SAR Parabolique capture avec précision les tendances structurelles nées des réalignements géopolitiques. Nous analysons comment il réagit sur les devises émergentes suite à des réformes politiques. Il illustre la « vitesse de la confiance » ou de la défiance envers un système.",
+            "macro": "Nous corrélons les cycles SAR avec l'évolution de la conjoncture. Un changement de direction du SAR sur une base mensuelle pour les indices globaux signale souvent l'entrée ou la sortie d'une récession. C'est le « feu tricolore » des expositions macro de long terme.",
+            "tech": "Les systèmes algorithmiques utilisent souvent le SAR comme filtre primaire pour déterminer un biais acheteur ou vendeur. Nous observons en 2026 des « sorties en cascade » lorsque le SAR se retourne sur les grandes capitalisations boursières. C'est un déclencheur de liquidité programmée.",
+            "policy": "Les décisions des banques centrales peuvent faire basculer le SAR instantanément. Nous évaluons la persistance du nouveau signal après le pic de volatilité initial. Le SAR aide à distinguer si un changement de politique n'est qu'un bruit passager ou un réel tournant de tendance.",
+            "quant": "Nos modèles optimisent le facteur d'accélération (AF) du SAR en fonction de la volatilité historique de la classe d'actifs. En 2026, nous avons noté que les réglages standards sont souvent trop serrés pour les matières premières. Nous calculons des probabilités de renversement quotidien.",
+            "technical": "Nous utilisons le SAR principalement pour sécuriser les gains durant les phases paraboliques (blow-off tops). Quand le SAR rattrape le prix, il est temps de sortir. Nous surveillons l'écartement entre les points comme mesure de l'accélération du mouvement actuel."
+        },
+        "forecast_risks": "Le risque principal du SAR Parabolique est son inefficacité dans les marchés sans tendance (« chop »). Dans ces phases, il saute d'un côté à l'autre du prix et génère de nombreuses petites pertes. C'est un pur suiveur de tendance qui échoue totalement en cas de consolidation latérale. De plus, il peut forcer une sortie prématurée lors de pics de prix soudains liés aux actualités.",
+        "gms_conclusion": "Guide de tendance stratégique. En 2026, le SAR Parabolique est votre instrument clé pour maximiser les profits dans les tendances. Laissez les points vous guider, mais débranchez-le dès que le marché entre en mode léthargique. Le timing est primordial."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-09T20:47:00+00:00"
+}

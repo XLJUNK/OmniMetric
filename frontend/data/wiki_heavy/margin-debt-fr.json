@@ -1,0 +1,23 @@
+{
+    "slug": "margin-debt",
+    "lang": "FR",
+    "title": "Margin Debt (Dette sur marge - Le moniteur de levier)",
+    "type": "indicator",
+    "category": "Macro",
+    "sections": {
+        "summary": "La dette sur marge (Margin Debt) représente le montant total emprunté par les investisseurs auprès de leurs courtiers pour acheter des titres financiers. Elle constitue la mesure principale du levier (leverage) dans le système. En 2026, elle est un indicateur critique du risque systémique et des phases finales de marchés haussiers spéculatifs.",
+        "deep_dive": "La dynamique de la dette sur marge en 2026 est caractérisée par le risque de « liquidation forcée ». Chez GMS, nous analysons la dette sur marge comme le baromètre de la fragilité boursière. Une hausse rapide suggère une confiance extrême, mais augmente la menace d'appels de marge (margin calls) en cas de baisse des cours. Nous surveillons particulièrement le taux de croissance annuel de la dette : historiquement, des augmentations de plus de 60 % en un an ont presque toujours précédé des corrections massives. La particularité en 2026 réside dans l'interconnexion entre les comptes de marge classiques et les plateformes de prêt crypto. Nous intégrons les données de crédit agrégées dans nos modèles GMS pour capturer l'ensemble du levier en circulation. Un désendettement (de-leveraging) signale souvent une purge saine, mais peut déclencher une spirale baissière s'il est trop brutal.",
+        "council_debate": {
+            "geopolitics": "En période d'instabilité géopolitique, les courtiers durcissent les exigences de marge pour les actifs étrangers. Nous analysons comment la dette sur marge en 2026 est utilisée comme levier de répression financière, canalisant le capital vers les marchés domestiques jugés plus sûrs. Elle visualise la fragmentation financière mondiale.",
+            "macro": "Nous corrélons la dette sur marge avec la politique de taux des banques centrales. La hausse des taux renchérit le coût de l'emprunt et force les acteurs les plus exposés à vendre. En 2026, nous l'utilisons pour prédire les crises de liquidité. Elle montre combien de « temps emprunté » il reste à la tendance actuelle.",
+            "tech": "Les systèmes de gestion des risques pilotés par IA chez les brokers déclenchent désormais les margin calls à la milliseconde près. Nous observons en 2026 l'émergence de cascades de liquidations amplifiées par les ordres automatiques. La technologie a triplé la vitesse du désendettement par rapport aux crises précédentes.",
+            "policy": "Les autorités financières durcissent en 2026 les règles de transparence pour les positions à effet de levier des hedge funds (family offices). Nous évaluons l'impact des décotes (haircuts) plus strictes sur la liquidité globale. La politique tente de minimiser le « risque Archegos » à l'échelle systémique.",
+            "quant": "Nos modèles utilisent le ratio Dette sur Marge / PIB comme indicateur de valorisation long terme. Nous avons noté que des écarts extrêmes en 2026 corrèlent avec une hausse significative de la probabilité de « risque de queue » (tail-risk). Nous calculons quotidiennement des « Leverage Capitulation Scores ».",
+            "technical": "Nous utilisons la dette sur marge pour confirmer les sommets de marché. Si le marché monte alors que la dette stagne ou baisse, cela indique l'épuisement du capital spéculatif. C'est le moniteur du réservoir de carburant du bull market en 2026."
+        },
+        "forecast_risks": "Le risque principal de l'interprétation réside dans le retard de publication des données (souvent mensuel). Dans l'environnement ultra-rapide de 2026, le système peut s'effondrer avant que les chiffres officiels ne montrent un reflux. De plus, une part croissante du levier est désormais traitée via le « shadow banking » et les dérivés (swaps), échappant aux statistiques officielles.",
+        "gms_conclusion": "Indicateur de levier stratégique. En 2026, la dette sur marge est la métrique la plus importante pour mesurer la quantité d'argent « chaud » présent sur le marché. Respectez le danger du levier : ce qui propulse le marché vers le haut peut le précipiter dans l'abîme à la première secousse."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-10T00:57:00+00:00"
+}
