@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-02-09T21:50:23.751091+00:00",
+    "last_updated": "2026-02-09T22:48:41.052079+00:00",
     "market_data": {
         "CRYPTO_SENTIMENT": {
             "price": 14,
@@ -39,11 +39,10 @@
             ]
         },
         "YIELD_SPREAD": {
-            "price": 0.54,
+            "price": 0.53,
             "change_percent": 0.0,
             "trend": "NORMAL",
             "sparkline": [
-                0.44,
                 0.49,
                 0.51,
                 0.51,
@@ -72,7 +71,8 @@
                 0.59,
                 0.6,
                 0.54,
-                0.54
+                0.54,
+                0.53
             ]
         },
         "HY_SPREAD": {
@@ -173,11 +173,10 @@
             ]
         },
         "BREAKEVEN_INFLATION": {
-            "price": 2.34,
+            "price": 2.35,
             "change_percent": 0.0,
             "trend": "STABLE",
             "sparkline": [
-                2.22,
                 2.24,
                 2.25,
                 2.25,
@@ -206,7 +205,8 @@
                 2.36,
                 2.35,
                 2.32,
-                2.34
+                2.34,
+                2.35
             ]
         },
         "VIX": {
@@ -241,11 +241,10 @@
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
-            "price": 0.72,
+            "price": 0.74,
             "change_percent": 0.0,
             "trend": "NEUTRAL",
             "sparkline": [
-                0.67,
                 0.69,
                 0.71,
                 0.71,
@@ -274,7 +273,8 @@
                 0.71,
                 0.72,
                 0.74,
-                0.72
+                0.72,
+                0.74
             ]
         },
         "US_10Y_YIELD": {
@@ -569,11 +569,11 @@
             ]
         },
         "BTC": {
-            "price": 69874.19,
+            "price": 70483.82,
             "prev_price": 70264.73,
-            "daily_chg": -0.56,
-            "change_percent": 11.44,
-            "trend": "DOWN",
+            "daily_chg": 0.31,
+            "change_percent": 12.41,
+            "trend": "UP",
             "sparkline": [
                 92553.59,
                 88310.91,
@@ -596,14 +596,14 @@
                 70555.39,
                 69281.97,
                 70264.73,
-                69874.19
+                70483.82
             ]
         },
         "ETH": {
-            "price": 2097.58,
+            "price": 2116.68,
             "prev_price": 2088.76,
-            "daily_chg": 0.42,
-            "change_percent": 15.15,
+            "daily_chg": 1.34,
+            "change_percent": 16.19,
             "trend": "UP",
             "sparkline": [
                 3186.62,
@@ -627,15 +627,15 @@
                 2063.39,
                 2090.55,
                 2088.76,
-                2097.58
+                2116.68
             ]
         },
         "SOL": {
-            "price": 86.76,
+            "price": 87.12,
             "prev_price": 87.04,
-            "daily_chg": -0.32,
-            "change_percent": 10.97,
-            "trend": "DOWN",
+            "daily_chg": 0.09,
+            "change_percent": 11.43,
+            "trend": "UP",
             "sparkline": [
                 133.34,
                 125.71,
@@ -658,14 +658,14 @@
                 87.46,
                 87.64,
                 87.04,
-                86.76
+                87.12
             ]
         },
         "DXY": {
-            "price": 96.86,
+            "price": 96.88,
             "prev_price": 97.63,
-            "daily_chg": -0.79,
-            "change_percent": -0.59,
+            "daily_chg": -0.77,
+            "change_percent": -0.57,
             "trend": "DOWN",
             "sparkline": [
                 98.93,
@@ -689,7 +689,7 @@
                 97.62,
                 97.82,
                 97.63,
-                96.86
+                96.88
             ]
         },
         "USDJPY": {
@@ -726,8 +726,8 @@
         "EURUSD": {
             "price": 1.19,
             "prev_price": 1.18,
-            "daily_chg": 1.2,
-            "change_percent": 1.02,
+            "daily_chg": 1.16,
+            "change_percent": 0.98,
             "trend": "UP",
             "sparkline": [
                 1.17,
@@ -758,7 +758,7 @@
             "price": 90.71,
             "prev_price": 90.31,
             "daily_chg": 0.44,
-            "change_percent": 0.52,
+            "change_percent": 0.51,
             "trend": "UP",
             "sparkline": [
                 89.91,
@@ -817,10 +817,10 @@
             ]
         },
         "GOLD": {
-            "price": 5083.2,
+            "price": 5084.2,
             "prev_price": 4951.2,
-            "daily_chg": 2.67,
-            "change_percent": 3.66,
+            "daily_chg": 2.69,
+            "change_percent": 3.68,
             "trend": "UP",
             "sparkline": [
                 4449.7,
@@ -844,14 +844,14 @@
                 4920.4,
                 4861.4,
                 4951.2,
-                5083.2
+                5084.2
             ]
         },
         "OIL": {
-            "price": 64.43,
+            "price": 64.42,
             "prev_price": 63.55,
-            "daily_chg": 1.38,
-            "change_percent": 1.93,
+            "daily_chg": 1.37,
+            "change_percent": 1.91,
             "trend": "UP",
             "sparkline": [
                 57.76,
@@ -875,14 +875,14 @@
                 65.14,
                 63.29,
                 63.55,
-                64.43
+                64.42
             ]
         },
         "COPPER": {
             "price": 5.96,
             "prev_price": 5.86,
-            "daily_chg": 1.65,
-            "change_percent": -1.69,
+            "daily_chg": 1.67,
+            "change_percent": -1.67,
             "trend": "UP",
             "sparkline": [
                 5.75,
@@ -912,8 +912,8 @@
         "NATGAS": {
             "price": 3.14,
             "prev_price": 3.42,
-            "daily_chg": -8.21,
-            "change_percent": -5.13,
+            "daily_chg": -8.24,
+            "change_percent": -5.16,
             "trend": "DOWN",
             "sparkline": [
                 3.41,
@@ -941,10 +941,10 @@
             ]
         },
         "SILVER": {
-            "price": 82.93,
+            "price": 83.05,
             "prev_price": 76.74,
-            "daily_chg": 8.07,
-            "change_percent": -0.14,
+            "daily_chg": 8.23,
+            "change_percent": 0.01,
             "trend": "UP",
             "sparkline": [
                 74.72,
@@ -968,7 +968,7 @@
                 84.17,
                 76.53,
                 76.74,
-                82.93
+                83.05
             ]
         },
         "DAX": {
@@ -1749,8 +1749,8 @@
         "GBPUSD": {
             "price": 0.73,
             "prev_price": 0.74,
-            "daily_chg": -1.3,
-            "change_percent": -0.19,
+            "daily_chg": -1.26,
+            "change_percent": -0.15,
             "trend": "DOWN",
             "sparkline": [
                 0.74,
@@ -1780,8 +1780,8 @@
         "AUDUSD": {
             "price": 1.41,
             "prev_price": 1.45,
-            "daily_chg": -2.53,
-            "change_percent": -1.98,
+            "daily_chg": -2.5,
+            "change_percent": -1.95,
             "trend": "DOWN",
             "sparkline": [
                 1.49,
@@ -1811,8 +1811,8 @@
         "USDCAD": {
             "price": 1.36,
             "prev_price": 1.37,
-            "daily_chg": -1.13,
-            "change_percent": -0.85,
+            "daily_chg": -1.12,
+            "change_percent": -0.84,
             "trend": "DOWN",
             "sparkline": [
                 1.39,
@@ -1873,8 +1873,8 @@
         "USDCHF": {
             "price": 0.77,
             "prev_price": 0.78,
-            "daily_chg": -1.48,
-            "change_percent": -1.64,
+            "daily_chg": -1.43,
+            "change_percent": -1.6,
             "trend": "DOWN",
             "sparkline": [
                 0.8,
@@ -2526,7 +2526,7 @@
         "history_length": 60,
         "system": "moving_fortress"
     },
-    "last_successful_update": "2026-02-09T21:50:23.751098+00:00",
+    "last_successful_update": "2026-02-09T22:48:41.052086+00:00",
     "gms_score": 44,
     "sector_scores": {
         "STOCKS": 70,
@@ -2584,24 +2584,20 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "The GMS Score at 44 signals a shift to a Neutral regime. Upward momentum pushed the score to 44 from 31, driven by a sharp decline in VIX (Fear index) and a weaker DXY (Dollar strength), which improved global liquidity. While equity risk appetite is returning as credit spreads tighten, the surge in Gold and Silver suggests underlying hedging against tail risks. Given low crypto sentiment, monitor if this recovery is sustainable or a relief rally. Maintain balanced exposure with a focus on high-quality assets.",
+        "content": "GMS Status: Neutral (44). Upward momentum pushed the score to 44, signaling a transition from defensive positioning. The sharp drop in VIX (Volatility) and DXY (Dollar strength) indicates easing financial pressure and improved liquidity. While High-Yield spreads narrowing is positive, the stagnant Crypto Sentiment (14) remains a major headwind for a full risk-on transition. Watch if labor market cooling, seen in retail layoffs, offsets recent gains. Action: Maintain neutral core holdings but exercise caution until market sentiment broadens.",
         "reports": {
-            "JP": "GMSスコアは44となり、市場は「中立」局面に移行しました。モメンタムがスコアを31から44へ押し上げ、VIX（恐怖指数）の大幅低下とDXY（ドル強弱）の軟化が市場流動性を改善させています。リスク資産への資金回帰が見られる一方、金・銀の急騰は依然として強いヘッジ需要を示唆しています。クリプト感応度の低迷が続く中、現在の回復が持続的か慎重に見極める段階です。ボラティリティの安定を確認しつつ、質の高い資産への分散投資を推奨します。",
-            "EN": "The GMS Score at 44 signals a shift to a Neutral regime. Upward momentum pushed the score to 44 from 31, driven by a sharp decline in VIX (Fear index) and a weaker DXY (Dollar strength), which improved global liquidity. While equity risk appetite is returning as credit spreads tighten, the surge in Gold and Silver suggests underlying hedging against tail risks. Given low crypto sentiment, monitor if this recovery is sustainable or a relief rally. Maintain balanced exposure with a focus on high-quality assets.",
-            "CN": "GMS得分为44，标志着市场进入“中立”格局。上涨动能将得分从31推升至44，主要归功于VIX（恐慌指数）大幅回落和DXY（美元走势）转弱，这显著改善了全球流动性。尽管高收益债利差收窄显示风险偏好回升，但金银价格的飙升反映出市场仍存在较强的避险对冲需求。由于加密情绪依然低迷，需警惕当前反弹的持久性。操作上建议保持平衡，在观察波动率企稳的同时，重点关注优质资产。",
-            "ES": "El puntaje GMS de 44 indica una transición hacia un régimen Neutral. El impulso alcista elevó el puntaje de 31 a 44, impulsado por una caída en el VIX (índice de miedo) y un DXY (fortaleza del dólar) más débil, mejorando la liquidez global. Aunque el apetito por el riesgo crece al reducirse los diferenciales de crédito, el auge del Oro y la Plata sugiere que persiste la cobertura contra riesgos sistémicos. Dada la baja confianza en cripto, vigile si la recuperación es sostenible. Se recomienda cautela y activos de calidad.",
-            "HI": "GMS स्कोर 44 बाजार के 'तटस्थ' चरण में प्रवेश का संकेत देता है। सकारात्मक मोमेंटम ने स्कोर को 31 से 44 तक पहुँचाया है, जिसका मुख्य कारण VIX (डर सूचकांक) में गिरावट और DXY (डॉलर की मजबूती) का कमजोर होना है, जिससे तरलता में सुधार हुआ। हालाँकि जोखिम लेने की क्षमता बढ़ी है, लेकिन सोने और चांदी में उछाल यह दर्शाता है कि निवेशक अभी भी सावधानी बरत रहे हैं। क्रिप्टो सेंटिमेंट कम होने के कारण, इस तेजी की स्थिरता पर नजर रखें। संतुलित निवेश और गुणवत्तापूर्ण संपत्ति पर ध्यान देना उचित होगा।",
-            "ID": "Skor GMS di level 44 menandakan transisi menuju rezim Netral. Momentum positif mendorong skor naik dari 31 ke 44, didorong oleh penurunan tajam VIX (indeks ketakutan) dan pelemahan DXY (kekuatan Dolar) yang memperbaiki likuiditas global. Meskipun minat risiko meningkat seiring menyempitnya spread obligasi, lonjakan harga Emas dan Perak menunjukkan adanya lindung nilai yang kuat. Mengingat sentimen kripto yang masih rendah, waspadai potensi pembalikan arah. Tetap fokus pada aset berkualitas dengan eksposur yang seimbang.",
-            "AR": "تشير درجة GMS البالغة 44 إلى التحول نحو نظام محايد. دفع الزخم الصعودي النتيجة من 31 إلى 44، مدعوماً بانخفاض حاد في مؤشر VIX (الخوف) وضعف مؤشر DXY (قوة الدولار)، مما حسن السيولة العالمية. بينما تعود الشهية للمخاطرة مع تقلص هوامش الائتمان، فإن صعود الذهب والفضة يشير إلى استمرار التحوط ضد المخاطر. نظراً لضعف معنويات الكريبتو، يجب مراقبة استدامة هذا التعافي بدقة. يُنصح بالحفاظ على محفظة متوازنة مع التركيز على الأصول ذات الجودة العالية لضمان الاستقرار.",
-            "DE": "Ein GMS-Score von 44 signalisiert den Übergang in ein neutrales Marktumfeld. Das Aufwärtsmomentum schob den Score von 31 auf 44, getrieben durch einen fallenden VIX (Angstindex) und einen schwächeren DXY (Dollarstärke), was die Liquidität erhöhte. Während die Risikobereitschaft bei Aktien steigt, deutet die Rallye bei Gold und Silber auf anhaltende Absicherungswünsche hin. Angesichts der schwachen Krypto-Stimmung bleibt die Nachhaltigkeit der Erholung fraglich. Empfohlen wird eine ausgewogene Strategie mit Fokus auf defensive Qualität und Volatilitätskontrolle.",
-            "FR": "Le score GMS de 44 marque une transition vers un régime Neutre. Le momentum a propulsé le score de 31 à 44, soutenu par une chute du VIX (indice de peur) et un DXY (force du dollar) en baisse, favorisant la liquidité mondiale. Bien que l'appétit pour le risque revienne avec la compression des spreads, l'envolée de l'or et de l'argent révèle une prudence persistante. La faiblesse du sentiment crypto suggère de rester vigilant quant à la pérennité du rebond. Maintenez une approche équilibrée axée sur la qualité des actifs financiers."
+            "JP": "GMS状況：中立（44）。上昇モーメンタムがスコアを44に押し上げ、防衛的局面からの脱却を示唆しています。VIX（市場の恐怖）の大幅低下とDXY（ドル強さ）の軟化は、流動性の改善を反映しています。ハイイールド債スプレッドの縮小はポジティブですが、14に留まる仮想通貨センチメントがリスクオンへの移行を阻む要因です。小売業界の人員削減が示す労働市場の脆弱性が、今後の重石となる可能性があります。結論：中立を維持し、市場の広がりを注視してください。",
+            "EN": "GMS Status: Neutral (44). Upward momentum pushed the score to 44, signaling a transition from defensive positioning. The sharp drop in VIX (Volatility) and DXY (Dollar strength) indicates easing financial pressure and improved liquidity. While High-Yield spreads narrowing is positive, the stagnant Crypto Sentiment (14) remains a major headwind for a full risk-on transition. Watch if labor market cooling, seen in retail layoffs, offsets recent gains. Action: Maintain neutral core holdings but exercise caution until market sentiment broadens.",
+            "CN": "GMS状态：中性 (44)。上升动能将分数推高至44，显示市场正脱离防御阶段。VIX（波动率）和DXY（美元指数）的显著下跌反映了流动性的改善和压力缓解。尽管高收益债利差收窄是积极信号，但仅为14的加密货币情绪仍是风险偏好全面回升的主要阻碍。需警惕零售业裁员所反映的劳动力市场疲软是否会抵消近期涨幅。操作建议：保持中性配置，观察市场情绪是否能进一步扩散至其他资产类别。",
+            "ES": "Estado GMS: Neutral (44). El impulso alcista llevó la puntuación a 44, señalando una transición desde un régimen defensivo. La caída del VIX (Volatilidad/Miedo) y del DXY (Fuerza del Dólar) indica una mejora en la liquidez global. Aunque el estrechamiento de los diferenciales de crédito es positivo, el sentimiento cripto estancado (14) actúa como un freno para el riesgo total. Los despidos en el sector minorista sugieren una fragilidad laboral que podría limitar las ganancias recientes. Acción: Mantener cautela y observar la amplitud del mercado.",
+            "HI": "GMS स्थिति: तटस्थ (44)। ऊपर की ओर गति ने स्कोर को 44 तक पहुँचा दिया है, जो रक्षात्मक स्थिति से बदलाव का संकेत देता है। VIX (अस्थिरता) और DXY (डॉलर की मजबूती) में गिरावट तरलता में सुधार दर्शाती है। हालांकि हाई-यिल्ड स्प्रेड का कम होना सकारात्मक है, लेकिन स्थिर क्रिप्टो सेंटिमेंट (14) जोखिम-चालू स्थिति के लिए एक बड़ी बाधा है। खुदरा क्षेत्र में छंटनी से संकेत मिलता है कि श्रम बाजार की कमजोरी हालिया बढ़त को रोक सकती है। कार्रवाई: तटस्थ रुख अपनाएं और बाजार की धारणा व्यापक होने तक सावधानी बरतें।",
+            "ID": "Status GMS: Netral (44). Momentum ke atas mendorong skor ke 44, menandakan pergeseran dari rezim defensif. Penurunan tajam VIX (Volatilitas/Ketakutan) dan DXY (Kekuatan Dolar) menunjukkan pelonggaran tekanan likuiditas. Meskipun penyempitan spread imbal hasil tinggi positif, Sentimen Kripto yang stagnan (14) tetap menjadi hambatan utama untuk transisi risk-on penuh. Perhatikan apakah PHK di sektor ritel menandakan pelemahan tenaga kerja yang dapat menghambat reli saat ini. Kesimpulan: Pertahankan posisi netral dan pantau perluasan sentimen.",
+            "AR": "حالة GMS: محايد (44). دفع الزخم الصعودي النتيجة إلى 44، مما يشير إلى تحول من النظام الدفاعي. يعكس الانخفاض في VIX (التقلب) وDXY (قوة الدولار) تحسن السيولة وتخفيف الضغوط المالية. ورغم إيجابية تقلص هوامش العائد المرتفع، لا يزال ركود مشاعر الكريبتو (14) عائقاً أمام شهية المخاطرة الكاملة. قد تؤدي تسريحات العمال في قطاع التجزئة إلى تقويض المكاسب الأخيرة نتيجة ضعف سوق العمل. الإجراء: الحفاظ على موقف محايد ومراقبة اتساع نطاق الثقة في السوق قبل زيادة المخاطر.",
+            "DE": "GMS-Status: Neutral (44). Der Aufwärtsimpuls hob den Score auf 44, was den Übergang aus einer defensiven Phase signalisiert. Sinkende Werte bei VIX (Volatilität) und DXY (Dollarstärke) deuten auf eine verbesserte Liquidität hin. Während die Verengung der High-Yield-Spreads positiv ist, bleibt das stagnierende Krypto-Sentiment (14) ein Hindernis für echtes Risk-On. Stellenabbau im Einzelhandel könnte die Erholung dämpfen und auf eine Schwäche am Arbeitsmarkt hindeuten. Fazit: Neutrale Haltung beibehalten und auf eine breitere Marktstimmung achten.",
+            "FR": "Statut GMS : Neutre (44). L'élan haussier a porté le score à 44, marquant une sortie du régime défensif. La baisse du VIX (Volatilité/Peur) et du DXY (Force du Dollar) signale une amélioration de la liquidité globale. Bien que le resserrement des spreads de crédit soit positif, le sentiment crypto stagnant (14) freine une transition complète vers le risque. Les restructurations dans le commerce de détail indiquent une fragilité de l'emploi qui pourrait peser sur la reprise actuelle. Action : Maintenir une position neutre en surveillant l'élargissement du sentiment."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-02T03:29:46Z",
-            "score": 27
-        },
         {
             "date": "2026-02-02T04:41:57Z",
             "score": 28
@@ -2837,6 +2833,10 @@
         {
             "date": "2026-02-09T21:50:23Z",
             "score": 44
+        },
+        {
+            "date": "2026-02-09T22:48:41Z",
+            "score": 44
         }
     ],
     "intelligence": {
@@ -2844,7 +2844,7 @@
             {
                 "title": "Target steps up investment in store staffing, cuts about 500 other roles to help fix customer experience",
                 "link": "https://www.cnbc.com/2026/02/09/target-store-investment-job-cuts-customer-experience.html",
-                "isoDate": "2026-02-09T20:31:53+00:00Z"
+                "isoDate": "2026-02-09T22:10:44+00:00Z"
             },
             {
                 "title": "Tulsi Gabbard to testify at Senate Intelligence Committee amid election probe concerns",
@@ -2857,9 +2857,9 @@
                 "isoDate": "2026-02-09T19:18:09+00:00Z"
             },
             {
-                "title": "Housing affordability package set to advance in Congress amid home-cost concerns",
-                "link": "https://www.cnbc.com/2026/02/09/housing-affordability-prices-congress.html",
-                "isoDate": "2026-02-09T20:46:00+00:00Z"
+                "title": "Stocks making the biggest moves after hours: ON Semiconductor, Upwork, Chegg and more",
+                "link": "https://www.cnbc.com/2026/02/09/stocks-making-the-biggest-moves-after-hours-on-upwk-chgg.html",
+                "isoDate": "2026-02-09T22:46:19+00:00Z"
             },
             {
                 "title": "Where the manager of this Morningstar 5-star rated fund is finding income right now",
@@ -2867,78 +2867,78 @@
                 "isoDate": "2026-02-09T21:00:54+00:00Z"
             },
             {
-                "title": "Alphabet calls out new AI-related risks, as it taps debt market to fund buildout",
-                "link": "https://www.cnbc.com/2026/02/09/alphabet-highlights-new-ai-related-risks-in-tapping-debt-market.html",
-                "isoDate": "2026-02-09T21:30:08+00:00Z"
+                "title": "Housing affordability package set to advance in Congress amid home-cost concerns",
+                "link": "https://www.cnbc.com/2026/02/09/housing-affordability-prices-congress.html",
+                "isoDate": "2026-02-09T20:46:00+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "ターゲット、店舗の人員増強に投資を拡大、顧客体験改善のため約500の他部門を削減",
-                "トゥルシー・ギャバード氏、選挙捜査懸念の中で上院情報委員会の公聴会で証言へ",
-                "FDA、ノボ・ノルディスクの肥満薬TV広告に「虚偽または誤解を招く」主張が含まれると指摘",
-                "住宅費高騰懸念の中、住宅手頃化パッケージが議会で進展の見込み",
-                "モーニングスター5つ星評価ファンドのマネージャーが現在、収益源を見出している場所",
-                "アルファベット、AI関連の新リスクを公表、構築資金調達のため債務市場を活用"
+                "ターゲット、顧客体験改善のため店舗人員に投資を強化、約500の他職種を削減",
+                "トゥルシー・ギャバード氏、選挙捜査懸念の中、上院情報特別委員会で証言へ",
+                "FDA、ノボノルディスク社の肥満薬TV広告に「虚偽または誤解を招く」主張が含まれると指摘",
+                "引け後に最も動いた株式：オン・セミコンダクター、アップワーク、チェグなど",
+                "モーニングスター5つ星評価ファンドのマネージャーが現在収入を得ている場所",
+                "住宅費高騰懸念の中、住宅購入支援パッケージが議会で承認へ向かう"
             ],
             "CN": [
-                "Target加码门店人员投资，削减约500个其他岗位以改善客户体验",
-                "Tulsi Gabbard amid election probe concerns to testify at Senate Intelligence Committee",
-                "FDA称Novo Nordisk的减肥药电视广告包含“虚假或误导性”声明",
-                "在房价高企的担忧中，住房负担能力一揽子计划有望在国会推进",
-                "这家晨星五星评级基金的基金经理目前正在哪里寻找收益",
-                "Alphabet警示新的AI相关风险，并利用债券市场为其扩张提供资金"
+                "Target 加大对门店员工的投资，削减约 500 个其他职位以改善顾客体验",
+                "Tulsi Gabbard 将在选举调查担忧之际出席参议院情报委员会听证会",
+                "FDA 表示 Novo Nordisk 的减肥药电视广告包含“虚假或误导性”宣传",
+                "盘后交易变动最大的股票：安森美半导体、Upwork、Chegg 等",
+                "此晨星五星评级基金的基金经理目前正在寻找收益的来源",
+                "住房负担能力一揽子计划因住房成本担忧将在国会推进"
             ],
             "ES": [
-                "Target aumenta la inversión en personal de tienda y recorta unos 500 puestos en otros departamentos para mejorar la experiencia del cliente",
+                "Target aumenta la inversión en personal de tienda y recorta unos 500 puestos de trabajo para mejorar la experiencia del cliente",
                 "Tulsi Gabbard testificará ante el Comité de Inteligencia del Senado en medio de preocupaciones por la investigación electoral",
                 "La FDA dice que el anuncio televisivo de Novo Nordisk para la píldora contra la obesidad incluye afirmaciones 'falsas o engañosas'",
-                "El paquete de asequibilidad de la vivienda se prepara para avanzar en el Congreso en medio de preocupaciones por los costos de las viviendas",
-                "Dónde está encontrando ingresos el gestor de este fondo de Morningstar con calificación de 5 estrellas en este momento",
-                "Alphabet advierte sobre nuevos riesgos relacionados con la IA y recurre al mercado de deuda para financiar su expansión"
+                "Las acciones que más se mueven después del cierre: ON Semiconductor, Upwork, Chegg y más",
+                "Dónde está encontrando ingresos ahora el gestor de este fondo con calificación de 5 estrellas de Morningstar",
+                "El paquete de asequibilidad de la vivienda avanza en el Congreso en medio de preocupaciones por el costo de la vivienda"
             ],
             "HI": [
-                "टारगेट ने ग्राहक अनुभव को ठीक करने के लिए स्टोर स्टाफिंग में निवेश बढ़ाया, लगभग 500 अन्य भूमिकाएं काटीं",
-                "चुनाव जांच संबंधी चिंताओं के बीच तुलसी गैबार्ड सीनेट इंटेलिजेंस कमेटी के समक्ष गवाही देंगी",
-                "FDA का कहना है कि मोटापे की गोली के लिए नोवो नॉर्डिस्क के टीवी विज्ञापन में 'झूठे या भ्रामक' दावे शामिल हैं",
-                "घर की लागत संबंधी चिंताओं के बीच आवास सामर्थ्य पैकेज कांग्रेस में आगे बढ़ने के लिए तैयार",
-                "मॉर्निंगस्टार 5-सितारा रेटेड फंड का मैनेजर इस समय कहां आय पा रहा है",
-                "अल्फाबेट ने नए AI-संबंधित जोखिमों पर प्रकाश डाला, क्योंकि यह निर्माण के लिए ऋण बाजार का उपयोग करता है"
+                "लक्ष्य ने ग्राहक अनुभव को बेहतर बनाने के लिए स्टोर स्टाफिंग में निवेश बढ़ाया, लगभग 500 अन्य भूमिकाओं में कटौती की",
+                "चुनावी जांच की चिंताओं के बीच तुलसी गब्बार्ड सीनेट इंटेलिजेंस कमेटी में गवाही देंगी",
+                "FDA का कहना है कि ओबेसिटी पिल के लिए Novo Nordisk के टीवी विज्ञापन में 'झूठे या भ्रामक' दावे शामिल हैं",
+                "घंटों बाद सबसे बड़ी हलचल मचाने वाले शेयर: ON Semiconductor, Upwork, Chegg और अन्य",
+                "इस मॉर्निंगस्टार 5-स्टार रेटेड फंड का मैनेजर अभी आय कहां ढूंढ रहा है",
+                "घर की लागत की चिंताओं के बीच आवास सामर्थ्य पैकेज कांग्रेस में आगे बढ़ने के लिए तैयार"
             ],
             "ID": [
-                "Target tingkatkan investasi pada staf toko, pangkas sekitar 500 peran lain untuk perbaiki pengalaman pelanggan",
+                "Target tingkatkan investasi staf toko, pangkas sekitar 500 peran lain untuk perbaiki pengalaman pelanggan",
                 "Tulsi Gabbard akan bersaksi di Komite Intelijen Senat di tengah kekhawatiran penyelidikan pemilu",
-                "FDA menyatakan iklan TV Novo Nordisk untuk pil obesitas berisi klaim 'salah atau menyesatkan'",
-                "Paket keterjangkauan perumahan siap diajukan di Kongres di tengah kekhawatiran biaya rumah",
-                "Di mana manajer dana berperingkat 5 bintang Morningstar ini menemukan pendapatan saat ini",
-                "Alphabet menyoroti risiko baru terkait AI, saat memanfaatkan pasar utang untuk mendanai pembangunan"
+                "FDA sebut iklan TV Novo Nordisk untuk pil obesitas berisi klaim 'salah atau menyesatkan'",
+                "Saham yang paling bergerak setelah jam perdagangan: ON Semiconductor, Upwork, Chegg, dan lainnya",
+                "Di mana manajer dana berperingkat bintang 5 Morningstar ini menemukan pendapatan saat ini",
+                "Paket keterjangkauan perumahan siap maju di Kongres di tengah kekhawatiran biaya rumah"
             ],
             "AR": [
-                "تارغيت تزيد الاستثمار في موظفي المتاجر، وتقطع حوالي 500 وظيفة أخرى لتحسين تجربة العملاء",
-                "تولسي غابارد تشهد أمام لجنة الاستخبارات بمجلس الشيوخ وسط مخاوف تحقيق الانتخابات",
-                "إدارة الغذاء والدواء تقول إن إعلان تلفزيوني لشركة نوفو نورديسك لحبوب السمنة يتضمن ادعاءات 'كاذبة أو مضللة'",
-                "حزمة القدرة على تحمل تكاليف الإسكان تستعد للتقدم في الكونغرس وسط مخاوف بشأن تكلفة المنزل",
-                "أين يجد مدير هذا الصندوق المصنف بخمس نجوم من مورنينغستار الدخل حاليًا",
-                "ألفابت تسلط الضوء على مخاطر جديدة متعلقة بالذكاء الاصطناعي، بينما تستفيد من سوق الدين لتمويل الإنشاء"
+                "تارجت تزيد الاستثمار في موظفي المتاجر، وتقطع حوالي 500 وظيفة أخرى لتحسين تجربة العملاء",
+                "تولسي غابارد تشهد أمام لجنة الاستخبارات بمجلس الشيوخ وسط مخاوف التحقيق الانتخابي",
+                "إدارة الغذاء والدواء تقول إن الإعلان التلفزيوني لـ Novo Nordisk لدواء السمنة يتضمن مزاعم 'كاذبة أو مضللة'",
+                "الأسهم التي شهدت أكبر التحركات بعد ساعات التداول: ON Semiconductor، Upwork، Chegg والمزيد",
+                "أين يجد مدير هذا الصندوق المصنف بخمس نجوم من Morningstar دخلاً حاليًا",
+                "حزمة القدرة على تحمل تكاليف الإسكان من المتوقع أن تتقدم في الكونغرس وسط مخاوف بشأن تكلفة المنزل"
             ],
             "DE": [
-                "Target erhöht Investitionen in Ladenpersonal und streicht rund 500 andere Stellen zur Verbesserung des Kundenerlebnisses",
-                "Tulsi Gabbard wird angesichts von Bedenken hinsichtlich der Wahluntersuchungen vor dem Geheimdienstausschuss des Senats aussagen",
-                "FDA: TV-Werbung von Novo Nordisk für Fettsucht-Pille enthält 'falsche oder irreführende' Behauptungen",
-                "Paket zur bezahlbaren Wohnraumversorgung soll angesichts von Bedenken hinsichtlich der Hauskosten im Kongress vorankommen",
-                "Wo der Manager dieses von Morningstar mit 5 Sternen bewerteten Fonds derzeit Erträge erzielt",
-                "Alphabet weist auf neue KI-bezogene Risiken hin und nutzt den Anleihenmarkt zur Finanzierung des Ausbaus"
+                "Target erhöht Investitionen in Ladenpersonal und kürzt rund 500 andere Stellen zur Verbesserung des Kundenerlebnisses",
+                "Tulsi Gabbard wird angesichts von Bedenken hinsichtlich der Wahluntersuchung vor dem Geheimdienstausschuss des Senats aussagen",
+                "FDA: TV-Werbung von Novo Nordisk für Schlankheitspille enthält 'falsche oder irreführende' Behauptungen",
+                "Aktien, die nach Börsenschluss die größten Bewegungen machten: ON Semiconductor, Upwork, Chegg und mehr",
+                "Wo der Manager dieses von Morningstar mit 5 Sternen bewerteten Fonds derzeit Einkommen erzielt",
+                "Paket zur Wohnraumerschwinglichkeit soll angesichts von Bedenken hinsichtlich der Hauskosten im Kongress vorankommen"
             ],
             "FR": [
-                "Target augmente ses investissements dans le personnel des magasins et supprime environ 500 autres postes pour améliorer l'expérience client",
-                "Tulsi Gabbard témoignera devant la commission du renseignement du Sénat dans un contexte de préoccupations concernant l'enquête électorale",
-                "La FDA affirme que la publicité télévisée de Novo Nordisk pour la pilule contre l'obésité contient des allégations 'fausses ou trompeuses'",
-                "Le paquet sur l'accessibilité du logement est prêt à avancer au Congrès dans un contexte de préoccupations concernant le coût des maisons",
-                "Où le gestionnaire de ce fonds noté 5 étoiles par Morningstar trouve actuellement des revenus",
-                "Alphabet met en garde contre de nouveaux risques liés à l'IA, alors qu'il utilise le marché de la dette pour financer son développement"
+                "Target augmente les investissements dans le personnel des magasins et supprime environ 500 autres postes pour améliorer l'expérience client",
+                "Tulsi Gabbard témoignera devant le comité du renseignement du Sénat sur fond de préoccupations concernant l'enquête électorale",
+                "La FDA déclare que la publicité télévisée de Novo Nordisk pour la pilule contre l'obésité contient des allégations 'fausses ou trompeuses'",
+                "Les actions qui ont le plus évolué après la clôture : ON Semiconductor, Upwork, Chegg et plus",
+                "Où le gestionnaire de ce fonds noté 5 étoiles par Morningstar trouve des revenus actuellement",
+                "Un plan d'abordabilité du logement devrait avancer au Congrès dans un contexte de préoccupations concernant le coût des maisons"
             ]
         },
-        "last_updated": "2026-02-09T21:50:23.750576+00:00Z"
+        "last_updated": "2026-02-09T22:48:41.051569+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
