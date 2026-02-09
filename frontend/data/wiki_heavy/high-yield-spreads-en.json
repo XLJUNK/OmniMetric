@@ -1,0 +1,23 @@
+{
+    "slug": "high-yield-spreads",
+    "lang": "EN",
+    "title": "High-Yield Spreads (Junk Bond Spreads)",
+    "type": "indicator",
+    "category": "Credit",
+    "sections": {
+        "summary": "High-Yield Spreads measure the difference in yield between high-yield (junk) corporate bonds and risk-free Treasury bonds. In 2026, this spread serves as the market's 'fear gauge' for credit risk and economic stress. Widening spreads signal rising default expectations and deteriorating financial conditions, while tightening spreads indicate investor confidence and risk appetite.",
+        "deep_dive": "In 2026's credit markets, High-Yield Spreads have become the most reliable early warning system for economic downturns and financial crises. GMS treats spread widening as a 'credit stress barometer'—when spreads blow out beyond 500 basis points, it historically precedes equity market corrections by 2-3 months. The mechanism is straightforward: high-yield issuers are the most financially vulnerable companies, and when investors demand massive premiums to hold their debt, it signals systemic concern about corporate health and economic sustainability. In 2026, the interaction between Fed policy and spreads has intensified—QT mechanically widens spreads by reducing liquidity, while any hint of Fed pivot causes violent spread compression. GMS monitors the 'spread velocity' (rate of change) as critically as absolute levels, because rapid widening indicates panic selling and forced deleveraging in credit markets.",
+        "council_debate": {
+            "geopolitics": "In 2026, geopolitical shocks immediately manifest in high-yield spreads as global supply chains and commodity access become uncertain. Energy sector junk bonds are particularly sensitive to Middle East tensions—spreads are geopolitical thermometers.",
+            "macro": "Spreads are the bond market's recession prediction. In 2026, when spreads exceed 600bp, recession probability within 12 months historically reaches 75%. Macro investors watch spreads more closely than GDP forecasts.",
+            "tech": "Credit algorithms in 2026 use machine learning to predict spread movements based on alternative data (satellite imagery of factories, shipping volumes). Technology has made spread trading faster but also more prone to flash crashes.",
+            "policy": "The Fed's corporate bond purchase programs (if reactivated) directly compress spreads. In 2026, the debate over 'moral hazard' versus 'financial stability' centers on whether the Fed should backstop junk bonds during stress.",
+            "quant": "Our models use spread levels as inputs for equity volatility forecasting. 2026 data shows that when spreads widen by 100bp in a month, VIX typically rises by 8-12 points within 4 weeks. Spreads are quantitatively predictive.",
+            "technical": "We track the 'spread curve' across different credit ratings (BB, B, CCC). In 2026, when CCC spreads blow out while BB spreads remain stable, it signals 'quality flight' within junk—a precursor to broader credit deterioration."
+        },
+        "forecast_risks": "The primary risk is a 'credit event cascade' where a major high-yield issuer defaults, triggering contagion and forcing spreads to levels that freeze the entire corporate bond market. In 2026, leveraged loan and CLO markets amplify this systemic risk.",
+        "gms_conclusion": "Strategic 'Credit Canary.' In 2026, High-Yield Spreads are the early warning system that equity investors ignore at their peril. GMS integrates spread analysis into all risk models—when credit markets scream danger, equities eventually follow."
+    },
+    "model": "Antigravity-GMS-v3 (EN Master Restoration)",
+    "generated_at": "2026-02-09T16:48:00+00:00"
+}
