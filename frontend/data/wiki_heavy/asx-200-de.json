@@ -1,0 +1,23 @@
+{
+    "slug": "asx-200",
+    "lang": "DE",
+    "title": "ASX 200 (S&P/ASX 200)",
+    "type": "index",
+    "category": "Indices",
+    "sections": {
+        "summary": "Der S&P/ASX 200 ist der wichtigste Aktienindex Australiens und umfasst die 200 größten an der Australian Securities Exchange (ASX) gelisteten Unternehmen nach Marktkapitalisierung. Er gilt als das absolute Barometer für die australische Wirtschaft und ist stark von den Sektoren Bergbau und Finanzen geprägt. Im Jahr 2026 ist der ASX 200 ein zentraler Indikator für die globale Rohstoffnachfrage, insbesondere aus dem asiatisch-pazifischen Raum.",
+        "deep_dive": "Die Zusammensetzung des ASX 200 macht ihn zu einem einzigartigen 'Rohstoff-Proxy'. Schwergewichte wie BHP und Rio Tinto bedeuten, dass der Index direkt mit den Preisen für Eisenerz, Kohle und Kupfer korreliert. Bei GMS analysieren wir den ASX 200 als Frühindikator für das industrielle Wachstum in China, da Australien Chinas wichtigster Rohstofflieferant ist. Gleichzeitig ist der australische Bankensektor (Commonwealth Bank, Westpac) für seine hohen Dividenden bekannt, was den Index für Einkommensinvestoren attraktiv macht. Wir beobachten die Zinspolitik der Reserve Bank of Australia (RBA) und deren Auswirkungen auf den australischen Dollar (AUD). Eine Stärke des AUD kann die Exporterlöse der Bergbaugiganten drücken, während sie die Kaufkraft der australischen Konsumenten stärkt. Wir integrieren Klimadaten und ESG-Regulierungen in unsere GMS-Modelle, da Australien massiv in den Export von 'grünem Wasserstoff' und Lithium für die globale Energiewende investiert – ein Sektor, der den ASX 200 in den nächsten Jahren transformieren wird.",
+        "council_debate": {
+            "geopolitics": "Australien ist der strategische Anker des Westens im Indopazifik. Wir analysieren Handelsspannungen mit China als das primäre geopolitische Risiko für den ASX 200. Geopolitische Stabilität in der Region ist entscheidend für die Sicherheit der australischen Exportrouten.",
+            "macro": "Wir korrelieren den ASX 200 mit dem globalen Wirtschaftswachstum. In einer Phase der globalen industriellen Expansion ist der ASX 200 oft ein Outperformer. Wir nutzen australische CPI-Daten als Vorlaufindikator für inflationäre Trends in anderen entwickelten Rohstoffökonomien.",
+            "tech": "Obwohl Australien als 'alter' Markt gilt, führt es bei Bergbau-Automatisierung und Green-Tech-Innovationen. Wir beobachten Unternehmen, die KI nutzen, um die Effizienz der Rohstoffgewinnung zu steigern. Technologische Sprünge bei der Lithium-Extraktion sind Kernbestandteile unserer ASX-Analyse.",
+            "policy": "Fiskalpolitische Maßnahmen zur Förderung der Energiewende und Änderungen in der Bergbau-Besteuerung sind zentrale politische Risiken. Wir bewerten die Auswirkungen der australischen Klimapolitik auf die Bewertung der großen fossilen Energieexporteure im Index.",
+            "quant": "Unsere Modelle nutzen die Korrelation zwischen dem ASX 200 und dem Preis für Eisenerz. Wir haben festgestellt, dass der Index oft eine verzögerte Reaktion auf Preisänderungen bei Rohstoffen zeigt, was wir für unsere Arbitrage-Strategien nutzen. Wir berechnen Sentiment-Scores für den asiatischen Baumarkt als Proxy für die ASX-Bergbauwerte.",
+            "technical": "Wir nutzen langfristige Aufwärtstrendkanäle und volumenbasierte Unterstützungszonen, um den ASX 200 zu handeln. Ein Rücksetzer auf den 200-Tage-Durchschnitt bei gleichzeitig stabilen Rohstoffpreisen gilt als klassisches Kaufsignal. Wir achten auf Widerstände bei psychologisch wichtigen Marken wie 8.000 oder 8.500 Punkten."
+        },
+        "forecast_risks": "Das Hauptrisiko bleibt ein drastischer Einbruch der chinesischen Nachfrage nach Basismetallen, der die Gewinne des Bergbausektors schlagartig halbieren könnte. Zudem stellt die hohe Verschuldung der privaten Haushalte in Australien in einem Hochzinsumfeld ein Risiko für den heimischen Banken- und Immobiliensektor dar.",
+        "gms_conclusion": "Strategisches \"Rohstoff-Exposure\" (Commodity Overweight). Der ASX 200 bleibt im Jahr 2026 der effektivste Weg, um von der asiatischen Wachstum Story und der globalen Energiewende gleichzeitig zu profitieren. Nutzen Sie Korrekturen im Rohstoffmarkt zum gezielten Aufbau von Positionen in australischen Blue-Chips."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-09T17:15:00+00:00"
+}

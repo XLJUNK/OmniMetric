@@ -1,0 +1,23 @@
+{
+    "slug": "nasdaq-100",
+    "lang": "DE",
+    "title": "Nasdaq 100 (NDX)",
+    "type": "index",
+    "category": "Indices",
+    "sections": {
+        "summary": "Der Nasdaq 100 ist einer der weltweit bedeutendsten Aktienindizes und umfasst die 100 größten nicht-finanziellen Unternehmen, die an der Nasdaq-Börse gelistet sind. Er gilt als das ultimative Barometer für den globalen Technologiesektor und umfasst Giganten aus den Bereichen Halbleiter, Software, Cloud-Computing und Biotechnologie. Im Jahr 2026 ist der Nasdaq 100 der zentrale Indikator für das Momentum der Künstlichen Intelligenz (KI) und der digitalen Transformation.",
+        "deep_dive": "Die Zusammensetzung des Nasdaq 100 macht ihn besonders anfällig für Zinsänderungen, da viele seiner Bestandteile Wachstumsunternehmen sind, deren Bewertung auf zukünftigen Cashflows basiert. GMS analysiert den Nasdaq 100 als technologischen Risiko-Indikator. Wir beobachten die 'Konzentration der Top 7', da deren Performance oft den gesamten Index dominiert. In der Ära von 2026 ist die Nasdaq nicht mehr nur ein US-Index, sondern eine globale Plattform für technologische Vorherrschaft. Wir integrieren Daten zur F&E-Investitionshöhe und zur Patentanmeldung der gelisteten Unternehmen in unsere GMS-Sentiment-Modelle. Ein Anstieg des Nasdaq 100 bei gleichzeitig moderaten Realzinsen signalisiert oft eine gesunde technologische Expansionsphase, während ein entkoppelter Anstieg auf spekulative Blasen hindeuten kann, die wir mit unseren quantitativen Alarmen überwachen.",
+        "council_debate": {
+            "geopolitics": "Der Nasdaq 100 ist das Schlachtfeld des technologischen Kalten Krieges. Handelsbeschränkungen für Halbleiter und KI-Chips betreffen direkt die Schwergewichte dieses Index. Wir analysieren geopolitische Spannungen zwischen den USA und China als primäres Risiko für die Lieferketten der Nasdaq-Mitglieder.",
+            "macro": "In einem disinflationären Umfeld ist der Nasdaq 100 der größte Profiteur. Wenn die Inflationserwartungen sinken, steigt die Bewertung von Tech-Werten überproportional. Wir nutzen den Nasdaq als Frühindikator für die globale Risikobereitschaft (Risk-On), der oft den S&P 500 und europäische Indizes anführt.",
+            "tech": "Die Nasdaq ist das Herz der KI-Revolution. Durchbrüche in der Quantengenerierung und der autonomen Robotik spiegeln sich sofort in der Performance der NDX-Schwergewichte wider. Wir analysieren die Chip-Nachfragezyklen als fundamentalen Vorläufer für die nächste Aufwärtsbewegung des Index.",
+            "policy": "Antitrust-Verfahren und Regulierungen im Bereich der KI sind die größten politischen Risiken für den Nasdaq 100. Wir bewerten die Auswirkungen von EU-Regulierungen auf US-Tech-Giganten und deren Einfluss auf die Rentabilität. Eine strengere Regulierung kann das Wachstum bremsen, aber die Marktstabilität erhöhen.",
+            "quant": "Unsere Modelle zeigen eine extrem hohe Korrelation zwischen dem Nasdaq 100 und der globalen Geldmenge M2. Der Index agiert oft als ein 'gehebelter US-Dollar'. Wir nutzen Volatilitätsmetriken wie den VXN, um Überhitzungsphasen zu identifizieren und unsere Absicherungsstrategien (Hedging) dynamisch anzupassen.",
+            "technical": "Wir nutzen gleitende Durchschnitte (SMA 200) und Bollinger Bänder, um Extremphasen im Nasdaq 100 zu handeln. Ein Rücklauf zum 50-Tage-Durchschnitt innerhalb eines starken Aufwärtstrends gilt als klassische institutionelle Kaufzone. Divergenzen zwischen dem Nasdaq und dem Russell 2000 nutzen wir zur Bestimmung der Marktbreite."
+        },
+        "forecast_risks": "Das Hauptrisiko bleibt eine aggressive Straffung der Geldpolitik durch die Fed, die tech-lastige Bewertungen massiv unter Druck setzen könnte. Zudem stellt eine mögliche 'KI-Enttäuschung' – falls die Produktivitätsgewinne hinter dem Hype zurückbleiben – ein erhebliches Abwärtsrisiko dar. Auch die Klumpenrisiken durch die Dominanz weniger Einzelwerte sind nicht zu unterschätzen.",
+        "gms_conclusion": "Strategische \"Übergewichtung\" (Overweight). Der Nasdaq 100 bleibt der Motor des globalen Wachstums im digitalen Zeitalter. Nutzen Sie Rücksetzer zur Akkumulation von Tech-Qualität, solange das makroökonomische Umfeld technologische Innovationen unterstützt."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-09T16:25:00+00:00"
+}

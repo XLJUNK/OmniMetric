@@ -1,16 +1,23 @@
 {
   "slug": "non-farm-payrolls",
   "lang": "DE",
-  "title": "Non-Farm Payrolls (NFP)",
-  "type": "glossary",
-  "category": "Labor Market",
+  "title": "Non-Farm Payrolls (NFP - US-Arbeitsmarktbericht)",
+  "type": "indicator",
+  "category": "Macro",
   "sections": {
-    "summary": "",
-    "deep_dive": "",
-    "council_debate": "",
-    "forecast_risks": "",
-    "gms_conclusion": ""
+    "summary": "Die Non-Farm Payrolls (NFP) sind der wichtigste Wirtschaftsindikator für den US-Arbeitsmarkt und messen die monatliche Veränderung der Anzahl der Beschäftigten außerhalb der Landwirtschaft. Der Bericht wird vom Bureau of Labor Statistics (BLS) veröffentlicht und umfasst private Unternehmen sowie Regierungsbehörden. Im Jahr 2026 ist der NFP-Bericht der zentrale Markttreiber für die US-Zinspolitik und das globale Anleger-Sentiment.",
+    "deep_dive": "Die Dynamik der Non-Farm Payrolls im Jahr 2026 spiegelt die strukturelle Transformation des US-Arbeitsmarktes wider. GMS analysiert die NFP-Daten nicht isoliert, sondern als Teil der 'Lohn-Preis-Spirale'. Wir beobachten die durchschnittlichen Stundenlöhne (Average Hourly Earnings) innerhalb des Berichts als primären Faktor für inflationären Druck. Die Besonderheit im Jahr 2026 ist die 'Gig-Economy-Integration' und die Auswirkungen der KI-gestützten Produktivitätssteigerung auf das Stellenwachstum. Wir integrieren Daten zu Erwerbsbeteiligung (Participation Rate) und zur Arbeitslosenquote (Unemployment Rate) in unsere GMS-Modelle. Ein massives Stellenwachstum (über 250.000) signalisiert meist eine robuste Wirtschaft, zwingt die Fed jedoch oft zu einer restriktiveren Geldpolitik, was kurzfristig negativ für Aktien und Anleihen sein kann. Ein schwacher Bericht (unter 100.000) schürt Rezessionsängste, erhöht jedoch die Wahrscheinlichkeit von Zinssenkungen. Für GMS ist der NFP-Freitag der volatilste Tag im makroökonomischen Kalender.",
+    "council_debate": {
+      "geopolitics": "Beschäftigung ist soziale Stabilität. Wir analysieren NFP-Trends als Indikator für die nationale Sicherheit der USA. Eine schwächelnde Beschäftigung in strategischen Sektoren (Verteidigung, Tech) wird geopolitisch als Schwächung der US-Vormachtstellung gewertet.",
+      "macro": "Wir korrelieren NFP-Zahlen mit den Konsumausgaben der Privathaushalte (PCE). Solange der Arbeitsmarkt stabil ist, bleibt die US-Wirtschaft rezessionsresistent. Wir nutzen NFP-Überraschungen zur Neukalibrierung unserer Erwartungen an die 'Fed-Dots' (Zinsprognosen).",
+      "tech": "KI verändert die Zusammensetzung der NFP. Wir beobachten eine Verschiebung von Routine-Bürotätigkeiten hin zu spezialisierten Tech-Rollen. Überraschenderweise führt technologische Effizienz oft zu einer höheren Nachfrage in nachgelagerten Dienstleistungssektoren (Hospitality, Personal Services).",
+      "policy": "Das 'Duale Mandat' der Fed (Preisstabilität und maximale Beschäftigung) rückt bei jedem NFP-Bericht in den Fokus. Wir bewerten staatliche Beschäftigungsinitiativen und Mindestlohnänderungen als entscheidende politische Treiber für die Arbeitsmarktdynamik.",
+      "quant": "Unsere Modelle nutzen 'Whisper Numbers' und Volatilitäts-Indizes (VIX) vor der Veröffentlichung. Wir haben festgestellt, dass die Marktreaktion oft weniger von der absoluten Zahl als von der Revision der Vormonate abhängt. Wir berechnen Risikoprämien für den Arbeitsmarkt-Tag.",
+      "technical": "Wir nutzen technische Level beim US-Dollar (DXY) und bei 10-jährigen Anleihen (TNX), um die Reaktion auf die NFP-Zahlen zu antizipieren. Ein 'Bad News is Good News'-Szenario führt oft zu technischen Breakouts bei Aktienindizes trotz schwacher Wirtschaftsdaten. Wir achten auf Unterstützungslinien beim S&P 500."
+    },
+    "forecast_risks": "Das Hauptrisiko bleibt eine plötzliche 'Arbeitsmarkt-Eiszeit', ausgelöst durch restriktive Zinsen, die zu einer schnellen Entlassungswelle führt (Sahm-Regel). Zudem stellen Diskrepanzen zwischen der Haushaltsumfrage und der Unternehmensumfrage des BLS ein Risiko für die Datenintegrität und die Markterwartungen dar. Eine Lohn-Preis-Spirale könnte die Inflation dauerhaft über dem 2%-Ziel verankern.",
+    "gms_conclusion": "Strategischer \"Sentiment-Schock-Monitor\" (Labor Edge). Die Non-Farm Payrolls sind im Jahr 2026 der ultimative Realitätscheck für die Märkte. Positionieren Sie sich defensiv vor der Veröffentlichung und nutzen Sie die oft irrationalen Preisschwankungen nach dem Bericht für gezielte Einstiege in Qualitätsaktien."
   },
-  "model": "gemini-2.5-flash",
-  "generated_at": "2026-02-09T00:43:02.557682+00:00"
+  "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+  "generated_at": "2026-02-09T17:55:00+00:00"
 }

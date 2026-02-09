@@ -1,0 +1,23 @@
+{
+    "slug": "macd",
+    "lang": "FR",
+    "title": "MACD (Moving Average Convergence Divergence)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Le Moving Average Convergence Divergence (MACD) est un indicateur de momentum suivant la tendance qui montre la relation entre deux moyennes mobiles du prix d'un titre. Il se compose de la ligne MACD, de la ligne de signal et de l'histogramme. En 2026, GMS déploie le MACD comme filtre principal pour confirmer la force des tendances et identifier précocement les signaux d'épuisement sur toutes les classes d'actifs mondiales.",
+        "deep_dive": "Bien que Gerald Appel ait introduit le MACD en 1979, il reste une pierre angulaire de l'analyse technique dans les marchés hautement algorithmiques de 2026. La dynamique entre la convergence (rapprochement) et la divergence (écartement) des moyennes mobiles offre des perspectives bien plus riches que de simples croisements. GMS utilise une version raffinée de l'histogramme MACD pour mesurer l'accélération ou la décélération du momentum. Nous sommes particulièrement attentifs au croisement de la ligne zéro, qui marque souvent la transition d'un marché baissier vers un marché haussier. Combiné aux données de cycles macroéconomiques, le MACD nous sert à déterminer si un mouvement de prix est soutenu par un momentum réel ou s'il s'agit d'un simple bruit de marché. À l'ère du trading industriel, l'interaction entre les divergences MACD et les flux de liquidité constitue le cœur de nos moteurs de confirmation de tendance.",
+        "council_debate": {
+            "geopolitics": "Les mutations géopolitiques majeures se manifestent souvent dans le MACD par des oscillations massives de l'histogramme. Nous utilisons le MACD sur une base mensuelle pour identifier les changements « tectoniques » à long terme dans la force relative des paires de devises. Un croisement MACD sur les monnaies majeures après un sommet international est souvent le déclencheur de tendances pluriannuelles.",
+            "macro": "Nous considérons le MACD comme un indicateur de la « vitesse de la politique monétaire ». Lorsque la différence entre les rendements à court et à long terme (courbe des taux) diverge dans notre modèle MACD, cela indique un changement radical des perspectives macroéconomiques. Le MACD nous aide à quantifier statistiquement l'inertie des grands blocs économiques.",
+            "tech": "Les modèles d'IA utilisent souvent le MACD comme variable pour les réseaux de neurones prédisant les tendances. Nous analysons la dérivée de l'histogramme MACD pour détecter l'épuisement du momentum plus rapidement que les traders humains. L'intégration des données MACD dans nos indices de sentiment technologique nous permet d'identifier les bulles tech dès leur phase de formation.",
+            "policy": "Les annonces des banques centrales agissent souvent comme un catalyseur pour les signaux MACD. Nous observons si un signal technique est « confirmé » par un événement politique. Un signal d'achat MACD juste avant une pause dans la hausse des taux est considéré par nos systèmes GMS comme hautement fiable, car il allie momentum technique et faits fondamentaux.",
+            "quant": "Nos modèles quantitatifs calculent les paramètres optimaux du MACD pour différentes phases de marché. Bien que 12, 26, 9 soit la norme, nous adaptons ces valeurs dynamiquement à la volatilité actuelle. Nous utilisons des « heatmaps de backtesting » MACD pour déterminer les horizons temporels les plus profitables pour chaque actif spécifique.",
+            "technical": "La divergence classique du MACD reste notre « Saint Graal ». Si le cours marque de nouveaux plus bas alors que l'histogramme MACD remonte déjà, nous nous préparons à un rebond massif. Nous utilisons également l'histogramme pour prévoir la volatilité : un histogramme qui s'aplatit indique souvent une phase latérale où nous passons à des stratégies GMS neutres."
+        },
+        "forecast_risks": "Le MACD est un indicateur retardé (lagging indicator). Dans les marchés latéraux volatils, il peut générer de fréquents faux signaux (whipsaws) entraînant des pertes. De plus, un signal de momentum fort peut être interprété à tort comme une fin de tendance si le trader se positionne trop tôt contre la ligne MACD.",
+        "gms_conclusion": "Confirmation de tendance stratégique (Confirm Trend). Utilisez le MACD pour vous assurer que vous ne nagez pas à contre-courant. Dans les marchés complexes de 2026, le signal MACD est un filtre nécessaire, bien que non suffisant, pour toute position macro professionnelle."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-09T16:02:00+00:00"
+}

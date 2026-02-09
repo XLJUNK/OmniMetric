@@ -1,0 +1,23 @@
+{
+    "slug": "bollinger-bands",
+    "lang": "DE",
+    "title": "Bollinger Bänder",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "Bollinger Bänder sind ein technisches Analyseinstrument, das von John Bollinger in den 1980er Jahren entwickelt wurde. Sie bestehen aus einem mittleren Band (einem einfachen gleitenden Durchschnitt) und zwei äußeren Bändern, die Standardabweichungen vom Durchschnitt darstellen. Im Jahr 2026 nutzen wir Bollinger Bänder bei GMS vor allem, um die Volatilität zu messen und 'Squeeze'-Phasen zu identifizieren, die oft massiven Preisbewegungen vorausgehen.",
+        "deep_dive": "Die Genialität der Bollinger Bänder liegt in ihrer Adaptivität. Da sich die Bänder basierend auf der Standardabweichung weiten und verengen, fungieren sie als dynamisches Maß für die Marktnervosität. In den hocheffizienten Märkten von 2026 sind die Bänder besonders wertvoll, um 'M-Tops' und 'W-Bottoms' zu validieren. Wenn der Kurs das obere Band berührt, deutet dies oft auf einen überkauften Zustand hin, doch GMS achtet besonders auf das 'Wandern an den Bändern' (Walking the Bands), was einen extrem starken Trend signalisiert. Ein 'Bollinger Squeeze' – wenn die Bänder so eng wie selten zuvor zusammenlaufen – ist für unsere Algorithmen ein Alarmsignal der Stufe Rot für einen bevorstehenden Volatilitätsausbruch. Wir kombinieren diese technische Sicht mit dem GMS-Liquiditätsmonitor, um die Richtung des Ausbruchs mit hoher Wahrscheinlichkeit vorherzusagen.",
+        "council_debate": {
+            "geopolitics": "In Krisenzeiten 'platzen' die Bollinger Bänder förmlich auf. Wir beobachten dies als Indikator für systemischen Stress. Wenn die Bänder eines nationalen Aktienindex oder einer Fluchtwährung wie Gold weit auseinanderlaufen, spiegelt dies die geopolitische Unsicherheit wider. Ein Rückgang der Bandbreite signalisiert oft eine diplomatische Entspannung.",
+            "macro": "Wir übertragen das Konzept der Standardabweichung auf makroökonomische Daten. Wenn die Abweichung von Wirtschaftsdaten (wie CPI oder GDP) von den Konsensschätzungen die 'makroökonomischen Bollinger Bänder' durchbricht, erwarten wir eine massive Neubewertung der Währungsmärkte. Volatilität ist für uns eine messbare Größe der makroökonomischen Ineffizienz.",
+            "tech": "KI-getriebene Scalping-Bots nutzen Bollinger Bänder als primäre Jagdgründe. Die Bänder definieren die statistisch wahrscheinliche Handelsspanne für 95% der Preisaktion. Wir analysieren das Orderbuch-Cluster an den äußeren Bändern, um zu sehen, wo die Liquidität der Bots am höchsten ist und wo Squeezes am profitabelsten sind.",
+            "policy": "Interventionen von Zentralbanken führen oft zu plötzlichen Durchbrüchen der äußeren Bänder. Wir bewerten, ob ein solcher Durchbruch 'nachhaltig' ist. Wenn der Kurs nach einer Zinssenkung das obere Band durchbricht und dort schließt, ist dies ein klares Zeichen für eine langfristige geldpolitische Trendwende, die wir in unseren Modellen priorisieren.",
+            "quant": "Unsere quantitativen Analysen zeigen, dass Bollinger Bänder am besten funktionieren, wenn sie mit dem RSI kombiniert werden. Wir suchen nach Situationen, in denen der Kurs das Band berührt, der RSI aber keine Bestätigung liefert. Solche Anomalien sind die Grundlage für unsere Mean-Reversion-Strategien im Hochfrequenzbereich.",
+            "technical": "Das 'Bandbreiten'-Delta ist unser wichtigster technischer Input. Eine extrem niedrige Bandbreite ist die Ruhe vor dem Sturm. Wir nutzen zudem das '%b'-Verhältnis, um die genaue Position des Kurses innerhalb der Bänder zu quantifizieren und diese Daten direkt in den GMS-Oszillator einzuspeisen, um die Marktdynamik visuell greifbar zu machen."
+        },
+        "forecast_risks": "Das größte Risiko ist der 'Head Fake' während eines Squeezes: Der Kurs bricht kurz in eine Richtung aus, nur um dann massiv in die entgegengesetzte Richtung zu drehen. Zudem können Bollinger Bänder in sauberen Trendmärkten viele Fehlsignale für Trendwenden geben, wenn man sie fälschlicherweise nur als Widerstands- und Unterstützungszonen betrachtet.",
+        "gms_conclusion": "Strategischer Fokus auf \"Ausbrüche\" (Breakout Focus). Achten Sie auf den Squeeze. In der aktuellen Marktlage von 2026 ist die Verringerung der Volatilität oft der Vorbote für den nächsten großen Makro-Trend. Nutzen Sie die Bänder, um Ihr Risikomanagement dynamisch an die Volatilität anzupassen."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-09T15:55:00+00:00"
+}

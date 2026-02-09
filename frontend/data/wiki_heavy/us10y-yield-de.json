@@ -1,0 +1,23 @@
+{
+    "slug": "us10y-yield",
+    "lang": "DE",
+    "title": "US 10-Year Treasury Yield (TNX)",
+    "type": "indicator",
+    "category": "Macro",
+    "sections": {
+        "summary": "Die Rendite 10-jähriger US-Staatsanleihen (TNX) gilt als der risikofreie Zinssatz der Welt und ist die wichtigste Benchmark für die Bewertung fast aller Finanzanlagen. Sie spiegelt die Erwartungen der Anleger an das zukünftige Wirtschaftswachstum und die Inflation in den USA wider. Im Jahr 2026 ist die 10-Jahres-Rendite der zentrale Indikator für die globale Duration-Positionierung und die Tragfähigkeit der globalen Schuldenlast.",
+        "deep_dive": "Die Dynamik der 10-jährigen Rendite im Jahr 2026 wird durch das Tauziehen zwischen der Notenbank-Liquidität und der fiskalischen Realität bestimmt. GMS analysiert die TNX als den 'Herzschlag des globalen Kapitalmarktes'. Ein Anstieg der Rendite bedeutet sinkende Anleihepreise und erhöht die Kapitalkosten für Unternehmen weltweit. Wir beobachten die 'Term Premium' (Laufzeitprämie) als primären Faktor für die Unsicherheit über die zukünftige Teuerungsrate. Die Besonderheit im Jahr 2026 ist die Rolle der TNX als Anker für Hypothekenzinsen und Unternehmenskredite; jeder Basispunkt nach oben hat direkte Auswirkungen auf den US-Immobilienmarkt und die Investitionstätigkeit. Wir integrieren Daten zur Auslandsnachfrage nach US-Treasuries (TIC-Daten) und zur Emissionsstrategie des US-Finanzministeriums in unsere GMS-Modelle. Ein Durchbruch über kritische Renditeniveaus (z.B. 4,5% oder 5,0%) wird von GMS als massiver Warnschuss für Aktienbewertungen gewertet, da die Attraktivität von Anleihen gegenüber Dividendenpapieren dramatisch zunimmt.",
+        "council_debate": {
+            "geopolitics": "Die 10-jährige Rendite ist ein Seismograph für das Vertrauen in die USA als globale Supermacht. Wir analysieren Divergenzen zwischen US-Renditen und denen anderer G7-Staaten als Maßstab für die geopolitische Kapitalflucht. 'Safe Haven'-Flüsse drücken die Rendite in Krisenzeiten trotz hoher Verschuldung.",
+            "macro": "Wir korrelieren die TNX mit den Breakeven-Inflationsraten. Die Differenz liefert uns den Realzins, der der wahre Treiber für Vermögenspreise ist. Wir nutzen die 10-Jahres-Rendite zur Bestimmung von Rezessionsrisiken über die Steilheit der Zinskurve.",
+            "tech": "Technologieaktien reagieren hypersensitiv auf die TNX. Wir beobachten, wie volatile Bewegungen in den Renditen algorithmische Verkäufe im Nasdaq auslösen. Langfristige Investitionen in KI-Infrastruktur hängen direkt von der Stabilität der Finanzierungskosten ab, die durch die TNX definiert werden.",
+            "policy": "Fiskalische Dominanz ist das Thema 2026. Wir bewerten, wie massive Staatsdefizite die Renditen nach oben treiben, selbst wenn die Fed versucht, die Zinsen zu kontrollieren (Yield Curve Control). Die Auktionen des US-Schatzamtes sind die wichtigsten Termine für die TNX-Entwicklung.",
+            "quant": "Unsere Modelle nutzen die Korrelation zwischen der TNX und dem S&P 500 Equity Risk Premium. Wir haben festgestellt, dass es 'Kipppunkte' in den Renditen gibt, an denen institutionelle Anleger massiv von Aktien in Anleihen umschichten. Wir berechnen Sensitivitäts-Metriken für verschiedene Anleihe-Portfolios.",
+            "technical": "Wir nutzen Trendkanäle beim TNX und technische Indikatoren wie den MACD auf Wochenbasis. Ein technischer Ausbruch über langjährige Abwärtstrendlinien gilt uns als Bestätigung eines neuen inflationären Zeitalters. Wir achten auf Widerstandszonen, die durch psychologische Renditemarken definiert sind."
+        },
+        "forecast_risks": "Das Hauptrisiko bleibt eine 'schuldenbedingte Kernschmelze' am Bondmarkt, bei der Anleger eine höhere Prämie für das Risiko des Zahlungsausfalls oder der Währungsentwertung verlangen. Zudem stellen plötzliche Verkäufe durch ausländische Zentralbanken (De-Dollarisierung) ein unberechenbares Risiko für die Renditestabilität dar. Eine Lohn-Preis-Spirale könnte die Renditen zudem weit über das erträgliche Maß für die Gesamtwirtschaft steigen lassen.",
+        "gms_conclusion": "Strategischer \"Benchmark-Filter\" (Yield Watch). Die 10-jährige US-Rendite ist im Jahr 2026 der ultimative Schiedsrichter über den Wert aller Anlagen. Bleiben Sie bei steigenden Renditen in Cash oder defensiven Titeln und nutzen Sie Renditespitzen für den Aufbau langfristiger Rentenpositionen als Absicherung."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-09T18:05:00+00:00"
+}

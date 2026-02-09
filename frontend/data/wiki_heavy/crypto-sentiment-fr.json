@@ -1,0 +1,23 @@
+{
+    "slug": "crypto-sentiment",
+    "lang": "FR",
+    "title": "Sentiment Crypto (Fear & Greed)",
+    "type": "indicator",
+    "category": "Sentiment",
+    "sections": {
+        "summary": "Le Sentiment Crypto, souvent manifesté par l'indice « Crypto Fear & Greed », est une mesure de l'état émotionnel des participants au marché des cryptomonnaies. Il agrège des données issues de la volatilité, du momentum du marché, des réseaux sociaux, des sondages et de la dominance des actifs. En 2026, chez GMS, le sentiment est un indicateur contrarien essentiel pour identifier les extrêmes de marché et prendre des décisions rationnelles dans un environnement souvent irrationnel.",
+        "deep_dive": "La psychologie du marché crypto est unique par son intensité et sa rapidité. GMS analyse le Sentiment Crypto comme un indicateur avancé des crises de liquidité ou de la formation de bulles euphoriques. Lorsque l'indice affiche une « Greed extrême » (au-dessus de 80), la probabilité d'une correction brutale augmente massivement, car le marché est suracheté et la plupart des acheteurs potentiels sont déjà positionnés. À l'inverse, une « Fear extrême » (en dessous de 20) constitue historiquement une opportunité d'achat de premier choix, signalant une phase de capitulation. En 2026, nous intégrons des analyses de sentiment assistées par l'IA sur les flux d'actualités mondiaux et les données on-chain (comme les mouvements des portefeuilles « baleines ») pour obtenir une image précise de la conviction réelle des acteurs. Le Sentiment Crypto est pour nous le filtre qui sépare l'impulsion émotionnelle de l'opportunisme stratégique.",
+        "council_debate": {
+            "geopolitics": "Les événements géopolitiques agissent comme des accélérateurs du sentiment crypto. Nous observons comment les nouvelles concernant l'adoption étatique ou les interdictions font basculer le pendule de la peur à l'avidité en quelques heures. Dans un monde multipolaire, le sentiment crypto reflète souvent l'aspiration mondiale à l'indépendance financière.",
+            "macro": "Le sentiment est étroitement lié à la liquidité mondiale. En période d'argent facile, le marché tend vers une avidité persistante. Nous corrélons le sentiment crypto avec les attentes d'inflation : quand la méfiance envers les monnaies fiduciaires augmente, l'avidité dans le secteur crypto croît souvent, signalant une fuite vers les actifs alternatifs.",
+            "tech": "L'analyse des algorithmes des réseaux sociaux et des volumes de recherche constitue le cœur technologique du sentiment. Nous utilisons le traitement du langage naturel (NLP) pour quantifier l'ambiance des forums. En 2026, les bots manipulent souvent artificiellement le sentiment ; notre rôle est de distinguer ce bruit de l'intérêt humain réel.",
+            "policy": "Les déclarations réglementaires sont les moteurs les plus puissants des phases de peur. Nous évaluons la capacité du marché à se redresser après des titres négatifs. Un marché qui sort rapidement de la zone de peur malgré des nouvelles défavorables signale un socle fondamental solide que nous utilisons pour nos achats.",
+            "quant": "Nos modèles quantitatifs utilisent le sentiment comme une couche superposée (overlay) à nos systèmes de trading mécaniques. Nous réduisons l'exposition lorsque le sentiment stagne trop longtemps en zone de « Greed ». Nous calculons également les « divergences de sentiment » : si le prix monte mais que le sentiment plafonne, cela indique une faiblesse de la tendance.",
+            "technical": "Nous combinons les extrêmes de sentiment avec les indicateurs techniques classiques comme le RSI. Une lecture de « Fear extrême » couplée à un RSI quotidien survendu est considérée dans nos protocoles GMS comme un signal d'achat à haute probabilité. Nous voyons le sentiment comme le catalyseur émotionnel qui donne de la force aux configurations techniques."
+        },
+        "forecast_risks": "Le risque principal est de confondre un extrême de sentiment avec un retournement immédiat. Un marché peut rester « gourmand » bien plus longtemps qu'un trader ne peut rester solvable. De plus, des manipulations coordonnées peuvent fausser artificiellement le sentiment pour piéger les petits porteurs. Nous déconseillons de traiter le sentiment de manière isolée sans confirmation par le prix.",
+        "gms_conclusion": "Biais contrarien stratégique (Contrarian Bias). Utilisez le sentiment crypto pour rester plus calme que la foule. Vendez dans l'euphorie et achetez dans le désespoir. Le score de sentiment GMS vous aide à éviter les pièges émotionnels du marché de 2026."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-09T16:42:00+00:00"
+}

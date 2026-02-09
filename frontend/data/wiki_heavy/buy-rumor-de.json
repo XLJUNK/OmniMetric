@@ -1,0 +1,23 @@
+{
+    "slug": "buy-rumor",
+    "lang": "DE",
+    "title": "Buy the Rumor, Sell the Fact (Gerücht kaufen, Fakten verkaufen)",
+    "type": "indicator",
+    "category": "Psychology",
+    "sections": {
+        "summary": "Die Börsenweisheit 'Buy the Rumor, Sell the Fact' (Kaufe das Gerücht, verkaufe die Nachricht) beschreibt ein Phänomen, bei dem sich Aktienkurse im Vorfeld eines erwarteten Ereignisses positiv bewegen, nur um bei dessen tatsächlichem Eintritt zu fallen. Dies liegt daran, dass der Markt die positiven Erwartungen bereits eingepreist hat. Im Jahr 2026 ist dieses Konzept aufgrund der extremen Geschwindigkeit der Informationsverbreitung durch KI und soziale Medien relevanter denn je.",
+        "deep_dive": "Die Dynamik von 'Buy the Rumor' im Jahr 2026 ist das Ergebnis effizienter Märkte, die versuchen, die Zukunft zu diskontieren. GMS analysiert dieses Muster als 'Erwartungskollaps'. Wenn ein Ereignis (wie eine Zinssenkung oder eine Produktvorstellung) zu fast 100% antizipiert wird, gibt es zum Zeitpunkt der Veröffentlichung keine neuen Käufer mehr, sondern nur noch Gewinnmitnehmer. Bei GMS beobachten wir die 'Implizite Volatilität' und das Optionsvolumen im Vorfeld wichtiger Termine als primäre Indikatoren für eine 'Überfüllung' des Gerüchts. Die Besonderheit im Jahr 2026 ist die 'Information Leakage' durch alternative Daten (z.B. Satellitenbilder oder Kreditkartendaten), die dazu führt, dass die 'Fakten' oft schon Tage vor dem offiziellen Termin verkauft werden. Wir integrieren Daten zur Anlegerstimmung und zum Nachrichtenzufluss in unsere GMS-Modelle, um zu identifizieren, ob eine Nachricht bereits 'verbraucht' ist. Ein klassisches Signal für 'Sell the Fact' ist ein Kursanstieg bei sinkendem Volumen kurz vor dem Ereignis, gefolgt von einem heftigen Abverkauf bei exzellenten Nachrichten.",
+        "council_debate": {
+            "geopolitics": "Politische Ankündigungen folgen oft diesem Muster. Wir analysieren, wie Friedensgespräche oder Handelsabkommen im Vorfeld zu Kursgewinnen führen, die bei der offiziellen Unterzeichnung wieder abgegeben werden. Geopolitische Risiken werden oft 'gekauft', wenn die Angst den Höhepunkt erreicht.",
+            "macro": "Zentralbankentscheidungen sind die Paradebeispiele. Wenn die Fed eine Zinssenkung signalisiert, beginnt die Rallye beim 'Gerücht'. Zum Zeitpunkt der Senkung ist das Makro-Szenario oft schon in den Kursen enthalten. Wir nutzen das Fed-Watch-Tool zur Kalibrierung dieser Erwartungen.",
+            "tech": "Produktvorstellungen großer Tech-Giganten (wie die neue Chip-Generation 2026) werden monatelang im Voraus 'gekauft'. Wir beobachten, dass Tech-Werte am Tag der Keynote oft unter Druck geraten, da das 'Wunder' bereits im Preis enthalten ist.",
+            "policy": "Gesetzesinitiativen und Regulierungsänderungen bieten klare Zeitpläne für dieses psychologische Muster. Wir bewerten die Auswirkungen von angekündigten Steuersenkungen auf die Markterwartungen. Die Politik liefert oft das 'Gerücht', während die Umsetzung den 'Fakt' darstellt.",
+            "quant": "Unsere Modelle nutzen Event-Study-Methoden zur Quantifizierung der Rendite-Anomalien vor und nach Ankündigungen. Wir haben festgestellt, dass die profitabelste Zeit oft das mittlere Drittel des Gerüchte-Zyklus ist. Wir berechnen 'Antizipations-Scores' zur Risikoabsicherung.",
+            "technical": "Wir nutzen Oszillatoren wie den RSI, um zu sehen, ob ein Wert im Vorfeld eines Ereignisses technisch überkauft ist. Ein 'Bearish Divergence' bei Erreichen des Termins ist unser finales Ausstiegssignal. Wir achten auf Unterstützungslinien, die nach dem Abverkauf oft wieder getestet werden."
+        },
+        "forecast_risks": "Das Hauptrisiko bleibt das 'Black Swan' Szenario, bei dem die Fakten die kühnsten Gerüchte übertreffen (z.B. ein massives Earnings Beat), was zu einem weiteren Preissprung anstatt eines Abverkaufs führt. Zudem können algorithmische Käufe den Abverkauf verzögern, was zu einer 'Short Squeeze' Situation führen kann. Eine Fehleinschätzung der Erwartungshaltung des Marktes ist das größte Verlustrisiko bei dieser Strategie.",
+        "gms_conclusion": "Strategischer \"Timing-Filter\" (Expectation Arbitrage). 'Buy the Rumor' ist im Jahr 2026 kein bloßer Spruch, sondern eine exakte Disziplin. Achten Sie auf die Sättigung der Erwartungen: Wenn jeder über das Ereignis spricht, ist es Zeit zu verkaufen."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-09T18:25:00+00:00"
+}

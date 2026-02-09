@@ -1,19 +1,23 @@
 {
     "slug": "correlation-coefficient",
     "lang": "FR",
-    "title": "Correlation Coefficient",
+    "title": "Coefficient de Corrélation",
     "type": "indicator",
-    "category": "Technical",
+    "category": "Quant",
     "sections": {
-        "summary": "How assets move together.",
-        "deep_dive": "Statistically mapping the spiderweb of macro.",
+        "summary": "Le coefficient de corrélation est une mesure statistique qui quantifie la force et la direction de la relation linéaire entre deux actifs financiers ou variables. Compris entre -1,0 (relation inverse parfaite) et +1,0 (mouvement synchrone parfait), il est l'outil fondamental de la gestion de portefeuille pour la diversification et la gestion des risques. Une corrélation de 0,0 indique une absence totale de relation linéaire.",
+        "deep_dive": "En 2026, la compréhension des corrélations a subi une transformation radicale. Le modèle classique d'allocation 60/40 a échoué car les corrélations entre actions et obligations sont devenues positives en période inflationniste. Les corrélations ne sont pas statiques ; elles sont sensibles aux régimes de volatilité. En période de crise systémique, toutes les classes d'actifs à risque tendent vers une corrélation de 1,0, éliminant tout bénéfice de diversification – un phénomène connu sous le nom de 'rupture de corrélation'. L'investisseur moderne doit surveiller les corrélations glissantes (rolling correlations) et comprendre les facteurs sous-jacents, comme la liquidité du dollar ou les taux réels, qui dictent ces relations. Analyser la corrélation entre les métaux précieux et les indices boursiers peut révéler si le marché est en mode 'croissance' ou en mode 'protection'.",
         "council_debate": {
-            "quant": "+1 to -1 range.",
-            "macro": "Inter-market linkage."
+            "geopolitics": "Les tensions géopolitiques agissent comme un synchronisateur global. Lorsqu'un conflit majeur éclate, les actifs régionaux qui étaient décorrélés se mettent soudainement à bouger de concert sous l'effet de la peur. En 2026, nous observons une corrélation croissante entre l'énergie et les tensions souveraines, modifiant les équilibres traditionnels des portefeuilles macro.",
+            "macro": "La politique des banques centrales est le moteur principal des corrélations actuelles. Le retrait des liquidités (QT) a tendance à augmenter la corrélation entre tous les types d'actifs de rendement. Nous étudions de près la corrélation entre l'indice dollar (DXY) et les marchés émergents : c'est l'indicateur le plus fidèle du stress financier mondial et de la disponibilité du crédit.",
+            "tech": "L'automatisation du rebalancement des portefeuilles par les algorithmes crée des corrélations artificielles. Lorsque les modèles de 'Risk Parity' vendent massivement, ils le font sans discernement entre les classes d'actifs, provoquant des pics de corrélation qui n'ont rien à voir avec les fondamentaux économiques. Comprendre cette mécanique technologique est vital pour ne pas être surpris par des mouvements synchronisés inattendus.",
+            "policy": "Les changements de réglementation, comme les taxes carbone ou les régulations sur l'IA, créent de nouveaux 'clusters' de corrélation. Des secteurs qui n'avaient aucun lien historique se retrouvent désormais liés par leur exposition aux politiques fiscales. La politique crée des dépendances structurelles que les modèles quantitatifs classiques ont parfois du mal à intégrer rapidement.",
+            "quant": "Nous utilisons désormais des modèles de 'Copula' pour capturer les dépendances non linéaires et les risques de queue (tail risks). Un simple coefficient Pearson ne suffit plus en 2026. Nous cherchons des actifs qui restent décorrélés même lors d'événements extrêmes. La quête du 'rendement alpha' passe par l'identification de corrélations instables que nous pouvons exploiter par l'arbitrage.",
+            "technical": "L'analyse technique inter-marchés repose entièrement sur les corrélations historiques. Si la relation habituelle entre l'or et le pétrole se brise, c'est le signe précurseur d'un changement de tendance majeur dans l'économie réelle. Nous surveillons la force relative des paires d'actifs pour détecter le moment où une corrélation s'érode, signalant souvent une opportunité de trading majeure."
         },
-        "forecast_risks": "Regime shifts breaking correlation.",
-        "gms_conclusion": "diversification is key."
+        "forecast_risks": "Le risque principal est l'illusion de sécurité offerte par une diversification basée sur des corrélations passées. Un portefeuille peut sembler diversifié sur le papier, mais être exposé à un seul et même risque macroéconomique latent. Si ce risque se concrétise, la corrélation bondit à 1,0 et les pertes s'accumulent sans protection.",
+        "gms_conclusion": "La corrélation est le langage du risque systémique. Ne vous fiez jamais à un chiffre statique. En 2026, vous devez comprendre pourquoi deux actifs bougent ensemble pour anticiper le moment où ils cesseront de le faire. Une diversification intelligente commence là où la corrélation linéaire s'arrête."
     },
-    "model": "Antigravity-GMS-v1 (Professional Audit)",
-    "generated_at": "2026-02-03T23:48:25.075812"
+    "model": "Antigravity-GMS-v3 (Institutional French Edition)",
+    "generated_at": "2026-02-09T14:50:00+00:00"
 }

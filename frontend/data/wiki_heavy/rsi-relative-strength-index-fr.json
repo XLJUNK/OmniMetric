@@ -1,0 +1,23 @@
+{
+    "slug": "rsi-relative-strength-index",
+    "lang": "FR",
+    "title": "Relative Strength Index (RSI)",
+    "type": "indicator",
+    "category": "Technical",
+    "sections": {
+        "summary": "L'indice de force relative (Relative Strength Index, RSI) est un oscillateur de momentum qui mesure la vitesse et le changement des mouvements de prix. Il oscille entre 0 et 100 et est traditionnellement utilisé pour identifier les conditions de surachat (au-dessus de 70) ou de survente (en dessous de 30) sur un marché. En 2026, le RSI demeure un outil indispensable pour GMS afin de détecter l'épuisement du marché et les retournements de tendance potentiels en temps réel.",
+        "deep_dive": "Bien que le RSI ait été développé en 1978 par J. Welles Wilder Jr., sa pertinence dans les marchés modernes de 2026, dominés par les algorithmes, s'est accrue. Nous n'interprétons pas le RSI comme un simple nombre statique, mais analysons sa dynamique dans le contexte de la volatilité globale. Un RSI restant longtemps en zone de surachat indique souvent une tendance institutionnelle puissante plutôt qu'une correction imminente. La véritable force de cet indicateur réside dans l'analyse des « divergences » : lorsque le prix atteint un nouveau sommet mais que le RSI forme un sommet plus bas, cela signale un affaiblissement de la tendance haussière. GMS combine les données du RSI avec des métriques on-chain et des analyses de sentiment pour minimiser les faux signaux et déterminer des points d'entrée et de sortie précis pour les positions macroéconomiques mondiales.",
+        "council_debate": {
+            "geopolitics": "Les chocs géopolitiques provoquent souvent des valeurs de RSI extrêmes. Nous observons comment les indices nationaux chutent en zone de survente profonde lors de conflits soudains. Un RSI inférieur à 20 sur une base hebdomadaire dans un indice majeur constitue souvent un signal historique d'achat opportuniste une fois la panique initiale dissipée.",
+            "macro": "Dans un environnement inflationniste, les valeurs du RSI pour les matières premières ont tendance à former des plateaux plus élevés. Nous utilisons le RSI pour vérifier si les tendances macroéconomiques, telles que les attentes de taux d'intérêt, sont déjà totalement intégrées par les participants au marché. Un RSI neutre autour de 50 indique souvent une phase d'attente avant de nouvelles données économiques.",
+            "tech": "Les algorithmes de trading haute fréquence (HFT) modernes utilisent les niveaux de RSI comme déclencheurs. Lorsque le RSI franchit les barres de 30 ou 70, des cascades automatisées déclenchent souvent des volumes de transaction massifs. Nous analysons ces réactions algorithmiques pour anticiper la liquidité lors des extrêmes du RSI.",
+            "policy": "Les décisions des banques centrales peuvent faire basculer les oscillateurs RSI d'un extrême à l'autre en quelques minutes. Nous évaluons la tendance de « retour à la moyenne » après de telles annonces. Un RSI qui revient immédiatement en zone neutre après une réunion de la Fed signale une acceptation du marché face à la nouvelle politique.",
+            "quant": "Nos modèles quantitatifs testent les stratégies RSI sur plusieurs décennies. Nous avons constaté que l'efficacité du RSI dépend fortement de la période choisie. Si 14 jours est le standard, nous utilisons souvent des périodes raccourcies (RSI-7) pour les actifs crypto afin de correspondre à la plus grande réactivité de ces marchés.",
+            "technical": "Le RSI est le maître des divergences. Nous recherchons des « divergences haussières cachées » dans les tendances de fond pour renforcer les positions. Une cassure de ligne de tendance sur l'indicateur RSI lui-même est souvent considérée comme une confirmation d'une explosion de prix imminente, avant même qu'elle ne soit visible sur le graphique des prix."
+        },
+        "forecast_risks": "Le risque majeur lors de l'utilisation du RSI est sa stagnation en zone extrême pendant des tendances fortes (trending markets). Un trader vendant aveuglément à RSI 70 peut être emporté par un mouvement parabolique. De plus, les opérations de wash-trading sur les marchés peu liquides peuvent fausser les signaux du RSI et créer des pièges haussiers ou baissiers.",
+        "gms_conclusion": "Surveillance stratégique (Monitor). Utilisez le RSI comme un filtre, et non comme un signal unique. Combiné au score global GMS, il apporte la précision nécessaire pour garder la tête froide dans les marchés surchauffés et agir avec audace lors des phases de panique."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-09T15:50:00+00:00"
+}

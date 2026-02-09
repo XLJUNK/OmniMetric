@@ -1,0 +1,23 @@
+{
+    "slug": "us10y-yield",
+    "lang": "FR",
+    "title": "Rendement du Trésor US à 10 ans (TNX)",
+    "type": "indicator",
+    "category": "Macro",
+    "sections": {
+        "summary": "Le rendement des obligations du Trésor américain à 10 ans (TNX) est considéré comme le taux sans risque de référence mondiale et constitue le socle de valorisation de la quasi-totalité des actifs financiers. Il reflète les attentes des investisseurs en matière de croissance économique et d'inflation aux États-Unis. En 2026, le rendement à 10 ans est l'indicateur central du positionnement global sur la duration et de la viabilité de l'endettement mondial.",
+        "deep_dive": "La dynamique du rendement à 10 ans en 2026 est dictée par le bras de fer entre la liquidité des banques centrales et la réalité budgétaire. Chez GMS, nous analysons le TNX comme le « rythme cardiaque du marché mondial des capitaux ». Une hausse du rendement signifie une baisse du prix des obligations et augmente le coût du capital pour les entreprises du monde entier. Nous surveillons la « prime de terme » (Term Premium) comme facteur primaire illustrant l'incertitude sur l'inflation future. La particularité en 2026 est le rôle du TNX comme ancre pour les taux hypothécaires et les prêts commerciaux ; chaque point de base à la hausse impacte directement le marché immobilier US et l'investissement productif. Nous intégrons les données sur la demande étrangère de Treasuries (données TIC) et la stratégie d'émission du Trésor américain dans nos modèles GMS. Une cassure de seuils critiques (ex: 4,5% ou 5,0%) est perçue par GMS comme un avertissement majeur pour les actions, l'attractivité relative des obligations augmentant radicalement.",
+        "council_debate": {
+            "geopolitics": "Le rendement à 10 ans est un sismographe de la confiance envers la puissance américaine. Nous analysons les divergences entre les rendements US et ceux du reste du G7 comme mesure de la fuite des capitaux géopolitique. Les flux de « valeur refuge » (Safe Haven) compressent le rendement en temps de crise malgré l'endettement élevé.",
+            "macro": "Nous corrélons le TNX aux taux d'inflation « breakeven ». La différence nous donne le taux réel, véritable moteur du prix des actifs. Nous utilisons le rendement à 10 ans pour déterminer les risques de récession via l'inclinaison de la courbe des taux.",
+            "tech": "Les actions technologiques sont hypersensibles au TNX. Nous observons comment les mouvements volatils des taux déclenchent des ventes algorithmiques sur le Nasdaq. Les investissements de long terme dans l'infrastructure de l'IA dépendent directement de la stabilité des coûts de financement définis par le TNX.",
+            "policy": "La domination budgétaire est le thème central de 2026. Nous évaluons comment les déficits publics massifs tirent les taux vers le haut, même si la Fed tente d'en garder le contrôle (Contrôle de la courbe des taux). Les enchères du Trésor américain sont les rendez-vous les plus scrutés pour l'évolution du TNX.",
+            "quant": "Nos modèles exploitent la corrélation entre le TNX et la prime de risque actions (Equity Risk Premium). Nous avons identifié des points de bascule où les institutionnels arbitrent massivement les actions en faveur des obligations. Nous calculons des métriques de sensibilité pour divers portefeuilles obligataires.",
+            "technical": "Nous utilisons les canaux de tendance et les indicateurs comme le MACD hebdomadaire. Une cassure technique de la tendance baissière pluridécennale est perçue par GMS comme la confirmation d'une nouvelle ère inflationniste. Nous surveillons les zones de résistance sur les seuils de rendement psychologiques."
+        },
+        "forecast_risks": "Le risque majeur demeure une « fonte du marché obligataire » due à la dette, où les investisseurs exigeraient une prime de risque beaucoup plus élevée face à un défaut ou une dévaluation. De plus, les ventes soudaines par des banques centrales étrangères (dé-dollarisation) constituent un risque imprévisible. Une boucle salaires-prix pourrait porter les rendements bien au-delà de ce que l'économie réelle peut supporter.",
+        "gms_conclusion": "Filtre stratégique de référence (Yield Watch). Le rendement US à 10 ans est en 2026 l'arbitre ultime de la valeur de tout investissement. Restez en cash ou sur des titres défensifs lors des phases de hausse des taux, et utilisez les pics de rendement pour bâtir des positions obligataires protectrices de long terme."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-09T18:07:00+00:00"
+}

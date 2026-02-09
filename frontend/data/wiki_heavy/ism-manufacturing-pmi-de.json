@@ -1,0 +1,23 @@
+{
+    "slug": "ism-manufacturing-pmi",
+    "lang": "DE",
+    "title": "ISM Manufacturing PMI (Einkaufsmanagerindex)",
+    "type": "indicator",
+    "category": "Macro",
+    "sections": {
+        "summary": "Der ISM Manufacturing PMI (Purchasing Managers' Index) ist einer der am meisten beachteten Wirtschaftsindikatoren weltweit und misst die monatliche Veränderung der Geschäftsbedingungen im verarbeitenden Gewerbe der USA. Er wird vom Institute for Supply Management erstellt und basiert auf Umfragen unter Einkaufsmanagern zu Auftragsbeständen, Produktion, Beschäftigung und Lieferzeiten. Im Jahr 2026 ist der ISM PMI der entscheidende Vorlaufindikator für das globale BIP-Wachstum und industrielle Trends.",
+        "deep_dive": "Die Dynamik des ISM PMI im Jahr 2026 ist ein präzises Spiegelbild der 'Re-Industrialisierung' der USA. Da der Index als Vorlaufindikator gilt, signalisiert ein Wert über 50 eine Expansion des Sektors, während ein Wert unter 50 eine Kontraktion anzeigt. Bei GMS analysieren wir den ISM PMI als den 'Zyklus-Taktgeber'. Wir beobachten insbesondere die Sub-Komponenten 'New Orders' (Neuaufträge) und 'Prices Paid' (gezahlte Preise) als primäre Faktoren für zukünftiges Gewinnwachstum und Inflationsdruck. Die Besonderheit im Jahr 2026 ist die Auswirkung der KI-Integration in die Fabrikautomatisierung, was dazu führt, dass die Beschäftigungskomponente des Index weniger volatil gegenüber Produktionsänderungen reagiert. Wir integrieren Daten zu globalen Lieferketten-Störungen und zu regionalen Fertigungsindizes (Phil Fed, Empire State) in unsere GMS-Modelle. Ein anhaltender Anstieg des ISM PMI über 55 signalisiert oft eine Überhitzung der Industrie, während ein Fall unter 45 fast immer eine bevorstehende Rezession ankündigt.",
+        "council_debate": {
+            "geopolitics": "Industrielle Stärke ist nationale Sicherheit. Wir analysieren den ISM PMI als Maßstab für den Erfolg der US-Handelsembargos und Förderprogramme (CHIPS Act). Ein starker PMI in den USA bei gleichzeitig schwachen globalen Daten signalisiert eine geopolitische Entkoppelung.",
+            "macro": "Wir korrelieren den ISM PMI mit den Gewinnerwartungen des S&P 500. Da das verarbeitende Gewerbe oft den Rest der Wirtschaft mitzieht, ist der PMI unser wichtigstes Tool für das konjunkturelle Market-Timing. Wir nutzen den Index zur Bestimmung der aktuellen Phase im Wirtschaftszyklus.",
+            "tech": "Moderne Fertigung ist Tech-getrieben. Wir beobachten die Einführung von digitalen Zwillingen und autonomen Robotiksystemen in den Umfrage-Kommentaren der Einkaufsmanager. Technologische Effizienzsprünge können den PMI trotz hoher Rohstoffpreise stabil halten.",
+            "policy": "Zinspolitik der Fed wirkt zeitverzögert auf den ISM PMI. Wir bewerten die Auswirkungen von Umweltregulierungen und Energiekosten auf die Wettbewerbsfähigkeit der US-Industrie. Fiskalische Anreize für die heimische Produktion sind der stärkste Rückenwind für industrielle Expansion.",
+            "quant": "Unsere Modelle nutzen die Differenz zwischen dem ISM PMI und dem Marktkonsens zur Erzeugung von kurzfristigen Handelssignalen. Wir haben festgestellt, dass positive Überraschungen beim PMI oft eine Kettenreaktion bei zyklischen Aktien (Industrials, Materials) auslösen. Wir berechnen Mean-Reversion-Level für industrielle Indikatoren.",
+            "technical": "Wir nutzen Oszillatoren wie den Stochastik auf den PMI-Daten selbst, um überkaufte oder überverkaufte Konjunkturbedingungen zu identifizieren. Ein technischer Breakout bei den Sub-Indizes für Lieferantenlieferungen gilt uns als Signal für ein Ende von deflationären Tendenzen. Wir achten auf Unterstützungslinien bei historischen Revisions-Tiefs."
+        },
+        "forecast_risks": "Das Hauptrisiko bleibt ein 'Double-Dip' in der Industrie, ausgelöst durch geopolitische Schocks oder einen plötzlichen Einbruch der Konsumnachfrage. Zudem stellt der Fachkräftemangel im produzierenden Gewerbe ein strukturelles Risiko dar, das die Produktionskapazität trotz hoher Nachfrage einschränken kann. Zu hohe gezahlte Preise können zudem die Margen der Unternehmen erodieren lassen.",
+        "gms_conclusion": "Strategisches \"Konjunktur-Barometer\" (Cycles Engine). Der ISM Manufacturing PMI ist im Jahr 2026 der ultimative Kompass für das zyklische Exposure. Bleiben Sie in industriellen Werten übergewichtet, solange der PMI über 50 notiert und die Neuaufträge stabil wachsen."
+    },
+    "model": "Antigravity-GMS-v3 (Global Parity Bridge)",
+    "generated_at": "2026-02-09T17:50:00+00:00"
+}
