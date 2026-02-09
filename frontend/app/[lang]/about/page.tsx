@@ -102,6 +102,61 @@ export default async function AboutPage({ params }: Props) {
                         </div>
                     </section>
 
+                    {/* Proprietary Macro Engine: The Four Pillars */}
+                    <section className="space-y-6">
+                        <div className="flex items-center gap-3">
+                            <Cpu className="w-5 h-5 text-amber-500" />
+                            <h2 className="text-sm font-black tracking-[0.3em] uppercase text-slate-400">
+                                {about.pillars_title || "Proprietary Macro Engine: The Four Pillars"}
+                            </h2>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {/* GMS Score */}
+                            <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-6 group hover:border-amber-500/50 transition-colors">
+                                <div className="flex items-center gap-3 mb-4">
+                                    <Sparkles className="w-5 h-5 text-amber-500" />
+                                    <h3 className="font-black text-white tracking-widest uppercase italic">GMS SCORE</h3>
+                                </div>
+                                <p className="text-sm text-slate-400 leading-relaxed">
+                                    {d.methodology.desc}
+                                </p>
+                            </div>
+
+                            {/* OGV */}
+                            <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-6 group hover:border-cyan-500/50 transition-colors">
+                                <div className="flex items-center gap-3 mb-4">
+                                    <TrendingUp className="w-5 h-5 text-cyan-500" />
+                                    <h3 className="font-black text-white tracking-widest uppercase italic">{d.modals.ogv.title}</h3>
+                                </div>
+                                <p className="text-sm text-slate-400 leading-relaxed">
+                                    {d.modals.ogv.func_desc}
+                                </p>
+                            </div>
+
+                            {/* OWB */}
+                            <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-6 group hover:border-red-500/50 transition-colors">
+                                <div className="flex items-center gap-3 mb-4">
+                                    <Shield className="w-5 h-5 text-red-500" />
+                                    <h3 className="font-black text-white tracking-widest uppercase italic">{d.modals.owb.title}</h3>
+                                </div>
+                                <p className="text-sm text-slate-400 leading-relaxed">
+                                    {d.modals.owb.func_desc}
+                                </p>
+                            </div>
+
+                            {/* OTG */}
+                            <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-6 group hover:border-green-500/50 transition-colors">
+                                <div className="flex items-center gap-3 mb-4">
+                                    <Database className="w-5 h-5 text-green-500" />
+                                    <h3 className="font-black text-white tracking-widest uppercase italic">{d.modals.otg.title}</h3>
+                                </div>
+                                <p className="text-sm text-slate-400 leading-relaxed">
+                                    {d.modals.otg.func_desc}
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
                     {/* Mission */}
                     <section className="space-y-6">
                         <div className="flex items-center gap-3">

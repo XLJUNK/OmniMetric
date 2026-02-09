@@ -198,7 +198,11 @@ const WIKI_LABELS = {
 // Generate params for SSG
 export async function generateStaticParams() {
     const langs = Object.keys(DICTIONARY).filter(l => l !== 'EN').map(l => l.toLowerCase());
-    const slugs = getAllSlugs();
+
+    // Use EN as the master list, but include Heavy-Only items
+    const { getWikiDataWithHeavy } = await import('@/lib/wiki-server');
+    const allItems = getWikiDataWithHeavy('EN');
+    const slugs = allItems.map(item => item.slug);
 
     // Cross product
     const params = [];

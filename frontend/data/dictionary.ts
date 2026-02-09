@@ -317,8 +317,8 @@ export const DICTIONARY: Record<LangType, any> = {
                 data_sources_content: "Federal Reserve Economic Data (FRED), CBOE Market Volatility Indices, Yahoo Finance, Financial Modeling Prep, Alternative.me Crypto Fear & Greed",
                 disclaimer_title: "Important Disclaimer",
                 disclaimer_content: "OmniMetric is provided for informational purposes only and does not constitute investment advice. All data is sourced from public APIs and third-party providers. We do not guarantee accuracy, completeness, or timeliness. Investment decisions are the sole responsibility of the user.",
-                system_status: "System Status: Operational (OmniMetric Project) // Version 2.0 // Updated",
-                footer_note: "OmniMetric is a 100% autonomous algorithmic project. We do not provide individual support or investment consulting."
+                footer_note: "OmniMetric is a 100% autonomous algorithmic project. We do not provide individual support or investment consulting.",
+                pillars_title: "Proprietary Macro Engine: The Four Pillars"
             },
             legal: {
                 title: "LEGAL NOTICE & COMPLIANCE",
@@ -637,7 +637,8 @@ export const DICTIONARY: Record<LangType, any> = {
                 disclaimer_title: "重要な免責事項",
                 disclaimer_content: "オムニ・メトリックは情報提供のみを目的としており、投資助言を構成するものではありません。すべてのデータは公開APIおよび第三者プロバイダーから取得されています。正確性、完全性、適時性を保証するものではありません。投資判断はユーザーの単独責任です。",
                 system_status: "システム状態: 運用中 (OmniMetric Project) // バージョン 2.0 // 更新日",
-                footer_note: "OmniMetricは100％自律的なアルゴリズムプロジェクトです。個別のサポートや投資コンサルティングは行っておりません。"
+                footer_note: "OmniMetricは100％自律的なアルゴリズムプロジェクトです。個別のサポートや投資コンサルティングは行っておりません。",
+                pillars_title: "独自マクロエンジン：4つの柱"
             },
             legal: {
                 title: "法的通知およびコンプライアンス",
@@ -909,8 +910,8 @@ export const DICTIONARY: Record<LangType, any> = {
                 data_sources_content: "美联储经济数据 (FRED), CBOE 波动率指数, 雅虎财经, Financial Modeling Prep, Alternative.me 加密恐惧与贪婪指数",
                 disclaimer_title: "重要免责声明",
                 disclaimer_content: "OmniMetric 仅供参考，不构成投资建议。所有数据均来自公共 API。我们不保证准确性。投资决策由用户自行承担。",
-                system_status: "系统状态：运行中 // 版本 2.0 // 更新日期",
-                footer_note: "OmniMetric 是一个 100% 自律的算法项目。我们不提供个人支持或投资咨询。"
+                footer_note: "OmniMetric 是一个 100% 自律的算法项目。我们不提供个人支持或投资咨询。",
+                pillars_title: "专有宏观引擎：四大支柱"
             },
             legal: {
                 title: "法律声明与合规性",
@@ -1071,7 +1072,7 @@ export const DICTIONARY: Record<LangType, any> = {
         },
         terms: {
             VIX: { def: "Índice de Volatilidad.", benchmark: "Ref: >20 Precaución." },
-            MOVE: { def: "Volatilidad de Bonos.", benchmark: "Ref: >120 Estrés sistémico." },
+            MOVE: { def: "Bonos de Volatilidad.", benchmark: "Ref: >120 Estrés sistémico." },
             NFCI: { def: "Índice de Condiciones Financieras.", benchmark: "Ref: Positivo = Ajustado." },
             HY_SPREAD: { def: "Diferencial High Yield.", benchmark: "Ref: >5% Estrés crediticio." },
             COPPER_GOLD: { def: "Ratio Cobre/Oro.", benchmark: "Ref: Subida = Expansión." },
@@ -1153,7 +1154,7 @@ export const DICTIONARY: Record<LangType, any> = {
                 BALTIC: "Baltic Dry", SHIPPING: "Transporte", AGRI: "Agro",
                 SEMIS: "Semiconductores", DEFENSE: "Defensa", RARE_EARTH: "Tierras Raras", CYBER: "Ciberseguridad",
                 SILVER: "Plata", USDCNY: "USD/CNY",
-                VIX: "Volatilidad VIX", TNX: "Bono 10 Años", MOVE: "Índice MOVE", CRYPTO_SENTIMENT: "Índice Miedo/Codicia"
+                VIX: "VIX Volatilidad", TNX: "Bono 10 Años", MOVE: "Índice MOVE", CRYPTO_SENTIMENT: "Índice Miedo/Codicia"
             },
             search_placeholder: "Buscar...",
             wiki_deep_dive: "Leer Análisis Detallado"
@@ -1166,7 +1167,7 @@ export const DICTIONARY: Record<LangType, any> = {
                 what_is_content: "OmniMetric es un terminal de análisis macroeconómico impulsado por IA que transforma datos financieros de grado institucional en información útil para inversores minoristas. A diferencia de los sitios de noticias financieras tradicionales, procesamos datos de mercado en tiempo real mediante algoritmos sofisticados para generar nuestro Puntaje de Señal Macro Global (GMS), un índice de riesgo cuantitativo de 0 a 100.",
                 diff_title: "Lo que nos hace diferentes",
                 diff_card_1_title: "📊 Fuentes de Datos de Grado Institucional",
-                diff_card_1_content: "Analizamos la liquidez neta (Balance de la Fed - TGA - RRP), el índice MOVE (volatilidad de bonos) y los diferenciales de crédito de alto rendimiento, métricas reservadas para fondos de cobertura.",
+                diff_card_1_content: "Analizamos la liquidez neta (Balance de la Fed - TGA - RRP), el índice MOVE (volatilidad de bonos) y los diferenciales de crédito de alto rendimiento——estas métricas reservadas para fondos de cobertura.",
                 diff_card_2_title: "🤖 Análisis en Tiempo Real con IA",
                 diff_card_2_content: "Nuestros algoritmos procesan datos de FRED, CBOE, Yahoo Finance y otras fuentes cada 60 segundos, generando perspectivas de IA en varios idiomas con tecnología de Google Gemini.",
                 diff_card_3_title: "🎯 Puntuación de Riesgo Cuantitativa",
@@ -1183,14 +1184,15 @@ export const DICTIONARY: Record<LangType, any> = {
                 disclaimer_title: "Aviso Legal Importante",
                 disclaimer_content: "OmniMetric se proporciona solo con fines informativos y no constituye asesoramiento de inversión. No garantizamos la exactitud. Las decisiones de inversión son responsabilidad exclusiva del usuario.",
                 system_status: "Estado del Sistema: Operativo // Versión 2.0 // Actualizado",
-                footer_note: "OmniMetric es un proyecto algorítmico 100% autónomo. No proporcionamos soporte individual ni consultoría de inversión."
+                footer_note: "OmniMetric es un proyecto algorítmico 100% autónomo. No proporcionamos soporte individual ni consultoría de inversión.",
+                pillars_title: "Motor Macro Propietario: Los Cuatro Pilares"
             },
             legal: {
                 title: "AVISO LEGAL Y CUMPLIMIENTO",
                 disclaimer: "Aviso Legal",
-                disclaimer_content: "OmniMetric es un agregador de información. La información proporcionada no constituye asesoramiento de inversión. Todos los datos se proporcionan 'tal cual'.",
+                disclaimer_content: "OmniMetric es un agregador de información. La información proporcionada no constituye asesoramiento de inversión, financiero o legal. Todos los datos y análisis se proporcionan 'tal cual'.",
                 usage: "Términos de Uso",
-                usage_content: "Queda estrictamente prohibido el raspado automatizado y el entrenamiento de IA sin licencia comercial. Al usar esta terminal, acepta estos términos legales."
+                usage_content: "Queda estrictamente prohibido el raspado automatizado y el entrenamiento de IA sin licencia comercial. Al usar esta terminal, acepta estos términos legales específicos del proyecto."
             },
             archive: {
                 title: "HISTORIAL DE CORRELACIÓN DE SEÑALES",
@@ -1456,7 +1458,8 @@ export const DICTIONARY: Record<LangType, any> = {
                 disclaimer_title: "महत्वपूर्ण अस्वीकरण",
                 disclaimer_content: "OmniMetric केवल सूचनात्मक उद्देश्यों के लिए प्रदान किया जाता है। सभी डेटा सार्वजनिक API से प्राप्त किया जाता है। हम सटीकता की गारंटी नहीं देते हैं।",
                 system_status: "सिस्टम स्थिति: चालू // संस्करण 2.0 // अद्यतन",
-                footer_note: "OmniMetric 100% स्वायत्त है। हम व्यक्तिगत सहायता या निवेश परामर्श प्रदान नहीं करते हैं।"
+                footer_note: "OmniMetric 100% स्वायत्त है। हम व्यक्तिगत सहायता या निवेश परामर्श प्रदान नहीं करते हैं।",
+                pillars_title: "मालिकाना मैक्रो इंजन: चार स्तंभ"
             },
             legal: {
                 title: "कानूनी नोटिस",
@@ -1684,8 +1687,6 @@ export const DICTIONARY: Record<LangType, any> = {
             forex: "VALAS",
             commodities: "KOMODITAS",
             wiki: "WIKI MAKRO",
-
-
             maxims: "PETUAH EMAS",
             technical: "TEKNIS",
             indicator: "Aset & Indikator",
@@ -1731,7 +1732,8 @@ export const DICTIONARY: Record<LangType, any> = {
                 disclaimer_title: "Penafian Penting",
                 disclaimer_content: "OmniMetric disediakan hanya untuk tujuan informasi. Semua data bersumber dari API publik. Kami tidak menjamin keakuratan.",
                 system_status: "Status Sistem: Beroperasi // Versi 2.0 // Diperbarui",
-                footer_note: "OmniMetric 100% otonom. Kami tidak menyediakan dukungan individu atau konsultasi investasi."
+                footer_note: "OmniMetric 100% otonom. Kami tidak menyediakan dukungan individu atau konsultasi investasi.",
+                pillars_title: "Mesin Makro Kepemilikan: Empat Pilar"
             },
             legal: {
                 title: "PEMBERITAHUAN HUKUM",
@@ -1961,7 +1963,6 @@ export const DICTIONARY: Record<LangType, any> = {
             commodities: "سلع",
             wiki: "الماكرو",
             maxims: "درر",
-
             technical: "المؤشرات الفنية",
             indicator: "الأصول والمؤشرات",
             tickers: {
@@ -2006,7 +2007,8 @@ export const DICTIONARY: Record<LangType, any> = {
                 disclaimer_title: "إخلاء مسؤولية هام",
                 disclaimer_content: "يتم توفير OmniMetric لأغراض إعلامية فقط. جميع البيانات مأخوذة من واجهات برمجة تطبيقات عامة. لا نضمن الدقة.",
                 system_status: "حالة النظام: يعمل // الإصدار 2.0 // محدث",
-                footer_note: "OmniMetric مستقل بنسبة 100%. نحن لا نقدم دعماً فردياً أو استشارات استثمارية."
+                footer_note: "OmniMetric هو مشروع خوارزمي مستقل بنسبة 100%. نحن لا نقدم دعمًا فرديًا أو استشارات استثمارية.",
+                pillars_title: "محرك ماكرو مملوك: الركائز الأربع"
             },
             legal: {
                 title: "إشعار قانوني",
@@ -2195,7 +2197,8 @@ export const DICTIONARY: Record<LangType, any> = {
                 disclaimer_title: "Wichtiger Haftungsausschluss",
                 disclaimer_content: "OmniMetric dient ausschließlich zu Informationszwecken und stellt keine Anlageberatung dar. Alle Daten stammen von öffentlichen Schnittstellen und Drittanbietern. Wir garantieren keine Genauigkeit, Vollständigkeit oder Aktualität. Anlageentscheidungen liegen in der alleinigen Verantwortung des Nutzers.",
                 system_status: "Systemstatus: Betriebsbereit (OmniMetric Projekt) // Version 2.0 // Aktualisiert",
-                footer_note: "OmniMetric ist ein zu 100 % autonomes algorithmisches Projekt. Wir bieten keine individuelle Unterstützung oder Anlageberatung an."
+                footer_note: "OmniMetric ist ein zu 100 % autonomes algorithmisches Projekt. Wir bieten keine individuelle Unterstützung oder Anlageberatung an.",
+                pillars_title: "Proprietäre Makro-Engine: Die vier Säulen"
             },
             legal: {
                 title: "RECHTLICHER HINWEIS & COMPLIANCE",
@@ -2448,7 +2451,8 @@ export const DICTIONARY: Record<LangType, any> = {
                 disclaimer_title: "Avertissement Important",
                 disclaimer_content: "OmniMetric est fourni à titre informatif uniquement et ne constitue pas un conseil en investissement. Toutes les données proviennent d'APIs publiques et de fournisseurs tiers. Nous ne garantissons pas l'exactitude, l'exhaustivité ou l'actualité. Les décisions d'investissement relèvent de la seule responsabilité de l'utilisateur.",
                 system_status: "Statut du système : Opérationnel (Projet OmniMetric) // Version 2.0 // Mis à jour",
-                footer_note: "OmniMetric est un projet algorithmique 100% autonome. Nous ne fournissons pas de support individuel ou de conseil en investissement."
+                footer_note: "OmniMetric est un projet algorithmique 100% autonome. Nous ne fournissons pas de support individuel ou de conseil en investissement.",
+                pillars_title: "Moteur Macro Propriétaire : les Quatre Piliers"
             },
             legal: {
                 title: "MENTIONS LÉGALES & CONFORMITÉ",

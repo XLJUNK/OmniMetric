@@ -17,7 +17,9 @@ import Link from 'next/link';
 
 // Only generate params for English
 export async function generateStaticParams() {
-    const wikiItems = await getWikiData('EN');
+    // Use getWikiDataWithHeavy to include Heavy-Only items
+    const { getWikiDataWithHeavy } = await import('@/lib/wiki-server');
+    const wikiItems = getWikiDataWithHeavy('EN');
     return wikiItems.map((item) => ({
         slug: item.slug,
     }));
@@ -58,9 +60,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     if (!item) return getMultilingualMetadata('/wiki', 'EN', 'Wiki not found', 'Wiki item not found');
 
     const title = item.title;
-    // Safely extract definition from data or fallback
+    // Prioritize Heavy Summary (synchronized from dictionary.ts)
+    const heavySummary = (item as any).heavy?.summary;
     const data = item.data as any;
-    const definition = data?.definition || data?.meaning || item.title || "OmniMetric Wiki";
+    const definition = heavySummary || data?.definition || data?.meaning || item.title || "OmniMetric Wiki";
     const desc = definition.slice(0, 160);
 
     return getMultilingualMetadata(`/wiki/${slug}`, 'EN', title, desc);

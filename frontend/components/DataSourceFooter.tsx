@@ -24,6 +24,12 @@ export const DataSourceFooter = () => {
                     <span>Algorithmic Validity Checked Daily</span>
                 </div>
             </div>
+
+            <div className="mt-8 pt-4 border-t border-slate-100 dark:border-slate-800/50">
+                <p className="text-[10px] text-slate-400 dark:text-slate-500 text-center italic leading-relaxed">
+                    OmniMetric specializes in proprietary algorithmic synthesis (GMS/OGV/OWB/OTG) to provide unique macro insights not available on traditional news platforms.
+                </p>
+            </div>
         </div>
     );
 };

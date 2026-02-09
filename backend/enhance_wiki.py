@@ -45,6 +45,7 @@ class WikiEnhancer:
         self.glossary = self._load_json("glossary-en.json")
         self.technical = self._load_json("technical-en.json")
         self.maxims = self._load_json("maxims-en.json")
+        self.ui_defs = self._load_ui_definitions()
         self.completed_tasks = self._load_progress()
 
     def _load_progress(self):
@@ -67,6 +68,61 @@ class WikiEnhancer:
             with open(path, "r", encoding="utf-8") as f:
                 return json.load(f)
         return []
+
+    def _load_ui_definitions(self):
+        dict_path = os.path.join(FRONTEND_DATA_DIR, "dictionary.ts")
+        if not os.path.exists(dict_path): return {}
+        
+        try:
+            with open(dict_path, "r", encoding="utf-8") as f:
+                content = f.read()
+            
+            defs = {}
+            # Define language order to find boundaries
+            langs_in_order = ["EN", "JP", "CN", "ES", "HI", "ID", "AR", "DE", "FR"]
+            
+            for i, lang in enumerate(langs_in_order):
+                defs[lang] = {}
+                # Find the start of the language block
+                start_match = re.search(rf"\b{lang}:\s*\{{", content)
+                if not start_match: continue
+                
+                # Find the end of the language block (start of next lang or end of file)
+                start_idx = start_match.start()
+                end_idx = len(content)
+                if i < len(langs_in_order) - 1:
+                    next_lang = langs_in_order[i+1]
+                    next_match = re.search(rf"\b{next_lang}:\s*\{{", content[start_idx+1:])
+                    if next_match:
+                        end_idx = start_idx + 1 + next_match.start()
+                
+                lang_content = content[start_idx:end_idx]
+                
+                for feat in ["gms-score", "ogv", "owb", "otg"]:
+                    text = ""
+                    if feat == "gms-score":
+                        # GMS is in methodology
+                        m = re.search(r'methodology:\s*\{.*?desc:\s*"(.*?)"', lang_content, re.DOTALL)
+                        if m: text = m.group(1)
+                    else:
+                        # Others are in modals
+                        feat_key = feat.replace("-", "_") if feat == "gms-score" else feat
+                        m_feat = re.search(rf'{feat_key}:\s*\{{(.*?)\}}', lang_content, re.DOTALL)
+                        if m_feat:
+                            sub = m_feat.group(1)
+                            f_desc = re.search(r'func_desc:\s*"(.*?)"', sub)
+                            p_desc = re.search(r'purpose_desc:\s*"(.*?)"', sub)
+                            if f_desc: text += f_desc.group(1)
+                            if p_desc: text += " " + p_desc.group(1)
+                    
+                    if text:
+                        # Clean up any JS templates if they exist (e.g. ${...})
+                        text = re.sub(r'\$\{.*?\}', '', text)
+                        defs[lang][feat] = text.strip()
+            return defs
+        except Exception as e:
+            print(f"[WARN] Failed to load UI definitions: {e}")
+            return {}
 
     def get_all_items(self):
         items = []
@@ -98,8 +154,11 @@ class WikiEnhancer:
         slug = item["slug"]
         save_path = os.path.join(DATA_DIR, f"{slug}-{lang.lower()}.json")
         
+        core_features = ["gms-score", "ogv", "owb", "otg"]
+        is_core = slug in core_features
+
         # Double check file existence
-        if os.path.exists(save_path):
+        if os.path.exists(save_path) and not is_core:
             self._save_progress(task_id)
             print(f"  [SKIP] {task_id} (File exists)")
             return False
@@ -107,7 +166,7 @@ class WikiEnhancer:
         print(f"  [GENERATE] {slug} ({lang})...")
         
         # --- QUALITY GUARD (V4.9) ---
-        if os.path.exists(save_path):
+        if os.path.exists(save_path) and not is_core:
             try:
                 with open(save_path, "r", encoding="utf-8") as f:
                     existing = json.load(f)
@@ -128,6 +187,15 @@ class WikiEnhancer:
             if not content: return False
 
             sections = self._parse_sections(content)
+            
+            # --- SYNC UI DEFINITIONS (SEO) ---
+            core_features = ["gms-score", "ogv", "owb", "otg"]
+            if slug in core_features and lang in self.ui_defs:
+                ui_text = self.ui_defs[lang].get(slug)
+                if ui_text:
+                    print(f"    [SYNC] Injecting UI definition for {slug} ({lang})")
+                    sections["summary"] = ui_text
+            # ---------------------------------
             
             # --- COUNCIL KEY FIX ---
             if "council_debate" in sections and sections["council_debate"]:

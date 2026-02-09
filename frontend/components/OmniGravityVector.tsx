@@ -277,20 +277,26 @@ export const OmniGravityVector = ({ onOpenInfo, lang = 'EN' }: { onOpenInfo?: ()
                 </div>
 
                 {/* Laser Line Slider */}
-                <div className="w-full max-w-[340px] mt-8 flex items-center gap-6 select-none relative z-10">
+                <div className="w-full max-w-[340px] mt-8 flex items-center gap-8 select-none relative z-10">
                     <span className="text-[10px] text-slate-500 font-mono">T-60</span>
-                    <div className="flex-1 relative h-6 flex items-center cursor-pointer group" onMouseDown={handleInteractionStart}>
-                        {/* Track: Ultra-visible neon guide */}
-                        <div className="absolute w-full h-1.5 bg-slate-700 group-hover:bg-slate-600 transition-colors rounded-full top-1/2 -translate-y-1/2" />
+                    <div className="flex-1 relative h-10 flex items-center cursor-pointer group" onMouseDown={handleInteractionStart}>
+                        {/* Track: Dark gray background */}
+                        <div
+                            className="absolute w-full h-3 rounded-full top-1/2 -translate-y-1/2 transition-colors"
+                            style={{ backgroundColor: '#334155' }}
+                        />
                         <input
                             type="range" aria-label="Time Shift" min="0" max="100" step="0.1" value={sliderValue}
                             onChange={(e) => setSliderValue(parseFloat(e.target.value))}
                             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-40"
                         />
-                        {/* Laser Thumb: Neon Blue Pill */}
+                        {/* Laser Thumb: Simple white dot with cyan glow */}
                         <div
-                            className="absolute w-5 h-6 bg-sky-400 rounded-full shadow-[0_0_15px_rgba(56,189,248,1),0_0_5px_rgba(255,255,255,0.8)] transition-transform duration-75 pointer-events-none -translate-x-1/2 top-1/2 -translate-y-1/2 z-30"
-                            style={{ left: `${progress}%` }}
+                            className="absolute w-10 h-10 bg-white rounded-full transition-transform duration-75 pointer-events-none -translate-x-1/2 top-1/2 -translate-y-1/2 z-50"
+                            style={{
+                                left: `${progress}%`,
+                                boxShadow: '0 0 0 2px rgba(56,189,248,0.4), 0 0 15px 3px rgba(56,189,248,0.8), 0 0 30px 6px rgba(56,189,248,0.5), 0 0 50px 10px rgba(56,189,248,0.3)'
+                            }}
                         />
                     </div>
                     <span className={`text-[10px] font-bold font-mono transition-colors ${progress > 98 ? 'text-sky-400 shadow-glow' : 'text-slate-500'}`}>NOW</span>
