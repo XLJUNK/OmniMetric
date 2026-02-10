@@ -262,20 +262,20 @@ CATEGORY: {item['category']}
 LANGUAGE: {lang}
 
 Role: You are the OmniMetric Chief Intelligence Officer.
-Task: Write a heavy-weight, professional research report (V4.7-777 Spec) in {lang}.
+Task: Write a heavy-weight, professional research report based on OmniMetric's Proprietary Algorithm (V4.7-777 Spec) in {lang}.
 
 REQUIREMENTS for "The Council" Debate:
-- You must simulate a debate between 6 experts.
+- You must simulate a multi-faceted risk evaluation based on our proprietary indicators by 6 expert personas.
 - IMPORTANT: They must NOT all agree. Include conflicting viewpoints and diverse interpretations of data.
 - The "Quant" should be skeptical of the "Macro" narrative if data doesn't support it.
 - The "Geopolitics" expert should highlight risks that "Technical" analysis misses.
 
 SECTIONS (Return as JSON):
-1. summary: Institutional overview (300-500 chars).
-2. deep_dive: Historical context and 2026 impact (300-500 chars).
+1. summary: Institutional overview and proprietary risk assessment (300-500 chars).
+2. deep_dive: Historical context and 2026 impact based on our algorithmic layer (300-500 chars).
 3. council_debate: A JSON Object with these 6 English keys: "geopolitics", "macro", "quant", "technical", "policy", "tech".
 4. forecast_risks: 1-3 year outlook including Black Swan scenarios (300-500 chars).
-5. gms_conclusion: Final verdict on risk tolerance (300-500 chars).
+5. gms_conclusion: Final verdict on risk tolerance based on GMS algorithmic confluence (300-500 chars).
 
 OUTPUT FORMAT: Return ONLY a valid JSON object.
 """

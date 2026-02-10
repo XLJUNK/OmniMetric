@@ -93,6 +93,16 @@ export const ExplanationModal = ({
                         </>
                     )}
                 </div>
+
+                {/* Footer */}
+                <div className="mt-8 pt-4 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-3">
+                    <p className="text-[10px] font-bold text-slate-500 tracking-widest uppercase">
+                        Institutional-grade data processing model
+                    </p>
+                    <p className="text-[9px] text-slate-600 font-mono">
+                        Copyright © 2026 OmniMetric Project. All Rights Reserved.
+                    </p>
+                </div>
             </div>
         </div>,
         document.body
