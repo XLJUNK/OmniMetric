@@ -1,13 +1,12 @@
 {
-    "last_updated": "2026-02-09T23:38:31.323373+00:00",
+    "last_updated": "2026-02-10T00:11:31.306620+00:00",
     "market_data": {
         "CRYPTO_SENTIMENT": {
-            "price": 14,
-            "daily_chg": 100.0,
-            "change_percent": 16.67,
+            "price": 9,
+            "daily_chg": -35.71,
+            "change_percent": 0.0,
             "trend": "FEAR",
             "sparkline": [
-                29,
                 27,
                 26,
                 48,
@@ -36,7 +35,8 @@
                 9,
                 6,
                 7,
-                14
+                14,
+                9
             ]
         },
         "YIELD_SPREAD": {
@@ -570,11 +570,11 @@
             ]
         },
         "BTC": {
-            "price": 70286.71,
+            "price": 70027.02,
             "prev_price": 70264.73,
-            "daily_chg": 0.03,
-            "change_percent": 12.1,
-            "trend": "UP",
+            "daily_chg": -0.34,
+            "change_percent": 11.68,
+            "trend": "DOWN",
             "sparkline": [
                 92553.59,
                 88310.91,
@@ -597,14 +597,14 @@
                 70555.39,
                 69281.97,
                 70264.73,
-                70286.71
+                70027.02
             ]
         },
         "ETH": {
-            "price": 2107.04,
+            "price": 2103.21,
             "prev_price": 2088.76,
-            "daily_chg": 0.88,
-            "change_percent": 15.66,
+            "daily_chg": 0.69,
+            "change_percent": 15.45,
             "trend": "UP",
             "sparkline": [
                 3186.62,
@@ -628,14 +628,14 @@
                 2063.39,
                 2090.55,
                 2088.76,
-                2107.04
+                2103.21
             ]
         },
         "SOL": {
-            "price": 86.91,
+            "price": 86.77,
             "prev_price": 87.04,
-            "daily_chg": -0.16,
-            "change_percent": 11.15,
+            "daily_chg": -0.31,
+            "change_percent": 10.98,
             "trend": "DOWN",
             "sparkline": [
                 133.34,
@@ -659,7 +659,7 @@
                 87.46,
                 87.64,
                 87.04,
-                86.91
+                86.77
             ]
         },
         "DXY": {
@@ -694,13 +694,12 @@
             ]
         },
         "USDJPY": {
-            "price": 156.11,
-            "prev_price": 156.78,
-            "daily_chg": -0.43,
-            "change_percent": 0.43,
+            "price": 156.2,
+            "prev_price": 157.24,
+            "daily_chg": -0.66,
+            "change_percent": 0.26,
             "trend": "DOWN",
             "sparkline": [
-                156.88,
                 158.15,
                 157.99,
                 159.18,
@@ -721,17 +720,17 @@
                 155.8,
                 156.92,
                 156.78,
-                156.11
+                157.24,
+                156.2
             ]
         },
         "EURUSD": {
             "price": 1.19,
             "prev_price": 1.18,
-            "daily_chg": 1.11,
-            "change_percent": 0.93,
+            "daily_chg": 0.68,
+            "change_percent": 0.76,
             "trend": "UP",
             "sparkline": [
-                1.17,
                 1.16,
                 1.17,
                 1.16,
@@ -747,6 +746,7 @@
                 1.2,
                 1.2,
                 1.2,
+                1.18,
                 1.18,
                 1.18,
                 1.18,
@@ -788,12 +788,11 @@
         },
         "USDSAR": {
             "price": 3.75,
-            "prev_price": 3.75,
-            "daily_chg": 0.11,
+            "prev_price": 3.74,
+            "daily_chg": 0.14,
             "change_percent": 0.12,
             "trend": "UP",
             "sparkline": [
-                3.75,
                 3.75,
                 3.75,
                 3.75,
@@ -814,14 +813,15 @@
                 3.75,
                 3.75,
                 3.75,
+                3.74,
                 3.75
             ]
         },
         "GOLD": {
-            "price": 5042.3,
+            "price": 5066.1,
             "prev_price": 4951.2,
-            "daily_chg": 1.84,
-            "change_percent": 2.83,
+            "daily_chg": 2.32,
+            "change_percent": 3.31,
             "trend": "UP",
             "sparkline": [
                 4449.7,
@@ -845,14 +845,14 @@
                 4920.4,
                 4861.4,
                 4951.2,
-                5042.3
+                5066.1
             ]
         },
         "OIL": {
-            "price": 64.33,
+            "price": 64.38,
             "prev_price": 63.55,
-            "daily_chg": 1.23,
-            "change_percent": 1.77,
+            "daily_chg": 1.31,
+            "change_percent": 1.85,
             "trend": "UP",
             "sparkline": [
                 57.76,
@@ -876,14 +876,14 @@
                 65.14,
                 63.29,
                 63.55,
-                64.33
+                64.38
             ]
         },
         "COPPER": {
-            "price": 5.94,
+            "price": 5.95,
             "prev_price": 5.86,
-            "daily_chg": 1.32,
-            "change_percent": -2.0,
+            "daily_chg": 1.42,
+            "change_percent": -1.91,
             "trend": "UP",
             "sparkline": [
                 5.75,
@@ -907,14 +907,14 @@
                 5.83,
                 5.8,
                 5.86,
-                5.94
+                5.95
             ]
         },
         "NATGAS": {
             "price": 3.13,
             "prev_price": 3.42,
-            "daily_chg": -8.56,
-            "change_percent": -5.5,
+            "daily_chg": -8.5,
+            "change_percent": -5.44,
             "trend": "DOWN",
             "sparkline": [
                 3.41,
@@ -942,10 +942,10 @@
             ]
         },
         "SILVER": {
-            "price": 81.44,
+            "price": 81.67,
             "prev_price": 76.74,
-            "daily_chg": 6.14,
-            "change_percent": -1.92,
+            "daily_chg": 6.42,
+            "change_percent": -1.66,
             "trend": "UP",
             "sparkline": [
                 74.72,
@@ -969,7 +969,7 @@
                 84.17,
                 76.53,
                 76.74,
-                81.44
+                81.67
             ]
         },
         "DAX": {
@@ -1252,10 +1252,10 @@
             ]
         },
         "ASX200": {
-            "price": 8919.9,
+            "price": 8910.8,
             "prev_price": 8708.8,
-            "daily_chg": 2.42,
-            "change_percent": 0.71,
+            "daily_chg": 2.32,
+            "change_percent": 0.61,
             "trend": "UP",
             "sparkline": [
                 8720.8,
@@ -1279,7 +1279,7 @@
                 8927.8,
                 8889.2,
                 8708.8,
-                8919.9
+                8910.8
             ]
         },
         "G_REIT": {
@@ -1749,12 +1749,11 @@
         },
         "GBPUSD": {
             "price": 0.73,
-            "prev_price": 0.74,
-            "daily_chg": -1.2,
-            "change_percent": -0.09,
+            "prev_price": 0.73,
+            "daily_chg": -0.52,
+            "change_percent": 0.13,
             "trend": "DOWN",
             "sparkline": [
-                0.74,
                 0.75,
                 0.74,
                 0.74,
@@ -1775,17 +1774,17 @@
                 0.73,
                 0.73,
                 0.74,
+                0.73,
                 0.73
             ]
         },
         "AUDUSD": {
             "price": 1.41,
-            "prev_price": 1.45,
-            "daily_chg": -2.41,
-            "change_percent": -1.86,
+            "prev_price": 1.42,
+            "daily_chg": -0.73,
+            "change_percent": -0.89,
             "trend": "DOWN",
             "sparkline": [
-                1.49,
                 1.5,
                 1.49,
                 1.5,
@@ -1806,14 +1805,15 @@
                 1.42,
                 1.43,
                 1.45,
+                1.42,
                 1.41
             ]
         },
         "USDCAD": {
             "price": 1.36,
             "prev_price": 1.37,
-            "daily_chg": -1.09,
-            "change_percent": -0.81,
+            "daily_chg": -0.69,
+            "change_percent": -0.55,
             "trend": "DOWN",
             "sparkline": [
                 1.39,
@@ -1823,7 +1823,6 @@
                 1.39,
                 1.39,
                 1.39,
-                1.39,
                 1.38,
                 1.38,
                 1.38,
@@ -1835,6 +1834,7 @@
                 1.36,
                 1.37,
                 1.36,
+                1.37,
                 1.37,
                 1.37,
                 1.36
@@ -1874,8 +1874,8 @@
         "USDCHF": {
             "price": 0.77,
             "prev_price": 0.78,
-            "daily_chg": -1.37,
-            "change_percent": -1.53,
+            "daily_chg": -1.1,
+            "change_percent": -1.09,
             "trend": "DOWN",
             "sparkline": [
                 0.8,
@@ -1885,7 +1885,6 @@
                 0.8,
                 0.8,
                 0.8,
-                0.8,
                 0.79,
                 0.8,
                 0.79,
@@ -1895,6 +1894,7 @@
                 0.77,
                 0.76,
                 0.77,
+                0.78,
                 0.78,
                 0.78,
                 0.78,
@@ -1994,40 +1994,40 @@
             ]
         },
         "COPPER_GOLD": {
-            "price": 1.18,
+            "price": 1.17,
             "change_percent": 0,
             "trend": "RISK-OFF",
             "sparkline": [
-                1.18,
-                1.18,
-                1.18,
-                1.18,
-                1.18,
-                1.18,
-                1.18,
-                1.18,
-                1.18,
-                1.18,
-                1.18,
-                1.18,
-                1.18,
-                1.18,
-                1.18,
-                1.18,
-                1.18,
-                1.18,
-                1.18,
-                1.18,
-                1.18,
-                1.18,
-                1.18,
-                1.18,
-                1.18,
-                1.18,
-                1.18,
-                1.18,
-                1.18,
-                1.18
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.17
             ]
         }
     },
@@ -2527,7 +2527,7 @@
         "history_length": 60,
         "system": "moving_fortress"
     },
-    "last_successful_update": "2026-02-09T23:38:31.323373+00:00",
+    "last_successful_update": "2026-02-10T00:11:31.306627+00:00",
     "gms_score": 44,
     "sector_scores": {
         "STOCKS": 70,
@@ -2553,56 +2553,52 @@
         {
             "code": "retail_sales",
             "name": "USD Retail Sales (MoM)",
-            "date": "2026-02-12",
-            "day": "THU",
+            "date": "2026-02-13",
+            "day": "FRI",
             "time": "08:30 EST",
             "impact": "high"
         },
         {
             "code": "boj",
             "name": "JPY Bank of Japan Policy Meeting",
-            "date": "2026-02-14",
-            "day": "SAT",
+            "date": "2026-02-15",
+            "day": "SUN",
             "time": "12:00 JST",
             "impact": "high"
         },
         {
             "code": "powell",
             "name": "USD Fed Chair Powell Testifies",
-            "date": "2026-02-17",
-            "day": "TUE",
+            "date": "2026-02-18",
+            "day": "WED",
             "time": "10:00 EST",
             "impact": "high"
         },
         {
             "code": "ecb",
             "name": "EUR ECB Monetary Policy Press Conference",
-            "date": "2026-02-19",
-            "day": "THU",
+            "date": "2026-02-20",
+            "day": "FRI",
             "time": "14:45 CET",
             "impact": "high"
         }
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS at 44 signals a shift to a Neutral regime. Upward momentum pushed the score from 29 to 44, driven by a 14.8% drop in VIX (Fear) and a weaker DXY (Dollar strength), easing liquidity constraints. While record Dow highs support bullishness, low Crypto Sentiment suggests a selective risk appetite. Monitor if commodity inflation caps this recovery.",
+        "content": "GMS Status: Neutral. Upward momentum pushed the score to 44, signaling a shift from defensive positioning. The decline in VIX (Fear/Volatility) and DXY (Dollar Strength/Liquidity) suggests easing financial stress and improving conditions. While equities reach record highs, the divergence in Crypto Sentiment (9) remains a key risk variance. Monitor if liquidity broadens across sectors. Action: Maintain neutral exposure until the score breaches the 60-point accumulate threshold.",
         "reports": {
-            "JP": "GMSは44で「中立」へ移行。VIX（恐怖指数）の14.8%低下とDXY（ドル強弱）の下落が流動性を改善させ、モメンタムはスコアを29から44へ押し上げました。ダウ平均の最高値更新は強気ですが、仮想通貨センチメントの低迷はリスク選好の偏りを示唆します。商品価格上昇に伴うインフレ再燃がこの回復の壁となるかに注目です。",
-            "EN": "GMS at 44 signals a shift to a Neutral regime. Upward momentum pushed the score from 29 to 44, driven by a 14.8% drop in VIX (Fear) and a weaker DXY (Dollar strength), easing liquidity constraints. While record Dow highs support bullishness, low Crypto Sentiment suggests a selective risk appetite. Monitor if commodity inflation caps this recovery.",
-            "CN": "GMS得分为44，进入“中立”格局。VIX（恐慌指数）下跌14.8%及DXY（美元强度）走弱改善了流动性，动能将得分从29推升至44。尽管道指创新高释放看涨信号，但加密货币情绪低迷显示风险偏好尚不全面。需警惕大宗商品价格上涨引发的通胀压力可能削弱反弹动力。",
-            "ES": "El GMS de 44 indica un régimen Neutral. El impulso elevó la puntuación desde 29 a 44, impulsado por una caída del 14.8% en el VIX (Miedo) y un DXY (Fuerza del dólar) más débil, mejorando la liquidez. Aunque los récords del Dow apoyan el optimismo, el bajo sentimiento cripto sugiere cautela. Vigile si la inflación de materias primas frena esta recuperación.",
-            "HI": "GMS स्कोर 44 'तटस्थ' व्यवस्था का संकेत देता है। VIX (डर) में 14.8% की गिरावट और DXY (डॉलर की मजबूती) में कमी से तरलता में सुधार हुआ, जिससे मोमेंटम ने स्कोर को 29 से 44 तक पहुँचाया। हालांकि डॉव जोंस का रिकॉर्ड स्तर तेजी का समर्थन करता है, लेकिन कम क्रिप्टो सेंटिमेंट सतर्क रहने का सुझाव देता है। कमोडिटी मुद्रास्फीति पर नज़र रखें।",
-            "ID": "Skor GMS 44 menunjukkan transisi ke rezim Netral. Momentum mendorong skor dari 29 ke 44, didorong penurunan VIX (Rasa Takut) sebesar 14,8% dan pelemahan DXY (Kekuatan Dolar) yang memperbaiki likuiditas. Meski rekor Dow mendukung sentimen bullish, rendahnya sentimen kripto menunjukkan minat risiko yang belum merata. Waspadai tekanan inflasi komoditas.",
-            "AR": "يشير مؤشر GMS البالغ 44 إلى التحول لنظام محايد. دفع الزخم النتيجة من 29 إلى 44، مدعوماً بانخفاض VIX (الخوف) بنسبة 14.8% وضعف DXY (قوة الدولار)، مما حسن السيولة. رغم مستويات داو جونز القياسية، فإن انخفاض معنويات الكريبتو يشير لشهية مخاطرة حذرة. راقب ما إذا كان تضخم السلع سيحد من هذا التعافي.",
-            "DE": "GMS bei 44 signalisiert einen Wechsel in das neutrale Regime. Das Momentum schob den Wert von 29 auf 44, gestützt durch einen Rückgang des VIX (Angst) um 14,8% und einen schwächeren DXY (Dollarkraft). Während Dow-Rekordhochs die Zuversicht stärken, deutet die schwache Krypto-Stimmung auf selektives Risiko hin. Achten Sie auf Inflationsdruck durch Rohstoffe.",
-            "FR": "Le GMS à 44 marque une transition vers un régime Neutre. Le momentum a propulsé le score de 29 à 44, soutenu par une chute de 14,8% du VIX (peur) et un affaiblissement du DXY (force du dollar). Si les records du Dow confirment une tendance haussière, la faiblesse du sentiment crypto suggère une prudence persistante. Attention au risque inflationniste des matières premières."
+            "JP": "GMS状況：中立。上向きのモメンタムがスコアを44まで押し上げ、防衛的局面からの脱却を示唆しています。VIX（恐怖指数）とDXY（ドル強弱/流動性）の低下は、金融ストレスの緩和と市場環境の改善を意味します。主要指数が最高値を更新する一方、仮想通貨センチメント（9）の極端な低迷は警戒すべき乖離リスクです。流動性が他資産へ波及するか注視しつつ、蓄積圏である60突破を待つ中立的な対応が推奨されます。",
+            "EN": "GMS Status: Neutral. Upward momentum pushed the score to 44, signaling a shift from defensive positioning. The decline in VIX (Fear/Volatility) and DXY (Dollar Strength/Liquidity) suggests easing financial stress and improving conditions. While equities reach record highs, the divergence in Crypto Sentiment (9) remains a key risk variance. Monitor if liquidity broadens across sectors. Action: Maintain neutral exposure until the score breaches the 60-point accumulate threshold.",
+            "CN": "GMS状态：中性。上行动能将分数推升至44，显示市场正脱离防御阶段。VIX（波动率/恐慌指数）和DXY（美元走强/流动性）的下降反映了金融压力的缓解。尽管股市触及历史高点，但加密货币情绪（仅为9）的背离是一个关键的风险变量。需观察流动性是否会全面扩散，还是仅限于特定资产。操作建议：保持中性配置，关注分数是否能突破60进入积累区。",
+            "ES": "Estado GMS: Neutral. El impulso alcista llevó la puntuación a 44, marcando una transición desde un entorno defensivo. La caída del VIX (índice de miedo) y del DXY (fortaleza del dólar/liquidez) indica una reducción del estrés financiero y mejores condiciones de mercado. Aunque las acciones alcanzan récords, la divergencia en el sentimiento cripto (9) es una señal de riesgo a vigilar. Acción: Mantener postura neutral mientras se observa si el impulso logra superar el umbral de 60 puntos.",
+            "HI": "GMS स्थिति: तटस्थ। उर्ध्वमुखी गति (Momentum) ने स्कोर को 44 तक पहुँचा दिया है, जो रक्षात्मक स्थिति से सुधार का संकेत है। VIX (डर/अस्थिरता) और DXY (डॉलर की मजबूती/तरलता) में गिरावट वित्तीय तनाव कम होने को दर्शाती है। जबकि शेयर बाजार रिकॉर्ड ऊंचाई पर हैं, क्रिप्टो सेंटिमेंट (9) में भारी गिरावट एक प्रमुख जोखिम है। यह देखना होगा कि क्या तरलता अन्य क्षेत्रों में फैलती है। कार्रवाई: 60 के स्तर तक पहुंचने तक तटस्थ दृष्टिकोण बनाए रखें।",
+            "ID": "Status GMS: Netral. Momentum ke atas mendorong skor ke 44, menunjukkan transisi dari fase defensif. Penurunan VIX (Indeks Ketakutan) dan DXY (Kekuatan Dolar/Likuiditas) mencerminkan berkurangnya tekanan finansial. Meski ekuitas mencapai rekor tertinggi, divergensi pada sentimen kripto (9) tetap menjadi risiko yang perlu diwaspadai. Pantau apakah likuiditas akan meluas atau pemulihan ini bersifat terbatas. Tindakan: Pertahankan eksposur netral hingga skor menembus angka 60.",
+            "AR": "حالة GMS: محايد. دفع الزخم الصعودي النتيجة إلى 44، مما يعكس الانتقال من المرحلة الدفاعية. يشير انخفاض VIX (مؤشر الخوف) وDXY (قوة الدولار/السيولة) إلى تراجع التوترات المالية وتحسن الظروف. ورغم وصول الأسهم لمستويات قياسية، يظل التباين في مشاعر الكريبتو (9) مخاطرة جوهرية يجب مراقبتها. راقب ما إذا كانت السيولة ستتسع أم أن التعافي سيستقر. الإجراء: الحفاظ على موقف محايد بانتظار اختراق حاجز 60 نقطة.",
+            "DE": "GMS-Status: Neutral. Das Aufwärtsmomentum hat den Score auf 44 gehoben, was einen Übergang aus der defensiven Phase signalisiert. Sinkende Werte bei VIX (Angstindex) und DXY (Dollarstärke/Liquidität) deuten auf eine Entspannung der Finanzlage hin. Während Aktien Rekorde erreichen, stellt das extrem niedrige Krypto-Sentiment (9) ein Warnsignal dar. Es bleibt abzuwarten, ob die Liquidität breitere Märkte erfasst. Fazit: Neutrale Haltung beibehalten, bis der Score die 60er-Marke überschreitet.",
+            "FR": "Statut GMS : Neutre. L'élan haussier a porté le score à 44, marquant une sortie de la phase défensive. La baisse du VIX (indice de la peur) et du DXY (force du dollar/liquidité) signale un apaisement des tensions financières. Si les actions atteignent des sommets, la divergence du sentiment crypto (9) constitue un risque majeur à surveiller. Observez si la liquidité se généralise ou si la reprise est fragile. Conseil : Maintenir une position neutre en attendant le seuil de 60."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-01T21:35:28Z",
-            "score": 28
-        },
         {
             "date": "2026-02-01T22:38:52Z",
             "score": 28
@@ -2838,6 +2834,10 @@
         {
             "date": "2026-02-09T23:38:31Z",
             "score": 44
+        },
+        {
+            "date": "2026-02-10T00:11:31Z",
+            "score": 44
         }
     ],
     "intelligence": {
@@ -2845,7 +2845,7 @@
             {
                 "title": "Stock futures are little changed after Dow hits new record: Live updates",
                 "link": "https://www.cnbc.com/2026/02/09/stock-market-today-live-updates.html",
-                "isoDate": "2026-02-09T23:37:04+00:00Z"
+                "isoDate": "2026-02-10T00:04:11+00:00Z"
             },
             {
                 "title": "Alphabet calls out new AI-related risks, as it taps debt market to fund build-out",
@@ -2875,71 +2875,71 @@
         ],
         "translations": {
             "JP": [
-                "ダウ平均が新記録を達成後、株価先物は小幅な値動き：ライブアップデート",
-                "Alphabet、AI関連の新リスクを指摘、インフラ構築資金調達のため債券市場を活用",
-                "Target、店舗の人員配置への投資を強化、顧客体験改善のため約500の他職種を削減",
-                "オラクルは9％高、マイクロソフトは3％高：1兆ドルの売りからテクロジースタッカーが反撃",
-                "Morningstar 5つ星評価ファンドのマネージャーが現在、収益源を見出している場所",
-                "選挙調査懸念の中、トゥルシー・ギャバード上院情報委員会で証言へ"
+                "ダウ平均が新記録を達成後、株価先物は小幅に変動：ライブアップデート",
+                "アルファベット、AI関連の新リスクを指摘、インフラ構築資金調達のため債券市場を活用",
+                "ターゲット、店舗の人員配置への投資を強化、顧客体験改善のため約500人の人員削減",
+                "オラクルは9％、マイクロソフトは3％上昇、IT企業は1兆ドルの売り浴びから回復を目指す",
+                "モーニングスター5つ星評価ファンドのマネージャーが現在収入源としている場所",
+                "大統領選調査懸念の中、タウリ・ガバード上院情報委員会で証言へ"
             ],
             "CN": [
-                "道琼斯指数创下新纪录后，股指期货小幅波动：实时更新",
-                "Alphabet 呼吁关注新人工智能相关风险，利用债务市场为其建设提供资金",
-                "Target 加大在门店员工配置方面的投资，裁减约 500 个其他岗位以改善客户体验",
+                "道瓊斯指数创下新纪录后，股指期货变化不大：实时更新",
+                "Alphabet 警告新的 AI 相关风险，同时利用债务市场为其建设提供资金",
+                "Target 加大对门店员工的投资，裁员约 500 人以改善客户体验",
                 "甲骨文上涨 9%，微软上涨 3%，科技股试图从 1 万亿美元的抛售中反弹",
-                "这家晨星评级为五星的基金的基金经理目前正在寻找收益来源",
-                "Tulsi Gabbard 将在选举调查担忧之际在参议院情报委员会作证"
+                "这家晨星五星评级基金的基金经理目前在哪里寻找收入",
+                "Tulsi Gabbard 在选举调查担忧之际将于参议院情报委员会作证"
             ],
             "ES": [
-                "Futuros de acciones sin cambios tras nuevo récord del Dow: Actualizaciones en vivo",
-                "Alphabet señala nuevos riesgos relacionados con la IA, al acceder al mercado de deuda para financiar su expansión",
-                "Target aumenta la inversión en personal de tienda, recorta alrededor de 500 puestos de trabajo para mejorar la experiencia del cliente",
-                "Oracle gana 9%, Microsoft sube 3% mientras la tecnología intenta recuperarse de una venta de 1 billón de dólares",
-                "Dónde está encontrando ingresos ahora el gestor de este fondo con calificación de 5 estrellas de Morningstar",
+                "Futuros de acciones con pocos cambios después de que el Dow alcanzara un nuevo récord: actualizaciones en vivo",
+                "Alphabet señala nuevos riesgos relacionados con la IA, mientras recurre al mercado de deuda para financiar la expansión",
+                "Target aumenta la inversión en personal de tienda y recorta alrededor de 500 puestos de trabajo para mejorar la experiencia del cliente",
+                "Oracle gana 9%, Microsoft sube 3% mientras la tecnología intenta recuperarse de una venta masiva de 1 billón de dólares",
+                "Dónde el gestor de este fondo con calificación de 5 estrellas de Morningstar está encontrando ingresos en este momento",
                 "Tulsi Gabbard testificará ante el Comité de Inteligencia del Senado en medio de preocupaciones por la investigación electoral"
             ],
             "HI": [
-                "डॉव ने नया रिकॉर्ड बनाया, स्टॉक फ्यूचर्स में मामूली बदलाव: लाइव अपडेट्स",
-                "Alphabet ने एआई-संबंधित नए जोखिमों को बताया, निर्माण के लिए कर्ज बाजार का उपयोग कर रहा है",
-                "टारगेट ने स्टोर स्टाफिंग में निवेश बढ़ाया, ग्राहक अनुभव को ठीक करने में मदद के लिए लगभग 500 अन्य भूमिकाओं में कटौती की",
-                "Oracle 9% बढ़ा, Microsoft 3% चढ़ा, क्योंकि टेक $1 ट्रिलियन की बिकवाली से वापसी की कोशिश कर रहा है",
-                "Morningstar 5-सितारा रेटेड फंड का प्रबंधक वर्तमान में आय कहाँ पा रहा है",
-                "चुनाव जांच संबंधी चिंताओं के बीच तुलसी गैबार्ड सीनेट इंटेलिजेंस कमेटी में गवाही देंगी"
+                "डाउ ने नया रिकॉर्ड बनाया, स्टॉक फ्यूचर्स में मामूली बदलाव: लाइव अपडेट्स",
+                "Alphabet ने नए AI-संबंधित जोखिमों पर प्रकाश डाला, निर्माण के लिए धन देने हेतु ऋण बाजार का सहारा लिया",
+                "Target ने स्टोर स्टाफिंग में निवेश बढ़ाया, ग्राहक अनुभव को बेहतर बनाने के लिए लगभग 500 अन्य भूमिकाओं में कटौती की",
+                "Oracle 9% ऊपर, Microsoft 3% चढ़ा, क्योंकि टेक 1 ट्रिलियन डॉलर की बिक्री से उबरने की कोशिश कर रहा है",
+                "इस मॉर्निंगस्टार 5-स्टार रेटेड फंड का प्रबंधक वर्तमान में आय कहाँ से प्राप्त कर रहा है",
+                "चुनाव जांच चिंताओं के बीच तुलसी गैबर्ड सीनेट इंटेलिजेंस कमेटी में गवाही देंगी"
             ],
             "ID": [
-                "Index Dow sentuh rekor baru, futures saham sedikit berubah: Pembaruan langsung",
-                "Alphabet sebutkan risiko baru terkait AI, saat menargetkan pasar utang untuk mendanai pembangunan",
-                "Target tingkatkan investasi dalam staf toko, memotong sekitar 500 peran lain untuk membantu memperbaiki pengalaman pelanggan",
-                "Oracle naik 9%, Microsoft naik 3% saat teknologi mencoba bangkit dari penjualan $1 triliun",
-                "Di mana manajer dana berperingkat bintang 5 Morningstar ini menemukan pendapatan saat ini",
-                "Tulsi Gabbard akan bersaksi di Komite Intelijen Senat di tengah kekhawatiran penyelidikan pemilu"
+                "Seiring Dow Mencapai Rekor Baru, Kontrak Berjangka Saham Sedikit Berubah: Pembaruan Langsung",
+                "Alphabet Mengeluarkan Risiko Baru Terkait AI, Saat Menggunakan Pasar Utang untuk Mendanai Pembangunan",
+                "Target Meningkatkan Investasi pada Staf Toko, Memangkas Sekitar 500 Peran Lain untuk Memperbaiki Pengalaman Pelanggan",
+                "Oracle Naik 9%, Microsoft Naik 3% Saat Teknologi Mencoba Bangkit dari Penjualan $1 Triliun",
+                "Di Mana Manajer Dana Peringkat Bintang 5 Morningstar Ini Menemukan Pendapatan Saat Ini",
+                "Tulsi Gabbard Akan Bersaksi di Komite Intelijen Senat di Tengah Kekhawatiran Penyelidikan Pemilu"
             ],
             "AR": [
-                "عقود الأسهم الآجلة دون تغيير يذكر بعد وصول مؤشر داو جونز إلى مستوى قياسي جديد: تحديثات مباشرة",
-                "ألفابت تدعو إلى مخاطر جديدة متعلقة بالذكاء الاصطناعي، حيث تستغل سوق الدين لتمويل البناء",
-                "تارجت تكثف الاستثمار في توظيف الموظفين بالمتاجر، وتخفض حوالي 500 وظيفة أخرى للمساعدة في تحسين تجربة العملاء",
-                "أوراكل يرتفع 9%، ومايكروسوفت يصعد 3% في محاولة التكنولوجيا للتعافي من بيع بـ 1 تريليون دولار",
-                "أين يجد مدير هذا الصندوق الحائز على تصنيف 5 نجوم من Morningstar الدخل في الوقت الحالي",
-                "تولسي غابارد تشهد أمام لجنة الاستخبارات بمجلس الشيوخ وسط مخاوف بشأن التحقيق الانتخابي"
+                "العقود الآجلة للأسهم تتغير بشكل طفيف بعد وصول مؤشر داو جونز إلى مستوى قياسي جديد: تحديثات مباشرة",
+                "ألفابت تشير إلى مخاطر جديدة متعلقة بالذكاء الاصطناعي، بينما تستغل سوق الدين لتمويل البناء",
+                "تارجت تزيد الاستثمار في موظفي المتاجر، وتخفض حوالي 500 وظيفة أخرى للمساعدة في إصلاح تجربة العملاء",
+                "أوراكل ترتفع 9%، ومايكروسوفت تصعد 3% بينما تحاول التكنولوجيا التعافي من بيع بقيمة تريليون دولار",
+                "أين يجد مدير هذا الصندوق الحاصل على تصنيف 5 نجوم من Morningstar دخلاً في الوقت الحالي",
+                "تولسي غابارد تشهد أمام لجنة الاستخبارات بمجلس الشيوخ وسط مخاوف من التحقيق في الانتخابات"
             ],
             "DE": [
-                "Aktienterminkontrakte wenig verändert, nachdem Dow einen neuen Rekord erreicht hat: Live-Updates",
-                "Alphabet weist auf neue KI-bezogene Risiken hin und nutzt den Schuldenmarkt, um den Ausbau zu finanzieren",
-                "Target erhöht Investitionen in die Personalausstattung von Filialen und streicht rund 500 andere Stellen, um das Kundenerlebnis zu verbessern",
-                "Oracle steigt um 9%, Microsoft klettert um 3%, während die Tech-Branche versucht, sich von einem Ausverkauf von 1 Billion Dollar zu erholen",
-                "Wo der Manager dieses von Morningstar mit 5 Sternen bewerteten Fonds derzeit Einnahmen erzielt",
-                "Tulsi Gabbard wird angesichts von Bedenken hinsichtlich der Wahlermittlungen vor dem Geheimdienstausschuss des Senats aussagen"
+                "Aktienterminkontraken sind wenig verändert, nachdem der Dow einen neuen Rekord erreicht hat: Live-Updates",
+                "Alphabet weist auf neue KI-bedingte Risiken hin und nutzt den Anleihenmarkt zur Finanzierung des Aufbaus",
+                "Target erhöht die Investitionen in die Ladenbesetzung und streicht rund 500 andere Stellen, um das Kundenerlebnis zu verbessern",
+                "Oracle gewinnt 9%, Microsoft steigt um 3%, während die Tech-Branche versucht, sich von einem Ausverkauf von 1 Billion Dollar zu erholen",
+                "Wo der Manager dieses Morningstar-Fonds mit 5-Sterne-Bewertung derzeit Einkommen erzielt",
+                "Tulsi Gabbard wird inmitten von Bedenken hinsichtlich der Wahlprüfung vor dem Geheimdienstausschuss des Senats aussagen"
             ],
             "FR": [
-                "Les contrats à terme sur actions peu changés après que le Dow a atteint un nouveau record : Mises à jour en direct",
-                "Alphabet signale de nouveaux risques liés à l'IA, alors qu'elle exploite le marché de la dette pour financer son expansion",
+                "Les contrats à terme sur actions peu changés après que le Dow ait atteint un nouveau record : Mises à jour en direct",
+                "Alphabet signale de nouveaux risques liés à l'IA, tout en exploitant le marché de la dette pour financer son développement",
                 "Target augmente ses investissements dans le personnel des magasins, supprime environ 500 autres postes pour améliorer l'expérience client",
-                "Oracle gagne 9%, Microsoft grimpe de 3% alors que la technologie tente de se remettre d'une liquidation de 1 000 milliards de dollars",
-                "Où le gestionnaire de ce fonds noté 5 étoiles par Morningstar trouve actuellement des revenus",
-                "Tulsi Gabbard témoignera devant le comité du renseignement du Sénat dans un contexte de préoccupations concernant l'enquête électorale"
+                "Oracle gagne 9%, Microsoft grimpe de 3% alors que la technologie tente de se remettre d'une liquidation de 1 billion de dollars",
+                "Où le gestionnaire de ce fonds noté 5 étoiles par Morningstar trouve des revenus actuellement",
+                "Tulsi Gabbard témoignera devant la commission de renseignement du Sénat sur fond de préoccupations concernant l'enquête électorale"
             ]
         },
-        "last_updated": "2026-02-09T23:38:31.321717+00:00Z"
+        "last_updated": "2026-02-10T00:11:31.306051+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
