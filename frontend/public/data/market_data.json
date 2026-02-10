@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-02-10T21:53:28.011470+00:00",
+    "last_updated": "2026-02-10T22:52:30.155654+00:00",
     "market_data": {
         "CRYPTO_SENTIMENT": {
             "price": 9,
@@ -40,11 +40,10 @@
             ]
         },
         "YIELD_SPREAD": {
-            "price": 0.53,
+            "price": 0.47,
             "change_percent": 0.0,
             "trend": "NORMAL",
             "sparkline": [
-                0.49,
                 0.51,
                 0.51,
                 0.54,
@@ -73,7 +72,8 @@
                 0.6,
                 0.54,
                 0.54,
-                0.53
+                0.53,
+                0.47
             ]
         },
         "HY_SPREAD": {
@@ -174,11 +174,10 @@
             ]
         },
         "BREAKEVEN_INFLATION": {
-            "price": 2.35,
+            "price": 2.32,
             "change_percent": 0.0,
             "trend": "STABLE",
             "sparkline": [
-                2.24,
                 2.25,
                 2.25,
                 2.25,
@@ -207,7 +206,8 @@
                 2.35,
                 2.32,
                 2.34,
-                2.35
+                2.35,
+                2.32
             ]
         },
         "VIX": {
@@ -242,11 +242,10 @@
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
-            "price": 0.74,
+            "price": 0.71,
             "change_percent": 0.0,
             "trend": "NEUTRAL",
             "sparkline": [
-                0.69,
                 0.71,
                 0.71,
                 0.72,
@@ -275,7 +274,8 @@
                 0.72,
                 0.74,
                 0.72,
-                0.74
+                0.74,
+                0.71
             ]
         },
         "US_10Y_YIELD": {
@@ -570,10 +570,10 @@
             ]
         },
         "BTC": {
-            "price": 68522.25,
+            "price": 68606.87,
             "prev_price": 70120.78,
-            "daily_chg": -2.28,
-            "change_percent": -2.88,
+            "daily_chg": -2.16,
+            "change_percent": -2.76,
             "trend": "DOWN",
             "sparkline": [
                 88310.91,
@@ -597,14 +597,14 @@
                 69281.97,
                 70264.73,
                 70120.78,
-                68522.25
+                68606.87
             ]
         },
         "ETH": {
-            "price": 2004.2,
+            "price": 2011.61,
             "prev_price": 2103.57,
-            "daily_chg": -4.72,
-            "change_percent": -2.87,
+            "daily_chg": -4.37,
+            "change_percent": -2.51,
             "trend": "DOWN",
             "sparkline": [
                 2935.61,
@@ -628,14 +628,14 @@
                 2090.55,
                 2088.76,
                 2103.57,
-                2004.2
+                2011.61
             ]
         },
         "SOL": {
-            "price": 82.28,
+            "price": 82.65,
             "prev_price": 86.7,
-            "daily_chg": -5.1,
-            "change_percent": -5.93,
+            "daily_chg": -4.67,
+            "change_percent": -5.5,
             "trend": "DOWN",
             "sparkline": [
                 125.71,
@@ -659,14 +659,14 @@
                 87.64,
                 87.04,
                 86.7,
-                82.28
+                82.65
             ]
         },
         "DXY": {
-            "price": 96.85,
+            "price": 96.87,
             "prev_price": 96.82,
-            "daily_chg": 0.03,
-            "change_percent": -0.79,
+            "daily_chg": 0.05,
+            "change_percent": -0.77,
             "trend": "UP",
             "sparkline": [
                 99.13,
@@ -690,14 +690,14 @@
                 97.82,
                 97.63,
                 96.82,
-                96.85
+                96.87
             ]
         },
         "USDJPY": {
-            "price": 154.4,
+            "price": 154.37,
             "prev_price": 157.24,
-            "daily_chg": -1.81,
-            "change_percent": -0.9,
+            "daily_chg": -1.83,
+            "change_percent": -0.91,
             "trend": "DOWN",
             "sparkline": [
                 158.15,
@@ -721,14 +721,14 @@
                 156.92,
                 156.78,
                 157.24,
-                154.4
+                154.37
             ]
         },
         "EURUSD": {
             "price": 1.19,
             "prev_price": 1.18,
-            "daily_chg": 0.63,
-            "change_percent": 0.71,
+            "daily_chg": 0.6,
+            "change_percent": 0.68,
             "trend": "UP",
             "sparkline": [
                 1.16,
@@ -818,10 +818,10 @@
             ]
         },
         "GOLD": {
-            "price": 5046.8,
+            "price": 5047.9,
             "prev_price": 5050.9,
-            "daily_chg": -0.08,
-            "change_percent": 2.57,
+            "daily_chg": -0.06,
+            "change_percent": 2.59,
             "trend": "DOWN",
             "sparkline": [
                 4490.3,
@@ -845,14 +845,14 @@
                 4861.4,
                 4951.2,
                 5050.9,
-                5046.8
+                5047.9
             ]
         },
         "OIL": {
-            "price": 64.23,
+            "price": 64.2,
             "prev_price": 64.36,
-            "daily_chg": -0.2,
-            "change_percent": -1.4,
+            "daily_chg": -0.25,
+            "change_percent": -1.44,
             "trend": "DOWN",
             "sparkline": [
                 59.12,
@@ -876,14 +876,14 @@
                 63.29,
                 63.55,
                 64.36,
-                64.23
+                64.2
             ]
         },
         "COPPER": {
-            "price": 5.9,
+            "price": 5.91,
             "prev_price": 5.95,
-            "daily_chg": -0.7,
-            "change_percent": 1.33,
+            "daily_chg": -0.64,
+            "change_percent": 1.39,
             "trend": "DOWN",
             "sparkline": [
                 5.86,
@@ -907,14 +907,14 @@
                 5.8,
                 5.86,
                 5.95,
-                5.9
+                5.91
             ]
         },
         "NATGAS": {
-            "price": 3.14,
+            "price": 3.16,
             "prev_price": 3.14,
-            "daily_chg": 0.06,
-            "change_percent": -9.38,
+            "daily_chg": 0.8,
+            "change_percent": -8.72,
             "trend": "UP",
             "sparkline": [
                 3.17,
@@ -938,14 +938,14 @@
                 3.51,
                 3.42,
                 3.14,
-                3.14
+                3.16
             ]
         },
         "SILVER": {
-            "price": 80.5,
+            "price": 80.58,
             "prev_price": 82.07,
-            "daily_chg": -1.91,
-            "change_percent": -4.36,
+            "daily_chg": -1.81,
+            "change_percent": -4.26,
             "trend": "DOWN",
             "sparkline": [
                 78.88,
@@ -969,7 +969,7 @@
                 76.53,
                 76.74,
                 82.07,
-                80.5
+                80.58
             ]
         },
         "DAX": {
@@ -1781,8 +1781,8 @@
         "AUDUSD": {
             "price": 1.41,
             "prev_price": 1.42,
-            "daily_chg": -0.62,
-            "change_percent": -0.78,
+            "daily_chg": -0.59,
+            "change_percent": -0.74,
             "trend": "DOWN",
             "sparkline": [
                 1.5,
@@ -1812,8 +1812,8 @@
         "USDCAD": {
             "price": 1.35,
             "prev_price": 1.37,
-            "daily_chg": -0.81,
-            "change_percent": -0.67,
+            "daily_chg": -0.82,
+            "change_percent": -0.68,
             "trend": "DOWN",
             "sparkline": [
                 1.39,
@@ -1874,8 +1874,8 @@
         "USDCHF": {
             "price": 0.77,
             "prev_price": 0.78,
-            "daily_chg": -1.05,
-            "change_percent": -1.04,
+            "daily_chg": -1.06,
+            "change_percent": -1.05,
             "trend": "DOWN",
             "sparkline": [
                 0.8,
@@ -2529,7 +2529,7 @@
         "history_length": 60,
         "system": "moving_fortress"
     },
-    "last_successful_update": "2026-02-10T21:53:28.011478+00:00",
+    "last_successful_update": "2026-02-10T22:52:30.155661+00:00",
     "gms_score": 39,
     "sector_scores": {
         "STOCKS": 75,
@@ -2587,24 +2587,20 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "The GMS score has shifted to 39, signaling a Defensive regime. Downward momentum pushed the score to 39 as the VIX (Fear index) rose to 17.79 and crypto sentiment collapsed. Stability in the DXY (Dollar strength) alongside equity weakness confirms tightening liquidity. While defensive, the sharp drop in USDJPY suggests a major currency realignment that could pressure margins further. Action: Prioritize capital preservation and monitor technical support levels until volatility shows signs of peaking.",
+        "content": "GMS score 39 holds the market in a Defensive regime. Momentum pushed the score to 39, signaling a slow move toward the Neutral threshold. A rising VIX (Fear index) to 17.79 and steady DXY (Dollar strength/Liquidity) confirm tight financial conditions. However, the sharp drop in USDJPY may signal an overlooked positive catalyst for future relief. Exercise caution and await a clear break above 40 before increasing exposure.",
         "reports": {
-            "JP": "GMSスコアは39となり「守備的」局面に移行しました。負のモメンタムがスコアを39まで押し下げ、VIX（恐怖指数）の17.79への上昇とリスク資産の下落が顕著です。DXY（ドル強弱）の安定は流動性の停滞を示唆しています。一方でUSDJPYの急落はキャリートレードの巻き戻しを示唆しており、これが市場の新たな下押し圧力となるリスクがあります。結論として、資本保護を最優先し、主要指数のサポートライン確認に注力すべき段階です。",
-            "EN": "The GMS score has shifted to 39, signaling a Defensive regime. Downward momentum pushed the score to 39 as the VIX (Fear index) rose to 17.79 and crypto sentiment collapsed. Stability in the DXY (Dollar strength) alongside equity weakness confirms tightening liquidity. While defensive, the sharp drop in USDJPY suggests a major currency realignment that could pressure margins further. Action: Prioritize capital preservation and monitor technical support levels until volatility shows signs of peaking.",
-            "CN": "当前GMS评分为39，进入“防御”模式。市场动能将评分推低至39，反映出VIX（恐慌指数）升至17.79及风险资产回调带来的压力。DXY（美元指数）的持稳揭示了全球流动性的收缩。尽管处于避险状态，但USDJPY（美日汇率）的显著走强暗示套利交易可能正在平仓，这可能加剧短期波动。建议采取保守策略，重点关注关键支撑位的确认，在波动率企稳前保持审慎，优先保障资金安全。",
-            "ES": "El puntaje GMS de 39 indica un régimen Defensivo. El impulso bajista empujó el puntaje a 39 debido al aumento del VIX (índice de miedo) a 17,79 y la debilidad en criptoactivos. El DXY (fuerza del dólar) se mantiene firme, lo que restringe la liquidez global. Aunque el contexto es de aversión al riesgo, la fuerte caída del USDJPY podría señalar una reestructuración de flujos que impactará la volatilidad general. Se recomienda cautela extrema y esperar a que los niveles de soporte se estabilicen antes de actuar.",
-            "HI": "GMS स्कोर 39 पर आ गया है, जो 'रक्षात्मक' स्थिति का संकेत है। गिरते मोमेंटम ने स्कोर को 39 तक धकेल दिया है क्योंकि VIX (डर का सूचकांक) 17.79 तक बढ़ गया है और जोखिम वाली संपत्तियों में गिरावट आई है। DXY (डॉलर की मजबूती) की स्थिरता वैश्विक तरलता में कमी को दर्शाती है। हालांकि बाजार रक्षात्मक है, लेकिन USDJPY में आई भारी गिरावट मुद्रा प्रवाह में बड़े बदलाव का संकेत हो सकती है। निष्कर्ष: पूंजी सुरक्षा को प्राथमिकता दें और बाजार के प्रमुख समर्थन स्तरों के स्थिर होने तक प्रतीक्षा करना ही उचित होगा।",
-            "ID": "Skor GMS berada di angka 39, menandakan rezim Defensif. Momentum negatif mendorong skor ke 39 seiring kenaikan VIX (indeks ketakutan) ke 17,79 dan pelemahan sentimen risiko. Stabilitas DXY (kekuatan Dolar) dan koreksi ekuitas menunjukkan pengetatan likuiditas global. Meskipun dalam fase defensif, penurunan tajam pada USDJPY perlu diwaspadai sebagai sinyal pergeseran modal yang dapat memicu volatilitas tambahan. Tindakan: Prioritaskan perlindungan aset dan pantau level dukungan teknis hingga kondisi pasar menjadi lebih stabil.",
-            "AR": "تراجع مؤشر GMS إلى 39، مما يشير إلى وضع دفاعي. دفع الزخم الهبوطي الدرجة إلى 39 مع ارتفاع مؤشر VIX (مؤشر الخوف) إلى 17.79 وتدهور شهية المخاطرة. استقرار DXY (قوة الدولار) مقابل ضعف الأسهم يؤكد تراجع السيولة العالمية. ورغم التوجه الدفاعي، فإن الهبوط الحاد في زوج USDJPY قد يشير إلى تغيير هيكلي في التدفقات النقدية قد يزيد من حدة التوتر. التوصية: إعطاء الأولوية للحفاظ على رأس المال ومراقبة مستويات الدعم الفنية حتى يهدأ تقلب السوق الحالي بشكل ملموس.",
-            "DE": "Der GMS-Score von 39 signalisiert ein defensives Marktumfeld. Negatives Momentum drückte den Score auf 39, während der VIX (Angstindex) auf 17,79 stieg und Krypto-Assets nachgaben. Ein stabiler DXY (Dollarstärke) bei sinkenden Aktienpreisen deutet auf eine sinkende globale Liquidität hin. Trotz der defensiven Haltung könnte der starke Rückgang des USDJPY eine Auflösung von Carry-Trades signalisieren, was die Volatilität weiter anheizen könnte. Fazit: Kapitalerhalt priorisieren und auf eine Festigung der Unterstützungsmarken warten.",
-            "FR": "Le score GMS de 39 indique un régime Défensif. L'élan baissier a poussé le score à 39 suite à la hausse du VIX (indice de peur) à 17,79 et au repli des actifs risqués. La stabilité du DXY (force du dollar) couplée à la baisse des actions confirme une contraction de la liquidité mondiale. Bien que le contexte soit défensif, la chute brutale de l'USDJPY suggère un rééquilibrage monétaire majeur pouvant accroître l'instabilité à court terme. Recommandation : Privilégier la protection du capital et surveiller les supports avant toute action."
+            "JP": "GMSスコアは39で「守備的（Defensive）」レジームを維持しています。モメンタムがスコアを39へ押し上げ、中立圏の閾値に迫っています。マクロ面ではVIX（恐怖指数/ボラティリティ）が17.79に上昇し、DXY（ドル強弱/流動性）も堅調なため警戒が必要です。一方でUSDJPYの急落は将来的な好転の兆し。スコアが40を明確に超えるまで、リスク管理を優先した慎重な行動を推奨します。",
+            "EN": "GMS score 39 holds the market in a Defensive regime. Momentum pushed the score to 39, signaling a slow move toward the Neutral threshold. A rising VIX (Fear index) to 17.79 and steady DXY (Dollar strength/Liquidity) confirm tight financial conditions. However, the sharp drop in USDJPY may signal an overlooked positive catalyst for future relief. Exercise caution and await a clear break above 40 before increasing exposure.",
+            "CN": "GMS分数为39，维持防御（Defensive）体制。目前动能将分数推升至39，正逐步接近中立区间的阈值。宏观逻辑上，VIX（恐慌指数）上升至17.79，结合坚挺的DXY（美元强弱/流动性），反映出短期资金面受压。尽管福特业绩不佳增加扰动，但美元兑日元走弱可能带来潜在转机。建议在分数确认突破40并站稳前继续保持防御，观察风险偏好回升。",
+            "ES": "El puntaje GMS de 39 mantiene un régimen Defensivo. El momentum impulsó el puntaje a 39, acercándose al umbral Neutral. El aumento del VIX (índice de miedo/volatilidad) a 17.79 y la firmeza del DXY (fortaleza del dólar/liquidez) reflejan condiciones restrictivas. No obstante, la caída en USDJPY podría indicar un alivio futuro. Se recomienda cautela y esperar a que el puntaje supere los 40 y la volatilidad se estabilice para ajustar la exposición al riesgo.",
+            "HI": "GMS स्कोर 39 बाजार को रक्षात्मक (Defensive) शासन में रखता है। मोमेंटम ने स्कोर को 39 तक पहुँचाया है, जो तटस्थ सीमा के करीब है। VIX (डर सूचकांक) का 17.79 तक बढ़ना और DXY (डॉलर की मजबूती/तरलता) में स्थिरता वित्तीय दबाव का संकेत देती है। हालांकि, USDJPY में गिरावट भविष्य में राहत का संकेत दे सकती है। जब तक स्कोर 40 के पार नहीं जाता और अस्थिरता कम नहीं होती, तब तक सावधानी बरतें और उच्च जोखिम वाले निवेश से बचें।",
+            "ID": "Skor GMS 39 mempertahankan rezim Defensif. Momentum mendorong skor ke 39, mendekati ambang batas Netral. Kenaikan VIX (indeks ketakutan/volatilitas) menjadi 17,79 dan DXY (kekuatan dolar/likuiditas) yang stabil menunjukkan kondisi keuangan yang ketat. Meskipun sentimen kripto turun, pelemahan USDJPY dapat menjadi katalis positif yang terabaikan. Tetap waspada dan tunggu hingga skor menembus angka 40 serta volatilitas mereda sebelum menambah risiko.",
+            "AR": "يسجل مؤشر GMS 39 نقطة، مما يبقي السوق في نظام دفاعي. دفع الزخم النتيجة إلى 39، مقتربًا من المنطقة المحايدة. يشير ارتفاع VIX (مؤشر الخوف) إلى 17.79 واستقرار DXY (قوة الدولار/السيولة) إلى ضيق الظروف المالية. ومع ذلك، قد يشير تراجع زوج USDJPY إلى تحول إيجابي محتمل. يُنصح بالحذر والانتظار حتى يتجاوز المؤشر حاجز 40 واستقرار التقلبات قبل زيادة التعرض للمخاطر، مع مراقبة أداء الشركات.",
+            "DE": "Der GMS-Score von 39 hält den Markt im defensiven Regime. Das Momentum schob den Wert auf 39, was eine Annäherung an die neutrale Zone bedeutet. Ein steigender VIX (Angstindex) auf 17,79 und ein fester DXY (Dollarstärke/Liquidität) deuten auf knappe Liquidität hin. Doch der Rückgang im USDJPY könnte eine Trendwende einläuten. Bleiben Sie vorsichtig, bis der Score die 40er-Marke überschreitet und sich die Volatilität stabilisiert, bevor Sie die Risikoexposition erhöhen.",
+            "FR": "Le score GMS de 39 maintient un régime défensif. Le momentum a poussé le score à 39, frôlant le seuil neutre. La hausse du VIX (indice de peur/volatilité) à 17,79 et la solidité du DXY (force du dollar/liquidité) signalent une liquidité restreinte. Cependant, la baisse de l'USDJPY pourrait offrir un catalyseur positif inattendu. Maintenez une approche prudente jusqu'à ce que le score franchisse les 40 et que la volatilité s'apaise avant d'augmenter l'exposition."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-02T16:57:56Z",
-            "score": 28
-        },
         {
             "date": "2026-02-02T17:54:03Z",
             "score": 33
@@ -2840,6 +2836,10 @@
         {
             "date": "2026-02-10T21:53:28Z",
             "score": 39
+        },
+        {
+            "date": "2026-02-10T22:52:30Z",
+            "score": 39
         }
     ],
     "intelligence": {
@@ -2847,7 +2847,7 @@
             {
                 "title": "Ford reports worst quarterly earnings miss in four years, guides for better 2026",
                 "link": "https://www.cnbc.com/2026/02/10/ford-motor-f-earnings-q4-2025.html",
-                "isoDate": "2026-02-10T21:40:55+00:00Z"
+                "isoDate": "2026-02-10T22:46:18+00:00Z"
             },
             {
                 "title": "The AI threat wrecked software stocks. Now financial stocks look next with LPL closing 8% lower",
@@ -2855,93 +2855,93 @@
                 "isoDate": "2026-02-10T21:35:56+00:00Z"
             },
             {
-                "title": "Estée Lauder sues Walmart alleging 'despicable' sale of counterfeit beauty products",
-                "link": "https://www.cnbc.com/2026/02/10/estee-lauder-lawsuit-walmart-counterfeits.html",
-                "isoDate": "2026-02-10T21:27:20+00:00Z"
-            },
-            {
                 "title": "The delayed January jobs report will be released Wednesday. Here's what to expect",
                 "link": "https://www.cnbc.com/2026/02/10/jobs-report-preview-january-2026.html",
                 "isoDate": "2026-02-10T20:52:41+00:00Z"
             },
             {
+                "title": "Lyft stock falls 15% on disappointing fourth-quarter results, rider numbers",
+                "link": "https://www.cnbc.com/2026/02/10/lyft-lyft-q4-2025-earnings-.html",
+                "isoDate": "2026-02-10T22:16:50+00:00Z"
+            },
+            {
+                "title": "Stocks making the biggest moves in after hours: Robinhood, Lyft, Ford Motor, Mattel & more",
+                "link": "https://www.cnbc.com/2026/02/10/stocks-making-the-biggest-moves-in-after-hours-hood-lyft-f-mat.html",
+                "isoDate": "2026-02-10T22:36:30+00:00Z"
+            },
+            {
                 "title": "Wells Fargo says buy the gold pullback. Here's where it sees bullion by year-end",
                 "link": "https://www.cnbc.com/2026/02/10/wells-fargo-says-buy-the-gold-pullback-heres-its-year-end-target.html",
                 "isoDate": "2026-02-10T21:18:52+00:00Z"
-            },
-            {
-                "title": "Senate Leader Thune throws cold water on filibuster change in push for voter-ID bill",
-                "link": "https://www.cnbc.com/2026/02/10/senate-filibuster-thune-trump-save-act.html",
-                "isoDate": "2026-02-10T21:42:56+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "フォード、4年ぶりの四半期決算未達、2026年は改善見通し",
-                "AIの脅威がソフト株を襲い、次は金融株か、LPLは8%下落",
-                "エスティローダー、偽造化粧品の販売でウォルマートを提訴「卑劣」",
-                "遅延した1月雇用統計、水曜日に発表、何が期待できるか",
-                "ウェルズ・ファーゴ、金の値崩れは買い時、年末の金価格予想",
-                "ソネイト・リーダー、国民ID法案推進でフィリバスター変更に冷や水"
+                "フォード、4年ぶりの四半期決算見通し未達、2026年は改善見通し",
+                "AIの脅威がソフトウェア株を襲い、金融株にも影響か、LPLは8%下落",
+                "遅延していた1月雇用統計、水曜日に発表へ、予測は？",
+                "リフト、第4四半期決算と利用者数不振で株価15%下落",
+                "引け後の株価変動トップ：ロビンフッド、リフト、フォード・モーター、マテルなど",
+                "ウェルズ・ファーゴ、金の値下がり局面での買いを推奨、年末の金価格予想は？"
             ],
             "CN": [
-                "福特报告四年来最差季度盈利未达，预计2026年表现改善",
-                "人工智能威胁摧毁软件股，现在金融股也岌岌可危，LPL下跌8%",
-                "雅诗兰黛起诉沃尔玛，指控其“卑鄙地”销售假冒美容产品",
-                "推迟发布的1月就业报告将于周三公布。以下是预期",
-                "富国银行表示逢低买入黄金。预计年底金价将达到此处",
-                "参议院领袖图恩对改变阻挠议事规则以推动选民身份证法案泼冷水"
+                "福特汽车报告四年以来最糟糕的季度盈利未达预期，并预测2026年表现将有所改善",
+                "人工智能威胁重创软件股，金融股或成下一个目标，LPL下跌8%",
+                "推迟发布的1月就业报告将于周三公布，以下是预期",
+                "Lyft因第四季度业绩和乘客数量令人失望，股价下跌15%",
+                "盘后交易中变动最大的股票：Robinhood、Lyft、福特汽车、美泰等",
+                "富国银行建议在黄金回调时买入，其预测年底金价将达到何处"
             ],
             "ES": [
-                "Ford reporta la peor omisión de ganancias trimestrales en cuatro años, prevé un mejor 2026",
-                "La amenaza de la IA destrozó las acciones de software. Ahora las acciones financieras parecen ser las próximas con LPL cayendo un 8%",
-                "Estée Lauder demanda a Walmart alegando la \"despreciable\" venta de productos de belleza falsificados",
-                "El retrasado informe de empleo de enero se publicará el miércoles. Esto es lo que se puede esperar",
-                "Wells Fargo dice que compre la caída del oro. Aquí es donde ve el lingote para fin de año",
-                "El líder del Senado Thune echa agua fría a un cambio de filibusterismo en el impulso de un proyecto de ley de identificación de votantes"
+                "Ford reporta la peor omisión de ganancias trimestrales en cuatro años, proyecta un mejor 2026",
+                "La amenaza de la IA destrozó las acciones de software. Ahora las acciones financieras parecen ser las próximas con LPL cerrando un 8% a la baja",
+                "El informe de empleo de enero, retrasado, se publicará el miércoles. Esto es lo que se espera",
+                "Las acciones de Lyft caen un 15% por resultados decepcionantes del cuarto trimestre y número de pasajeros",
+                "Las acciones que tuvieron los mayores movimientos en operaciones posteriores al cierre: Robinhood, Lyft, Ford Motor, Mattel y más",
+                "Wells Fargo dice que compre la retirada del oro. Aquí es donde ve el lingote para fin de año"
             ],
             "HI": [
-                "फोर्ड ने चार साल में सबसे खराब तिमाही आय की रिपोर्ट दी, 2026 के लिए बेहतर की उम्मीद",
-                "एआई के खतरे ने सॉफ्टवेयर शेयरों को तबाह कर दिया। अब वित्तीय शेयरों का नंबर लगने वाला है, एलपीएल 8% नीचे",
-                "एस्टी लॉडर ने वालमार्ट पर नकली सौंदर्य उत्पादों की 'घिनौनी' बिक्री का आरोप लगाते हुए मुकदमा दायर किया",
-                "विलंबित जनवरी की रोजगार रिपोर्ट बुधवार को जारी की जाएगी। यहाँ क्या उम्मीद की जाए",
-                "वेल्स फारगो ने सोने की गिरावट को खरीदने को कहा। यहाँ वर्ष के अंत तक बुलियन की उम्मीद है",
-                "सीनेट नेता थूने ने मतदाता-आईडी विधेयक के लिए प्रयास में फ़िलिबस्टर परिवर्तन पर पानी फेर दिया"
+                "फोर्ड ने चार साल में सबसे खराब तिमाही आय का खुलासा किया, 2026 के लिए बेहतर मार्गदर्शन दिया",
+                "एआई के खतरे ने सॉफ्टवेयर शेयरों को तबाह कर दिया। अब वित्तीय शेयरों की बारी है, एलपीएल 8% गिरकर बंद हुआ",
+                "विलंबित जनवरी की रोजगार रिपोर्ट बुधवार को जारी होगी। यहां बताया गया है कि क्या उम्मीद करनी है",
+                "Lyft के शेयर चौथे तिमाही के निराशाजनक नतीजों और यात्रियों की संख्या पर 15% गिरे",
+                "आफ्टर-आवर ट्रेडिंग में सबसे बड़े चाल वाले स्टॉक: रॉबिनहुड, लिफ्ट, फोर्ड मोटर, मैटल और अन्य",
+                "वेल्स फ़ार्गो का कहना है कि सोने की गिरावट पर खरीदें। यहाँ यह साल के अंत तक बुलियन देखता है"
             ],
             "ID": [
-                "Ford melaporkan kerugian pendapatan kuartalan terburuk dalam empat tahun, memproyeksikan kinerja lebih baik pada 2026",
-                "Ancaman AI menghancurkan saham perangkat lunak. Sekarang saham keuangan terlihat berikutnya dengan LPL turun 8%",
-                "Estée Lauder menggugat Walmart menuduh penjualan produk kecantikan palsu yang 'tercela'",
-                "Laporan pekerjaan Januari yang tertunda akan dirilis pada hari Rabu. Berikut yang diharapkan",
-                "Wells Fargo mengatakan beli penurunan emas. Inilah di mana ia melihat emas batangan pada akhir tahun",
-                "Pemimpin Senat Thune meragukan perubahan filibuster dalam dorongan untuk RUU identitas pemilih"
+                "Ford melaporkan kerugian pendapatan kuartalan terburuk dalam empat tahun, memperkirakan kondisi yang lebih baik untuk 2026",
+                "Ancaman AI merusak saham perangkat lunak. Kini saham keuangan tampak berikutnya dengan LPL ditutup turun 8%",
+                "Laporan pekerjaan Januari yang tertunda akan dirilis Rabu. Inilah yang diharapkan",
+                "Saham Lyft anjlok 15% karena hasil kuartal keempat yang mengecewakan, angka penumpang",
+                "Saham yang membuat pergerakan terbesar setelah jam perdagangan: Robinhood, Lyft, Ford Motor, Mattel & lainnya",
+                "Wells Fargo mengatakan beli penurunan emas. Inilah perkiraan harga emas pada akhir tahun"
             ],
             "AR": [
-                "فورد تسجل أسوأ فوات أرباح ربع سنوية في أربع سنوات، وتتوقع أداءً أفضل لعام 2026",
-                "خطر الذكاء الاصطناعي حطم أسهم البرمجيات. الآن تبدو أسهم القطاع المالي هي التالية مع انخفاض LPL بنسبة 8%",
-                "إستي لودر تقاضي وول مارت بزعم بيع منتجات تجميل مزيفة \"بشعة\"",
-                "سيتم نشر تقرير الوظائف لشهر يناير المتأخر يوم الأربعاء. إليك ما يمكن توقعه",
-                "ويلز فارغو تقول اشتروا تراجع الذهب. هذا هو المكان الذي ترى فيه السبائك بنهاية العام",
-                "زعيم مجلس الشيوخ ثون يلقي بالماء البارد على تغيير العرقلة في الدفع نحو مشروع قانون تحديد هوية الناخب"
+                "فورد تعلن عن أسوأ خسارة في أرباح الربع السنوية منذ أربع سنوات، وتتوقع تحسنًا لعام 2026",
+                "تهديد الذكاء الاصطناعي يدمر أسهم البرمجيات. الآن تبدو أسهم القطاع المالي التالية مع إغلاق LPL بانخفاض 8%",
+                "سيتم إصدار تقرير الوظائف الشهري المتأخر لشهر يناير يوم الأربعاء. إليك ما يمكن توقعه",
+                "سهم Lyft ينخفض 15% بسبب نتائج الربع الرابع المخيبة للآمال وأعداد الركاب",
+                "الأسهم التي شهدت أكبر التحركات في تداول ما بعد الإغلاق: Robinhood، Lyft، Ford Motor، Mattel والمزيد",
+                "Wells Fargo توصي بشراء الذهب عند تراجعه. إليك أين ترى السبائك بنهاية العام"
             ],
             "DE": [
-                "Ford meldet schlechteste Quartalsgewinnverfehlung seit vier Jahren, prognostiziert besseres Jahr 2026",
-                "Die KI-Bedrohung hat Software-Aktien zerstört. Jetzt sehen Finanzaktien als nächste aus, wobei LPL um 8 % gefallen ist",
-                "Estée Lauder verklagt Walmart wegen angeblich \"verachtenswerter\" Verkauf gefälschter Schönheitsprodukte",
-                "Der verschobene Arbeitsmarktbericht für Januar wird am Mittwoch veröffentlicht. Hier ist, was zu erwarten ist",
-                "Wells Fargo rät zum Kauf des Gold-Pullbacks. Hier sieht es Bullion bis Jahresende",
-                "Senatsführer Thune dämpft Hoffnung auf Änderung der Filibuster-Regeln im Zuge der Forderung nach einem Wähler-ID-Gesetz"
+                "Ford meldet die schlechteste Quartalsgewinnverfehlung seit vier Jahren und prognostiziert ein besseres Jahr 2026",
+                "Die KI-Bedrohung hat Software-Aktien zerstört. Nun sehen Finanzaktien als nächste aus, da LPL 8 % niedriger schließt",
+                "Der verzögerte Arbeitsmarktbericht für Januar wird am Mittwoch veröffentlicht. Hier ist, was zu erwarten ist",
+                "Lyft-Aktien fallen nach enttäuschenden Ergebnissen des vierten Quartals und Fahrgastzahlen um 15 %",
+                "Die größten Kursbewegungen nach Börsenschluss: Robinhood, Lyft, Ford Motor, Mattel & mehr",
+                "Wells Fargo rät zum Kauf von Gold-Rückgängen. Hier sieht das Institut Goldbarren bis Jahresende"
             ],
             "FR": [
-                "Ford annonce sa pire défaillance de bénéfices trimestriels en quatre ans, prévoit une amélioration pour 2026",
-                "La menace de l'IA a détruit les actions de logiciels. Les actions financières semblent être les prochaines avec LPL en baisse de 8 %",
-                "Estée Lauder poursuit Walmart en justice pour la vente \"déplorable\" de produits de beauté contrefaits",
+                "Ford annonce la pire déception de bénéfices trimestriels en quatre ans, prévoit une amélioration pour 2026",
+                "La menace de l'IA a fait chuter les actions logicielles. Désormais, les actions financières semblent être les suivantes avec une clôture de LPL en baisse de 8 %",
                 "Le rapport sur l'emploi de janvier, retardé, sera publié mercredi. Voici ce à quoi s'attendre",
-                "Wells Fargo dit d'acheter la baisse de l'or. Voici où il voit le lingot d'ici la fin de l'année",
-                "Le leader du Sénat Thune refroidit le changement de procédure d'obstruction dans le cadre de la promotion d'un projet de loi d'identification des électeurs"
+                "L'action Lyft chute de 15 % sur des résultats décevants du quatrième trimestre et un nombre de passagers",
+                "Les actions qui ont connu les plus grands mouvements après la clôture : Robinhood, Lyft, Ford Motor, Mattel et plus",
+                "Wells Fargo dit d'acheter sur le repli de l'or. Voici où il voit le lingot d'ici la fin de l'année"
             ]
         },
-        "last_updated": "2026-02-10T21:53:28.010928+00:00Z"
+        "last_updated": "2026-02-10T22:52:30.155134+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
