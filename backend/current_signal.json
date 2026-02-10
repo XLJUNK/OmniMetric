@@ -1,10 +1,10 @@
 {
-    "last_updated": "2026-02-10T05:43:11.211251+00:00",
-    "last_successful_update": "2026-02-10T05:43:11.211258+00:00",
-    "gms_score": 43,
+    "last_updated": "2026-02-10T07:18:24.065664+00:00",
+    "last_successful_update": "2026-02-10T07:18:24.065694+00:00",
+    "gms_score": 38,
     "sector_scores": {
         "STOCKS": 70,
-        "CRYPTO": 75,
+        "CRYPTO": 25,
         "FOREX": 55,
         "COMMODITIES": 40,
         "GLOBAL_INDICES": 50,
@@ -553,10 +553,10 @@
             ]
         },
         "NIFTY": {
-            "price": 25960.0,
+            "price": 25974.25,
             "prev_price": 25867.3,
-            "daily_chg": 0.36,
-            "change_percent": 0.71,
+            "daily_chg": 0.41,
+            "change_percent": 0.77,
             "trend": "UP",
             "sparkline": [
                 25876.85,
@@ -580,17 +580,16 @@
                 25642.8,
                 25693.7,
                 25867.3,
-                25960.0
+                25974.25
             ]
         },
         "BTC": {
-            "price": 69608.48,
-            "prev_price": 70264.73,
-            "daily_chg": -0.93,
-            "change_percent": 11.01,
+            "price": 69040.94,
+            "prev_price": 70120.78,
+            "daily_chg": -1.54,
+            "change_percent": -2.15,
             "trend": "DOWN",
             "sparkline": [
-                92553.59,
                 88310.91,
                 89376.96,
                 89462.45,
@@ -611,17 +610,17 @@
                 70555.39,
                 69281.97,
                 70264.73,
-                69608.48
+                70120.78,
+                69040.94
             ]
         },
         "ETH": {
-            "price": 2068.8,
-            "prev_price": 2088.76,
-            "daily_chg": -0.96,
-            "change_percent": 13.57,
+            "price": 2009.83,
+            "prev_price": 2103.57,
+            "daily_chg": -4.46,
+            "change_percent": -2.6,
             "trend": "DOWN",
             "sparkline": [
-                3186.62,
                 2935.61,
                 2978.9,
                 2949.63,
@@ -642,17 +641,17 @@
                 2063.39,
                 2090.55,
                 2088.76,
-                2068.8
+                2103.57,
+                2009.83
             ]
         },
         "SOL": {
-            "price": 86.23,
-            "prev_price": 87.04,
-            "daily_chg": -0.94,
-            "change_percent": 10.28,
+            "price": 84.89,
+            "prev_price": 86.7,
+            "daily_chg": -2.09,
+            "change_percent": -2.95,
             "trend": "DOWN",
             "sparkline": [
-                133.34,
                 125.71,
                 129.38,
                 128.29,
@@ -673,14 +672,15 @@
                 87.46,
                 87.64,
                 87.04,
-                86.23
+                86.7,
+                84.89
             ]
         },
         "DXY": {
-            "price": 96.85,
+            "price": 96.91,
             "prev_price": 96.82,
-            "daily_chg": 0.03,
-            "change_percent": -0.79,
+            "daily_chg": 0.09,
+            "change_percent": -0.73,
             "trend": "UP",
             "sparkline": [
                 99.13,
@@ -704,14 +704,14 @@
                 97.82,
                 97.63,
                 96.82,
-                96.85
+                96.91
             ]
         },
         "USDJPY": {
-            "price": 155.23,
+            "price": 155.35,
             "prev_price": 157.24,
-            "daily_chg": -1.28,
-            "change_percent": -0.36,
+            "daily_chg": -1.21,
+            "change_percent": -0.29,
             "trend": "DOWN",
             "sparkline": [
                 158.15,
@@ -735,14 +735,14 @@
                 156.92,
                 156.78,
                 157.24,
-                155.23
+                155.35
             ]
         },
         "EURUSD": {
             "price": 1.19,
             "prev_price": 1.18,
-            "daily_chg": 0.7,
-            "change_percent": 0.79,
+            "daily_chg": 0.73,
+            "change_percent": 0.81,
             "trend": "UP",
             "sparkline": [
                 1.16,
@@ -770,11 +770,11 @@
             ]
         },
         "USDINR": {
-            "price": 90.66,
+            "price": 90.57,
             "prev_price": 90.59,
-            "daily_chg": 0.08,
-            "change_percent": 0.26,
-            "trend": "UP",
+            "daily_chg": -0.02,
+            "change_percent": 0.17,
+            "trend": "DOWN",
             "sparkline": [
                 90.24,
                 90.13,
@@ -797,7 +797,7 @@
                 90.12,
                 90.31,
                 90.59,
-                90.66
+                90.57
             ]
         },
         "USDSAR": {
@@ -832,10 +832,10 @@
             ]
         },
         "GOLD": {
-            "price": 5046.3,
+            "price": 5050.1,
             "prev_price": 5050.9,
-            "daily_chg": -0.09,
-            "change_percent": 2.56,
+            "daily_chg": -0.02,
+            "change_percent": 2.64,
             "trend": "DOWN",
             "sparkline": [
                 4490.3,
@@ -859,14 +859,14 @@
                 4861.4,
                 4951.2,
                 5050.9,
-                5046.3
+                5050.1
             ]
         },
         "OIL": {
-            "price": 64.15,
+            "price": 64.36,
             "prev_price": 64.36,
-            "daily_chg": -0.33,
-            "change_percent": -1.52,
+            "daily_chg": 0.0,
+            "change_percent": -1.2,
             "trend": "DOWN",
             "sparkline": [
                 59.12,
@@ -890,14 +890,14 @@
                 63.29,
                 63.55,
                 64.36,
-                64.15
+                64.36
             ]
         },
         "COPPER": {
-            "price": 5.9,
+            "price": 5.89,
             "prev_price": 5.95,
-            "daily_chg": -0.77,
-            "change_percent": 1.26,
+            "daily_chg": -0.87,
+            "change_percent": 1.16,
             "trend": "DOWN",
             "sparkline": [
                 5.86,
@@ -921,14 +921,14 @@
                 5.8,
                 5.86,
                 5.95,
-                5.9
+                5.89
             ]
         },
         "NATGAS": {
-            "price": 3.11,
+            "price": 3.09,
             "prev_price": 3.14,
-            "daily_chg": -1.05,
-            "change_percent": -10.39,
+            "daily_chg": -1.47,
+            "change_percent": -10.76,
             "trend": "DOWN",
             "sparkline": [
                 3.17,
@@ -952,14 +952,14 @@
                 3.51,
                 3.42,
                 3.14,
-                3.11
+                3.09
             ]
         },
         "SILVER": {
-            "price": 80.54,
+            "price": 81.07,
             "prev_price": 82.07,
-            "daily_chg": -1.86,
-            "change_percent": -4.31,
+            "daily_chg": -1.21,
+            "change_percent": -3.68,
             "trend": "DOWN",
             "sparkline": [
                 78.88,
@@ -983,7 +983,7 @@
                 76.53,
                 76.74,
                 82.07,
-                80.54
+                81.07
             ]
         },
         "DAX": {
@@ -1111,10 +1111,10 @@
             ]
         },
         "NIKKEI": {
-            "price": 57657.57,
+            "price": 57650.54,
             "prev_price": 56363.94,
-            "daily_chg": 2.3,
-            "change_percent": 6.2,
+            "daily_chg": 2.28,
+            "change_percent": 6.18,
             "trend": "UP",
             "sparkline": [
                 51939.89,
@@ -1138,14 +1138,14 @@
                 53818.04,
                 54253.68,
                 56363.94,
-                57657.57
+                57650.54
             ]
         },
         "HANGSENG": {
-            "price": 27167.34,
+            "price": 27153.73,
             "prev_price": 27027.16,
-            "daily_chg": 0.52,
-            "change_percent": 1.19,
+            "daily_chg": 0.47,
+            "change_percent": 1.14,
             "trend": "UP",
             "sparkline": [
                 26608.48,
@@ -1169,14 +1169,14 @@
                 26885.24,
                 26559.95,
                 27027.16,
-                27167.34
+                27153.73
             ]
         },
         "SHANGHAI": {
-            "price": 4128.89,
+            "price": 4128.37,
             "prev_price": 4123.09,
-            "daily_chg": 0.14,
-            "change_percent": 0.65,
+            "daily_chg": 0.13,
+            "change_percent": 0.64,
             "trend": "UP",
             "sparkline": [
                 4165.29,
@@ -1200,14 +1200,14 @@
                 4075.92,
                 4065.58,
                 4123.09,
-                4128.89
+                4128.37
             ]
         },
         "SENSEX": {
-            "price": 84399.73,
+            "price": 84359.55,
             "prev_price": 84065.75,
-            "daily_chg": 0.4,
-            "change_percent": 0.69,
+            "daily_chg": 0.35,
+            "change_percent": 0.65,
             "trend": "UP",
             "sparkline": [
                 84180.96,
@@ -1231,7 +1231,7 @@
                 83313.93,
                 83580.4,
                 84065.75,
-                84399.73
+                84359.55
             ]
         },
         "BOVESPA": {
@@ -1764,8 +1764,8 @@
         "GBPUSD": {
             "price": 0.73,
             "prev_price": 0.73,
-            "daily_chg": -0.52,
-            "change_percent": 0.13,
+            "daily_chg": -0.5,
+            "change_percent": 0.15,
             "trend": "DOWN",
             "sparkline": [
                 0.75,
@@ -1795,8 +1795,8 @@
         "AUDUSD": {
             "price": 1.41,
             "prev_price": 1.42,
-            "daily_chg": -0.61,
-            "change_percent": -0.77,
+            "daily_chg": -0.57,
+            "change_percent": -0.73,
             "trend": "DOWN",
             "sparkline": [
                 1.5,
@@ -1826,7 +1826,7 @@
         "USDCAD": {
             "price": 1.36,
             "prev_price": 1.37,
-            "daily_chg": -0.76,
+            "daily_chg": -0.75,
             "change_percent": -0.61,
             "trend": "DOWN",
             "sparkline": [
@@ -1857,8 +1857,8 @@
         "USDCNY": {
             "price": 6.91,
             "prev_price": 6.94,
-            "daily_chg": -0.41,
-            "change_percent": -0.39,
+            "daily_chg": -0.39,
+            "change_percent": -0.37,
             "trend": "DOWN",
             "sparkline": [
                 6.98,
@@ -1888,8 +1888,8 @@
         "USDCHF": {
             "price": 0.77,
             "prev_price": 0.78,
-            "daily_chg": -1.09,
-            "change_percent": -1.08,
+            "daily_chg": -1.15,
+            "change_percent": -1.14,
             "trend": "DOWN",
             "sparkline": [
                 0.8,
@@ -2089,24 +2089,20 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS status is Neutral at 43. Upward momentum pushed the score from 31, driven by a 14.78% drop in VIX (Fear Index), signaling lower volatility. While credit spreads support risk, a firm DXY (Dollar strength) limits liquidity. Risk: Divergence between record stocks and low crypto sentiment. Action: Avoid high leverage until score clears 50.",
+        "content": "GMS Status: Defensive. Momentum pushed the score to 38, signaling a bottoming process. While VIX (Fear) plummeted 14.78% to 17.36, improving risk appetite, DXY (Dollar strength) remains firm at 96.91, restricting liquidity. A rebound in semiconductors supports the upward delta, yet Taiwan’s resistance to chip relocation goals presents a structural supply chain risk. Caution is advised as the matrix nears the Neutral threshold; stabilization is visible, but the current regime remains Risk-Off.",
         "reports": {
-            "JP": "GMS状況は43で「中立」です。ボラティリティを示すVIXが14.78%と大幅に低下したことで、強いモメンタムがスコアを31から43へと押し上げ、市場の過度な恐怖は後退しています。信用スプレッドの縮小はリスク資産に追い風ですが、ドル強度を示すDXYが高止まりしており、流動性は依然として抑制されています。株価指数が最高値を更新する一方で、仮想通貨センチメントが極端に低いという乖離が潜在的なリスクです。結論として、スコアが50を安定して超えるまでは、積極的なレバレッジを控え、現物主体の運用を維持すべき局面といえます。",
-            "EN": "GMS status is Neutral at 43. Upward momentum pushed the score from 31, driven by a 14.78% drop in VIX (Fear Index), signaling lower volatility. While credit spreads support risk, a firm DXY (Dollar strength) limits liquidity. Risk: Divergence between record stocks and low crypto sentiment. Action: Avoid high leverage until score clears 50.",
-            "CN": "GMS分数目前为43，处于“中立”区间。近期VIX（反映市场恐慌的波动率指数）大幅下降14.78%，其产生的向上动能成功将分数从31提振至43，显示出市场情绪正在稳步修复。虽然信用利差收窄为风险资产提供了支撑，但DXY（美元强度）维持高位依然在宏观层面限制了整体流动性的扩张。当前的矛盾点在于股市创新高与加密市场情绪极度低迷之间的背离，这暗示上涨基础可能并不稳固。操作上建议保持中性配置，在分数有效突破50大关并确立优势前，应避免过度杠杆化，以防范潜在的回撤风险。",
-            "ES": "GMS es Neutral con 43. El impulso elevó la puntuación desde 31 ante la caída del 14.78% en el VIX (Índice de miedo). Aunque los diferenciales de crédito apoyan el riesgo, la firmeza del DXY (Fuerza del dólar) limita la liquidez global. El riesgo es la divergencia entre máximos bursátiles y bajo sentimiento cripto. Acción: Mantener posiciones y evitar apalancamiento hasta superar los 50.",
-            "HI": "GMS 43 पर 'तटस्थ' है। VIX (डर सूचकांक) में 14.78% की गिरावट ने मोमेंटम को 31 से बढ़ाकर 43 कर दिया है, जो कम अस्थिरता का संकेत है। हालांकि बेहतर क्रेडिट स्प्रेड जोखिम के लिए अच्छे हैं, पर DXY (डॉलर मजबूती) तरलता सीमित कर रही है। मुख्य जोखिम रिकॉर्ड शेयर स्तर और कमजोर क्रिप्टो सेंटीमेंट का अंतर है। कार्रवाई: स्कोर 50 पार होने तक बड़े दांव से बचें और सावधानी के साथ मौजूदा स्थिति बनाए रखें।",
-            "ID": "GMS Netral di level 43. Momentum mendorong skor naik dari 31 dipicu penurunan VIX (Indeks Ketakutan) 14,78%, menandakan volatilitas mereda. Meski spread kredit mendukung aset risiko, DXY (Kekuatan Dolar) yang stabil membatasi likuiditas global. Risiko utama adalah divergensi antara rekor bursa saham dan sentimen kripto yang rendah. Tindakan: Hindari leverage agresif hingga skor menembus 50.",
-            "AR": "حالة GMS \"محايد\" عند 43. دفع الزخم النتيجة من 31 مع انخفاض مؤشر VIX (الخوف) بنسبة 14.78%، مما قلل التقلبات. بينما يدعم تحسن هوامش الائتمان المخاطرة، يحد استقرار DXY (قوة الدولار) من السيولة العالمية. الخطر هو التباين بين أرقام الأسهم القياسية وضعف معنويات الكريبتو. الإجراء: الحفاظ على المراكز وتجنب الرافعة المالية حتى يتجاوز المؤشر مستوى 50 لضمان استقرار الاتجاه الصاعد.",
-            "DE": "GMS-Status ist Neutral bei 43. Das Momentum hob den Score von 31, getrieben durch 14,78% VIX-Rückgang (Angstindex). Während Kreditspreads das Risiko stützen, begrenzt ein stabiler DXY (Dollarstärke) die globale Liquidität. Risiko: Divergenz zwischen Aktienrekorden und schwachem Krypto-Sentiment. Aktion: Kernpositionen halten, Hebel vermeiden, bis Score über 50 steigt.",
-            "FR": "GMS est Neutre à 43. Le momentum a propulsé le score depuis 31 via une chute de 14,78% du VIX (Indice de peur), signe de moindre volatilité. Si les spreads de crédit favorisent le risque, un DXY (Force du dollar) ferme limite la liquidité. Risque : record boursier vs sentiment crypto morose. Action : Prudence stratégique et levier limité tant que le score ne franchit pas 50."
+            "JP": "GMS状況：守備的。モメンタムがスコアを38まで押し上げ、相場の底打ちと安定化を示唆しています。VIX（恐怖指数）が14.78%急落して17.36となり、投資家心理は改善傾向にありますが、DXY（ドル強弱）が96.91で高止まりし流動性を圧迫しています。半導体関連の反発が上昇を牽引する一方、台湾のチップ生産移転拒否は供給網の構造的リスクを露呈させています。中立圏への回復を伺う局面ですが、依然としてリスクオフの警戒が必要です。",
+            "EN": "GMS Status: Defensive. Momentum pushed the score to 38, signaling a bottoming process. While VIX (Fear) plummeted 14.78% to 17.36, improving risk appetite, DXY (Dollar strength) remains firm at 96.91, restricting liquidity. A rebound in semiconductors supports the upward delta, yet Taiwan’s resistance to chip relocation goals presents a structural supply chain risk. Caution is advised as the matrix nears the Neutral threshold; stabilization is visible, but the current regime remains Risk-Off.",
+            "CN": "GMS状态：防御性。动能将得分推升至38，显示市场正在筑底企稳。尽管VIX（恐慌指数）大幅下跌14.78%至17.36，提振了风险偏好，但DXY（美元走势）仍维持在96.91的高位，限制了流动性。半导体板块的回升支撑了上行趋势，但台湾对芯片迁址目标的抵制增加了供应链的结构性风险。在接近中性区间时仍需保持谨慎，目前市场依然处于风险规避的防御阶段。",
+            "ES": "Estado GMS: Defensivo. El impulso elevó la puntuación a 38, indicando una estabilización en el fondo. Aunque el VIX (Miedo) cayó un 14.78% a 17.36, mejorando el sentimiento, el DXY (Fuerza del dólar) se mantiene firme en 96.91, limitando la liquidez global. El rebote en semiconductores apoya la tendencia alcista, pero la negativa de Taiwán a la relocalización de chips plantea riesgos estructurales en la cadena de suministro. Se recomienda precaución al acercarse al umbral Neutral; el régimen sigue siendo de aversión al riesgo.",
+            "HI": "GMS स्थिति: रक्षात्मक। मोमेंटम ने स्कोर को 38 तक पहुँचा दिया है, जो बाजार के बॉटमिंग के संकेत हैं। जबकि VIX (डर) 14.78% गिरकर 17.36 पर आ गया है, जिससे जोखिम की भूख बढ़ी है, DXY (डॉलर की मजबूती) 96.91 पर बनी हुई है, जो तरलता को सीमित करती है। सेमीकंडक्टर में सुधार ऊपर की ओर बढ़ने में मदद कर रहा है, लेकिन चिप स्थानांतरण पर ताइवान का विरोध आपूर्ति श्रृंखला के लिए ढांचागत जोखिम पैदा करता है। तटस्थ स्तर के करीब होने पर भी सावधानी बरतें; फिलहाल शासन जोखिम-बंद बना हुआ है।",
+            "ID": "Status GMS: Defensif. Momentum mendorong skor ke 38, menandakan proses bottoming yang stabil. Meskipun VIX (Ketakutan) anjlok 14,78% ke 17,36, meningkatkan selera risiko, DXY (Kekuatan Dolar) tetap kokoh di 96,91, membatasi likuiditas pasar. Rebound di sektor semikonduktor mendukung tren kenaikan, namun penolakan Taiwan terhadap target relokasi chip menghadirkan risiko rantai pasok struktural. Kewaspadaan diperlukan saat mendekati ambang batas Netral; rezim saat ini tetap dalam kondisi Risk-Off.",
+            "AR": "حالة GMS: دفاعي. دفع الزخم النتيجة إلى 38، مما يشير إلى مرحلة استقرار القاع. بينما انخفض مؤشر VIX (الخوف) بنسبة 14.78% إلى 17.36، مما حسن الشهية للمخاطرة، لا يزال DXY (قوة الدولار) صامداً عند 96.91، مما يقيد السيولة العالمية. يدعم انتعاش قطاع أشباه الموصلات الاتجاه الصعودي، لكن مقاومة تايوان لأهداف نقل الرقائق تفرض مخاطر هيكلية على سلاسل الإمداد. ينصح بالحذر مع الاقتراب من العتبة المحايدة؛ لا يزال النظام في حالة تجنب للمخاطر.",
+            "DE": "GMS-Status: Defensiv. Das Momentum drückte den Score auf 38, was auf eine Bodenbildung hindeutet. Während der VIX (Angst) um 14,78 % auf 17,36 fiel und die Risikobereitschaft verbesserte, bleibt der DXY (Dollarstärke) mit 96,91 fest und begrenzt die Liquidität. Die Erholung bei Halbleitern unterstützt den Aufwärtstrend, doch Taiwans Widerstand gegen Chip-Verlagerungsziele birgt strukturelle Lieferkettenrisiken. Vorsicht ist geboten, da wir uns der neutralen Schwelle nähern; das Marktregime bleibt vorerst Risk-Off.",
+            "FR": "Statut GMS : Défensif. Le momentum a porté le score à 38, signalant un processus de stabilisation. Bien que le VIX (Peur) ait chuté de 14,78 % à 17,36, améliorant l'appétit pour le risque, le DXY (Force du dollar) reste ferme à 96,91, limitant la liquidité. Le rebond des semi-conducteurs soutient la dynamique haussière, mais le refus de Taiwan de relocaliser la production de puces présente un risque structurel. La prudence est de mise à l'approche du seuil neutre ; le régime actuel reste en mode aversion au risque."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-02T04:41:57Z",
-            "score": 28
-        },
         {
             "date": "2026-02-02T05:39:45Z",
             "score": 28
@@ -2342,24 +2338,28 @@
         {
             "date": "2026-02-10T05:43:11Z",
             "score": 43
+        },
+        {
+            "date": "2026-02-10T07:18:24Z",
+            "score": 38
         }
     ],
     "intelligence": {
         "news": [
             {
-                "title": "Stock futures are little changed after Dow hits new record: Live updates",
-                "link": "https://www.cnbc.com/2026/02/09/stock-market-today-live-updates.html",
-                "isoDate": "2026-02-10T00:29:30+00:00Z"
+                "title": "'Impossible': Taiwan pushes back against Washington’s 40% chip supply relocation goal",
+                "link": "https://www.cnbc.com/2026/02/10/taiwan-chips-us-supply-chain-lutnick-trade-deal.html",
+                "isoDate": "2026-02-10T06:26:59+00:00Z"
+            },
+            {
+                "title": "Oil major BP suspends buybacks in fresh sign of oil price pressure",
+                "link": "https://www.cnbc.com/2026/02/10/bp-earnings-q4-full-year-oil-energy.html",
+                "isoDate": "2026-02-10T07:17:49+00:00Z"
             },
             {
                 "title": "Alphabet calls out new AI-related risks, as it taps debt market to fund build-out",
                 "link": "https://www.cnbc.com/2026/02/09/alphabet-highlights-new-ai-related-risks-in-tapping-debt-market.html",
-                "isoDate": "2026-02-09T23:33:34+00:00Z"
-            },
-            {
-                "title": "'Impossible': Taiwan pushes back against Washington’s 40% chip supply relocation goal",
-                "link": "https://www.cnbc.com/2026/02/10/taiwan-chips-us-supply-chain-lutnick-trade-deal.html",
-                "isoDate": "2026-02-10T05:42:44+00:00Z"
+                "isoDate": "2026-02-10T07:01:17+00:00Z"
             },
             {
                 "title": "Trump bashed Epstein to Palm Beach police during first investigation, called Maxwell 'evil,' record shows",
@@ -2379,71 +2379,71 @@
         ],
         "translations": {
             "JP": [
-                "ダウ平均が過去最高を更新、株価先物は小動き：ライブ速報",
-                "Alphabet、AI関連の新リスクを公表、インフラ投資のため債券市場を活用",
-                "台湾、米国の半導体供給の40％移転目標に「不可能」と反発",
-                "トランプ氏、エプスタイン氏を「悪魔」と非難、マックスウェル氏を「邪悪」と警察に証言：記録が示す",
-                "モーニングスター5つ星評価ファンドのマネージャーが現在収益源を見つけている場所",
-                "不快感の中でのリーダーシップがフィリップスCEOロイ・ヤコブス氏を最難関の決断に備えさせた方法"
+                "'不可能'：台湾、ワシントンの半導体供給40％移転目標に反発",
+                "石油大手BP、自社株買いを停止 - 石油価格圧力の新たな兆候",
+                "Alphabet、AI関連の新リスクを公表 - 構築資金調達のため債券市場を活用",
+                "トランプ氏、エプスタイン氏を非難、マックスウェル氏を「悪魔」と呼んだことが捜査記録で判明",
+                "モーニングスター5つ星評価ファンドのマネージャーが現在収入を見つけている場所",
+                "不快感を通じてリードすることによって、フィリップスCEOロイ・ヤコブスは最も困難な決断に備えた"
             ],
             "CN": [
-                "道瓊斯指數創紀錄新高後，股指期貨變動不大：即時更新",
-                "Alphabet 點出新 AI 相關風險，同時進軍債務市場為擴建融資",
-                "台灣力阻華盛頓 40% 晶片供應轉移目標，稱「不可能」",
-                "記錄顯示：特朗普首次調查期間，斥責愛潑斯坦，稱麥斯威爾「邪惡」",
-                "這檔 Morningstar 五星級基金經理人目前在哪裡尋找收益",
-                "在不適中領導如何讓飛利浦 CEO Roy Jakobs 為其最艱難的決定做好準備"
+                "'不可能'：台湾がワシントン40%芯片供应搬迁目标提出反对",
+                "石油巨头BP暂停股票回购，显示石油价格压力的新迹象",
+                "Alphabet披露新AI相关风险，并利用债券市场为其建设融资",
+                "记录显示：特朗普在首次调查期间向棕榈滩警方抨击爱泼斯坦，称麦克斯韦“邪恶”",
+                "这家晨星评级五星基金的基金经理目前正在寻找收入的来源",
+                "如何通过应对不适领导让飞利浦CEO罗伊·雅各布斯为最艰难的决定做好了准备"
             ],
             "ES": [
-                "Los futuros de acciones apenas cambian después de que el Dow alcanzara un nuevo récord: Actualizaciones en vivo",
-                "Alphabet señala nuevos riesgos relacionados con la IA, mientras accede al mercado de deuda para financiar su expansión",
-                "Taiwán rechaza el objetivo de Washington del 40% de reubicación del suministro de chips, calificándolo de 'imposible'",
-                "Trump criticó a Epstein ante la policía de Palm Beach durante la primera investigación, calificó a Maxwell de 'malvada', según los registros",
-                "Dónde está encontrando ingresos el gestor de este fondo con calificación de 5 estrellas de Morningstar en este momento",
-                "Cómo liderar a través de la incomodidad preparó al CEO de Philips, Roy Jakobs, para sus llamadas más difíciles"
+                "'Imposible': Taiwán rechaza el objetivo de Washington de reubicar el 40% de la cadena de suministro de chips",
+                "El gigante petrolero BP suspende recompra de acciones en una nueva señal de presión sobre los precios del petróleo",
+                "Alphabet advierte sobre nuevos riesgos relacionados con la IA, mientras recurre al mercado de deuda para financiar su desarrollo",
+                "Trump criticó a Epstein ante la policía de Palm Beach durante la primera investigación, llamó a Maxwell 'malvada', según registros",
+                "Dónde está encontrando ingresos ahora el gestor de este fondo con calificación de 5 estrellas de Morningstar",
+                "Cómo liderar a través de la incomodidad preparó al CEO de Philips, Roy Jakobs, para sus decisiones más difíciles"
             ],
             "HI": [
-                "डॉव ने नया रिकॉर्ड बनाया, स्टॉक फ्यूचर्स में मामूली बदलाव: लाइव अपडेट",
-                "Alphabet ने नए AI-संबंधी जोखिमों का उल्लेख किया, क्योंकि वह विस्तार के लिए ऋण बाजार का उपयोग करता है",
                 "'असंभव': ताइवान ने वाशिंगटन के 40% चिप आपूर्ति स्थानांतरण लक्ष्य का विरोध किया",
-                "रिकॉर्ड बताते हैं: पहली जांच के दौरान ट्रम्प ने पाम बीच पुलिस से एपस्टीन को डांटा, मैक्सवेल को 'बुरा' कहा",
-                "इस मॉर्निंगस्टार 5-सितारा रेटेड फंड का मैनेजर इस समय आय कहाँ पा रहा है",
-                "असुविधा के माध्यम से नेतृत्व करने से फिलिप्स के सीईओ रॉय जैकब्स को अपनी सबसे कठिन कॉल के लिए कैसे तैयार किया"
+                "तेल दिग्गज बीपी ने शेयरों की पुनर्खरीद निलंबित की, तेल मूल्य दबाव का नया संकेत",
+                "Alphabet ने AI-संबंधित नए जोखिमों को उजागर किया, निर्माण के लिए ऋण बाजार का उपयोग किया",
+                "रिकॉर्ड से पता चलता है: पहली जांच के दौरान ट्रंप ने पाम बीच पुलिस को एपस्टीन को डांटा, मैक्सवेल को 'दुष्ट' कहा",
+                "मॉर्निंगस्टार के 5-स्टार रेटेड फंड का मैनेजर इस समय कहां आय पा रहा है",
+                "असुविधा के माध्यम से नेतृत्व करने से फिलिप्स के सीईओ रॉय जैकब्स को अपने सबसे कठिन निर्णयों के लिए कैसे तैयार किया"
             ],
             "ID": [
-                "Se futures saham sedikit berubah setelah Dow mencapai rekor baru: Pembaruan langsung",
-                "Alphabet menyoroti risiko baru terkait AI, saat memanfaatkan pasar utang untuk mendanai pembangunan",
-                "'Mustahil': Taiwan menolak target relokasi pasokan chip 40% Washington",
-                "Trump mencaci maki Epstein kepada polisi Palm Beach selama penyelidikan pertama, menyebut Maxwell 'jahat', demikian catatan menunjukkan",
-                "Di mana manajer dana berperingkat 5 bintang Morningstar ini menemukan pendapatan saat ini",
-                "Bagaimana memimpin melalui ketidaknyamanan mempersiapkan CEO Philips Roy Jakobs untuk panggilan tersulitnya"
+                "'Tidak Mungkin': Taiwan Tolak Target Relokasi Pasokan Chip 40% Washington",
+                "Raksasa minyak BP tangguhkan pembelian kembali saham, sinyal baru tekanan harga minyak",
+                "Alphabet Soroti Risiko Baru Terkait AI, Saat Manfaatkan Pasar Utang untuk danai Pembangunan",
+                "Rekaman Tunjukkan: Trump Kritik Epstein ke Polisi Palm Beach Saat Investigasi Pertama, Sebut Maxwell 'Jahat'",
+                "Manajer Dana Peringkat Bintang 5 Morningstar Ini Menemukan Pendapatan Saat Ini",
+                "Bagaimana Memimpin Melalui Ketidaknyamanan Mempersiapkan CEO Philips Roy Jakobs untuk Panggilan Tersulitnya"
             ],
             "AR": [
-                "العقود الآجلة للأسهم تتغير بشكل طفيف بعد وصول داو جونز إلى مستوى قياسي جديد: تحديثات مباشرة",
-                "ألفابت تسلط الضوء على مخاطر جديدة متعلقة بالذكاء الاصطناعي، بينما تلجأ إلى سوق الديون لتمويل البناء",
-                "تايوان تدفع ضد هدف واشنطن لنقل 40% من إمدادات الرقائق، وتصفه بـ 'المستحيل'",
-                "ترامب انتقد إبشتاين أمام شرطة بالم بيتش خلال التحقيق الأول، ووصف ماكسويل بأنها 'شريرة'، حسبما تظهر السجلات",
-                "أين يجد مدير هذا الصندوق الحاصل على تصنيف 5 نجوم من مورنينج ستار الدخل حاليًا",
-                "كيف أعده القيادة عبر عدم الراحة الرئيس التنفيذي لشركة فيليبس روي جاكوبس لاتخاذ أصعب قراراته"
+                "'مستحيل': تايوان ترفض هدف واشنطن لنقل 40٪ من إمدادات الرقائق",
+                "شركة النفط الكبرى BP تعلق إعادة شراء الأسهم في علامة جديدة على ضغط أسعار النفط",
+                "Alphabet تفصح عن مخاطر جديدة متعلقة بالذكاء الاصطناعي، بينما تلجأ إلى سوق الديون لتمويل البناء",
+                "السجلات تظهر: ترامب انتقد إبشتاين شرطة بالم بيتش خلال التحقيق الأول، ووصف ماكسويل بأنها \"شريرة\"",
+                "أين يجد مدير هذا الصندوق المصنف بـ 5 نجوم من مورنينجستار الدخل في الوقت الحالي",
+                "كيف أعد القيادة عبر عدم الارتياح الرئيس التنفيذي لشركة فيليبس روي جاكوبس لأصعب مكالماته"
             ],
             "DE": [
-                "Aktienterminkontrakte wenig verändert, nachdem der Dow einen neuen Rekord erreicht hat: Live-Updates",
-                "Alphabet weist auf neue KI-bezogene Risiken hin und nutzt den Schuldenmarkt zur Finanzierung des Ausbaus",
-                "Taiwan lehnt Washingtons Ziel der Verlagerung von 40% der Chipversorgung als 'unmöglich' ab",
-                "Trump schimpfte Epstein während der ersten Ermittlung bei der Polizei von Palm Beach und nannte Maxwell 'böse', wie Aufzeichnungen zeigen",
-                "Wo der Manager dieses von Morningstar mit 5 Sternen bewerteten Fonds derzeit Einkommen findet",
+                "'Unmöglich': Taiwan wehrt sich gegen Washingtons Ziel der Verlagerung von 40% der Chip-Lieferungen",
+                "Ölriese BP setzt Aktienrückkäufe aus – ein weiteres Zeichen für den Preisdruck bei Öl",
+                "Alphabet nennt neue KI-bezogene Risiken und nutzt den Schuldenmarkt zur Finanzierung des Aufbaus",
+                "Aufzeichnungen zeigen: Trump beschimpfte Epstein gegenüber der Polizei von Palm Beach während der ersten Ermittlungen und nannte Maxwell 'böse'",
+                "Wo der Manager dieses Morningstar 5-Sterne-Fonds derzeit Einkommen findet",
                 "Wie die Führung durch Unbehagen Philips-CEO Roy Jakobs auf seine schwierigsten Entscheidungen vorbereitete"
             ],
             "FR": [
-                "Les contrats à terme sur actions peu changés après que le Dow a atteint un nouveau record : mises à jour en direct",
-                "Alphabet signale de nouveaux risques liés à l'IA, alors qu'il utilise le marché de la dette pour financer son développement",
-                "'Impossible' : Taïwan s'oppose à l'objectif de relocalisation de 40 % de l'approvisionnement en puces de Washington",
-                "Trump a critiqué Epstein auprès de la police de Palm Beach lors de la première enquête, qualifiant Maxwell d''infâme', selon les registres",
-                "Où le gestionnaire de ce fonds noté 5 étoiles Morningstar trouve actuellement des revenus",
-                "Comment le fait de diriger dans l'inconfort a préparé le PDG de Philips, Roy Jakobs, à ses appels les plus difficiles"
+                "'Impossible' : Taïwan s'oppose à l'objectif de Washington de délocaliser 40% de l'approvisionnement en puces",
+                "Le géant pétrolier BP suspend ses rachats d'actions, nouveau signe de la pression sur les prix du pétrole",
+                "Alphabet met en garde contre de nouveaux risques liés à l'IA, tout en puisant dans le marché de la dette pour financer son développement",
+                "Les archives montrent : Trump a critiqué Epstein auprès de la police de Palm Beach lors de la première enquête, qualifiant Maxwell d'''maléfique''",
+                "Où le gestionnaire de ce fonds noté 5 étoiles par Morningstar trouve actuellement des revenus",
+                "Comment diriger à travers l'inconfort a préparé le PDG de Philips, Roy Jakobs, pour ses appels les plus difficiles"
             ]
         },
-        "last_updated": "2026-02-10T05:43:11.210705+00:00Z"
+        "last_updated": "2026-02-10T07:18:24.065135+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
