@@ -337,6 +337,9 @@ export default async function WikiDetailPage({ params }: Props) {
     };
 
     // JSON-LD Breadcrumbs
+    const wikiRoot = lang === 'en' ? 'https://www.omnimetric.net/wiki' : `https://www.omnimetric.net/${lang}/wiki`;
+    const itemUrl = lang === 'en' ? `https://www.omnimetric.net/wiki/${slug}` : `https://www.omnimetric.net/${lang}/wiki/${slug}`;
+
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -345,25 +348,25 @@ export default async function WikiDetailPage({ params }: Props) {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://omnimetric.net"
+                "item": "https://www.omnimetric.net"
             },
             {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Wiki",
-                "item": `https://omnimetric.net/${lang}/wiki`
+                "item": wikiRoot
             },
             {
                 "@type": "ListItem",
                 "position": 3,
                 "name": item.category,
-                "item": `https://omnimetric.net/${lang}/wiki#${item.category}`
+                "item": `${wikiRoot}#${item.category}`
             },
             {
                 "@type": "ListItem",
                 "position": 4,
                 "name": item.title,
-                "item": `https://omnimetric.net/${lang}/wiki/${slug}`
+                "item": itemUrl
             }
         ]
     };
@@ -396,9 +399,9 @@ export default async function WikiDetailPage({ params }: Props) {
                         <nav aria-label="Breadcrumb" className={`flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 mb-6 flex-wrap ${isRTL ? 'flex-row-reverse' : ''}`}>
                             <Link href={`/`} className="hover:text-sky-400 transition-colors">Home</Link>
                             <ChevronRight className={`w-3 h-3 text-slate-800 ${isRTL ? 'rotate-180' : ''}`} />
-                            <Link href={`/${lang.toLowerCase()}/wiki`} className="hover:text-sky-400 transition-colors">Wiki</Link>
+                            <Link href={lang === 'en' ? `/wiki` : `/${lang}/wiki`} className="hover:text-sky-400 transition-colors">Wiki</Link>
                             <ChevronRight className={`w-3 h-3 text-slate-800 ${isRTL ? 'rotate-180' : ''}`} />
-                            <Link href={`/${lang.toLowerCase()}/wiki#${item.category}`} className="hover:text-sky-400 transition-colors">{item.category}</Link>
+                            <Link href={lang === 'en' ? `/wiki#${item.category}` : `/${lang}/wiki#${item.category}`} className="hover:text-sky-400 transition-colors">{item.category}</Link>
                             <ChevronRight className={`w-3 h-3 text-slate-800 ${isRTL ? 'rotate-180' : ''}`} />
                             <span className="text-sky-500">{item.title}</span>
                         </nav>
