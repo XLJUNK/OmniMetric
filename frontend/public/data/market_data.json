@@ -1,13 +1,12 @@
 {
-    "last_updated": "2026-02-11T02:32:49.984075+00:00",
+    "last_updated": "2026-02-11T03:15:49.264615+00:00",
     "market_data": {
         "CRYPTO_SENTIMENT": {
-            "price": 9,
-            "daily_chg": -35.71,
-            "change_percent": 0.0,
+            "price": 11,
+            "daily_chg": 22.22,
+            "change_percent": 83.33,
             "trend": "FEAR",
             "sparkline": [
-                27,
                 26,
                 48,
                 61,
@@ -36,7 +35,8 @@
                 6,
                 7,
                 14,
-                9
+                9,
+                11
             ]
         },
         "YIELD_SPREAD": {
@@ -570,10 +570,10 @@
             ]
         },
         "BTC": {
-            "price": 68748.41,
+            "price": 68663.21,
             "prev_price": 70120.78,
-            "daily_chg": -1.96,
-            "change_percent": -2.56,
+            "daily_chg": -2.08,
+            "change_percent": -2.68,
             "trend": "DOWN",
             "sparkline": [
                 88310.91,
@@ -597,14 +597,14 @@
                 69281.97,
                 70264.73,
                 70120.78,
-                68748.41
+                68663.21
             ]
         },
         "ETH": {
-            "price": 2019.93,
+            "price": 2015.58,
             "prev_price": 2103.57,
-            "daily_chg": -3.98,
-            "change_percent": -2.11,
+            "daily_chg": -4.18,
+            "change_percent": -2.32,
             "trend": "DOWN",
             "sparkline": [
                 2935.61,
@@ -628,14 +628,14 @@
                 2090.55,
                 2088.76,
                 2103.57,
-                2019.93
+                2015.58
             ]
         },
         "SOL": {
-            "price": 82.82,
+            "price": 83.55,
             "prev_price": 86.7,
-            "daily_chg": -4.47,
-            "change_percent": -5.31,
+            "daily_chg": -3.63,
+            "change_percent": -4.47,
             "trend": "DOWN",
             "sparkline": [
                 125.71,
@@ -659,15 +659,15 @@
                 87.64,
                 87.04,
                 86.7,
-                82.82
+                83.55
             ]
         },
         "DXY": {
-            "price": 96.89,
+            "price": 96.68,
             "prev_price": 96.82,
-            "daily_chg": 0.08,
-            "change_percent": -0.74,
-            "trend": "UP",
+            "daily_chg": -0.14,
+            "change_percent": -0.96,
+            "trend": "DOWN",
             "sparkline": [
                 99.13,
                 98.86,
@@ -690,17 +690,16 @@
                 97.82,
                 97.63,
                 96.82,
-                96.89
+                96.68
             ]
         },
         "USDJPY": {
-            "price": 154.48,
-            "prev_price": 157.24,
-            "daily_chg": -1.76,
-            "change_percent": -0.84,
+            "price": 153.66,
+            "prev_price": 156.13,
+            "daily_chg": -1.58,
+            "change_percent": -2.08,
             "trend": "DOWN",
             "sparkline": [
-                158.15,
                 157.99,
                 159.18,
                 158.4,
@@ -721,17 +720,17 @@
                 156.92,
                 156.78,
                 157.24,
-                154.48
+                156.13,
+                153.66
             ]
         },
         "EURUSD": {
             "price": 1.19,
-            "prev_price": 1.18,
-            "daily_chg": 0.55,
-            "change_percent": 0.63,
+            "prev_price": 1.19,
+            "daily_chg": 0.04,
+            "change_percent": 0.91,
             "trend": "UP",
             "sparkline": [
-                1.16,
                 1.17,
                 1.16,
                 1.16,
@@ -752,17 +751,17 @@
                 1.18,
                 1.18,
                 1.18,
+                1.19,
                 1.19
             ]
         },
         "USDINR": {
-            "price": 90.54,
-            "prev_price": 90.59,
-            "daily_chg": -0.06,
-            "change_percent": 0.13,
+            "price": 90.55,
+            "prev_price": 90.82,
+            "daily_chg": -0.3,
+            "change_percent": 0.47,
             "trend": "DOWN",
             "sparkline": [
-                90.24,
                 90.13,
                 90.27,
                 90.18,
@@ -783,14 +782,15 @@
                 90.12,
                 90.31,
                 90.59,
-                90.54
+                90.82,
+                90.55
             ]
         },
         "USDSAR": {
             "price": 3.75,
-            "prev_price": 3.74,
-            "daily_chg": 0.16,
-            "change_percent": 0.13,
+            "prev_price": 3.75,
+            "daily_chg": 0.12,
+            "change_percent": 0.14,
             "trend": "UP",
             "sparkline": [
                 3.75,
@@ -802,7 +802,6 @@
                 3.75,
                 3.75,
                 3.75,
-                3.75,
                 3.74,
                 3.75,
                 3.75,
@@ -814,14 +813,15 @@
                 3.75,
                 3.75,
                 3.74,
+                3.75,
                 3.75
             ]
         },
         "GOLD": {
-            "price": 5062.8,
+            "price": 5076.2,
             "prev_price": 5050.9,
-            "daily_chg": 0.24,
-            "change_percent": 2.89,
+            "daily_chg": 0.5,
+            "change_percent": 3.17,
             "trend": "UP",
             "sparkline": [
                 4490.3,
@@ -845,15 +845,15 @@
                 4861.4,
                 4951.2,
                 5050.9,
-                5062.8
+                5076.2
             ]
         },
         "OIL": {
-            "price": 64.28,
+            "price": 64.52,
             "prev_price": 64.36,
-            "daily_chg": -0.12,
-            "change_percent": -1.32,
-            "trend": "DOWN",
+            "daily_chg": 0.25,
+            "change_percent": -0.95,
+            "trend": "UP",
             "sparkline": [
                 59.12,
                 59.5,
@@ -876,14 +876,14 @@
                 63.29,
                 63.55,
                 64.36,
-                64.28
+                64.52
             ]
         },
         "COPPER": {
-            "price": 5.9,
+            "price": 5.92,
             "prev_price": 5.95,
-            "daily_chg": -0.72,
-            "change_percent": 1.3,
+            "daily_chg": -0.35,
+            "change_percent": 1.68,
             "trend": "DOWN",
             "sparkline": [
                 5.86,
@@ -907,15 +907,15 @@
                 5.8,
                 5.86,
                 5.95,
-                5.9
+                5.92
             ]
         },
         "NATGAS": {
-            "price": 3.16,
+            "price": 3.13,
             "prev_price": 3.14,
-            "daily_chg": 0.57,
-            "change_percent": -8.92,
-            "trend": "UP",
+            "daily_chg": -0.25,
+            "change_percent": -9.67,
+            "trend": "DOWN",
             "sparkline": [
                 3.17,
                 3.41,
@@ -938,15 +938,15 @@
                 3.51,
                 3.42,
                 3.14,
-                3.16
+                3.13
             ]
         },
         "SILVER": {
-            "price": 80.93,
+            "price": 82.18,
             "prev_price": 82.07,
-            "daily_chg": -1.39,
-            "change_percent": -3.85,
-            "trend": "DOWN",
+            "daily_chg": 0.13,
+            "change_percent": -2.36,
+            "trend": "UP",
             "sparkline": [
                 78.88,
                 84.61,
@@ -969,7 +969,7 @@
                 76.53,
                 76.74,
                 82.07,
-                80.93
+                82.18
             ]
         },
         "DAX": {
@@ -1066,7 +1066,7 @@
             ]
         },
         "FTSE": {
-            "price": 10353.84,
+            "price": 10353.8,
             "prev_price": 10386.2,
             "daily_chg": -0.31,
             "change_percent": -0.47,
@@ -1093,7 +1093,7 @@
                 10309.2,
                 10369.8,
                 10386.2,
-                10353.84
+                10353.8
             ]
         },
         "NIKKEI": {
@@ -1128,13 +1128,12 @@
             ]
         },
         "HANGSENG": {
-            "price": 27183.15,
-            "prev_price": 27027.16,
-            "daily_chg": 0.58,
-            "change_percent": 1.25,
+            "price": 27305.26,
+            "prev_price": 27183.15,
+            "daily_chg": 0.45,
+            "change_percent": 1.56,
             "trend": "UP",
             "sparkline": [
-                26608.48,
                 26848.47,
                 26999.81,
                 26923.62,
@@ -1155,17 +1154,17 @@
                 26885.24,
                 26559.95,
                 27027.16,
-                27183.15
+                27183.15,
+                27305.26
             ]
         },
         "SHANGHAI": {
-            "price": 4128.37,
-            "prev_price": 4123.09,
-            "daily_chg": 0.13,
-            "change_percent": 0.64,
+            "price": 4138.39,
+            "prev_price": 4128.37,
+            "daily_chg": 0.24,
+            "change_percent": 1.53,
             "trend": "UP",
             "sparkline": [
-                4165.29,
                 4138.76,
                 4126.09,
                 4112.6,
@@ -1186,7 +1185,8 @@
                 4075.92,
                 4065.58,
                 4123.09,
-                4128.37
+                4128.37,
+                4138.39
             ]
         },
         "SENSEX": {
@@ -1221,7 +1221,7 @@
             ]
         },
         "BOVESPA": {
-            "price": 185929.33,
+            "price": 185929.0,
             "prev_price": 186241.0,
             "daily_chg": -0.17,
             "change_percent": 2.32,
@@ -1248,17 +1248,16 @@
                 182127.0,
                 182950.0,
                 186241.0,
-                185929.33
+                185929.0
             ]
         },
         "ASX200": {
-            "price": 8918.4,
-            "prev_price": 8912.1,
-            "daily_chg": 0.07,
-            "change_percent": -0.11,
+            "price": 8997.4,
+            "prev_price": 8867.4,
+            "daily_chg": 1.47,
+            "change_percent": 1.22,
             "trend": "UP",
             "sparkline": [
-                8717.8,
                 8759.4,
                 8808.5,
                 8820.6,
@@ -1279,7 +1278,8 @@
                 8889.2,
                 8708.8,
                 8912.1,
-                8918.4
+                8867.4,
+                8997.4
             ]
         },
         "G_REIT": {
@@ -1750,11 +1750,10 @@
         "GBPUSD": {
             "price": 0.73,
             "prev_price": 0.73,
-            "daily_chg": -0.17,
-            "change_percent": 0.48,
-            "trend": "DOWN",
+            "daily_chg": 0.18,
+            "change_percent": -0.1,
+            "trend": "UP",
             "sparkline": [
-                0.75,
                 0.74,
                 0.74,
                 0.74,
@@ -1774,18 +1773,18 @@
                 0.73,
                 0.73,
                 0.74,
+                0.73,
                 0.73,
                 0.73
             ]
         },
         "AUDUSD": {
             "price": 1.41,
-            "prev_price": 1.42,
-            "daily_chg": -0.58,
-            "change_percent": -0.74,
+            "prev_price": 1.41,
+            "daily_chg": -0.47,
+            "change_percent": -1.72,
             "trend": "DOWN",
             "sparkline": [
-                1.5,
                 1.49,
                 1.5,
                 1.5,
@@ -1806,14 +1805,15 @@
                 1.43,
                 1.45,
                 1.42,
+                1.41,
                 1.41
             ]
         },
         "USDCAD": {
-            "price": 1.36,
-            "prev_price": 1.37,
-            "daily_chg": -0.78,
-            "change_percent": -0.63,
+            "price": 1.35,
+            "prev_price": 1.36,
+            "daily_chg": -0.28,
+            "change_percent": -1.06,
             "trend": "DOWN",
             "sparkline": [
                 1.39,
@@ -1822,7 +1822,6 @@
                 1.39,
                 1.39,
                 1.39,
-                1.39,
                 1.38,
                 1.38,
                 1.38,
@@ -1837,17 +1836,17 @@
                 1.37,
                 1.37,
                 1.37,
-                1.36
+                1.36,
+                1.35
             ]
         },
         "USDCNY": {
             "price": 6.91,
-            "prev_price": 6.94,
-            "daily_chg": -0.41,
-            "change_percent": -0.4,
+            "prev_price": 6.92,
+            "daily_chg": -0.15,
+            "change_percent": -0.37,
             "trend": "DOWN",
             "sparkline": [
-                6.98,
                 6.97,
                 6.98,
                 6.97,
@@ -1868,14 +1867,15 @@
                 6.94,
                 6.94,
                 6.94,
+                6.92,
                 6.91
             ]
         },
         "USDCHF": {
             "price": 0.77,
-            "prev_price": 0.78,
-            "daily_chg": -0.92,
-            "change_percent": -0.92,
+            "prev_price": 0.77,
+            "daily_chg": -0.03,
+            "change_percent": -1.34,
             "trend": "DOWN",
             "sparkline": [
                 0.8,
@@ -1884,7 +1884,6 @@
                 0.8,
                 0.8,
                 0.8,
-                0.8,
                 0.79,
                 0.8,
                 0.79,
@@ -1899,12 +1898,13 @@
                 0.78,
                 0.78,
                 0.78,
+                0.77,
                 0.77
             ]
         },
         "MOVE": {
             "price": 64.55,
-            "change_percent": 2.89,
+            "change_percent": 2.88,
             "trend": "NORMAL",
             "sparkline": [
                 62.9,
@@ -2529,7 +2529,7 @@
         "history_length": 60,
         "system": "moving_fortress"
     },
-    "last_successful_update": "2026-02-10T23:48:40.138007+00:00",
+    "last_successful_update": "2026-02-11T03:15:49.264622+00:00",
     "gms_score": 39,
     "sector_scores": {
         "STOCKS": 75,
@@ -2555,56 +2555,52 @@
         {
             "code": "retail_sales",
             "name": "USD Retail Sales (MoM)",
-            "date": "2026-02-13",
-            "day": "FRI",
+            "date": "2026-02-14",
+            "day": "SAT",
             "time": "08:30 EST",
             "impact": "high"
         },
         {
             "code": "boj",
             "name": "JPY Bank of Japan Policy Meeting",
-            "date": "2026-02-15",
-            "day": "SUN",
+            "date": "2026-02-16",
+            "day": "MON",
             "time": "12:00 JST",
             "impact": "high"
         },
         {
             "code": "powell",
             "name": "USD Fed Chair Powell Testifies",
-            "date": "2026-02-18",
-            "day": "WED",
+            "date": "2026-02-19",
+            "day": "THU",
             "time": "10:00 EST",
             "impact": "high"
         },
         {
             "code": "ecb",
             "name": "EUR ECB Monetary Policy Press Conference",
-            "date": "2026-02-20",
-            "day": "FRI",
+            "date": "2026-02-21",
+            "day": "SAT",
             "time": "14:45 CET",
             "impact": "high"
         }
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "[GMS Status] Score 39 (Defensive). Momentum pushed the score to 39 from 38. [Macro Root] Rising VIX (Fear: +2.48%) and a steady DXY (Dollar strength) indicate liquidity contraction. [Risk/Reward] Despite a crypto crash, rising momentum tests the Neutral (40) boundary. A VIX peak may signal a short-term bottom. [Action] Stay defensive. Focus on IG Bonds and high-quality assets until the score clears 40 to confirm a regime shift toward neutral territory.",
+        "content": "GMS Status: 39 (Defensive). Flat momentum pushed the score to 39, maintaining a risk-off regime. The rise in VIX (fear indicator) to 17.79 signals growing market instability. While the DXY (dollar strength) eased slightly, providing some liquidity relief, the AI-driven sell-off in software and financial sectors remains a significant headwind. Investors should remain cautious and wait for volatility to peak before seeking new entries. Capital preservation is currently prioritized over aggressive accumulation.",
         "reports": {
-            "JP": "【GMS状況】スコア39（防衛的）。モメンタムが数値を38から39へと押し上げました。【マクロ要因】VIX（恐怖指数）の2.48%上昇とDXY（ドル強さ）の底堅さは、市場の流動性低下とリスク回避姿勢を鮮明にしています。【リスク・リターン】仮想通貨センチメントは急落しましたが、微増したモメンタムは中立圏（40）への接近を試みています。ボラティリティがピークを打てば、短期的な底入れの可能性があります。【結論】依然として防衛的姿勢を維持。スコアが40を明確に上抜けるまでは、高格付け債券等の安全資産を優先すべきです。",
-            "EN": "[GMS Status] Score 39 (Defensive). Momentum pushed the score to 39 from 38. [Macro Root] Rising VIX (Fear: +2.48%) and a steady DXY (Dollar strength) indicate liquidity contraction. [Risk/Reward] Despite a crypto crash, rising momentum tests the Neutral (40) boundary. A VIX peak may signal a short-term bottom. [Action] Stay defensive. Focus on IG Bonds and high-quality assets until the score clears 40 to confirm a regime shift toward neutral territory.",
-            "CN": "[GMS状态] 指数39（防御型）。动能将得分从38推升至39。 [宏观根源] VIX（恐慌指数：衡量波动率）上涨2.48%与DXY（美元走势：衡量流动性）持稳，这反映出当前全球流动性正在收紧且避险情绪显著升温。 [风险/回报] 尽管加密货币市场情绪大幅恶化，但动能的微升表明市场正尝试向中性区间（40）修复。若波动率指标见顶，可能出现阶段性反弹。 [行动建议] 保持防御立场。在得分稳固突破40大关之前，建议优先关注高评级债券及避险资产，切勿盲目抄底。",
-            "ES": "[Estado GMS] Puntuación 39 (Defensivo). El impulso elevó la puntuación a 39 desde 38. [Raíz Macro] El aumento del VIX (Miedo: +2.48%) y la firmeza del DXY (Fortaleza del Dólar) indican contracción de liquidez global. [Riesgo/Recompensa] Pese al colapso en el sentimiento cripto, el avance del impulso busca el nivel Neutral (40). Un techo en la volatilidad sugeriría un suelo técnico. [Acción] Mantener perfil defensivo. Vigilar la consolidación por encima de 40 antes de incrementar riesgo en activos cíclicos.",
-            "HI": "[GMS स्थिति] स्कोर 39 (रक्षात्मक)। मोमेंटम ने स्कोर को 38 से 39 पहुँचाया। [मैक्रो रूट] बढ़ता VIX (डर: +2.48%) और स्थिर DXY (डॉलर मजबूती) तरलता संकुचन और जोखिम-विमुख भावना दिखाते हैं। [जोखिम/पुरस्कार] क्रिप्टो में गिरावट के बावजूद, बढ़ता मोमेंटम न्यूट्रल (40) सीमा को परख रहा है। अस्थिरता का चरम एक संभावित रिवर्सल का संकेत दे सकता है। [कार्रवाई] पूरी तरह रक्षात्मक रहें। स्कोर के 40 पार करने तक सुरक्षित संपत्तियों और बॉन्ड्स पर ध्यान दें, जब तक कि शासन में स्पष्ट बदलाव न हो जाए।",
-            "ID": "[Status GMS] Skor 39 (Defensif). Momentum mendorong skor ke 39 dari 38. [Akar Makro] Kenaikan VIX (Ketakutan: +2,48%) dan ketangguhan DXY (Kekuatan Dolar) menandakan likuiditas global yang ketat. [Risiko/Imbalan] Meski sentimen kripto anjlok, kenaikan tipis momentum menguji batas ambang Netral (40). Puncak volatilitas bisa menjadi sinyal dasar pasar jangka pendek. [Tindakan] Tetap dalam posisi defensif. Fokus pada aset aman dan obligasi berkualitas hingga skor stabil di atas level 40.",
-            "AR": "[حالة GMS] النتيجة 39 (دفاعي). الزخم دفع النتيجة من 38 إلى 39. [الجذر الكلي] ارتفاع VIX (الخوف: +2.48%) وقوة DXY (الدولار) يشيران لانكماش السيولة والنفور من المخاطرة. [المخاطر] رغم انهيار معنويات الكريبتو، يحاول الزخم اختبار حدود الحياد (40). ذروة التقلب قد تعني اقتراب القاع السعري. [الإجراء] البقاء في الوضع الدفاعي حالياً. ركز على السندات عالية الجودة والذهب حتى تتجاوز النتيجة حاجز 40 لتأكيد التحول الفعلي في السوق.",
-            "DE": "[GMS-Status] Score 39 (Defensiv). Das Momentum schob den Wert von 38 auf 39. [Makro-Basis] Ein steigender VIX (Angst: +2,48%) und ein fester DXY (Dollar) deuten auf Liquiditätsmangel und Risikoaversion hin. [Risiko/Ertrag] Trotz Krypto-Crash testet das Momentum die Neutral-Marke (40). Ein VIX-Peak könnte den kurzfristigen Boden markieren. [Fazit] Defensiv bleiben. Erst bei Scores nachhaltig über 40 die Risikoexposition erhöhen und verstärkt auf IG-Bonds und defensive Werte setzen.",
-            "FR": "[Statut GMS] Score 39 (Défensif). L'élan a poussé le score à 39 contre 38 précédemment. [Racine Macro] La hausse du VIX (Peur : +2,48%) et du DXY (Dollar) signale une liquidité restreinte et une aversion au risque. [Risque/Rendement] Malgré la chute du sentiment crypto, l'élan teste le seuil Neutre (40). Un pic de volatilité pourrait indiquer un point bas technique imminent. [Action] Rester défensif. Privilégier la prudence et les obligations de qualité tant que le score ne franchit pas durablement 40."
+            "JP": "GMSスコアは39で「守備的（Defensive）」な局面です。フラットなモメンタムがスコアを39へと押し上げ、リスクオフの体制を維持しています。VIX（恐怖指数）の17.79への上昇は市場の不安定化を意味します。DXY（ドル強弱）の低下は流動性の支えとなりますが、AI脅威論がソフトウェアや金融株を圧迫しており、依然として慎重な姿勢が求められます。ボラティリティの沈静化を確認するまで、積極的な参入は控えるべきでしょう。",
+            "EN": "GMS Status: 39 (Defensive). Flat momentum pushed the score to 39, maintaining a risk-off regime. The rise in VIX (fear indicator) to 17.79 signals growing market instability. While the DXY (dollar strength) eased slightly, providing some liquidity relief, the AI-driven sell-off in software and financial sectors remains a significant headwind. Investors should remain cautious and wait for volatility to peak before seeking new entries. Capital preservation is currently prioritized over aggressive accumulation.",
+            "CN": "GMS得分为39（防御型）。持平的动能将分数推至39，维持了避险模式。VIX（恐慌指数）上升至17.79，预示着市场不稳定性增加。尽管DXY（美元强度）略有回落，缓解了部分流动性压力，但AI对软件及金融板块的威胁持续压制情绪。目前建议保持高度谨慎，在波动率见顶回落之前避免盲目抄底。在当前防御体制下，应重点关注风险对冲，而非激进资产配置。",
+            "ES": "Estado GMS: 39 (Defensivo). El impulso plano llevó la puntuación a 39, manteniendo un régimen de aversión al riesgo. El aumento del VIX (indicador de miedo) a 17,79 señala una creciente inestabilidad. Aunque el DXY (fuerza del dólar) se debilitó levemente, la presión de venta en software y finanzas debido a la IA genera vientos en contra. Se recomienda cautela extrema; es prudente esperar a que la volatilidad alcance su punto máximo antes de actuar. La preservación del capital es la prioridad actual.",
+            "HI": "GMS स्कोर 39 (रक्षात्मक) है। सपाट मोमेंटम ने स्कोर को 39 तक पहुँचाया, जिससे जोखिम-मुक्त माहौल बना हुआ है। VIX (डर सूचकांक) का 17.79 तक बढ़ना बाजार में बढ़ती अस्थिरता का संकेत है। हालाँकि DXY (डॉलर की मजबूती) में मामूली कमी आई है, जिससे तरलता को कुछ राहत मिली है, लेकिन सॉफ्टवेयर और वित्तीय शेयरों पर AI का खतरा बाजार पर दबाव बना रहा है। निवेशकों को सावधानी बरतने की सलाह दी जाती है; बाजार में नई प्रविष्टियों से पहले VIX के स्थिर होने और गिरावट का इंतज़ार करना उचित होगा।",
+            "ID": "Status GMS: 39 (Defensif). Momentum datar mendorong skor ke 39, menjaga rezim tetap dalam mode hindari risiko. Kenaikan VIX (indeks ketakutan) ke 17,79 menunjukkan ketidakpastian pasar yang meningkat. Meskipun DXY (kekuatan dolar) sedikit melemah dan memberi ruang likuiditas, aksi jual di sektor perangkat lunak dan keuangan akibat isu AI menjadi hambatan utama. Tetaplah waspada dan disiplin; disarankan menunggu hingga volatilitas mencapai puncaknya sebelum mencari peluang masuk yang baru di pasar.",
+            "AR": "حالة GMS هي 39 (دفاعي). دفع الزخم المسطح النتيجة إلى 39، مما يحافظ على نظام تجنب المخاطر. يشير ارتفاع مؤشر VIX (مقياس الخوف) إلى 17.79 إلى تزايد عدم الاستقرار. ورغم تراجع مؤشر DXY (قوة الدولار) قليلاً، مما وفر بعض السيولة، إلا أن تهديدات الذكاء الاصطناعي لقطاعي البرمجيات والمالية لا تزال تشكل ضغطاً هبوطياً. يجب توخي الحذر الشديد؛ من الحكمة انتظار وصول التقلبات إلى ذروتها قبل البحث عن نقاط دخول جديدة. الأولوية الآن هي حماية رأس المال.",
+            "DE": "GMS-Status: 39 (Defensiv). Ein flaches Momentum schob den Score auf 39, was das Risk-Off-Regime bestätigt. Der Anstieg des VIX (Angstindex) auf 17,79 signalisiert zunehmende Instabilität. Während der DXY (Dollarkurs) leicht nachgab und die Liquidität stützte, belasten KI-Sorgen im Software- und Finanzsektor die Stimmung. Vorsicht ist geboten; warten Sie auf ein Abklingen der Volatilität, bevor Sie Positionen aufbauen. In diesem Umfeld hat der Kapitalschutz Vorrang vor aggressiven Käufen.",
+            "FR": "Statut GMS : 39 (Défensif). Le momentum plat a porté le score à 39, maintenant un régime de prudence. La hausse du VIX (indice de peur) à 17,79 signale une instabilité croissante. Bien que le DXY (force du dollar) ait légèrement fléchi, offrant un répit à la liquidité, les craintes liées à l'IA dans les secteurs du logiciel et de la finance pèsent lourdement. La prudence est de mise ; il convient d'attendre un pic de volatilité avant d'envisager de nouvelles entrées. Priorisez la protection de votre capital."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-02T23:13:01Z",
-            "score": 32
-        },
         {
             "date": "2026-02-02T23:40:38Z",
             "score": 32
@@ -2840,34 +2836,38 @@
         {
             "date": "2026-02-10T23:48:40Z",
             "score": 39
+        },
+        {
+            "date": "2026-02-11T03:15:49Z",
+            "score": 39
         }
     ],
     "intelligence": {
         "news": [
-            {
-                "title": "Ford reports worst quarterly earnings miss in four years, guides for better 2026",
-                "link": "https://www.cnbc.com/2026/02/10/ford-motor-f-earnings-q4-2025.html",
-                "isoDate": "2026-02-10T22:46:18+00:00Z"
-            },
             {
                 "title": "The AI threat wrecked software stocks. Now financial stocks look next with LPL closing 8% lower",
                 "link": "https://www.cnbc.com/2026/02/10/the-ai-threat-wrecked-software-stocks-now-broker-stocks-look-next-with-lpl-down-11percent.html",
                 "isoDate": "2026-02-10T21:35:56+00:00Z"
             },
             {
-                "title": "The delayed January jobs report will be released Wednesday. Here's what to expect",
-                "link": "https://www.cnbc.com/2026/02/10/jobs-report-preview-january-2026.html",
-                "isoDate": "2026-02-10T20:52:41+00:00Z"
+                "title": "The world’s rich are relocating at a pace unseen in history — where are they going?",
+                "link": "https://www.cnbc.com/2026/02/11/the-worlds-rich-are-relocating-at-a-pace-unseen-in-history-where-are-they-going.html",
+                "isoDate": "2026-02-11T01:33:56+00:00Z"
             },
             {
-                "title": "Lyft stock falls 15% on disappointing fourth-quarter results, rider numbers",
-                "link": "https://www.cnbc.com/2026/02/10/lyft-lyft-q4-2025-earnings-.html",
-                "isoDate": "2026-02-10T22:16:50+00:00Z"
+                "title": "Salesforce employees call on CEO Benioff to cancel ICE 'opportunities'",
+                "link": "https://www.cnbc.com/2026/02/10/salesforce-employees-call-on-ceo-benioff-to-cancel-ice-opportunities.html",
+                "isoDate": "2026-02-11T03:12:49+00:00Z"
             },
             {
-                "title": "Moderna says FDA refuses to review its application for experimental flu shot",
-                "link": "https://www.cnbc.com/2026/02/10/moderna-fda-flu-shot.html",
-                "isoDate": "2026-02-10T23:11:40+00:00Z"
+                "title": "DC grand jury declines to indict Sens. Kelly, Slotkin for seditious conspiracy: MS Now",
+                "link": "https://www.cnbc.com/2026/02/11/kelly-slotkin-grand-jury-trump-hegseth.html",
+                "isoDate": "2026-02-11T02:53:52+00:00Z"
+            },
+            {
+                "title": "Musk's xAI loses second co-founder in two days",
+                "link": "https://www.cnbc.com/2026/02/10/musks-xai-loses-second-co-founder-in-two-days-as-jimmy-ba-departs.html",
+                "isoDate": "2026-02-11T01:52:08+00:00Z"
             },
             {
                 "title": "Wells Fargo says buy the gold pullback. Here's where it sees bullion by year-end",
@@ -2877,71 +2877,71 @@
         ],
         "translations": {
             "JP": [
-                "フォード、4年間で最悪の四半期決算未達を報告、2026年は改善見通し",
-                "AIの脅威がソフトウエア株を壊滅、次は金融株か、LPLは8%下落",
-                "延期された1月雇用統計、水曜日に発表、何が期待できるか",
-                "リフト、第4四半期決算と利用者数低迷で株価15%下落",
-                "モデルナ、FDAが実験的インフルエンザワクチンの申請を審査拒否と発表",
-                "ウェルズ・ファーゴ、金の下落局面での買いを推奨、年末までに金価格を予想"
+                "AIの脅威がソフトウェア株を壊滅させる。金融株も次の標的か、LPLは8%下落",
+                "世界の富裕層が歴史上かつてないペースで移住中――彼らはどこへ向かっているのか？",
+                "Salesforce社員、CEOにICEの「機会」中止を要求",
+                "MS Now：DC大陪審、ケリー上院議員とスロットキン上院議員の反乱罪での起訴を却下",
+                "イーロン・マスク氏のxAI、2日間で共同設立者を2人失う",
+                "Wells Fargo、金の下落局面での買いを推奨。年末の金価格予測も提示"
             ],
             "CN": [
-                "福特报告四年来最差季度盈利未达预期，预计2026年业绩好转",
-                "人工智能威胁重创软件股，金融股或成下一个目标，LPL下跌8%",
-                "推迟的1月就业报告将于周三公布，以下是预期",
-                "Lyft股价因第四季度业绩和乘员数量令人失望而下跌15%",
-                "Moderna称FDA拒绝审查其实验性流感疫苗申请",
-                "富国银行建议逢低买入黄金，预计年底金价将达到这一水平"
+                "人工智能威胁重创软件股，金融股或成下一个目标，LPL股价下跌8%",
+                "全球富豪正以前所未有的速度重新安置——他们将去往何处？",
+                "Salesforce员工呼吁CEO贝尼奥夫取消ICE的“机会”",
+                "MS Now：华盛顿大陪审团拒绝起诉参议员凯利、斯洛特金叛国罪",
+                "马斯克的xAI两天内损失第二位联合创始人",
+                "富国银行表示逢低买入黄金。他们预计年底金价将达到..."
             ],
             "ES": [
-                "Ford reporta la peor omisión de ganancias trimestrales en cuatro años, prevé un 2026 mejor",
-                "La amenaza de la IA destrozó las acciones de software. Ahora las acciones financieras parecen las próximas con LPL cayendo un 8%",
-                "El informe de empleos de enero retrasado se publicará el miércoles. Esto es lo que se espera",
-                "Las acciones de Lyft caen un 15% por decepcionantes resultados del cuarto trimestre y número de pasajeros",
-                "Moderna dice que la FDA se niega a revisar su solicitud de vacuna experimental contra la gripe",
-                "Wells Fargo dice que compre el retroceso del oro. Aquí es donde ve el lingote para fin de año"
+                "La amenaza de la IA destrozó las acciones de software. Ahora las acciones financieras parecen ser las siguientes, con LPL cerrando un 8% a la baja",
+                "Los ricos del mundo se están reubicando a un ritmo no visto en la historia: ¿a dónde van?",
+                "Empleados de Salesforce piden al CEO Benioff que cancele las 'oportunidades' de ICE",
+                "Gran jurado de DC se niega a acusar a los senadores Kelly y Slotkin por conspiración sediciosa: MS Now",
+                "xAI de Musk pierde a su segundo cofundador en dos días",
+                "Wells Fargo dice que compre la retirada del oro. Aquí es donde ve el lingote para fin de año"
             ],
             "HI": [
-                "फोर्ड ने चार वर्षों में सबसे खराब तिमाही आय की कमी की सूचना दी, 2026 के लिए बेहतर मार्गदर्शन दिया",
-                "एआई खतरे ने सॉफ्टवेयर शेयरों को तबाह कर दिया। अब वित्तीय शेयर अगले लग रहे हैं, एलपीएल 8% नीचे बंद",
-                "स्थगित जनवरी की नौकरियों की रिपोर्ट बुधवार को जारी की जाएगी। यहाँ क्या उम्मीद है",
-                "Lyft के शेयर चौथी तिमाही के निराशाजनक नतीजों और यात्रियों की संख्या पर 15% गिरे",
-                "Moderna का कहना है कि FDA ने प्रायोगिक फ्लू शॉट के लिए उसके आवेदन की समीक्षा करने से इनकार कर दिया",
-                "वेल्स फ़ार्गो का कहना है कि सोने की गिरावट खरीदें। यहाँ यह साल के अंत तक बुलियन देखता है"
+                "एआई का खतरा सॉफ्टवेयर शेयरों के लिए विनाशकारी साबित हुआ। अब वित्तीय शेयर अगले नंबर पर दिख रहे हैं, एलपीएल 8% की गिरावट के साथ बंद हुआ",
+                "दुनिया के अमीर अभूतपूर्व गति से अपना स्थान बदल रहे हैं — वे कहाँ जा रहे हैं?",
+                "Salesforce के कर्मचारियों ने सीईओ बेनियोफ से ICE 'अवसरों' को रद्द करने का आह्वान किया",
+                "MS Now: डीसी ग्रैंड जूरी ने सेडिशियस कॉन्सपिरेसी के लिए सीनेटर केली, स्लॉटकिन पर मुकदमा चलाने से इनकार किया",
+                "मस्क की xAI ने दो दिन में दूसरा सह-संस्थापक खो दिया",
+                "वेल्स फ़ार्गो ने कहा कि सोने की गिरावट पर खरीदें। यहाँ वे साल के अंत तक बुलियन को देखते हैं"
             ],
             "ID": [
-                "Ford laporkan kerugian pendapatan kuartalan terburuk dalam empat tahun, perkirakan 2026 yang lebih baik",
-                "Ancaman AI menghancurkan saham perangkat lunak. Sekarang saham keuangan terlihat selanjutnya dengan LPL turun 8%",
-                "Laporan pekerjaan Januari yang tertunda akan dirilis Rabu. Inilah yang diharapkan",
-                "Saham Lyft turun 15% karena hasil kuartal keempat yang mengecewakan, jumlah penumpang",
-                "Moderna mengatakan FDA menolak meninjau aplikasinya untuk suntikan flu eksperimental",
-                "Wells Fargo mengatakan beli penurunan emas. Inilah targetnya pada akhir tahun"
+                "Ancaman AI menghancurkan saham perangkat lunak. Kini saham keuangan terlihat berikutnya dengan LPL ditutup 8% lebih rendah",
+                "Orang-orang kaya dunia sedang pindah dengan kecepatan yang belum pernah terjadi sebelumnya dalam sejarah — ke mana mereka pergi?",
+                "Karyawan Salesforce menyerukan CEO Benioff untuk membatalkan 'peluang' ICE",
+                "MS Now: Juri agung DC menolak mendakwa Senator Kelly, Slotkin atas konspirasi makar",
+                "xAI milik Musk kehilangan pendiri bersama kedua dalam dua hari",
+                "Wells Fargo mengatakan beli penurunan emas. Inilah di mana ia melihat emas batangan pada akhir tahun"
             ],
             "AR": [
-                "فورد تعلن عن أسوأ تخلف عن أرباح الربع السنوي في أربع سنوات، وتتوقع عام 2026 أفضل",
-                "تهديد الذكاء الاصطناعي يدمر أسهم البرمجيات. الآن تبدو الأسهم المالية هي التالية مع انخفاض LPL بنسبة 8%",
-                "سيتم إصدار تقرير الوظائف المؤجل لشهر يناير يوم الأربعاء. إليك ما يمكن توقعه",
-                "أسهم Lyft تنخفض 15% بسبب نتائج الربع الرابع المخيبة للآمال وأعداد الركاب",
-                "موديرنا تقول إن إدارة الغذاء والدواء ترفض مراجعة طلبها للقاح الأنفلونزا التجريبي",
-                "ويلز فارجو تقول اشترِ تراجع الذهب. إليك ما تراه من السبائك بنهاية العام"
+                "تهديد الذكاء الاصطناعي يدمر أسهم البرمجيات. الآن تبدو الأسهم المالية التالية، مع إغلاق LPL بانخفاض 8%",
+                "أثرياء العالم ينتقلون بوتيرة غير مسبوقة في التاريخ — إلى أين يتجهون؟",
+                "موظفو Salesforce يدعون الرئيس التنفيذي بينيوف إلى إلغاء 'فرص' ICE",
+                "MS Now: هيئة محلفين كبرى في واشنطن ترفض توجيه اتهام بالتحريض على الفتنة للسيناتورين كيلي وسلوتكين",
+                "xAI التابعة لموسك تخسر ثاني مؤسس مشارك في يومين",
+                "Wells Fargo تقول اشتروا تراجع الذهب. إليكم أين ترى الذهب بنهاية العام"
             ],
             "DE": [
-                "Ford meldet schlechtesten Quartalsverlust seit vier Jahren und prognostiziert besseres Jahr 2026",
-                "Die KI-Bedrohung verwüstete Software-Aktien. Nun scheinen Finanzaktien als nächste an der Reihe zu sein, da LPL 8% niedriger schließt",
-                "Der verschobene Arbeitsmarktbericht für Januar wird am Mittwoch veröffentlicht. Hier ist, was zu erwarten ist",
-                "Lyft-Aktien fallen um 15% aufgrund enttäuschender Ergebnisse des vierten Quartals und der Fahrgastzahlen",
-                "Moderna sagt, die FDA lehne die Prüfung ihres Antrags für experimentellen Grippeschutz ab",
-                "Wells Fargo rät zum Kauf von Gold-Rückgängen. Hier sieht das Institut Gold bis Jahresende"
+                "Die KI-Bedrohung hat Software-Aktien zerstört. Jetzt sehen Finanzaktien als Nächstes aus, LPL schließt 8% niedriger",
+                "Die Reichen der Welt siedeln in einem historischen Ausmaß um – wohin gehen sie?",
+                "Salesforce-Mitarbeiter fordern CEO Benioff auf, ICE-'Möglichkeiten' abzusagen",
+                "MS Now: Grand Jury in D.C. lehnt Anklage gegen die Senatoren Kelly und Slotkin wegen Aufwiegelung ab",
+                "Musks xAI verliert zweiten Mitgründer an zwei Tagen",
+                "Wells Fargo sagt, kaufen Sie den Goldrückgang. Hier sieht es Edelmetall bis Jahresende"
             ],
             "FR": [
-                "Ford annonce la pire déception de bénéfices trimestriels en quatre ans, prévoit une amélioration pour 2026",
                 "La menace de l'IA a ruiné les actions de logiciels. Désormais, les actions financières semblent être les suivantes, LPL clôturant en baisse de 8%",
-                "Le rapport sur l'emploi de janvier, retardé, sera publié mercredi. Voici ce qu'il faut attendre",
-                "L'action Lyft chute de 15% suite aux résultats décevants du quatrième trimestre et au nombre de passagers",
-                "Moderna affirme que la FDA refuse d'examiner sa demande de vaccin expérimental contre la grippe",
-                "Wells Fargo recommande d'acheter la baisse de l'or. Voici où il voit l'once d'ici la fin de l'année"
+                "Les riches du monde se relocalisent à un rythme sans précédent dans l'histoire — où vont-ils ?",
+                "Les employés de Salesforce appellent le PDG Benioff à annuler les 'opportunités' de l'ICE",
+                "MS Now : Un grand jury de D.C. refuse d'inculper les sénateurs Kelly et Slotkin pour conspiration séditieuse",
+                "xAI de Musk perd son deuxième cofondateur en deux jours",
+                "Wells Fargo dit d'acheter le repli de l'or. Voici où elle voit le lingot d'ici la fin de l'année"
             ]
         },
-        "last_updated": "2026-02-10T23:48:40.137434+00:00Z"
+        "last_updated": "2026-02-11T03:15:49.264010+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
