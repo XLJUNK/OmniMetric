@@ -3,7 +3,8 @@ on:
   push:
     branches: [ main ]
   schedule:
-    - cron: '5 * * * *' # Every hour at :05
+    - cron: '7,37 * * * 1-5' # Weekdays: 7, 37 min past hour
+    - cron: '7 */4 * * 0,6' # Weekends: Every 4 hours at 7 min past hour
   workflow_dispatch:
 
 concurrency:
@@ -17,6 +18,8 @@ jobs:
       contents: write
     timeout-minutes: 10 # Reduced timeout for efficiency
     steps:
+      - name: Set Start Time
+        run: echo "SYNC_START_TIME=$(date +%s)" >> $GITHUB_ENV
       - uses: actions/checkout@v4
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -98,4 +101,15 @@ jobs:
             for url in $URLS; do
               curl -v "https://www.bing.com/indexnow?url=$url&key=$INDEXNOW_KEY"
             done
+          fi
+
+      - name: Log Consumption
+        if: always()
+        run: |
+          SYNC_END_TIME=$(date +%s)
+          DURATION=$((SYNC_END_TIME - SYNC_START_TIME))
+          echo "=== Execution Summary ==="
+          echo "Duration: $DURATION seconds"
+          if [ $DURATION -gt 300 ]; then
+            echo "::warning title=Latency Alert::Hourly sync took $DURATION seconds (Threshold: 300s)"
           fi
