@@ -46,8 +46,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lowerLangs.forEach(lang => {
             entries.push({
                 url: lang === 'en' ? `${baseUrl}${urlPath || '/'}` : `${baseUrl}/${lang}${urlPath}`,
-                lastModified: new Date(),
-                changeFrequency: 'hourly',
+                lastModified: new Date().toISOString(),
+                changeFrequency: 'daily',
                 priority: urlPath === '' ? 1.0 : 0.9,
                 alternates: getAlternates(urlPath),
             });
@@ -59,7 +59,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lowerLangs.forEach(lang => {
             entries.push({
                 url: lang === 'en' ? `${baseUrl}${urlPath}` : `${baseUrl}/${lang}${urlPath}`,
-                lastModified: new Date(),
+                lastModified: new Date().toISOString(),
                 changeFrequency: 'monthly',
                 priority: 0.5,
                 alternates: getAlternates(urlPath),
@@ -71,7 +71,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lowerLangs.forEach(lang => {
         entries.push({
             url: lang === 'en' ? `${baseUrl}/wiki` : `${baseUrl}/${lang}/wiki`,
-            lastModified: new Date(),
+            lastModified: new Date().toISOString(),
             changeFrequency: 'daily',
             priority: 0.8,
             alternates: getAlternates('/wiki'),
@@ -85,7 +85,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lowerLangs.forEach(lang => {
             entries.push({
                 url: lang === 'en' ? `${baseUrl}${subPath}` : `${baseUrl}/${lang}${subPath}`,
-                lastModified: new Date(),
+                lastModified: new Date().toISOString(),
                 changeFrequency: 'weekly',
                 priority: 0.7,
                 alternates: getAlternates(subPath),
@@ -108,7 +108,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
                 lowerLangs.forEach(lang => {
                     entries.push({
                         url: lang === 'en' ? `${baseUrl}${archivePath}` : `${baseUrl}/${lang}${archivePath}`,
-                        lastModified: new Date(),
+                        lastModified: new Date().toISOString(),
                         changeFrequency: 'never',
                         priority: 0.4,
                         alternates: getAlternates(archivePath),
@@ -120,7 +120,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
                 lowerLangs.forEach(lang => {
                     entries.push({
                         url: lang === 'en' ? `${baseUrl}${analysisPath}` : `${baseUrl}/${lang}${analysisPath}`,
-                        lastModified: new Date(),
+                        lastModified: new Date().toISOString(),
                         changeFrequency: 'never',
                         priority: 0.6,
                         alternates: getAlternates(analysisPath),

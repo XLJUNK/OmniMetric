@@ -43,8 +43,8 @@ export const DynamicStructuredData = ({ data: externalData }: { data?: unknown }
         };
     }, [isStatic]);
 
-    // If external data is provided, use it directly (Static Mode)
     if (externalData) {
+        // Advanced SEO: Flatten graph if possible or use multiple schemas
         return (
             <script
                 type="application/ld+json"
@@ -60,14 +60,18 @@ export const DynamicStructuredData = ({ data: externalData }: { data?: unknown }
         "@graph": [
             {
                 "@type": "Dataset",
-                "@id": "https://omnimetric.net/#gms-dataset",
+                "@id": "https://www.omnimetric.net/#gms-dataset",
                 "name": "OmniMetric Global Macro Signal Index",
-                "description": "Institutional-grade real-time risk assessment integrating Net Liquidity, Bond Volatility (MOVE), Equity Volatility (VIX), and Credit Spreads. Updated continuously.",
-                "url": "https://omnimetric.net",
+                "description": "Institutional-grade real-time market risk assessment dataset integrating Net Liquidity, MOVE, VIX, and Credit Spreads.",
+                "url": "https://www.omnimetric.net",
                 "creator": {
                     "@type": "Organization",
                     "name": "OmniMetric Project",
-                    "url": "https://omnimetric.net"
+                    "url": "https://www.omnimetric.net",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://www.omnimetric.net/icon.png"
+                    }
                 },
                 "isAccessibleForFree": true,
                 "license": "https://creativecommons.org/licenses/by-nc/4.0/",
@@ -86,32 +90,18 @@ export const DynamicStructuredData = ({ data: externalData }: { data?: unknown }
                         "value": data.market_data.NET_LIQUIDITY?.price || 0,
                         "unitText": "USD_BILLIONS",
                         "description": "Federal Reserve Balance Sheet minus TGA and RRP"
-                    },
-                    {
-                        "@type": "PropertyValue",
-                        "name": "MOVE Index",
-                        "value": data.market_data.MOVE?.price || 0,
-                        "unitText": "INDEX",
-                        "description": "Bond Market Volatility Index"
-                    },
-                    {
-                        "@type": "PropertyValue",
-                        "name": "VIX Index",
-                        "value": data.market_data.VIX?.price || 0,
-                        "unitText": "INDEX",
-                        "description": "Equity Market Volatility Index"
                     }
                 ]
             },
             {
-                "@type": "FinancialProduct",
-                "name": "Global Macro Signal",
-                "description": "Algorithmic market risk indicator combining institutional-grade data sources",
+                "@type": "FinancialService",
+                "name": "OmniMetric Terminal",
+                "description": "Professional algorithmic macroeconomic analysis platform.",
+                "url": "https://www.omnimetric.net",
                 "provider": {
                     "@type": "Organization",
                     "name": "OmniMetric"
-                },
-                "feesAndCommissionsSpecification": "Free for informational use"
+                }
             }
         ]
     };

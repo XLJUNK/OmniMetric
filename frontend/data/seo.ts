@@ -29,26 +29,22 @@ export function getMultilingualMetadata(
 
     const alternates: Record<string, string> = {};
 
-    // Generate all 7 languages
-    // Generate all 7 languages (Path-based strict)
+    // Generate all 9 languages (Path-based strict)
     Object.entries(LANGUAGES).forEach(([code, hreflang]) => {
+        const langPath = code.toLowerCase();
         if (cleanPath === '/') {
-            // Root special case (Homepage)
+            // Root special case: English is naked domain
             alternates[hreflang] = code === 'EN'
                 ? `${BASE_URL}/`
-                : `${BASE_URL}/${code.toLowerCase()}`;
+                : `${BASE_URL}/${langPath}`;
         } else {
-            // Standard Paths (/wiki, /forex, etc)
-            alternates[hreflang] = `${BASE_URL}/${code.toLowerCase()}${cleanPath}`;
+            // Standard Paths (/wiki, /forex, etc) - English always gets /en/ in alternates for clarity
+            alternates[hreflang] = `${BASE_URL}/${langPath}${cleanPath}`;
         }
     });
 
-    // Set x-default (English Path is default)
-    if (cleanPath === '/') {
-        alternates['x-default'] = `${BASE_URL}/`;
-    } else {
-        alternates['x-default'] = `${BASE_URL}/en${cleanPath}`;
-    }
+    // Set x-default (English Root or English Path)
+    alternates['x-default'] = cleanPath === '/' ? `${BASE_URL}/` : `${BASE_URL}/en${cleanPath}`;
 
     // Canonical (Self-referencing path)
     let canonical = `${BASE_URL}/${langCode.toLowerCase()}${cleanPath}`;
@@ -58,21 +54,41 @@ export function getMultilingualMetadata(
         canonical = `${BASE_URL}/`;
     }
 
-
     return {
-        title: title || "Global Macro Signal | Institutional Market Intelligence",
-        description: description || "Real-time global market risk analysis. AI-driven insights for professional investors.",
+        title: title || "Global Macro Signal (OmniMetric Terminal) | AI-Driven Financial Insight",
+        description: description || (langCode === 'JP'
+            ? "機関投資家品質のマクロ経済解析を個人に開放する自律型ターミナル。GMS Scoreによりグローバルマクロのリスクをリアルタイムで可視化。"
+            : "Autonomous terminal democratizing institutional-grade macro analysis. GMS Score provides real-time visibility into global macro risk regimes."),
         alternates: {
             canonical,
-            languages: Object.keys(LANGUAGES).reduce((acc: Record<string, string>, l: string) => {
-                const hreflang = LANGUAGES[l];
-                if (cleanPath === '/') {
-                    acc[hreflang] = l === 'EN' ? `${BASE_URL}/` : `${BASE_URL}/${l.toLowerCase()}`;
-                } else {
-                    acc[hreflang] = `${BASE_URL}/${l.toLowerCase()}${cleanPath}`;
+            languages: alternates,
+        },
+        openGraph: {
+            title: title || "Global Macro Signal | Institutional Market Intelligence",
+            description: description || (langCode === 'JP'
+                ? "機関投資家品質のマクロ解析を提供する自律型ターミナル。独自アルゴリズムでリスクを可視化。"
+                : "Institutional-grade autonomous terminal for macro analysis. Visualizing global risk via proprietary algorithms."),
+            url: canonical,
+            siteName: "OmniMetric Terminal",
+            images: [
+                {
+                    url: `${BASE_URL}/brand-og.png`,
+                    width: 1200,
+                    height: 630,
+                    alt: title || 'Global Macro Signal | Institutional Real-Time Analysis',
                 }
-                return acc;
-            }, {} as Record<string, string>),
+            ],
+            type: 'website',
+            locale: currentLang === 'JP' ? 'ja_JP' : 'en_US',
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: title || "Global Macro Signal | Institutional Market Intelligence",
+            description: description || (langCode === 'JP'
+                ? "機関投資家品質のマクロ解析を提供する自律型ターミナル。"
+                : "Autonomous terminal democratizing institutional-grade macro analysis."),
+            creator: '@OmniMetric_GMS',
+            images: [`${BASE_URL}/brand-og.png`],
         },
     };
 }

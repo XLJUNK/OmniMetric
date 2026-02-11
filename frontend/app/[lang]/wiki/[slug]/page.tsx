@@ -585,12 +585,18 @@ export default async function WikiDetailPage({ params }: Props) {
                     <h2 className={`text-xs font-bold text-slate-500 uppercase tracking-widest mb-8 ${isRTL ? 'text-right' : ''}`}>{LABELS.related}</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {related.map(r => (
-                            <Link key={r.slug} href={lang.toLowerCase() === 'en' ? `/wiki/${r.slug}` : `/${lang.toLowerCase()}/wiki/${r.slug}`} className="group block">
+                            <Link key={r.slug} href={lang.toLowerCase() === 'en' ? `/wiki/${r.slug}` : `/${lang.toLowerCase()}/wiki/${r.slug}`} className="group block" aria-label={`${r.title} Analysis`}>
                                 <div className={`p-6 bg-transparent dark:bg-[#0A0A0A] border border-border group-hover:border-sky-500/50 transition-all h-full flex flex-col justify-between ${isRTL ? 'text-right' : 'text-left'}`}>
-                                    <h4 className="text-sm font-bold text-foreground group-hover:text-sky-500 transition-colors mb-2">
-                                        {r.title}
-                                    </h4>
-                                    <p className="text-[10px] text-slate-500 font-mono uppercase italic">{r.category}</p>
+                                    <div className="space-y-4">
+                                        <h4 className="text-sm font-bold text-foreground group-hover:text-sky-500 transition-colors">
+                                            {r.title}
+                                        </h4>
+                                        <p className="text-[10px] text-slate-500 font-mono uppercase italic mb-4">{r.category}</p>
+                                    </div>
+                                    <div className="flex items-center gap-1 text-[10px] text-sky-500 font-bold uppercase tracking-tighter opacity-0 group-hover:opacity-100 transition-opacity">
+                                        {normalizedLang === 'JP' ? `${r.title}の解析データを見る` : `View ${r.title} Analysis`}
+                                        <ChevronRight className="w-3 h-3" />
+                                    </div>
                                 </div>
                             </Link>
                         ))}

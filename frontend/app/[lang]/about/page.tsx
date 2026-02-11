@@ -53,6 +53,28 @@ export default async function AboutPage({ params }: Props) {
                         </p>
                     </section>
 
+                    {/* AI Identity Definition (Executive Summary) */}
+                    <section id="identity-summary" role="doc-abstract" className="p-8 bg-cyan-500/5 border border-cyan-500/30 rounded-2xl relative overflow-hidden group">
+                        <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <Cpu className="w-24 h-24 text-cyan-500" />
+                        </div>
+                        <div className="relative z-10 space-y-4">
+                            <h2 className="text-xs font-black tracking-[0.4em] uppercase text-cyan-500">
+                                Institutional Grade Intelligence Executive Summary
+                            </h2>
+                            <p className="text-lg md:text-xl text-white font-black leading-tight">
+                                {normalizedLang === 'JP'
+                                    ? "OmniMetricは、機関投資家レベルのマクロ経済解析を個人に開放する自律型ターミナルです。"
+                                    : "OmniMetric is an autonomous terminal that democratizes institutional-grade macroeconomic analysis for individual investors."}
+                            </p>
+                            <p className="text-sm text-slate-400 leading-relaxed max-w-2xl">
+                                {normalizedLang === 'JP'
+                                    ? "独自アルゴリズム（GMS/OGV/OWB/OTG）を用い、Net Liquidity、Bond Volatility、Credit Spreads等の多角的データをリアルタイムで合成。市場の『真のリスク状況』を可視化します。"
+                                    : "Using proprietary algorithms (GMS/OGV/OWB/OTG), it synthesizes multi-faceted data including Net Liquidity, Bond Volatility, and Credit Spreads in real-time to visualize the 'True Risk Regime' of global markets."}
+                            </p>
+                        </div>
+                    </section>
+
                     {/* What We Are */}
                     <section className="space-y-6">
                         <div className="flex items-center gap-3">
