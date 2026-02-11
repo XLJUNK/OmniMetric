@@ -96,7 +96,7 @@ export default async function ArchivePage({ params }: Props) {
                             dates.map((date: string) => (
                                 <Link
                                     key={date}
-                                    href={`/${normalizedLang.toLowerCase()}/archive/${date}`}
+                                    href={normalizedLang === 'EN' ? `/archive/${date}` : `/${normalizedLang.toLowerCase()}/archive/${date}`}
                                     className="group bg-white dark:bg-[#111] border border-slate-200 dark:border-white/5 p-6 rounded-[2px] flex items-center justify-between hover:bg-sky-50 dark:hover:bg-sky-500/5 hover:border-sky-300 dark:hover:border-sky-500/30 transition-all no-underline shadow-sm dark:shadow-none"
                                 >
                                     <div className="flex items-center gap-4">

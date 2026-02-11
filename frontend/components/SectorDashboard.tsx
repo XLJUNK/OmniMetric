@@ -80,30 +80,83 @@ export const SectorDashboard = ({ sectorKey, lang: langProp }: SectorDashboardPr
                 </div>
 
                 {/* 4. INDICATOR GRID (UNIFIED WITH PULSE TILE) */}
-                <div className="grid gap-4 md:gap-6 grid-cols-2 lg:grid-cols-4">
-                    {indicators.map((val) => {
-                        // Determine Color based on Change %
-                        const isUp = (val.change_percent ?? 0) >= 0;
-                        const cardColor = isUp ? "#22c55e" : "#ef4444"; // Green/Red
+                {sectorKey === 'STOCKS' ? (
+                    <div className="space-y-12">
+                        {/* Primary Equities */}
+                        <div className="space-y-4">
+                            <h3 className="text-sm font-bold text-slate-500 uppercase tracking-widest px-1 border-l-2 border-sky-500">
+                                {lang === 'JP' ? '主要株価指数' : 'Major Equity Indices'}
+                            </h3>
+                            <div className="grid gap-4 md:gap-6 grid-cols-2 lg:grid-cols-4">
+                                {indicators.filter(val => ["SPY", "QQQ", "IWM"].includes(val.key)).map((val) => (
+                                    <PulseTile
+                                        key={val.key}
+                                        title={(t.tickers as any)?.[val.key] || (val.key === 'STOCKS' ? t.labels.stocks_rates : (t.labels as any)?.[val.key.toLowerCase()]) || val.key}
+                                        score={sectorScore}
+                                        ticker={val.key}
+                                        data={val}
+                                        onClick={() => { }}
+                                        lang={lang}
+                                    />
+                                ))}
+                            </div>
+                        </div>
 
-                        // Safety check for localized title
-                        const locTitle = (t.tickers as any)?.[val.key] || (t.labels as any)?.[val.key.toLowerCase()] || val.key;
+                        {/* Yields - Market Gravity */}
+                        <div className="space-y-4">
+                            <h3 className="text-sm font-bold text-slate-500 uppercase tracking-widest px-1 border-l-2 border-rose-500">
+                                {t.labels.rates_gravity || (lang === 'JP' ? 'マーケットの重力（金利）' : 'Market Gravity (Yields)')}
+                            </h3>
+                            <div className="grid gap-4 md:gap-6 grid-cols-2 lg:grid-cols-4">
+                                {indicators.filter(val => ["US_10Y_YIELD", "US_02Y_YIELD"].includes(val.key)).map((val) => (
+                                    <PulseTile
+                                        key={val.key}
+                                        title={(t.tickers as any)?.[val.key] || (val.key === 'STOCKS' ? t.labels.stocks_rates : (t.labels as any)?.[val.key.toLowerCase()]) || val.key}
+                                        score={sectorScore}
+                                        ticker={val.key}
+                                        data={val}
+                                        onClick={() => { }}
+                                        lang={lang}
+                                    />
+                                ))}
+                            </div>
+                        </div>
 
-                        // Use PulseTile here
-                        return (
+                        {/* Other Indicators */}
+                        <div className="space-y-4">
+                            <h3 className="text-sm font-bold text-slate-500 uppercase tracking-widest px-1 border-l-2 border-slate-700">
+                                {lang === 'JP' ? '市場流動性・センチメント' : 'Market Liquidity & Sentiment'}
+                            </h3>
+                            <div className="grid gap-4 md:gap-6 grid-cols-2 lg:grid-cols-4">
+                                {indicators.filter(val => !["SPY", "QQQ", "IWM", "US_10Y_YIELD", "US_02Y_YIELD"].includes(val.key)).map((val) => (
+                                    <PulseTile
+                                        key={val.key}
+                                        title={(t.tickers as any)?.[val.key] || (val.key === 'STOCKS' ? t.labels.stocks_rates : (t.labels as any)?.[val.key.toLowerCase()]) || val.key}
+                                        score={sectorScore}
+                                        ticker={val.key}
+                                        data={val}
+                                        onClick={() => { }}
+                                        lang={lang}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                ) : (
+                    <div className="grid gap-4 md:gap-6 grid-cols-2 lg:grid-cols-4">
+                        {indicators.map((val) => (
                             <PulseTile
                                 key={val.key}
-                                title={locTitle}
+                                title={(t.tickers as any)?.[val.key] || (val.key === 'STOCKS' ? t.labels.stocks_rates : (t.labels as any)?.[val.key.toLowerCase()]) || val.key}
                                 score={sectorScore}
                                 ticker={val.key}
                                 data={val}
-                                chartColor={cardColor}
                                 onClick={() => { }}
                                 lang={lang}
                             />
-                        )
-                    })}
-                </div>
+                        ))}
+                    </div>
+                )}
 
             </div>
 

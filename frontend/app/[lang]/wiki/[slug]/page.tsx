@@ -35,7 +35,7 @@ const WIKI_LABELS = {
     },
     JP: {
         deep_dive: "詳細分析コンテキスト",
-        council_debate: "評議会討論 (The Council Debate)",
+        council_debate: "多角的な分析 (Multifaceted Analysis)",
         geopolitics: "地政学",
         macro: "マクロ",
         quant: "クオンツ",
@@ -299,13 +299,36 @@ interface ExpertCardProps {
 
 const ExpertCard = ({ role, icon: Icon, color, bg, content, isRTL, localizedRole }: ExpertCardProps) => {
     if (!content) return null;
+
+    // Detect Stance (Hawk/Dove)
+    const isHawk = /Hawk|Hawkish|タカ|鹰|Halcón/i.test(content);
+    const isDove = /Dove|Dovish|ハト|鸽|Paloma/i.test(content);
+
+    const stanceStyles = isHawk
+        ? "border-red-500/30 bg-red-500/5 shadow-[0_0_15px_rgba(239,68,68,0.05)]"
+        : isDove
+            ? "border-emerald-500/30 bg-emerald-500/5 shadow-[0_0_15px_rgba(16,185,129,0.05)]"
+            : "border-border bg-transparent hover:bg-slate-50 dark:hover:bg-slate-900";
+
+    const stanceColor = isHawk ? "text-red-400" : isDove ? "text-emerald-400" : color;
+    const stanceBg = isHawk ? "bg-red-500/20" : isDove ? "bg-emerald-500/20" : bg;
+
     return (
-        <div className={`p-4 rounded-xl border border-border bg-transparent hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors ${isRTL ? 'text-right' : 'text-left'}`}>
+        <div className={`p-4 rounded-xl border transition-all duration-300 ${stanceStyles} ${isRTL ? 'text-right' : 'text-left'}`}>
             <div className={`flex items-center gap-2 mb-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                <div className={`p-1.5 rounded ${bg} ${color}`}>
+                <div className={`p-1.5 rounded ${stanceBg} ${stanceColor}`}>
                     <Icon className="w-4 h-4" />
                 </div>
-                <span className="text-[10px] font-black uppercase tracking-widest text-slate-500">{localizedRole || role}</span>
+                <div className="flex flex-col">
+                    <span className={`text-[10px] font-black uppercase tracking-widest ${isHawk ? 'text-red-500' : isDove ? 'text-emerald-500' : 'text-slate-500'}`}>
+                        {localizedRole || role}
+                    </span>
+                    {(isHawk || isDove) && (
+                        <span className={`text-[8px] font-bold uppercase tracking-widest ${isHawk ? 'text-red-400' : 'text-emerald-400'}`}>
+                            — {isHawk ? 'Hawk' : 'Dove'}
+                        </span>
+                    )}
+                </div>
             </div>
             <p className="text-xs md:text-sm leading-6 md:leading-7 font-medium text-slate-700 dark:text-slate-300">
                 &ldquo;{content}&rdquo;

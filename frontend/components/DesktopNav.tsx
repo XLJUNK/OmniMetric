@@ -24,7 +24,7 @@ export const DesktopNav = ({ lang: defaultLang }: { lang: LangType }) => {
 
     const navItems = [
         { key: 'home', label: t.labels.summary || 'SUMMARY', path: '/' },
-        { key: 'stocks', label: t.labels.stocks || 'STOCKS', path: '/stocks' },
+        { key: 'stocks', label: t.labels.stocks_rates || 'STOCKS & RATES', path: '/stocks' },
         { key: 'crypto', label: t.labels.crypto || 'CRYPTO', path: '/crypto' },
         { key: 'forex', label: t.labels.forex || 'FOREX', path: '/forex' },
         { key: 'cmdty', label: t.labels.commodities || 'COMMODITIES', path: '/commodities' },

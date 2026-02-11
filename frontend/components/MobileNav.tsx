@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Home, LineChart, Bitcoin, Banknote, Gem, Globe, ScrollText, Activity } from 'lucide-react';
+import { Home, LineChart, BarChart3, Bitcoin, Banknote, Gem, Globe, ScrollText, Activity } from 'lucide-react';
 import { usePathname, useRouter } from 'next/navigation';
 import { DICTIONARY } from '@/data/dictionary';
 import { useCurrentLang } from '@/hooks/useCurrentLang';
@@ -13,7 +13,7 @@ export const MobileNav = () => {
 
     const tabs = [
         { key: 'home', label: t.labels.summary || 'Summary', icon: Home, path: '/' },
-        { key: 'stocks', label: t.labels.stocks || 'Stocks', icon: LineChart, path: '/stocks' },
+        { key: 'stocks', label: t.labels.stocks_rates || 'Stocks & Rates', icon: BarChart3, path: '/stocks' },
         { key: 'crypto', label: t.labels.crypto || 'Crypto', icon: Bitcoin, path: '/crypto' },
         { key: 'forex', label: t.labels.forex || 'Forex', icon: Banknote, path: '/forex' },
         { key: 'cmdty', label: t.labels.commodities || 'Cmdty', icon: Gem, path: '/commodities' },
