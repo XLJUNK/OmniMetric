@@ -338,7 +338,13 @@ class SNSPublisher:
 # CLI entry point
 if __name__ == "__main__":
     import sys
-    from gms_engine import DATA_FILE, log_diag
+    
+    # Define DATA_FILE locally to avoid importing gms_engine (which imports tech_analysis -> pandas-ta)
+    DATA_FILE = os.path.join(os.path.dirname(__file__), "current_signal.json")
+    
+    def log_diag(msg):
+        """Simple logging function"""
+        print(f"[SNS] {msg}")
     
     with open(DATA_FILE, 'r', encoding='utf-8') as f:
         data = json.load(f)
