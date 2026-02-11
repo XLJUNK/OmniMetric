@@ -22,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
 
     // Paths that exist for all languages
-    const corePaths = ['', '/stocks', '/crypto', '/forex', '/commodities', '/glossary', '/technical', '/maxims'];
+    const corePaths = ['', '/stocks', '/crypto', '/currencies', '/commodities', '/glossary', '/technical', '/maxims', '/omni-resonance'];
     const legalPaths = ['/contact', '/about', '/archive', '/legal', '/privacy'];
 
     const entries: MetadataRoute.Sitemap = [];
