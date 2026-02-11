@@ -84,7 +84,7 @@ class BlueskySequencer:
                      if is_time_match(h, m):
                          if lang == "ALL":
                              # Add all major langs
-                             for l in ["JP", "EN", "ZH", "ES"]:
+                             for l in ["JP", "EN", "ZH", "ES", "DE", "FR"]:
                                  matches.append((l, 99, True))
                          else:
                              matches.append((lang, i+1, True))
@@ -134,7 +134,7 @@ class BlueskySequencer:
                     if start_jst < slot_dt <= now_jst:
                         # Found a recent slot!
                         if lang == "ALL":
-                            for l in ["JP", "EN", "ZH", "ES"]:
+                            for l in ["JP", "EN", "ZH", "ES", "DE", "FR"]:
                                 found_matches.append((l, 99, True))
                         else:
                             force = True if is_we else False # Weekend usually forces
