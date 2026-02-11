@@ -35,7 +35,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install setuptools wheel
+          pip install "setuptools<70" wheel
           pip install -r backend/requirements.txt
       - name: Install Node dependencies
         working-directory: ./frontend
