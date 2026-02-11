@@ -9,6 +9,8 @@ import { WikiSearch } from '@/components/WikiSearch';
 import { LanguageSelector } from '@/components/LanguageSelector';
 import { DynamicStructuredData } from '@/components/DynamicStructuredData';
 
+export const dynamicParams = false;
+
 // Enable Static Params for all localized languages (excluding English)
 export async function generateStaticParams() {
     return Object.keys(DICTIONARY)

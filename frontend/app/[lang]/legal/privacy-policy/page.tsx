@@ -34,6 +34,8 @@ interface PrivacyData {
     legalFramework: string;
 }
 
+export const dynamicParams = false;
+
 // Enable Static Params for all languages defined in dictionary
 export async function generateStaticParams() {
     return Object.keys(DICTIONARY).filter((lang) => lang !== 'EN').map((lang) => ({

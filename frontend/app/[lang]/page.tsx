@@ -5,6 +5,8 @@ import { getMultilingualMetadata } from '@/data/seo';
 import { DICTIONARY, LangType } from '@/data/dictionary';
 
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
     return ['jp', 'cn', 'es', 'hi', 'id', 'ar', 'de', 'fr'].map(l => ({ lang: l }));
 }

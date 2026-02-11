@@ -3,6 +3,8 @@ import { MultiAssetSummary } from '@/components/MultiAssetSummary';
 import { Metadata } from 'next';
 import { DICTIONARY } from '@/data/dictionary';
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
     return Object.keys(DICTIONARY).map((lang) => ({
         lang: lang.toLowerCase(),

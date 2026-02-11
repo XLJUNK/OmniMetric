@@ -4,6 +4,8 @@ import { getMultilingualMetadata } from '@/data/seo';
 import OmniResonanceClient from './OmniResonanceClient';
 import { DICTIONARY, LangType } from '@/data/dictionary';
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
     return Object.keys(DICTIONARY).filter(l => l !== 'EN').map((lang) => ({
         lang: lang.toLowerCase(),

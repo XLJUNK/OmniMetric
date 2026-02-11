@@ -16,6 +16,8 @@ import glossaryDataHi from '@/data/glossary-hi.json';
 import glossaryDataId from '@/data/glossary-id.json';
 import glossaryDataAr from '@/data/glossary-ar.json';
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
     return Object.keys(DICTIONARY).filter((lang) => lang !== 'EN').map((lang) => ({
         lang: lang.toLowerCase(),

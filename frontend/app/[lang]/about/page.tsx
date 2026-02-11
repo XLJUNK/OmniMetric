@@ -5,6 +5,8 @@ import { Shield, Sparkles, Database, TrendingUp, Cpu, Terminal } from 'lucide-re
 import { Metadata } from 'next';
 import { getMultilingualMetadata } from '@/data/seo';
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
     return Object.keys(DICTIONARY).filter((lang) => lang !== 'EN').map((lang) => ({
         lang: lang.toLowerCase(),

@@ -51,6 +51,8 @@ interface TermsSection {
 }
 
 // Enable Static Params for all languages defined in dictionary
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
     return Object.keys(DICTIONARY).filter((lang) => lang !== 'EN').map((lang) => ({
         lang: lang.toLowerCase(),

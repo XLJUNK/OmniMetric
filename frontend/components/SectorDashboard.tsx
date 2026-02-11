@@ -10,7 +10,7 @@ import { SkeletonCard } from '@/components/Skeleton';
 import { useSignalData } from '@/hooks/useSignalData';
 
 interface SectorDashboardProps {
-    sectorKey: 'STOCKS' | 'CRYPTO' | 'FOREX' | 'COMMODITIES';
+    sectorKey: 'STOCKS' | 'CRYPTO' | 'FOREX' | 'COMMODITIES' | 'CURRENCIES';
     lang: string;
 }
 
@@ -132,6 +132,48 @@ export const SectorDashboard = ({ sectorKey, lang: langProp }: SectorDashboardPr
                                     <PulseTile
                                         key={val.key}
                                         title={(t.tickers as any)?.[val.key] || (val.key === 'STOCKS' ? t.labels.stocks_rates : (t.labels as any)?.[val.key.toLowerCase()]) || val.key}
+                                        score={sectorScore}
+                                        ticker={val.key}
+                                        data={val}
+                                        onClick={() => { }}
+                                        lang={lang}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                ) : sectorKey === 'CURRENCIES' ? (
+                    <div className="space-y-12">
+                        {/* Fiat Currencies */}
+                        <div className="space-y-4">
+                            <h3 className="text-sm font-bold text-slate-500 uppercase tracking-widest px-1 border-l-2 border-sky-500">
+                                {t.labels.fiat_currencies || 'Fiat Currencies'}
+                            </h3>
+                            <div className="grid gap-4 md:gap-6 grid-cols-2 lg:grid-cols-4">
+                                {indicators.filter(val => ["DXY", "EURUSD", "USDJPY", "GBPUSD", "AUDUSD", "USDCAD", "USDCNY"].includes(val.key)).map((val) => (
+                                    <PulseTile
+                                        key={val.key}
+                                        title={(t.tickers as any)?.[val.key] || (t.labels as any)?.[val.key.toLowerCase()] || val.key}
+                                        score={sectorScore}
+                                        ticker={val.key}
+                                        data={val}
+                                        onClick={() => { }}
+                                        lang={lang}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Digital Assets */}
+                        <div className="space-y-4">
+                            <h3 className="text-sm font-bold text-slate-500 uppercase tracking-widest px-1 border-l-2 border-orange-500">
+                                {t.labels.digital_assets || 'Digital Assets'}
+                            </h3>
+                            <div className="grid gap-4 md:gap-6 grid-cols-2 lg:grid-cols-4">
+                                {indicators.filter(val => ["BTC", "ETH", "SOL", "CRYPTO_SENTIMENT"].includes(val.key)).map((val) => (
+                                    <PulseTile
+                                        key={val.key}
+                                        title={(t.tickers as any)?.[val.key] || (t.labels as any)?.[val.key.toLowerCase()] || val.key}
                                         score={sectorScore}
                                         ticker={val.key}
                                         data={val}

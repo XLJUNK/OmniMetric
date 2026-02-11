@@ -4,6 +4,8 @@ import { DICTIONARY, LangType } from '@/data/dictionary';
 import { Metadata } from 'next';
 import { getMultilingualMetadata } from '@/data/seo';
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
     return Object.keys(DICTIONARY).map((lang) => ({
         lang: lang.toLowerCase(),

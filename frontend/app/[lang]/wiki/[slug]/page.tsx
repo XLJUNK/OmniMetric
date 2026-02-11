@@ -195,6 +195,8 @@ const WIKI_LABELS = {
     }
 };
 
+export const dynamicParams = false;
+
 // Generate params for SSG
 export async function generateStaticParams() {
     const langs = Object.keys(DICTIONARY).filter(l => l !== 'EN').map(l => l.toLowerCase());

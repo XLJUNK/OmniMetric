@@ -18,6 +18,8 @@ import maximsDataHi from '@/data/maxims-hi.json';
 import maximsDataId from '@/data/maxims-id.json';
 import maximsDataAr from '@/data/maxims-ar.json';
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
     return Object.keys(DICTIONARY).filter((lang) => lang !== 'EN').map((lang) => ({
         lang: lang.toLowerCase(),
