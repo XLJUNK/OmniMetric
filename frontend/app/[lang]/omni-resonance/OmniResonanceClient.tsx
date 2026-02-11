@@ -7,6 +7,7 @@ import { OmniResonanceGauge } from '@/components/OmniResonanceGauge';
 import { OmniResonanceTwinPlot } from '@/components/OmniResonanceTwinPlot';
 import { Radar, Thermometer, Info, Scale } from 'lucide-react';
 import { LangType, DICTIONARY } from '@/data/dictionary';
+import { LanguageSelector } from '@/components/LanguageSelector';
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
@@ -87,24 +88,37 @@ export default function OmniResonanceClient({ lang }: OmniResonanceClientProps) 
     if (!marketData) return <div className="min-h-screen bg-black flex items-center justify-center text-sky-500 font-mono tracking-widest animate-pulse">CALIBRATING SYSTEM...</div>;
 
     const t = DICTIONARY[lang] || DICTIONARY.EN;
-    const ot = t.subpages.omni_resonance;
+    const ot = t.subpages.omni_resonance || DICTIONARY.EN.subpages.omni_resonance;
 
     return (
-        <div className="min-h-screen bg-[#020617] text-slate-200 font-inter pb-20">
+        <div className="min-h-screen bg-[#020617] text-slate-200 font-inter pb-20 relative">
             {/* Header */}
-            <header className="p-8 border-b border-slate-800 flex flex-col items-center">
-                <div className="flex items-center gap-3 mb-2">
-                    <div className="p-2 bg-sky-500/10 rounded-lg">
-                        <Radar className="w-6 h-6 text-sky-400" />
+            {/* Header */}
+            {/* Header */}
+            {/* Header - Aligned with Dashboard.tsx */}
+            <div className="w-full px-2 md:px-8 py-4 md:py-8">
+                <header className="flex flex-col border-b border-slate-800 pb-4 relative z-20 gap-4">
+                    {/* Top Row: Language Selector */}
+                    <div className="flex justify-end w-full">
+                        <LanguageSelector currentLang={lang} mode="path" />
                     </div>
-                    {lang === 'JP' ? (
-                        <h1 className="text-2xl font-black tracking-tighter uppercase italic">OmniResonance <span className="text-sky-500 not-italic">プロトタイプ</span></h1>
-                    ) : (
-                        <h1 className="text-2xl font-black tracking-tighter uppercase italic">{ot.title.split(' ')[0]} <span className="text-sky-500 not-italic">{ot.title.split(' ')[1]}</span></h1>
-                    )}
-                </div>
-                <p className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.3em] text-center">{ot.subtitle}</p>
-            </header>
+
+                    {/* Bottom Row: Title & Subtitle */}
+                    <div className="flex flex-col items-start gap-1 min-w-0">
+                        <div className="flex items-center gap-2 md:gap-3">
+                            <div className="p-1.5 md:p-2 bg-sky-500/10 rounded-lg shrink-0">
+                                <Radar className="w-5 h-5 md:w-6 md:h-6 text-sky-400" />
+                            </div>
+                            {lang === 'JP' ? (
+                                <h1 className="text-base md:text-xl font-black tracking-tighter uppercase italic break-words leading-tight">OmniResonance <span className="text-sky-500 not-italic">プロトタイプ</span></h1>
+                            ) : (
+                                <h1 className="text-base md:text-xl font-black tracking-tighter uppercase italic break-words leading-tight">{ot.title.split(' ')[0]} <span className="text-sky-500 not-italic">{ot.title.split(' ')[1]}</span></h1>
+                            )}
+                        </div>
+                        <p className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em] md:tracking-[0.3em] pl-1 truncate w-full">{ot.subtitle}</p>
+                    </div>
+                </header>
+            </div>
 
             <main className="max-w-[360px] mx-auto p-4 md:p-8 flex flex-col gap-8">
                 {/* Left Column: Input */}

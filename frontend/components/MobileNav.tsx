@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Home, LineChart, BarChart3, Bitcoin, Banknote, Gem, Globe, ScrollText, Activity, BookOpen, Coins } from 'lucide-react';
+import { Home, LineChart, BarChart3, Bitcoin, Banknote, Gem, Globe, ScrollText, Activity, BookOpen, Coins, Diamond, Scroll } from 'lucide-react';
 import { usePathname, useRouter } from 'next/navigation';
 import { DICTIONARY } from '@/data/dictionary';
 import { useCurrentLang } from '@/hooks/useCurrentLang';
@@ -13,19 +13,20 @@ export const MobileNav = () => {
 
 
     const tabs = [
-        { key: 'home', label: t.labels.summary || 'Summary', icon: Home, path: '/' },
-        { key: 'stocks', label: t.labels.stocks_rates || 'Stocks & Rates', icon: BarChart3, path: '/stocks' },
-        { key: 'currencies', label: t.labels.currencies || 'Currencies', icon: Coins, path: '/currencies' },
-        { key: 'cmdty', label: t.labels.commodities || 'Cmdty', icon: Gem, path: '/commodities' },
-        { key: 'technical', label: t.labels.technical || 'Technical', icon: Activity, path: '/technical' },
-        { key: 'wiki', label: t.labels.wiki || 'Wiki', icon: BookOpen, path: '/glossary' },
-        { key: 'maxims', label: t.labels.maxims || 'Maxims', icon: ScrollText, path: '/maxims' },
+        { key: 'home', label: t.labels.summary || 'SUMMARY', icon: Home, path: '/' },
+        { key: 'omni', label: t.labels.omni || 'OMNI', icon: Activity, path: '/omni-resonance' },
+        { key: 'stocks', label: t.labels.stocks_rates || 'STOCKS', icon: BarChart3, path: '/stocks' },
+        { key: 'currencies', label: t.labels.currencies || 'CURRENCIES', icon: Coins, path: '/currencies' },
+        { key: 'cmdty', label: t.labels.commodities || 'CMDTY', icon: Diamond, path: '/commodities' },
+        { key: 'technical', label: t.labels.technical || 'TECH', icon: LineChart, path: '/technical' },
+        { key: 'wiki', label: t.labels.wiki || 'WIKI', icon: BookOpen, path: '/glossary' },
+        { key: 'maxims', label: t.labels.maxims || 'MAXIMS', icon: Scroll, path: '/maxims' },
     ];
     return (
         <nav
             className="fixed top-0 left-0 right-0 h-[48px] bg-[#F1F5F9]/95 dark:bg-[#000000]/95 backdrop-blur-xl border-b border-slate-200 dark:border-[#1E293B] md:hidden w-full z-[9999] shadow-2xl overflow-hidden transition-colors duration-300"
         >
-            <div className="grid grid-cols-7 h-full w-full items-center px-0">
+            <div className="grid grid-cols-8 h-full w-full items-center px-0">
                 {tabs.map((tab) => {
                     const localizedPath = lang.toUpperCase() === 'EN'
                         ? tab.path

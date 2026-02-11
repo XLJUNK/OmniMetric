@@ -628,6 +628,7 @@ export const DICTIONARY: Record<LangType, any> = {
             dxy: "ドルインデックス",
             tnx: "米国10年債利回り",
             spy: "S&P 500 (米国株)",
+            omni: "OmniResonance (資産共鳴診断)",
             summary: "サマリー",
             stocks_rates: "株・債券",
             rates_gravity: "マーケットの重力（金利）",
@@ -776,7 +777,8 @@ export const DICTIONARY: Record<LangType, any> = {
             methodology: "方法论",
             analysis_history: "分析历史 (Analysis History)",
             live_stream: "实时情报流",
-            ai_disclaimer: "本洞察是由算法驱动智能层进行的多元化分析结果，不保证内容的准确性。"
+            ai_disclaimer: "本洞察是由算法驱动智能层进行的多元化分析结果，不保证内容的准确性。",
+            omni_resonance: "OmniResonance (资产共鸣)"
         },
         methodology: {
             title: "GMS QUANT METHODOLOGY",
@@ -944,6 +946,7 @@ export const DICTIONARY: Record<LangType, any> = {
             dxy: "美元指数",
             tnx: "美国10年期收益率",
             spy: "标普500 (SPY)",
+            omni: "OmniResonance (资产共鸣)",
             summary: "概要",
             stocks_rates: "股票与利率",
             rates_gravity: "市场引力（收益率）",
@@ -1010,6 +1013,33 @@ export const DICTIONARY: Record<LangType, any> = {
                 title: "信号相关性历史",
                 desc: "客观重现历史指标状态以及相应的 GMS 算法信号。",
                 disclaimer: "此数据仅代表历史相关性，不暗示或保证未来的投资结果。"
+            },
+            omni_resonance: {
+                title: "OmniResonance 资产共鸣",
+                subtitle: "宏观对准模拟器 / V1.0-ALPHA",
+                alpha_notice: "ALPHA 通知: 这是一个技术原型。它针对自定义投资组合分布对宏观信号向量进行定位，以观察相关性映射（共鸣）。",
+                alpha_notice_label: "ALPHA 通知",
+                total_allocation_label: "总配置: 100.0% (已归一化)",
+                tech_report: "技术观察报告",
+                observation: "观察",
+                technical_insight: "技术见解",
+                legal_title: "法律免责声明",
+                allocations_title: "资产配置",
+                allocations: {
+                    equities: "股票",
+                    crypto: "加密资产",
+                    metals: "金属",
+                    fixedIncome: "固定收益",
+                    cash: "现金"
+                },
+                observation_text: {
+                    overheating: "过热",
+                    stable: "稳定"
+                },
+                insight_text_1: "根据当前市场数据，所选资产配置与宏观环境的",
+                insight_text_2: "趋势显示出中等相关性。",
+                tech_insight_content: "根据三边委员会的分析，对股票和加密资产的配置往往会将 OGV 向量拉向过热象限，证实了增加对市场波动敏感性的趋势。",
+                feature_guide: "调整滑块以输入您的投资组合分布。这将可视化您相对于宏观核心的位置，并计算您的特定“投资组合热度”级别。"
             }
         }
     },
@@ -1058,7 +1088,8 @@ export const DICTIONARY: Record<LangType, any> = {
             methodology: "METODOLOGÍA",
             analysis_history: "Historial de Análisis",
             live_stream: "FLUJO DE INTELIGENCIA EN VIVO",
-            ai_disclaimer: "Este análisis es el resultado de un estudio multifacético realizado por IA y no garantiza la precisión de su contenido."
+            ai_disclaimer: "Este análisis es el resultado de un estudio multifacético realizado por IA y no garantiza la precisión de su contenido.",
+            omni_resonance: "OmniResonance (Sincronización de Cartera)"
         },
         methodology: {
             title: "METODOLOGÍA CUANTITATIVA GMS",
@@ -1226,6 +1257,7 @@ export const DICTIONARY: Record<LangType, any> = {
             dxy: "Índice Dólar",
             tnx: "Rendimiento 10A",
             spy: "S&P 500 (SPY)",
+            omni: "OmniResonance (Sincronización de cartera)",
             summary: "RESUMEN",
             stocks_rates: "Acciones y Tasas",
             rates_gravity: "Gravedad del Mercado (Rendimientos)",
@@ -1292,6 +1324,33 @@ export const DICTIONARY: Record<LangType, any> = {
                 title: "HISTORIAL DE CORRELACIÓN DE SEÑALES",
                 desc: "Reproducción objetiva de los estados de los indicadores históricos y la señal algorítmica GMS correspondiente.",
                 disclaimer: "ESTOS DATOS REPRESENTAN ÚNICAMENTE CORRELACIONES HISTÓRICAS Y NO SUGIEREN NI GARANTIZAN RESULTADOS DE INVERSIÓN FUTUROS."
+            },
+            omni_resonance: {
+                title: "OmniResonance Prototipo",
+                subtitle: "Simulador de Alineación Macro / V1.0-ALPHA",
+                alpha_notice: "AVISO ALPHA: Este es un prototipo técnico. Localiza vectores de señales macro frente a distribuciones de cartera personalizadas para observar el mapeo de correlación (Resonancia).",
+                alpha_notice_label: "AVISO ALPHA",
+                total_allocation_label: "Asignación Total: 100.0% (Normalizado)",
+                tech_report: "Informe de Observación Técnica",
+                observation: "Observación",
+                technical_insight: "Perspectiva Técnica",
+                legal_title: "Aviso Legal",
+                allocations_title: "Asignación de Activos",
+                allocations: {
+                    equities: "Acciones",
+                    crypto: "Cripto",
+                    metals: "Metales",
+                    fixedIncome: "Renta Fija",
+                    cash: "Efectivo"
+                },
+                observation_text: {
+                    overheating: "Recalentamiento",
+                    stable: "Estable"
+                },
+                insight_text_1: "Basado en los datos actuales del mercado, la configuración de activos seleccionada muestra una correlación media con la tendencia del",
+                insight_text_2: "entorno macro.",
+                tech_insight_content: "Según el análisis del Consejo Trilateral, las asignaciones a Acciones y Cripto tienden a tirar del vector OGV hacia el cuadrante de Recalentamiento, confirmando una tendencia a aumentar la sensibilidad a la volatilidad del mercado.",
+                feature_guide: "Ajuste los controles deslizantes para ingresar la distribución de su cartera. Esto visualiza su posición relativa al núcleo macro y calcula su nivel específico de 'Calor de Cartera'."
             }
         }
     },
@@ -1340,7 +1399,8 @@ export const DICTIONARY: Record<LangType, any> = {
             methodology: "पद्धति (METHODOLOGY)",
             analysis_history: "विश्लेषण इतिहास",
             live_stream: "LIVE INTELLIGENCE STREAM",
-            ai_disclaimer: "यह अंतर्दृष्टि AI द्वारा बहुआयामी विश्लेषण का परिणाम है और सामग्री की सटीकता की गारंटी नहीं देती है।"
+            ai_disclaimer: "यह अंतर्दृष्टि AI द्वारा बहुआयामी विश्लेषण का परिणाम है और सामग्री की सटीकता की गारंटी नहीं देती है।",
+            omni_resonance: "OmniResonance (पोर्टफोलियो सिंक)"
         },
         methodology: {
             title: "GMS मात्रात्मक पद्धति",
@@ -1508,6 +1568,7 @@ export const DICTIONARY: Record<LangType, any> = {
             dxy: "Dollar Index",
             tnx: "US 10Y Yield",
             spy: "S&P 500 (SPY)",
+            omni: "OmniResonance (पोर्टफोलियो सिंक)",
             summary: "सार",
             stocks_rates: "स्टॉक और दरें",
             rates_gravity: "बाजार का गुरुत्वाकर्षण (उपज)",
@@ -1574,6 +1635,33 @@ export const DICTIONARY: Record<LangType, any> = {
                 title: "सिग्नल सहसंबंध इतिहास",
                 desc: "ऐतिहासिक संकेतक राज्यों और संबंधित GMS एल्गोरिथम सिग्नल का वस्तुनिष्ठ रीप्ले।",
                 disclaimer: "यह डेटा केवल ऐतिहासिक सहसंबंधों का प्रतिनिधित्व करता है और भविष्य के निवेश परिणामों का सुझाव या गारंटी नहीं देता है।"
+            },
+            omni_resonance: {
+                title: "OmniResonance प्रोटोटाइप",
+                subtitle: "मैक्रो एलाइनमेंट सिम्युलेटर / V1.0-ALPHA",
+                alpha_notice: "अल्फा सूचना: यह एक तकनीकी प्रोटोटाइप है। यह सहसंबंध मानचित्रण (रेजोनेंस) देखने के लिए कस्टम पोर्टफोलियो वितरण के खिलाफ मैक्रो सिग्नल वैक्टर को स्थानीयकृत करता है।",
+                alpha_notice_label: "अल्फा सूचना",
+                total_allocation_label: "कुल आवंटन: 100.0% (सामान्यीकृत)",
+                tech_report: "तकनीकी अवलोकन रिपोर्ट",
+                observation: "अवलोकन",
+                technical_insight: "तकनीकी अंतर्दृष्टि",
+                legal_title: "कानूनी अस्वीकरण",
+                allocations_title: "संपत्ति आवंटन",
+                allocations: {
+                    equities: "इक्विटी",
+                    crypto: "क्रिप्टो",
+                    metals: "धातु",
+                    fixedIncome: "निश्चित आय",
+                    cash: "नकद"
+                },
+                observation_text: {
+                    overheating: "ओवरहीटिंग",
+                    stable: "स्थिर"
+                },
+                insight_text_1: "वर्तमान बाजार डेटा के आधार पर, चयनित संपत्ति विन्यास मैक्रो पर्यावरण के",
+                insight_text_2: "रुझान के साथ एक मध्यम सहसंबंध दिखाता है।",
+                tech_insight_content: "त्रिपक्षीय परिषद के विश्लेषण के अनुसार, इक्विटी और क्रिप्टो के आवंटन ओजीवी वेक्टर को ओवरहीटिंग चतुर्थांश की ओर खींचते हैं, जो बाजार की अस्थिरता के प्रति संवेदनशीलता बढ़ाने की प्रवृत्ति की पुष्टि करते हैं।",
+                feature_guide: "अपने पोर्टफोलियो वितरण को दर्ज करने के लिए स्लाइडर को समायोजित करें। यह मैक्रो कोर के सापेक्ष आपकी स्थिति की कल्पना करता है और आपके विशिष्ट 'पोर्टफोलियो हीट' स्तर की गणना करता है।"
             }
         }
     },
@@ -1622,7 +1710,8 @@ export const DICTIONARY: Record<LangType, any> = {
             methodology: "METODOLOGI",
             analysis_history: "Riwayat Analisis",
             live_stream: "ALIRAN INTELIJEN LANGSUNG",
-            ai_disclaimer: "Wawasan ini adalah hasil analisis multifaset oleh AI dan tidak menjamin keakuratan isinya."
+            ai_disclaimer: "Wawasan ini adalah hasil analisis multifaset oleh AI dan tidak menjamin keakuratan isinya.",
+            omni_resonance: "OmniResonance (Sinkronisasi Portofolio)"
         },
         methodology: {
             title: "METODOLOGI KUANTITATIF GMS",
@@ -1790,6 +1879,7 @@ export const DICTIONARY: Record<LangType, any> = {
             dxy: "Indeks Dolar",
             tnx: "Yield AS 10Y",
             spy: "S&P 500 (SPY)",
+            omni: "OmniResonance (Sinkronisasi Portofolio)",
             summary: "RANGKUMAN",
             stocks_rates: "Saham & Suku Bunga",
             rates_gravity: "Gravitasi Pasar (Imbal Hasil)",
@@ -1856,6 +1946,33 @@ export const DICTIONARY: Record<LangType, any> = {
                 title: "RIWAYAT KORELASI SINYAL",
                 desc: "Pemutaran ulang objektif dari status indikator historis dan sinyal algoritmik GMS yang sesuai.",
                 disclaimer: "DATA INI HANYA MEWAKILI KORELASI HISTORIS DAN TIDAK MENYARANKAN ATAU MENJAMIN HASIL INVESTASI DI MASA DEPAN."
+            },
+            omni_resonance: {
+                title: "OmniResonance Prototipe",
+                subtitle: "Simulator Penyelarasan Makro / V1.0-ALPHA",
+                alpha_notice: "PEMBERITAHUAN ALPHA: Ini adalah prototipe teknis. Ini melokalisasi vektor sinyal makro terhadap distribusi portofolio khusus untuk mengamati pemetaan korelasi (Resonansi).",
+                alpha_notice_label: "PEMBERITAHUAN ALPHA",
+                total_allocation_label: "Total Alokasi: 100.0% (Dinormalisasi)",
+                tech_report: "Laporan Observasi Teknis",
+                observation: "Observasi",
+                technical_insight: "Wawasan Teknis",
+                legal_title: "Penafian Hukum",
+                allocations_title: "Alokasi Aset",
+                allocations: {
+                    equities: "Saham",
+                    crypto: "Kripto",
+                    metals: "Logam",
+                    fixedIncome: "Pendapatan Tetap",
+                    cash: "Tunai"
+                },
+                observation_text: {
+                    overheating: "Pemanasan Berlebih",
+                    stable: "Stabil"
+                },
+                insight_text_1: "Berdasarkan data pasar saat ini, konfigurasi aset yang dipilih menunjukkan korelasi sedang dengan tren",
+                insight_text_2: "lingkungan makro.",
+                tech_insight_content: "Menurut analisis Dewan Trilateral, alokasi ke Saham dan Kripto cenderung menarik vektor OGV ke arah kuadran Pemanasan Berlebih, mengkonfirmasi kecenderungan untuk meningkatkan sensitivitas terhadap volatilitas pasar.",
+                feature_guide: "Sesuaikan penggeser untuk memasukkan distribusi portofolio Anda. Ini memvisualisasikan posisi Anda relatif terhadap inti makro dan menghitung level 'Panas Portofolio' spesifik Anda."
             }
         }
     },
@@ -1905,7 +2022,8 @@ export const DICTIONARY: Record<LangType, any> = {
             delayed_tick: "*تأخير 15د",
             methodology: "المنهجية (METHODOLOGY)",
             analysis_history: "سجل التحليل",
-            ai_disclaimer: "هذه الرؤية هي نتيجة تحليل متعدد الأوجه بواسطة الذكاء الاصطناعي ولا تضمن دقة محتواها."
+            ai_disclaimer: "هذه الرؤية هي نتيجة تحليل متعدد الأوجه بواسطة الذكاء الاصطناعي ولا تضمن دقة محتواها.",
+            omni_resonance: "OmniResonance (مزامنة المحفظة)"
         },
         methodology: {
             title: "منهجية GMS الكمية",
@@ -2073,6 +2191,7 @@ export const DICTIONARY: Record<LangType, any> = {
             dxy: "مؤشر الدولار",
             tnx: "عائد 10Y",
             spy: "S&P 500 (SPY)",
+            omni: "OmniResonance (مزامنة المحفظة)",
             summary: "ملخص",
             stocks_rates: "الأسهم والأسعار",
             rates_gravity: "جاذبية السوق (العوائد)",
@@ -2139,6 +2258,33 @@ export const DICTIONARY: Record<LangType, any> = {
                 title: "سجل ارتباط الإشارة",
                 desc: "إعادة عرض موضوعية لحالات المؤشرات التاريخية وإشارة GMS الخوارزمية المقابلة.",
                 disclaimer: "تمثل هذه البيانات الارتباطات التاريخية فقط ولا تقترح أو تضمن نتائج الاستثمار المستقبلية."
+            },
+            omni_resonance: {
+                title: "OmniResonance نموذج أولي",
+                subtitle: "محاكي المحاذاة الكلية / V1.0-ALPHA",
+                alpha_notice: "إشعار ألفا: هذا نموذج أولي تقني. يقوم بتوطين نواقل الإشارات الكلية مقابل توزيعات المحفظة المخصصة لمراقبة رسم الخرائط الارتباطية (الرنين).",
+                alpha_notice_label: "إشعار ألفا",
+                total_allocation_label: "إجمالي التخصيص: 100.0% (معدل)",
+                tech_report: "تقرير المراقبة الفنية",
+                observation: "المراقبة",
+                technical_insight: "رؤية فنية",
+                legal_title: "إخلاء المسؤولية القانونية",
+                allocations_title: "تخصيص الأصول",
+                allocations: {
+                    equities: "الأسهم",
+                    crypto: "تشفير",
+                    metals: "معادن",
+                    fixedIncome: "دخل ثابت",
+                    cash: "نقد"
+                },
+                observation_text: {
+                    overheating: "فرط الإحماء",
+                    stable: "مستقر"
+                },
+                insight_text_1: "بناءً على بيانات السوق الحالية، يظهر تكوين الأصول المحدد ارتباطاً متوسطاً مع اتجاه",
+                insight_text_2: "البيئة الكلية.",
+                tech_insight_content: "وفقاً لتحليل المجلس الثلاثي، يميل تخصيص الأسهم والعملات المشفرة إلى سحب ناقل OGV نحو ربع فرط الإحماء، مما يؤكد الميل إلى زيادة الحساسية لتقلبات السوق.",
+                feature_guide: "اضبط أشرطة التمرير لإدخال توزيع محفظتك. هذا يصور موقعك بالنسبة للنواة الكلية ويحسب مستوى 'حرارة المحفظة' الخاص بك."
             }
         }
     },
@@ -2175,7 +2321,8 @@ export const DICTIONARY: Record<LangType, any> = {
             methodology: "METHODIK",
             analysis_history: "Analyse Historie",
             live_stream: "LIVE INTELLIGENCE STREAM",
-            ai_disclaimer: "Diese Einsicht ist eine Analyse durch KI."
+            ai_disclaimer: "Diese Einsicht ist eine Analyse durch KI.",
+            omni_resonance: "OmniResonance (Portfolio-Sync)"
         },
         methodology: {
             title: "GMS QUANT METHODIK",
@@ -2336,6 +2483,33 @@ export const DICTIONARY: Record<LangType, any> = {
                 title: "SIGNAL-KORRELATIONSHISTORIE",
                 desc: "Objektive Wiedergabe historischer Indikatorzustände und des entsprechenden algorithmischen GMS-Signals.",
                 disclaimer: "DIESE DATEN STELLEN NUR HISTORISCHE KORRELATIONEN DAR UND LASSEN KEINE RÜCKSCHLÜSSE AUF ZUKÜNFTIGE ANLAGEERGEBNISSE ZU ODER GARANTIEREN DIESE."
+            },
+            omni_resonance: {
+                title: "OmniResonance Prototyp",
+                subtitle: "Makro-Ausrichtungs-Simulator / V1.0-ALPHA",
+                alpha_notice: "ALPHA-HINWEIS: Dies ist ein technischer Prototyp. Er lokalisiert Makrosignalvektoren gegenüber benutzerdefinierten Portfolioverteilungen, um Korrelationsmapping (Resonanz) zu beobachten.",
+                alpha_notice_label: "ALPHA-HINWEIS",
+                total_allocation_label: "Gesamtallokation: 100,0 % (Normalisiert)",
+                tech_report: "Technischer Beobachtungsbericht",
+                observation: "Beobachtung",
+                technical_insight: "Technische Einblicke",
+                legal_title: "Haftungsausschluss",
+                allocations_title: "Asset Allokation",
+                allocations: {
+                    equities: "Aktien",
+                    crypto: "Krypto",
+                    metals: "Metalle",
+                    fixedIncome: "Anleihen",
+                    cash: "Cash"
+                },
+                observation_text: {
+                    overheating: "Überhitzung",
+                    stable: "Stabil"
+                },
+                insight_text_1: "Basierend auf aktuellen Marktdaten zeigt die ausgewählte Asset-Konfiguration eine mittlere Korrelation mit dem Trend des",
+                insight_text_2: "Makroumfelds.",
+                tech_insight_content: "Laut der Analyse des Trilateralen Rates neigen Allokationen in Aktien und Krypto dazu, den OGV-Vektor in den Überhitzungsquadranten zu ziehen, was die Tendenz bestätigt, die Sensitivität gegenüber Marktvolatilität zu erhöhen.",
+                feature_guide: "Passen Sie die Schieberegler an, um Ihre Portfolioverteilung einzugeben. Dies visualisiert Ihre Position relativ zum Makro-Kern und berechnet Ihr spezifisches 'Portfolio-Hitze'-Niveau."
             }
         },
         settings: {
@@ -2376,6 +2550,7 @@ export const DICTIONARY: Record<LangType, any> = {
             dxy: "US Dollar Index",
             tnx: "US 10Y Yield",
             spy: "S&P 500 (SPY)",
+            omni: "OmniResonance (Portfolio-Sync)",
             summary: "SUMMARY",
             stocks_rates: "Aktien & Zinsen",
             rates_gravity: "Marktschwerkraft (Renditen)",
@@ -2437,7 +2612,8 @@ export const DICTIONARY: Record<LangType, any> = {
             methodology: "MÉTHODOLOGIE",
             analysis_history: "Historique Analyse",
             live_stream: "FLUX INTELLIGENCE LIVE",
-            ai_disclaimer: "Cet aperçu est une analyse par IA."
+            ai_disclaimer: "Cet aperçu est une analyse par IA.",
+            omni_resonance: "OmniResonance (Sync de portefeuille)"
         },
         strategy: {
             accumulate: "ACCUMULER",
@@ -2598,6 +2774,33 @@ export const DICTIONARY: Record<LangType, any> = {
                 title: "HISTORIQUE DE CORRÉLATION DES SIGNAUX",
                 desc: "Relecture objective des états historiques des indicateurs et du signal algorithmique GMS correspondant.",
                 disclaimer: "CES DONNÉES REPRÉSENTENT UNIQUEMENT DES CORRÉLATIONS HISTORIQUES ET NE GARANTISSENT PAS LES RÉSULTATS FUTURS."
+            },
+            omni_resonance: {
+                title: "OmniResonance Prototype",
+                subtitle: "Simulateur d'Alignement Macro / V1.0-ALPHA",
+                alpha_notice: "AVIS ALPHA : Ceci est un prototype technique. Il localise les vecteurs de signaux macro par rapport aux répartitions de portefeuille personnalisées pour observer le mappage de corrélation (Résonance).",
+                alpha_notice_label: "AVIS ALPHA",
+                total_allocation_label: "Allocation Totale : 100,0 % (Normalisée)",
+                tech_report: "Rapport d'Observation Technique",
+                observation: "Observation",
+                technical_insight: "Aperçu Technique",
+                legal_title: "Mentions Légales",
+                allocations_title: "Allocation d'Actifs",
+                allocations: {
+                    equities: "Actions",
+                    crypto: "Crypto",
+                    metals: "Métaux",
+                    fixedIncome: "Revenu Fixe",
+                    cash: "Liquidités"
+                },
+                observation_text: {
+                    overheating: "Surchauffe",
+                    stable: "Stable"
+                },
+                insight_text_1: "Sur la base des données de marché actuelles, la configuration d'actifs sélectionnée montre une corrélation moyenne avec la tendance de",
+                insight_text_2: "l'environnement macro.",
+                tech_insight_content: "Selon l'analyse du Conseil Trilatéral, les allocations aux actions et aux cryptos tendent à tirer le vecteur OGV vers le quadrant de surchauffe, confirmant une tendance à accroître la sensibilité à la volatilité du marché.",
+                feature_guide: "Ajustez les curseurs pour saisir la répartition de votre portefeuille. Cela visualise votre position par rapport au noyau macro et calcule votre niveau spécifique de « Chaleur du Portefeuille »."
             }
         },
         settings: {
@@ -2638,6 +2841,7 @@ export const DICTIONARY: Record<LangType, any> = {
             dxy: "US Dollar Index",
             tnx: "US 10Y Yield",
             spy: "S&P 500 (SPY)",
+            omni: "OmniResonance (Sync de portefeuille)",
             summary: "SUMMARY",
             stocks_rates: "Actions et Taux",
             rates_gravity: "Gravité du Marché (Rendements)",

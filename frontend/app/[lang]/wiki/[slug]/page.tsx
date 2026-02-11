@@ -598,6 +598,17 @@ export default async function WikiDetailPage({ params }: Props) {
                 </div>
 
                 <div className="mt-12 pt-12 border-t border-border">
+                    <Link href={lang.toLowerCase() === 'en' ? `/omni-resonance` : `/${lang.toLowerCase()}/omni-resonance`} className="group block text-center p-6 bg-sky-50 dark:bg-[#0A0A0A] border border-sky-200 dark:border-sky-900/30 rounded-lg hover:border-sky-500/50 transition-colors">
+                        <p className="text-lg font-bold text-sky-500 mb-2">
+                            {lang === 'JP' ? 'この指標があなたの資産にどう影響するか OmniResonance でシミュレートする' : 'Simulate how this indicator impacts your assets in OmniResonance'}
+                        </p>
+                        <span className="text-sm text-slate-500">
+                            {lang === 'JP' ? 'ポートフォリオとマクロ経済の相関を分析' : 'Analyze Portfolio-Macro Correlation'}
+                        </span>
+                    </Link>
+                </div>
+
+                <div className="mt-12 pt-12 border-t border-border">
                     <AdSenseSlot variant="responsive" />
                 </div>
             </main>

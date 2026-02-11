@@ -1,5 +1,5 @@
 'use client';
-import { Home, LineChart, BarChart3, Bitcoin, Banknote, Gem, Globe, ScrollText, Activity, BookOpen, MessageSquare, Microscope, Menu, X, ChevronLeft, ChevronRight, Share2, Search, ExternalLink, Coins } from 'lucide-react';
+import { Home, LineChart, BarChart3, Bitcoin, Banknote, Gem, Globe, ScrollText, Activity, BookOpen, MessageSquare, Microscope, Menu, X, ChevronLeft, ChevronRight, Share2, Search, ExternalLink, Coins, Diamond, Scroll } from 'lucide-react';
 import { usePathname, useRouter } from 'next/navigation';
 import { DICTIONARY } from '@/data/dictionary';
 import { useCurrentLang } from '@/hooks/useCurrentLang';
@@ -13,12 +13,13 @@ export const Sidebar = () => {
 
     const tabs = [
         { key: 'home', label: t.labels.summary || 'SUMMARY', icon: Home, path: '/' },
+        { key: 'omni', label: t.labels.omni || 'OMNI-RESONANCE', icon: Activity, path: '/omni-resonance' },
         { key: 'stocks', label: t.labels.stocks_rates || 'STOCKS & RATES', icon: BarChart3, path: '/stocks' },
         { key: 'currencies', label: t.labels.currencies || 'CURRENCIES', icon: Coins, path: '/currencies' },
-        { key: 'cmdty', label: t.labels.commodities || 'COMMODITIES', icon: Gem, path: '/commodities' },
-        { key: 'technical', label: t.labels.technical || 'Technical', icon: Activity, path: '/technical' },
-        { key: 'wiki', label: t.labels.wiki || 'Wiki', icon: BookOpen, path: '/glossary' },
-        { key: 'maxims', label: t.labels.maxims || 'Maxims', icon: ScrollText, path: '/maxims' },
+        { key: 'cmdty', label: t.labels.commodities || 'COMMODITIES', icon: Diamond, path: '/commodities' },
+        { key: 'technical', label: t.labels.technical || 'TECHNICAL', icon: LineChart, path: '/technical' },
+        { key: 'wiki', label: t.labels.wiki || 'MACRO WIKI', icon: BookOpen, path: '/glossary' },
+        { key: 'maxims', label: t.labels.maxims || 'MAXIMS', icon: Scroll, path: '/maxims' },
     ];
 
     return (
