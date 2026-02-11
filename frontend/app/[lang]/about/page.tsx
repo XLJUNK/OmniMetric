@@ -66,7 +66,7 @@ export default async function AboutPage({ params }: Props) {
                                 {about.what_is_content}
                             </p>
                             <p className="text-sm text-cyan-500 font-bold border-l-2 border-cyan-500 pl-4 py-1 bg-cyan-500/5">
-                                当プロジェクトは システムエンジニアリングの高度な技術と、マクロ経済解析ロジックを融合させた技術実証プラットフォームです。
+                                {about.platform_statement}
                             </p>
                         </div>
                     </section>

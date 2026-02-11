@@ -1,0 +1,128 @@
+{
+    "title": "Kebijakan Privasi",
+    "lastUpdated": "11 Februari 2026",
+    "adsensePolicy": {
+        "title": "🔔 Kebijakan Google AdSense & Cookie",
+        "content": "Vendor pihak ketiga, termasuk Google, menggunakan cookie untuk menayangkan iklan berdasarkan kunjungan sebelumnya pengguna ke situs web ini atau situs web lain. Penggunaan cookie iklan oleh Google memungkinkan Google dan mitranya untuk menayangkan iklan berdasarkan kunjungan mereka ke situs ini dan/atau situs lain di Internet.",
+        "cookie_notice": "Google menggunakan cookie iklan (seperti DoubleClick DART Cookie) untuk memungkinkan penayangan iklan yang sesuai bagi pengguna.",
+        "opt_out": "Pengguna dapat memilih keluar dari iklan yang dipersonalisasi dengan mengunjungi Setelan Iklan Google:",
+        "more_info": "Untuk informasi lebih lanjut tentang cara Google menggunakan data saat Anda menggunakan situs mitra, kunjungi:"
+    },
+    "sections": [
+        {
+            "title": "1. Kebijakan Zero PII (Informasi Pribadi)",
+            "content": "Proyek OmniMetric beroperasi pada arsitektur Zero PII (Personally Identifiable Information). Kami TIDAK mengumpulkan, menyimpan, atau mengelola nama, alamat email, nomor telepon, atau pengenal pribadi lainnya. Ini adalah sistem algoritma otonom yang dirancang untuk demonstrasi teknis.",
+            "note": "Kami tidak memiliki database untuk akun pengguna atau milis."
+        },
+        {
+            "title": "2. Data yang Kami Kumpulkan (Non-PII)",
+            "subsections": [
+                {
+                    "title": "Informasi yang Dikumpulkan Secara Otomatis",
+                    "list": [
+                        "Tampilan halaman dan pola navigasi",
+                        "Preferensi bahasa (EN/JP/CN/ES/HI/ID/AR/DE/FR)",
+                        "Jenis perangkat dan informasi browser",
+                        "Lokasi geografis (tingkat negara, anonim)",
+                        "Durasi sesi dan stempel waktu interaksi"
+                    ]
+                },
+                {
+                    "title": "Cookie yang Digunakan",
+                    "list": [
+                        {
+                            "title": "Cookie Fungsional:",
+                            "desc": "Pemilihan bahasa, preferensi tema"
+                        },
+                        {
+                            "title": "Cookie Analitik:",
+                            "desc": "Google Analytics 4 (GA4) untuk performa situs"
+                        },
+                        {
+                            "title": "Cookie Iklan:",
+                            "desc": "Google AdSense untuk personalisasi iklan"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "3. Layanan Pihak Ketiga",
+            "services": [
+                {
+                    "name": "Google AdSense",
+                    "desc": "Menggunakan cookie untuk menayangkan iklan berdasarkan kunjungan sebelumnya. Anda dapat memilih keluar dari iklan yang dipersonalisasi di Setelan Iklan Google."
+                },
+                {
+                    "name": "Google Analytics 4",
+                    "desc": "Kami menggunakan GA4 untuk analisis performa. Data diproses secara anonim. Anda dapat memilih keluar melalui Google Analytics Opt-out Browser Add-on."
+                },
+                {
+                    "name": "Vercel Analytics",
+                    "desc": "Pemantauan infrastruktur yang berfokus pada privasi untuk memastikan uptime sistem."
+                }
+            ]
+        },
+        {
+            "title": "4. Hak Anda & Pilihan Keluar",
+            "list": [
+                {
+                    "label": "Keluar dari iklan yang dipersonalisasi:",
+                    "link": "https://www.google.com/settings/ads",
+                    "text": "Setelan Iklan Google",
+                    "link2": "http://www.aboutads.info/choices/",
+                    "text2": "www.aboutads.info"
+                },
+                {
+                    "label": "Keluar dari GA4:",
+                    "link": "https://tools.google.com/dlpage/gaoptout",
+                    "text": "Google Analytics Opt-out Add-on"
+                },
+                {
+                    "label": "Blokir cookie:",
+                    "desc": "Konfigurasi browser manual diperlukan untuk menolak semua cookie."
+                }
+            ]
+        },
+        {
+            "title": "5. Pembaruan Kebijakan",
+            "content": "Kami dapat memperbarui Kebijakan Privasi ini untuk mencerminkan perubahan teknis atau hukum. Penggunaan berkelanjutan dari terminal ini merupakan penerimaan terhadap kebijakan terbaru."
+        },
+        {
+            "title": "7. Cookie & Iklan Pihak Ketiga",
+            "list": [
+                {
+                    "label": "Google AdSense:",
+                    "desc": "Sebagai vendor pihak ketiga, Google menggunakan cookie untuk menayangkan iklan di OmniMetric berdasarkan kunjungan Anda sebelumnya ke situs web ini dan situs lainnya."
+                },
+                {
+                    "label": "Iklan Dipersonalisasi:",
+                    "desc": "Pengguna dapat memilih untuk tidak menerima iklan dipersonalisasi dengan mengunjungi Google Ads Settings atau www.aboutads.info.",
+                    "link": "https://www.google.com/settings/ads",
+                    "text": "Setelan Iklan Google",
+                    "link2": "http://www.aboutads.info/choices/",
+                    "text2": "www.aboutads.info"
+                },
+                {
+                    "label": "Google Analytics:",
+                    "desc": "Kami menggunakan Google Analytics 4 untuk menganalisis lalu lintas situs secara anonim. Anda dapat memilih keluar melalui ekstensi browser Opt-out Google Analytics.",
+                    "link": "https://tools.google.com/dlpage/gaoptout",
+                    "text": "Add-on Browser Opt-out Google Analytics"
+                }
+            ]
+        },
+        {
+            "title": "8. Anonimitas Data",
+            "content": "OmniMetric adalah sistem 100% otonom. Kami TIDAK mengumpulkan, menyimpan, atau membagikan Informasi Pribadi yang Dapat Diidentifikasi (PII) seperti nama, email, atau nomor telepon."
+        },
+        {
+            "title": "9. Persetujuan Cookie",
+            "content": "Dengan menggunakan Layanan ini, Anda menyetujui penggunaan cookie sebagaimana dijelaskan di atas. Anda dapat mengelola atau memblokir cookie melalui pengaturan browser kapan saja."
+        }
+    ],
+    "contact": {
+        "title": "10. Kontak & Pertanyaan Hukum",
+        "text": "Semua pertanyaan hukum harus ditujukan secara eksklusif kepada X (Twitter) @OmniMetric_GMS melalui DM saja. Tidak ada saluran dukungan lain yang dipantau."
+    },
+    "legalFramework": "Kerangka Privasi: Patuh AdSense & GA4 // Arsitektur Zero PII"
+}

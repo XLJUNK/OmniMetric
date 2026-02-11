@@ -1,14 +1,14 @@
 {
     "title": "Nutzungsbedingungen",
-    "lastUpdated": "12. Januar 2026",
+    "lastUpdated": "11. Februar 2026",
     "criticalDisclaimer": {
         "title": "WICHTIGER HAFTUNGSAUSSCHLUSS",
         "mainText": "OmniMetric ist KEINE Anlageberatung.",
         "list": [
             "Alle bereitgestellten Informationen dienen ausschließlich Informations- und Bildungszwecken",
-            "Wir garantieren NICHT die Richtigkeit, Vollständigkeit oder Aktualität von Daten",
+            "Wir garantieren NICHT für die Richtigkeit, Vollständigkeit oder Aktualität der Daten",
             "Anlageentscheidungen liegen in IHRER alleinigen Verantwortung",
-            "Vergangene Wertentwicklung ist KEINE Garantie für zukünftige Ergebnisse",
+            "Vergangene Wertentwicklungen garantieren KEINE zukünftigen Ergebnisse",
             "Marktdaten können verzögert sein oder Fehler enthalten"
         ],
         "acknowledgment": "Durch den Zugriff auf diese Website erkennen Sie alle mit den Finanzmärkten verbundenen Risiken an und akzeptieren diese."
@@ -16,87 +16,46 @@
     "sections": [
         {
             "title": "1. Annahme der Bedingungen",
-            "content": "Durch den Zugriff auf oder die Nutzung des OmniMetric Terminals („der Dienst“) erklären Sie sich damit einverstanden, rechtlich an diese Nutzungsbedingungen gebunden zu sein. Wenn Sie mit irgendeinem Teil dieser Bedingungen nicht einverstanden sind, müssen Sie die Nutzung des Dienstes unverzüglich einstellen."
+            "content": "Durch den Zugriff auf das OmniMetric Terminal (\"der Dienst\") erklären Sie sich damit einverstanden, an diese Nutzungsbedingungen rechtlich gebunden zu sein. Wenn Sie mit Teilen dieser Bedingungen nicht einverstanden sind, müssen Sie die Nutzung des Dienstes unverzüglich einstellen."
         },
         {
-            "title": "2. Untersagte Nutzung & geistiges Eigentum",
-            "content": "Die folgenden Aktionen sind strengstens untersagt:",
+            "title": "2. Verbotene Nutzung & Geistiges Eigentum",
+            "content": "Folgende Handlungen sind streng untersagt:",
             "list": [
                 {
                     "title": "Automatisiertes Scraping:",
-                    "desc": "Verwendung von Bots, Crawlern oder automatisierten Skripten zur Datenextraktion ohne ausdrückliche schriftliche Genehmigung"
+                    "desc": "Verwendung von Bots, Crawlern oder automatisierten Skripten zur Datenextraktion ohne ausdrückliche schriftliche Genehmigung."
                 },
                 {
                     "title": "Gewerbliches Data Mining:",
-                    "desc": "Sammeln unserer proprietären Analysen zum Wiederverkauf, zur Weiterverbreitung oder für Wettbewerbszwecke"
+                    "desc": "Sammeln unserer proprietären Analysen für den Wiederverkauf, die Weiterverbreitung oder für Wettbewerbszwecke."
                 },
                 {
                     "title": "KI-Training:",
-                    "desc": "Verwendung unserer Inhalte, Algorithmen oder generierten Texte zum Trainieren von KI- oder maschinellen Lernmodellen ohne Genehmigung"
-                },
-                {
-                    "title": "Reverse Engineering:",
-                    "desc": "Versuch, die Logik unseres proprietären GMS Score-Algorithmus zurückzuentwickeln, zu dekompilieren oder zu extrahieren"
-                },
-                {
-                    "title": "Identitätstäuschung:",
-                    "desc": "Falsche Darstellung Ihrer Person oder Ihrer Zugehörigkeit zu OmniMetric"
+                    "desc": "Nutzung unserer Inhalte, Algorithmen oder generierten Texte zum Training von KI-Modellen ohne Genehmigung."
                 }
             ],
-            "note": "Hinweis: Akademische Forschung und persönlicher Gebrauch (mit ordnungsgemäßer Quellenangabe) sind gestattet. Gewerbliche Lizenzen sind auf Anfrage via X (Twitter) DM erhältlich."
+            "note": "Hinweis: Eine kommerzielle Lizenzierung ist auf Anfrage ausschließlich über X (Twitter) DM @OmniMetric_GMS möglich."
         },
         {
-            "title": "3. Datenquellen & Genauigkeit",
-            "content": "OmniMetric aggregiert Daten aus öffentlich zugänglichen Quellen von Drittanbietern, insbesondere:",
-            "sources": [
-                "Federal Reserve Economic Data (FRED)",
-                "CBOE Market Volatility Indices (VIX, MOVE)",
-                "Yahoo Finance (Marktpreise)",
-                "Financial Modeling Prep (Wirtschaftskalender)",
-                "Alternative.me (Krypto-Sentiment)"
-            ],
-            "disclaimer": "Wir verlassen uns auf diese Quellen hinsichtlich der Richtigkeit, können jedoch deren Korrektheit, Vollständigkeit oder Echtzeit-Genauigkeit nicht garantieren. Daten können je nach Quelle um 15+ Minuten verzögert sein."
+            "title": "3. Datenquellen & Korrektheit",
+            "content": "OmniMetric aggregiert Daten aus öffentlich zugänglichen Drittquellen wie FRED, CBOE und Yahoo Finance.",
+            "disclaimer": "Wir verlassen uns auf diese Quellen, können aber deren Fehlerfreiheit nicht garantieren. Daten können um 15+ Minuten verzögert sein."
         },
         {
             "title": "4. Haftungsbeschränkung",
-            "content": "Soweit gesetzlich zulässig, haften das OmniMetric-Projekt und seine Mitwirkenden NICHT für:",
-            "list": [
-                "Finanzielle Verluste infolge des Vertrauens auf unsere Daten oder Analysen",
-                "Technische Fehler, Datungenauigkeiten oder Dienstunterbrechungen",
-                "Fehler von Drittanbietern oder API-Ausfälle",
-                "Indirekte, zufällige oder Folgeschäden"
-            ],
-            "footer": "Sie nutzen diesen Dienst ausschließlich auf eigenes Risiko."
+            "content": "Das OmniMetric-Projekt und seine Mitwirkenden haften NICHT für finanzielle Verluste, technische Fehler oder Datenungenauigkeiten. Die Nutzung dieses Dienstes erfolgt auf eigenes Risiko.",
+            "footer": "Dies ist eine autonome Demonstrationsplattform ohne professionelles Beratungsverhältnis."
         },
         {
-            "title": "5. Betriebsrichtlinien",
-            "subsections": [
-                {
-                    "title": "Keine Support-Verpflichtung",
-                    "content": "Das OmniMetric-Projekt ist nicht verpflichtet, individuellen Support, Beratung oder Antworten auf Anfragen bereitzustellen. Die Nutzung des Dienstes begründet kein professionelles Kundenverhältnis."
-                },
-                {
-                    "title": "Recht zur Kündigung",
-                    "content": "Wir behalten uns das Recht vor, den Zugriff für jeden Benutzer oder jede IP-Adresse ohne Vorankündigung zu sperren, wenn diese Bedingungen verletzt werden (einschließlich Scraping von Daten)."
-                },
-                {
-                    "title": "Salvatorische Klausel",
-                    "content": "Sollte eine Bestimmung dieser Bedingungen für nicht durchsetzbar befunden werden, bleiben die übrigen Bestimmungen in vollem Umfang in Kraft."
-                }
-            ]
-        },
-        {
-            "title": "6. Änderungen der Bedingungen",
-            "content": "Wir behalten uns das Recht vor, diese Bedingungen jederzeit zu ändern. Änderungen werden auf dieser Seite mit einem aktualisierten Datum der „Letzten Aktualisierung“ veröffentlicht. Die fortgesetzte Nutzung von OmniMetric nach Änderungen stellt die Annahme der neuen Bedingungen dar."
-        },
-        {
-            "title": "7. Anwendbares Recht",
-            "content": "Diese Bedingungen unterliegen den geltenden internationalen Gesetzen zum digitalen Handel und sind entsprechend auszulegen. Streitigkeiten werden durch Schiedsverfahren oder die Gerichte der Gerichtsbarkeit gelöst, in der das OmniMetric-Projekt registriert ist."
+            "title": "5. Exklusiver Kontakt & Anwendbares Recht",
+            "content": "Alle rechtlichen Anfragen müssen ausschließlich über X (Twitter) @OmniMetric_GMS per DM gestellt werden. Diese Bedingungen unterliegen den geltenden Gesetzen des internationalen digitalen Handels.",
+            "note": "Andere Kontaktkanäle werden für rechtliche Angelegenheiten nicht überwacht."
         }
     ],
     "contact": {
-        "title": "8. Kontakt",
-        "text": "Für rechtliche Anfragen oder Lizenzanfragen kontaktieren Sie uns bitte per Direktnachricht auf X (Twitter):"
+        "title": "6. Kontakt",
+        "text": "Für rechtliche Anfragen oder Lizenzierungsanfragen kontaktieren Sie uns per Direktnachricht auf X (Twitter):"
     },
-    "legalFramework": "Rechtlicher Rahmen: Bedingungen v2.0 // Inkrafttreten: 12.01.2026"
+    "legalFramework": "Rechtlicher Rahmen: Terms v2.1 // AdSense-konform // Gültig ab: 11.02.2026"
 }

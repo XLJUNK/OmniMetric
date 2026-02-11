@@ -56,7 +56,7 @@ export const MobileNav = () => {
                             />
 
                             {/* Text: Active=Blue, Inactive=Slate-500(Light)/Slate-300(Dark), Hover=Slate-900(Light)/Slate-100(Dark) */}
-                            <span className={`${textSizeClass} font-bold uppercase tracking-tight text-center leading-[0.85] w-full whitespace-normal break-words px-0 transition-colors duration-200 ${isActive
+                            <span className={`${textSizeClass} font-bold uppercase tracking-tight text-center leading-[0.85] w-full whitespace-pre-line px-0 transition-colors duration-200 ${isActive
                                 ? 'text-[#007AFF] drop-shadow-[0_0_5px_#007AFF]'
                                 : 'text-slate-500 dark:text-slate-300 group-hover:text-slate-900 dark:group-hover:text-slate-100'
                                 }`}>

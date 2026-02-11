@@ -109,11 +109,12 @@ export default function OmniResonanceClient({ lang }: OmniResonanceClientProps) 
                             <div className="p-1.5 md:p-2 bg-sky-500/10 rounded-lg shrink-0">
                                 <Radar className="w-5 h-5 md:w-6 md:h-6 text-sky-400" />
                             </div>
-                            {lang === 'JP' ? (
-                                <h1 className="text-base md:text-xl font-black tracking-tighter uppercase italic break-words leading-tight">OmniResonance <span className="text-sky-500 not-italic">プロトタイプ</span></h1>
-                            ) : (
-                                <h1 className="text-base md:text-xl font-black tracking-tighter uppercase italic break-words leading-tight">{ot.title.split(' ')[0]} <span className="text-sky-500 not-italic">{ot.title.split(' ')[1]}</span></h1>
-                            )}
+                            <h1 className="text-base md:text-xl font-black tracking-tighter uppercase italic break-words leading-tight whitespace-pre-line">
+                                {ot.title.split('\n')[0]}
+                                {ot.title.includes('\n') && (
+                                    <span className="text-sky-500 not-italic block md:inline"> {ot.title.split('\n')[1]}</span>
+                                )}
+                            </h1>
                         </div>
                         <p className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em] md:tracking-[0.3em] pl-1 truncate w-full">{ot.subtitle}</p>
                     </div>

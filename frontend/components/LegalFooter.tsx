@@ -24,11 +24,11 @@ export const LegalFooter = () => {
                         {t.labels.about}
                     </Link>
                     {!isMobile && <span className="text-slate-300 dark:text-slate-800">|</span>}
-                    <Link href={getLink('/privacy')} className="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-slate-200 uppercase transition-colors px-2 py-1">
+                    <Link href={getLink('/legal#privacy-policy')} className="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-slate-200 uppercase transition-colors px-2 py-1">
                         {t.labels.privacy}
                     </Link>
                     {!isMobile && <span className="text-slate-300 dark:text-slate-800">|</span>}
-                    <Link href={getLink('/legal')} className="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-slate-200 uppercase transition-colors px-2 py-1">
+                    <Link href={getLink('/legal#terms')} className="text-slate-500 dark:text-slate-400 hover:text-sky-600 dark:hover:text-slate-200 uppercase transition-colors px-2 py-1">
                         {t.labels.terms}
                     </Link>
                     {!isMobile && <span className="text-slate-300 dark:text-slate-800">|</span>}
@@ -47,7 +47,7 @@ export const LegalFooter = () => {
                 <div className="flex flex-col gap-3 items-center">
                     <p className="text-[10px] leading-[1.3] text-slate-500 max-w-4xl mx-auto whitespace-pre-line">
                         {t.legal_text.t1} {t.legal_text.t2}
-                        {"\n"}当プロジェクトは システムエンジニアリングの高度な技術と、マクロ経済解析ロジックを融合させた技術実証プラットフォームである。
+                        {"\n"}{t.legal_text.t3}
                     </p>
                     {/* Partner Disclaimer */}
                     <p className="text-[10px] leading-[1.3] text-slate-600 max-w-4xl mx-auto whitespace-pre-line opacity-80">

@@ -90,14 +90,9 @@ export default async function ContactPage({ params }: Props) {
                                 <p className="text-xs text-slate-500 uppercase tracking-widest mb-2">
                                     {isJP ? 'X（Twitter）でダイレクトメッセージを送信' : 'Send a Direct Message on X (Twitter)'}
                                 </p>
-                                <a
-                                    href="https://twitter.com/OmniMetric_GMS"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-block text-2xl font-mono font-black text-cyan-600 dark:text-cyan-400 hover:text-cyan-500 dark:hover:text-cyan-300 transition-colors"
-                                >
+                                <div className="inline-block text-2xl font-mono font-black text-cyan-600 dark:text-cyan-400">
                                     @OmniMetric_GMS
-                                </a>
+                                </div>
                                 <p className="text-xs text-slate-600 mt-3">
                                     {isJP ? '返信時間: 24-72時間（営業日）' : 'Response time: 24-72 hours (business days)'}
                                 </p>

@@ -1,154 +1,305 @@
 import React, { Suspense } from 'react';
-import { Metadata } from 'next';
 import { TerminalPage } from '@/components/TerminalPage';
-import { AlertTriangle } from 'lucide-react';
-import { DICTIONARY } from '@/data/dictionary';
-import termsEn from '@/data/terms-en.json';
+import { DICTIONARY, LangType } from '@/data/dictionary';
+import { Metadata } from 'next';
 import { getMultilingualMetadata } from '@/data/seo';
-
-// Re-define interfaces
-interface TermsListItem {
-    title?: string;
-    desc?: string;
-}
-
-interface TermsSection {
-    title: string;
-    content?: string;
-    list?: (string | TermsListItem)[];
-    note?: string;
-    footer?: string;
-    sources?: string[];
-    disclaimer?: string;
-    subsections?: TermsSection[];
-}
-
-
-// Load data directly
-const data = termsEn;
+import { getTermsData, getPrivacyData } from '@/data/LegalData';
+import { Shield, AlertTriangle, ExternalLink, Scale, Lock, Eye, Bot, Database } from 'lucide-react';
 
 export async function generateMetadata(): Promise<Metadata> {
-    return getMultilingualMetadata('/legal', 'EN', "Terms of Service | OmniMetric Terminal", "Terms and Conditions, Disclaimers, and Usage Restrictions for OmniMetric.");
+    return getMultilingualMetadata('/legal', 'EN', "LEGAL NOTICE & COMPLIANCE", "Legal information, Terms of Service, and Privacy Policy for OmniMetric Terminal.");
 }
 
 export default async function LegalPage() {
-    const normalizedLang = 'EN';
+    const normalizedLang = 'EN' as LangType;
+    const isRTL = false;
+
+    const terms = getTermsData(normalizedLang);
+    const privacy = getPrivacyData(normalizedLang);
+
+    if (!terms || !privacy) return null;
+
+    // JSON-LD for Privacy Policy Compliance
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "PrivacyPolicy",
+        "name": privacy.title,
+        "url": `https://gms.omni-metric.com/legal`,
+        "datePublished": "2026-01-12",
+        "dateModified": "2026-02-11",
+        "knowsAbout": ["Google AdSense", "Google Analytics 4", "GDPR", "Privacy"],
+        "accountablePerson": {
+            "@type": "Person",
+            "name": "OmniMetric Project Owner",
+            "identifier": "@OmniMetric_GMS"
+        }
+    };
 
     return (
-        <Suspense fallback={null}>
-            <TerminalPage pageKey="legal" lang="EN" selectorMode="path">
-                <div className="max-w-4xl mx-auto space-y-8 text-left" dir="ltr">
-                    <div className="flex justify-between items-start mb-8">
-                        <div className="flex items-center gap-4">
-                            <AlertTriangle className="w-8 h-8 text-red-500" />
-                            <h1 className="text-3xl font-black tracking-tight text-white uppercase">{data.title}</h1>
+        <Suspense fallback={<div className="min-h-screen bg-black flex items-center justify-center text-sky-500 font-mono text-xs animate-pulse">LOADING COMPLIANCE CORE...</div>}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <TerminalPage pageKey="legal" lang={normalizedLang} selectorMode="path">
+                <div className="max-w-4xl space-y-12 text-left" dir="ltr">
+
+                    {/* CRITICAL DISCLAIMER BANNER - FORTRESS AESTHETIC */}
+                    <div className="relative group">
+                        <div className="absolute -inset-1 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-2xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                        <div className="relative !border-2 !border-red-500/50 bg-red-500/5 rounded-xl p-6 md:p-8 space-y-4 shadow-[0_0_40px_rgba(239,68,68,0.1)] backdrop-blur-sm">
+                            <div className="flex items-start md:items-center gap-4 text-red-500">
+                                <div className="p-3 bg-red-500 animate-pulse rounded-lg shadow-[0_0_15px_rgba(239,68,68,0.4)]">
+                                    <AlertTriangle className="w-6 h-6 text-white shrink-0" />
+                                </div>
+                                <div className="space-y-1">
+                                    <h2 className="text-xl md:text-2xl font-black uppercase tracking-tighter leading-none">
+                                        {terms.criticalDisclaimer.title}
+                                    </h2>
+                                    <p className="text-sm md:text-base font-bold text-red-400/90 uppercase tracking-widest">
+                                        {terms.criticalDisclaimer.mainText}
+                                    </p>
+                                </div>
+                                <div className="hidden md:flex items-center gap-2 ml-auto px-3 py-1 bg-red-500/20 border border-red-500/30 rounded-full text-[10px] font-black text-red-500 uppercase tracking-widest">
+                                    <Lock className="w-3 h-3" /> Secure Compliance
+                                </div>
+                            </div>
+                            <ul className="text-sm md:text-base text-slate-300 space-y-3 font-medium pl-16 list-disc marker:text-red-500">
+                                {terms.criticalDisclaimer.list.map((item, i) => (
+                                    <li key={i}>{item}</li>
+                                ))}
+                            </ul>
+                            <div className="pt-4 border-t border-red-500/20">
+                                <p className="text-xs md:text-sm text-red-400 font-bold uppercase tracking-[0.2em] leading-relaxed">
+                                    {terms.criticalDisclaimer.acknowledgment}
+                                </p>
+                            </div>
                         </div>
                     </div>
 
-                    <p className="text-sm text-slate-500 font-mono">Last Updated: {data.lastUpdated}</p>
+                    {/* ANCHOR NAV - ENHANCED */}
+                    <nav className="sticky top-0 z-50 flex flex-wrap items-center gap-6 py-4 bg-black/80 backdrop-blur-xl border-b border-white/10">
+                        <a href="#terms" className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-slate-400 hover:text-sky-400 transition-all flex items-center gap-2 px-3 py-1 border border-transparent hover:border-sky-500/30 rounded-lg">
+                            <Scale className="w-3 h-3" /> {terms.title}
+                        </a>
+                        <a href="#privacy-policy" className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-slate-400 hover:text-cyan-400 transition-all flex items-center gap-2 px-3 py-1 border border-transparent hover:border-cyan-500/30 rounded-lg">
+                            <Shield className="w-3 h-3" /> {privacy.title}
+                        </a>
+                        <div className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-slate-500 flex items-center gap-2 ml-auto">
+                            <span className="opacity-50">DM INQUIRIES:</span> @OmniMetric_GMS
+                        </div>
+                    </nav>
 
-                    <section id="terms" className="!border-2 !border-red-500 bg-red-950/20 !rounded-xl p-6 space-y-4">
-                        <h2 className="text-xl font-black text-red-400 uppercase tracking-wide flex items-center gap-2">
-                            <AlertTriangle className="w-6 h-6" />
-                            {data.criticalDisclaimer.title}
-                        </h2>
-                        <div className="space-y-3 text-sm text-red-200 leading-relaxed font-medium">
-                            <p className="text-base">
-                                <strong className="text-red-300">{data.criticalDisclaimer.mainText}</strong>
-                            </p>
-                            <ul className="list-disc space-y-2 text-red-200 pl-6">
-                                {data.criticalDisclaimer.list.map((item: string, i: number) => (
-                                    <li key={i} dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
-                                ))}
-                            </ul>
-                            <p className="text-base font-bold text-red-300 pt-2">
-                                {data.criticalDisclaimer.acknowledgment}
-                            </p>
+                    {/* SECTION: TERMS OF SERVICE */}
+                    <section id="terms" className="space-y-10 pt-16 scroll-mt-24">
+                        <div className="flex items-center gap-4">
+                            <div className="w-2 h-8 bg-sky-500 shadow-[0_0_15px_rgba(14,165,233,0.5)]"></div>
+                            <h2 className="text-3xl font-black uppercase italic tracking-tighter text-white">{terms.title}</h2>
+                        </div>
+
+                        <div className="flex items-center gap-3 text-[10px] font-mono text-slate-500 uppercase tracking-[0.3em]">
+                            <Lock className="w-3 h-3" /> Last Updated: {terms.lastUpdated}
+                        </div>
+
+                        <div className="space-y-16">
+                            {terms.sections.map((section, idx) => (
+                                <div key={idx} className="space-y-6">
+                                    <div className="flex items-center gap-3">
+                                        <h3 className="text-sm font-black uppercase tracking-[0.4em] text-sky-400 border-b border-sky-500/20 pb-2 w-full">
+                                            {section.title}
+                                        </h3>
+                                    </div>
+                                    {section.content && (
+                                        <p className="text-sm md:text-base text-slate-300 leading-relaxed font-mono">
+                                            {section.content}
+                                        </p>
+                                    )}
+                                    {section.list && (
+                                        <ul className="space-y-6 pl-6">
+                                            {section.list.map((item, i) => (
+                                                <li key={i} className="text-sm md:text-base text-slate-400 font-mono leading-relaxed group">
+                                                    {typeof item === 'string' ? (
+                                                        <div className="flex gap-3">
+                                                            <div className="w-1.5 h-1.5 bg-sky-500 mt-2 shrink-0 opacity-40 group-hover:opacity-100 transition-opacity"></div>
+                                                            {item}
+                                                        </div>
+                                                    ) : (
+                                                        <div className="space-y-1">
+                                                            <div className="flex items-center gap-2 text-slate-200">
+                                                                <div className="w-1.5 h-1.5 bg-sky-500 shrink-0"></div>
+                                                                <strong className="uppercase tracking-widest text-xs font-black">{item.title}</strong>
+                                                            </div>
+                                                            <div className="text-slate-500 ml-3.5">{item.desc}</div>
+                                                        </div>
+                                                    )}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                    {section.sources && (
+                                        <div className="bg-white/5 border border-white/10 rounded-xl p-6 mt-8">
+                                            <div className="flex items-center gap-2 mb-4 text-xs font-black text-slate-300 uppercase tracking-widest">
+                                                <Database className="w-3 h-3 text-sky-500" /> Data Sources Integrated
+                                            </div>
+                                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                                                {section.sources.map((source, i) => (
+                                                    <div key={i} className="bg-black/40 px-3 py-2 border border-white/5 rounded text-[10px] font-mono text-slate-400 flex items-center gap-2">
+                                                        <div className="w-1 h-1 bg-sky-500"></div> {source}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )}
+                                    {section.subsections && (
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                                            {section.subsections.map((sub, i) => (
+                                                <div key={i} className="bg-[#111] p-6 border-l-2 border-sky-500/50 rounded-r-lg space-y-3">
+                                                    <h4 className="text-xs font-black text-slate-100 uppercase tracking-widest">{sub.title}</h4>
+                                                    <p className="text-xs text-slate-500 leading-relaxed font-mono">{sub.content}</p>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+                                    {section.note && (
+                                        <div className="bg-sky-500/5 text-sky-400 p-5 border-l-2 border-sky-500 text-xs italic font-semibold leading-relaxed mt-6">
+                                            {section.note}
+                                        </div>
+                                    )}
+                                </div>
+                            ))}
                         </div>
                     </section>
 
-                    {data.sections.map((section: TermsSection, idx: number) => (
-                        <section key={idx} className={`${section.title.includes('Modifications') ? '' : 'bg-[#111]'} !border ${section.title.includes('Prohibited') ? '!border-yellow-500/30' : '!border-slate-800'} !rounded-xl p-6 space-y-4 shadow-sm dark:shadow-none`}>
-                            <h2 className={`text-lg font-bold uppercase tracking-wide ${section.title.includes('Prohibited') ? 'text-yellow-400' : 'text-white'}`}>
-                                {section.title}
-                            </h2>
+                    {/* SECTION: PRIVACY POLICY */}
+                    <section id="privacy-policy" className="space-y-10 pt-24 border-t border-white/5 scroll-mt-24">
+                        <div className="flex items-center gap-4">
+                            <div className="w-2 h-8 bg-cyan-500 shadow-[0_0_15px_rgba(6,182,212,0.5)]"></div>
+                            <h2 className="text-3xl font-black uppercase italic tracking-tighter text-white">{privacy.title}</h2>
+                        </div>
 
-                            {section.content && (
-                                <p className="text-sm text-slate-300">
-                                    {section.content}
-                                </p>
-                            )}
+                        <div className="flex items-center gap-3 text-[10px] font-mono text-slate-500 uppercase tracking-[0.3em]">
+                            <Shield className="w-3 h-3" /> Last Updated: {privacy.lastUpdated}
+                        </div>
 
-                            {section.list && (
-                                <div className="space-y-3 text-sm text-slate-300">
-                                    <ul className="list-disc space-y-2 text-slate-400 pl-6">
-                                        {section.list.map((item: string | TermsListItem, i: number) => (
-                                            typeof item === 'string' ? (
-                                                <li key={i}>{item}</li>
-                                            ) : (
-                                                <li key={i}>
-                                                    <strong>{item.title}</strong> {item.desc}
-                                                </li>
-                                            )
-                                        ))}
-                                    </ul>
-                                    {section.note && (
-                                        <p className="text-xs text-yellow-300 bg-yellow-950/20 p-3 !rounded-lg !border !border-yellow-500/30 mt-4">
-                                            {section.note}
-                                        </p>
-                                    )}
-                                    {section.footer && (
-                                        <p className="text-xs text-slate-500 pt-2">{section.footer}</p>
-                                    )}
+                        {/* ADSENSE POLICY BOX - COMPLIANCE FORTRESS */}
+                        <div className="relative group">
+                            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 to-sky-500/20 rounded-2xl blur opacity-20"></div>
+                            <div className="relative bg-cyan-500/5 border border-cyan-500/30 rounded-xl p-6 md:p-8 space-y-6 backdrop-blur-sm">
+                                <div className="flex items-center gap-3">
+                                    <div className="p-2 bg-cyan-500/20 rounded-lg">
+                                        <Eye className="w-5 h-5 text-cyan-500" />
+                                    </div>
+                                    <h3 className="text-sm md:text-base font-black uppercase tracking-[0.3em] text-cyan-400">
+                                        {privacy.adsensePolicy.title}
+                                    </h3>
                                 </div>
-                            )}
+                                <div className="space-y-4 text-sm md:text-base text-slate-400 font-mono leading-relaxed">
+                                    <p>{privacy.adsensePolicy.content}</p>
+                                    <div className="p-4 bg-black/40 border border-white/5 rounded-lg border-l-2 border-cyan-500">
+                                        <p className="text-slate-200 font-bold italic text-sm">{privacy.adsensePolicy.cookie_notice}</p>
+                                    </div>
+                                    <div className="pt-4 flex flex-wrap gap-4">
+                                        <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener" className="inline-flex items-center gap-3 px-5 py-3 bg-cyan-500 text-black rounded-lg text-xs font-black hover:bg-cyan-400 transition-all shadow-[0_0_20px_rgba(6,182,212,0.3)]">
+                                            <Lock className="w-4 h-4" /> GOOGLE ADS SETTINGS <ExternalLink className="w-3 h-3" />
+                                        </a>
+                                        <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener" className="inline-flex items-center gap-3 px-5 py-3 bg-white/5 text-slate-300 rounded-lg text-xs font-black hover:bg-white/10 transition-all border border-white/10">
+                                            PRIVACY PARTNER SITES <ExternalLink className="w-3 h-3" />
+                                        </a>
+                                    </div>
+                                    <p className="text-[10px] text-slate-600 pt-4 uppercase tracking-[0.2em] italic border-t border-white/5">
+                                        {privacy.adsensePolicy.more_info}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
 
-                            {section.sources && (
-                                <div className="space-y-3 text-sm text-slate-300">
-                                    <div className="bg-black !border !border-slate-700 !rounded-lg p-4 font-mono text-xs text-slate-400">
-                                        <ul className="space-y-1">
-                                            {section.sources.map((source: string, i: number) => (
-                                                <li key={i}>• {source}</li>
+                        <div className="space-y-20 mt-12">
+                            {privacy.sections.map((section, idx) => (
+                                <div key={idx} className="space-y-8">
+                                    <div className="flex items-center gap-3">
+                                        <h3 className="text-sm font-black uppercase tracking-[0.4em] text-cyan-400 border-b border-cyan-500/20 pb-2 w-full">
+                                            {section.title}
+                                        </h3>
+                                    </div>
+                                    {section.content && (
+                                        <div className="relative p-6 bg-white/[0.02] border border-white/5 rounded-xl">
+                                            <p className="text-sm md:text-base text-slate-300 leading-relaxed font-mono">
+                                                {section.content}
+                                            </p>
+                                        </div>
+                                    )}
+                                    {section.subsections && (
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                                            {section.subsections.map((sub, i) => (
+                                                <div key={i} className="space-y-4">
+                                                    <h4 className="text-xs font-black text-slate-100 uppercase tracking-[0.3em] flex items-center gap-3">
+                                                        <div className="w-2 h-2 bg-cyan-500 rounded-full"></div> {sub.title}
+                                                    </h4>
+                                                    <ul className="space-y-3 pl-4">
+                                                        {sub.list?.map((item, j) => (
+                                                            <li key={j} className="text-xs md:text-sm text-slate-500 font-mono flex items-start gap-4 group">
+                                                                <div className="w-1 h-1 bg-cyan-500 shrink-0 mt-2 opacity-30 group-hover:opacity-100 transition-opacity"></div>
+                                                                <span>{typeof item === 'string' ? item : <><strong className="text-slate-300 uppercase tracking-widest text-[10px] block mb-1">{item.title}</strong> {item.desc}</>}</span>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+                                    {section.services && (
+                                        <div className="grid grid-cols-1 gap-4">
+                                            {section.services.map((service, i) => (
+                                                <div key={i} className="bg-white/5 p-6 rounded-xl flex flex-col md:flex-row md:items-center gap-6 border border-white/5 hover:border-cyan-500/30 transition-colors group">
+                                                    <div className="min-w-[180px] text-xs font-black text-cyan-500 uppercase tracking-[0.3em] flex items-center gap-2">
+                                                        <div className="w-1.5 h-1.5 bg-cyan-500 rounded-full group-hover:animate-ping"></div> {service.name}
+                                                    </div>
+                                                    <div className="text-xs md:text-sm text-slate-400 italic leading-relaxed font-mono">{service.desc}</div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+                                    {section.list && (
+                                        <ul className="space-y-6 pl-6">
+                                            {section.list.map((item, i) => (
+                                                <li key={i} className="text-sm text-slate-400 font-mono leading-relaxed space-y-2">
+                                                    <div className="flex items-center gap-2 text-slate-200">
+                                                        <div className="w-1.5 h-1.5 bg-cyan-500 rounded-full"></div>
+                                                        <strong className="uppercase tracking-widest text-xs font-black">{item.label}</strong>
+                                                    </div>
+                                                    <div className="text-slate-500 ml-3.5">
+                                                        {item.desc}
+                                                        {item.link && (
+                                                            <a href={item.link} target="_blank" rel="noopener" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors ml-3 px-3 py-1 bg-cyan-500/10 rounded border border-cyan-500/20 text-[10px] font-black uppercase">
+                                                                {item.text} <ExternalLink className="w-2.5 h-2.5" />
+                                                            </a>
+                                                        )}
+                                                        {item.link2 && (
+                                                            <a href={item.link2} target="_blank" rel="noopener" className="inline-flex items-center gap-2 text-slate-400 hover:text-slate-300 transition-colors ml-3 px-3 py-1 bg-white/5 rounded border border-white/10 text-[10px] font-black uppercase">
+                                                                {item.text2} <ExternalLink className="w-2.5 h-2.5" />
+                                                            </a>
+                                                        )}
+                                                    </div>
+                                                </li>
                                             ))}
                                         </ul>
-                                    </div>
-                                    {section.disclaimer && (
-                                        <p className="text-slate-400">
-                                            {section.disclaimer}
-                                        </p>
                                     )}
                                 </div>
-                            )}
-
-                            {section.subsections && (
-                                <div className="space-y-4 text-sm text-slate-300">
-                                    {section.subsections.map((sub: TermsSection, i: number) => (
-                                        <div key={i}>
-                                            <h3 className="text-slate-400 font-bold mb-1">{sub.title}</h3>
-                                            <p>{sub.content}</p>
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
-                        </section>
-                    ))}
-
-                    <section className="bg-[#111] !border !border-slate-800 !rounded-xl p-6 shadow-sm dark:shadow-none">
-                        <h2 className="text-lg font-bold text-white uppercase tracking-wide mb-3">
-                            {data.contact.title}
-                        </h2>
-                        <p className="text-sm text-slate-300">
-                            {data.contact.text} {' '}
-                            <a href="https://twitter.com/OmniMetric_GMS" target="_blank" rel="noopener" className="text-sky-400 hover:underline font-mono">
-                                @OmniMetric_GMS
-                            </a>
-                        </p>
+                            ))}
+                        </div>
                     </section>
 
-                    <div className="pt-8 border-t border-slate-200 dark:border-slate-800 opacity-50">
-                        <p className="text-[10px] font-mono tracking-widest uppercase text-slate-500 dark:text-slate-600">
-                            {data.legalFramework}
-                        </p>
+                    {/* FOOTER METADATA */}
+                    <div className="pt-24 pb-12 border-t border-white/5 opacity-50">
+                        <div className="flex flex-col md:flex-row justify-between gap-6 text-[10px] font-mono tracking-[0.4em] uppercase text-slate-500">
+                            <div className="space-y-2">
+                                <p>{terms.legalFramework}</p>
+                                <p>{privacy.legalFramework}</p>
+                            </div>
+                            <div className="text-sky-500 font-black border-2 border-sky-500/30 px-4 py-2 rounded-lg bg-sky-500/5 ml-auto">
+                                COMPLIANCE_ID // OMNI-TERM-2026-COMP
+                            </div>
+                        </div>
                     </div>
                 </div>
             </TerminalPage>

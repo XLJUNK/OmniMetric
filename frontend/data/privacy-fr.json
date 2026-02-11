@@ -1,25 +1,30 @@
 {
-    "title": "Politique de confidentialité",
-    "lastUpdated": "12 janvier 2026",
+    "title": "Politique de Confidentialité",
+    "lastUpdated": "11 février 2026",
     "adsensePolicy": {
-        "title": "🔔 Google AdSense & Politique relative aux cookies",
-        "content": "OmniMetric utilise Google AdSense, un service publicitaire tiers géré par Google LLC.",
-        "cookie_notice": "Google utilise des cookies publicitaires (cookie DoubleClick DART) pour permettre la diffusion d'annonces appropriées aux utilisateurs.",
-        "opt_out": "Vous pouvez désactiver la publicité personnalisée en visitant :",
+        "title": "🔔 Politique Google AdSense & Cookies",
+        "content": "Des prestataires tiers, y compris Google, utilisent des cookies pour diffuser des annonces basées sur les visites antérieures d'un utilisateur sur ce site Web ou sur d'autres sites Web. L'utilisation de cookies publicitaires par Google lui permet, ainsi qu'à ses partenaires, de diffuser des annonces basées sur leur visite sur ce site et/ou sur d'autres sites sur Internet.",
+        "cookie_notice": "Google utilise des cookies publicitaires (tels que le cookie DoubleClick DART) pour permettre la diffusion d'annonces appropriées aux utilisateurs.",
+        "opt_out": "Les utilisateurs peuvent désactiver la publicité personnalisée en accédant aux paramètres des annonces Google :",
         "more_info": "Pour plus d'informations sur la manière dont Google utilise les données lorsque vous utilisez des sites partenaires, visitez :"
     },
     "sections": [
         {
-            "title": "1. Données que nous collectons",
+            "title": "1. Politique Zero PII (Informations Personnelles)",
+            "content": "Le projet OmniMetric fonctionne sur une architecture Zero PII (Personally Identifiable Information). Nous ne collectons, ne stockons ni ne gérons AUCUN nom, adresse e-mail, numéro de téléphone ou tout autre identifiant personnel. Il s'agit d'un système algorithmique autonome conçu pour une démonstration technique.",
+            "note": "Nous n'avons aucune base de données pour les comptes utilisateurs ou les listes de diffusion."
+        },
+        {
+            "title": "2. Données que nous collectons (données non PII)",
             "subsections": [
                 {
                     "title": "Informations collectées automatiquement",
                     "list": [
-                        "Pages consultées et schémas de navigation",
-                        "Préférences linguistiques (EN/JP/CN/ES/HI/ID/AR)",
+                        "Vues de pages et modèles de navigation",
+                        "Préférences linguistiques (EN/JP/CN/ES/HI/ID/AR/DE/FR)",
                         "Type d'appareil et informations sur le navigateur",
-                        "Localisation géographique (niveau pays/ville, anonymisée)",
-                        "Durée de la session et horodatage des interactions"
+                        "Localisation géographique (niveau pays, anonymisée)",
+                        "Durée de la session et horodatages d'interaction"
                     ]
                 },
                 {
@@ -27,44 +32,39 @@
                     "list": [
                         {
                             "title": "Cookies fonctionnels :",
-                            "desc": "Sélection de la langue, préférences de consentement"
+                            "desc": "Sélection de la langue, préférences thématiques"
                         },
                         {
-                            "title": "Cookies analytiques :",
+                            "title": "Cookies d'analyse :",
                             "desc": "Google Analytics 4 (GA4) pour la performance du site"
                         },
                         {
                             "title": "Cookies publicitaires :",
-                            "desc": "Google AdSense pour la personnalisation des annonces"
+                            "desc": "Google AdSense pour la personnalisation des publicités"
                         }
                     ]
-                }
-            ],
-            "footer": "Ce site est géré personnellement et ne dispose d'AUCUNE infrastructure pour collecter, stocker ou gérer des informations personnellement identifiables (PII) telles que des adresses e-mail, des noms réels ou des informations de paiement."
-        },
-        {
-            "title": "2. Services tiers",
-            "services": [
-                {
-                    "name": "Google AdSense",
-                    "desc": "Des fournisseurs tiers, y compris Google, utilisent des cookies pour diffuser des annonces basées sur vos visites antérieures sur OmniMetric et d'autres sites web. D'autres fournisseurs tiers ou réseaux publicitaires peuvent également utiliser des cookies pour diffuser des annonces sur OmniMetric."
-                },
-                {
-                    "name": "Google Analytics",
-                    "desc": "Nous utilisons Google Analytics 4 pour comprendre le comportement des utilisateurs, mesurer la performance du site et améliorer nos services. Aucune donnée personnelle n'est partagée avec des tiers au-delà des services analytiques de Google."
-                },
-                {
-                    "name": "Vercel Analytics",
-                    "desc": "Analyses axées sur la confidentialité fournies par notre plateforme d'hébergement pour surveiller le temps de fonctionnement et les indicateurs de performance."
                 }
             ]
         },
         {
-            "title": "3. Sécurité des données",
-            "content": "Toutes les données transmises entre votre navigateur et nos serveurs sont cryptées via HTTPS/TLS. Nous ne stockons aucune donnée financière sensible ou information de paiement sur nos serveurs."
+            "title": "3. Services tiers",
+            "services": [
+                {
+                    "name": "Google AdSense",
+                    "desc": "Utilise des cookies pour diffuser des annonces basées sur les visites précédentes. Vous pouvez désactiver la publicité personnalisée dans les paramètres des annonces Google."
+                },
+                {
+                    "name": "Google Analytics 4",
+                    "desc": "Nous utilisons GA4 pour l'analyse des performances. Les données sont traitées de manière anonyme. Vous pouvez vous désabonner via le module complémentaire de navigateur pour la désactivation de Google Analytics."
+                },
+                {
+                    "name": "Vercel Analytics",
+                    "desc": "Surveillance de l'infrastructure axée sur la confidentialité pour assurer la disponibilité du système."
+                }
+            ]
         },
         {
-            "title": "4. Vos droits",
+            "title": "4. Vos droits et désactivation",
             "list": [
                 {
                     "label": "Désactiver les publicités personnalisées :",
@@ -74,23 +74,55 @@
                     "text2": "www.aboutads.info"
                 },
                 {
-                    "label": "Bloquer les cookies :",
-                    "desc": "Configurez les paramètres de votre navigateur pour rejeter les cookies"
+                    "label": "Désactivation de GA4 :",
+                    "link": "https://tools.google.com/dlpage/gaoptout",
+                    "text": "Module de désactivation Google Analytics"
                 },
                 {
-                    "label": "Do Not Track :",
-                    "desc": "Nous respectons les signaux DNT du navigateur le cas échéant"
+                    "label": "Bloquer les cookies :",
+                    "desc": "Une configuration manuelle du navigateur est requise pour rejeter tous les cookies."
                 }
             ]
         },
         {
-            "title": "5. Modifications de cette politique",
-            "content": "Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. Les modifications seront publiées sur cette page avec une date de « Dernière mise à jour ». L'utilisation continue d'OmniMetric constitue l'acceptation de tout changement."
+            "title": "5. Mises à jour de la politique",
+            "content": "Nous pouvons mettre à jour cette politique de confidentialité pour refléter les changements techniques ou juridiques. L'utilisation continue du terminal constitue l'acceptation de la dernière politique."
+        },
+        {
+            "title": "7. Cookies et publicité tierce",
+            "list": [
+                {
+                    "label": "Google AdSense :",
+                    "desc": "En tant que fournisseur tiers, Google utilise des cookies pour afficher des publicités sur OmniMetric en fonction de vos visites antérieures sur ce site et d'autres sites web."
+                },
+                {
+                    "label": "Publicité personnalisée :",
+                    "desc": "Les utilisateurs peuvent refuser la publicité personnalisée en visitant Google Ads Settings ou www.aboutads.info.",
+                    "link": "https://www.google.com/settings/ads",
+                    "text": "Google Ads Settings",
+                    "link2": "http://www.aboutads.info/choices/",
+                    "text2": "www.aboutads.info"
+                },
+                {
+                    "label": "Google Analytics :",
+                    "desc": "Nous utilisons Google Analytics 4 pour analyser le trafic du site de manière anonyme. Vous pouvez vous désinscrire via l'extension de navigateur Opt-out de Google Analytics.",
+                    "link": "https://tools.google.com/dlpage/gaoptout",
+                    "text": "Module complémentaire de navigateur pour la désactivation de Google Analytics"
+                }
+            ]
+        },
+        {
+            "title": "8. Anonymat des données",
+            "content": "OmniMetric est un système 100 % autonome. Nous ne collectons, ne stockons ni ne partageons d'informations personnellement identifiables (PII) telles que les noms, adresses e-mail ou numéros de téléphone."
+        },
+        {
+            "title": "9. Consentement aux cookies",
+            "content": "En utilisant ce service, vous consentez à l'utilisation des cookies telle que décrite ci-dessus. Vous pouvez gérer ou bloquer les cookies via les paramètres de votre navigateur à tout moment."
         }
     ],
     "contact": {
-        "title": "6. Contact",
-        "text": "Pour toute question relative à la confidentialité, contactez-nous par message direct sur X (Twitter) :"
+        "title": "10. Contact et demandes juridiques",
+        "text": "Toutes les demandes juridiques doivent être adressées exclusivement par DM à X (Twitter) @OmniMetric_GMS. Aucun autre canal de support n'est surveillé."
     },
-    "legalFramework": "Cadre de confidentialité : Conforme au RGPD // Consentement aux cookies v2.0"
+    "legalFramework": "Cadre de confidentialité : conforme AdSense & GA4 // Architecture Zero PII"
 }

@@ -58,9 +58,9 @@ export default async function ContactPage() {
                             <p className="text-xs text-slate-500 uppercase tracking-widest mb-2">
                                 Send a Direct Message on X (Twitter)
                             </p>
-                            <a href="https://twitter.com/OmniMetric_GMS" target="_blank" rel="noopener noreferrer" className="inline-block text-2xl font-mono font-black text-cyan-400 hover:text-cyan-300 transition-colors">
+                            <div className="inline-block text-2xl font-mono font-black text-cyan-400">
                                 @OmniMetric_GMS
-                            </a>
+                            </div>
                             <p className="text-xs text-slate-600 mt-3">
                                 Response time: 24-72 hours (business days)
                             </p>

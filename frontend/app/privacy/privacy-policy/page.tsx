@@ -173,9 +173,9 @@ export default async function PrivacyPage() {
                         </h2>
                         <p className="text-sm text-slate-700 dark:text-slate-300">
                             {data.contact.text} {' '}
-                            <a href="https://twitter.com/OmniMetric_GMS" target="_blank" rel="noopener" className="text-sky-600 dark:text-sky-400 hover:underline font-mono">
+                            <span className="text-sky-600 dark:text-sky-400 font-mono">
                                 @OmniMetric_GMS
-                            </a>
+                            </span>
                         </p>
                     </section>
 

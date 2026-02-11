@@ -60,7 +60,7 @@ export const Sidebar = () => {
 
                             {/* Tooltip (Label) - TYPOGRAPHY MASTERPIECE */}
                             <div
-                                className="absolute ltr:left-full rtl:right-full top-1/2 -translate-y-1/2 ms-4 px-3 py-2 bg-black border border-[#333] text-[#F1F5F9] text-[10.5px] font-semibold tracking-[0.15em] uppercase rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap shadow-[0_4px_20px_rgba(0,0,0,1)] z-[9999]"
+                                className="absolute ltr:left-full rtl:right-full top-1/2 -translate-y-1/2 ms-4 px-3 py-2 bg-black border border-[#333] text-[#F1F5F9] text-[10.5px] font-semibold tracking-[0.15em] uppercase rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-pre-line shadow-[0_4px_20px_rgba(0,0,0,1)] z-[9999]"
                             >
                                 {tab.label}
                             </div>

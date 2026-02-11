@@ -1,0 +1,128 @@
+{
+    "title": "隐私政策",
+    "lastUpdated": "2026年2月11日",
+    "adsensePolicy": {
+        "title": "🔔 Google AdSense 及 Cookie 政策",
+        "content": "第三方供应商（包括 Google）会根据用户之前访问本网站或其他网站的情况，使用 Cookie 来投放广告。Google 对广告 Cookie 的使用使其及其合作伙伴能够根据用户对本网站和/或互联网上其他网站的访问情况投放广告。",
+        "cookie_notice": "Google 使用广告 Cookie（如 DoubleClick DART Cookie）来向用户投放合适的广告。",
+        "opt_out": "用户可以通过访问 Google 广告设置来停用个性化广告：",
+        "more_info": "有关 Google 在您使用合作伙伴网站时如何使用数据的更多信息，请访问："
+    },
+    "sections": [
+        {
+            "title": "1. 零 PII 政策（个人信息不保留）",
+            "content": "OmniMetric 项目运行在“零 PII”（个人身份信息）架构上。我们不收集、存储或管理姓名、电子邮件地址、电话号码或任何其他个人标识符。这是一个专为技术演示而设计的自主算法系统。",
+            "note": "我们没有任何用于用户帐户或邮件列表的数据库。"
+        },
+        {
+            "title": "2. 我们收集的数据（非 PII 数据）",
+            "subsections": [
+                {
+                    "title": "自动收集的信息",
+                    "list": [
+                        "页面浏览量和导航模式",
+                        "语言偏好 (EN/JP/CN/ES/HI/ID/AR/DE/FR)",
+                        "设备类型和浏览器信息",
+                        "地理位置（国家级别，已匿名化）",
+                        "会话持续时间和交互时间戳"
+                    ]
+                },
+                {
+                    "title": "使用的 Cookie",
+                    "list": [
+                        {
+                            "title": "功能性 Cookie：",
+                            "desc": "语言选择、主题偏好"
+                        },
+                        {
+                            "title": "分析性 Cookie：",
+                            "desc": "用于网站性能分析的 Google Analytics 4 (GA4)"
+                        },
+                        {
+                            "title": "广告 Cookie：",
+                            "desc": "用于广告个性化的 Google AdSense"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "3. 第三方服务",
+            "services": [
+                {
+                    "name": "Google AdSense",
+                    "desc": "使用 Cookie 根据之前的访问情况投放广告。您可以访问 Google 广告设置来停用个性化广告。"
+                },
+                {
+                    "name": "Google Analytics 4",
+                    "desc": "我们使用 GA4 进行性能分析。数据匿名处理。您可以通过 Google Analytics 停用浏览器插件进行停用。"
+                },
+                {
+                    "name": "Vercel Analytics",
+                    "desc": "注重隐私的后端基础设施监控，以确保系统正常运行。"
+                }
+            ]
+        },
+        {
+            "title": "4. 您的权利与退出",
+            "list": [
+                {
+                    "label": "停用个性化广告：",
+                    "link": "https://www.google.com/settings/ads",
+                    "text": "Google 广告设置",
+                    "link2": "http://www.aboutads.info/choices/",
+                    "text2": "www.aboutads.info"
+                },
+                {
+                    "label": "GA4 停用：",
+                    "link": "https://tools.google.com/dlpage/gaoptout",
+                    "text": "Google Analytics 停用插件"
+                },
+                {
+                    "label": "阻止 Cookie：",
+                    "desc": "需要手动配置浏览器设置以拒绝所有 Cookie。"
+                }
+            ]
+        },
+        {
+            "title": "5. 政策更新",
+            "content": "我们可能会更新本隐私政策以反映技术或法律变更。继续使用本终端即表示接受最新政策。"
+        },
+        {
+            "title": "7. Cookie 和第三方广告",
+            "list": [
+                {
+                    "label": "Google AdSense：",
+                    "desc": "作为第三方供应商，Google 使用 Cookie 根据您之前访问本网站及其他网站的情况，在 OmniMetric 上投放广告。"
+                },
+                {
+                    "label": "个性化广告：",
+                    "desc": "用户可访问 Google Ads Settings 或 www.aboutads.info 选择退出个性化广告。",
+                    "link": "https://www.google.com/settings/ads",
+                    "text": "Google 广告设置",
+                    "link2": "http://www.aboutads.info/choices/",
+                    "text2": "www.aboutads.info"
+                },
+                {
+                    "label": "Google Analytics：",
+                    "desc": "我们使用 Google Analytics 4 匿名分析网站流量。您可通过 Google Analytics 退出浏览器插件选择退出。",
+                    "link": "https://tools.google.com/dlpage/gaoptout",
+                    "text": "Google Analytics 退出浏览器插件"
+                }
+            ]
+        },
+        {
+            "title": "8. 数据匿名性",
+            "content": "OmniMetric 是 100% 自主系统。我们不收集、存储或分享任何个人可识别信息（PII），如姓名、电子邮件或电话号码。"
+        },
+        {
+            "title": "9. Cookie 同意",
+            "content": "使用本服务即表示您同意上述 Cookie 使用说明。您可随时通过浏览器设置管理或阻止 Cookie。"
+        }
+    ],
+    "contact": {
+        "title": "10. 联系与法律查询",
+        "text": "所有法律查询必须仅通过 DM 发送到 X (Twitter) @OmniMetric_GMS。不监控其他支持渠道。"
+    },
+    "legalFramework": "隐私框架：符合 AdSense 和 GA4 标准 // Zero PII 架构"
+}

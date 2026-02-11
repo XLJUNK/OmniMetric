@@ -1,24 +1,29 @@
 {
     "title": "Privacy Policy",
-    "lastUpdated": "January 12, 2026",
+    "lastUpdated": "February 11, 2026",
     "adsensePolicy": {
         "title": "🔔 Google AdSense & Cookie Policy",
-        "content": "OmniMetric uses Google AdSense, a third-party advertising service managed by Google LLC.",
+        "content": "Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to this website or other websites. Google's use of advertising cookies enables it and its partners to serve ads based on their visit to this site and/or other sites on the Internet.",
         "cookie_notice": "Google uses advertising cookies (DoubleClick DART Cookie) to enable the display of appropriate ads to users.",
         "opt_out": "You can opt out of personalized advertising by visiting:",
         "more_info": "For more information on how Google uses data when you use partner sites, visit:"
     },
     "sections": [
         {
-            "title": "1. Data We Collect",
+            "title": "1. Zero PII Policy (Personal Information)",
+            "content": "OmniMetric project operates on a Zero PII (Personally Identifiable Information) architecture. We do NOT collect, store, or manage names, email addresses, phone numbers, or any other personal identifiers. This is an autonomous algorithmic system designed for technical demonstration.",
+            "note": "We have no database for user accounts or mailing lists."
+        },
+        {
+            "title": "2. Data We Collect (Non-PII)",
             "subsections": [
                 {
                     "title": "Automatically Collected Information",
                     "list": [
                         "Page views and navigation patterns",
-                        "Language preferences (EN/JP/CN/ES/HI/ID/AR)",
+                        "Language preferences (EN/JP/CN/ES/HI/ID/AR/DE/FR)",
                         "Device type and browser information",
-                        "Geographic location (country/city level, anonymized)",
+                        "Geographic location (country level, anonymized)",
                         "Session duration and interaction timestamps"
                     ]
                 },
@@ -27,7 +32,7 @@
                     "list": [
                         {
                             "title": "Functional Cookies:",
-                            "desc": "Language selection, consent preferences"
+                            "desc": "Language selection, theme preferences"
                         },
                         {
                             "title": "Analytics Cookies:",
@@ -39,32 +44,27 @@
                         }
                     ]
                 }
-            ],
-            "footer": "This site is personally operated and has NO infrastructure to collect, store, or manage Personally Identifiable Information (PII) such as email addresses, real names, or payment details."
+            ]
         },
         {
-            "title": "2. Third-Party Services",
+            "title": "3. Third-Party Services",
             "services": [
                 {
                     "name": "Google AdSense",
-                    "desc": "Third-party vendors, including Google, use cookies to serve ads based on your prior visits to OmniMetric and other websites. Other third-party vendors or ad networks may also use cookies to serve ads on OmniMetric."
+                    "desc": "Uses cookies to serve ads based on prior visits. You may opt out of personalized advertising by visiting Google Ads Settings."
                 },
                 {
-                    "name": "Google Analytics",
-                    "desc": "We use Google Analytics 4 to understand user behavior, measure site performance, and improve our services. No personal data is shared with third parties beyond Google's analytics services."
+                    "name": "Google Analytics 4",
+                    "desc": "We use GA4 for performance analysis. Data is processed anonymously. You may opt out via the Google Analytics Opt-out Browser Add-on."
                 },
                 {
                     "name": "Vercel Analytics",
-                    "desc": "Privacy-focused analytics provided by our hosting platform to monitor uptime and performance metrics."
+                    "desc": "Privacy-focused infrastructure monitoring to ensure system uptime."
                 }
             ]
         },
         {
-            "title": "3. Data Security",
-            "content": "All data transmitted between your browser and our servers is encrypted using HTTPS/TLS. We do not store sensitive financial data or payment information on our servers."
-        },
-        {
-            "title": "4. Your Rights",
+            "title": "4. Your Rights & Opt-Out",
             "list": [
                 {
                     "label": "Opt-out of personalized ads:",
@@ -74,23 +74,55 @@
                     "text2": "www.aboutads.info"
                 },
                 {
-                    "label": "Block cookies:",
-                    "desc": "Configure your browser settings to reject cookies"
+                    "label": "GA4 Opt-out:",
+                    "link": "https://tools.google.com/dlpage/gaoptout",
+                    "text": "Google Analytics Opt-out Add-on"
                 },
                 {
-                    "label": "Do Not Track:",
-                    "desc": "We respect browser DNT signals where applicable"
+                    "label": "Block cookies:",
+                    "desc": "Manual browser configuration required to reject all cookies."
                 }
             ]
         },
         {
-            "title": "5. Changes to This Policy",
-            "content": "We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated \"Last Updated\" date. Continued use of OmniMetric constitutes acceptance of any changes."
+            "title": "5. Policy Updates",
+            "content": "We may update this Privacy Policy to reflect technical or legal changes. Continued use of the terminal constitutes acceptance of the latest policy."
+        },
+        {
+            "title": "7. Cookies & Third-Party Advertising",
+            "list": [
+                {
+                    "label": "Google AdSense:",
+                    "desc": "As a third-party vendor, Google uses cookies to serve ads on OmniMetric based on your prior visits to this and other websites."
+                },
+                {
+                    "label": "Personalized Advertising:",
+                    "desc": "Users may opt out of personalized advertising by visiting Google Ads Settings or www.aboutads.info.",
+                    "link": "https://www.google.com/settings/ads",
+                    "text": "Google Ads Settings",
+                    "link2": "http://www.aboutads.info/choices/",
+                    "text2": "www.aboutads.info"
+                },
+                {
+                    "label": "Google Analytics:",
+                    "desc": "We use Google Analytics 4 to analyze site traffic anonymously. You can opt out via the Google Analytics Opt-out Browser Add-on.",
+                    "link": "https://tools.google.com/dlpage/gaoptout",
+                    "text": "Google Analytics Opt-out Add-on"
+                }
+            ]
+        },
+        {
+            "title": "8. Data Anonymity",
+            "content": "OmniMetric is a 100% autonomous system. We do NOT collect, store, or share Personally Identifiable Information (PII) such as names, emails, or phone numbers."
+        },
+        {
+            "title": "9. Cookie Consent",
+            "content": "By using this Service, you consent to the use of cookies as described above. You can manage or block cookies through your browser settings at any time."
         }
     ],
     "contact": {
-        "title": "6. Contact",
-        "text": "For privacy-related inquiries, contact us via Direct Message on X (Twitter):"
+        "title": "10. Contact & Legal Inquiries",
+        "text": "All legal inquiries must be directed to X (Twitter) @OmniMetric_GMS via DM only. No other support channels are monitored."
     },
-    "legalFramework": "Privacy Framework: GDPR-Compliant // Cookie Consent v2.0"
+    "legalFramework": "Privacy Framework: AdSense & GA4 Compliant // Zero PII Architecture"
 }

@@ -1,0 +1,128 @@
+{
+    "title": "Política de Privacidad",
+    "lastUpdated": "11 de febrero de 2026",
+    "adsensePolicy": {
+        "title": "🔔 Política de Google AdSense y Cookies",
+        "content": "Los proveedores externos, incluido Google, utilizan cookies para mostrar anuncios basados en las visitas previas de un usuario a este sitio web o a otros sitios web. El uso de cookies publicitarias por parte de Google les permite a él y a sus socios mostrar anuncios basados en las visitas a este sitio y/u otros sitios en Internet.",
+        "cookie_notice": "Google utiliza cookies publicitarias (como la cookie de DoubleClick DART) para permitir la visualización de anuncios adecuados a los usuarios.",
+        "opt_out": "Los usuarios pueden inhabilitar la publicidad personalizada visitando la Configuración de anuncios de Google:",
+        "more_info": "Para obtener más información sobre cómo utiliza Google los datos cuando utilizas sitios web asociados, visita:"
+    },
+    "sections": [
+        {
+            "title": "1. Política Zero PII (Información Personal)",
+            "content": "El proyecto OmniMetric opera en una arquitectura Zero PII (Personally Identifiable Information). No recopilamos, almacenamos ni gestionamos NINGÚN nombre, dirección de correo electrónico, número de teléfono ni ningún otro identificador personal. Este es un sistema algorítmico autónomo diseñado para demostración técnica.",
+            "note": "No tenemos bases de datos para cuentas de usuario o listas de correo."
+        },
+        {
+            "title": "2. Datos que recopilamos (Datos No-PII)",
+            "subsections": [
+                {
+                    "title": "Información recopilada automáticamente",
+                    "list": [
+                        "Páginas vistas y patrones de navegación",
+                        "Preferencias de idioma (EN/JP/CN/ES/HI/ID/AR/DE/FR)",
+                        "Tipo de dispositivo e información del navegador",
+                        "Ubicación geográfica (nivel país, anonimizada)",
+                        "Duración de la sesión y marcas de tiempo de interacción"
+                    ]
+                },
+                {
+                    "title": "Cookies utilizadas",
+                    "list": [
+                        {
+                            "title": "Cookies funcionales:",
+                            "desc": "Selección de idioma, preferencias de tema"
+                        },
+                        {
+                            "title": "Cookies de análisis:",
+                            "desc": "Google Analytics 4 (GA4) para el rendimiento del sitio"
+                        },
+                        {
+                            "title": "Cookies de publicidad:",
+                            "desc": "Google AdSense para la personalización de anuncios"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "3. Servicios de terceros",
+            "services": [
+                {
+                    "name": "Google AdSense",
+                    "desc": "Utiliza cookies para mostrar anuncios basados en visitas anteriores. Puede inhabilitar la publicidad personalizada en la Configuración de anuncios de Google."
+                },
+                {
+                    "name": "Google Analytics 4",
+                    "desc": "Utilizamos GA4 para el análisis del rendimiento. Los datos se procesan de forma anónima. Puede inhabilitarla a través del complemento de inhabilitación de Google Analytics."
+                },
+                {
+                    "name": "Vercel Analytics",
+                    "desc": "Monitoreo de infraestructura centrado en la privacidad para garantizar el tiempo de actividad del sistema."
+                }
+            ]
+        },
+        {
+            "title": "4. Sus derechos y exclusión",
+            "list": [
+                {
+                    "label": "Inhabilitar anuncios personalizados:",
+                    "link": "https://www.google.com/settings/ads",
+                    "text": "Configuración de anuncios de Google",
+                    "link2": "http://www.aboutads.info/choices/",
+                    "text2": "www.aboutads.info"
+                },
+                {
+                    "label": "Inhabilitar GA4:",
+                    "link": "https://tools.google.com/dlpage/gaoptout",
+                    "text": "Complemento de inhabilitación de Google Analytics"
+                },
+                {
+                    "label": "Bloquear cookies:",
+                    "desc": "Se requiere configuración manual del navegador para rechazar todas las cookies."
+                }
+            ]
+        },
+        {
+            "title": "5. Actualizaciones de la política",
+            "content": "Podemos actualizar esta Política de Privacidad para reflejar cambios técnicos o legales. El uso continuado de la terminal constituye la aceptación de la política más reciente."
+        },
+        {
+            "title": "7. Cookies y publicidad de terceros",
+            "list": [
+                {
+                    "label": "Google AdSense:",
+                    "desc": "Como proveedor de terceros, Google utiliza cookies para mostrar anuncios en OmniMetric basados en sus visitas previas a este y otros sitios web."
+                },
+                {
+                    "label": "Publicidad personalizada:",
+                    "desc": "Los usuarios pueden optar por no recibir publicidad personalizada visitando Google Ads Settings o www.aboutads.info.",
+                    "link": "https://www.google.com/settings/ads",
+                    "text": "Google Ads Settings",
+                    "link2": "http://www.aboutads.info/choices/",
+                    "text2": "www.aboutads.info"
+                },
+                {
+                    "label": "Google Analytics:",
+                    "desc": "Utilizamos Google Analytics 4 para analizar el tráfico del sitio de forma anónima. Puede optar por no participar mediante la extensión del navegador Opt-out de Google Analytics.",
+                    "link": "https://tools.google.com/dlpage/gaoptout",
+                    "text": "Complemento de inhabilitación para navegadores de Google Analytics"
+                }
+            ]
+        },
+        {
+            "title": "8. Anonimato de datos",
+            "content": "OmniMetric es un sistema 100 % autónomo. No recopilamos, almacenamos ni compartimos información personalmente identificable (PII) como nombres, correos electrónicos o números de teléfono."
+        },
+        {
+            "title": "9. Consentimiento de cookies",
+            "content": "Al usar este servicio, usted consiente el uso de cookies como se describe arriba. Puede gestionar o bloquear las cookies a través de la configuración de su navegador en cualquier momento."
+        }
+    ],
+    "contact": {
+        "title": "10. Contacto y consultas legales",
+        "text": "Todas las consultas legales deben dirigirse exclusivamente a X (Twitter) @OmniMetric_GMS solo por mensaje directo. No se monitorean otros canales de soporte."
+    },
+    "legalFramework": "Marco de privacidad: cumple con AdSense y GA4 // Arquitectura Zero PII"
+}
