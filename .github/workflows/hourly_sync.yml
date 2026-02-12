@@ -38,6 +38,7 @@ jobs:
           pip install "setuptools<70" wheel
           pip install "numpy<2.0" "pandas<3.0.0" numba --only-binary=:all:
           pip install -r backend/requirements.txt
+          pip install --no-deps pandas-ta
       - name: Install Node dependencies
         working-directory: ./frontend
         run: npm ci
