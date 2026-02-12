@@ -53,13 +53,22 @@ jobs:
             python backend/sns_publisher.py
           fi
           
+          # Check for beacon alerts
+          if [ -f backend/beacon_alerts.json ]; then
+            echo "[SNS] Beacon alerts detected. Publishing..."
+            python backend/sns_publisher.py --beacon-alert
+            rm backend/beacon_alerts.json
+          else
+            echo "[SNS] No beacon alerts to publish."
+          fi
+          
       - name: Commit State Changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
           # Only commit interaction logs/state
-          git add backend/sns_last_post.json backend/sns_status.json
+          git add backend/sns_last_post.json backend/sns_status.json backend/beacon_alert_history.json
           git commit -m "SNS State Update [skip ci]" || echo "No changes to commit"
           
           git pull --rebase origin main || echo "Already up to date"

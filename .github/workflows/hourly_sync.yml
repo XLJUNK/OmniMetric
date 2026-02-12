@@ -78,13 +78,14 @@ jobs:
           # Run Technical Analysis (Chart Data)
           python backend/tech_analysis.py
           
+          # Update OGV Beacons (Hourly for real-time monitoring)
+          python backend/update_ogv_beacons.py
+          
           # FORCE NEWS UPDATE (Fix for empty translations)
           # [DISABLED] Redundant: gms_engine.py already calls fetch_news (Double Billing Fix)
           # python backend/fetch_news.py
           
-          # NOTE: OGV update moved to daily_maintenance.yml
-          
-          git add backend/current_signal.json backend/history.json frontend/public/data/market_data.json frontend/public/data/market_analysis.json
+          git add backend/current_signal.json backend/history.json backend/beacon_alerts.json frontend/public/data/market_data.json frontend/public/data/market_analysis.json
           git commit -m "Auto-update hourly signal [bot]" || echo "No changes to commit"
           
           git pull --rebase origin main || echo "Already up to date"

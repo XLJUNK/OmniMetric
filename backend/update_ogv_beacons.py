@@ -167,6 +167,42 @@ def calculate_ogv(df):
         
     return trails, satellites
 
+def check_alert_conditions(current_beacons, previous_beacons):
+    """
+    Detect status changes to danger/warning for alerting.
+    
+    Args:
+        current_beacons: Current beacon data
+        previous_beacons: Previous beacon data
+    
+    Returns:
+        list: Alerts that need to be published
+    """
+    alerts = []
+    
+    if not previous_beacons:
+        return alerts
+    
+    for beacon_name in ["recession", "panic", "credit"]:
+        current = current_beacons.get(beacon_name, {})
+        previous = previous_beacons.get(beacon_name, {})
+        
+        current_status = current.get("status", "safe")
+        previous_status = previous.get("status", "safe")
+        
+        # Alert only when status worsens
+        if current_status in ["danger", "warning"] and current_status != previous_status:
+            alerts.append({
+                "beacon": beacon_name,
+                "status": current_status,
+                "value": current.get("value"),
+                "display": current.get("display"),
+                "name": current.get("name")
+            })
+    
+    return alerts
+
+
 def main():
     print(f"=== OGV MOVING FORTRESS UPDATE [{datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')}] ===")
     
@@ -190,9 +226,56 @@ def main():
     beacons = calculate_beacons(df)
     trails, satellites = calculate_ogv(df)
     
-    # 3. Merge Updates
-    current_data["last_updated"] = datetime.now(timezone.utc).isoformat()
+    # 3. Historical Data Tracking (30 days)
+    timestamp = datetime.now(timezone.utc).isoformat()
+    
+    # Load existing history
+    beacons_history = current_data.get("beacons_history", [])
+    
+    # Add new entry
+    history_entry = {
+        "timestamp": timestamp,
+        "recession": {
+            "value": beacons["recession"]["value"],
+            "status": beacons["recession"]["status"]
+        },
+        "panic": {
+            "value": beacons["panic"]["value"],
+            "status": beacons["panic"]["status"]
+        },
+        "credit": {
+            "value": beacons["credit"]["value"],
+            "status": beacons["credit"]["status"]
+        }
+    }
+    beacons_history.append(history_entry)
+    
+    # Prune to 30 days (720 hours max)
+    if len(beacons_history) > 720:
+        beacons_history = beacons_history[-720:]
+    
+    # 4. Alert Detection
+    previous_beacons = current_data.get("beacons", {})
+    alerts = check_alert_conditions(beacons, previous_beacons)
+    
+    if alerts:
+        # Save alerts for SNS publisher
+        alert_file = os.path.join(os.path.dirname(__file__), "beacon_alerts.json")
+        alert_data = {
+            "timestamp": timestamp,
+            "alerts": alerts
+        }
+        try:
+            with open(alert_file, 'w', encoding='utf-8') as f:
+                json.dump(alert_data, f, indent=4, ensure_ascii=False)
+            print(f"[ALERT] Generated {len(alerts)} beacon alerts: {alert_file}")
+        except Exception as e:
+            print(f"[ERROR] Failed to save alerts: {e}")
+    
+    # 5. Merge Updates
+    current_data["last_updated"] = timestamp
     current_data["beacons"] = beacons
+    current_data["beacons_history"] = beacons_history
     current_data["ogv"] = {
         "trails": trails,
         "current_satellites": satellites,
@@ -203,11 +286,12 @@ def main():
     # Ensure frontend directories exist
     os.makedirs(os.path.dirname(MARKET_DATA_FILE), exist_ok=True)
     
-    # 4. Save
+    # 6. Save
     with open(MARKET_DATA_FILE, 'w', encoding='utf-8') as f:
         json.dump(current_data, f, indent=4, ensure_ascii=False)
         
     print(f"[SUCCESS] {MARKET_DATA_FILE} updated. Preserved existing keys: {list(current_data.keys())}")
+    print(f"[INFO] Beacons history: {len(beacons_history)} entries (~{len(beacons_history)/24:.1f} days)")
 
 if __name__ == "__main__":
     main()

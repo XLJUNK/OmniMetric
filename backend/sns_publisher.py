@@ -335,26 +335,116 @@ class SNSPublisher:
             self._log(f"Twitter Error: {e}", is_error=True, platform="TWITTER")
             return False
 
+    def publish_beacon_alert(self, alert_data):
+        """
+        Publish beacon alerts to BlueSky.
+        
+        Args:
+            alert_data: {"timestamp": "...", "alerts": [...]}
+        """
+        alerts = alert_data.get("alerts", [])
+        if not alerts:
+            self._log("No alerts to publish.", platform="BEACON")
+            return {"status": "skipped", "reason": "no_alerts"}
+        
+        # Load alert history to prevent spam
+        history_file = os.path.join(os.path.dirname(__file__), "beacon_alert_history.json")
+        alert_history = []
+        if os.path.exists(history_file):
+            try:
+                with open(history_file, 'r', encoding='utf-8') as f:
+                    alert_history = json.load(f)
+            except:
+                alert_history = []
+        
+        # Check rate limits
+        now = datetime.now(timezone.utc)
+        recent_alerts = [a for a in alert_history if (now - datetime.fromisoformat(a["timestamp"])).total_seconds() < 86400]  # 24 hours
+        
+        published_count = 0
+        for alert in alerts:
+            beacon_name = alert["beacon"]
+            status = alert["status"]
+            
+            # Check if this beacon was already alerted in the last 24 hours
+            if any(a["beacon"] == beacon_name and a["status"] == status for a in recent_alerts):
+                self._log(f"Skipping {beacon_name} alert (already sent in last 24h)", platform="BEACON")
+                continue
+            
+            # Generate multi-language posts
+            display_value = alert["display"]
+            full_name = alert["name"]
+            
+            # Emoji mapping
+            emoji = "🚨" if status == "danger" else "⚠️"
+            
+            posts = {
+                "EN": f"{emoji} OmniWarning Alert\n\n{full_name}\nStatus: {status.upper()}\nValue: {display_value}\n\nMonitor: omnimetric.net\n\n#OmniMetric #MarketAlert",
+                "JP": f"{emoji} 警告シグナル\n\n{full_name}\nステータス: {status}\n値: {display_value}\n\n詳細: omnimetric.net\n\n#OmniMetric #市場警告",
+                "DE": f"{emoji} Marktwarnung\n\n{full_name}\nStatus: {status}\nWert: {display_value}\n\nDetails: omnimetric.net\n\n#OmniMetric #Marktwarnung"
+            }
+            
+            # Publish to BlueSky (priority languages only)
+            for lang in ["EN", "JP", "DE"]:
+                try:
+                    success = self.sequencer.publish(posts[lang], lang=lang)
+                    if success:
+                        self._log(f"Published {beacon_name} {status} alert ({lang})", platform="BEACON")
+                        published_count += 1
+                except Exception as e:
+                    self._log(f"Failed to publish {beacon_name} alert ({lang}): {e}", is_error=True, platform="BEACON")
+            
+            # Record in history
+            alert_history.append({
+                "timestamp": now.isoformat(),
+                "beacon": beacon_name,
+                "status": status,
+                "value": alert["value"]
+            })
+        
+        # Save updated history
+        try:
+            with open(history_file, 'w', encoding='utf-8') as f:
+                json.dump(alert_history[-100:], f, indent=4)  # Keep last 100 alerts
+        except Exception as e:
+            self._log(f"Failed to save alert history: {e}", is_error=True, platform="BEACON")
+        
+        return {"status": "success", "published": published_count}
+
 # CLI entry point
 if __name__ == "__main__":
     import sys
     
     # Define DATA_FILE locally to avoid importing gms_engine (which imports tech_analysis -> pandas-ta)
     DATA_FILE = os.path.join(os.path.dirname(__file__), "current_signal.json")
+    ALERT_FILE = os.path.join(os.path.dirname(__file__), "beacon_alerts.json")
     
     def log_diag(msg):
         """Simple logging function"""
         print(f"[SNS] {msg}")
     
-    with open(DATA_FILE, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-    
     pub = SNSPublisher(log_callback=log_diag)
     print("\n--- SNS PUBLISHER EXECUTION ---")
     
-    force_mode = "--force" in sys.argv
-    if force_mode:
-        print("[CLI] Force Mode Enabled: Bypassing Schedule Check.")
-    
-    res = pub.publish_update(data, force_override=force_mode)
-    print(res)
+    # Check for beacon alert mode
+    if "--beacon-alert" in sys.argv:
+        print("[CLI] Beacon Alert Mode")
+        if os.path.exists(ALERT_FILE):
+            with open(ALERT_FILE, 'r', encoding='utf-8') as f:
+                alert_data = json.load(f)
+            result = pub.publish_beacon_alert(alert_data)
+            print(f"Result: {result}")
+        else:
+            print("[CLI] No beacon alerts file found.")
+    else:
+        # Normal GMS update mode
+        with open(DATA_FILE, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        
+        force_mode = "--force" in sys.argv
+        if force_mode:
+            print("[CLI] Force Mode Enabled: Bypassing Schedule Check.")
+        
+        res = pub.publish_update(data, force_override=force_mode)
+        print(res)
+
