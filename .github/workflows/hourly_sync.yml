@@ -85,7 +85,11 @@ jobs:
           # [DISABLED] Redundant: gms_engine.py already calls fetch_news (Double Billing Fix)
           # python backend/fetch_news.py
           
-          git add backend/current_signal.json backend/history.json backend/beacon_alerts.json frontend/public/data/market_data.json frontend/public/data/market_analysis.json
+          git add backend/current_signal.json backend/history.json frontend/public/data/market_data.json frontend/public/data/market_analysis.json
+          # Add beacon_alerts.json only if it exists (generated when alerts are triggered)
+          if [ -f backend/beacon_alerts.json ]; then
+            git add backend/beacon_alerts.json
+          fi
           git commit -m "Auto-update hourly signal [bot]" || echo "No changes to commit"
           
           git pull --rebase origin main || echo "Already up to date"
