@@ -1013,7 +1013,7 @@ def fetch_market_data():
     return all_data, status, real_events
 
 def calculate_sector_score(sector_name, data):
-    """Calculates 0-100 score for a specific sector."""
+    """Calculates 0-100 score for a specific sector with trend consideration."""
     config = SECTORS.get(sector_name)
     if not config: return 50
     
@@ -1025,30 +1025,68 @@ def calculate_sector_score(sector_name, data):
         item = data[key]
         price = item["price"]
         change = item["change_percent"]
+        sparkline = item.get("sparkline", [])
         
-        # Normalized scoring logic (Simplified for robustness)
-        # Normal: Higher Price = Higher Score (Risk On / Good)
-        
-        impact = 0
+        # Daily impact (60% weight)
+        daily_impact = 0
         if key in config["invert"]:
-             # E.g., VIX: 20 is neutral. >20 bad (-), <20 good (+)
-             # Baseline 20. +1 point for every 0.5 below 20?
-             # Simple approach: Change based
-             if change > 0: impact = -5 # Rising fear
-             else: impact = 5
+             if change > 0: daily_impact = -5  # Rising fear
+             else: daily_impact = 5
         else:
-             if change > 0: impact = 5 # Rising asset
-             else: impact = -5
-             
-        score += impact * (weight * 5) # Scale factor
+             if change > 0: daily_impact = 5  # Rising asset
+             else: daily_impact = -5
+        
+        # Trend impact (40% weight) - 30-day moving average
+        trend_impact = 0
+        if len(sparkline) >= 30:
+            ma_30 = sum(sparkline[-30:]) / 30
+            current = sparkline[-1]
+            trend_pct = ((current - ma_30) / ma_30) * 100 if ma_30 != 0 else 0
+            
+            if key in config["invert"]:
+                trend_impact = -trend_pct * 0.5  # Invert for fear indices
+            else:
+                trend_impact = trend_pct * 0.5
+        
+        # Combined impact: 60% daily + 40% trend
+        combined_impact = (daily_impact * 0.6) + (trend_impact * 0.4)
+        score += combined_impact * (weight * 5)
         total_weight += weight
 
     return int(max(0, min(100, score)))
 
-def calculate_total_gms(data, sector_scores):
-    """Calculates Final Global Macro Signal (0-100)."""
+def calculate_liquidity_thresholds(history_data):
+    """Calculate dynamic Net Liquidity thresholds from historical data."""
+    if not history_data or len(history_data) < 30:
+        # Fallback to fixed values
+        return 6400, 6000
+    
+    # Extract Net Liquidity values from history
+    values = []
+    for entry in history_data:
+        market_data = entry.get("market_data", {})
+        net_liq = market_data.get("NET_LIQUIDITY", {}).get("price")
+        if net_liq is not None:
+            values.append(net_liq)
+    
+    if len(values) < 30:
+        return 6400, 6000
+    
+    # Use 75th and 25th percentiles
+    values_sorted = sorted(values)
+    high_idx = int(len(values_sorted) * 0.75)
+    low_idx = int(len(values_sorted) * 0.25)
+    
+    high_threshold = values_sorted[high_idx]
+    low_threshold = values_sorted[low_idx]
+    
+    return high_threshold, low_threshold
+
+
+def calculate_total_gms(data, sector_scores, history_data=None):
+    """Calculates Final Global Macro Signal (0-100) with improved weighting."""
     log_diag(f"[OUT] SECTOR_SCORES: {json.dumps(sector_scores)}")
-    # Base: Legacy Logic + Component Average
+    
     # Legacy Logic (VIX, HY, etc)
     legacy_score = 50
     vix = data.get("VIX", {}).get("price", 20)
@@ -1059,20 +1097,30 @@ def calculate_total_gms(data, sector_scores):
     
     legacy_score = max(0, min(100, legacy_score))
     
-    # Weighted Sector Influence
-    # Stocks 40%, Crypto 10%, Forex 20%, Cmdty 10%, Legacy 20%
-    final = (legacy_score * 0.3) + \
+    # Rebalanced Sector Weights (Total: 100%)
+    # Legacy: 25%, STOCKS: 25%, CRYPTO: 10%, FOREX: 10%, COMMODITIES: 10%
+    # CREDIT: 8%, REAL_ESTATE: 7%, GLOBAL_INDICES: 5%
+    final = (legacy_score * 0.25) + \
             (sector_scores.get("STOCKS", 50) * 0.25) + \
-            (sector_scores.get("CRYPTO", 50) * 0.1) + \
-            (sector_scores.get("FOREX", 50) * 0.1) + \
-            (sector_scores.get("COMMODITIES", 50) * 0.1)
-            
-    # NET LIQUIDITY ADJUSTMENT (The "GMSv2" Factor)
-    # If Net Liquidity > 6.5T -> Add Risk
-    # If Net Liquidity < 6.0T -> Reduce Risk
+            (sector_scores.get("CRYPTO", 50) * 0.10) + \
+            (sector_scores.get("FOREX", 50) * 0.10) + \
+            (sector_scores.get("COMMODITIES", 50) * 0.10) + \
+            (sector_scores.get("CREDIT", 50) * 0.08) + \
+            (sector_scores.get("REAL_ESTATE", 50) * 0.07) + \
+            (sector_scores.get("GLOBAL_INDICES", 50) * 0.05)
+    
+    # Dynamic Net Liquidity Adjustment
+    high_thresh, low_thresh = calculate_liquidity_thresholds(history_data)
     net_liq = data.get("NET_LIQUIDITY", {}).get("price", 6200)
-    if net_liq > 6400: final += 5
-    elif net_liq < 6000: final -= 10
+    
+    if net_liq > high_thresh: 
+        final += 5
+        log_diag(f"[GMS] Net Liquidity {net_liq}B > {high_thresh}B (high) -> +5")
+    elif net_liq < low_thresh: 
+        final -= 10
+        log_diag(f"[GMS] Net Liquidity {net_liq}B < {low_thresh}B (low) -> -10")
+    else:
+        log_diag(f"[GMS] Net Liquidity {net_liq}B in normal range [{low_thresh}B - {high_thresh}B]")
             
     return int(max(0, min(100, final)))
 
@@ -1732,8 +1780,17 @@ def update_signal(force_news=False):
             sector_scores[sector] = score
             log_diag(f"[OUT] CALC_SCORE: {{ sector: {sector}, score: {score} }}")
             
-        # Calculate GMS Score
-        score = calculate_total_gms(market_data, sector_scores) # Original line
+        # Calculate GMS Score with history for dynamic thresholds
+        history_data = None
+        try:
+            history_file = os.path.join(os.path.dirname(__file__), "history.json")
+            if os.path.exists(history_file):
+                with open(history_file, 'r', encoding='utf-8') as f:
+                    history_data = json.load(f)
+        except Exception as e:
+            log_diag(f"[WARN] Could not load history for dynamic thresholds: {e}")
+        
+        score = calculate_total_gms(market_data, sector_scores, history_data)
         
         # Validate range
         score = validate_range(score, "GMS_SCORE")
