@@ -10,93 +10,85 @@ class BlueskyPublisher:
         self.state_file = os.path.join(os.path.dirname(__file__), "sns_last_post.json")
         self.status_log_file = os.path.join(os.path.dirname(__file__), "sns_status.json")
 
-    def get_trend_text(self, data, lang):
-        """Returns localized trend direction text (e.g. 'Trend: UP', 'トレンド: 上昇')"""
-        # Simplistic extraction from STOCKS or VIX for "Trend" proxy if GMS trend not explicit
-        # Using simple Score direction or VIX trend
-        
-        # Localized Dictionaries
-        terms = {
-            "JP": {"UP": "上昇", "DOWN": "下落", "NEUTRAL": "中立", "RISK-ON": "リスク選好", "RISK-OFF": "リスク回避"},
-            "EN": {"UP": "UP", "DOWN": "DOWN", "NEUTRAL": "NEUTRAL", "RISK-ON": "RISK-ON", "RISK-OFF": "RISK-OFF"},
-            "CN": {"UP": "上升", "DOWN": "下跌", "NEUTRAL": "中性", "RISK-ON": "风险偏好", "RISK-OFF": "风险规避"},
-            "ES": {"UP": "ALZA", "DOWN": "BAJA", "NEUTRAL": "NEUTRAL", "RISK-ON": "APETITO", "RISK-OFF": "AVERSIÓN"},
-            "HI": {"UP": "ऊपर", "DOWN": "नीचे", "NEUTRAL": "तठस्थ", "RISK-ON": "जोखिम-पर", "RISK-OFF": "जोखिम-मना"},
-            "ID": {"UP": "NAIK", "DOWN": "TURUN", "NEUTRAL": "NETRAL", "RISK-ON": "RISK-ON", "RISK-OFF": "RISK-OFF"},
-            "AR": {"UP": "صعود", "DOWN": "هبوط", "NEUTRAL": "محايد", "RISK-ON": "مخاطرة", "RISK-OFF": "تجنب"},
-            "DE": {"UP": "TOP", "DOWN": "FLOP", "NEUTRAL": "NEUTRAL", "RISK-ON": "RISK-ON", "RISK-OFF": "RISK-OFF"},
-            "FR": {"UP": "HAUSSE", "DOWN": "BAISSE", "NEUTRAL": "NEUTRE", "RISK-ON": "RISK-ON", "RISK-OFF": "RISK-OFF"},
-        }
-        
-        score = data.get("gms_score", 50)
-        regime = "NEUTRAL"
-        if score > 60: regime = "RISK-ON"
-        elif score < 40: regime = "RISK-OFF"
-        
-        t = terms.get(lang, terms["EN"])
-        return t.get(regime, regime)
-
     def format_post(self, data, lang="EN"):
         """
-        Generates professional posts respecting the user requirement:
-        【GMS Score: XX/100】 [Trend] + [AI Insight (2 sentences)] + Tags
+        Generates institutional-grade posts with marketing copy.
+        Includes GMS score, key indicators (DXY, HY spread, 10Y-3M), AI insight.
+        Strict 300 character limit.
         """
         score = data.get("gms_score", 50)
-        trend_text = self.get_trend_text(data, lang)
         
-        # Extract AI Insight
+        # Extract key institutional indicators
+        market_data = data.get("market_data", {})
+        dxy = market_data.get("DXY", {}).get("price", 0)
+        hy_spread = market_data.get("HY_SPREAD", {}).get("price", 0)
+        yield_spread = market_data.get("YIELD_SPREAD", {}).get("price", 0)  # 10Y-3M
+        
+        # Extract AI Insight (shortened to 1 sentence)
         analysis = data.get("analysis", {})
         reports = analysis.get("reports", {})
         ai_insight = reports.get(lang, reports.get("EN", ""))
         
-        # Truncate to ~2 sentences / 100-120 chars max for readability
-        # Simple split by punctuation
+        # Get first sentence only
         delimiters = ["。", "！", "？", ".", "!", "?"]
-        sentences = []
-        current = ""
+        first_sentence = ""
         for char in ai_insight:
-            current += char
+            first_sentence += char
             if char in delimiters:
-                sentences.append(current)
-                current = ""
-        if current: sentences.append(current)
+                break
         
-        # Take first 2 sentences
-        short_summary = "".join(sentences[:2])
-        if len(short_summary) > 130: # Hard cap
-             short_summary = short_summary[:127] + "..."
-             
-        # Build Tags
-        tags = "#OmniMetric"
-        if lang == "JP": tags += " #株 #為替 #投資"
-        elif lang == "EN": tags += " #Macro #Finance #Investing"
-        elif lang == "CN": tags += " #美股 #宏观 #投资"
-        elif lang == "ES": tags += " #Bolsa #Finanzas #Macro"
-        elif lang == "ID": tags += " #Saham #Forex #Investasi"
-        elif lang == "HI": tags += " #बाजार #निवेश #वित्त"
-        elif lang == "AR": tags += " #استثمار #اقتصاد"
-        elif lang == "DE": tags += " #Börse #Finanzen #DAX"
-        elif lang == "FR": tags += " #Bourse #Finance #CAC40"
-
-        # Construct Post
-        # Format: 【GMS Score: XX/100】 [Trend] + [AI Insight] + Tags
-        header = f"【GMS Score: {score}/100】"
-        trend_section = f"[{trend_text}]"
+        # Localized marketing copy and formatting
+        if lang == "DE":
+            # German version
+            header = f"【GMS: {score}/100】"
+            promo = f"Kostenlose Institutionsanalyse: DXY {dxy:.2f}, HY {hy_spread:.2f}%, 10Y-3M {yield_spread:.2f}%"
+            tags = "#OmniMetric #Börse"
+            url = f"{self.site_url}/?lang=DE"
+            
+            # Build post (no AI insight for DE/FR to save space)
+            post = f"{header}\n\n{promo}\n\n{tags}\n{url}"
+            
+        elif lang == "FR":
+            # French version
+            header = f"【GMS: {score}/100】"
+            promo = f"Analyse institutionnelle gratuite: DXY {dxy:.2f}, HY {hy_spread:.2f}%, 10Y-3M {yield_spread:.2f}%"
+            tags = "#OmniMetric #Bourse"
+            url = f"{self.site_url}/?lang=FR"
+            
+            post = f"{header}\n\n{promo}\n\n{tags}\n{url}"
+            
+        else:  # EN (default for both UK and US)
+            header = f"【GMS: {score}/100】"
+            promo = f"Free institutional-grade macro: DXY {dxy:.2f}, HY {hy_spread:.2f}%, 10Y-3M {yield_spread:.2f}%"
+            tags = "#OmniMetric #Macro"
+            url = f"{self.site_url}/?lang=EN"
+            
+            # Truncate AI insight to fit
+            ai_text = first_sentence
+            if len(ai_text) > 60:
+                ai_text = ai_text[:57] + "..."
+            
+            post = f"{header}\n\n{promo}\n\nAI: {ai_text}\n\n{tags}\n{url}"
         
-        post_text = f"{header} {trend_section}\n\n{short_summary}\n\n{tags}"
+        # Final safety check for 300 character limit
+        if len(post) > 300:
+            # Calculate how much to trim
+            excess = len(post) - 297  # 297 to leave room for "..."
+            
+            if lang == "EN":
+                # For EN, trim the AI insight
+                ai_text = first_sentence
+                if len(ai_text) > excess + 3:
+                    ai_text = ai_text[:len(ai_text) - excess - 3] + "..."
+                else:
+                    ai_text = "..."
+                post = f"{header}\n\n{promo}\n\nAI: {ai_text}\n\n{tags}\n{url}"
+            else:
+                # For DE/FR, trim the promo text
+                promo_trimmed = promo[:len(promo) - excess - 3] + "..."
+                post = f"{header}\n\n{promo_trimmed}\n\n{tags}\n{url}"
         
-        # Add Link
-        # URL Logic: https://www.omnimetric.net/?lang=XX
-        base_url = self.site_url.replace("https://omnimetric.net", "https://www.omnimetric.net")
-        if not "www" in base_url: base_url = base_url.replace("https://", "https://www.")
-        
-        url_lang = lang.upper()
-        # Exception: "CN" usually maps to "ZH" or "CN" in query logic? Assuming "CN" based on user context, but let's check.
-        # Check backend/current_signal.json usage? "CN" is key.
-        
-        post_text += f"\n{base_url}/?lang={url_lang}"
-
-        return post_text
+        return post
 
     def _write_status(self, status, message=None):
         """Writes the latest attempt status to a JSON file."""
@@ -128,11 +120,6 @@ class BlueskyPublisher:
             self._write_status("FAILURE", message)
         elif "Success:" in message:
             self._write_status("SUCCESS", message)
-
-    def get_regime_name(self, score):
-        if score > 60: return "ACCUMULATE (Risk-On)"
-        if score < 40: return "DEFENSIVE (Risk-Off)"
-        return "NEUTRAL (Wait & See)"
 
     def should_skip(self, content, lang):
         """Checks if the exact content has already been posted for this language."""
@@ -215,7 +202,7 @@ class BlueskyPublisher:
             
             # Extract score just for log, though strictly we aren't using it for state anymore
             score = data.get("gms_score", 50)
-            self._log(f"Success: Posted GMS Score {score} ({lang}) to Bluesky.")
+            self._log(f"Success: Posted GMS Score {score} ({lang}) to Bluesky. Length: {len(text)} chars")
             
             if not reply_to: # Only update state for top-level posts
                 self.update_state(text, lang)
@@ -233,6 +220,10 @@ if __name__ == "__main__":
             data = json.load(f)
         pub = BlueskyPublisher()
         print("\n--- BLUESKY POST PREVIEW ---")
-        print(pub.format_post(data, lang="EN"))
+        for lang in ["DE", "FR", "EN"]:
+            post = pub.format_post(data, lang=lang)
+            print(f"\n{lang} ({len(post)} chars):")
+            print(post)
+            print("-" * 50)
     else:
         print("current_signal.json not found for testing.")

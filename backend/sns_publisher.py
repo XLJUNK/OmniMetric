@@ -180,8 +180,8 @@ class SNSPublisher:
         # SEQUENCER LOGIC (Golden Schedule + Stateful Catch-up)
         matches = []
         if force_override:
-            # Force all major languages sequence
-            matches = [("JP", 1, True), ("EN", 2, True), ("ES", 3, True), ("DE", 4, True), ("FR", 5, True)]
+            # Force only priority languages
+            matches = [("DE", 1, True), ("FR", 2, True), ("EN", 3, True)]
         else:
             # STRICT MODE: Use Time Window Catch-up
             # Look back 55 minutes (Cron runs every 60m or 30m, 55m window covers enough overlap without double posting)

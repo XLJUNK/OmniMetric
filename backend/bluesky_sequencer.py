@@ -2,127 +2,64 @@ from datetime import datetime, timedelta, timezone
 
 class BlueskySequencer:
     """
-    Manages the 'Golden Schedule' for BlueSky posts.
-    Handles 7-Language Dispersion and 2-Phase Logic based on JST.
+    Simplified scheduler for priority languages only.
+    Focuses on DE, FR, EN at fixed times.
     """
     
-    # Golden Schedule (JST)
-    # Format: "LANG": {"PH1": (Hour, Minute), "PH2": (Hour, Minute), "PH3": (Hour, Minute)}
-    # Times are JST (UTC+9)
-    SCHEDULE_WEEKDAY = {
-        "JP": [(7, 5), (10, 35), (14, 35)],  # Pre-open, Lunch, Close-1h (Adjusted to Cron 05/35)
-        # 14:00 is not x:05/35. Closest is 14:05 (Close-55m) or 13:35. User said "Close-1h".
-        # Close is 15:00. 14:00 is target. Cron runs 13:35, 14:05.
-        # Let's use 14:05 as "Close-1h approx".
-        
-        "EN": [(21, 35), (0, 5), (5, 5)], # US Pre-open, Mid-day, Close
-        "ZH": [(10, 35), (14, 5)],        # HK/CN Lunch, Close
-        "ID": [(10, 35), (16, 5)],        # Jakarta
-        "HI": [(12, 35), (16, 35)],       # Mumbai
-        "AR": [(16, 5), (19, 35)],        # Riyadh/Dubai
-        "DE": [(17, 35)],                 # Frankfurt Open (approx)
-        "FR": [(17, 5)],                  # Paris Open (approx)
-        "ES": [(17, 5), (23, 35)]         # Madrid/Latam
-    }
-
-    SCHEDULE_WEEKEND = {
-        "JP": [(9, 35)],      # Sat AM Recap
-        "EN": [(21, 5)],      # Sun Evening (US time) / Mon Morning JST
-        "ALL": [(20, 35)]     # Sun Night Global
+    # Simplified Schedule (JST = UTC+9)
+    # Format: "LANG": [(Hour_JST, Minute_JST)]
+    SCHEDULE = {
+        "DE": [(16, 0)],   # 16:00 JST = 07:00 UTC (European market open)
+        "FR": [(16, 0)],   # 16:00 JST = 07:00 UTC (European market open)
+        "EN": [(17, 0), (22, 0)]  # 17:00 JST = 08:00 UTC (UK), 22:00 JST = 13:00 UTC (US)
     }
 
     def get_jst_now(self):
         """Returns current JST time."""
         return datetime.now(timezone.utc) + timedelta(hours=9)
 
-    def is_weekend(self, jst_dt):
-        """Returns True if Saturday or Sunday (JST)."""
-        return jst_dt.weekday() >= 5
-
     def check_schedule(self):
         """
-        Checks if the current time matches any Golden Schedule slots.
+        Checks if the current time matches any schedule slots.
         Returns a list of tuples: (LANG, PHASE_ID, FORCE_FLAG)
         """
         now_jst = self.get_jst_now()
-        
-        # Virtual Day Logic: Treat 00:00-05:59 as "Previous Day" (for US Market continuity)
-        # Mon 00:05 is Sunday Night -> Weekend (Skip)
-        # Sat 00:05 is Friday Night -> Weekday (Post)
-        effective_dt = now_jst
-        if now_jst.hour < 6:
-            effective_dt = now_jst - timedelta(days=1)
-
-        is_we = self.is_weekend(effective_dt)
-        
         current_hour = now_jst.hour
         current_minute = now_jst.minute
         
         matches = []
         
-        # Tolerance window (since cron might be slightly delayed)
-        # Target: 05 and 35
-        # We check if we are within [Target, Target+10m]
-        
-        schedule = self.SCHEDULE_WEEKEND if is_we else self.SCHEDULE_WEEKDAY
-        
-        # Helper to check time match
+        # Helper to check time match (within 10 minute window)
         def is_time_match(h, m):
-            # Strict hour match
             if h != current_hour:
                 return False
-            # Loose minute match (0-9 min delay allowed)
+            # Allow 0-9 minute delay
             if m <= current_minute < m + 10:
                 return True
             return False
 
-        if is_we:
-             # Weekday Logic
-             for lang, slots in self.SCHEDULE_WEEKEND.items(): # Use self.
-
-                 for i, (h, m) in enumerate(slots):
-                     if is_time_match(h, m):
-                         if lang == "ALL":
-                             # Add all major langs
-                             for l in ["JP", "EN", "ZH", "ES", "DE", "FR"]:
-                                 matches.append((l, 99, True))
-                         else:
-                             matches.append((lang, i+1, True))
-        else:
-            # Weekday Logic
-            for lang, slots in self.SCHEDULE_WEEKDAY.items(): # Use self.
-                for i, (h, m) in enumerate(slots):
-                    if is_time_match(h, m):
-                        matches.append((lang, i+1, False))
+        for lang, slots in self.SCHEDULE.items():
+            for i, (h, m) in enumerate(slots):
+                if is_time_match(h, m):
+                    matches.append((lang, i+1, False))
         
         return matches
 
     def find_recent_slot(self, lookback_minutes=60):
         """
         Stateful Catch-up Logic:
-        Checks if there was a Golden Schedule slot within the last X minutes.
+        Checks if there was a schedule slot within the last X minutes.
         Returns a list of unique (LANG, PHASE, FORCE) tuples for the *latest* slot found.
         """
         now_jst = self.get_jst_now()
         start_jst = now_jst - timedelta(minutes=lookback_minutes)
         
-        # Determine valid day (handle 0-6am logic)
-        effective_dt = now_jst
-        if now_jst.hour < 6:
-            effective_dt = now_jst - timedelta(days=1)
-        is_we = self.is_weekend(effective_dt)
-        schedule = self.SCHEDULE_WEEKEND if is_we else self.SCHEDULE_WEEKDAY
-        
         found_matches = []
         
         # Iterate all defined slots
-        for lang, slots in schedule.items():
+        for lang, slots in self.SCHEDULE.items():
             for i, (h, m) in enumerate(slots):
-                # Create a specific datetime for this slot today
-                # Note: This simplistic approach works because we only care about "Today's" slots relative to Now.
-                # However, 0-6am slots belong to "Tomorrow" if we are late at night, or "Today" if early morning.
-                # To be robust: Check both "Today" and "Yesterday" candidate dates for the slot.
-                
+                # Create datetime for this slot (check today, yesterday, tomorrow)
                 candidates = [
                     now_jst.replace(hour=h, minute=m, second=0, microsecond=0),
                     now_jst.replace(hour=h, minute=m, second=0, microsecond=0) - timedelta(days=1),
@@ -132,13 +69,7 @@ class BlueskySequencer:
                 for slot_dt in candidates:
                     # Check if slot is within the window [Start < Slot <= Now]
                     if start_jst < slot_dt <= now_jst:
-                        # Found a recent slot!
-                        if lang == "ALL":
-                            for l in ["JP", "EN", "ZH", "ES", "DE", "FR"]:
-                                found_matches.append((l, 99, True))
-                        else:
-                            force = True if is_we else False # Weekend usually forces
-                            found_matches.append((lang, i+1, force))
+                        found_matches.append((lang, i+1, False))
                             
-        # Deduplication (If multiple slots hit, which shouldn't happen in 1h window usually, but good to be safe)
+        # Deduplication
         return list(set(found_matches))

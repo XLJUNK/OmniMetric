@@ -1,7 +1,7 @@
 name: GMS SNS Publisher
 on:
   schedule:
-    - cron: '10 * * * *' # Run at :10 (5 mins after Main Engine) to allow data sync
+    - cron: '0 7,8,13 * * *' # Run at 07:00, 08:00, 13:00 UTC for DE/FR/EN posts
   workflow_dispatch:
     inputs:
       force_post:
@@ -37,8 +37,8 @@ jobs:
           
       - name: Run SNS Publisher
         env:
-          BSKY_HANDLE: ${{ secrets.BSKY_HANDLE }}
-          BSKY_PASSWORD: ${{ secrets.BSKY_PASSWORD }}
+          BLUESKY_HANDLE: ${{ secrets.BSKY_HANDLE }}
+          BLUESKY_PASSWORD: ${{ secrets.BSKY_PASSWORD }}
           TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
           TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
           TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
