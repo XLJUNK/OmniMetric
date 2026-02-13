@@ -43,95 +43,121 @@ class BlueskyPublisher:
             header = f"【GMS: {score}/100】"
             promo = f"Kostenlose Institutionsanalyse: DXY {dxy:.2f}, HY {hy_spread:.2f}%, 10Y-3M {yield_spread:.2f}%"
             tags = "#OmniMetric #Börse"
-            url = f"{self.site_url}/?lang=DE"
+            url = f"{self.site_url}/de"
             
-            # Build post (no AI insight for DE/FR to save space)
-            post = f"{header}\n\n{promo}\n\n{tags}\n{url}"
+            # Truncate AI insight to fit
+            ai_text = first_sentence
+            if len(ai_text) > 50:
+                ai_text = ai_text[:47] + "..."
+            
+            cta = "Mehr auf der Website"
+            post = f"{header}\n\nAI: {ai_text}\n\n{promo}\n\n{cta} → {url}\n{tags}"
             
         elif lang == "FR":
             # French version
             header = f"【GMS: {score}/100】"
             promo = f"Analyse institutionnelle gratuite: DXY {dxy:.2f}, HY {hy_spread:.2f}%, 10Y-3M {yield_spread:.2f}%"
             tags = "#OmniMetric #Bourse"
-            url = f"{self.site_url}/?lang=FR"
+            url = f"{self.site_url}/fr"
             
-            post = f"{header}\n\n{promo}\n\n{tags}\n{url}"
+            # Truncate AI insight to fit
+            ai_text = first_sentence
+            if len(ai_text) > 50:
+                ai_text = ai_text[:47] + "..."
+            
+            cta = "Plus de détails sur le site"
+            post = f"{header}\n\nAI: {ai_text}\n\n{promo}\n\n{cta} → {url}\n{tags}"
             
         elif lang == "JA":
             # Japanese version
             header = f"【GMS: {score}/100】"
             promo = f"無料の機関投資家向けマクロ分析: DXY {dxy:.2f}, HY {hy_spread:.2f}%, 10Y-3M {yield_spread:.2f}%"
             tags = "#OmniMetric #マクロ経済"
-            url = f"{self.site_url}/?lang=JA"
+            url = f"{self.site_url}/ja"
             
             # Truncate AI insight to fit
             ai_text = first_sentence
-            if len(ai_text) > 60:
-                ai_text = ai_text[:57] + "..."
+            if len(ai_text) > 50:
+                ai_text = ai_text[:47] + "..."
             
-            post = f"{header}\n\nAI: {ai_text}\n\n{promo}\n\n{tags}\n{url}"
+            cta = "詳しくは本サイトで"
+            post = f"{header}\n\nAI: {ai_text}\n\n{promo}\n\n{cta} → {url}\n{tags}"
             
         elif lang == "ZH":
             # Chinese version
             header = f"【GMS: {score}/100】"
             promo = f"免费机构级宏观分析: DXY {dxy:.2f}, HY {hy_spread:.2f}%, 10Y-3M {yield_spread:.2f}%"
             tags = "#OmniMetric #宏观经济"
-            url = f"{self.site_url}/?lang=ZH"
+            url = f"{self.site_url}/zh"
             
             # Truncate AI insight to fit
             ai_text = first_sentence
-            if len(ai_text) > 60:
-                ai_text = ai_text[:57] + "..."
+            if len(ai_text) > 50:
+                ai_text = ai_text[:47] + "..."
             
-            post = f"{header}\n\nAI: {ai_text}\n\n{promo}\n\n{tags}\n{url}"
+            cta = "更多详情请访问网站"
+            post = f"{header}\n\nAI: {ai_text}\n\n{promo}\n\n{cta} → {url}\n{tags}"
             
         elif lang == "ES":
             # Spanish version
             header = f"【GMS: {score}/100】"
             promo = f"Análisis macro institucional gratuito: DXY {dxy:.2f}, HY {hy_spread:.2f}%, 10Y-3M {yield_spread:.2f}%"
             tags = "#OmniMetric #Bolsa"
-            url = f"{self.site_url}/?lang=ES"
+            url = f"{self.site_url}/es"
             
-            post = f"{header}\n\n{promo}\n\n{tags}\n{url}"
+            # Truncate AI insight to fit
+            ai_text = first_sentence
+            if len(ai_text) > 50:
+                ai_text = ai_text[:47] + "..."
+            
+            cta = "Más detalles en el sitio"
+            post = f"{header}\n\nAI: {ai_text}\n\n{promo}\n\n{cta} → {url}\n{tags}"
             
         else:  # EN (default for both UK and US)
             header = f"【GMS: {score}/100】"
             promo = f"Free institutional-grade macro: DXY {dxy:.2f}, HY {hy_spread:.2f}%, 10Y-3M {yield_spread:.2f}%"
             tags = "#OmniMetric #Macro"
-            url = f"{self.site_url}/?lang=EN"
+            url = f"{self.site_url}/en"
             
             # Truncate AI insight to fit
             ai_text = first_sentence
-            if len(ai_text) > 60:
-                ai_text = ai_text[:57] + "..."
+            if len(ai_text) > 50:
+                ai_text = ai_text[:47] + "..."
             
-            post = f"{header}\n\nAI: {ai_text}\n\n{promo}\n\n{tags}\n{url}"
+            cta = "Full analysis on site"
+            post = f"{header}\n\nAI: {ai_text}\n\n{promo}\n\n{cta} → {url}\n{tags}"
         
         # Final safety check for 300 character limit
         if len(post) > 300:
             # Calculate how much to trim
             excess = len(post) - 297  # 297 to leave room for "..."
             
-            if lang == "EN":
-                # For EN, trim the AI insight
-                ai_text = first_sentence
-                if len(ai_text) > excess + 3:
-                    ai_text = ai_text[:len(ai_text) - excess - 3] + "..."
-                else:
-                    ai_text = "..."
-                post = f"{header}\n\nAI: {ai_text}\n\n{promo}\n\n{tags}\n{url}"
-            elif lang in ["JA", "ZH"]:
-                # For JA/ZH, trim the AI insight
-                ai_text = first_sentence
-                if len(ai_text) > excess + 3:
-                    ai_text = ai_text[:len(ai_text) - excess - 3] + "..."
-                else:
-                    ai_text = "..."
-                post = f"{header}\n\nAI: {ai_text}\n\n{promo}\n\n{tags}\n{url}"
-            elif lang in ["DE", "FR", "ES"]:
-                # For DE/FR/ES, trim the promo text
-                promo_trimmed = promo[:len(promo) - excess - 3] + "..."
-                post = f"{header}\n\n{promo_trimmed}\n\n{tags}\n{url}"
+            # For all languages, trim the AI insight
+            ai_text = first_sentence
+            if len(ai_text) > excess + 3:
+                ai_text = ai_text[:len(ai_text) - excess - 3] + "..."
+            else:
+                ai_text = "..."
+            
+            # Rebuild post with trimmed AI
+            if lang == "DE":
+                cta = "Mehr auf der Website"
+                post = f"{header}\n\nAI: {ai_text}\n\n{promo}\n\n{cta} → {url}\n{tags}"
+            elif lang == "FR":
+                cta = "Plus de détails sur le site"
+                post = f"{header}\n\nAI: {ai_text}\n\n{promo}\n\n{cta} → {url}\n{tags}"
+            elif lang == "JA":
+                cta = "詳しくは本サイトで"
+                post = f"{header}\n\nAI: {ai_text}\n\n{promo}\n\n{cta} → {url}\n{tags}"
+            elif lang == "ZH":
+                cta = "更多详情请访问网站"
+                post = f"{header}\n\nAI: {ai_text}\n\n{promo}\n\n{cta} → {url}\n{tags}"
+            elif lang == "ES":
+                cta = "Más detalles en el sitio"
+                post = f"{header}\n\nAI: {ai_text}\n\n{promo}\n\n{cta} → {url}\n{tags}"
+            else:  # EN
+                cta = "Full analysis on site"
+                post = f"{header}\n\nAI: {ai_text}\n\n{promo}\n\n{cta} → {url}\n{tags}"
         
         return post
 
