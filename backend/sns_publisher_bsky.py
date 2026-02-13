@@ -57,6 +57,43 @@ class BlueskyPublisher:
             
             post = f"{header}\n\n{promo}\n\n{tags}\n{url}"
             
+        elif lang == "JA":
+            # Japanese version
+            header = f"【GMS: {score}/100】"
+            promo = f"無料の機関投資家向けマクロ分析: DXY {dxy:.2f}, HY {hy_spread:.2f}%, 10Y-3M {yield_spread:.2f}%"
+            tags = "#OmniMetric #マクロ経済"
+            url = f"{self.site_url}/?lang=JA"
+            
+            # Truncate AI insight to fit
+            ai_text = first_sentence
+            if len(ai_text) > 60:
+                ai_text = ai_text[:57] + "..."
+            
+            post = f"{header}\n\nAI: {ai_text}\n\n{promo}\n\n{tags}\n{url}"
+            
+        elif lang == "ZH":
+            # Chinese version
+            header = f"【GMS: {score}/100】"
+            promo = f"免费机构级宏观分析: DXY {dxy:.2f}, HY {hy_spread:.2f}%, 10Y-3M {yield_spread:.2f}%"
+            tags = "#OmniMetric #宏观经济"
+            url = f"{self.site_url}/?lang=ZH"
+            
+            # Truncate AI insight to fit
+            ai_text = first_sentence
+            if len(ai_text) > 60:
+                ai_text = ai_text[:57] + "..."
+            
+            post = f"{header}\n\nAI: {ai_text}\n\n{promo}\n\n{tags}\n{url}"
+            
+        elif lang == "ES":
+            # Spanish version
+            header = f"【GMS: {score}/100】"
+            promo = f"Análisis macro institucional gratuito: DXY {dxy:.2f}, HY {hy_spread:.2f}%, 10Y-3M {yield_spread:.2f}%"
+            tags = "#OmniMetric #Bolsa"
+            url = f"{self.site_url}/?lang=ES"
+            
+            post = f"{header}\n\n{promo}\n\n{tags}\n{url}"
+            
         else:  # EN (default for both UK and US)
             header = f"【GMS: {score}/100】"
             promo = f"Free institutional-grade macro: DXY {dxy:.2f}, HY {hy_spread:.2f}%, 10Y-3M {yield_spread:.2f}%"
@@ -68,7 +105,7 @@ class BlueskyPublisher:
             if len(ai_text) > 60:
                 ai_text = ai_text[:57] + "..."
             
-            post = f"{header}\n\n{promo}\n\nAI: {ai_text}\n\n{tags}\n{url}"
+            post = f"{header}\n\nAI: {ai_text}\n\n{promo}\n\n{tags}\n{url}"
         
         # Final safety check for 300 character limit
         if len(post) > 300:
@@ -82,9 +119,17 @@ class BlueskyPublisher:
                     ai_text = ai_text[:len(ai_text) - excess - 3] + "..."
                 else:
                     ai_text = "..."
-                post = f"{header}\n\n{promo}\n\nAI: {ai_text}\n\n{tags}\n{url}"
-            else:
-                # For DE/FR, trim the promo text
+                post = f"{header}\n\nAI: {ai_text}\n\n{promo}\n\n{tags}\n{url}"
+            elif lang in ["JA", "ZH"]:
+                # For JA/ZH, trim the AI insight
+                ai_text = first_sentence
+                if len(ai_text) > excess + 3:
+                    ai_text = ai_text[:len(ai_text) - excess - 3] + "..."
+                else:
+                    ai_text = "..."
+                post = f"{header}\n\nAI: {ai_text}\n\n{promo}\n\n{tags}\n{url}"
+            elif lang in ["DE", "FR", "ES"]:
+                # For DE/FR/ES, trim the promo text
                 promo_trimmed = promo[:len(promo) - excess - 3] + "..."
                 post = f"{header}\n\n{promo_trimmed}\n\n{tags}\n{url}"
         

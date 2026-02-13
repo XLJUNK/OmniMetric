@@ -1,7 +1,7 @@
 name: GMS SNS Publisher
 on:
   schedule:
-    - cron: '0 7,8,13 * * *' # Run at 07:00, 08:00, 13:00 UTC for DE/FR/EN posts
+    - cron: '0 0,7,8,13,23 * * *' # Run at 23:00 (JA), 00:00 (ZH), 07:00 (DE/FR/ES), 08:00 (EN), 13:00 (EN) UTC
   workflow_dispatch:
     inputs:
       force_post:

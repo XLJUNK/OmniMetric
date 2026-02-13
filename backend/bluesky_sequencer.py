@@ -9,8 +9,11 @@ class BlueskySequencer:
     # Simplified Schedule (JST = UTC+9)
     # Format: "LANG": [(Hour_JST, Minute_JST)]
     SCHEDULE = {
+        "JA": [(8, 0)],    # 08:00 JST = 23:00 UTC (prev day) (Japan market)
+        "ZH": [(9, 0)],    # 09:00 JST = 00:00 UTC (China/Asia markets)
         "DE": [(16, 0)],   # 16:00 JST = 07:00 UTC (European market open)
         "FR": [(16, 0)],   # 16:00 JST = 07:00 UTC (European market open)
+        "ES": [(16, 0)],   # 16:00 JST = 07:00 UTC (Spain market open - 1hr)
         "EN": [(17, 0), (22, 0)]  # 17:00 JST = 08:00 UTC (UK), 22:00 JST = 13:00 UTC (US)
     }
 
