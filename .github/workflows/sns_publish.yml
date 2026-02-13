@@ -68,7 +68,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
           # Only commit interaction logs/state
-          git add backend/sns_last_post.json backend/sns_status.json backend/beacon_alert_history.json
+          git add backend/sns_last_post.json backend/sns_status.json
           git commit -m "SNS State Update [skip ci]" || echo "No changes to commit"
           
           git pull --rebase origin main || echo "Already up to date"
