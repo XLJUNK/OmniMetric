@@ -278,6 +278,7 @@ def main():
     current_data["beacons_history"] = beacons_history
     current_data["ogv"] = {
         "trails": trails,
+        "current_vector": trails[-1] if trails else {"x": 50, "y": 50},
         "current_satellites": satellites,
         "history_length": 60,
         "system": "moving_fortress"

@@ -74,7 +74,9 @@ export default function OmniResonanceClient({ lang }: OmniResonanceClientProps) 
 
         // 3. Market Vector (Reference Point)
         // Keep OGV as a ghost reference for resonance
-        const marketVector = marketData?.ogv?.current_vector || { x: 50, y: 50 };
+        // Fallback: If current_vector is missing, try last trail entry (Added Phase 2.1)
+        const marketVector = marketData?.ogv?.current_vector ||
+            (marketData?.ogv?.trails?.length > 0 ? marketData.ogv.trails[marketData.ogv.trails.length - 1] : { x: 50, y: 50 });
 
         // Resonance Status & Distance (Relative to Market Core)
         const resonanceDistance = Math.hypot(marketVector.x - userVector.x, marketVector.y - userVector.y);
