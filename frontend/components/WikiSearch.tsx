@@ -91,7 +91,7 @@ export const WikiSearch = ({ items, lang, placeholder }: WikiSearchProps) => {
                             {filteredItems.map(item => (
                                 <li key={item.slug} className="border-b border-slate-100 dark:border-slate-800 last:border-0">
                                     <Link
-                                        href={`/${lang.toLowerCase()}/wiki/${item.slug}`}
+                                        href={lang.toUpperCase() === 'EN' ? `/wiki/${item.slug}` : `/${lang.toLowerCase()}/wiki/${item.slug}`}
                                         className={`block p-4 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors ${isRTL ? 'text-right' : 'text-left'}`}
                                         onClick={() => setIsOpen(false)}
                                     >

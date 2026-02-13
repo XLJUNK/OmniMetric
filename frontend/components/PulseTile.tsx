@@ -158,7 +158,7 @@ export const PulseTile = ({ title, score, ticker, data, onClick, lang, wikiSlug 
                         <h3 className={`text-slate-900 dark:text-slate-200 text-fluid-xs font-black uppercase tracking-[0.1em] font-sans leading-tight whitespace-normal break-words`}>{title}</h3>
                         {wikiSlug && (
                             <Link
-                                href={lang.toLowerCase() === 'en' ? `/wiki/${wikiSlug}` : `/${lang.toLowerCase()}/wiki/${wikiSlug}`}
+                                href={lang.toUpperCase() === 'EN' ? `/wiki/${wikiSlug}` : `/${lang.toLowerCase()}/wiki/${wikiSlug}`}
                                 onClick={(e) => e.stopPropagation()}
                                 className={`text-slate-400 dark:text-slate-600 transition-colors p-0.5 rounded-full relative after:absolute after:-inset-4 after:content-[''] ${score >= 60 ? 'hover:text-blue-500 hover:bg-blue-500/10' : (score < 40 ? 'hover:text-rose-500 hover:bg-rose-500/10' : 'hover:text-slate-900 dark:hover:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700/50')}`}
                                 title="Open Macro Wiki Definition"

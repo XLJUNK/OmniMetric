@@ -102,7 +102,7 @@ export const GMSHeaderSection = ({ data, lang, onOpenSettings }: GMSHeaderProps)
             >
                 <div className="flex flex-nowrap justify-between items-start gap-3">
                     {/* TITLE AREA */}
-                    <div className="pointer-events-auto cursor-pointer min-w-0 flex-1" onClick={() => router.push(lang === 'EN' ? '/' : `/${lang.toLowerCase()}`)}>
+                    <div className="pointer-events-auto cursor-pointer min-w-0 flex-1" onClick={() => router.push(lang.toUpperCase() === 'EN' ? '/' : `/${lang.toLowerCase()}`)}>
                         <h1 className="text-base sm:text-2xl md:text-3xl font-black tracking-tighter mb-0 leading-tight hover:text-sky-500 transition-colors text-slate-900 dark:text-white uppercase whitespace-normal break-normal">OMNIMETRIC TERMINAL</h1>
                         <h2 className="text-[10px] sm:text-sm md:text-base font-bold text-sky-500 tracking-[0.2em] uppercase mt-1">Global Macro Signal (GMS)</h2>
                     </div>
