@@ -73,7 +73,7 @@ class BlueskyPublisher:
             header = f"【GMS: {score}/100】"
             promo = f"無料の機関投資家向けマクロ分析: DXY {dxy:.2f}, HY {hy_spread:.2f}%, 10Y-3M {yield_spread:.2f}%"
             tags = "#OmniMetric #マクロ経済"
-            url = f"{self.site_url}/ja"
+            url = f"{self.site_url}/jp"
             
             # Truncate AI insight to fit
             ai_text = first_sentence
@@ -88,7 +88,7 @@ class BlueskyPublisher:
             header = f"【GMS: {score}/100】"
             promo = f"免费机构级宏观分析: DXY {dxy:.2f}, HY {hy_spread:.2f}%, 10Y-3M {yield_spread:.2f}%"
             tags = "#OmniMetric #宏观经济"
-            url = f"{self.site_url}/zh"
+            url = f"{self.site_url}/cn"
             
             # Truncate AI insight to fit
             ai_text = first_sentence
