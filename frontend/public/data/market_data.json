@@ -1,13 +1,12 @@
 {
-    "last_updated": "2026-02-12T23:43:56.700702+00:00",
+    "last_updated": "2026-02-13T01:29:36.256705+00:00",
     "market_data": {
         "CRYPTO_SENTIMENT": {
-            "price": 5,
-            "daily_chg": -54.55,
-            "change_percent": -28.57,
+            "price": 9,
+            "daily_chg": 80.0,
+            "change_percent": -35.71,
             "trend": "FEAR",
             "sparkline": [
-                48,
                 61,
                 49,
                 50,
@@ -36,7 +35,8 @@
                 14,
                 9,
                 11,
-                5
+                5,
+                9
             ]
         },
         "YIELD_SPREAD": {
@@ -120,7 +120,6 @@
             "change_percent": 0.0,
             "trend": "CALM",
             "sparkline": [
-                -0.51,
                 -0.51,
                 -0.51,
                 -0.52,
@@ -571,10 +570,10 @@
             ]
         },
         "BTC": {
-            "price": 66196.02,
+            "price": 66096.41,
             "prev_price": 66991.97,
-            "daily_chg": -1.19,
-            "change_percent": -5.79,
+            "daily_chg": -1.34,
+            "change_percent": -5.93,
             "trend": "DOWN",
             "sparkline": [
                 89462.45,
@@ -598,15 +597,15 @@
                 70120.78,
                 68793.96,
                 66991.97,
-                66196.02
+                66096.41
             ]
         },
         "ETH": {
-            "price": 1943.58,
+            "price": 1937.64,
             "prev_price": 1940.62,
-            "daily_chg": 0.15,
-            "change_percent": -6.95,
-            "trend": "UP",
+            "daily_chg": -0.15,
+            "change_percent": -7.23,
+            "trend": "DOWN",
             "sparkline": [
                 2949.63,
                 2953.26,
@@ -629,14 +628,14 @@
                 2103.57,
                 2019.5,
                 1940.62,
-                1943.58
+                1937.64
             ]
         },
         "SOL": {
-            "price": 78.15,
+            "price": 78.32,
             "prev_price": 79.25,
-            "daily_chg": -1.39,
-            "change_percent": -10.22,
+            "daily_chg": -1.18,
+            "change_percent": -10.02,
             "trend": "DOWN",
             "sparkline": [
                 128.29,
@@ -660,14 +659,14 @@
                 86.7,
                 82.92,
                 79.25,
-                78.15
+                78.32
             ]
         },
         "DXY": {
-            "price": 96.92,
+            "price": 96.95,
             "prev_price": 96.83,
-            "daily_chg": 0.09,
-            "change_percent": -0.73,
+            "daily_chg": 0.13,
+            "change_percent": -0.69,
             "trend": "UP",
             "sparkline": [
                 99.13,
@@ -691,17 +690,16 @@
                 96.82,
                 96.8,
                 96.83,
-                96.92
+                96.95
             ]
         },
         "USDJPY": {
-            "price": 152.72,
-            "prev_price": 154.48,
-            "daily_chg": -1.14,
-            "change_percent": -2.59,
-            "trend": "DOWN",
+            "price": 153.32,
+            "prev_price": 153.27,
+            "daily_chg": 0.03,
+            "change_percent": -2.49,
+            "trend": "UP",
             "sparkline": [
-                159.18,
                 158.4,
                 158.6,
                 157.54,
@@ -722,21 +720,21 @@
                 157.24,
                 156.13,
                 154.48,
-                152.72
+                153.27,
+                153.32
             ]
         },
         "EURUSD": {
             "price": 1.19,
             "prev_price": 1.19,
-            "daily_chg": -0.13,
-            "change_percent": 0.81,
+            "daily_chg": -0.07,
+            "change_percent": 0.36,
             "trend": "DOWN",
             "sparkline": [
                 1.16,
                 1.16,
                 1.16,
                 1.16,
-                1.16,
                 1.17,
                 1.17,
                 1.18,
@@ -751,6 +749,7 @@
                 1.18,
                 1.18,
                 1.18,
+                1.19,
                 1.19,
                 1.19,
                 1.19
@@ -819,10 +818,10 @@
             ]
         },
         "GOLD": {
-            "price": 4941.1,
+            "price": 4985.0,
             "prev_price": 5071.6,
-            "daily_chg": -2.57,
-            "change_percent": -0.2,
+            "daily_chg": -1.71,
+            "change_percent": 0.68,
             "trend": "DOWN",
             "sparkline": [
                 4589.2,
@@ -846,14 +845,14 @@
                 5050.9,
                 5003.8,
                 5071.6,
-                4941.1
+                4985.0
             ]
         },
         "OIL": {
-            "price": 62.82,
+            "price": 62.99,
             "prev_price": 64.63,
-            "daily_chg": -2.8,
-            "change_percent": -1.15,
+            "daily_chg": -2.54,
+            "change_percent": -0.88,
             "trend": "DOWN",
             "sparkline": [
                 61.15,
@@ -877,14 +876,14 @@
                 64.36,
                 63.96,
                 64.63,
-                62.82
+                62.99
             ]
         },
         "COPPER": {
-            "price": 5.76,
+            "price": 5.83,
             "prev_price": 5.95,
-            "daily_chg": -3.12,
-            "change_percent": -1.71,
+            "daily_chg": -1.95,
+            "change_percent": -0.52,
             "trend": "DOWN",
             "sparkline": [
                 5.97,
@@ -908,14 +907,14 @@
                 5.95,
                 5.9,
                 5.95,
-                5.76
+                5.83
             ]
         },
         "NATGAS": {
             "price": 3.22,
             "prev_price": 3.16,
-            "daily_chg": 1.8,
-            "change_percent": -6.02,
+            "daily_chg": 1.87,
+            "change_percent": -5.96,
             "trend": "UP",
             "sparkline": [
                 3.42,
@@ -943,10 +942,10 @@
             ]
         },
         "SILVER": {
-            "price": 75.0,
+            "price": 76.41,
             "prev_price": 83.75,
-            "daily_chg": -10.45,
-            "change_percent": -2.26,
+            "daily_chg": -8.77,
+            "change_percent": -0.42,
             "trend": "DOWN",
             "sparkline": [
                 85.88,
@@ -970,7 +969,7 @@
                 82.07,
                 80.22,
                 83.75,
-                75.0
+                76.41
             ]
         },
         "DAX": {
@@ -1098,10 +1097,10 @@
             ]
         },
         "NIKKEI": {
-            "price": 57639.84,
+            "price": 57106.71,
             "prev_price": 57650.54,
-            "daily_chg": -0.02,
-            "change_percent": 7.1,
+            "daily_chg": -0.94,
+            "change_percent": 6.11,
             "trend": "DOWN",
             "sparkline": [
                 53549.16,
@@ -1125,7 +1124,7 @@
                 54253.68,
                 56363.94,
                 57650.54,
-                57639.84
+                57106.71
             ]
         },
         "HANGSENG": {
@@ -1253,10 +1252,10 @@
             ]
         },
         "ASX200": {
-            "price": 8977.8,
+            "price": 8928.9,
             "prev_price": 9014.8,
-            "daily_chg": -0.41,
-            "change_percent": 3.09,
+            "daily_chg": -0.95,
+            "change_percent": 2.53,
             "trend": "DOWN",
             "sparkline": [
                 8808.5,
@@ -1280,7 +1279,7 @@
                 8912.1,
                 8867.4,
                 9014.8,
-                8977.8
+                8928.9
             ]
         },
         "G_REIT": {
@@ -1751,12 +1750,11 @@
         "GBPUSD": {
             "price": 0.73,
             "prev_price": 0.73,
-            "daily_chg": 0.1,
-            "change_percent": -0.73,
+            "daily_chg": 0.08,
+            "change_percent": -0.03,
             "trend": "UP",
             "sparkline": [
                 0.74,
-                0.74,
                 0.75,
                 0.75,
                 0.75,
@@ -1773,6 +1771,7 @@
                 0.73,
                 0.73,
                 0.74,
+                0.73,
                 0.73,
                 0.73,
                 0.73,
@@ -1781,12 +1780,11 @@
         },
         "AUDUSD": {
             "price": 1.41,
-            "prev_price": 1.41,
-            "daily_chg": -0.2,
-            "change_percent": -2.43,
-            "trend": "DOWN",
+            "prev_price": 1.4,
+            "daily_chg": 0.47,
+            "change_percent": -0.82,
+            "trend": "UP",
             "sparkline": [
-                1.5,
                 1.5,
                 1.49,
                 1.5,
@@ -1807,21 +1805,21 @@
                 1.42,
                 1.41,
                 1.41,
+                1.4,
                 1.41
             ]
         },
         "USDCAD": {
             "price": 1.36,
             "prev_price": 1.36,
-            "daily_chg": 0.41,
-            "change_percent": -0.76,
+            "daily_chg": 0.29,
+            "change_percent": -0.32,
             "trend": "UP",
             "sparkline": [
                 1.39,
                 1.39,
                 1.39,
                 1.39,
-                1.39,
                 1.38,
                 1.38,
                 1.38,
@@ -1836,6 +1834,7 @@
                 1.37,
                 1.37,
                 1.37,
+                1.36,
                 1.36,
                 1.36,
                 1.36
@@ -1875,15 +1874,14 @@
         "USDCHF": {
             "price": 0.77,
             "prev_price": 0.77,
-            "daily_chg": 0.08,
-            "change_percent": -1.09,
-            "trend": "UP",
+            "daily_chg": -0.19,
+            "change_percent": -0.79,
+            "trend": "DOWN",
             "sparkline": [
                 0.8,
                 0.8,
                 0.8,
                 0.8,
-                0.8,
                 0.79,
                 0.8,
                 0.79,
@@ -1898,6 +1896,7 @@
                 0.78,
                 0.78,
                 0.78,
+                0.77,
                 0.77,
                 0.77,
                 0.77
@@ -2051,18 +2050,13 @@
         },
         "credit": {
             "name": "Credit (HYG/IEF Z)",
-            "value": 0.11,
+            "value": 0.1,
             "status": "safe",
             "display": "0.1σ"
         }
     },
     "ogv": {
         "trails": [
-            {
-                "date": "2025-12-15",
-                "x": 14.13,
-                "y": 55.22
-            },
             {
                 "date": "2025-12-16",
                 "x": 2.35,
@@ -2355,157 +2349,162 @@
             },
             {
                 "date": "2026-02-12",
-                "x": -52.04,
-                "y": -75.49
+                "x": -52.78,
+                "y": -75.47
+            },
+            {
+                "date": "2026-02-13",
+                "x": -53.11,
+                "y": -74.92
             }
         ],
         "current_satellites": [
             {
                 "id": "SPY",
                 "label": "SPY",
-                "x": 1.09,
+                "x": 0.28,
                 "y": 0.0,
-                "z": 0.02
+                "z": 0.01
             },
             {
                 "id": "QQQ",
                 "label": "QQQ",
-                "x": -84.76,
+                "x": -85.0,
                 "y": -0.0,
                 "z": -1.57
             },
             {
                 "id": "IWM",
                 "label": "IWM",
-                "x": 39.42,
+                "x": 38.78,
                 "y": 0.0,
-                "z": 0.88
+                "z": 0.86
             },
             {
                 "id": "BTC",
                 "label": "BTC",
-                "x": -85.78,
-                "y": 53.61,
-                "z": -2.38
+                "x": -83.92,
+                "y": 52.45,
+                "z": -2.33
             },
             {
                 "id": "GOLD",
                 "label": "GOLD",
-                "x": -75.02,
+                "x": -79.26,
                 "y": 0.0,
-                "z": 1.67
+                "z": 1.76
             },
             {
                 "id": "US10Y",
                 "label": "US10Y",
                 "x": -0.0,
-                "y": -25.11,
-                "z": -0.37
+                "y": -26.43,
+                "z": -0.39
             },
             {
                 "id": "DXY",
                 "label": "DXY",
-                "x": 103.27,
-                "y": -86.05,
-                "z": -1.91
+                "x": 99.2,
+                "y": -82.67,
+                "z": -1.84
             },
             {
                 "id": "BIL",
                 "label": "BIL",
-                "x": -110.33,
-                "y": 58.84,
-                "z": 1.63
+                "x": -108.66,
+                "y": 57.95,
+                "z": 1.61
             },
             {
                 "id": "XLK",
                 "label": "XLK",
-                "x": -89.76,
-                "y": 29.92,
-                "z": -1.66
+                "x": -88.54,
+                "y": 29.51,
+                "z": -1.64
             },
             {
                 "id": "XLE",
                 "label": "XLE",
-                "x": 60.59,
+                "x": 58.51,
                 "y": 0.0,
-                "z": 2.69
+                "z": 2.6
             },
             {
                 "id": "XLF",
                 "label": "XLF",
-                "x": -51.17,
-                "y": -38.38,
+                "x": -51.25,
+                "y": -38.44,
                 "z": -1.42
             },
             {
                 "id": "XLV",
                 "label": "XLV",
-                "x": -18.35,
+                "x": -18.05,
                 "y": 0.0,
-                "z": 0.68
+                "z": 0.67
             },
             {
                 "id": "XLI",
                 "label": "XLI",
-                "x": 80.91,
+                "x": 78.64,
                 "y": 0.0,
-                "z": 2.25
+                "z": 2.18
             },
             {
                 "id": "XLB",
                 "label": "XLB",
                 "x": 0.0,
                 "y": 0.0,
-                "z": 2.37
+                "z": 2.29
             },
             {
                 "id": "XLY",
                 "label": "XLY",
-                "x": -51.39,
+                "x": -51.43,
                 "y": -0.0,
                 "z": -1.14
             },
             {
                 "id": "XLP",
                 "label": "XLP",
-                "x": -107.53,
+                "x": -102.84,
                 "y": 0.0,
-                "z": 2.99
+                "z": 2.86
             },
             {
                 "id": "XLU",
                 "label": "XLU",
-                "x": -63.16,
-                "y": -63.16,
-                "z": 1.75
+                "x": -63.66,
+                "y": -63.66,
+                "z": 1.77
             },
             {
                 "id": "XLRE",
                 "label": "XLRE",
                 "x": 0.0,
-                "y": -97.67,
-                "z": 2.71
+                "y": -94.28,
+                "z": 2.62
             },
             {
                 "id": "EEM",
                 "label": "EEM",
-                "x": 78.17,
+                "x": 76.03,
                 "y": 0.0,
-                "z": 2.17
+                "z": 2.11
             },
             {
                 "id": "FXI",
                 "label": "FXI",
-                "x": -26.21,
+                "x": -25.81,
                 "y": -0.0,
-                "z": -0.97
+                "z": -0.96
             },
             {
                 "id": "USO",
                 "label": "USO",
-                "x": 36.13,
+                "x": 35.45,
                 "y": 0.0,
-                "z": 1.61
+                "z": 1.58
             },
             {
                 "id": "SLV",
@@ -2518,27 +2517,27 @@
                 "id": "JNK",
                 "label": "JNK",
                 "x": 0.0,
-                "y": -59.82,
-                "z": 1.33
+                "y": -58.91,
+                "z": 1.31
             },
             {
                 "id": "TLT",
                 "label": "TLT",
-                "x": -24.84,
-                "y": -74.53,
-                "z": 1.1
+                "x": -25.19,
+                "y": -75.58,
+                "z": 1.12
             }
         ],
         "history_length": 60,
         "system": "moving_fortress"
     },
-    "last_successful_update": "2026-02-12T23:43:44.936095+00:00",
-    "gms_score": 39,
+    "last_successful_update": "2026-02-13T01:29:24.990825+00:00",
+    "gms_score": 37,
     "sector_scores": {
         "STOCKS": 44,
         "CRYPTO": 35,
         "FOREX": 53,
-        "COMMODITIES": 47,
+        "COMMODITIES": 35,
         "GLOBAL_INDICES": 50,
         "REAL_ESTATE": 50,
         "CREDIT": 50,
@@ -2550,64 +2549,60 @@
         {
             "code": "retail_sales",
             "name": "USD Retail Sales (MoM)",
-            "date": "2026-02-15",
-            "day": "SUN",
+            "date": "2026-02-16",
+            "day": "MON",
             "time": "08:30 EST",
             "impact": "high"
         },
         {
             "code": "boj",
             "name": "JPY Bank of Japan Policy Meeting",
-            "date": "2026-02-17",
-            "day": "TUE",
+            "date": "2026-02-18",
+            "day": "WED",
             "time": "12:00 JST",
             "impact": "high"
         },
         {
             "code": "powell",
             "name": "USD Fed Chair Powell Testifies",
-            "date": "2026-02-20",
-            "day": "FRI",
+            "date": "2026-02-21",
+            "day": "SAT",
             "time": "10:00 EST",
             "impact": "high"
         },
         {
             "code": "ecb",
             "name": "EUR ECB Monetary Policy Press Conference",
-            "date": "2026-02-22",
-            "day": "SUN",
+            "date": "2026-02-23",
+            "day": "MON",
             "time": "14:45 CET",
             "impact": "high"
         },
         {
             "code": "ppi",
             "name": "USD Producer Price Index (PPI)",
-            "date": "2026-02-25",
-            "day": "WED",
+            "date": "2026-02-26",
+            "day": "THU",
             "time": "08:30 EST",
             "impact": "high"
         }
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS status is Defensive as momentum pushed the score to 39. The spike in VIX (Fear/Volatility) to 20.82 and declining equity indices reflect a sharp pivot to risk-off behavior. While DXY (Dollar strength/Liquidity) remains stable, the aggressive sell-off in commodities and tech, led by Apple's regulatory scrutiny, confirms a tactical tightening. Although falling bond yields may provide a temporary floor, extreme caution is advised until the VIX stabilizes below the 20 level.",
+        "content": "GMS 37 indicates a Defensive regime. Downward momentum pushed the score to 37 as VIX (Fear/Volatility) spiked 17.9% and DXY (Dollar/Liquidity) rose, signaling heightened caution. While tech lags on Apple’s scrutiny, rising Investment Grade (IG) bonds suggest a flight to safety rather than systemic collapse. A potential peaking in VIX might signal a short-term bottom. Action: Increase cash levels and prioritize capital preservation until volatility stabilizes.",
         "reports": {
-            "JP": "GMSは守備的（Defensive）に転換し、モメンタムがスコアを39まで押し下げました。VIX（恐怖指数/ボラティリティ）が20.82へ急騰し、Appleへの規制リスクやハイテク株の下落が市場を冷やしています。DXY（ドル強弱/流動性）は安定していますが、原油や金を含む広範な資産での投げ売りは流動性の低下を示唆します。債券利回りの低下が下値を支える可能性はありますが、VIXが落ち着くまではリスク回避を優先すべき局面です。",
-            "EN": "GMS status is Defensive as momentum pushed the score to 39. The spike in VIX (Fear/Volatility) to 20.82 and declining equity indices reflect a sharp pivot to risk-off behavior. While DXY (Dollar strength/Liquidity) remains stable, the aggressive sell-off in commodities and tech, led by Apple's regulatory scrutiny, confirms a tactical tightening. Although falling bond yields may provide a temporary floor, extreme caution is advised until the VIX stabilizes below the 20 level.",
-            "CN": "GMS状态进入防御模式，动能将得分推至39。VIX（恐慌指数/波动率）飙升至20.82，加之苹果面临监管压力导致科技股重挫，市场避险情绪浓厚。尽管DXY（美元强度/流动性）基本持平，但大宗商品普遍遭抛售显示流动性环境恶化。虽然国债收益率回落可能提供短期缓冲，但在波动率回落至20以下前，建议交易者保持高度谨慎，将资本安全与风险规避放在首位。",
-            "ES": "El estado GMS es Defensivo ya que el impulso empujó la puntuación a 39. El aumento del VIX (Miedo/Volatilidad) a 20.82 y la caída de los índices reflejan un giro hacia la aversión al riesgo. Aunque el DXY (Fuerza del dólar/Liquidez) se mantiene estable, las ventas masivas en materias primas y tecnología por el caso Apple confirman una restricción de liquidez. La caída en los rendimientos de bonos podría ofrecer un suelo temporal, pero se recomienda cautela hasta que el VIX baje de 20.",
-            "HI": "GMS स्थिति रक्षात्मक है क्योंकि मोमेंटम ने स्कोर को 39 तक धकेल दिया है। VIX (डर/अस्थिरता) का 20.82 तक बढ़ना और टेक शेयरों में गिरावट जोखिम-मुक्त व्यवहार को दर्शाती है। हालांकि DXY (डॉलर की मजबूती/तरलता) स्थिर है, लेकिन Apple पर नियामक दबाव और कमोडिटीज में बिकवाली तरलता की कमी का संकेत देती है। बॉन्ड यील्ड में गिरावट कुछ सहारा दे सकती है, लेकिन जब तक VIX 20 से नीचे नहीं आता, तब तक सावधानी बरतें और पूंजी संरक्षण को प्राथमिकता देना आवश्यक है।",
-            "ID": "Status GMS berada dalam posisi Defensif setelah momentum mendorong skor ke 39. Lonjakan VIX (Indeks Ketakutan/Volatilitas) ke 20.82 dan koreksi tajam pada sektor teknologi akibat tekanan regulasi Apple mencerminkan sentimen risk-off. Meskipun DXY (Kekuatan Dolar/Likuiditas) stabil, aksi jual luas pada komoditas menandakan pengetatan pasar. Penurunan imbal hasil obligasi mungkin memberikan batas bawah sementara, namun disarankan tetap waspada hingga volatilitas mereda di bawah level 20.",
-            "AR": "وضع GMS دفاعي حيث دفع الزخم النتيجة إلى 39. يعكس ارتفاع مؤشر VIX (الخوف/تقلبات السوق) إلى 20.82 وتراجع الأسهم تحولاً حاداً نحو تجنب المخاطر. رغم استقرار DXY (قوة الدولار/السيولة)، فإن البيع المكثف في السلع والتكنولوجيا، مدفوعاً بضغوط على شركة Apple، يؤكد تقلص السيولة. قد توفر عوائد السندات المنخفضة دعماً مؤقتاً، لكن يوصى بالحذر الشديد وتفضيل الحفاظ على رأس المال حتى يستقر مؤشر VIX دون مستوى 20.",
-            "DE": "Der GMS-Status ist defensiv, da das Momentum den Score auf 39 gedrückt hat. Der Anstieg des VIX (Angst/Volatilität) auf 20,82 und fallende Tech-Indizes signalisieren eine Flucht in Sicherheit. Während der DXY (Dollarstärke/Liquidität) stabil bleibt, deutet der Ausverkauf bei Rohstoffen und Apple-Aktien auf eine Verknappung der Liquidität hin. Sinkende Anleiherenditen könnten zwar stützen, dennoch ist Vorsicht geboten, bis sich der VIX unter 20 stabilisiert. Kapitalerhalt hat nun Priorität.",
-            "FR": "Le statut GMS est défensif car l'élan a poussé le score à 39. La flambée du VIX (Peur/Volatilité) à 20,82 et la chute des indices technologiques, plombés par les déboires d'Apple, reflètent un évitement du risque. Bien que le DXY (Force du dollar/Liquidité) soit stable, les ventes massives sur les matières premières confirment un resserrement du marché. La baisse des rendements obligataires pourrait offrir un soutien technique, mais la prudence reste de mise tant que le VIX ne repasse pas sous les 20."
+            "JP": "GMSスコア37は「守備的（リスクオフ）」な局面を示唆しています。下落モーメンタムがスコアを37まで押し下げ、VIX（恐怖指数）の17.9%急騰とDXY（ドル指数/流動性）の上昇が市場の不安を裏付けています。Apple主導のハイテク安が重石ですが、適格格付け債（IG債）の上昇は質への逃避を示しており、全面崩壊とは異なります。VIXのピークアウトが底打ちの鍵となります。戦略：キャッシュ比率を高め、資産防衛を最優先にしてください。",
+            "EN": "GMS 37 indicates a Defensive regime. Downward momentum pushed the score to 37 as VIX (Fear/Volatility) spiked 17.9% and DXY (Dollar/Liquidity) rose, signaling heightened caution. While tech lags on Apple’s scrutiny, rising Investment Grade (IG) bonds suggest a flight to safety rather than systemic collapse. A potential peaking in VIX might signal a short-term bottom. Action: Increase cash levels and prioritize capital preservation until volatility stabilizes.",
+            "CN": "GMS评分37表明当前处于“防御”模式。下行趋势将评分推至37，主要受VIX（波动率指数）飙升17.9%和DXY（美元指数/流动性）上涨驱动，反映出市场恐慌加剧与流动性收紧。尽管苹果公司利空消息拖累科技板块，但投资级债券的上涨暗示资金正在转向安全资产而非系统性崩溃。若VIX见顶，可能预示短期市场底部。建议：增加现金储备，优先保全资本，等待波动率企稳。",
+            "ES": "El GMS de 37 indica un régimen Defensivo. El impulso a la baja empujó el puntaje a 37, impulsado por el alza del 17.9% en VIX (Volatilidad/Miedo) y el DXY (Dólar/Liquidez), señalando mayor cautela. Aunque Apple lastra al sector tecnológico, el alza en bonos de Grado de Inversión (IG) sugiere una rotación segura en lugar de un colapso sistémico. Un pico en el VIX podría marcar un suelo a corto plazo. Acción: Elevar niveles de liquidez y priorizar la preservación de capital ahora.",
+            "HI": "GMS स्कोर 37 एक रक्षात्मक शासन का संकेत है। नीचे की ओर गति ने स्कोर को 37 तक धकेल दिया है, जिसका कारण VIX (डर सूचकांक) में 17.9% की वृद्धि और DXY (डॉलर/तरलता) का बढ़ना है। Apple के कारण टेक क्षेत्र में कमजोरी बनी हुई है, लेकिन निवेश-ग्रेड (IG) बॉन्ड में बढ़त सुरक्षा की ओर इशारा करती है न कि पूर्ण बाजार टूटने की। VIX का शिखर एक अल्पकालिक निचले स्तर का संकेत हो सकता है। कार्रवाई: नकद स्तर बढ़ाएं और पूंजी की सुरक्षा को अपनी पहली प्राथमिकता बनाएं।",
+            "ID": "Skor GMS 37 menunjukkan rezim Defensif. Momentum penurunan mendorong skor ke 37, dipicu lonjakan VIX (Indeks Ketakutan) sebesar 17,9% dan kenaikan DXY (Kekuatan Dolar/Likuiditas), menandakan pengetatan pasar. Meskipun berita Apple menekan sektor teknologi, kenaikan obligasi Investment Grade (IG) menunjukkan adanya rotasi ke aset aman, bukan keruntuhan total. Puncak VIX bisa menjadi sinyal dasar jangka pendek. Tindakan: Tingkatkan posisi kas dan prioritaskan perlindungan modal modal anda.",
+            "AR": "تشير درجة GMS البالغة 37 إلى نظام دفاعي. دفع الزخم الهبوطي النتيجة إلى 37 مع ارتفاع مؤشر VIX (الخوف) بنسبة 17.9% وقوة DXY (الدولار/السيولة)، مما يعكس حذراً متزايداً. ورغم ضغوط آبل على قطاع التكنولوجيا، فإن ارتفاع سندات الدرجة الاستثمارية (IG) يشير إلى توجه نحو الأمان وليس انهياراً نظامياً. قد يمثل بلوغ VIX ذروته إشارة لقاع قريب للمسار الحالي. الإجراء: زيادة مستويات السيولة النقدية ومنح الأولوية القصوى للحفاظ على رأس المال.",
+            "DE": "GMS 37 signalisiert ein defensives Regime. Abwärtsmomentum drückte den Score auf 37, getrieben durch einen VIX-Anstieg (Angstindex) von 17,9 % und einen festen DXY (Dollarstärke/Liquidität), was auf Vorsicht hindeutet. Trotz der Tech-Schwäche durch Apple zeigt der Anstieg bei IG-Anleihen eine Flucht in Sicherheit statt eines Kollapses. Ein VIX-Höchststand könnte einen kurzfristigen Boden markieren. Aktion: Erhöhen Sie die Cash-Quote und stellen Sie den Kapitalerhalt absolut in den Vordergrund.",
+            "FR": "Le GMS 37 indique un régime Défensif. L'élan baissier a poussé le score à 37, suite à un bond de 17,9 % du VIX (Peur/Volatilité) et une hausse du DXY (Dollar/Liquidité), signalant une prudence accrue. Bien qu'Apple pèse sur la tech, la hausse des obligations Investment Grade (IG) suggère une fuite vers la sécurité plutôt qu'un crash systémique. Un pic du VIX pourrait marquer un plancher à court terme. Action : Augmenter les liquidités et privilégier la préservation du capital."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-06T06:57:38Z",
-            "score": 28
-        },
         {
             "date": "2026-02-06T07:49:30Z",
             "score": 28
@@ -2843,6 +2838,10 @@
         {
             "date": "2026-02-12T23:43:44Z",
             "score": 39
+        },
+        {
+            "date": "2026-02-13T01:29:24Z",
+            "score": 37
         }
     ],
     "intelligence": {
@@ -2850,7 +2849,7 @@
             {
                 "title": "Apple's stock has worst day since April as iPhone maker faces FTC scrutiny, reports of Siri delay",
                 "link": "https://www.cnbc.com/2026/02/12/apple-stock-worst-day-ftc-siri.html",
-                "isoDate": "2026-02-12T23:16:32+00:00Z"
+                "isoDate": "2026-02-12T23:52:25+00:00Z"
             },
             {
                 "title": "Rivian stock rises 15% as automaker tops Q4 expectations, targets significant production increase",
@@ -2858,14 +2857,14 @@
                 "isoDate": "2026-02-12T23:01:37+00:00Z"
             },
             {
-                "title": "DHS shutdown all but certain as Democrats and Trump White House can't cut deal",
-                "link": "https://www.cnbc.com/2026/02/12/dhs-shutdown-senate-dhs-funding-bill-trump.html",
-                "isoDate": "2026-02-12T22:06:26+00:00Z"
+                "title": "Amazon's Ring cancels Flock partnership amid Super Bowl ad backlash",
+                "link": "https://www.cnbc.com/2026/02/12/amazons-ring-cancels-flock-partnership-amid-super-bowl-ad-backlash.html",
+                "isoDate": "2026-02-13T01:12:05+00:00Z"
             },
             {
-                "title": "The January CPI inflation report is due out Friday morning. Here's what it's expected to show",
-                "link": "https://www.cnbc.com/2026/02/12/the-january-cpi-inflation-report-is-due-out-friday-morning-heres-what-its-expected-to-show.html",
-                "isoDate": "2026-02-12T21:42:46+00:00Z"
+                "title": "Asia stock markets track losses on Wall Street as AI fears hit sentiment",
+                "link": "https://www.cnbc.com/2026/02/13/asia-markets-live-today-friday-nikkei-kospi-hang-seng-ai-fears.html",
+                "isoDate": "2026-02-13T00:13:30+00:00Z"
             },
             {
                 "title": "Top hyperscalers set to boost 2026 AI spending by 70% to $600 billion. How to play the spending boom now",
@@ -2873,78 +2872,78 @@
                 "isoDate": "2026-02-12T22:27:44+00:00Z"
             },
             {
-                "title": "Cisco stock has worst day since 2022 as memory prices pressure margins",
-                "link": "https://www.cnbc.com/2026/02/12/cisco-stock-has-worst-day-since-2022-as-memory-prices-pressure-margins.html",
-                "isoDate": "2026-02-12T23:34:14+00:00Z"
+                "title": "DHS shutdown all but certain as Democrats and Trump White House can't cut deal",
+                "link": "https://www.cnbc.com/2026/02/12/dhs-shutdown-senate-dhs-funding-bill-trump.html",
+                "isoDate": "2026-02-13T00:18:41+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "アップルの株価、iPhoneメーカーがFTCの審査とSiriの遅延報道に直面し、4月以来最悪の一日",
-                "リビアン株、第4四半期決算が予想を上回り、大幅な生産増を目指し15%上昇",
-                "民主党とトランプ政権の合意が得られず、国土安全保障省の閉鎖はほぼ確実",
-                "1月のCPIインフレ報告が金曜朝に発表予定。何が示されると予想されるか",
-                "主要ハイパースケーラー、2026年のAI支出を70%増の6000億ドルに引き上げへ。今すぐ支出ブームに乗る方法",
-                "シスコ株、メモリ価格が利益率を圧迫し、2022年以来最悪の一日"
+                "アップルの株価、FTCの調査とSiriの遅延報道で4月以来最悪の下げ幅",
+                "Rivian株、第4四半期予想を上回り生産大幅増目標で15%上昇",
+                "アマゾン傘下のRing、スーパーボウル広告への反発でFlockとの提携を解消",
+                "アジア株市場、ウォール街の損失を追随、AIへの懸念がセンチメントを圧迫",
+                "主要ハイパースケーラー、2026年のAI支出を70%増の6000億ドルに引き上げへ。今すぐこの支出ブームに乗る方法",
+                "民主党とトランプ政権、合意に至らず、DHSの閉鎖がほぼ確実に"
             ],
             "CN": [
-                "受FTC审查和Siri延期传闻影响，苹果股价创4月以来最差表现",
-                "Rivian股价飙升15%，汽车制造商第四季度业绩超预期，目标产量大幅提升",
-                "国土安全部关门几乎成定局，民主党与特朗普政府白宫未能达成协议",
-                "1月CPI通胀报告将于周五上午公布，预期显示...",
-                "顶级超大规模云服务商2026年AI支出将猛增70%至6000亿美元。现在如何抓住这股支出热潮",
-                "受内存价格挤压利润影响，思科股价创2022年来最差表现"
+                "苹果股价跌至四月以来最差，因iPhone制造商面临FTC审查，Siri延迟报道",
+                "Rivian股价上涨15%，因汽车制造商超出第四季度预期，目标是大幅提高产量",
+                "亚马逊Ring在超级碗广告遭遇强烈抵制后取消Flock合作",
+                "亚洲股市跟随华尔街下跌，人工智能担忧情绪重挫",
+                "顶级超大规模公司将把2026年AI支出提高70%至6000亿美元。现在如何从这股支出热潮中获利",
+                "因民主党与特朗普政府无法达成协议，美国国土安全部关闭几乎已成定局"
             ],
             "ES": [
-                "Acciones de Apple sufren su peor día desde abril ante escrutinio de FTC y reportes de retraso de Siri",
-                "Acciones de Rivian suben 15% tras superar expectativas en el Q4 y apuntar a un aumento significativo de producción",
-                "Cierre del DHS, casi seguro, ya que demócratas y la Casa Blanca de Trump no logran acuerdo",
-                "El informe de inflación CPI de enero se publicará el viernes por la mañana. Esto es lo que se espera que muestre",
-                "Los principales hiperscaladores aumentarán el gasto en IA en 2026 en un 70% hasta los 600 mil millones de dólares. Cómo aprovechar el auge del gasto ahora",
-                "Acciones de Cisco tienen su peor día desde 2022 por la presión de los precios de la memoria sobre los márgenes"
+                "Las acciones de Apple tienen su peor día desde abril mientras el fabricante del iPhone enfrenta escrutinio de la FTC, informes de retraso de Siri",
+                "Las acciones de Rivian suben un 15% a medida que el fabricante de automóviles supera las expectativas del cuarto trimestre, apunta a un aumento significativo de la producción",
+                "Amazon Ring cancela la asociación con Flock en medio de la reacción negativa del anuncio del Super Bowl",
+                "Los mercados bursátiles asiáticos siguen las pérdidas de Wall Street, ya que los temores de IA afectan el sentimiento",
+                "Los principales hiperescaladores aumentarán el gasto en IA para 2026 en un 70% hasta los 600 mil millones de dólares. Cómo capitalizar el auge del gasto ahora",
+                "El cierre del DHS es prácticamente seguro ya que los demócratas y la Casa Blanca de Trump no llegan a un acuerdo"
             ],
             "HI": [
-                "FTC की जांच और सिरी में देरी की रिपोर्टों का सामना करने पर, एप्पल का स्टॉक अप्रैल के बाद से सबसे खराब दिन",
-                "Rivian का स्टॉक 15% बढ़ा क्योंकि ऑटोमेकर ने Q4 की उम्मीदों को पार किया, उत्पादन में महत्वपूर्ण वृद्धि का लक्ष्य",
-                "DHS शटडाउन लगभग निश्चित है क्योंकि डेमोक्रेट्स और ट्रम्प व्हाइट हाउस सौदा नहीं कर पाए",
-                "जनवरी का सीपीआई मुद्रास्फीति रिपोर्ट शुक्रवार सुबह जारी होना है। यहाँ वह दिखाया जा रहा है जिसकी उम्मीद है",
-                "शीर्ष हाइपरस्केलर्स 2026 में AI खर्च 70% बढ़ाकर 600 बिलियन डॉलर करने के लिए तैयार हैं। अभी खर्च में वृद्धि का लाभ कैसे उठाएं",
-                "मेमोरी की कीमतों से मार्जिन पर दबाव पड़ने के कारण सिस्को के स्टॉक का 2022 के बाद से सबसे खराब दिन"
+                "Apple के शेयर में अप्रैल के बाद का सबसे खराब दिन, क्योंकि iPhone निर्माता FTC की जांच, सिरी में देरी की रिपोर्ट का सामना कर रहा है",
+                "Rivian के शेयर 15% बढ़े क्योंकि ऑटोमेकर ने Q4 की उम्मीदों को पार किया, महत्वपूर्ण उत्पादन वृद्धि का लक्ष्य",
+                "Amazon का Ring सुपर बाउल विज्ञापन की प्रतिक्रिया के बीच Flock साझेदारी रद्द करता है",
+                "एशियाई शेयर बाज़ार वॉल स्ट्रीट के नुकसान को ट्रैक करते हैं, क्योंकि AI का डर भावना को प्रभावित करता है",
+                "शीर्ष हाइपरस्केलर्स 2026 में AI खर्च 70% बढ़ाकर $600 बिलियन करेंगे। अभी इस खर्च बूम को कैसे भुनाएं",
+                "डेमोक्रेट्स और ट्रम्प व्हाइट हाउस के बीच समझौता नहीं होने के कारण DHS का बंद होना लगभग तय है"
             ],
             "ID": [
-                "Saham Apple alami hari terburuk sejak April saat pembuat iPhone hadapi pengawasan FTC, laporan penundaan Siri",
-                "Saham Rivian naik 15% saat produsen mobil penuhi ekspektasi Q4, targetkan peningkatan produksi signifikan",
-                "Penutupan DHS hampir pasti karena Demokrat dan Gedung Putih Trump gagal capai kesepakatan",
-                "Laporan inflasi CPI Januari akan dirilis Jumat pagi. Berikut yang diharapkan akan ditunjukkan",
-                "Hyperscaler teratas siap tingkatkan belanja AI 2026 sebesar 70% menjadi $600 miliar. Cara memanfaatkan lonjakan belanja sekarang",
-                "Saham Cisco alami hari terburuk sejak 2022 karena harga memori menekan margin"
+                "Saham Apple alami hari terburuk sejak April karena pembuat iPhone menghadapi pengawasan FTC, laporan penundaan Siri",
+                "Saham Rivian naik 15% saat produsen mobil melampaui ekspektasi Q4, menargetkan peningkatan produksi yang signifikan",
+                "Ring milik Amazon membatalkan kemitraan Flock di tengah reaksi negatif iklan Super Bowl",
+                "Pasar saham Asia mengikuti kerugian Wall Street karena ketakutan AI memukul sentimen",
+                "Hiperskala teratas akan meningkatkan pengeluaran AI 2026 sebesar 70% menjadi $600 miliar. Cara memanfaatkan lonjakan pengeluaran sekarang",
+                "Penutupan DHS hampir pasti karena Demokrat dan Gedung Putih Trump tidak mencapai kesepakatan"
             ],
             "AR": [
-                "سهم آبل يسجل أسوأ يوم له منذ أبريل مع مواجهة صانع الآيفون تدقيقًا من FTC وتقارير عن تأخير سيري",
-                "سهم ريفيان يرتفع 15% بعد أن فاقت شركة صناعة السيارات توقعات الربع الرابع، مستهدفة زيادة إنتاج كبيرة",
-                "إغلاق وزارة الأمن الداخلي شبه مؤكد مع فشل الديمقراطيين والبيت الأبيض ترامب في التوصل إلى اتفاق",
-                "تقرير التضخم لمؤشر أسعار المستهلك لشهر يناير سيصدر صباح الجمعة. إليك ما هو متوقع أن يظهره",
-                "من المقرر أن يعزز كبار مزودي الخدمات السحابية إنفاق الذكاء الاصطناعي لعام 2026 بنسبة 70% ليصل إلى 600 مليار دولار. كيف تستغل طفرة الإنفاق الآن",
-                "سهم سيسكو يسجل أسوأ يوم له منذ عام 2022 مع ضغط أسعار الذاكرة على الهوامش"
+                "سهم أبل يسجل أسوأ يوم له منذ أبريل مع مواجهة صانع iPhone تدقيق FTC وتقارير عن تأخير Siri",
+                "سهم Rivian يرتفع 15% مع تجاوز صانع السيارات لتوقعات الربع الرابع، ويستهدف زيادة كبيرة في الإنتاج",
+                "Ring التابعة لأمازون تلغي شراكة Flock وسط ردود فعل سلبية على إعلان السوبر بول",
+                "أسواق الأسهم الآسيوية تتبع خسائر وول ستريت مع ضرب مخاوف الذكاء الاصطناعي للمعنويات",
+                "أكبر الشركات السحابية العملاقة تزيد إنفاق الذكاء الاصطناعي لعام 2026 بنسبة 70% إلى 600 مليار دولار. كيف تستفيد من طفرة الإنفاق الآن",
+                "إغلاق وزارة الأمن الداخلي شبه مؤكد حيث لا يمكن للديمقراطيين والبيت الأبيض بقيادة ترامب التوصل إلى اتفاق"
             ],
             "DE": [
-                "Apple-Aktie erlebt schlechtesten Tag seit April, da iPhone-Hersteller FTC-Prüfung und Berichte über Siri-Verzögerung gegenübersteht",
-                "Rivian-Aktie steigt um 15%, da Autohersteller Q4-Erwartungen übertrifft und deutliche Produktionssteigerung anstrebt",
-                "DHS-Schließung fast sicher, da Demokraten und das Trump-Weiße Haus keine Einigung erzielen können",
-                "Der CPI-Inflationsbericht vom Januar wird am Freitagmorgen veröffentlicht. Hier ist, was er voraussichtlich zeigen wird",
-                "Top-Hyperscaler werden die KI-Ausgaben bis 2026 um 70% auf 600 Milliarden US-Dollar erhöhen. Wie Sie den Ausgabenboom jetzt nutzen können",
-                "Cisco-Aktie hat den schlechtesten Tag seit 2022, da Speicherpreise die Margen belasten"
+                "Apple-Aktie erlebt den schlechtesten Tag seit April, da iPhone-Hersteller mit FTC-Prüfung und Berichten über Siri-Verzögerung konfrontiert wird",
+                "Rivian-Aktie steigt um 15%, da Autohersteller Q4-Erwartungen übertrifft und eine deutliche Produktionssteigerung anstrebt",
+                "Amazons Ring sagt Flock-Partnerschaft nach Gegenreaktionen auf Super-Bowl-Werbung ab",
+                "Asiatische Aktienmärkte folgen den Verlusten an der Wall Street, da KI-Ängste die Stimmung belasten",
+                "Top-Hyperscaler werden die KI-Ausgaben im Jahr 2026 um 70% auf 600 Milliarden US-Dollar erhöhen. Wie Sie jetzt von diesem Ausgabenboom profitieren können",
+                "DHS-Schließung fast sicher, da Demokraten und das Trump-Weiße-Haus keine Einigung erzielen können"
             ],
             "FR": [
-                "L'action Apple connaît sa pire journée depuis avril, le fabricant d'iPhone faisant face à un examen de la FTC et à des rapports de retard de Siri",
-                "L'action Rivian monte de 15% après que le constructeur automobile a dépassé les attentes du T4 et vise une augmentation significative de la production",
-                "Fermeture du DHS quasi certaine alors que les démocrates et la Maison Blanche de Trump ne parviennent pas à un accord",
-                "Le rapport sur l'inflation de l'IPC de janvier sera publié vendredi matin. Voici ce qu'il est censé montrer",
-                "Les principaux hyperscalers devraient augmenter leurs dépenses en IA en 2026 de 70% à 600 milliards de dollars. Comment profiter du boom des dépenses dès maintenant",
-                "L'action Cisco connaît sa pire journée depuis 2022, la pression des prix de la mémoire pesant sur les marges"
+                "Le titre Apple connaît sa pire journée depuis avril, le fabricant d'iPhone faisant face à un examen minutieux de la FTC et à des rapports de retard de Siri",
+                "Le titre Rivian grimpe de 15% alors que le constructeur automobile dépasse les attentes du quatrième trimestre, cible une augmentation significative de la production",
+                "Ring d'Amazon annule le partenariat Flock suite aux réactions négatives de la publicité du Super Bowl",
+                "Les marchés boursiers asiatiques suivent les pertes de Wall Street alors que les craintes liées à l'IA affectent le sentiment",
+                "Les principaux hyperscalers augmenteront les dépenses en IA en 2026 de 70% pour atteindre 600 milliards de dollars. Comment jouer le boom des dépenses maintenant",
+                "La fermeture du DHS est presque certaine car les démocrates et la Maison Blanche de Trump ne parviennent pas à un accord"
             ]
         },
-        "last_updated": "2026-02-12T23:43:44.935462+00:00Z"
+        "last_updated": "2026-02-13T01:29:24.990240+00:00Z"
     },
     "system_status": "OPERATIONAL",
     "beacons_history": [
@@ -3095,6 +3094,21 @@
             },
             "credit": {
                 "value": 0.11,
+                "status": "safe"
+            }
+        },
+        {
+            "timestamp": "2026-02-13T01:29:36.256705+00:00",
+            "recession": {
+                "value": 0.506,
+                "status": "safe"
+            },
+            "panic": {
+                "value": 0.939,
+                "status": "safe"
+            },
+            "credit": {
+                "value": 0.1,
                 "status": "safe"
             }
         }
