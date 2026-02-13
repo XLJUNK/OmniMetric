@@ -4,7 +4,7 @@ from datetime import datetime, timezone
 from atproto import Client
 
 class BlueskyPublisher:
-    def __init__(self, site_url="https://omnimetric.net", log_callback=None):
+    def __init__(self, site_url="https://www.omnimetric.net", log_callback=None):
         self.site_url = site_url
         self.log_callback = log_callback
         self.state_file = os.path.join(os.path.dirname(__file__), "sns_last_post.json")
