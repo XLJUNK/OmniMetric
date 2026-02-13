@@ -66,7 +66,7 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 // MobileMenu removed as per user request (Sidebar is now responsive)
 import { Sidebar } from "@/components/Sidebar";
 import { MobileNav } from "@/components/MobileNav";
-import { AdUnit } from "@/components/AdUnit";
+import { AdComponent } from "@/components/AdComponent";
 import { DynamicStructuredData } from "@/components/DynamicStructuredData";
 import { ClientDirectionProvider } from "@/components/ClientDirectionProvider";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -130,8 +130,8 @@ export default function RootLayout({
             <div className="flex-1 flex flex-col relative min-w-0 md:ms-[60px] transition-all duration-300 pt-[54px] md:pt-0 pb-0 overflow-hidden">
               {/* TOP AD BANNER (Desktop Only - Optional) */}
               <div className="hidden md:flex justify-center py-4 bg-black border-b border-[#1E293B]">
-                <div className="w-[728px] h-[90px] bg-black">
-                  <AdUnit />
+                <div className="w-[728px] h-auto">
+                  <AdComponent format="horizontal" minHeight="90px" />
                 </div>
               </div>
 

@@ -6,6 +6,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { Activity, Settings } from 'lucide-react';
 import { GMSHeaderSection } from '@/components/GMSHeaderSection';
 import { PulseTile } from '@/components/PulseTile';
+import { AdComponent } from '@/components/AdComponent';
 import { useDevice } from '@/hooks/useDevice';
 import { SignalData } from '@/lib/signal';
 import { useSignalData } from '@/hooks/useSignalData';
@@ -218,6 +219,11 @@ export const MultiAssetSummary = ({ initialData, lang: propLang }: MultiAssetSum
                 // Skeleton Loader or Safe Header
                 <div className="w-full h-32 animate-pulse bg-white/5" />
             )}
+
+            {/* Dashboard Ad Slot */}
+            <div className="max-w-[1200px] mx-auto w-full px-2">
+                <AdComponent format="horizontal" minHeight="90px" className="!my-8" />
+            </div>
 
 
 

@@ -5,7 +5,7 @@ import { LangType } from '@/data/dictionary';
 import { GlossaryTerm } from '@/types/glossary';
 import { WikiItem } from '@/lib/wiki';
 import { ArrowUp, ArrowDown, BookOpen, Hash, Link as LinkIcon, ArrowRight } from 'lucide-react';
-import { AdSenseSlot } from '@/components/AdSenseSlot';
+import { AdComponent } from '@/components/AdComponent';
 import { TVPartnerCard } from '@/components/TVPartnerCard';
 import { WikiSearch } from '@/components/WikiSearch';
 import { LanguageSelector } from '@/components/LanguageSelector';
@@ -80,7 +80,7 @@ export const GlossaryClient = ({ lang, data, pageTitle, pageDesc, searchItems, s
 
                 {/* SIDEBAR AD (Desktop) */}
                 <div className="mt-12">
-                    <AdSenseSlot variant="square" />
+                    <AdComponent format="vertical" minHeight="600px" />
                 </div>
             </aside>
 
@@ -244,7 +244,7 @@ export const GlossaryClient = ({ lang, data, pageTitle, pageDesc, searchItems, s
                             {/* DYNAMIC AD INSERTION (After 3rd Category) */}
                             {categoryIndex === 2 && (
                                 <div className="py-8" key="mid-ad">
-                                    <AdSenseSlot variant="responsive" />
+                                    <AdComponent format="fluid" layout="in-article" minHeight="250px" />
                                 </div>
                             )}
                         </React.Fragment>
@@ -253,7 +253,7 @@ export const GlossaryClient = ({ lang, data, pageTitle, pageDesc, searchItems, s
                     {/* BOTTOM AD */}
                     <div className="pt-8 border-t border-slate-200 dark:border-[#1E293B] mt-12">
                         <h3 className="text-[#666] text-[10px] font-black uppercase tracking-[0.2em] mb-4">Sponsored</h3>
-                        <AdSenseSlot variant="responsive" />
+                        <AdComponent format="fluid" layout="in-article" minHeight="250px" />
                     </div>
                 </div>
                 {/* BOTTOM SPACE */}

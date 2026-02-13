@@ -6,7 +6,7 @@ import { getWikiItemWithHeavy } from '@/lib/wiki-server';
 import { WikiSearch } from '@/components/WikiSearch';
 import { DICTIONARY } from '@/data/dictionary';
 import { BookOpen, Calendar, Clock, Tag, ChevronLeft, ArrowRight } from 'lucide-react';
-import { AdSenseSlot } from '@/components/AdSenseSlot';
+import { AdComponent } from '@/components/AdComponent';
 import { DynamicStructuredData } from '@/components/DynamicStructuredData';
 import { LanguageSelector } from '@/components/LanguageSelector';
 import { getMultilingualMetadata } from '@/data/seo';
@@ -235,7 +235,7 @@ export default async function WikiSlugPage({ params }: { params: Promise<{ slug:
                             </div>
 
                             <div className="py-8">
-                                <AdSenseSlot variant="responsive" />
+                                <AdComponent format="fluid" layout="in-article" minHeight="250px" />
                             </div>
 
                             {item.tags && item.tags.length > 0 && (
@@ -315,8 +315,7 @@ export default async function WikiSlugPage({ params }: { params: Promise<{ slug:
                                 )}
 
                                 <div className="pt-8">
-                                    <AdSenseSlot variant="responsive" />
-                                    {/* Changed "fixed" to "responsive" as "fixed" is not in AdVariant type */}
+                                    <AdComponent format="fluid" layout="in-article" minHeight="250px" />
                                 </div>
                             </div>
                         </aside>

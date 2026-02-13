@@ -4,7 +4,7 @@ import { LangType, DICTIONARY } from '@/data/dictionary';
 import { getWikiData, WikiItem } from '@/lib/wiki';
 import { BookOpen, Activity, Quote, Hash } from 'lucide-react';
 import { Metadata } from 'next';
-import { AdSenseSlot } from '@/components/AdSenseSlot';
+import { AdComponent } from '@/components/AdComponent';
 import { WikiSearch } from '@/components/WikiSearch';
 import { LanguageSelector } from '@/components/LanguageSelector';
 import { DynamicStructuredData } from '@/components/DynamicStructuredData';
@@ -177,7 +177,7 @@ export default async function WikiIndexPage({ params }: Props) {
                                 </div>
 
                                 {/* Ad after Glossary */}
-                                {type === 'glossary' && <div className="py-4"><AdSenseSlot variant="responsive" /></div>}
+                                {type === 'glossary' && <div className="py-4"><AdComponent format="fluid" layout="in-article" minHeight="250px" /></div>}
                             </section>
                         ))}
                     </div>

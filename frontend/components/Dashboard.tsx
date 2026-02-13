@@ -8,7 +8,7 @@ import { LangType, DICTIONARY } from '@/data/dictionary';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { NewsTicker } from '@/components/NewsTicker';
-import { AdUnit } from '@/components/AdUnit';
+import { AdComponent } from '@/components/AdComponent';
 import { LanguageSelector } from '@/components/LanguageSelector';
 
 // Types
@@ -217,9 +217,7 @@ export const Dashboard = ({ lang, setLang }: DashboardProps) => {
                 {/* 4. AD PLACEMENT (STRATEGIC SEPARATOR) */}
                 {/* 4. AD PLACEMENT (STRATEGIC SEPARATOR) */}
                 <div className="w-full px-4 mb-8">
-                    <div className="w-full h-[30px] bg-[#0c0c0c] border border-slate-800 rounded flex items-center justify-center overflow-hidden relative min-h-[30px] max-h-[30px]">
-                        <AdUnit />
-                    </div>
+                    <AdComponent format="horizontal" minHeight="90px" />
                 </div>
 
                 <div className="flex flex-col gap-4 md:gap-6 w-full px-4 pb-32">

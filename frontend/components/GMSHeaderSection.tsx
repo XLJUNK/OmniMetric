@@ -7,7 +7,7 @@ import { DICTIONARY, LangType } from '@/data/dictionary';
 
 import { useRouter, usePathname } from 'next/navigation';
 import { NewsTicker } from '@/components/NewsTicker';
-import { AdUnit } from '@/components/AdUnit';
+import { AdComponent } from '@/components/AdComponent';
 import MESSAGES from '@/data/messages.json';
 import { TVPartnerCard } from '@/components/TVPartnerCard';
 import { MarketAnalysisWidget } from '@/components/analysis/MarketAnalysisWidget';
@@ -266,7 +266,7 @@ export const GMSHeaderSection = ({ data, lang, onOpenSettings }: GMSHeaderProps)
             </div>
 
             <div className="w-full px-4 md:px-8 mb-8">
-                <AdUnit />
+                <AdComponent format="horizontal" minHeight="90px" />
             </div>
 
             {/* 7. Market Heatmap Section */}

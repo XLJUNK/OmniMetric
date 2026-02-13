@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { DICTIONARY } from '@/data/dictionary';
 import { Quote, BookOpen, ArrowRight } from 'lucide-react';
-import { AdSenseSlot } from '@/components/AdSenseSlot';
+import { AdComponent } from '@/components/AdComponent';
 import { DynamicStructuredData } from '@/components/DynamicStructuredData';
 import { Metadata } from 'next';
 import { getMultilingualMetadata } from '@/data/seo';
@@ -112,7 +112,7 @@ export default async function MaximsPage() {
                                 </ul>
                                 {catIndex === 1 && (
                                     <div className="py-12">
-                                        <AdSenseSlot variant="responsive" />
+                                        <AdComponent format="fluid" layout="in-article" minHeight="250px" />
                                     </div>
                                 )}
                             </section>

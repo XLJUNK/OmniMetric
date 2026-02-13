@@ -5,7 +5,7 @@ import { LangType, DICTIONARY } from '@/data/dictionary';
 import { getAllSlugs, WikiItem, getWikiData } from '@/lib/wiki';
 import { getWikiItemWithHeavy } from '@/lib/wiki-server';
 import { DynamicStructuredData } from '@/components/DynamicStructuredData';
-import { AdSenseSlot } from '@/components/AdSenseSlot';
+import { AdComponent } from '@/components/AdComponent';
 import { LiveWikiData } from '@/components/LiveWikiData';
 import { DataSourceFooter } from '@/components/DataSourceFooter';
 import { ArrowLeft, TrendingUp, Activity, ChevronRight, Globe, Cpu, Scale, Zap, Users } from 'lucide-react';
@@ -615,7 +615,7 @@ export default async function WikiDetailPage({ params }: Props) {
                 </div>
 
                 <div className="mt-12 pt-12 border-t border-border">
-                    <AdSenseSlot variant="responsive" />
+                    <AdComponent format="fluid" layout="in-article" minHeight="250px" />
                 </div>
             </main>
         </div>
