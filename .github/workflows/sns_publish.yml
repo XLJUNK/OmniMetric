@@ -37,8 +37,8 @@ jobs:
           
       - name: Run SNS Publisher
         env:
-          BLUESKY_HANDLE: ${{ secrets.BSKY_HANDLE }}
-          BLUESKY_PASSWORD: ${{ secrets.BSKY_PASSWORD }}
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
           TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
           TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
           TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
