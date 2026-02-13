@@ -117,7 +117,7 @@ class BlueskyPublisher:
             header = f"【GMS: {score}/100】"
             promo = f"Free institutional-grade macro: DXY {dxy:.2f}, HY {hy_spread:.2f}%, 10Y-3M {yield_spread:.2f}%"
             tags = "#OmniMetric #Macro"
-            url = f"{self.site_url}/en"
+            url = self.site_url  # Root URL without /en prefix
             
             # Truncate AI insight to fit
             ai_text = first_sentence
