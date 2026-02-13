@@ -1,12 +1,12 @@
 {
-    "last_updated": "2026-02-13T04:07:27.570079+00:00",
-    "last_successful_update": "2026-02-13T04:07:27.570088+00:00",
+    "last_updated": "2026-02-13T05:13:21.555517+00:00",
+    "last_successful_update": "2026-02-13T05:13:21.555524+00:00",
     "gms_score": 37,
     "sector_scores": {
         "STOCKS": 41,
         "CRYPTO": 35,
-        "FOREX": 53,
-        "COMMODITIES": 35,
+        "FOREX": 41,
+        "COMMODITIES": 47,
         "GLOBAL_INDICES": 50,
         "REAL_ESTATE": 50,
         "CREDIT": 50,
@@ -553,10 +553,10 @@
             ]
         },
         "NIFTY": {
-            "price": 25544.2,
+            "price": 25581.45,
             "prev_price": 25807.2,
-            "daily_chg": -1.02,
-            "change_percent": -1.25,
+            "daily_chg": -0.87,
+            "change_percent": -1.11,
             "trend": "DOWN",
             "sparkline": [
                 25732.3,
@@ -580,14 +580,14 @@
                 25935.15,
                 25953.85,
                 25807.2,
-                25544.2
+                25581.45
             ]
         },
         "BTC": {
-            "price": 66458.16,
+            "price": 66226.0,
             "prev_price": 66991.97,
-            "daily_chg": -0.8,
-            "change_percent": -5.42,
+            "daily_chg": -1.14,
+            "change_percent": -5.75,
             "trend": "DOWN",
             "sparkline": [
                 89462.45,
@@ -611,15 +611,15 @@
                 70120.78,
                 68793.96,
                 66991.97,
-                66458.16
+                66226.0
             ]
         },
         "ETH": {
-            "price": 1951.11,
+            "price": 1938.4,
             "prev_price": 1940.62,
-            "daily_chg": 0.54,
-            "change_percent": -6.59,
-            "trend": "UP",
+            "daily_chg": -0.11,
+            "change_percent": -7.2,
+            "trend": "DOWN",
             "sparkline": [
                 2949.63,
                 2953.26,
@@ -642,14 +642,14 @@
                 2103.57,
                 2019.5,
                 1940.62,
-                1951.11
+                1938.4
             ]
         },
         "SOL": {
-            "price": 79.01,
+            "price": 78.3,
             "prev_price": 79.25,
-            "daily_chg": -0.31,
-            "change_percent": -9.23,
+            "daily_chg": -1.2,
+            "change_percent": -10.04,
             "trend": "DOWN",
             "sparkline": [
                 128.29,
@@ -673,17 +673,16 @@
                 86.7,
                 82.92,
                 79.25,
-                79.01
+                78.3
             ]
         },
         "DXY": {
-            "price": 96.95,
-            "prev_price": 96.83,
-            "daily_chg": 0.13,
-            "change_percent": -0.69,
+            "price": 97.0,
+            "prev_price": 96.93,
+            "daily_chg": 0.07,
+            "change_percent": 0.18,
             "trend": "UP",
             "sparkline": [
-                99.13,
                 99.13,
                 99.32,
                 99.39,
@@ -704,14 +703,15 @@
                 96.82,
                 96.8,
                 96.83,
-                96.95
+                96.93,
+                97.0
             ]
         },
         "USDJPY": {
-            "price": 152.89,
+            "price": 153.17,
             "prev_price": 153.27,
-            "daily_chg": -0.25,
-            "change_percent": -2.77,
+            "daily_chg": -0.06,
+            "change_percent": -2.59,
             "trend": "DOWN",
             "sparkline": [
                 158.4,
@@ -735,14 +735,14 @@
                 156.13,
                 154.48,
                 153.27,
-                152.89
+                153.17
             ]
         },
         "EURUSD": {
             "price": 1.19,
             "prev_price": 1.19,
-            "daily_chg": -0.04,
-            "change_percent": 0.38,
+            "daily_chg": -0.09,
+            "change_percent": 0.33,
             "trend": "DOWN",
             "sparkline": [
                 1.16,
@@ -770,10 +770,10 @@
             ]
         },
         "USDINR": {
-            "price": 90.67,
+            "price": 90.71,
             "prev_price": 90.74,
-            "daily_chg": -0.07,
-            "change_percent": 0.09,
+            "daily_chg": -0.03,
+            "change_percent": 0.13,
             "trend": "DOWN",
             "sparkline": [
                 90.18,
@@ -797,7 +797,7 @@
                 90.82,
                 90.59,
                 90.74,
-                90.67
+                90.71
             ]
         },
         "USDSAR": {
@@ -832,13 +832,12 @@
             ]
         },
         "GOLD": {
-            "price": 5001.0,
-            "prev_price": 5071.6,
-            "daily_chg": -1.39,
-            "change_percent": 1.01,
-            "trend": "DOWN",
+            "price": 4998.1,
+            "prev_price": 4923.7,
+            "daily_chg": 1.51,
+            "change_percent": -1.05,
+            "trend": "UP",
             "sparkline": [
-                4589.2,
                 4626.3,
                 4616.3,
                 4588.4,
@@ -859,17 +858,17 @@
                 5050.9,
                 5003.8,
                 5071.6,
-                5001.0
+                4923.7,
+                4998.1
             ]
         },
         "OIL": {
-            "price": 62.7,
-            "prev_price": 64.63,
-            "daily_chg": -2.99,
-            "change_percent": -1.34,
+            "price": 62.76,
+            "prev_price": 62.84,
+            "daily_chg": -0.13,
+            "change_percent": -2.49,
             "trend": "DOWN",
             "sparkline": [
-                61.15,
                 62.02,
                 59.19,
                 59.44,
@@ -890,17 +889,17 @@
                 64.36,
                 63.96,
                 64.63,
-                62.7
+                62.84,
+                62.76
             ]
         },
         "COPPER": {
-            "price": 5.83,
-            "prev_price": 5.95,
-            "daily_chg": -1.95,
-            "change_percent": -0.52,
-            "trend": "DOWN",
+            "price": 5.84,
+            "prev_price": 5.77,
+            "daily_chg": 1.15,
+            "change_percent": -1.81,
+            "trend": "UP",
             "sparkline": [
-                5.97,
                 6.01,
                 5.95,
                 5.79,
@@ -921,17 +920,17 @@
                 5.95,
                 5.9,
                 5.95,
-                5.83
+                5.77,
+                5.84
             ]
         },
         "NATGAS": {
-            "price": 3.19,
-            "prev_price": 3.16,
-            "daily_chg": 0.85,
-            "change_percent": -6.9,
-            "trend": "UP",
+            "price": 3.14,
+            "prev_price": 3.22,
+            "daily_chg": -2.39,
+            "change_percent": 0.06,
+            "trend": "DOWN",
             "sparkline": [
-                3.42,
                 3.12,
                 3.13,
                 3.1,
@@ -952,17 +951,17 @@
                 3.14,
                 3.12,
                 3.16,
-                3.19
+                3.22,
+                3.14
             ]
         },
         "SILVER": {
-            "price": 76.86,
-            "prev_price": 83.75,
-            "daily_chg": -8.23,
-            "change_percent": 0.17,
-            "trend": "DOWN",
+            "price": 76.89,
+            "prev_price": 75.55,
+            "daily_chg": 1.78,
+            "change_percent": -6.31,
+            "trend": "UP",
             "sparkline": [
-                85.88,
                 90.87,
                 91.88,
                 88.09,
@@ -983,7 +982,8 @@
                 82.07,
                 80.22,
                 83.75,
-                76.86
+                75.55,
+                76.89
             ]
         },
         "DAX": {
@@ -1111,10 +1111,10 @@
             ]
         },
         "NIKKEI": {
-            "price": 57261.42,
+            "price": 57263.55,
             "prev_price": 57639.84,
-            "daily_chg": -0.66,
-            "change_percent": 5.54,
+            "daily_chg": -0.65,
+            "change_percent": 5.55,
             "trend": "DOWN",
             "sparkline": [
                 54341.23,
@@ -1138,14 +1138,14 @@
                 56363.94,
                 57650.54,
                 57639.84,
-                57261.42
+                57263.55
             ]
         },
         "HANGSENG": {
-            "price": 26556.6,
+            "price": 26547.97,
             "prev_price": 27032.54,
-            "daily_chg": -1.76,
-            "change_percent": -1.74,
+            "daily_chg": -1.79,
+            "change_percent": -1.77,
             "trend": "DOWN",
             "sparkline": [
                 26923.62,
@@ -1169,7 +1169,7 @@
                 27183.15,
                 27266.38,
                 27032.54,
-                26556.6
+                26547.97
             ]
         },
         "SHANGHAI": {
@@ -1204,10 +1204,10 @@
             ]
         },
         "SENSEX": {
-            "price": 82973.65,
+            "price": 82858.92,
             "prev_price": 83674.92,
-            "daily_chg": -0.84,
-            "change_percent": -1.3,
+            "daily_chg": -0.98,
+            "change_percent": -1.44,
             "trend": "DOWN",
             "sparkline": [
                 83627.69,
@@ -1231,7 +1231,7 @@
                 84273.92,
                 84233.64,
                 83674.92,
-                82973.65
+                82858.92
             ]
         },
         "BOVESPA": {
@@ -1266,10 +1266,10 @@
             ]
         },
         "ASX200": {
-            "price": 8925.4,
+            "price": 8920.9,
             "prev_price": 9043.5,
-            "daily_chg": -1.31,
-            "change_percent": 0.15,
+            "daily_chg": -1.36,
+            "change_percent": 0.1,
             "trend": "DOWN",
             "sparkline": [
                 8820.6,
@@ -1293,7 +1293,7 @@
                 8867.4,
                 9014.8,
                 9043.5,
-                8925.4
+                8920.9
             ]
         },
         "G_REIT": {
@@ -1764,8 +1764,8 @@
         "GBPUSD": {
             "price": 0.73,
             "prev_price": 0.73,
-            "daily_chg": 0.05,
-            "change_percent": -0.06,
+            "daily_chg": 0.09,
+            "change_percent": -0.02,
             "trend": "UP",
             "sparkline": [
                 0.74,
@@ -1795,8 +1795,8 @@
         "AUDUSD": {
             "price": 1.41,
             "prev_price": 1.4,
-            "daily_chg": 0.54,
-            "change_percent": -0.75,
+            "daily_chg": 0.59,
+            "change_percent": -0.71,
             "trend": "UP",
             "sparkline": [
                 1.5,
@@ -1826,8 +1826,8 @@
         "USDCAD": {
             "price": 1.36,
             "prev_price": 1.36,
-            "daily_chg": 0.28,
-            "change_percent": -0.33,
+            "daily_chg": 0.31,
+            "change_percent": -0.3,
             "trend": "UP",
             "sparkline": [
                 1.39,
@@ -1888,8 +1888,8 @@
         "USDCHF": {
             "price": 0.77,
             "prev_price": 0.77,
-            "daily_chg": -0.19,
-            "change_percent": -0.79,
+            "daily_chg": -0.11,
+            "change_percent": -0.71,
             "trend": "DOWN",
             "sparkline": [
                 0.8,
@@ -2093,24 +2093,20 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "The GMS score of 37 confirms a Defensive regime as momentum pushed the score down from 39. The primary driver is a sharp 18% spike in VIX (Fear/Volatility) and rising DXY (Dollar strength/Liquidity), signaling tightening conditions. While equities and semis face pressure, stable yield spreads suggest this is volatility-led deleveraging rather than a systemic credit collapse. Caution is advised; maintain higher cash levels until VIX peaks and liquidity stabilizes.",
+        "content": "GMS status is Defensive at 37. Negative momentum pushed the score to 37, driven by a 17.96% spike in VIX (Fear/Volatility), signaling a sharp contraction in risk appetite. Equities like QQQ and SPY face pressure as liquidity tightens. While the current regime suggests caution, the rise in Gold and Silver indicates a flight to hard assets amid institutional uncertainty following the Goldman news. Prioritize capital preservation until VIX stabilizes; avoid aggressive entries into high-beta sectors like Semis as momentum remains bearish.",
         "reports": {
-            "JP": "GMSスコア37は「防衛的（Defensive）」な局面を示し、モメンタムが39から37へ押し下げました。主な要因はVIX（恐怖指数）の18%急騰とDXY（米ドル強さ/流動性）の上昇による流動性低下です。株価指数や半導体への圧力が強い一方、利回りスプレッドの安定は信用リスクが限定的であることを示唆しています。VIXがピークアウトするまでキャッシュ比率を高め、慎重な姿勢を維持すべき局面です。",
-            "EN": "The GMS score of 37 confirms a Defensive regime as momentum pushed the score down from 39. The primary driver is a sharp 18% spike in VIX (Fear/Volatility) and rising DXY (Dollar strength/Liquidity), signaling tightening conditions. While equities and semis face pressure, stable yield spreads suggest this is volatility-led deleveraging rather than a systemic credit collapse. Caution is advised; maintain higher cash levels until VIX peaks and liquidity stabilizes.",
-            "CN": "GMS得分37表明市场处于防御体制，动能将得分从39推低至37。核心驱动力是VIX（恐慌指数）飙升18%以及DXY（美元强度/流动性）上升，这反映了金融环境的收紧。尽管科技股和半导体面临抛售压力，但收益率利差保持稳定，暗示这更多是波动性引发的去杠杆而非信用崩溃。建议保持防御姿态，增加现金比例，等待VIX见顶后的反弹机会。",
-            "ES": "El GMS de 37 confirma un régimen defensivo mientras el impulso empujó la puntuación desde 39. El factor clave es el aumento del 18% en el VIX (volatilidad/miedo) y el fortalecimiento del DXY (fuerza del dólar/liquidez), lo que reduce el apetito por el riesgo. Aunque las acciones sufren, los diferenciales de rendimiento estables sugieren que no hay una crisis crediticia inminente. Se recomienda cautela y mantener liquidez hasta que el VIX muestre signos de agotamiento táctico.",
-            "HI": "GMS स्कोर 37 एक रक्षात्मक (Defensive) शासन की पुष्टि करता है क्योंकि मोमेंटम ने स्कोर को 39 से घटाकर 37 कर दिया है। मुख्य कारण VIX (डर/अस्थिरता) में 18% की वृद्धि और DXY (डॉलर की मजबूती/तरलता) में बढ़त है, जो बाजार में घबराहट पैदा कर रहा है। हालांकि इक्विटी दबाव में हैं, लेकिन स्थिर यील्ड स्प्रेड बताते हैं कि यह कोई क्रेडिट संकट नहीं है। VIX के चरम पर पहुँचने तक सावधानी बरतें और नकद स्तर ऊँचा रखें ताकि गिरावट का लाभ उठाया जा सके।",
-            "ID": "Skor GMS 37 mengonfirmasi rezim Defensif saat momentum mendorong skor turun dari 39. Pemicu utamanya adalah lonjakan 18% pada VIX (Indeks Ketakutan) dan penguatan DXY (Kekuatan Dolar/Likuiditas) yang memperketat kondisi keuangan. Meskipun sektor teknologi tertekan, spread imbal hasil yang stabil menunjukkan ini adalah deleveraging akibat volatilitas, bukan krisis kredit sistemik. Tetap waspada dan pertahankan posisi kas tinggi hingga VIX mencapai puncaknya.",
-            "AR": "تؤكد درجة 37 في مؤشر GMS التحول إلى نظام دفاعي حيث دفع الزخم النتيجة للهبوط من 39. المحرك الرئيسي هو ارتفاع مؤشر VIX (الخوف) بنسبة 18% وقوة DXY (الدولار/السيولة)، مما يشير إلى تضييق مالي. ورغم الضغوط على الأسهم، إلا أن استقرار فروق العائد يوحي بأن التراجع ناتج عن التقلبات وليس انهياراً ائتمانياً. يُنصح بالحذر والحفاظ على مستويات نقدية عالية حتى يصل مؤشر VIX إلى ذروته وتستقر السيولة العالمية.",
-            "DE": "Der GMS-Score von 37 bestätigt ein defensives Regime, da das Momentum den Score von 39 nach unten drückte. Haupttreiber sind der 18%ige Anstieg des VIX (Angstindex) und ein festerer DXY (Dollarstärke/Liquidität), was die Finanzbedingungen verschärft. Während Aktien unter Druck stehen, deutet die Stabilität der Renditespreads darauf hin, dass es sich um einen volatilitätsgetriebenen Rückzug und nicht um eine Kreditkrise handelt. Erhöhen Sie die Cash-Quote, bis der VIX seinen Höchststand erreicht.",
-            "FR": "Le score GMS de 37 confirme un régime défensif, le momentum ayant poussé le score de 39 à 37. Le moteur principal est le bond de 18 % du VIX (indice de la peur) et la hausse du DXY (force du dollar/liquidité), signalant un resserrement monétaire. Bien que les actions soient sous pression, la stabilité des spreads de rendement suggère un désendettement lié à la volatilité plutôt qu'une crise de crédit. Maintenez une position prudente et surveillez un pic du VIX avant d'agir."
+            "JP": "GMSは37で「守備的」です。モメンタムがスコアを37へ押し下げ、VIX（恐怖指数/ボラティリティ）が17.96%急騰したことでリスク回避が鮮明となりました。QQQやSPYの下落は流動性の低下を反映していますが、金や銀の上昇は機関投資家の不透明感に対する避難先確保を示唆しています。現在の局面では資本保護を優先すべきですが、VIXの沈静化が短期的な底打ちの合図となる可能性があります。半導体やサイバー関連の弱気な動きに注意し、慎重な姿勢を維持してください。",
+            "EN": "GMS status is Defensive at 37. Negative momentum pushed the score to 37, driven by a 17.96% spike in VIX (Fear/Volatility), signaling a sharp contraction in risk appetite. Equities like QQQ and SPY face pressure as liquidity tightens. While the current regime suggests caution, the rise in Gold and Silver indicates a flight to hard assets amid institutional uncertainty following the Goldman news. Prioritize capital preservation until VIX stabilizes; avoid aggressive entries into high-beta sectors like Semis as momentum remains bearish.",
+            "CN": "GMS分数为37，处于“防御”状态。动能将分数推至37，主要受VIX（恐慌指数/波动率）飙升17.96%驱动，显示风险偏好大幅收缩。QQQ和SPY随流动性收紧而承压。虽然当前机制建议谨慎，但黄金和白银的上涨表明，在机构动荡背景下资金正流向硬资产避险。在VIX稳定之前，应优先考虑资本保全；半导体和网络安全板块动能依然看跌，需避免激进抄底，等待市场波动率回归正常水平。",
+            "ES": "El estado GMS es Defensivo en 37. El impulso empujó la puntuación a 37, debido a un salto del 17.96% en el VIX (Miedo/Volatilidad), señalando una fuerte contracción del riesgo. Acciones como QQQ y SPY sufren mientras la liquidez se reduce. Aunque el régimen actual sugiere cautela, el alza en Oro y Plata indica una fuga hacia activos reales ante la incertidumbre institucional. Priorice la preservación del capital hasta que el VIX se estabilice; evite entradas agresivas en sectores como semiconductores, ya que el impulso sigue siendo bajista.",
+            "HI": "GMS स्थिति 37 पर 'रक्षात्मक' है। मोमेंटम ने स्कोर को 37 पर धकेल दिया है, जिसका मुख्य कारण VIX (डर/अस्थिरता) में 17.96% की भारी वृद्धि है। QQQ और SPY जैसे शेयरों में तरलता की कमी के कारण दबाव देखा जा रहा है। हालांकि वर्तमान शासन सावधानी का सुझाव देता है, सोने और चांदी में तेजी संस्थागत अनिश्चितता के बीच सुरक्षित संपत्तियों की ओर झुकाव दर्शाती है। VIX के स्थिर होने तक पूंजी संरक्षण पर ध्यान दें; सेमीकंडक्टर जैसे कमजोर क्षेत्रों में आक्रामक निवेश से बचें क्योंकि बाजार का रुख वर्तमान में मंदी की ओर बना हुआ है।",
+            "ID": "Status GMS adalah Defensif di angka 37. Momentum mendorong skor ke 37, dipicu oleh lonjakan VIX (Ketakutan/Volatilitas) sebesar 17,96%, menandakan kontraksi risiko yang tajam. Saham seperti QQQ dan SPY tertekan seiring pengetatan likuiditas. Meskipun rezim saat ini menyarankan kewaspadaan, kenaikan Emas dan Perak menunjukkan pelarian ke aset keras di tengah ketidakpastian institusional. Fokus pada perlindungan modal hingga VIX stabil; hindari entri agresif pada sektor lemah seperti semikonduktor karena vektor momentum masih menunjukkan tren penurunan.",
+            "AR": "حالة GMS هي 'دفاعي' عند 37. دفع الزخم النتيجة إلى 37، مدفوعاً بزيادة 17.96% في مؤشر VIX (الخوف/التقلب)، مما يشير إلى انكماش حاد في الشهية للمخاطر. تتعرض الأسهم مثل QQQ لضغوط مع تقلص السيولة. بينما يشير النظام الحالي إلى ضرورة الحذر، فإن ارتفاع الذهب والفضة يعكس الهروب إلى الأصول الصلبة كتحوط ضد عدم اليقين المؤسسي. يجب إعطاء الأولوية للحفاظ على رأس المال حتى يستقر مؤشر VIX؛ تجنب الدخول القوي في قطاعات أشباه الموصلات حيث لا يزال الزخم هبوطياً بشكل واضح.",
+            "DE": "Der GMS-Status ist Defensiv bei 37. Das Momentum drückte den Score auf 37, getrieben durch einen VIX-Anstieg (Angst/Volatilität) von 17,96 %, was auf sinkende Risikobereitschaft hindeutet. Aktien wie QQQ und SPY geraten durch knappe Liquidität unter Druck. Während das Regime zur Vorsicht rät, zeigt der Anstieg von Gold und Silber eine Flucht in Sachwerte aufgrund institutioneller Unsicherheit. Priorisieren Sie den Kapitalschutz, bis sich der VIX stabilisiert; vermeiden Sie Einstiege in schwache Sektoren wie Halbleiter, da der Abwärtstrend weiterhin dominiert.",
+            "FR": "Le statut GMS est Défensif à 37. Le momentum a poussé le score à 37, suite à une hausse de 17,96% du VIX (Peur/Volatilité), signalant une forte aversion au risque. Les actions comme le QQQ et le SPY chutent avec la liquidité. Bien que le régime actuel impose la prudence, la hausse de l'Or et de l'Argent montre une fuite vers les actifs tangibles face à l'instabilité institutionnelle. Priorisez la préservation du capital jusqu'à la stabilisation du VIX ; évitez les secteurs à bêta élevé comme les semi-conducteurs tant que le momentum reste baissier."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-06T14:52:15Z",
-            "score": 34
-        },
         {
             "date": "2026-02-06T22:24:58Z",
             "score": 34
@@ -2346,6 +2342,10 @@
         {
             "date": "2026-02-13T04:07:27Z",
             "score": 37
+        },
+        {
+            "date": "2026-02-13T05:13:21Z",
+            "score": 37
         }
     ],
     "intelligence": {
@@ -2363,7 +2363,7 @@
             {
                 "title": "U.S.–China proxy battle over Panama Canal ports set to intensify as CK Hutchison warns of legal action",
                 "link": "https://www.cnbc.com/2026/02/13/panama-ports-us-china-ck-hutchison-trump.html",
-                "isoDate": "2026-02-13T04:05:28+00:00Z"
+                "isoDate": "2026-02-13T04:54:50+00:00Z"
             },
             {
                 "title": "Stock futures are little changed as traders await big consumer inflation report: Live updates",
@@ -2376,78 +2376,78 @@
                 "isoDate": "2026-02-12T22:27:44+00:00Z"
             },
             {
-                "title": "Apple's stock has worst day since April as iPhone maker faces FTC scrutiny, reports of Siri delay",
-                "link": "https://www.cnbc.com/2026/02/12/apple-stock-worst-day-ftc-siri.html",
-                "isoDate": "2026-02-12T23:52:25+00:00Z"
+                "title": "India approves Rafale jet purchase in $40 billion defense package ahead of Macron visit",
+                "link": "https://www.cnbc.com/2026/02/13/india-rafale-jets-dassault-39-billion-defense-package-macron-visit-france.html",
+                "isoDate": "2026-02-13T04:35:10+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "エプスタイン事件：ゴールドマン・サックスのトップ弁護士、キャスリン・リュムラー氏がメール流出を受け辞任へ",
-                "シャオミのEV SUV、1月の中国販売台数でトップ、テスラのモデルYの2倍を販売",
-                "パナマ運河港湾における米中代理戦争が激化へ、CKハチソンが法的措置を示唆",
-                "株価先物は小動き、個人消費インフレ報告をトレーダーが待つ：ライブアップデート",
-                "大手ハイパースケーラー、2026年のAI支出を70%増の6000億ドルに引き上げへ。この支出ブームに今どう乗るか",
-                "アップル株、FTCの調査とSiri遅延報道で4月以来最悪の1日"
+                "エプスタイン文書：ゴールドマン・サックスのトップ弁護士キャスリーン・ルムラー氏、メール問題で辞任へ",
+                "シャオミのEV SUV、1月の中国販売台数でトップに、テスラのモデルYの2倍を販売",
+                "パナマ運河港湾を巡る米中代理戦争、CKハチソンが法的措置を示唆し激化へ",
+                "株価先物は小幅高、消費インフレのビッグレポートをトレーダーが待つ：ライブ更新",
+                "主要ハイパースケーラー、2026年のAI支出を70%増の6000億ドルに引き上げへ。今すぐ支出ブームに乗る方法",
+                "マクロン大統領訪問控え、インドが400億ドルの防衛パッケージでラファール戦闘機購入を承認"
             ],
             "CN": [
-                "爱泼斯坦文件：高盛首席律师凯瑟琳·鲁姆勒因邮件风波将辞职",
-                "小米电动SUV一月销量领跑中国，销量是特斯拉Model Y的两倍",
-                "美国与中国就巴拿马运河港口展开代理人战争，CK Hutchison警告将采取法律行动，局势或加剧",
-                "股指期货小幅变动，交易员等待重磅消费者通胀报告：实时更新",
-                "顶级超大规模云服务商将把2026年AI支出提高70%至6000亿美元。如何立即抓住这波支出热潮",
-                "苹果股价遭遇4月以来最糟糕一天，iPhone制造商面临FTC审查，Siri延迟报道频出"
+                "爱泼斯坦案文件：高盛首席律师凯瑟琳·鲁姆勒因邮件风波将辞职",
+                "小米电动SUV一月中国销量夺冠，销量是特斯拉Model Y两倍",
+                "巴拿马运河港口的美中代理人战争升级，和记黄埔警告将采取法律行动",
+                "股指期货小幅变动，交易员静待重大消费者通胀报告：实时更新",
+                "顶级超大规模计算公司预计2026年AI支出增长70%至6000亿美元。如何抓住当前支出热潮",
+                "马克龙访问前夕，印度批准400亿美元国防一揽子计划购买“阵风”战斗机"
             ],
             "ES": [
-                "Archivos Epstein: la abogada principal de Goldman Sachs, Kathryn Ruemmler, renunciará tras la repercusión de un correo electrónico",
+                "Archivos de Epstein: la abogada principal de Goldman Sachs, Kathryn Ruemmler, dimitirá tras las repercusiones de un correo electrónico",
                 "El SUV eléctrico de Xiaomi lidera las ventas en China en enero, vende el doble que el Model Y de Tesla",
-                "La batalla por poderes entre EE.UU. y China sobre los puertos del Canal de Panamá se intensificará mientras CK Hutchison advierte de acciones legales",
-                "Los futuros de las acciones apenas cambian mientras los operadores esperan el gran informe de inflación al consumidor: Actualizaciones en vivo",
-                "Los principales hiperescaladores aumentarán el gasto en IA en 2026 en un 70% hasta los 600.000 millones de dólares. Cómo aprovechar el auge del gasto ahora",
-                "Las acciones de Apple tienen su peor día desde abril mientras el fabricante del iPhone enfrenta el escrutinio de la FTC e informes de retraso en Siri"
+                "La batalla proxy entre EE. UU. y China por los puertos del Canal de Panamá se intensificará después de que CK Hutchison advierta de acciones legales",
+                "Los futuros de las acciones apenas cambian mientras los operadores esperan el gran informe de inflación al consumidor: actualizaciones en vivo",
+                "Los principales hiperescaladores aumentarán el gasto en IA en 2026 un 70% hasta los 600.000 millones de dólares. Cómo aprovechar el auge del gasto ahora",
+                "India aprueba la compra de jets Rafale en un paquete de defensa de 40.000 millones de dólares antes de la visita de Macron"
             ],
             "HI": [
-                "एपस्टीन फाइलें: गोल्डमैन सैक्स की शीर्ष वकील कैथरीन रुएमलर ईमेल प्रकरण के बाद पद छोड़ेंगी",
-                "Xiaomi का इलेक्ट्रिक SUV जनवरी में चीन की बिक्री में शीर्ष पर, टेस्ला के मॉडल Y से दोगुना बेचा",
+                "एपस्टीन फ़ाइलें: गोल्डमैन सैक्स की शीर्ष वकील कैथरीन रूम्लर ईमेल fallout के बाद पद छोड़ेंगी",
+                "Xiaomi की इलेक्ट्रिक SUV जनवरी में चीन की बिक्री में अव्वल, टेस्ला की मॉडल Y से दोगुनी बिकी",
                 "पनामा नहर बंदरगाहों पर अमेरिका-चीन प्रॉक्सी लड़ाई तेज होने की उम्मीद, CK Hutchison ने कानूनी कार्रवाई की चेतावनी दी",
-                "स्टॉक फ्यूचर्स थोड़े बदले, ट्रेडर बड़े उपभोक्ता मुद्रास्फीति रिपोर्ट का इंतजार कर रहे हैं: लाइव अपडेट",
-                "शीर्ष हाइपरस्केलर्स 2026 में AI खर्च 70% बढ़ाकर $600 बिलियन करने के लिए तैयार। अभी खर्च में उछाल का लाभ कैसे उठाएं",
-                "Apple के शेयर में अप्रैल के बाद का सबसे खराब दिन, iPhone निर्माता FTC जांच का सामना कर रहा है, Siri में देरी की रिपोर्ट"
+                "शेयर वायदा में मामूली बदलाव, व्यापारी बड़े उपभोक्ता मुद्रास्फीति रिपोर्ट का इंतजार कर रहे हैं: लाइव अपडेट",
+                "शीर्ष हाइपरस्केलर्स 2026 में AI खर्च 70% बढ़ाकर 600 बिलियन डॉलर करने को तैयार। अभी खर्च बूम का लाभ कैसे उठाएं",
+                "मैक्रों की यात्रा से पहले भारत ने 40 अरब डॉलर के रक्षा पैकेज में राफेल जेट की खरीद को मंजूरी दी"
             ],
             "ID": [
-                "File Epstein: pengacara utama Goldman Sachs Kathryn Ruemmler akan mundur setelah berita email",
-                "SUV listrik Xiaomi puncaki penjualan di Tiongkok pada Januari, terjual dua kali lipat dari Model Y Tesla",
-                "Pertarungan proksi AS-Tiongkok atas pelabuhan Terusan Panama akan meningkat seiring peringatan tindakan hukum oleh CK Hutchison",
-                "Saham berjangka sedikit berubah karena pedagang menunggu laporan inflasi konsumen besar: Pembaruan langsung",
-                "Hiperpenyedia terkemuka siap tingkatkan belanja AI 2026 sebesar 70% menjadi $600 miliar. Cara memanfaatkan lonjakan belanja sekarang",
-                "Saham Apple alami hari terburuk sejak April karena pembuat iPhone hadapi pengawasan FTC, laporan penundaan Siri"
+                "File Epstein: pengacara utama Goldman Sachs Kathryn Ruemmler akan mengundurkan diri setelah skandal email",
+                "SUV listrik Xiaomi puncaki penjualan China Januari, laris dua kali lipat Model Y Tesla",
+                "Perang proksi AS-China atas pelabuhan Terusan Panama diprediksi memanas seiring CK Hutchison ancam aksi hukum",
+                "Kontrak berjangka saham sedikit berubah saat trader menanti laporan inflasi konsumen besar: Pembaruan langsung",
+                "Perusahaan hyperscaler teratas diprediksi tingkatkan belanja AI 2026 sebesar 70% menjadi $600 miliar. Cara manfaatkan lonjakan belanja sekarang",
+                "India setujui pembelian jet Rafale dalam paket pertahanan $40 miliar menjelang kunjungan Macron"
             ],
             "AR": [
-                "ملفات إبستين: كبيرة محاميي جولدمان ساكس كاثرين رويمبلر ستتنحى بعد تداعيات رسالة بريد إلكتروني",
-                "سيارة الدفع الرباعي الكهربائية من شاومي تتصدر مبيعات الصين في يناير، وتبيع ضعف ما باعته تسلا موديل Y",
-                "معركة الوكالة بين الولايات المتحدة والصين حول موانئ قناة بنما تشتعل مع تحذير CK Hutchison من إجراءات قانونية",
-                "عقود الأسهم الآجلة تتغير بشكل طفيف في انتظار المتداولين تقرير تضخم المستهلك الكبير: تحديثات مباشرة",
-                "أكبر مزودي الحوسبة الفائقة يرفعون إنفاق الذكاء الاصطناعي لعام 2026 بنسبة 70% إلى 600 مليار دولار. كيف تستفيد من طفرة الإنفاق الآن",
-                "سهم آبل يشهد أسوأ يوم منذ أبريل مع مواجهة صانع الآيفون تدقيقًا من لجنة التجارة الفيدرالية وتقارير عن تأخير سيري"
+                "ملفات إبستاين: كبيرة محاميي جولدمان ساكس كاثرين رويميلر تتنحى بعد تداعيات بريد إلكتروني",
+                "سيارة الدفع الرباعي الكهربائية من شاومي تتصدر مبيعات الصين في يناير، تبيع ضعف ما تبيعه تسلا موديل Y",
+                "معركة الوكالة الأمريكية-الصينية حول موانئ قناة بنما تشتد مع تحذير CK Hutchison من إجراءات قانونية",
+                "عقود الأسهم الآجلة تتغير بشكل طفيف بينما ينتظر المتداولون تقرير التضخم الاستهلاكي الكبير: تحديثات مباشرة",
+                "أكبر مزودي البنية التحتية السحابية يستعدون لزيادة إنفاق الذكاء الاصطناعي في 2026 بنسبة 70% إلى 600 مليار دولار. كيفية الاستفادة من طفرة الإنفاق الآن",
+                "الهند توافق على شراء طائرات رافال في صفقة دفاع بقيمة 40 مليار دولار قبل زيارة ماكرون"
             ],
             "DE": [
-                "Epstein-Akten: Goldman Sachs-Topjuristin Kathryn Ruemmler tritt nach E-Mail-Kontroverse zurück",
-                "Xiaomis Elektro-SUV führt Chinas Verkäufe im Januar an und verkauft doppelt so viele wie Teslas Model Y",
-                "US-China-Stellvertreterkampf um Panama-Kanal-Häfen intensiviert sich, CK Hutchison droht mit rechtlichen Schritten",
-                "Aktien-Futures wenig verändert, da Händler auf wichtigen Bericht zur Verbraucherinflation warten: Live-Updates",
-                "Top-Hyperscaler werden ihre KI-Ausgaben 2026 um 70 % auf 600 Milliarden US-Dollar erhöhen. So nutzen Sie den Ausgabenboom jetzt",
-                "Apple-Aktie erlebt den schlechtesten Tag seit April, da iPhone-Hersteller FTC-Prüfung und Berichte über Siri-Verzögerungen gegenübersieht"
+                "Epstein-Akten: Goldman Sachs' Top-Anwältin Kathryn Ruemmler tritt nach E-Mail-Folgen zurück",
+                "Xiaomis Elektro-SUV führt Chinas Verkäufe im Januar an, verkauft doppelt so viele wie Teslas Model Y",
+                "Stellvertreterkrieg zwischen den USA und China um Panamakanalhäfen wird sich voraussichtlich intensivieren, da CK Hutchison rechtliche Schritte androht",
+                "Aktienfutures kaum verändert, da Händler auf großen Bericht zur Verbraucherinflation warten: Live-Updates",
+                "Top-Hyperscaler wollen KI-Ausgaben 2026 um 70% auf 600 Milliarden Dollar erhöhen. So profitieren Sie jetzt vom Ausgabenboom",
+                "Indien genehmigt Kauf von Rafale-Jets im Rahmen eines 40-Milliarden-Dollar-Verteidigungspakets vor Macrons Besuch"
             ],
             "FR": [
-                "Dossiers Epstein : la principale avocate de Goldman Sachs, Kathryn Ruemmler, démissionnera après les retombées d'un e-mail",
-                "Le SUV électrique de Xiaomi en tête des ventes en Chine en janvier, vend deux fois plus que le Model Y de Tesla",
-                "La bataille par procuration entre les États-Unis et la Chine pour les ports du canal de Panama s'intensifie alors que CK Hutchison avertit d'actions en justice",
-                "Les contrats à terme sur actions peu modifiés alors que les traders attendent un grand rapport sur l'inflation des consommateurs : mises à jour en direct",
-                "Les principaux hyperscalers vont augmenter leurs dépenses en IA en 2026 de 70 % pour atteindre 600 milliards de dollars. Comment profiter de l'explosion des dépenses dès maintenant",
-                "L'action Apple connaît sa pire journée depuis avril, le fabricant d'iPhone faisant face à l'examen de la FTC et à des rapports sur un retard de Siri"
+                "Dossiers Epstein : la principale avocate de Goldman Sachs, Kathryn Ruemmler, démissionne après les retombées d'un e-mail",
+                "Le SUV électrique de Xiaomi domine les ventes en Chine en janvier, vendant deux fois plus que le Model Y de Tesla",
+                "La bataille par procuration américano-chinoise pour les ports du canal de Panama s'intensifie alors que CK Hutchison menace d'actions en justice",
+                "Les contrats à terme sur actions peu changés alors que les traders attendent le grand rapport sur l'inflation des consommateurs : mises à jour en direct",
+                "Les principaux hyperscalers devraient augmenter leurs dépenses en IA en 2026 de 70 % pour atteindre 600 milliards de dollars. Comment profiter du boom des dépenses maintenant",
+                "L'Inde approuve l'achat de jets Rafale dans le cadre d'un paquet de défense de 40 milliards de dollars avant la visite de Macron"
             ]
         },
-        "last_updated": "2026-02-13T04:07:27.569276+00:00Z"
+        "last_updated": "2026-02-13T05:13:21.554980+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
