@@ -13,5 +13,10 @@
         "timestamp": "2026-01-24T13:39:34.463086",
         "status": "FAILURE",
         "message": "Font loading failed (/home/runner/work/OmniMetric/OmniMetric/backend/assets/fonts/NotoSansJP-Bold.ttf): unknown file format. Using PIL default."
+    },
+    "BEACON": {
+        "timestamp": "2026-02-13T14:04:55.195278+00:00",
+        "status": "FAILURE",
+        "message": "Failed to publish panic alert (DE): 'BlueskySequencer' object has no attribute 'publish'"
     }
 }
