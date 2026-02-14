@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-02-14T08:50:14.479541+00:00",
+    "last_updated": "2026-02-14T13:12:39.119827+00:00",
     "market_data": {
         "CRYPTO_SENTIMENT": {
             "price": 9,
@@ -570,10 +570,10 @@
             ]
         },
         "BTC": {
-            "price": 69717.22,
+            "price": 69582.84,
             "prev_price": 68857.84,
-            "daily_chg": 1.25,
-            "change_percent": 1.34,
+            "daily_chg": 1.05,
+            "change_percent": 1.15,
             "trend": "UP",
             "sparkline": [
                 89110.73,
@@ -597,14 +597,14 @@
                 66991.97,
                 66221.84,
                 68857.84,
-                69717.22
+                69582.84
             ]
         },
         "ETH": {
-            "price": 2078.33,
+            "price": 2070.12,
             "prev_price": 2048.53,
-            "daily_chg": 1.45,
-            "change_percent": 2.91,
+            "daily_chg": 1.05,
+            "change_percent": 2.51,
             "trend": "UP",
             "sparkline": [
                 2948.74,
@@ -628,14 +628,14 @@
                 1940.62,
                 1946.94,
                 2048.53,
-                2078.33
+                2070.12
             ]
         },
         "SOL": {
-            "price": 86.08,
+            "price": 86.66,
             "prev_price": 84.32,
-            "daily_chg": 2.09,
-            "change_percent": 3.82,
+            "daily_chg": 2.77,
+            "change_percent": 4.51,
             "trend": "UP",
             "sparkline": [
                 127.05,
@@ -659,7 +659,7 @@
                 79.25,
                 78.35,
                 84.32,
-                86.08
+                86.66
             ]
         },
         "DXY": {
@@ -2150,7 +2150,7 @@
             {
                 "date": "2026-01-04",
                 "x": 26.84,
-                "y": 63.88
+                "y": 63.89
             },
             {
                 "date": "2026-01-05",
@@ -2354,14 +2354,14 @@
             },
             {
                 "date": "2026-02-14",
-                "x": -57.27,
-                "y": -110.19
+                "x": -57.33,
+                "y": -110.12
             }
         ],
         "current_vector": {
             "date": "2026-02-14",
-            "x": -57.27,
-            "y": -110.19
+            "x": -57.33,
+            "y": -110.12
         },
         "current_satellites": [
             {
@@ -2388,9 +2388,9 @@
             {
                 "id": "BTC",
                 "label": "BTC",
-                "x": -70.7,
-                "y": 44.19,
-                "z": -1.96
+                "x": -71.14,
+                "y": 44.47,
+                "z": -1.98
             },
             {
                 "id": "GOLD",
@@ -2536,7 +2536,7 @@
         "history_length": 60,
         "system": "moving_fortress"
     },
-    "last_successful_update": "2026-02-14T08:50:04.010136+00:00",
+    "last_successful_update": "2026-02-14T13:12:28.349268+00:00",
     "gms_score": 41,
     "sector_scores": {
         "STOCKS": 44,
@@ -2594,24 +2594,20 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS Status: Neutral (41). Recent momentum pushed the score to 41, signaling a transition from defensive positioning. A softening DXY (Dollar) and lower VIX (Volatility) support short-term stability, yet a 2% surge in Gold and weakness in Asian markets suggest underlying risk aversion. While global liquidity remains stable, rising political uncertainty may cap immediate gains. Maintain a balanced stance while monitoring for breakout volatility.",
+        "content": "The GMS score reached 41 as momentum pushed the regime into Neutral. Softening in DXY (Dollar strength/Liquidity) and VIX (Fear/Volatility) supports this shift. However, a 2.8% spike in HY Spreads warns of underlying credit stress. While the outlook is stabilizing, investors should balance Neutral positioning with caution toward credit risk. Await confirmation of global liquidity stability before increasing aggressive exposure to risk assets.",
         "reports": {
-            "JP": "GMS状況：中立（41）。直近のモメンタムによりスコアは41へ上昇し、防衛的局面からの脱却を示唆しています。DXY（ドル指数）の軟化とVIX（恐怖指数）の低下は短期的な安定を支えますが、金価格の2%上昇とアジア市場の弱含みは依然として根強い警戒感を示しています。流動性は安定していますが、政治的な不透明感が上値を抑える可能性があるため、バランスを重視した慎重な対応が求められます。",
-            "EN": "GMS Status: Neutral (41). Recent momentum pushed the score to 41, signaling a transition from defensive positioning. A softening DXY (Dollar) and lower VIX (Volatility) support short-term stability, yet a 2% surge in Gold and weakness in Asian markets suggest underlying risk aversion. While global liquidity remains stable, rising political uncertainty may cap immediate gains. Maintain a balanced stance while monitoring for breakout volatility.",
-            "CN": "GMS状态：中性 (41)。近期动能将分数推至41，表明市场正从防御模式转向中性。DXY（美元指数）走软和VIX（波动率）下降支撑了短期稳定，但黄金上涨2%以及亚洲市场的疲软反映出潜在的避险情绪。尽管流动性保持稳定，但政治不确定性可能抑制上行空间。建议保持平衡仓位，关注宏观环境的进一步演变。",
-            "ES": "Estado GMS: Neutral (41). El impulso reciente llevó la puntuación a 41, marcando una transición desde un régimen defensivo. Un DXY (Dólar) más débil y un VIX (Volatilidad) en descenso favorecen la estabilidad a corto plazo, aunque el alza del 2% en el Oro y las caídas en Asia exigen cautela. La liquidez es estable, pero la incertidumbre política podría limitar el avance de los activos de riesgo. Se recomienda mantener una postura equilibrada y vigilante.",
-            "HI": "GMS स्थिति: न्यूट्रल (41)। हालिया मोमेंटम ने स्कोर को 41 तक पहुँचा दिया है, जो रक्षात्मक रुख से बदलाव का संकेत है। कमजोर DXY (डॉलर) और गिरता VIX (डर/अस्थिरता) स्थिरता का समर्थन करते हैं, लेकिन सोने में 2% की वृद्धि और एशियाई बाजारों की गिरावट सावधानी का संकेत देती है। लिक्विडिटी स्थिर है, फिर भी राजनीतिक अनिश्चितता बढ़त को रोक सकती है। निवेशकों को संतुलित दृष्टिकोण अपनाना चाहिए और बाजार की दिशा पर नजर रखनी चाहिए।",
-            "ID": "Status GMS: Netral (41). Momentum baru-baru ini mendorong skor ke 41, menunjukkan transisi dari fase defensif. Pelemahan DXY (Dolar) dan penurunan VIX (Volatilitas) mendukung stabilitas jangka pendek, namun lonjakan Emas 2% dan pelemahan pasar Asia menunjukkan risiko yang masih ada. Likuiditas global terpantau stabil, tetapi ketidakpastian politik dapat membatasi kenaikan lebih lanjut. Tetap pada posisi seimbang sambil memantau sentimen pasar.",
-            "AR": "حالة GMS: محايد (41). دفع الزخم الأخير النتيجة إلى 41، مما يشير إلى الانتقال من الوضع الدفاعي. يدعم ضعف DXY (الدولار) وانخفاض VIX (التقلب) الاستقرار على المدى القصير، لكن ارتفاع الذهب بنسبة 2% وضعف الأسواق الآسيوية يعكسان حذراً مستتراً تجاه المخاطر. السيولة مستقرة، إلا أن عدم اليقين السياسي قد يحد من المكاسب السعرية. يوصى باتخاذ موقف متوازن مع مراقبة تطورات السوق.",
-            "DE": "GMS-Status: Neutral (41). Das aktuelle Momentum hat den Score auf 41 gehoben, was einen Übergang vom defensiven Regime markiert. Ein schwächerer DXY (Dollar) und sinkender VIX (Volatilität) stützen die kurzfristige Stabilität, doch der Goldanstieg um 2% und die Schwäche in Asien mahnen zur Vorsicht. Die Liquidität bleibt stabil, aber politische Unsicherheit könnte Gewinne begrenzen. Behalten Sie eine neutrale Positionierung bei und achten Sie auf Volatilitätsspitzen.",
-            "FR": "Statut GMS : Neutre (41). L'élan récent a poussé le score à 41, signalant une sortie de la zone défensive. Un DXY (Dollar) en repli et un VIX (Volatilité) en baisse favorisent la stabilité à court terme, mais la hausse de 2% de l'or et la faiblesse des marchés asiatiques incitent à la prudence. La liquidité globale est stable, toutefois l'incertitude politique pourrait freiner la progression des actifs. Maintenez une approche équilibrée face à ces signaux mixtes."
+            "JP": "GMSスコアは41に到達し、モメンタムが数値を押し上げたことで、これまでの防御的局面から「中立」圏へと移行しました。DXY（ドル強気/流動性）の低下傾向とVIX（恐怖指数）の緩和が相場の支えとなっています。しかし、ハイイールド債のスプレッドが2.8%拡大しており、潜在的な信用リスクへの警戒は依然として必要です。中立的な配分へシフトしつつも、急激な市場の反転に備えた慎重な姿勢を維持することが重要です。",
+            "EN": "The GMS score reached 41 as momentum pushed the regime into Neutral. Softening in DXY (Dollar strength/Liquidity) and VIX (Fear/Volatility) supports this shift. However, a 2.8% spike in HY Spreads warns of underlying credit stress. While the outlook is stabilizing, investors should balance Neutral positioning with caution toward credit risk. Await confirmation of global liquidity stability before increasing aggressive exposure to risk assets.",
+            "CN": "GMS得分升至41，动量将该数值推入“中立”区间。DXY（美元强度/流动性）和VIX（恐慌指数）的回落为市场企稳提供了支撑。然而，高收益债利差（HY Spread）上涨2.8%暗示底层信用风险依然存在。虽然市场目前正从防御模式转向中立，但仍需警惕亚洲市场的持续疲软及信用压力。建议投资者在维持中性配置的同时，密切关注全球流动性变化，确保在波动中保持资产组合的弹性。",
+            "ES": "El GMS llegó a 41, ya que el impulso empujó la puntuación a un régimen Neutral. La debilidad del DXY (fuerza del dólar) y la caída del VIX (miedo/volatilidad) favorecen la estabilidad relativa. No obstante, el aumento del diferencial de bonos basura (HY) del 2.8% advierte sobre riesgos crediticios persistentes. Se recomienda adoptar una postura neutral, manteniendo una estrecha vigilancia sobre la volatilidad y los flujos de liquidez para evitar riesgos sistémicos inesperados.",
+            "HI": "GMS स्कोर 41 पर पहुंच गया क्योंकि मोमेंटम ने इसे 'तटस्थ' (Neutral) क्षेत्र में धकेल दिया। DXY (डॉलर की मजबूती) और VIX (डर/अस्थिरता) में कमी से बाजार को सहारा मिला है। हालांकि, HY स्प्रेड में 2.8% की वृद्धि क्रेडिट जोखिम का संकेत देती है। वर्तमान में रक्षात्मक रुख से तटस्थ की ओर बढ़ें, लेकिन क्रेडिट बाजार के तनाव पर पैनी नजर रखें। जब तक बाजार में पूरी स्थिरता की पुष्टि नहीं हो जाती, तब तक संतुलित और सावधानीपूर्वक निवेश की रणनीति अपनाना ही बेहतर होगा।",
+            "ID": "Skor GMS mencapai 41 karena momentum mendorong angka tersebut ke zona Netral. Penurunan DXY (kekuatan Dolar/Likuiditas) dan VIX (Indeks Ketakutan) mendukung stabilisasi pasar saat ini. Namun, kenaikan spread obligasi berisiko tinggi (HY Spread) sebesar 2.8% memberi peringatan akan adanya tekanan kredit yang belum hilang. Transisi ke posisi Netral disarankan, namun tetap waspada terhadap risiko sistemik serta pelemahan di pasar Asia yang dapat memicu volatilidad mendadak.",
+            "AR": "وصل مؤشر GMS إلى 41 حيث دفع الزخم النتيجة نحو المنطقة 'المحايدة'. تراجع مؤشر DXY (قوة الدولار/السيولة) وانخفاض VIX (مؤشر الخوف) يدعمان هذا التحول المستقر. ومع ذلك، فإن ارتفاع فروق أسعار الائتمان (HY Spread) بنسبة 2.8% يحذر من ضغوط مالية كامنة. يُنصح بالانتقال إلى موقف محايد مع مراقبة مخاطر الائتمان بعناية، حيث يتطلب التباين بين الأسواق العالمية نهجاً استثمارياً متوازناً وحذراً لضمان حماية المحفظة من أي تقلبات مفاجئة.",
+            "DE": "Der GMS-Score stieg auf 41, da das Momentum den Wert in den neutralen Bereich drückte. Ein sinkender DXY (Dollarstärke) und VIX (Angstindex) stützen diese Stabilisierung. Doch der Anstieg der HY-Spreads um 2,8 % mahnt zur Vorsicht bei versteckten Kreditrisiken. Der Übergang von defensiv zu neutral erfordert eine ausgewogene Strategie. Anleger sollten die weitere Entwicklung der Liquidität abwarten und auf Anzeichen neuer Marktspannungen achten, bevor sie das Risiko im Portfolio signifikant erhöhen.",
+            "FR": "Le score GMS atteint 41, le momentum ayant poussé l'indicateur vers une zone Neutre. La détente du DXY (force du dollar/liquidité) et du VIX (indice de peur) soutient cette transition. Cependant, l'augmentation des spreads de crédit HY de 2,8 % signale une fragilité persistante sous-jacente. Il est conseillé d'adopter une posture neutre tout en restant vigilant face aux risques de crédit. Surveillez de près la divergence entre la résilience occidentale et la faiblesse persistante des marchés asiatiques."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-11T05:42:04Z",
-            "score": 41
-        },
         {
             "date": "2026-02-11T07:15:18Z",
             "score": 41
@@ -2847,19 +2843,28 @@
         {
             "date": "2026-02-14T08:50:04Z",
             "score": 41
+        },
+        {
+            "date": "2026-02-14T13:12:28Z",
+            "score": 41
         }
     ],
     "intelligence": {
         "news": [
+            {
+                "title": "U.S. and European interests are 'intertwined', Rubio says",
+                "link": "https://www.cnbc.com/2026/02/14/us-and-european-interests-are-intertwined-rubio-says.html",
+                "isoDate": "2026-02-14T13:11:41+00:00Z"
+            },
             {
                 "title": "Trump says he will issue executive order to get voter-ID requirements before midterms",
                 "link": "https://www.cnbc.com/2026/02/13/trump-congress-voter-id-midterms.html",
                 "isoDate": "2026-02-13T23:58:44+00:00Z"
             },
             {
-                "title": "It's been a big — but rocky — week for AI models from China. Here's what's happened",
-                "link": "https://www.cnbc.com/2026/02/14/new-china-ai-models-alibaba-bytedance-seedance-kuaishou-kling.html",
-                "isoDate": "2026-02-14T06:47:34+00:00Z"
+                "title": "TSA agents are working without pay at U.S. airports due to another partial government shutdown",
+                "link": "https://www.cnbc.com/2026/02/14/tsa-agents-are-working-without-pay-at-us-airports-due-to-another-shutdown.html",
+                "isoDate": "2026-02-14T12:50:07+00:00Z"
             },
             {
                 "title": "What's next for Cuba? Trump turns the screws as the island runs out of jet fuel",
@@ -2867,88 +2872,83 @@
                 "isoDate": "2026-02-14T06:58:06+00:00Z"
             },
             {
-                "title": "S&P 500 closes little changed after soft inflation report, index notches losing week: Live updates",
-                "link": "https://www.cnbc.com/2026/02/12/stock-market-today-live-updates.html",
-                "isoDate": "2026-02-13T21:25:49+00:00Z"
+                "title": "Epstein files: LA28 chief Wasserman puts his talent agency up for sale after Maxwell revelations, WSJ reports",
+                "link": "https://www.cnbc.com/2026/02/14/epstein-files-wasserman-talent-agency-up-for-sale.html",
+                "isoDate": "2026-02-14T11:16:17+00:00Z"
             },
             {
                 "title": "This sector is having its best start since at least 2000. Wall Street likes these dividend payers",
                 "link": "https://www.cnbc.com/2026/02/13/this-sector-is-roaring-to-start-2026-wall-street-likes-these-dividend-payers.html",
                 "isoDate": "2026-02-13T20:16:02+00:00Z"
-            },
-            {
-                "title": "Nvidia's stock is down and AMD is up. The culprit may be Arista.",
-                "link": "https://www.cnbc.com/2026/02/13/nvidias-stock-is-down-and-amd-is-up-the-culprit-may-be-arista-.html",
-                "isoDate": "2026-02-13T20:38:27+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "トランプ氏、中間選挙前に有権者ID要件を導入する大統領令を発令すると表明",
-                "中国製AIモデルにとって大きな、しかし荒れた一週間。何が起こったのか",
-                "キューバの今後：トランプ氏が圧力を強める中、島はジェット燃料を使い果たす",
-                "インフレ報告が弱く、S&P500種株価指数はほとんど変わらず終値。同指数は下落週を記録：ライブアップデート",
-                "このセクターは2000年以降で最高のスタートを切った。ウォール街はこの配当貴族を好む",
-                "Nvidia株は下落、AMD株は上昇。原因はAristaかもしれない"
+                "ルービー上院議員：米欧の利害は「絡み合っている」",
+                "トランプ氏：中間選挙前に投票者ID要件導入へ大統領令を発令すると表明",
+                "政府の一部閉鎖で、TSA職員が空港で無給で勤務",
+                "キューバの今後は？ジェット燃料枯渇の島にトランプ氏が圧力を強める",
+                "エプスタイン関連文書：LA28代表ワッサーマン氏、マックスウェル氏の暴露を受けタレントエージェンシーを売却へ－WSJ",
+                "このセクター、2000年以降で最高のスタート、ウォール街は高配当株に注目"
             ],
             "CN": [
-                "特朗普称将发布行政命令，在中期选举前实施选民身份证要求",
-                "中国AI模型迎来艰难的一周。发生了什么？",
-                "古巴的下一步是什么？特朗普施加压力，该岛的喷气燃料耗尽",
-                "通胀报告疲软，标普500指数收盘几乎持平，指数录得周线收跌：实时更新",
-                "该行业自2000年以来开局最佳。华尔街青睐这些派息股",
-                "英伟达股价下跌，AMD股价上涨。罪魁祸首可能是Arista"
+                "鲁比奥称美欧利益“相互交织”",
+                "特朗普：将发布行政令要求选民身份证件，以在中期选举前实施",
+                "由于又一次政府局部关闭，TSA安检人员在美国机场无薪工作",
+                "古巴的下一步是什么？特朗普收紧对燃油耗尽岛屿的施压",
+                "爱泼斯坦文件：在马克斯韦尔披露后，洛杉矶28奥运会首席代表沃瑟曼将其经纪公司挂牌出售，《华尔街日报》报道",
+                "该行业迎来至少2000年以来最佳开局，华尔街青睐这些股息支付者"
             ],
             "ES": [
-                "Trump dice que emitirá una orden ejecutiva para obtener requisitos de identificación de votantes antes de las elecciones intermedias",
-                "Ha sido una semana importante, pero difícil, para los modelos de IA de China. Esto es lo que ha sucedido",
+                "Los intereses de EE. UU. y Europa están \"entrelazados\", dice Rubio",
+                "Trump dice que emitirá una orden ejecutiva para obtener requisitos de identificación de votantes antes de las elecciones de mitad de período",
+                "Agentes de la TSA trabajan sin paga en aeropuertos de EE. UU. debido a otro cierre parcial del gobierno",
                 "¿Qué sigue para Cuba? Trump aprieta las tuercas mientras la isla se queda sin combustible para aviones",
-                "El S&P 500 cierra sin cambios tras un informe de inflación débil, el índice registra una semana perdedora: Actualizaciones en vivo",
-                "Este sector tiene su mejor comienzo desde al menos el año 2000. Wall Street ama a estos pagadores de dividendos",
-                "Las acciones de Nvidia bajan y las de AMD suben. El culpable podría ser Arista"
+                "Archivos de Epstein: El jefe de LA28, Wasserman, pone a la venta su agencia de talentos tras las revelaciones de Maxwell, informa el WSJ",
+                "Este sector tiene su mejor comienzo desde al menos el año 2000. Wall Street gusta de estos pagadores de dividendos"
             ],
             "HI": [
-                "ट्रम्प ने कहा कि वे मध्यावधि चुनावों से पहले मतदाता-आईडी आवश्यकताओं को लागू करने के लिए कार्यकारी आदेश जारी करेंगे",
-                "चीन के एआई मॉडल के लिए यह एक बड़ा — लेकिन उबड़-खाबड़ — हफ्ता रहा है। यहाँ क्या हुआ है",
-                "क्यूबा के लिए आगे क्या? ट्रम्प दबाव बढ़ाते हैं क्योंकि द्वीप पर जेट ईंधन खत्म हो जाता है",
-                "नरम मुद्रास्फीति रिपोर्ट के बाद एसएंडपी 500 मामूली बदलाव के साथ बंद हुआ, सूचकांक ने खोने वाला सप्ताह दर्ज किया: लाइव अपडेट",
-                "यह क्षेत्र 2000 के बाद से सबसे अच्छी शुरुआत कर रहा है। वॉल स्ट्रीट को ये लाभांश देने वाले पसंद हैं",
-                "Nvidia का स्टॉक नीचे है और AMD ऊपर है। इसका दोषी Arista हो सकता है"
+                "रूबी का कहना है कि अमेरिका और यूरोपीय हित \"आपस में जुड़े हुए\" हैं",
+                "ट्रम्प का कहना है कि वे मध्यावधि चुनावों से पहले मतदाता-आईडी आवश्यकताओं को प्राप्त करने के लिए कार्यकारी आदेश जारी करेंगे",
+                "एक और आंशिक सरकारी शटडाउन के कारण TSA एजेंट अमेरिकी हवाई अड्डों पर बिना भुगतान के काम कर रहे हैं",
+                "क्यूबा के लिए आगे क्या? जैसे ही द्वीप के जेट ईंधन खत्म होते हैं, ट्रम्प शिकंजा कसते हैं",
+                "एपस्टीन फाइलें: मैक्सीवेल खुलासों के बाद LA28 प्रमुख वासरमैन ने अपनी टैलेंट एजेंसी को बिक्री के लिए रखा, WSJ रिपोर्ट",
+                "यह क्षेत्र 2000 के बाद से अपना सर्वश्रेष्ठ प्रदर्शन कर रहा है। वॉल स्ट्रीट इन लाभांश भुगतानकर्ताओं को पसंद करता है"
             ],
             "ID": [
-                "Trump mengatakan dia akan mengeluarkan perintah eksekutif untuk mendapatkan persyaratan ID pemilih sebelum pemilihan sela",
-                "Ini adalah minggu yang besar — tetapi bergejolak — untuk model AI dari Tiongkok. Ini yang terjadi",
-                "Apa selanjutnya untuk Kuba? Trump menekan keras saat pulau itu kehabisan bahan bakar jet",
-                "S&P 500 ditutup sedikit berubah setelah laporan inflasi yang lemah, indeks mencatat minggu yang merugi: Pembaruan langsung",
-                "Sektor ini memiliki awal terbaiknya sejak setidaknya tahun 2000. Wall Street menyukai pembayar dividen ini",
-                "Saham Nvidia turun dan AMD naik. Pelakunya mungkin Arista"
+                "Kepentingan AS dan Eropa \"saling terkait\", kata Rubio",
+                "Trump mengatakan akan mengeluarkan perintah eksekutif untuk mendapatkan persyaratan identitas pemilih sebelum pemilu sela",
+                "Agen TSA bekerja tanpa dibayar di bandara AS karena penutupan pemerintah parsial lainnya",
+                "Apa selanjutnya untuk Kuba? Trump menekan saat pulau itu kehabisan bahan bakar jet",
+                "Berkas Epstein: Bos LA28 Wasserman menjual agensi talentanya setelah wahyu Maxwell, lapor WSJ",
+                "Sektor ini mencatat awal terbaiknya sejak setidaknya tahun 2000. Wall Street menyukai pembayar dividen ini"
             ],
             "AR": [
-                "ترامب يقول إنه سيصدر أمرًا تنفيذيًا للحصول على متطلبات هوية الناخب قبل الانتخابات النصفية",
-                "لقد كان أسبوعًا كبيرًا - ولكنه صعب - لنماذج الذكاء الاصطناعي من الصين. هذا ما حدث",
-                "ماذا بعد كوبا؟ ترامب يشدد الخناق بينما ينفد الوقود النفاث من الجزيرة",
-                "يغلق مؤشر S&P 500 دون تغيير يذكر بعد تقرير تضخم ضعيف، ويسجل المؤشر أسبوعًا خاسرًا: تحديثات مباشرة",
-                "هذا القطاع يحقق أفضل بداية له منذ عام 2000 على الأقل. وول ستريت تحب هذه الشركات التي تدفع أرباحًا",
-                "سهم Nvidia ينخفض و AMD يرتفع. قد يكون الجاني هو Arista"
+                "روبیو: المصالح الأمريكية والأوروبية \"متشابكة\"",
+                "ترامب يقول إنه سيصدر أمرًا تنفيذيًا لوضع متطلبات تحديد هوية الناخب قبل الانتخابات النصفية",
+                "يعمل وكلاء TSA بدون أجر في المطارات الأمريكية بسبب إغلاق حكومي جزئي آخر",
+                "ماذا بعد كوبا؟ ترامب يشدد الخناق بينما ينفد وقود الطائرات من الجزيرة",
+                "ملفات إبستين: رئيس LA28 واسرمان يعرض وكالة المواهب الخاصة به للبيع بعد الكشف عن ماكسويل، وفقًا لـ WSJ",
+                "هذا القطاع يشهد أفضل بداية له منذ عام 2000 على الأقل. وول ستريت يعجب بهذه الشركات التي تدفع أرباحًا"
             ],
             "DE": [
-                "Trump sagt, er werde eine Durchführungsverordnung erlassen, um vor den Zwischenwahlen Ausweisvorschriften für Wähler einzuführen",
-                "Es war eine große – aber holprige – Woche für KI-Modelle aus China. Was passiert ist",
+                "Rubio: US-amerikanische und europäische Interessen sind \"miteinander verflochten\"",
+                "Trump sagt, er werde eine Durchführungsverordnung erlassen, um Wähler-ID-Anforderungen vor den Zwischenwahlen einzuführen",
+                "TSA-Beamte arbeiten aufgrund einer weiteren teilweisen Regierungsschließung ohne Bezahlung an US-Flughäfen",
                 "Was kommt als Nächstes für Kuba? Trump zieht die Daumenschrauben an, während der Insel das Kerosin ausgeht",
-                "S&P 500 schließt nach schwachem Inflationsbericht kaum verändert, Index verzeichnet verlorene Woche: Live-Updates",
-                "Dieser Sektor hat seinen besten Start seit mindestens 2000. Die Wall Street mag diese Dividendenpapieren",
-                "Nvidias Aktie fällt und AMD steigt. Der Schuldige könnte Arista sein"
+                "Epstein-Akten: LA28-Chef Wasserman stellt seine Talentagentur nach Enthüllungen über Maxwell zum Verkauf, berichtet das WSJ",
+                "Dieser Sektor hat seinen besten Start seit mindestens 2000. Die Wall Street mag diese Dividendenpapier"
             ],
             "FR": [
-                "Trump annonce qu'il publiera un décret pour exiger l'identification des électeurs avant les élections de mi-mandat",
-                "Ce fut une semaine importante – mais mouvementée – pour les modèles d'IA chinois. Voici ce qui s'est passé",
-                "Quelle sera la suite pour Cuba ? Trump serre la vis alors que l'île manque de kérosène",
-                "Le S&P 500 clôture sans grand changement après un rapport d'inflation faible, l'indice enregistre une semaine perdante : Mises à jour en direct",
-                "Ce secteur connaît son meilleur début depuis au moins 2000. Wall Street aime ces valeurs à dividendes",
-                "L'action Nvidia baisse et celle d'AMD monte. Le coupable pourrait être Arista"
+                "Les intérêts américains et européens sont \"entremêlés\", déclare Rubio",
+                "Trump annonce qu'il publiera un décret pour imposer des exigences d'identification des électeurs avant les élections de mi-mandat",
+                "Les agents de la TSA travaillent sans salaire dans les aéroports américains en raison d'une nouvelle fermeture partielle du gouvernement",
+                "Quelle sera la suite pour Cuba ? Trump resserre l'étau alors que l'île manque de kérosène",
+                "Dossiers Epstein : Wasserman, chef de LA28, met en vente son agence de talents après les révélations de Maxwell, rapporte le WSJ",
+                "Ce secteur connaît son meilleur début depuis au moins 2000. Wall Street apprécie ces valeurs de rendement"
             ]
         },
-        "last_updated": "2026-02-14T08:50:04.009570+00:00Z"
+        "last_updated": "2026-02-14T13:12:28.348687+00:00Z"
     },
     "system_status": "OPERATIONAL",
     "beacons_history": [
@@ -3569,6 +3569,21 @@
         },
         {
             "timestamp": "2026-02-14T08:50:14.479541+00:00",
+            "recession": {
+                "value": 0.463,
+                "status": "safe"
+            },
+            "panic": {
+                "value": 0.929,
+                "status": "safe"
+            },
+            "credit": {
+                "value": -0.28,
+                "status": "safe"
+            }
+        },
+        {
+            "timestamp": "2026-02-14T13:12:39.119827+00:00",
             "recession": {
                 "value": 0.463,
                 "status": "safe"
