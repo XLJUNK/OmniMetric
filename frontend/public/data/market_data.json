@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-02-14T05:15:58.070023+00:00",
+    "last_updated": "2026-02-14T08:50:14.479541+00:00",
     "market_data": {
         "CRYPTO_SENTIMENT": {
             "price": 9,
@@ -570,13 +570,12 @@
             ]
         },
         "BTC": {
-            "price": 68817.17,
-            "prev_price": 66221.84,
-            "daily_chg": 3.92,
-            "change_percent": -1.86,
+            "price": 69717.22,
+            "prev_price": 68857.84,
+            "daily_chg": 1.25,
+            "change_percent": 1.34,
             "trend": "UP",
             "sparkline": [
-                89503.88,
                 89110.73,
                 86572.22,
                 88267.14,
@@ -597,17 +596,17 @@
                 68793.96,
                 66991.97,
                 66221.84,
-                68817.17
+                68857.84,
+                69717.22
             ]
         },
         "ETH": {
-            "price": 2051.9,
-            "prev_price": 1946.94,
-            "daily_chg": 5.39,
-            "change_percent": -2.46,
+            "price": 2078.33,
+            "prev_price": 2048.53,
+            "daily_chg": 1.45,
+            "change_percent": 2.91,
             "trend": "UP",
             "sparkline": [
-                2953.26,
                 2948.74,
                 2815.9,
                 2926.46,
@@ -628,17 +627,17 @@
                 2019.5,
                 1940.62,
                 1946.94,
-                2051.9
+                2048.53,
+                2078.33
             ]
         },
         "SOL": {
-            "price": 84.79,
-            "prev_price": 78.35,
-            "daily_chg": 8.22,
-            "change_percent": -2.21,
+            "price": 86.08,
+            "prev_price": 84.32,
+            "daily_chg": 2.09,
+            "change_percent": 3.82,
             "trend": "UP",
             "sparkline": [
-                127.36,
                 127.05,
                 118.77,
                 124.14,
@@ -659,7 +658,8 @@
                 82.92,
                 79.25,
                 78.35,
-                84.79
+                84.32,
+                86.08
             ]
         },
         "DXY": {
@@ -1780,12 +1780,11 @@
         },
         "AUDUSD": {
             "price": 1.41,
-            "prev_price": 1.4,
-            "daily_chg": 0.54,
-            "change_percent": -0.75,
+            "prev_price": 1.41,
+            "daily_chg": 0.13,
+            "change_percent": 0.08,
             "trend": "UP",
             "sparkline": [
-                1.5,
                 1.49,
                 1.5,
                 1.49,
@@ -1806,20 +1805,20 @@
                 1.41,
                 1.41,
                 1.4,
+                1.41,
                 1.41
             ]
         },
         "USDCAD": {
             "price": 1.36,
             "prev_price": 1.36,
-            "daily_chg": 0.26,
-            "change_percent": -0.35,
+            "daily_chg": 0.05,
+            "change_percent": 0.4,
             "trend": "UP",
             "sparkline": [
                 1.39,
                 1.39,
                 1.39,
-                1.39,
                 1.38,
                 1.38,
                 1.38,
@@ -1834,6 +1833,7 @@
                 1.37,
                 1.37,
                 1.37,
+                1.36,
                 1.36,
                 1.36,
                 1.36,
@@ -2150,7 +2150,7 @@
             {
                 "date": "2026-01-04",
                 "x": 26.84,
-                "y": 63.89
+                "y": 63.88
             },
             {
                 "date": "2026-01-05",
@@ -2349,19 +2349,19 @@
             },
             {
                 "date": "2026-02-13",
-                "x": -59.24,
-                "y": -109.06
+                "x": -58.15,
+                "y": -110.33
             },
             {
                 "date": "2026-02-14",
-                "x": -57.59,
-                "y": -109.82
+                "x": -57.27,
+                "y": -110.19
             }
         ],
         "current_vector": {
             "date": "2026-02-14",
-            "x": -57.59,
-            "y": -109.82
+            "x": -57.27,
+            "y": -110.19
         },
         "current_satellites": [
             {
@@ -2388,9 +2388,9 @@
             {
                 "id": "BTC",
                 "label": "BTC",
-                "x": -73.1,
-                "y": 45.69,
-                "z": -2.03
+                "x": -70.7,
+                "y": 44.19,
+                "z": -1.96
             },
             {
                 "id": "GOLD",
@@ -2536,11 +2536,11 @@
         "history_length": 60,
         "system": "moving_fortress"
     },
-    "last_successful_update": "2026-02-14T05:15:43.906086+00:00",
-    "gms_score": 38,
+    "last_successful_update": "2026-02-14T08:50:04.010136+00:00",
+    "gms_score": 41,
     "sector_scores": {
         "STOCKS": 44,
-        "CRYPTO": 35,
+        "CRYPTO": 65,
         "FOREX": 44,
         "COMMODITIES": 47,
         "GLOBAL_INDICES": 50,
@@ -2594,24 +2594,20 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "Status: [DEFENSIVE]. The GMS score of 38 confirms a risk-off posture as flat momentum pushed the score to 38. High-yield spreads (credit risk) widening by 2.82% signal underlying stress, while the VIX (fear index) remains elevated at 20.6. Though DXY (dollar strength/liquidity) is cooling, caution prevails across major indices. However, a significant rally in Gold and Crypto suggests a strategic liquidity rotation; if volatility begins to mean-revert, this could spark a tactical short-term bottom despite the defensive macro backdrop. Maintain rigorous hedging.",
+        "content": "GMS Status: Neutral (41). Recent momentum pushed the score to 41, signaling a transition from defensive positioning. A softening DXY (Dollar) and lower VIX (Volatility) support short-term stability, yet a 2% surge in Gold and weakness in Asian markets suggest underlying risk aversion. While global liquidity remains stable, rising political uncertainty may cap immediate gains. Maintain a balanced stance while monitoring for breakout volatility.",
         "reports": {
-            "JP": "ステータス：【守備的】。GMSスコア38はリスクオフの姿勢を明確に示しており、停滞したモメンタムがスコアを38に押し留めました。信用リスクを反映するハイイールド債スプレッドが2.82%拡大したことは市場の深層的なストレスを示唆し、恐怖指数であるVIXも20.6と警戒水準にあります。ドル強度（DXY）は軟化の兆しを見せていますが、全体的なセンチメントは依然として慎重です。一方で、金や仮想通貨の上昇は流動性の避難先確保を意味しており、ボラティリティが落ち着けば短期的な底打ちを形成する可能性があります。",
-            "EN": "Status: [DEFENSIVE]. The GMS score of 38 confirms a risk-off posture as flat momentum pushed the score to 38. High-yield spreads (credit risk) widening by 2.82% signal underlying stress, while the VIX (fear index) remains elevated at 20.6. Though DXY (dollar strength/liquidity) is cooling, caution prevails across major indices. However, a significant rally in Gold and Crypto suggests a strategic liquidity rotation; if volatility begins to mean-revert, this could spark a tactical short-term bottom despite the defensive macro backdrop. Maintain rigorous hedging.",
-            "CN": "状态：【防御型】。GMS分数38确认了避险立场，持平的动能将分数推至38。高收益债利差（信用风险）扩大2.82%释放了底层压力信号，而VIX（恐慌指数）维持在20.6的高位。尽管DXY（美元强度/流动性）小幅回落，但整体市场情绪依然偏向谨慎。值得注意的是，黄金和加密货币的强势上涨暗示资金正在进行避险轮动，若市场波动率进一步下降，这可能成为短期筑底的催化剂。在宏观环境改善前，建议投资者继续保持防御性配置。",
-            "ES": "Estado: [DEFENSIVO]. El puntaje GMS de 38 confirma una postura de aversión al riesgo, mientras un impulso plano mantuvo el nivel en 38. El aumento del 2.82% en los diferenciales de alto rendimiento (riesgo crediticio) indica un estrés subyacente, con el VIX (índice de miedo) elevado en 20.6. Aunque el DXY (fuerza del dólar) muestra debilidad, prevalece la cautela institucional. No obstante, el repunte en Oro y Cripto sugiere una rotación de liquidez que podría anticipar un suelo táctico si la volatilidad cede. Es fundamental mantener coberturas activas ante la fragilidad actual.",
-            "HI": "स्थिति: [रक्षात्मक]। GMS स्कोर 38 जोखिम-मुक्त स्थिति की पुष्टि करता है, क्योंकि स्थिर मोमेंटम ने स्कोर को 38 पर बनाए रखा है। हाई-यील्ड स्प्रेड (क्रेडिट जोखिम) में 2.82% की वृद्धि बाजार में तनाव का संकेत देती है, जबकि VIX (डर सूचकांक) 20.6 पर ऊंचा बना हुआ है। हालांकि DXY (डॉलर की मजबूती) कम हो रही है, फिर भी निवेशकों में सावधानी बनी हुई है। सोने और क्रिप्टो में आई तेजी यह दर्शाती है कि लिक्विडिटी सुरक्षित संपत्तियों की ओर बढ़ रही है, जो अस्थिरता कम होने पर बाजार में अल्पकालिक निचले स्तर (bottom) के निर्माण का संकेत दे सकती है।",
-            "ID": "Status: [DEFENSIF]. Skor GMS 38 mengonfirmasi posisi risk-off karena momentum datar mendorong skor tetap di 38. Pelebaran spread imbal hasil tinggi (risiko kredit) sebesar 2,82% mensinyalkan tekanan pasar, sementara VIX (indeks ketakutan) tetap tinggi di level 20,6. Meskipun DXY (kekuatan dolar) sedikit melemah, kehati-hatian tetap menjadi prioritas utama. Namun, kenaikan signifikan pada Emas dan Kripto menunjukkan adanya rotasi likuiditas strategis; jika volatilitas mulai mereda, hal ini dapat memicu pemulihan taktis jangka pendek meskipun kondisi makro masih defensif.",
-            "AR": "الحالة: [دفاعي]. تؤكد درجة GMS البالغة 38 موقف التحوط من المخاطر، حيث دفع الزخم المسطح النتيجة إلى 38. يشير اتساع هوامش العائد المرتفع (مخاطر الائتمان) بنسبة 2.82% إلى ضغوط هيكلية، بينما يظل مؤشر VIX (الخوف) مرتفعاً عند 20.6. على الرغم من ضعف مؤشر DXY (قوة الدولار)، إلا أن الحذر يسود الأسواق العالمية. ومع ذلك، فإن الارتفاع في الذهب والعملات المشفرة يشير إلى تدوير السيولة نحو أصول التحوط، مما قد يشكل قاعاً مؤقتاً إذا بدأت التقلبات في التراجع. يجب الالتزام باستراتيجيات الحماية في الوقت الحالي.",
-            "DE": "Status: [DEFENSIV]. Der GMS-Score von 38 bestätigt eine Risk-Off-Haltung, wobei ein flaches Momentum den Wert stabil bei 38 hielt. Die Ausweitung der High-Yield-Spreads (Kreditrisiko) um 2,82 % signalisiert systemischen Stress, während der VIX (Angstindex) mit 20,6 auf hohem Niveau verharrt. Trotz eines schwächeren DXY (Dollarstärke) überwiegt die vorsichtige Marktstimmung. Dennoch deutet die Rallye bei Gold und Krypto auf eine Liquiditätsrotation hin, die bei sinkender Volatilität einen kurzfristigen Boden bilden könnte. Eine defensive Absicherung bleibt angesichts der Volatilität zwingend erforderlich.",
-            "FR": "Statut : [DÉFENSIF]. Le score GMS de 38 confirme une posture de réduction des risques, le momentum plat ayant maintenu le score à 38. L'élargissement des spreads à haut rendement (risque de crédit) de 2,82 % signale un stress latent, tandis que le VIX (indice de peur) reste élevé à 20,6. Bien que le DXY (force du dollar) s'affaiblisse, la prudence domine les échanges. Cependant, la hausse de l'or et des cryptos suggère une rotation de la liquidité vers des actifs refuges, ce qui pourrait signaler un creux tactique à court terme si la volatilité reflue. Maintenez une couverture rigoureuse."
+            "JP": "GMS状況：中立（41）。直近のモメンタムによりスコアは41へ上昇し、防衛的局面からの脱却を示唆しています。DXY（ドル指数）の軟化とVIX（恐怖指数）の低下は短期的な安定を支えますが、金価格の2%上昇とアジア市場の弱含みは依然として根強い警戒感を示しています。流動性は安定していますが、政治的な不透明感が上値を抑える可能性があるため、バランスを重視した慎重な対応が求められます。",
+            "EN": "GMS Status: Neutral (41). Recent momentum pushed the score to 41, signaling a transition from defensive positioning. A softening DXY (Dollar) and lower VIX (Volatility) support short-term stability, yet a 2% surge in Gold and weakness in Asian markets suggest underlying risk aversion. While global liquidity remains stable, rising political uncertainty may cap immediate gains. Maintain a balanced stance while monitoring for breakout volatility.",
+            "CN": "GMS状态：中性 (41)。近期动能将分数推至41，表明市场正从防御模式转向中性。DXY（美元指数）走软和VIX（波动率）下降支撑了短期稳定，但黄金上涨2%以及亚洲市场的疲软反映出潜在的避险情绪。尽管流动性保持稳定，但政治不确定性可能抑制上行空间。建议保持平衡仓位，关注宏观环境的进一步演变。",
+            "ES": "Estado GMS: Neutral (41). El impulso reciente llevó la puntuación a 41, marcando una transición desde un régimen defensivo. Un DXY (Dólar) más débil y un VIX (Volatilidad) en descenso favorecen la estabilidad a corto plazo, aunque el alza del 2% en el Oro y las caídas en Asia exigen cautela. La liquidez es estable, pero la incertidumbre política podría limitar el avance de los activos de riesgo. Se recomienda mantener una postura equilibrada y vigilante.",
+            "HI": "GMS स्थिति: न्यूट्रल (41)। हालिया मोमेंटम ने स्कोर को 41 तक पहुँचा दिया है, जो रक्षात्मक रुख से बदलाव का संकेत है। कमजोर DXY (डॉलर) और गिरता VIX (डर/अस्थिरता) स्थिरता का समर्थन करते हैं, लेकिन सोने में 2% की वृद्धि और एशियाई बाजारों की गिरावट सावधानी का संकेत देती है। लिक्विडिटी स्थिर है, फिर भी राजनीतिक अनिश्चितता बढ़त को रोक सकती है। निवेशकों को संतुलित दृष्टिकोण अपनाना चाहिए और बाजार की दिशा पर नजर रखनी चाहिए।",
+            "ID": "Status GMS: Netral (41). Momentum baru-baru ini mendorong skor ke 41, menunjukkan transisi dari fase defensif. Pelemahan DXY (Dolar) dan penurunan VIX (Volatilitas) mendukung stabilitas jangka pendek, namun lonjakan Emas 2% dan pelemahan pasar Asia menunjukkan risiko yang masih ada. Likuiditas global terpantau stabil, tetapi ketidakpastian politik dapat membatasi kenaikan lebih lanjut. Tetap pada posisi seimbang sambil memantau sentimen pasar.",
+            "AR": "حالة GMS: محايد (41). دفع الزخم الأخير النتيجة إلى 41، مما يشير إلى الانتقال من الوضع الدفاعي. يدعم ضعف DXY (الدولار) وانخفاض VIX (التقلب) الاستقرار على المدى القصير، لكن ارتفاع الذهب بنسبة 2% وضعف الأسواق الآسيوية يعكسان حذراً مستتراً تجاه المخاطر. السيولة مستقرة، إلا أن عدم اليقين السياسي قد يحد من المكاسب السعرية. يوصى باتخاذ موقف متوازن مع مراقبة تطورات السوق.",
+            "DE": "GMS-Status: Neutral (41). Das aktuelle Momentum hat den Score auf 41 gehoben, was einen Übergang vom defensiven Regime markiert. Ein schwächerer DXY (Dollar) und sinkender VIX (Volatilität) stützen die kurzfristige Stabilität, doch der Goldanstieg um 2% und die Schwäche in Asien mahnen zur Vorsicht. Die Liquidität bleibt stabil, aber politische Unsicherheit könnte Gewinne begrenzen. Behalten Sie eine neutrale Positionierung bei und achten Sie auf Volatilitätsspitzen.",
+            "FR": "Statut GMS : Neutre (41). L'élan récent a poussé le score à 41, signalant une sortie de la zone défensive. Un DXY (Dollar) en repli et un VIX (Volatilité) en baisse favorisent la stabilité à court terme, mais la hausse de 2% de l'or et la faiblesse des marchés asiatiques incitent à la prudence. La liquidité globale est stable, toutefois l'incertitude politique pourrait freiner la progression des actifs. Maintenez une approche équilibrée face à ces signaux mixtes."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-11T03:15:49Z",
-            "score": 39
-        },
         {
             "date": "2026-02-11T05:42:04Z",
             "score": 41
@@ -2847,29 +2843,33 @@
         {
             "date": "2026-02-14T05:15:43Z",
             "score": 38
+        },
+        {
+            "date": "2026-02-14T08:50:04Z",
+            "score": 41
         }
     ],
     "intelligence": {
         "news": [
-            {
-                "title": "S&P 500 closes little changed after soft inflation report, index notches losing week: Live updates",
-                "link": "https://www.cnbc.com/2026/02/12/stock-market-today-live-updates.html",
-                "isoDate": "2026-02-13T21:25:49+00:00Z"
-            },
             {
                 "title": "Trump says he will issue executive order to get voter-ID requirements before midterms",
                 "link": "https://www.cnbc.com/2026/02/13/trump-congress-voter-id-midterms.html",
                 "isoDate": "2026-02-13T23:58:44+00:00Z"
             },
             {
-                "title": "Trump takes a beating from his own party amid Epstein files release and tariffs rebuke",
-                "link": "https://www.cnbc.com/2026/02/13/trump-republicans-epstein-tariffs-elections.html",
-                "isoDate": "2026-02-13T22:45:02+00:00Z"
+                "title": "It's been a big — but rocky — week for AI models from China. Here's what's happened",
+                "link": "https://www.cnbc.com/2026/02/14/new-china-ai-models-alibaba-bytedance-seedance-kuaishou-kling.html",
+                "isoDate": "2026-02-14T06:47:34+00:00Z"
             },
             {
-                "title": "Average IRS tax refund is up 10.9% so far this season, early filing data shows",
-                "link": "https://www.cnbc.com/2026/02/13/average-tax-refund-early-irs-data.html",
-                "isoDate": "2026-02-14T01:17:43+00:00Z"
+                "title": "What's next for Cuba? Trump turns the screws as the island runs out of jet fuel",
+                "link": "https://www.cnbc.com/2026/02/14/cuba-fuel-shortage-trump-tariffs.html",
+                "isoDate": "2026-02-14T06:58:06+00:00Z"
+            },
+            {
+                "title": "S&P 500 closes little changed after soft inflation report, index notches losing week: Live updates",
+                "link": "https://www.cnbc.com/2026/02/12/stock-market-today-live-updates.html",
+                "isoDate": "2026-02-13T21:25:49+00:00Z"
             },
             {
                 "title": "This sector is having its best start since at least 2000. Wall Street likes these dividend payers",
@@ -2877,78 +2877,78 @@
                 "isoDate": "2026-02-13T20:16:02+00:00Z"
             },
             {
-                "title": "Venezuela oil sales top $1 billion, funds won’t go to Qatar account anymore, Energy secretary says",
-                "link": "https://www.cnbc.com/2026/02/13/venezuela-oil-sales-qatar-chris-wright-trump.html",
-                "isoDate": "2026-02-13T17:50:43+00:00Z"
+                "title": "Nvidia's stock is down and AMD is up. The culprit may be Arista.",
+                "link": "https://www.cnbc.com/2026/02/13/nvidias-stock-is-down-and-amd-is-up-the-culprit-may-be-arista-.html",
+                "isoDate": "2026-02-13T20:38:27+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "インフレ報告は弱く、S&P500は小幅な変動で引け、週足は下落：ライブアップデート",
-                "トランプ氏、中間選挙前に有権者ID要件を義務付ける大統領令を発令すると表明",
-                "エプスタイン文書公開と関税への非難で、トランプ氏が党内から袋叩きに",
-                "IRSの平均税金還付金は今シーズンに入ってから10.9%増加、早期申告データが示す",
-                "このセクターは2000年以降で最高のスタートを切る。ウォール街はこれらの配当貴族を好む",
-                "ベネズエラ産石油販売、10億ドル超え、資金はカタール口座にはもう行かないとエネルギー長官が発言"
+                "トランプ氏、中間選挙前に有権者ID要件を導入する大統領令を発令すると表明",
+                "中国製AIモデルにとって大きな、しかし荒れた一週間。何が起こったのか",
+                "キューバの今後：トランプ氏が圧力を強める中、島はジェット燃料を使い果たす",
+                "インフレ報告が弱く、S&P500種株価指数はほとんど変わらず終値。同指数は下落週を記録：ライブアップデート",
+                "このセクターは2000年以降で最高のスタートを切った。ウォール街はこの配当貴族を好む",
+                "Nvidia株は下落、AMD株は上昇。原因はAristaかもしれない"
             ],
             "CN": [
-                "标普500指数在通胀报告疲软后小幅收盘，指数录得连续下跌周：实时更新",
-                "特朗普表示将发布行政命令，在中期选举前实施选民身份验证要求",
-                "在爱泼斯坦文件发布和关税受到批评之际，特朗普遭到本党派的猛烈抨击",
-                "早期申报数据显示，本季度的平均IRS退税额迄今已上涨10.9%",
-                "该行业迎来2000年以来最佳开局。华尔街青睐这些派息股",
-                "委内瑞拉石油销售额突破10亿美元，能源部长称资金将不再进入卡塔尔账户"
+                "特朗普称将发布行政命令，在中期选举前实施选民身份证要求",
+                "中国AI模型迎来艰难的一周。发生了什么？",
+                "古巴的下一步是什么？特朗普施加压力，该岛的喷气燃料耗尽",
+                "通胀报告疲软，标普500指数收盘几乎持平，指数录得周线收跌：实时更新",
+                "该行业自2000年以来开局最佳。华尔街青睐这些派息股",
+                "英伟达股价下跌，AMD股价上涨。罪魁祸首可能是Arista"
             ],
             "ES": [
-                "El S&P 500 cierra con pocos cambios tras un informe de inflación débil, el índice anota una semana de pérdidas: Actualizaciones en vivo",
-                "Trump dice que emitirá una orden ejecutiva para imponer requisitos de identificación de votantes antes de las elecciones de mitad de período",
-                "Trump recibe duros golpes de su propio partido en medio de la publicación de archivos de Epstein y la reprimenda por los aranceles",
-                "El reembolso promedio de impuestos del IRS ha aumentado un 10.9% en lo que va de temporada, según datos de presentación temprana",
-                "Este sector tiene su mejor comienzo desde al menos el año 2000. Wall Street está a favor de estos pagadores de dividendos",
-                "Las ventas de petróleo de Venezuela superan los 1.000 millones de dólares, los fondos ya no irán a la cuenta de Qatar, dice el secretario de Energía"
+                "Trump dice que emitirá una orden ejecutiva para obtener requisitos de identificación de votantes antes de las elecciones intermedias",
+                "Ha sido una semana importante, pero difícil, para los modelos de IA de China. Esto es lo que ha sucedido",
+                "¿Qué sigue para Cuba? Trump aprieta las tuercas mientras la isla se queda sin combustible para aviones",
+                "El S&P 500 cierra sin cambios tras un informe de inflación débil, el índice registra una semana perdedora: Actualizaciones en vivo",
+                "Este sector tiene su mejor comienzo desde al menos el año 2000. Wall Street ama a estos pagadores de dividendos",
+                "Las acciones de Nvidia bajan y las de AMD suben. El culpable podría ser Arista"
             ],
             "HI": [
-                "नरम मुद्रास्फीति रिपोर्ट के बाद एस एंड पी 500 में मामूली बदलाव, सूचकांक ने सप्ताह में नुकसान दर्ज किया: लाइव अपडेट",
-                "ट्रम्प ने कहा कि वह मध्यावधि चुनावों से पहले मतदाता-आईडी आवश्यकताओं को लागू करने के लिए कार्यकारी आदेश जारी करेंगे",
-                "एपस्टीन फाइलों के जारी होने और टैरिफ की निंदा के बीच ट्रम्प को अपनी ही पार्टी से मार झेलनी पड़ी",
-                "शुरुआती फाइलिंग डेटा से पता चलता है कि इस सीज़न में औसत आईआरएस कर रिफंड 10.9% बढ़ा है",
-                "यह क्षेत्र 2000 के बाद से सबसे अच्छी शुरुआत कर रहा है। वॉल स्ट्रीट इन लाभांश भुगतानकर्ताओं को पसंद करता है",
-                "वेनेजुएला की तेल बिक्री 1 अरब डॉलर से अधिक, ऊर्जा सचिव का कहना है कि फंड अब कतर खाते में नहीं जाएंगे"
+                "ट्रम्प ने कहा कि वे मध्यावधि चुनावों से पहले मतदाता-आईडी आवश्यकताओं को लागू करने के लिए कार्यकारी आदेश जारी करेंगे",
+                "चीन के एआई मॉडल के लिए यह एक बड़ा — लेकिन उबड़-खाबड़ — हफ्ता रहा है। यहाँ क्या हुआ है",
+                "क्यूबा के लिए आगे क्या? ट्रम्प दबाव बढ़ाते हैं क्योंकि द्वीप पर जेट ईंधन खत्म हो जाता है",
+                "नरम मुद्रास्फीति रिपोर्ट के बाद एसएंडपी 500 मामूली बदलाव के साथ बंद हुआ, सूचकांक ने खोने वाला सप्ताह दर्ज किया: लाइव अपडेट",
+                "यह क्षेत्र 2000 के बाद से सबसे अच्छी शुरुआत कर रहा है। वॉल स्ट्रीट को ये लाभांश देने वाले पसंद हैं",
+                "Nvidia का स्टॉक नीचे है और AMD ऊपर है। इसका दोषी Arista हो सकता है"
             ],
             "ID": [
+                "Trump mengatakan dia akan mengeluarkan perintah eksekutif untuk mendapatkan persyaratan ID pemilih sebelum pemilihan sela",
+                "Ini adalah minggu yang besar — tetapi bergejolak — untuk model AI dari Tiongkok. Ini yang terjadi",
+                "Apa selanjutnya untuk Kuba? Trump menekan keras saat pulau itu kehabisan bahan bakar jet",
                 "S&P 500 ditutup sedikit berubah setelah laporan inflasi yang lemah, indeks mencatat minggu yang merugi: Pembaruan langsung",
-                "Trump mengatakan dia akan mengeluarkan perintah eksekutif untuk memberlakukan persyaratan identifikasi pemilih sebelum pemilu sela",
-                "Trump mendapat pukulan telak dari partainya sendiri di tengah rilis file Epstein dan teguran tarif",
-                "Pengembalian pajak IRS rata-rata naik 10,9% sejauh musim ini, data pengajuan awal menunjukkan",
-                "Sektor ini mencatat awal terbaiknya sejak setidaknya tahun 2000. Wall Street menyukai pembayar dividen ini",
-                "Penjualan minyak Venezuela capai lebih dari $1 miliar, dana tidak akan lagi masuk ke rekening Qatar, kata Menteri Energi"
+                "Sektor ini memiliki awal terbaiknya sejak setidaknya tahun 2000. Wall Street menyukai pembayar dividen ini",
+                "Saham Nvidia turun dan AMD naik. Pelakunya mungkin Arista"
             ],
             "AR": [
-                "إغلاق مؤشر S&P 500 بتغير طفيف بعد تقرير تضخم ضعيف، والمؤشر يسجل أسبوعًا خاسرًا: تحديثات مباشرة",
-                "ترامب يقول إنه سيصدر أمرًا تنفيذيًا لفرض متطلبات هوية الناخب قبل انتخابات التجديد النصفي",
-                "ترامب يتعرض لانتقادات من حزبه الخاص وسط الكشف عن ملفات إبستاين وتوبيخ بشأن التعريفات الجمركية",
-                "متوسط استرداد ضرائب مصلحة الضرائب الأمريكية يرتفع بنسبة 10.9% حتى الآن هذا الموسم، تظهر بيانات الإيداع المبكر",
-                "هذا القطاع يحقق أفضل بداية له منذ عام 2000 على الأقل. وول ستريت تعجبها هذه الأسهم الموزعة للأرباح",
-                "مبيعات النفط الفنزويلي تتجاوز مليار دولار، ولن تذهب الأموال إلى حساب قطر بعد الآن، حسبما قال وزير الطاقة"
+                "ترامب يقول إنه سيصدر أمرًا تنفيذيًا للحصول على متطلبات هوية الناخب قبل الانتخابات النصفية",
+                "لقد كان أسبوعًا كبيرًا - ولكنه صعب - لنماذج الذكاء الاصطناعي من الصين. هذا ما حدث",
+                "ماذا بعد كوبا؟ ترامب يشدد الخناق بينما ينفد الوقود النفاث من الجزيرة",
+                "يغلق مؤشر S&P 500 دون تغيير يذكر بعد تقرير تضخم ضعيف، ويسجل المؤشر أسبوعًا خاسرًا: تحديثات مباشرة",
+                "هذا القطاع يحقق أفضل بداية له منذ عام 2000 على الأقل. وول ستريت تحب هذه الشركات التي تدفع أرباحًا",
+                "سهم Nvidia ينخفض و AMD يرتفع. قد يكون الجاني هو Arista"
             ],
             "DE": [
-                "S&P 500 schließt kaum verändert nach schwachem Inflationsbericht, Index verzeichnet verlustreiche Woche: Live-Updates",
-                "Trump kündigt an, per Dekret Wählerausweis-Pflichten vor Midterms einzuführen",
-                "Trump von eigener Partei ausgebuht nach Epstein-Aktenveröffentlichung und Zölle-Kritik",
-                "Durchschnittliche IRS-Steuerrückerstattung steigt in dieser Saison bisher um 10,9 %, zeigen erste Einreichungsdaten",
-                "Dieser Sektor verzeichnet den besten Start seit mindestens 2000. Die Wall Street mag diese Dividendenaristokraten",
-                "Venezuelas Ölverkäufe übersteigen 1 Milliarde Dollar, Gelder fließen nicht mehr auf katarisches Konto, sagt Energieminister"
+                "Trump sagt, er werde eine Durchführungsverordnung erlassen, um vor den Zwischenwahlen Ausweisvorschriften für Wähler einzuführen",
+                "Es war eine große – aber holprige – Woche für KI-Modelle aus China. Was passiert ist",
+                "Was kommt als Nächstes für Kuba? Trump zieht die Daumenschrauben an, während der Insel das Kerosin ausgeht",
+                "S&P 500 schließt nach schwachem Inflationsbericht kaum verändert, Index verzeichnet verlorene Woche: Live-Updates",
+                "Dieser Sektor hat seinen besten Start seit mindestens 2000. Die Wall Street mag diese Dividendenpapieren",
+                "Nvidias Aktie fällt und AMD steigt. Der Schuldige könnte Arista sein"
             ],
             "FR": [
-                "Le S&P 500 clôture peu changé après un rapport d'inflation faible, l'indice enregistre une semaine de pertes : Mises à jour en direct",
-                "Trump déclare qu'il publiera un décret pour imposer des exigences d'identification des électeurs avant les midterms",
-                "Trump malmené par son propre parti suite à la publication des dossiers Epstein et à la réprobation des tarifs douaniers",
-                "Le remboursement moyen des impôts de l'IRS a augmenté de 10,9 % depuis le début de la saison, selon les premières données de déclaration",
+                "Trump annonce qu'il publiera un décret pour exiger l'identification des électeurs avant les élections de mi-mandat",
+                "Ce fut une semaine importante – mais mouvementée – pour les modèles d'IA chinois. Voici ce qui s'est passé",
+                "Quelle sera la suite pour Cuba ? Trump serre la vis alors que l'île manque de kérosène",
+                "Le S&P 500 clôture sans grand changement après un rapport d'inflation faible, l'indice enregistre une semaine perdante : Mises à jour en direct",
                 "Ce secteur connaît son meilleur début depuis au moins 2000. Wall Street aime ces valeurs à dividendes",
-                "Les ventes de pétrole du Venezuela dépassent le milliard de dollars, les fonds n'iront plus sur le compte du Qatar, déclare le secrétaire à l'Énergie"
+                "L'action Nvidia baisse et celle d'AMD monte. Le coupable pourrait être Arista"
             ]
         },
-        "last_updated": "2026-02-14T05:15:43.905548+00:00Z"
+        "last_updated": "2026-02-14T08:50:04.009570+00:00Z"
     },
     "system_status": "OPERATIONAL",
     "beacons_history": [
@@ -3554,6 +3554,21 @@
         },
         {
             "timestamp": "2026-02-14T05:15:58.070023+00:00",
+            "recession": {
+                "value": 0.463,
+                "status": "safe"
+            },
+            "panic": {
+                "value": 0.929,
+                "status": "safe"
+            },
+            "credit": {
+                "value": -0.28,
+                "status": "safe"
+            }
+        },
+        {
+            "timestamp": "2026-02-14T08:50:14.479541+00:00",
             "recession": {
                 "value": 0.463,
                 "status": "safe"
