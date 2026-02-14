@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-02-13T23:43:39.067598+00:00",
-    "last_successful_update": "2026-02-13T23:43:39.067607+00:00",
+    "last_updated": "2026-02-14T02:51:31.576917+00:00",
+    "last_successful_update": "2026-02-14T02:51:31.576924+00:00",
     "gms_score": 37,
     "sector_scores": {
         "STOCKS": 44,
@@ -17,11 +17,10 @@
     "market_data": {
         "CRYPTO_SENTIMENT": {
             "price": 9,
-            "daily_chg": 80.0,
-            "change_percent": -35.71,
+            "daily_chg": 0.0,
+            "change_percent": 0.0,
             "trend": "FEAR",
             "sparkline": [
-                61,
                 49,
                 50,
                 49,
@@ -50,6 +49,7 @@
                 9,
                 11,
                 5,
+                9,
                 9
             ]
         },
@@ -584,10 +584,10 @@
             ]
         },
         "BTC": {
-            "price": 68840.41,
+            "price": 68875.82,
             "prev_price": 66221.84,
-            "daily_chg": 3.95,
-            "change_percent": -1.83,
+            "daily_chg": 4.01,
+            "change_percent": -1.78,
             "trend": "UP",
             "sparkline": [
                 89503.88,
@@ -611,14 +611,14 @@
                 68793.96,
                 66991.97,
                 66221.84,
-                68840.41
+                68875.82
             ]
         },
         "ETH": {
-            "price": 2047.31,
+            "price": 2048.69,
             "prev_price": 1946.94,
-            "daily_chg": 5.16,
-            "change_percent": -2.67,
+            "daily_chg": 5.23,
+            "change_percent": -2.61,
             "trend": "UP",
             "sparkline": [
                 2953.26,
@@ -642,14 +642,14 @@
                 2019.5,
                 1940.62,
                 1946.94,
-                2047.31
+                2048.69
             ]
         },
         "SOL": {
-            "price": 84.25,
+            "price": 84.82,
             "prev_price": 78.35,
-            "daily_chg": 7.53,
-            "change_percent": -2.83,
+            "daily_chg": 8.26,
+            "change_percent": -2.17,
             "trend": "UP",
             "sparkline": [
                 127.36,
@@ -673,7 +673,7 @@
                 82.92,
                 79.25,
                 78.35,
-                84.25
+                84.82
             ]
         },
         "DXY": {
@@ -708,10 +708,10 @@
             ]
         },
         "USDJPY": {
-            "price": 152.65,
+            "price": 152.82,
             "prev_price": 153.27,
-            "daily_chg": -0.4,
-            "change_percent": -2.92,
+            "daily_chg": -0.29,
+            "change_percent": -2.81,
             "trend": "DOWN",
             "sparkline": [
                 158.4,
@@ -735,14 +735,14 @@
                 156.13,
                 154.48,
                 153.27,
-                152.65
+                152.82
             ]
         },
         "EURUSD": {
             "price": 1.19,
             "prev_price": 1.19,
-            "daily_chg": -0.04,
-            "change_percent": 0.38,
+            "daily_chg": -0.06,
+            "change_percent": 0.36,
             "trend": "DOWN",
             "sparkline": [
                 1.16,
@@ -770,10 +770,10 @@
             ]
         },
         "USDINR": {
-            "price": 90.5,
+            "price": 90.56,
             "prev_price": 90.74,
-            "daily_chg": -0.25,
-            "change_percent": -0.09,
+            "daily_chg": -0.19,
+            "change_percent": -0.03,
             "trend": "DOWN",
             "sparkline": [
                 90.18,
@@ -797,15 +797,15 @@
                 90.82,
                 90.59,
                 90.74,
-                90.5
+                90.56
             ]
         },
         "USDSAR": {
             "price": 3.75,
             "prev_price": 3.75,
-            "daily_chg": 0.09,
-            "change_percent": 0.14,
-            "trend": "UP",
+            "daily_chg": -0.03,
+            "change_percent": 0.02,
+            "trend": "DOWN",
             "sparkline": [
                 3.75,
                 3.75,
@@ -1080,7 +1080,7 @@
             ]
         },
         "FTSE": {
-            "price": 10446.35,
+            "price": 10446.4,
             "prev_price": 10402.4,
             "daily_chg": 0.42,
             "change_percent": 0.58,
@@ -1107,7 +1107,7 @@
                 10353.8,
                 10472.1,
                 10402.4,
-                10446.35
+                10446.4
             ]
         },
         "NIKKEI": {
@@ -1235,7 +1235,7 @@
             ]
         },
         "BOVESPA": {
-            "price": 186464.3,
+            "price": 186464.0,
             "prev_price": 187766.0,
             "daily_chg": -0.69,
             "change_percent": 0.12,
@@ -1262,7 +1262,7 @@
                 185929.0,
                 189699.0,
                 187766.0,
-                186464.3
+                186464.0
             ]
         },
         "ASX200": {
@@ -1764,9 +1764,9 @@
         "GBPUSD": {
             "price": 0.73,
             "prev_price": 0.73,
-            "daily_chg": -0.24,
-            "change_percent": -0.35,
-            "trend": "DOWN",
+            "daily_chg": 0.03,
+            "change_percent": -0.08,
+            "trend": "UP",
             "sparkline": [
                 0.74,
                 0.75,
@@ -1795,8 +1795,8 @@
         "AUDUSD": {
             "price": 1.41,
             "prev_price": 1.4,
-            "daily_chg": 0.67,
-            "change_percent": -0.62,
+            "daily_chg": 0.54,
+            "change_percent": -0.75,
             "trend": "UP",
             "sparkline": [
                 1.5,
@@ -1826,8 +1826,8 @@
         "USDCAD": {
             "price": 1.36,
             "prev_price": 1.36,
-            "daily_chg": 0.29,
-            "change_percent": -0.32,
+            "daily_chg": 0.26,
+            "change_percent": -0.35,
             "trend": "UP",
             "sparkline": [
                 1.39,
@@ -1855,10 +1855,10 @@
             ]
         },
         "USDCNY": {
-            "price": 6.91,
+            "price": 6.9,
             "prev_price": 6.91,
-            "daily_chg": -0.07,
-            "change_percent": -0.45,
+            "daily_chg": -0.18,
+            "change_percent": -0.56,
             "trend": "DOWN",
             "sparkline": [
                 6.97,
@@ -1882,14 +1882,14 @@
                 6.92,
                 6.91,
                 6.91,
-                6.91
+                6.9
             ]
         },
         "USDCHF": {
             "price": 0.77,
             "prev_price": 0.77,
-            "daily_chg": -0.54,
-            "change_percent": -1.14,
+            "daily_chg": -0.21,
+            "change_percent": -0.81,
             "trend": "DOWN",
             "sparkline": [
                 0.8,
@@ -1918,7 +1918,7 @@
         },
         "MOVE": {
             "price": 70.1,
-            "change_percent": 2.24,
+            "change_percent": 2.23,
             "trend": "NORMAL",
             "sparkline": [
                 58.11,
@@ -2053,64 +2053,60 @@
         {
             "code": "retail_sales",
             "name": "USD Retail Sales (MoM)",
-            "date": "2026-02-16",
-            "day": "MON",
+            "date": "2026-02-17",
+            "day": "TUE",
             "time": "08:30 EST",
             "impact": "high"
         },
         {
             "code": "boj",
             "name": "JPY Bank of Japan Policy Meeting",
-            "date": "2026-02-18",
-            "day": "WED",
+            "date": "2026-02-19",
+            "day": "THU",
             "time": "12:00 JST",
             "impact": "high"
         },
         {
             "code": "powell",
             "name": "USD Fed Chair Powell Testifies",
-            "date": "2026-02-21",
-            "day": "SAT",
+            "date": "2026-02-22",
+            "day": "SUN",
             "time": "10:00 EST",
             "impact": "high"
         },
         {
             "code": "ecb",
             "name": "EUR ECB Monetary Policy Press Conference",
-            "date": "2026-02-23",
-            "day": "MON",
+            "date": "2026-02-24",
+            "day": "TUE",
             "time": "14:45 CET",
             "impact": "high"
         },
         {
             "code": "ppi",
             "name": "USD Producer Price Index (PPI)",
-            "date": "2026-02-26",
-            "day": "THU",
+            "date": "2026-02-27",
+            "day": "FRI",
             "time": "08:30 EST",
             "impact": "high"
         }
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "[GMS Status] Stable momentum maintained the score at 37, signaling a Defensive regime. [Macro Root] While DXY (Dollar strength) is steady, VIX (Fear index) at 20.6 limits equity gains despite soft inflation data. [Risk/Reward] Credit spreads suggest caution, but surging Bitcoin and Gold signal a tactical shift toward alternative assets. [Conclusion] Maintain high cash reserves and wait for VIX to drop below 20 and market breadth to improve before increasing risk exposure.",
+        "content": "GMS Status: DEFENSIVE. The score of 37 and flat momentum signal a risk-off regime. Although DXY (Dollar strength) eased, the widening HY Spread (Credit risk) maintains pressure. However, surging BTC and Gold suggest a rotation into alternative assets. If VIX (Fear/Volatility) falls below 20, a tactical bottom may form. Prioritize capital preservation until momentum shifts positively.",
         "reports": {
-            "JP": "【GMS状況】安定した勢いがスコア37を維持しており、現在は「防衛」局面です。【マクロ要因】DXY（ドル指数/流動性）は落ち着いていますが、VIX（恐怖指数）が20.6と高く、インフレ鈍化後も株価の上値を押さえています。【リスク・警告】利回り差の拡大は警戒を要しますが、BTCや金の急騰は代替資産への資金シフトを示唆しています。【結論】慎重な姿勢を崩さず、VIXが20を下回り市場の広がり（騰落銘柄数）が改善するまで待機が賢明です。",
-            "EN": "[GMS Status] Stable momentum maintained the score at 37, signaling a Defensive regime. [Macro Root] While DXY (Dollar strength) is steady, VIX (Fear index) at 20.6 limits equity gains despite soft inflation data. [Risk/Reward] Credit spreads suggest caution, but surging Bitcoin and Gold signal a tactical shift toward alternative assets. [Conclusion] Maintain high cash reserves and wait for VIX to drop below 20 and market breadth to improve before increasing risk exposure.",
-            "CN": "【GMS状态】稳定的动力将得分维持在37，表明处于“防御”机制。【宏观逻辑】尽管DXY（美元指数/流动性）走稳，但VIX（恐慌指数）处于20.6的高位，限制了股市在通胀数据走弱后的表现。【风险预警】信用利差显示风险偏好低迷，但比特币与黄金的飙升暗示资金正流向替代资产。【结论】建议保持谨慎并增加现金比例，需等待VIX跌破20且市场广度改善后再行考虑重新建仓。",
-            "ES": "[GMS] El impulso estable mantuvo el puntaje en 37, indicando un régimen Defensivo. [Macro] Mientras el DXY (Dólar/Liquidez) está estable, el VIX (Índice de miedo) en 20.6 limita las acciones tras datos de inflación débiles. [Riesgo] Los diferenciales de crédito sugieren cautela, pero el repunte en Bitcoin y Oro indica un flujo hacia activos alternativos. [Conclusión] Mantenga liquidez y precaución hasta que el VIX baje de 20 y mejore la amplitud del mercado para nuevas entradas.",
-            "HI": "[GMS स्थिति] स्थिर मोमेंटम ने स्कोर को 37 पर बनाए रखा है, जो 'रक्षात्मक' शासन का संकेत है। [मैक्रो कारक] जबकि DXY (डॉलर की मजबूती) स्थिर है, 20.6 पर VIX (डर सूचकांक) मुद्रास्फीति आंकड़ों के बाद भी शेयरों की बढ़त को रोक रहा है। [जोखिम/चेतावनी] क्रेडिट स्प्रेड सावधानी का संकेत देते हैं, लेकिन बिटकॉइन और सोने में उछाल वैकल्पिक संपत्तियों की ओर झुकाव दिखाता है। [निष्कर्ष] नकद सुरक्षित रखें और बाजार में प्रवेश के लिए VIX के 20 से नीचे आने और बाजार की चौड़ाई में सुधार का इंतजार करें।",
-            "ID": "[Status GMS] Momentum stabil menjaga skor tetap di 37, menandakan rezim Defensif. [Akar Makro] Meskipun DXY (kekuatan Dolar) stabil, VIX (indeks ketakutan) di 20,6 membatasi kenaikan saham pasca data inflasi yang melambat. [Risiko/Peringatan] Spread kredit menunjukkan kehati-hatian, namun lonjakan Bitcoin dan Emas menandakan pergeseran likuiditas ke aset alternatif. [Kesimpulan] Pertahankan posisi kas yang tinggi dan pantau penurunan VIX di bawah 20 serta perbaikan keluasan pasar sebelum masuk kembali.",
-            "AR": "[حالة GMS] حافظ الزخم المستقر على النتيجة عند 37، مما يشير إلى نظام دفاعي. [الجذر الكلي] بينما استقر DXY (قوة الدولار)، فإن VIX (مؤشر الخوف) عند 20.6 يحد من صعود الأسهم رغم بيانات التضخم الضعيفة. [تحذير المخاطر] تشير هوامش الائتمان إلى الحذر، لكن ارتفاع البيتكوين والذهب يشير إلى تحول السيولة نحو الأصول البديلة. [الخلاصة] حافظ على مستويات سيولة عالية وانتظر انخفاض مؤشر VIX دون مستوى 20 وتحسن اتساع السوق قبل زيادة المخاطرة.",
-            "DE": "[GMS-Status] Stabiles Momentum hielt den Score bei 37, was ein defensives Regime bestätigt. [Makro] Während der DXY (Dollarkurs) fest bleibt, begrenzt der VIX (Angstindex) von 20,6 das Kurspotenzial nach schwachen Inflationsdaten. [Risiko] Weite Kredit-Spreads mahnen zur Vorsicht, doch steigende Bitcoin- und Goldpreise deuten auf eine Umschichtung in alternative Sachwerte hin. [Fazit] Bleiben Sie defensiv mit hohem Cash-Anteil, bis der VIX unter 20 fällt und die Marktbreite deutlich zunimmt.",
-            "FR": "[Statut GMS] Un momentum stable a maintenu le score à 37, confirmant un régime Défensif. [Macro] Bien que le DXY (Dollar) soit stable, le VIX (Indice de peur) à 20,6 freine les actions malgré une inflation modérée. [Risque] Les spreads de crédit incitent à la prudence, mais la hausse du Bitcoin et de l'Or suggère une rotation vers les actifs alternatifs. [Conclusion] Privilégiez les liquidités en attendant que le VIX passe sous 20 et que la largeur du marché s'améliore pour intervenir."
+            "JP": "GMSステータス：守備的。スコア37と横ばいのモメンタムはリスクオフを示唆します。DXY（ドル強気）が小幅低下した一方、HYスプレッド（信用リスク）の拡大が重石です。一方でBTCや金の急騰は代替資産への資金移動を暗示しています。VIX（恐怖指数）が20を下回れば底打ちの可能性がありますが、現在は資産保護を優先すべき局面です。",
+            "EN": "GMS Status: DEFENSIVE. The score of 37 and flat momentum signal a risk-off regime. Although DXY (Dollar strength) eased, the widening HY Spread (Credit risk) maintains pressure. However, surging BTC and Gold suggest a rotation into alternative assets. If VIX (Fear/Volatility) falls below 20, a tactical bottom may form. Prioritize capital preservation until momentum shifts positively.",
+            "CN": "GMS状态：防御型。分值37且动量持平，显示市场处于避险模式。尽管DXY（美元强度）小幅回落，但HY利差（信用风险）扩大增加了压力。BTC和黄金的上涨暗示资金正转向替代资产。若VIX（波动率）跌破20，市场可能迎来短期筑底。当前动量尚未好转，建议优先保护资本，警惕信用风险波动。",
+            "ES": "Estado GMS: DEFENSIVO. El puntaje de 37 y el impulso plano indican un régimen de aversión al riesgo. Aunque el DXY (fuerza del dólar) cedió, la ampliación del diferencial HY (riesgo crediticio) mantiene la presión. El auge de BTC y el oro sugiere una rotación hacia activos alternativos. Si el VIX (miedo/volatilidad) cae bajo 20, podría formarse un suelo táctico. Priorice la preservación de capital.",
+            "HI": "GMS स्थिति: रक्षात्मक। 37 का स्कोर और सपाट मोमेंटम जोखिम-बंद (risk-off) शासन का संकेत देते हैं। हालांकि DXY (डॉलर की मजबूती) में कमी आई है, लेकिन बढ़ते HY स्प्रेड (क्रेडिट जोखिम) दबाव बनाए हुए हैं। BTC और सोने में उछाल वैकल्पिक संपत्तियों में रोटेशन का सुझाव देता है। यदि VIX (भय) 20 से नीचे गिरता है, तो एक अल्पकालिक निचला स्तर बन सकता है। अभी पूंजी सुरक्षा को प्राथमिकता दें।",
+            "ID": "Status GMS: DEFENSIF. Skor 37 dengan momentum datar menunjukkan rezim risk-off. Meski DXY (kekuatan dolar) sedikit melandai, pelebaran HY Spread (risiko kredit) tetap menekan pasar. Namun, lonjakan BTC dan Emas mengindikasikan rotasi ke aset alternatif. Jika VIX (indeks ketakutan) turun di bawah 20, dasar pasar jangka pendek mungkin terbentuk. Utamakan pelestarian modal saat ini.",
+            "AR": "حالة GMS: دفاعي. تشير الدرجة 37 والزخم المسطح إلى نظام تجنب المخاطر. رغم تراجع DXY (قوة الدولار)، فإن اتساع فروق HY (مخاطر الائتمان) يبقي الضغط قائماً. يشير صعود BTC والذهب إلى دوران نحو الأصول البديلة. إذا انخفض VIX (مؤشر الخوف) دون 20، فقد يتشكل قاع مؤقت. يجب إعطاء الأولوية لحماية رأس المال حتى يتحسن الزخم بشكل واضح.",
+            "DE": "GMS-Status: DEFENSIV. Ein Score von 37 und flaches Momentum signalisieren ein Risk-Off-Umfeld. Während der DXY (Dollarkraft) nachgab, belastet der steigende HY-Spread (Kreditrisiko) den Markt. Die Rallye bei BTC und Gold deutet jedoch auf eine Umschichtung in Alternativen hin. Sinkt der VIX (Volatilität) unter 20, könnte sich ein Boden bilden. Priorisieren Sie derzeit den Kapitalschutz.",
+            "FR": "Statut GMS : DÉFENSIF. Un score de 37 avec un momentum plat confirme un régime d'aversion au risque. Bien que le DXY (force du dollar) ait fléchi, l'élargissement du spread HY (risque de crédit) maintient la pression. Cependant, l'envolée du BTC et de l'or suggère une rotation vers les actifs alternatifs. Si le VIX (peur) tombe sous 20, un plancher pourrait se former. Priorisez la sécurité du capital."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-10T22:52:30Z",
-            "score": 39
-        },
         {
             "date": "2026-02-10T23:48:40Z",
             "score": 39
@@ -2346,6 +2342,10 @@
         {
             "date": "2026-02-13T23:43:39Z",
             "score": 37
+        },
+        {
+            "date": "2026-02-14T02:51:31Z",
+            "score": 37
         }
     ],
     "intelligence": {
@@ -2358,7 +2358,7 @@
             {
                 "title": "Trump says he will issue executive order to get voter-ID requirements before midterms",
                 "link": "https://www.cnbc.com/2026/02/13/trump-congress-voter-id-midterms.html",
-                "isoDate": "2026-02-13T23:09:55+00:00Z"
+                "isoDate": "2026-02-13T23:58:44+00:00Z"
             },
             {
                 "title": "Trump takes a beating from his own party amid Epstein files release and tariffs rebuke",
@@ -2366,9 +2366,9 @@
                 "isoDate": "2026-02-13T22:45:02+00:00Z"
             },
             {
-                "title": "Venezuela oil sales top $1 billion, funds won’t go to Qatar account anymore, Energy secretary says",
-                "link": "https://www.cnbc.com/2026/02/13/venezuela-oil-sales-qatar-chris-wright-trump.html",
-                "isoDate": "2026-02-13T17:50:43+00:00Z"
+                "title": "Average IRS tax refund is up 10.9% so far this season, early filing data shows",
+                "link": "https://www.cnbc.com/2026/02/13/average-tax-refund-early-irs-data.html",
+                "isoDate": "2026-02-14T01:17:43+00:00Z"
             },
             {
                 "title": "This sector is having its best start since at least 2000. Wall Street likes these dividend payers",
@@ -2376,78 +2376,78 @@
                 "isoDate": "2026-02-13T20:16:02+00:00Z"
             },
             {
-                "title": "China's tech titans are giving away money and cars in 'The Lunar New Year AI War'",
-                "link": "https://www.cnbc.com/2026/02/13/china-ai-lunar-new-year-bytedance-baidu-tencent-alibaba.html",
-                "isoDate": "2026-02-13T22:15:13+00:00Z"
+                "title": "Venezuela oil sales top $1 billion, funds won’t go to Qatar account anymore, Energy secretary says",
+                "link": "https://www.cnbc.com/2026/02/13/venezuela-oil-sales-qatar-chris-wright-trump.html",
+                "isoDate": "2026-02-13T17:50:43+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "インフレ報告は小幅な値動き、S&P500は下落週に：ライブアップデート",
-                "トランプ氏、中間選挙前に投票者ID義務化へ行政命令を発令すると表明",
-                "エプスタイン文書公開と関税への非難で、トランプ氏が党内から厳しい批判を浴びる",
-                "ベネズエラ産石油販売額10億ドル超、カタール口座への資金流入は停止へ：エネルギー長官",
-                "2000年以降で最高のスタートを切ったセクター：ウォール街は配当貴族に注目",
-                "中国のテクノロジー大手、旧正月「AI戦争」で資金や車をばらまく"
+                "インフレ報告が鈍化、S&P500は小幅な値上がりで引け、指数は下落週に：ライブアップデート",
+                "トランプ氏、中間選挙前に有権者ID要件を義務付ける大統領令を出すと表明",
+                "エプスタイン文書公開と関税への非難で、トランプ氏が党内から厳しい批判を受ける",
+                "IRSの平均税金還付金は今シーズンに入ってから10.9%増、早期申告データが示す",
+                "このセクターは2000年以降で最高のスタートを切る。ウォール街はこれらの配当貴族を好む",
+                "ベネズエラの石油販売額が10億ドル超、カタール口座への送金は今後なし、エネルギー長官が発言"
             ],
             "CN": [
-                "通胀报告后标普500指数小幅收跌，本周录得下跌：实时更新",
-                "特朗普表示将发布行政命令，在中期选举前实行选民身份验证要求",
-                "在爱泼斯坦文件泄露和关税受挫后，特朗普遭到党内人士的猛烈抨击",
-                "委内瑞拉石油销售额突破10亿美元，能源部长表示资金将不再流入卡塔尔账户",
-                "该行业迎来2000年以来最佳开局，华尔街青睐这些派息股",
-                "中国科技巨头在“农历新年AI大战”中送钱送车"
+                "软通胀报告后标普500指数小幅收盘，指数录得下跌周：实时更新",
+                "特朗普表示将发布行政命令，在中期选举前实施选民身份证要求",
+                "随着爱泼斯坦文件公布和关税批评，特朗普遭到党内人士的重创",
+                "美国国税局平均退税额本季至今增长10.9%，早期报税数据显示",
+                "该行业迎来自2000年以来最佳开局。华尔街青睐这些派息股",
+                "委内瑞拉石油销售额突破10亿美元，能源部长称资金将不再进入卡塔尔账户"
             ],
             "ES": [
-                "S&P 500 cierra con pocos cambios tras débil informe de inflación; índice anota semana de pérdidas: Actualizaciones en vivo",
-                "Trump dice que emitirá una orden ejecutiva para exigir requisitos de identificación de votantes antes de las elecciones de mitad de período",
-                "Trump recibe duros golpes de su propio partido en medio de la publicación de archivos de Epstein y la reprimenda por aranceles",
-                "Ventas de petróleo de Venezuela superan los $1 mil millones, fondos ya no irán a cuenta de Qatar, dice secretario de Energía",
-                "Este sector tiene su mejor comienzo desde al menos el año 2000. Wall Street favorece a estos pagadores de dividendos",
-                "Los titanes tecnológicos de China regalan dinero y coches en la 'Guerra de IA del Año Nuevo Lunar'"
+                "El S&P 500 cierra casi sin cambios tras informe de inflación moderada, el índice anota semana de pérdidas: Actualizaciones en vivo",
+                "Trump dice que emitirá una orden ejecutiva para imponer requisitos de identificación de votantes antes de las elecciones de mitad de período",
+                "Trump recibe duros golpes de su propio partido en medio de la publicación de archivos de Epstein y la crítica a los aranceles",
+                "El reembolso promedio de impuestos del IRS ha aumentado un 10,9% en lo que va de temporada, según datos de presentación temprana",
+                "Este sector está teniendo su mejor comienzo desde al menos el año 2000. Wall Street prefiere a estos pagadores de dividendos",
+                "Las ventas de petróleo de Venezuela superan los mil millones de dólares, los fondos ya no irán a la cuenta de Qatar, dice el secretario de Energía"
             ],
             "HI": [
-                "कमजोर मुद्रास्फीति रिपोर्ट के बाद एसएंडपी 500 थोड़ा अपरिवर्तित बंद हुआ, सूचकांक ने हारी हुई साप्ताहिक बढ़त दर्ज की: लाइव अपडेट",
+                "नरम मुद्रास्फीति रिपोर्ट के बाद S&P 500 में मामूली बदलाव, सूचकांक में गिरावट का सप्ताह: लाइव अपडेट",
                 "ट्रम्प ने कहा कि वह मध्यावधि चुनावों से पहले मतदाता-आईडी आवश्यकताओं को लागू करने के लिए कार्यकारी आदेश जारी करेंगे",
-                "एपस्टीन फाइलों के जारी होने और टैरिफ की निंदा के बीच ट्रम्प को अपनी पार्टी से करारी हार का सामना करना पड़ा",
-                "वेनेजुएला की तेल बिक्री 1 अरब डॉलर से अधिक, ऊर्जा सचिव ने कहा कि धन अब कतर खाते में नहीं जाएगा",
-                "यह क्षेत्र 2000 के बाद से अपना सर्वश्रेष्ठ प्रदर्शन कर रहा है। वॉल स्ट्रीट इन लाभांश देने वालों को पसंद करता है",
-                "चीन के टेक दिग्गज 'चंद्र नव वर्ष एआई युद्ध' में पैसे और कारें बांट रहे हैं"
+                "एपस्टीन फाइलों के जारी होने और टैरिफ की निंदा के बीच ट्रम्प को अपनी ही पार्टी से करारा झटका",
+                "इस सीज़न में अब तक औसत आईआरएस कर रिफंड 10.9% बढ़ा है, शुरुआती फाइलिंग डेटा दिखाता है",
+                "यह क्षेत्र 2000 के बाद से अपना सर्वश्रेष्ठ प्रदर्शन कर रहा है। वॉल स्ट्रीट इन डिविडेंड देने वालों को पसंद करता है",
+                "वेनेजुएला की तेल बिक्री 1 अरब डॉलर से अधिक, ऊर्जा सचिव ने कहा कि फंड अब कतर खाते में नहीं जाएंगे"
             ],
             "ID": [
-                "S&P 500 ditutup sedikit berubah setelah laporan inflasi lemah, indeks catat minggu merugi: Pembaruan langsung",
-                "Trump mengatakan dia akan mengeluarkan perintah eksekutif untuk memberlakukan persyaratan ID pemilih sebelum pemilu sela",
-                "Trump dihantam dari partainya sendiri di tengah rilis file Epstein dan teguran tarif",
-                "Penjualan minyak Venezuela capai lebih dari $1 miliar, dana tidak akan masuk ke rekening Qatar lagi, kata Menteri Energi",
+                "S&P 500 ditutup sedikit berubah setelah laporan inflasi lunak, indeks mencatat minggu yang merugi: Pembaruan langsung",
+                "Trump mengatakan akan mengeluarkan perintah eksekutif untuk memberlakukan persyaratan ID pemilih sebelum pemilihan paruh waktu",
+                "Trump dihajar oleh partainya sendiri di tengah rilis file Epstein dan kecaman tarif",
+                "Pengembalian pajak IRS rata-rata naik 10,9% sejauh musim ini, data pengajuan awal menunjukkan",
                 "Sektor ini mencatat awal terbaiknya sejak setidaknya tahun 2000. Wall Street menyukai pembayar dividen ini",
-                "Raksasa teknologi China membagikan uang dan mobil dalam 'Perang AI Tahun Baru Imlek'"
+                "Penjualan minyak Venezuela capai lebih dari $1 miliar, dana tidak akan lagi masuk ke rekening Qatar, kata Menteri Energi"
             ],
             "AR": [
-                "مؤشر S&P 500 يغلق دون تغيير يذكر بعد تقرير تضخم ضعيف، المؤشر يسجل أسبوعًا خاسرًا: تحديثات مباشرة",
-                "ترامب يقول إنه سيصدر أمرًا تنفيذيًا لتطبيق متطلبات تعريف الناخب قبل انتخابات التجديد النصفي",
-                "ترامب يتعرض لانتقادات شديدة من حزبه وسط الكشف عن ملفات إبستاين وتوبيخ على التعريفات الجمركية",
-                "مبيعات نفط فنزويلا تتجاوز مليار دولار، ولن تذهب الأموال إلى حساب قطر بعد الآن، حسبما قال وزير الطاقة",
-                "هذا القطاع يسجل أفضل بداية له منذ عام 2000 على الأقل. وول ستريت تفضل هذه الشركات الموزعة للأرباح",
-                "عمالقة التكنولوجيا الصينيون يوزعون الأموال والسيارات في 'حرب الذكاء الاصطناعي للسنة القمرية الجديدة'"
+                "مؤشر S&P 500 يغلق دون تغيير يذكر بعد تقرير تضخم ضعيف، المؤشر يسجل أسبوعاً خاسراً: تحديثات مباشرة",
+                "ترامب يقول إنه سيصدر أمراً تنفيذياً لوضع متطلبات هوية الناخب قبل الانتخابات النصفية",
+                "ترامب يتعرض لانتقادات شديدة من حزبه وسط نشر ملفات إبستين وتوبيخ التعريفات الجمركية",
+                "متوسط استرداد ضرائب مصلحة الضرائب الأمريكية يرتفع بنسبة 10.9% حتى الآن هذا الموسم، وتظهر بيانات الإيداع المبكر",
+                "هذا القطاع يحقق أفضل بداية له منذ عام 2000 على الأقل. وول ستريت يعجبها دافعو الأرباح هؤلاء",
+                "مبيعات نفط فنزويلا تتجاوز مليار دولار، والأموال لن تذهب إلى حساب قطر بعد الآن، حسب قول وزير الطاقة"
             ],
             "DE": [
-                "S&P 500 schließt kaum verändert nach schwachem Inflationsbericht, Index verzeichnet verlorene Woche: Live-Updates",
-                "Trump kündigt an, per Erlass Wähler-ID-Pflichten vor Zwischenwahlen einzuführen",
-                "Trump erhält von eigener Partei einen Dämpfer nach Veröffentlichung der Epstein-Files und Kritik an Zöllen",
-                "Venezuelas Ölverkäufe übersteigen 1 Milliarde US-Dollar, Gelder fließen nicht mehr auf Katar-Konto, sagt Energieminister",
-                "Dieser Sektor verzeichnet den besten Start seit mindestens 2000. Wall Street mag diese Dividendenzahler",
-                "Chinas Tech-Giganten verschenken Geld und Autos im 'Lunar New Year AI War'"
+                "S&P 500 schließt wenig verändert nach schwachem Inflationsbericht, Index verzeichnet verlorene Woche: Live-Updates",
+                "Trump kündigt an, eine Executive Order zu erlassen, um Ausweispflichten für Wähler vor den Midterms einzuführen",
+                "Trump erhält von seiner eigenen Partei einen Schlagabtausch inmitten der Veröffentlichung von Epstein-Akten und Tarifkritik",
+                "Die durchschnittliche Steuerrückerstattung des IRS ist in dieser Saison bisher um 10,9 % gestiegen, zeigen frühe Einreichungsdaten",
+                "Dieser Sektor verzeichnet den besten Start seit mindestens 2000. Die Wall Street mag diese Dividendenzahler",
+                "Venezuelas Ölverkäufe übersteigen 1 Milliarde Dollar, Gelder fließen nicht mehr auf Katar-Konto, sagt Energieminister"
             ],
             "FR": [
-                "Le S&P 500 clôture peu modifié après un rapport d'inflation faible, l'indice enregistre une semaine perdante : Mises à jour en direct",
-                "Trump annonce qu'il émettra un décret pour imposer des exigences d'identification des électeurs avant les midterms",
-                "Trump est critiqué par son propre parti suite à la publication des dossiers Epstein et à la réprobation des tarifs douaniers",
-                "Les ventes de pétrole du Venezuela dépassent le milliard de dollars, les fonds n'iront plus sur le compte du Qatar, déclare le secrétaire à l'Énergie",
-                "Ce secteur connaît son meilleur début depuis au moins 2000. Wall Street apprécie ces sociétés versant des dividendes",
-                "Les géants technologiques chinois donnent de l'argent et des voitures dans la 'Guerre de l'IA du Nouvel An Lunaire'"
+                "Le S&P 500 clôture peu modifié après un rapport d'inflation faible, l'indice enregistre une semaine de pertes : mises à jour en direct",
+                "Trump annonce qu'il publiera un décret pour imposer des exigences d'identification des électeurs avant les midterms",
+                "Trump prend une raclée de son propre parti suite à la publication des dossiers Epstein et à la réprobation des tarifs douaniers",
+                "Le remboursement moyen des impôts de l'IRS a augmenté de 10,9 % jusqu'à présent cette saison, selon les premières données de dépôt",
+                "Ce secteur connaît son meilleur début depuis au moins 2000. Wall Street aime ces payeurs de dividendes",
+                "Les ventes de pétrole du Venezuela dépassent le milliard de dollars, les fonds n'iront plus sur le compte du Qatar, déclare le secrétaire à l'Énergie"
             ]
         },
-        "last_updated": "2026-02-13T23:43:39.067014+00:00Z"
+        "last_updated": "2026-02-14T02:51:31.576342+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
