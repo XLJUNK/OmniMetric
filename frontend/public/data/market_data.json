@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-02-15T05:33:27.368475+00:00",
+    "last_updated": "2026-02-15T08:50:53.760746+00:00",
     "market_data": {
         "CRYPTO_SENTIMENT": {
             "price": 8,
@@ -570,13 +570,12 @@
             ]
         },
         "BTC": {
-            "price": 70312.57,
-            "prev_price": 68857.84,
-            "daily_chg": 2.11,
-            "change_percent": 2.21,
+            "price": 70353.8,
+            "prev_price": 69767.62,
+            "daily_chg": 0.84,
+            "change_percent": 5.02,
             "trend": "UP",
             "sparkline": [
-                89110.73,
                 86572.22,
                 88267.14,
                 89102.57,
@@ -597,17 +596,17 @@
                 66991.97,
                 66221.84,
                 68857.84,
-                70312.57
+                69767.62,
+                70353.8
             ]
         },
         "ETH": {
-            "price": 2089.66,
-            "prev_price": 2048.53,
-            "daily_chg": 2.01,
-            "change_percent": 3.47,
-            "trend": "UP",
+            "price": 2065.25,
+            "prev_price": 2086.01,
+            "daily_chg": -0.99,
+            "change_percent": 6.42,
+            "trend": "DOWN",
             "sparkline": [
-                2948.74,
                 2815.9,
                 2926.46,
                 3022.21,
@@ -628,17 +627,17 @@
                 1940.62,
                 1946.94,
                 2048.53,
-                2089.66
+                2086.01,
+                2065.25
             ]
         },
         "SOL": {
-            "price": 89.32,
-            "prev_price": 84.32,
-            "daily_chg": 5.93,
-            "change_percent": 7.73,
+            "price": 89.47,
+            "prev_price": 88.16,
+            "daily_chg": 1.49,
+            "change_percent": 12.89,
             "trend": "UP",
             "sparkline": [
-                127.05,
                 118.77,
                 124.14,
                 127.05,
@@ -659,7 +658,8 @@
                 79.25,
                 78.35,
                 84.32,
-                89.32
+                88.16,
+                89.47
             ]
         },
         "DXY": {
@@ -2050,18 +2050,13 @@
         },
         "credit": {
             "name": "Credit (HYG/IEF Z)",
-            "value": -0.28,
+            "value": -0.29,
             "status": "safe",
             "display": "-0.3σ"
         }
     },
     "ogv": {
         "trails": [
-            {
-                "date": "2025-12-17",
-                "x": -21.44,
-                "y": 55.76
-            },
             {
                 "date": "2025-12-18",
                 "x": -7.09,
@@ -2353,135 +2348,140 @@
                 "y": -110.31
             },
             {
+                "date": "2026-02-14",
+                "x": -57.66,
+                "y": -110.19
+            },
+            {
                 "date": "2026-02-15",
-                "x": -57.43,
-                "y": -110.46
+                "x": -56.93,
+                "y": -109.94
             }
         ],
         "current_vector": {
             "date": "2026-02-15",
-            "x": -57.43,
-            "y": -110.46
+            "x": -56.93,
+            "y": -109.94
         },
         "current_satellites": [
             {
                 "id": "SPY",
                 "label": "SPY",
-                "x": 1.7,
+                "x": 0.99,
                 "y": 0.0,
-                "z": 0.04
+                "z": 0.02
             },
             {
                 "id": "QQQ",
                 "label": "QQQ",
-                "x": -78.04,
+                "x": -77.87,
                 "y": -0.0,
-                "z": -1.45
+                "z": -1.44
             },
             {
                 "id": "IWM",
                 "label": "IWM",
-                "x": 53.65,
+                "x": 52.74,
                 "y": 0.0,
-                "z": 1.19
+                "z": 1.17
             },
             {
                 "id": "BTC",
                 "label": "BTC",
-                "x": -68.85,
-                "y": 43.03,
-                "z": -1.91
+                "x": -67.16,
+                "y": 41.97,
+                "z": -1.87
             },
             {
                 "id": "GOLD",
                 "label": "GOLD",
-                "x": -84.6,
+                "x": -82.6,
                 "y": 0.0,
-                "z": 1.88
+                "z": 1.84
             },
             {
                 "id": "US10Y",
                 "label": "US10Y",
                 "x": -0.0,
-                "y": -67.77,
-                "z": -1.0
+                "y": -68.59,
+                "z": -1.02
             },
             {
                 "id": "DXY",
                 "label": "DXY",
-                "x": 101.0,
-                "y": -84.16,
-                "z": -1.87
+                "x": 98.86,
+                "y": -82.38,
+                "z": -1.83
             },
             {
                 "id": "BIL",
                 "label": "BIL",
-                "x": -114.94,
-                "y": 61.3,
-                "z": 1.7
+                "x": -113.13,
+                "y": 60.34,
+                "z": 1.68
             },
             {
                 "id": "XLK",
                 "label": "XLK",
-                "x": -81.68,
-                "y": 27.23,
-                "z": -1.51
+                "x": -80.66,
+                "y": 26.89,
+                "z": -1.49
             },
             {
                 "id": "XLE",
                 "label": "XLE",
-                "x": 58.92,
+                "x": 56.94,
                 "y": 0.0,
-                "z": 2.62
+                "z": 2.53
             },
             {
                 "id": "XLF",
                 "label": "XLF",
-                "x": -52.1,
-                "y": -39.08,
-                "z": -1.45
+                "x": -51.87,
+                "y": -38.9,
+                "z": -1.44
             },
             {
                 "id": "XLV",
                 "label": "XLV",
-                "x": -27.17,
+                "x": -26.9,
                 "y": 0.0,
-                "z": 1.01
+                "z": 1.0
             },
             {
                 "id": "XLI",
                 "label": "XLI",
-                "x": 83.2,
+                "x": 80.78,
                 "y": 0.0,
-                "z": 2.31
+                "z": 2.24
             },
             {
                 "id": "XLB",
                 "label": "XLB",
                 "x": 0.0,
                 "y": 0.0,
-                "z": 2.36
+                "z": 2.29
             },
             {
                 "id": "XLY",
                 "label": "XLY",
-                "x": -50.44,
+                "x": -50.22,
                 "y": -0.0,
                 "z": -1.12
             },
             {
                 "id": "XLP",
                 "label": "XLP",
-                "x": -101.26,
+                "x": -97.23,
                 "y": 0.0,
-                "z": 2.81
+                "z": 2.7
             },
             {
                 "id": "XLU",
                 "label": "XLU",
-                "x": -105.36,
-                "y": -105.36,
-                "z": 2.93
+                "x": -102.87,
+                "y": -102.87,
+                "z": 2.86
             },
             {
                 "id": "XLRE",
@@ -2493,50 +2493,50 @@
             {
                 "id": "EEM",
                 "label": "EEM",
-                "x": 77.37,
+                "x": 75.28,
                 "y": 0.0,
-                "z": 2.15
+                "z": 2.09
             },
             {
                 "id": "FXI",
                 "label": "FXI",
-                "x": -38.73,
+                "x": -38.01,
                 "y": -0.0,
-                "z": -1.43
+                "z": -1.41
             },
             {
                 "id": "USO",
                 "label": "USO",
-                "x": 33.67,
+                "x": 33.06,
                 "y": 0.0,
-                "z": 1.5
+                "z": 1.47
             },
             {
                 "id": "SLV",
                 "label": "SLV",
                 "x": 0.0,
                 "y": 0.0,
-                "z": 0.52
+                "z": 0.51
             },
             {
                 "id": "JNK",
                 "label": "JNK",
                 "x": 0.0,
-                "y": -63.59,
-                "z": 1.41
+                "y": -62.53,
+                "z": 1.39
             },
             {
                 "id": "TLT",
                 "label": "TLT",
-                "x": -35.33,
-                "y": -105.99,
+                "x": -35.41,
+                "y": -106.24,
                 "z": 1.57
             }
         ],
         "history_length": 60,
         "system": "moving_fortress"
     },
-    "last_successful_update": "2026-02-15T05:33:16.765433+00:00",
+    "last_successful_update": "2026-02-15T08:50:42.861801+00:00",
     "gms_score": 41,
     "sector_scores": {
         "STOCKS": 44,
@@ -2594,24 +2594,20 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS status is Neutral. Upward momentum pushed the score to 41, exiting the Defensive zone. A slight dip in VIX (Market Fear) and DXY (Dollar Strength) suggests improving liquidity. While crypto and gold gain, rising High-Yield spreads (Credit Risk) signal underlying stress. Monitor credit market stability before shifting to a full accumulation strategy.",
+        "content": "GMS score 41 signals a shift to a Neutral regime. Upward momentum pushed the score to 41, driven by a softening DXY (Dollar strength) and stable VIX (Volatility). While liquidity remains flat, rising Gold and widening High-Yield spreads suggest underlying caution. Maintain balanced positions as risk appetite recovers slowly, monitoring for stability above the neutral threshold.",
         "reports": {
-            "JP": "GMSは「中立」です。上昇モーメンタムがスコアを41に押し上げ、防衛圏を脱しました。VIX（市場の恐怖）とDXY（ドルの強さ）の低下は流動性の改善を示唆しています。暗号資産や金が上昇する一方、ハイイールド債スプレッド（信用リスク）の拡大は潜在的なストレスを示しており、本格的な蓄積期への移行には信用市場の安定が不可欠です。",
-            "EN": "GMS status is Neutral. Upward momentum pushed the score to 41, exiting the Defensive zone. A slight dip in VIX (Market Fear) and DXY (Dollar Strength) suggests improving liquidity. While crypto and gold gain, rising High-Yield spreads (Credit Risk) signal underlying stress. Monitor credit market stability before shifting to a full accumulation strategy.",
-            "CN": "GMS处于“中性”状态。上升势头将分数推至41，脱离了防御区间。VIX（市场恐慌指数）和DXY（美元强度）的微跌表明流动性有所改善。尽管加密货币和黄金走强，但高收益债利差（信用风险）的扩大暗示了潜在压力。在进入全面积累阶段前，仍需警惕信用市场的波动风险，保持谨慎。",
-            "ES": "El estado de GMS es Neutral. El impulso alcista empujó el puntaje a 41, saliendo de la zona Defensiva. Una leve caída en el VIX (Miedo) y el DXY (Fuerza del Dólar) sugiere una mejora en la liquidez. Aunque las criptos y el oro suben, el aumento en los diferenciales de alto rendimiento (Riesgo Crediticio) indica estrés. Se requiere estabilidad crediticia antes de acumular activos.",
-            "HI": "GMS की स्थिति 'तटस्थ' है। ऊपर की ओर मोमेंटम ने स्कोर को 41 तक पहुँचा दिया, जिससे यह रक्षात्मक क्षेत्र से बाहर आ गया। VIX (बाजार का डर) और DXY (डॉलर की मजबूती) में गिरावट तरलता में सुधार का संकेत देती है। जहाँ क्रिप्टो और सोना बढ़ रहे हैं, वहीं हाई-यील्ड स्प्रेड (क्रेडिट जोखिम) का बढ़ना तनाव दर्शाता है। संचय से पहले क्रेडिट मार्केट की स्थिरता पर नज़र रखना अनिवार्य है।",
-            "ID": "Status GMS adalah Netral. Momentum ke atas mendorong skor ke 41, keluar dari zona Defensif. Penurunan VIX (Indeks Ketakutan) dan DXY (Kekuatan Dolar) menunjukkan likuiditas yang membaik. Meskipun kripto dan emas naik, melebarnya spread High-Yield (Risiko Kredit) menandakan adanya tekanan pasar. Perlu stabilitas pasar kredit yang lebih kuat sebelum melakukan akumulasi penuh.",
-            "AR": "حالة مؤشر GMS هي \"محايد\". دفع الزخم الصعودي النتيجة إلى 41، ليخرج من المنطقة الدفاعية. يشير انخفاض VIX (الخوف) وDXY (قوة الدولار) إلى تحسن السيولة. بينما يرتفع الكريبتو والذهب، فإن اتساع هوامش العائد المرتفع (مخاطر الائتمان) ينذر بضغوط باطنة. استقرار سوق الائتمان ضروري قبل التحول إلى استراتيجية التراكم الكاملة.",
-            "DE": "Der GMS-Status ist Neutral. Aufwärtsmomentum pushed den Score auf 41 und verließ die defensive Zone. Sinkende VIX- (Angst) und DXY-Werte (Dollarstärke) deuten auf eine bessere Liquidität hin. Während Krypto und Gold steigen, signalisieren höhere High-Yield-Spreads (Kreditrisiko) unterschwelligen Stress. Vor einer vollen Akkumulation sollte die Stabilität am Kreditmarkt abgewartet werden.",
-            "FR": "Le statut GMS est Neutre. Le momentum haussier a poussé le score à 41, sortant de la zone défensive. La baisse du VIX (Peur) et du DXY (Force du Dollar) suggère une amélioration de la liquidité. Si les cryptos et l'or progressent, l'élargissement des spreads High-Yield (Risque de Crédit) signale une pression sous-jacente. La prudence reste de mise avant de passer à une phase d'accumulation."
+            "JP": "GMS指数は41となり、中立圏へ移行しました。DXY（ドル安）とVIX（恐怖指数）の低下がモメンタムを41まで押し上げましたが、ハイイールド債スプレッドの拡大は警戒感を示唆しています。流動性は安定していますが、金価格の上昇はリスクヘッジ需要を反映しており、慎重な姿勢を維持しつつ市場の回復を監視すべき局面です。",
+            "EN": "GMS score 41 signals a shift to a Neutral regime. Upward momentum pushed the score to 41, driven by a softening DXY (Dollar strength) and stable VIX (Volatility). While liquidity remains flat, rising Gold and widening High-Yield spreads suggest underlying caution. Maintain balanced positions as risk appetite recovers slowly, monitoring for stability above the neutral threshold.",
+            "CN": "GMS指数为41，进入中立区间。DXY（美元走势）和VIX（波动率）的回落推动分值升至41。尽管流动性稳定，但高收益债利差走阔和黄金上涨反映出市场仍有潜在谨慎情绪。目前处于从防御转向中立的过渡期，建议在关注市场修复的同时保持持仓平衡，警惕信贷市场的波动反馈。",
+            "ES": "El GMS de 41 marca el inicio de un régimen Neutral. El impulso alcista llevó el puntaje a 41, apoyado por la debilidad del DXY (Dólar) y la estabilidad del VIX (Volatilidad). Aunque la liquidez es estable, el aumento del Oro y los diferenciales de bonos de alto riesgo sugieren cautela. Mantenga posiciones equilibradas mientras el apetito por el riesgo se recupera gradualmente.",
+            "HI": "GMS स्कोर 41 न्यूट्रल शासन की ओर संकेत करता है। DXY (डॉलर की मजबूती) में कमी और VIX (अस्थिरता) में स्थिरता ने मोमेंटम को 41 तक पहुँचाया है। हालांकि लिक्विडिटी स्थिर है, लेकिन बढ़ते गोल्ड और हाई-यिल्ड स्प्रेड्स सावधानी का संकेत देते हैं। बाजार में जोखिम लेने की क्षमता धीरे-धीरे सुधर रही है, इसलिए संतुलित पोर्टफोलियो बनाए रखें और स्थिरता पर नज़र रखें।",
+            "ID": "Skor GMS 41 menandakan transisi ke rezim Netral. Momentum mendorong skor ke 41 seiring melemahnya DXY (kekuatan Dolar) dan VIX (Indeks ketakutan) yang stabil. Meskipun likuiditas tetap flat, kenaikan harga Emas dan pelebaran spread High-Yield menunjukkan kewaspadaan pasar. Pertahankan posisi seimbang karena selera risiko mulai pulih secara bertahap dalam fase transisi ini.",
+            "AR": "يشير مؤشر GMS البالغ 41 إلى الانتقال لنظام محايد. دفع الزخم القوي النتيجة إلى 41 بفضل تراجع مؤشر DXY (قوة الدولار) واستقرار VIX (التقلب). رغم استقرار السيولة، فإن ارتفاع الذهب واتساع هوامش العائد المرتفع يعكسان حذراً مستتراً. يُنصح بالحفاظ على مراكز متوازنة مع ترقب تعافي شهية المخاطرة ببطء ومراقبة استقرار المؤشرات فوق مستوى 40.",
+            "DE": "Der GMS-Score von 41 signalisiert einen Übergang in ein neutrales Regime. Aufwärtsmomentum trieb den Score auf 41, gestützt durch einen schwächeren DXY (Dollarstärke) und stabilen VIX (Volatilität). Während die Liquidität stagniert, deuten steigendes Gold und ausgeweitete High-Yield-Spreads auf Vorsicht hin. Halten Sie Positionen ausgewogen, während sich der Risikoappetit langsam stabilisiert.",
+            "FR": "Le score GMS de 41 marque une transition vers un régime Neutre. Le momentum a poussé le score à 41, soutenu par l'affaiblissement du DXY (Dollar) et la stabilité du VIX (Volatilité). Bien que la liquidité soit stable, la hausse de l'Or et l'écartement des spreads High-Yield incitent à la prudence. Maintenez des positions équilibrées pendant que l'appétit pour le risque se reconstruit progressivement."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-11T11:53:04Z",
-            "score": 41
-        },
         {
             "date": "2026-02-11T13:18:29Z",
             "score": 41
@@ -2847,6 +2843,10 @@
         {
             "date": "2026-02-15T05:33:16Z",
             "score": 41
+        },
+        {
+            "date": "2026-02-15T08:50:42Z",
+            "score": 41
         }
     ],
     "intelligence": {
@@ -2855,6 +2855,11 @@
                 "title": "U.S. and European interests are 'intertwined,' Secretary of State Rubio says",
                 "link": "https://www.cnbc.com/2026/02/14/us-and-european-interests-are-intertwined-rubio-says.html",
                 "isoDate": "2026-02-14T13:20:09+00:00Z"
+            },
+            {
+                "title": "The NFL just wrapped a record-breaking season. Here’s why next year’s going to be even bigger",
+                "link": "https://www.cnbc.com/2026/02/15/nfl-just-had-record-breaking-season-next-year-will-be-bigger.html",
+                "isoDate": "2026-02-15T08:24:07+00:00Z"
             },
             {
                 "title": "Trump says he will issue executive order to get voter-ID requirements before midterms",
@@ -2872,11 +2877,6 @@
                 "isoDate": "2026-02-14T06:58:06+00:00Z"
             },
             {
-                "title": "Epstein files: LA28 chief Wasserman puts his talent agency up for sale after Maxwell revelations, WSJ reports",
-                "link": "https://www.cnbc.com/2026/02/14/epstein-files-wasserman-talent-agency-up-for-sale.html",
-                "isoDate": "2026-02-14T11:16:17+00:00Z"
-            },
-            {
                 "title": "Goldman Sachs says these five stocks, including Nvidia, are too attractive to ignore",
                 "link": "https://www.cnbc.com/2026/02/14/five-compelling-stocks-to-buy-like-nvidia.html",
                 "isoDate": "2026-02-14T13:50:25+00:00Z"
@@ -2884,71 +2884,71 @@
         ],
         "translations": {
             "JP": [
-                "「米国と欧州の利害は『絡み合っている』」とルビオ国務長官",
+                "ルビオ国務長官「米国と欧州の利害は『絡み合っている』」",
+                "NFLは記録破りのシーズンを終えた。来年はさらに大きくなる理由",
                 "トランプ氏、中間選挙前に投票者ID要件を導入する大統領令を発令すると表明",
-                "政府一部閉鎖が続く中、TSA職員は米国の空港で無給で勤務",
-                "キューバの今後：ジェット燃料が尽きる中、トランプ氏が圧力を強める",
-                "エプスタイン氏関連文書：LA28代表ワッサーマン氏、マックスウェル氏の暴露後、タレントエージェンシーを売却へ＝WSJ報道",
-                "ゴールドマン・サックス、Nvidiaを含むこれら5銘柄は無視できないほど魅力的だと指摘"
+                "政府の一部閉鎖でTSA職員が米国の空港で無給で勤務",
+                "キューバの今後は？トランプ氏が圧力を強める中、同島はジェット燃料が枯渇",
+                "ゴールドマン・サックス、Nvidiaを含むこれらの5銘柄は無視できないほど魅力的だと指摘"
             ],
             "CN": [
-                "美国国务卿卢比奥表示，美欧利益“盘根错节”",
-                "特朗普称将发布行政令，在中期选举前实施选民身份证要求",
-                "由于政府再次部分停摆，TSA（美国运输安全管理局）官员在机场无薪工作",
-                "古巴何去何从？特朗普收紧政策，岛上面临航空燃油短缺",
-                "《华尔街日报》报道：爱泼斯坦文件曝光，洛杉矶2028奥运会主席瓦瑟曼在麦克斯韦事件后出售其经纪公司",
-                "高盛：包括英伟达在内的这五只股票极具吸引力，不容忽视"
+                "鲁比奥国务卿称，美国和欧洲的利益“相互交织”",
+                "NFL刚刚结束了一个创纪录的赛季。明年将更加辉煌的原因",
+                "特朗普表示将发布行政命令，在中期选举前实施选民身份验证要求",
+                "由于部分政府再次停摆，TSA（美国运输安全管理局）特工在美国机场无薪工作",
+                "古巴的下一步是什么？特朗普收紧措施，岛上面临航空燃油短缺",
+                "高盛表示，包括英伟达在内的这五只股票极具吸引力，不容忽视"
             ],
             "ES": [
-                "Los intereses de EE. UU. y Europa están 'entrelazados', dice el secretario de Estado Rubio",
-                "Trump dice que emitirá una orden ejecutiva para imponer requisitos de identificación de votantes antes de las elecciones de mitad de período",
-                "Los agentes de la TSA trabajan sin salario en aeropuertos de EE. UU. debido a otro cierre parcial del gobierno",
+                "Los intereses de Estados Unidos y Europa están 'entrelazados', dice el Secretario de Estado Rubio",
+                "La NFL acaba de concluir una temporada récord. Aquí te explicamos por qué la próxima será aún mayor",
+                "Trump dice que emitirá una orden ejecutiva para implementar requisitos de identificación de votantes antes de las elecciones de mitad de período",
+                "Agentes de la TSA trabajan sin paga en aeropuertos de EE. UU. debido a otro cierre parcial del gobierno",
                 "¿Qué sigue para Cuba? Trump aprieta las tuercas mientras la isla se queda sin combustible para aviones",
-                "Archivos de Epstein: El jefe de LA28, Wasserman, pone a la venta su agencia de talentos tras las revelaciones de Maxwell, informa WSJ",
                 "Goldman Sachs dice que estas cinco acciones, incluida Nvidia, son demasiado atractivas para ignorarlas"
             ],
             "HI": [
-                "अमेरिकी विदेश सचिव रुबियो ने कहा, अमेरिका और यूरोपीय हित 'आपस में जुड़े हुए हैं'",
-                "ट्रम्प का कहना है कि वह मध्यावधि चुनावों से पहले मतदाता-आईडी आवश्यकताओं को लागू करने के लिए कार्यकारी आदेश जारी करेंगे",
+                "अमेरिकी और यूरोपीय हित 'आपस में जुड़े हुए हैं', विदेश मंत्री रुबियो ने कहा",
+                "NFL ने रिकॉर्ड तोड़ सीज़न पूरा किया है। यहाँ बताया गया है कि अगला सीज़न और भी बड़ा क्यों होगा",
+                "ट्रम्प ने कहा कि वह मध्यावधि चुनावों से पहले मतदाता-आईडी आवश्यकताओं को लागू करने के लिए कार्यकारी आदेश जारी करेंगे",
                 "एक और आंशिक सरकारी शटडाउन के कारण TSA एजेंट अमेरिकी हवाई अड्डों पर बिना वेतन के काम कर रहे हैं",
-                "क्यूबा का अगला कदम क्या है? जैसे ही द्वीप का जेट ईंधन खत्म हो रहा है, ट्रम्प ने कसा शिकंजा",
-                "एपस्टीन फाइलें: मैक्सवेल खुलासे के बाद LA28 प्रमुख वासरमैन ने अपनी टैलेंट एजेंसी को बिक्री के लिए रखा, WSJ की रिपोर्ट",
-                "गोल्डमैन सैक्स का कहना है कि ये पांच स्टॉक, जिनमें Nvidia भी शामिल है, नजरअंदाज करने के लिए बहुत आकर्षक हैं"
+                "क्यूबा के लिए आगे क्या? जैसे-जैसे द्वीप पर जेट ईंधन खत्म हो रहा है, ट्रम्प कस रहे हैं",
+                "गोल्डमैन सैक्स का कहना है कि ये पांच स्टॉक, जिनमें Nvidia भी शामिल है, अनदेखी करने के लिए बहुत आकर्षक हैं"
             ],
             "ID": [
                 "Kepentingan AS dan Eropa 'saling terkait', kata Menteri Luar Negeri Rubio",
-                "Trump mengatakan akan mengeluarkan perintah eksekutif untuk menerapkan persyaratan ID pemilih sebelum pemilu sela",
-                "Agen TSA bekerja tanpa gaji di bandara AS karena penutupan pemerintah parsial lainnya",
-                "Apa selanjutnya untuk Kuba? Trump mengencangkan sekrup saat pulau itu kehabisan bahan bakar jet",
-                "Berkas Epstein: Bos LA28 Wasserman menjual agen bakatnya setelah wahyu Maxwell, lapor WSJ",
-                "Goldman Sachs mengatakan kelima saham ini, termasuk Nvidia, terlalu menarik untuk diabaikan"
+                "NFL baru saja menyelesaikan musim yang memecahkan rekor. Inilah mengapa tahun depan akan lebih besar lagi",
+                "Trump mengatakan akan mengeluarkan perintah eksekutif untuk menerapkan persyaratan ID pemilih sebelum pemilu paruh waktu",
+                "Agen TSA bekerja tanpa bayaran di bandara AS karena penutupan pemerintah sebagian lainnya",
+                "Apa selanjutnya untuk Kuba? Trump memperketat cengkeraman saat pulau itu kehabisan bahan bakar jet",
+                "Goldman Sachs mengatakan lima saham ini, termasuk Nvidia, terlalu menarik untuk diabaikan"
             ],
             "AR": [
-                "مصالح الولايات المتحدة وأوروبا \"مترابطة\"، كما يقول وزير الخارجية روبيو",
-                "ترامب يقول إنه سيصدر أمرًا تنفيذيًا لتطبيق متطلبات بطاقة هوية الناخب قبل انتخابات التجديد النصفي",
-                "يعمل وكلاء إدارة أمن النقل (TSA) بدون أجر في المطارات الأمريكية بسبب إغلاق حكومي جزئي آخر",
-                "ماذا بعد كوبا؟ ترامب يشدد الخناق مع نفاد وقود الطائرات من الجزيرة",
-                "ملفات إبستين: رئيس LA28 واسرمان يعرض وكالة المواهب الخاصة به للبيع بعد الكشف عن معلومات ماكسويل، حسبما أفادت وول ستريت جورنال",
-                "جولدمان ساكس يقول إن هذه الأسهم الخمسة، بما في ذلك Nvidia، جذابة للغاية ولا يمكن تجاهلها"
+                "مصالح الولايات المتحدة وأوروبا \"متشابكة\"، كما يقول وزير الخارجية روبيو",
+                "اختتمت دوري كرة القدم الأمريكية (NFL) موسمًا قياسيًا. إليك السبب الذي يجعل الموسم المقبل أكبر",
+                "ترامب يقول إنه سيصدر أمرًا تنفيذيًا لتطبيق متطلبات هوية الناخب قبل الانتخابات النصفية",
+                "يعمل وكلاء هيئة أمن النقل (TSA) دون أجر في المطارات الأمريكية بسبب إغلاق جزئي آخر للحكومة",
+                "ماذا بعد كوبا؟ ترامب يشدد الخناق بينما ينفد وقود الطائرات من الجزيرة",
+                "جولدمان ساكس يقول إن هذه الأسهم الخمسة، بما في ذلك إنفيديا، جذابة للغاية بحيث لا يمكن تجاهلها"
             ],
             "DE": [
-                "US-amerikanische und europäische Interessen sind \"miteinander verflochten\", sagt Außenminister Rubio",
-                "Trump sagt, er werde eine Durchführungsverordnung erlassen, um Wähler-ID-Anforderungen vor den Midterms durchzusetzen",
-                "TSA-Agenten arbeiten aufgrund eines weiteren teilweisen Regierungsstillstands ohne Bezahlung an US-Flughäfen",
-                "Was kommt als Nächstes für Kuba? Trump zieht die Schrauben an, während der Insel das Kerosin ausgeht",
-                "Epstein-Akten: LA28-Chef Wasserman stellt seine Talentagentur nach Maxwell-Enthüllungen zum Verkauf, berichtet das WSJ",
-                "Goldman Sachs sagt, diese fünf Aktien, einschließlich Nvidia, seien zu attraktiv, um sie zu ignorieren"
+                "US- und europäische Interessen sind \"verflochten\", sagt Außenminister Rubio",
+                "Die NFL hat gerade eine Rekordsaison beendet. Warum die nächste noch größer wird",
+                "Trump kündigt an, per Dekret Wähler-ID-Pflichten vor den Zwischenwahlen einzuführen",
+                "TSA-Agenten arbeiten aufgrund eines weiteren teilweisen Government Shutdowns ohne Bezahlung an US-Flughäfen",
+                "Was kommt als Nächstes für Kuba? Trump dreht die Daumenschrauben, während der Insel der Flugzeugtreibstoff ausgeht",
+                "Goldman Sachs sagt, diese fünf Aktien, darunter Nvidia, seien zu attraktiv, um sie zu ignorieren"
             ],
             "FR": [
                 "Les intérêts américains et européens sont \"entremêlés\", déclare le secrétaire d'État Rubio",
-                "Trump déclare qu'il publiera un décret pour imposer des exigences d'identification des électeurs avant les élections de mi-mandat",
-                "Des agents de la TSA travaillent sans salaire dans les aéroports américains en raison d'un autre arrêt partiel du gouvernement",
-                "Quelle suite pour Cuba ? Trump resserre l'étau alors que l'île manque de kérosène",
-                "Dossiers Epstein : Le chef de LA28, Wasserman, met sa société de talents en vente après les révélations de Maxwell, rapporte le WSJ",
+                "La NFL vient de conclure une saison record. Voici pourquoi celle de l'année prochaine sera encore plus grande",
+                "Trump annonce qu'il publiera un décret pour imposer des exigences d'identification des électeurs avant les midterms",
+                "Des agents de la TSA travaillent sans salaire dans les aéroports américains en raison d'un autre blocage partiel du gouvernement",
+                "Quelle sera la suite pour Cuba ? Trump serre la vis alors que l'île manque de kérosène",
                 "Goldman Sachs affirme que ces cinq actions, y compris Nvidia, sont trop attrayantes pour être ignorées"
             ]
         },
-        "last_updated": "2026-02-15T05:33:16.764805+00:00Z"
+        "last_updated": "2026-02-15T08:50:42.861213+00:00Z"
     },
     "system_status": "OPERATIONAL",
     "beacons_history": [
@@ -3669,6 +3669,21 @@
             },
             "credit": {
                 "value": -0.28,
+                "status": "safe"
+            }
+        },
+        {
+            "timestamp": "2026-02-15T08:50:53.760746+00:00",
+            "recession": {
+                "value": 0.463,
+                "status": "safe"
+            },
+            "panic": {
+                "value": 0.929,
+                "status": "safe"
+            },
+            "credit": {
+                "value": -0.29,
                 "status": "safe"
             }
         }
