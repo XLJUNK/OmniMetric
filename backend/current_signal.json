@@ -1,9 +1,9 @@
 {
-    "last_updated": "2026-02-15T08:50:42.861793+00:00",
-    "last_successful_update": "2026-02-15T08:50:42.861801+00:00",
-    "gms_score": 41,
+    "last_updated": "2026-02-15T13:14:12.178035+00:00",
+    "last_successful_update": "2026-02-15T13:14:12.178043+00:00",
+    "gms_score": 44,
     "sector_scores": {
-        "STOCKS": 44,
+        "STOCKS": 49,
         "CRYPTO": 65,
         "FOREX": 44,
         "COMMODITIES": 47,
@@ -225,34 +225,40 @@
             ]
         },
         "VIX": {
-            "price": 20.6,
-            "prev_price": 20.82,
-            "daily_chg": -1.06,
-            "change_percent": 18.66,
-            "trend": "DOWN",
+            "price": 15.85,
+            "change_percent": 0.0,
+            "trend": "NEUTRAL",
             "sparkline": [
-                16.75,
-                15.84,
-                15.86,
-                20.09,
-                16.9,
-                15.64,
-                16.09,
-                16.15,
-                16.35,
-                16.35,
-                16.88,
-                17.44,
-                16.34,
-                18.0,
-                18.64,
-                21.77,
-                20.37,
-                17.36,
-                17.79,
-                17.65,
-                20.82,
-                20.6
+                14.16,
+                15.65,
+                14.71,
+                15.35,
+                14.99,
+                15.37,
+                15.69,
+                15.74,
+                15.16,
+                15.92,
+                15.03,
+                14.27,
+                15.68,
+                14.31,
+                15.59,
+                15.83,
+                15.59,
+                15.92,
+                14.07,
+                15.83,
+                14.7,
+                14.9,
+                15.32,
+                15.11,
+                14.44,
+                14.92,
+                14.48,
+                15.35,
+                15.95,
+                15.53
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
@@ -584,11 +590,11 @@
             ]
         },
         "BTC": {
-            "price": 70353.8,
+            "price": 69438.64,
             "prev_price": 69767.62,
-            "daily_chg": 0.84,
-            "change_percent": 5.02,
-            "trend": "UP",
+            "daily_chg": -0.47,
+            "change_percent": 3.65,
+            "trend": "DOWN",
             "sparkline": [
                 86572.22,
                 88267.14,
@@ -611,14 +617,14 @@
                 66221.84,
                 68857.84,
                 69767.62,
-                70353.8
+                69438.64
             ]
         },
         "ETH": {
-            "price": 2065.25,
+            "price": 2023.63,
             "prev_price": 2086.01,
-            "daily_chg": -0.99,
-            "change_percent": 6.42,
+            "daily_chg": -2.99,
+            "change_percent": 4.28,
             "trend": "DOWN",
             "sparkline": [
                 2815.9,
@@ -642,15 +648,15 @@
                 1946.94,
                 2048.53,
                 2086.01,
-                2065.25
+                2023.63
             ]
         },
         "SOL": {
-            "price": 89.47,
+            "price": 88.04,
             "prev_price": 88.16,
-            "daily_chg": 1.49,
-            "change_percent": 12.89,
-            "trend": "UP",
+            "daily_chg": -0.14,
+            "change_percent": 11.08,
+            "trend": "DOWN",
             "sparkline": [
                 118.77,
                 124.14,
@@ -673,7 +679,7 @@
                 78.35,
                 84.32,
                 88.16,
-                89.47
+                88.04
             ]
         },
         "DXY": {
@@ -2093,24 +2099,20 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS score 41 signals a shift to a Neutral regime. Upward momentum pushed the score to 41, driven by a softening DXY (Dollar strength) and stable VIX (Volatility). While liquidity remains flat, rising Gold and widening High-Yield spreads suggest underlying caution. Maintain balanced positions as risk appetite recovers slowly, monitoring for stability above the neutral threshold.",
+        "content": "GMS score 44 indicates a Neutral regime. Upward momentum pushed the score to 44 from 37, driven by a cooling DXY (Dollar strength) and stable net liquidity. While VIX (Fear) remains steady at 15.85, the significant spike in Gold suggests tactical hedging by major players. Watch for potential contagion from Asian market weakness into US equities. Maintain a balanced stance and monitor the momentum delta carefully to identify any shifts in the prevailing risk-reward variance.",
         "reports": {
-            "JP": "GMS指数は41となり、中立圏へ移行しました。DXY（ドル安）とVIX（恐怖指数）の低下がモメンタムを41まで押し上げましたが、ハイイールド債スプレッドの拡大は警戒感を示唆しています。流動性は安定していますが、金価格の上昇はリスクヘッジ需要を反映しており、慎重な姿勢を維持しつつ市場の回復を監視すべき局面です。",
-            "EN": "GMS score 41 signals a shift to a Neutral regime. Upward momentum pushed the score to 41, driven by a softening DXY (Dollar strength) and stable VIX (Volatility). While liquidity remains flat, rising Gold and widening High-Yield spreads suggest underlying caution. Maintain balanced positions as risk appetite recovers slowly, monitoring for stability above the neutral threshold.",
-            "CN": "GMS指数为41，进入中立区间。DXY（美元走势）和VIX（波动率）的回落推动分值升至41。尽管流动性稳定，但高收益债利差走阔和黄金上涨反映出市场仍有潜在谨慎情绪。目前处于从防御转向中立的过渡期，建议在关注市场修复的同时保持持仓平衡，警惕信贷市场的波动反馈。",
-            "ES": "El GMS de 41 marca el inicio de un régimen Neutral. El impulso alcista llevó el puntaje a 41, apoyado por la debilidad del DXY (Dólar) y la estabilidad del VIX (Volatilidad). Aunque la liquidez es estable, el aumento del Oro y los diferenciales de bonos de alto riesgo sugieren cautela. Mantenga posiciones equilibradas mientras el apetito por el riesgo se recupera gradualmente.",
-            "HI": "GMS स्कोर 41 न्यूट्रल शासन की ओर संकेत करता है। DXY (डॉलर की मजबूती) में कमी और VIX (अस्थिरता) में स्थिरता ने मोमेंटम को 41 तक पहुँचाया है। हालांकि लिक्विडिटी स्थिर है, लेकिन बढ़ते गोल्ड और हाई-यिल्ड स्प्रेड्स सावधानी का संकेत देते हैं। बाजार में जोखिम लेने की क्षमता धीरे-धीरे सुधर रही है, इसलिए संतुलित पोर्टफोलियो बनाए रखें और स्थिरता पर नज़र रखें।",
-            "ID": "Skor GMS 41 menandakan transisi ke rezim Netral. Momentum mendorong skor ke 41 seiring melemahnya DXY (kekuatan Dolar) dan VIX (Indeks ketakutan) yang stabil. Meskipun likuiditas tetap flat, kenaikan harga Emas dan pelebaran spread High-Yield menunjukkan kewaspadaan pasar. Pertahankan posisi seimbang karena selera risiko mulai pulih secara bertahap dalam fase transisi ini.",
-            "AR": "يشير مؤشر GMS البالغ 41 إلى الانتقال لنظام محايد. دفع الزخم القوي النتيجة إلى 41 بفضل تراجع مؤشر DXY (قوة الدولار) واستقرار VIX (التقلب). رغم استقرار السيولة، فإن ارتفاع الذهب واتساع هوامش العائد المرتفع يعكسان حذراً مستتراً. يُنصح بالحفاظ على مراكز متوازنة مع ترقب تعافي شهية المخاطرة ببطء ومراقبة استقرار المؤشرات فوق مستوى 40.",
-            "DE": "Der GMS-Score von 41 signalisiert einen Übergang in ein neutrales Regime. Aufwärtsmomentum trieb den Score auf 41, gestützt durch einen schwächeren DXY (Dollarstärke) und stabilen VIX (Volatilität). Während die Liquidität stagniert, deuten steigendes Gold und ausgeweitete High-Yield-Spreads auf Vorsicht hin. Halten Sie Positionen ausgewogen, während sich der Risikoappetit langsam stabilisiert.",
-            "FR": "Le score GMS de 41 marque une transition vers un régime Neutre. Le momentum a poussé le score à 41, soutenu par l'affaiblissement du DXY (Dollar) et la stabilité du VIX (Volatilité). Bien que la liquidité soit stable, la hausse de l'Or et l'écartement des spreads High-Yield incitent à la prudence. Maintenez des positions équilibrées pendant que l'appétit pour le risque se reconstruit progressivement."
+            "JP": "GMSスコア44は「中立」レジームへの移行を示唆しています。ドル指数（DXY/通貨の強さ）の低下と流動性の安定が追い風となり、モメンタムがスコアを37から44へ押し上げました。恐怖指数（VIX）は15.85と安定圏にありますが、金と銀の急騰は市場の潜在的な警戒心とヘッジ需要を反映しています。アジア市場の弱含みが米国株へ波及するリスクを注視し、現在はバランスの取れたポジションを維持すべき局面です。",
+            "EN": "GMS score 44 indicates a Neutral regime. Upward momentum pushed the score to 44 from 37, driven by a cooling DXY (Dollar strength) and stable net liquidity. While VIX (Fear) remains steady at 15.85, the significant spike in Gold suggests tactical hedging by major players. Watch for potential contagion from Asian market weakness into US equities. Maintain a balanced stance and monitor the momentum delta carefully to identify any shifts in the prevailing risk-reward variance.",
+            "CN": "GMS 分数为 44，标志着市场进入“中性”阶段。由于美元指数 (DXY/流动性压力) 回落以及净流动性企稳，向上势头将分数从 37 提升至 44。尽管恐慌指数 (VIX) 稳定在 15.85，但黄金与白银价格的同步飙升暗示了市场深层的避险对冲情绪。投资者需警惕亚洲股市的普遍疲软是否会向全球蔓延。在动能持续改善前，建议保持中性配置并严格监控各资产类别的风险偏差。",
+            "ES": "El puntaje GMS de 44 indica un régimen Neutral. El impulso alcista pushed el score desde 37 hasta 44, impulsado por un DXY (fuerza del dólar) en descenso y una liquidez estable. Aunque el VIX (miedo/volatilidad) se mantiene calmado en 15.85, el fuerte repunte del Oro sugiere una cobertura contra riesgos ocultos. Monitoree si la debilidad en los mercados asiáticos se traslada a las acciones de EE. UU. Mantenga una postura equilibrada mientras espera una mayor confirmación de la tendencia alcista.",
+            "HI": "GMS स्कोर 44 'तटस्थ' व्यवस्था का संकेत देता है। डॉलर की मजबूती (DXY) में कमी और स्थिर तरलता ने मोमेंटम को 37 से 44 तक पहुँचाया है। हालांकि VIX (डर/अस्थिरता) 15.85 पर स्थिर है, लेकिन सोने और चांदी में आई तेजी निवेशकों की सावधानी और हेजिंग को दर्शाती है। एशियाई बाजारों की कमजोरी के अमेरिकी इक्विटी पर पड़ने वाले प्रभाव पर नजर रखें। वर्तमान में एक संतुलित पोर्टफोलियो बनाए रखें और बाजार की दिशा की पुष्टि होने तक प्रतीक्षा करें। यह समय सतर्क रहने और जोखिम के प्रति जागरूक रहने का है।",
+            "ID": "Skor GMS 44 menunjukkan transisi ke rezim Netral. Momentum mendorong skor naik dari 37 ke 44, didukung oleh pelemahan DXY (kekuatan Dolar) dan kondisi likuiditas yang stabil. Meskipun VIX (indeks ketakutan) tetap tenang di level 15,85, lonjakan harga Emas dan Perak mengisyaratkan adanya strategi lindung nilai yang hati-hati. Pantau apakah pelemahan di pasar Asia akan merambat ke ekuitas global. Tetaplah pada posisi netral dan waspadai varians risiko yang muncul dari pergerakan volatilitas obligasi saat ini.",
+            "AR": "تشير درجة GMS البالغة 44 إلى الانتقال لنظام محايد. دفع الزخم النتيجة من 37 إلى 44، مدعوماً بتراجع مؤشر الدولار (DXY) واستقرار السيولة الصافية. ورغم استقرار مؤشر الخوف (VIX) عند 15.85، إلا أن القفزة في أسعار الذهب والفضة تعكس توجهاً للتحوط ضد المخاطر غير المرئية. يجب مراقبة احتمالية انتقال الضعف من الأسواق الآسيوية إلى الأسهم الأمريكية. يُنصح بالحفاظ على توازن المحفظة حالياً مع مراقبة تطورات التقلبات في سوق السندات، وتجنب المخاطر العالية.",
+            "DE": "Ein GMS-Score von 44 signalisiert ein neutrales Marktumfeld. Positives Momentum schob den Wert von 37 auf 44, begünstigt durch einen sinkenden DXY (Dollarstärke) und stabile Nettoliquidität. Während der VIX (Angstindex) bei 15,85 stabil bleibt, deutet der massive Anstieg bei Gold und Silber auf eine vorsorgliche Absicherung hin. Achten Sie auf mögliche Spillover-Effekte der Schwäche asiatischer Märkte auf US-Aktien. Wir empfehlen eine neutrale Positionierung und die Beobachtung der weiteren Volatilitätsentwicklung in den kommenden Tagen.",
+            "FR": "Le score GMS de 44 indique un passage en régime Neutre. Le momentum a poussé le score de 37 à 44, soutenu par l'affaiblissement du DXY (force du dollar) et une liquidité nette stable. Si le VIX (indice de la peur) reste contenu à 15,85, l'envolée de l'Or et de l'Argent témoigne d'une volonté de couverture prudente des investisseurs. Surveillez de près la contagion potentielle de la faiblesse des marchés asiatiques vers les indices américains. Maintenez une exposition équilibrée en attendant une confirmation plus nette du biais haussier."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-11T13:18:29Z",
-            "score": 41
-        },
         {
             "date": "2026-02-11T13:28:59Z",
             "score": 41
@@ -2346,19 +2348,23 @@
         {
             "date": "2026-02-15T08:50:42Z",
             "score": 41
+        },
+        {
+            "date": "2026-02-15T13:14:12Z",
+            "score": 44
         }
     ],
     "intelligence": {
         "news": [
             {
-                "title": "U.S. and European interests are 'intertwined,' Secretary of State Rubio says",
-                "link": "https://www.cnbc.com/2026/02/14/us-and-european-interests-are-intertwined-rubio-says.html",
-                "isoDate": "2026-02-14T13:20:09+00:00Z"
-            },
-            {
                 "title": "The NFL just wrapped a record-breaking season. Here’s why next year’s going to be even bigger",
                 "link": "https://www.cnbc.com/2026/02/15/nfl-just-had-record-breaking-season-next-year-will-be-bigger.html",
                 "isoDate": "2026-02-15T08:24:07+00:00Z"
+            },
+            {
+                "title": "Some European policymakers welcome U.S. Secretary of State Rubio's warm words, others remain cautious",
+                "link": "https://www.cnbc.com/2026/02/15/some-europeans-welcome-rubios-warm-words-others-remain-cautious.html",
+                "isoDate": "2026-02-15T13:10:52+00:00Z"
             },
             {
                 "title": "Trump says he will issue executive order to get voter-ID requirements before midterms",
@@ -2366,14 +2372,14 @@
                 "isoDate": "2026-02-13T23:58:44+00:00Z"
             },
             {
-                "title": "TSA agents are working without pay at U.S. airports due to another partial government shutdown",
-                "link": "https://www.cnbc.com/2026/02/14/tsa-agents-are-working-without-pay-at-us-airports-due-to-another-shutdown.html",
-                "isoDate": "2026-02-14T12:50:07+00:00Z"
+                "title": "Iran open to compromises to reach nuclear deal with U.S., minister tells BBC",
+                "link": "https://www.cnbc.com/2026/02/15/iran-open-to-compromises-to-reach-nuclear-deal-with-us-bbc.html",
+                "isoDate": "2026-02-15T09:37:58+00:00Z"
             },
             {
-                "title": "What's next for Cuba? Trump turns the screws as the island runs out of jet fuel",
-                "link": "https://www.cnbc.com/2026/02/14/cuba-fuel-shortage-trump-tariffs.html",
-                "isoDate": "2026-02-14T06:58:06+00:00Z"
+                "title": "Global week ahead: Markets brace for more AI noise and 'scare trading'",
+                "link": "https://www.cnbc.com/2026/02/15/global-week-ahead-markets-brace-for-more-ai-noise-and-scare-trading.html",
+                "isoDate": "2026-02-15T08:36:50+00:00Z"
             },
             {
                 "title": "Goldman Sachs says these five stocks, including Nvidia, are too attractive to ignore",
@@ -2383,71 +2389,71 @@
         ],
         "translations": {
             "JP": [
-                "ルビオ国務長官「米国と欧州の利害は『絡み合っている』」",
-                "NFLは記録破りのシーズンを終えた。来年はさらに大きくなる理由",
-                "トランプ氏、中間選挙前に投票者ID要件を導入する大統領令を発令すると表明",
-                "政府の一部閉鎖でTSA職員が米国の空港で無給で勤務",
-                "キューバの今後は？トランプ氏が圧力を強める中、同島はジェット燃料が枯渇",
+                "NFLは記録破りのシーズンを終え、来年はさらに大きくなる理由",
+                "一部の欧州政策立案者は、ルビオ米国務長官の温かい言葉を歓迎する一方、慎重な姿勢を崩さない",
+                "トランプ氏、中間選挙前に有権者ID要件を義務付ける大統領令を発令すると表明",
+                "イラン、BBCに対し米国との核合意達成に向け譲歩する用意があることを表明",
+                "グローバル週報：AIのノイズと「恐怖取引」の増加に市場は身構える",
                 "ゴールドマン・サックス、Nvidiaを含むこれらの5銘柄は無視できないほど魅力的だと指摘"
             ],
             "CN": [
-                "鲁比奥国务卿称，美国和欧洲的利益“相互交织”",
-                "NFL刚刚结束了一个创纪录的赛季。明年将更加辉煌的原因",
+                "NFL刚刚结束了一个创纪录的赛季。以下是明年将更上一层楼的原因",
+                "一些欧洲决策者欢迎美国国务卿鲁比奥的暖意，但另一些人仍持谨慎态度",
                 "特朗普表示将发布行政命令，在中期选举前实施选民身份验证要求",
-                "由于部分政府再次停摆，TSA（美国运输安全管理局）特工在美国机场无薪工作",
-                "古巴的下一步是什么？特朗普收紧措施，岛上面临航空燃油短缺",
+                "伊朗外长告诉BBC，伊朗愿意做出妥协以达成与美国的核协议",
+                "全球周报：市场准备迎接更多人工智能噪音和“恐慌交易”",
                 "高盛表示，包括英伟达在内的这五只股票极具吸引力，不容忽视"
             ],
             "ES": [
-                "Los intereses de Estados Unidos y Europa están 'entrelazados', dice el Secretario de Estado Rubio",
-                "La NFL acaba de concluir una temporada récord. Aquí te explicamos por qué la próxima será aún mayor",
-                "Trump dice que emitirá una orden ejecutiva para implementar requisitos de identificación de votantes antes de las elecciones de mitad de período",
-                "Agentes de la TSA trabajan sin paga en aeropuertos de EE. UU. debido a otro cierre parcial del gobierno",
-                "¿Qué sigue para Cuba? Trump aprieta las tuercas mientras la isla se queda sin combustible para aviones",
+                "La NFL acaba de concluir una temporada récord. He aquí por qué el próximo año será aún mayor",
+                "Algunos responsables políticos europeos dan la bienvenida a las cálidas palabras del Secretario de Estado de EE. UU. Rubio, mientras que otros se mantienen cautelosos",
+                "Trump dice que emitirá una orden ejecutiva para imponer requisitos de identificación de votantes antes de las elecciones de mitad de período",
+                "Irán está abierto a compromisos para alcanzar un acuerdo nuclear con EE. UU., dice un ministro a la BBC",
+                "Semana global: Los mercados se preparan para más ruido de IA y 'trading de miedo'",
                 "Goldman Sachs dice que estas cinco acciones, incluida Nvidia, son demasiado atractivas para ignorarlas"
             ],
             "HI": [
-                "अमेरिकी और यूरोपीय हित 'आपस में जुड़े हुए हैं', विदेश मंत्री रुबियो ने कहा",
-                "NFL ने रिकॉर्ड तोड़ सीज़न पूरा किया है। यहाँ बताया गया है कि अगला सीज़न और भी बड़ा क्यों होगा",
+                "NFL ने अभी-अभी एक रिकॉर्ड तोड़ने वाला सीज़न पूरा किया है। यहाँ बताया गया है कि अगले साल यह और भी बड़ा क्यों होने वाला है",
+                "कुछ यूरोपीय नीति निर्माता अमेरिकी विदेश मंत्री रुबियो के गर्मजोशी भरे शब्दों का स्वागत करते हैं, जबकि अन्य सतर्क रहते हैं",
                 "ट्रम्प ने कहा कि वह मध्यावधि चुनावों से पहले मतदाता-आईडी आवश्यकताओं को लागू करने के लिए कार्यकारी आदेश जारी करेंगे",
-                "एक और आंशिक सरकारी शटडाउन के कारण TSA एजेंट अमेरिकी हवाई अड्डों पर बिना वेतन के काम कर रहे हैं",
-                "क्यूबा के लिए आगे क्या? जैसे-जैसे द्वीप पर जेट ईंधन खत्म हो रहा है, ट्रम्प कस रहे हैं",
-                "गोल्डमैन सैक्स का कहना है कि ये पांच स्टॉक, जिनमें Nvidia भी शामिल है, अनदेखी करने के लिए बहुत आकर्षक हैं"
+                "ईरान ने बीबीसी को बताया कि वह अमेरिका के साथ परमाणु समझौते पर पहुंचने के लिए समझौते के लिए तैयार है",
+                "वैश्विक सप्ताह आगे: बाजार एआई के और शोर और 'डराने वाले व्यापार' के लिए तैयार",
+                "गोल्डमैन सैक्स का कहना है कि ये पांच स्टॉक, जिनमें एनवीडिया भी शामिल है, नजरअंदाज करने के लिए बहुत आकर्षक हैं"
             ],
             "ID": [
-                "Kepentingan AS dan Eropa 'saling terkait', kata Menteri Luar Negeri Rubio",
                 "NFL baru saja menyelesaikan musim yang memecahkan rekor. Inilah mengapa tahun depan akan lebih besar lagi",
-                "Trump mengatakan akan mengeluarkan perintah eksekutif untuk menerapkan persyaratan ID pemilih sebelum pemilu paruh waktu",
-                "Agen TSA bekerja tanpa bayaran di bandara AS karena penutupan pemerintah sebagian lainnya",
-                "Apa selanjutnya untuk Kuba? Trump memperketat cengkeraman saat pulau itu kehabisan bahan bakar jet",
-                "Goldman Sachs mengatakan lima saham ini, termasuk Nvidia, terlalu menarik untuk diabaikan"
+                "Beberapa pembuat kebijakan Eropa menyambut hangat kata-kata hangat Menteri Luar Negeri AS Rubio, sementara yang lain tetap berhati-hati",
+                "Trump mengatakan dia akan mengeluarkan perintah eksekutif untuk memberlakukan persyaratan ID pemilih sebelum pertengahan masa jabatan",
+                "Iran terbuka untuk kompromi untuk mencapai kesepakatan nuklir dengan AS, kata seorang menteri kepada BBC",
+                "Minggu global mendatang: Pasar bersiap menghadapi lebih banyak kebisingan AI dan 'perdagangan menakutkan'",
+                "Goldman Sachs mengatakan kelima saham ini, termasuk Nvidia, terlalu menarik untuk diabaikan"
             ],
             "AR": [
-                "مصالح الولايات المتحدة وأوروبا \"متشابكة\"، كما يقول وزير الخارجية روبيو",
-                "اختتمت دوري كرة القدم الأمريكية (NFL) موسمًا قياسيًا. إليك السبب الذي يجعل الموسم المقبل أكبر",
-                "ترامب يقول إنه سيصدر أمرًا تنفيذيًا لتطبيق متطلبات هوية الناخب قبل الانتخابات النصفية",
-                "يعمل وكلاء هيئة أمن النقل (TSA) دون أجر في المطارات الأمريكية بسبب إغلاق جزئي آخر للحكومة",
-                "ماذا بعد كوبا؟ ترامب يشدد الخناق بينما ينفد وقود الطائرات من الجزيرة",
-                "جولدمان ساكس يقول إن هذه الأسهم الخمسة، بما في ذلك إنفيديا، جذابة للغاية بحيث لا يمكن تجاهلها"
+                "أنهى اتحاد كرة القدم الأمريكي (NFL) للتو موسمًا قياسيًا. إليك لماذا سيكون العام المقبل أكبر",
+                "يرحب بعض صانعي السياسات الأوروبيين بالكلمات الدافئة لوزير الخارجية الأمريكي روبيو، بينما يظل آخرون حذرين",
+                "ترامب يقول إنه سيصدر أمرًا تنفيذيًا لفرض متطلبات تحديد هوية الناخب قبل انتخابات التجديد النصفي",
+                "إيران منفتحة على التوصل إلى تسويات للوصول إلى اتفاق نووي مع الولايات المتحدة، حسبما قال وزير لهيئة الإذاعة البريطانية",
+                "الأسبوع العالمي المقبل: الأسواق تستعد لمزيد من ضجيج الذكاء الاصطناعي و\"تداول الذعر\"",
+                "جولدمان ساكس يقول إن هذه الأسهم الخمسة، بما في ذلك Nvidia، جذابة للغاية ولا يمكن تجاهلها"
             ],
             "DE": [
-                "US- und europäische Interessen sind \"verflochten\", sagt Außenminister Rubio",
-                "Die NFL hat gerade eine Rekordsaison beendet. Warum die nächste noch größer wird",
-                "Trump kündigt an, per Dekret Wähler-ID-Pflichten vor den Zwischenwahlen einzuführen",
-                "TSA-Agenten arbeiten aufgrund eines weiteren teilweisen Government Shutdowns ohne Bezahlung an US-Flughäfen",
-                "Was kommt als Nächstes für Kuba? Trump dreht die Daumenschrauben, während der Insel der Flugzeugtreibstoff ausgeht",
-                "Goldman Sachs sagt, diese fünf Aktien, darunter Nvidia, seien zu attraktiv, um sie zu ignorieren"
+                "Die NFL hat gerade eine Saison mit Rekordumsatz abgeschlossen. Hier erfahren Sie, warum das nächste Jahr noch größer wird",
+                "Einige europäische politische Entscheidungsträger begrüßen die warmen Worte von US-Außenminister Rubio, während andere vorsichtig bleiben",
+                "Trump sagt, er werde eine Durchführungsverordnung erlassen, um Wähler-ID-Anforderungen vor den Midterm-Wahlen durchzusetzen",
+                "Iran ist offen für Kompromisse, um ein Atomabkommen mit den USA zu erreichen, sagt ein Minister der BBC",
+                "Globale Woche voraus: Märkte bereiten sich auf mehr KI-Rauschen und \"Schreckenshandel\" vor",
+                "Goldman Sachs sagt, diese fünf Aktien, einschließlich Nvidia, seien zu attraktiv, um sie zu ignorieren"
             ],
             "FR": [
-                "Les intérêts américains et européens sont \"entremêlés\", déclare le secrétaire d'État Rubio",
-                "La NFL vient de conclure une saison record. Voici pourquoi celle de l'année prochaine sera encore plus grande",
-                "Trump annonce qu'il publiera un décret pour imposer des exigences d'identification des électeurs avant les midterms",
-                "Des agents de la TSA travaillent sans salaire dans les aéroports américains en raison d'un autre blocage partiel du gouvernement",
-                "Quelle sera la suite pour Cuba ? Trump serre la vis alors que l'île manque de kérosène",
+                "La NFL vient de terminer une saison record. Voici pourquoi l'année prochaine sera encore plus belle",
+                "Certains décideurs politiques européens saluent les paroles chaleureuses du secrétaire d'État américain Rubio, tandis que d'autres restent prudents",
+                "Trump affirme qu'il publiera un décret pour imposer des exigences d'identification des électeurs avant les élections de mi-mandat",
+                "L'Iran est ouvert aux compromis pour parvenir à un accord nucléaire avec les États-Unis, déclare un ministre à la BBC",
+                "Semaine mondiale à venir : les marchés se préparent à plus de bruit d'IA et à des \"transactions de panique\"",
                 "Goldman Sachs affirme que ces cinq actions, y compris Nvidia, sont trop attrayantes pour être ignorées"
             ]
         },
-        "last_updated": "2026-02-15T08:50:42.861213+00:00Z"
+        "last_updated": "2026-02-15T13:14:12.177463+00:00Z"
     },
-    "system_status": "OPERATIONAL"
+    "system_status": "SIMULATED"
 }
