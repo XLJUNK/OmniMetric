@@ -1,36 +1,16 @@
 {
     "metrics": {
         "avg_vix_defensive": 17.44,
-        "avg_vix_neutral": 17.77,
+        "avg_vix_neutral": 18.24,
         "avg_vix_accumulate": 14.49,
-        "sample_count": 35,
-        "last_updated": "2026-02-15T02:28:52.662795+00:00"
+        "sample_count": 36,
+        "last_updated": "2026-02-16T02:25:29.474815+00:00"
     },
     "summaries": {
-        "EN": "Over the past 35 entries, market volatility (VIX) was -1.9% higher during GMS Defensive regimes (<40) compared to Neutral, validating the signal's sensitivity to structural stress.",
-        "JP": "過去35回の観測データにおいて、GMSが「ディフェンシブ（40以下）」を示した期間のVIX指数は平均17.44となり、ニュートラル期間より-1.9%高く推移しました。これは、本アルゴリズムが市場の構造的ストレスを正確に捉えていることを客観的に示しています。"
+        "EN": "Over the past 36 entries, market volatility (VIX) was -4.4% higher during GMS Defensive regimes (<40) compared to Neutral, validating the signal's sensitivity to structural stress.",
+        "JP": "過去36回の観測データにおいて、GMSが「ディフェンシブ（40以下）」を示した期間のVIX指数は平均17.44となり、ニュートラル期間より-4.4%高く推移しました。これは、本アルゴリズムが市場の構造的ストレスを正確に捉えていることを客観的に示しています。"
     },
     "history": [
-        {
-            "date": "2026-01-15",
-            "gms_score": 37,
-            "net_liquidity": 5800.52,
-            "move_price": 56.14,
-            "real_rate": 1.86,
-            "breakeven_inflation": null,
-            "dxy_price": 99.36,
-            "hy_spread": 2.76,
-            "nfci_price": -0.57,
-            "breadth_spread": 1.25,
-            "gold_price": 4614.6,
-            "btc_price": 95491.38,
-            "copper_gold_ratio": 1.3,
-            "vix_price": 15.84,
-            "spy_price": 692.24,
-            "qqq_price": 621.78,
-            "iwm_price": 265.51,
-            "crypto_sentiment": 61
-        },
         {
             "date": "2026-01-16",
             "gms_score": 36,
@@ -610,6 +590,26 @@
             "qqq_price": 601.92,
             "iwm_price": 262.96,
             "crypto_sentiment": 9
+        },
+        {
+            "date": "2026-02-16",
+            "gms_score": 41,
+            "net_liquidity": 5706.7,
+            "move_price": 70.1,
+            "real_rate": 1.8,
+            "breakeven_inflation": 2.27,
+            "dxy_price": 96.88,
+            "hy_spread": 2.92,
+            "nfci_price": -0.56,
+            "breadth_spread": 2.0,
+            "gold_price": 5046.3,
+            "btc_price": 68455.34,
+            "copper_gold_ratio": 1.15,
+            "vix_price": 20.6,
+            "spy_price": 681.75,
+            "qqq_price": 601.92,
+            "iwm_price": 262.96,
+            "crypto_sentiment": 8
         }
     ]
 }
