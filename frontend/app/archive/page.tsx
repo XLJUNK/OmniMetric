@@ -36,12 +36,15 @@ async function getDates() {
     }
 }
 
-export default async function ArchiveRootPage() {
-    const normalizedLang = 'EN';
-    const t = DICTIONARY[normalizedLang];
-    const pageData = t.subpages.archive;
-    const dates = await getDates();
+const normalizedLang = 'EN';
+const t = DICTIONARY[normalizedLang];
+const pageData = t.subpages.archive;
+const dates = await getDates();
 
+// Check if we have any valid data to verify the signal
+const hasData = dates.length > 0;
+
+export default function ArchivePage() {
     return (
         <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-sky-500 font-mono text-xs animate-pulse">LOADING HISTORICAL INDEX...</div>}>
             <TerminalPage pageKey="archive" lang={normalizedLang} selectorMode="path">
@@ -51,17 +54,24 @@ export default async function ArchiveRootPage() {
                         <div className="p-6 border-b border-sky-200 dark:border-sky-500/10 flex items-center justify-between bg-sky-100 dark:bg-sky-500/10">
                             <div className="flex items-center gap-3">
                                 <ShieldCheck className="w-5 h-5 text-sky-500" />
-                                <span className="text-xs font-black tracking-[0.3em] text-sky-900 dark:text-white uppercase">GMS Performance Audit</span>
+                                <span className="text-xs font-black tracking-[0.3em] text-sky-900 dark:text-white uppercase">{pageData.audit_title}</span>
                             </div>
                             <div className="flex items-center gap-2 px-2 py-1 bg-sky-200 dark:bg-sky-500/20 rounded-[4px]">
                                 <Activity className="w-3 h-3 text-sky-600 dark:text-sky-400" />
-                                <span className="text-[10px] font-mono text-sky-700 dark:text-sky-400 font-bold uppercase tracking-widest">Signal Verified</span>
+                                <span className="text-[10px] font-mono text-sky-700 dark:text-sky-400 font-bold uppercase tracking-widest">
+                                    {hasData ? pageData.signal_verified : pageData.awaiting_data}
+                                </span>
                             </div>
                         </div>
                         <div className="p-8 space-y-8">
                             <div className="text-center py-8">
                                 <Info className="w-8 h-8 text-slate-600 mx-auto mb-3" />
-                                <p className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">Awaiting sufficient correlation data points.</p>
+                                <p className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">
+                                    {hasData ?
+                                        `${pageData.signal_verified} — Computed under Sovereign v6.0 Protocol.` :
+                                        pageData.awaiting_data
+                                    }
+                                </p>
                             </div>
                         </div>
                     </div>
