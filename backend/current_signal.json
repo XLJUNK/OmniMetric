@@ -1,12 +1,12 @@
 {
-    "last_updated": "2026-02-15T20:41:26.045812+00:00",
-    "last_successful_update": "2026-02-15T20:41:26.045824+00:00",
-    "gms_score": 41,
+    "last_updated": "2026-02-16T03:13:13.273217+00:00",
+    "last_successful_update": "2026-02-16T03:13:13.273224+00:00",
+    "gms_score": 39,
     "sector_scores": {
         "STOCKS": 44,
         "CRYPTO": 65,
-        "FOREX": 44,
-        "COMMODITIES": 47,
+        "FOREX": 38,
+        "COMMODITIES": 35,
         "GLOBAL_INDICES": 50,
         "REAL_ESTATE": 50,
         "CREDIT": 50,
@@ -16,12 +16,11 @@
     },
     "market_data": {
         "CRYPTO_SENTIMENT": {
-            "price": 8,
-            "daily_chg": -11.11,
-            "change_percent": -27.27,
+            "price": 12,
+            "daily_chg": 50.0,
+            "change_percent": 140.0,
             "trend": "FEAR",
             "sparkline": [
-                50,
                 49,
                 44,
                 32,
@@ -50,7 +49,8 @@
                 5,
                 9,
                 9,
-                8
+                8,
+                12
             ]
         },
         "YIELD_SPREAD": {
@@ -584,10 +584,10 @@
             ]
         },
         "BTC": {
-            "price": 68455.34,
+            "price": 68362.05,
             "prev_price": 69767.62,
-            "daily_chg": -1.88,
-            "change_percent": 2.18,
+            "daily_chg": -2.01,
+            "change_percent": 2.05,
             "trend": "DOWN",
             "sparkline": [
                 86572.22,
@@ -611,14 +611,14 @@
                 66221.84,
                 68857.84,
                 69767.62,
-                68455.34
+                68362.05
             ]
         },
         "ETH": {
-            "price": 1952.23,
+            "price": 1956.64,
             "prev_price": 2086.01,
-            "daily_chg": -6.41,
-            "change_percent": 0.6,
+            "daily_chg": -6.2,
+            "change_percent": 0.83,
             "trend": "DOWN",
             "sparkline": [
                 2815.9,
@@ -642,14 +642,14 @@
                 1946.94,
                 2048.53,
                 2086.01,
-                1952.23
+                1956.64
             ]
         },
         "SOL": {
-            "price": 85.72,
+            "price": 85.42,
             "prev_price": 88.16,
-            "daily_chg": -2.76,
-            "change_percent": 8.16,
+            "daily_chg": -3.11,
+            "change_percent": 7.78,
             "trend": "DOWN",
             "sparkline": [
                 118.77,
@@ -673,17 +673,16 @@
                 78.35,
                 84.32,
                 88.16,
-                85.72
+                85.42
             ]
         },
         "DXY": {
-            "price": 96.88,
-            "prev_price": 96.93,
-            "daily_chg": -0.05,
-            "change_percent": 0.06,
-            "trend": "DOWN",
+            "price": 96.95,
+            "prev_price": 96.88,
+            "daily_chg": 0.07,
+            "change_percent": 0.16,
+            "trend": "UP",
             "sparkline": [
-                99.13,
                 99.32,
                 99.39,
                 98.64,
@@ -704,15 +703,16 @@
                 96.8,
                 96.83,
                 96.93,
-                96.88
+                96.88,
+                96.95
             ]
         },
         "USDJPY": {
-            "price": 152.52,
+            "price": 153.07,
             "prev_price": 152.82,
-            "daily_chg": -0.2,
-            "change_percent": -2.31,
-            "trend": "DOWN",
+            "daily_chg": 0.16,
+            "change_percent": -1.96,
+            "trend": "UP",
             "sparkline": [
                 158.6,
                 157.54,
@@ -735,20 +735,19 @@
                 154.48,
                 153.27,
                 152.82,
-                152.52
+                153.07
             ]
         },
         "EURUSD": {
             "price": 1.19,
             "prev_price": 1.19,
-            "daily_chg": -0.06,
-            "change_percent": 0.36,
+            "daily_chg": -0.0,
+            "change_percent": -0.3,
             "trend": "DOWN",
             "sparkline": [
                 1.16,
                 1.16,
                 1.16,
-                1.16,
                 1.17,
                 1.17,
                 1.18,
@@ -763,6 +762,7 @@
                 1.18,
                 1.18,
                 1.18,
+                1.19,
                 1.19,
                 1.19,
                 1.19,
@@ -770,11 +770,11 @@
             ]
         },
         "USDINR": {
-            "price": 90.5,
+            "price": 90.62,
             "prev_price": 90.56,
-            "daily_chg": -0.07,
-            "change_percent": -0.35,
-            "trend": "DOWN",
+            "daily_chg": 0.07,
+            "change_percent": -0.22,
+            "trend": "UP",
             "sparkline": [
                 90.36,
                 90.7,
@@ -797,7 +797,7 @@
                 90.59,
                 90.74,
                 90.56,
-                90.5
+                90.62
             ]
         },
         "USDSAR": {
@@ -832,13 +832,12 @@
             ]
         },
         "GOLD": {
-            "price": 5046.3,
-            "prev_price": 4923.7,
-            "daily_chg": 2.49,
-            "change_percent": -0.09,
-            "trend": "UP",
+            "price": 5010.0,
+            "prev_price": 5022.0,
+            "daily_chg": -0.24,
+            "change_percent": 0.12,
+            "trend": "DOWN",
             "sparkline": [
-                4626.3,
                 4616.3,
                 4588.4,
                 4759.6,
@@ -859,17 +858,17 @@
                 5003.8,
                 5071.6,
                 4923.7,
-                5046.3
+                5022.0,
+                5010.0
             ]
         },
         "OIL": {
-            "price": 62.89,
-            "prev_price": 62.84,
-            "daily_chg": 0.08,
-            "change_percent": -2.28,
+            "price": 62.95,
+            "prev_price": 62.89,
+            "daily_chg": 0.1,
+            "change_percent": -1.58,
             "trend": "UP",
             "sparkline": [
-                62.02,
                 59.19,
                 59.44,
                 60.34,
@@ -890,17 +889,17 @@
                 63.96,
                 64.63,
                 62.84,
-                62.89
+                62.89,
+                62.95
             ]
         },
         "COPPER": {
-            "price": 5.8,
-            "prev_price": 5.77,
-            "daily_chg": 0.55,
-            "change_percent": -2.39,
-            "trend": "UP",
+            "price": 5.76,
+            "prev_price": 5.79,
+            "daily_chg": -0.55,
+            "change_percent": -2.3,
+            "trend": "DOWN",
             "sparkline": [
-                6.01,
                 5.95,
                 5.79,
                 5.77,
@@ -921,17 +920,17 @@
                 5.9,
                 5.95,
                 5.77,
-                5.8
+                5.79,
+                5.76
             ]
         },
         "NATGAS": {
-            "price": 3.24,
-            "prev_price": 3.22,
-            "daily_chg": 0.81,
-            "change_percent": 3.35,
-            "trend": "UP",
+            "price": 3.01,
+            "prev_price": 3.24,
+            "daily_chg": -7.06,
+            "change_percent": -3.24,
+            "trend": "DOWN",
             "sparkline": [
-                3.12,
                 3.13,
                 3.1,
                 3.91,
@@ -952,17 +951,17 @@
                 3.12,
                 3.16,
                 3.22,
-                3.24
+                3.24,
+                3.01
             ]
         },
         "SILVER": {
-            "price": 77.96,
-            "prev_price": 75.55,
-            "daily_chg": 3.2,
-            "change_percent": -5.0,
-            "trend": "UP",
+            "price": 75.42,
+            "prev_price": 77.85,
+            "daily_chg": -3.13,
+            "change_percent": -5.99,
+            "trend": "DOWN",
             "sparkline": [
-                90.87,
                 91.88,
                 88.09,
                 94.21,
@@ -983,7 +982,8 @@
                 80.22,
                 83.75,
                 75.55,
-                77.96
+                77.85,
+                75.42
             ]
         },
         "DAX": {
@@ -1111,13 +1111,12 @@
             ]
         },
         "NIKKEI": {
-            "price": 56941.97,
-            "prev_price": 57639.84,
-            "daily_chg": -1.21,
-            "change_percent": 4.96,
+            "price": 56790.7,
+            "prev_price": 56941.97,
+            "daily_chg": -0.27,
+            "change_percent": 0.76,
             "trend": "DOWN",
             "sparkline": [
-                54341.23,
                 54110.5,
                 53936.17,
                 53583.57,
@@ -1138,17 +1137,17 @@
                 56363.94,
                 57650.54,
                 57639.84,
-                56941.97
+                56941.97,
+                56790.7
             ]
         },
         "HANGSENG": {
-            "price": 26567.12,
-            "prev_price": 27032.54,
-            "daily_chg": -1.72,
-            "change_percent": -1.7,
-            "trend": "DOWN",
+            "price": 26621.98,
+            "prev_price": 26567.12,
+            "daily_chg": 0.21,
+            "change_percent": -2.06,
+            "trend": "UP",
             "sparkline": [
-                26923.62,
                 26844.96,
                 26563.9,
                 26487.51,
@@ -1169,7 +1168,8 @@
                 27183.15,
                 27266.38,
                 27032.54,
-                26567.12
+                26567.12,
+                26621.98
             ]
         },
         "SHANGHAI": {
@@ -1266,13 +1266,12 @@
             ]
         },
         "ASX200": {
-            "price": 8917.6,
-            "prev_price": 9043.5,
-            "daily_chg": -1.39,
-            "change_percent": 0.06,
-            "trend": "DOWN",
+            "price": 8935.1,
+            "prev_price": 8917.6,
+            "daily_chg": 0.2,
+            "change_percent": 0.76,
+            "trend": "UP",
             "sparkline": [
-                8820.6,
                 8861.7,
                 8903.9,
                 8874.5,
@@ -1293,7 +1292,8 @@
                 8867.4,
                 9014.8,
                 9043.5,
-                8917.6
+                8917.6,
+                8935.1
             ]
         },
         "G_REIT": {
@@ -1764,8 +1764,8 @@
         "GBPUSD": {
             "price": 0.73,
             "prev_price": 0.73,
-            "daily_chg": -0.25,
-            "change_percent": 0.21,
+            "daily_chg": -0.15,
+            "change_percent": 0.32,
             "trend": "DOWN",
             "sparkline": [
                 0.75,
@@ -1795,8 +1795,8 @@
         "AUDUSD": {
             "price": 1.41,
             "prev_price": 1.41,
-            "daily_chg": 0.25,
-            "change_percent": 0.2,
+            "daily_chg": 0.05,
+            "change_percent": -0.0,
             "trend": "UP",
             "sparkline": [
                 1.49,
@@ -1826,8 +1826,8 @@
         "USDCAD": {
             "price": 1.36,
             "prev_price": 1.36,
-            "daily_chg": 0.02,
-            "change_percent": 0.38,
+            "daily_chg": 0.0,
+            "change_percent": 0.36,
             "trend": "UP",
             "sparkline": [
                 1.39,
@@ -1888,8 +1888,8 @@
         "USDCHF": {
             "price": 0.77,
             "prev_price": 0.77,
-            "daily_chg": -0.21,
-            "change_percent": 0.1,
+            "daily_chg": -0.16,
+            "change_percent": 0.15,
             "trend": "DOWN",
             "sparkline": [
                 0.8,
@@ -2053,64 +2053,60 @@
         {
             "code": "retail_sales",
             "name": "USD Retail Sales (MoM)",
-            "date": "2026-02-18",
-            "day": "WED",
+            "date": "2026-02-19",
+            "day": "THU",
             "time": "08:30 EST",
             "impact": "high"
         },
         {
             "code": "boj",
             "name": "JPY Bank of Japan Policy Meeting",
-            "date": "2026-02-20",
-            "day": "FRI",
+            "date": "2026-02-21",
+            "day": "SAT",
             "time": "12:00 JST",
             "impact": "high"
         },
         {
             "code": "powell",
             "name": "USD Fed Chair Powell Testifies",
-            "date": "2026-02-23",
-            "day": "MON",
+            "date": "2026-02-24",
+            "day": "TUE",
             "time": "10:00 EST",
             "impact": "high"
         },
         {
             "code": "ecb",
             "name": "EUR ECB Monetary Policy Press Conference",
-            "date": "2026-02-25",
-            "day": "WED",
+            "date": "2026-02-26",
+            "day": "THU",
             "time": "14:45 CET",
             "impact": "high"
         },
         {
             "code": "ppi",
             "name": "USD Producer Price Index (PPI)",
-            "date": "2026-02-28",
-            "day": "SAT",
+            "date": "2026-03-01",
+            "day": "SUN",
             "time": "08:30 EST",
             "impact": "high"
         }
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "GMS status is 41, signaling a transition to a Neutral regime. Momentum pushed the score to 41 as VIX (fear index) stabilized and DXY (dollar strength/liquidity) cooled. While liquidity remains stable, potential regulatory cost mandates for data centers pose a risk to tech margins. Rising Gold suggests deep defensive hedging persists. Maintain a balanced neutral stance while monitoring regulatory headlines.",
+        "content": "GMS Status: 39 (Defensive). Momentum pushed the score from 41 down to 39, signaling a clear risk-off shift. The Macro Root is anchored in a firm DXY (Dollar strength/Liquidity) and a VIX at 20.6 (Fear/Volatility), which restricts upside potential. While widening High-Yield spreads suggest rising credit risk, stable net liquidity prevents a total systemic collapse. Conclusion: Prioritize capital preservation as a matter of urgency until the GMS score breaks back above the 40 threshold into Neutral territory.",
         "reports": {
-            "JP": "GMSは41で、中立(Neutral)レジームへの移行を示唆しています。VIX（恐怖指数）の安定とDXY（ドル強さ/流動性）の軟化がモメンタムを41まで押し上げました。流動性は安定していますが、データセンターへのコスト転嫁懸念がテック株の重荷となる可能性があり、金価格の上昇は根強い警戒心を示しています。中立的な姿勢で、規制動向を注視してください。",
-            "EN": "GMS status is 41, signaling a transition to a Neutral regime. Momentum pushed the score to 41 as VIX (fear index) stabilized and DXY (dollar strength/liquidity) cooled. While liquidity remains stable, potential regulatory cost mandates for data centers pose a risk to tech margins. Rising Gold suggests deep defensive hedging persists. Maintain a balanced neutral stance while monitoring regulatory headlines.",
-            "CN": "GMS指数为41，表明市场进入中立阶段。随着VIX（恐慌指数）稳定和DXY（美元强度/流动性）微跌，动能将分数推升至41。尽管流动性稳定，但数据中心成本内化政策可能对科技股构成压力。黄金走强暗示避险需求依然旺盛，建议在中立区间内保持平衡仓位，并密切关注政策风险。",
-            "ES": "El GMS es 41, indicando un régimen Neutral. El impulso empujó la puntuación a 41 gracias a la estabilidad del VIX (índice de miedo) y un DXY (fuerza del dólar) más plano. Aunque la liquidez es estable, los posibles costos regulatorios en centros de datos son un riesgo para la tecnología. El alza del oro sugiere cautela subyacente; mantenga una postura equilibrada mientras vigila las noticias regulatorias.",
-            "HI": "GMS स्कोर 41 है, जो एक तटस्थ (Neutral) शासन का संकेत देता है। VIX (डर सूचकांक) के स्थिर होने और DXY (डॉलर की मजबूती) में कमी ने मोमेंटम को 41 तक पहुँचाया। हालांकि तरलता स्थिर है, डेटा सेंटरों पर संभावित विनियामक लागत तकनीकी क्षेत्र पर दबाव डाल सकती है। सोने में तेजी गहरी रक्षात्मक हेजिंग का संकेत देती है। नियामक सुर्खियों पर नजर रखते हुए संतुलित स्थिति बनाए रखें।",
-            "ID": "GMS berada di 41, menandakan transisi ke rezim Netral. Momentum mendorong skor ke 41 seiring stabilnya VIX (indeks ketakutan) dan DXY (kekuatan dolar/likuiditas). Meski likuiditas stabil, potensi mandat biaya pusat data dapat menekan marjin sektor teknologi. Kenaikan harga emas menunjukkan lindung nilai defensif tetap aktif. Tetap waspada dalam posisi netral sambil memantau berita regulasi.",
-            "AR": "يستقر مؤشر GMS عند 41، مما يشير إلى التحول لنظام محايد. دفع الزخم النتيجة إلى 41 مع استقرار VIX (مؤشر الخوف) وهدوء DXY (قوة الدولار والسيولة). رغم استقرار السيولة، فإن تكاليف مراكز البيانات المحتملة قد تضغط على قطاع التكنولوجيا. صعود الذهب يستوجب الحذر ويشير للتحوط الدفاعي؛ حافظ على مراكز متوازنة مع مراقبة العناوين التنظيمية.",
-            "DE": "Der GMS-Wert von 41 signalisiert einen Übergang zum neutralen Regime. Das Momentum schob den Score auf 41, da sich der VIX (Angstindex) stabilisierte und der DXY (Dollarkurs/Liquidität) stagnierte. Trotz stabiler Liquidität könnten regulatorische Kosten für Rechenzentren die Tech-Margen belasten. Der Goldanstieg deutet auf anhaltende Absicherung hin. Bleiben Sie in neutralen Positionen und achten Sie auf Schlagzeilen.",
-            "FR": "Le score GMS est de 41, indiquant une transition vers un régime Neutre. L'élan a poussé le score à 41 alors que le VIX (indice de peur) se stabilise et que le DXY (force du dollar/liquidité) s'essouffle. Malgré une liquidité stable, les coûts réglementaires pour les centres de données restent un risque pour la tech. La hausse de l'or suggère une prudence persistante. Maintenez une position équilibrée et neutre."
+            "JP": "GMS状況：39（防衛的）。モメンタムがスコアを41から39へと押し下げ、市場がリスクオフへ転換したことを示唆しています。マクロの根底には堅調なDXY（ドル高/流動性低下）と20.6で推移するVIX（恐怖指数/ボラティリティ）があり、反発の重石となっています。ハイイールド債スプレッドの拡大は信用リスクへの警戒を促しますが、安定した純流動性が底割れを防いでいます。結論：GMSが40を超えて中立圏へ回復するまで、徹底した資産保護を優先すべき局面と判断します。",
+            "EN": "GMS Status: 39 (Defensive). Momentum pushed the score from 41 down to 39, signaling a clear risk-off shift. The Macro Root is anchored in a firm DXY (Dollar strength/Liquidity) and a VIX at 20.6 (Fear/Volatility), which restricts upside potential. While widening High-Yield spreads suggest rising credit risk, stable net liquidity prevents a total systemic collapse. Conclusion: Prioritize capital preservation as a matter of urgency until the GMS score breaks back above the 40 threshold into Neutral territory.",
+            "CN": "GMS状态：39（防御型）。动能将得分从41推低至39，显示出明显的避险转向。宏观根源在于走强的DXY（美元强度/流动性收紧）和处于20.6高位的VIX（恐慌指数/波动率），这严重限制了市场的反弹空间。尽管高收益债利差的扩大暗示信用风险正在增加，但稳定的全球净流动性提供了关键支撑。结论：在GMS得分突破40并回归中性区间之前，投资者应优先采取资本保全策略，在操作上保持高度谨慎。",
+            "ES": "Estado GMS: 39 (Defensivo). El impulso empujó la puntuación de 41 a 39, indicando un giro firme hacia la aversión al riesgo. La raíz macro se basa en un DXY (fortaleza del dólar/liquidez) sólido y un VIX de 20.6 (miedo/volatilidad), lo que restringe el margen de maniobra al alza. Aunque la ampliación de los diferenciales de alto rendimiento sugiere un aumento del riesgo crediticio, la liquidez neta estable evita un colapso total del sistema. Conclusión: Es imperativo priorizar la preservación de capital hasta que el GMS supere los 40 puntos.",
+            "HI": "GMS स्थिति: 39 (रक्षात्मक)। मोमेंटम ने स्कोर को 41 से घटाकर 39 कर दिया है, जो बाजार में रिस्क-ऑफ की स्थिति को दर्शाता है। इसका मुख्य कारण मजबूत DXY (डॉलर की मजबूती/तरलता) और 20.6 पर स्थित VIX (डर/अस्थिरता) है, जो तेजी को रोक रहे हैं। हालांकि हाई-यील्ड स्प्रेड का बढ़ना क्रेडिट जोखिम की ओर इशारा करता है, लेकिन स्थिर नेट लिक्विडिटी बाजार को पूरी तरह गिरने से बचा रही है। निष्कर्ष: जब तक GMS 40 के स्तर को पार कर न्यूट्रल ज़ोन में नहीं आता, तब तक अपनी पूंजी को सुरक्षित रखने को ही प्राथमिकता दें।",
+            "ID": "Status GMS: 39 (Defensif). Momentum mendorong skor dari 41 turun ke 39, menandakan peralihan kuat ke arah risk-off. Akar makro terpaku pada DXY (kekuatan Dolar/likuiditas) yang kokoh dan VIX di level 20.6 (ketakutan/volatilitas), yang membatasi potensi kenaikan aset berisiko. Meskipun pelebaran spread High-Yield mengisyaratkan peningkatan risiko kredit, level likuiditas bersih yang stabil saat ini mampu mencegah keruntuhan harga secara total. Tindakan: Prioritaskan pelestarian modal hingga indikator GMS menembus kembali angka 40 ke zona Netral.",
+            "AR": "حالة GMS: 39 (دفاعي). دفع الزخم النتيجة من 41 هبوطاً إلى 39، مما يشير إلى تحول واضح نحو تجنب المخاطر. يعود الجذر الكلي إلى قوة مؤشر DXY (قوة الدولار والسيولة) واستقرار VIX عند 20.6 (الخوف والتقلب)، مما يحد من فرص الصعود. رغم أن اتساع فروق أسعار العائد المرتفع يشير إلى مخاطر ائتمانية متزايدة، إلا أن صافي السيولة المستقر يمنع حدوث انهيار شامل في الأسواق. الإجراء: يجب إعطاء الأولوية القصوى للحفاظ على رأس المال حتى يتجاوز مؤشر GMS مستوى 40 ليعود إلى النطاق المحايد.",
+            "DE": "GMS-Status: 39 (Defensiv). Das Momentum drückte den Score von 41 auf 39, was eine klare Risk-Off-Wende signalisiert. Die Makro-Basis liegt im festen DXY (Dollarstärke/Liquidität) und einem VIX von 20,6 (Angst/Volatilität), was das Aufwärtspotenzial begrenzt. Während sich weitende High-Yield-Spreads auf steigende Kreditrisiken hindeuten, verhindert die stabile Nettoliquidität einen systemischen Absturz. Fazit: Kapitalerhalt strikt priorisieren, bis der GMS-Wert nachhaltig über 40 in den neutralen Bereich steigt.",
+            "FR": "Statut GMS : 39 (Défensif). L'élan a poussé le score de 41 à 39, signalant un passage marqué au mode risk-off. La racine macro réside dans un DXY (force du dollar/liquidité) ferme et un VIX à 20,6 (peur/volatilité), limitant toute reprise immédiate. Bien que l'élargissement des spreads High-Yield (risque de crédit) suggère une prudence accrue, la liquidité nette stable freine une capitulation totale. Action : Prioriser la préservation du capital tant que le score GMS ne franchit pas la barre des 40."
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-11T14:02:29Z",
-            "score": 41
-        },
         {
             "date": "2026-02-11T14:20:26Z",
             "score": 41
@@ -2346,34 +2342,38 @@
         {
             "date": "2026-02-15T20:41:26Z",
             "score": 41
+        },
+        {
+            "date": "2026-02-16T03:13:13Z",
+            "score": 39
         }
     ],
     "intelligence": {
         "news": [
             {
+                "title": "OpenClaw creator Peter Steinberger joining OpenAI, Altman Says",
+                "link": "https://www.cnbc.com/2026/02/15/openclaw-creator-peter-steinberger-joining-openai-altman-says.html",
+                "isoDate": "2026-02-15T23:56:35+00:00Z"
+            },
+            {
+                "title": "Epstein files fallout: The high-profile people burned by past dealings with a predator",
+                "link": "https://www.cnbc.com/2026/02/15/epstein-files-fallout-goldman-ruemmler-harvard-yale.html",
+                "isoDate": "2026-02-16T02:53:11+00:00Z"
+            },
+            {
+                "title": "Warner Bros. may reopen sale talks with Paramount following new deal terms, Bloomberg reports",
+                "link": "https://www.cnbc.com/2026/02/15/warner-bros-discovery-paramount-netflix.html",
+                "isoDate": "2026-02-15T23:58:09+00:00Z"
+            },
+            {
                 "title": "Trump trade adviser Navarro says administration may force data center builders like Meta to 'internalize' costs",
                 "link": "https://www.cnbc.com/2026/02/15/navarro-trump-data-centers-affordability.html",
-                "isoDate": "2026-02-15T20:31:06+00:00Z"
+                "isoDate": "2026-02-15T23:57:45+00:00Z"
             },
             {
-                "title": "From Hyatt to Holiday Inn, America's free hotel breakfast is facing a K-shaped economic threat",
-                "link": "https://www.cnbc.com/2026/02/15/hotel-free-breakfast-hyatt-holiday-inn-marriott-cost-cuts.html",
-                "isoDate": "2026-02-15T17:18:08+00:00Z"
-            },
-            {
-                "title": "In bitcoin price plummet, ETF flows are down but aren't signaling 'crypto winter' investor panic",
-                "link": "https://www.cnbc.com/2026/02/15/bitcoin-price-crash-crypto-winter-investors-etf-flows.html",
-                "isoDate": "2026-02-15T15:24:48+00:00Z"
-            },
-            {
-                "title": "The NFL just wrapped a record-breaking season. Here’s why next year’s going to be even bigger",
-                "link": "https://www.cnbc.com/2026/02/15/nfl-just-had-record-breaking-season-next-year-will-be-bigger.html",
-                "isoDate": "2026-02-15T08:24:07+00:00Z"
-            },
-            {
-                "title": "Some European policymakers welcome U.S. Secretary of State Rubio's warm words, others remain cautious",
-                "link": "https://www.cnbc.com/2026/02/15/some-europeans-welcome-rubios-warm-words-others-remain-cautious.html",
-                "isoDate": "2026-02-15T13:15:34+00:00Z"
+                "title": "No clear path to ending the partial government shutdown as lawmakers dig in over DHS oversight",
+                "link": "https://www.cnbc.com/2026/02/15/trump-congress-government-shutdown-dhs.html",
+                "isoDate": "2026-02-15T23:58:32+00:00Z"
             },
             {
                 "title": "Consumer staples are rallying in 2026. Here’s what’s driving the surge in the sector",
@@ -2383,71 +2383,71 @@
         ],
         "translations": {
             "JP": [
-                "トランプ政権の貿易顧問ナバロ氏、メタなどのデータセンター建設業者にコストの「内製化」を強制する可能性を示唆",
-                "ハイアットからホリデイ・インまで、アメリカの無料ホテルの朝食がK字型経済の脅威に直面",
-                "ビットコイン価格急落、ETFフローは減少も「仮想通貨の冬」の投資家パニックは示唆せず",
-                "NFL、記録破りのシーズンを終了。来年はさらに大きくなる理由",
-                "一部欧州政策立案者は、ルービー国務長官の温かい言葉を歓迎、他は慎重姿勢を維持",
-                "生活必需品セクターが2026年に急騰。この分野の急騰を牽引するもの"
+                "OpenClawのクリエイター、ピーター・スタインバーガー氏がOpenAIに参加、アルトマン氏が発表",
+                "エプスタイン事件の余波：捕食者との過去の取引で傷ついた著名人たち",
+                "ワーナー・ブラザース、新たな契約条件でパラマウントとの売却交渉を再開する可能性、ブルームバーグ報道",
+                "トランプ政権の貿易顧問ナバロ氏、メタのようなデータセンター建設業者にコストの「内製化」を強制する可能性",
+                "DHS監督を巡り議員らが譲らず、部分的な政府閉鎖の終結への明確な道筋なし",
+                "生活必需品セクターが2026年に上昇。この分野の急騰を牽引するものとは"
             ],
             "CN": [
-                "特朗普贸易顾问纳瓦罗称，政府可能迫使Meta等数据中心建设商“内部化”成本",
-                "从凯悦到假日酒店，美国免费酒店早餐面临“K形”经济威胁",
-                "比特币价格暴跌，ETF资金流出但并未预示“加密寒冬”投资者恐慌",
-                "NFL刚刚结束了创纪录的赛季。明年将更加辉煌的原因",
-                "部分欧洲政策制定者欢迎美国国务卿卢比奥的温和言辞，另一些则保持谨慎",
-                "2026年，消费必需品板块正在飙升。推动该板块飙升的因素是什么"
+                "OpenClaw创始人Peter Steinberger将加入OpenAI，Altman表示",
+                "爱泼斯坦文件后续：与掠夺者过去交易受损的高调人物",
+                "据彭博社报道，华纳兄弟可能在新的交易条款后重新开始与派拉蒙的出售谈判",
+                "特朗普贸易顾问纳瓦罗称，政府可能迫使Meta等数据中心建设商“内化”成本",
+                "由于议员们在国土安全部监督问题上立场坚定，部分政府停摆尚无明确的结束路径",
+                "2026年消费必需品板块飙升。驱动该行业飙升的因素是什么"
             ],
             "ES": [
-                "El asesor comercial de Trump, Navarro, dice que la administración puede obligar a los constructores de centros de datos como Meta a \"internalizar\" costos",
-                "Desde Hyatt hasta Holiday Inn, el desayuno gratuito de los hoteles estadounidenses enfrenta una amenaza económica en forma de K",
-                "En la caída del precio de Bitcoin, los flujos de ETF han disminuido pero no señalan pánico de los inversores ante el \"invierno cripto\"",
-                "La NFL acaba de concluir una temporada récord. Aquí se explica por qué la del próximo año será aún mayor",
-                "Algunos responsables políticos europeos acogen con agrado las cálidas palabras del Secretario de Estado de EE. UU., Rubio, otros permanecen cautelosos",
+                "El creador de OpenClaw, Peter Steinberger, se une a OpenAI, dice Altman",
+                "Las secuelas de los archivos de Epstein: las personas de alto perfil quemadas por tratos pasados con un depredador",
+                "Warner Bros. podría reabrir conversaciones de venta con Paramount tras nuevos términos de acuerdo, informa Bloomberg",
+                "El asesor comercial de Trump, Navarro, dice que la administración podría obligar a los constructores de centros de datos como Meta a 'internalizar' los costos",
+                "No hay un camino claro para poner fin al cierre parcial del gobierno mientras los legisladores se aferran a la supervisión del DHS",
                 "Los bienes de consumo básico se están recuperando en 2026. Esto es lo que está impulsando el aumento en el sector"
             ],
             "HI": [
-                "ट्रम्प के व्यापार सलाहकार नवारो ने कहा कि प्रशासन मेटा जैसी डेटा सेंटर बनाने वाली कंपनियों को लागत 'आंतरिक' बनाने के लिए मजबूर कर सकता है",
-                "हायात से हॉलिडे इन तक, अमेरिका का मुफ्त होटल नाश्ता 'के-आकार' के आर्थिक खतरे का सामना कर रहा है",
-                "बिटकॉइन की कीमत में गिरावट, ईटीएफ प्रवाह में कमी लेकिन 'क्रिप्टो विंटर' निवेशक घबराहट का संकेत नहीं",
-                "एनएफएल ने अभी-अभी रिकॉर्ड तोड़ सीजन पूरा किया है। यहाँ बताया गया है कि अगले साल और भी बड़ा क्यों होगा",
-                "कुछ यूरोपीय नीति निर्माता अमेरिकी विदेश मंत्री रूबीओ के गर्मजोशी भरे शब्दों का स्वागत करते हैं, अन्य सतर्क रहते हैं",
-                "2026 में कंज्यूमर स्टेपल्स में तेजी आ रही है। इस क्षेत्र में तेजी लाने वाले कारक यहाँ दिए गए हैं"
+                "OpenClaw के निर्माता पीटर स्टीनबर्गर OpenAI में शामिल हो रहे हैं, अल्टमैन ने कहा",
+                "एपस्टीन फाइलों का असर: शिकारी के साथ पिछले सौदों से जल चुके हाई-प्रोफाइल लोग",
+                "ब्लूमबर्ग की रिपोर्ट: वार्नर ब्रदर्स नए डील शर्तों के बाद पैरामाउंट के साथ बिक्री वार्ता फिर से खोल सकता है",
+                "ट्रम्प के व्यापार सलाहकार नवारो का कहना है कि प्रशासन मेटा जैसे डेटा सेंटर बिल्डरों को लागत 'आंतरिक' करने के लिए मजबूर कर सकता है",
+                "DHS की निगरानी को लेकर कानूनविद अपनी बात पर अड़े हुए हैं, आंशिक सरकारी शटडाउन को समाप्त करने का कोई स्पष्ट रास्ता नहीं",
+                "2026 में उपभोक्ता प्रधान वस्तुएं उछल रही हैं। इस क्षेत्र में उछाल को क्या प्रेरित कर रहा है"
             ],
             "ID": [
+                "Pencipta OpenClaw Peter Steinberger bergabung dengan OpenAI, Kata Altman",
+                "Dampak berkas Epstein: orang-orang terkenal yang terbakar oleh kesepakatan masa lalu dengan predator",
+                "Warner Bros. dapat membuka kembali pembicaraan penjualan dengan Paramount setelah syarat kesepakatan baru, lapor Bloomberg",
                 "Penasihat perdagangan Trump Navarro mengatakan pemerintahan dapat memaksa pembangun pusat data seperti Meta untuk 'menginternalisasi' biaya",
-                "Dari Hyatt hingga Holiday Inn, sarapan gratis hotel Amerika menghadapi ancaman ekonomi berbentuk K",
-                "Dalam penurunan harga bitcoin, arus ETF menurun tetapi tidak menandakan kepanikan investor 'musim dingin kripto'",
-                "NFL baru saja menyelesaikan musim yang memecahkan rekor. Mengapa tahun depan akan lebih besar lagi",
-                "Beberapa pembuat kebijakan Eropa menyambut hangat kata-kata Menteri Luar Negeri AS Rubio, yang lain tetap berhati-hati",
-                "Kebutuhan pokok konsumen melonjak pada tahun 2026. Inilah yang mendorong lonjakan di sektor ini"
+                "Tidak ada jalur yang jelas untuk mengakhiri penutupan pemerintahan parsial saat anggota parlemen bertahan atas pengawasan DHS",
+                "Barang konsumsi pokok meroket pada tahun 2026. Inilah yang mendorong lonjakan di sektor ini"
             ],
             "AR": [
+                "صانع OpenClaw بيتر شتاينبرغر ينضم إلى OpenAI، كما قال ألتامان",
+                "تداعيات ملفات إبستين: الأشخاص البارزون الذين احترقوا بسبب صفقات سابقة مع مفترس",
+                "قد تعيد وارنر برذرز فتح محادثات البيع مع باراماونت بعد شروط صفقة جديدة، حسبما أفادت بلومبرج",
                 "مستشار ترامب التجاري نافارو يقول إن الإدارة قد تجبر بناة مراكز البيانات مثل ميتا على \"استيعاب\" التكاليف",
-                "من حياة إلى هوليداي إن، تواجه وجبة الإفطار المجانية في الفنادق الأمريكية تهديدًا اقتصاديًا على شكل حرف K",
-                "في انخفاض أسعار البيتكوين، تدفقات صناديق الاستثمار المتداولة تتراجع لكنها لا تشير إلى ذعر المستثمرين من \"شتاء العملات المشفرة\"",
-                "اختتمت NFL للتو موسمًا قياسيًا. إليك سبب كون الموسم القادم أكبر",
-                "يرحب بعض صانعي السياسات الأوروبيين بالكلمات الدافئة لوزير الخارجية الأمريكي روبيو، بينما يظل آخرون حذرين",
-                "السلع الاستهلاكية الأساسية تتصاعد في عام 2026. إليك ما يدفع الارتفاع في هذا القطاع"
+                "لا يوجد مسار واضح لإنهاء الإغلاق الحكومي الجزئي مع تمسك المشرعين بالإشراف على وزارة الأمن الداخلي",
+                "السلع الاستهلاكية الأساسية ترتفع في عام 2026. هذا ما يقود الارتفاع في القطاع"
             ],
             "DE": [
-                "Trump-Handelsberater Navarro sagt, die Regierung könnte Datenzentren-Bauer wie Meta zwingen, Kosten zu \"internalisieren\"",
-                "Von Hyatt bis Holiday Inn: Amerikas kostenloses Hotel-Frühstück sieht sich einer K-förmigen Wirtschaftsbedrohung gegenüber",
-                "Beim Absturz der Bitcoin-Preise sind die ETF-Zuflüsse zwar rückläufig, signalisieren aber keine Panik der Anleger vor einem \"Krypto-Winter\"",
-                "Die NFL hat gerade eine rekordverdächtige Saison beendet. Hier erfahren Sie, warum die nächste noch größer wird",
-                "Einige europäische Politiker begrüßen die warmen Worte von US-Außenminister Rubio, andere bleiben vorsichtig",
-                "Basiskonsumgüter legen 2026 zu. Was den Anstieg in diesem Sektor antreibt"
+                "OpenClaw-Schöpfer Peter Steinberger wechselt zu OpenAI, sagt Altman",
+                "Epstein-Akten-Folgen: Hochkarätige Personen, die durch frühere Geschäfte mit einem Raubtier verbrannt wurden",
+                "Warner Bros. könnte nach neuen Vertragsbedingungen Übernahmegespräche mit Paramount wieder aufnehmen, berichtet Bloomberg",
+                "Trump-Handelsberater Navarro sagt, die Regierung könnte Bauherren von Rechenzentren wie Meta zwingen, Kosten zu \"internalisieren\"",
+                "Kein klarer Weg zum Ende des teilweisen Regierungsstillstands, da die Gesetzgeber auf der Aufsicht des DHS beharren",
+                "Basiskonsumgüter steigen 2026. Was treibt den Anstieg des Sektors an"
             ],
             "FR": [
-                "Navarro, conseiller commercial de Trump, déclare que l'administration pourrait forcer les constructeurs de centres de données comme Meta à \"internaliser\" les coûts",
-                "De Hyatt à Holiday Inn, le petit-déjeuner d'hôtel gratuit américain fait face à une menace économique en forme de K",
-                "Dans la chute du prix du bitcoin, les flux d'ETF diminuent mais ne signalent pas la panique des investisseurs d'un \"hiver crypto\"",
-                "La NFL vient de terminer une saison record. Voici pourquoi celle de l'année prochaine sera encore plus importante",
-                "Certains décideurs politiques européens accueillent favorablement les paroles chaleureuses du secrétaire d'État américain Rubio, d'autres restent prudents",
-                "Les biens de consommation de base se redressent en 2026. Voici ce qui stimule la hausse dans ce secteur"
+                "Le créateur d'OpenClaw Peter Steinberger rejoint OpenAI, annonce Altman",
+                "Les retombées des dossiers Epstein : les personnalités de haut niveau brûlées par des transactions passées avec un prédateur",
+                "Warner Bros. pourrait rouvrir les discussions de vente avec Paramount suite à de nouvelles conditions d'accord, rapporte Bloomberg",
+                "L'ancien conseiller commercial de Trump, Navarro, déclare que l'administration pourrait forcer les constructeurs de centres de données comme Meta à « internaliser » les coûts",
+                "Aucune voie claire pour mettre fin à la fermeture partielle du gouvernement alors que les législateurs s'en tiennent à la surveillance du DHS",
+                "Les biens de consommation de base se redressent en 2026. Voici ce qui stimule la hausse du secteur"
             ]
         },
-        "last_updated": "2026-02-15T20:41:26.045216+00:00Z"
+        "last_updated": "2026-02-16T03:13:13.272688+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
