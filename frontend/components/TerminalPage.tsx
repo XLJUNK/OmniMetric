@@ -6,22 +6,28 @@ import { useTheme } from '@/components/ThemeProvider';
 import React, { Suspense } from 'react';
 
 interface TerminalPageProps {
-    pageKey: 'about' | 'legal' | 'archive' | 'wiki';
+    pageKey?: 'about' | 'legal' | 'archive' | 'wiki';
+    title?: string;
+    description?: string;
     children: React.ReactNode;
     lang?: LangType; // Optional: If provided, overrides searchParams
     selectorMode?: 'query' | 'path'; // Optional: Defaults to 'query'
 }
 
-const TerminalPageContent = ({ pageKey, children, lang: propLang, selectorMode = 'query' }: TerminalPageProps) => {
+const TerminalPageContent = ({ pageKey, title, description, children, lang: propLang, selectorMode = 'query' }: TerminalPageProps) => {
     const { theme } = useTheme();
     const searchParams = useSearchParams();
     // Use propLang if available (path mode), otherwise fallback to query param
-    const lang = propLang || (searchParams.get('lang') as LangType) || 'JP';
+    const lang = propLang || (searchParams.get('lang') as LangType) || 'EN';
     const t = DICTIONARY[lang];
 
     if (!t) return null;
 
-    const pageData = t.subpages[pageKey as keyof typeof t.subpages] as Record<string, string> || { title: pageKey.toUpperCase() };
+    const pageDataFromKey = pageKey ? (t.subpages[pageKey as keyof typeof t.subpages] as Record<string, string>) : null;
+    const pageData = {
+        title: title || pageDataFromKey?.title || (pageKey ? pageKey.toUpperCase() : 'OMNIMETRIC'),
+        desc: description || pageDataFromKey?.desc
+    };
 
     return (
         <div

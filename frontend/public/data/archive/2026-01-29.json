@@ -1,0 +1,1450 @@
+{
+    "last_updated": "2026-01-29T23:37:53.902953+00:00",
+    "last_successful_update": "2026-01-29T23:37:53.902959+00:00",
+    "gms_score": 36,
+    "sector_scores": {
+        "STOCKS": 50,
+        "CRYPTO": 40,
+        "FOREX": 55,
+        "COMMODITIES": 55
+    },
+    "market_data": {
+        "CRYPTO_SENTIMENT": {
+            "price": 26,
+            "change_percent": 0.0,
+            "trend": "BEARISH",
+            "sparkline": [
+                21,
+                20,
+                28,
+                29,
+                25,
+                26,
+                44,
+                42,
+                28,
+                27,
+                25,
+                29,
+                27,
+                26,
+                48,
+                61,
+                49,
+                50,
+                49,
+                44,
+                32,
+                24,
+                20,
+                24,
+                25,
+                25,
+                20,
+                29,
+                29,
+                26
+            ]
+        },
+        "YIELD_SPREAD": {
+            "price": 0.57,
+            "change_percent": 0.0,
+            "trend": "NORMAL",
+            "sparkline": [
+                0.54,
+                0.53,
+                0.53,
+                0.46,
+                0.46,
+                0.5,
+                0.44,
+                0.49,
+                0.51,
+                0.51,
+                0.54,
+                0.53,
+                0.55,
+                0.53,
+                0.57,
+                0.56,
+                0.52,
+                0.51,
+                0.48,
+                0.49,
+                0.57,
+                0.57,
+                0.6,
+                0.56,
+                0.55,
+                0.54,
+                0.55,
+                0.57,
+                0.58,
+                0.57
+            ]
+        },
+        "HY_SPREAD": {
+            "price": 2.72,
+            "prev_price": 2.71,
+            "daily_chg": 0.37,
+            "change_percent": 0.37,
+            "trend": "CALM",
+            "sparkline": [
+                2.95,
+                2.9,
+                2.88,
+                2.83,
+                2.84,
+                2.84,
+                2.86,
+                2.87,
+                2.84,
+                2.81,
+                2.81,
+                2.83,
+                2.81,
+                2.79,
+                2.79,
+                2.76,
+                2.74,
+                2.74,
+                2.75,
+                2.76,
+                2.71,
+                2.65,
+                2.65,
+                2.73,
+                2.69,
+                2.64,
+                2.68,
+                2.69,
+                2.71,
+                2.72
+            ]
+        },
+        "NFCI": {
+            "price": -0.6,
+            "change_percent": 0.0,
+            "trend": "CALM",
+            "sparkline": [
+                -0.52,
+                -0.52,
+                -0.51,
+                -0.51,
+                -0.52,
+                -0.52,
+                -0.53,
+                -0.54,
+                -0.55,
+                -0.56,
+                -0.58,
+                -0.59,
+                -0.6
+            ]
+        },
+        "NET_LIQUIDITY": {
+            "price": 5661.67,
+            "prev_price": 5663.42,
+            "daily_chg": -0.03,
+            "change_percent": -0.92,
+            "trend": "CONTRACTION",
+            "sparkline": [
+                5720.72,
+                5722.24,
+                5717.88,
+                5739.31,
+                5739.31,
+                5723.77,
+                5733.56,
+                5731.51,
+                5697.32,
+                5697.32,
+                5797.65,
+                5796.83,
+                5800.73,
+                5772.87,
+                5774.37,
+                5774.17,
+                5774.05,
+                5774.18,
+                5799.3,
+                5800.52,
+                5801.3,
+                5801.3,
+                5799.02,
+                5711.98,
+                5713.26,
+                5714.39,
+                5713.83,
+                5714.07,
+                5663.42,
+                5661.67
+            ]
+        },
+        "BREAKEVEN_INFLATION": {
+            "price": 2.35,
+            "change_percent": 0.0,
+            "trend": "STABLE",
+            "sparkline": [
+                2.24,
+                2.23,
+                2.24,
+                2.24,
+                2.24,
+                2.23,
+                2.22,
+                2.24,
+                2.25,
+                2.25,
+                2.25,
+                2.26,
+                2.27,
+                2.27,
+                2.27,
+                2.28,
+                2.29,
+                2.3,
+                2.29,
+                2.29,
+                2.33,
+                2.33,
+                2.33,
+                2.34,
+                2.31,
+                2.32,
+                2.32,
+                2.34,
+                2.36,
+                2.35
+            ]
+        },
+        "VIX": {
+            "price": 16.88,
+            "prev_price": 16.35,
+            "daily_chg": 3.24,
+            "change_percent": 4.91,
+            "trend": "UP",
+            "sparkline": [
+                14.2,
+                14.33,
+                14.95,
+                14.51,
+                14.9,
+                14.75,
+                15.38,
+                15.45,
+                14.49,
+                15.12,
+                15.98,
+                16.75,
+                15.84,
+                15.86,
+                20.09,
+                16.9,
+                15.64,
+                16.09,
+                16.15,
+                16.35,
+                16.35,
+                16.88
+            ]
+        },
+        "YIELD_SPREAD_10Y2Y": {
+            "price": 0.71,
+            "change_percent": 0.0,
+            "trend": "NEUTRAL",
+            "sparkline": [
+                0.68,
+                0.73,
+                0.7,
+                0.68,
+                0.68,
+                0.68,
+                0.67,
+                0.69,
+                0.71,
+                0.71,
+                0.72,
+                0.71,
+                0.71,
+                0.68,
+                0.7,
+                0.64,
+                0.65,
+                0.65,
+                0.64,
+                0.61,
+                0.65,
+                0.65,
+                0.7,
+                0.66,
+                0.65,
+                0.64,
+                0.66,
+                0.71,
+                0.7,
+                0.71
+            ]
+        },
+        "US_10Y_YIELD": {
+            "price": 4.26,
+            "change_percent": 0.0,
+            "trend": "STABLE",
+            "sparkline": [
+                4.12,
+                4.16,
+                4.17,
+                4.18,
+                4.15,
+                4.15,
+                4.14,
+                4.12,
+                4.14,
+                4.18,
+                4.18,
+                4.19,
+                4.17,
+                4.18,
+                4.15,
+                4.19,
+                4.18,
+                4.19,
+                4.18,
+                4.15,
+                4.17,
+                4.24,
+                4.24,
+                4.3,
+                4.26,
+                4.26,
+                4.24,
+                4.22,
+                4.24,
+                4.26
+            ]
+        },
+        "REAL_INTEREST_RATE": {
+            "price": 1.9,
+            "change_percent": 0.0,
+            "trend": "STABLE",
+            "sparkline": [
+                1.88,
+                1.92,
+                1.94,
+                1.94,
+                1.91,
+                1.91,
+                1.91,
+                1.9,
+                1.9,
+                1.93,
+                1.93,
+                1.94,
+                1.91,
+                1.91,
+                1.88,
+                1.92,
+                1.9,
+                1.9,
+                1.88,
+                1.86,
+                1.88,
+                1.91,
+                1.91,
+                1.97,
+                1.92,
+                1.95,
+                1.92,
+                1.9,
+                1.9,
+                1.9
+            ]
+        },
+        "SPY": {
+            "price": 694.04,
+            "prev_price": 695.42,
+            "daily_chg": -0.2,
+            "change_percent": 0.7,
+            "trend": "DOWN",
+            "sparkline": [
+                687.85,
+                687.01,
+                681.92,
+                683.17,
+                687.72,
+                691.81,
+                689.58,
+                689.51,
+                694.07,
+                695.16,
+                693.77,
+                690.36,
+                692.24,
+                691.66,
+                677.58,
+                685.4,
+                688.98,
+                689.23,
+                692.73,
+                695.49,
+                695.42,
+                694.04
+            ]
+        },
+        "TNX": {
+            "price": 4.23,
+            "prev_price": 4.25,
+            "daily_chg": -0.56,
+            "change_percent": -0.28,
+            "trend": "DOWN",
+            "sparkline": [
+                4.12,
+                4.13,
+                4.16,
+                4.19,
+                4.16,
+                4.18,
+                4.14,
+                4.18,
+                4.17,
+                4.19,
+                4.17,
+                4.14,
+                4.16,
+                4.23,
+                4.3,
+                4.25,
+                4.25,
+                4.24,
+                4.21,
+                4.22,
+                4.25,
+                4.23
+            ]
+        },
+        "QQQ": {
+            "price": 629.43,
+            "prev_price": 633.22,
+            "daily_chg": -0.6,
+            "change_percent": 1.08,
+            "trend": "DOWN",
+            "sparkline": [
+                620.87,
+                619.43,
+                614.31,
+                613.12,
+                617.99,
+                623.42,
+                624.02,
+                620.47,
+                626.65,
+                627.17,
+                626.24,
+                619.55,
+                621.78,
+                621.26,
+                608.06,
+                616.28,
+                620.76,
+                622.72,
+                625.46,
+                631.13,
+                633.22,
+                629.43
+            ]
+        },
+        "IWM": {
+            "price": 263.37,
+            "prev_price": 263.3,
+            "daily_chg": 0.03,
+            "change_percent": -0.54,
+            "trend": "UP",
+            "sparkline": [
+                249.88,
+                248.03,
+                246.16,
+                248.78,
+                252.73,
+                256.08,
+                255.48,
+                258.27,
+                260.23,
+                261.5,
+                261.35,
+                263.19,
+                265.51,
+                265.76,
+                262.58,
+                267.79,
+                269.79,
+                264.81,
+                263.98,
+                264.73,
+                263.3,
+                263.37
+            ]
+        },
+        "RSP": {
+            "price": 198.52,
+            "prev_price": 198.26,
+            "daily_chg": 0.13,
+            "change_percent": -0.13,
+            "trend": "UP",
+            "sparkline": [
+                193.52,
+                193.21,
+                191.56,
+                192.86,
+                194.65,
+                197.0,
+                194.79,
+                196.46,
+                197.6,
+                197.78,
+                197.78,
+                198.68,
+                199.56,
+                199.05,
+                196.08,
+                199.4,
+                199.66,
+                198.77,
+                199.24,
+                198.93,
+                198.26,
+                198.52
+            ]
+        },
+        "HYG": {
+            "price": 81.03,
+            "prev_price": 81.04,
+            "daily_chg": -0.01,
+            "change_percent": -0.14,
+            "trend": "DOWN",
+            "sparkline": [
+                80.63,
+                80.71,
+                80.63,
+                80.67,
+                80.88,
+                80.9,
+                80.88,
+                80.94,
+                81.0,
+                81.04,
+                81.04,
+                81.04,
+                81.04,
+                81.09,
+                80.88,
+                81.12,
+                81.18,
+                81.14,
+                81.18,
+                81.17,
+                81.04,
+                81.03
+            ]
+        },
+        "NIFTY": {
+            "price": 25418.9,
+            "prev_price": 25342.75,
+            "daily_chg": 0.3,
+            "change_percent": 0.51,
+            "trend": "UP",
+            "sparkline": [
+                25942.1,
+                25938.85,
+                26129.6,
+                26146.55,
+                26328.55,
+                26250.3,
+                26178.7,
+                26140.75,
+                25876.85,
+                25683.3,
+                25790.25,
+                25732.3,
+                25665.6,
+                25694.35,
+                25585.5,
+                25232.5,
+                25157.5,
+                25289.9,
+                25048.65,
+                25175.4,
+                25342.75,
+                25418.9
+            ]
+        },
+        "BTC": {
+            "price": 84551.2,
+            "prev_price": 89184.57,
+            "daily_chg": -5.2,
+            "change_percent": -2.33,
+            "trend": "DOWN",
+            "sparkline": [
+                91027.12,
+                90513.1,
+                90386.65,
+                90827.46,
+                91192.99,
+                95321.78,
+                96929.33,
+                95551.19,
+                95525.12,
+                95099.92,
+                93634.43,
+                92553.59,
+                88310.91,
+                89376.96,
+                89462.45,
+                89503.88,
+                89110.73,
+                86572.22,
+                88267.14,
+                89102.57,
+                89184.57,
+                84551.2
+            ]
+        },
+        "ETH": {
+            "price": 2819.76,
+            "prev_price": 3006.61,
+            "daily_chg": -6.21,
+            "change_percent": 0.14,
+            "trend": "DOWN",
+            "sparkline": [
+                3104.38,
+                3083.05,
+                3082.4,
+                3118.89,
+                3092.33,
+                3322.1,
+                3354.72,
+                3317.1,
+                3295.48,
+                3308.86,
+                3281.16,
+                3186.62,
+                2935.61,
+                2978.9,
+                2949.63,
+                2953.26,
+                2948.74,
+                2815.9,
+                2926.46,
+                3022.21,
+                3006.61,
+                2819.76
+            ]
+        },
+        "SOL": {
+            "price": 117.48,
+            "prev_price": 125.12,
+            "daily_chg": -6.11,
+            "change_percent": -1.09,
+            "trend": "DOWN",
+            "sparkline": [
+                138.29,
+                135.76,
+                135.73,
+                139.49,
+                139.14,
+                145.36,
+                146.75,
+                142.33,
+                144.86,
+                143.73,
+                138.0,
+                133.34,
+                125.71,
+                129.38,
+                128.29,
+                127.36,
+                127.05,
+                118.77,
+                124.14,
+                127.05,
+                125.12,
+                117.48
+            ]
+        },
+        "DXY": {
+            "price": 96.16,
+            "prev_price": 96.45,
+            "daily_chg": -0.3,
+            "change_percent": -1.47,
+            "trend": "DOWN",
+            "sparkline": [
+                98.04,
+                98.24,
+                98.28,
+                98.42,
+                98.27,
+                98.58,
+                98.68,
+                98.93,
+                99.13,
+                98.86,
+                99.13,
+                99.13,
+                99.32,
+                99.39,
+                98.64,
+                98.76,
+                98.36,
+                97.6,
+                97.04,
+                96.22,
+                96.45,
+                96.16
+            ]
+        },
+        "USDJPY": {
+            "price": 152.94,
+            "prev_price": 152.45,
+            "daily_chg": 0.32,
+            "change_percent": -3.51,
+            "trend": "UP",
+            "sparkline": [
+                156.01,
+                156.41,
+                156.73,
+                156.99,
+                156.63,
+                156.68,
+                156.73,
+                156.88,
+                158.15,
+                157.99,
+                159.18,
+                158.4,
+                158.6,
+                157.54,
+                158.18,
+                158.16,
+                158.46,
+                158.5,
+                155.17,
+                154.34,
+                152.45,
+                152.94
+            ]
+        },
+        "EURUSD": {
+            "price": 1.2,
+            "prev_price": 1.2,
+            "daily_chg": -0.33,
+            "change_percent": 1.9,
+            "trend": "DOWN",
+            "sparkline": [
+                1.18,
+                1.17,
+                1.18,
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.17,
+                1.16,
+                1.17,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.17,
+                1.17,
+                1.18,
+                1.19,
+                1.19,
+                1.2,
+                1.2
+            ]
+        },
+        "USDINR": {
+            "price": 91.75,
+            "prev_price": 91.53,
+            "daily_chg": 0.24,
+            "change_percent": 0.21,
+            "trend": "UP",
+            "sparkline": [
+                89.9,
+                89.77,
+                89.96,
+                90.01,
+                90.23,
+                90.17,
+                89.86,
+                89.91,
+                90.24,
+                90.13,
+                90.27,
+                90.18,
+                90.36,
+                90.7,
+                90.9,
+                91.12,
+                91.54,
+                91.56,
+                91.5,
+                91.71,
+                91.53,
+                91.75
+            ]
+        },
+        "USDSAR": {
+            "price": 3.75,
+            "prev_price": 3.75,
+            "daily_chg": 0.12,
+            "change_percent": 0.13,
+            "trend": "UP",
+            "sparkline": [
+                3.74,
+                3.75,
+                3.75,
+                3.75,
+                3.75,
+                3.75,
+                3.75,
+                3.75,
+                3.75,
+                3.75,
+                3.75,
+                3.75,
+                3.75,
+                3.75,
+                3.75,
+                3.75,
+                3.75,
+                3.75,
+                3.74,
+                3.75,
+                3.75,
+                3.75
+            ]
+        },
+        "GOLD": {
+            "price": 5445.7,
+            "prev_price": 5301.6,
+            "daily_chg": 2.72,
+            "change_percent": 9.43,
+            "trend": "UP",
+            "sparkline": [
+                4325.1,
+                4370.1,
+                4325.6,
+                4314.4,
+                4436.9,
+                4482.2,
+                4449.3,
+                4449.7,
+                4490.3,
+                4604.3,
+                4589.2,
+                4626.3,
+                4616.3,
+                4588.4,
+                4759.6,
+                4831.8,
+                4908.8,
+                4976.2,
+                5079.7,
+                5079.9,
+                5301.6,
+                5445.7
+            ]
+        },
+        "OIL": {
+            "price": 65.65,
+            "prev_price": 63.21,
+            "daily_chg": 3.86,
+            "change_percent": 7.5,
+            "trend": "UP",
+            "sparkline": [
+                58.08,
+                57.95,
+                57.42,
+                57.32,
+                58.32,
+                57.13,
+                55.99,
+                57.76,
+                59.12,
+                59.5,
+                61.15,
+                62.02,
+                59.19,
+                59.44,
+                60.34,
+                60.62,
+                59.36,
+                61.07,
+                60.63,
+                62.39,
+                63.21,
+                65.65
+            ]
+        },
+        "COPPER": {
+            "price": 6.31,
+            "prev_price": 5.89,
+            "daily_chg": 7.03,
+            "change_percent": 6.69,
+            "trend": "UP",
+            "sparkline": [
+                5.49,
+                5.73,
+                5.63,
+                5.64,
+                5.92,
+                6.01,
+                5.81,
+                5.75,
+                5.86,
+                5.99,
+                5.97,
+                6.01,
+                5.95,
+                5.79,
+                5.77,
+                5.73,
+                5.74,
+                5.91,
+                5.98,
+                5.83,
+                5.89,
+                6.31
+            ]
+        },
+        "NATGAS": {
+            "price": 3.89,
+            "prev_price": 7.46,
+            "daily_chg": -47.87,
+            "change_percent": -26.27,
+            "trend": "DOWN",
+            "sparkline": [
+                4.69,
+                3.97,
+                3.69,
+                3.62,
+                3.52,
+                3.35,
+                3.53,
+                3.41,
+                3.17,
+                3.41,
+                3.42,
+                3.12,
+                3.13,
+                3.1,
+                3.91,
+                4.88,
+                5.05,
+                5.28,
+                6.8,
+                6.95,
+                7.46,
+                3.89
+            ]
+        },
+        "MOVE": {
+            "price": 60.73,
+            "change_percent": 5.74,
+            "trend": "NORMAL",
+            "sparkline": [
+                63.98,
+                63.96,
+                62.36,
+                64.71,
+                65.82,
+                66.15,
+                66.94,
+                61.55,
+                62.9,
+                60.79,
+                58.11,
+                56.14,
+                58.05,
+                66.67,
+                59.56,
+                56.5,
+                56.25,
+                55.77,
+                56.12,
+                57.43,
+                60.73
+            ]
+        },
+        "BREADTH": {
+            "price": -0.83,
+            "change_percent": 0.0,
+            "trend": "HEALTHY",
+            "sparkline": [
+                0.0,
+                -0.11,
+                0.38,
+                0.64,
+                1.26,
+                0.44,
+                1.32,
+                1.24,
+                1.18,
+                1.38,
+                2.34,
+                2.53,
+                2.35,
+                2.86,
+                3.44,
+                3.05,
+                2.55,
+                2.29,
+                1.73,
+                1.39,
+                1.73
+            ]
+        },
+        "SPY_MOMENTUM": {
+            "price": 0.83,
+            "change_percent": 0,
+            "trend": "BALANCED",
+            "sparkline": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        "COPPER_GOLD": {
+            "price": 1.16,
+            "change_percent": 0,
+            "trend": "RISK-OFF",
+            "sparkline": [
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16,
+                1.16
+            ]
+        }
+    },
+    "events": [
+        {
+            "code": "nfp",
+            "name": "NON-FARM PAYROLLS",
+            "date": "2026-02-06",
+            "day": "FRI",
+            "time": "08:30 EST",
+            "impact": "high"
+        },
+        {
+            "code": "cpi",
+            "name": "CPI INFLATION DATA",
+            "date": "2026-02-12",
+            "day": "THU",
+            "time": "08:30 EST",
+            "impact": "high"
+        },
+        {
+            "code": "fomc",
+            "name": "FOMC RATE DECISION",
+            "date": "2026-03-18",
+            "day": "WED",
+            "time": "14:00 EST",
+            "impact": "critical"
+        }
+    ],
+    "analysis": {
+        "title": "Global Market Outlook",
+        "content": "GMS Score 36 signals a Defensive market. Momentum pushed the score lower, reflecting caution. VIX (Fear/Volatility) increased, showing heightened anxiety, yet DXY (Dollar strength/Liquidity) slightly weakened. While defensive, this DXY dip with strong commodity gains (Gold, Oil, Copper) suggests capital may rotate into real assets for inflation protection, rather than pure risk-off. Maintain caution but watch DXY and commodities for allocation shifts.",
+        "reports": {
+            "JP": "GMSスコア36は防御的な市場を示唆。モメンタムはスコアを押し下げ、警戒感を反映。VIX(恐怖/変動性)は上昇し不安を示すも、DXY(ドル高/流動性)はやや下落。防御的ながら、DXY下落と商品高(金、原油、銅)は、資本が純粋なリスクオフでなく、インフレヘッジの現物資産へ移行する可能性を示唆。警戒を維持しつつ、DXYと商品の資本配分シフトを注視。",
+            "EN": "GMS Score 36 signals a Defensive market. Momentum pushed the score lower, reflecting caution. VIX (Fear/Volatility) increased, showing heightened anxiety, yet DXY (Dollar strength/Liquidity) slightly weakened. While defensive, this DXY dip with strong commodity gains (Gold, Oil, Copper) suggests capital may rotate into real assets for inflation protection, rather than pure risk-off. Maintain caution but watch DXY and commodities for allocation shifts.",
+            "CN": "GMS评分36预示防御性市场。动能将评分推低，反映谨慎情绪。VIX（恐慌/波动性）上升，显示市场焦虑加剧，但DXY（美元强度/流动性）略有走弱。尽管处于防御态势，美元走弱与大宗商品（黄金、石油、铜）强劲上涨表明，资金可能转向通胀对冲的实物资产，而非纯粹规避风险。保持谨慎，同时关注美元和大宗商品以识别资金配置变化。",
+            "ES": "El GMS Score 36 indica un mercado Defensivo. El Momentum empujó la puntuación a la baja, reflejando cautela. El VIX (Miedo/Volatilidad) aumentó, mostrando ansiedad, pero el DXY (Fuerza del dólar/Liquidez) se debilitó levemente. Aunque defensivo, esta caída del DXY con fuertes ganancias en materias primas (Oro, Petróleo, Cobre) sugiere que el capital podría rotar hacia activos reales para protección contra la inflación, no solo a la aversión al riesgo. Mantenga la cautela, pero observe el DXY y las materias primas para cambios de asignación.",
+            "HI": "जीएमएस स्कोर 36 एक रक्षात्मक बाजार का संकेत देता है। मोमेंटम ने स्कोर को कम किया, जो सावधानी को दर्शाता है। VIX (भय/अस्थिरता) बढ़ा, जिससे बढ़ी हुई चिंता दिखी, फिर भी DXY (डॉलर की मजबूती/तरलता) थोड़ा कमजोर हुआ। रक्षात्मक होने के बावजूद, DXY की यह गिरावट और मजबूत कमोडिटी लाभ (सोना, तेल, तांबा) बताता है कि पूंजी शुद्ध जोखिम-बंद की बजाय मुद्रास्फीति-संरक्षण के लिए वास्तविक संपत्तियों में घूम सकती है। सावधानी बरतें लेकिन आवंटन में बदलाव के लिए DXY और कमोडिटीज पर नज़र रखें।",
+            "ID": "Skor GMS 36 menandakan pasar Defensif. Momentum mendorong skor lebih rendah, mencerminkan kehati-hatian. VIX (Ketakutan/Volatilitas) meningkat, menunjukkan kecemasan, namun DXY (Kekuatan Dolar/Likuiditas) sedikit melemah. Meskipun defensif, penurunan DXY ini dengan keuntungan komoditas kuat (Emas, Minyak, Tembaga) menunjukkan modal mungkin berotasi ke aset riil untuk perlindungan inflasi, bukan murni penghindaran risiko. Tetap waspada, namun pantau DXY dan komoditas untuk pergeseran alokasi.",
+            "AR": "يشير مؤشر GMS البالغ 36 إلى سوق دفاعي. دفع الزخم النتيجة للانخفاض، مما يعكس الحذر. زاد مؤشر VIX (الخوف/التقلب) مما يدل على قلق متزايد، لكن مؤشر DXY (قوة الدولار/السيولة) ضعف قليلاً. بينما الوضع دفاعي، يشير تراجع DXY مع مكاسب السلع القوية (الذهب والنفط والنحاس) إلى أن رأس المال قد يتحول إلى الأصول الحقيقية للحماية من التضخم، بدلاً من التجنب الصرف للمخاطر. حافظ على الحذر، لكن راقب DXY والسلع لتحولات التخصيص."
+        }
+    },
+    "history_chart": [
+        {
+            "date": "2026-01-28T01:42:34Z",
+            "score": 40
+        },
+        {
+            "date": "2026-01-28T01:50:14Z",
+            "score": 40
+        },
+        {
+            "date": "2026-01-28T03:09:12Z",
+            "score": 40
+        },
+        {
+            "date": "2026-01-28T04:53:41Z",
+            "score": 40
+        },
+        {
+            "date": "2026-01-28T05:17:03Z",
+            "score": 40
+        },
+        {
+            "date": "2026-01-28T05:40:52Z",
+            "score": 40
+        },
+        {
+            "date": "2026-01-28T05:56:03Z",
+            "score": 40
+        },
+        {
+            "date": "2026-01-28T05:59:29Z",
+            "score": 40
+        },
+        {
+            "date": "2026-01-28T06:34:43Z",
+            "score": 43
+        },
+        {
+            "date": "2026-01-28T06:47:58Z",
+            "score": 40
+        },
+        {
+            "date": "2026-01-28T06:53:10Z",
+            "score": 40
+        },
+        {
+            "date": "2026-01-28T07:37:29Z",
+            "score": 41
+        },
+        {
+            "date": "2026-01-28T08:49:31Z",
+            "score": 38
+        },
+        {
+            "date": "2026-01-28T09:46:30Z",
+            "score": 41
+        },
+        {
+            "date": "2026-01-28T10:44:08Z",
+            "score": 41
+        },
+        {
+            "date": "2026-01-28T11:33:51Z",
+            "score": 41
+        },
+        {
+            "date": "2026-01-28T13:12:43Z",
+            "score": 41
+        },
+        {
+            "date": "2026-01-28T13:53:07Z",
+            "score": 41
+        },
+        {
+            "date": "2026-01-28T14:00:48Z",
+            "score": 41
+        },
+        {
+            "date": "2026-01-28T14:08:01Z",
+            "score": 41
+        },
+        {
+            "date": "2026-01-28T14:19:45Z",
+            "score": 40
+        },
+        {
+            "date": "2026-01-28T14:30:37Z",
+            "score": 40
+        },
+        {
+            "date": "2026-01-28T14:40:51Z",
+            "score": 39
+        },
+        {
+            "date": "2026-01-28T14:45:25Z",
+            "score": 39
+        },
+        {
+            "date": "2026-01-28T15:46:53Z",
+            "score": 37
+        },
+        {
+            "date": "2026-01-28T16:54:11Z",
+            "score": 36
+        },
+        {
+            "date": "2026-01-28T17:44:33Z",
+            "score": 36
+        },
+        {
+            "date": "2026-01-28T18:52:12Z",
+            "score": 36
+        },
+        {
+            "date": "2026-01-28T19:40:04Z",
+            "score": 37
+        },
+        {
+            "date": "2026-01-28T20:47:07Z",
+            "score": 37
+        },
+        {
+            "date": "2026-01-28T21:41:02Z",
+            "score": 34
+        },
+        {
+            "date": "2026-01-28T22:40:15Z",
+            "score": 34
+        },
+        {
+            "date": "2026-01-28T23:06:19Z",
+            "score": 37
+        },
+        {
+            "date": "2026-01-28T23:37:18Z",
+            "score": 37
+        },
+        {
+            "date": "2026-01-29T00:17:36Z",
+            "score": 34
+        },
+        {
+            "date": "2026-01-29T01:25:01Z",
+            "score": 34
+        },
+        {
+            "date": "2026-01-29T02:45:32Z",
+            "score": 34
+        },
+        {
+            "date": "2026-01-29T02:48:15Z",
+            "score": 34
+        },
+        {
+            "date": "2026-01-29T03:09:55Z",
+            "score": 34
+        },
+        {
+            "date": "2026-01-29T04:47:12Z",
+            "score": 33
+        },
+        {
+            "date": "2026-01-29T05:56:19Z",
+            "score": 31
+        },
+        {
+            "date": "2026-01-29T07:03:26Z",
+            "score": 38
+        },
+        {
+            "date": "2026-01-29T07:52:12Z",
+            "score": 38
+        },
+        {
+            "date": "2026-01-29T08:08:52Z",
+            "score": 38
+        },
+        {
+            "date": "2026-01-29T08:14:41Z",
+            "score": 38
+        },
+        {
+            "date": "2026-01-29T08:56:45Z",
+            "score": 40
+        },
+        {
+            "date": "2026-01-29T09:56:49Z",
+            "score": 40
+        },
+        {
+            "date": "2026-01-29T10:53:39Z",
+            "score": 38
+        },
+        {
+            "date": "2026-01-29T11:42:05Z",
+            "score": 38
+        },
+        {
+            "date": "2026-01-29T13:21:11Z",
+            "score": 37
+        },
+        {
+            "date": "2026-01-29T14:53:36Z",
+            "score": 37
+        },
+        {
+            "date": "2026-01-29T15:50:36Z",
+            "score": 31
+        },
+        {
+            "date": "2026-01-29T16:56:38Z",
+            "score": 32
+        },
+        {
+            "date": "2026-01-29T17:50:28Z",
+            "score": 36
+        },
+        {
+            "date": "2026-01-29T19:02:48Z",
+            "score": 35
+        },
+        {
+            "date": "2026-01-29T19:39:24Z",
+            "score": 35
+        },
+        {
+            "date": "2026-01-29T20:45:19Z",
+            "score": 35
+        },
+        {
+            "date": "2026-01-29T21:39:27Z",
+            "score": 35
+        },
+        {
+            "date": "2026-01-29T22:41:02Z",
+            "score": 35
+        },
+        {
+            "date": "2026-01-29T23:37:53Z",
+            "score": 36
+        }
+    ],
+    "intelligence": {
+        "news": [
+            {
+                "title": "Apple sales surge 16% on ‘staggering’ iPhone demand",
+                "link": "https://www.cnbc.com/2026/01/29/apple-aapl-earnings-report-q1-2026.html",
+                "isoDate": "2026-01-29T23:08:57+00:00Z"
+            },
+            {
+                "title": "Microsoft lost $357 billion in market cap as stock plunged most since 2020",
+                "link": "https://www.cnbc.com/2026/01/29/microsoft-market-cap-earnings.html",
+                "isoDate": "2026-01-29T21:41:49+00:00Z"
+            },
+            {
+                "title": "Trump backs Senate government funding deal that includes DHS extension",
+                "link": "https://www.cnbc.com/2026/01/29/trump-congress-government-shutdown.html",
+                "isoDate": "2026-01-29T23:36:12+00:00Z"
+            },
+            {
+                "title": "Elon Musk's $20 billion spending plan signals 'Tesla of yesterday is gone'",
+                "link": "https://www.cnbc.com/2026/01/29/musks-20-billion-spending-plan-signals-tesla-of-yesterday-is-gone.html",
+                "isoDate": "2026-01-29T23:01:47+00:00Z"
+            },
+            {
+                "title": "Software stocks enter bear market on AI disruption fear with ServiceNow plunging 10%",
+                "link": "https://www.cnbc.com/2026/01/29/software-stocks-enter-bear-market-on-ai-disruption-fear-with-servicenow-plunging-11percent-thursday.html",
+                "isoDate": "2026-01-29T21:03:56+00:00Z"
+            },
+            {
+                "title": "These stocks posting earnings next week have a history of topping expectations",
+                "link": "https://www.cnbc.com/2026/01/29/these-stocks-posting-earnings-have-a-history-of-topping-expectations.html",
+                "isoDate": "2026-01-29T21:04:08+00:00Z"
+            }
+        ],
+        "translations": {
+            "JP": [
+                "iPhone需要の「驚異的な」需要によりAppleの売上高が16%急増",
+                "マイクロソフト、株価が2020年以来最大の急落で時価総額3570億ドル失う",
+                "トランプ氏、国土安全保障省の延長を含む上院政府資金調達案を支持",
+                "イーロン・マスク氏の200億ドルの歳出計画は「昨日のテスラはもういない」ことを示唆",
+                "AIの混乱への懸念からソフトウェア株が弱気市場入り、ServiceNowは10%下落",
+                "来週決算発表、予想を上回る実績の歴史を持つ銘柄"
+            ],
+            "CN": [
+                "iPhone需求“惊人”带动苹果销售额激增16%",
+                "微软市值蒸发3570亿美元，股价创2020年来最大跌幅",
+                "特朗普支持包含国土安全部延期在内的参议院政府资金协议",
+                "埃隆·马斯克200亿美元支出计划预示“昨日的特斯拉已不复存在”",
+                "受AI颠覆恐惧影响，软件股进入熊市，ServiceNow大跌10%",
+                "下周公布财报的这些股票过往业绩均超预期"
+            ],
+            "ES": [
+                "Las ventas de Apple se disparan un 16% por la \"asombrosa\" demanda del iPhone",
+                "Microsoft pierde 357 mil millones de dólares en capitalización de mercado al desplomarse sus acciones más desde 2020",
+                "Trump respalda el acuerdo de financiación gubernamental del Senado que incluye la extensión del DHS",
+                "El plan de gasto de 20 mil millones de dólares de Elon Musk señala que 'el Tesla de ayer ya no existe'",
+                "Las acciones de software entran en mercado bajista por temor a la disrupción de la IA con ServiceNow hundiéndose un 10%",
+                "Estas acciones que presentan ganancias la próxima semana tienen un historial de superar las expectativas"
+            ],
+            "HI": [
+                "iPhone की 'स्तब्ध' मांग पर Apple की बिक्री 16% बढ़ी",
+                "माइक्रोसॉफ्ट ने 2020 के बाद सबसे बड़ी गिरावट पर बाजार पूंजी में $357 बिलियन का नुकसान उठाया",
+                "ट्रम्प ने DHS विस्तार सहित सीनेट सरकारी वित्त पोषण सौदे का समर्थन किया",
+                "एलन मस्क की $20 बिलियन की खर्च योजना 'कल का टेस्ला चला गया' का संकेत देती है",
+                "AI व्यवधान के डर से सॉफ्टवेयर स्टॉक बियर मार्केट में प्रवेश, सर्विसनाउ 10% गिरा",
+                "अगले सप्ताह कमाई पेश करने वाले इन स्टॉक का उम्मीदों को पार करने का इतिहास रहा है"
+            ],
+            "ID": [
+                "Penjualan Apple melonjak 16% berkat permintaan iPhone yang 'menakjubkan'",
+                "Microsoft kehilangan kapitalisasi pasar $357 miliar karena sahamnya anjlok paling parah sejak 2020",
+                "Trump mendukung kesepakatan pendanaan pemerintah Senat yang mencakup perpanjangan DHS",
+                "Rencana belanja $20 miliar Elon Musk menandakan 'Tesla kemarin sudah tiada'",
+                "Saham perangkat lunak memasuki pasar beruang karena ketakutan disrupsi AI dengan ServiceNow anjlok 10%",
+                "Saham-saham yang membukukan pendapatan minggu depan ini memiliki rekam jejak melampaui ekspektasi"
+            ],
+            "AR": [
+                "مبيعات آبل ترتفع 16% بفضل طلب آيفون \"المذهل\"",
+                "مايكروسوفت تخسر 357 مليار دولار من قيمتها السوقية مع هبوط سهمها بأكبر نسبة منذ 2020",
+                "ترامب يدعم صفقة تمويل حكومي في مجلس الشيوخ تتضمن تمديد لوزارة الأمن الداخلي",
+                "خطة إنفاق إيلون ماسك البالغة 20 مليار دولار تشير إلى أن 'تسلا الأمس لم يعد موجوداً'",
+                "أسهم البرمجيات تدخل سوق هابطة بسبب الخوف من اضطراب الذكاء الاصطناعي مع هبوط ServiceNow بنسبة 10%",
+                "هذه الأسهم التي ستعلن عن أرباحها الأسبوع المقبل لديها تاريخ في تجاوز التوقعات"
+            ]
+        },
+        "last_updated": "2026-01-29T23:37:53.902443+00:00Z"
+    },
+    "system_status": "OPERATIONAL"
+}

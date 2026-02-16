@@ -343,6 +343,9 @@ export const DICTIONARY: Record<LangType, any> = {
                 title: "SIGNAL CORRELATION HISTORY",
                 desc: "Objective replay of historical indicator states and the corresponding GMS algorithmic signal.",
                 disclaimer: "THIS DATA REPRESENTS HISTORICAL CORRELATIONS ONLY AND DOES NOT SUGGEST OR GUARANTEE FUTURE INVESTMENT RESULTS.",
+                audit_title: "GMS Performance Audit",
+                signal_verified: "Signal Verified",
+                awaiting_data: "Awaiting sufficient correlation data points.",
                 calendar_title: "Browse Historical Signal",
                 monthly_reports_title: "Monthly Macro Intelligence",
                 loading_calendar: "Syncing Historical Logs...",
@@ -755,6 +758,9 @@ export const DICTIONARY: Record<LangType, any> = {
                 title: "シグナルと市場の相関履歴",
                 desc: "当時の各指標（ボラティリティ・流動性等）の客観的データと、それに基づき算出されたGMSスコアの履歴です。",
                 disclaimer: "本データは過去の相関を示すものであり、将来の投資成果を示唆または保証するものではない",
+                audit_title: "GMSパフォーマンス感査",
+                signal_verified: "シグナル検証済み",
+                awaiting_data: "十分な相関データポイントを待機中",
                 calendar_title: "過去の記録を閲覧",
                 monthly_reports_title: "月間マクロ・インテリジェンス",
                 loading_calendar: "過去ログを同期中...",
@@ -1119,7 +1125,10 @@ export const DICTIONARY: Record<LangType, any> = {
             archive: {
                 title: "信号相关性历史",
                 desc: "客观重现历史指标状态以及相应的 GMS 算法信号。",
-                disclaimer: "此数据仅代表历史相关性，不暗示或保证未来的投资结果。"
+                disclaimer: "此数据仅代表历史相关性，不暗示或保证未来的投资结果。",
+                audit_title: "GMS 绩效审计",
+                signal_verified: "信号已验证",
+                awaiting_data: "正在等待足够的相干数据点。"
             },
             omni_resonance: {
                 title: "OmniResonance\n(资产共鸣原型)",
@@ -1478,7 +1487,10 @@ export const DICTIONARY: Record<LangType, any> = {
             archive: {
                 title: "HISTORIAL DE CORRELACIÓN DE SEÑALES",
                 desc: "Reproducción objetiva de los estados de los indicadores históricos y la señal algorítmica GMS correspondiente.",
-                disclaimer: "ESTOS DATOS REPRESENTAN ÚNICAMENTE CORRELACIONES HISTÓRICAS Y NO SUGIEREN NI GARANTIZAN RESULTADOS DE INVERSIÓN FUTUROS."
+                disclaimer: "ESTOS DATOS REPRESENTAN ÚNICAMENTE CORRELACIONES HISTÓRICAS Y NO SUGIEREN NI GARANTIZAN RESULTADOS DE INVERSIÓN FUTUROS.",
+                audit_title: "Auditoría de Rendimiento GMS",
+                signal_verified: "Señal Verificada",
+                awaiting_data: "Esperando suficientes puntos de datos de correlación."
             },
             omni_resonance: {
                 title: "OmniResonance\n(Sincro de Cartera - Prototipo)",
@@ -1837,7 +1849,10 @@ export const DICTIONARY: Record<LangType, any> = {
             archive: {
                 title: "सिग्नल सहसंबंध इतिहास",
                 desc: "ऐतिहासिक संकेतक राज्यों और संबंधित GMS एल्गोरिथम सिग्नल का वस्तुनिष्ठ रीप्ले।",
-                disclaimer: "यह डेटा केवल ऐतिहासिक सहसंबंधों का प्रतिनिधित्व करता है और भविष्य के निवेश परिणामों का सुझाव या गारंटी नहीं देता है।"
+                disclaimer: "यह डेटा केवल ऐतिहासिक सहसंबंधों का प्रतिनिधित्व करता है और भविष्य के निवेश परिणामों का सुझाव या गारंटी नहीं देता है।",
+                audit_title: "GMS प्रदर्शन ऑडिट",
+                signal_verified: "सिग्नल सत्यापित",
+                awaiting_data: "पर्याप्त सहसंबंध डेटा बिंदुओं की प्रतीक्षा है।"
             },
             omni_resonance: {
                 title: "OmniResonance\n(पोर्टफोलियो सिंक प्रोटोटाइप)",
@@ -2196,7 +2211,10 @@ export const DICTIONARY: Record<LangType, any> = {
             archive: {
                 title: "RIWAYAT KORELASI SINYAL",
                 desc: "Pemutaran ulang objektif dari status indikator historis dan sinyal algoritmik GMS yang sesuai.",
-                disclaimer: "DATA INI HANYA MEWAKILI KORELASI HISTORIS DAN TIDAK MENYARANKAN ATAU MENJAMIN HASIL INVESTASI DI MASA DEPAN."
+                disclaimer: "DATA INI HANYA MEWAKILI KORELASI HISTORIS DAN TIDAK MENYARANKAN ATAU MENJAMIN HASIL INVESTASI DI MASA DEPAN.",
+                audit_title: "Audit Kinerja GMS",
+                signal_verified: "Sinyal Terverifikasi",
+                awaiting_data: "Menunggu cukup titik data korelasi"
             },
             omni_resonance: {
                 title: "OmniResonance\n(Sinkronisasi Portfolio - Prototipe)",
@@ -2556,7 +2574,10 @@ export const DICTIONARY: Record<LangType, any> = {
             archive: {
                 title: "سجل ارتباط الإشارة",
                 desc: "إعادة عرض موضوعية لحالات المؤشرات التاريخية وإشارة GMS الخوارزمية المقابلة.",
-                disclaimer: "تمثل هذه البيانات الارتباطات التاريخية فقط ولا تقترح أو تضمن نتائج الاستثمار المستقبلية."
+                disclaimer: "تمثل هذه البيانات الارتباطات التاريخية فقط ولا تقترح أو تضمن نتائج الاستثمار المستقبلية.",
+                audit_title: "تدقيق أداء GMS",
+                signal_verified: "الإشارة موثقة",
+                awaiting_data: "في انتظار نقاط بيانات ارتباط كافية"
             },
             omni_resonance: {
                 title: "OmniResonance\n(مزامنة المحفظة - نموذج أولي)",
@@ -2829,7 +2850,10 @@ export const DICTIONARY: Record<LangType, any> = {
             archive: {
                 title: "SIGNAL-KORRELATIONSHISTORIE",
                 desc: "Objektive Wiedergabe historischer Indikatorzustände und des entsprechenden algorithmischen GMS-Signals.",
-                disclaimer: "DIESE DATEN STELLEN NUR HISTORISCHE KORRELATIONEN DAR UND LASSEN KEINE RÜCKSCHLÜSSE AUF ZUKÜNFTIGE ANLAGEERGEBNISSE ZU ODER GARANTIEREN DIESE."
+                disclaimer: "DIESE DATEN STELLEN NUR HISTORISCHE KORRELATIONEN DAR UND LASSEN KEINE RÜCKSCHLÜSSE AUF ZUKÜNFTIGE ANLAGEERGEBNISSE ZU ODER GARANTIEREN DIESE.",
+                audit_title: "GMS-Leistungsprüfung",
+                signal_verified: "Signal verifiziert",
+                awaiting_data: "Ausreichende Korrelationsdatensätze werden erwartet"
             },
             omni_resonance: {
                 title: "OmniResonance\n(Portfolio-Sync Prototyp)",
@@ -3168,7 +3192,10 @@ export const DICTIONARY: Record<LangType, any> = {
             archive: {
                 title: "HISTORIQUE DE CORRÉLATION DES SIGNAUX",
                 desc: "Relecture objective des états historiques des indicateurs et du signal algorithmique GMS correspondant.",
-                disclaimer: "CES DONNÉES REPRÉSENTENT UNIQUEMENT DES CORRÉLATIONS HISTORIQUES ET NE GARANTISSENT PAS LES RÉSULTATS FUTURS."
+                disclaimer: "CES DONNÉES REPRÉSENTENT UNIQUEMENT DES CORRÉLATIONS HISTORIQUES ET NE GARANTISSENT PAS LES RÉSULTATS FUTURS.",
+                audit_title: "Audit de performance GMS",
+                signal_verified: "Signal vérifié",
+                awaiting_data: "En attente de points de données de corrélation suffisants"
             },
             omni_resonance: {
                 title: "OmniResonance\n(Sync de Portefeuille - Prototype)",

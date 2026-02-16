@@ -54,7 +54,16 @@ export async function getSignalData(): Promise<SignalData | null> {
 
     // Client-side or fallback (Relative path fetch to avoid external dependencies)
     try {
-        const res = await fetch('/data/market_data.json', {
+        let fetchUrl = '/data/market_data.json';
+
+        // On server, we must use absolute URL if fs fails
+        if (typeof window === 'undefined') {
+            const host = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000';
+            fetchUrl = `${host}${fetchUrl}`;
+            console.log(`[getSignalData] Server fallback to network fetch: ${fetchUrl}`);
+        }
+
+        const res = await fetch(fetchUrl, {
             next: { revalidate: 60 },
             headers: { 'Cache-Control': 'no-cache' }
         });
@@ -64,6 +73,8 @@ export async function getSignalData(): Promise<SignalData | null> {
             if (data && data.last_updated) {
                 return data;
             }
+        } else {
+            console.warn(`[getSignalData] Fetch failed with status: ${res.status}`);
         }
     } catch (error) {
         console.error("[getSignalData] Fetch failed:", error);

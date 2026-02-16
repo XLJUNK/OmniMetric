@@ -9,9 +9,10 @@ import { Clock, Shield, AlertTriangle } from 'lucide-react';
 interface ArchiveClientProps {
     date: string;
     lang: LangType;
+    selectorMode?: 'query' | 'path';
 }
 
-function ArchiveDetailContent({ date, lang }: ArchiveClientProps) {
+function ArchiveDetailContent({ date, lang, selectorMode }: ArchiveClientProps) {
     const searchParams = useSearchParams();
     // const params = useParams(); // Passed as prop now
     const t = DICTIONARY[lang];
@@ -38,7 +39,7 @@ function ArchiveDetailContent({ date, lang }: ArchiveClientProps) {
 
     if (loading) {
         return (
-            <TerminalPage pageKey="archive">
+            <TerminalPage pageKey="archive" lang={lang} selectorMode={selectorMode}>
                 <div className="flex flex-col items-center justify-center py-24 space-y-4">
                     <div className="w-12 h-12 border-2 border-sky-500/20 border-t-sky-500 rounded-full animate-spin"></div>
                     <span className="text-[10px] font-mono text-sky-500 tracking-[0.5em] uppercase">ACCESSING HISTORICAL VAULT...</span>
@@ -49,7 +50,7 @@ function ArchiveDetailContent({ date, lang }: ArchiveClientProps) {
 
     if (!data) {
         return (
-            <TerminalPage pageKey="archive">
+            <TerminalPage pageKey="archive" lang={lang} selectorMode={selectorMode}>
                 <div className="border border-red-500/20 bg-red-500/5 p-12 text-center rounded-[2px] space-y-4">
                     <AlertTriangle className="w-8 h-8 text-red-500 mx-auto" />
                     <p className="text-red-500 font-bold uppercase tracking-widest">Archive Data Corrupted or Missing</p>
@@ -67,10 +68,9 @@ function ArchiveDetailContent({ date, lang }: ArchiveClientProps) {
     const regimeTextClass = isBull ? "text-[#00D4FF]" : (isBear ? "text-[#FF4D4D]" : "text-[#FFC107]");
 
     return (
-        <TerminalPage pageKey="archive">
+        <TerminalPage pageKey="archive" lang={lang} selectorMode={selectorMode}>
             <div className="space-y-16">
                 <div className="border-b border-slate-200 dark:border-white/10 pb-4">
-                    <h2 className="text-xl font-black text-slate-900 dark:text-white uppercase tracking-[0.2em]">{t.subpages.archive.title}</h2>
                     <p className="text-[10px] text-slate-500 font-mono mt-1 uppercase tracking-widest leading-relaxed">Recorded Algorithmic Intelligence Snapshot</p>
                 </div>
 
@@ -131,6 +131,25 @@ function ArchiveDetailContent({ date, lang }: ArchiveClientProps) {
                     </div>
                 </div>
 
+                {/* 4. GMS PERFORMANCE AUDIT */}
+                <div className="bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 p-8 rounded-[2px] space-y-6">
+                    <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                            <Shield className="w-5 h-5 text-emerald-500" />
+                            <h3 className="text-sm font-black tracking-widest uppercase">{t.subpages.archive.audit_title}</h3>
+                        </div>
+                        <div className="flex items-center gap-2 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full">
+                            <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                            <span className="text-[9px] font-black text-emerald-500 uppercase tracking-tighter">
+                                {data ? t.subpages.archive.signal_verified : t.subpages.archive.awaiting_data}
+                            </span>
+                        </div>
+                    </div>
+                    <p className="text-[10px] text-slate-500 dark:text-slate-400 font-mono leading-relaxed uppercase tracking-wider">
+                        {data ? t.subpages.archive.signal_verified : t.subpages.archive.awaiting_data} — Computed under Sovereign v6.0 Protocol.
+                    </p>
+                </div>
+
                 {/* MANDATORY LEGAL DISCLAIMER */}
                 <div className="mt-24 pt-12 border-t border-slate-200 dark:border-white/5">
                     <p className="text-[10px] md:text-xs font-black text-slate-500 tracking-widest leading-relaxed uppercase text-center max-w-2xl mx-auto italic">
@@ -142,10 +161,10 @@ function ArchiveDetailContent({ date, lang }: ArchiveClientProps) {
     );
 }
 
-export default function ArchiveClient({ date, lang }: ArchiveClientProps) {
+export default function ArchiveClient({ date, lang, selectorMode }: ArchiveClientProps) {
     return (
         <Suspense fallback={<div className="min-h-screen bg-white dark:bg-[#0A0A0A] flex items-center justify-center text-sky-500 font-mono text-xs animate-pulse">RECONSTRUCTING MARKET STATE...</div>}>
-            <ArchiveDetailContent date={date} lang={lang} />
+            <ArchiveDetailContent date={date} lang={lang} selectorMode={selectorMode} />
         </Suspense>
     );
 }

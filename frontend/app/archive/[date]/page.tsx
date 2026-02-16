@@ -1,10 +1,9 @@
 import React from 'react';
-import ArchiveClient from './ArchiveClient';
+import ArchiveClient from '@/app/[lang]/archive/[date]/ArchiveClient';
 import fs from 'fs';
 import path from 'path';
-import { DICTIONARY, LangType } from '@/data/dictionary';
 
-// Generate Static Params for all archived dates AND languages
+// Generate Static Params for all archived dates for the root English route
 export async function generateStaticParams() {
     const archiveDir = path.join(process.cwd(), 'public', 'data', 'archive');
 
@@ -16,23 +15,13 @@ export async function generateStaticParams() {
             .map(file => file.replace('.json', ''));
     }
 
-    const langs = Object.keys(DICTIONARY).filter(l => l !== 'EN').map(l => l.toLowerCase());
-
-    // Create combination of ALL dates and ALL languages
-    const params = [];
-    for (const d of dates) {
-        for (const l of langs) {
-            params.push({ lang: l, date: d });
-        }
-    }
-
-    return params;
+    return dates.map(d => ({ date: d }));
 }
 
 import { Metadata } from 'next';
 
 type Props = {
-    params: Promise<{ date: string; lang: string }>;
+    params: Promise<{ date: string }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -42,6 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const diffTime = Math.abs(today.getTime() - targetDate.getTime());
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
+    // SEO Strategy: Only index the last 7 days of daily reports to avoid "thin content" bloat
     const shouldIndex = diffDays <= 7;
 
     return {
@@ -54,7 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ArchiveDetailPage({ params }: Props) {
-    const { date, lang } = await params;
-    const normalizedLang = (lang.toUpperCase() as LangType) || 'EN';
-    return <ArchiveClient date={date} lang={normalizedLang} selectorMode="path" />;
+    const { date } = await params;
+    // Root route defaults to English ('EN')
+    return <ArchiveClient date={date} lang="EN" selectorMode="path" />;
 }

@@ -7,6 +7,7 @@ import { Metadata } from 'next';
 import { getMultilingualMetadata } from '@/data/seo';
 import fs from 'fs';
 import path from 'path';
+import { ArchiveCalendar } from '@/components/ArchiveCalendar';
 
 export function generateStaticParams() {
     return Object.keys(DICTIONARY).map((lang) => ({
