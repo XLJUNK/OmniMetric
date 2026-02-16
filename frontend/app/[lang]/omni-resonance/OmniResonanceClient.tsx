@@ -33,6 +33,9 @@ export default function OmniResonanceClient({ lang }: OmniResonanceClientProps) 
     // - [x] Add persistent compliance footer.
     // - [x] Add interactive feature guide explanation.
 
+    // Configuration Constants
+    const VOLATILITY_COEFFICIENT = 0.85;
+
     // Client-side Logic (Zero CPU)
     const resonanceData = useMemo(() => {
         // ASSET VECTOR DEFINITIONS (Refined Phase 2)
@@ -65,26 +68,36 @@ export default function OmniResonanceClient({ lang }: OmniResonanceClientProps) 
         };
 
         // 2. ABSOLUTE TEMPERATURE (Decoupled from Market Data)
-        // Distance from (0,0) defines heat.
-        const distance = Math.hypot(userVector.x, userVector.y);
-
-        // Scale temperature: 0 to 100 base on distance.
-        // Diagonal max distance is ~128 (for 100, 80 mix). Let's use 0.8 factor.
-        const gaugeTemp = Math.min(100, distance * 0.85);
+        const distanceOrigin = Math.hypot(userVector.x, userVector.y);
+        const gaugeTemp = Math.min(100, distanceOrigin * VOLATILITY_COEFFICIENT);
 
         // 3. Market Vector (Reference Point)
-        // Keep OGV as a ghost reference for resonance
-        // Fallback: If current_vector is missing, try last trail entry (Added Phase 2.1)
         const marketVector = marketData?.ogv?.current_vector ||
             (marketData?.ogv?.trails?.length > 0 ? marketData.ogv.trails[marketData.ogv.trails.length - 1] : { x: 50, y: 50 });
 
         // Resonance Status & Distance (Relative to Market Core)
         const resonanceDistance = Math.hypot(marketVector.x - userVector.x, marketVector.y - userVector.y);
-        let status: 'low' | 'mid' | 'high' = 'mid';
-        if (resonanceDistance < 30) status = 'low';
-        else if (resonanceDistance > 70) status = 'high';
+        const scaledDist = resonanceDistance / 100;
 
-        return { gaugeTemp, marketVector, userVector, distance: resonanceDistance, status };
+        let status: 'resonance' | 'alpha' | 'anomaly' = 'resonance';
+        if (scaledDist < 0.5) status = 'resonance';
+        else if (scaledDist < 1.2) status = 'alpha';
+        else status = 'anomaly';
+
+        // Dynamic Guidance Logic
+        const isRecession = marketVector.x < 0 && marketVector.y < 0;
+        const highEquity = allocation.equities > 50;
+        const guidanceKey = (isRecession && highEquity) ? 'recession_stocks' : status;
+
+        return {
+            gaugeTemp,
+            marketVector,
+            userVector,
+            distance: resonanceDistance,
+            scaledDist,
+            status,
+            guidanceKey
+        };
     }, [marketData, allocation]);
 
     if (!marketData) return <div className="min-h-screen bg-black flex items-center justify-center text-sky-500 font-mono tracking-widest animate-pulse">CALIBRATING SYSTEM...</div>;
@@ -157,11 +170,13 @@ export default function OmniResonanceClient({ lang }: OmniResonanceClientProps) 
                 <section className="space-y-8">
                     {resonanceData && (
                         <>
-                            <OmniResonanceGauge temperature={resonanceData.gaugeTemp} />
+                            <OmniResonanceGauge temperature={resonanceData.gaugeTemp} ot={ot} />
                             <OmniResonanceTwinPlot
                                 marketVector={resonanceData.marketVector}
                                 userVector={resonanceData.userVector}
-                                statusLabel={ot.resonance_status?.[resonanceData.status]}
+                                interpretationLabel={ot.interpretation_labels?.[resonanceData.status]}
+                                status={resonanceData.status}
+                                ot={ot}
                             />
 
                             {/* Technical Observation Report (Moved) */}
@@ -180,11 +195,15 @@ export default function OmniResonanceClient({ lang }: OmniResonanceClientProps) 
                                         <>
                                             <div className="border-l-2 border-slate-700 pl-4 py-1">
                                                 <span className="text-[10px] text-slate-500 block mb-1 uppercase tracking-widest font-black">{ot.observation}</span>
-                                                <span className="text-white font-bold">{resonanceData?.gaugeTemp && resonanceData.gaugeTemp > 70 ? "High Exposure (Extreme)" : "Stable (Neutral)"}</span>
+                                                <span className="text-white font-bold">
+                                                    {ot.interpretation_labels?.[resonanceData.status] || resonanceData.status.toUpperCase()}
+                                                </span>
                                             </div>
-                                            <div className="border-l-2 border-sky-500/30 pl-4 py-1">
+                                            <div className="border-l-2 border-sky-500/30 pl-4 py-2 bg-sky-500/5 rounded-r-lg">
                                                 <span className="text-[10px] text-sky-500 block mb-1 uppercase tracking-widest font-black">{ot.technical_insight}</span>
-                                                <span className="text-slate-200 leading-6">{ot.tech_insight_content}</span>
+                                                <span className="text-slate-200 leading-6 italic">
+                                                    {ot.guidance_texts?.[resonanceData.guidanceKey] || ot.tech_insight_content}
+                                                </span>
                                             </div>
                                         </>
                                     )}

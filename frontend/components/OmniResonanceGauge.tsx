@@ -5,9 +5,10 @@ import React from 'react';
 interface OmniResonanceGaugeProps {
     temperature: number; // 0 to 100
     label?: string;
+    ot: any;
 }
 
-export const OmniResonanceGauge: React.FC<OmniResonanceGaugeProps> = ({ temperature, label = "Current Asset Temp" }) => {
+export const OmniResonanceGauge: React.FC<OmniResonanceGaugeProps> = ({ temperature, label = "Current Asset Temp", ot }) => {
     // 0 is blue (cold), 50 is yellow (neutral), 100 is red (fire)
     const getColor = (temp: number) => {
         if (temp < 50) return `rgb(${Math.floor(temp * 5)}, ${Math.floor(100 + temp * 2)}, 255)`;
@@ -19,7 +20,7 @@ export const OmniResonanceGauge: React.FC<OmniResonanceGaugeProps> = ({ temperat
 
     return (
         <div className="w-full flex flex-col items-center p-6 bg-slate-900/50 rounded-2xl border border-sky-500/20 shadow-[0_0_20px_rgba(56,189,248,0.1)]">
-            <h3 className="text-sky-400 text-[10px] font-black uppercase tracking-[0.2em] mb-6">Portfolio Heat Gauge</h3>
+            <h3 className="text-sky-400 text-[10px] font-black uppercase tracking-[0.2em] mb-6">{ot.gauge_title}</h3>
 
             <div className="relative w-48 h-24 overflow-hidden">
                 {/* Gauge Background */}
@@ -55,24 +56,24 @@ export const OmniResonanceGauge: React.FC<OmniResonanceGaugeProps> = ({ temperat
                     } as React.CSSProperties}
                 >
                     {temperature.toFixed(1)}°
-                    {temperature <= 0.1 && <span className="text-sm ml-2 opacity-50 font-bold" style={{ textShadow: 'none' }}>(ICE)</span>}
-                    {temperature >= 99.9 && <span className="text-sm ml-2 opacity-50 font-bold" style={{ textShadow: 'none' }}>(FLAME)</span>}
+                    {temperature <= 0.1 && <span className="text-sm ml-2 opacity-50 font-bold" style={{ textShadow: 'none' }}>({ot.gauge_labels.ice.toUpperCase()})</span>}
+                    {temperature >= 99.9 && <span className="text-sm ml-2 opacity-50 font-bold" style={{ textShadow: 'none' }}>({ot.gauge_labels.fire.toUpperCase()})</span>}
                 </div>
-                <div className="text-[10px] text-sky-400/70 font-black uppercase tracking-[0.2em] mt-2">Portfolio Heat</div>
+                <div className="text-[10px] text-sky-400/70 font-black uppercase tracking-[0.2em] mt-2">{ot.portfolio_heat_label}</div>
             </div>
 
             <div className="w-full grid grid-cols-3 gap-2 mt-6">
                 <div className="text-center">
                     <div className="h-1 bg-blue-500 rounded-full mb-1 opacity-50" />
-                    <span className="text-[8px] text-slate-500 uppercase font-bold">Ice</span>
+                    <span className="text-[8px] text-slate-500 uppercase font-bold">{ot.gauge_labels.ice}</span>
                 </div>
                 <div className="text-center">
                     <div className="h-1 bg-yellow-400 rounded-full mb-1 opacity-50" />
-                    <span className="text-[8px] text-slate-500 uppercase font-bold">Neutral</span>
+                    <span className="text-[8px] text-slate-500 uppercase font-bold">{ot.gauge_labels.neutral}</span>
                 </div>
                 <div className="text-center">
                     <div className="h-1 bg-red-600 rounded-full mb-1 opacity-50" />
-                    <span className="text-[8px] text-slate-500 uppercase font-bold">Flame</span>
+                    <span className="text-[8px] text-slate-500 uppercase font-bold">{ot.gauge_labels.fire}</span>
                 </div>
             </div>
         </div>

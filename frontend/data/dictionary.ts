@@ -369,9 +369,55 @@ export const DICTIONARY: Record<LangType, any> = {
                 insight_text_1: "Based on current market data, the selected asset configuration shows a medium correlation with the macro environment's",
                 insight_text_2: "trend.",
                 tech_insight_content: "According to the Trilateral Council analysis, allocations to Equities and Crypto tend to pull the OGV vector toward the Overheating quadrant, confirming a tendency to increase sensitivity to market volatility.",
-                feature_guide: "Adjust the sliders to input your portfolio distribution. This visualizes your position relative to the macro core and calculates your specific 'Portfolio Heat' level."
+                resonance_status: {
+                    low: "LOW (Market Resonance)",
+                    mid: "MID (Standard)",
+                    high: "HIGH (Market Divergence)"
+                },
+                interpretation_labels: {
+                    resonance: "Market Resonance",
+                    alpha: "Strategic Alpha",
+                    anomaly: "Contra-Cyclic Anomaly"
+                },
+                guidance_texts: {
+                    resonance: "Your portfolio is highly aligned with the current macro environment.",
+                    alpha: "Intentionally tilted toward a specific economic scenario (e.g., Inflation Hedge).",
+                    anomaly: "Extreme divergence from the market regime (e.g., Aggressive during Recession). Watch for heightened volatility.",
+                    recession_stocks: "Sensitivity mismatch: You are increasing equity exposure against a contracting market (Contra-Cyclic). Prepare for high volatility."
+                },
+                feature_guide: "Adjust the sliders to input your portfolio distribution. This visualizes your position relative to the macro core and calculates your specific 'Portfolio Heat' level.",
+                gauge_title: "Portfolio Heat Gauge",
+                portfolio_heat_label: "Portfolio Heat",
+                gauge_labels: {
+                    ice: "Ice",
+                    neutral: "Neutral",
+                    fire: "Flame"
+                },
+                quadrants: {
+                    stagflation: "Stagflation",
+                    overheating: "Overheating",
+                    recession: "Recession",
+                    goldilocks: "Goldilocks"
+                },
+                axes: {
+                    growth: "GROWTH MOMENTUM",
+                    inflation: "MACRO PRESSURE"
+                },
+                directions: {
+                    high_pressure: "HIGH PRESS.",
+                    low_pressure: "LOW PRESS.",
+                    high_growth: "EXPANSION",
+                    low_growth: "CONTRACTION"
+                },
+                chart_labels: {
+                    market_core: "MARKET CORE",
+                    portfolio: "PORTFOLIO"
+                },
+                twin_plot_title: "OGV Vector Mapping (Twin Plot)",
+                resonance_distance: "Resonance Distance",
+                safe_haven_report: "You are currently positioned outside the market's gravitational field (Safe Haven), completely isolated from macro overheating."
             }
-        },
+        }
     },
     JP: {
         status: {
@@ -729,13 +775,53 @@ export const DICTIONARY: Record<LangType, any> = {
                 insight_text_1: "現在の市場データに基づくと、選択された資産構成はマクロ環境の「",
                 insight_text_2: "」トレンドに対して中程度の相関を示しています。",
                 tech_insight_content: "多角的な分析によれば、Equities および Crypto への配分は OGV ベクトルを Overheating 象限へと牽引する性質があり、市場のボラティリティに対する感応度を高める傾向が確認されます。",
-                safe_haven_report: "あなたは現在、市場の重力圏外（Safe Haven）に位置しており、マクロの過熱から完全に隔離されています",
                 resonance_status: {
                     low: "LOW（市場連動）",
                     mid: "MID（標準）",
                     high: "HIGH（市場非連動）"
                 },
-                feature_guide: "スライダーを動かして自身のポートフォリオ比率を入力してください。現在のマーケットに対する相対的な位置付けと、そこから算出される「ポートフォリオ熱量」を可視化します。"
+                interpretation_labels: {
+                    resonance: "Market Resonance (市場共鳴)",
+                    alpha: "Strategic Alpha (戦略的アルファ)",
+                    anomaly: "Contra-Cyclic Anomaly (逆行的乖離)"
+                },
+                guidance_texts: {
+                    resonance: "ポートフォリオが現在のマクロ環境に高度に適合している状態。",
+                    alpha: "特定の経済シナリオ（例：インフレ耐性）に意図的に傾斜している状態。",
+                    anomaly: "市場環境（例：Recession）に対し、極めて攻撃的または防衛的な逆張りを仕掛けている状態。",
+                    recession_stocks: "市場の収縮に対し、資産の感応度が逆行しています（Contra-Cyclic）。ボラティリティの増大に備えてください。"
+                },
+                feature_guide: "スライダーを動かして自身のポートフォリオ比率を入力してください。現在のマーケットに対する相対的な位置付けと、そこから算出される「ポートフォリオ熱量」を可視化します。",
+                gauge_title: "ポートフォリオ熱量計",
+                portfolio_heat_label: "ポートフォリオ熱量",
+                gauge_labels: {
+                    ice: "氷結感 (Ice)",
+                    neutral: "中立 (Neutral)",
+                    fire: "過熱 (Flame)"
+                },
+                quadrants: {
+                    stagflation: "スタグフレーション",
+                    overheating: "オーバーヒート",
+                    recession: "リセッション",
+                    goldilocks: "適温相場 (Goldilocks)"
+                },
+                axes: {
+                    growth: "成長モメンタム",
+                    inflation: "マクロ圧力"
+                },
+                directions: {
+                    high_pressure: "圧力上昇",
+                    low_pressure: "圧力低下",
+                    high_growth: "景気拡大",
+                    low_growth: "景気後退"
+                },
+                chart_labels: {
+                    market_core: "市場コア",
+                    portfolio: "ポートフォリオ"
+                },
+                twin_plot_title: "OGVベクトル・マッピング (ツイン・プロット)",
+                resonance_distance: "共鳴距離 (Resonance Distance)",
+                safe_haven_report: "現在、ポートフォリオは市場の「重力圏」の外側（セーフヘイブン）に位置しており、マクロ的な過熱感から完全に隔離された状態にあります。"
             }
         }
     },
@@ -1048,7 +1134,53 @@ export const DICTIONARY: Record<LangType, any> = {
                 insight_text_1: "根据当前市场数据，所选资产配置与宏观环境的",
                 insight_text_2: "趋势显示出中等相关性。",
                 tech_insight_content: "根据三边委员会的分析，对股票和加密资产的配置往往会将 OGV 向量拉向过热象限，证实了增加对市场波动敏感性的趋势。",
-                feature_guide: "调整滑块以输入您的投资组合分布。这将可视化您相对于宏观核心的位置，并计算您的特定“投资组合热度”级别。"
+                feature_guide: "调整滑块以输入您的投资组合分布。这将可视化您相对于宏观核心的位置，并计算您的特定“投资组合热度”级别。",
+                resonance_status: {
+                    low: "低（市场同步）",
+                    mid: "中（标准）",
+                    high: "高（市场偏离）"
+                },
+                interpretation_labels: {
+                    resonance: "市场共鸣",
+                    alpha: "战略阿尔法",
+                    anomaly: "反周期异常"
+                },
+                guidance_texts: {
+                    resonance: "您的投资组合与当前宏观环境高度契合。",
+                    alpha: "有意向特定经济情景（如通胀对冲）倾斜。",
+                    anomaly: "与市场机制极端背离（例如在衰退期间采取激进态势）。请注意波动加剧。",
+                    recession_stocks: "敏感度不匹配：您正在收缩的市场中增加股票敞口（反周期）。请为高波动做好准备。"
+                },
+                gauge_title: "投资组合热度表",
+                portfolio_heat_label: "投资组合热度",
+                gauge_labels: {
+                    ice: "冰冷",
+                    neutral: "中性",
+                    fire: "过热"
+                },
+                quadrants: {
+                    stagflation: "滞胀",
+                    overheating: "过热",
+                    recession: "衰退",
+                    goldilocks: "金发姑娘"
+                },
+                axes: {
+                    growth: "增长动能",
+                    inflation: "宏观压力"
+                },
+                directions: {
+                    high_pressure: "高压",
+                    low_pressure: "低压",
+                    high_growth: "扩张",
+                    low_growth: "收缩"
+                },
+                chart_labels: {
+                    market_core: "市场核心",
+                    portfolio: "投资组合"
+                },
+                twin_plot_title: "OGV 矢量映射（双曲线图）",
+                resonance_distance: "共鸣距离",
+                safe_haven_report: "您当前处于市场引力场之外（避风港），完全隔离于宏观过热。"
             }
         }
     },
@@ -1361,7 +1493,53 @@ export const DICTIONARY: Record<LangType, any> = {
                 insight_text_1: "Basado en los datos actuales del mercado, la configuración de activos seleccionada muestra una correlación media con la tendencia del",
                 insight_text_2: "entorno macro.",
                 tech_insight_content: "Según el análisis del Consejo Trilateral, las asignaciones a Acciones y Cripto tienden a tirar del vector OGV hacia el cuadrante de Recalentamiento, confirmando una tendencia a aumentar la sensibilidad a la volatilidad del mercado.",
-                feature_guide: "Ajuste los controles deslizantes para ingresar la distribución de su cartera. Esto visualiza su posición relativa al núcleo macro y calcula su nivel específico de 'Calor de Cartera'."
+                feature_guide: "Ajuste los controles deslizantes para ingresar la distribución de su cartera. Esto visualiza su posición relativa al núcleo macro y calcula su nivel específico de 'Calor de Cartera'.",
+                resonance_status: {
+                    low: "BAJA (Resonancia de Mercado)",
+                    mid: "MEDIA (Estándar)",
+                    high: "ALTA (Divergencia de Mercado)"
+                },
+                interpretation_labels: {
+                    resonance: "Resonancia de Mercado",
+                    alpha: "Alpha Estratégico",
+                    anomaly: "Anomalía Contracíclica"
+                },
+                guidance_texts: {
+                    resonance: "Su cartera está altamente alineada con el entorno macro actual.",
+                    alpha: "Intencionalmente inclinada hacia un escenario económico específico (ej. cobertura contra la inflación).",
+                    anomaly: "Divergencia extrema del régimen de mercado (ej. agresiva durante la recesión). Esté atento a una mayor volatilidad.",
+                    recession_stocks: "Desajuste de sensibilidad: Está aumentando la exposición a acciones frente a un mercado en contracción (Contracíclico). Prepárese para una alta volatilidad."
+                },
+                gauge_title: "Medidor de Calor de Cartera",
+                portfolio_heat_label: "Calor de Cartera",
+                gauge_labels: {
+                    ice: "Congelado",
+                    neutral: "Neutral",
+                    fire: "Calor"
+                },
+                quadrants: {
+                    stagflation: "Estanflación",
+                    overheating: "Recalentamiento",
+                    recession: "Recesión",
+                    goldilocks: "Goldilocks"
+                },
+                axes: {
+                    growth: "Momentum de Crecimiento",
+                    inflation: "Presión Macro"
+                },
+                directions: {
+                    high_pressure: "ALTA PRESIÓN",
+                    low_pressure: "BAJA PRESIÓN",
+                    high_growth: "EXPANSIÓN",
+                    low_growth: "CONTRACCIÓN"
+                },
+                chart_labels: {
+                    market_core: "NÚCLEO DE MERCADO",
+                    portfolio: "CARTERA"
+                },
+                twin_plot_title: "Mapeo de Vectores OGV (Twin Plot)",
+                resonance_distance: "Distancia de Resonancia",
+                safe_haven_report: "Actualmente se encuentra posicionado fuera del campo gravitacional del mercado (Refugio Seguro), completamente aislado del sobrecalentamiento macro."
             }
         }
     },
@@ -1674,7 +1852,53 @@ export const DICTIONARY: Record<LangType, any> = {
                 insight_text_1: "वर्तमान बाजार डेटा के आधार पर, चयनित संपत्ति विन्यास मैक्रो पर्यावरण के",
                 insight_text_2: "रुझान के साथ एक मध्यम सहसंबंध दिखाता है।",
                 tech_insight_content: "त्रिपक्षीय परिषद के विश्लेषण के अनुसार, इक्विटी और क्रिप्टो के आवंटन ओजीवी वेक्टर को ओवरहीटिंग चतुर्थांश की ओर खींचते हैं, जो बाजार की अस्थिरता के प्रति संवेदनशीलता बढ़ाने की प्रवृत्ति की पुष्टि करते हैं।",
-                feature_guide: "अपने पोर्टफोलियो वितरण को दर्ज करने के लिए स्लाइडर को समायोजित करें। यह मैक्रो कोर के सापेक्ष आपकी स्थिति की कल्पना करता है और आपके विशिष्ट 'पोर्टफोलियो हीट' स्तर की गणना करता है।"
+                feature_guide: "अपने पोर्टफोलियो वितरण को दर्ज करने के लिए स्लाइडर को समायोजित करें। यह मैक्रो कोर के सापेक्ष आपकी स्थिति की कल्पना करता है और आपके विशिष्ट 'पोर्टफोलियो हीट' स्तर की गणना करता है।",
+                resonance_status: {
+                    low: "कम (बाजार अनुनाद)",
+                    mid: "मध्य (मानक)",
+                    high: "उच्च (बाजार विचलन)"
+                },
+                interpretation_labels: {
+                    resonance: "बाजार अनुनाद",
+                    alpha: "रणनीतिक अल्फा",
+                    anomaly: "प्रतिकूल-चक्रीय विसंगति"
+                },
+                guidance_texts: {
+                    resonance: "आपका पोर्टफोलियो वर्तमान मैक्रो वातावरण के साथ अत्यधिक संरेखित है।",
+                    alpha: "जानबूझकर एक विशिष्ट आर्थिक परिदृश्य (जैसे, मुद्रास्फीति बचाव) की ओर झुका हुआ।",
+                    anomaly: "बाजार शासन से अत्यधिक विचलन (जैसे, मंदी के दौरान आक्रामक)। बढ़ती अस्थिरता पर नज़र रखें।",
+                    recession_stocks: "संवेदनशीलता बेमेल: आप सिकुड़ते बाजार (प्रतिकूल-चक्रीय) के खिलाफ इक्विटी जोखिम बढ़ा रहे हैं। उच्च अस्थिरता के लिए तैयार रहें।"
+                },
+                gauge_title: "पोर्टफोलियो हीट गेज",
+                portfolio_heat_label: "पोर्टफोलियो हीट",
+                gauge_labels: {
+                    ice: "बर्फ",
+                    neutral: "तटस्थ",
+                    fire: "लौ"
+                },
+                quadrants: {
+                    stagflation: "स्टैगफ्लेशन",
+                    overheating: "ओवरहीटिंग",
+                    recession: "मंदी",
+                    goldilocks: "गोल्डीलॉक्स"
+                },
+                axes: {
+                    growth: "विकास गति",
+                    inflation: "मैक्रो दबाव"
+                },
+                directions: {
+                    high_pressure: "उच्च दबाव",
+                    low_pressure: "कम दबाव",
+                    high_growth: "विस्तार",
+                    low_growth: "संकुचन"
+                },
+                chart_labels: {
+                    market_core: "बाजार कोर",
+                    portfolio: "पोर्टफोलियो"
+                },
+                twin_plot_title: "OGV वेक्टर मैपिंग (ट्विन प्लॉट)",
+                resonance_distance: "अनुनाद दूरी",
+                safe_haven_report: "आप वर्तमान में बाजार के गुरुत्वाकर्षण क्षेत्र (सेफ हेवन) के बाहर स्थित हैं, जो मैक्रो ओवरहीटिंग से पूरी तरह से अलग है।"
             }
         }
     },
@@ -1987,7 +2211,53 @@ export const DICTIONARY: Record<LangType, any> = {
                 insight_text_1: "Berdasarkan data pasar saat ini, konfigurasi aset yang dipilih menunjukkan korelasi sedang dengan tren",
                 insight_text_2: "lingkungan makro.",
                 tech_insight_content: "Menurut analisis Dewan Trilateral, alokasi ke Saham dan Kripto cenderung menarik vektor OGV ke arah kuadran Pemanasan Berlebih, mengkonfirmasi kecenderungan untuk meningkatkan sensitivitas terhadap volatilitas pasar.",
-                feature_guide: "Sesuaikan penggeser untuk memasukkan distribusi portofolio Anda. Ini memvisualisasikan posisi Anda relatif terhadap inti makro dan menghitung level 'Panas Portofolio' spesifik Anda."
+                feature_guide: "Sesuaikan penggeser untuk memasukkan distribusi portofolio Anda. Ini memvisualisasikan posisi Anda relatif terhadap inti makro dan menghitung level 'Panas Portofolio' spesifik Anda.",
+                resonance_status: {
+                    low: "RENDAH (Resonansi Pasar)",
+                    mid: "SEDANG (Standar)",
+                    high: "TINGGI (Divergensi Pasar)"
+                },
+                interpretation_labels: {
+                    resonance: "Resonansi Pasar",
+                    alpha: "Alpha Strategis",
+                    anomaly: "Anomali Kontra-Siklus"
+                },
+                guidance_texts: {
+                    resonance: "Portofolio Anda sangat selaras dengan lingkungan makro saat ini.",
+                    alpha: "Sengaja dimiringkan ke arah skenario ekonomi tertentu (misalnya, Lindung Nilai Inflasi).",
+                    anomaly: "Divergensi ekstrem dari rezim pasar (misalnya, Agresif selama Resesi). Perhatikan volatilitas yang meningkat.",
+                    recession_stocks: "Ketidaksesuaian sensitivitas: Anda meningkatkan paparan ekuitas terhadap pasar yang berkontraksi (Kontra-Siklus). Bersiaplah untuk volatilitas tinggi."
+                },
+                gauge_title: "Pengukur Panas Portofolio",
+                portfolio_heat_label: "Panas Portofolio",
+                gauge_labels: {
+                    ice: "Beku",
+                    neutral: "Netral",
+                    fire: "Api"
+                },
+                quadrants: {
+                    stagflation: "Stagflasi",
+                    overheating: "Pemanasan Berlebih",
+                    recession: "Resesi",
+                    goldilocks: "Goldilocks"
+                },
+                axes: {
+                    growth: "Momentum Pertumbuhan",
+                    inflation: "Tekanan Makro"
+                },
+                directions: {
+                    high_pressure: "TEKANAN TINGGI",
+                    low_pressure: "TEKANAN RENDAH",
+                    high_growth: "EKSPANSI",
+                    low_growth: "KONTRAKSI"
+                },
+                chart_labels: {
+                    market_core: "INTI PASAR",
+                    portfolio: "PORTOFOLIO"
+                },
+                twin_plot_title: "Pemetaan Vektor OGV (Twin Plot)",
+                resonance_distance: "Jarak Resonansi",
+                safe_haven_report: "Anda saat ini diposisikan di luar medan gravitasi pasar (Safe Haven), benar-benar terisolasi dari pemanasan makro."
             }
         }
     },
@@ -2301,7 +2571,53 @@ export const DICTIONARY: Record<LangType, any> = {
                 insight_text_1: "بناءً على بيانات السوق الحالية، يظهر تكوين الأصول المحدد ارتباطاً متوسطاً مع اتجاه",
                 insight_text_2: "البيئة الكلية.",
                 tech_insight_content: "وفقاً لتحليل المجلس الثلاثي، يميل تخصيص الأسهم والعملات المشفرة إلى سحب ناقل OGV نحو ربع فرط الإحماء، مما يؤكد الميل إلى زيادة الحساسية لتقلبات السوق.",
-                feature_guide: "اضبط أشرطة التمرير لإدخال توزيع محفظتك. هذا يصور موقعك بالنسبة للنواة الكلية ويحسب مستوى 'حرارة المحفظة' الخاص بك."
+                feature_guide: "اضبط أشرطة التمرير لإدخال توزيع محفظتك. هذا يصور موقعك بالنسبة للنواة الكلية ويحسب مستوى 'حرارة المحفظة' الخاص بك.",
+                resonance_status: {
+                    low: "منخفض (رنين السوق)",
+                    mid: "متوسط (قياسي)",
+                    high: "عالي (تباعد السوق)"
+                },
+                interpretation_labels: {
+                    resonance: "رنين السوق",
+                    alpha: "ألفا استراتيجية",
+                    anomaly: "شذوذ عكس الدورة الاقتصادية"
+                },
+                guidance_texts: {
+                    resonance: "محفظتك متوافقة للغاية مع بيئة الماكرو الحالية.",
+                    alpha: "تم توجيهها عمدا نحو سيناريو اقتصادي محدد (مثل التحوط من التضخم).",
+                    anomaly: "تباعد كبير عن نظام السوق (مثل الهجوم أثناء الركود). راقب زيادة التقلبات.",
+                    recession_stocks: "عدم تطابق الحساسية: أنت تزيد من التعرض للأسهم مقابل سوق منكمش (عكس الدورة الاقتصادية). استعد لتقلبات عالية."
+                },
+                gauge_title: "مقياس حرارة المحفظة",
+                portfolio_heat_label: "حرارة المحفظة",
+                gauge_labels: {
+                    ice: "جليد",
+                    neutral: "محايد",
+                    fire: "لهب"
+                },
+                quadrants: {
+                    stagflation: "ركود تضخمي",
+                    overheating: "فرط إحماء",
+                    recession: "ركود",
+                    goldilocks: "جولديلوكس"
+                },
+                axes: {
+                    growth: "زخم النمو",
+                    inflation: "ضغط الماكرو"
+                },
+                directions: {
+                    high_pressure: "ضغط مرتفع",
+                    low_pressure: "ضغط منخفض",
+                    high_growth: "توسع",
+                    low_growth: "انكماش"
+                },
+                chart_labels: {
+                    market_core: "قلب السوق",
+                    portfolio: "المحفظة"
+                },
+                twin_plot_title: "رسم خرائط ناقل OGV (مخطط مزدوج)",
+                resonance_distance: "مسافة الرنين",
+                safe_haven_report: "أنت متمركز حاليًا خارج حقل الجاذبية في السوق (الملاذ الآمن)، وبمعزل تمامًا عن الإنهاك الكلي للبيئة."
             }
         }
     },
@@ -2528,7 +2844,53 @@ export const DICTIONARY: Record<LangType, any> = {
                 insight_text_1: "Basierend auf aktuellen Marktdaten zeigt die ausgewählte Asset-Konfiguration eine mittlere Korrelation mit dem Trend des",
                 insight_text_2: "Makroumfelds.",
                 tech_insight_content: "Laut der Analyse des Trilateralen Rates neigen Allokationen in Aktien und Krypto dazu, den OGV-Vektor in den Überhitzungsquadranten zu ziehen, was die Tendenz bestätigt, die Sensitivität gegenüber Marktvolatilität zu erhöhen.",
-                feature_guide: "Passen Sie die Schieberegler an, um Ihre Portfolioverteilung einzugeben. Dies visualisiert Ihre Position relativ zum Makro-Kern und berechnet Ihr spezifisches 'Portfolio-Hitze'-Niveau."
+                feature_guide: "Passen Sie die Schieberegler an, um Ihre Portfolioverteilung einzugeben. Dies visualisiert Ihre Position relativ zum Makro-Kern und berechnet Ihr spezifisches 'Portfolio-Hitze'-Niveau.",
+                resonance_status: {
+                    low: "GERING (Marktresonanz)",
+                    mid: "MITTEL (Standard)",
+                    high: "HOCH (Marktdivergenz)"
+                },
+                interpretation_labels: {
+                    resonance: "Marktresonanz",
+                    alpha: "Strategisches Alpha",
+                    anomaly: "Kontrazyklische Anomalie"
+                },
+                guidance_texts: {
+                    resonance: "Ihr Portfolio ist stark auf das aktuelle Makroumfeld ausgerichtet.",
+                    alpha: "Bewusst auf ein bestimmtes Wirtschaftsszenario ausgerichtet (z. B. Inflationsschutz).",
+                    anomaly: "Extreme Abweichung vom Marktregime (z. B. aggressiv während der Rezession). Achten Sie auf erhöhte Volatilität.",
+                    recession_stocks: "Fehlanpassung der Sensitivität: Sie erhöhen das Aktienexposure gegen einen schrumpfenden Markt (kontrazyklisch). Bereiten Sie sich auf hohe Volatilität vor."
+                },
+                gauge_title: "Portfolio-Hitzemesser",
+                portfolio_heat_label: "Portfolio-Hitze",
+                gauge_labels: {
+                    ice: "Eis",
+                    neutral: "Neutral",
+                    fire: "Flamme"
+                },
+                quadrants: {
+                    stagflation: "Stagflation",
+                    overheating: "Überhitzung",
+                    recession: "Rezession",
+                    goldilocks: "Goldilocks"
+                },
+                axes: {
+                    growth: "Wachstumsdynamik",
+                    inflation: "Makro-Druck"
+                },
+                directions: {
+                    high_pressure: "HOHER DRUCK",
+                    low_pressure: "NIEDRIGER DRUCK",
+                    high_growth: "EXPANSION",
+                    low_growth: "KONTRAKTION"
+                },
+                chart_labels: {
+                    market_core: "MARKT-KERN",
+                    portfolio: "PORTFOLIO"
+                },
+                twin_plot_title: "OGV Vektor-Mapping (Twin Plot)",
+                resonance_distance: "Resonanz-Distanz",
+                safe_haven_report: "Sie sind derzeit außerhalb des Gravitationsfeldes des Marktes positioniert (Safe Haven), völlig isoliert von makroökonomischer Überhitzung."
             }
         },
         settings: {
@@ -2821,7 +3183,53 @@ export const DICTIONARY: Record<LangType, any> = {
                 insight_text_1: "Sur la base des données de marché actuelles, la configuration d'actifs sélectionnée montre une corrélation moyenne avec la tendance de",
                 insight_text_2: "l'environnement macro.",
                 tech_insight_content: "Selon l'analyse du Conseil Trilatéral, les allocations aux actions et aux cryptos tendent à tirer le vecteur OGV vers le quadrant de surchauffe, confirmant une tendance à accroître la sensibilité à la volatilité du marché.",
-                feature_guide: "Ajustez les curseurs pour saisir la répartition de votre portefeuille. Cela visualise votre position par rapport au noyau macro et calcule votre niveau spécifique de « Chaleur du Portefeuille »."
+                feature_guide: "Ajustez les curseurs pour saisir la répartition de votre portefeuille. Cela visualise votre position par rapport au noyau macro et calcule votre niveau spécifique de « Chaleur du Portefeuille ».",
+                resonance_status: {
+                    low: "FAIBLE (Résonance de Marché)",
+                    mid: "MOYEN (Standard)",
+                    high: "ÉLEVÉ (Divergence de Marché)"
+                },
+                interpretation_labels: {
+                    resonance: "Résonance de Marché",
+                    alpha: "Alpha Stratégique",
+                    anomaly: "Anomalie Contre-Cyclique"
+                },
+                guidance_texts: {
+                    resonance: "Votre portefeuille est parfaitement aligné avec l'environnement macro actuel.",
+                    alpha: "Intentionnellement orienté vers un scénario économique spécifique (ex: couverture contre l'inflation).",
+                    anomaly: "Divergence extrême par rapport au régime du marché (ex: agressif en période de récession). Surveillez l'augmentation de la volatilité.",
+                    recession_stocks: "Inadéquation de sensibilité : Vous augmentez l'exposition aux actions face à un marché en contraction (contre-cyclique). Préparez-vous à une forte volatilité."
+                },
+                gauge_title: "Jauge de Chaleur du Portefeuille",
+                portfolio_heat_label: "Chaleur du Portefeuille",
+                gauge_labels: {
+                    ice: "Glace",
+                    neutral: "Neutre",
+                    fire: "Flamme"
+                },
+                quadrants: {
+                    stagflation: "Stagflation",
+                    overheating: "Surchauffe",
+                    recession: "Récession",
+                    goldilocks: "Boucle d'or"
+                },
+                axes: {
+                    growth: "Momentum de Croissance",
+                    inflation: "Pression Macro"
+                },
+                directions: {
+                    high_pressure: "HAUTE PRESSION",
+                    low_pressure: "BASSE PRESSION",
+                    high_growth: "EXPANSION",
+                    low_growth: "CONTRACTION"
+                },
+                chart_labels: {
+                    market_core: "NOYAU DU MARCHÉ",
+                    portfolio: "PORTEFEUILLE"
+                },
+                twin_plot_title: "Cartographie des Vecteurs OGV (Twin Plot)",
+                resonance_distance: "Distance de Résonance",
+                safe_haven_report: "Vous êtes actuellement positionné en dehors du champ gravitationnel du marché (Safe Haven), complètement isolé de la surchauffe macroéconomique."
             }
         },
         settings: {

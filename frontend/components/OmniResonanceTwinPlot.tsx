@@ -12,12 +12,18 @@ interface VectorPoint {
 interface OmniResonanceTwinPlotProps {
     marketVector: { x: number; y: number };
     userVector: { x: number; y: number };
-    statusLabel?: string;
+    interpretationLabel?: string;
+    status?: 'resonance' | 'alpha' | 'anomaly';
+    ot: any;
 }
 
-export const OmniResonanceTwinPlot: React.FC<OmniResonanceTwinPlotProps> = ({ marketVector, userVector, statusLabel }) => {
+export const OmniResonanceTwinPlot: React.FC<OmniResonanceTwinPlotProps> = ({ marketVector, userVector, interpretationLabel, status = 'resonance', ot }) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const distance = Math.hypot(marketVector.x - userVector.x, marketVector.y - userVector.y);
+
+    // Derived UI states
+    const statusColor = status === 'anomaly' ? 'text-orange-500' : status === 'alpha' ? 'text-amber-400' : 'text-sky-400';
+    const glowColor = status === 'anomaly' ? 'rgba(249, 115, 22, 0.3)' : status === 'alpha' ? 'rgba(251, 191, 36, 0.3)' : 'rgba(56, 189, 248, 0.3)';
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -62,15 +68,16 @@ export const OmniResonanceTwinPlot: React.FC<OmniResonanceTwinPlotProps> = ({ ma
         };
 
         // QII: Top-Left (Stagflation)
-        drawRegime(0, 0, cx, cy, [`rgba(168, 85, 247, ${bgAlpha})`, `rgba(239, 68, 68, ${bgAlpha})`], 'Stagflation');
+        drawRegime(0, 0, cx, cy, [`rgba(168, 85, 247, ${bgAlpha})`, `rgba(239, 68, 68, ${bgAlpha})`], ot.quadrants.stagflation);
         // QI: Top-Right (Overheating)
-        drawRegime(cx, 0, cx, cy, [`rgba(245, 158, 11, ${bgAlpha})`, `rgba(234, 179, 8, ${bgAlpha})`], 'Overheating');
+        drawRegime(cx, 0, cx, cy, [`rgba(245, 158, 11, ${bgAlpha})`, `rgba(234, 179, 8, ${bgAlpha})`], ot.quadrants.overheating);
         // QIII: Bottom-Left (Recession)
-        drawRegime(0, cy, cx, cy, [`rgba(30, 41, 59, 0.6)`, `rgba(100, 116, 139, 0.2)`], 'Recession');
+        drawRegime(0, cy, cx, cy, [`rgba(30, 41, 59, 0.6)`, `rgba(100, 116, 139, 0.2)`], ot.quadrants.recession);
         // QIV: Bottom-Right (Goldilocks)
-        drawRegime(cx, cy, cx, cy, [`rgba(16, 185, 129, ${bgAlpha})`, `rgba(14, 165, 233, ${bgAlpha})`], 'Goldilocks');
+        drawRegime(cx, cy, cx, cy, [`rgba(16, 185, 129, ${bgAlpha})`, `rgba(14, 165, 233, ${bgAlpha})`], ot.quadrants.goldilocks);
 
-        // 2. Grid Lines (Expand to frame)
+        // ... (Grid and Axis logic remains same) ...
+        // 2. Grid Lines
         ctx.strokeStyle = 'rgba(56, 189, 248, 0.1)';
         ctx.lineWidth = 1;
         ctx.beginPath();
@@ -96,15 +103,13 @@ export const OmniResonanceTwinPlot: React.FC<OmniResonanceTwinPlotProps> = ({ ma
             if (i === 0) continue;
             const pos = (i / 100) * scale;
             const tickSize = i % 50 === 0 ? 6 : 3;
-            // X-axis ticks
             ctx.moveTo(cx + pos, cy - tickSize); ctx.lineTo(cx + pos, cy + tickSize);
-            // Y-axis ticks
             ctx.moveTo(cx - tickSize, cy + pos); ctx.lineTo(cx + tickSize, cy + pos);
         }
         ctx.stroke();
 
         // 4. Axis Titles & Direction Labels (HUD Style)
-        ctx.fillStyle = 'rgba(203, 213, 225, 0.8)'; // text-slate-300 level
+        ctx.fillStyle = 'rgba(203, 213, 225, 0.8)';
         ctx.font = '900 9px Inter';
         ctx.textAlign = 'center';
 
@@ -112,21 +117,21 @@ export const OmniResonanceTwinPlot: React.FC<OmniResonanceTwinPlotProps> = ({ ma
         ctx.save();
         ctx.translate(10, cy);
         ctx.rotate(-Math.PI / 2);
-        ctx.fillText('GROWTH MOMENTUM', 0, 0);
+        ctx.fillText(ot.axes.growth, 0, 0);
         ctx.restore();
 
         // Macro Pressure (Top)
-        ctx.fillText('MACRO PRESSURE', cx, 15);
+        ctx.fillText(ot.axes.inflation, cx, 15);
 
         // Direction Small Labels (Brightened)
         ctx.font = 'black 8px Inter';
         ctx.fillStyle = 'rgba(203, 213, 225, 1)';
         ctx.textAlign = 'right';
-        ctx.fillText('HIGH PRESS.', w - 10, 25);
-        ctx.fillText('LOW PRESS.', w - 10, h - 15);
-        ctx.fillText('EXPANSION', w - 10, cy - 8);
+        ctx.fillText(ot.directions.high_pressure, w - 10, 25);
+        ctx.fillText(ot.directions.low_pressure, w - 10, h - 15);
+        ctx.fillText(ot.directions.high_growth, w - 10, cy - 8);
         ctx.textAlign = 'left';
-        ctx.fillText('CONTRACTION', 25, cy - 8);
+        ctx.fillText(ot.directions.low_growth, 25, cy - 8);
 
         const drawPoint = (v: { x: number; y: number }, color: string, label: string, glow = true) => {
             const sx = cx + (v.x / 100) * scale;
@@ -163,14 +168,14 @@ export const OmniResonanceTwinPlot: React.FC<OmniResonanceTwinPlotProps> = ({ ma
         ctx.setLineDash([]);
 
         // Plot Points
-        drawPoint(marketVector, '#0ea5e9', 'MARKET CORE');
-        drawPoint(userVector, '#22d3ee', 'PORTFOLIO');
+        drawPoint(marketVector, '#0ea5e9', ot.chart_labels.market_core);
+        drawPoint(userVector, '#22d3ee', ot.chart_labels.portfolio);
 
-    }, [marketVector, userVector]);
+    }, [marketVector, userVector, ot]);
 
     return (
         <div className="w-full flex flex-col items-center p-6 bg-slate-900/50 rounded-2xl border border-sky-500/20 shadow-[0_0_20px_rgba(56,189,248,0.1)]">
-            <h3 className="text-sky-400 text-[10px] font-black uppercase tracking-[0.2em] mb-4">OGV Vector Mapping (Twin Plot)</h3>
+            <h3 className="text-sky-400 text-[10px] font-black uppercase tracking-[0.2em] mb-4">{ot.twin_plot_title}</h3>
 
             <div className="relative w-full aspect-square max-w-[440px] bg-black/40 rounded-xl overflow-hidden border border-slate-800">
                 <canvas ref={canvasRef} className="w-full h-full" />
@@ -178,9 +183,9 @@ export const OmniResonanceTwinPlot: React.FC<OmniResonanceTwinPlotProps> = ({ ma
 
             <div className="mt-4 w-full border-t border-slate-800 pt-6">
                 <div className="flex justify-between items-center bg-slate-950/50 p-3 rounded-lg border border-slate-800">
-                    <span className="text-[11px] font-black text-slate-500 uppercase tracking-[0.2em]">Resonance Distance</span>
-                    <span className="text-sky-400 font-mono font-black text-lg tracking-tighter [text-shadow:0_0_10px_rgba(56,189,248,0.3)]">
-                        {statusLabel ? `${statusLabel} ` : ''}{distance.toFixed(2)}%
+                    <span className="text-[11px] font-black text-slate-500 uppercase tracking-[0.2em]">{ot.resonance_distance}</span>
+                    <span className={`font-mono font-black text-lg tracking-tighter transition-colors duration-500 ${statusColor}`} style={{ textShadow: `0 0 10px ${glowColor}` }}>
+                        {interpretationLabel ? `${interpretationLabel} ` : ''}{distance.toFixed(2)}%
                     </span>
                 </div>
             </div>
