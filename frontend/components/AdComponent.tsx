@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 
 declare global {
@@ -19,7 +19,7 @@ interface AdComponentProps {
 
 /**
  * AdComponent - Robust AdSense integration for Next.js SPA.
- * Handled with specified slot: 8020292211
+ * Prevents TagError: No slot size for availableWidth=0 by checking visibility.
  */
 export const AdComponent = ({
     slot = "8020292211",
@@ -29,40 +29,49 @@ export const AdComponent = ({
     minHeight = "150px"
 }: AdComponentProps) => {
     const pathname = usePathname();
-    const adRef = useRef<HTMLModElement>(null);
+    const containerRef = useRef<HTMLDivElement>(null);
+    const [isVisible, setIsVisible] = useState(false);
+    const [isPushed, setIsPushed] = useState(false);
 
     useEffect(() => {
-        const pushAd = () => {
-            try {
-                if (typeof window !== 'undefined' && adRef.current) {
-                    // CRITICAL: Ensure the element has a width before pushing.
-                    // AdSense throws "No slot size for availableWidth=0" if width is 0.
-                    if (adRef.current.offsetWidth > 0) {
-                        (window.adsbygoogle = window.adsbygoogle || []).push({});
-                    } else {
-                        // If not ready, retry once after a short delay
-                        setTimeout(() => {
-                            if (adRef.current && adRef.current.offsetWidth > 0) {
-                                (window.adsbygoogle = window.adsbygoogle || []).push({});
-                            }
-                        }, 500);
-                    }
-                }
-            } catch (err) {
-                // Silently handle "adsbygoogle.push() error: All 'ins' elements in the DOM with class=adsbygoogle already have ads in them."
-                // This happens in SPA transitions sometimes.
+        // Reset state on route change
+        setIsVisible(false);
+        setIsPushed(false);
+
+        const checkVisibility = () => {
+            if (containerRef.current && containerRef.current.offsetWidth > 0) {
+                setIsVisible(true);
             }
         };
 
-        // Small delay to ensure Next.js/Turbopack have finished DOM updates
-        const timer = setTimeout(pushAd, 300);
-        return () => clearTimeout(timer);
-    }, [pathname]); // Reload on route change
+        // Check initially after a short delay
+        const timer = setTimeout(checkVisibility, 500);
+
+        // Optional: Resize observer for more robust hydration handling
+        const observer = new ResizeObserver(checkVisibility);
+        if (containerRef.current) observer.observe(containerRef.current);
+
+        return () => {
+            clearTimeout(timer);
+            observer.disconnect();
+        };
+    }, [pathname]);
+
+    useEffect(() => {
+        if (isVisible && !isPushed && typeof window !== 'undefined') {
+            try {
+                (window.adsbygoogle = window.adsbygoogle || []).push({});
+                setIsPushed(true);
+            } catch (err) {
+                // Silently handle push errors
+            }
+        }
+    }, [isVisible, isPushed]);
 
     return (
         <div
+            ref={containerRef}
             className={`ad-container w-full mx-auto my-4 overflow-hidden ${className}`}
-            style={{ '--min-height': minHeight } as React.CSSProperties}
         >
             <div className="flex justify-start mb-1">
                 <span className="text-[10px] font-mono text-slate-400 dark:text-slate-600 uppercase tracking-widest px-1">
@@ -70,14 +79,17 @@ export const AdComponent = ({
                 </span>
             </div>
 
-            <ins
-                ref={adRef}
-                className="adsbygoogle"
-                data-ad-layout={layout}
-                data-ad-format={format}
-                data-ad-client="ca-pub-1230621442620902"
-                data-ad-slot={slot}
-            />
+            {/* ONLY render the 'ins' tag when visible width is confirmed. 
+                This prevents AdSense from attempting to measure a 0-width element. */}
+            {isVisible && (
+                <ins
+                    className="adsbygoogle"
+                    data-ad-layout={layout}
+                    data-ad-format={format}
+                    data-ad-client="ca-pub-1230621442620902"
+                    data-ad-slot={slot}
+                />
+            )}
 
             <style jsx>{`
         .ad-container {

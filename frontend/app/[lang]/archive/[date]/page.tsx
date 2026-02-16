@@ -29,9 +29,29 @@ export async function generateStaticParams() {
     return params;
 }
 
+import { Metadata } from 'next';
+
 type Props = {
     params: Promise<{ date: string; lang: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { date } = await params;
+    const targetDate = new Date(date);
+    const today = new Date();
+    const diffTime = Math.abs(today.getTime() - targetDate.getTime());
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+    const shouldIndex = diffDays <= 7;
+
+    return {
+        title: `Archive - ${date} | OmniMetric`,
+        robots: {
+            index: shouldIndex,
+            follow: true,
+        }
+    };
+}
 
 export default async function ArchiveDetailPage({ params }: Props) {
     const { date, lang } = await params;

@@ -99,8 +99,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
         if (fs.existsSync(archiveDir)) {
             const files = fs.readdirSync(archiveDir);
             const dates = files
-                .filter(f => f.endsWith('.json') && f !== 'index.json' && f !== 'performance_audit.json' && f !== 'summary.json')
-                .map(f => f.replace('.json', ''));
+                .filter((f: string) => f.endsWith('.json') && f !== 'index.json' && f !== 'performance_audit.json' && f !== 'summary.json' && !f.startsWith('monthly_'))
+                .map((f: string) => f.replace('.json', ''))
+                .sort((a: string, b: string) => b.localeCompare(a)) // Ensure descending for latest
+                .slice(0, 7); // Only latest 7 days for daily snapshots
 
             dates.forEach(date => {
                 // Archive Page
@@ -127,6 +129,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
                     });
                 });
             });
+
+            // 5. Monthly AI Reports (High Authority)
+            const monthlyIndexFile = path.join(archiveDir, 'monthly_index.json');
+            if (fs.existsSync(monthlyIndexFile)) {
+                try {
+                    const monthlyData = JSON.parse(fs.readFileSync(monthlyIndexFile, 'utf8'));
+                    const months = monthlyData.months || [];
+                    months.forEach((monthKey: string) => {
+                        const monthPath = `/archive/month/${monthKey}`;
+                        lowerLangs.forEach(lang => {
+                            entries.push({
+                                url: lang === 'en' ? `${baseUrl}${monthPath}` : `${baseUrl}/${lang}${monthPath}`,
+                                lastModified: new Date().toISOString(),
+                                changeFrequency: 'monthly',
+                                priority: 0.7,
+                                alternates: getAlternates(monthPath),
+                            });
+                        });
+                    });
+                } catch (e) {
+                    console.error('Monthly index parsing failed:', e);
+                }
+            }
         }
     } catch (error) {
         console.error('Sitemap archive generation failed:', error);

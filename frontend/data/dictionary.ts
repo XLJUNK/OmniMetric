@@ -342,7 +342,13 @@ export const DICTIONARY: Record<LangType, any> = {
             archive: {
                 title: "SIGNAL CORRELATION HISTORY",
                 desc: "Objective replay of historical indicator states and the corresponding GMS algorithmic signal.",
-                disclaimer: "THIS DATA REPRESENTS HISTORICAL CORRELATIONS ONLY AND DOES NOT SUGGEST OR GUARANTEE FUTURE INVESTMENT RESULTS."
+                disclaimer: "THIS DATA REPRESENTS HISTORICAL CORRELATIONS ONLY AND DOES NOT SUGGEST OR GUARANTEE FUTURE INVESTMENT RESULTS.",
+                calendar_title: "Browse Historical Signal",
+                monthly_reports_title: "Monthly Macro Intelligence",
+                loading_calendar: "Syncing Historical Logs...",
+                no_data: "No data available in this period.",
+                view_report: "View Monthly Synopsis",
+                monthly_summary_desc: "AI-driven synthesis of the month's macro regime and asset correlations."
             },
             omni_resonance: {
                 title: "OmniResonance\n(Portfolio Sync Prototype)",
@@ -748,7 +754,13 @@ export const DICTIONARY: Record<LangType, any> = {
             archive: {
                 title: "シグナルと市場の相関履歴",
                 desc: "当時の各指標（ボラティリティ・流動性等）の客観的データと、それに基づき算出されたGMSスコアの履歴です。",
-                disclaimer: "本データは過去の相関を示すものであり、将来の投資成果を示唆または保証するものではない"
+                disclaimer: "本データは過去の相関を示すものであり、将来の投資成果を示唆または保証するものではない",
+                calendar_title: "過去の記録を閲覧",
+                monthly_reports_title: "月間マクロ・インテリジェンス",
+                loading_calendar: "過去ログを同期中...",
+                no_data: "対象期間のデータが見つかりません。",
+                view_report: "月間レポートを表示",
+                monthly_summary_desc: "AIによる月間のマクロ局面と資産相関の統合分析レポート。"
             },
             omni_resonance: {
                 title: "OmniResonance\n(資産共鳴プロトタイプ)",

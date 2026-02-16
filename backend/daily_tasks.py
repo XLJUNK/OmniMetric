@@ -110,6 +110,24 @@ def main():
 
     # 3. Archive (Snapshot)
     run_archive()
+
+    # 4. Monthly Summary Trigger (Runs on the 1st of each month)
+    today = datetime.now(timezone.utc)
+    if today.day == 1:
+        logger.info("First of the month detected. Triggering Monthly Summary...")
+        try:
+            summary_script = os.path.join(SCRIPT_DIR, "monthly_summary.py")
+            if os.path.exists(summary_script):
+                import subprocess
+                result = subprocess.run([sys.executable, summary_script], capture_output=True, text=True)
+                if result.returncode == 0:
+                    logger.info("Monthly Summary Generation Success")
+                else:
+                    logger.error(f"Monthly Summary Generation Failed: {result.stderr}")
+            else:
+                logger.warning(f"Monthly Summary script not found at {summary_script}")
+        except Exception as e:
+            logger.error(f"Monthly Summary trigger failed: {e}")
     
     logger.info("=== DAILY MAINTENANCE TASKS COMPLETE ===")
 

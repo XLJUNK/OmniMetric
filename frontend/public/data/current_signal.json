@@ -1,12 +1,12 @@
 {
-    "last_updated": "2026-02-12T13:48:04.999165+00:00",
-    "last_successful_update": "2026-02-12T13:48:04.999165+00:00",
-    "gms_score": 46,
+    "last_updated": "2026-02-16T00:05:34.928404+00:00",
+    "last_successful_update": "2026-02-16T00:05:34.928404+00:00",
+    "gms_score": 49,
     "sector_scores": {
-        "STOCKS": 65,
-        "CRYPTO": 35,
-        "FOREX": 53,
-        "COMMODITIES": 53,
+        "STOCKS": 44,
+        "CRYPTO": 65,
+        "FOREX": 38,
+        "COMMODITIES": 35,
         "GLOBAL_INDICES": 50,
         "REAL_ESTATE": 50,
         "CREDIT": 50,
@@ -16,15 +16,11 @@
     },
     "market_data": {
         "CRYPTO_SENTIMENT": {
-            "price": 5,
-            "daily_chg": -54.55,
-            "change_percent": -28.57,
+            "price": 12,
+            "daily_chg": 50.0,
+            "change_percent": 140.0,
             "trend": "FEAR",
             "sparkline": [
-                48,
-                61,
-                49,
-                50,
                 49,
                 44,
                 32,
@@ -50,16 +46,18 @@
                 14,
                 9,
                 11,
-                5
+                5,
+                9,
+                9,
+                8,
+                12
             ]
         },
         "YIELD_SPREAD": {
-            "price": 0.48,
+            "price": 0.36,
             "change_percent": 0.0,
             "trend": "NORMAL",
             "sparkline": [
-                0.51,
-                0.54,
                 0.53,
                 0.55,
                 0.53,
@@ -87,18 +85,18 @@
                 0.54,
                 0.53,
                 0.47,
-                0.48
+                0.48,
+                0.39,
+                0.36
             ]
         },
         "HY_SPREAD": {
-            "price": 2.86,
+            "price": 2.92,
             "prev_price": 2.84,
-            "daily_chg": 0.7,
-            "change_percent": 0.7,
+            "daily_chg": 2.82,
+            "change_percent": 2.82,
             "trend": "CALM",
             "sparkline": [
-                2.81,
-                2.83,
                 2.81,
                 2.79,
                 2.79,
@@ -126,7 +124,9 @@
                 2.97,
                 2.87,
                 2.84,
-                2.86
+                2.86,
+                2.84,
+                2.92
             ]
         },
         "NFCI": {
@@ -134,7 +134,6 @@
             "change_percent": 0.0,
             "trend": "CALM",
             "sparkline": [
-                -0.51,
                 -0.51,
                 -0.51,
                 -0.52,
@@ -150,14 +149,12 @@
             ]
         },
         "NET_LIQUIDITY": {
-            "price": 5696.09,
-            "prev_price": 5695.69,
-            "daily_chg": 0.01,
-            "change_percent": 0.01,
+            "price": 5706.7,
+            "prev_price": 5704.23,
+            "daily_chg": 0.04,
+            "change_percent": 0.19,
             "trend": "EXPANSION",
             "sparkline": [
-                5697.32,
-                5797.65,
                 5796.83,
                 5800.73,
                 5772.87,
@@ -185,16 +182,16 @@
                 5694.02,
                 5695.83,
                 5695.69,
-                5696.09
+                5706.03,
+                5704.23,
+                5706.7
             ]
         },
         "BREAKEVEN_INFLATION": {
-            "price": 2.32,
+            "price": 2.27,
             "change_percent": 0.0,
             "trend": "STABLE",
             "sparkline": [
-                2.25,
-                2.25,
                 2.26,
                 2.27,
                 2.27,
@@ -222,17 +219,18 @@
                 2.34,
                 2.35,
                 2.32,
-                2.32
+                2.32,
+                2.29,
+                2.27
             ]
         },
         "VIX": {
-            "price": 17.4,
-            "prev_price": 17.65,
-            "daily_chg": -1.42,
-            "change_percent": -14.58,
+            "price": 20.6,
+            "prev_price": 20.82,
+            "daily_chg": -1.06,
+            "change_percent": 18.66,
             "trend": "DOWN",
             "sparkline": [
-                15.98,
                 16.75,
                 15.84,
                 15.86,
@@ -253,16 +251,15 @@
                 17.36,
                 17.79,
                 17.65,
-                17.4
+                20.82,
+                20.6
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
-            "price": 0.66,
+            "price": 0.64,
             "change_percent": 0.0,
             "trend": "NEUTRAL",
             "sparkline": [
-                0.71,
-                0.72,
                 0.71,
                 0.71,
                 0.68,
@@ -290,16 +287,16 @@
                 0.72,
                 0.74,
                 0.71,
-                0.66
+                0.66,
+                0.62,
+                0.64
             ]
         },
         "US_10Y_YIELD": {
-            "price": 4.16,
+            "price": 4.09,
             "change_percent": 0.0,
             "trend": "STABLE",
             "sparkline": [
-                4.18,
-                4.18,
                 4.19,
                 4.17,
                 4.18,
@@ -327,16 +324,16 @@
                 4.21,
                 4.22,
                 4.22,
-                4.16
+                4.16,
+                4.18,
+                4.09
             ]
         },
         "REAL_INTEREST_RATE": {
-            "price": 1.84,
+            "price": 1.8,
             "change_percent": 0.0,
             "trend": "STABLE",
             "sparkline": [
-                1.93,
-                1.93,
                 1.94,
                 1.91,
                 1.91,
@@ -364,18 +361,18 @@
                 1.89,
                 1.88,
                 1.87,
-                1.84
+                1.84,
+                1.86,
+                1.8
             ]
         },
         "SPY": {
-            "price": 691.96,
-            "prev_price": 692.12,
-            "daily_chg": -0.02,
-            "change_percent": 2.12,
-            "trend": "DOWN",
+            "price": 681.75,
+            "prev_price": 681.27,
+            "daily_chg": 0.07,
+            "change_percent": -1.76,
+            "trend": "UP",
             "sparkline": [
-                695.16,
-                693.77,
                 690.36,
                 692.24,
                 691.66,
@@ -395,17 +392,18 @@
                 690.62,
                 693.95,
                 692.12,
-                691.96
+                691.96,
+                681.27,
+                681.75
             ]
         },
         "TNX": {
-            "price": 4.16,
-            "prev_price": 4.17,
-            "daily_chg": -0.34,
-            "change_percent": -1.14,
+            "price": 4.06,
+            "prev_price": 4.1,
+            "daily_chg": -1.17,
+            "change_percent": -3.38,
             "trend": "DOWN",
             "sparkline": [
-                4.17,
                 4.14,
                 4.16,
                 4.23,
@@ -426,18 +424,17 @@
                 4.2,
                 4.15,
                 4.17,
-                4.16
+                4.1,
+                4.06
             ]
         },
         "QQQ": {
-            "price": 613.11,
-            "prev_price": 611.47,
-            "daily_chg": 0.27,
-            "change_percent": 2.69,
+            "price": 601.92,
+            "prev_price": 600.64,
+            "daily_chg": 0.21,
+            "change_percent": -2.02,
             "trend": "UP",
             "sparkline": [
-                627.17,
-                626.24,
                 619.55,
                 621.78,
                 621.26,
@@ -457,18 +454,18 @@
                 609.65,
                 614.32,
                 611.47,
-                613.11
+                613.11,
+                600.64,
+                601.92
             ]
         },
         "IWM": {
-            "price": 264.95,
-            "prev_price": 266.16,
-            "daily_chg": -0.45,
-            "change_percent": 3.56,
-            "trend": "DOWN",
+            "price": 262.96,
+            "prev_price": 259.54,
+            "daily_chg": 1.32,
+            "change_percent": -1.47,
+            "trend": "UP",
             "sparkline": [
-                261.5,
-                261.35,
                 263.19,
                 265.51,
                 265.76,
@@ -488,18 +485,18 @@
                 265.02,
                 266.88,
                 266.16,
-                264.95
+                264.95,
+                259.54,
+                262.96
             ]
         },
         "RSP": {
-            "price": 203.46,
-            "prev_price": 203.1,
-            "daily_chg": 0.18,
-            "change_percent": 2.47,
+            "price": 202.87,
+            "prev_price": 200.79,
+            "daily_chg": 1.04,
+            "change_percent": 0.24,
             "trend": "UP",
             "sparkline": [
-                197.78,
-                197.78,
                 198.68,
                 199.56,
                 199.05,
@@ -519,18 +516,18 @@
                 202.26,
                 202.38,
                 203.1,
-                203.46
+                203.46,
+                200.79,
+                202.87
             ]
         },
         "HYG": {
-            "price": 80.83,
-            "prev_price": 80.84,
-            "daily_chg": -0.01,
-            "change_percent": 0.37,
-            "trend": "DOWN",
+            "price": 80.85,
+            "prev_price": 80.79,
+            "daily_chg": 0.07,
+            "change_percent": -0.09,
+            "trend": "UP",
             "sparkline": [
-                80.64,
-                80.64,
                 80.64,
                 80.64,
                 80.69,
@@ -550,17 +547,18 @@
                 80.81,
                 80.92,
                 80.84,
-                80.83
+                80.83,
+                80.79,
+                80.85
             ]
         },
         "NIFTY": {
-            "price": 25807.2,
-            "prev_price": 25953.85,
-            "daily_chg": -0.57,
-            "change_percent": 0.44,
+            "price": 25471.1,
+            "prev_price": 25807.2,
+            "daily_chg": -1.3,
+            "change_percent": -1.53,
             "trend": "DOWN",
             "sparkline": [
-                25790.25,
                 25732.3,
                 25665.6,
                 25694.35,
@@ -581,19 +579,17 @@
                 25867.3,
                 25935.15,
                 25953.85,
-                25807.2
+                25807.2,
+                25471.1
             ]
         },
         "BTC": {
-            "price": 68086.38,
-            "prev_price": 66991.97,
-            "daily_chg": 1.63,
-            "change_percent": -3.1,
-            "trend": "UP",
+            "price": 68744.39,
+            "prev_price": 69767.62,
+            "daily_chg": -1.47,
+            "change_percent": 2.62,
+            "trend": "DOWN",
             "sparkline": [
-                89462.45,
-                89503.88,
-                89110.73,
                 86572.22,
                 88267.14,
                 89102.57,
@@ -612,19 +608,19 @@
                 70120.78,
                 68793.96,
                 66991.97,
-                68086.38
+                66221.84,
+                68857.84,
+                69767.62,
+                68744.39
             ]
         },
         "ETH": {
-            "price": 1990.49,
-            "prev_price": 1940.62,
-            "daily_chg": 2.57,
-            "change_percent": -4.7,
-            "trend": "UP",
+            "price": 1965.77,
+            "prev_price": 2086.01,
+            "daily_chg": -5.76,
+            "change_percent": 1.3,
+            "trend": "DOWN",
             "sparkline": [
-                2949.63,
-                2953.26,
-                2948.74,
                 2815.9,
                 2926.46,
                 3022.21,
@@ -643,19 +639,19 @@
                 2103.57,
                 2019.5,
                 1940.62,
-                1990.49
+                1946.94,
+                2048.53,
+                2086.01,
+                1965.77
             ]
         },
         "SOL": {
-            "price": 81.54,
-            "prev_price": 79.25,
-            "daily_chg": 2.88,
-            "change_percent": -6.33,
-            "trend": "UP",
+            "price": 86.05,
+            "prev_price": 88.16,
+            "daily_chg": -2.39,
+            "change_percent": 8.58,
+            "trend": "DOWN",
             "sparkline": [
-                128.29,
-                127.36,
-                127.05,
                 118.77,
                 124.14,
                 127.05,
@@ -674,18 +670,19 @@
                 86.7,
                 82.92,
                 79.25,
-                81.54
+                78.35,
+                84.32,
+                88.16,
+                86.05
             ]
         },
         "DXY": {
-            "price": 96.83,
-            "prev_price": 96.83,
-            "daily_chg": -0.0,
-            "change_percent": -0.82,
-            "trend": "DOWN",
+            "price": 96.94,
+            "prev_price": 96.88,
+            "daily_chg": 0.06,
+            "change_percent": 0.14,
+            "trend": "UP",
             "sparkline": [
-                99.13,
-                99.13,
                 99.32,
                 99.39,
                 98.64,
@@ -705,18 +702,18 @@
                 96.82,
                 96.8,
                 96.83,
-                96.83
+                96.93,
+                96.88,
+                96.94
             ]
         },
         "USDJPY": {
-            "price": 153.24,
-            "prev_price": 154.48,
-            "daily_chg": -0.81,
-            "change_percent": -2.26,
+            "price": 152.82,
+            "prev_price": 152.82,
+            "daily_chg": 0.0,
+            "change_percent": -2.12,
             "trend": "DOWN",
             "sparkline": [
-                159.18,
-                158.4,
                 158.6,
                 157.54,
                 158.18,
@@ -736,21 +733,21 @@
                 157.24,
                 156.13,
                 154.48,
-                153.24
+                153.27,
+                152.82,
+                152.82
             ]
         },
         "EURUSD": {
             "price": 1.19,
             "prev_price": 1.19,
-            "daily_chg": -0.03,
-            "change_percent": 0.92,
-            "trend": "DOWN",
+            "daily_chg": 0.01,
+            "change_percent": -0.29,
+            "trend": "UP",
             "sparkline": [
                 1.16,
                 1.16,
                 1.16,
-                1.16,
-                1.16,
                 1.17,
                 1.17,
                 1.18,
@@ -765,20 +762,20 @@
                 1.18,
                 1.18,
                 1.18,
+                1.19,
+                1.19,
                 1.19,
                 1.19,
                 1.19
             ]
         },
         "USDINR": {
-            "price": 90.55,
-            "prev_price": 90.59,
-            "daily_chg": -0.05,
-            "change_percent": 0.26,
+            "price": 90.5,
+            "prev_price": 90.56,
+            "daily_chg": -0.07,
+            "change_percent": -0.35,
             "trend": "DOWN",
             "sparkline": [
-                90.27,
-                90.18,
                 90.36,
                 90.7,
                 90.9,
@@ -798,14 +795,16 @@
                 90.59,
                 90.82,
                 90.59,
-                90.55
+                90.74,
+                90.56,
+                90.5
             ]
         },
         "USDSAR": {
             "price": 3.75,
             "prev_price": 3.75,
-            "daily_chg": 0.1,
-            "change_percent": 0.11,
+            "daily_chg": 0.13,
+            "change_percent": 0.12,
             "trend": "UP",
             "sparkline": [
                 3.75,
@@ -814,8 +813,6 @@
                 3.75,
                 3.75,
                 3.75,
-                3.75,
-                3.75,
                 3.74,
                 3.75,
                 3.75,
@@ -827,20 +824,20 @@
                 3.75,
                 3.75,
                 3.74,
+                3.75,
+                3.75,
                 3.75,
                 3.75,
                 3.75
             ]
         },
         "GOLD": {
-            "price": 5097.6,
-            "prev_price": 5071.6,
-            "daily_chg": 0.51,
-            "change_percent": 2.96,
+            "price": 5038.6,
+            "prev_price": 5022.0,
+            "daily_chg": 0.33,
+            "change_percent": 0.7,
             "trend": "UP",
             "sparkline": [
-                4589.2,
-                4626.3,
                 4616.3,
                 4588.4,
                 4759.6,
@@ -860,18 +857,18 @@
                 5050.9,
                 5003.8,
                 5071.6,
-                5097.6
+                4923.7,
+                5022.0,
+                5038.6
             ]
         },
         "OIL": {
-            "price": 64.26,
-            "prev_price": 64.63,
-            "daily_chg": -0.57,
-            "change_percent": 1.12,
+            "price": 62.82,
+            "prev_price": 62.89,
+            "daily_chg": -0.11,
+            "change_percent": -1.78,
             "trend": "DOWN",
             "sparkline": [
-                61.15,
-                62.02,
                 59.19,
                 59.44,
                 60.34,
@@ -891,18 +888,18 @@
                 64.36,
                 63.96,
                 64.63,
-                64.26
+                62.84,
+                62.89,
+                62.82
             ]
         },
         "COPPER": {
-            "price": 5.96,
-            "prev_price": 5.95,
-            "daily_chg": 0.17,
-            "change_percent": 1.63,
-            "trend": "UP",
+            "price": 5.77,
+            "prev_price": 5.79,
+            "daily_chg": -0.4,
+            "change_percent": -2.15,
+            "trend": "DOWN",
             "sparkline": [
-                5.97,
-                6.01,
                 5.95,
                 5.79,
                 5.77,
@@ -922,18 +919,18 @@
                 5.95,
                 5.9,
                 5.95,
-                5.96
+                5.77,
+                5.79,
+                5.77
             ]
         },
         "NATGAS": {
-            "price": 3.28,
-            "prev_price": 3.16,
-            "daily_chg": 3.7,
-            "change_percent": -4.27,
-            "trend": "UP",
+            "price": 3.04,
+            "prev_price": 3.24,
+            "daily_chg": -6.32,
+            "change_percent": -2.47,
+            "trend": "DOWN",
             "sparkline": [
-                3.42,
-                3.12,
                 3.13,
                 3.1,
                 3.91,
@@ -953,18 +950,18 @@
                 3.14,
                 3.12,
                 3.16,
-                3.28
+                3.22,
+                3.24,
+                3.04
             ]
         },
         "SILVER": {
-            "price": 82.67,
-            "prev_price": 83.75,
-            "daily_chg": -1.3,
-            "change_percent": 7.73,
+            "price": 75.91,
+            "prev_price": 77.85,
+            "daily_chg": -2.49,
+            "change_percent": -5.37,
             "trend": "DOWN",
             "sparkline": [
-                85.88,
-                90.87,
                 91.88,
                 88.09,
                 94.21,
@@ -984,17 +981,18 @@
                 82.07,
                 80.22,
                 83.75,
-                82.67
+                75.55,
+                77.85,
+                75.91
             ]
         },
         "DAX": {
-            "price": 25197.45,
-            "prev_price": 24856.15,
-            "daily_chg": 1.37,
-            "change_percent": 1.93,
+            "price": 24914.88,
+            "prev_price": 24852.69,
+            "daily_chg": 0.25,
+            "change_percent": -0.4,
             "trend": "UP",
             "sparkline": [
-                25286.24,
                 25352.39,
                 25297.13,
                 24959.06,
@@ -1015,17 +1013,17 @@
                 25014.87,
                 24987.85,
                 24856.15,
-                25197.45
+                24852.69,
+                24914.88
             ]
         },
         "CAC40": {
-            "price": 8396.56,
-            "prev_price": 8313.24,
-            "daily_chg": 1.0,
-            "change_percent": 1.48,
-            "trend": "UP",
+            "price": 8311.74,
+            "prev_price": 8340.56,
+            "daily_chg": -0.35,
+            "change_percent": -0.14,
+            "trend": "DOWN",
             "sparkline": [
-                8330.97,
                 8313.12,
                 8258.94,
                 8112.02,
@@ -1046,17 +1044,17 @@
                 8323.28,
                 8327.88,
                 8313.24,
-                8396.56
+                8340.56,
+                8311.74
             ]
         },
         "STOXX600": {
-            "price": 623.95,
-            "prev_price": 621.58,
-            "daily_chg": 0.38,
-            "change_percent": 1.11,
-            "trend": "UP",
+            "price": 617.7,
+            "prev_price": 618.52,
+            "daily_chg": -0.13,
+            "change_percent": -0.6,
+            "trend": "DOWN",
             "sparkline": [
-                611.56,
                 614.57,
                 614.38,
                 607.06,
@@ -1077,17 +1075,17 @@
                 621.41,
                 620.97,
                 621.58,
-                623.95
+                618.52,
+                617.7
             ]
         },
         "FTSE": {
-            "price": 10476.23,
-            "prev_price": 10472.1,
-            "daily_chg": 0.04,
-            "change_percent": 1.03,
+            "price": 10446.4,
+            "prev_price": 10402.4,
+            "daily_chg": 0.42,
+            "change_percent": 0.58,
             "trend": "UP",
             "sparkline": [
-                10184.4,
                 10238.9,
                 10235.3,
                 10195.4,
@@ -1108,17 +1106,17 @@
                 10386.2,
                 10353.8,
                 10472.1,
-                10476.23
+                10402.4,
+                10446.4
             ]
         },
         "NIKKEI": {
-            "price": 57639.84,
-            "prev_price": 57650.54,
-            "daily_chg": -0.02,
-            "change_percent": 7.1,
+            "price": 56941.97,
+            "prev_price": 57639.84,
+            "daily_chg": -1.21,
+            "change_percent": 4.96,
             "trend": "DOWN",
             "sparkline": [
-                53549.16,
                 54341.23,
                 54110.5,
                 53936.17,
@@ -1139,17 +1137,17 @@
                 54253.68,
                 56363.94,
                 57650.54,
-                57639.84
+                57639.84,
+                56941.97
             ]
         },
         "HANGSENG": {
-            "price": 27032.54,
-            "prev_price": 27266.38,
-            "daily_chg": -0.86,
-            "change_percent": 1.78,
+            "price": 26567.12,
+            "prev_price": 27032.54,
+            "daily_chg": -1.72,
+            "change_percent": -1.7,
             "trend": "DOWN",
             "sparkline": [
-                26999.81,
                 26923.62,
                 26844.96,
                 26563.9,
@@ -1170,17 +1168,17 @@
                 27027.16,
                 27183.15,
                 27266.38,
-                27032.54
+                27032.54,
+                26567.12
             ]
         },
         "SHANGHAI": {
-            "price": 4134.02,
-            "prev_price": 4131.98,
-            "daily_chg": 0.05,
-            "change_percent": 1.68,
-            "trend": "UP",
+            "price": 4082.07,
+            "prev_price": 4134.02,
+            "daily_chg": -1.26,
+            "change_percent": -0.99,
+            "trend": "DOWN",
             "sparkline": [
-                4126.09,
                 4112.6,
                 4101.91,
                 4114.0,
@@ -1201,17 +1199,17 @@
                 4123.09,
                 4128.37,
                 4131.98,
-                4134.02
+                4134.02,
+                4082.07
             ]
         },
         "SENSEX": {
-            "price": 83674.92,
-            "prev_price": 84233.64,
-            "daily_chg": -0.66,
-            "change_percent": 0.11,
+            "price": 82626.76,
+            "prev_price": 83674.92,
+            "daily_chg": -1.25,
+            "change_percent": -1.71,
             "trend": "DOWN",
             "sparkline": [
-                83878.17,
                 83627.69,
                 83382.71,
                 83570.35,
@@ -1232,17 +1230,17 @@
                 84065.75,
                 84273.92,
                 84233.64,
-                83674.92
+                83674.92,
+                82626.76
             ]
         },
         "BOVESPA": {
-            "price": 189171.52,
-            "prev_price": 189699.0,
-            "daily_chg": -0.28,
-            "change_percent": 3.4,
+            "price": 186464.0,
+            "prev_price": 187766.0,
+            "daily_chg": -0.69,
+            "change_percent": 0.12,
             "trend": "DOWN",
             "sparkline": [
-                165146.0,
                 165568.0,
                 164800.0,
                 164849.0,
@@ -1263,18 +1261,17 @@
                 186241.0,
                 185929.0,
                 189699.0,
-                189171.52
+                187766.0,
+                186464.0
             ]
         },
         "ASX200": {
-            "price": 9043.5,
-            "prev_price": 9014.8,
-            "daily_chg": 0.32,
-            "change_percent": 3.84,
+            "price": 8947.6,
+            "prev_price": 8917.6,
+            "daily_chg": 0.34,
+            "change_percent": 0.9,
             "trend": "UP",
             "sparkline": [
-                8808.5,
-                8820.6,
                 8861.7,
                 8903.9,
                 8874.5,
@@ -1294,18 +1291,18 @@
                 8912.1,
                 8867.4,
                 9014.8,
-                9043.5
+                9043.5,
+                8917.6,
+                8947.6
             ]
         },
         "G_REIT": {
-            "price": 26.77,
-            "prev_price": 26.65,
-            "daily_chg": 0.45,
-            "change_percent": 3.28,
+            "price": 26.98,
+            "prev_price": 26.71,
+            "daily_chg": 1.01,
+            "change_percent": 2.2,
             "trend": "UP",
             "sparkline": [
-                25.34,
-                25.39,
                 25.53,
                 25.63,
                 25.88,
@@ -1325,18 +1322,18 @@
                 26.26,
                 26.4,
                 26.65,
-                26.77
+                26.77,
+                26.71,
+                26.98
             ]
         },
         "US_HOUSING": {
-            "price": 120.6,
-            "prev_price": 120.35,
-            "daily_chg": 0.21,
-            "change_percent": 4.59,
+            "price": 121.36,
+            "prev_price": 119.11,
+            "daily_chg": 1.89,
+            "change_percent": 3.68,
             "trend": "UP",
             "sparkline": [
-                113.63,
-                114.88,
                 113.89,
                 115.45,
                 114.56,
@@ -1356,18 +1353,18 @@
                 117.27,
                 117.05,
                 120.35,
-                120.6
+                120.6,
+                119.11,
+                121.36
             ]
         },
         "LOGISTICS": {
-            "price": 39.88,
-            "prev_price": 39.81,
-            "daily_chg": 0.18,
-            "change_percent": 2.06,
+            "price": 40.04,
+            "prev_price": 39.49,
+            "daily_chg": 1.4,
+            "change_percent": 1.6,
             "trend": "UP",
             "sparkline": [
-                38.32,
-                38.35,
                 38.99,
                 39.41,
                 39.71,
@@ -1387,18 +1384,18 @@
                 39.36,
                 39.41,
                 39.81,
-                39.88
+                39.88,
+                39.49,
+                40.04
             ]
         },
         "INFRA": {
-            "price": 67.45,
-            "prev_price": 66.6,
-            "daily_chg": 1.28,
-            "change_percent": 3.9,
+            "price": 68.35,
+            "prev_price": 67.39,
+            "daily_chg": 1.42,
+            "change_percent": 2.89,
             "trend": "UP",
             "sparkline": [
-                61.85,
-                61.5,
                 61.82,
                 61.85,
                 62.24,
@@ -1418,18 +1415,18 @@
                 65.73,
                 66.43,
                 66.6,
-                67.45
+                67.45,
+                67.39,
+                68.35
             ]
         },
         "HY_BOND": {
-            "price": 80.83,
-            "prev_price": 80.84,
-            "daily_chg": -0.01,
-            "change_percent": 0.37,
-            "trend": "DOWN",
+            "price": 80.85,
+            "prev_price": 80.79,
+            "daily_chg": 0.07,
+            "change_percent": -0.09,
+            "trend": "UP",
             "sparkline": [
-                80.64,
-                80.64,
                 80.64,
                 80.64,
                 80.69,
@@ -1449,18 +1446,18 @@
                 80.81,
                 80.92,
                 80.84,
-                80.83
+                80.83,
+                80.79,
+                80.85
             ]
         },
         "IG_BOND": {
-            "price": 110.7,
-            "prev_price": 110.82,
-            "daily_chg": -0.11,
-            "change_percent": 0.18,
-            "trend": "DOWN",
+            "price": 111.59,
+            "prev_price": 111.22,
+            "daily_chg": 0.33,
+            "change_percent": 0.93,
+            "trend": "UP",
             "sparkline": [
-                110.1,
-                110.34,
                 110.62,
                 110.48,
                 110.16,
@@ -1480,18 +1477,18 @@
                 110.56,
                 110.56,
                 110.82,
-                110.7
+                110.7,
+                111.22,
+                111.59
             ]
         },
         "TIPS": {
-            "price": 110.81,
-            "prev_price": 110.99,
-            "daily_chg": -0.16,
-            "change_percent": 0.23,
-            "trend": "DOWN",
+            "price": 111.39,
+            "prev_price": 111.25,
+            "daily_chg": 0.13,
+            "change_percent": 0.57,
+            "trend": "UP",
             "sparkline": [
-                110.18,
-                110.28,
                 110.4,
                 110.23,
                 110.02,
@@ -1511,18 +1508,18 @@
                 110.67,
                 110.76,
                 110.99,
-                110.81
+                110.81,
+                111.25,
+                111.39
             ]
         },
         "SHY": {
-            "price": 82.85,
+            "price": 83.06,
             "prev_price": 82.93,
-            "daily_chg": -0.1,
-            "change_percent": -0.01,
-            "trend": "DOWN",
+            "daily_chg": 0.16,
+            "change_percent": 0.22,
+            "trend": "UP",
             "sparkline": [
-                82.58,
-                82.6,
                 82.62,
                 82.56,
                 82.54,
@@ -1542,18 +1539,18 @@
                 82.86,
                 82.88,
                 82.93,
-                82.85
+                82.85,
+                82.93,
+                83.06
             ]
         },
         "BALTIC": {
-            "price": 11.44,
-            "prev_price": 11.18,
-            "daily_chg": 2.33,
-            "change_percent": 6.82,
+            "price": 11.49,
+            "prev_price": 11.3,
+            "daily_chg": 1.68,
+            "change_percent": 4.93,
             "trend": "UP",
             "sparkline": [
-                8.73,
-                8.72,
                 9.04,
                 9.48,
                 9.8,
@@ -1573,18 +1570,18 @@
                 10.65,
                 10.95,
                 11.18,
-                11.44
+                11.44,
+                11.3,
+                11.49
             ]
         },
         "SHIPPING": {
-            "price": 37.47,
-            "prev_price": 36.67,
-            "daily_chg": 2.18,
-            "change_percent": 5.94,
+            "price": 37.81,
+            "prev_price": 37.13,
+            "daily_chg": 1.83,
+            "change_percent": 3.76,
             "trend": "UP",
             "sparkline": [
-                33.77,
-                33.7,
                 34.05,
                 33.85,
                 33.43,
@@ -1604,18 +1601,18 @@
                 36.45,
                 36.44,
                 36.67,
-                37.47
+                37.47,
+                37.13,
+                37.81
             ]
         },
         "AGRI": {
-            "price": 25.82,
-            "prev_price": 25.73,
-            "daily_chg": 0.35,
-            "change_percent": 0.19,
-            "trend": "UP",
+            "price": 25.79,
+            "prev_price": 25.89,
+            "daily_chg": -0.39,
+            "change_percent": 0.16,
+            "trend": "DOWN",
             "sparkline": [
-                25.63,
-                25.57,
                 25.51,
                 25.59,
                 25.6,
@@ -1635,18 +1632,18 @@
                 25.77,
                 25.75,
                 25.73,
-                25.82
+                25.82,
+                25.89,
+                25.79
             ]
         },
         "SEMIS": {
-            "price": 360.2,
-            "prev_price": 351.43,
-            "daily_chg": 2.5,
-            "change_percent": 8.88,
+            "price": 354.66,
+            "prev_price": 351.5,
+            "daily_chg": 0.9,
+            "change_percent": 0.54,
             "trend": "UP",
             "sparkline": [
-                330.35,
-                333.3,
                 331.9,
                 337.22,
                 342.47,
@@ -1666,18 +1663,18 @@
                 348.51,
                 352.77,
                 351.43,
-                360.2
+                360.2,
+                351.5,
+                354.66
             ]
         },
         "DEFENSE": {
-            "price": 230.95,
-            "prev_price": 233.21,
-            "daily_chg": -0.97,
-            "change_percent": 2.11,
-            "trend": "DOWN",
+            "price": 234.87,
+            "prev_price": 232.53,
+            "daily_chg": 1.01,
+            "change_percent": 0.01,
+            "trend": "UP",
             "sparkline": [
-                236.55,
-                237.54,
                 239.16,
                 241.21,
                 243.77,
@@ -1697,18 +1694,18 @@
                 233.93,
                 234.84,
                 233.21,
-                230.95
+                230.95,
+                232.53,
+                234.87
             ]
         },
         "RARE_EARTH": {
-            "price": 91.92,
-            "prev_price": 88.74,
-            "daily_chg": 3.58,
-            "change_percent": 12.56,
+            "price": 89.7,
+            "prev_price": 87.2,
+            "daily_chg": 2.87,
+            "change_percent": 1.08,
             "trend": "UP",
             "sparkline": [
-                88.84,
-                89.2,
                 91.32,
                 90.54,
                 89.18,
@@ -1728,18 +1725,18 @@
                 86.63,
                 88.74,
                 88.74,
-                91.92
+                91.92,
+                87.2,
+                89.7
             ]
         },
         "CYBER": {
-            "price": 67.62,
-            "prev_price": 68.83,
-            "daily_chg": -1.76,
-            "change_percent": 4.11,
-            "trend": "DOWN",
+            "price": 66.83,
+            "prev_price": 65.1,
+            "daily_chg": 2.66,
+            "change_percent": -2.21,
+            "trend": "UP",
             "sparkline": [
-                72.96,
-                72.62,
                 72.42,
                 72.11,
                 71.91,
@@ -1759,18 +1756,18 @@
                 67.13,
                 68.34,
                 68.83,
-                67.62
+                67.62,
+                65.1,
+                66.83
             ]
         },
         "GBPUSD": {
             "price": 0.73,
             "prev_price": 0.73,
-            "daily_chg": -0.1,
-            "change_percent": -0.94,
+            "daily_chg": -0.19,
+            "change_percent": 0.27,
             "trend": "DOWN",
             "sparkline": [
-                0.74,
-                0.74,
                 0.75,
                 0.75,
                 0.75,
@@ -1787,6 +1784,8 @@
                 0.73,
                 0.73,
                 0.74,
+                0.73,
+                0.73,
                 0.73,
                 0.73,
                 0.73,
@@ -1794,14 +1793,12 @@
             ]
         },
         "AUDUSD": {
-            "price": 1.4,
+            "price": 1.41,
             "prev_price": 1.41,
-            "daily_chg": -0.9,
-            "change_percent": -3.12,
-            "trend": "DOWN",
+            "daily_chg": 0.2,
+            "change_percent": 0.15,
+            "trend": "UP",
             "sparkline": [
-                1.5,
-                1.5,
                 1.49,
                 1.5,
                 1.49,
@@ -1821,21 +1818,21 @@
                 1.42,
                 1.41,
                 1.41,
-                1.4
+                1.4,
+                1.41,
+                1.41
             ]
         },
         "USDCAD": {
             "price": 1.36,
             "prev_price": 1.36,
-            "daily_chg": 0.12,
-            "change_percent": -1.05,
+            "daily_chg": 0.06,
+            "change_percent": 0.42,
             "trend": "UP",
             "sparkline": [
                 1.39,
                 1.39,
                 1.39,
-                1.39,
-                1.39,
                 1.38,
                 1.38,
                 1.38,
@@ -1850,20 +1847,20 @@
                 1.37,
                 1.37,
                 1.37,
+                1.36,
+                1.36,
                 1.36,
                 1.36,
                 1.36
             ]
         },
         "USDCNY": {
-            "price": 6.9,
-            "prev_price": 6.91,
-            "daily_chg": -0.15,
-            "change_percent": -0.54,
-            "trend": "DOWN",
+            "price": 6.91,
+            "prev_price": 6.9,
+            "daily_chg": 0.11,
+            "change_percent": -0.21,
+            "trend": "UP",
             "sparkline": [
-                6.98,
-                6.97,
                 6.97,
                 6.97,
                 6.97,
@@ -1883,21 +1880,21 @@
                 6.94,
                 6.92,
                 6.91,
-                6.9
+                6.91,
+                6.9,
+                6.91
             ]
         },
         "USDCHF": {
             "price": 0.77,
             "prev_price": 0.77,
-            "daily_chg": 0.04,
-            "change_percent": -1.14,
-            "trend": "UP",
+            "daily_chg": -0.15,
+            "change_percent": 0.16,
+            "trend": "DOWN",
             "sparkline": [
                 0.8,
                 0.8,
                 0.8,
-                0.8,
-                0.8,
                 0.79,
                 0.8,
                 0.79,
@@ -1912,18 +1909,18 @@
                 0.78,
                 0.78,
                 0.78,
+                0.77,
+                0.77,
                 0.77,
                 0.77,
                 0.77
             ]
         },
         "MOVE": {
-            "price": 61.35,
-            "change_percent": -4.96,
+            "price": 70.1,
+            "change_percent": 2.23,
             "trend": "NORMAL",
             "sparkline": [
-                62.9,
-                60.79,
                 58.11,
                 56.14,
                 58.05,
@@ -1943,42 +1940,44 @@
                 63.62,
                 62.74,
                 64.55,
-                61.35
+                61.35,
+                68.57,
+                70.1
             ]
         },
         "BREADTH": {
-            "price": 0.35,
+            "price": 2.0,
             "change_percent": 0.0,
-            "trend": "HEALTHY",
+            "trend": "BROAD",
             "sparkline": [
                 0.0,
-                0.2,
-                1.15,
-                1.32,
-                1.15,
-                1.67,
-                2.22,
-                1.84,
-                1.35,
-                1.09,
-                0.53,
-                0.21,
+                0.17,
+                -0.0,
                 0.54,
-                0.61,
-                0.63,
-                1.21,
-                2.56,
-                2.92,
-                2.92,
-                2.5,
-                3.13,
-                3.33
+                1.08,
+                0.69,
+                0.21,
+                -0.06,
+                -0.62,
+                -0.94,
+                -0.61,
+                -0.54,
+                -0.52,
+                0.06,
+                1.42,
+                1.79,
+                1.76,
+                1.34,
+                1.97,
+                2.17,
+                2.38,
+                3.36
             ]
         },
         "SPY_MOMENTUM": {
-            "price": -0.35,
+            "price": -2.0,
             "change_percent": 0,
-            "trend": "BALANCED",
+            "trend": "SKEWED",
             "sparkline": [
                 0,
                 0,
@@ -2013,40 +2012,40 @@
             ]
         },
         "COPPER_GOLD": {
-            "price": 1.17,
+            "price": 1.15,
             "change_percent": 0,
             "trend": "RISK-OFF",
             "sparkline": [
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17,
-                1.17
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15
             ]
         }
     },
@@ -2054,148 +2053,60 @@
         {
             "code": "retail_sales",
             "name": "USD Retail Sales (MoM)",
-            "date": "2026-02-15",
-            "day": "SUN",
+            "date": "2026-02-19",
+            "day": "THU",
             "time": "08:30 EST",
             "impact": "high"
         },
         {
             "code": "boj",
             "name": "JPY Bank of Japan Policy Meeting",
-            "date": "2026-02-17",
-            "day": "TUE",
+            "date": "2026-02-21",
+            "day": "SAT",
             "time": "12:00 JST",
             "impact": "high"
         },
         {
             "code": "powell",
             "name": "USD Fed Chair Powell Testifies",
-            "date": "2026-02-20",
-            "day": "FRI",
+            "date": "2026-02-24",
+            "day": "TUE",
             "time": "10:00 EST",
             "impact": "high"
         },
         {
             "code": "ecb",
             "name": "EUR ECB Monetary Policy Press Conference",
-            "date": "2026-02-22",
-            "day": "SUN",
+            "date": "2026-02-26",
+            "day": "THU",
             "time": "14:45 CET",
             "impact": "high"
         },
         {
             "code": "ppi",
             "name": "USD Producer Price Index (PPI)",
-            "date": "2026-02-25",
-            "day": "WED",
+            "date": "2026-03-01",
+            "day": "SUN",
             "time": "08:30 EST",
             "impact": "high"
         }
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "The current GMS status is Neutral. Upward momentum pushed the score to 46, reflecting easing market tension. Stable DXY (Dollar strength) and a cooling VIX (Fear index) create a supportive backdrop. While neutrality suggests caution, the House's tariff override reduces immediate trade risks. A disconnect between extremely low sentiment and rising asset prices may signal a short-term bottom. Maintain balanced positioning until momentum confirms a definitive shift toward a Risk-On regime.",
+        "content": "1. [DETERMINATION] Neutral-Ascending Regime. 2. [ANALYSIS] Net liquidity expansion and real yield stabilization drive upward OGV. High-yield spread widening signals credit stress, while equity breadth favors domestic rotation over global weakness. 3. [CONTRARIAN WARNING] Severe divergence between US resilience and Asian equity contraction indicates a localized liquidity trap. 4. [SOVEREIGN CONCLUSION] [ACTION: WAIT FOR PULLBACK]",
         "reports": {
-            "JP": "現在のGMSは「中立」です。上昇モーメンタムがスコアを46まで押し上げ、緊張緩和を反映しています。安定したDXY（ドル強弱）と低下するVIX（恐怖指数）が市場を支えています。中立圏内では慎重さが求められますが、関税撤回案の可決が貿易リスクを抑制しています。極端に低いセンチメントと上昇する価格の乖離は、市場が底を打った兆候かもしれません。リスクオンへの明確な転換を確認するまで、中立姿勢を維持してください。",
-            "EN": "The current GMS status is Neutral. Upward momentum pushed the score to 46, reflecting easing market tension. Stable DXY (Dollar strength) and a cooling VIX (Fear index) create a supportive backdrop. While neutrality suggests caution, the House's tariff override reduces immediate trade risks. A disconnect between extremely low sentiment and rising asset prices may signal a short-term bottom. Maintain balanced positioning until momentum confirms a definitive shift toward a Risk-On regime.",
-            "CN": "目前GMS状态为“中立”。上升动能将分数推高至46，反映出市场紧张情绪有所缓解。稳定的DXY（美元走势）和回落的VIX（恐慌指数）提供了支撑背景。虽然中立格局提示需保持谨慎，但众议院推翻关税的举动降低了贸易风险。极低的市场情绪与上涨的资产价格之间存在背离，这可能预示着阶段性底部。在确认转向风险偏好模式前，建议投资者继续维持中立的仓位配置。",
-            "ES": "El estado actual de GMS es Neutral. El impulso alcista empujó la puntuación a 46, reflejando una menor tensión en el mercado. Un DXY (fortaleza del dólar) estable y un VIX (índice de miedo) a la baja brindan un trasfondo de soporte. Aunque la neutralidad exige cautela, la anulación de aranceles por parte de la Cámara reduce los riesgos comerciales. La divergencia entre el bajo sentimiento y el alza en los precios sugiere un posible suelo técnico. Mantenga una postura equilibrada hasta que se confirme el riesgo.",
-            "HI": "वर्तमान GMS स्थिति 'न्यूट्रल' है। सकारात्मक मोमेंटम ने स्कोर को 46 तक पहुँचाया है, जो बाजार के तनाव में कमी को दर्शाता है। स्थिर DXY (डॉलर की मजबूती) और घटता VIX (डर का सूचकांक) एक सहायक माहौल बना रहे हैं। हालांकि तटस्थता सावधानी का संकेत देती है, लेकिन टैरिफ को पलटने के फैसले ने व्यापार जोखिम को कम किया है। बहुत कम सेंटीमेंट और बढ़ती कीमतों के बीच का अंतर बाजार के निचले स्तर (bottom) का संकेत हो सकता है। जोखिम-ऑन मोड की पुष्टि होने तक संतुलित स्थिति बनाए रखें।",
-            "ID": "Status GMS saat ini adalah Netral. Momentum ke atas mendorong skor ke 46, mencerminkan ketegangan pasar yang mulai mereda. DXY (kekuatan Dolar) yang stabil dan VIX (indeks ketakutan) yang menurun memberikan dukungan pada harga aset. Meskipun fase netralitas menyarankan kewaspadaan, pembatalan tarif oleh DPR mengurangi risiko perdagangan global. Ketimpangan antara sentimen yang sangat rendah dan kenaikan harga mungkin menandakan dasar pasar. Pertahankan posisi seimbang hingga tren risiko terkonfirmasi.",
-            "AR": "حالة GMS الحالية هي 'محايد'. دفع الزخم الصعودي النتيجة إلى 46، مما يعكس تراجع توترات السوق. يوفر استقرار DXY (قوة الدولار) وانخفاض VIX (مؤشر الخوف) خلفية داعمة للأسعار. بينما يشير وضع الحياد إلى ضرورة توخي الحذر، فإن تجاوز الرسوم الجمركية يقلل من المخاطر التجارية الفورية. قد يشير التباين بين المعنويات المنخفضة للغاية وارتفاع أسعار الأصول إلى تشكل قاع سعري محتمل. حافظ على توازن المحفظة حتى يتم تأكيد التحول الكامل نحو نظام المخاطرة.",
-            "DE": "Der aktuelle GMS-Status ist Neutral. Aufwärtsmomentum pushed den Score auf 46, was auf eine Entspannung der Marktlage hindeutet. Ein stabiler DXY (Dollarstärke) und ein sinkender VIX (Angstindex) stützen das Umfeld. Während die Neutralität zur Vorsicht mahnt, reduziert die Aufhebung der Zölle die unmittelbaren Handelsrisiken. Die Diskrepanz zwischen der extrem niedrigen Stimmung und steigenden Kursen könnte einen Marktboden signalisieren. Bleiben Sie neutral positioniert, bis der Trend klar in Richtung Risikoakzeptanz umschlägt.",
-            "FR": "Le statut actuel du GMS est Neutre. L'élan haussier a poussé le score à 46, reflétant une détente des tensions sur le marché. Un DXY (force du dollar) stable et un VIX (indice de la peur) en baisse créent un contexte de soutien. Bien que la neutralité impose la prudence, l'annulation des tarifs douaniers par la Chambre réduit les risques commerciaux. La divergence entre un sentiment très bas et la hausse des prix pourrait signaler un creux technique. Maintenez l'équilibre jusqu'à confirmation d'un régime Risk-On."
+            "JP": "1. 【判定】中立・上昇レジーム。2. 【分析】ネットリクイディティの拡大と実質金利の安定がOGVを牽引。ハイイールド・スプレッドの拡大は信用リスクを示唆するが、株式の幅広さはグローバルな弱さに対する国内回帰を反映。3. 【逆張り警告】米国市場の強靭性とアジア株の急落との乖離は、局所的な流動性の罠を示唆。4. 【主権的結論】 [ACTION: WAIT FOR PULLBACK]",
+            "EN": "1. [DETERMINATION] Neutral-Ascending Regime. 2. [ANALYSIS] Net liquidity expansion and real yield stabilization drive upward OGV. High-yield spread widening signals credit stress, while equity breadth favors domestic rotation over global weakness. 3. [CONTRARIAN WARNING] Severe divergence between US resilience and Asian equity contraction indicates a localized liquidity trap. 4. [SOVEREIGN CONCLUSION] [ACTION: WAIT FOR PULLBACK]",
+            "CN": "1. 【判定】中立回升格局。2. 【分析】净流动性扩张与实际利率趋稳支撑OGV上行。高收益债利差走阔暗示信用风险，但美股宽度显示资金正从全球疲软转向国内轮动。3. 【反向警告】美股韧性与亚洲股市大跌的严重背离预示局域性流动性陷阱。4. 【主权结论】 [ACTION: WAIT FOR PULLBACK]",
+            "ES": "1. [DETERMINACIÓN] Régimen Neutral-Ascendente. 2. [ANÁLISIS] Expansión de liquidez neta y estabilidad de tipos reales impulsan el OGV. El aumento del diferencial HY señala riesgo crediticio, mientras la rotación interna domina ante la debilidad global. 3. [ADVERTENCIA] La divergencia entre la resiliencia de EE.UU. y la contracción en Asia indica una trampa de liquidez. 4. [CONCLUSIÓN SOBERANA] [ACTION: WAIT FOR PULLBACK]",
+            "HI": "1. [निर्धारण] तटस्थ-बढ़ती व्यवस्था। 2. [विश्लेषण] शुद्ध तरलता विस्तार और वास्तविक प्रतिफल स्थिरता OGV को बढ़ा रही है। HY स्प्रेड का बढ़ना क्रेडिट जोखिम का संकेत है, जबकि इक्विटी रोटेशन वैश्विक कमजोरी पर हावी है। 3. [विपरीत चेतावनी] अमेरिकी लचीलेपन और एशियाई बाजारों में गिरावट के बीच का अंतर तरलता जाल का संकेत देता है। 4. [संप्रभु निष्कर्ष] [ACTION: WAIT FOR PULLBACK]",
+            "ID": "1. [DETERMINASI] Rezim Netral-Meningkat. 2. [ANALISIS] Ekspansi likuiditas bersih dan stabilisasi imbal hasil riil mendorong OGV. Pelebaran spread HY menandakan risiko kredit, sementara rotasi ekuitas mendukung aset domestik di tengah kelemahan global. 3. [PERINGATAN] Divergensi antara ketahanan AS dan kontraksi Asia mengindikasikan jebakan likuiditas lokal. 4. [KESIMPULAN BERDAULAT] [ACTION: WAIT FOR PULLBACK]",
+            "AR": "1. [تحديد] نظام محايد-صاعد. 2. [تحليل] توسع السيولة الصافية واستقرار العوائد الحقيقية يدفعان ناقل OGV للأعلى. اتساع هوامش العائد المرتفع يشير لمخاطر ائتمانية، بينما تظهر روتينية السوق تفوق الأصول المحلية. 3. [تحذير] التباين بين مرونة أمريكا وانكماش آسيا يشير إلى فخ سيولة محلي. 4. [خلاصة سيادية] [ACTION: WAIT FOR PULLBACK]",
+            "DE": "1. [BESTIMMUNG] Neutral-Aufsteigendes Regime. 2. [ANALYSE] Liquiditätsausweitung und stabile Realrenditen stützen den OGV-Vektor. Ausweitende HY-Spreads signalisieren Kreditrisiken, während die Marktbreite eine Rotation gegenüber globaler Schwäche zeigt. 3. [KONTRA-WARNUNG] Die Divergenz zwischen US-Resilienz und asiatischer Kontraktion deutet auf eine Liquiditätsfalle hin. 4. [SOUVERÄNES FAZIT] [ACTION: WAIT FOR PULLBACK]",
+            "FR": "1. [DÉTERMINATION] Régime Neutre-Ascendant. 2. [ANALYSE] L'expansion de la liquidité nette et la stabilité des taux réels soutiennent l'OGV. L'écart des rendements HY signale un risque de crédit, tandis que la rotation favorise les actifs domestiques. 3. [ALERTE] La divergence entre la résilience américaine et la chute asiatique indique un piège de liquidité localisé. 4. [CONCLUSION SOUVERAINE] [ACTION: WAIT FOR PULLBACK]"
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-04T02:50:55Z",
-            "score": 32
-        },
-        {
-            "date": "2026-02-04T04:49:46Z",
-            "score": 32
-        },
-        {
-            "date": "2026-02-04T06:00:40Z",
-            "score": 29
-        },
-        {
-            "date": "2026-02-04T07:07:48Z",
-            "score": 29
-        },
-        {
-            "date": "2026-02-04T13:34:54Z",
-            "score": 30
-        },
-        {
-            "date": "2026-02-05T14:41:59Z",
-            "score": 27
-        },
-        {
-            "date": "2026-02-06T05:38:12Z",
-            "score": 28
-        },
-        {
-            "date": "2026-02-06T05:55:08Z",
-            "score": 28
-        },
-        {
-            "date": "2026-02-06T06:21:30Z",
-            "score": 28
-        },
-        {
-            "date": "2026-02-06T06:30:38Z",
-            "score": 28
-        },
-        {
-            "date": "2026-02-06T06:52:08Z",
-            "score": 28
-        },
-        {
-            "date": "2026-02-06T06:57:38Z",
-            "score": 28
-        },
-        {
-            "date": "2026-02-06T07:49:30Z",
-            "score": 28
-        },
-        {
-            "date": "2026-02-06T08:43:45Z",
-            "score": 29
-        },
-        {
-            "date": "2026-02-06T09:44:55Z",
-            "score": 29
-        },
-        {
-            "date": "2026-02-06T10:41:55Z",
-            "score": 29
-        },
-        {
-            "date": "2026-02-06T11:35:37Z",
-            "score": 29
-        },
-        {
-            "date": "2026-02-06T13:03:37Z",
-            "score": 31
-        },
-        {
-            "date": "2026-02-06T14:04:54Z",
-            "score": 31
-        },
-        {
-            "date": "2026-02-06T14:52:15Z",
-            "score": 34
-        },
-        {
-            "date": "2026-02-06T22:24:58Z",
-            "score": 34
-        },
-        {
-            "date": "2026-02-09T15:51:30Z",
-            "score": 44
-        },
         {
             "date": "2026-02-09T23:24:27Z",
             "score": 44
@@ -2345,110 +2256,198 @@
             "score": 41
         },
         {
-            "date": "2026-02-12T13:48:04Z",
+            "date": "2026-02-12T13:27:53Z",
+            "score": 41
+        },
+        {
+            "date": "2026-02-12T13:43:49Z",
+            "score": 41
+        },
+        {
+            "date": "2026-02-12T14:10:35Z",
             "score": 46
+        },
+        {
+            "date": "2026-02-12T15:05:08Z",
+            "score": 46
+        },
+        {
+            "date": "2026-02-12T16:08:27Z",
+            "score": 43
+        },
+        {
+            "date": "2026-02-12T17:17:43Z",
+            "score": 39
+        },
+        {
+            "date": "2026-02-12T18:35:37Z",
+            "score": 39
+        },
+        {
+            "date": "2026-02-12T19:39:07Z",
+            "score": 40
+        },
+        {
+            "date": "2026-02-12T20:54:15Z",
+            "score": 40
+        },
+        {
+            "date": "2026-02-12T21:49:09Z",
+            "score": 39
+        },
+        {
+            "date": "2026-02-12T22:49:10Z",
+            "score": 39
+        },
+        {
+            "date": "2026-02-12T23:43:44Z",
+            "score": 39
+        },
+        {
+            "date": "2026-02-13T01:29:24Z",
+            "score": 37
+        },
+        {
+            "date": "2026-02-13T02:09:34Z",
+            "score": 38
+        },
+        {
+            "date": "2026-02-13T02:20:47Z",
+            "score": 37
+        },
+        {
+            "date": "2026-02-13T02:24:08Z",
+            "score": 37
+        },
+        {
+            "date": "2026-02-13T02:32:44Z",
+            "score": 37
+        },
+        {
+            "date": "2026-02-13T03:06:15Z",
+            "score": 38
+        },
+        {
+            "date": "2026-02-13T03:21:03Z",
+            "score": 38
+        },
+        {
+            "date": "2026-02-13T04:07:27Z",
+            "score": 37
+        },
+        {
+            "date": "2026-02-13T05:13:21Z",
+            "score": 37
+        },
+        {
+            "date": "2026-02-15T23:59:23Z",
+            "score": 49
+        },
+        {
+            "date": "2026-02-16T00:05:34Z",
+            "score": 49
         }
     ],
     "intelligence": {
         "news": [
             {
-                "title": "House votes to override Trump's Canada tariffs",
-                "link": "https://www.cnbc.com/2026/02/11/gop-trump-tariffs-canada.html",
-                "isoDate": "2026-02-12T13:43:56+00:00Z"
+                "title": "OpenClaw creator Peter Steinberger joining OpenAI, Altman Says",
+                "link": "https://www.cnbc.com/2026/02/15/openclaw-creator-peter-steinberger-joining-openai-altman-says.html",
+                "isoDate": "2026-02-15T23:56:35+00:00Z"
             },
             {
-                "title": "Tech IPO hype gets drowned out on Wall Street by prospect of $1 trillion in debt sales",
-                "link": "https://www.cnbc.com/2026/02/12/tech-ipo-hype-drowned-out-by-prospect-of-1-trillion-in-debt-sales.html",
-                "isoDate": "2026-02-12T13:00:01+00:00Z"
+                "title": "Epstein files fallout: The high-profile people burned by past dealings with a predator",
+                "link": "https://www.cnbc.com/2026/02/15/epstein-files-fallout-goldman-ruemmler-harvard-yale.html",
+                "isoDate": "2026-02-16T00:04:24+00:00Z"
             },
             {
-                "title": "Restaurant Brands earnings top estimates as international Burger King restaurants fuel sales growth",
-                "link": "https://www.cnbc.com/2026/02/12/restaurant-brands-international-qsr-q4-2025-earnings.html",
-                "isoDate": "2026-02-12T13:35:29+00:00Z"
+                "title": "Warner Bros. may reopen sale talks with Paramount following new deal terms, Bloomberg reports",
+                "link": "https://www.cnbc.com/2026/02/15/warner-bros-discovery-paramount-netflix.html",
+                "isoDate": "2026-02-15T23:58:09+00:00Z"
             },
             {
-                "title": "Stocks making the biggest moves premarket: Cisco, QuantumScape, Rollins, Fastly and more",
-                "link": "https://www.cnbc.com/2026/02/12/stocks-making-the-biggest-moves-premarket-.html",
-                "isoDate": "2026-02-12T13:08:16+00:00Z"
+                "title": "Trump trade adviser Navarro says administration may force data center builders like Meta to 'internalize' costs",
+                "link": "https://www.cnbc.com/2026/02/15/navarro-trump-data-centers-affordability.html",
+                "isoDate": "2026-02-15T23:57:45+00:00Z"
             },
             {
-                "title": "Here are Thursday's biggest analyst calls of the day: Nvidia, Apple, Shopify, McDonald's, Kraft Heinz & more",
-                "link": "https://www.cnbc.com/2026/02/12/biggest-stocks-thursday-from-analyst-calls-like-nvidia.html",
-                "isoDate": "2026-02-12T13:28:08+00:00Z"
+                "title": "No clear path to ending the partial government shutdown as lawmakers dig in over DHS oversight",
+                "link": "https://www.cnbc.com/2026/02/15/trump-congress-government-shutdown-dhs.html",
+                "isoDate": "2026-02-15T23:58:32+00:00Z"
             },
             {
-                "title": "Why Alphabet’s 100-year sterling bond is raising new fears over debt-fuelled AI arms race",
-                "link": "https://www.cnbc.com/2026/02/12/alphabet-100-year-bond-debt-fears-ai-credit-risk.html",
-                "isoDate": "2026-02-12T10:09:46+00:00Z"
+                "title": "Consumer staples are rallying in 2026. Here’s what’s driving the surge in the sector",
+                "link": "https://www.cnbc.com/2026/02/15/consumer-staples-are-rallying-in-2026-heres-whats-driving-the-surge.html",
+                "isoDate": "2026-02-15T13:41:54+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "トランプ氏のカナダ関税に対する下院の再可決",
-                "テクノロジーIPOの熱狂、1兆ドルの債券発行見通しでウォール街に埋もれる",
-                "レストラン・ブランズ、海外バーガーキングが売上増を牽引し決算が予想を上回る",
-                "プレマーケットで最も動いた銘柄：シスコ、クオンタムスケープ、ロリンズ、ファストリーなど",
-                "木曜日の主要アナリスト見通し：Nvidia、Apple、Shopify、McDonald's、Kraft Heinzなど",
-                "Alphabetの100年満期社債が、AI軍拡競争への債務懸念を再燃させる理由"
+                "OpenClawのクリエイター、ピーター・スタインバーガー氏がOpenAIに参加、アルトマン氏が発表",
+                "エプスタイン事件の余波：過去の取引で被害を受けた著名人",
+                "ワーナー・ブラザーズ、新たな契約条件でパラマウントとの売却交渉を再開か、ブルームバーグ報道",
+                "トランプ政権の貿易顧問ナバロ氏、メタのようなデータセンター建設業者にコストの「内製化」を強制する可能性を示唆",
+                "DHS監督を巡り議員が強硬姿勢、一部政府閉鎖終了への明確な道筋なく",
+                "生活必需品セクターが2026年に急騰。この分野の急騰を牽引するものとは"
             ],
             "CN": [
-                "众议院投票推翻特朗普的加拿大关税",
-                "科技IPO炒作被华尔街万亿美元债务发行前景所淹没",
-                "Restaurant Brands财报超预期，国际汉堡王餐厅带动销售增长",
-                "盘前交易波动最大的股票：思科、QuantumScape、Rollins、Fastly等",
-                "周四最大的分析师评级变动：英伟达、苹果、Shopify、麦当劳、卡夫亨氏等",
-                "Alphabet发行100年期债券引发对债务驱动AI军备竞赛的新担忧"
+                "OpenClaw创建者Peter Steinberger将加入OpenAI，Altman表示",
+                "爱泼斯坦文件后续：与掠夺者过去的交易受到牵连的高调人物",
+                "据彭博社报道，华纳兄弟可能在新的交易条款后重新开启与派拉蒙的销售谈判",
+                "特朗普贸易顾问纳瓦罗称，政府可能迫使Meta等数据中心建设商“内化”成本",
+                "围绕DHS监督问题，议员们立场坚定，部分政府停摆的结束没有明确路径",
+                "2026年，必需消费品行业正在上涨。以下是推动该行业飙升的因素"
             ],
             "ES": [
-                "La Cámara de Representantes vota para anular los aranceles de Trump a Canadá",
-                "El bombo de las OPI tecnológicas se ahoga en Wall Street por la perspectiva de ventas de deuda por 1 billón de dólares",
-                "Las ganancias de Restaurant Brands superan las estimaciones, ya que los restaurantes internacionales de Burger King impulsan el crecimiento de las ventas",
-                "Las acciones que registran los mayores movimientos antes de la apertura: Cisco, QuantumScape, Rollins, Fastly y más",
-                "Las mayores llamadas de analistas del jueves del día: Nvidia, Apple, Shopify, McDonald's, Kraft Heinz y más",
-                "Por qué el bono a 100 años de Alphabet está generando nuevos temores sobre la carrera armamentista de IA impulsada por la deuda"
+                "El creador de OpenClaw, Peter Steinberger, se une a OpenAI, dice Altman",
+                "Consecuencias de los archivos de Epstein: Personas de alto perfil afectadas por tratos pasados con un depredador",
+                "Warner Bros. podría reabrir conversaciones de venta con Paramount tras nuevos términos de acuerdo, informa Bloomberg",
+                "El asesor comercial de Trump, Navarro, dice que la administración podría obligar a constructores de centros de datos como Meta a 'internalizar' costos",
+                "No hay un camino claro para poner fin al cierre parcial del gobierno mientras los legisladores se atrincheran sobre la supervisión del DHS",
+                "Los productos básicos de consumo se están recuperando en 2026. Esto es lo que está impulsando el aumento en el sector"
             ],
             "HI": [
-                "हाउस ने ट्रम्प के कनाडाई टैरिफ को ओवरराइड करने के लिए मतदान किया",
-                "टेक आईपीओ का प्रचार वॉल स्ट्रीट पर 1 ट्रिलियन डॉलर की ऋण बिक्री की संभावना से दब गया",
-                "रेस्तरां ब्रांड्स की कमाई अनुमानों से बेहतर, अंतरराष्ट्रीय बर्गर किंग रेस्तरां बिक्री वृद्धि को बढ़ावा दे रहे हैं",
-                "प्रीमार्केट में सबसे बड़ी चालें चलने वाले स्टॉक: सिस्को, क्वांटमस्केप, रोलिंस, फास्टली और बहुत कुछ",
-                "गुरुवार की सबसे बड़ी विश्लेषक कॉल: Nvidia, Apple, Shopify, McDonald's, Kraft Heinz और बहुत कुछ",
-                "Alphabet का 100-वर्षीय बॉन्ड ऋण-ईंधन वाली AI हथियारों की दौड़ पर नए डर पैदा कर रहा है"
+                "OpenClaw निर्माता पीटर स्टाइनबर्गर OpenAI में शामिल हो रहे हैं, अल्टमैन ने कहा",
+                "एपस्टीन फाइलों का प्रभाव: एक शिकारी के साथ पिछले व्यवहार से प्रभावित उच्च-प्रोफ़ाइल लोग",
+                "ब्लूमबर्ग की रिपोर्ट: वार्नर ब्रदर्स नई डील शर्तों के बाद पैरामाउंट के साथ बिक्री वार्ता फिर से शुरू कर सकता है",
+                "ट्रम्प के व्यापार सलाहकार नवारो का कहना है कि प्रशासन मेटा जैसे डेटा सेंटर बिल्डरों को लागत 'आंतरिक' बनाने के लिए मजबूर कर सकता है",
+                "डीएचएस निरीक्षण पर सांसदों के कड़े रुख के कारण आंशिक सरकारी शटडाउन को समाप्त करने का कोई स्पष्ट रास्ता नहीं",
+                "2026 में उपभोक्ता प्रधान वस्तुएं बढ़ रही हैं। यहाँ इस क्षेत्र में वृद्धि को बढ़ावा देने वाली चीजें दी गई हैं"
             ],
             "ID": [
-                "DPR memilih untuk membatalkan tarif Kanada Trump",
-                "Euforia IPO teknologi tenggelam di Wall Street oleh prospek penjualan utang senilai $1 triliun",
-                "Pendapatan Restaurant Brands melampaui perkiraan karena restoran Burger King internasional mendorong pertumbuhan penjualan",
-                "Saham yang membuat pergerakan terbesar sebelum pasar: Cisco, QuantumScape, Rollins, Fastly, dan lainnya",
-                "Panggilan analis terbesar hari Kamis: Nvidia, Apple, Shopify, McDonald's, Kraft Heinz & lainnya",
-                "Mengapa obligasi sterling 100 tahun Alphabet meningkatkan ketakutan baru atas perlombaan senjata AI yang didorong oleh utang"
+                "Pencipta OpenClaw Peter Steinberger Bergabung dengan OpenAI, Kata Altman",
+                "Dampak berkas Epstein: Orang-orang terkenal yang dirugikan oleh pergaulan masa lalu dengan predator",
+                "Warner Bros. Dapat Membuka Kembali Pembicaraan Penjualan dengan Paramount Setelah Syarat Kesepakatan Baru, Laporan Bloomberg",
+                "Penasihat perdagangan Trump Navarro mengatakan pemerintahan mungkin memaksa pembangun pusat data seperti Meta untuk 'menginternalisasi' biaya",
+                "Tidak ada jalur yang jelas untuk mengakhiri penutupan pemerintah parsial saat anggota parlemen bertahan atas pengawasan DHS",
+                "Kebutuhan pokok konsumen menguat di tahun 2026. Inilah yang mendorong lonjakan di sektor ini"
             ],
             "AR": [
-                "مجلس النواب يصوت على تجاوز رسوم ترامب على كندا",
-                "ضجة الاكتتابات العامة لشركات التكنولوجيا تطغى عليها وول ستريت بتوقع مبيعات ديون بقيمة تريليون دولار",
-                "أرباح Restaurant Brands تتجاوز التقديرات مع نمو مبيعات مطاعم برجر كنج الدولية",
-                "الأسهم التي سجلت أكبر تحركات قبل الافتتاح: Cisco، QuantumScape، Rollins، Fastly والمزيد",
-                "أكبر مكالمات المحللين ليوم الخميس: Nvidia، Apple، Shopify، McDonald's، Kraft Heinz والمزيد",
-                "لماذا تثير سندات ألفابت القياسية لأجل 100 عام مخاوف جديدة بشأن سباق التسلح المدعوم بالذكاء الاصطناعي والديون"
+                "مبدع OpenClaw بيتر شتاينبرغر ينضم إلى OpenAI، حسبما قال ألتમાન",
+                "تداعيات ملفات إبشتاين: الأشخاص البارزون المتضررون من تعاملاتهم السابقة مع مفترس",
+                "وارنر براذرز قد تعيد فتح محادثات البيع مع باراماونت بعد شروط صفقة جديدة، حسبما أفادت بلومبرج",
+                "مستشار ترامب التجاري نافارو يقول إن الإدارة قد تجبر بناة مراكز البيانات مثل ميتا على \"استيعاب\" التكاليف",
+                "لا يوجد مسار واضح لإنهاء الإغلاق الحكومي الجزئي مع تمسك المشرعين بالإشراف على وزارة الأمن الداخلي",
+                "السلع الاستهلاكية الأساسية تشهد انتعاشًا في عام 2026. إليك ما يدفع الارتفاع في هذا القطاع"
             ],
             "DE": [
-                "Repräsentantenhaus stimmt dafür, Trumps Zölle auf Kanada zu überstimmen",
-                "Tech-Börsengang-Hype wird an der Wall Street von der Aussicht auf Schuldenverkäufe in Höhe von 1 Billion US-Dollar übertönt",
-                "Restaurant Brands Gewinn übertrifft Erwartungen, da internationale Burger King Restaurants das Umsatzwachstum ankurbeln",
-                "Aktien mit den größten Bewegungen vor dem Handel: Cisco, QuantumScape, Rollins, Fastly und mehr",
-                "Die größten Analystenrufe des Tages am Donnerstag: Nvidia, Apple, Shopify, McDonald's, Kraft Heinz & mehr",
-                "Warum die 100-jährige Sterling-Anleihe von Alphabet neue Befürchtungen über ein schuldengetriebenes KI-Wettrüsten schürt"
+                "OpenClaw-Schöpfer Peter Steinberger tritt OpenAI bei, sagt Altman",
+                "Folgen der Epstein-Akten: Prominente, die durch vergangene Geschäfte mit einem Raubtier geschädigt wurden",
+                "Warner Bros. könnte nach neuen Geschäftsbedingungen Gespräche über einen Verkauf mit Paramount wieder aufnehmen, berichtet Bloomberg",
+                "Trumps Handelsberater Navarro sagt, die Regierung könnte Bauherren von Rechenzentren wie Meta zwingen, Kosten zu \"internalisieren\"",
+                "Kein klarer Weg zur Beendigung des teilweisen Government Shutdowns, da sich die Gesetzgeber beim DHS-G Oversight festsetzen",
+                "Basiskonsumgüter boomen im Jahr 2026. Hier erfahren Sie, was den Anstieg in diesem Sektor antreibt"
             ],
             "FR": [
-                "La Chambre des représentants vote pour annuler les tarifs douaniers de Trump sur le Canada",
-                "L'engouement pour les introductions en bourse technologiques est étouffé à Wall Street par la perspective de ventes de dette d'un billion de dollars",
-                "Les bénéfices de Restaurant Brands dépassent les estimations, les restaurants Burger King internationaux stimulant la croissance des ventes",
-                "Les actions qui ont fait les plus grands mouvements avant le marché : Cisco, QuantumScape, Rollins, Fastly et plus",
-                "Les plus grands appels d'analystes de jeudi : Nvidia, Apple, Shopify, McDonald's, Kraft Heinz et plus",
-                "Pourquoi l'obligation sterling de 100 ans d'Alphabet suscite de nouvelles craintes concernant la course aux armements alimentée par la dette de l'IA"
+                "Le créateur d'OpenClaw, Peter Steinberger, rejoint OpenAI, selon Altman",
+                "Les retombées des dossiers Epstein : les personnalités influentes brûlées par leurs relations passées avec un prédateur",
+                "Warner Bros. pourrait rouvrir les discussions de vente avec Paramount suite à de nouvelles conditions d'accord, rapporte Bloomberg",
+                "L'ancien conseiller commercial de Trump, Navarro, affirme que l'administration pourrait obliger les constructeurs de centres de données comme Meta à \"internaliser\" les coûts",
+                "Aucune voie claire pour mettre fin à la fermeture partielle du gouvernement alors que les législateurs s'accrochent au contrôle du DHS",
+                "Les biens de consommation de base se redressent en 2026. Voici ce qui stimule la hausse du secteur"
             ]
         },
-        "last_updated": "2026-02-12T13:48:04.998552+00:00Z"
+        "last_updated": "2026-02-16T00:05:34.926685+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }

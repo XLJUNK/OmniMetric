@@ -51,13 +51,22 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { date } = await params;
-    // const { lang } = await searchParams; // Cannot use searchParams in static export
     const l = 'EN'; // Default to EN for static metadata
 
     const data = await getReportData(date);
 
+    // SEO Tiering Logic: only index the latest 7 days
+    const targetDate = new Date(date);
+    const today = new Date();
+    const diffTime = Math.abs(today.getTime() - targetDate.getTime());
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    const shouldIndex = diffDays <= 7;
+
     if (!data || !data.analysis) {
-        return getMultilingualMetadata(`/analysis/${date}`, l, 'Report Not Found | OmniMetric');
+        return {
+            ...(getMultilingualMetadata(`/analysis/${date}`, l, 'Report Not Found | OmniMetric')),
+            robots: { index: false, follow: true }
+        };
     }
 
     const score = data.gms_score;
@@ -68,7 +77,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title = `${score} - ${regime} | OmniMetric Market Analysis ${date}`;
     const description = typeof data.analysis.content === 'string' ? data.analysis.content.slice(0, 160) : "Institutional Global Macro Signal daily analysis report.";
 
-    return getMultilingualMetadata(`/analysis/${date}`, l, title, description);
+    const baseMetadata = getMultilingualMetadata(`/analysis/${date}`, l, title, description);
+
+    return {
+        ...baseMetadata,
+        robots: {
+            index: shouldIndex,
+            follow: true,
+        }
+    };
 }
 
 export default async function AnalysisPage({ params }: { params: Promise<{ date: string }> }) {

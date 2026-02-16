@@ -84,33 +84,43 @@ export default async function ArchivePage({ params }: Props) {
                         </div>
                     </div>
 
-                    {/* SNAPSHOT EXPLORER HEADER */}
-                    <div className="flex items-center gap-4 pt-12">
-                        <Calendar className="w-4 h-4 text-slate-500" />
-                        <h3 className="text-xs font-black tracking-[0.4em] uppercase text-slate-500">Historical Snapshot Explorer</h3>
-                        <div className="flex-1 h-px bg-slate-200 dark:bg-white/5"></div>
-                    </div>
+                    {/* LATEST SNAPSHOTS (SEO LAYER - 7 DAYS) */}
+                    <div className="space-y-6">
+                        <div className="flex items-center gap-4">
+                            <Activity className="w-4 h-4 text-sky-500" />
+                            <h3 className="text-xs font-black tracking-[0.4em] uppercase text-slate-500">Latest Pulse Snapshots (7 Days)</h3>
+                            <div className="flex-1 h-px bg-slate-200 dark:bg-white/5"></div>
+                        </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {dates.length > 0 ? (
-                            dates.map((date: string) => (
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            {dates.slice(0, 7).map((date: string) => (
                                 <Link
                                     key={date}
                                     href={normalizedLang === 'EN' ? `/archive/${date}` : `/${normalizedLang.toLowerCase()}/archive/${date}`}
-                                    className="group bg-white dark:bg-[#111] border border-slate-200 dark:border-white/5 p-6 rounded-[2px] flex items-center justify-between hover:bg-sky-50 dark:hover:bg-sky-500/5 hover:border-sky-300 dark:hover:border-sky-500/30 transition-all no-underline shadow-sm dark:shadow-none"
+                                    className="group flex items-center justify-between p-4 bg-white dark:bg-[#111] border border-slate-200 dark:border-white/5 rounded hover:border-sky-500 transition-all no-underline"
                                 >
-                                    <div className="flex items-center gap-4">
-                                        <Calendar className="w-4 h-4 text-sky-500 opacity-60 group-hover:opacity-100" />
-                                        <span className="font-mono text-lg font-bold tracking-tighter text-slate-700 dark:text-slate-300 group-hover:text-sky-900 dark:group-hover:text-white">{date}</span>
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-2 h-2 rounded-full bg-sky-500/40 group-hover:bg-sky-500 animate-pulse" />
+                                        <span className="font-mono text-sm font-bold text-slate-600 dark:text-slate-400 group-hover:text-sky-500">{date}</span>
                                     </div>
-                                    <ChevronRight className="w-4 h-4 text-slate-400 dark:text-slate-600 group-hover:text-sky-500 transform group-hover:translate-x-1 transition-all" />
+                                    <ChevronRight className="w-3 h-3 text-slate-300 group-hover:translate-x-1 transition-transform" />
                                 </Link>
-                            ))
-                        ) : (
-                            <div className="col-span-full border border-dashed border-slate-300 dark:border-white/10 p-12 text-center">
-                                <span className="text-[10px] font-mono text-slate-500 tracking-widest uppercase">No historical data found in local vaults.</span>
-                            </div>
-                        )}
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* ARCHIVE EXPLORER (PERSISTENT LAYER) */}
+                    <div className="pt-12 space-y-8">
+                        <div className="flex items-center gap-4">
+                            <Calendar className="w-4 h-4 text-slate-500" />
+                            <h3 className="text-xs font-black tracking-[0.4em] uppercase text-slate-500">Historical Signal Archive</h3>
+                            <div className="flex-1 h-px bg-slate-200 dark:bg-white/5"></div>
+                        </div>
+
+                        <ArchiveCalendar
+                            lang={lang.toLowerCase()}
+                            t={pageData}
+                        />
                     </div>
 
                     {/* MANDATORY LEGAL DISCLAIMER */}

@@ -22,11 +22,12 @@ BEACON_TICKERS = {
 
 # 2. OGV Indicators (Enhanced Density: 24 total)
 OGV_TICKERS = {
-    # Macro Pillars
+    # Macro Pillars (Growth & Inflation Proxies)
     "SPY": "SPY", "QQQ": "QQQ", "IWM": "IWM",
-    "BTC": "BTC-USD", "GOLD": "GC=F", "US10Y": "^TNX",
+    "BTC": "BTC-USD", "GOLD": "GC=F", "COPPER": "HG=F",
+    "TIP": "TIP", "IEF": "IEF", "US10Y": "^TNX",
     
-    # Cash / Safe Haven (The "Moving Fortress" additions)
+    # Cash / Safe Haven
     "DXY": "DX-Y.NYB", "BIL": "BIL",
     
     # Sectors (Market Concentration)
@@ -34,22 +35,23 @@ OGV_TICKERS = {
     "XLI": "XLI", "XLB": "XLB", "XLY": "XLY", "XLP": "XLP", 
     "XLU": "XLU", "XLRE": "XLRE",
     
-    # Diversified / Global
+    # Diversified / Credit
     "EEM": "EEM", "FXI": "FXI", "USO": "USO", "SLV": "SLV",
     "JNK": "JNK", "TLT": "TLT"
 }
 
-# OGV Axis Weights (Defining the Economic/Monetary Geometry)
-# X-Axis: Economy (+ Expansion / - Stagnation)
+# X-Axis: Economy (+ Expansion / - Stagnation) - CORE LEADING: COPPER/GOLD RATIO
 OGV_X_WEIGHTS = {
-    "SPY": 1.0, "QQQ": 1.2, "IWM": 1.0, "BTC": 0.8, "COPPER": 1.0,
+    "COPPER": 2.0, "GOLD": -2.0, # Strong leading proxy for growth/risk-on
+    "SPY": 1.0, "QQQ": 1.2, "IWM": 1.0, "BTC": 0.8,
     "XLK": 1.2, "XLY": 1.0, "XLF": 0.8, "XLI": 0.8, "XLE": 0.5,
     "EEM": 0.8, "FXI": 0.6, "USO": 0.5,
-    "GOLD": -1.0, "DXY": -1.2, "BIL": -1.5, "XLP": -0.8, "XLV": -0.6, "XLU": -0.8, "TLT": -0.5
+    "DXY": -1.2, "BIL": -1.5, "XLP": -0.8, "XLV": -0.6, "XLU": -0.8, "TLT": -0.5
 }
 
-# Y-Axis: Monetary (+ Tightening / - Liquidity)
+# Y-Axis: Monetary (+ Tightening / - Liquidity) - CORE LEADING: 10Y BREAKEVEN (TIP/IEF SPREAD)
 OGV_Y_WEIGHTS = {
+    "TIP": 2.0, "IEF": -2.0, # Breakeven inflation proxy
     "US10Y": 1.5, "DXY": 1.0, "BIL": 0.8, "XLF": 0.6,
     "TLT": -1.5, "LQD": -1.2, "JNK": -1.0, "BTC": -0.5, "XLK": -0.4, "XLRE": -0.8, "XLU": -0.8
 }

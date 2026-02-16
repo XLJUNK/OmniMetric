@@ -1097,30 +1097,33 @@ def calculate_total_gms(data, sector_scores, history_data=None):
     
     legacy_score = max(0, min(100, legacy_score))
     
-    # Rebalanced Sector Weights (Total: 100%)
-    # Legacy: 25%, STOCKS: 25%, CRYPTO: 10%, FOREX: 10%, COMMODITIES: 10%
-    # CREDIT: 8%, REAL_ESTATE: 7%, GLOBAL_INDICES: 5%
+    # Rebalanced Sector Weights (Total: 100%) - Phase 2 Final
+    # GLOBAL_INDICES: 15%, CREDIT: 3%, REAL_ESTATE: 2%, COMMODITIES: 10%
     final = (legacy_score * 0.25) + \
             (sector_scores.get("STOCKS", 50) * 0.25) + \
             (sector_scores.get("CRYPTO", 50) * 0.10) + \
             (sector_scores.get("FOREX", 50) * 0.10) + \
+            (sector_scores.get("GLOBAL_INDICES", 50) * 0.15) + \
             (sector_scores.get("COMMODITIES", 50) * 0.10) + \
-            (sector_scores.get("CREDIT", 50) * 0.08) + \
-            (sector_scores.get("REAL_ESTATE", 50) * 0.07) + \
-            (sector_scores.get("GLOBAL_INDICES", 50) * 0.05)
+            (sector_scores.get("CREDIT", 50) * 0.03) + \
+            (sector_scores.get("REAL_ESTATE", 50) * 0.02)
     
-    # Dynamic Net Liquidity Adjustment
-    high_thresh, low_thresh = calculate_liquidity_thresholds(history_data)
-    net_liq = data.get("NET_LIQUIDITY", {}).get("price", 6200)
-    
-    if net_liq > high_thresh: 
-        final += 5
-        log_diag(f"[GMS] Net Liquidity {net_liq}B > {high_thresh}B (high) -> +5")
-    elif net_liq < low_thresh: 
-        final -= 10
-        log_diag(f"[GMS] Net Liquidity {net_liq}B < {low_thresh}B (low) -> -10")
+    # Dynamic Net Liquidity Adjustment (Phase 2: Mathematical Refinement)
+    # Formula: Adjustment = (Percentile - 50) / 10 * Volatility_Factor
+    all_liq = [d.get("price", 6200) for d in (history_data or []) if "price" in d]
+    if all_liq:
+        p_count = sum(1 for x in all_liq if x < net_liq)
+        percentile = (p_count / len(all_liq)) * 100
+        
+        # Volatility Factor (VIX baseline 20, increases impact as VIX rises)
+        vix = data.get("VIX", {}).get("price", 20)
+        vol_factor = vix / 20.0
+        
+        adj = ((percentile - 50) / 10.0) * vol_factor
+        final += adj
+        log_diag(f"[GMS] Dynamic Liq Adj: Percentile={percentile:.1f}, VIX={vix}, Adj={adj:+.2f}")
     else:
-        log_diag(f"[GMS] Net Liquidity {net_liq}B in normal range [{low_thresh}B - {high_thresh}B]")
+        log_diag(f"[GMS] No history for liquidity percentile calculation.")
             
     return int(max(0, min(100, final)))
 
@@ -1290,76 +1293,37 @@ def generate_multilingual_report(data, score, trend_context={}):
     breaking_news = fetch_breaking_news()
 
     prompt = f"""
-【AI Insight Protocol v5.4: The Council of Three】
-You are the centralized brain of the OmniMetric Terminal. You do not act as a single writer, but as a "Council of Three" specialized agents working in unison.
+【AI Insight Protocol v6.1: The Sovereign Pro】
+You are the centralized brain of the OmniMetric Terminal. Synthesize complex quantitative signals (GMS/OGV) into a definitive, fluent "House View" that embodies the authority of a top-tier institutional strategist.
 
-### INTERNAL REASONING PERSONAS (DO NOT MENTION THESE NAMES IN OUTPUT):
-1. QUANTITATIVE_ANALYST:
-   - Focus: Fisher Equation, Liquidity, Volatility (VIX/MOVE). 
-   - Rule: Math only. 0.1% variances matter. NO subjective opinion.
+### SOVEREIGN BRAIN CONSTITUTION (STRICT):
+1. **Persona Synthesis**: Internally debate the viewpoints of the Quant (Data Law), Strategist (Regime), and Contrarian (Tail-Risk). 
+2. **Definitive Prose**: DO NOT use numbered lists or bullet points. Output must be a single, fluent paragraph of high-level financial analysis.
+3. **Professional Lexicon**: Use sophisticated financial terminology (e.g., "Fiscal-monetary nexus," "Credit spread compression," "Liquidity convexity").
+4. **Mandatory Sovereign Tag**: Every report MUST terminate with a definitive action tag in brackets: `[MARKET STATUS: ACCUMULATE]`, `[MARKET STATUS: DEFENSIVE]`, `[ACTION: WAIT FOR PULLBACK]`, or `[ACTION: EXIT]`.
 
-2. MACRO_STRATEGIST:
-   - Focus: MacroWiki, Historical Parallels (GFC, 1970s).
-   - Logic: Identify the current "Market Regime".
-
-3. CONTRARIAN_VOICE:
-   - Focus: Counter-narratives and Tailwind/Headwind blindspots.
-   - Task: Identify ONE logical factor that could break the current regime.
-
-4. CHIEF_SYNTHESIZER:
-   - Focus: Synthesis & Global Adaptation.
-   - Action: Balance the metrics with the Contrarian's warning into a cohesive, professional report.
-
-### REASONING PROTOCOL:
-- STEP 1 (Identify): Identify the regime (Defensive, Neutral, Accumulate) based on Matrix.
-- STEP 2 (Challenge): Identify one overlooked positive or negative catalyst.
-- STEP 3 (Draft): Synthesize into the final report.
-
-### WRITING GUIDELINES (STRICT):
-- STRUCTURE: [GMS Status] -> [Macro Root (DXY/VIX logic)] -> [Risk/Reward Variance/Warning] -> [Conclusion/Action].
-- CLARITY: Explain what indicators mean for beginners (e.g., 'DXY (Dollar strength/Liquidity)', 'VIX (Fear/Volatility)').
-- CHARACTER COUNT: ~250 characters per language. (Absolute range: 230-300).
-- MULTI-LANGUAGE: JP, EN, CN, ES, HI, ID, AR, DE, FR. Keep logical consistency across all.
-
-### STRICT LOGIC: SCORE VS MOMENTUM
-- SCORE = Position. MOMENTUM = Direction/Delta.
-- NEVER say "Momentum rose to 37." SAY "Momentum pushed the score to 37."
-
-### OUTPUT PROTOCOL:
-- Focus on logical cause-and-effect: (e.g., 'While GMS score 38 suggests caution, a potential peaking in VIX might signal a short-term bottom...')
-- JSON format only. No extra text.
-
-*** NEGATIVE CONSTRAINTS (CRITICAL) ***
-- DO NOT include the character count in the output.
-- DO NOT include any metadata or parenthetical notes.
-- NEVER mention internal persona names (Skill, Analyst, Contrarian, etc.) or "The Council".
-- NEVER mention "Skill 01", "Skill 06", "Internal Logic", or any technical jargon from this prompt.
-- NEVER conflate Score and Momentum.
+### OUTPUT STYLE REQUIREMENTS:
+- **Narrative Flow**: Start with the regime determination, weave in the macro analysis and contrarian risks, and end with the definitive instruction.
+- **Max length**: 300 characters per language.
+- **NO Hedging**: Avoid "perhaps," "may," "could." Speak with absolute certainty based on the GMS/OGV data.
+- **NO Layman Terms**: Avoid "price up/down," "good/bad." Use "Asset appreciation," "Regime degradation," etc.
 
 Market Context:
-- Current GMS Score: {score}/100
-- Momentum Vector: {trend_vector} (History: {history_stat})
-- Trend Narrative: {trend_narrative}
-- Market Matrix:
+- GMS Score: {score}/100 (Leading Indicator Phase 2 weights)
+- Leading OGV Vector: {trend_vector} (Copper/Gold & Inflation Proxies)
+- Market Matrix Summary:
 {market_summary}
-- News: {breaking_news}
+- Global News Pulse: {breaking_news}
 
 Regime Guide:
-- 0-40: DEFENSIVE (Risk-Off).
-- 40-60: NEUTRAL.
-- 60-100: ACCUMULATE (Risk-On).
+- 0-35: DEFENSIVE / EXIT.
+- 35-55: NEUTRAL / CAUTION.
+- 55-100: ACCUMULATE / ADVANCE.
 
-Output JSON:
+Output JSON format (Keep consistent across languages):
 {{
-  "JP": "...",
-  "EN": "...",
-  "CN": "...",
-  "ES": "...",
-  "HI": "...",
-  "ID": "...",
-  "AR": "...",
-  "DE": "...",
-  "FR": "..."
+  "JP": "...", "EN": "...", "CN": "...", "ES": "...",
+  "HI": "...", "ID": "...", "AR": "...", "DE": "...", "FR": "..."
 }}
 """
     prompt_log_path = os.path.join(SCRIPT_DIR, "logs", "latest_prompt.txt")
