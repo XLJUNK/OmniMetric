@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-02-17T18:34:14.164507+00:00",
-    "last_successful_update": "2026-02-17T18:34:14.164515+00:00",
+    "last_updated": "2026-02-17T19:34:28.837699+00:00",
+    "last_successful_update": "2026-02-17T19:34:28.837705+00:00",
     "gms_score": 47,
     "sector_scores": {
         "STOCKS": 41,
@@ -91,13 +91,12 @@
             ]
         },
         "HY_SPREAD": {
-            "price": 2.95,
-            "prev_price": 2.92,
-            "daily_chg": 1.03,
-            "change_percent": 1.03,
+            "price": 2.94,
+            "prev_price": 2.95,
+            "daily_chg": -0.34,
+            "change_percent": -0.34,
             "trend": "CALM",
             "sparkline": [
-                2.79,
                 2.79,
                 2.76,
                 2.74,
@@ -126,7 +125,8 @@
                 2.86,
                 2.84,
                 2.92,
-                2.95
+                2.95,
+                2.94
             ]
         },
         "NFCI": {
@@ -149,14 +149,12 @@
             ]
         },
         "NET_LIQUIDITY": {
-            "price": 5706.7,
-            "prev_price": 5704.23,
-            "daily_chg": 0.04,
-            "change_percent": 0.19,
-            "trend": "EXPANSION",
+            "price": 5706.64,
+            "prev_price": 5706.7,
+            "daily_chg": -0.0,
+            "change_percent": 0.01,
+            "trend": "CONTRACTION",
             "sparkline": [
-                5796.83,
-                5800.73,
                 5772.87,
                 5774.37,
                 5774.17,
@@ -184,7 +182,9 @@
                 5695.69,
                 5706.03,
                 5704.23,
-                5706.7
+                5706.7,
+                5706.7,
+                5706.64
             ]
         },
         "BREAKEVEN_INFLATION": {
@@ -225,11 +225,11 @@
             ]
         },
         "VIX": {
-            "price": 20.97,
+            "price": 20.0,
             "prev_price": 20.6,
-            "daily_chg": 1.8,
-            "change_percent": 17.88,
-            "trend": "UP",
+            "daily_chg": -2.91,
+            "change_percent": 12.42,
+            "trend": "DOWN",
             "sparkline": [
                 15.84,
                 15.86,
@@ -252,7 +252,7 @@
                 17.65,
                 20.82,
                 20.6,
-                20.97
+                20.0
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
@@ -367,10 +367,10 @@
             ]
         },
         "SPY": {
-            "price": 682.68,
+            "price": 684.42,
             "prev_price": 681.75,
-            "daily_chg": 0.14,
-            "change_percent": -1.36,
+            "daily_chg": 0.39,
+            "change_percent": -1.11,
             "trend": "UP",
             "sparkline": [
                 692.24,
@@ -394,15 +394,15 @@
                 691.96,
                 681.27,
                 681.75,
-                682.68
+                684.42
             ]
         },
         "TNX": {
             "price": 4.06,
             "prev_price": 4.06,
-            "daily_chg": 0.05,
-            "change_percent": -2.15,
-            "trend": "UP",
+            "daily_chg": 0.0,
+            "change_percent": -2.19,
+            "trend": "DOWN",
             "sparkline": [
                 4.16,
                 4.23,
@@ -429,11 +429,11 @@
             ]
         },
         "QQQ": {
-            "price": 601.45,
+            "price": 603.22,
             "prev_price": 601.92,
-            "daily_chg": -0.08,
-            "change_percent": -1.64,
-            "trend": "DOWN",
+            "daily_chg": 0.22,
+            "change_percent": -1.35,
+            "trend": "UP",
             "sparkline": [
                 621.78,
                 621.26,
@@ -456,15 +456,15 @@
                 613.11,
                 600.64,
                 601.92,
-                601.45
+                603.22
             ]
         },
         "IWM": {
-            "price": 262.89,
+            "price": 264.0,
             "prev_price": 262.96,
-            "daily_chg": -0.02,
-            "change_percent": -1.23,
-            "trend": "DOWN",
+            "daily_chg": 0.4,
+            "change_percent": -0.81,
+            "trend": "UP",
             "sparkline": [
                 265.51,
                 265.76,
@@ -487,14 +487,14 @@
                 264.95,
                 259.54,
                 262.96,
-                262.89
+                264.0
             ]
         },
         "RSP": {
-            "price": 202.34,
+            "price": 202.73,
             "prev_price": 202.87,
-            "daily_chg": -0.26,
-            "change_percent": -0.37,
+            "daily_chg": -0.07,
+            "change_percent": -0.18,
             "trend": "DOWN",
             "sparkline": [
                 199.56,
@@ -518,14 +518,14 @@
                 203.46,
                 200.79,
                 202.87,
-                202.34
+                202.73
             ]
         },
         "HYG": {
-            "price": 80.79,
+            "price": 80.81,
             "prev_price": 80.85,
-            "daily_chg": -0.07,
-            "change_percent": -0.06,
+            "daily_chg": -0.06,
+            "change_percent": -0.04,
             "trend": "DOWN",
             "sparkline": [
                 80.64,
@@ -549,7 +549,7 @@
                 80.83,
                 80.79,
                 80.85,
-                80.79
+                80.81
             ]
         },
         "NIFTY": {
@@ -584,10 +584,10 @@
             ]
         },
         "BTC": {
-            "price": 67712.74,
+            "price": 67904.64,
             "prev_price": 68843.16,
-            "daily_chg": -1.64,
-            "change_percent": -1.66,
+            "daily_chg": -1.36,
+            "change_percent": -1.38,
             "trend": "DOWN",
             "sparkline": [
                 89102.57,
@@ -611,15 +611,15 @@
                 69767.62,
                 68788.19,
                 68843.16,
-                67712.74
+                67904.64
             ]
         },
         "ETH": {
-            "price": 1988.52,
+            "price": 2002.52,
             "prev_price": 1997.92,
-            "daily_chg": -0.47,
-            "change_percent": -2.93,
-            "trend": "DOWN",
+            "daily_chg": 0.23,
+            "change_percent": -2.25,
+            "trend": "UP",
             "sparkline": [
                 3022.21,
                 3006.61,
@@ -642,14 +642,14 @@
                 2086.01,
                 1966.04,
                 1997.92,
-                1988.52
+                2002.52
             ]
         },
         "SOL": {
-            "price": 84.64,
+            "price": 84.9,
             "prev_price": 86.43,
-            "daily_chg": -2.07,
-            "change_percent": 0.38,
+            "daily_chg": -1.77,
+            "change_percent": 0.69,
             "trend": "DOWN",
             "sparkline": [
                 127.05,
@@ -673,14 +673,14 @@
                 88.16,
                 86.01,
                 86.43,
-                84.64
+                84.9
             ]
         },
         "DXY": {
-            "price": 97.2,
+            "price": 97.18,
             "prev_price": 96.88,
-            "daily_chg": 0.33,
-            "change_percent": 0.42,
+            "daily_chg": 0.31,
+            "change_percent": 0.4,
             "trend": "UP",
             "sparkline": [
                 99.32,
@@ -704,14 +704,14 @@
                 96.83,
                 96.93,
                 96.88,
-                97.2
+                97.18
             ]
         },
         "USDJPY": {
-            "price": 153.37,
+            "price": 153.38,
             "prev_price": 152.78,
             "daily_chg": 0.39,
-            "change_percent": -0.72,
+            "change_percent": -0.71,
             "trend": "UP",
             "sparkline": [
                 157.54,
@@ -735,14 +735,14 @@
                 153.27,
                 152.82,
                 152.78,
-                153.37
+                153.38
             ]
         },
         "EURUSD": {
             "price": 1.18,
             "prev_price": 1.19,
-            "daily_chg": -0.15,
-            "change_percent": -0.34,
+            "daily_chg": -0.17,
+            "change_percent": -0.36,
             "trend": "DOWN",
             "sparkline": [
                 1.16,
@@ -770,10 +770,10 @@
             ]
         },
         "USDINR": {
-            "price": 90.59,
+            "price": 90.58,
             "prev_price": 90.57,
-            "daily_chg": 0.02,
-            "change_percent": 0.0,
+            "daily_chg": 0.01,
+            "change_percent": -0.01,
             "trend": "UP",
             "sparkline": [
                 90.7,
@@ -797,14 +797,14 @@
                 90.74,
                 90.56,
                 90.57,
-                90.59
+                90.58
             ]
         },
         "USDSAR": {
             "price": 3.75,
             "prev_price": 3.75,
             "daily_chg": 0.13,
-            "change_percent": 0.09,
+            "change_percent": 0.1,
             "trend": "UP",
             "sparkline": [
                 3.75,
@@ -832,10 +832,10 @@
             ]
         },
         "GOLD": {
-            "price": 4899.7,
+            "price": 4911.1,
             "prev_price": 5022.0,
-            "daily_chg": -2.44,
-            "change_percent": -2.08,
+            "daily_chg": -2.21,
+            "change_percent": -1.85,
             "trend": "DOWN",
             "sparkline": [
                 4616.3,
@@ -859,14 +859,14 @@
                 5071.6,
                 4923.7,
                 5022.0,
-                4899.7
+                4911.1
             ]
         },
         "OIL": {
-            "price": 62.27,
+            "price": 62.39,
             "prev_price": 62.89,
-            "daily_chg": -0.99,
-            "change_percent": -2.64,
+            "daily_chg": -0.8,
+            "change_percent": -2.45,
             "trend": "DOWN",
             "sparkline": [
                 59.19,
@@ -890,14 +890,14 @@
                 64.63,
                 62.84,
                 62.89,
-                62.27
+                62.39
             ]
         },
         "COPPER": {
-            "price": 5.66,
+            "price": 5.69,
             "prev_price": 5.79,
-            "daily_chg": -2.23,
-            "change_percent": -3.94,
+            "daily_chg": -1.84,
+            "change_percent": -3.56,
             "trend": "DOWN",
             "sparkline": [
                 5.95,
@@ -921,14 +921,14 @@
                 5.95,
                 5.77,
                 5.79,
-                5.66
+                5.69
             ]
         },
         "NATGAS": {
-            "price": 3.04,
+            "price": 3.03,
             "prev_price": 3.24,
-            "daily_chg": -6.29,
-            "change_percent": -2.44,
+            "daily_chg": -6.66,
+            "change_percent": -2.83,
             "trend": "DOWN",
             "sparkline": [
                 3.13,
@@ -952,14 +952,14 @@
                 3.16,
                 3.22,
                 3.24,
-                3.04
+                3.03
             ]
         },
         "SILVER": {
-            "price": 73.21,
+            "price": 73.76,
             "prev_price": 77.85,
-            "daily_chg": -5.97,
-            "change_percent": -8.74,
+            "daily_chg": -5.25,
+            "change_percent": -8.05,
             "trend": "DOWN",
             "sparkline": [
                 91.88,
@@ -983,7 +983,7 @@
                 83.75,
                 75.55,
                 77.85,
-                73.21
+                73.76
             ]
         },
         "DAX": {
@@ -1297,10 +1297,10 @@
             ]
         },
         "G_REIT": {
-            "price": 27.15,
+            "price": 27.24,
             "prev_price": 26.98,
-            "daily_chg": 0.64,
-            "change_percent": 1.89,
+            "daily_chg": 0.96,
+            "change_percent": 2.21,
             "trend": "UP",
             "sparkline": [
                 25.63,
@@ -1324,14 +1324,14 @@
                 26.77,
                 26.71,
                 26.98,
-                27.15
+                27.24
             ]
         },
         "US_HOUSING": {
-            "price": 119.62,
+            "price": 120.25,
             "prev_price": 121.36,
-            "daily_chg": -1.43,
-            "change_percent": -0.61,
+            "daily_chg": -0.91,
+            "change_percent": -0.08,
             "trend": "DOWN",
             "sparkline": [
                 115.45,
@@ -1355,14 +1355,14 @@
                 120.6,
                 119.11,
                 121.36,
-                119.62
+                120.25
             ]
         },
         "LOGISTICS": {
-            "price": 40.26,
+            "price": 40.46,
             "prev_price": 40.04,
-            "daily_chg": 0.54,
-            "change_percent": 1.12,
+            "daily_chg": 1.03,
+            "change_percent": 1.61,
             "trend": "UP",
             "sparkline": [
                 39.41,
@@ -1386,14 +1386,14 @@
                 39.88,
                 39.49,
                 40.04,
-                40.26
+                40.46
             ]
         },
         "INFRA": {
-            "price": 68.56,
+            "price": 68.62,
             "prev_price": 68.35,
-            "daily_chg": 0.31,
-            "change_percent": 2.94,
+            "daily_chg": 0.4,
+            "change_percent": 3.03,
             "trend": "UP",
             "sparkline": [
                 61.85,
@@ -1417,14 +1417,14 @@
                 67.45,
                 67.39,
                 68.35,
-                68.56
+                68.62
             ]
         },
         "HY_BOND": {
-            "price": 80.79,
+            "price": 80.81,
             "prev_price": 80.85,
-            "daily_chg": -0.07,
-            "change_percent": -0.06,
+            "daily_chg": -0.06,
+            "change_percent": -0.04,
             "trend": "DOWN",
             "sparkline": [
                 80.64,
@@ -1448,15 +1448,15 @@
                 80.83,
                 80.79,
                 80.85,
-                80.79
+                80.81
             ]
         },
         "IG_BOND": {
-            "price": 111.56,
+            "price": 111.69,
             "prev_price": 111.59,
-            "daily_chg": -0.03,
-            "change_percent": 0.66,
-            "trend": "DOWN",
+            "daily_chg": 0.09,
+            "change_percent": 0.79,
+            "trend": "UP",
             "sparkline": [
                 110.48,
                 110.16,
@@ -1479,14 +1479,14 @@
                 110.7,
                 111.22,
                 111.59,
-                111.56
+                111.69
             ]
         },
         "TIPS": {
-            "price": 111.2,
+            "price": 111.22,
             "prev_price": 111.39,
-            "daily_chg": -0.17,
-            "change_percent": 0.19,
+            "daily_chg": -0.15,
+            "change_percent": 0.21,
             "trend": "DOWN",
             "sparkline": [
                 110.23,
@@ -1510,13 +1510,13 @@
                 110.81,
                 111.25,
                 111.39,
-                111.2
+                111.22
             ]
         },
         "SHY": {
             "price": 83.01,
             "prev_price": 83.06,
-            "daily_chg": -0.06,
+            "daily_chg": -0.05,
             "change_percent": 0.1,
             "trend": "DOWN",
             "sparkline": [
@@ -1545,10 +1545,10 @@
             ]
         },
         "BALTIC": {
-            "price": 11.68,
+            "price": 11.64,
             "prev_price": 11.49,
-            "daily_chg": 1.65,
-            "change_percent": 4.47,
+            "daily_chg": 1.31,
+            "change_percent": 4.11,
             "trend": "UP",
             "sparkline": [
                 9.48,
@@ -1572,14 +1572,14 @@
                 11.44,
                 11.3,
                 11.49,
-                11.68
+                11.64
             ]
         },
         "SHIPPING": {
-            "price": 38.19,
+            "price": 38.31,
             "prev_price": 37.81,
-            "daily_chg": 1.01,
-            "change_percent": 4.15,
+            "daily_chg": 1.33,
+            "change_percent": 4.47,
             "trend": "UP",
             "sparkline": [
                 33.85,
@@ -1603,14 +1603,14 @@
                 37.47,
                 37.13,
                 37.81,
-                38.19
+                38.31
             ]
         },
         "AGRI": {
-            "price": 25.74,
+            "price": 25.73,
             "prev_price": 25.79,
-            "daily_chg": -0.19,
-            "change_percent": 0.04,
+            "daily_chg": -0.24,
+            "change_percent": -0.0,
             "trend": "DOWN",
             "sparkline": [
                 25.59,
@@ -1634,14 +1634,14 @@
                 25.82,
                 25.89,
                 25.79,
-                25.74
+                25.73
             ]
         },
         "SEMIS": {
-            "price": 354.79,
+            "price": 356.54,
             "prev_price": 354.66,
-            "daily_chg": 0.04,
-            "change_percent": 0.96,
+            "daily_chg": 0.53,
+            "change_percent": 1.45,
             "trend": "UP",
             "sparkline": [
                 337.22,
@@ -1665,14 +1665,14 @@
                 360.2,
                 351.5,
                 354.66,
-                354.79
+                356.54
             ]
         },
         "DEFENSE": {
-            "price": 238.65,
+            "price": 239.02,
             "prev_price": 234.87,
-            "daily_chg": 1.61,
-            "change_percent": 2.33,
+            "daily_chg": 1.77,
+            "change_percent": 2.49,
             "trend": "UP",
             "sparkline": [
                 241.21,
@@ -1696,14 +1696,14 @@
                 230.95,
                 232.53,
                 234.87,
-                238.65
+                239.02
             ]
         },
         "RARE_EARTH": {
-            "price": 88.85,
+            "price": 89.11,
             "prev_price": 89.7,
-            "daily_chg": -0.95,
-            "change_percent": 0.12,
+            "daily_chg": -0.65,
+            "change_percent": 0.42,
             "trend": "DOWN",
             "sparkline": [
                 90.54,
@@ -1727,14 +1727,14 @@
                 91.92,
                 87.2,
                 89.7,
-                88.85
+                89.11
             ]
         },
         "CYBER": {
-            "price": 65.49,
+            "price": 65.46,
             "prev_price": 66.83,
-            "daily_chg": -2.01,
-            "change_percent": -4.85,
+            "daily_chg": -2.05,
+            "change_percent": -4.9,
             "trend": "DOWN",
             "sparkline": [
                 72.11,
@@ -1758,14 +1758,14 @@
                 67.62,
                 65.1,
                 66.83,
-                65.49
+                65.46
             ]
         },
         "GBPUSD": {
             "price": 0.74,
             "prev_price": 0.73,
-            "daily_chg": 0.68,
-            "change_percent": 0.58,
+            "daily_chg": 0.66,
+            "change_percent": 0.56,
             "trend": "UP",
             "sparkline": [
                 0.75,
@@ -1795,8 +1795,8 @@
         "AUDUSD": {
             "price": 1.41,
             "prev_price": 1.41,
-            "daily_chg": -0.15,
-            "change_percent": -0.09,
+            "daily_chg": -0.2,
+            "change_percent": -0.14,
             "trend": "DOWN",
             "sparkline": [
                 1.5,
@@ -1857,7 +1857,7 @@
         "USDCNY": {
             "price": 6.91,
             "prev_price": 6.91,
-            "daily_chg": 0.0,
+            "daily_chg": -0.01,
             "change_percent": -0.04,
             "trend": "DOWN",
             "sparkline": [
@@ -1889,7 +1889,7 @@
             "price": 0.77,
             "prev_price": 0.77,
             "daily_chg": 0.31,
-            "change_percent": 0.27,
+            "change_percent": 0.26,
             "trend": "UP",
             "sparkline": [
                 0.8,
@@ -1943,7 +1943,7 @@
             ]
         },
         "BREADTH": {
-            "price": 0.99,
+            "price": 0.93,
             "change_percent": 0.0,
             "trend": "BROAD",
             "sparkline": [
@@ -1966,11 +1966,11 @@
                 1.64,
                 1.86,
                 2.85,
-                2.44
+                2.39
             ]
         },
         "SPY_MOMENTUM": {
-            "price": -0.99,
+            "price": -0.93,
             "change_percent": 0,
             "trend": "BALANCED",
             "sparkline": [
@@ -2088,24 +2088,20 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "Systematic deceleration warrants tactical de-risking. The GMS score of 47 confirms a transition into a cautious regime where idiosyncratic shocks, exemplified by megacap market cap erosion, exacerbate systematic fragility. Elevated VIX levels and widening high-yield spreads signal localized credit stress, while a stagnant OGV vector reflects paralysis in reflationary impulses. Liquidity convexity is diminishing as net liquidity remains static, necessitating defensive positioning to preserve capital. [ACTION: WAIT FOR PULLBACK]",
+        "content": "NEUTRAL REGIME: EXHAUSTION AMID TECH EROSION. The GMS 47 print dictates a transitional neutrality, characterized by a distinct deceleration in risk-on impetus. While high-yield spreads exhibit compression-induced complacency, the erosion of mega-cap valuation anchors and a flat OGV vector signal a regime degradation. High real interest rates at 1.8% exert significant gravity on growth assets, while liquidity convexity remains constrained. The fiscal-monetary nexus offers no relief. [ACTION: WAIT FOR PULLBACK]",
         "reports": {
-            "JP": "系統的な減速は戦術的なリスク回避を正当化する。GMS 47は慎重なレジームへの移行を裏付けており、メガキャップの時価総額減少が系統的な脆弱性を悪化させている。VIXの上昇とハイイールド・スプレッドの拡大は信用収縮の兆候であり、停滞するOGVベクトルはリフレーションの麻痺を反映している。ネットリクイディティが停滞する中で流動性のコンベキシティは減衰しており、資本保全のための防御的ポジショニングが不可欠である。[ACTION: WAIT FOR PULLBACK]",
-            "EN": "Systematic deceleration warrants tactical de-risking. The GMS score of 47 confirms a transition into a cautious regime where idiosyncratic shocks, exemplified by megacap market cap erosion, exacerbate systematic fragility. Elevated VIX levels and widening high-yield spreads signal localized credit stress, while a stagnant OGV vector reflects paralysis in reflationary impulses. Liquidity convexity is diminishing as net liquidity remains static, necessitating defensive positioning to preserve capital. [ACTION: WAIT FOR PULLBACK]",
-            "CN": "系统性减速证实需进行战术性去风险操作。GMS 47表明市场进入审慎格局，大盘股估值侵蚀加剧了系统脆弱性。VIX走高与高收益债利差扩大预示信用压力上升，而平稳的OGV矢量反映出通货再膨胀动能瘫痪。在净流动性停滞的背景下，流动性凸性正在消失，必须转向高质量防御性配置以应对政权退化并实现资本保全。[ACTION: WAIT FOR PULLBACK]",
-            "ES": "La desaceleración exige una reducción táctica de riesgo. El GMS de 47 confirma la transición hacia un régimen de cautela donde el deterioro de las megacaps exacerba la fragilidad sistémica. El aumento del VIX y la expansión de los diferenciales de alto rendimiento señalan tensiones crediticias, mientras que el vector OGV plano refleja parálisis en los impulsos reflacionarios. La convexidad de la liquidez se desvanece ante una liquidez neta estática, imponiendo un posicionamiento defensivo. [ACTION: WAIT FOR PULLBACK]",
-            "HI": "प्रणालीगत मंदी सामरिक जोखिम कटौती की पुष्टि करती है। 47 का GMS स्कोर एक सतर्क शासन में संक्रमण की पुष्टि करता है जहां मेगाकैप बाजार पूंजीकरण का क्षरण प्रणालीगत कमजोरी को बढ़ाता है। बढ़ता VIX और हाई-यिल्ड स्प्रेड में विस्तार क्रेडिट तनाव का संकेत देते हैं, जबकि स्थिर OGV वेक्टर रिफ्लेशनरी आवेगों में पक्षाघात को दर्शाता है। शुद्ध तरलता स्थिर रहने से लिक्विडिटी कन्वेक्सिटी कम हो रही है, जिससे पूंजी संरक्षण के लिए रक्षात्मक स्थिति अनिवार्य हो गई है। [ACTION: WAIT FOR PULLBACK]",
-            "ID": "Deselerasi sistematis menjamin pengurangan risiko taktis. Skor GMS 47 mengonfirmasi transisi ke rezim waspada di mana erosi kapitalisasi pasar megacap memperburuk fragilitas sistemik. Kenaikan VIX dan pelebaran spread imbal hasil tinggi menandakan stres kredit, sementara vektor OGV yang stagnan mencerminkan kelumpuhan impuls reflasi. Konveksitas likuiditas memudar di tengah likuiditas bersih yang statis, mengharuskan posisi defensif untuk menjaga modal selama degradasi rezim ini. [ACTION: WAIT FOR PULLBACK]",
-            "AR": "التباطؤ المنهجي يستوجب تخفيف المخاطر التكتيكية. تؤكد درجة GMS البالغة 47 الانتقال إلى نظام حذر حيث يؤدي تآكل القيمة السوقية للشركات الكبرى إلى تفاقم الهشاشة النظامية. تشير مستويات VIX المرتفعة واتساع هوامش العائد المرتفع إلى ضغوط ائتمانية، بينما يعكس ناقل OGV الراكد شلل الدوافع الانكماشية. تتلاشى تباينية السيولة مع بقاء صافي السيولة ثابتًا، مما يفرض اتخاذ وضعية دفاعية لحماية رأس المال خلال فترة تدهور النظام الحالية. [ACTION: WAIT FOR PULLBACK]",
-            "DE": "Systematische Verlangsamung erfordert taktisches De-Risking. Ein GMS-Wert von 47 bestätigt den Übergang in ein vorsichtiges Regime, in dem die Erosion der Megacap-Marktkapitalisierung die systemische Fragilität verschärft. Erhöhte VIX-Werte und die Ausweitung der HY-Spreads signalisieren Kreditstress, während der stagnierende OGV-Vektor eine Lähmung der Reflationsimpulse widerspiegelt. Die Liquiditätskonvexität schwindet bei statischer Nettoliquidität, was eine defensive Positionierung erzwingt. [ACTION: WAIT FOR PULLBACK]",
-            "FR": "La décélération systématique impose un dé-risquage tactique. Le score GMS de 47 confirme la transition vers un régime de prudence où l'érosion de la capitalisation des mégacaps exacerbe la fragilité systémique. La hausse du VIX et l'élargissement des spreads de crédit signalent un stress financier, tandis que le vecteur OGV stagnant reflète une paralysie des impulsions reflationnistes. La convexité de la liquidité s'atténue face à une l'absence de croissance de la liquidité nette, exigeant une posture défensive. [ACTION: WAIT FOR PULLBACK]"
+            "JP": "ニュートラル：テック資本減衰に伴う転換期。GMS 47は、リスクオンの勢いの停滞を示す中立的な領域を示唆している。ハイイールド・スプレッドの圧縮は市場の慢心を反映しているが、メガキャップの時価総額毀損と停滞するOGVベクトルは、体制の劣化を明確に裏付けている。1.8%の実質金利はグロース資産への重圧となり、流動性のコンベキシティも抑制されたままである。ボラティリティの回帰まで防衛的姿勢を維持すべきである。[ACTION: WAIT FOR PULLBACK]",
+            "EN": "NEUTRAL REGIME: EXHAUSTION AMID TECH EROSION. The GMS 47 print dictates a transitional neutrality, characterized by a distinct deceleration in risk-on impetus. While high-yield spreads exhibit compression-induced complacency, the erosion of mega-cap valuation anchors and a flat OGV vector signal a regime degradation. High real interest rates at 1.8% exert significant gravity on growth assets, while liquidity convexity remains constrained. The fiscal-monetary nexus offers no relief. [ACTION: WAIT FOR PULLBACK]",
+            "CN": "中性格局：科技估值侵蚀导致增长动能枯竭。GMS 指数 47 明确了风险偏好的减速，标志着市场进入过渡性中立期。尽管高收益债信用利差受压制显现出某种市场自满，但大盘科技股估值的持续侵蚀与持平的 OGV 矢量共同确证了制度性退化。1.8% 的实际利率对成长型资产形成显著压制，且流动性凸性持续受限。在波动率均值回归前，必须采取防御性头寸以对冲宏观不确定性。 [ACTION: WAIT FOR PULLBACK]",
+            "ES": "RÉGIMEN NEUTRAL: AGOTAMIENTO POR EROSIÓN TECNOLÓGICA. El GMS de 47 dicta una neutralidad transicional, caracterizada por una desaceleración del ímpetu de riesgo. Mientras la compresión de diferenciales de crédito refleja complacencia, la erosión en valoraciones de megacaps y un vector OGV plano señalan una degradación del régimen. Las tasas de interés reales del 1,8% ejercen gravedad sobre activos de crecimiento, limitando la convexidad de liquidez. Se requiere preservar capital. [ACTION: WAIT FOR PULLBACK]",
+            "HI": "तटस्थ शासन: तकनीकी क्षरण के बीच थकान। GMS 47 जोखिम-ऑन आवेग में मंदी द्वारा विशेषता एक संक्रमणकालीन तटस्थता को निर्देशित करता है। जबकि उच्च-उपज स्प्रेड संपीड़न-प्रेरित शालीनता प्रदर्शित करते हैं, मेगा-कैप मूल्यांकन एंकरों का क्षरण और एक सपाट OGV वेक्टर शासन गिरावट का संकेत देते हैं। 1.8% पर वास्तविक ब्याज दरें विकास परिसंपत्तियों पर महत्वपूर्ण दबाव डालती हैं, जबकि तरलता उत्तलता सीमित रहती है। जब तक अस्थिरता का माध्य-प्रत्यावर्तन नहीं होता, तब तक रक्षात्मक बने रहना अनिवार्य है। [ACTION: WAIT FOR PULLBACK]",
+            "ID": "REZIM NETRAL: KELELAHAN DI TENGAH EROSI TEKNOLOGI. GMS 47 mendikte netralitas transisional yang ditandai dengan dekselerasi momentum risiko. Meskipun kompresi spread imbal hasil tinggi menunjukkan kepuasan pasar, erosi valuasi saham kapitalisasi besar dan vektor OGV yang datar menandakan degradasi rezim. Suku bunga riil sebesar 1,8% memberikan tekanan gravitasi pada aset pertumbuhan, sementara konveksitas likuiditas tetap terkendali. Pelestarian modal diperlukan hingga volatilitas mengalami mean-reversion. [ACTION: WAIT FOR PULLBACK]",
+            "AR": "نظام محايد: استنفاد وسط تآكل القطاع التكنولوجي. تفرض قراءة GMS البالغة 47 حيادًا انتقاليًا يتسم بتباطؤ واضح في زخم المخاطرة. بينما يظهر ضغط هوامش العائد المرتفع حالة من الامتثال، فإن تآكل تقييمات الشركات الكبرى واستقرار ناقل OGV يشيران إلى تدهور النظام. تمثل معدلات الفائدة الحقيقية بنسبة 1.8% ضغطًا على أصول النمو، مع بقاء تحدب السيولة مقيدًا. يتطلب الوضع الحالي الحفاظ على رأس المال حتى تراجع التقلبات إلى مستوياتها المتوسطة. [ACTION: WAIT FOR PULLBACK]",
+            "DE": "NEUTRALES REGIME: ERSCHÖPFUNG DURCH TECH-EROSION. Der GMS-Wert von 47 erzwingt eine transitionale Neutralität, die durch eine Dekelerierung des Risiko-Momentums geprägt ist. Während die Kompression der High-Yield-Spreads auf Marktsorglosigkeit hindeutet, signalisieren die Erosion der Mega-Cap-Bewertungen und ein flacher OGV-Vektor eine Regimedegradation. Reale Zinssätze von 1,8 % üben signifikanten Druck auf Wachstumsassets aus, während die Liquiditätskonvexität eingeschränkt bleibt. [ACTION: WAIT FOR PULLBACK]",
+            "FR": "RÉGIME NEUTRE : ÉPUISEMENT ET ÉROSION TECHNOLOGIQUE. L'indice GMS à 47 dicte une neutralité transitionnelle, marquée par une décélération de l'impulsion de risque. Bien que la compression des spreads de crédit traduise une certaine complaisance, l'érosion des valorisations des mégacapitalisations et un vecteur OGV plat signalent une dégradation du régime. Les taux d'intérêt réels à 1,8 % exercent une pression gravitationnelle sur les actifs de croissance, limitant la convexité de la liquidité. [ACTION: WAIT FOR PULLBACK]"
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-13T17:29:08Z",
-            "score": 39
-        },
         {
             "date": "2026-02-13T18:08:53Z",
             "score": 38
@@ -2341,6 +2337,10 @@
         {
             "date": "2026-02-17T18:34:14Z",
             "score": 47
+        },
+        {
+            "date": "2026-02-17T19:34:28Z",
+            "score": 47
         }
     ],
     "intelligence": {
@@ -2348,7 +2348,7 @@
             {
                 "title": "Amazon has lost $450 billion in value during this historic losing streak. Here's what's dragging it down",
                 "link": "https://www.cnbc.com/2026/02/17/amazon-stock-losing-streak.html",
-                "isoDate": "2026-02-17T18:16:10+00:00Z"
+                "isoDate": "2026-02-17T19:26:37+00:00Z"
             },
             {
                 "title": "Ford to follow Tesla Cybertruck with electrical tech in new EV pickup",
@@ -2361,88 +2361,88 @@
                 "isoDate": "2026-02-17T15:52:07+00:00Z"
             },
             {
+                "title": "Stephen Colbert says CBS blocks James Talarico interview from air",
+                "link": "https://www.cnbc.com/2026/02/17/james-talarico-stephen-colbert-cbs-fcc-interview.html",
+                "isoDate": "2026-02-17T19:09:33+00:00Z"
+            },
+            {
+                "title": "S&P 500 rises to start shortened week, led by banks; software shares slide: Live updates",
+                "link": "https://www.cnbc.com/2026/02/16/stock-market-today-live-updates.html",
+                "isoDate": "2026-02-17T19:11:32+00:00Z"
+            },
+            {
                 "title": "Anthropic releases Claude Sonnet 4.6, continuing breakneck pace of AI model releases",
                 "link": "https://www.cnbc.com/2026/02/17/anthropic-ai-claude-sonnet-4-6-default-free-pro.html",
-                "isoDate": "2026-02-17T17:55:15+00:00Z"
-            },
-            {
-                "title": "S&P 500 is little changed to start shortened week, software shares slide: Live updates",
-                "link": "https://www.cnbc.com/2026/02/16/stock-market-today-live-updates.html",
-                "isoDate": "2026-02-17T18:18:33+00:00Z"
-            },
-            {
-                "title": "Cloud startup Render raises funding at $1.5 billion valuation as AI-built apps boom",
-                "link": "https://www.cnbc.com/2026/02/17/render-raises-100-million-at-1point5-billion-valuation.html",
-                "isoDate": "2026-02-17T15:00:02+00:00Z"
+                "isoDate": "2026-02-17T18:38:38+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "アマゾン、歴史的な連敗で4500億ドルの価値を失う。その要因は？",
-                "フォード、テスラ・サイバートラックに続き、新型EVピックアップに電気技術を導入",
-                "イラン、ホルムズ海峡を部分的に閉鎖。テヘランと米国の交渉中に、原油の重要チョークポイント",
-                "Anthropic、Claude Sonnet 4.6をリリース、AIモデル開発の猛烈なペースを継続",
-                "S&P 500は短縮週の始まりでほぼ変わらず、ソフトウェア株は下落：ライブアップデート",
-                "クラウドスタートアップRender、AI構築アプリのブームで15億ドルの評価額で資金調達"
+                "アマゾン、歴史的な連敗で4500億ドル相当を失う。その下落要因とは",
+                "フォード、テスラ・サイバートラックに続き新型EVピックアップに電動技術を導入",
+                "イラン、ホルムズ海峡を部分的に閉鎖、テヘランは米国と会談",
+                "スティーブン・コルベア、CBSがジェームズ・タラリコ氏のインタビュー放送をブロックしたと発言",
+                "S&P 500、銀行主導で短縮週間の取引を開始、ソフトウェア株は下落：ライブアップデート",
+                "Anthropic、Claude Sonnet 4.6をリリース、AIモデル発表の驚異的なペースを継続"
             ],
             "CN": [
-                "亚马逊市值蒸发4500亿美元，创历史连跌纪录，是什么在拖累它？",
-                "福特将效仿特斯拉Cybertruck，在新款电动皮卡中采用电动技术",
-                "伊朗部分关闭霍尔木兹海峡这一关键石油通道，因德黑兰与美国举行会谈",
-                "Anthropic发布Claude Sonnet 4.6，继续AI模型发布的疯狂步伐",
-                "标普500指数缩短交易周伊始小幅波动，软件股下滑：实时更新",
-                "云初创公司Render在AI应用热潮中以15亿美元估值融资"
+                "亚马逊市值蒸发4500亿美元，创历史最长连跌纪录。是什么在拖累它",
+                "福特将效仿特斯拉Cybertruck，在新电动皮卡中采用电动技术",
+                "伊朗部分关闭霍尔木兹海峡这一重要石油通道，此前德黑兰与美国举行会谈",
+                "斯蒂芬·科尔伯特称CBS阻止詹姆斯·塔拉里科采访播出",
+                "标普500指数开盘上涨，银行股领涨；软件股下跌：实时更新",
+                "Anthropic发布Claude Sonnet 4.6，继续保持AI模型发布的惊人速度"
             ],
             "ES": [
-                "Amazon ha perdido 450 mil millones de dólares en valor durante esta racha histórica de pérdidas. Esto es lo que la está arrastrando.",
-                "Ford seguirá al Tesla Cybertruck con tecnología eléctrica en su nueva camioneta eléctrica.",
-                "Irán cierra parcialmente el Estrecho de Ormuz, un punto de estrangulamiento vital para el petróleo, mientras Teherán mantiene conversaciones con EE.UU.",
-                "Anthropic lanza Claude Sonnet 4.6, continuando el ritmo vertiginoso de lanzamientos de modelos de IA.",
-                "El S&P 500 apenas cambia al inicio de una semana acortada, las acciones de software se deslizan: actualizaciones en vivo.",
-                "La startup de la nube Render recauda fondos con una valoración de 1.500 millones de dólares en medio del auge de las aplicaciones creadas por IA."
+                "Amazon ha perdido $450 mil millones en valor durante esta racha histórica de pérdidas. Esto es lo que la está arrastrando",
+                "Ford seguirá al Tesla Cybertruck con tecnología eléctrica en su nueva camioneta EV",
+                "Irán cierra parcialmente el Estrecho de Ormuz, un punto de estrangulamiento petrolero vital, mientras Teherán mantiene conversaciones con EE. UU.",
+                "Stephen Colbert dice que CBS bloquea la transmisión de la entrevista a James Talarico",
+                "El S&P 500 sube para comenzar la semana acortada, liderado por los bancos; las acciones de software caen: Actualizaciones en vivo",
+                "Anthropic lanza Claude Sonnet 4.6, continuando el vertiginoso ritmo de lanzamientos de modelos de IA"
             ],
             "HI": [
-                "अमेज़ॅन इस ऐतिहासिक गिरावट के दौरान 450 बिलियन डॉलर का मूल्य खो चुका है। यहाँ बताया गया है कि इसे क्या नीचे खींच रहा है",
-                "फोर्ड टेस्ला साइबरट्रक के बाद नई इलेक्ट्रिक पिकअप में इलेक्ट्रॉनिक तकनीक पेश करेगा",
-                "ईरान ने होर्मुज जलडमरूमध्य को आंशिक रूप से बंद कर दिया, जो एक महत्वपूर्ण तेल अवरोध है, क्योंकि तेहरान अमेरिका के साथ बातचीत कर रहा है",
-                "एंथ्रोपिक ने क्लॉड सोनेट 4.6 जारी किया, एआई मॉडल रिलीज की तेज गति जारी रखी",
-                "S&P 500 छोटी शुरुआत वाले सप्ताह में थोड़ा बदला, सॉफ्टवेयर शेयर फिसले: लाइव अपडेट",
-                "क्लाउड स्टार्टअप रेंडर ने AI-निर्मित ऐप्स के उछाल के बीच 1.5 बिलियन डॉलर के मूल्यांकन पर धन जुटाया"
+                "ऐतिहासिक गिरावट के इस दौर में अमेज़ॅन ने $450 बिलियन का मूल्य खो दिया है। यहाँ वह है जो इसे नीचे खींच रहा है",
+                "फोर्ड, टेस्ला साइबरट्रक के बाद नई ईवी पिकअप में इलेक्ट्रिक तकनीक पेश करेगा",
+                "ईरान ने होर्मुज जलडमरूमध्य को आंशिक रूप से बंद किया, एक महत्वपूर्ण तेल नाकाबंदी, जबकि तेहरान ने अमेरिका के साथ बातचीत की",
+                "स्टीफन कोल्बर्ट का कहना है कि सीबीएस ने जेम्स टालारिको के साक्षात्कार को प्रसारित होने से रोका",
+                "बैंकों के नेतृत्व में छोटा सप्ताह शुरू करने के लिए एस एंड पी 500 बढ़ा; सॉफ्टवेयर शेयर फिसले: लाइव अपडेट",
+                "एन्थ्रोपिक ने क्लाउड सॉनेट 4.6 जारी किया, एआई मॉडल जारी करने की तेज गति जारी रखी"
             ],
             "ID": [
-                "Amazon telah kehilangan nilai $450 miliar selama rekor kekalahan bersejarah ini. Inilah yang menyeretnya ke bawah",
-                "Ford akan mengikuti jejak Tesla Cybertruck dengan teknologi listrik di truk pikap EV baru",
-                "Iran menutup sebagian Selat Hormuz, titik krusial minyak, saat Teheran melakukan pembicaraan dengan AS",
-                "Anthropic merilis Claude Sonnet 4.6, melanjutkan kecepatan rilis model AI yang sangat cepat",
-                "S&P 500 sedikit berubah di awal minggu yang diperpendek, saham perangkat lunak merosot: Pembaruan langsung",
-                "Startup cloud Render mengumpulkan dana dengan valuasi $1,5 miliar di tengah lonjakan aplikasi buatan AI"
+                "Amazon telah kehilangan nilai $450 miliar selama rentetan kerugian bersejarah ini. Inilah yang menyeretnya ke bawah",
+                "Ford akan mengikuti jejak Tesla Cybertruck dengan teknologi listrik pada truk pikap EV baru",
+                "Iran menutup sebagian Selat Hormuz, titik penting pasokan minyak, saat Teheran melakukan pembicaraan dengan AS",
+                "Stephen Colbert mengatakan CBS memblokir wawancara James Talarico dari siaran",
+                "S&P 500 naik untuk memulai minggu yang diperpendek, dipimpin oleh bank; saham perangkat lunak merosot: Pembaruan Langsung",
+                "Anthropic merilis Claude Sonnet 4.6, melanjutkan kecepatan rilis model AI yang pesat"
             ],
             "AR": [
-                "أمازون تخسر 450 مليار دولار من قيمتها خلال هذا المسار التاريخي للخسائر. إليك ما الذي يؤثر عليها سلبًا",
-                "فورد تتبع تسلا سايبرتراك بتقنية كهربائية في شاحنة بيك آب كهربائية جديدة",
-                "إيران تغلق جزئيًا مضيق هرمز، نقطة اختناق حيوية للنفط، بينما تجري طهران محادثات مع الولايات المتحدة",
-                "أنثروبيك تطلق Claude Sonnet 4.6، مواصلة الوتيرة المتسارعة لإصدارات نماذج الذكاء الاصطناعي",
-                "مؤشر S&P 500 يتغير بشكل طفيف لبدء أسبوع قصير، أسهم البرمجيات تنزلق: تحديثات مباشرة",
-                "شركة Render الناشئة في مجال الحوسبة السحابية تجمع تمويلًا بتقييم 1.5 مليار دولار في ظل طفرة التطبيقات المبنية بالذكاء الاصطناعي"
+                "خسرت أمازون 450 مليار دولار من قيمتها خلال هذا الركود التاريخي. إليك ما الذي يجرها إلى الأسفل",
+                "فورد ستتبع تسلا سايبرتراك بتقنية كهربائية في شاحنة بيك أب كهربائية جديدة",
+                "إيران تغلق مضيق هرمز جزئيًا، وهو نقطة اختناق حيوية للنفط، بينما تجري طهران محادثات مع الولايات المتحدة",
+                "ستيفن كولبيرت يقول إن شبكة سي بي إس منعت بث مقابلة مع جيمس تالاريكو",
+                "ارتفاع مؤشر S&P 500 لبدء أسبوع قصير، بقيادة البنوك؛ انزلاق أسهم البرمجيات: تحديثات مباشرة",
+                "أنتثروبيك تطلق Claude Sonnet 4.6، مستمرة في وتيرة إصدار نماذج الذكاء الاصطناعي السريعة"
             ],
             "DE": [
-                "Amazon hat im Laufe dieser historischen Verlustserie 450 Milliarden Dollar an Wert verloren. Das zieht das Unternehmen herunter",
-                "Ford folgt dem Tesla Cybertruck mit Elektrotechnologie in neuen E-Auto-Pickup",
-                "Iran schließt teilweise die Straße von Hormuz, eine lebenswichtige Öl-Engstelle, während Teheran Gespräche mit den USA führt",
-                "Anthropic veröffentlicht Claude Sonnet 4.6 und setzt den rasanten Rhythmus von KI-Modell-Veröffentlichungen fort",
-                "S&P 500 zu Beginn der verkürzten Woche wenig verändert, Softwareaktien rutschen ab: Live-Updates",
-                "Cloud-Startup Render sammelt Finanzierung zu einer Bewertung von 1,5 Milliarden Dollar im Zuge des Booms KI-gestützter Apps"
+                "Amazon hat während dieser historischen Verlustserie 450 Milliarden Dollar an Wert verloren. Das ist es, was es nach unten zieht",
+                "Ford folgt dem Tesla Cybertruck mit Elektrotechnologie in neuem E-EV-Pickup",
+                "Iran schließt Straße von Hormus teilweise, einen wichtigen Öl-Engpass, während Teheran Gespräche mit den USA führt",
+                "Stephen Colbert sagt, CBS blockiere das Senden eines Interviews mit James Talarico",
+                "S&P 500 steigt zu Beginn der verkürzten Woche, angeführt von Banken; Software-Aktien rutschen ab: Live-Updates",
+                "Anthropic veröffentlicht Claude Sonnet 4.6 und setzt das rasante Tempo bei der Veröffentlichung von KI-Modellen fort"
             ],
             "FR": [
-                "Amazon a perdu 450 milliards de dollars de valeur lors de cette série historique de pertes. Voici ce qui la fait baisser",
+                "Amazon a perdu 450 milliards de dollars de valeur lors de cette série de pertes historiques. Voici ce qui la fait baisser",
                 "Ford suivra le Tesla Cybertruck avec une technologie électrique dans son nouveau pick-up électrique",
-                "L'Iran ferme partiellement le détroit d'Ormuz, un point d'étranglement vital pour le pétrole, alors que Téhéran tient des pourparlers avec les États-Unis",
-                "Anthropic publie Claude Sonnet 4.6, poursuivant le rythme effréné des sorties de modèles d'IA",
-                "Le S&P 500 peu changé en début de semaine écourtée, les actions de logiciels glissent : Mises à jour en direct",
-                "La startup cloud Render lève des fonds avec une valorisation de 1,5 milliard de dollars dans le cadre de l'essor des applications créées par l'IA"
+                "L'Iran ferme partiellement le détroit d'Ormuz, un point d'étranglement pétrolier vital, pendant que Téhéran mène des pourparlers avec les États-Unis",
+                "Stephen Colbert affirme que CBS bloque la diffusion d'une interview de James Talarico",
+                "Le S&P 500 progresse pour commencer la semaine raccourcie, mené par les banques ; les actions de logiciels chutent : Mises à jour en direct",
+                "Anthropic publie Claude Sonnet 4.6, poursuivant le rythme effréné des sorties de modèles d'IA"
             ]
         },
-        "last_updated": "2026-02-17T18:34:14.163965+00:00Z"
+        "last_updated": "2026-02-17T19:34:28.837169+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
