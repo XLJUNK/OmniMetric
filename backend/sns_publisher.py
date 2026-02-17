@@ -225,9 +225,8 @@ class SNSPublisher:
 
         results["MATCHES"] = len(valid_matches)
         
-        # 1. Post to Twitter (X) - PAUSED
-        self._log("Stage 1 (Twitter) is currently DISABLED per user request.")
-        results["TW_SKIP"] = True
+        # 1. Post to Twitter (X) - INTEGRATED IN LOOP BELOW
+        results["TW_SUCCESS_COUNT"] = 0
         
         # 2. Post to Bluesky
         try:
@@ -268,7 +267,7 @@ class SNSPublisher:
                          self._log(f"OGP Gen Error: {e}", is_error=True)
                          img_path = None # Fallback to no image
 
-                     # 2. Publish
+                     # 2. Publish to BlueSky
                      reply_to = None
                      if parent_post:
                          from atproto import models
@@ -287,7 +286,19 @@ class SNSPublisher:
                      else:
                          results[f"BSKY_{lang}"] = "FAILED"
                      
-                     # 3. Cleanup
+                     # 3. Publish to Twitter (X) - Only for supported languages in format_post (EN, JP)
+                     if lang in ["EN", "JP"]:
+                         tw_text = posts.get(lang)
+                         if tw_text:
+                             self._log(f"[{lang}] Posting to X (Twitter)...")
+                             tw_id = self.post_to_twitter(tw_text)
+                             if tw_id:
+                                 results[f"TW_{lang}"] = "SUCCESS"
+                                 results["TW_SUCCESS_COUNT"] += 1
+                             else:
+                                 results[f"TW_{lang}"] = "FAILED"
+
+                     # 4. Cleanup
                      if img_path and os.path.exists(img_path):
                          try: os.remove(img_path)
                          except: pass
