@@ -1,10 +1,10 @@
 {
-    "last_updated": "2026-02-17T06:38:02.515755+00:00",
-    "last_successful_update": "2026-02-17T06:38:02.515762+00:00",
-    "gms_score": 50,
+    "last_updated": "2026-02-17T07:39:33.422858+00:00",
+    "last_successful_update": "2026-02-17T07:39:33.422865+00:00",
+    "gms_score": 47,
     "sector_scores": {
         "STOCKS": 44,
-        "CRYPTO": 65,
+        "CRYPTO": 41,
         "FOREX": 35,
         "COMMODITIES": 47,
         "GLOBAL_INDICES": 50,
@@ -553,10 +553,10 @@
             ]
         },
         "NIFTY": {
-            "price": 25729.9,
+            "price": 25751.05,
             "prev_price": 25682.75,
-            "daily_chg": 0.18,
-            "change_percent": -0.86,
+            "daily_chg": 0.27,
+            "change_percent": -0.78,
             "trend": "UP",
             "sparkline": [
                 25694.35,
@@ -580,17 +580,16 @@
                 25807.2,
                 25471.1,
                 25682.75,
-                25729.9
+                25751.05
             ]
         },
         "BTC": {
-            "price": 68382.09,
-            "prev_price": 68788.19,
-            "daily_chg": -0.59,
-            "change_percent": 3.26,
+            "price": 68203.91,
+            "prev_price": 68843.16,
+            "daily_chg": -0.93,
+            "change_percent": -0.95,
             "trend": "DOWN",
             "sparkline": [
-                88267.14,
                 89102.57,
                 89184.57,
                 84561.59,
@@ -611,17 +610,17 @@
                 68857.84,
                 69767.62,
                 68788.19,
-                68382.09
+                68843.16,
+                68203.91
             ]
         },
         "ETH": {
-            "price": 1981.09,
-            "prev_price": 1966.04,
-            "daily_chg": 0.77,
-            "change_percent": 1.75,
-            "trend": "UP",
+            "price": 1975.02,
+            "prev_price": 1997.92,
+            "daily_chg": -1.15,
+            "change_percent": -3.59,
+            "trend": "DOWN",
             "sparkline": [
-                2926.46,
                 3022.21,
                 3006.61,
                 2818.23,
@@ -642,17 +641,17 @@
                 2048.53,
                 2086.01,
                 1966.04,
-                1981.09
+                1997.92,
+                1975.02
             ]
         },
         "SOL": {
-            "price": 86.51,
-            "prev_price": 86.01,
-            "daily_chg": 0.59,
-            "change_percent": 10.42,
-            "trend": "UP",
+            "price": 86.01,
+            "prev_price": 86.43,
+            "daily_chg": -0.49,
+            "change_percent": 2.0,
+            "trend": "DOWN",
             "sparkline": [
-                124.14,
                 127.05,
                 125.12,
                 117.61,
@@ -673,14 +672,15 @@
                 84.32,
                 88.16,
                 86.01,
-                86.51
+                86.43,
+                86.01
             ]
         },
         "DXY": {
-            "price": 97.08,
+            "price": 97.18,
             "prev_price": 96.88,
-            "daily_chg": 0.21,
-            "change_percent": 0.29,
+            "daily_chg": 0.31,
+            "change_percent": 0.39,
             "trend": "UP",
             "sparkline": [
                 99.32,
@@ -704,14 +704,14 @@
                 96.83,
                 96.93,
                 96.88,
-                97.08
+                97.18
             ]
         },
         "USDJPY": {
-            "price": 152.87,
+            "price": 152.97,
             "prev_price": 152.78,
-            "daily_chg": 0.06,
-            "change_percent": -1.04,
+            "daily_chg": 0.12,
+            "change_percent": -0.98,
             "trend": "UP",
             "sparkline": [
                 157.54,
@@ -735,14 +735,14 @@
                 153.27,
                 152.82,
                 152.78,
-                152.87
+                152.97
             ]
         },
         "EURUSD": {
             "price": 1.18,
             "prev_price": 1.19,
-            "daily_chg": -0.16,
-            "change_percent": -0.35,
+            "daily_chg": -0.26,
+            "change_percent": -0.44,
             "trend": "DOWN",
             "sparkline": [
                 1.16,
@@ -770,10 +770,10 @@
             ]
         },
         "USDINR": {
-            "price": 90.74,
+            "price": 90.75,
             "prev_price": 90.57,
-            "daily_chg": 0.19,
-            "change_percent": 0.17,
+            "daily_chg": 0.2,
+            "change_percent": 0.18,
             "trend": "UP",
             "sparkline": [
                 90.7,
@@ -797,7 +797,7 @@
                 90.74,
                 90.56,
                 90.57,
-                90.74
+                90.75
             ]
         },
         "USDSAR": {
@@ -832,10 +832,10 @@
             ]
         },
         "GOLD": {
-            "price": 4911.7,
+            "price": 4926.3,
             "prev_price": 5022.0,
-            "daily_chg": -2.2,
-            "change_percent": -1.84,
+            "daily_chg": -1.91,
+            "change_percent": -1.55,
             "trend": "DOWN",
             "sparkline": [
                 4616.3,
@@ -859,14 +859,14 @@
                 5071.6,
                 4923.7,
                 5022.0,
-                4911.7
+                4926.3
             ]
         },
         "OIL": {
-            "price": 63.36,
+            "price": 63.22,
             "prev_price": 62.89,
-            "daily_chg": 0.75,
-            "change_percent": -0.94,
+            "daily_chg": 0.52,
+            "change_percent": -1.16,
             "trend": "UP",
             "sparkline": [
                 59.19,
@@ -890,14 +890,14 @@
                 64.63,
                 62.84,
                 62.89,
-                63.36
+                63.22
             ]
         },
         "COPPER": {
             "price": 5.71,
             "prev_price": 5.79,
-            "daily_chg": -1.5,
-            "change_percent": -3.23,
+            "daily_chg": -1.45,
+            "change_percent": -3.18,
             "trend": "DOWN",
             "sparkline": [
                 5.95,
@@ -927,8 +927,8 @@
         "NATGAS": {
             "price": 3.11,
             "prev_price": 3.24,
-            "daily_chg": -4.22,
-            "change_percent": -0.29,
+            "daily_chg": -4.26,
+            "change_percent": -0.32,
             "trend": "DOWN",
             "sparkline": [
                 3.13,
@@ -956,10 +956,10 @@
             ]
         },
         "SILVER": {
-            "price": 74.09,
+            "price": 74.32,
             "prev_price": 77.85,
-            "daily_chg": -4.83,
-            "change_percent": -7.64,
+            "daily_chg": -4.54,
+            "change_percent": -7.35,
             "trend": "DOWN",
             "sparkline": [
                 91.88,
@@ -983,7 +983,7 @@
                 83.75,
                 75.55,
                 77.85,
-                74.09
+                74.32
             ]
         },
         "DAX": {
@@ -1111,10 +1111,10 @@
             ]
         },
         "NIKKEI": {
-            "price": 56507.73,
+            "price": 56566.49,
             "prev_price": 56806.41,
-            "daily_chg": -0.53,
-            "change_percent": -1.98,
+            "daily_chg": -0.42,
+            "change_percent": -1.88,
             "trend": "DOWN",
             "sparkline": [
                 53936.17,
@@ -1138,7 +1138,7 @@
                 57639.84,
                 56941.97,
                 56806.41,
-                56507.73
+                56566.49
             ]
         },
         "HANGSENG": {
@@ -1204,10 +1204,10 @@
             ]
         },
         "SENSEX": {
-            "price": 83568.0,
+            "price": 83577.92,
             "prev_price": 83277.15,
-            "daily_chg": 0.35,
-            "change_percent": -0.79,
+            "daily_chg": 0.36,
+            "change_percent": -0.78,
             "trend": "UP",
             "sparkline": [
                 83570.35,
@@ -1231,7 +1231,7 @@
                 83674.92,
                 82626.76,
                 83277.15,
-                83568.0
+                83577.92
             ]
         },
         "BOVESPA": {
@@ -1762,10 +1762,10 @@
             ]
         },
         "GBPUSD": {
-            "price": 0.73,
+            "price": 0.74,
             "prev_price": 0.73,
-            "daily_chg": 0.27,
-            "change_percent": 0.17,
+            "daily_chg": 0.65,
+            "change_percent": 0.55,
             "trend": "UP",
             "sparkline": [
                 0.75,
@@ -1789,14 +1789,14 @@
                 0.73,
                 0.73,
                 0.73,
-                0.73
+                0.74
             ]
         },
         "AUDUSD": {
-            "price": 1.41,
+            "price": 1.42,
             "prev_price": 1.41,
-            "daily_chg": 0.02,
-            "change_percent": 0.09,
+            "daily_chg": 0.09,
+            "change_percent": 0.15,
             "trend": "UP",
             "sparkline": [
                 1.5,
@@ -1820,14 +1820,14 @@
                 1.4,
                 1.41,
                 1.41,
-                1.41
+                1.42
             ]
         },
         "USDCAD": {
             "price": 1.36,
             "prev_price": 1.36,
-            "daily_chg": 0.16,
-            "change_percent": 0.65,
+            "daily_chg": 0.18,
+            "change_percent": 0.67,
             "trend": "UP",
             "sparkline": [
                 1.39,
@@ -1888,8 +1888,8 @@
         "USDCHF": {
             "price": 0.77,
             "prev_price": 0.77,
-            "daily_chg": 0.1,
-            "change_percent": 0.05,
+            "daily_chg": 0.28,
+            "change_percent": 0.23,
             "trend": "UP",
             "sparkline": [
                 0.8,
@@ -2093,24 +2093,20 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "Neutral regime persists amid rising volatility. The GMS equilibrium at 50 validates a transition into a non-directional regime where credit spread widening and VIX elevation dictate immediate price action. Despite marginal liquidity expansion, the degradation in copper-gold proxies signals an erosion in cyclical momentum. The fiscal-monetary nexus remains constrained by yield spread stasis, while depressed sentiment and credit risk expansion necessitate a tactical deleveraging. [ACTION: WAIT FOR PULLBACK]",
+        "content": "Neutrality persists amidst escalating volatility. The GMS print of 47 signifies a regime of structural friction where liquidity convexity is neutralized by credit spread expansion and a VIX breaching the 21 threshold. The fiscal-monetary nexus faces resistance as industrial depreciation and a flat OGV vector indicate a decelerating growth impulse. Dollar appreciation further exacerbates risk-asset compression. Despite stable net liquidity, the collapse in sentiment mandates an avoidance of directional exposure. [ACTION: WAIT FOR PULLBACK]",
         "reports": {
-            "JP": "中立の市場環境が持続し、ボラティリティの上昇が重石となっています。GMSスコア50は、クレジット・スプレッドの拡大とVIXの上昇が支配する非方向性レジームへの移行を裏付けています。わずかな流動性の拡大にもかかわらず、銅・金プロキシの下落は景気循環的モーメンタムの減退を示唆しています。イールドスプレッドの停滞が財政・金融ネクサスを制約しており、センチメントの悪化は戦術的なデレバレッジを要求します。 [ACTION: WAIT FOR PULLBACK]",
-            "EN": "Neutral regime persists amid rising volatility. The GMS equilibrium at 50 validates a transition into a non-directional regime where credit spread widening and VIX elevation dictate immediate price action. Despite marginal liquidity expansion, the degradation in copper-gold proxies signals an erosion in cyclical momentum. The fiscal-monetary nexus remains constrained by yield spread stasis, while depressed sentiment and credit risk expansion necessitate a tactical deleveraging. [ACTION: WAIT FOR PULLBACK]",
-            "CN": "中性格局持续，波动率上升压制市场表现。GMS 评分处于 50 平衡点，确认了信用利差走扩与 VIX 攀升背景下的非方向性体制。尽管流动性微增，但铜金比价恶化反映出周期性动能侵蚀。财金关系受制于收益率曲线停滞，而低迷的情绪与信贷风险扩张要求进行战术性去杠杆。体制停滞的确定性要求优先选择观望而非贸然部署。 [ACTION: WAIT FOR PULLBACK]",
-            "ES": "Régimen neutral persiste ante el aumento de la volatilidad. El equilibrio del GMS en 50 valida una transición hacia un régimen sin dirección definida, donde la expansión de los diferenciales de crédito y la elevación del VIX dictan la acción del precio. A pesar de la marginal expansión de liquidez, la degradación en los proxies de cobre-oro señala una erosión en el impulso cíclico. El nexo fiscal-monetario permanece restringido por el estancamiento de los diferenciales de rendimiento. [ACTION: WAIT FOR PULLBACK]",
-            "HI": "बढ़ती अस्थिरता के बीच तटस्थ शासन बना हुआ है। 50 पर GMS संतुलन एक गैर-दिशात्मक शासन में संक्रमण की पुष्टि करता है जहां क्रेडिट स्प्रेड का विस्तार और VIX की वृद्धि मूल्य कार्रवाई को निर्देशित करती है। मामूली तरलता विस्तार के बावजूद, तांबा-सोना प्रॉक्सी में गिरावट चक्रीय गति के क्षरण का संकेत देती है। राजकोषीय-मौद्रिक सांठगांठ प्रतिफल प्रसार के ठहराव से बाधित बनी हुई है, जिससे प्राप्त अस्थिरता संकुचित होने तक सामरिक डीलेवेरिंग की आवश्यकता होती है। [ACTION: WAIT FOR PULLBACK]",
-            "ID": "Rezim netral bertahan di tengah meningkatnya volatilitas. Ekuilibrium GMS pada level 50 memvalidasi transisi ke rezim non-direksional di mana pelebaran credit spread dan elevasi VIX mendikte aksi harga. Meskipun ada ekspansi likuiditas marginal, degradasi dalam proksi tembaga-emas menandakan erosi momentum siklikal. Nexus fiskal-moneter tetap terhambat oleh stasis yield spread, mengharuskan deleveraging taktis hingga volatilitas terealisasi mengalami kompresi. [ACTION: WAIT FOR PULLBACK]",
-            "AR": "يستمر النظام المحايد وسط تصاعد التقلبات. يؤكد توازن GMS عند 50 الانتقال إلى نظام غير اتجاهي حيث يفرض اتساع هوامش الائتمان وارتفاع مؤشر VIX حركة السعر. على الرغم من التوسع الهامشي في السيولة، فإن تدهور مؤشرات النحاس والذهب يشير إلى تأكل الزخم الدوري. تظل العلاقة المالية-النقدية مقيدة بركود فروق العوائد، مما يستلزم تقليص الرافعة المالية التكتيكية حتى ينضغط التقلب المحقق ومراقبة مستويات السيولة الصافية بدقة. [ACTION: WAIT FOR PULLBACK]",
-            "DE": "Neutrales Regime besteht bei steigender Volatilität fort. Das GMS-Gleichgewicht bei 50 validiert einen Übergang in ein richtungsloses Regime, in dem die Ausweitung der Credit Spreads und die VIX-Erhöhung das Kursgeschehen diktieren. Trotz marginaler Liquiditätsausweitung signalisiert die Degradierung der Kupfer-Gold-Proxies eine Erosion des zyklischen Momentums. Der fiskalisch-monetäre Nexus bleibt durch die Stagnation der Renditespannen eingeschränkt, was ein taktisches Deleveraging erfordert. [ACTION: WAIT FOR PULLBACK]",
-            "FR": "Le régime neutre persiste face à la volatilité croissante. L'équilibre du GMS à 50 valide une transition vers un régime non directionnel où l'élargissement des spreads de crédit et l'élévation du VIX dictent l'action immédiate des prix. Malgré une expansion marginale de la liquidité, la dégradation des proxies cuivre-or signale une érosion du momentum cyclique. Le nexus fiscalo-monétaire reste contraint par la stase des spreads de rendement, imposant un désendettement tactique immédiat. [ACTION: WAIT FOR PULLBACK]"
+            "JP": "ボラティリティ上昇の中、中立的な規律が継続。GMS 47は、信用スプレッドの拡大とVIX 21突破により、流動性のコンベクシティが相殺される摩擦レジームを示唆します。銅・金価格の停滞とOGVベクトルのフラット化は成長インパルスの減速を裏付け、ドル高がリスク資産の圧縮を加速させています。純流動性は安定していますが、センチメントの著しい悪化は方向性リスクの回避を要求しており、明確な平均回帰を待つべき局面です。[ACTION: WAIT FOR PULLBACK]",
+            "EN": "Neutrality persists amidst escalating volatility. The GMS print of 47 signifies a regime of structural friction where liquidity convexity is neutralized by credit spread expansion and a VIX breaching the 21 threshold. The fiscal-monetary nexus faces resistance as industrial depreciation and a flat OGV vector indicate a decelerating growth impulse. Dollar appreciation further exacerbates risk-asset compression. Despite stable net liquidity, the collapse in sentiment mandates an avoidance of directional exposure. [ACTION: WAIT FOR PULLBACK]",
+            "CN": "波动加剧，市场进入中性审慎防御阶段。GMS得分47反映了结构性摩擦，信用利差走阔与VIX突破21关口抵消了流动性凸性。工业金属贬值与持平的OGV矢量揭示了增长冲量的减速，同时美元走强加剧了风险资产的估值压缩。尽管净流动性总量维持稳健，但加密情绪的坍塌与市场宽度的停滞要求机构投资者在明确的趋势转换前保持观望，以对冲潜在的制度性降级风险。[ACTION: WAIT FOR PULLBACK]",
+            "ES": "Neutralidad ante la escalada de volatilidad. El registro GMS de 47 significa un régimen de fricción estructural donde la convexidad de la liquidez es neutralizada por la expansión de los diferenciales de crédito y un VIX superando el umbral de 21. La depreciación de los indicadores industriales y un vector OGV plano indican una desaceleración del impulso de crecimiento, mientras que la apreciación del dólar exacerba la compresión de activos de riesgo. Pese a la liquidez estable, el colapso del sentimiento exige cautela. [ACTION: WAIT FOR PULLBACK]",
+            "HI": "बढ़ती अस्थिरता के बीच तटस्थता बनी हुई है। 47 का GMS स्कोर एक संरचनात्मक घर्षण के शासन को दर्शाता है जहां क्रेडिट स्प्रेड विस्तार और 21 की सीमा को पार करने वाले VIX द्वारा तरलता उत्तलता को बेअसर किया जाता है। औद्योगिक प्रॉक्सी के मूल्यह्रास और एक सपाट OGV वेक्टर विकास आवेग में कमी का संकेत देते हैं, जबकि डॉलर की मजबूती जोखिम-परिसंपत्ति संपीड़न को बढ़ाती है। स्थिर शुद्ध तरलता के बावजूद, धारणा में गिरावट एक दिशात्मक जोखिम से बचने और एक स्पष्ट सुधार की प्रतीक्षा करने का आदेश देती है। [ACTION: WAIT FOR PULLBACK]",
+            "ID": "Netralitas bertahan di tengah kenaikan volatilitas. Angka GMS 47 menandakan rezim friksi struktural di mana konveksitas likuiditas dinetralkan oleh ekspansi penyebaran kredit dan VIX yang menembus ambang batas 21. Depresiasi proksi industri dan vektor OGV yang datar menunjukkan perlambatan impuls pertumbuhan, sementara apresiasi dolar memperburuk kompresi aset berisiko. Terlepas dari likuiditas bersih yang stabil, keruntuhan sentimen mengharuskan penghindaran eksposur terarah hingga terjadi pembalikan rata-rata. [ACTION: WAIT FOR PULLBACK]",
+            "AR": "الحياد مستمر وسط تصاعد تقلبات السوق. تعكس قيمة GMS البالغة 47 نظاماً من الاحتكاك الهيكلي حيث يتم تحييد تقعر السيولة من خلال توسع هوامش الائتمان وتجاوز مؤشر VIX لعتبة 21. يشير انخفاض أسعار السلع الصناعية واستقرار ناقل OGV إلى تباطؤ زخم النمو، بينما يؤدي ارتفاع مؤشر الدولار إلى ضغط الأصول الخطرة. على الرغم من استقرار صافي السيولة، فإن انهيار المعنويات يفرض تجنب التعرض المباشر للمخاطر حتى حدوث ارتداد معنوي أو اختراق سعري واضح. [ACTION: WAIT FOR PULLBACK]",
+            "DE": "Neutralität inmitten eskalierender Volatilität. Der GMS-Wert von 47 signalisiert ein Regime struktureller Friktion, in dem die Liquiditätskonvexität durch die Ausweitung der Credit-Spreads und einen VIX über 21 neutralisiert wird. Die Abwertung industrieller Proxies und ein flacher OGV-Vektor deuten auf einen nachlassenden Wachstums-Impuls hin, während die Dollar-Appreziation die Kompression von Risikoaktiva verschärft. Trotz stabiler Nettoliquidität erfordert der Sentimenteinbruch den Verzicht auf direktionale Risiken bis zu einer definitiven Trendwende. [ACTION: WAIT FOR PULLBACK]",
+            "FR": "La neutralité persiste face à la volatilité. Le score GMS de 47 indique un régime de friction structurelle où la convexité de la liquidité est neutralisée par l'élargissement des spreads de crédit et un VIX franchissant le seuil de 21. La dépréciation des proxys industriels et un vecteur OGV plat signalent une décélération de l'impulsion de croissance, tandis que l'appréciation du dollar accentue la compression des actifs risqués. Malgré une liquidité nette stable, l'effondrement du sentiment impose d'éviter l'exposition directionnelle. [ACTION: WAIT FOR PULLBACK]"
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-13T05:13:21Z",
-            "score": 37
-        },
         {
             "date": "2026-02-13T06:28:13Z",
             "score": 37
@@ -2346,6 +2342,10 @@
         {
             "date": "2026-02-17T06:38:02Z",
             "score": 50
+        },
+        {
+            "date": "2026-02-17T07:39:33Z",
+            "score": 47
         }
     ],
     "intelligence": {
@@ -2366,14 +2366,14 @@
                 "isoDate": "2026-02-16T22:35:52+00:00Z"
             },
             {
-                "title": "French prosecutors are investigating companies like Nestle and Danone over contaminated baby formula. Here's the latest",
-                "link": "https://www.cnbc.com/2026/02/16/baby-formula-nestle-danone-probe-aptamil-sma.html",
-                "isoDate": "2026-02-16T16:29:03+00:00Z"
+                "title": "AI chatbot firms face stricter regulation in online safety laws protecting children in the UK",
+                "link": "https://www.cnbc.com/2026/02/16/ai-chatbot-firms-face-stricter-regulation-protect-children-uk.html",
+                "isoDate": "2026-02-16T16:44:20+00:00Z"
             },
             {
                 "title": "European markets set to open lower as earnings remain in focus",
                 "link": "https://www.cnbc.com/2026/02/17/european-markets-stoxx-600-ftse-dax-cac-miner-earnings-data.html",
-                "isoDate": "2026-02-17T06:16:37+00:00Z"
+                "isoDate": "2026-02-17T07:37:14+00:00Z"
             },
             {
                 "title": "AI fears are hitting software stocks the hardest. Citi sees a buying opportunity in many names",
@@ -2385,69 +2385,69 @@
             "JP": [
                 "S&P500先物は2週続落後、下落して取引中：ライブアップデート",
                 "ハイアット会長プリツカー氏、エプスタイン氏との関係で取締役を辞任",
-                "エプスタイン氏関連の余波：捕食者との過去の取引で傷ついた著名人たち",
-                "ネスレやダノンなどの企業が汚染された粉ミルクで仏検察の捜査対象に。最新情報はこちら",
-                "欧州市場は決算発表に焦点が集まる中、下落して始まる見込み",
-                "AIへの懸念がソフトウェア株を最も直撃。シティは多くの銘柄で買いの機会を見出す"
+                "エプスタイン氏事件の余波：捕食者との過去の取引で傷ついた著名人たち",
+                "AIチャットボット企業、英国の子供保護オンライン安全法でより厳格な規制に直面",
+                "欧州市場、決算発表が引き続き焦点となり下落して始まると予想",
+                "AIへの懸念がソフトウェア株に最も打撃を与えている。シティは多くの銘柄で買いの機会を見出す"
             ],
             "CN": [
-                "标普500指数期货在连续两周下跌后走低：实时更新",
-                "凯悦酒店董事长普里茨克因与爱泼斯坦的关系辞去董事职务",
-                "爱泼斯坦事件的后续影响：被掠夺者过去的交易拖累的高调人物",
-                "法国检察官正在调查雀巢和达能等公司受污染的婴儿配方奶粉。最新消息在此",
-                "欧洲市场预计将低开，因为财报仍是焦点",
-                "人工智能的担忧对软件股打击最大。花旗认为许多个股是买入机会"
+                "标普500指数期货在连续两周下跌后低开：实时更新",
+                "凯悦集团董事长普里茨克因爱泼斯坦关系退出董事会",
+                "爱泼斯坦案件的后续影响：与一名掠夺者过往交易中受损的高调人物",
+                "人工智能聊天机器人公司在保护英国儿童的在线安全法中面临更严格的监管",
+                "欧洲市场预期低开，收益报告仍是焦点",
+                "对人工智能的担忧对软件股打击最大。花旗集团认为许多股票存在买入机会"
             ],
             "ES": [
                 "Los futuros del S&P 500 cotizan a la baja tras dos semanas consecutivas de pérdidas: Actualizaciones en vivo",
-                "El presidente de Hyatt, Pritzker, abandona la junta directiva por vínculos con Epstein",
+                "El presidente de Hyatt, Pritzker, abandona la junta por vínculos con Epstein",
                 "Las repercusiones de los archivos de Epstein: Las personas de alto perfil perjudicadas por tratos pasados con un depredador",
-                "Fiscales franceses investigan a empresas como Nestlé y Danone por leche en polvo contaminada. Aquí las últimas noticias",
-                "Los mercados europeos abrirán a la baja ya que los resultados empresariales siguen en foco",
-                "Los temores de la IA golpean más fuerte a las acciones de software. Citi ve una oportunidad de compra en muchos nombres"
+                "Las empresas de chatbots de IA se enfrentan a una regulación más estricta en las leyes de seguridad en línea que protegen a los niños en el Reino Unido",
+                "Los mercados europeos se preparan para abrir a la baja ante el foco en los resultados empresariales",
+                "Los temores sobre la IA están golpeando más fuerte a las acciones de software. Citi ve una oportunidad de compra en muchos nombres"
             ],
             "HI": [
-                "S&P 500 फ्यूचर्स लगातार दो हफ्तों की गिरावट के बाद निचले स्तर पर कारोबार कर रहे हैं: लाइव अपडेट",
-                "एपस्टीन संबंधों के चलते हयात के अध्यक्ष प्रित्ज़कर ने बोर्ड छोड़ा",
-                "एपस्टीन फाइलों का असर: शिकारी के साथ पिछले सौदों से प्रभावित हाई-प्रोफाइल लोग",
-                "फ्रांसीसी अभियोजक दूषित शिशु फार्मूला को लेकर नेस्ले और डैनोन जैसी कंपनियों की जांच कर रहे हैं। यहाँ नवीनतम है",
-                "यूरोपीय बाजार कम खुलने वाले हैं क्योंकि आय पर ध्यान केंद्रित है",
-                "एआई का डर सॉफ्टवेयर शेयरों पर सबसे ज्यादा पड़ रहा है। सिटी कई नामों में खरीदारी का अवसर देखता है"
+                "S&P 500 वायदा लगातार दो हफ्तों की गिरावट के बाद निचले स्तर पर कारोबार कर रहे हैं: लाइव अपडेट",
+                "एपस्टीन से संबंधों के चलते हयात के अध्यक्ष प्रित्ज़कर ने बोर्ड छोड़ा",
+                "एपस्टीन की फाइलों का असर: एक शिकारी के साथ पिछले सौदों से प्रभावित हुए प्रमुख लोग",
+                "यूके में बच्चों की सुरक्षा करने वाले ऑनलाइन सुरक्षा कानूनों में एआई चैटबॉट कंपनियों को सख्त नियमों का सामना करना पड़ेगा",
+                "यूरोपीय बाजारों में गिरावट की उम्मीद, आय पर अभी भी ध्यान केंद्रित",
+                "एआई का डर सॉफ्टवेयर शेयरों को सबसे ज्यादा प्रभावित कर रहा है। सिटी कई नामों में खरीदारी का अवसर देखता है"
             ],
             "ID": [
-                "Futures S&P 500 diperdagangkan lebih rendah setelah dua minggu berturut-turut rugi: Pembaruan langsung",
-                "Ketua Hyatt Pritzker meninggalkan dewan karena hubungan Epstein",
-                "Dampak berkas Epstein: Orang-orang terkenal yang terbakar oleh kesepakatan masa lalu dengan predator",
-                "Jaksa Prancis menyelidiki perusahaan seperti Nestle dan Danone atas susu formula bayi yang terkontaminasi. Berikut berita terbarunya",
-                "Pasar Eropa diperkirakan dibuka lebih rendah karena laba tetap menjadi fokus",
-                "Ketakutan AI paling keras menghantam saham perangkat lunak. Citi melihat peluang beli di banyak nama"
+                "Perkiraan S&P 500 diperdagangkan lebih rendah setelah dua minggu berturut-turut merugi: Pembaruan langsung",
+                "Ketua Hyatt Pritzker keluar dari dewan karena hubungan dengan Epstein",
+                "Dampak berkas Epstein: Tokoh-tokoh terkemuka yang dirugikan oleh kesepakatan masa lalu dengan predator",
+                "Perusahaan chatbot AI menghadapi regulasi yang lebih ketat dalam undang-undang keselamatan online yang melindungi anak-anak di Inggris",
+                "Pasar Eropa siap dibuka lebih rendah karena pendapatan tetap menjadi fokus",
+                "Ketakutan AI paling memukul saham perangkat lunak. Citi melihat peluang beli pada banyak nama"
             ],
             "AR": [
-                "عقود S&P 500 الآجلة تتداول على انخفاض بعد أسبوعين متتاليين من الخسائر: تحديثات مباشرة",
-                "رئيس حياة بريتزكر يغادر مجلس الإدارة بسبب صلاته بإبشتاين",
-                "تداعيات ملفات إبشتاين: الأشخاص البارزون الذين احترقوا بسبب تعاملاتهم السابقة مع مفترس",
-                "المدعون الفرنسيون يحققون مع شركات مثل نستله ودانون بشأن حليب الأطفال الملوث. إليك آخر المستجدات",
-                "الأسواق الأوروبية من المتوقع أن تفتح على انخفاض مع بقاء الأرباح في التركيز",
-                "مخاوف الذكاء الاصطناعي تضرب أسهم البرمجيات بقوة. سيتي ترى فرصة شراء في العديد من الأسماء"
+                "عقود S&P 500 الآجلة تتداول بانخفاض بعد أسبوعين متتاليين من الخسائر: تحديثات مباشرة",
+                "رئيس حياة بريتزكر يغادر مجلس الإدارة بسبب روابط مع إبشتاين",
+                "تداعيات ملفات إبشتاين: الشخصيات البارزة التي أضرتها صفقات سابقة مع مفترس",
+                "شركات روبوتات الدردشة الذكية تواجه تنظيمًا أكثر صرامة في قوانين السلامة عبر الإنترنت لحماية الأطفال في المملكة المتحدة",
+                "الأسواق الأوروبية تستعد للانفتاح على انخفاض مع بقاء الأرباح في التركيز",
+                "مخاوف الذكاء الاصطناعي تضرب أسهم البرمجيات بأشدها. سيتي ترى فرصة شراء في العديد من الأسماء"
             ],
             "DE": [
-                "S&P 500 Futures handeln niedriger nach zwei aufeinanderfolgenden Verlustwochen: Live-Updates",
-                "Hyatt-Vorstandsvorsitzender Pritzker verlässt Vorstand wegen Epstein-Verbindungen",
-                "Auswirkungen der Epstein-Akten: Prominente Menschen, die durch vergangene Geschäfte mit einem Raubtier verbrannt wurden",
-                "Französische Staatsanwälte ermitteln gegen Unternehmen wie Nestle und Danone wegen kontaminierter Säuglingsnahrung. Hier die neuesten Nachrichten",
-                "Europäische Märkte werden niedriger eröffnen, da die Ergebnisse im Fokus bleiben",
-                "KI-Ängste treffen Software-Aktien am härtesten. Citi sieht eine Kaufgelegenheit bei vielen Namen"
+                "S&P 500 Futures werden nach zwei verlorenen Wochen niedriger gehandelt: Live-Updates",
+                "Hyatt-Vorsitzender Pritzker verlässt Vorstand wegen Epstein-Verbindungen",
+                "Die Folgen der Epstein-Akten: Prominente, die durch vergangene Geschäfte mit einem Räuber geschädigt wurden",
+                "KI-Chatbot-Firmen sehen sich strengeren Vorschriften in Online-Sicherheitsgesetzen zum Schutz von Kindern in Großbritannien gegenüber",
+                "Europäische Märkte werden voraussichtlich niedriger eröffnen, da die Erträge weiterhin im Fokus stehen",
+                "KI-Ängste treffen Softwareaktien am härtesten. Citi sieht eine Kaufgelegenheit bei vielen Namen"
             ],
             "FR": [
-                "Les futures du S&P 500 s'échangent à la baisse après deux semaines de pertes consécutives : Mises à jour en direct",
+                "Les contrats à terme sur le S&P 500 s'échangent à la baisse après deux semaines consécutives de pertes : mises à jour en direct",
                 "Le président de Hyatt, Pritzker, quitte le conseil d'administration en raison de liens avec Epstein",
-                "Les retombées des documents Epstein : Les personnalités de haut niveau brûlées par leurs transactions passées avec un prédateur",
-                "Les procureurs français enquêtent sur des entreprises comme Nestlé et Danone pour du lait maternisé contaminé. Voici les dernières nouvelles",
+                "Les retombées des dossiers Epstein : les personnalités de haut rang brûlées par leurs dealings passés avec un prédateur",
+                "Les entreprises de chatbots d'IA font face à une réglementation plus stricte dans les lois sur la sécurité en ligne protégeant les enfants au Royaume-Uni",
                 "Les marchés européens devraient ouvrir en baisse alors que les résultats d'entreprises restent au centre de l'attention",
                 "Les craintes liées à l'IA frappent le plus durement les actions de logiciels. Citi voit une opportunité d'achat dans de nombreux noms"
             ]
         },
-        "last_updated": "2026-02-17T06:38:02.515232+00:00Z"
+        "last_updated": "2026-02-17T07:39:33.422325+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
