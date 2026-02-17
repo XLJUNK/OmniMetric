@@ -1,12 +1,12 @@
 {
-    "last_updated": "2026-02-16T23:42:36.600755+00:00",
-    "last_successful_update": "2026-02-16T23:42:36.600762+00:00",
-    "gms_score": 49,
+    "last_updated": "2026-02-17T03:04:22.538471+00:00",
+    "last_successful_update": "2026-02-17T03:04:22.538478+00:00",
+    "gms_score": 50,
     "sector_scores": {
         "STOCKS": 44,
         "CRYPTO": 65,
-        "FOREX": 38,
-        "COMMODITIES": 35,
+        "FOREX": 35,
+        "COMMODITIES": 47,
         "GLOBAL_INDICES": 50,
         "REAL_ESTATE": 50,
         "CREDIT": 50,
@@ -16,12 +16,11 @@
     },
     "market_data": {
         "CRYPTO_SENTIMENT": {
-            "price": 12,
-            "daily_chg": 50.0,
-            "change_percent": 140.0,
+            "price": 10,
+            "daily_chg": -16.67,
+            "change_percent": 11.11,
             "trend": "FEAR",
             "sparkline": [
-                49,
                 44,
                 32,
                 24,
@@ -50,7 +49,8 @@
                 9,
                 9,
                 8,
-                12
+                12,
+                10
             ]
         },
         "YIELD_SPREAD": {
@@ -584,11 +584,11 @@
             ]
         },
         "BTC": {
-            "price": 68643.56,
+            "price": 68805.58,
             "prev_price": 68788.19,
-            "daily_chg": -0.21,
-            "change_percent": 3.66,
-            "trend": "DOWN",
+            "daily_chg": 0.03,
+            "change_percent": 3.9,
+            "trend": "UP",
             "sparkline": [
                 88267.14,
                 89102.57,
@@ -611,14 +611,14 @@
                 68857.84,
                 69767.62,
                 68788.19,
-                68643.56
+                68805.58
             ]
         },
         "ETH": {
-            "price": 1994.41,
+            "price": 1998.22,
             "prev_price": 1966.04,
-            "daily_chg": 1.44,
-            "change_percent": 2.44,
+            "daily_chg": 1.64,
+            "change_percent": 2.63,
             "trend": "UP",
             "sparkline": [
                 2926.46,
@@ -642,14 +642,14 @@
                 2048.53,
                 2086.01,
                 1966.04,
-                1994.41
+                1998.22
             ]
         },
         "SOL": {
-            "price": 86.2,
+            "price": 87.46,
             "prev_price": 86.01,
-            "daily_chg": 0.23,
-            "change_percent": 10.02,
+            "daily_chg": 1.7,
+            "change_percent": 11.63,
             "trend": "UP",
             "sparkline": [
                 124.14,
@@ -673,14 +673,14 @@
                 84.32,
                 88.16,
                 86.01,
-                86.2
+                87.46
             ]
         },
         "DXY": {
-            "price": 97.1,
+            "price": 97.13,
             "prev_price": 96.88,
-            "daily_chg": 0.23,
-            "change_percent": 0.31,
+            "daily_chg": 0.26,
+            "change_percent": 0.34,
             "trend": "UP",
             "sparkline": [
                 99.32,
@@ -704,17 +704,16 @@
                 96.83,
                 96.93,
                 96.88,
-                97.1
+                97.13
             ]
         },
         "USDJPY": {
-            "price": 153.63,
-            "prev_price": 152.82,
-            "daily_chg": 0.53,
-            "change_percent": -1.6,
+            "price": 153.08,
+            "prev_price": 152.78,
+            "daily_chg": 0.2,
+            "change_percent": -0.91,
             "trend": "UP",
             "sparkline": [
-                158.6,
                 157.54,
                 158.18,
                 158.16,
@@ -735,19 +734,19 @@
                 154.48,
                 153.27,
                 152.82,
-                153.63
+                152.78,
+                153.08
             ]
         },
         "EURUSD": {
-            "price": 1.19,
+            "price": 1.18,
             "prev_price": 1.19,
-            "daily_chg": -0.12,
-            "change_percent": -0.42,
+            "daily_chg": -0.2,
+            "change_percent": -0.38,
             "trend": "DOWN",
             "sparkline": [
                 1.16,
                 1.16,
-                1.16,
                 1.17,
                 1.17,
                 1.18,
@@ -766,17 +765,17 @@
                 1.19,
                 1.19,
                 1.19,
-                1.19
+                1.19,
+                1.18
             ]
         },
         "USDINR": {
             "price": 90.76,
-            "prev_price": 90.56,
-            "daily_chg": 0.22,
-            "change_percent": -0.07,
+            "prev_price": 90.57,
+            "daily_chg": 0.21,
+            "change_percent": 0.19,
             "trend": "UP",
             "sparkline": [
-                90.36,
                 90.7,
                 90.9,
                 91.12,
@@ -797,14 +796,15 @@
                 90.59,
                 90.74,
                 90.56,
+                90.57,
                 90.76
             ]
         },
         "USDSAR": {
             "price": 3.75,
             "prev_price": 3.75,
-            "daily_chg": 0.12,
-            "change_percent": 0.1,
+            "daily_chg": 0.13,
+            "change_percent": 0.09,
             "trend": "UP",
             "sparkline": [
                 3.75,
@@ -812,7 +812,6 @@
                 3.75,
                 3.75,
                 3.75,
-                3.75,
                 3.74,
                 3.75,
                 3.75,
@@ -824,6 +823,7 @@
                 3.75,
                 3.75,
                 3.74,
+                3.75,
                 3.75,
                 3.75,
                 3.75,
@@ -832,10 +832,10 @@
             ]
         },
         "GOLD": {
-            "price": 5014.2,
+            "price": 4983.5,
             "prev_price": 5022.0,
-            "daily_chg": -0.16,
-            "change_percent": 0.21,
+            "daily_chg": -0.77,
+            "change_percent": -0.41,
             "trend": "DOWN",
             "sparkline": [
                 4616.3,
@@ -859,14 +859,14 @@
                 5071.6,
                 4923.7,
                 5022.0,
-                5014.2
+                4983.5
             ]
         },
         "OIL": {
-            "price": 63.7,
+            "price": 63.6,
             "prev_price": 62.89,
-            "daily_chg": 1.29,
-            "change_percent": -0.41,
+            "daily_chg": 1.13,
+            "change_percent": -0.56,
             "trend": "UP",
             "sparkline": [
                 59.19,
@@ -890,14 +890,14 @@
                 64.63,
                 62.84,
                 62.89,
-                63.7
+                63.6
             ]
         },
         "COPPER": {
-            "price": 5.76,
+            "price": 5.73,
             "prev_price": 5.79,
-            "daily_chg": -0.55,
-            "change_percent": -2.3,
+            "daily_chg": -1.01,
+            "change_percent": -2.75,
             "trend": "DOWN",
             "sparkline": [
                 5.95,
@@ -921,14 +921,14 @@
                 5.95,
                 5.77,
                 5.79,
-                5.76
+                5.73
             ]
         },
         "NATGAS": {
-            "price": 3.1,
+            "price": 3.09,
             "prev_price": 3.24,
-            "daily_chg": -4.56,
-            "change_percent": -0.64,
+            "daily_chg": -4.78,
+            "change_percent": -0.87,
             "trend": "DOWN",
             "sparkline": [
                 3.13,
@@ -952,14 +952,14 @@
                 3.16,
                 3.22,
                 3.24,
-                3.1
+                3.09
             ]
         },
         "SILVER": {
-            "price": 76.58,
+            "price": 75.99,
             "prev_price": 77.85,
-            "daily_chg": -1.63,
-            "change_percent": -4.53,
+            "daily_chg": -2.39,
+            "change_percent": -5.27,
             "trend": "DOWN",
             "sparkline": [
                 91.88,
@@ -983,7 +983,7 @@
                 83.75,
                 75.55,
                 77.85,
-                76.58
+                75.99
             ]
         },
         "DAX": {
@@ -1080,7 +1080,7 @@
             ]
         },
         "FTSE": {
-            "price": 10473.69,
+            "price": 10473.7,
             "prev_price": 10446.4,
             "daily_chg": 0.26,
             "change_percent": 1.16,
@@ -1107,17 +1107,16 @@
                 10472.1,
                 10402.4,
                 10446.4,
-                10473.69
+                10473.7
             ]
         },
         "NIKKEI": {
-            "price": 56806.41,
-            "prev_price": 56941.97,
-            "daily_chg": -0.24,
-            "change_percent": 0.79,
+            "price": 56354.55,
+            "prev_price": 56806.41,
+            "daily_chg": -0.8,
+            "change_percent": -2.25,
             "trend": "DOWN",
             "sparkline": [
-                54110.5,
                 53936.17,
                 53583.57,
                 52991.1,
@@ -1138,7 +1137,8 @@
                 57650.54,
                 57639.84,
                 56941.97,
-                56806.41
+                56806.41,
+                56354.55
             ]
         },
         "HANGSENG": {
@@ -1266,13 +1266,12 @@
             ]
         },
         "ASX200": {
-            "price": 8979.8,
-            "prev_price": 8917.6,
-            "daily_chg": 0.7,
-            "change_percent": 1.27,
+            "price": 8974.5,
+            "prev_price": 8966.8,
+            "daily_chg": 0.09,
+            "change_percent": -0.45,
             "trend": "UP",
             "sparkline": [
-                8861.7,
                 8903.9,
                 8874.5,
                 8815.9,
@@ -1293,7 +1292,8 @@
                 9014.8,
                 9043.5,
                 8917.6,
-                8979.8
+                8966.8,
+                8974.5
             ]
         },
         "G_REIT": {
@@ -1764,13 +1764,12 @@
         "GBPUSD": {
             "price": 0.73,
             "prev_price": 0.73,
-            "daily_chg": -0.04,
-            "change_percent": 0.42,
-            "trend": "DOWN",
+            "daily_chg": 0.26,
+            "change_percent": 0.16,
+            "trend": "UP",
             "sparkline": [
                 0.75,
                 0.75,
-                0.75,
                 0.74,
                 0.75,
                 0.74,
@@ -1784,6 +1783,7 @@
                 0.73,
                 0.73,
                 0.74,
+                0.73,
                 0.73,
                 0.73,
                 0.73,
@@ -1793,13 +1793,12 @@
             ]
         },
         "AUDUSD": {
-            "price": 1.41,
+            "price": 1.42,
             "prev_price": 1.41,
-            "daily_chg": 0.16,
-            "change_percent": 0.11,
+            "daily_chg": 0.17,
+            "change_percent": 0.24,
             "trend": "UP",
             "sparkline": [
-                1.49,
                 1.5,
                 1.49,
                 1.49,
@@ -1820,19 +1819,19 @@
                 1.41,
                 1.4,
                 1.41,
-                1.41
+                1.41,
+                1.42
             ]
         },
         "USDCAD": {
             "price": 1.36,
             "prev_price": 1.36,
-            "daily_chg": 0.17,
-            "change_percent": 0.53,
+            "daily_chg": 0.19,
+            "change_percent": 0.68,
             "trend": "UP",
             "sparkline": [
                 1.39,
                 1.39,
-                1.39,
                 1.38,
                 1.38,
                 1.38,
@@ -1847,6 +1846,7 @@
                 1.37,
                 1.37,
                 1.37,
+                1.36,
                 1.36,
                 1.36,
                 1.36,
@@ -1856,12 +1856,11 @@
         },
         "USDCNY": {
             "price": 6.91,
-            "prev_price": 6.9,
-            "daily_chg": 0.11,
-            "change_percent": -0.21,
-            "trend": "UP",
+            "prev_price": 6.91,
+            "daily_chg": -0.01,
+            "change_percent": -0.04,
+            "trend": "DOWN",
             "sparkline": [
-                6.97,
                 6.97,
                 6.97,
                 6.96,
@@ -1882,19 +1881,19 @@
                 6.91,
                 6.91,
                 6.9,
+                6.91,
                 6.91
             ]
         },
         "USDCHF": {
             "price": 0.77,
             "prev_price": 0.77,
-            "daily_chg": 0.01,
-            "change_percent": 0.32,
+            "daily_chg": 0.19,
+            "change_percent": 0.14,
             "trend": "UP",
             "sparkline": [
                 0.8,
                 0.8,
-                0.8,
                 0.79,
                 0.8,
                 0.79,
@@ -1909,6 +1908,7 @@
                 0.78,
                 0.78,
                 0.78,
+                0.77,
                 0.77,
                 0.77,
                 0.77,
@@ -2053,64 +2053,60 @@
         {
             "code": "retail_sales",
             "name": "USD Retail Sales (MoM)",
-            "date": "2026-02-19",
-            "day": "THU",
+            "date": "2026-02-20",
+            "day": "FRI",
             "time": "08:30 EST",
             "impact": "high"
         },
         {
             "code": "boj",
             "name": "JPY Bank of Japan Policy Meeting",
-            "date": "2026-02-21",
-            "day": "SAT",
+            "date": "2026-02-22",
+            "day": "SUN",
             "time": "12:00 JST",
             "impact": "high"
         },
         {
             "code": "powell",
             "name": "USD Fed Chair Powell Testifies",
-            "date": "2026-02-24",
-            "day": "TUE",
+            "date": "2026-02-25",
+            "day": "WED",
             "time": "10:00 EST",
             "impact": "high"
         },
         {
             "code": "ecb",
             "name": "EUR ECB Monetary Policy Press Conference",
-            "date": "2026-02-26",
-            "day": "THU",
+            "date": "2026-02-27",
+            "day": "FRI",
             "time": "14:45 CET",
             "impact": "high"
         },
         {
             "code": "ppi",
             "name": "USD Producer Price Index (PPI)",
-            "date": "2026-03-01",
-            "day": "SUN",
+            "date": "2026-03-02",
+            "day": "MON",
             "time": "08:30 EST",
             "impact": "high"
         }
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "The GMS score of 49 confirms a regime of fragility where credit spread widening and elevated VIX levels signal acute volatility compression. Stagnant net liquidity and flat OGV vectors necessitate institutional de-risking until mean reversion provides a stable entry. [ACTION: WAIT FOR PULLBACK]",
+        "content": "A GMS of 50 signals a transitional regime where equity premium erosion meets rising VIX volatility. Widening high-yield spreads and compressed sentiment indicate fragility, while flat inflation proxies confirm a stall in reflation. Liquidity stagnation mandates a tactical pause. [ACTION: WAIT FOR PULLBACK]",
         "reports": {
-            "JP": "GMS 49は市場の脆弱な体制を示唆し、信用スプレッドの拡大とVIXの上昇はボラティリティの圧縮を露呈させています。純流動性の停滞とOGVベクトルの平坦化により、資産評価の持続性は低下しており、平均回帰を確認するまでリスク削減を優先すべきです。[ACTION: WAIT FOR PULLBACK]",
-            "EN": "The GMS score of 49 confirms a regime of fragility where credit spread widening and elevated VIX levels signal acute volatility compression. Stagnant net liquidity and flat OGV vectors necessitate institutional de-risking until mean reversion provides a stable entry. [ACTION: WAIT FOR PULLBACK]",
-            "CN": "GMS评分49反映市场处于脆弱体制，信用利差扩大与VIX上升预示波动率压抑。净流动性停滞及OGV向量持平，暗示系统性风险正在积聚，机构应在均值回归前保持审慎，避免在当前体制退化期过度暴露。 [ACTION: WAIT FOR PULLBACK]",
-            "ES": "El GMS de 49 valida un régimen de fragilidad donde la expansión de diferenciales de crédito y el VIX elevado indican compresión de volatilidad. Ante la liquidez neta estancada y vectores OGV planos, se impone una reducción de riesgo institucional hasta que ocurra la reversión a la media. [ACTION: WAIT FOR PULLBACK]",
-            "HI": "49 का GMS स्कोर बाजार की नाजुकता को दर्शाता है, जहां क्रेडिट स्प्रेड का विस्तार और ऊंचा VIX अस्थिरता का संकेत देते हैं। स्थिर तरलता और सपाट OGV वेक्टर के बीच, मीन रिवर्जन होने तक संस्थागत जोखिम को कम करना और रणनीतिक धैर्य बनाए रखना अनिवार्य है। [ACTION: WAIT FOR PULLBACK]",
-            "ID": "Skor GMS 49 mengonfirmasi rezim kerapuhan di mana pelebaran spread kredit dan VIX yang meningkat mensinyalkan kompresi volatilitas. Mengingat likuiditas netral yang stagnan dan vektor OGV yang datar, de-risking institusional sangat diperlukan hingga terjadi mean reversion. [ACTION: WAIT FOR PULLBACK]",
-            "AR": "يؤكد مؤشر GMS البالغ 49 نظاماً من الهشاشة، حيث يشير اتساع هوامش الائتمان وارتفاع VIX إلى ضغوط التقلبات. في ظل ركود السيولة الصافية واستقرار نواقل OGV، يتحتم تقليل المخاطر المؤسسية بانتظار العودة إلى المتوسط لتحديد نقطة دخول آمنة. [ACTION: WAIT FOR PULLBACK]",
-            "DE": "Ein GMS von 49 bestätigt ein fragiles Regime; steigende Kreditspreads und ein erhöhter VIX signalisieren eine manifeste Volatilitätskompression. Bei stagnierender Netto-Liquidität und flachen OGV-Vektoren ist eine institutionelle Risikoreduktion bis zur Mean-Reversion zwingend erforderlich. [ACTION: WAIT FOR PULLBACK]",
-            "FR": "Le score GMS de 49 confirme un régime de fragilité où l'élargissement des spreads de crédit et le VIX élevé signalent une compression de la volatilité. Vu la liquidité stagnante et les vecteurs OGV plats, le dérisquage institutionnel est impératif avant tout retour à la moyenne. [ACTION: WAIT FOR PULLBACK]"
+            "JP": "50のGMSは、リスクプレミアムの侵食とボラティリティの上昇が交差する転換期を示唆します。クレジットスプレッドの拡大とセンチメントの低迷は流動性の停滞を露呈させており、リフレ的モメンタムは完全に消失しました。現在は資本保護を優先し、エントリーを控える局面です。[ACTION: WAIT FOR PULLBACK]",
+            "EN": "A GMS of 50 signals a transitional regime where equity premium erosion meets rising VIX volatility. Widening high-yield spreads and compressed sentiment indicate fragility, while flat inflation proxies confirm a stall in reflation. Liquidity stagnation mandates a tactical pause. [ACTION: WAIT FOR PULLBACK]",
+            "CN": "50的GMS评分预示风险溢价侵蚀与波动率上升的过渡期。高收益债利差走扩及情绪低迷反映了流动性陷阱，通胀代理指标持平证实了再通胀动力陷入停滞。结构性流动性未能扩张前，必须保持审慎，等待宏观拐点。[ACTION: WAIT FOR PULLBACK]",
+            "ES": "Un GMS de 50 dicta un régimen de transición donde la erosión de las primas de riesgo coincide con una volatilidad en ascenso. El ensanchamiento de los diferenciales de crédito y el sentimiento deprimido señalan fragilidad sistémica, exigiendo una pausa táctica inmediata ante la liquidez estancada. [ACTION: WAIT FOR PULLBACK]",
+            "HI": "50 का GMS स्कोर एक संक्रमणकालीन शासन का संकेत देता है जहाँ इक्विटी प्रीमियम में कमी और बढ़ती अस्थिरता का मिलन होता है। बढ़ते क्रेडिट स्प्रेड और सुस्त भावना तरलता की कमी को दर्शाते हैं। चक्रीय पुनरुद्धार रुक गया है, इसलिए पूंजी परिनियोजन में सामरिक विराम अनिवार्य है। [ACTION: WAIT FOR PULLBACK]",
+            "ID": "GMS 50 menandakan rezim transisi di mana erosi premi ekuitas bertemu dengan lonjakan volatilitas. Melebarnya spread kredit dan sentimen yang tertekan menunjukkan risiko idiosinkratik, sementara likuiditas yang stagnan mengharuskan jeda taktis sebelum penempatan modal baru dilakukan. [ACTION: WAIT FOR PULLBACK]",
+            "AR": "يشير مؤشر GMS البالغ 50 إلى نظام انتقالي حيث يلتقي تآكل علاوة مخاطر الأسهم مع تصاعد التقلبات. اتساع هوامش الائتمان وضعف المعنويات يؤكد ركود السيولة الهيكلية، مما يفرض توقفاً تكتيكياً عن ضخ رؤوس الأموال حتى استقرار معالم الاقتصاد الكلي. [ACTION: WAIT FOR PULLBACK]",
+            "DE": "Ein GMS von 50 markiert ein Übergangsregime, in dem die Erosion der Risikoprämien auf eine steigende Volatilität trifft. Ausweitende Credit-Spreads und stagnierende Liquidität signalisieren systemische Fragilität, während das Ausbleiben reflationärer Impulse eine taktische Zurückhaltung erzwingt. [ACTION: WAIT FOR PULLBACK]",
+            "FR": "Un GMS de 50 indique un régime de transition où l'érosion des primes de risque rencontre une volatilité croissante. L'élargissement des spreads de crédit et la stagnation de la liquidité signalent une fragilité systémique, imposant une pause tactique dans le déploiement des capitaux. [ACTION: WAIT FOR PULLBACK]"
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-13T02:24:08Z",
-            "score": 37
-        },
         {
             "date": "2026-02-13T02:32:44Z",
             "score": 37
@@ -2346,6 +2342,10 @@
         {
             "date": "2026-02-16T23:42:36Z",
             "score": 49
+        },
+        {
+            "date": "2026-02-17T03:04:22Z",
+            "score": 50
         }
     ],
     "intelligence": {
@@ -2383,71 +2383,72 @@
         ],
         "translations": {
             "JP": [
-                "S&P 500先物は2週連続下落後、小幅な値動き: ライブアップデート",
-                "ハイアット会長、エプスタイン氏との関係で取締役を辞任",
-                "エプスタイン氏訴訟の余波: 捕食者との過去の取引で傷ついた著名人たち",
-                "アップル、新動画ポッドキャストでユーチューブとスポティファイに対抗",
+                "S&P500先物は2週連続下落後、小動き：ライブアップデート",
+                "ハイアット会長プリツカー氏、エプスタイン氏との関係で取締役を辞任",
+                "エプスタイン氏関連訴訟の余波：詐欺師との過去の取引で傷ついた著名人たち",
+                "アップル、YouTubeとSpotifyに対抗し動画ポッドキャストを強化",
                 "ビザのオリンピック独占が欧州の決済問題を浮き彫りに",
-                "AIへの懸念がソフトウェア株に最も打撃。シティは多くの銘柄に買いの好機と見る"
+                "AIへの懸念がソフトウェア株に最も打撃、シティは多くの銘柄に買いの機会を見出す"
             ],
             "CN": [
-                "标普500指数期货连续两周下跌后小幅波动：实时更新",
-                "凯悦酒店董事长普里茨克因爱泼斯坦关系辞去董事职务",
-                "爱泼斯坦案件的后续影响：因与罪犯过去的交易而受损的高调人物",
-                "苹果进军视频播客领域，挑战YouTube和Spotify",
-                "维萨的奥运会垄断凸显欧洲支付困境",
-                "对人工智能的担忧对软件股打击最严重。花旗认为许多个股存在买入机会"
+                "标普500指数期货在连续两周下跌后小幅波动：实时更新",
+                "凯悦酒店董事长普里茨克因与爱泼斯坦的关联退出董事会",
+                "爱泼斯坦案件后续：与捕食者过往交易受损的高调人物",
+                "苹果凭借新的视频播客推广，挑战YouTube和Spotify",
+                "维萨的奥运会垄断凸显了欧洲的支付难题",
+                "对人工智能的担忧对软件股打击最严重。花旗认为许多股票存在买入机会"
             ],
             "ES": [
-                "Futuros del S&P 500 apenas cambian tras dos semanas consecutivas de pérdidas: Actualizaciones en vivo",
-                "Presidente de Hyatt, Pritzker, deja la junta directiva por vínculos con Epstein",
-                "Consecuencias de los archivos de Epstein: Personas de alto perfil afectadas por tratos pasados con un depredador",
-                "Apple desafía a YouTube y Spotify con un nuevo impulso a los videopodcasts",
-                "El monopolio olímpico de Visa resalta el dolor de cabeza de los pagos en Europa",
-                "Los temores sobre la IA están golpeando más fuerte a las acciones de software. Citi ve una oportunidad de compra en muchos nombres"
+                "Los futuros del S&P 500 apenas cambian tras dos semanas consecutivas de pérdidas: Actualizaciones en vivo",
+                "El presidente de Hyatt, Pritzker, abandona la junta por vínculos con Epstein",
+                "Las repercusiones de los archivos de Epstein: Las personalidades destacadas perjudicadas por tratos pasados con un depredador",
+                "Apple desafía a YouTube y Spotify con un nuevo impulso a los pódcasts de vídeo",
+                "El monopolio olímpico de Visa pone de manifiesto el dolor de cabeza de los pagos en Europa",
+                "Los temores de la IA están golpeando más fuerte a las acciones de software. Citi ve una oportunidad de compra en muchos nombres"
             ],
             "HI": [
                 "लगातार दो हफ्तों की गिरावट के बाद एस एंड पी 500 फ्यूचर्स में मामूली बदलाव: लाइव अपडेट",
-                "एपस्टीन संबंधों के कारण，，，，，，، ، Hyatt के अध्यक्ष प्रिज़कर ने बोर्ड छोड़ा",
-                "एपस्टीन की फाइलों का असर: शिकारी के साथ पिछले व्यवहारों से प्रभावित हुए उच्च-प्रोफ़ाइल लोग",
-                "Apple ने नए वीडियो पॉडकास्टिंग के साथ YouTube और Spotify को चुनौती दी",
-                "Visa का ओलंपिक एकाधिकार यूरोप की भुगतान संबंधी परेशानी को उजागर करता है",
-                "AI का डर सॉफ्टवेयर शेयरों पर सबसे भारी पड़ रहा है। सिटी कई नामों में खरीदारी का अवसर देखता है"
+                "एपस्टीन संबंधों के कारण，，，，，，，,，，,，，，,，，,，，,，，,，,，，，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，,，,，,，,，,，,，，,，，,，，,，,，，,，，,，,，,，,，,，,，,，,，,，,，,，，,，，,，，,，,，，,，，,，，,，，,，，,，,，,，,，,，，,，，,，，,，,，,，,，,，，,，，,，，,，，,，,，,，,，,，,，，,，,，,，,，，,，,，,，,，,，,，,，，,，，,，，,，，,，，,，，,，,，,，,，,，,，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，，,，，,，，,，，,，,，,，,，,，,，,，,，,，,，,，，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，，,，,，，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,，,MS.Chairman,",
+                "HyattPritzker,",
+                "Epstein",
+                "Hyatt,",
+                "HyattChairman,",
+                "HyFinch"
             ],
             "ID": [
-                "S&P 500 berjangka sedikit berubah setelah dua minggu berturut-turut merugi: Pembaruan langsung",
-                "Ketua Hyatt Pritzker tinggalkan dewan karena hubungan Epstein",
-                "Dampak berkas Epstein: Orang-orang terkemuka yang terpukul oleh transaksi masa lalu dengan predator",
-                "Apple tantang YouTube dan Spotify dengan dorongan podcast video baru",
+                "Futures S&P 500 sedikit berubah setelah dua minggu berturut-turut merugi: Pembaruan langsung",
+                "Ketua Hyatt Pritzker mundur dari dewan karena hubungan dengan Epstein",
+                "Dampak kasus Epstein: Tokoh-tokoh terkenal yang tercoreng oleh kesepakatan masa lalu dengan predator",
+                "Apple menantang YouTube dan Spotify dengan dorongan baru untuk podcast video",
                 "Monopoli Olimpiade Visa menyoroti masalah pembayaran Eropa",
-                "Ketakutan AI paling keras menghantam saham perangkat lunak. Citi melihat peluang beli di banyak nama"
+                "Ketakutan AI paling parah melanda saham perangkat lunak. Citi melihat peluang beli pada banyak nama"
             ],
             "AR": [
-                "عقود العقود الآجلة لمؤشر S&P 500 تتغير قليلاً بعد أسبوعين متتاليين من الخسائر: تحديثات مباشرة",
-                "رئيس مجلس إدارة حياة، بريتزكر، يترك مجلس الإدارة بسبب ارتباطات بإبستين",
-                "تداعيات ملفات إبستين: شخصيات بارزة تعرضت للضرر بسبب تعاملات ماضية مع مفترس",
-                "آبل تواجه يوتيوب وسبوتيفاي بدفعة جديدة لبودكاست الفيديو",
-                "احتكار فيزا للألعاب الأولمبية يسلط الضوء على صداع المدفوعات في أوروبا",
-                "مخاوف الذكاء الاصطناعي تضرب أسهم البرمجيات بأقسى شكل. سيتي ترى فرصة شراء في العديد من الأسماء"
+                "عقود العقود الآجلة لمؤشر S&P 500 تتغير بشكل طفيف بعد أسبوعين متتاليين من الخسائر: تحديثات مباشرة",
+                "رئيس مجلس إدارة حياة يترك المجلس بسبب ارتباطات إبشتاين",
+                "تداعيات ملفات إبشتاين: شخصيات بارزة تعرضت للضرر بسبب صفقات سابقة مع مفترس",
+                "آبل تتحدى يوتيوب وسبوتيفاي بدفعة جديدة لبودكاست الفيديو",
+                "احتكار فيزا للأولمبياد يسلط الضوء على صداع مدفوعات أوروبا",
+                "مخاوف الذكاء الاصطناعي تضرب أسهم البرمجيات بشدة. سيتي ترى فرصة شراء في العديد من الأسماء"
             ],
             "DE": [
                 "S&P 500 Futures wenig verändert nach zwei Verlustwochen in Folge: Live-Updates",
                 "Hyatt-Vorsitzender Pritzker verlässt Vorstand wegen Epstein-Verbindungen",
-                "Folgen der Epstein-Akten: Hochkarätige Persönlichkeiten, die durch vergangene Geschäfte mit einem Räuber verbrannt wurden",
-                "Apple nimmt es mit YouTube und Spotify auf und forciert neue Video-Podcasts",
-                "Visas Olympia-Monopol unterstreicht Europas Zahlungsprobleme",
-                "KI-Ängste treffen Softwareaktien am härtesten. Citi sieht eine Kaufgelegenheit bei vielen Namen"
+                "Epstein-Akten-Nachwirkungen: Prominente, die durch frühere Geschäfte mit einem Raubtier geschädigt wurden",
+                "Apple tritt mit neuem Vorstoß für Video-Podcasts gegen YouTube und Spotify an",
+                "Visas Olympiamonopol unterstreicht Europas Zahlungs-Kopfschmerzen",
+                "KI-Ängste treffen Softwareaktien am härtesten. Citi sieht Kaufgelegenheit bei vielen Namen"
             ],
             "FR": [
-                "Les contrats à terme sur le S&P 500 peu changés après deux semaines consécutives de pertes : Mises à jour en direct",
-                "Le président de Hyatt, Pritzker, quitte le conseil d'administration pour ses liens avec Epstein",
-                "Les retombées des dossiers Epstein : Les personnalités de haut rang brûlées par leurs transactions passées avec un prédateur",
-                "Apple s'attaque à YouTube et Spotify avec une nouvelle stratégie de podcasts vidéo",
-                "Le monopole olympique de Visa met en lumière le casse-tête européen des paiements",
-                "Les craintes liées à l'IA frappent le plus durement les actions de logiciels. Citi voit une opportunité d'achat dans de nombreux titres"
+                "Les futures du S&P 500 peu changés après deux semaines de pertes consécutives : mises à jour en direct",
+                "Le président de Hyatt, Pritzker, quitte le conseil d'administration en raison de liens avec Epstein",
+                "Les retombées des dossiers Epstein : Les personnalités marquantes brûlées par des transactions passées avec un prédateur",
+                "Apple s'attaque à YouTube et Spotify avec une nouvelle offensive sur les podcasts vidéo",
+                "Le monopole olympique de Visa met en évidence le casse-tête européen des paiements",
+                "Les craintes liées à l'IA frappent le plus durement les actions logicielles. Citi voit une opportunité d'achat dans de nombreux noms"
             ]
         },
-        "last_updated": "2026-02-16T23:42:36.600206+00:00Z"
+        "last_updated": "2026-02-17T03:04:22.537902+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
