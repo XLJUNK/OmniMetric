@@ -6,8 +6,8 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from gms_engine import generate_multilingual_report
 
-def verify_protocol_v5_3():
-    print("--- [AI PROTOCOL v5.3 AUDIT] ---")
+def verify_protocol_v6_2():
+    print("--- [AI PROTOCOL v6.2 AUDIT] ---")
     
     # Mock data for testing
     mock_data = {
@@ -32,19 +32,19 @@ def verify_protocol_v5_3():
         preview = text[:50].replace('\n', ' ') + "..."
         print(f"[{lang}] Count: {count} | Preview: {preview}")
         
-        # Protocol v5.3 Strict Range: 200 - 250
-        if 200 <= count <= 250:
+        # Protocol v6.2 Strict Range: 400 - 550 (Allowing some buffer for action tags)
+        if 400 <= count <= 550:
             status = "PASS"
         else:
-            status = "FAIL (Out of v5.3 range 200-250)"
+            status = f"FAIL (Out of v6.2 target range 400-550, actual: {count})"
             all_pass = False
         
         print(f" - Status: {status}")
         
     if all_pass:
-        print("\n[RESULT] AI Protocol v5.3: COMPLIANT")
+        print("\n[RESULT] AI Protocol v6.2: COMPLIANT")
     else:
-        print("\n[RESULT] AI Protocol v5.3: NON-COMPLIANT (Length issues)")
+        print("\n[RESULT] AI Protocol v6.2: NON-COMPLIANT (Length issues)")
 
 if __name__ == "__main__":
-    verify_protocol_v5_3()
+    verify_protocol_v6_2()
