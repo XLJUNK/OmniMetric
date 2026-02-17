@@ -5,6 +5,12 @@ from datetime import datetime, timezone
 import pytz
 from atproto import Client
 from bluesky_sequencer import BlueskySequencer
+from dotenv import load_dotenv
+
+# Load local environment variables for terminal execution
+env_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env')
+if os.path.exists(env_path):
+    load_dotenv(env_path)
 
 class SNSPublisher:
     def __init__(self, site_url="https://omnimetric.net", log_callback=None):
@@ -234,8 +240,8 @@ class SNSPublisher:
             self._log(f"Processing Serial SNS Broadcast: Stage 2 (Bluesky) - {len(valid_matches)} Tasks")
             bsky_pub = BlueskyPublisher(log_callback=self.log_callback)
             
-            # Sort: JP first
-            sorted_matches = sorted(valid_matches, key=lambda x: (0 if x[0] == 'JP' else (1 if x[0] == 'EN' else 2)))
+            # Sort: JP/JA first
+            sorted_matches = sorted(valid_matches, key=lambda x: (0 if x[0] in ['JP', 'JA'] else (1 if x[0] == 'EN' else 2)))
             
             parent_post = None
             
@@ -287,8 +293,10 @@ class SNSPublisher:
                          results[f"BSKY_{lang}"] = "FAILED"
                      
                      # 3. Publish to Twitter (X) - Only for supported languages in format_post (EN, JP)
-                     if lang in ["EN", "JP"]:
-                         tw_text = posts.get(lang)
+                     if lang in ["EN", "JP", "JA"]:
+                         # Normalize JA -> JP for format_post compatibility
+                         norm_lang = "JP" if lang == "JA" else lang
+                         tw_text = posts.get(norm_lang)
                          if tw_text:
                              self._log(f"[{lang}] Posting to X (Twitter)...")
                              tw_id = self.post_to_twitter(tw_text)
