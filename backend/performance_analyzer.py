@@ -1,5 +1,6 @@
 import json
 import os
+import re
 from datetime import datetime, timezone
 import pandas as pd
 import numpy as np
@@ -27,7 +28,7 @@ def update_summary():
     
     # HEALING & EXPANSION LOGIC
     if os.path.exists(ARCHIVE_DIR):
-        archive_files = [f for f in os.listdir(ARCHIVE_DIR) if f.endswith('.json') and f not in ['summary.json', 'performance_audit.json']]
+        archive_files = [f for f in os.listdir(ARCHIVE_DIR) if re.match(r'^\d{4}-\d{2}-\d{2}\.json$', f)]
         for f in archive_files:
             date_str = f.replace('.json', '')
             # Check if we need to heal/expand this entry
