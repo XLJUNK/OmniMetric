@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-02-18T22:03:33.695532+00:00",
+    "last_updated": "2026-02-18T22:52:41.910849+00:00",
     "market_data": {
         "CRYPTO_SENTIMENT": {
             "price": 8,
@@ -40,11 +40,10 @@
             ]
         },
         "YIELD_SPREAD": {
-            "price": 0.36,
+            "price": 0.39,
             "change_percent": 0.0,
             "trend": "NORMAL",
             "sparkline": [
-                0.53,
                 0.57,
                 0.56,
                 0.52,
@@ -73,7 +72,8 @@
                 0.39,
                 0.36,
                 0.36,
-                0.36
+                0.36,
+                0.39
             ]
         },
         "HY_SPREAD": {
@@ -174,11 +174,10 @@
             ]
         },
         "BREAKEVEN_INFLATION": {
-            "price": 2.26,
+            "price": 2.29,
             "change_percent": 0.0,
             "trend": "STABLE",
             "sparkline": [
-                2.27,
                 2.27,
                 2.28,
                 2.29,
@@ -207,7 +206,8 @@
                 2.29,
                 2.27,
                 2.27,
-                2.26
+                2.26,
+                2.29
             ]
         },
         "VIX": {
@@ -246,7 +246,6 @@
             "change_percent": 0.0,
             "trend": "NEUTRAL",
             "sparkline": [
-                0.68,
                 0.7,
                 0.64,
                 0.65,
@@ -275,6 +274,7 @@
                 0.62,
                 0.64,
                 0.64,
+                0.62,
                 0.62
             ]
         },
@@ -570,10 +570,10 @@
             ]
         },
         "BTC": {
-            "price": 66303.55,
+            "price": 66416.83,
             "prev_price": 67494.22,
-            "daily_chg": -1.76,
-            "change_percent": -4.97,
+            "daily_chg": -1.6,
+            "change_percent": -4.8,
             "trend": "DOWN",
             "sparkline": [
                 89184.57,
@@ -597,14 +597,14 @@
                 68788.19,
                 68843.16,
                 67494.22,
-                66303.55
+                66416.83
             ]
         },
         "ETH": {
-            "price": 1941.27,
+            "price": 1946.53,
             "prev_price": 1992.19,
-            "daily_chg": -2.56,
-            "change_percent": -6.94,
+            "daily_chg": -2.29,
+            "change_percent": -6.69,
             "trend": "DOWN",
             "sparkline": [
                 3006.61,
@@ -628,14 +628,14 @@
                 1966.04,
                 1997.92,
                 1992.19,
-                1941.27
+                1946.53
             ]
         },
         "SOL": {
-            "price": 81.23,
+            "price": 81.38,
             "prev_price": 85.2,
-            "daily_chg": -4.65,
-            "change_percent": -7.86,
+            "daily_chg": -4.49,
+            "change_percent": -7.7,
             "trend": "DOWN",
             "sparkline": [
                 125.12,
@@ -659,14 +659,14 @@
                 86.01,
                 86.43,
                 85.2,
-                81.23
+                81.38
             ]
         },
         "DXY": {
-            "price": 97.74,
+            "price": 97.71,
             "prev_price": 97.16,
-            "daily_chg": 0.59,
-            "change_percent": 0.94,
+            "daily_chg": 0.57,
+            "change_percent": 0.91,
             "trend": "UP",
             "sparkline": [
                 99.39,
@@ -690,14 +690,14 @@
                 96.93,
                 96.88,
                 97.16,
-                97.74
+                97.71
             ]
         },
         "USDJPY": {
-            "price": 154.79,
+            "price": 154.76,
             "prev_price": 153.61,
-            "daily_chg": 0.77,
-            "change_percent": 0.99,
+            "daily_chg": 0.75,
+            "change_percent": 0.97,
             "trend": "UP",
             "sparkline": [
                 158.18,
@@ -721,14 +721,14 @@
                 152.82,
                 152.78,
                 153.61,
-                154.79
+                154.76
             ]
         },
         "EURUSD": {
             "price": 1.18,
             "prev_price": 1.18,
-            "daily_chg": -0.52,
-            "change_percent": -0.74,
+            "daily_chg": -0.48,
+            "change_percent": -0.7,
             "trend": "DOWN",
             "sparkline": [
                 1.16,
@@ -818,10 +818,10 @@
             ]
         },
         "GOLD": {
-            "price": 4999.1,
+            "price": 4996.1,
             "prev_price": 4882.9,
-            "daily_chg": 2.38,
-            "change_percent": -1.43,
+            "daily_chg": 2.32,
+            "change_percent": -1.49,
             "trend": "UP",
             "sparkline": [
                 4588.4,
@@ -845,14 +845,14 @@
                 4923.7,
                 5022.0,
                 4882.9,
-                4999.1
+                4996.1
             ]
         },
         "OIL": {
-            "price": 64.99,
+            "price": 64.94,
             "prev_price": 62.33,
-            "daily_chg": 4.27,
-            "change_percent": 0.56,
+            "daily_chg": 4.19,
+            "change_percent": 0.48,
             "trend": "UP",
             "sparkline": [
                 59.44,
@@ -876,14 +876,14 @@
                 62.84,
                 62.89,
                 62.33,
-                64.99
+                64.94
             ]
         },
         "COPPER": {
             "price": 5.78,
             "prev_price": 5.63,
-            "daily_chg": 2.61,
-            "change_percent": -2.84,
+            "daily_chg": 2.57,
+            "change_percent": -2.87,
             "trend": "UP",
             "sparkline": [
                 5.79,
@@ -913,8 +913,8 @@
         "NATGAS": {
             "price": 3.02,
             "prev_price": 3.03,
-            "daily_chg": -0.33,
-            "change_percent": -4.37,
+            "daily_chg": -0.3,
+            "change_percent": -4.34,
             "trend": "DOWN",
             "sparkline": [
                 3.1,
@@ -942,10 +942,10 @@
             ]
         },
         "SILVER": {
-            "price": 77.14,
+            "price": 77.13,
             "prev_price": 73.45,
-            "daily_chg": 5.02,
-            "change_percent": -7.9,
+            "daily_chg": 5.01,
+            "change_percent": -7.91,
             "trend": "UP",
             "sparkline": [
                 88.09,
@@ -969,7 +969,7 @@
                 75.55,
                 77.85,
                 73.45,
-                77.14
+                77.13
             ]
         },
         "DAX": {
@@ -1750,8 +1750,8 @@
         "GBPUSD": {
             "price": 0.74,
             "prev_price": 0.73,
-            "daily_chg": 1.0,
-            "change_percent": 0.97,
+            "daily_chg": 0.96,
+            "change_percent": 0.94,
             "trend": "UP",
             "sparkline": [
                 0.75,
@@ -1874,8 +1874,8 @@
         "USDCHF": {
             "price": 0.77,
             "prev_price": 0.77,
-            "daily_chg": 0.38,
-            "change_percent": 0.18,
+            "daily_chg": 0.31,
+            "change_percent": 0.11,
             "trend": "UP",
             "sparkline": [
                 0.8,
@@ -2352,14 +2352,14 @@
             },
             {
                 "date": "2026-02-18",
-                "x": -30.46,
-                "y": -57.33
+                "x": -30.25,
+                "y": -57.57
             }
         ],
         "current_vector": {
             "date": "2026-02-18",
-            "x": -30.46,
-            "y": -57.33
+            "x": -30.25,
+            "y": -57.57
         },
         "current_satellites": [
             {
@@ -2386,21 +2386,21 @@
             {
                 "id": "BTC",
                 "label": "BTC",
-                "x": -75.31,
-                "y": 47.07,
-                "z": -2.09
+                "x": -74.91,
+                "y": 46.82,
+                "z": -2.08
             },
             {
                 "id": "GOLD",
                 "label": "GOLD",
-                "x": -144.82,
+                "x": -144.19,
                 "y": 0.0,
-                "z": 1.61
+                "z": 1.6
             },
             {
                 "id": "COPPER",
                 "label": "COPPER",
-                "x": 76.63,
+                "x": 76.14,
                 "y": 0.0,
                 "z": 0.85
             },
@@ -2428,9 +2428,9 @@
             {
                 "id": "DXY",
                 "label": "DXY",
-                "x": 47.92,
-                "y": -39.93,
-                "z": -0.89
+                "x": 49.26,
+                "y": -41.05,
+                "z": -0.91
             },
             {
                 "id": "BIL",
@@ -2555,7 +2555,7 @@
         "history_length": 60,
         "system": "moving_fortress"
     },
-    "last_successful_update": "2026-02-18T22:03:22.588720+00:00",
+    "last_successful_update": "2026-02-18T22:52:31.592031+00:00",
     "gms_score": 50,
     "sector_scores": {
         "STOCKS": 50,
@@ -2613,24 +2613,20 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "Market Neutrality Demands Strategic Patience. The GMS score of 50 confirms a liquidity stagnation phase, characterized by a stark bifurcation between equity resilience and extreme crypto sentiment degradation. While credit spread compression persists, the upward trajectory in hard commodities signals re-inflationary tail risks within the fiscal-monetary nexus. Absent a definitive expansion in net liquidity, the current regime dictates capital preservation until OGV vectors signal a directional breakout from this neutral inflection. [ACTION: WAIT FOR PULLBACK]",
+        "content": "Neutral regime persists amid commodity-led reflation. The GMS print of 50 indicates a transitional equilibrium where equity beta is countered by a sharp degradation in crypto sentiment and heightened tail-risk within the fiscal-monetary nexus. While credit spread compression remains stable, the aggressive appreciation in the precious metals complex and energy sectors suggests a pivot toward hard-asset insulation. Restricted liquidity convexity necessitates a tactical pause. [ACTION: WAIT FOR PULLBACK]",
         "reports": {
-            "JP": "市場の中立性は戦略的な待機を要求する。GMSスコア50は流動性の停滞を反映しており、株式指数の堅調さと暗号資産センチメントの極端な悪化という二極化が鮮明である。ハードコモディティの価格上昇は財政・金融ネクサスにおける再インフレのテールリスクを露呈させている。信用スプレッドの圧縮は持続しているが、ネットリクイディティの決定的な拡大を欠く現状では、この中立的変曲点からの方向性が確定するまで資本保全を優先すべきである。[ACTION: WAIT FOR PULLBACK]",
-            "EN": "Market Neutrality Demands Strategic Patience. The GMS score of 50 confirms a liquidity stagnation phase, characterized by a stark bifurcation between equity resilience and extreme crypto sentiment degradation. While credit spread compression persists, the upward trajectory in hard commodities signals re-inflationary tail risks within the fiscal-monetary nexus. Absent a definitive expansion in net liquidity, the current regime dictates capital preservation until OGV vectors signal a directional breakout from this neutral inflection. [ACTION: WAIT FOR PULLBACK]",
-            "CN": "市场中性状态要求战略性观望。GMS得分50表明流动性处于停滞区间，权益类资产的韧性与加密货币情绪的剧烈恶化形成鲜明背离。大宗商品价格的上涨反映了财政货币纽带下的再通胀尾部风险。尽管信用利差保持压缩，但在流动性净值出现实质性扩张前，当前体制处于中性拐点，必须优先考虑资本保全，直至领先指标向量释放明确的突破信号。[ACTION: WAIT FOR PULLBACK]",
-            "ES": "La neutralidad del mercado exige una pausa estratégica. El GMS de 50 refleja un estancamiento en la liquidez neta, con una clara divergencia entre la resiliencia de la renta variable y la capitulación del sentimiento cripto. El impulso en materias primas sugiere riesgos inflacionarios en el nexo fiscal-monetario. A pesar de la compresión de diferenciales de crédito, el régimen actual impone la preservación de capital hasta que se manifieste un impulso direccional fuera de este punto de inflexión. [ACTION: WAIT FOR PULLBACK]",
-            "HI": "बाजार की तटस्थता रणनीतिक प्रतीक्षा की मांग करती है। 50 का GMS स्कोर तरलता के ठहराव को दर्शाता है, जहाँ इक्विटी सूचकांकों की मजबूती और क्रिप्टो भावनाओं में गिरावट के बीच गहरा विचलन है। कमोडिटी की कीमतों में वृद्धि राजकोषीय-मौद्रिक नेक्सस के भीतर मुद्रास्फीति के जोखिमों की ओर इशारा करती है। क्रेडिट स्प्रेड संकुचन के बावजूद, वर्तमान शासन पूंजी संरक्षण को प्राथमिकता देता है जब तक कि इस तटस्थ मोड़ से कोई स्पष्ट दिशात्मक संकेत न मिले। [ACTION: WAIT FOR PULLBACK]",
-            "ID": "Netralitas pasar menuntut penantian strategis. Skor GMS 50 mengonfirmasi stagnasi likuiditas, yang dicirikan oleh divergensi antara resiliensi ekuitas dan degradasi sentimen kripto yang parah. Kenaikan harga komoditas mencerminkan risiko ekor inflasi dalam neksus fiskal-moneter. Meskipun kompresi spread kredit stabil, rezim saat ini mendikte pelestarian modal hingga muncul impuls direktoral yang jelas dari titik infleksi netral ini. [ACTION: WAIT FOR PULLBACK]",
-            "AR": "حياد السوق يتطلب ترقباً استراتيجياً. تعكس درجة 50 في نظام GMS ركوداً في السيولة، مع تباين حاد بين مرونة أسهم الأسواق وتدهور معنويات الأصول الرقمية. يشير صعود السلع الأساسية إلى مخاطر تضخمية ضمن الرابط المالي والنقدي. رغم استقرار فروق ائتمان العائد المرتفع، يفرض النظام الحالي الحفاظ على رأس المال حتى ظهور نبض اتجاهي واضح من نقطة الانعطاف المحايدة هذه. [ACTION: WAIT FOR PULLBACK]",
-            "DE": "Marktneutralität erfordert strategische Zurückhaltung. Der GMS-Score von 50 signalisiert eine Stagnation der Liquidität, wobei die Resilienz der Aktienmärkte in scharfem Kontrast zur Erosion des Krypto-Sentiments steht. Die Aufwärtsbewegung bei Rohstoffen deutet auf Inflationsrisiken im fiskalisch-monetären Nexus hin. Trotz stabiler Kreditspreads erzwingt das aktuelle Regime Kapitalerhalt, bis ein klarer Liquiditätsimpuls eine Richtungsentscheidung aus diesem neutralen Wendepunkt herbeiführt. [ACTION: WAIT FOR PULLBACK]",
-            "FR": "La neutralité du marché impose une temporisation stratégique. Le score GMS de 50 confirme une stagnation de la liquidité globale, marquée par une déconnexion entre la résilience des indices actions et la dégradation sévère du sentiment crypto. La hausse des matières premières signale un risque de queue inflationniste au sein du nexus fiscalo-monétaire. Malgré la compression des spreads de crédit, le régime actuel dicte la préservation du capital jusqu'à une impulsion directionnelle claire. [ACTION: WAIT FOR PULLBACK]"
+            "JP": "コモディティ主導のリフレ下で中立レジームが継続。GMSスコア50は、株式ベータと暗号資産センチメントの急激な悪化が交錯する均衡状態を示す。信用スプレッドは安定しているが、貴金属およびエネルギー価格の上昇は実物資産へのヘッジ需要を反映している。財政・金融政策の不透明感がテールリスクを増大させており、流動性の凸性が制限される中、明確なレジーム転換を待つべき局面である。[ACTION: WAIT FOR PULLBACK]",
+            "EN": "Neutral regime persists amid commodity-led reflation. The GMS print of 50 indicates a transitional equilibrium where equity beta is countered by a sharp degradation in crypto sentiment and heightened tail-risk within the fiscal-monetary nexus. While credit spread compression remains stable, the aggressive appreciation in the precious metals complex and energy sectors suggests a pivot toward hard-asset insulation. Restricted liquidity convexity necessitates a tactical pause. [ACTION: WAIT FOR PULLBACK]",
+            "CN": "大宗商品再通胀背景下中性状态持续。GMS分值50表明市场处于过渡均衡期，股票贝塔收益被加密情绪的剧烈退潮所对冲。尽管信用利差压缩保持稳定，但贵金属与能源领域的强势上涨预示资金正向实物资产避险。财政与货币政策节点的脱节放大了尾部风险，在流动性凸性受限的背景下，必须等待政策确定性回归以进行再平衡。[ACTION: WAIT FOR PULLBACK]",
+            "ES": "El régimen neutral persiste ante la reflación de materias primas. El GMS de 50 dicta un equilibrio de transición donde la beta de renta variable se ve neutralizada por la degradación del sentimiento cripto. La compresión de diferenciales de crédito es estable, pero la apreciación en metales y energía señala una rotación hacia activos reales. La limitada convexidad de liquidez y el nexo fiscal-monetario divergente exigen cautela táctica ante riesgos de cola. [ACTION: WAIT FOR PULLBACK]",
+            "HI": "कमोडिटी-जनित रिफ्लेशन के बीच तटस्थ शासन कायम। 50 का GMS स्कोर एक संक्रमणकालीन संतुलन को दर्शाता है, जहाँ इक्विटी बीटा क्रिप्टो भावना में गिरावट से संतुलित है। क्रेडिट स्प्रेड संकुचन स्थिर है, लेकिन कीमती धातुओं और ऊर्जा में वृद्धि हार्ड-एसेट इन्सुलेशन की ओर झुकाव का संकेत देती है। राजकोषीय-मौद्रिक नेक्सस में बढ़ती अनिश्चितता और सीमित तरलता उत्तलता के कारण, स्पष्ट शासन दिशा की प्रतीक्षा करना अनिवार्य है। [ACTION: WAIT FOR PULLBACK]",
+            "ID": "Rezim netral berlanjut di tengah reflasi komoditas. Skor GMS 50 mengindikasikan ekuilibrium transisi di mana beta ekuitas diimbangi oleh degradasi sentimen kripto. Meskipun kompresi spread kredit stabil, apresiasi agresif pada sektor logam mulia dan energi menunjukkan rotasi ke aset riil. Keterbatasan konveksitas likuiditas dan ketidakpastian neksus fiskal-moneter mengharuskan jeda taktis hingga resolusi rezim yang lebih jelas muncul. [ACTION: WAIT FOR PULLBACK]",
+            "AR": "استمرار النظام المحايد وسط تضخم السلع الأساسية. تشير درجة GMS البالغة 50 إلى توازن انتقالي حيث يتم تحييد بيتا الأسهم من خلال تدهور معنويات الأصول الرقمية. استقرار ضغط فروق الائتمان يقابله ارتفاع حاد في المعادن الثمينة والطاقة، مما يعكس التحوط بالأصول الحقيقية. يتطلب تداخل السياسات المالية والنقدية المتباينة ومحدودية تحدب السيولة التريث التكتيكي حتى يظهر اتجاه واضح للنظام. [ACTION: WAIT FOR PULLBACK]",
+            "DE": "Neutrales Regime verharrt inmitten rohstoffgetriebener Reflation. Der GMS-Wert von 50 signalisiert ein Übergangsgleichgewicht, in dem Aktien-Beta durch die Erosion des Krypto-Sentiments neutralisiert wird. Während die Kredit-Spread-Kompression stabil bleibt, deutet die Aufwertung bei Edelmetallen und Energie auf eine Rotation in Sachwerte hin. Der fiskalisch-monetäre Nexus erhöht das Tail-Risk; eine begrenzte Liquiditätskonvexität erzwingt taktische Zurückhaltung. [ACTION: WAIT FOR PULLBACK]",
+            "FR": "Le régime neutre persiste sous une reflation menée par les matières premières. Le score GMS de 50 indique un équilibre de transition où le bêta action est contré par une dégradation du sentiment crypto. La compression des spreads de crédit reste stable, mais l'appréciation des métaux précieux et de l'énergie signale une isolation via les actifs réels. La convexité limitée de la liquidité et les divergences du nexus fiscal-monétaire imposent une pause tactique. [ACTION: WAIT FOR PULLBACK]"
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-16T06:45:33Z",
-            "score": 39
-        },
         {
             "date": "2026-02-16T08:01:15Z",
             "score": 39
@@ -2866,6 +2862,10 @@
         {
             "date": "2026-02-18T22:03:22Z",
             "score": 50
+        },
+        {
+            "date": "2026-02-18T22:52:31Z",
+            "score": 50
         }
     ],
     "intelligence": {
@@ -2878,17 +2878,17 @@
             {
                 "title": "Zuckerberg testimony: Company consulted stakeholders about keeping beauty filters",
                 "link": "https://www.cnbc.com/2026/02/18/meta-mark-zuckerberg-social-media-safety-trial.html",
-                "isoDate": "2026-02-18T21:56:36+00:00Z"
+                "isoDate": "2026-02-18T22:03:40+00:00Z"
             },
             {
                 "title": "Figma stock jumps 16% as company sees AI monetization accelerating growth",
                 "link": "https://www.cnbc.com/2026/02/18/figma-fig-q4-earnings-report-2025.html",
-                "isoDate": "2026-02-18T21:56:37+00:00Z"
+                "isoDate": "2026-02-18T22:50:01+00:00Z"
             },
             {
-                "title": "Doordash falls 8% on lackluster fourth-quarter results",
+                "title": "Doordash stock climbs 10%, reversing plunge after earnings and revenue miss",
                 "link": "https://www.cnbc.com/2026/02/18/doordash-dash-q4-2025-earnings.html",
-                "isoDate": "2026-02-18T21:28:54+00:00Z"
+                "isoDate": "2026-02-18T22:36:08+00:00Z"
             },
             {
                 "title": "Inside David Einhorn's eclectic stock portfolio: The value investor shuns AI in favor of a unique mix of companies",
@@ -2898,76 +2898,76 @@
             {
                 "title": "Etsy stock pops 14% on sale of Depop to eBay for $1.2 billion",
                 "link": "https://www.cnbc.com/2026/02/18/ebay-buying-depop-etsy.html",
-                "isoDate": "2026-02-18T22:00:29+00:00Z"
+                "isoDate": "2026-02-18T22:16:52+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "FRB当局者、金利の方向性で意見割れる、議事録が示す",
-                "ザッカーバーグ氏証言：当社はビューティーフィルター存続についてステークホルダーと協議",
-                "Figma株、AI収益化による成長加速で16%上昇",
-                "DoorDash、期待外れの第4四半期決算で8%下落",
-                "デイビッド・アインホーン氏の多様な株式ポートフォリオ：バリュー投資家、AIを避けユニークな企業ミックスを重視",
-                "Etsy株、DepopをeBayに12億ドルで売却し14%上昇"
+                "FRB当局、利上げの方向性で意見割れる、議事録で判明",
+                "ザッカーバーグ氏証言：企業、ビューティーフィルター維持についてステークホルダーと協議",
+                "フィグマ株、AI収益化が成長加速と見て16%上昇",
+                "ドアダッシュ株、決算・収益未達後の急落から一転10%上昇",
+                "デビッド・アインホーン氏の多様な株式ポートフォリオ：AIを避け、ユニークな企業ミックスを重視するバリュー投資家",
+                "Etsy株、DepopをeBayに12億ドルで売却し14%急伸"
             ],
             "CN": [
-                "美联储官员在利率走向问题上存在分歧，会议纪要显示",
-                "扎克伯格作证：公司就保留滤镜咨询了利益相关者",
-                "Figma股价上涨16%，公司看好AI变现加速增长",
-                "DoorDash第四季度业绩不佳，股价下跌8%",
-                "埃因霍恩的多元化股票投资组合：这位价值投资者避开人工智能，青睐独特的公司组合",
-                "Etsy以12亿美元出售Depop给eBay，股价上涨14%"
+                "美联储官员对利率走向意见不一，会议纪要显示",
+                "扎克伯格作证：公司就保留美颜滤镜问题咨询了利益相关者",
+                "Figma股价飙升16%，公司预计AI盈利将加速增长",
+                "DoorDash股价上涨10%，在业绩和营收未达预期后触底反弹",
+                "揭秘大卫·艾因霍恩的多元化股票组合：这位价值投资者规避AI，青睐独特组合",
+                "Etsy股价大涨14%，因将Depop以12亿美元出售给eBay"
             ],
             "ES": [
                 "Funcionarios de la Fed divididos sobre hacia dónde deben ir las tasas de interés, según las actas",
                 "Testimonio de Zuckerberg: La empresa consultó a las partes interesadas sobre el mantenimiento de los filtros de belleza",
-                "Las acciones de Figma suben un 16% al ver la empresa acelerar el crecimiento con la monetización de IA",
-                "DoorDash cae un 8% por resultados decepcionantes del cuarto trimestre",
-                "Dentro de la ecléctica cartera de acciones de David Einhorn: El inversor de valor rehúye la IA en favor de una combinación única de empresas",
+                "Las acciones de Figma suben un 16% al ver la empresa que la monetización de la IA acelera el crecimiento",
+                "Las acciones de Doordash suben un 10%, revirtiendo la caída tras no cumplir expectativas de ganancias e ingresos",
+                "Dentro de la ecléctica cartera de acciones de David Einhorn: El inversor de valor rehúye la IA en favor de una mezcla única de empresas",
                 "Las acciones de Etsy se disparan un 14% tras la venta de Depop a eBay por 1.200 millones de dólares"
             ],
             "HI": [
-                "फेड अधिकारियों की ब्याज दरों पर राय बंटी, मिनटों में खुलासा",
-                "ज़करबर्ग की गवाही: कंपनी ने सुंदरता फिल्टर रखने पर हितधारकों से सलाह ली",
-                "Figma का स्टॉक 16% उछला, कंपनी AI मोनेटाइजेशन से विकास में तेजी देख रही है",
-                "DoorDash चौथी तिमाही के खराब नतीजों पर 8% गिरा",
-                "डेविड आइनहॉर्न के विविध स्टॉक पोर्टफोलियो के अंदर: वैल्यू निवेशक AI से बचता है, कंपनियों के अनोखे मिश्रण को तरजीह देता है",
-                "Etsy का स्टॉक Depop को eBay को $1.2 बिलियन में बेचने पर 14% बढ़ा"
+                "फेड अधिकारी ब्याज दरों की दिशा पर विभाजित, मिनट्स में कहा गया",
+                "ज़ुकेरबर्ग की गवाही: कंपनी ने ब्यूटी फ़िल्टर बनाए रखने पर हितधारकों से सलाह ली",
+                "Figma के शेयर 16% चढ़े, कंपनी को AI मुद्रीकरण से विकास में तेजी की उम्मीद",
+                "DoorDash के शेयर 10% चढ़े, आय और राजस्व के अनुमान चूकने के बाद गिरावट को पलटा",
+                "डेविड ऐनहॉर्न के विविध स्टॉक पोर्टफोलियो के अंदर: मूल्य निवेशक AI से कतराते हैं, अद्वितीय कंपनियों के मिश्रण का पक्ष लेते हैं",
+                "Etsy के शेयर 14% उछले, Depop को eBay को $1.2 बिलियन में बेचने पर"
             ],
             "ID": [
-                "Pejabat Fed terpecah soal arah suku bunga, menurut risalah rapat",
+                "Pejabat The Fed terbagi soal arah suku bunga, kata risalah rapat",
                 "Kesaksian Zuckerberg: Perusahaan berkonsultasi dengan pemangku kepentingan tentang mempertahankan filter kecantikan",
-                "Saham Figma melonjak 16% saat perusahaan melihat monetisasi AI mempercepat pertumbuhan",
-                "DoorDash jatuh 8% karena hasil kuartal keempat yang lesu",
-                "Di dalam portofolio saham David Einhorn yang eklektik: Investor nilai menghindari AI demi campuran unik perusahaan",
-                "Saham Etsy melonjak 14% atas penjualan Depop ke eBay seharga $1,2 miliar"
+                "Saham Figma melonjak 16% karena perusahaan melihat monetisasi AI mempercepat pertumbuhan",
+                "Saham DoorDash naik 10%, membalikkan penurunan setelah pendapatan dan revenue meleset",
+                "Di dalam portofolio saham eklektik David Einhorn: Investor nilai hindari AI demi perpaduan unik perusahaan",
+                "Saham Etsy melonjak 14% atas penjualan Depop ke eBay senilai $1,2 miliar"
             ],
             "AR": [
-                "مسؤولون فيدراليون منقسمون حول اتجاه أسعار الفائدة، حسب ما جاء في المحضر",
-                "شهادة زوكربيرغ: الشركة استشارت أصحاب المصلحة بشأن الاحتفاظ بفلاتر الجمال",
-                "أسهم Figma ترتفع 16% مع رؤية الشركة لتسريع النمو عبر تحقيق الدخل من الذكاء الاصطناعي",
-                "سهم DoorDash ينخفض 8% بسبب نتائج مخيبة للآمال للربع الرابع",
-                "داخل محفظة أسهم ديفيد آينهورن المتنوعة: مستثمر القيمة يتجنب الذكاء الاصطناعي لصالح مزيج فريد من الشركات",
-                "أسهم Etsy ترتفع 14% لبيع Depop لـ eBay مقابل 1.2 مليار دولار"
+                "مسؤولون في الاحتياطي الفيدرالي منقسمون بشأن اتجاه أسعار الفائدة، حسبما تظهر المحاضر",
+                "شهادة زوكربيرج: الشركة استشارت أصحاب المصلحة بشأن الاحتفاظ بفلاتر الجمال",
+                "أسهم Figma ترتفع 16% مع رؤية الشركة لتحفيز النمو من خلال تحقيق الدخل من الذكاء الاصطناعي",
+                "أسهم DoorDash ترتفع 10%، متعافية من هبوط بعد فواتير الأرباح والإيرادات",
+                "داخل محفظة أسهم ديفيد آينهورن المتنوعة: المستثمر في القيمة يتجنب الذكاء الاصطناعي لصالح مزيج فريد من الشركات",
+                "أسهم Etsy تقفز 14% بعد بيع Depop لـ eBay مقابل 1.2 مليار دولار"
             ],
             "DE": [
-                "Fed-Beamte uneinig über Zinsentwicklung, sagt Protokoll",
-                "Zuckerberg-Aussage: Unternehmen konsultierte Stakeholder zur Beibehaltung von Schönheitsfiltern",
-                "Figma-Aktie steigt um 16%, da das Unternehmen durch KI-Monetarisierung ein beschleunigtes Wachstum sieht",
-                "DoorDash fällt um 8% aufgrund magerer Ergebnisse im vierten Quartal",
+                "FED-Beamte uneinig über die künftige Zinspolitik, wie aus Protokollen hervorgeht",
+                "Zuckerbergs Aussage: Unternehmen konsultierte Stakeholder zur Beibehaltung von Schönheitsfiltern",
+                "Figma-Aktien steigen um 16%, da das Unternehmen beschleunigtes Wachstum durch KI-Monetarisierung sieht",
+                "DoorDash-Aktien klettern um 10% und kehren Absturz nach verfehlten Gewinn- und Umsatzzahlen um",
                 "Einblicke in David Einhorns vielseitiges Aktienportfolio: Der Value-Investor meidet KI zugunsten einer einzigartigen Mischung von Unternehmen",
-                "Etsy-Aktie steigt um 14% nach Verkauf von Depop an eBay für 1,2 Milliarden Dollar"
+                "Etsy-Aktien steigen um 14% nach Verkauf von Depop an eBay für 1,2 Milliarden US-Dollar"
             ],
             "FR": [
-                "Des responsables de la Fed divisés sur l'orientation des taux d'intérêt, selon les minutes",
+                "Les responsables de la Fed divisés sur l'orientation des taux d'intérêt, selon les minutes",
                 "Témoignage de Zuckerberg : L'entreprise a consulté les parties prenantes sur le maintien des filtres de beauté",
-                "L'action Figma grimpe de 16% alors que l'entreprise voit la monétisation de l'IA accélérer la croissance",
-                "DoorDash chute de 8% sur des résultats du quatrième trimestre décevants",
-                "À l'intérieur du portefeuille d'actions éclectique de David Einhorn : L'investisseur de valeur écarte l'IA au profit d'un mélange unique d'entreprises",
-                "L'action Etsy bondit de 14% après la vente de Depop à eBay pour 1,2 milliard de dollars"
+                "L'action Figma bondit de 16% car l'entreprise voit la monétisation de l'IA accélérer la croissance",
+                "L'action Doordash grimpe de 10%, inversant une chute après avoir manqué les bénéfices et les revenus",
+                "À l'intérieur du portefeuille d'actions éclectique de David Einhorn : L'investisseur de valeur évite l'IA au profit d'un mélange unique d'entreprises",
+                "L'action Etsy s'envole de 14% suite à la vente de Depop à eBay pour 1,2 milliard de dollars"
             ]
         },
-        "last_updated": "2026-02-18T22:03:22.588089+00:00Z"
+        "last_updated": "2026-02-18T22:52:31.591408+00:00Z"
     },
     "system_status": "OPERATIONAL",
     "beacons_history": [
@@ -4728,6 +4728,21 @@
         },
         {
             "timestamp": "2026-02-18T22:03:33.695532+00:00",
+            "recession": {
+                "value": 0.476,
+                "status": "safe"
+            },
+            "panic": {
+                "value": 0.917,
+                "status": "safe"
+            },
+            "credit": {
+                "value": 0.02,
+                "status": "safe"
+            }
+        },
+        {
+            "timestamp": "2026-02-18T22:52:41.910849+00:00",
             "recession": {
                 "value": 0.476,
                 "status": "safe"
