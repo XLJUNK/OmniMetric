@@ -1,10 +1,10 @@
 {
-    "last_updated": "2026-02-18T05:14:57.654377+00:00",
-    "last_successful_update": "2026-02-18T05:14:57.654384+00:00",
-    "gms_score": 48,
+    "last_updated": "2026-02-18T06:42:31.001120+00:00",
+    "last_successful_update": "2026-02-18T06:42:31.001127+00:00",
+    "gms_score": 47,
     "sector_scores": {
         "STOCKS": 41,
-        "CRYPTO": 41,
+        "CRYPTO": 35,
         "FOREX": 44,
         "COMMODITIES": 47,
         "GLOBAL_INDICES": 50,
@@ -553,10 +553,10 @@
             ]
         },
         "NIFTY": {
-            "price": 25663.2,
+            "price": 25713.15,
             "prev_price": 25725.4,
-            "daily_chg": -0.24,
-            "change_percent": -0.56,
+            "daily_chg": -0.05,
+            "change_percent": -0.36,
             "trend": "DOWN",
             "sparkline": [
                 25585.5,
@@ -580,17 +580,16 @@
                 25471.1,
                 25682.75,
                 25725.4,
-                25663.2
+                25713.15
             ]
         },
         "BTC": {
-            "price": 67746.62,
-            "prev_price": 68843.16,
-            "daily_chg": -1.59,
-            "change_percent": -1.61,
-            "trend": "DOWN",
+            "price": 67863.6,
+            "prev_price": 67494.22,
+            "daily_chg": 0.55,
+            "change_percent": -2.73,
+            "trend": "UP",
             "sparkline": [
-                89102.57,
                 89184.57,
                 84561.59,
                 84128.66,
@@ -611,17 +610,17 @@
                 69767.62,
                 68788.19,
                 68843.16,
-                67746.62
+                67494.22,
+                67863.6
             ]
         },
         "ETH": {
-            "price": 1996.78,
-            "prev_price": 1997.92,
-            "daily_chg": -0.06,
-            "change_percent": -2.53,
-            "trend": "DOWN",
+            "price": 2003.92,
+            "prev_price": 1992.19,
+            "daily_chg": 0.59,
+            "change_percent": -3.94,
+            "trend": "UP",
             "sparkline": [
-                3022.21,
                 3006.61,
                 2818.23,
                 2702.38,
@@ -642,17 +641,17 @@
                 2086.01,
                 1966.04,
                 1997.92,
-                1996.78
+                1992.19,
+                2003.92
             ]
         },
         "SOL": {
-            "price": 85.0,
-            "prev_price": 86.43,
-            "daily_chg": -1.65,
-            "change_percent": 0.81,
+            "price": 85.05,
+            "prev_price": 85.2,
+            "daily_chg": -0.18,
+            "change_percent": -3.53,
             "trend": "DOWN",
             "sparkline": [
-                127.05,
                 125.12,
                 117.61,
                 117.36,
@@ -673,14 +672,15 @@
                 88.16,
                 86.01,
                 86.43,
-                85.0
+                85.2,
+                85.05
             ]
         },
         "DXY": {
-            "price": 97.24,
+            "price": 97.21,
             "prev_price": 97.16,
-            "daily_chg": 0.08,
-            "change_percent": 0.42,
+            "daily_chg": 0.05,
+            "change_percent": 0.39,
             "trend": "UP",
             "sparkline": [
                 99.39,
@@ -704,14 +704,14 @@
                 96.93,
                 96.88,
                 97.16,
-                97.24
+                97.21
             ]
         },
         "USDJPY": {
-            "price": 153.56,
+            "price": 153.47,
             "prev_price": 153.61,
-            "daily_chg": -0.03,
-            "change_percent": 0.19,
+            "daily_chg": -0.09,
+            "change_percent": 0.13,
             "trend": "DOWN",
             "sparkline": [
                 158.18,
@@ -735,14 +735,14 @@
                 152.82,
                 152.78,
                 153.61,
-                153.56
+                153.47
             ]
         },
         "EURUSD": {
             "price": 1.18,
             "prev_price": 1.18,
-            "daily_chg": -0.01,
-            "change_percent": -0.23,
+            "daily_chg": -0.02,
+            "change_percent": -0.25,
             "trend": "DOWN",
             "sparkline": [
                 1.16,
@@ -772,8 +772,8 @@
         "USDINR": {
             "price": 90.66,
             "prev_price": 90.78,
-            "daily_chg": -0.13,
-            "change_percent": -0.08,
+            "daily_chg": -0.14,
+            "change_percent": -0.09,
             "trend": "DOWN",
             "sparkline": [
                 90.9,
@@ -832,10 +832,10 @@
             ]
         },
         "GOLD": {
-            "price": 4953.6,
+            "price": 4949.3,
             "prev_price": 4882.9,
-            "daily_chg": 1.45,
-            "change_percent": -2.33,
+            "daily_chg": 1.36,
+            "change_percent": -2.41,
             "trend": "UP",
             "sparkline": [
                 4588.4,
@@ -859,14 +859,14 @@
                 4923.7,
                 5022.0,
                 4882.9,
-                4953.6
+                4949.3
             ]
         },
         "OIL": {
-            "price": 62.45,
+            "price": 62.34,
             "prev_price": 62.33,
-            "daily_chg": 0.19,
-            "change_percent": -3.37,
+            "daily_chg": 0.02,
+            "change_percent": -3.54,
             "trend": "UP",
             "sparkline": [
                 59.44,
@@ -890,14 +890,14 @@
                 62.84,
                 62.89,
                 62.33,
-                62.45
+                62.34
             ]
         },
         "COPPER": {
-            "price": 5.71,
+            "price": 5.69,
             "prev_price": 5.63,
-            "daily_chg": 1.33,
-            "change_percent": -4.05,
+            "daily_chg": 1.05,
+            "change_percent": -4.32,
             "trend": "UP",
             "sparkline": [
                 5.79,
@@ -921,14 +921,14 @@
                 5.77,
                 5.79,
                 5.63,
-                5.71
+                5.69
             ]
         },
         "NATGAS": {
-            "price": 3.01,
+            "price": 3.02,
             "prev_price": 3.03,
-            "daily_chg": -0.56,
-            "change_percent": -4.59,
+            "daily_chg": -0.26,
+            "change_percent": -4.31,
             "trend": "DOWN",
             "sparkline": [
                 3.1,
@@ -952,14 +952,14 @@
                 3.22,
                 3.24,
                 3.03,
-                3.01
+                3.02
             ]
         },
         "SILVER": {
-            "price": 75.81,
+            "price": 75.54,
             "prev_price": 73.45,
-            "daily_chg": 3.21,
-            "change_percent": -9.49,
+            "daily_chg": 2.84,
+            "change_percent": -9.81,
             "trend": "UP",
             "sparkline": [
                 88.09,
@@ -983,7 +983,7 @@
                 75.55,
                 77.85,
                 73.45,
-                75.81
+                75.54
             ]
         },
         "DAX": {
@@ -1111,10 +1111,10 @@
             ]
         },
         "NIKKEI": {
-            "price": 57347.7,
+            "price": 57140.68,
             "prev_price": 56566.49,
-            "daily_chg": 1.38,
-            "change_percent": -0.51,
+            "daily_chg": 1.02,
+            "change_percent": -0.87,
             "trend": "UP",
             "sparkline": [
                 53583.57,
@@ -1138,7 +1138,7 @@
                 56941.97,
                 56806.41,
                 56566.49,
-                57347.7
+                57140.68
             ]
         },
         "HANGSENG": {
@@ -1204,10 +1204,10 @@
             ]
         },
         "SENSEX": {
-            "price": 83205.24,
+            "price": 83349.89,
             "prev_price": 83450.96,
-            "daily_chg": -0.29,
-            "change_percent": -0.56,
+            "daily_chg": -0.12,
+            "change_percent": -0.39,
             "trend": "DOWN",
             "sparkline": [
                 83246.18,
@@ -1231,7 +1231,7 @@
                 82626.76,
                 83277.15,
                 83450.96,
-                83205.24
+                83349.89
             ]
         },
         "BOVESPA": {
@@ -1266,10 +1266,10 @@
             ]
         },
         "ASX200": {
-            "price": 9005.4,
+            "price": 9007.0,
             "prev_price": 8958.9,
-            "daily_chg": 0.52,
-            "change_percent": -0.42,
+            "daily_chg": 0.54,
+            "change_percent": -0.4,
             "trend": "UP",
             "sparkline": [
                 8874.5,
@@ -1293,7 +1293,7 @@
                 8917.6,
                 8966.8,
                 8958.9,
-                9005.4
+                9007.0
             ]
         },
         "G_REIT": {
@@ -1795,9 +1795,9 @@
         "AUDUSD": {
             "price": 1.41,
             "prev_price": 1.41,
-            "daily_chg": -0.0,
-            "change_percent": 0.74,
-            "trend": "DOWN",
+            "daily_chg": 0.01,
+            "change_percent": 0.75,
+            "trend": "UP",
             "sparkline": [
                 1.49,
                 1.49,
@@ -1824,10 +1824,10 @@
             ]
         },
         "USDCAD": {
-            "price": 1.36,
+            "price": 1.37,
             "prev_price": 1.36,
-            "daily_chg": 0.09,
-            "change_percent": 0.54,
+            "daily_chg": 0.13,
+            "change_percent": 0.58,
             "trend": "UP",
             "sparkline": [
                 1.39,
@@ -1851,7 +1851,7 @@
                 1.36,
                 1.36,
                 1.36,
-                1.36
+                1.37
             ]
         },
         "USDCNY": {
@@ -2089,24 +2089,20 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "Summary: Fragile equilibrium persists as tail-risks mount. The GMS 48 print signifies a Phase 2 stagnation, characterized by a precarious fiscal-monetary nexus and liquidity exhaustion. Despite the compression in high-yield credit spreads, the concurrent surge in precious metal indices and VIX elevation signals an aggressive pivot toward tail-risk hedging. Crypto sentiment degradation and flat OGV vectors underscore a regime of diminishing returns, where equity momentum is eclipsed by inflationary proxy strength, necessitating defensive capital preservation. [ACTION: WAIT FOR PULLBACK]",
+        "content": "Neutrality prevails amidst structural fragility. The GMS print of 47 encapsulates a precarious equilibrium within the fiscal-monetary nexus, where stagnant net liquidity offsets marginal credit spread compression. Persistent volatility via a VIX exceeding 20 necessitates a disciplined risk-mitigation framework, as the flat OGV vector signals a lack of directional conviction. Precious metal appreciation underscores a flight to quality, while crypto sentiment decay inhibits broader risk-on convexity. [ACTION: WAIT FOR PULLBACK]",
         "reports": {
-            "JP": "要旨：テールリスク増大に伴い、脆弱な均衡が継続。GMS 48は、財政・金融ネクサスの不安定化と流動性枯渇を特徴とするフェーズ2の停滞を明示している。ハイイールド債のスプレッド圧縮にもかかわらず、貴金属指数の急騰とVIXの膠着は、テールリスク・ヘッジへの積極的な転換を示唆する。暗号資産センチメントの悪化と横ばいのOGVベクトルは、インフレプロキシの強さが株式のモメンタムを凌駕する収益逓減レジームを裏付けており、慎重な資産保全が不可欠である。[ACTION: WAIT FOR PULLBACK]",
-            "EN": "Summary: Fragile equilibrium persists as tail-risks mount. The GMS 48 print signifies a Phase 2 stagnation, characterized by a precarious fiscal-monetary nexus and liquidity exhaustion. Despite the compression in high-yield credit spreads, the concurrent surge in precious metal indices and VIX elevation signals an aggressive pivot toward tail-risk hedging. Crypto sentiment degradation and flat OGV vectors underscore a regime of diminishing returns, where equity momentum is eclipsed by inflationary proxy strength, necessitating defensive capital preservation. [ACTION: WAIT FOR PULLBACK]",
-            "CN": "摘要：尾部风险加剧，市场处于脆弱的均衡态势。GMS 48读数预示着第二阶段的停滞，其特征是财政与货币纽带不稳及流动性枯竭。尽管高收益债信用利差持续压缩，但贵金属指数的飙升与VIX的居高不下表明市场正加速转向尾部风险对冲。加密情绪的恶化与持平的OGV向量突显了边际报酬递减的机制，通胀对冲资产走强正逐步削弱权益资产动能，当前环境要求优先考虑资本保全而非盲目扩张。[ACTION: WAIT FOR PULLBACK]",
-            "ES": "Resumen: El equilibrio frágil persiste ante riesgos de cola. La lectura de 48 en el GMS significa una estancación de Fase 2, caracterizada por un nexo fiscal-monetario precario y agotamiento de liquidez. Pese a la compresión en los diferenciales de crédito de alto rendimiento, el auge de los metales preciosos y la elevación del VIX señalan un pivote agresivo hacia la cobertura de riesgos extremos. La degradación del sentimiento cripto y vectores OGV planos subrayan un régimen de retornos decrecientes donde la fortaleza pro-inflación eclipsa el momentum. [ACTION: WAIT FOR PULLBACK]",
-            "HI": "सारांश: टेल-रिस्क बढ़ने के साथ नाजुक संतुलन बना हुआ है। GMS 48 का स्तर चरण 2 के ठहराव को दर्शाता है, जो अस्थिर राजकोषीय-मौद्रिक नेक्सस और तरलता की कमी से चिह्नित है। हाई-यिल्ड क्रेडिट स्प्रेड में संकुचन के बावजूद, कीमती धातुओं में तेजी और VIX का बढ़ना टेल-रिस्क हेजिंग की ओर एक आक्रामक झुकाव का संकेत देता है। क्रिप्टो सेंटिमेंट में गिरावट और स्थिर OGV वेक्टर घटते रिटर्न के शासन को रेखांकित करते हैं, जहां मुद्रास्फीति प्रॉक्सी की ताकत इक्विटी मोमेंटम पर भारी पड़ रही है, जिससे पूंजी संरक्षण अनिवार्य हो गया है। [ACTION: WAIT FOR PULLBACK]",
-            "ID": "Ringkasan: Ekuilibrium rapuh di tengah risiko ekor yang naik. Skor GMS 48 menandakan stagnasi Fase 2, yang ditandai oleh neksus fiskal-moneter yang genting dan kehabisan likuiditas. Meskipun terjadi kompresi spread kredit imbal hasil tinggi, lonjakan indeks logam mulia dan elevasi VIX menandakan pergeseran agresif menuju lindung nilai risiko ekor. Degradasi sentimen kripto dan vektor OGV yang datar menggarisbawahi rezim penurunan imbal hasil, di mana kekuatan proksi inflasi melampaui momentum ekuitas, menuntut pelestarian modal yang ketat. [ACTION: WAIT FOR PULLBACK]",
-            "AR": "الملخص: توازن هش مستمر مع تصاعد مخاطر التذييل. تشير قراءة GMS 48 إلى ركود المرحلة الثانية، المتسم بارتباط مالي-نقدي محفوف بالمخاطر ونفاذ السيولة. رغم ضغط هوامش الائتمان عالية العائد، فإن طفرة المعادن الثمينة وارتفاع VIX يشيران إلى تحول نحو تحوط مخاطر التذييل. يؤكد تدهور معنويات الكريبتو وركود ناقلات OGV نظاماً من العوائد المتناقصة، حيث تطغى قوة بروكسي التضخم على زخم الأسهم، مما يتطلب إعطاء الأولوية القصوى للحفاظ على رأس المال المتاح حالياً. [ACTION: WAIT FOR PULLBACK]",
-            "DE": "Zusammenfassung: Fragiles Gleichgewicht bei steigenden Tail-Risiken. Der GMS-Wert von 48 signalisiert eine Stagnation der Phase 2, geprägt von einem prekären fiskalisch-monetären Nexus und Liquiditätserschöpfung. Trotz der Kompression der High-Yield-Spreads deutet der Anstieg der Edelmetallindizes und des VIX auf einen Pivot zur Absicherung von Extremrisiken hin. Die Degradierung des Krypto-Sentiments und flache OGV-Vektoren unterstreichen ein Regime abnehmender Erträge, in dem die Dynamik der Aktienmärkte durch die Stärke von Inflationsproxys untergraben wird. [ACTION: WAIT FOR PULLBACK]",
-            "FR": "Résumé: Équilibre fragile face à la montée des risques extrêmes. Le score GMS de 48 indique une stagnation de phase 2, définie par un nexus fiscaux-monétaire précaire et une exhaustion de la liquidité. Malgré la compression des spreads de crédit à haut rendement, la flambée des métaux précieux et l'élévation du VIX signalent un pivot vers la couverture des risques de queue. La dégradation du sentiment crypto et la stagnation des vecteurs OGV confirment un régime de rendements décroissants où la force des proxys inflationnistes supplante le momentum des actions. [ACTION: WAIT FOR PULLBACK]"
+            "JP": "構造的脆弱性の中、中立性が支配する。GMS 47は、停滞する純流動性がクレジット・スプレッドの縮小を相殺する不安定な均衡を反映している。VIX 20超の持続的なボラティリティは規律あるリスク軽減を要求し、フラットなOGVベクトルは方向性の欠如を裏付ける。貴金属の上昇は質のへの逃避を強調し、暗号資産のセンチメント悪化がリスクオンのコンベキシティを阻害している。資本保護を最優先すべき局面である。[ACTION: WAIT FOR PULLBACK]",
+            "EN": "Neutrality prevails amidst structural fragility. The GMS print of 47 encapsulates a precarious equilibrium within the fiscal-monetary nexus, where stagnant net liquidity offsets marginal credit spread compression. Persistent volatility via a VIX exceeding 20 necessitates a disciplined risk-mitigation framework, as the flat OGV vector signals a lack of directional conviction. Precious metal appreciation underscores a flight to quality, while crypto sentiment decay inhibits broader risk-on convexity. [ACTION: WAIT FOR PULLBACK]",
+            "CN": "结构性脆弱下的中性博弈。GMS 指数 47 反映了财政货币关系中的脆弱平衡，净流动性停滞抵消了信用利差的边际收缩。VIX 维持在 20 以上要求执行严密的风险对冲，而平整的 OGV 矢量确认了市场方向感的缺失。贵金属的走势凸显了避险买盘，加密情绪的退潮抑制了风险资产的凸性表现。机构投资者当前应优先考虑资本保护，而非盲目追求超额收益。[ACTION: WAIT FOR PULLBACK]",
+            "ES": "La neutralidad prevalece ante la fragilidad estructural. El GMS de 47 refleja un equilibrio precario en el nexo fiscal-monetario, donde la liquidez estancada neutraliza la compresión marginal de los diferenciales de crédito. Un VIX superior a 20 exige una gestión de riesgos disciplinada, mientras que el vector OGV plano confirma la ausencia de convicción direccional. El auge de metales preciosos subraya la fuga hacia la calidad, limitando la convexidad del apetito por el riesgo global. [ACTION: WAIT FOR PULLBACK]",
+            "HI": "संरचनात्मक अस्थिरता के बीच तटस्थता बनी हुई है। 47 का GMS स्कोर राजकोषीय-मौद्रिक नेक्सस में एक अनिश्चित संतुलन को दर्शाता है। 20 से ऊपर का VIX अनुशासित जोखिम प्रबंधन की मांग करता है, जबकि सपाट OGV दिशात्मक दृढ़ता की कमी की पुष्टि करता है। कीमती धातुओं में तेजी गुणवत्ता की ओर पलायन को रेखांकित करती है, जबकि क्रिप्टो भावना में गिरावट जोखिम लेने की क्षमता को बाधित करती है। पूंजी संरक्षण ही वर्तमान में सर्वोच्च प्राथमिकता होनी चाहिए। [ACTION: WAIT FOR PULLBACK]",
+            "ID": "Netralitas mendominasi di tengah kerapuhan struktural. Skor GMS 47 mencerminkan keseimbangan yang genting dalam neksus fiskal-moneter, di mana likuiditas bersih yang stagnan mengimbangi kompresi spread kredit marginal. VIX di atas 20 menuntut kerangka mitigasi risiko yang disiplin, sementara vektor OGV yang datar mengonfirmasi kurangnya keyakinan terarah. Apresiasi logam mulia menekankan pelarian ke kualitas, menghambat konveksitas sentimen risiko secara luas. [ACTION: WAIT FOR PULLBACK]",
+            "AR": "تسود الحيادية وسط الهشاشة الهيكلية الحالية. تعكس قراءة GMS البالغة 47 توازناً محفوفاً بالمخاطر في الرابطة المالية والنقدية، حيث تعوض السيولة الراكدة الضغط الهامشي في هوامش الائتمان. يتطلب مؤشر VIX المتجاوز لـ 20 إطاراً منضبطاً لتخفيف المخاطر، بينما يؤكد ناقل OGV المسطح غياب القناعة الاتجاهية. يؤكد ارتفاع المعادن الثمينة الهروب نحو الجودة، مما يثبط التحدب في شهية المخاطرة. يجب إعطاء الأولوية لحماية رأس المال. [ACTION: WAIT FOR PULLBACK]",
+            "DE": "Neutralität inmitten struktureller Fragilität. Der GMS-Wert von 47 signalisiert ein prekäres Gleichgewicht im fiskal-monetären Nexus, wobei stagnierende Nettoliquidität die marginale Kompression der Credit Spreads neutralisiert. Ein VIX über 20 erfordert ein diszipliniertes Risikomanagement, da der flache OGV-Vektor mangelnde Überzeugung widerspiegelt. Die Aufwertung von Edelmetallen unterstreicht die Flucht in Qualität, während der Verfall des Krypto-Sentiments die Risiko-Konvexität hemmt. [ACTION: WAIT FOR PULLBACK]",
+            "FR": "La neutralité prévaut face à la fragilité structurelle. Le score GMS de 47 reflète un équilibre précaire au sein du nexus fiscalo-monétaire, où la stagnation de la liquidité nette compense la compression marginale des spreads de crédit. Un VIX supérieur à 20 impose un cadre rigoureux de réduction des risques, tandis que le vecteur OGV plat confirme l'absence de conviction directionnelle. L'appréciation des métaux précieux souligne une fuite vers la qualité, limitant la convexité du risque. [ACTION: WAIT FOR PULLBACK]"
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-14T02:51:31Z",
-            "score": 37
-        },
         {
             "date": "2026-02-14T05:15:43Z",
             "score": 38
@@ -2342,6 +2338,10 @@
         {
             "date": "2026-02-18T05:14:57Z",
             "score": 48
+        },
+        {
+            "date": "2026-02-18T06:42:31Z",
+            "score": 47
         }
     ],
     "intelligence": {
@@ -2357,93 +2357,93 @@
                 "isoDate": "2026-02-17T22:02:39+00:00Z"
             },
             {
+                "title": "'Crap': Stephen Colbert blasts CBS for denying it blocked James Talarico interview from air",
+                "link": "https://www.cnbc.com/2026/02/18/stephen-colbert-cbs-james-talarico-paramount-fcc-trump.html",
+                "isoDate": "2026-02-18T06:34:34+00:00Z"
+            },
+            {
+                "title": "More than 50% of enterprise software could switch to AI, Mistral CEO says",
+                "link": "https://www.cnbc.com/2026/02/18/ai-mistral-software-switch-ceo-india-ai-impact-summit.html",
+                "isoDate": "2026-02-18T06:30:31+00:00Z"
+            },
+            {
                 "title": "Palo Alto Networks slumps 6% as third quarter profit guidance falls short",
                 "link": "https://www.cnbc.com/2026/02/17/palo-alto-networks-panw-q2-2026-earnings.html",
                 "isoDate": "2026-02-17T22:24:14+00:00Z"
             },
             {
-                "title": "Nvidia is partnering with major Indian VC firms in search for the country's next AI start-ups",
-                "link": "https://www.cnbc.com/2026/02/18/nvidia-india-ai-vc-data-center-partners.html",
-                "isoDate": "2026-02-18T03:54:50+00:00Z"
-            },
-            {
-                "title": "CNBC's The China Connection newsletter: Businesses scramble to reach China's growing experiences economy",
-                "link": "https://www.cnbc.com/2026/02/17/cnbcs-the-china-connection-newsletter-businesses-scramble-to-reach-chinas-growing-experiences-economy.html",
-                "isoDate": "2026-02-18T04:22:26+00:00Z"
-            },
-            {
-                "title": "Stephen Colbert says CBS blocked James Talarico interview from air",
-                "link": "https://www.cnbc.com/2026/02/17/james-talarico-stephen-colbert-cbs-fcc-interview.html",
-                "isoDate": "2026-02-18T01:20:08+00:00Z"
+                "title": "JPMorgan prefers international stocks to America’s — here’s where it sees opportunities beyond Wall Street",
+                "link": "https://www.cnbc.com/2026/02/18/abusa-trade-jpmorgans-picks-outside-the-us.html",
+                "isoDate": "2026-02-18T06:00:01+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "アマゾン、9日続落に終止符、時価総額4500億ドル超減少",
-                "バークシャー・ハサウェイ、アップル株を削減、NYタイムズ株購入 - バフェット氏、CEOとして最後の動き",
-                "パロアルトネットワークス、第3四半期の利益見通し未達で6%下落",
-                "Nvidia、インドの主要VCファームと提携、国内次世代AIスタートアップを模索",
-                "CNBC「チャイナ・コネクション」ニュースレター: 企業、成長する中国の体験型経済への進出に躍起",
-                "スティーブン・コルベア氏、CBSがジェームズ・タラリコ氏のインタビュー放送をブロックしたと発言"
+                "アマゾン、4500億ドル超の価値減少を伴う9連敗の連鎖を断ち切る",
+                "バークシャー・ハサウェイ、アップル株を削減、バフェット氏CEO退任前の最後の動きとしてNYタイムズ株を購入",
+                "「クソだ」：スティーブン・コルベア氏、CBSがジェームズ・タラリコ氏のインタビュー放送を拒否したことを非難",
+                "ミストラルCEO：エンタープライズソフトウェアの50％以上がAIに移行する可能性",
+                "パロアルト・ネットワークス、第3四半期利益予測未達で6％下落",
+                "J.P.モルガン、米国株より国際株を重視 – ウォール街以外の機会をどこに見出すか"
             ],
             "CN": [
-                "亚马逊结束9连跌，市值蒸发超4500亿美元",
-                "伯克希尔哈撒韦减持苹果股票，购入纽约时报股票，巴菲特卸任CEO前的最后举动",
-                "Palo Alto Networks第三季度盈利指引不及预期，股价下跌6%",
-                "英伟达与印度主要风投公司合作，寻找该国下一批人工智能初创企业",
-                "CNBC《中国连接》通讯：企业争相抢占中国不断增长的体验经济",
-                "斯蒂芬·科尔伯特称CBS阻止詹姆斯·塔拉里科采访播出"
+                "亚马逊结束连续9个交易日下跌，期间市值缩水超4500亿美元",
+                "伯克希尔哈撒韦减持苹果股份，巴菲特卸任CEO前的最后举措：购入《纽约时报》股票",
+                "“真是胡闹”：斯蒂芬·科尔伯特抨击CBS阻止詹姆斯·塔拉里科的采访播出",
+                "Mistral CEO：超过50%的企业软件可能转向AI",
+                "Palo Alto Networks第三季度利润指引不及预期，股价下跌6%",
+                "摩根大通偏爱国际股票而非美国股票——该公司看好华尔街以外的哪些机会"
             ],
             "ES": [
-                "Amazon rompe racha de 9 días de caídas, perdiendo más de $450 mil millones en valor",
-                "Berkshire Hathaway reduce participación en Apple, compra acciones de NYTimes en los últimos movimientos de Buffett como CEO",
-                "Palo Alto Networks cae 6% tras previsiones de beneficios del tercer trimestre por debajo de lo esperado",
-                "Nvidia se asocia con importantes firmas de capital de riesgo indias en busca de las próximas startups de IA del país",
-                "Newsletter 'The China Connection' de CNBC: Empresas luchan por llegar a la creciente economía de experiencias de China",
-                "Stephen Colbert dice que CBS bloqueó la emisión de la entrevista a James Talarico"
+                "Amazon rompe una racha de 9 días de pérdidas en la que perdió más de 450 mil millones de dólares en valor",
+                "Berkshire Hathaway reduce su participación en Apple, compra acciones de NYTimes en los últimos movimientos de Buffett como CEO",
+                "'Estafa': Stephen Colbert critica a CBS por negar haber bloqueado la transmisión de la entrevista a James Talarico",
+                "Más del 50% del software empresarial podría pasarse a la IA, dice el CEO de Mistral",
+                "Palo Alto Networks se desploma un 6% al no cumplir sus previsiones de beneficios para el tercer trimestre",
+                "JPMorgan prefiere las acciones internacionales a las de Estados Unidos: aquí es donde ve oportunidades fuera de Wall Street"
             ],
             "HI": [
-                "अमेज़ॅन ने 9 दिनों की गिरावट का सिलसिला तोड़ा, 450 बिलियन डॉलर से अधिक का मूल्य गंवाया",
-                "बर्कशायर हैथवे ने एप्पल में हिस्सेदारी कम की, सीईओ के रूप में बफेट के अंतिम कदम में NYTimes स्टॉक खरीदा",
-                "Palo Alto Networks तीसरी तिमाही के लाभ अनुमान से पीछे रहने पर 6% गिरा",
-                "Nvidia देश के अगले AI स्टार्टअप की तलाश में प्रमुख भारतीय वीसी फर्मों के साथ साझेदारी कर रही है",
-                "CNBC का 'द चाइना कनेक्शन' न्यूज़लेटर: कंपनियां चीन की बढ़ती 'अनुभवों की अर्थव्यवस्था' तक पहुँचने के लिए संघर्ष कर रही हैं",
-                "स्टीफन कोल्बर्ट का कहना है कि सीबीएस ने जेम्स तालारिको के साक्षात्कार को प्रसारित होने से रोका"
+                "अमेज़न ने 9 दिनों की लगातार गिरावट का सिलसिला तोड़ा, जिस दौरान उसका मूल्यांकन 450 अरब डॉलर से अधिक घट गया",
+                "बर्कशायर हैथवे ने एप्पल की हिस्सेदारी घटाई, बफेट के सीईओ के रूप में आखिरी चालों में NYTimes के शेयर खरीदे",
+                "'बकवास': स्टीफन कोल्बर्ट ने CBS पर जेम्स तालारिको के साक्षात्कार को प्रसारित होने से रोकने का आरोप लगाया",
+                "मिस्ट्रल के सीईओ का कहना है कि 50% से अधिक एंटरप्राइज़ सॉफ़्टवेयर AI पर स्विच कर सकता है",
+                "Palo Alto Networks तीसरी तिमाही के लाभ के अनुमान से कम रहने पर 6% गिरा",
+                "जेपी मॉर्गन अमेरिका के बजाय अंतरराष्ट्रीय शेयरों को पसंद करता है - वॉल स्ट्रीट से परे यहां अवसर देखता है"
             ],
             "ID": [
-                "Amazon mengakhiri rentetan 9 hari pelemahan, kehilangan nilai lebih dari $450 miliar",
-                "Berkshire Hathaway kurangi saham Apple, beli saham NYTimes dalam langkah terakhir Buffett sebagai CEO",
+                "Amazon mengakhiri tren penurunan 9 hari yang menyebabkan nilai perusahaan anjlok lebih dari $450 miliar",
+                "Berkshire Hathaway pangkas saham Apple, beli saham NYTimes dalam langkah terakhir Buffett sebagai CEO",
+                "'Omong Kosong': Stephen Colbert serang CBS karena menolak memblokir wawancara James Talarico",
+                "Lebih dari 50% perangkat lunak perusahaan bisa beralih ke AI, kata CEO Mistral",
                 "Palo Alto Networks anjlok 6% karena panduan laba kuartal ketiga meleset",
-                "Nvidia bermitra dengan firma VC India besar dalam pencarian startup AI berikutnya di negara itu",
-                "Newsletter The China Connection CNBC: Bisnis berlomba-lomba menjangkau ekonomi pengalaman China yang terus berkembang",
-                "Stephen Colbert mengatakan CBS memblokir wawancara James Talarico dari tayangan"
+                "JPMorgan lebih memilih saham internasional daripada Amerika - inilah peluang yang dilihatnya di luar Wall Street"
             ],
             "AR": [
-                "أمازون تنهي سلسلة خسائر 9 أيام خسرت خلالها أكثر من 450 مليار دولار من قيمتها",
-                "بيركشاير هاثاواي تقلل حصتها في آبل، وتشتري أسهم نيويورك تايمز في آخر تحركات بوفيت كرئيس تنفيذي",
-                "بالو ألتو نتوركس تهبط 6% مع تراجع توقعات أرباح الربع الثالث",
-                "إنفيديا تعقد شراكة مع شركات رأس مال مخاطر هندية كبرى بحثًا عن الجيل القادم من الشركات الناشئة في مجال الذكاء الاصطناعي بالبلاد",
-                "نشرة 'The China Connection' من CNBC: الشركات تتسابق للوصول إلى اقتصاد التجارب المتنامي في الصين",
-                "ستيفن كولبيرت يقول إن CBS منعت بث مقابلة جيمس تالاريكو"
+                "أمازون تنهي سلسلة خسائر استمرت 9 أيام فقدت خلالها أكثر من 450 مليار دولار من قيمتها",
+                "بيركشاير هاثاواي تقلص حصتها في آبل، وتشتري أسهم نيويورك تايمز في آخر تحركات بافيت كرئيس تنفيذي",
+                "\"هراء\": ستيفن كولبرت يهاجم سي بي إس لرفضها منع مقابلة جيمس تالاريكو من البث",
+                "أكثر من 50% من برمجيات المؤسسات قد تتحول إلى الذكاء الاصطناعي، حسبما يقول الرئيس التنفيذي لشركة ميسترال",
+                "بالو ألتو نتوركس تهبط 6% مع فشل توقعات أرباح الربع الثالث",
+                "جي بي مورجان يفضل الأسهم الدولية على الأمريكية - إليك أين يرى الفرص خارج وول ستريت"
             ],
             "DE": [
-                "Amazon beendet 9-tägige Verlustserie, bei der das Unternehmen mehr als 450 Milliarden Dollar an Wert verlor",
-                "Berkshire Hathaway reduziert Apple-Anteil, kauft NYTimes-Aktien in Buffets letzten Schritten als CEO",
+                "Amazon beendet 9-tägige Verlustserie, bei der mehr als 450 Milliarden Dollar an Wert verloren gingen",
+                "Berkshire Hathaway reduziert Apple-Beteiligung, kauft NYTimes-Aktien in Buffets letzten Zügen als CEO",
+                "\"Kacke\": Stephen Colbert kritisiert CBS für die Verweigerung, ein Interview mit James Talarico auszustrahlen",
+                "Mehr als 50% der Unternehmenssoftware könnten zu KI wechseln, sagt Mistral CEO",
                 "Palo Alto Networks stürzt um 6% ab, da die Gewinnprognose für das dritte Quartal hinter den Erwartungen zurückbleibt",
-                "Nvidia geht Partnerschaften mit großen indischen VC-Firmen ein, um die nächsten KI-Startups des Landes zu finden",
-                "CNBCs Newsletter 'The China Connection': Unternehmen kämpfen darum, Chinas wachsende Erlebniswirtschaft zu erreichen",
-                "Stephen Colbert sagt, CBS habe James Talaricos Interview blockiert"
+                "JPMorgan bevorzugt internationale Aktien gegenüber amerikanischen – hier sieht es Chancen jenseits der Wall Street"
             ],
             "FR": [
-                "Amazon met fin à une série de 9 jours de baisses, perdant plus de 450 milliards de dollars de valeur",
+                "Amazon met fin à une série de 9 jours de pertes au cours de laquelle elle a perdu plus de 450 milliards de dollars de valeur",
                 "Berkshire Hathaway réduit sa participation dans Apple, achète des actions du NYTimes dans les derniers mouvements de Buffett en tant que PDG",
-                "Palo Alto Networks chute de 6% alors que les prévisions de bénéfices du troisième trimestre sont inférieures aux attentes",
-                "Nvidia s'associe à de grandes sociétés de capital-risque indiennes pour rechercher les prochaines startups d'IA du pays",
-                "Newsletter 'The China Connection' de CNBC : Les entreprises se précipitent pour atteindre l'économie de l'expérience en pleine croissance en Chine",
-                "Stephen Colbert affirme que CBS a bloqué la diffusion de l'interview de James Talarico"
+                "\"C'est naze\" : Stephen Colbert démolit CBS pour avoir refusé de bloquer l'interview de James Talarico",
+                "Plus de 50 % des logiciels d'entreprise pourraient passer à l'IA, déclare le PDG de Mistral",
+                "Palo Alto Networks chute de 6 % alors que les prévisions de bénéfices du troisième trimestre sont inférieures aux attentes",
+                "JPMorgan préfère les actions internationales aux actions américaines – voici où il voit des opportunités au-delà de Wall Street"
             ]
         },
-        "last_updated": "2026-02-18T05:14:57.653830+00:00Z"
+        "last_updated": "2026-02-18T06:42:31.000584+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
