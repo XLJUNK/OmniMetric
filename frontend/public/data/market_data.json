@@ -1,13 +1,12 @@
 {
-    "last_updated": "2026-02-18T02:25:36.300572+00:00",
+    "last_updated": "2026-02-18T03:16:52.371160+00:00",
     "market_data": {
         "CRYPTO_SENTIMENT": {
-            "price": 10,
-            "daily_chg": -16.67,
-            "change_percent": 11.11,
+            "price": 8,
+            "daily_chg": -20.0,
+            "change_percent": -11.11,
             "trend": "FEAR",
             "sparkline": [
-                44,
                 32,
                 24,
                 20,
@@ -36,7 +35,8 @@
                 9,
                 8,
                 12,
-                10
+                10,
+                8
             ]
         },
         "YIELD_SPREAD": {
@@ -570,10 +570,10 @@
             ]
         },
         "BTC": {
-            "price": 67441.8,
+            "price": 67338.59,
             "prev_price": 68843.16,
-            "daily_chg": -2.04,
-            "change_percent": -2.06,
+            "daily_chg": -2.19,
+            "change_percent": -2.21,
             "trend": "DOWN",
             "sparkline": [
                 89102.57,
@@ -597,14 +597,14 @@
                 69767.62,
                 68788.19,
                 68843.16,
-                67441.8
+                67338.59
             ]
         },
         "ETH": {
-            "price": 1992.17,
+            "price": 1986.58,
             "prev_price": 1997.92,
-            "daily_chg": -0.29,
-            "change_percent": -2.75,
+            "daily_chg": -0.57,
+            "change_percent": -3.02,
             "trend": "DOWN",
             "sparkline": [
                 3022.21,
@@ -628,14 +628,14 @@
                 2086.01,
                 1966.04,
                 1997.92,
-                1992.17
+                1986.58
             ]
         },
         "SOL": {
-            "price": 84.98,
+            "price": 84.63,
             "prev_price": 86.43,
-            "daily_chg": -1.68,
-            "change_percent": 0.78,
+            "daily_chg": -2.08,
+            "change_percent": 0.36,
             "trend": "DOWN",
             "sparkline": [
                 127.05,
@@ -659,14 +659,14 @@
                 88.16,
                 86.01,
                 86.43,
-                84.98
+                84.63
             ]
         },
         "DXY": {
-            "price": 97.11,
+            "price": 97.19,
             "prev_price": 96.88,
-            "daily_chg": 0.23,
-            "change_percent": 0.32,
+            "daily_chg": 0.32,
+            "change_percent": 0.41,
             "trend": "UP",
             "sparkline": [
                 99.32,
@@ -690,17 +690,16 @@
                 96.83,
                 96.93,
                 96.88,
-                97.11
+                97.19
             ]
         },
         "USDJPY": {
-            "price": 153.29,
-            "prev_price": 152.78,
-            "daily_chg": 0.33,
-            "change_percent": -0.77,
-            "trend": "UP",
+            "price": 153.53,
+            "prev_price": 153.61,
+            "daily_chg": -0.05,
+            "change_percent": 0.17,
+            "trend": "DOWN",
             "sparkline": [
-                157.54,
                 158.18,
                 158.16,
                 158.46,
@@ -721,18 +720,18 @@
                 153.27,
                 152.82,
                 152.78,
-                153.29
+                153.61,
+                153.53
             ]
         },
         "EURUSD": {
-            "price": 1.19,
-            "prev_price": 1.19,
-            "daily_chg": -0.1,
-            "change_percent": -0.29,
+            "price": 1.18,
+            "prev_price": 1.18,
+            "daily_chg": -0.01,
+            "change_percent": -0.23,
             "trend": "DOWN",
             "sparkline": [
                 1.16,
-                1.16,
                 1.17,
                 1.17,
                 1.18,
@@ -752,17 +751,17 @@
                 1.19,
                 1.19,
                 1.19,
-                1.19
+                1.18,
+                1.18
             ]
         },
         "USDINR": {
-            "price": 90.61,
-            "prev_price": 90.57,
-            "daily_chg": 0.04,
-            "change_percent": 0.02,
-            "trend": "UP",
+            "price": 90.59,
+            "prev_price": 90.78,
+            "daily_chg": -0.21,
+            "change_percent": -0.16,
+            "trend": "DOWN",
             "sparkline": [
-                90.7,
                 90.9,
                 91.12,
                 91.54,
@@ -783,21 +782,21 @@
                 90.74,
                 90.56,
                 90.57,
-                90.61
+                90.78,
+                90.59
             ]
         },
         "USDSAR": {
             "price": 3.75,
             "prev_price": 3.75,
-            "daily_chg": 0.13,
-            "change_percent": 0.1,
+            "daily_chg": 0.11,
+            "change_percent": 0.09,
             "trend": "UP",
             "sparkline": [
                 3.75,
                 3.75,
                 3.75,
                 3.75,
-                3.75,
                 3.74,
                 3.75,
                 3.75,
@@ -809,6 +808,7 @@
                 3.75,
                 3.75,
                 3.74,
+                3.75,
                 3.75,
                 3.75,
                 3.75,
@@ -818,10 +818,10 @@
             ]
         },
         "GOLD": {
-            "price": 4893.4,
+            "price": 4931.6,
             "prev_price": 5022.0,
-            "daily_chg": -2.56,
-            "change_percent": -2.21,
+            "daily_chg": -1.8,
+            "change_percent": -1.44,
             "trend": "DOWN",
             "sparkline": [
                 4616.3,
@@ -845,14 +845,14 @@
                 5071.6,
                 4923.7,
                 5022.0,
-                4893.4
+                4931.6
             ]
         },
         "OIL": {
-            "price": 62.2,
+            "price": 62.31,
             "prev_price": 62.89,
-            "daily_chg": -1.1,
-            "change_percent": -2.75,
+            "daily_chg": -0.92,
+            "change_percent": -2.58,
             "trend": "DOWN",
             "sparkline": [
                 59.19,
@@ -876,14 +876,14 @@
                 64.63,
                 62.84,
                 62.89,
-                62.2
+                62.31
             ]
         },
         "COPPER": {
             "price": 5.68,
             "prev_price": 5.79,
-            "daily_chg": -1.98,
-            "change_percent": -3.7,
+            "daily_chg": -1.86,
+            "change_percent": -3.59,
             "trend": "DOWN",
             "sparkline": [
                 5.95,
@@ -911,10 +911,10 @@
             ]
         },
         "NATGAS": {
-            "price": 3.05,
+            "price": 3.02,
             "prev_price": 3.24,
-            "daily_chg": -6.04,
-            "change_percent": -2.18,
+            "daily_chg": -6.75,
+            "change_percent": -2.92,
             "trend": "DOWN",
             "sparkline": [
                 3.13,
@@ -938,14 +938,14 @@
                 3.16,
                 3.22,
                 3.24,
-                3.05
+                3.02
             ]
         },
         "SILVER": {
-            "price": 73.43,
+            "price": 74.0,
             "prev_price": 77.85,
-            "daily_chg": -5.69,
-            "change_percent": -8.47,
+            "daily_chg": -4.95,
+            "change_percent": -7.75,
             "trend": "DOWN",
             "sparkline": [
                 91.88,
@@ -969,7 +969,7 @@
                 83.75,
                 75.55,
                 77.85,
-                73.43
+                74.0
             ]
         },
         "DAX": {
@@ -1066,7 +1066,7 @@
             ]
         },
         "FTSE": {
-            "price": 10556.17,
+            "price": 10556.2,
             "prev_price": 10473.7,
             "daily_chg": 0.79,
             "change_percent": 0.8,
@@ -1093,17 +1093,16 @@
                 10402.4,
                 10446.4,
                 10473.7,
-                10556.17
+                10556.2
             ]
         },
         "NIKKEI": {
-            "price": 56566.49,
-            "prev_price": 56806.41,
-            "daily_chg": -0.42,
-            "change_percent": -1.88,
-            "trend": "DOWN",
+            "price": 57253.46,
+            "prev_price": 56566.49,
+            "daily_chg": 1.21,
+            "change_percent": -0.67,
+            "trend": "UP",
             "sparkline": [
-                53936.17,
                 53583.57,
                 52991.1,
                 52774.64,
@@ -1124,7 +1123,8 @@
                 57639.84,
                 56941.97,
                 56806.41,
-                56566.49
+                56566.49,
+                57253.46
             ]
         },
         "HANGSENG": {
@@ -1252,13 +1252,12 @@
             ]
         },
         "ASX200": {
-            "price": 8992.5,
-            "prev_price": 8966.8,
-            "daily_chg": 0.29,
-            "change_percent": -0.25,
+            "price": 8992.0,
+            "prev_price": 8958.9,
+            "daily_chg": 0.37,
+            "change_percent": -0.57,
             "trend": "UP",
             "sparkline": [
-                8903.9,
                 8874.5,
                 8815.9,
                 8782.9,
@@ -1279,7 +1278,8 @@
                 9043.5,
                 8917.6,
                 8966.8,
-                8992.5
+                8958.9,
+                8992.0
             ]
         },
         "G_REIT": {
@@ -1750,12 +1750,11 @@
         "GBPUSD": {
             "price": 0.74,
             "prev_price": 0.73,
-            "daily_chg": 0.61,
-            "change_percent": 0.51,
+            "daily_chg": 0.53,
+            "change_percent": 0.5,
             "trend": "UP",
             "sparkline": [
                 0.75,
-                0.75,
                 0.74,
                 0.75,
                 0.74,
@@ -1769,6 +1768,7 @@
                 0.73,
                 0.73,
                 0.74,
+                0.73,
                 0.73,
                 0.73,
                 0.73,
@@ -1781,11 +1781,10 @@
         "AUDUSD": {
             "price": 1.41,
             "prev_price": 1.41,
-            "daily_chg": -0.23,
-            "change_percent": -0.17,
-            "trend": "DOWN",
+            "daily_chg": 0.03,
+            "change_percent": 0.77,
+            "trend": "UP",
             "sparkline": [
-                1.5,
                 1.49,
                 1.49,
                 1.48,
@@ -1806,18 +1805,18 @@
                 1.4,
                 1.41,
                 1.41,
+                1.41,
                 1.41
             ]
         },
         "USDCAD": {
             "price": 1.36,
             "prev_price": 1.36,
-            "daily_chg": 0.15,
-            "change_percent": 0.64,
+            "daily_chg": 0.09,
+            "change_percent": 0.54,
             "trend": "UP",
             "sparkline": [
                 1.39,
-                1.39,
                 1.38,
                 1.38,
                 1.38,
@@ -1832,6 +1831,7 @@
                 1.37,
                 1.37,
                 1.37,
+                1.36,
                 1.36,
                 1.36,
                 1.36,
@@ -1844,10 +1844,9 @@
             "price": 6.91,
             "prev_price": 6.91,
             "daily_chg": -0.01,
-            "change_percent": -0.04,
+            "change_percent": -0.07,
             "trend": "DOWN",
             "sparkline": [
-                6.97,
                 6.97,
                 6.96,
                 6.96,
@@ -1868,18 +1867,18 @@
                 6.91,
                 6.9,
                 6.91,
+                6.91,
                 6.91
             ]
         },
         "USDCHF": {
             "price": 0.77,
             "prev_price": 0.77,
-            "daily_chg": 0.27,
-            "change_percent": 0.22,
+            "daily_chg": 0.14,
+            "change_percent": -0.06,
             "trend": "UP",
             "sparkline": [
                 0.8,
-                0.8,
                 0.79,
                 0.8,
                 0.79,
@@ -1894,6 +1893,7 @@
                 0.78,
                 0.78,
                 0.78,
+                0.77,
                 0.77,
                 0.77,
                 0.77,
@@ -1994,40 +1994,40 @@
             ]
         },
         "COPPER_GOLD": {
-            "price": 1.16,
+            "price": 1.15,
             "change_percent": 0,
             "trend": "RISK-OFF",
             "sparkline": [
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16,
-                1.16
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15,
+                1.15
             ]
         }
     },
@@ -2345,19 +2345,19 @@
             },
             {
                 "date": "2026-02-17",
-                "x": -46.27,
-                "y": -80.83
+                "x": -46.4,
+                "y": -81.01
             },
             {
                 "date": "2026-02-18",
-                "x": -46.39,
-                "y": -79.46
+                "x": -46.48,
+                "y": -79.67
             }
         ],
         "current_vector": {
             "date": "2026-02-18",
-            "x": -46.39,
-            "y": -79.46
+            "x": -46.48,
+            "y": -79.67
         },
         "current_satellites": [
             {
@@ -2384,23 +2384,23 @@
             {
                 "id": "BTC",
                 "label": "BTC",
-                "x": -72.52,
-                "y": 45.32,
+                "x": -72.22,
+                "y": 45.14,
                 "z": -2.01
             },
             {
                 "id": "GOLD",
                 "label": "GOLD",
-                "x": -124.52,
+                "x": -128.36,
                 "y": 0.0,
-                "z": 1.38
+                "z": 1.43
             },
             {
                 "id": "COPPER",
                 "label": "COPPER",
-                "x": 51.82,
+                "x": 53.4,
                 "y": 0.0,
-                "z": 0.58
+                "z": 0.59
             },
             {
                 "id": "TIP",
@@ -2426,9 +2426,9 @@
             {
                 "id": "DXY",
                 "label": "DXY",
-                "x": 75.56,
-                "y": -62.97,
-                "z": -1.4
+                "x": 76.79,
+                "y": -63.99,
+                "z": -1.42
             },
             {
                 "id": "BIL",
@@ -2553,12 +2553,12 @@
         "history_length": 60,
         "system": "moving_fortress"
     },
-    "last_successful_update": "2026-02-17T23:43:46.437728+00:00",
-    "gms_score": 47,
+    "last_successful_update": "2026-02-18T03:16:40.674101+00:00",
+    "gms_score": 48,
     "sector_scores": {
         "STOCKS": 41,
         "CRYPTO": 41,
-        "FOREX": 35,
+        "FOREX": 44,
         "COMMODITIES": 47,
         "GLOBAL_INDICES": 50,
         "REAL_ESTATE": 50,
@@ -2571,64 +2571,60 @@
         {
             "code": "retail_sales",
             "name": "USD Retail Sales (MoM)",
-            "date": "2026-02-20",
-            "day": "FRI",
+            "date": "2026-02-21",
+            "day": "SAT",
             "time": "08:30 EST",
             "impact": "high"
         },
         {
             "code": "boj",
             "name": "JPY Bank of Japan Policy Meeting",
-            "date": "2026-02-22",
-            "day": "SUN",
+            "date": "2026-02-23",
+            "day": "MON",
             "time": "12:00 JST",
             "impact": "high"
         },
         {
             "code": "powell",
             "name": "USD Fed Chair Powell Testifies",
-            "date": "2026-02-25",
-            "day": "WED",
+            "date": "2026-02-26",
+            "day": "THU",
             "time": "10:00 EST",
             "impact": "high"
         },
         {
             "code": "ecb",
             "name": "EUR ECB Monetary Policy Press Conference",
-            "date": "2026-02-27",
-            "day": "FRI",
+            "date": "2026-02-28",
+            "day": "SAT",
             "time": "14:45 CET",
             "impact": "high"
         },
         {
             "code": "ppi",
             "name": "USD Producer Price Index (PPI)",
-            "date": "2026-03-02",
-            "day": "MON",
+            "date": "2026-03-03",
+            "day": "TUE",
             "time": "08:30 EST",
             "impact": "high"
         }
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "Stagnant liquidity mandates tactical patience. The GMS score of 47 signals a tenuous equilibrium within Phase 2 transition, as the fiscal-monetary nexus grapples with stagnant net liquidity and a precipitous decline in commodity-driven inflation proxies. While credit spread compression in high-yield sectors suggests residual risk appetite, the extreme degradation in crypto sentiment and sharp retracement in industrial metals reveal a latent liquidity convexity risk. The regime exhibits structural fragility, necessitating a tactical pause as real interest rates maintain restrictive pressure against a backdrop of VIX elevation. [ACTION: WAIT FOR PULLBACK]",
+        "content": "Neutral regime amidst commodity-driven deflation. The current GMS reading of 48 confirms a liquidity plateau where directional impulse is absent. While tight credit spreads indicate underlying stability, the aggressive contraction in the copper-gold vector and broader commodity complex signals significant disinflationary headwinds. Crypto sentiment exhaustion and VIX elevation above 20 necessitate immediate tactical restraint. Systemic regime degradation persists. [ACTION: WAIT FOR PULLBACK]",
         "reports": {
-            "JP": "流動性の停滞はタクティカルな忍耐を要求する。GMS 47は第2フェーズの脆弱な均衡を示唆しており、財政・金融ネクサスが停滞する純流動性と格闘する中で、コモディティ関連のインフレプロキシは急激に減退しています。ハイイールド債のスプレッド圧縮は潜在的なリスク選好を維持しているものの、仮想通貨センチメントの極端な悪化と工業用メタルの反落は潜在的な流動性コンベキシティ・リスクを露呈しています。実質金利が抑制的な水準を維持し、VIXが高止まりする現状では、体制の構造的脆弱性は拭えず、確固たる反転シグナルを確認するまで静観すべきです。[ACTION: WAIT FOR PULLBACK]",
-            "EN": "Stagnant liquidity mandates tactical patience. The GMS score of 47 signals a tenuous equilibrium within Phase 2 transition, as the fiscal-monetary nexus grapples with stagnant net liquidity and a precipitous decline in commodity-driven inflation proxies. While credit spread compression in high-yield sectors suggests residual risk appetite, the extreme degradation in crypto sentiment and sharp retracement in industrial metals reveal a latent liquidity convexity risk. The regime exhibits structural fragility, necessitating a tactical pause as real interest rates maintain restrictive pressure against a backdrop of VIX elevation. [ACTION: WAIT FOR PULLBACK]",
-            "CN": "流动性停滞要求战术性观望。GMS 47反映了第二阶段转型中的脆弱平衡，财政与货币政策交汇点正面临净流动性停滞和大宗商品通胀代理指标的剧烈下滑。尽管高收益债信用利差收窄暗示风险偏好尚存，但加密货币情绪的极端恶化与工业金属的深调揭露了潜在的流动性凸性风险。在实际利率维持限制性压力且VIX波动率依然高企的背景下，宏观体制呈现结构性脆弱，必须保持战术冷静以等待更优的入场契机。[ACTION: WAIT FOR PULLBACK]",
-            "ES": "La liquidez estancada exige paciencia táctica. El puntaje GMS de 47 denota un equilibrio precario en la transición de Fase 2, donde el nexo fiscal-monetario se enfrenta a una liquidez neta estancada y una caída estrepitosa de los proxies inflacionarios. Si bien la compresión de los diferenciales de crédito sugiere apetito por el riesgo residual, la degradación extrema en el sentimiento cripto y el retroceso de los metales industriales revelan una convexidad de liquidez latente. El régimen exhibe fragilidad estructural, exigiendo una pausa táctica mientras los tipos reales mantienen presión restrictiva ante un VIX elevado. [ACTION: WAIT FOR PULLBACK]",
-            "HI": "स्थिर तरलता सामरिक धैर्य की मांग करती है। GMS स्कोर 47 चरण 2 के भीतर एक नाजुक संतुलन का संकेत देता है, क्योंकि राजकोषीय-मौद्रिक नेक्सस स्थिर शुद्ध तरलता और मुद्रास्फीति प्रॉक्सी में गिरावट के साथ संघर्ष कर रहा है। जबकि उच्च-उपज ऋण प्रसार में संकुचन अवशिष्ट जोखिम भूख का सुझाव देता है, क्रिप्टो धारणा में गिरावट और औद्योगिक धातुओं में सुधार एक अव्यक्त तरलता जोखिम को प्रकट करता है। यह शासन संरचनात्मक नाजुकता प्रदर्शित करता है, जिससे वास्तविक ब्याज दरों और VIX की उच्चता के बीच एक सामरिक ठहराव आवश्यक हो जाता है। [ACTION: WAIT FOR PULLBACK]",
-            "ID": "Stagnasi likuiditas menuntut kesabaran taktis. Skor GMS 47 menandakan keseimbangan rapuh dalam transisi Fase 2, di mana neksus fiskal-moneter bergulat dengan stagnasi likuiditas bersih dan penurunan tajam proksi inflasi komoditas. Meskipun kompresi spread kredit pada sektor yield tinggi menunjukkan selera risiko residual, degradasi ekstrem pada sentimen kripto dan retracement tajam logam industri mengungkap risiko konveksitas likuiditas laten. Rezim ini menunjukkan kerapuhan struktural, mengharuskan jeda taktis karena suku bunga riil mempertahankan tekanan restriktif di tengah kenaikan VIX. [ACTION: WAIT FOR PULLBACK]",
-            "AR": "ركود السيولة يفرض صبراً تكتيكياً. تشير درجة GMS البالغة 47 إلى توازن هش في المرحلة الثانية، حيث يواجه الرابط المالي والنقدي سيولة صافية راكدة وانخفاضاً حاداً في مؤشرات التضخم القائمة على السلع. في حين أن ضغط هوامش الائتمان في قطاعات العائد المرتفع يشير إلى شهية متبقية للمخاطرة، فإن التدهور الشديد في معنويات الكريبتو وتراجع المعادن الصناعية يكشف عن مخاطر تقعر السيولة الكامنة. يظهر النظام هشاشة هيكلية، مما يستلزم توقفاً تكتيكياً حيث تحافظ أسعار الفائدة الحقيقية على ضغوط تقييدية وسط ارتفاع مؤشر VIX. [ACTION: WAIT FOR PULLBACK]",
-            "DE": "Stagnierende Liquidität erzwingt taktische Geduld. Der GMS-Score von 47 signalisiert ein prekäres Gleichgewicht in der Phase-2-Transition, während der fiskalisch-monetäre Nexus mit stagnierender Nettoliquidität und einem Rückgang der Inflations-Proxys kämpft. Obwohl die Kredit-Spread-Kompression im High-Yield-Sektor verbleibende Risikoappetit andeutet, offenbaren der Verfall des Krypto-Sentiments und der Rückgang der Industriemetalle latente Liquiditäts-Konvexitätsrisiken. Das Regime zeigt strukturelle Fragilität, was eine taktische Pause erfordert, da die Realzinsen angesichts eines erhöhten VIX restriktiven Druck ausüben. [ACTION: WAIT FOR PULLBACK]",
-            "FR": "La stagnation de la liquidité impose la patience. Le score GMS de 47 indique un équilibre ténu en Phase 2, où le nexus fiscaux-monétaire se heurte à une stagnation de la liquidité nette et à un repli des matières premières. Bien que la compression des spreads de crédit suggère un appétit pour le risque résiduel, la dégradation extrême du sentiment crypto et le retrait des métaux industriels révèlent un risque latent de convexité de liquidité. Le régime présente une fragilité structurelle, imposant une pause tactique alors que les taux réels maintiennent une pression restrictive dans un contexte de VIX élevé. [ACTION: WAIT FOR PULLBACK]"
+            "JP": "商品安に伴う中立的レジームの継続。GMS 48は流動性の停滞と方向性の欠如を裏付けている。クレジット・スプレッドの圧縮は安定を示唆するが、銅・金ベクトルの急激な収縮はデフレ的逆風を暗示する。仮想通貨センチメントの枯渇とVIXの20超えは、リスク資産への慎重なアプローチを要求する。個別株の反発に関わらず、マクロ的レジームの劣化は不可避である。[ACTION: WAIT FOR PULLBACK]",
+            "EN": "Neutral regime amidst commodity-driven deflation. The current GMS reading of 48 confirms a liquidity plateau where directional impulse is absent. While tight credit spreads indicate underlying stability, the aggressive contraction in the copper-gold vector and broader commodity complex signals significant disinflationary headwinds. Crypto sentiment exhaustion and VIX elevation above 20 necessitate immediate tactical restraint. Systemic regime degradation persists. [ACTION: WAIT FOR PULLBACK]",
+            "CN": "大宗商品通缩压力下的中性政体阶段。GMS 48分值确立了流动性凸性的停滞，市场缺乏明确方向。尽管信用利差压缩维持稳定，但铜金比及商品复合体的剧烈收缩预示了显著的通缩逆风。加密货币情绪枯竭与VIX升至20上方要求立即采取战术克制。尽管存在个别权重的修复性反弹，系统性政体退化依然严峻。[ACTION: WAIT FOR PULLBACK]",
+            "ES": "Régimen neutral ante deflación de materias primas. El GMS de 48 confirma una meseta de liquidez sin impulso direccional. Aunque la compresión de diferenciales de crédito sugiere estabilidad, la contracción en el vector cobre-oro y complejos industriales señala vientos en contra desinflacionarios. El agotamiento del sentimiento cripto y un VIX sobre 20 exigen moderación táctica. La degradación del régimen persiste pese a rebotes idiosincrásicos. [ACTION: WAIT FOR PULLBACK]",
+            "HI": "वस्तुओं के अपस्फीति दबाव के बीच तटस्थ शासन। 48 का GMS स्कोर तरलता के ठहराव की पुष्टि करता है जहाँ दिशात्मक आवेग अनुपस्थित है। जबकि क्रेडिट स्प्रेड संकुचन स्थिरता का संकेत देता है, तांबा-सोना वेक्टर और कमोडिटी कॉम्प्लेक्स में तीव्र गिरावट महत्वपूर्ण अपस्फीति बाधाओं का संकेत देती है। क्रिप्टो भावना की थकावट और 20 से ऊपर VIX स्तर सामरिक संयम की मांग करते हैं। व्यक्तिगत इक्विटी सुधार के बावजूद प्रणालीगत शासन गिरावट जारी है। [ACTION: WAIT FOR PULLBACK]",
+            "ID": "Rezim netral di tengah hambatan deflasi komoditas. Skor GMS 48 mengonfirmasi dataran tinggi likuiditas tanpa dorongan terarah. Meskipun kompresi spread kredit menunjukkan stabilitas, kontraksi tajam pada vektor tembaga-emas dan kompleks komoditas menandakan hambatan disinflasi yang signifikan. Kelelahan sentimen kripto dan kenaikan VIX di atas 20 mengharuskan pengendalian taktis segera. Degradasi rezim sistemik tetap berlanjut meskipun ada rebound ekuitas. [ACTION: WAIT FOR PULLBACK]",
+            "AR": "نظام محايد وسط ضغوط انكماشية في السلع الأساسية. تؤكد قراءة GMS البالغة 48 حالة من استقرار السيولة وافتقار الزخم الاتجاهي. بينما يشير ضيق هوامش الائتمان إلى استقرار ظاهري، فإن الانكماش في ناقل النحاس والذهب يشير إلى رياح معاكسة تضخمية. يتطلب استنفاد معنويات الكريبتو وارتفاع مؤشر VIX فوق 20 ضبطًا تكتيكيًا فوريًا. يستمر تدهور النظام الهيكلي رغم التعافي الانتقائي لبعض الأسهم. [ACTION: WAIT FOR PULLBACK]",
+            "DE": "Neutrales Regime bei deflationärem Rohstoffdruck. Der GMS-Wert von 48 bestätigt ein Liquiditätsplateau ohne direktionalen Impuls. Während die Kompression der Credit Spreads Stabilität suggeriert, signalisiert die Kontraktion im Kupfer-Gold-Vektor signifikanten disinflationären Gegenwind. Das erschöpfte Krypto-Sentiment und ein VIX über 20 erfordern taktische Zurückhaltung. Die systemische Regimeverschlechterung hält trotz einzelner Aktien-Rebounds an. [ACTION: WAIT FOR PULLBACK]",
+            "FR": "Régime neutre face à la déflation des commodités. Le score GMS de 48 confirme un plateau de liquidité dépourvu d'impulsion directionnelle. Si la compression des spreads de crédit suggère une stabilité, la contraction du vecteur cuivre-or signale des vents contraires désinflationnistes. L'épuisement du sentiment crypto et un VIX supérieur à 20 imposent une retenue tactique immédiate. La dégradation systémique du régime persiste malgré les rebonds. [ACTION: WAIT FOR PULLBACK]"
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-13T22:51:26Z",
-            "score": 37
-        },
         {
             "date": "2026-02-13T23:43:39Z",
             "score": 37
@@ -2864,6 +2860,10 @@
         {
             "date": "2026-02-17T23:43:46Z",
             "score": 47
+        },
+        {
+            "date": "2026-02-18T03:16:40Z",
+            "score": 48
         }
     ],
     "intelligence": {
@@ -2884,9 +2884,9 @@
                 "isoDate": "2026-02-17T22:24:14+00:00Z"
             },
             {
-                "title": "Stephen Colbert says CBS blocks James Talarico interview from air",
+                "title": "Stephen Colbert says CBS blocked James Talarico interview from air",
                 "link": "https://www.cnbc.com/2026/02/17/james-talarico-stephen-colbert-cbs-fcc-interview.html",
-                "isoDate": "2026-02-17T21:28:00+00:00Z"
+                "isoDate": "2026-02-18T01:20:08+00:00Z"
             },
             {
                 "title": "Anthropic releases Claude Sonnet 4.6, continuing breakneck pace of AI model releases",
@@ -2894,78 +2894,78 @@
                 "isoDate": "2026-02-17T18:38:38+00:00Z"
             },
             {
-                "title": "Tesla adding Grok AI chatbot to its cars in the UK, Europe amid regulatory probes",
-                "link": "https://www.cnbc.com/2026/02/17/tesla-adding-grok-ai-uk-europe.html",
-                "isoDate": "2026-02-17T23:17:09+00:00Z"
+                "title": "Japan exports growth surges to over 3-year high, up nearly 17% in January, as shipments to China soar",
+                "link": "https://www.cnbc.com/2026/02/18/japan-trade-data-january-exports-imports.html",
+                "isoDate": "2026-02-18T02:14:05+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "アマゾン、9日間続いた値下がり連敗を断ち切る、この間に4500億ドル以上の価値が失われる",
-                "ウォーレン・バフェットCEOとしての最後の動き、バークシャー・ハサウェイがアップル株を減らしNYタイムズ株を購入",
-                "パロ・アルト・ネットワークス、第3四半期の利益ガイダンスが未達となり6%下落",
+                "アマゾン、9日続落で4500億ドル超の時価総額を失う",
+                "バークシャー・ハサウェイ、アップル株を売却、NYタイムズ株を購入 - バフェットCEO最後の動き",
+                "パロアルト・ネットワークス、第3四半期の利益予測未達で6%下落",
                 "スティーブン・コルベア氏、CBSがジェームズ・タラリコ氏のインタビュー放送をブロックしたと発言",
-                "Anthropic、Claude Sonnet 4.6をリリース、AIモデル発表の速いペースを維持",
-                "テスラ、規制当局の調査が続く中、英国と欧州でGrok AIチャットボットを車に搭載"
+                "Anthropic、Claude Sonnet 4.6をリリース AIモデル発表のペースは衰えず",
+                "日本の1月輸出、中国向け出荷が急増し17%近く増加、3年超ぶりの高水準に"
             ],
             "CN": [
-                "亚马逊结束了连续9个交易日的下跌，期间市值 蒸发超过4500亿美元",
-                "伯克希尔哈撒韦削减苹果(Apple)持股，增持纽约时报(NYTimes)股票，这是巴菲特作为CEO的最后举动",
-                "Palo Alto Networks 第三季度盈利指引不及预期，股价下跌6%",
-                "斯蒂芬·科尔伯特称CBS阻止了詹姆斯·塔拉里科(James Talarico)的采访播出",
-                "Anthropic 发布 Claude Sonnet 4.6，继续保持AI模型发布的快速步伐",
-                "特斯拉在监管调查期间，将Grok AI聊天机器人引入英国和欧洲的汽车"
+                "亚马逊结束9连跌，期间市值蒸发超4500亿美元",
+                "伯克希尔哈撒韦减持苹果股份，购入纽约时报股票，巴菲特卸任CEO前的最后动作",
+                "Palo Alto Networks 下跌6%，第三季度盈利指引不及预期",
+                "斯蒂芬·科尔伯特称CBS阻止詹姆斯·塔拉里科采访播出",
+                "Anthropic 发布 Claude Sonnet 4.6，AI模型发布步伐不停歇",
+                "日本1月出口增长近17%至逾三年高点，对华出口飙升"
             ],
             "ES": [
-                "Amazon pone fin a una racha de 9 días de caídas en las que perdió más de 450 mil millones de dólares en valor",
+                "Amazon pone fin a una racha de 9 días de pérdidas, durante la cual perdió más de 450.000 millones de dólares en valor",
                 "Berkshire Hathaway reduce su participación en Apple y compra acciones de NYTimes en los últimos movimientos de Buffett como CEO",
-                "Palo Alto Networks se desploma un 6% al no cumplir la previsión de beneficios del tercer trimestre",
-                "Stephen Colbert dice que CBS bloquea la emisión de la entrevista a James Talarico",
-                "Anthropic lanza Claude Sonnet 4.6, continuando su vertiginoso ritmo de lanzamientos de modelos de IA",
-                "Tesla añade el chatbot de IA Grok a sus coches en el Reino Unido y Europa en medio de investigaciones regulatorias"
+                "Palo Alto Networks se desploma un 6% ante una guía de beneficios del tercer trimestre por debajo de las expectativas",
+                "Stephen Colbert dice que CBS bloqueó la emisión de la entrevista a James Talarico",
+                "Anthropic lanza Claude Sonnet 4.6, continuando el frenético ritmo de lanzamientos de modelos de IA",
+                "El crecimiento de las exportaciones de Japón se dispara a máximos de más de 3 años, con un aumento de casi el 17% en enero, ante el auge de los envíos a China"
             ],
             "HI": [
-                "अमेज़ॅन ने 9-दिवसीय गिरावट का सिलसिला तोड़ा, जिसके दौरान इसका मूल्य $450 बिलियन से अधिक घट गया",
-                "बर्कशायर हैथवे ने एप्पल में अपनी हिस्सेदारी घटाई, बफेट के सीईओ के रूप में अंतिम चालों में NYTimes के शेयर खरीदे",
-                "Palo Alto Networks तीसरी तिमाही के लाभ मार्गदर्शन के उम्मीदों से कम रहने पर 6% गिरा",
-                "स्टीफन कोल्बर्ट ने कहा कि सीबीएस ने जेम्स तालारिको (James Talarico) का साक्षात्कार प्रसारित होने से रोका",
-                "Anthropic ने Claude Sonnet 4.6 जारी किया, AI मॉडल की तेज गति को जारी रखा",
-                "टेस्ला यूके, यूरोप में नियामक जांच के बीच अपनी कारों में Grok AI चैटबॉट जोड़ रहा है"
+                "अमेज़ॅन ने 9-दिवसीय गिरावट का सिलसिला तोड़ा, जिसके दौरान इसका मूल्यांकन 450 बिलियन डॉलर से अधिक घट गया",
+                "बर्कशायर हैथवे ने एप्पल की हिस्सेदारी कम की, सीईओ के रूप में बफेट की अंतिम चालों में NYTimes स्टॉक खरीदा",
+                "Palo Alto Networks तीसरी तिमाही के लाभ अनुमानों से पिछड़ने के कारण 6% गिरा",
+                "स्टीफन कोलबर्ट ने कहा कि सीबीएस ने जेम्स टालारिको के साक्षात्कार को प्रसारित होने से रोका",
+                "एंथ्रोपिक ने क्लॉड सॉनेट 4.6 जारी किया, जो एआई मॉडल रिलीज़ की तीव्र गति जारी रखे हुए है",
+                "जापान का निर्यात विकास 3 साल के उच्च स्तर पर पहुंचा, जनवरी में लगभग 17% बढ़ा, चीन को शिपमेंट में भारी वृद्धि"
             ],
             "ID": [
-                "Amazon mengakhiri rekor 9 hari penurunan, kehilangan nilai lebih dari $450 miliar",
+                "Amazon mengakhiri rentetan 9 hari kalah, selama itu kehilangan nilai lebih dari $450 miliar",
                 "Berkshire Hathaway pangkas saham Apple, beli saham NYTimes dalam langkah terakhir Buffett sebagai CEO",
                 "Palo Alto Networks anjlok 6% karena panduan laba kuartal ketiga meleset",
                 "Stephen Colbert mengatakan CBS memblokir wawancara James Talarico dari siaran",
-                "Anthropic merilis Claude Sonnet 4.6, melanjutkan laju pesat perilisan model AI",
-                "Tesla menambahkan chatbot AI Grok ke mobilnya di Inggris, Eropa di tengah penyelidikan regulator"
+                "Anthropic merilis Claude Sonnet 4.6, melanjutkan kecepatan pesat rilis model AI",
+                "Pertumbuhan ekspor Jepang melonjak ke level tertinggi lebih dari 3 tahun, naik hampir 17% di Januari, saat pengiriman ke Tiongkok meroket"
             ],
             "AR": [
-                "أمازون تنهي سلسلة خسائر استمرت 9 أيام فقدت خلالها أكثر من 450 مليار دولار من قيمتها",
-                "بيركشاير هاثاواي تقلص حصتها في آبل وتشتري أسهم نيويورك تايمز في آخر تحركات بافيت كرئيس تنفيذي",
-                "شبكات بالو ألتو (Palo Alto Networks) تنخفض 6% مع فشل توقعات الأرباح للربع الثالث",
-                "ستيفن كولبيرت يقول إن سي بي إس حجبت مقابلة جيمس تالاريكو عن البث",
-                "أنثروبيك تطلق Claude Sonnet 4.6، مستمرة في وتيرة سريعة لإصدارات نماذج الذكاء الاصطناعي",
-                "تسلا تضيف روبوت الدردشة بالذكاء الاصطناعي Grok إلى سياراتها في المملكة المتحدة وأوروبا وسط تحقيقات تنظيمية"
+                "أمازون تكسر سلسلة خسائر دامت 9 أيام خسرت خلالها أكثر من 450 مليار دولار من قيمتها",
+                "بيركشاير هاثاواي تقلص حصتها في آبل، وتشتري أسهم نيويورك تايمز في آخر تحركات بافيت كرئيس تنفيذي",
+                "شبكات بالو ألتو تنهار 6% مع فشل توقعات أرباح الربع الثالث",
+                "ستيفن كولبيرت يقول إن سي بي إس حجبت مقابلة جيمس تالاريكو من البث",
+                "أنثروبيك تطلق Claude Sonnet 4.6، مستمرة في وتيرة إصدار نماذج الذكاء الاصطناعي المتسارعة",
+                "نمو صادرات اليابان يقفز إلى أعلى مستوى في أكثر من 3 سنوات، بزيادة تقارب 17% في يناير، مع ارتفاع الشحنات إلى الصين"
             ],
             "DE": [
-                "Amazon beendet 9-tägige Verlustserie, bei der das Unternehmen mehr als 450 Milliarden Dollar an Wert verlor",
+                "Amazon beendet 9-tägige Verlustserie, in der es mehr als 450 Milliarden Dollar an Wert verlor",
                 "Berkshire Hathaway reduziert Apple-Beteiligung, kauft NYTimes-Aktien in Buffets letzten Zügen als CEO",
-                "Palo Alto Networks stürzt um 6% ab, da die Gewinprognose für das dritte Quartal hinter den Erwartungen zurückbleibt",
-                "Stephen Colbert sagt, CBS blockiere James Talarico-Interview von der Ausstrahlung",
-                "Anthropic veröffentlicht Claude Sonnet 4.6 und setzt das rasante Tempo bei der Veröffentlichung von KI-Modellen fort",
-                "Tesla fügt Grok KI-Chatbot in Großbritannien und Europa inmitten regulatorischer Prüfungen zu seinen Autos hinzu"
+                "Palo Alto Networks stürzt um 6% ab, da die Gewinnprognose für das dritte Quartal hinter den Erwartungen zurückbleibt",
+                "Stephen Colbert sagt, CBS habe James Talaricos Interview blockiert",
+                "Anthropic veröffentlicht Claude Sonnet 4.6 und setzt damit das rasante Tempo bei KI-Modellveröffentlichungen fort",
+                "Japans Exporte wachsen auf den höchsten Stand seit über 3 Jahren, im Januar fast 17% Zuwachs, da die Lieferungen nach China stark ansteigen"
             ],
             "FR": [
-                "Amazon met fin à une série de 9 jours de baisses au cours desquelles elle a perdu plus de 450 milliards de dollars de valeur",
+                "Amazon met fin à une série de 9 jours de pertes, au cours de laquelle elle a perdu plus de 450 milliards de dollars de valeur",
                 "Berkshire Hathaway réduit sa participation dans Apple, achète des actions du NYTimes dans les derniers mouvements de Buffett en tant que PDG",
-                "Palo Alto Networks chute de 6 % alors que les prévisions de bénéfices du troisième trimestre sont inférieures aux attentes",
-                "Stephen Colbert déclare que CBS a bloqué la diffusion de l'interview de James Talarico",
+                "Palo Alto Networks s'effondre de 6% alors que les prévisions de bénéfices du troisième trimestre sont inférieures aux attentes",
+                "Stephen Colbert affirme que CBS a bloqué la diffusion de l'interview de James Talarico",
                 "Anthropic publie Claude Sonnet 4.6, poursuivant son rythme effréné de sorties de modèles d'IA",
-                "Tesla ajoute le chatbot IA Grok à ses voitures au Royaume-Uni et en Europe dans le cadre d'enquêtes réglementaires"
+                "La croissance des exportations japonaises atteint un sommet de plus de 3 ans, en hausse de près de 17% en janvier, avec un essor des expéditions vers la Chine"
             ]
         },
-        "last_updated": "2026-02-17T23:43:46.437177+00:00Z"
+        "last_updated": "2026-02-18T03:16:40.673574+00:00Z"
     },
     "system_status": "OPERATIONAL",
     "beacons_history": [
@@ -4471,6 +4471,21 @@
         },
         {
             "timestamp": "2026-02-18T02:25:36.300572+00:00",
+            "recession": {
+                "value": 0.459,
+                "status": "safe"
+            },
+            "panic": {
+                "value": 0.939,
+                "status": "safe"
+            },
+            "credit": {
+                "value": -0.38,
+                "status": "safe"
+            }
+        },
+        {
+            "timestamp": "2026-02-18T03:16:52.371160+00:00",
             "recession": {
                 "value": 0.459,
                 "status": "safe"
