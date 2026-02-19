@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-02-19T13:42:52.913001+00:00",
+    "last_updated": "2026-02-19T15:05:05.876480+00:00",
     "market_data": {
         "CRYPTO_SENTIMENT": {
             "price": 9,
@@ -77,13 +77,12 @@
             ]
         },
         "HY_SPREAD": {
-            "price": 2.94,
+            "price": 2.86,
             "prev_price": 2.94,
-            "daily_chg": 0.0,
-            "change_percent": 0.0,
+            "daily_chg": -2.72,
+            "change_percent": -2.72,
             "trend": "CALM",
             "sparkline": [
-                2.76,
                 2.74,
                 2.74,
                 2.75,
@@ -112,26 +111,28 @@
                 2.92,
                 2.95,
                 2.94,
-                2.94
+                2.94,
+                2.86
             ]
         },
         "NFCI": {
-            "price": -0.56,
+            "price": -0.57,
             "change_percent": 0.0,
             "trend": "CALM",
             "sparkline": [
                 -0.51,
                 -0.51,
                 -0.52,
-                -0.53,
+                -0.52,
                 -0.53,
                 -0.54,
                 -0.55,
                 -0.56,
                 -0.56,
                 -0.57,
-                -0.56,
-                -0.56
+                -0.57,
+                -0.57,
+                -0.57
             ]
         },
         "NET_LIQUIDITY": {
@@ -211,10 +212,10 @@
             ]
         },
         "VIX": {
-            "price": 20.48,
+            "price": 20.54,
             "prev_price": 19.62,
-            "daily_chg": 4.38,
-            "change_percent": -1.63,
+            "daily_chg": 4.69,
+            "change_percent": -1.34,
             "trend": "UP",
             "sparkline": [
                 20.09,
@@ -238,7 +239,7 @@
                 20.6,
                 20.29,
                 19.62,
-                20.48
+                20.54
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
@@ -353,13 +354,12 @@
             ]
         },
         "SPY": {
-            "price": 686.29,
-            "prev_price": 682.85,
-            "daily_chg": 0.5,
-            "change_percent": -0.82,
-            "trend": "UP",
+            "price": 686.05,
+            "prev_price": 686.29,
+            "daily_chg": -0.03,
+            "change_percent": 0.7,
+            "trend": "DOWN",
             "sparkline": [
-                691.66,
                 677.58,
                 685.4,
                 688.98,
@@ -380,14 +380,15 @@
                 681.27,
                 681.75,
                 682.85,
-                686.29
+                686.29,
+                686.05
             ]
         },
         "TNX": {
             "price": 4.09,
             "prev_price": 4.08,
-            "daily_chg": 0.37,
-            "change_percent": -0.24,
+            "daily_chg": 0.27,
+            "change_percent": -0.34,
             "trend": "UP",
             "sparkline": [
                 4.3,
@@ -415,13 +416,12 @@
             ]
         },
         "QQQ": {
-            "price": 605.79,
-            "prev_price": 601.3,
-            "daily_chg": 0.75,
-            "change_percent": -1.19,
-            "trend": "UP",
+            "price": 605.38,
+            "prev_price": 605.79,
+            "daily_chg": -0.07,
+            "change_percent": 0.79,
+            "trend": "DOWN",
             "sparkline": [
-                621.26,
                 608.06,
                 616.28,
                 620.76,
@@ -442,17 +442,17 @@
                 600.64,
                 601.92,
                 601.3,
-                605.79
+                605.79,
+                605.38
             ]
         },
         "IWM": {
-            "price": 263.99,
-            "prev_price": 263.04,
-            "daily_chg": 0.36,
-            "change_percent": -0.36,
-            "trend": "UP",
+            "price": 263.62,
+            "prev_price": 263.99,
+            "daily_chg": -0.14,
+            "change_percent": 1.57,
+            "trend": "DOWN",
             "sparkline": [
-                265.76,
                 262.58,
                 267.79,
                 269.79,
@@ -473,17 +473,17 @@
                 259.54,
                 262.96,
                 263.04,
-                263.99
+                263.99,
+                263.62
             ]
         },
         "RSP": {
-            "price": 203.57,
-            "prev_price": 202.52,
-            "daily_chg": 0.52,
-            "change_percent": 0.05,
-            "trend": "UP",
+            "price": 203.32,
+            "prev_price": 203.57,
+            "daily_chg": -0.12,
+            "change_percent": 1.26,
+            "trend": "DOWN",
             "sparkline": [
-                199.05,
                 196.08,
                 199.4,
                 199.66,
@@ -504,17 +504,17 @@
                 200.79,
                 202.87,
                 202.52,
-                203.57
+                203.57,
+                203.32
             ]
         },
         "HYG": {
-            "price": 80.91,
-            "prev_price": 80.81,
-            "daily_chg": 0.12,
+            "price": 80.87,
+            "prev_price": 80.91,
+            "daily_chg": -0.05,
             "change_percent": 0.1,
-            "trend": "UP",
+            "trend": "DOWN",
             "sparkline": [
-                80.69,
                 80.48,
                 80.72,
                 80.78,
@@ -535,7 +535,8 @@
                 80.79,
                 80.85,
                 80.81,
-                80.91
+                80.91,
+                80.87
             ]
         },
         "NIFTY": {
@@ -570,11 +571,11 @@
             ]
         },
         "BTC": {
-            "price": 66135.3,
+            "price": 66425.58,
             "prev_price": 66425.32,
-            "daily_chg": -0.44,
-            "change_percent": -3.86,
-            "trend": "DOWN",
+            "daily_chg": 0.0,
+            "change_percent": -3.43,
+            "trend": "UP",
             "sparkline": [
                 84561.59,
                 84128.66,
@@ -597,14 +598,14 @@
                 68843.16,
                 67494.22,
                 66425.32,
-                66135.3
+                66425.58
             ]
         },
         "ETH": {
-            "price": 1929.25,
+            "price": 1936.51,
             "prev_price": 1953.97,
-            "daily_chg": -1.27,
-            "change_percent": -1.87,
+            "daily_chg": -0.89,
+            "change_percent": -1.5,
             "trend": "DOWN",
             "sparkline": [
                 2818.23,
@@ -628,14 +629,14 @@
                 1997.92,
                 1992.19,
                 1953.97,
-                1929.25
+                1936.51
             ]
         },
         "SOL": {
-            "price": 80.38,
+            "price": 80.78,
             "prev_price": 81.57,
-            "daily_chg": -1.45,
-            "change_percent": -6.54,
+            "daily_chg": -0.96,
+            "change_percent": -6.07,
             "trend": "DOWN",
             "sparkline": [
                 117.61,
@@ -659,14 +660,14 @@
                 86.43,
                 85.2,
                 81.57,
-                80.38
+                80.78
             ]
         },
         "DXY": {
-            "price": 97.94,
+            "price": 98.02,
             "prev_price": 97.7,
-            "daily_chg": 0.25,
-            "change_percent": 1.05,
+            "daily_chg": 0.33,
+            "change_percent": 1.13,
             "trend": "UP",
             "sparkline": [
                 98.64,
@@ -690,14 +691,14 @@
                 96.88,
                 97.16,
                 97.7,
-                97.94
+                98.02
             ]
         },
         "USDJPY": {
-            "price": 154.93,
+            "price": 155.11,
             "prev_price": 153.15,
-            "daily_chg": 1.16,
-            "change_percent": 1.38,
+            "daily_chg": 1.28,
+            "change_percent": 1.5,
             "trend": "UP",
             "sparkline": [
                 158.16,
@@ -721,14 +722,14 @@
                 152.78,
                 153.61,
                 153.15,
-                154.93
+                155.11
             ]
         },
         "EURUSD": {
             "price": 1.18,
             "prev_price": 1.19,
-            "daily_chg": -0.74,
-            "change_percent": -0.87,
+            "daily_chg": -0.69,
+            "change_percent": -0.83,
             "trend": "DOWN",
             "sparkline": [
                 1.17,
@@ -756,7 +757,7 @@
             ]
         },
         "USDINR": {
-            "price": 91.12,
+            "price": 91.11,
             "prev_price": 90.63,
             "daily_chg": 0.54,
             "change_percent": 0.61,
@@ -783,7 +784,7 @@
                 90.57,
                 90.78,
                 90.63,
-                91.12
+                91.11
             ]
         },
         "USDSAR": {
@@ -818,10 +819,10 @@
             ]
         },
         "GOLD": {
-            "price": 5002.0,
+            "price": 5022.4,
             "prev_price": 4986.5,
-            "daily_chg": 0.31,
-            "change_percent": 1.59,
+            "daily_chg": 0.72,
+            "change_percent": 2.0,
             "trend": "UP",
             "sparkline": [
                 4759.6,
@@ -845,14 +846,14 @@
                 5022.0,
                 4882.9,
                 4986.5,
-                5002.0
+                5022.4
             ]
         },
         "OIL": {
-            "price": 66.42,
+            "price": 66.43,
             "prev_price": 65.19,
-            "daily_chg": 1.89,
-            "change_percent": 5.7,
+            "daily_chg": 1.9,
+            "change_percent": 5.71,
             "trend": "UP",
             "sparkline": [
                 60.34,
@@ -876,14 +877,14 @@
                 62.89,
                 62.33,
                 65.19,
-                66.42
+                66.43
             ]
         },
         "COPPER": {
-            "price": 5.7,
+            "price": 5.71,
             "prev_price": 5.79,
-            "daily_chg": -1.61,
-            "change_percent": -1.22,
+            "daily_chg": -1.46,
+            "change_percent": -1.07,
             "trend": "DOWN",
             "sparkline": [
                 5.77,
@@ -907,14 +908,14 @@
                 5.79,
                 5.63,
                 5.79,
-                5.7
+                5.71
             ]
         },
         "NATGAS": {
-            "price": 2.97,
+            "price": 2.99,
             "prev_price": 3.01,
-            "daily_chg": -1.33,
-            "change_percent": -7.65,
+            "daily_chg": -0.66,
+            "change_percent": -7.03,
             "trend": "DOWN",
             "sparkline": [
                 3.91,
@@ -938,14 +939,14 @@
                 3.24,
                 3.03,
                 3.01,
-                2.97
+                2.99
             ]
         },
         "SILVER": {
-            "price": 77.86,
+            "price": 77.94,
             "prev_price": 77.51,
-            "daily_chg": 0.46,
-            "change_percent": 3.07,
+            "daily_chg": 0.56,
+            "change_percent": 3.18,
             "trend": "UP",
             "sparkline": [
                 94.21,
@@ -969,14 +970,14 @@
                 77.85,
                 73.45,
                 77.51,
-                77.86
+                77.94
             ]
         },
         "DAX": {
-            "price": 25009.86,
+            "price": 25005.46,
             "prev_price": 25278.21,
-            "daily_chg": -1.06,
-            "change_percent": 0.38,
+            "daily_chg": -1.08,
+            "change_percent": 0.36,
             "trend": "DOWN",
             "sparkline": [
                 24560.98,
@@ -1000,14 +1001,14 @@
                 24800.91,
                 24998.4,
                 25278.21,
-                25009.86
+                25005.46
             ]
         },
         "CAC40": {
-            "price": 8354.98,
+            "price": 8370.36,
             "prev_price": 8429.03,
-            "daily_chg": -0.88,
-            "change_percent": 0.52,
+            "daily_chg": -0.7,
+            "change_percent": 0.71,
             "trend": "DOWN",
             "sparkline": [
                 8069.17,
@@ -1031,14 +1032,14 @@
                 8316.5,
                 8361.46,
                 8429.03,
-                8354.98
+                8370.36
             ]
         },
         "STOXX600": {
-            "price": 624.08,
+            "price": 623.66,
             "prev_price": 628.69,
-            "daily_chg": -0.73,
-            "change_percent": 1.03,
+            "daily_chg": -0.8,
+            "change_percent": 0.96,
             "trend": "DOWN",
             "sparkline": [
                 602.67,
@@ -1062,14 +1063,14 @@
                 618.52,
                 621.29,
                 628.69,
-                624.08
+                623.66
             ]
         },
         "FTSE": {
-            "price": 10606.62,
+            "price": 10608.94,
             "prev_price": 10686.2,
-            "daily_chg": -0.74,
-            "change_percent": 1.53,
+            "daily_chg": -0.72,
+            "change_percent": 1.56,
             "trend": "DOWN",
             "sparkline": [
                 10138.1,
@@ -1093,7 +1094,7 @@
                 10473.7,
                 10556.2,
                 10686.2,
-                10606.62
+                10608.94
             ]
         },
         "NIKKEI": {
@@ -1221,10 +1222,10 @@
             ]
         },
         "BOVESPA": {
-            "price": 186427.75,
+            "price": 186482.77,
             "prev_price": 186016.0,
-            "daily_chg": 0.22,
-            "change_percent": -1.72,
+            "daily_chg": 0.25,
+            "change_percent": -1.7,
             "trend": "UP",
             "sparkline": [
                 164849.0,
@@ -1248,7 +1249,7 @@
                 187766.0,
                 186464.0,
                 186016.0,
-                186427.75
+                186482.77
             ]
         },
         "ASX200": {
@@ -1283,13 +1284,12 @@
             ]
         },
         "G_REIT": {
-            "price": 26.9,
-            "prev_price": 27.25,
-            "daily_chg": -1.28,
-            "change_percent": 0.49,
+            "price": 26.86,
+            "prev_price": 26.9,
+            "daily_chg": -0.15,
+            "change_percent": 0.56,
             "trend": "DOWN",
             "sparkline": [
-                25.88,
                 25.54,
                 25.57,
                 25.39,
@@ -1310,17 +1310,17 @@
                 26.71,
                 26.98,
                 27.25,
-                26.9
+                26.9,
+                26.86
             ]
         },
         "US_HOUSING": {
-            "price": 119.59,
-            "prev_price": 120.14,
-            "daily_chg": -0.46,
-            "change_percent": -0.84,
+            "price": 119.17,
+            "prev_price": 119.59,
+            "daily_chg": -0.35,
+            "change_percent": 0.05,
             "trend": "DOWN",
             "sparkline": [
-                114.56,
                 111.89,
                 114.84,
                 113.6,
@@ -1341,17 +1341,17 @@
                 119.11,
                 121.36,
                 120.14,
-                119.59
+                119.59,
+                119.17
             ]
         },
         "LOGISTICS": {
-            "price": 39.87,
-            "prev_price": 40.38,
-            "daily_chg": -1.26,
-            "change_percent": -0.04,
+            "price": 39.77,
+            "prev_price": 39.87,
+            "daily_chg": -0.25,
+            "change_percent": 0.71,
             "trend": "DOWN",
             "sparkline": [
-                39.71,
                 38.79,
                 38.86,
                 38.56,
@@ -1372,17 +1372,17 @@
                 39.49,
                 40.04,
                 40.38,
-                39.87
+                39.87,
+                39.77
             ]
         },
         "INFRA": {
-            "price": 67.98,
-            "prev_price": 68.62,
-            "daily_chg": -0.93,
-            "change_percent": 0.79,
+            "price": 67.84,
+            "prev_price": 67.98,
+            "daily_chg": -0.21,
+            "change_percent": 0.67,
             "trend": "DOWN",
             "sparkline": [
-                62.24,
                 62.12,
                 62.47,
                 62.86,
@@ -1403,17 +1403,17 @@
                 67.39,
                 68.35,
                 68.62,
-                67.98
+                67.98,
+                67.84
             ]
         },
         "HY_BOND": {
-            "price": 80.91,
-            "prev_price": 80.81,
-            "daily_chg": 0.12,
+            "price": 80.87,
+            "prev_price": 80.91,
+            "daily_chg": -0.05,
             "change_percent": 0.1,
-            "trend": "UP",
+            "trend": "DOWN",
             "sparkline": [
-                80.69,
                 80.48,
                 80.72,
                 80.78,
@@ -1434,17 +1434,17 @@
                 80.79,
                 80.85,
                 80.81,
-                80.91
+                80.91,
+                80.87
             ]
         },
         "IG_BOND": {
-            "price": 111.59,
-            "prev_price": 111.7,
-            "daily_chg": -0.1,
-            "change_percent": 0.8,
+            "price": 111.46,
+            "prev_price": 111.59,
+            "daily_chg": -0.11,
+            "change_percent": 0.22,
             "trend": "DOWN",
             "sparkline": [
-                110.16,
                 109.49,
                 110.15,
                 110.36,
@@ -1465,17 +1465,17 @@
                 111.22,
                 111.59,
                 111.7,
-                111.59
+                111.59,
+                111.46
             ]
         },
         "TIPS": {
-            "price": 111.16,
-            "prev_price": 111.23,
-            "daily_chg": -0.06,
-            "change_percent": 0.32,
+            "price": 111.15,
+            "prev_price": 111.16,
+            "daily_chg": -0.01,
+            "change_percent": -0.09,
             "trend": "DOWN",
             "sparkline": [
-                110.02,
                 109.69,
                 110.12,
                 110.01,
@@ -1496,17 +1496,17 @@
                 111.25,
                 111.39,
                 111.23,
-                111.16
+                111.16,
+                111.15
             ]
         },
         "SHY": {
             "price": 82.98,
-            "prev_price": 83.03,
-            "daily_chg": -0.06,
-            "change_percent": 0.16,
-            "trend": "DOWN",
+            "prev_price": 82.98,
+            "daily_chg": 0.0,
+            "change_percent": 0.06,
+            "trend": "UP",
             "sparkline": [
-                82.54,
                 82.55,
                 82.59,
                 82.56,
@@ -1527,17 +1527,17 @@
                 82.93,
                 83.06,
                 83.03,
+                82.98,
                 82.98
             ]
         },
         "BALTIC": {
-            "price": 11.76,
-            "prev_price": 11.68,
-            "daily_chg": 0.68,
-            "change_percent": 2.8,
+            "price": 11.85,
+            "prev_price": 11.76,
+            "daily_chg": 0.77,
+            "change_percent": 4.87,
             "trend": "UP",
             "sparkline": [
-                9.8,
                 10.24,
                 10.07,
                 10.0,
@@ -1558,17 +1558,17 @@
                 11.3,
                 11.49,
                 11.68,
-                11.76
+                11.76,
+                11.85
             ]
         },
         "SHIPPING": {
-            "price": 39.06,
-            "prev_price": 38.46,
-            "daily_chg": 1.55,
-            "change_percent": 4.24,
+            "price": 39.37,
+            "prev_price": 39.06,
+            "daily_chg": 0.8,
+            "change_percent": 6.03,
             "trend": "UP",
             "sparkline": [
-                33.43,
                 33.29,
                 33.95,
                 34.05,
@@ -1589,17 +1589,17 @@
                 37.13,
                 37.81,
                 38.46,
-                39.06
+                39.06,
+                39.37
             ]
         },
         "AGRI": {
-            "price": 25.84,
-            "prev_price": 25.71,
-            "daily_chg": 0.51,
-            "change_percent": 0.08,
-            "trend": "UP",
+            "price": 25.75,
+            "prev_price": 25.84,
+            "daily_chg": -0.33,
+            "change_percent": -0.52,
+            "trend": "DOWN",
             "sparkline": [
-                25.6,
                 25.49,
                 25.55,
                 25.6,
@@ -1620,17 +1620,17 @@
                 25.89,
                 25.79,
                 25.71,
-                25.84
+                25.84,
+                25.75
             ]
         },
         "SEMIS": {
-            "price": 357.92,
-            "prev_price": 354.1,
-            "daily_chg": 1.08,
-            "change_percent": -0.63,
-            "trend": "UP",
+            "price": 355.55,
+            "prev_price": 357.92,
+            "daily_chg": -0.66,
+            "change_percent": 1.15,
+            "trend": "DOWN",
             "sparkline": [
-                342.47,
                 337.35,
                 348.14,
                 348.67,
@@ -1651,17 +1651,17 @@
                 351.5,
                 354.66,
                 354.1,
-                357.92
+                357.92,
+                355.55
             ]
         },
         "DEFENSE": {
-            "price": 240.32,
-            "prev_price": 238.17,
-            "daily_chg": 0.9,
-            "change_percent": 4.06,
+            "price": 240.97,
+            "prev_price": 240.32,
+            "daily_chg": 0.27,
+            "change_percent": 3.63,
             "trend": "UP",
             "sparkline": [
-                243.77,
                 237.9,
                 240.27,
                 235.82,
@@ -1682,17 +1682,17 @@
                 232.53,
                 234.87,
                 238.17,
-                240.32
+                240.32,
+                240.97
             ]
         },
         "RARE_EARTH": {
-            "price": 91.45,
-            "prev_price": 88.99,
-            "daily_chg": 2.76,
-            "change_percent": -0.51,
-            "trend": "UP",
+            "price": 89.65,
+            "prev_price": 91.45,
+            "daily_chg": -1.97,
+            "change_percent": 2.81,
+            "trend": "DOWN",
             "sparkline": [
-                89.18,
                 89.51,
                 92.84,
                 95.58,
@@ -1713,17 +1713,17 @@
                 87.2,
                 89.7,
                 88.99,
-                91.45
+                91.45,
+                89.65
             ]
         },
         "CYBER": {
-            "price": 65.93,
-            "prev_price": 65.54,
-            "daily_chg": 0.6,
-            "change_percent": -2.5,
-            "trend": "UP",
+            "price": 65.82,
+            "prev_price": 65.93,
+            "daily_chg": -0.16,
+            "change_percent": 1.11,
+            "trend": "DOWN",
             "sparkline": [
-                71.91,
                 69.98,
                 70.07,
                 70.65,
@@ -1744,14 +1744,15 @@
                 65.1,
                 66.83,
                 65.54,
-                65.93
+                65.93,
+                65.82
             ]
         },
         "GBPUSD": {
             "price": 0.74,
             "prev_price": 0.74,
             "daily_chg": 0.73,
-            "change_percent": 1.14,
+            "change_percent": 1.15,
             "trend": "UP",
             "sparkline": [
                 0.74,
@@ -1781,8 +1782,8 @@
         "AUDUSD": {
             "price": 1.42,
             "prev_price": 1.41,
-            "daily_chg": 0.43,
-            "change_percent": 0.49,
+            "daily_chg": 0.55,
+            "change_percent": 0.61,
             "trend": "UP",
             "sparkline": [
                 1.49,
@@ -1812,8 +1813,8 @@
         "USDCAD": {
             "price": 1.37,
             "prev_price": 1.36,
-            "daily_chg": 0.4,
-            "change_percent": 0.6,
+            "daily_chg": 0.43,
+            "change_percent": 0.63,
             "trend": "UP",
             "sparkline": [
                 1.38,
@@ -1874,8 +1875,8 @@
         "USDCHF": {
             "price": 0.77,
             "prev_price": 0.77,
-            "daily_chg": 0.62,
-            "change_percent": 0.7,
+            "daily_chg": 0.6,
+            "change_percent": 0.69,
             "trend": "UP",
             "sparkline": [
                 0.79,
@@ -1904,7 +1905,7 @@
         },
         "MOVE": {
             "price": 64.19,
-            "change_percent": -6.75,
+            "change_percent": -6.76,
             "trend": "NORMAL",
             "sparkline": [
                 66.67,
@@ -1931,7 +1932,7 @@
             ]
         },
         "BREADTH": {
-            "price": 0.87,
+            "price": 0.56,
             "change_percent": 0.0,
             "trend": "BROAD",
             "sparkline": [
@@ -1955,11 +1956,12 @@
                 1.86,
                 2.85,
                 2.51,
-                2.53
+                2.53,
+                2.45
             ]
         },
         "SPY_MOMENTUM": {
-            "price": -0.87,
+            "price": -0.56,
             "change_percent": 0,
             "trend": "BALANCED",
             "sparkline": [
@@ -2036,19 +2038,19 @@
     "beacons": {
         "recession": {
             "name": "Recession (Yield Curve)",
-            "value": 0.496,
+            "value": 0.492,
             "status": "safe",
-            "display": "0.5%"
+            "display": "0.49%"
         },
         "panic": {
             "name": "Panic (VIX/VIX3M)",
-            "value": 0.959,
-            "status": "warning",
-            "display": "0.96x"
+            "value": 0.934,
+            "status": "safe",
+            "display": "0.93x"
         },
         "credit": {
             "name": "Credit (HYG/IEF Z)",
-            "value": -0.0,
+            "value": -0.04,
             "status": "safe",
             "display": "-0.0σ"
         }
@@ -2352,127 +2354,127 @@
             },
             {
                 "date": "2026-02-19",
-                "x": -34.32,
-                "y": -52.64
+                "x": -39.96,
+                "y": -54.31
             }
         ],
         "current_vector": {
             "date": "2026-02-19",
-            "x": -34.32,
-            "y": -52.64
+            "x": -39.96,
+            "y": -54.31
         },
         "current_satellites": [
             {
                 "id": "SPY",
                 "label": "SPY",
-                "x": 19.83,
+                "x": 16.49,
                 "y": 0.0,
-                "z": 0.44
+                "z": 0.37
             },
             {
                 "id": "QQQ",
                 "label": "QQQ",
-                "x": -55.49,
+                "x": -59.56,
                 "y": -0.0,
-                "z": -1.03
+                "z": -1.1
             },
             {
                 "id": "IWM",
                 "label": "IWM",
-                "x": 53.89,
+                "x": 51.27,
                 "y": 0.0,
-                "z": 1.2
+                "z": 1.14
             },
             {
                 "id": "BTC",
                 "label": "BTC",
-                "x": -74.12,
-                "y": 46.32,
-                "z": -2.06
+                "x": -72.92,
+                "y": 45.58,
+                "z": -2.03
             },
             {
                 "id": "GOLD",
                 "label": "GOLD",
-                "x": -143.17,
+                "x": -148.18,
                 "y": 0.0,
-                "z": 1.59
+                "z": 1.65
             },
             {
                 "id": "COPPER",
                 "label": "COPPER",
-                "x": 55.16,
+                "x": 57.99,
                 "y": 0.0,
-                "z": 0.61
+                "z": 0.64
             },
             {
                 "id": "TIP",
                 "label": "TIP",
                 "x": 0.0,
-                "y": 189.72,
-                "z": 2.11
+                "y": 184.3,
+                "z": 2.05
             },
             {
                 "id": "IEF",
                 "label": "IEF",
                 "x": 0.0,
-                "y": -212.31,
-                "z": 2.36
+                "y": -207.39,
+                "z": 2.3
             },
             {
                 "id": "US10Y",
                 "label": "US10Y",
                 "x": -0.0,
-                "y": -39.04,
-                "z": -0.58
+                "y": -44.5,
+                "z": -0.66
             },
             {
                 "id": "DXY",
                 "label": "DXY",
-                "x": 36.57,
-                "y": -30.48,
-                "z": -0.68
+                "x": 31.53,
+                "y": -26.27,
+                "z": -0.58
             },
             {
                 "id": "BIL",
                 "label": "BIL",
-                "x": -110.42,
-                "y": 58.89,
-                "z": 1.64
+                "x": -111.76,
+                "y": 59.6,
+                "z": 1.66
             },
             {
                 "id": "XLK",
                 "label": "XLK",
-                "x": -54.83,
-                "y": 18.28,
-                "z": -1.02
+                "x": -60.9,
+                "y": 20.3,
+                "z": -1.13
             },
             {
                 "id": "XLE",
                 "label": "XLE",
-                "x": 53.03,
+                "x": 56.35,
                 "y": 0.0,
-                "z": 2.36
+                "z": 2.5
             },
             {
                 "id": "XLF",
                 "label": "XLF",
-                "x": -25.68,
-                "y": -19.26,
-                "z": -0.71
+                "x": -37.49,
+                "y": -28.12,
+                "z": -1.04
             },
             {
                 "id": "XLV",
                 "label": "XLV",
-                "x": -25.67,
+                "x": -20.32,
                 "y": 0.0,
-                "z": 0.95
+                "z": 0.75
             },
             {
                 "id": "XLI",
                 "label": "XLI",
-                "x": 75.96,
+                "x": 78.91,
                 "y": 0.0,
-                "z": 2.11
+                "z": 2.19
             },
             {
                 "id": "XLB",
@@ -2484,81 +2486,81 @@
             {
                 "id": "XLY",
                 "label": "XLY",
-                "x": -35.8,
+                "x": -45.63,
                 "y": -0.0,
-                "z": -0.8
+                "z": -1.01
             },
             {
                 "id": "XLP",
                 "label": "XLP",
-                "x": -73.1,
+                "x": -75.3,
                 "y": 0.0,
-                "z": 2.03
+                "z": 2.09
             },
             {
                 "id": "XLU",
                 "label": "XLU",
-                "x": -66.53,
-                "y": -66.53,
-                "z": 1.85
+                "x": -76.04,
+                "y": -76.04,
+                "z": 2.11
             },
             {
                 "id": "XLRE",
                 "label": "XLRE",
                 "x": 0.0,
-                "y": -90.1,
-                "z": 2.5
+                "y": -87.53,
+                "z": 2.43
             },
             {
                 "id": "EEM",
                 "label": "EEM",
-                "x": 68.97,
+                "x": 65.4,
                 "y": 0.0,
-                "z": 1.92
+                "z": 1.82
             },
             {
                 "id": "FXI",
                 "label": "FXI",
-                "x": -20.2,
+                "x": -27.28,
                 "y": -0.0,
-                "z": -0.75
+                "z": -1.01
             },
             {
                 "id": "USO",
                 "label": "USO",
-                "x": 52.17,
+                "x": 56.92,
                 "y": 0.0,
-                "z": 2.32
+                "z": 2.53
             },
             {
                 "id": "SLV",
                 "label": "SLV",
                 "x": 0.0,
                 "y": 0.0,
-                "z": 0.49
+                "z": 0.54
             },
             {
                 "id": "JNK",
                 "label": "JNK",
                 "x": 0.0,
-                "y": -61.14,
-                "z": 1.36
+                "y": -59.31,
+                "z": 1.32
             },
             {
                 "id": "TLT",
                 "label": "TLT",
-                "x": -33.31,
-                "y": -99.92,
-                "z": 1.48
+                "x": -31.97,
+                "y": -95.91,
+                "z": 1.42
             }
         ],
         "history_length": 60,
         "system": "moving_fortress"
     },
-    "last_successful_update": "2026-02-19T13:42:40.894817+00:00",
-    "gms_score": 50,
+    "last_successful_update": "2026-02-19T15:04:54.896543+00:00",
+    "gms_score": 52,
     "sector_scores": {
-        "STOCKS": 53,
+        "STOCKS": 62,
         "CRYPTO": 35,
         "FOREX": 41,
         "COMMODITIES": 44,
@@ -2613,24 +2615,20 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "Neutrality persists amid rising volatility risks. Current GMS at 50 mandates strategic neutrality as the fiscal-monetary nexus faces stagnation in net liquidity. While equity indices demonstrate residual resilience, the escalation in the VIX to 20.48 indicates a regime degradation characterized by increasing tail-risk. Negative copper-gold divergence signals a cyclical deceleration that offsets crypto-asset exuberance. Await the resolution of volatility convexity. [ACTION: WAIT FOR PULLBACK]",
+        "content": "Fragile equilibrium necessitates strategic caution. The GMS 52 print indicates a regime transition where liquidity convexity is challenged by DXY strength and VIX expansion. While credit spread compression suggests nominal solvency, the negative delta in global equities and copper’s depreciation signal pro-cyclical degradation. The fiscal-monetary nexus is strained by the trade deficit, amplifying volatility-induced re-rating risks. Tactical pruning is mandatory to mitigate tail-risk. [ACTION: WAIT FOR PULLBACK]",
         "reports": {
-            "JP": "ボラティリティの上昇に伴い戦略的中立を維持すべきです。50というGMSスコアは、ネットリクイディティの停滞と財政・金融ネクサスの硬直化を反映しています。VIXの20.48への上昇はテールリスクの拡大を露呈させており、銅の価格下落は景気循環の減速を裏付けています。暗号資産の過熱感はボラティリティの凸性によって相殺されるため、リスクプレミアムの再評価が完了するまで待機が賢明です。[ACTION: WAIT FOR PULLBACK]",
-            "EN": "Neutrality persists amid rising volatility risks. Current GMS at 50 mandates strategic neutrality as the fiscal-monetary nexus faces stagnation in net liquidity. While equity indices demonstrate residual resilience, the escalation in the VIX to 20.48 indicates a regime degradation characterized by increasing tail-risk. Negative copper-gold divergence signals a cyclical deceleration that offsets crypto-asset exuberance. Await the resolution of volatility convexity. [ACTION: WAIT FOR PULLBACK]",
-            "CN": "中性区间波动风险加剧，市场进入谨慎防御阶段。GMS处于50平衡点，财政与货币流动性联结陷入停滞。VIX攀升至20.48预示着制度性退化与尾部风险扩张，铜价下跌进一步证实了周期性减速压力。尽管加密资产情绪亢奋，但流动性凸性的缺失要求投资者在风险溢价重新定价完成前保持观望，避免在波动率释放初期盲目扩张敞口。[ACTION: WAIT FOR PULLBACK]",
-            "ES": "La neutralidad persiste ante el aumento del riesgo. El GMS de 50 dicta cautela estratégica mientras el nexo fiscal-monetario enfrenta un estancamiento en la liquidez neta. La escalada del VIX a 20.48 indica una degradación del régimen con expansión del riesgo de cola. La divergencia negativa del cobre señala una desaceleración cíclica que neutraliza la exuberancia de los criptoactivos. Es imperativo esperar la resolución de la convexidad antes de actuar. [ACTION: WAIT FOR PULLBACK]",
-            "HI": "बढ़ते अस्थिरता जोखिमों के बीच तटस्थता बनी हुई है। 50 का GMS स्कोर रणनीतिक तटस्थता का आदेश देता है क्योंकि शुद्ध तरलता में स्थिरता बनी हुई है। VIX का 20.48 तक बढ़ना टेल-रिस्क के विस्तार के साथ शासन के क्षरण का संकेत देता है। तांबे में गिरावट चक्रीय मंदी की पुष्टि करती है जो क्रिप्टो-परिसंपत्ति के उत्साह को संतुलित करती है। पूंजी तैनाती से पहले अस्थिरता उत्तलता के समाधान की प्रतीक्षा करना अनिवार्य है। [ACTION: WAIT FOR PULLBACK]",
-            "ID": "Netralitas bertahan di tengah risiko volatilitas. Skor GMS 50 memandatkan kehati-hatian strategis saat neksus fiskal-moneter menghadapi stagnasi likuiditas bersih. Eskalasi VIX ke 20,48 mengindikasikan degradasi rezim dengan perluasan risiko ekor. Divergensi negatif tembaga mensinyalkan perlambatan siklikal yang menetralkan eksuberansi kripto. Resolusi konveksitas volatilitas sangat penting sebelum melakukan ekspansi durasi atau kredit. [ACTION: WAIT FOR PULLBACK]",
-            "AR": "الحياد يسود مع تزايد مخاطر التقلبات السعرية. يفرض مؤشر GMS البالغ 50 حياداً استراتيجياً مع ركود السيولة الصافية في النظام المالي. يشير تصاعد VIX إلى 20.48 إلى تدهور النظام وتوسع مخاطر التذييل الحادة. يؤكد تباعد النحاس السلبي تباطؤاً دورياً يلغي تأثير ابتهاج الأصول المشفرة. من الضروري انتظار حل تحدب التقلبات قبل زيادة التعرض للمخاطر لضمان الحفاظ على رأس المال في ظل الظروف الراهنة. [ACTION: WAIT FOR PULLBACK]",
-            "DE": "Strategische Neutralität angesichts erhöhter Volatilität. Ein GMS von 50 erzwingt Zurückhaltung, da der fiskalisch-monetäre Nexus bei der Nettoliquidität stagniert. Der Anstieg des VIX auf 20,48 signalisiert eine Regime-Degradierung und wachsende Tail-Risiken. Die negative Kupfer-Gold-Divergenz deutet auf eine zyklische Verlangsamung hin, die die spekulative Krypto-Exuberanz neutralisiert. Vor einer Ausweitung der Risikopositionen muss die Volatilitätskonvexität abklingen. [ACTION: WAIT FOR PULLBACK]",
-            "FR": "La neutralité s'impose face aux risques de volatilité. Le score GMS de 50 dicte une neutralité stratégique alors que le nexus fiscaux-monétaire stagne en termes de liquidité nette. L'escalade du VIX à 20,48 marque une dégradation du régime par l'expansion du risque de queue. La divergence négative du cuivre signale une décélération cyclique neutralisant l'exubérance des crypto-actifs. La résolution de la convexité de la volatilité est requise avant tout déploiement. [ACTION: WAIT FOR PULLBACK]"
+            "JP": "脆弱な均衡は戦略的な警戒を不可欠とする。GMS 52は流動性の凸性がドル高とVIX拡大により毀損される局面への移行を示唆している。クレジットスプレッドの縮小は表面的なソルベンシーを維持しているが、銅の減価と世界的な負のデルタは景気循環の退行を裏付けている。巨額の貿易赤字は財政・金融ネクサスに圧力をかけ、ボラティリティ主導のリレーティングリスクを増大させる。テールリスク回避のため戦術的縮小を断行すべきである。[ACTION: WAIT FOR PULLBACK]",
+            "EN": "Fragile equilibrium necessitates strategic caution. The GMS 52 print indicates a regime transition where liquidity convexity is challenged by DXY strength and VIX expansion. While credit spread compression suggests nominal solvency, the negative delta in global equities and copper’s depreciation signal pro-cyclical degradation. The fiscal-monetary nexus is strained by the trade deficit, amplifying volatility-induced re-rating risks. Tactical pruning is mandatory to mitigate tail-risk. [ACTION: WAIT FOR PULLBACK]",
+            "CN": "脆弱的均衡要求采取战略性审慎态度。GMS 52 表明流动性凸性正面临美元走强和 VIX 扩张的严峻挑战。虽然信用利差压缩显示了名义上的偿付能力，但全球股市的负 delta 和铜价贬值预示着顺周期动量的衰减。巨额贸易赤字给财政货币纽带带来压力，加剧了波动性诱发的估值重整风险。必须进行战术性减仓以规避尾部风险，等待更有利的进入点。[ACTION: WAIT FOR PULLBACK]",
+            "ES": "El equilibrio frágil exige una cautela estratégica. El GMS 52 señala una transición de régimen donde la convexidad de la liquidez es desafiada por la fortaleza del DXY y la expansión del VIX. Aunque la compresión de los diferenciales de crédito sugiere solvencia nominal, el delta negativo en las acciones globales y la depreciación del cobre señalan una degradación procíclica. El nexo fiscal-monetario se tensa por el déficit comercial, amplificando el riesgo de revalorización por volatilidad. [ACTION: WAIT FOR PULLBACK]",
+            "HI": "नाजुक संतुलन के लिए रणनीतिक सावधानी अनिवार्य है। GMS 52 शासन परिवर्तन का संकेत देता है जहां DXY की मजबूती और VIX विस्तार से तरलता उत्तलता को चुनौती मिल रही है। हालांकि क्रेडिट स्प्रेड संकुचन नाममात्र की शोधनक्षमता का सुझाव देता है, वैश्विक इक्विटी में नकारात्मक डेल्टा और तांबे का मूल्यह्रास चक्रीय गिरावट का संकेत देते हैं। राजकोषीय-मौद्रिक संबंध व्यापार घाटे से तनावपूर्ण है, जिससे अस्थिरता-प्रेरित जोखिम बढ़ रहा है। टेल-रिस्क को कम करने के लिए सामरिक कटौती आवश्यक है। [ACTION: WAIT FOR PULLBACK]",
+            "ID": "Ekuilibrium yang rapuh memerlukan kehati-hatian strategis. Cetakan GMS 52 menunjukkan transisi rezim di mana konveksitas likuiditas ditantang oleh penguatan DXY dan ekspansi VIX. Meskipun kompresi spread kredit menunjukkan solvensi nominal, delta negatif dalam ekuitas global dan depresiasi tembaga menandakan degradasi pro-siklus. Nexus fiskal-moneter tertekan oleh defisit perdagangan, memperkuat risiko re-rating akibat volatilitas. Pemangkasan taktis wajib dilakukan guna mitigasi risiko. [ACTION: WAIT FOR PULLBACK]",
+            "AR": "التوازن الهش يستلزم الحذر الاستراتيجي الصارم. تشير قراءة GMS 52 إلى انتقال النظام حيث تتعرض تحدبات السيولة لضغوط ناتجة عن قوة الدولار وتوسع مؤشر VIX. ورغم أن انضغاط هوامش الائتمان يشير إلى ملاءة اسمية، إلا أن الدلتا السلبية في الأسهم العالمية وتدهور النحاس ينذران بتدهور دوري. تضغط العجوزات التجارية على الرابط المالي والنقدي، مما يضخم مخاطر إعادة التقييم المدفوعة بالتقلبات. يجب تقليص المراكز التكتيكية للتخفيف من مخاطر الذيل المرتفعة حالياً. [ACTION: WAIT FOR PULLBACK]",
+            "DE": "Fragiles Gleichgewicht erzwingt strategische Vorsicht. Der GMS-Wert von 52 signalisiert einen Regimewechsel, bei dem die Liquiditätskonvexität durch DXY-Stärke und VIX-Expansion herausgefordert wird. Während die Kompression der Credit Spreads nominale Solvenz suggeriert, deuten das negative Delta der globalen Aktien und die Kupferabwertung auf eine prozyklische Degradation hin. Der fiskal-monetäre Nexus wird durch das Handelsdefizit belastet, was das Risiko einer volatilitätsinduzierten Neubewertung erhöht. [ACTION: WAIT FOR PULLBACK]",
+            "FR": "L'équilibre fragile impose une prudence stratégique. Le score GMS 52 indique une transition de régime où la convexité de la liquidité est défiée par la force du DXY et l'expansion du VIX. Bien que la compression des spreads de crédit suggère une solvabilité nominale, le delta négatif des actions mondiales et la dépréciation du cuivre signalent une dégradation pro-cyclique. Le nexus fiscalo-monétaire est tendu par le déficit commercial, amplifiant le risque de réévaluation induit par la volatilité. [ACTION: WAIT FOR PULLBACK]"
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-16T20:48:19Z",
-            "score": 49
-        },
         {
             "date": "2026-02-16T21:42:12Z",
             "score": 49
@@ -2866,14 +2864,18 @@
         {
             "date": "2026-02-19T13:42:40Z",
             "score": 50
+        },
+        {
+            "date": "2026-02-19T15:04:54Z",
+            "score": 52
         }
     ],
     "intelligence": {
         "news": [
             {
-                "title": "Walmart reports strong holiday growth, but earnings outlook falls short of estimates",
-                "link": "https://www.cnbc.com/2026/02/19/walmart-wmt-q4-2026-earnings.html",
-                "isoDate": "2026-02-19T13:11:10+00:00Z"
+                "title": "U.S. trade deficit totaled $901 billion in 2025 despite Trump's tariffs",
+                "link": "https://www.cnbc.com/2026/02/19/us-trade-deficit-totaled-901-billion-in-2025-despite-trumps-tariffs.html",
+                "isoDate": "2026-02-19T14:55:29+00:00Z"
             },
             {
                 "title": "King Charles' brother Andrew arrested on suspicion of misconduct",
@@ -2886,88 +2888,88 @@
                 "isoDate": "2026-02-19T12:55:53+00:00Z"
             },
             {
-                "title": "Small furniture retailers face existential tariff threat, regardless of Supreme Court ruling",
-                "link": "https://www.cnbc.com/2026/02/19/supreme-court-tariffs-furniture-retailers-threat.html",
-                "isoDate": "2026-02-19T13:00:02+00:00Z"
+                "title": "Stocks slide as traders assess Walmart earnings, potential Iran conflict: Live updates",
+                "link": "https://www.cnbc.com/2026/02/18/stock-market-today-live-updates.html",
+                "isoDate": "2026-02-19T14:52:42+00:00Z"
             },
             {
-                "title": "Here are Thursday's biggest analyst calls: Nvidia, Dell, Chewy, Verizon, DoorDash, Carvana, Palantir & more",
-                "link": "https://www.cnbc.com/2026/02/19/thursday-stocks-from-analyst-calls-include-nvidia-dell-chewy.html",
-                "isoDate": "2026-02-19T13:27:39+00:00Z"
+                "title": "Walmart reports strong holiday growth, but earnings outlook falls short of estimates",
+                "link": "https://www.cnbc.com/2026/02/19/walmart-wmt-q4-2026-earnings.html",
+                "isoDate": "2026-02-19T14:51:26+00:00Z"
             },
             {
-                "title": "Why New Balance's 'dad shoes' are beating Nike as sales surge 19%",
-                "link": "https://www.cnbc.com/2026/02/19/new-balance-2025-sales-jump-19percent-as-brand-takes-share-from-nike.html",
-                "isoDate": "2026-02-19T13:30:01+00:00Z"
+                "title": "How the stock market typically reacts to geopolitical conflicts",
+                "link": "https://www.cnbc.com/2026/02/19/how-the-stock-market-typically-reacts-to-geopolitical-conflicts.html",
+                "isoDate": "2026-02-19T14:18:23+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "ウォルマート、ホリデーシーズンの好調な成長を報告も、決算見通しは予測を下回る",
+                "トランプ関税にもかかわらず、2025年の米国貿易赤字は9010億ドルに達する",
                 "チャールズ国王の弟アンドリュー王子、不正行為の疑いで逮捕",
-                "ユナイテッド航空、マイレージプラス改革でクレジットカード非保有者の特典を削減へ",
-                "中小家具小売業者、最高裁判決に関わらず存亡の危機に瀕する関税の脅威に直面",
-                "木曜日の主要アナリスト評価：Nvidia、Dell、Chewy、Verizon、DoorDash、Carvana、Palantirなど",
-                "ニューバランスの「ダッドシューズ」がナイキを凌駕する理由：売上19％増"
+                "ユナイテッド航空、マイレージプラス刷新でクレジットカード非会員への特典を削減",
+                "ウォルマートの決算、イラン紛争の可能性を投資家が分析し株価下落：ライブ速報",
+                "ウォルマート、ホリデーシーズンの好調な成長を報告、ただし決算見通しは予想を下回る",
+                "株式市場は地政学的紛争に通常どのように反応するか"
             ],
             "CN": [
-                "沃尔玛报告假日季强劲增长，但盈利预期低于估计",
-                "英国国王查尔斯三世的弟弟安德鲁王子涉嫌不当行为被捕",
-                "联合航空在 MileagePlus 改革中缩减对没有其信用卡的旅客的奖励",
-                "小型家具零售商面临生存危机，无视最高法院裁决，受关税威胁",
-                "周四最大的分析师评级：英伟达、戴尔、Chewy、Verizon、DoorDash、Carvana、Palantir 等",
-                "为什么新百伦的“老爹鞋”销量激增19%而击败耐克"
+                "尽管特朗普关税生效，美国2025年贸易逆差仍达9010亿美元",
+                "英王查尔斯三世的弟弟安德鲁王子因涉嫌不当行为被捕",
+                "联合航空在MileagePlus改革中削减非信用卡持有者的奖励",
+                "股市下跌，交易员评估沃尔玛财报和潜在伊朗冲突：实时更新",
+                "沃尔玛报告假日季强劲增长，但盈利预期未能达到估计",
+                "股市通常如何应对地缘政治冲突"
             ],
             "ES": [
-                "Walmart reporta un fuerte crecimiento navideño, pero las perspectivas de ganancias no cumplen las estimaciones",
-                "El hermano del rey Carlos, Andrew, arrestado bajo sospecha de mala conducta",
-                "United Airlines está reduciendo las recompensas para los viajeros que no tienen su tarjeta de crédito en la remodelación de MileagePlus",
-                "Los pequeños minoristas de muebles enfrentan una amenaza existencial de aranceles, independientemente del fallo de la Corte Suprema",
-                "Aquí están las mayores llamadas de analistas del jueves: Nvidia, Dell, Chewy, Verizon, DoorDash, Carvana, Palantir y más",
-                "Por qué los 'zapatos de papá' de New Balance están superando a Nike con un aumento de ventas del 19%"
+                "El déficit comercial de EE. UU. totalizó $901 mil millones en 2025 a pesar de los aranceles de Trump",
+                "El hermano del rey Carlos, Andrés, arrestado bajo sospecha de mala conducta",
+                "United Airlines está reduciendo las recompensas para los viajeros que no tienen su tarjeta de crédito en la revisión de MileagePlus",
+                "Las acciones caen mientras los operadores evalúan las ganancias de Walmart y el posible conflicto de Irán: actualizaciones en vivo",
+                "Walmart informa un fuerte crecimiento navideño, pero las perspectivas de ganancias no cumplen con las estimaciones",
+                "Cómo reacciona típicamente el mercado de valores a los conflictos geopolíticos"
             ],
             "HI": [
-                "वॉलमार्ट ने छुट्टियों में मजबूत वृद्धि दर्ज की, लेकिन आय का अनुमान अनुमानों से कम रहा",
+                "ट्रम्प के टैरिफ के बावजूद, 2025 में अमेरिका का व्यापार घाटा 901 अरब डॉलर रहा",
                 "किंग चार्ल्स के भाई एंड्रयू को कदाचार के संदेह में गिरफ्तार किया गया",
-                "यूनाइटेड एयरलाइंस माइलेजप्लस ओवरहाल में अपने क्रेडिट कार्ड नहीं रखने वाले यात्रियों के लिए पुरस्कारों को कम कर रही है",
-                "छोटे फर्नीचर खुदरा विक्रेता अस्तित्वगत टैरिफ खतरे का सामना कर रहे हैं, भले ही सुप्रीम कोर्ट का फैसला कुछ भी हो",
-                "यहां गुरुवार को विश्लेषक की सबसे बड़ी कॉल हैं: Nvidia, Dell, Chewy, Verizon, DoorDash, Carvana, Palantir और बहुत कुछ",
-                "न्यू बैलेंस के 'डैड शू' नाइकी को बिक्री में 19% की वृद्धि के साथ क्यों पछाड़ रहे हैं"
+                "यूनाइटेड एयरलाइंस माइलेजप्लस ओवरहाल में अपने क्रेडिट कार्ड नहीं रखने वाले यात्रियों के लिए पुरस्कारों में कटौती कर रही है",
+                "वॉलमार्ट की कमाई और संभावित ईरान संघर्ष का मूल्यांकन करते हुए व्यापारियों के रूप में शेयर गिरते हैं: लाइव अपडेट",
+                "वॉलमार्ट ने छुट्टियों में मजबूत वृद्धि की सूचना दी, लेकिन कमाई का दृष्टिकोण अनुमानों से कम रहा",
+                "शेयर बाजार आमतौर पर भू-राजनीतिक संघर्षों पर कैसे प्रतिक्रिया करता है"
             ],
             "ID": [
-                "Walmart melaporkan pertumbuhan kuat selama liburan, tetapi prospek laba meleset dari perkiraan",
-                "Saudara Raja Charles, Andrew, ditangkap karena dicurigai melakukan pelanggaran",
-                "United Airlines mengurangi imbalan bagi pelancong yang tidak memiliki kartu kreditnya dalam perombakan MileagePlus",
-                "Pengecer furnitur kecil menghadapi ancaman tarif yang mengancam eksistensi, terlepas dari keputusan Mahkamah Agung",
-                "Berikut adalah panggilan analis terbesar hari Kamis: Nvidia, Dell, Chewy, Verizon, DoorDash, Carvana, Palantir & lainnya",
-                "Mengapa 'sepatu ayah' New Balance mengalahkan Nike saat penjualan melonjak 19%"
+                "Defisit perdagangan AS mencapai $901 miliar pada tahun 2025 meskipun ada tarif Trump",
+                "Saudara laki-laki Raja Charles, Andrew, ditangkap atas dugaan pelanggaran",
+                "United Airlines mengurangi hadiah untuk pelancong yang tidak memiliki kartu kreditnya dalam perombakan MileagePlus",
+                "Saham merosot saat pedagang menilai pendapatan Walmart, potensi konflik Iran: Pembaruan langsung",
+                "Walmart melaporkan pertumbuhan liburan yang kuat, tetapi prospek laba meleset dari perkiraan",
+                "Bagaimana pasar saham biasanya bereaksi terhadap konflik geopolitik"
             ],
             "AR": [
-                "وول مارت تحقق نموًا قويًا في العطلات، لكن توقعات الأرباح تخفق في تلبية التقديرات",
-                "شقيق الملك تشارلز أندرو يُعتقل للاشتباه في سوء السلوك",
-                "يونايتد إيرلاينز تقلص مكافآت المسافرين الذين لا يملكون بطاقة الائتمان الخاصة بها في تعديل MileagePlus",
-                "تجار الأثاث الصغار يواجهون تهديدًا وجوديًا للتعريفة الجمركية، بغض النظر عن حكم المحكمة العليا",
-                "إليك أكبر مكالمات المحللين ليوم الخميس: Nvidia، Dell، Chewy، Verizon، DoorDash، Carvana، Palantir والمزيد",
-                "لماذا تتفوق 'أحذية الأب' من New Balance على Nike مع ارتفاع المبيعات بنسبة 19٪"
+                "بلغ عجز التجارة الأمريكي 901 مليار دولار في عام 2025 على الرغم من تعريفات ترامب",
+                "شقيق الملك تشارلز أندرو يعتقل للاشتباه في سوء السلوك",
+                "تخفض يونايتد إيرلاينز المكافآت للمسافرين الذين لا يملكون بطاقتها الائتمانية في عملية مراجعة MileagePlus",
+                "الأسهم تهبط مع تقييم التجار لأرباح وول مارت وصراع إيران المحتمل: تحديثات مباشرة",
+                "وول مارت تسجل نموًا قويًا في العطلات، لكن توقعات الأرباح تخفق في تحقيق التقديرات",
+                "كيف يتفاعل سوق الأسهم عادة مع الصراعات الجيوسياسية"
             ],
             "DE": [
-                "Walmart meldet starkes Wachstum im Feiertagsgeschäft, aber der Gewinnausblick bleibt hinter den Schätzungen zurück",
+                "Das US-Handelsdefizit belief sich 2025 trotz Trumps Zöllen auf 901 Milliarden US-Dollar",
                 "König Charles' Bruder Andrew wegen des Verdachts des Fehlverhaltens festgenommen",
-                "United Airlines schränkt Prämien für Reisende ein, die ihre Kreditkarte im Rahmen der MileagePlus-Überarbeitung nicht besitzen",
-                "Kleine Möbelhändler sehen sich existenziellen Zollbedrohungen ausgesetzt, unabhängig vom Urteil des Obersten Gerichtshofs",
-                "Hier sind die größten Analysten-Calls vom Donnerstag: Nvidia, Dell, Chewy, Verizon, DoorDash, Carvana, Palantir & mehr",
-                "Warum New Balance's 'Dad Shoes' Nike übertreffen, da der Umsatz um 19% steigt"
+                "United Airlines reduziert Prämien für Reisende, die ihre Kreditkarte im Rahmen der MileagePlus-Überarbeitung nicht besitzen",
+                "Aktien rutschen ab, da Händler Walmart-Ergebnisse und einen potenziellen Iran-Konflikt bewerten: Live-Updates",
+                "Walmart meldet starkes Weihnachts-Wachstum, aber der Ausblick auf die Gewinne bleibt hinter den Schätzungen zurück",
+                "Wie der Aktienmarkt typischerweise auf geopolitische Konflikte reagiert"
             ],
             "FR": [
-                "Walmart annonce une forte croissance pour les fêtes, mais les perspectives de bénéfices sont inférieures aux estimations",
-                "Le frère du roi Charles, Andrew, arrêté pour suspicion d'inconduite",
+                "Le déficit commercial américain s'est élevé à 901 milliards de dollars en 2025 malgré les tarifs de Trump",
+                "Le prince Andrew, frère du roi Charles, arrêté pour suspicion d'inconduite",
                 "United Airlines réduit les récompenses pour les voyageurs qui ne possèdent pas sa carte de crédit dans le cadre de la refonte de MileagePlus",
-                "Les petits détaillants de meubles sont confrontés à une menace existentielle de droits de douane, quelle que soit la décision de la Cour suprême",
-                "Voici les plus grands appels d'analystes de jeudi : Nvidia, Dell, Chewy, Verizon, DoorDash, Carvana, Palantir et plus encore",
-                "Pourquoi les 'chaussures de papa' de New Balance battent Nike avec une augmentation des ventes de 19%"
+                "Les actions chutent alors que les traders évaluent les bénéfices de Walmart et le potentiel conflit iranien : mises à jour en direct",
+                "Walmart rapporte une forte croissance pendant les fêtes, mais les perspectives de bénéfices ne répondent pas aux estimations",
+                "Comment le marché boursier réagit généralement aux conflits géopolitiques"
             ]
         },
-        "last_updated": "2026-02-19T13:42:40.894232+00:00Z"
+        "last_updated": "2026-02-19T15:04:54.895977+00:00Z"
     },
     "system_status": "OPERATIONAL",
     "beacons_history": [
@@ -4993,6 +4995,21 @@
             },
             "credit": {
                 "value": -0.0,
+                "status": "safe"
+            }
+        },
+        {
+            "timestamp": "2026-02-19T15:05:05.876480+00:00",
+            "recession": {
+                "value": 0.492,
+                "status": "safe"
+            },
+            "panic": {
+                "value": 0.934,
+                "status": "safe"
+            },
+            "credit": {
+                "value": -0.04,
                 "status": "safe"
             }
         }
