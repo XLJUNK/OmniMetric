@@ -1,10 +1,10 @@
 {
-    "last_updated": "2026-02-19T05:13:49.807728+00:00",
-    "last_successful_update": "2026-02-19T05:13:49.807735+00:00",
-    "gms_score": 50,
+    "last_updated": "2026-02-19T06:41:35.701839+00:00",
+    "last_successful_update": "2026-02-19T06:41:35.701846+00:00",
+    "gms_score": 51,
     "sector_scores": {
         "STOCKS": 50,
-        "CRYPTO": 35,
+        "CRYPTO": 44,
         "FOREX": 41,
         "COMMODITIES": 53,
         "GLOBAL_INDICES": 50,
@@ -553,10 +553,10 @@
             ]
         },
         "NIFTY": {
-            "price": 25726.45,
+            "price": 25628.15,
             "prev_price": 25819.35,
-            "daily_chg": -0.36,
-            "change_percent": 1.0,
+            "daily_chg": -0.74,
+            "change_percent": 0.62,
             "trend": "DOWN",
             "sparkline": [
                 25232.5,
@@ -580,17 +580,16 @@
                 25682.75,
                 25725.4,
                 25819.35,
-                25726.45
+                25628.15
             ]
         },
         "BTC": {
-            "price": 66705.17,
-            "prev_price": 67494.22,
-            "daily_chg": -1.17,
-            "change_percent": -4.39,
-            "trend": "DOWN",
+            "price": 67108.46,
+            "prev_price": 66425.32,
+            "daily_chg": 1.03,
+            "change_percent": -2.44,
+            "trend": "UP",
             "sparkline": [
-                89184.57,
                 84561.59,
                 84128.66,
                 78621.12,
@@ -611,17 +610,17 @@
                 68788.19,
                 68843.16,
                 67494.22,
-                66705.17
+                66425.32,
+                67108.46
             ]
         },
         "ETH": {
-            "price": 1966.74,
-            "prev_price": 1992.19,
-            "daily_chg": -1.28,
-            "change_percent": -5.72,
-            "trend": "DOWN",
+            "price": 1979.47,
+            "prev_price": 1953.97,
+            "daily_chg": 1.3,
+            "change_percent": 0.68,
+            "trend": "UP",
             "sparkline": [
-                3006.61,
                 2818.23,
                 2702.38,
                 2445.09,
@@ -642,17 +641,17 @@
                 1966.04,
                 1997.92,
                 1992.19,
-                1966.74
+                1953.97,
+                1979.47
             ]
         },
         "SOL": {
-            "price": 81.59,
-            "prev_price": 85.2,
-            "daily_chg": -4.23,
-            "change_percent": -7.45,
-            "trend": "DOWN",
+            "price": 82.31,
+            "prev_price": 81.57,
+            "daily_chg": 0.91,
+            "change_percent": -4.29,
+            "trend": "UP",
             "sparkline": [
-                125.12,
                 117.61,
                 117.36,
                 105.44,
@@ -673,15 +672,16 @@
                 86.01,
                 86.43,
                 85.2,
-                81.59
+                81.57,
+                82.31
             ]
         },
         "DXY": {
-            "price": 97.76,
+            "price": 97.68,
             "prev_price": 97.7,
-            "daily_chg": 0.06,
-            "change_percent": 0.86,
-            "trend": "UP",
+            "daily_chg": -0.02,
+            "change_percent": 0.78,
+            "trend": "DOWN",
             "sparkline": [
                 98.64,
                 98.76,
@@ -704,14 +704,14 @@
                 96.88,
                 97.16,
                 97.7,
-                97.76
+                97.68
             ]
         },
         "USDJPY": {
-            "price": 155.17,
+            "price": 155.09,
             "prev_price": 153.15,
-            "daily_chg": 1.32,
-            "change_percent": 1.54,
+            "daily_chg": 1.26,
+            "change_percent": 1.48,
             "trend": "UP",
             "sparkline": [
                 158.16,
@@ -735,14 +735,14 @@
                 152.78,
                 153.61,
                 153.15,
-                155.17
+                155.09
             ]
         },
         "EURUSD": {
             "price": 1.18,
             "prev_price": 1.19,
-            "daily_chg": -0.51,
-            "change_percent": -0.65,
+            "daily_chg": -0.42,
+            "change_percent": -0.56,
             "trend": "DOWN",
             "sparkline": [
                 1.17,
@@ -770,10 +770,10 @@
             ]
         },
         "USDINR": {
-            "price": 91.05,
+            "price": 91.01,
             "prev_price": 90.63,
-            "daily_chg": 0.47,
-            "change_percent": 0.54,
+            "daily_chg": 0.42,
+            "change_percent": 0.49,
             "trend": "UP",
             "sparkline": [
                 91.12,
@@ -797,7 +797,7 @@
                 90.57,
                 90.78,
                 90.63,
-                91.05
+                91.01
             ]
         },
         "USDSAR": {
@@ -832,10 +832,10 @@
             ]
         },
         "GOLD": {
-            "price": 5006.4,
+            "price": 5019.7,
             "prev_price": 4986.5,
-            "daily_chg": 0.4,
-            "change_percent": 1.68,
+            "daily_chg": 0.67,
+            "change_percent": 1.95,
             "trend": "UP",
             "sparkline": [
                 4759.6,
@@ -859,15 +859,15 @@
                 5022.0,
                 4882.9,
                 4986.5,
-                5006.4
+                5019.7
             ]
         },
         "OIL": {
-            "price": 65.29,
+            "price": 65.18,
             "prev_price": 65.19,
-            "daily_chg": 0.15,
-            "change_percent": 3.9,
-            "trend": "UP",
+            "daily_chg": -0.02,
+            "change_percent": 3.72,
+            "trend": "DOWN",
             "sparkline": [
                 60.34,
                 60.62,
@@ -890,14 +890,14 @@
                 62.89,
                 62.33,
                 65.19,
-                65.29
+                65.18
             ]
         },
         "COPPER": {
-            "price": 5.78,
+            "price": 5.79,
             "prev_price": 5.79,
-            "daily_chg": -0.3,
-            "change_percent": 0.09,
+            "daily_chg": -0.11,
+            "change_percent": 0.28,
             "trend": "DOWN",
             "sparkline": [
                 5.77,
@@ -921,15 +921,15 @@
                 5.79,
                 5.63,
                 5.79,
-                5.78
+                5.79
             ]
         },
         "NATGAS": {
-            "price": 3.02,
+            "price": 3.01,
             "prev_price": 3.01,
-            "daily_chg": 0.3,
-            "change_percent": -6.12,
-            "trend": "UP",
+            "daily_chg": -0.03,
+            "change_percent": -6.43,
+            "trend": "DOWN",
             "sparkline": [
                 3.91,
                 4.88,
@@ -952,14 +952,14 @@
                 3.24,
                 3.03,
                 3.01,
-                3.02
+                3.01
             ]
         },
         "SILVER": {
-            "price": 77.89,
+            "price": 78.07,
             "prev_price": 77.51,
-            "daily_chg": 0.49,
-            "change_percent": 3.1,
+            "daily_chg": 0.72,
+            "change_percent": 3.34,
             "trend": "UP",
             "sparkline": [
                 94.21,
@@ -983,7 +983,7 @@
                 77.85,
                 73.45,
                 77.51,
-                77.89
+                78.07
             ]
         },
         "DAX": {
@@ -1111,10 +1111,10 @@
             ]
         },
         "NIKKEI": {
-            "price": 57522.82,
+            "price": 57453.62,
             "prev_price": 57143.84,
-            "daily_chg": 0.66,
-            "change_percent": 1.02,
+            "daily_chg": 0.54,
+            "change_percent": 0.9,
             "trend": "UP",
             "sparkline": [
                 52991.1,
@@ -1138,7 +1138,7 @@
                 56806.41,
                 56566.49,
                 57143.84,
-                57522.82
+                57453.62
             ]
         },
         "HANGSENG": {
@@ -1204,10 +1204,10 @@
             ]
         },
         "SENSEX": {
-            "price": 83448.3,
+            "price": 83162.65,
             "prev_price": 83734.25,
-            "daily_chg": -0.34,
-            "change_percent": 0.99,
+            "daily_chg": -0.68,
+            "change_percent": 0.65,
             "trend": "DOWN",
             "sparkline": [
                 82180.47,
@@ -1231,7 +1231,7 @@
                 83277.15,
                 83450.96,
                 83734.25,
-                83448.3
+                83162.65
             ]
         },
         "BOVESPA": {
@@ -1266,10 +1266,10 @@
             ]
         },
         "ASX200": {
-            "price": 9081.5,
+            "price": 9086.2,
             "prev_price": 9007.0,
-            "daily_chg": 0.83,
-            "change_percent": 1.84,
+            "daily_chg": 0.88,
+            "change_percent": 1.89,
             "trend": "UP",
             "sparkline": [
                 8815.9,
@@ -1293,7 +1293,7 @@
                 8966.8,
                 8958.9,
                 9007.0,
-                9081.5
+                9086.2
             ]
         },
         "G_REIT": {
@@ -1764,8 +1764,8 @@
         "GBPUSD": {
             "price": 0.74,
             "prev_price": 0.74,
-            "daily_chg": 0.61,
-            "change_percent": 1.02,
+            "daily_chg": 0.49,
+            "change_percent": 0.9,
             "trend": "UP",
             "sparkline": [
                 0.74,
@@ -1795,8 +1795,8 @@
         "AUDUSD": {
             "price": 1.42,
             "prev_price": 1.41,
-            "daily_chg": 0.46,
-            "change_percent": 0.52,
+            "daily_chg": 0.3,
+            "change_percent": 0.35,
             "trend": "UP",
             "sparkline": [
                 1.49,
@@ -1826,8 +1826,8 @@
         "USDCAD": {
             "price": 1.37,
             "prev_price": 1.36,
-            "daily_chg": 0.47,
-            "change_percent": 0.67,
+            "daily_chg": 0.4,
+            "change_percent": 0.6,
             "trend": "UP",
             "sparkline": [
                 1.38,
@@ -1888,8 +1888,8 @@
         "USDCHF": {
             "price": 0.77,
             "prev_price": 0.77,
-            "daily_chg": 0.39,
-            "change_percent": 0.48,
+            "daily_chg": 0.31,
+            "change_percent": 0.39,
             "trend": "UP",
             "sparkline": [
                 0.79,
@@ -2091,24 +2091,20 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "MARKET EQUILIBRIUM AMIDST MONETARY INDECISION. The GMS stagnation at 50 signifies a structural transition toward a neutral regime, necessitated by a bifurcated fiscal-monetary nexus and the exhaustion of liquidity convexity. While equity indices demonstrate persistent asset appreciation, the negative momentum and stagnant net liquidity provide a stark divergence from fundamental valuation. Fed sentiment bifurcation introduces idiosyncratic risk, mandating a tactical pause until liquidity re-injection provides a definitive catalyst. [ACTION: WAIT FOR PULLBACK]",
+        "content": "Equilibrium Fragility: Stagnant Liquidity Pivot. Current GMS at 51 validates a fragile equilibrium within a Phase 2 regime, where credit spread compression lacks the supporting liquidity convexity required for sustained asset appreciation. While risk-on sentiment in digital assets persists, the negative SPY momentum and stagnant net liquidity profile necessitate tactical restraint. The fiscal-monetary nexus remains paralyzed under a flat OGV vector, signaling that current valuations demand a premium reset. [ACTION: WAIT FOR PULLBACK]",
         "reports": {
-            "JP": "金融政策の不透明感に伴う市場均衡の停滞。GMSは50に留まり、流動性のコンベクシティが枯渇する中、二極化した財政・金融ネクサスが中立的レジームへの移行を示唆している。主要指数は資産価値の上昇を維持しているが、モメンタムの負の乖離と流動性の停滞はファンダメンタルズとの乖離を露呈させている。FRB内部の意見対立は固有のリスクプロファイルを増大させ、流動性の再注入がレジームの再拡大を促すまでは戦術的な待機が不可欠である。[ACTION: WAIT FOR PULLBACK]",
-            "EN": "MARKET EQUILIBRIUM AMIDST MONETARY INDECISION. The GMS stagnation at 50 signifies a structural transition toward a neutral regime, necessitated by a bifurcated fiscal-monetary nexus and the exhaustion of liquidity convexity. While equity indices demonstrate persistent asset appreciation, the negative momentum and stagnant net liquidity provide a stark divergence from fundamental valuation. Fed sentiment bifurcation introduces idiosyncratic risk, mandating a tactical pause until liquidity re-injection provides a definitive catalyst. [ACTION: WAIT FOR PULLBACK]",
-            "CN": "货币政策分歧下的市场均衡。GMS停留在50临界点，反映出流动性凸性枯竭及财政货币枢纽分化下的中性体制转型。尽管股指维持资产增值，但负向动量与停滞的净流动性揭示了与基本面的估值背离。美联储内部决策的割裂引入了特异性风险，压制了波动率的修复。在流动性重新注入以驱动体制扩张之前，当前环境要求战略性审慎，必须等待更具吸引力的进入节点。[ACTION: WAIT FOR PULLBACK]",
-            "ES": "EQUILIBRIO DE MERCADO ANTE INDECISIÓN MONETARIA. El estancamiento del GMS en 50 indica una transición estructural hacia un régimen neutral, forzado por un nexo fiscal-monetario bifurcado y el agotamiento de la convexidad de liquidez. Aunque los índices muestran apreciación, el momentum negativo y la liquidez estancada revelan una divergencia fundamental. La división en la Fed introduce riesgos idiosincrásicos, exigiendo una pausa táctica hasta que una nueva inyección de liquidez catalice la expansión del régimen. [ACTION: WAIT FOR PULLBACK]",
-            "HI": "मौद्रिक अनिश्चितता के बीच बाजार संतुलन। 50 पर GMS का ठहराव एक तटस्थ शासन की ओर संरचनात्मक संक्रमण को दर्शाता है, जो राजकोषीय-मौद्रिक नेक्सस के विभाजन और तरलता की कमी के कारण है। जबकि इक्विटी सूचकांक मूल्य वृद्धि दिखाते हैं, नकारात्मक गति और स्थिर शुद्ध तरलता मौलिक मूल्यांकन से विचलन को उजागर करती है। फेड की विभाजित राय विशिष्ट जोखिमों को जन्म देती है, जिससे तरलता के पुन: इंजेक्शन तक रणनीतिक प्रतीक्षा अनिवार्य हो जाती है। [ACTION: WAIT FOR PULLBACK]",
-            "ID": "EKUILIBRIUM PASAR DI TENGAH KERAGUAN MONETER. Stagnasi GMS pada level 50 menandakan transisi struktural menuju rezim netral, didorong oleh neksus fiskal-moneter yang terpecah dan kehabisan konveksitas likuiditas. Meskipun indeks ekuitas menunjukkan apresiasi aset, momentum negatif dan likuiditas bersih yang stagnan memberikan divergensi tajam dari valuasi fundamental. Perpecahan sentimen Fed memperkenalkan risiko idiosinkratik, menuntut jeda taktis hingga re-injeksi likuiditas memicu ekspansi rezim. [ACTION: WAIT FOR PULLBACK]",
-            "AR": "توازن السوق وسط عدم اليقين النقدي. يشير ركود مؤشر GMS عند 50 إلى تحول هيكلي نحو نظام محايد، مدفوعاً بانقسام الربط المالي النقدي واستنفاد تحدب السيولة. ورغم ارتفاع الأصول في مؤشرات الأسهم، فإن الزخم السلبي وركود صافي السيولة يكشفان عن تباين جوهري في التقييم. يؤدي انقسام الاحتياطي الفيدرالي إلى مخاطر خاصة، مما يستوجب توقفاً تكتيكياً حتى توفر إعادة ضخ السيولة حافزاً حاسماً لتوسع النظام. [ACTION: WAIT FOR PULLBACK]",
-            "DE": "MARKTGLEICHGEWICHT BEI MONETÄRER UNENTSCHLOSSENHEIT. Die GMS-Stagnation bei 50 signalisiert einen Übergang zu einem neutralen Regime, bedingt durch einen gespaltenen fiskalisch-monetären Nexus und erschöpfte Liquiditätskonvexität. Trotz Asset-Appreziation in den Aktienindizes offenbaren das negative Momentum und die stagnierende Nettoliquidität fundamentale Divergenzen. Die Uneinigkeit der Fed führt zu idiosynkratischen Risiken, was eine taktische Pause bis zur Liquiditätsrejektion und Regimeexpansion unumgänglich macht. [ACTION: WAIT FOR PULLBACK]",
-            "FR": "ÉQUILIBRE DE MARCHÉ SOUS INDÉCISION MONÉTAIRE. La stagnation du GMS à 50 indique une transition structurelle vers un régime neutre, dictée par un nexus fiscalo-monétaire bifurqué et l'épuisement de la convexité de la liquidité. Bien que les indices actions affichent une appréciation, le momentum négatif et la liquidité nette stagnante signalent une divergence fondamentale. La divergence au sein de la Fed introduit un risque idiosyncrasique, imposant une pause tactique avant une réinjection de liquidité. [ACTION: WAIT FOR PULLBACK]"
+            "JP": "平衡の脆弱性：流動性停滞に伴う転換点の到来。GMS 51は第2フェーズの不安定な均衡を示唆し、ハイイールド・スプレッドの圧縮にも拘らず、持続的資産上昇に必要な流動性の凸性が欠如している。暗号資産のセンチメントは堅調だが、SPYの負のモメンタムと純流動性の停滞は、現在のバリュエーションにおけるプレミアムの再評価を要求する。財政・金融ネクサスは横ばいのOGVベクトルにより硬直化しており、戦術的な待機が至上命令である。[ACTION: WAIT FOR PULLBACK]",
+            "EN": "Equilibrium Fragility: Stagnant Liquidity Pivot. Current GMS at 51 validates a fragile equilibrium within a Phase 2 regime, where credit spread compression lacks the supporting liquidity convexity required for sustained asset appreciation. While risk-on sentiment in digital assets persists, the negative SPY momentum and stagnant net liquidity profile necessitate tactical restraint. The fiscal-monetary nexus remains paralyzed under a flat OGV vector, signaling that current valuations demand a premium reset. [ACTION: WAIT FOR PULLBACK]",
+            "CN": "均衡脆弱性：流动性停滞引发的转折窗口。GMS 51 确认了二阶段体制下的脆弱平衡，尽管信用利差持续压缩，但缺乏支撑资产持续升值的流动性凸性。加密情绪虽高涨，但标普动量转负与净流动性停滞表明当前估值需进行溢价重估。财政与货币政策交织处的 OGV 矢量走平，预示着市场进入整固期，绝对确定的战术性等待是当前的最优选择。[ACTION: WAIT FOR PULLBACK]",
+            "ES": "Fragilidad del Equilibrio: Pivote de Liquidez Estancada. El GMS 51 valida un equilibrio precario en Fase 2, donde la compresión de diferenciales de crédito carece de la convexidad de liquidez necesaria para una apreciación sostenida. El sentimiento cripto persiste, pero el momentum negativo del SPY y el estancamiento de la liquidez neta exigen un reajuste de primas. El nexo fiscal-monetario permanece paralizado bajo un vector OGV plano, dictando una prudencia técnica inmediata ante el agotamiento del impulso. [ACTION: WAIT FOR PULLBACK]",
+            "HI": "संतुलन की नाजुकता: स्थिर तरलता का मुख्य बिंदु। 51 का GMS स्कोर दूसरे चरण के शासन में एक अनिश्चित संतुलन की पुष्टि करता है, जहाँ क्रेडिट स्प्रेड संपीड़न में निरंतर संपत्ति वृद्धि के लिए आवश्यक तरलता उत्तलता का अभाव है। यद्यपि क्रिप्टो भावना सकारात्मक है, SPY की नकारात्मक गति और स्थिर शुद्ध तरलता मूल्यांकन के पुनर्मूल्यांकन की मांग करती है। राजकोषीय-मौद्रिक गठजोड़ एक सपाट OGV वेक्टर के साथ स्थिर बना हुआ है, जो सामरिक प्रतीक्षा को अनिवार्य बनाता है। [ACTION: WAIT FOR PULLBACK]",
+            "ID": "Kerapuhan Keseimbangan: Pivot Likuiditas Stagnan. GMS 51 memvalidasi keseimbangan genting dalam rezim Fase 2, di mana kompresi spread kredit kekurangan konveksitas likuiditas yang diperlukan untuk apresiasi aset berkelanjutan. Meskipun sentimen kripto tetap kuat, momentum negatif SPY dan stagnasi likuiditas bersih mengharuskan penilaian ulang premi risiko. Nexus fiskal-moneter tetap lumpuh dengan vektor OGV yang datar, mendikte perlunya penantian taktis yang absolut untuk optimasi entri. [ACTION: WAIT FOR PULLBACK]",
+            "AR": "هشاشة التوازن: نقطة تحول سيولة راكدة. يؤكد مؤشر GMS 51 توازناً حرجاً في المرحلة الثانية، حيث يفتقر ضغط فروق الائتمان إلى تحدب السيولة اللازم لارتفاع الأصول المستدام. رغم إيجابية مشاعر التشفير، فإن زخم SPY السلبي وركود السيولة الصافية يفرضان إعادة تقييم علاوات المخاطر. يظل الربط المالي النقدي مشلولاً مع استقرار ناقل OGV، مما يتطلب تريثاً تكتيكياً حتمياً قبل أي تخصيص جديد لرأس المال في هذه البيئة عالية التقييم. [ACTION: WAIT FOR PULLBACK]",
+            "DE": "Fragiles Gleichgewicht: Wendepunkt bei stagnierender Liquidität. Ein GMS von 51 signalisiert eine prekäre Phase-2-Stabilität, in der die Kredit-Spread-Kompression ohne die erforderliche Liquiditätskonvexität für dauerhafte Wertsteigerungen bleibt. Trotz positivem Krypto-Sentiment erzwingen das negative SPY-Momentum und stagnierende Nettoliquidität eine Neubewertung der Risikoprämien. Der fiskalisch-monetäre Nexus verharrt bei flachem OGV-Vektor, was taktische Zurückhaltung zur unbedingten Pflicht macht. [ACTION: WAIT FOR PULLBACK]",
+            "FR": "Fragilité de l'Équilibre : Pivot de Liquidité Stagnante. Le GMS 51 valide un équilibre précaire en Phase 2, où la compression des spreads de crédit manque de la convexité de liquidité requise pour une appréciation durable des actifs. Bien que le sentiment crypto reste haussier, le momentum négatif du SPY et la stagnation de la liquidité nette imposent une réévaluation des primes de risque. Le nexus fiscaux-monétaire est paralysé par un vecteur OGV plat, dictant une attente tactique absolue. [ACTION: WAIT FOR PULLBACK]"
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-16T09:10:18Z",
-            "score": 49
-        },
         {
             "date": "2026-02-16T10:10:09Z",
             "score": 49
@@ -2344,14 +2340,18 @@
         {
             "date": "2026-02-19T05:13:49Z",
             "score": 50
+        },
+        {
+            "date": "2026-02-19T06:41:35Z",
+            "score": 51
         }
     ],
     "intelligence": {
         "news": [
             {
-                "title": "Fed officials split on where interest rates should go, minutes say",
-                "link": "https://www.cnbc.com/2026/02/18/fed-minutes-january-2026.html",
-                "isoDate": "2026-02-18T20:19:23+00:00Z"
+                "title": "Mark Zuckerberg said he reached out to Apple CEO Tim Cook to discuss 'wellbeing of teens and kids'",
+                "link": "https://www.cnbc.com/2026/02/18/meta-mark-zuckerberg-social-media-safety-trial.html",
+                "isoDate": "2026-02-19T03:06:26+00:00Z"
             },
             {
                 "title": "Trump order pushes glyphosate production; Roundup chemical hated by MAHA",
@@ -2359,14 +2359,14 @@
                 "isoDate": "2026-02-19T02:03:05+00:00Z"
             },
             {
+                "title": "Quantum's big leap puts data centers in the spotlight",
+                "link": "https://www.cnbc.com/2026/02/19/quantum-computing-data-centers-ai-tech-microsoft.html",
+                "isoDate": "2026-02-19T06:02:01+00:00Z"
+            },
+            {
                 "title": "Trump family says U.S. dollar needs an upgrade, and they are the ones to do it",
                 "link": "https://www.cnbc.com/2026/02/18/trump-eric-don-jr-cryptocurrency-world-liberty-financial.html",
                 "isoDate": "2026-02-18T23:04:36+00:00Z"
-            },
-            {
-                "title": "Mark Zuckerberg said he reached out to Apple CEO Tim Cook to discuss 'wellbeing of teens and kids'",
-                "link": "https://www.cnbc.com/2026/02/18/meta-mark-zuckerberg-social-media-safety-trial.html",
-                "isoDate": "2026-02-19T03:06:26+00:00Z"
             },
             {
                 "title": "Inside David Einhorn's eclectic stock portfolio: The value investor shuns AI in favor of a unique mix of companies",
@@ -2374,78 +2374,78 @@
                 "isoDate": "2026-02-18T21:50:09+00:00Z"
             },
             {
-                "title": "More than 50% of enterprise software could switch to AI, Mistral CEO says",
-                "link": "https://www.cnbc.com/2026/02/18/ai-mistral-software-switch-ceo-india-ai-impact-summit.html",
-                "isoDate": "2026-02-18T08:36:35+00:00Z"
+                "title": "Airbus targets 870 deliveries this year, below estimates as Boeing competition tightens",
+                "link": "https://www.cnbc.com/2026/02/19/airbus-earnings-fy-q4-boeing-deliveries-a320-airbus-2026-boeing-recovery.html",
+                "isoDate": "2026-02-19T05:51:37+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "FRB当局、政策金利の行方巡り意見分かれる－議事要旨",
-                "トランプ氏、グリホサート生産を推進：モンサント（MAHA）は除草剤「ラウンドアップ」を嫌悪",
-                "トランプ一家、米ドルに「アップグレード」必要と主張：自分たちがその役割を担う",
-                "ザッカーバーグ氏、ティム・クック氏（アップルCEO）に連絡：10代・子供の「ウェルビーイング」について協議",
-                "デビッド・アインホーン氏の多様な株式ポートフォリオ：バリュー投資家、AIを避けユニークな企業ミックスを重視",
-                "エンタープライズソフトウェアの50％超がAIに移行する可能性：Mistral CEO"
+                "マーク・ザッカーバーグ氏、ティム・クックApple CEOに接触し「10代や子供たちのウェルビーイング」を議論",
+                "トランプ氏、グリホサート生産を指示。モンサント（MAHA）が嫌う除草剤ラウンドアップ",
+                "量子コンピューティングの飛躍がデータセンターに注目を集める",
+                "トランプ一家、米ドルにはアップグレードが必要だと主張。その任は我々にあると",
+                "デビッド・アインホーン氏の個性的な株式ポートフォリオ：AIを避け、ユニークな企業ミックスを重視するバリュー投資家",
+                "エアバス、今年の納入目標870機。ボーイングとの競争激化で予想を下回る"
             ],
             "CN": [
-                "美联储官员在利率走向问题上意见分歧，会议纪要显示",
-                "特朗普命令推动草甘膦生产；“除草剂”公司MAHA憎恨“草甘膦”",
-                "特朗普家族表示美元需要升级，他们将是实现这一目标的人",
-                "马克·扎克伯格表示已联系苹果CEO蒂姆·库克讨论“青少年和儿童的福祉”",
-                "大卫·艾因霍恩的多元化股票投资组合：价值投资者避开人工智能，偏爱独特的公司组合",
-                "Mistral首席执行官表示，超过50%的企业软件可能转向人工智能"
+                "马克·扎克伯格表示已联系苹果CEO蒂姆·库克，讨论“青少年和儿童的福祉”",
+                "特朗普命令推动草甘膦生产；“非我化”（MAHA）憎恨的除草剂“农达”",
+                "量子计算的巨大飞跃使数据中心成为焦点",
+                "特朗普家族称美元需要升级，他们是执行者",
+                "大卫·艾因霍恩的另类股票投资组合：这位价值投资者避开人工智能，偏爱独特的公司组合",
+                "空中客车公司今年目标交付870架飞机，低于预期，因波音竞争加剧"
             ],
             "ES": [
-                "Funcionarios de la Fed divididos sobre hacia dónde deben ir las tasas de interés, según las minutas",
-                "Orden de Trump impulsa la producción de glifosato; el químico Roundup odiado por MAHA",
-                "Familia Trump dice que el dólar estadounidense necesita una mejora, y ellos son quienes lo harán",
-                "Mark Zuckerberg dijo que contactó al CEO de Apple, Tim Cook, para discutir el 'bienestar de adolescentes y niños'",
-                "Dentro de la ecléctica cartera de acciones de David Einhorn: El inversor de valor rehúye la IA en favor de una mezcla única de empresas",
-                "Más del 50% del software empresarial podría pasar a la IA, dice el CEO de Mistral"
+                "Mark Zuckerberg dijo que se comunicó con el CEO de Apple, Tim Cook, para discutir el 'bienestar de adolescentes y niños'",
+                "Orden de Trump impulsa la producción de glifosato; el químico Roundup, odiado por MAHA",
+                "El gran salto cuántico pone los centros de datos en el punto de mira",
+                "La familia Trump dice que el dólar estadounidense necesita una mejora, y ellos son quienes lo harán",
+                "Dentro de la ecléctica cartera de acciones de David Einhorn: el inversor de valor rehúye la IA en favor de una combinación única de empresas",
+                "Airbus apunta a 870 entregas este año, por debajo de las estimaciones ante la intensificación de la competencia de Boeing"
             ],
             "HI": [
-                "फेड अधिकारियों की ब्याज दरों की दिशा को लेकर राय बंटी, मिनटों में कहा गया",
-                "ट्रम्प का आदेश ग्लाइफोसेट उत्पादन को बढ़ावा देता है; राउंडअप रसायन MAHA द्वारा घृणास्पद",
+                "मार्क जुकरबर्ग ने कहा कि उन्होंने 'किशोरों और बच्चों की भलाई' पर चर्चा के लिए एप्पल के सीईओ टिम कुक से संपर्क किया",
+                "ट्रम्प के आदेश से ग्लाइफोसेट उत्पादन को बढ़ावा; मोंसेंटो (MAHA) द्वारा नफरत वाला राउंडअप रसायन",
+                "क्वांटम की बड़ी छलांग डेटा सेंटरों को सुर्खियों में लाती है",
                 "ट्रम्प परिवार का कहना है कि अमेरिकी डॉलर को अपग्रेड की जरूरत है, और वे इसे करेंगे",
-                "मार्क जुकरबर्ग ने कहा कि उन्होंने 'किशोरों और बच्चों की भलाई' पर चर्चा करने के लिए एप्पल के सीईओ टिम कुक से संपर्क किया",
-                "डेविड एन्हॉर्न के विविध स्टॉक पोर्टफोलियो के अंदर: मूल्य निवेशक AI से बचते हुए कंपनियों का अनूठा मिश्रण पसंद करते हैं",
-                "मिस्ट्रल के सीईओ ने कहा कि 50% से अधिक एंटरप्राइज सॉफ्टवेयर AI में बदल सकता है"
+                "डेविड ईनहॉर्न के विचित्र स्टॉक पोर्टफोलियो के अंदर: वैल्यू निवेशक AI से दूर, कंपनियों के अनूठे मिश्रण का पक्षधर",
+                "एयरबस इस साल 870 डिलीवरी का लक्ष्य, बोइंग की प्रतिस्पर्धा बढ़ने के कारण अनुमानों से नीचे"
             ],
             "ID": [
-                "Pejabat Fed terpecah soal arah suku bunga, kata risalah rapat",
+                "Mark Zuckerberg mengatakan dia menjangkau CEO Apple Tim Cook untuk membahas 'kesejahteraan remaja dan anak-anak'",
                 "Perintah Trump mendorong produksi glifosat; bahan kimia Roundup dibenci oleh MAHA",
-                "Keluarga Trump mengatakan dolar AS perlu ditingkatkan, dan merekalah yang akan melakukannya",
-                "Mark Zuckerberg mengatakan dia menghubungi CEO Apple Tim Cook untuk membahas 'kesejahteraan remaja dan anak-anak'",
-                "Di dalam portofolio saham eklektik David Einhorn: Investor nilai menolak AI demi campuran unik perusahaan",
-                "Lebih dari 50% perangkat lunak perusahaan bisa beralih ke AI, kata CEO Mistral"
+                "Lompatan besar kuantum menempatkan pusat data menjadi sorotan",
+                "Keluarga Trump mengatakan dolar AS membutuhkan peningkatan, dan merekalah yang akan melakukannya",
+                "Di dalam portofolio saham David Einhorn yang unik: Investor nilai menolak AI demi campuran perusahaan yang unik",
+                "Airbus menargetkan 870 pengiriman tahun ini, di bawah perkiraan karena persaingan Boeing semakin ketat"
             ],
             "AR": [
-                "مسؤولون في الاحتياطي الفيدرالي منقسمون حول اتجاه أسعار الفائدة، وفقًا للمحضر",
-                "أمر ترامب يدفع إنتاج الغليفوسات؛ مادة Roundup الكيميائية مكروهة من قبل MAHA",
-                "عائلة ترامب تقول إن الدولار الأمريكي يحتاج إلى ترقية، وهم من سيفعلون ذلك",
-                "قال مارك زوكربيرغ إنه تواصل مع الرئيس التنفيذي لشركة آبل تيم كوك لمناقشة \"رفاهية المراهقين والأطفال\"",
-                "داخل محفظة أسهم ديفيد آينهورن المتنوعة: مستثمر القيمة يتجنب الذكاء الاصطناعي لصالح مزيج فريد من الشركات",
-                "أكثر من 50٪ من برامج المؤسسات قد تتحول إلى الذكاء الاصطناعي، حسب قول الرئيس التنفيذي لشركة Mistral"
+                "قال مارك زوكربيرغ إنه تواصل مع الرئيس التنفيذي لشركة آبل تيم كوك لمناقشة 'رفاهية المراهقين والأطفال'",
+                "أمر ترامب يدفع إنتاج الغليفوسات؛ مادة الر Roundup الكيميائية التي يكرهها MAHA",
+                "قفزة الكم الهائلة تضع مراكز البيانات في دائرة الضوء",
+                "عائلة ترامب تقول إن الدولار الأمريكي يحتاج إلى ترقية، وهم من سيقومون بذلك",
+                "داخل محفظة أسهم ديفيد آينهورن المتنوعة: المستثمر القيمي يتجنب الذكاء الاصطناعي لصالح مزيج فريد من الشركات",
+                "إيرباص تستهدف 870 تسليمًا هذا العام، أقل من التقديرات مع احتدام المنافسة من بوينغ"
             ],
             "DE": [
-                "FED-Beamte uneinig über die künftige Zinspolitik, heißt es in den Protokollen",
-                "Trumps Anordnung treibt Glyphosat-Produktion an; Roundup-Chemikalie von MAHA verabscheut",
-                "Trumps Familie sagt, der US-Dollar brauche ein Upgrade, und sie seien die Richtigen dafür",
-                "Mark Zuckerberg sagte, er habe sich an Apple-CEO Tim Cook gewandt, um über das 'Wohlbefinden von Teenagern und Kindern' zu sprechen",
-                "Einblicke in David Einhorns vielseitiges Aktienportfolio: Der Value-Investor meidet KI zugunsten einer einzigartigen Mischung von Unternehmen",
-                "Mehr als 50 % der Unternehmenssoftware könnten zu KI wechseln, sagt Mistral CEO"
+                "Mark Zuckerberg sagte, er habe sich an Apple-CEO Tim Cook gewandt, um 'das Wohlbefinden von Teenagern und Kindern' zu diskutieren",
+                "Trumps Anordnung treibt Glyphosat-Produktion voran; Roundup-Chemikalie wird von MAHA gehasst",
+                "Quantensprung rückt Rechenzentren ins Rampenlicht",
+                "Trump-Familie sagt, der US-Dollar brauche ein Upgrade, und sie seien diejenigen, die es tun werden",
+                "Einblick in David Einhorns vielseitiges Aktienportfolio: Der Value-Investor meidet KI zugunsten einer einzigartigen Mischung von Unternehmen",
+                "Airbus peilt 870 Auslieferungen in diesem Jahr an, unter den Erwartungen, da der Wettbewerb mit Boeing zunimmt"
             ],
             "FR": [
-                "Les responsables de la Fed divisés sur l'orientation des taux d'intérêt, selon les minutes",
+                "Mark Zuckerberg a déclaré avoir contacté le PDG d'Apple, Tim Cook, pour discuter du 'bien-être des adolescents et des enfants'",
                 "L'ordre de Trump pousse la production de glyphosate ; le produit chimique Roundup détesté par MAHA",
-                "La famille Trump affirme que le dollar américain a besoin d'une mise à niveau, et qu'ils sont les mieux placés pour le faire",
-                "Mark Zuckerberg a déclaré avoir contacté le PDG d'Apple, Tim Cook, pour discuter du « bien-être des adolescents et des enfants »",
-                "Au cœur du portefeuille d'actions éclectique de David Einhorn : l'investisseur axé sur la valeur boude l'IA au profit d'un mélange unique d'entreprises",
-                "Plus de 50 % des logiciels d'entreprise pourraient passer à l'IA, déclare le PDG de Mistral"
+                "Le grand bond quantique met les centres de données sous les feux de la rampe",
+                "La famille Trump affirme que le dollar américain a besoin d'une mise à niveau, et qu'elle est la mieux placée pour le faire",
+                "Dans le portefeuille d'actions éclectique de David Einhorn : L'investisseur de valeur délaisse l'IA au profit d'un mélange unique d'entreprises",
+                "Airbus vise 870 livraisons cette année, en deçà des estimations alors que la concurrence de Boeing se resserre"
             ]
         },
-        "last_updated": "2026-02-19T05:13:49.807136+00:00Z"
+        "last_updated": "2026-02-19T06:41:35.701345+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
