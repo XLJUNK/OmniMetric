@@ -146,7 +146,7 @@ export const GlossaryClient = ({ lang, data, pageTitle, pageDesc, searchItems, s
                                                         {searchItems.some(wiki => wiki.slug === item.id) && (
                                                             <div className="mt-6 pt-4 border-t border-slate-100 dark:border-[#1E293B]">
                                                                 <a
-                                                                    href={`/${lang.toLowerCase()}/wiki/${item.id}`}
+                                                                    href={lang === 'EN' ? `/wiki/${item.id}` : `/${lang.toLowerCase()}/wiki/${item.id}`}
                                                                     className="group/btn relative w-full flex items-center justify-start pl-6 gap-3 py-4 bg-gradient-to-r from-sky-500 to-emerald-500 hover:from-sky-400 hover:to-emerald-400 text-white text-[13px] font-bold uppercase tracking-widest rounded-xl shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 transform hover:-translate-y-0.5 overflow-hidden"
                                                                 >
                                                                     <span className="absolute inset-0 bg-white/20 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></span>
