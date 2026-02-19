@@ -1,13 +1,13 @@
 {
     "TWITTER": {
-        "timestamp": "2026-02-18T23:35:27.189082+00:00",
+        "timestamp": "2026-02-19T08:52:37.581501+00:00",
         "status": "FAILURE",
         "message": "Twitter Error: 403 Forbidden\nYou are not permitted to perform this action."
     },
     "BLUESKY": {
-        "timestamp": "2026-02-19T07:52:14.222326+00:00",
+        "timestamp": "2026-02-19T08:52:37.435621+00:00",
         "status": "SUCCESS",
-        "message": "Success: Posted GMS Score 51 (FR) to Bluesky. Length: 218 chars"
+        "message": "Success: Posted GMS Score 51 (EN) to Bluesky. Length: 207 chars"
     },
     "SYSTEM": {
         "timestamp": "2026-01-24T13:39:34.463086",
@@ -15,7 +15,7 @@
         "message": "Font loading failed (/home/runner/work/OmniMetric/OmniMetric/backend/assets/fonts/NotoSansJP-Bold.ttf): unknown file format. Using PIL default."
     },
     "BEACON": {
-        "timestamp": "2026-02-19T07:52:18.967737+00:00",
+        "timestamp": "2026-02-19T08:52:41.602728+00:00",
         "status": "FAILURE",
         "message": "Failed to publish panic alert (DE): 'BlueskySequencer' object has no attribute 'publish'"
     }
