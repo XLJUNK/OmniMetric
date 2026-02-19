@@ -215,7 +215,7 @@ export default async function MaximsPage({ params }: Props) {
 
                                     {/* Ad Insertion after specific categories if needed */}
                                     {catIndex === 1 && (
-                                        <div className="py-12">
+                                        <div className="py-4">
                                             <AdComponent format="fluid" layout="in-article" minHeight="250px" />
                                         </div>
                                     )}

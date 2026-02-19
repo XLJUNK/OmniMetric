@@ -79,9 +79,7 @@ export default async function WikiIndexPage({ params }: Props) {
     };
 
     wikiData.forEach(item => {
-        // Map 'asset' type to 'indicator' for UI grouping, but be defensive for unknown types
         const effectiveType = item.type === 'asset' ? 'indicator' : item.type;
-
         if (grouped[effectiveType]) {
             if (!grouped[effectiveType][item.category]) {
                 grouped[effectiveType][item.category] = [];
@@ -89,6 +87,20 @@ export default async function WikiIndexPage({ params }: Props) {
             grouped[effectiveType][item.category].push(item);
         }
     });
+
+    // Helper to render ads every N items
+    let globalItemCounter = 0;
+    const renderAdIfTime = () => {
+        globalItemCounter++;
+        if (globalItemCounter % 10 === 0) {
+            return (
+                <div className="col-span-full py-4">
+                    <AdComponent format="fluid" layout="in-article" minHeight="150px" isSubtle={true} />
+                </div>
+            );
+        }
+        return null;
+    };
 
     const getSectionTitle = (type: string) => {
         switch (type) {
@@ -156,28 +168,37 @@ export default async function WikiIndexPage({ params }: Props) {
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                     {Object.entries(grouped[type]).map(([category, items]) => (
-                                        <div key={category} className="bg-transparent dark:bg-[#0A0A0A] border border-border rounded-lg p-6 hover:border-sky-500/30 transition-colors">
-                                            <h3 className={`text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-4 border-b border-border pb-2 ${isRTL ? 'text-right' : 'text-left'}`}>
-                                                {category}
-                                            </h3>
-                                            <ul className="space-y-2">
-                                                {items.map(item => (
-                                                    <li key={item.slug} className={`flex ${isRTL ? 'justify-end' : 'justify-start'}`}>
-                                                        <Link
-                                                            href={normalizedLang === 'EN' ? `/wiki/${item.slug}` : `/${normalizedLang.toLowerCase()}/wiki/${item.slug}`}
-                                                            className={`text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500 transition-colors truncate block max-w-full ${isRTL ? 'text-right' : 'text-left'}`}
-                                                        >
-                                                            {item.title}
-                                                        </Link>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
+                                        <React.Fragment key={category}>
+                                            <div className="bg-transparent dark:bg-[#0A0A0A] border border-border rounded-lg p-6 hover:border-sky-500/30 transition-colors">
+                                                <h3 className={`text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-4 border-b border-border pb-2 ${isRTL ? 'text-right' : 'text-left'}`}>
+                                                    {category}
+                                                </h3>
+                                                <ul className="space-y-2">
+                                                    {items.map(item => (
+                                                        <li key={item.slug} className={`flex ${isRTL ? 'justify-end' : 'justify-start'}`}>
+                                                            <Link
+                                                                href={normalizedLang === 'EN' ? `/wiki/${item.slug}` : `/${normalizedLang.toLowerCase()}/wiki/${item.slug}`}
+                                                                className={`text-sm text-slate-600 dark:text-slate-300 hover:text-sky-500 transition-colors truncate block max-w-full ${isRTL ? 'text-right' : 'text-left'}`}
+                                                            >
+                                                                {item.title}
+                                                            </Link>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                            {/* Track count per category and insert ad if threshold met */}
+                                            {(() => {
+                                                const ad = items.length >= 10 || (globalItemCounter + items.length) % 10 < globalItemCounter % 10 ?
+                                                    <div className="col-span-full py-4"><AdComponent format="fluid" layout="in-article" minHeight="150px" isSubtle={true} /></div> : null;
+                                                globalItemCounter += items.length;
+                                                return ad;
+                                            })()}
+                                        </React.Fragment>
                                     ))}
                                 </div>
 
                                 {/* Ad after Glossary */}
-                                {type === 'glossary' && <div className="py-4"><AdComponent format="fluid" layout="in-article" minHeight="250px" /></div>}
+                                {type === 'glossary' && <div className="py-2"><AdComponent format="fluid" layout="in-article" minHeight="250px" /></div>}
                             </section>
                         ))}
                     </div>

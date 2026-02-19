@@ -73,13 +73,8 @@ export const AdComponent = ({
     return (
         <div
             ref={containerRef}
-            className={`ad-container w-full mx-auto my-4 overflow-hidden ${className}`}
+            className={`ad-container w-full mx-auto my-1 overflow-hidden ${className}`}
         >
-            <div className={`flex justify-start mb-1 ${isSubtle ? 'opacity-40' : ''}`}>
-                <span className={`text-[10px] font-mono text-slate-400 dark:text-slate-600 uppercase tracking-widest px-1 ${isSubtle ? 'text-[9px]' : ''}`}>
-                    Sponsored Link
-                </span>
-            </div>
 
             {/* ONLY render the 'ins' tag when visible width is confirmed. 
                 This prevents AdSense from attempting to measure a 0-width element. */}
@@ -95,10 +90,9 @@ export const AdComponent = ({
 
             <style jsx>{`
         .ad-container {
-          border-top: ${isSubtle ? 'none' : '1px solid rgba(148, 163, 184, 0.1)'};
-          border-bottom: ${isSubtle ? 'none' : '1px solid rgba(148, 163, 184, 0.1)'};
-          padding: ${isSubtle ? '0.25rem 0' : '1rem 0'};
-          background: transparent;
+          border: none;
+          padding: 0;
+          background: transparent !important;
           min-height: var(--min-height);
         }
         .adsbygoogle {

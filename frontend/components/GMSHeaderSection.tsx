@@ -265,7 +265,7 @@ export const GMSHeaderSection = ({ data, lang, onOpenSettings }: GMSHeaderProps)
                 </div>
             </div>
 
-            <div className="w-full px-4 md:px-8 mb-8">
+            <div className="w-full px-4 md:px-8 mb-2">
                 <AdComponent format="horizontal" minHeight="90px" />
             </div>
 

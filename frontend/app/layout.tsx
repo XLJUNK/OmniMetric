@@ -128,12 +128,6 @@ export default function RootLayout({
 
             {/* MAIN CONTENT AREA with Offset for Fixed Sidebar (Hidden on Mobile) */}
             <div className="flex-1 flex flex-col relative min-w-0 md:ms-[60px] transition-all duration-300 pt-[54px] md:pt-0 pb-0 overflow-hidden">
-              {/* TOP AD BANNER (Desktop Only - Optional) */}
-              <div className="hidden md:flex justify-center py-4 bg-black border-b border-[#1E293B]">
-                <div className="w-[728px] h-auto">
-                  <AdComponent isSubtle={true} format="horizontal" minHeight="90px" />
-                </div>
-              </div>
 
               <style dangerouslySetInnerHTML={{
                 __html: `
@@ -154,8 +148,13 @@ export default function RootLayout({
                 {children}
               </main>
 
-              {/* Footer */}
-              <div>
+              {/* Footer and Bottom Ad (Moved from Top) */}
+              <div className="mt-8">
+                <div className="hidden md:flex justify-center py-2 bg-black">
+                  <div className="w-[728px] h-auto">
+                    <AdComponent isSubtle={true} format="horizontal" minHeight="90px" />
+                  </div>
+                </div>
                 <Suspense fallback={null}>
                   <LegalFooter />
                 </Suspense>

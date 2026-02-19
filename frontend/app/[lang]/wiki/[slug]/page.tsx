@@ -440,6 +440,11 @@ export default async function WikiDetailPage({ params }: Props) {
                         {/* LIVE DATA INJECTION (E-E-A-T UTILITY) */}
                         <LiveWikiData slug={slug} lang={normalizedLang} />
 
+                        {/* HIGH DENSITY AD: Top/Mid placement */}
+                        <div className="mt-8">
+                            <AdComponent format="fluid" layout="in-article" minHeight="200px" isSubtle={true} />
+                        </div>
+
                         {/* V4.7 HEAVY: Deep Dive */}
                         {(item.heavy?.deep_dive || item.heavy?.summary) && (
                             <div className={`mt-8 p-6 bg-slate-50 dark:bg-slate-900/50 border-sky-500 text-sm leading-8 text-slate-700 dark:text-slate-300 font-serif ${isRTL ? 'border-r-4 text-right' : 'border-l-4 text-left'}`}>
@@ -614,7 +619,7 @@ export default async function WikiDetailPage({ params }: Props) {
                     </Link>
                 </div>
 
-                <div className="mt-12 pt-12 border-t border-border">
+                <div className="mt-8 pt-0">
                     <AdComponent format="fluid" layout="in-article" minHeight="250px" />
                 </div>
             </main>

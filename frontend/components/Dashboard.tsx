@@ -216,7 +216,7 @@ export const Dashboard = ({ lang, setLang }: DashboardProps) => {
 
                 {/* 4. AD PLACEMENT (STRATEGIC SEPARATOR) */}
                 {/* 4. AD PLACEMENT (STRATEGIC SEPARATOR) */}
-                <div className="w-full px-4 mb-8">
+                <div className="w-full px-4 mb-2">
                     <AdComponent format="horizontal" minHeight="90px" />
                 </div>
 
