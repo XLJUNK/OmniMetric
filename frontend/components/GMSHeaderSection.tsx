@@ -209,6 +209,13 @@ export const GMSHeaderSection = ({ data, lang, onOpenSettings }: GMSHeaderProps)
                 </div>
             </div>
 
+            {/* NEW Text-Ad Above OGV (Strategic Slot: 2602883383) */}
+            <div className="w-full px-2 md:px-6 mb-4">
+                <div className="border-y border-white/5 py-2">
+                    <AdComponent slot="2602883383" format="fluid" layout="in-article" minHeight="50px" isSubtle={true} />
+                </div>
+            </div>
+
             {/* OGV (Relocated Below AI Insight) */}
             <div className="w-full px-2 md:px-6 mb-8 mt-4">
                 <OmniGravityVector lang={lang} onOpenInfo={() => setShowOgvInfo(true)} />
@@ -265,9 +272,6 @@ export const GMSHeaderSection = ({ data, lang, onOpenSettings }: GMSHeaderProps)
                 </div>
             </div>
 
-            <div className="w-full px-4 md:px-8 mb-2">
-                <AdComponent format="horizontal" minHeight="90px" />
-            </div>
 
             {/* 7. Market Heatmap Section */}
             <div className="w-full px-4 md:px-8 mb-12">

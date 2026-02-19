@@ -440,9 +440,9 @@ export default async function WikiDetailPage({ params }: Props) {
                         {/* LIVE DATA INJECTION (E-E-A-T UTILITY) */}
                         <LiveWikiData slug={slug} lang={normalizedLang} />
 
-                        {/* HIGH DENSITY AD: Top/Mid placement */}
-                        <div className="mt-8">
-                            <AdComponent format="fluid" layout="in-article" minHeight="200px" isSubtle={true} />
+                        {/* HIGH DENSITY AD 1: Top/Mid placement */}
+                        <div className="mt-8 border-y border-border/50 py-4 my-8">
+                            <AdComponent slot="2602883383" format="fluid" layout="in-article" minHeight="150px" isSubtle={true} />
                         </div>
 
                         {/* V4.7 HEAVY: Deep Dive */}
@@ -476,6 +476,11 @@ export default async function WikiDetailPage({ params }: Props) {
                             </div>
                         </section>
                     )}
+
+                    {/* HIGH DENSITY AD 2: Mid-Content placement */}
+                    <div className="py-4 border-y border-border/50 my-12">
+                        <AdComponent slot="2602883383" format="fluid" layout="in-article" minHeight="150px" isSubtle={true} />
+                    </div>
 
                     {/* Content Body Based on Type */}
                     <div className="space-y-12">
@@ -619,8 +624,8 @@ export default async function WikiDetailPage({ params }: Props) {
                     </Link>
                 </div>
 
-                <div className="mt-8 pt-0">
-                    <AdComponent format="fluid" layout="in-article" minHeight="250px" />
+                <div className="mt-8 pt-0 border-t border-border/50">
+                    <AdComponent slot="2602883383" format="fluid" layout="in-article" minHeight="250px" />
                 </div>
             </main>
         </div>

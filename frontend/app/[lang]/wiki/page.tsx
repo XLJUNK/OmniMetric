@@ -94,8 +94,8 @@ export default async function WikiIndexPage({ params }: Props) {
         globalItemCounter++;
         if (globalItemCounter % 10 === 0) {
             return (
-                <div className="col-span-full py-4">
-                    <AdComponent format="fluid" layout="in-article" minHeight="150px" isSubtle={true} />
+                <div className="col-span-full py-4 border-y border-border/50 my-8">
+                    <AdComponent slot="2602883383" format="fluid" layout="in-article" minHeight="150px" isSubtle={true} />
                 </div>
             );
         }
@@ -189,7 +189,7 @@ export default async function WikiIndexPage({ params }: Props) {
                                             {/* Track count per category and insert ad if threshold met */}
                                             {(() => {
                                                 const ad = items.length >= 10 || (globalItemCounter + items.length) % 10 < globalItemCounter % 10 ?
-                                                    <div className="col-span-full py-4"><AdComponent format="fluid" layout="in-article" minHeight="150px" isSubtle={true} /></div> : null;
+                                                    <div className="col-span-full py-4 border-y border-border/50 my-8"><AdComponent slot="2602883383" format="fluid" layout="in-article" minHeight="150px" isSubtle={true} /></div> : null;
                                                 globalItemCounter += items.length;
                                                 return ad;
                                             })()}
@@ -198,7 +198,7 @@ export default async function WikiIndexPage({ params }: Props) {
                                 </div>
 
                                 {/* Ad after Glossary */}
-                                {type === 'glossary' && <div className="py-2"><AdComponent format="fluid" layout="in-article" minHeight="250px" /></div>}
+                                {type === 'glossary' && <div className="py-2"><AdComponent slot="2602883383" format="fluid" layout="in-article" minHeight="250px" /></div>}
                             </section>
                         ))}
                     </div>

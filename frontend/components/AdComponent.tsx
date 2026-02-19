@@ -23,12 +23,12 @@ interface AdComponentProps {
  * Prevents TagError: No slot size for availableWidth=0 by checking visibility.
  */
 export const AdComponent = ({
-    slot = "8020292211",
-    isSubtle = false,
+    slot = "2602883383", // Default to new text-based slot
+    isSubtle = true,     // Default to subtle
     format = "fluid",
     layout = "in-article",
     className = "",
-    minHeight = isSubtle ? "50px" : "150px"
+    minHeight = "50px"
 }: AdComponentProps) => {
     const pathname = usePathname();
     const containerRef = useRef<HTMLDivElement>(null);
@@ -93,7 +93,7 @@ export const AdComponent = ({
           border: none;
           padding: 0;
           background: transparent !important;
-          min-height: var(--min-height);
+          min-height: ${minHeight};
         }
         .adsbygoogle {
           display: block;

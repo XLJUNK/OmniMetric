@@ -148,13 +148,8 @@ export default function RootLayout({
                 {children}
               </main>
 
-              {/* Footer and Bottom Ad (Moved from Top) */}
+              {/* Footer (Bottom Ad Removed) */}
               <div className="mt-8">
-                <div className="hidden md:flex justify-center py-2 bg-black">
-                  <div className="w-[728px] h-auto">
-                    <AdComponent isSubtle={true} format="horizontal" minHeight="90px" />
-                  </div>
-                </div>
                 <Suspense fallback={null}>
                   <LegalFooter />
                 </Suspense>
