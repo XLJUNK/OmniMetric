@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-02-19T21:49:29.867737+00:00",
-    "last_successful_update": "2026-02-19T21:49:29.867744+00:00",
+    "last_updated": "2026-02-19T22:51:00.902805+00:00",
+    "last_successful_update": "2026-02-19T22:51:00.902812+00:00",
     "gms_score": 52,
     "sector_scores": {
         "STOCKS": 62,
@@ -58,7 +58,6 @@
             "change_percent": 0.0,
             "trend": "NORMAL",
             "sparkline": [
-                0.57,
                 0.56,
                 0.52,
                 0.51,
@@ -87,6 +86,7 @@
                 0.36,
                 0.36,
                 0.36,
+                0.39,
                 0.39
             ]
         },
@@ -193,7 +193,6 @@
             "change_percent": 0.0,
             "trend": "STABLE",
             "sparkline": [
-                2.27,
                 2.28,
                 2.29,
                 2.3,
@@ -222,6 +221,7 @@
                 2.27,
                 2.27,
                 2.26,
+                2.29,
                 2.29
             ]
         },
@@ -257,11 +257,10 @@
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
-            "price": 0.62,
+            "price": 0.61,
             "change_percent": 0.0,
             "trend": "NEUTRAL",
             "sparkline": [
-                0.7,
                 0.64,
                 0.65,
                 0.65,
@@ -290,7 +289,8 @@
                 0.64,
                 0.64,
                 0.62,
-                0.62
+                0.62,
+                0.61
             ]
         },
         "US_10Y_YIELD": {
@@ -585,10 +585,10 @@
             ]
         },
         "BTC": {
-            "price": 66954.01,
+            "price": 66777.52,
             "prev_price": 66425.32,
-            "daily_chg": 0.8,
-            "change_percent": -2.67,
+            "daily_chg": 0.53,
+            "change_percent": -2.92,
             "trend": "UP",
             "sparkline": [
                 84561.59,
@@ -612,14 +612,14 @@
                 68843.16,
                 67494.22,
                 66425.32,
-                66954.01
+                66777.52
             ]
         },
         "ETH": {
-            "price": 1948.1,
+            "price": 1939.66,
             "prev_price": 1953.97,
-            "daily_chg": -0.3,
-            "change_percent": -0.91,
+            "daily_chg": -0.73,
+            "change_percent": -1.34,
             "trend": "DOWN",
             "sparkline": [
                 2818.23,
@@ -643,14 +643,14 @@
                 1997.92,
                 1992.19,
                 1953.97,
-                1948.1
+                1939.66
             ]
         },
         "SOL": {
-            "price": 82.07,
+            "price": 82.12,
             "prev_price": 81.57,
-            "daily_chg": 0.62,
-            "change_percent": -4.57,
+            "daily_chg": 0.68,
+            "change_percent": -4.51,
             "trend": "UP",
             "sparkline": [
                 117.61,
@@ -674,14 +674,14 @@
                 86.43,
                 85.2,
                 81.57,
-                82.07
+                82.12
             ]
         },
         "DXY": {
-            "price": 97.81,
+            "price": 97.82,
             "prev_price": 97.7,
-            "daily_chg": 0.11,
-            "change_percent": 0.91,
+            "daily_chg": 0.13,
+            "change_percent": 0.92,
             "trend": "UP",
             "sparkline": [
                 98.64,
@@ -705,14 +705,14 @@
                 96.88,
                 97.16,
                 97.7,
-                97.81
+                97.82
             ]
         },
         "USDJPY": {
-            "price": 154.98,
+            "price": 154.9,
             "prev_price": 153.15,
-            "daily_chg": 1.2,
-            "change_percent": 1.41,
+            "daily_chg": 1.14,
+            "change_percent": 1.36,
             "trend": "UP",
             "sparkline": [
                 158.16,
@@ -736,14 +736,14 @@
                 152.78,
                 153.61,
                 153.15,
-                154.98
+                154.9
             ]
         },
         "EURUSD": {
             "price": 1.18,
             "prev_price": 1.19,
-            "daily_chg": -0.59,
-            "change_percent": -0.73,
+            "daily_chg": -0.64,
+            "change_percent": -0.78,
             "trend": "DOWN",
             "sparkline": [
                 1.17,
@@ -771,10 +771,10 @@
             ]
         },
         "USDINR": {
-            "price": 90.99,
+            "price": 91.0,
             "prev_price": 90.63,
-            "daily_chg": 0.4,
-            "change_percent": 0.47,
+            "daily_chg": 0.41,
+            "change_percent": 0.48,
             "trend": "UP",
             "sparkline": [
                 91.12,
@@ -798,7 +798,7 @@
                 90.57,
                 90.78,
                 90.63,
-                90.99
+                91.0
             ]
         },
         "USDSAR": {
@@ -833,7 +833,7 @@
             ]
         },
         "GOLD": {
-            "price": 5015.4,
+            "price": 5015.5,
             "prev_price": 4986.5,
             "daily_chg": 0.58,
             "change_percent": 1.86,
@@ -860,14 +860,14 @@
                 5022.0,
                 4882.9,
                 4986.5,
-                5015.4
+                5015.5
             ]
         },
         "OIL": {
-            "price": 66.53,
+            "price": 66.67,
             "prev_price": 65.19,
-            "daily_chg": 2.06,
-            "change_percent": 5.87,
+            "daily_chg": 2.27,
+            "change_percent": 6.09,
             "trend": "UP",
             "sparkline": [
                 60.34,
@@ -891,14 +891,14 @@
                 62.89,
                 62.33,
                 65.19,
-                66.53
+                66.67
             ]
         },
         "COPPER": {
             "price": 5.76,
             "prev_price": 5.79,
-            "daily_chg": -0.51,
-            "change_percent": -0.12,
+            "daily_chg": -0.54,
+            "change_percent": -0.16,
             "trend": "DOWN",
             "sparkline": [
                 5.77,
@@ -926,10 +926,10 @@
             ]
         },
         "NATGAS": {
-            "price": 2.91,
+            "price": 2.92,
             "prev_price": 3.01,
-            "daily_chg": -3.25,
-            "change_percent": -9.45,
+            "daily_chg": -2.92,
+            "change_percent": -9.14,
             "trend": "DOWN",
             "sparkline": [
                 3.91,
@@ -953,14 +953,14 @@
                 3.24,
                 3.03,
                 3.01,
-                2.91
+                2.92
             ]
         },
         "SILVER": {
-            "price": 78.23,
+            "price": 78.44,
             "prev_price": 77.51,
-            "daily_chg": 0.93,
-            "change_percent": 3.55,
+            "daily_chg": 1.2,
+            "change_percent": 3.83,
             "trend": "UP",
             "sparkline": [
                 94.21,
@@ -984,7 +984,7 @@
                 77.85,
                 73.45,
                 77.51,
-                78.23
+                78.44
             ]
         },
         "DAX": {
@@ -1765,8 +1765,8 @@
         "GBPUSD": {
             "price": 0.74,
             "prev_price": 0.74,
-            "daily_chg": 0.68,
-            "change_percent": 1.1,
+            "daily_chg": 0.71,
+            "change_percent": 1.13,
             "trend": "UP",
             "sparkline": [
                 0.74,
@@ -1796,8 +1796,8 @@
         "AUDUSD": {
             "price": 1.42,
             "prev_price": 1.41,
-            "daily_chg": 0.29,
-            "change_percent": 0.35,
+            "daily_chg": 0.33,
+            "change_percent": 0.39,
             "trend": "UP",
             "sparkline": [
                 1.49,
@@ -1827,8 +1827,8 @@
         "USDCAD": {
             "price": 1.37,
             "prev_price": 1.36,
-            "daily_chg": 0.32,
-            "change_percent": 0.52,
+            "daily_chg": 0.29,
+            "change_percent": 0.49,
             "trend": "UP",
             "sparkline": [
                 1.38,
@@ -1858,9 +1858,9 @@
         "USDCNY": {
             "price": 6.91,
             "prev_price": 6.91,
-            "daily_chg": 0.0,
-            "change_percent": 0.12,
-            "trend": "UP",
+            "daily_chg": -0.01,
+            "change_percent": 0.11,
+            "trend": "DOWN",
             "sparkline": [
                 6.96,
                 6.96,
@@ -1889,8 +1889,8 @@
         "USDCHF": {
             "price": 0.77,
             "prev_price": 0.77,
-            "daily_chg": 0.59,
-            "change_percent": 0.67,
+            "daily_chg": 0.62,
+            "change_percent": 0.7,
             "trend": "UP",
             "sparkline": [
                 0.79,
@@ -2094,24 +2094,20 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "NEUTRAL STANCE: VOLATILITY SPIKE DEMANDS CAUTION. The GMS 52 print confirms a transition into a late-cycle neutral regime where liquidity stagnation and VIX elevation above 20 necessitate immediate risk-mitigation. While credit spread compression offers a superficial signal of resilience, the flat OGV vector and equity momentum degradation reflect a tightening fiscal-monetary nexus. Cooling labor dynamics signal an erosion of the growth narrative, demanding capital preservation as liquidity convexity diminishes. [ACTION: WAIT FOR PULLBACK]",
+        "content": "Market equilibrium persists amid latent volatility. The GMS at 52 validates a transitionary regime where credit spread compression is countered by escalating VIX premiums and stagnant net liquidity. While the fiscal-monetary nexus remains balanced, the negative momentum in equities and housing indicates a localized regime degradation. The flat OGV vector and cooling labor incentives signal an abatement of inflationary convexity, requiring liquidity preservation. [ACTION: WAIT FOR PULLBACK]",
         "reports": {
-            "JP": "中立姿勢：ボラティリティの上昇により警戒が必要。GMS 52は中立的レジームへの移行を裏付けており、VIXの20超えと流動性の停滞はリスク回避を示唆します。クレジット・スプレッドの縮小は表面的な強さを示すものの、フラットなOGVベクトルとモメンタムの減衰は財政・金融ネクサスの逼迫を反映しています。労働市場の冷え込みは成長ナラティブの侵食を意味し、流動性のコンベキシティが低下する中で資本保全への転換が不可欠です。[ACTION: WAIT FOR PULLBACK]",
-            "EN": "NEUTRAL STANCE: VOLATILITY SPIKE DEMANDS CAUTION. The GMS 52 print confirms a transition into a late-cycle neutral regime where liquidity stagnation and VIX elevation above 20 necessitate immediate risk-mitigation. While credit spread compression offers a superficial signal of resilience, the flat OGV vector and equity momentum degradation reflect a tightening fiscal-monetary nexus. Cooling labor dynamics signal an erosion of the growth narrative, demanding capital preservation as liquidity convexity diminishes. [ACTION: WAIT FOR PULLBACK]",
-            "CN": "中立立场：波动率飙升需保持审慎。GMS 52确认市场进入中性阶段，VIX突破20与流动性停滞要求立即规避风险。尽管信用利差收窄暗示韧性，但持平的OGV向量与权益动量恶化反映了财政与货币纽带的趋紧。劳动力市场降温预示通胀驱动型增长叙事的侵蚀，在流动性凸性减弱的背景下，必须转向资本保护以应对制度性退化。[ACTION: WAIT FOR PULLBACK]",
-            "ES": "POSTURA NEUTRAL: EL REPUNTE DE VOLATILIDAD EXIGE CAUTELA. El GMS de 52 confirma una transición hacia un régimen neutral donde el estancamiento de la liquidez y un VIX superior a 20 obligan a la mitigación de riesgos. Aunque la compresión de diferenciales de crédito ofrece una resiliencia superficial, el vector OGV plano y la degradación del impulso acentúan el nexo fiscal-monetario. El enfriamiento laboral erosiona la narrativa de crecimiento, exigiendo una preservación de capital ante la menor convexidad de liquidez. [ACTION: WAIT FOR PULLBACK]",
-            "HI": "तटस्थ दृष्टिकोण: अस्थिरता में वृद्धि सावधानी की मांग करती है। 52 का GMS स्कोर एक तटस्थ शासन में संक्रमण की पुष्टि करता है, जहाँ तरलता का ठहराव और 20 से ऊपर VIX जोखिम कम करने की आवश्यकता को दर्शाता है। यद्यपि क्रेडिट स्प्रेड संकुचन सतही लचीलापन प्रदान करता है, सपाट OGV वेक्टर और इक्विटी गति में गिरावट राजकोषीय-मौद्रिक सांठगांठ को दर्शाती है। श्रम बाजार का ठंडा होना विकास की कहानी को कमजोर करता है, जिससे तरलता उत्तलता कम होने पर पूंजी संरक्षण आवश्यक हो जाता है। [ACTION: WAIT FOR PULLBACK]",
-            "ID": "POSISI NETRAL: LONJAKAN VOLATILITAS MENUNTUT KEWASPADAAN. Skor GMS 52 mengonfirmasi transisi menuju rezim netral di mana stagnasi likuiditas dan VIX di atas 20 mengharuskan mitigasi risiko segera. Meskipun kompresi spread kredit menunjukkan ketahanan superfisial, vektor OGV yang datar dan degradasi momentum ekuitas mencerminkan pengetatan neksus fiskal-moneter. Pendinginan dinamika tenaga kerja mengikis narasi pertumbuhan, menuntut pelestarian modal seiring menurunnya konveksitas likuiditas global. [ACTION: WAIT FOR PULLBACK]",
-            "AR": "موقف محايد: ارتفاع التقلبات يتطلب الحذر الشديد. تؤكد قراءة GMS عند 52 الانتقال إلى نظام محايد حيث يتطلب ركود السيولة وارتفاع VIX فوق 20 تخفيف المخاطر فوراً. ورغم أن ضيق فروق ائتمان السندات يوفر مرونة سطحية، إلا أن استقرار ناقل OGV وتدهور زخم الأسهم يعكسان تضييق الرابط المالي النقدي. يشير تباطؤ سوق العمل إلى تآكل سردية النمو، مما يستوجب التحول نحو الحفاظ على رأس المال مع تضاؤل تحدب السيولة في النظام الحالي. [ACTION: WAIT FOR PULLBACK]",
-            "DE": "NEUTRALE POSITION: VOLATILITÄTSSPIKE ERFORDERT VORSICHT. Der GMS-Wert von 52 bestätigt den Übergang in ein neutrales Regime, in dem Liquiditätsstagnation und ein VIX über 20 Risikominderung erzwingen. Während die Kompression der Kreditspreads oberflächliche Resilienz suggeriert, spiegeln der flache OGV-Vektor und die Momentum-Degradation einen sich verschärfenden fiskalisch-monetären Nexus wider. Die Abkühlung des Arbeitsmarktes untergräbt das Wachstumsnarrativ und erfordert Kapitalerhalt bei sinkender Liquiditätskonvexität. [ACTION: WAIT FOR PULLBACK]",
-            "FR": "POSTURE NEUTRE : LE PIC DE VOLATILITÉ EXIGE LA PRUDENCE. Le score GMS de 52 confirme une transition vers un régime neutre où la stagnation de la liquidité et un VIX supérieur à 20 imposent une réduction des risques. Bien que la compression des spreads de crédit offre une résilience superficielle, le vecteur OGV plat et la dégradation du momentum reflètent un resserrement du nexus fisco-monétaire. Le refroidissement du marché du travail érode le narratif de croissance, exigeant une préservation du capital face à la baisse de la convexité de liquidité. [ACTION: WAIT FOR PULLBACK]"
+            "JP": "潜在的な変動の中で市場の均衡が維持される。GMS 52は、信用スプレッドの縮小がVIXプレミアムの上昇と停滞する純流動性によって相殺される過渡的なレジームを裏付けています。財政・金融ネクサスは均衡を保っていますが、株式と住宅におけるマイナスのモメンタムは局所的なレジームの劣化を示唆しています。フラットなOGVベクトルはインフレの凸性の減衰を意味しますが、ボラティリティの再調整を待つ必要があります。[ACTION: WAIT FOR PULLBACK]",
+            "EN": "Market equilibrium persists amid latent volatility. The GMS at 52 validates a transitionary regime where credit spread compression is countered by escalating VIX premiums and stagnant net liquidity. While the fiscal-monetary nexus remains balanced, the negative momentum in equities and housing indicates a localized regime degradation. The flat OGV vector and cooling labor incentives signal an abatement of inflationary convexity, requiring liquidity preservation. [ACTION: WAIT FOR PULLBACK]",
+            "CN": "潜在波动中市场维持均衡。GMS 52证实了信用利差压缩与VIX溢价上升及流动性停滞并存的过渡格局。尽管财政与货币政策连接点保持稳健，但权益市场与住房板块的负向动能显示局部制度性退化。平坦的OGV矢量与劳动力激励下降预示通胀凸性消退，但在波动率重新校准期间，资本配置必须优先考虑流动性保全，以对冲潜在的尾部风险。 [ACTION: WAIT FOR PULLBACK]",
+            "ES": "El equilibrio persiste ante la volatilidad latente. El GMS de 52 valida un régimen de transición donde la compresión de diferenciales de crédito se ve contrarrestada por primas de VIX crecientes y liquidez estancada. Aunque el nexo fiscal-monetario es estable, el momentum negativo en renta variable indica degradación del régimen. La convexidad inflacionaria se atenúa, pero la recalibración del riesgo exige preservar liquidez ante la inestabilidad técnica. [ACTION: WAIT FOR PULLBACK]",
+            "HI": "अव्यक्त अस्थिरता के बीच बाजार संतुलन बना हुआ है। GMS 52 एक संक्रमणकालीन शासन की पुष्टि करता है जहां क्रेडिट स्प्रेड संपीड़न को बढ़ते VIX प्रीमियम और स्थिर तरलता द्वारा संतुलित किया जाता है। जबकि राजकोषीय-मौद्रिक सांठगांठ संतुलित है, इक्विटी में नकारात्मक गति शासन के क्षरण का संकेत देती है। OGV वेक्टर और शीतलन श्रम प्रोत्साहन मुद्रास्फीति की उत्तलता में कमी का संकेत देते हैं, लेकिन अस्थिरता पुनर्गणना के दौरान तरलता संरक्षण प्राथमिकता होनी चाहिए। [ACTION: WAIT FOR PULLBACK]",
+            "ID": "Keseimbangan pasar bertahan di tengah volatilitas. Skor GMS 52 memvalidasi rezim transisi di mana kompresi spread kredit dinetralkan oleh kenaikan premi VIX dan likuiditas bersih yang stagnan. Meskipun neksus fiskal-moneter tetap seimbang, momentum negatif pada ekuitas dan perumahan mengindikasikan degradasi rezim lokal. Vektor OGV datar dan insentif tenaga kerja yang mendingin menandakan redanya konveksitas inflasi, menuntut kewaspadaan taktis saat ini. [ACTION: WAIT FOR PULLBACK]",
+            "AR": "استقرار السوق مستمر وسط تقلبات كامنة. تؤكد قيمة GMS عند 52 وجود نظام انتقالي حيث يتم موازنة ضغط فروق الائتمان بارتفاع علاوات VIX وركود السيولة الصافية. بينما يظل الترابط المالي النقدي متوازناً، يشير الزخم السلبي في الأسهم والإسكان إلى تدهور موضعي في النظام. يشير ناقل OGV المسطح وتباطؤ حوافز العمل إلى خمود التحدب التضخمي، مما يستلزم الحفاظ على السيولة حتى إعادة معايرة التقلبات تماماً. [ACTION: WAIT FOR PULLBACK]",
+            "DE": "Marktgleichgewicht besteht trotz latenter Volatilität. Der GMS von 52 bestätigt ein Übergangsregime, in dem die Kompression der Kredit-Spreads durch steigende VIX-Prämien und stagnierende Nettoliquidität neutralisiert wird. Während der fiskalisch-monetäre Nexus stabil bleibt, deutet das negative Momentum bei Aktien auf eine lokale Regimedegradation hin. Der flache OGV-Vektor signalisiert ein Abklingen der Inflationskonvexität, was taktische Zurückhaltung erfordert. [ACTION: WAIT FOR PULLBACK]",
+            "FR": "L'équilibre persiste face à une volatilité latente. Le GMS à 52 valide un régime de transition où la compression des spreads de crédit est neutralisée par l'escalade des primes VIX et une liquidité stagnante. Bien que le nexus fiscaux-monétaire reste équilibré, l'élan négatif des actions indique une dégradation locale du régime. Le vecteur OGV plat signale une atténuation de la convexité inflationniste, imposant la préservation des liquidités pour l'instant. [ACTION: WAIT FOR PULLBACK]"
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-17T06:38:02Z",
-            "score": 50
-        },
         {
             "date": "2026-02-17T07:39:33Z",
             "score": 47
@@ -2347,14 +2343,18 @@
         {
             "date": "2026-02-19T21:49:29Z",
             "score": 52
+        },
+        {
+            "date": "2026-02-19T22:51:00Z",
+            "score": 52
         }
     ],
     "intelligence": {
         "news": [
             {
-                "title": "Life after the Great Resignation: Incentives are dimming for workers to change jobs",
+                "title": "Life after the 'great resignation': Incentives are dimming for workers to change jobs",
                 "link": "https://www.cnbc.com/2026/02/19/life-after-the-great-resignation-incentives-are-dimming-for-workers-to-change-jobs.html",
-                "isoDate": "2026-02-19T20:00:33+00:00Z"
+                "isoDate": "2026-02-19T21:50:32+00:00Z"
             },
             {
                 "title": "Amazon surpasses Walmart in annual revenue for first time, as both chase AI-fueled growth",
@@ -2379,76 +2379,76 @@
             {
                 "title": "Epstein files: Former prince Andrew released by police, Trump calls his arrest 'a shame'",
                 "link": "https://www.cnbc.com/2026/02/19/epstein-files-former-prince-andrew-police-released-arrest.html",
-                "isoDate": "2026-02-19T20:48:02+00:00Z"
+                "isoDate": "2026-02-19T22:28:58+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "大退職時代後の人生：労働者が転職するインセンティブが薄れる",
-                "アマゾン、年間売上高でウォルマートを初めて抜く、両社ともAI主導の成長を追求",
-                "トランプ氏、今後10日以内にイラン攻撃を決定へ – 原油価格上昇",
-                "ケネディ氏、トランプ氏のグリホサート命令を擁護；中間選挙を控えMAHAが激怒",
-                "最高裁の関税決定により、株式市場はどう動くか",
-                "エプスタイン文書：アンドルー王子、警察に釈放される、トランプ氏は逮捕を「残念」と非難"
+                "「大退職」後の人生：労働者が転職するインセンティブが薄れる",
+                "アマゾン、年間売上高で初めてウォルマートを上回る、両社ともAI主導の成長を追う",
+                "トランプ氏、今後10日間でイラン攻撃の是非を決定へ — 原油価格上昇",
+                "ケネディ氏、トランプ氏のグリホサート命令を擁護；中間選挙が近づく中、MAHAが激怒",
+                "最高裁の関税決定で株式市場はどう動くか",
+                "エプスタイン氏の書類：アンドルー王子、警察から釈放、トランプ氏は逮捕を「残念」と非難"
             ],
             "CN": [
-                "“大辞职”后的生活：工人跳槽的激励措施正在减弱",
-                "亚马逊年营收首次超越沃尔玛，两者都在追逐人工智能驱动的增长",
-                "特朗普将在10天内决定是否袭击伊朗——油价上涨",
-                "肯尼迪为特朗普的草甘膦命令辩护；随着中期选举临近，MAHA爆发",
-                "最高法院关税决定可能如何影响股市",
-                "爱泼斯坦文件：前安德鲁王子被警方释放，特朗普称其被捕“可耻”"
+                "“大辞职”后的生活：工人跳槽的激励因素正在减弱",
+                "亚马逊年度营收首超沃尔玛，两者均追逐人工智能驱动的增长",
+                "特朗普将在未来10天内决定是否攻击伊朗——油价上涨",
+                "肯尼迪为特朗普的草甘膦令辩护；中期选举临近，马萨诸塞州爆发不满",
+                "最高法院关税裁决可能如何影响股市",
+                "爱泼斯坦文件：前安德鲁王子获警方释放，特朗普称其被捕“可耻”"
             ],
             "ES": [
-                "La vida después de la Gran Renuncia: Los incentivos para que los trabajadores cambien de trabajo se están desvaneciendo",
+                "La vida después de la 'gran renuncia': Los incentivos para que los trabajadores cambien de trabajo están disminuyendo",
                 "Amazon supera a Walmart en ingresos anuales por primera vez, mientras ambos persiguen el crecimiento impulsado por la IA",
-                "Trump decidirá si atacar a Irán en los próximos 10 días – los precios del petróleo suben",
-                "Kennedy defiende la orden de glifosato de Trump; MAHA estalla ante la proximidad de las elecciones de mitad de período",
-                "Cómo podría moverse el mercado de valores ante la decisión de la Corte Suprema sobre los aranceles",
-                "Archivos de Epstein: El ex príncipe Andrew liberado por la policía, Trump llama \"una pena\" a su arresto"
+                "Trump decidirá si atacar a Irán en los próximos 10 días — suben los precios del petróleo",
+                "Kennedy defiende la orden de glifosato de Trump; MAHA estalla a medida que se acercan las elecciones intermedias",
+                "Cómo podría moverse el mercado de valores ante la decisión del Tribunal Supremo sobre los aranceles",
+                "Archivos de Epstein: El ex príncipe Andrew liberado por la policía, Trump llama a su arresto 'una vergüenza'"
             ],
             "HI": [
-                "महा-त्याग के बाद का जीवन: श्रमिकों के लिए नौकरी बदलने के प्रोत्साहन में कमी आ रही है",
-                "अमेज़ॅन ने पहली बार वार्षिक राजस्व में वॉलमार्ट को पीछे छोड़ा, दोनों एआई-संचालित विकास का पीछा कर रहे हैं",
-                "ट्रम्प अगले 10 दिनों में ईरान पर हमला करने का फैसला करेंगे - तेल की कीमतों में वृद्धि",
-                "केनेडी ने ट्रम्प के ग्लाइफोसेट आदेश का बचाव किया; मध्यावधि चुनावों के करीब आने पर MAHA भड़क उठा",
+                "‘ग्रेट रेज़िग्नेशन’ के बाद का जीवन: कर्मचारियों के नौकरी बदलने के लिए प्रोत्साहन कम हो रहे हैं",
+                "अमेज़ॅन वार्षिक राजस्व में पहली बार वालमार्ट से आगे निकला, दोनों एआई-संचालित विकास का पीछा कर रहे हैं",
+                "ट्रम्प अगले 10 दिनों में ईरान पर हमला करने या न करने का फैसला करेंगे — तेल की कीमतों में वृद्धि",
+                "केनेडी ने ट्रम्प के ग्लाइफोसेट आदेश का बचाव किया; मध्यावधि चुनाव नजदीक आने पर एमएएचए भड़क उठा",
                 "सुप्रीम कोर्ट के टैरिफ फैसले पर शेयर बाजार कैसे चल सकता है",
-                "एपस्टीन फाइलें: पूर्व प्रिंस एंड्रयू को पुलिस ने रिहा किया, ट्रम्प ने उनकी गिरफ्तारी को 'शर्म की बात' बताया"
+                "एपस्टीन फाइलें: पूर्व प्रिंस एंड्रयू को पुलिस ने छोड़ा, ट्रम्प ने उनकी गिरफ्तारी को 'शर्म की बात' बताया"
             ],
             "ID": [
-                "Kehidupan setelah Resign Besar-besaran: Insentif bagi pekerja untuk berganti pekerjaan meredup",
+                "Kehidupan setelah 'pengunduran diri besar-besaran': Insentif bagi pekerja untuk berganti pekerjaan meredup",
                 "Amazon melampaui Walmart dalam pendapatan tahunan untuk pertama kalinya, saat keduanya mengejar pertumbuhan yang didorong oleh AI",
                 "Trump akan memutuskan apakah akan menyerang Iran dalam 10 hari ke depan — harga minyak naik",
-                "Kennedy membela perintah pestisida Trump; MAHA mengamuk menjelang pemilu sela",
-                "Bagaimana pasar saham bisa bergerak berdasarkan keputusan Mahkamah Agung tentang tarif",
+                "Kennedy membela perintah glifosat Trump; MAHA mengamuk menjelang pemilihan sela",
+                "Bagaimana pasar saham dapat bergerak atas keputusan tarif Mahkamah Agung",
                 "Berkas Epstein: Mantan Pangeran Andrew dibebaskan polisi, Trump menyebut penangkapannya 'memalukan'"
             ],
             "AR": [
-                "الحياة بعد الاستقالة الكبرى: حوافز تغيير الوظائف للعمال تخفت",
-                "أمازون تتجاوز وول مارت في الإيرادات السنوية لأول مرة، بينما يسعى كلاهما للنمو المدفوع بالذكاء الاصطناعي",
-                "ترامب سيقرر مهاجمة إيران في الأيام العشرة القادمة - أسعار النفط ترتفع",
-                "كينيدي تدافع عن أمر ترامب بشأن الغليفوسات؛ MAHA تندلع مع اقتراب الانتخابات النصفية",
+                "الحياة بعد \"الاستقالة الكبرى\": الحوافز أمام العمال لتغيير وظائفهم تتضاءل",
+                "أمازون تتجاوز وول مارت في الإيرادات السنوية لأول مرة، بينما يسعى كلاهما لتحقيق نمو مدفوع بالذكاء الاصطناعي",
+                "ترامب يقرر ما إذا كان سيهاجم إيران في الأيام العشرة القادمة - أسعار النفط ترتفع",
+                "كينيدي تدافع عن أمر ترامب بشأن مبيدات الغليفوسات؛ غضب ماساتشوستس مع اقتراب الانتخابات النصفية",
                 "كيف قد يتحرك سوق الأسهم بشأن قرار المحكمة العليا بشأن التعريفات الجمركية",
-                "وثائق إبستين: الأمير أندرو السابق يفرج عنه من قبل الشرطة، ترامب يصف اعتقاله \"بالعار\""
+                "ملفات إبشتاين: الأمير السابق أندرو يطلق سراحه من قبل الشرطة، ترامب يصف اعتقاله بـ \"العار\""
             ],
             "DE": [
-                "Das Leben nach der Großen Kündigung: Anreize für Arbeitnehmer, den Job zu wechseln, schwinden",
-                "Amazon übertrifft Walmart erstmals im Jahresumsatz, während beide nach KI-gestütztem Wachstum streben",
-                "Trump wird entscheiden, ob er den Iran in den nächsten 10 Tagen angreift – Ölpreise steigen",
-                "Kennedy verteidigt Trumps Glyphosat-Anordnung; MAHA bricht aus, da die Midterms näher rücken",
-                "Wie sich der Aktienmarkt aufgrund der Entscheidung des Obersten Gerichtshofs über Zölle bewegen könnte",
-                "Epstein-Akten: Prinz Andrew wird von der Polizei freigelassen, Trump nennt seine Verhaftung \"eine Schande\""
+                "Das Leben nach der 'Großen Kündigung': Anreize für Arbeitnehmer zum Stellenwechsel schwinden",
+                "Amazon übertrifft Walmart erstmals im Jahresumsatz, während beide auf KI-gestütztes Wachstum setzen",
+                "Trump wird in den nächsten 10 Tagen entscheiden, ob er den Iran angreift – Ölpreise steigen",
+                "Kennedy verteidigt Trumps Glyphosat-Anordnung; MAHA bricht als Midterms näher rücken aus",
+                "Wie sich der Aktienmarkt nach der Tariff-Entscheidung des Obersten Gerichtshofs bewegen könnte",
+                "Epstein-Akten: Ex-Prinz Andrew von der Polizei freigelassen, Trump nennt seine Verhaftung \"eine Schande\""
             ],
             "FR": [
-                "La vie après la Grande Démission : les incitations pour les travailleurs à changer d'emploi s'amenuisent",
-                "Amazon dépasse Walmart en chiffre d'affaires annuel pour la première fois, les deux entreprises poursuivant une croissance alimentée par l'IA",
+                "La vie après la 'grande démission' : les incitations pour les travailleurs à changer d'emploi s'amenuisent",
+                "Amazon dépasse Walmart en revenus annuels pour la première fois, alors que les deux poursuivent une croissance alimentée par l'IA",
                 "Trump décidera d'attaquer l'Iran dans les 10 prochains jours — les prix du pétrole augmentent",
-                "Kennedy défend l'ordre de glyphosate de Trump ; MAHA s'enflamme à l'approche des élections de mi-mandat",
-                "Comment le marché boursier pourrait évoluer suite à la décision de la Cour suprême sur les tarifs douaniers",
+                "Kennedy défend l'ordre de Trump sur le glyphosate ; MAHA s'enflamme à l'approche des midterms",
+                "Comment le marché boursier pourrait évoluer suite à la décision de la Cour suprême sur les droits de douane",
                 "Dossiers Epstein : L'ancien prince Andrew libéré par la police, Trump qualifie son arrestation de \"honte\""
             ]
         },
-        "last_updated": "2026-02-19T21:49:29.867225+00:00Z"
+        "last_updated": "2026-02-19T22:51:00.902310+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
