@@ -99,6 +99,11 @@ export default function RootLayout({
       <head>
         {/* @ts-expect-error: Impact.com requires non-standard 'value' attribute */}
         <meta name="impact-site-verification" value="077c2f6e-dfc6-4a7e-a10e-65c42ed1337e" />
+        <link rel="alternate" href="https://www.omnimetric.net/" hrefLang="x-default" />
+        <link rel="alternate" href="https://www.omnimetric.net/" hrefLang="en" />
+        <link rel="alternate" href="https://www.omnimetric.net/" hrefLang="en-US" />
+        <link rel="alternate" href="https://www.omnimetric.net/" hrefLang="en-GB" />
+        <link rel="alternate" href="https://www.omnimetric.net/jp" hrefLang="ja-jp" />
       </head>
       <body
         className={`${inter.variable} ${notoJP.variable} ${notoAR.variable} ${notoHI.variable} antialiased selection:bg-cyan-500/30 overflow-x-hidden`}
@@ -111,7 +116,7 @@ export default function RootLayout({
           <Suspense fallback={null}>
             <ClientDirectionProvider />
           </Suspense>
-          <DynamicStructuredData />
+          {/* DynamicStructuredData moved to individual pages for Server-Side context injection */}
           <script
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1230621442620902"

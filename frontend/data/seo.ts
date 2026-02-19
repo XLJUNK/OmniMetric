@@ -23,26 +23,30 @@ export function getMultilingualMetadata(
     description?: string
 ): Metadata {
     const langCode = currentLang.toUpperCase();
-    // Normalize path to not have leading slash if style is path to avoid double slashes later if needed, 
-    // but usually path is like "/wiki/slug".
     const cleanPath = path.startsWith('/') ? path : `/${path}`;
 
     const alternates: Record<string, string> = {};
 
-    // Generate all 9 languages (Path-based strict)
+    // Generate language & region specific alternates
     Object.entries(LANGUAGES).forEach(([code, hreflang]) => {
         const langPath = code.toLowerCase();
+        let targetUrl = '';
+
         if (cleanPath === '/') {
-            // Root special case: English is naked domain
-            alternates[hreflang] = code === 'EN'
-                ? `${BASE_URL}/`
-                : `${BASE_URL}/${langPath}`;
+            targetUrl = code === 'EN' ? `${BASE_URL}/` : `${BASE_URL}/${langPath}`;
         } else {
-            // Standard Paths (/wiki, /forex, etc)
-            // Fix: English (EN) should NOT have /en prefix
-            alternates[hreflang] = code === 'EN'
-                ? `${BASE_URL}${cleanPath}`
-                : `${BASE_URL}/${langPath}${cleanPath}`;
+            targetUrl = code === 'EN' ? `${BASE_URL}${cleanPath}` : `${BASE_URL}/${langPath}${cleanPath}`;
+        }
+
+        alternates[hreflang] = targetUrl;
+
+        // Specific Region Support for North America and Europe
+        if (code === 'EN') {
+            alternates['en-US'] = targetUrl;
+            alternates['en-GB'] = targetUrl;
+        }
+        if (code === 'JP') {
+            alternates['ja-jp'] = targetUrl;
         }
     });
 
@@ -50,30 +54,34 @@ export function getMultilingualMetadata(
     alternates['x-default'] = cleanPath === '/' ? `${BASE_URL}/` : `${BASE_URL}${cleanPath}`;
 
     // Canonical (Self-referencing path)
-    // Fix: English (EN) should NOT have /en prefix in canonical
     let canonical = langCode === 'EN'
         ? `${BASE_URL}${cleanPath}`
         : `${BASE_URL}/${langCode.toLowerCase()}${cleanPath}`;
 
-    // Ensure root trailing slash consistency (Optional but cleaner)
     if (cleanPath === '/') {
         canonical = `${BASE_URL}/`;
     }
 
+    // Ensure Description density (120-150 chars for AI search engines)
+    const defaultDesc = langCode === 'JP'
+        ? "機関投資家品質のマクロ経済解析を個人に開放する自律型ターミナル。GMS Scoreによりグローバルマクロのリスクをリアルタイムで可視化し、AIが深い洞察を提供します。"
+        : "Autonomous terminal democratizing institutional-grade macro analysis. GMS Score provides real-time visibility into global macro risk regimes with deep AI-driven insights.";
+
+    let finalDesc = description || defaultDesc;
+    if (finalDesc.length < 100) {
+        finalDesc = `${finalDesc} OmniMetric Terminal provides institutional-grade market intelligence and real-time risk assessments for global investors.`.slice(0, 155);
+    }
+
     return {
         title: title || "Global Macro Signal (OmniMetric Terminal) | AI-Driven Financial Insight",
-        description: description || (langCode === 'JP'
-            ? "機関投資家品質のマクロ経済解析を個人に開放する自律型ターミナル。GMS Scoreによりグローバルマクロのリスクをリアルタイムで可視化。"
-            : "Autonomous terminal democratizing institutional-grade macro analysis. GMS Score provides real-time visibility into global macro risk regimes."),
+        description: finalDesc,
         alternates: {
             canonical,
             languages: alternates,
         },
         openGraph: {
             title: title || "Global Macro Signal | Institutional Market Intelligence",
-            description: description || (langCode === 'JP'
-                ? "機関投資家品質のマクロ解析を提供する自律型ターミナル。独自アルゴリズムでリスクを可視化。"
-                : "Institutional-grade autonomous terminal for macro analysis. Visualizing global risk via proprietary algorithms."),
+            description: finalDesc,
             url: canonical,
             siteName: "OmniMetric Terminal",
             images: [
@@ -90,9 +98,7 @@ export function getMultilingualMetadata(
         twitter: {
             card: 'summary_large_image',
             title: title || "Global Macro Signal | Institutional Market Intelligence",
-            description: description || (langCode === 'JP'
-                ? "機関投資家品質のマクロ解析を提供する自律型ターミナル。"
-                : "Autonomous terminal democratizing institutional-grade macro analysis."),
+            description: finalDesc,
             creator: '@OmniMetric_GMS',
             images: [`${BASE_URL}/brand-og.png`],
         },

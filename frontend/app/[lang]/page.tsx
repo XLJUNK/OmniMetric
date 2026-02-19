@@ -3,6 +3,8 @@ import { Metadata } from 'next';
 import { getSignalData } from '@/lib/signal';
 import { getMultilingualMetadata } from '@/data/seo';
 import { DICTIONARY, LangType } from '@/data/dictionary';
+import { DynamicStructuredData } from '@/components/DynamicStructuredData';
+import { Suspense } from 'react';
 
 
 export const dynamicParams = false;
@@ -30,11 +32,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     if (initialData) {
         const score = initialData.gms_score;
-        // Format Date: "Jan 23"
         const dateObj = new Date(initialData.last_updated);
-        const dateStr = dateObj.toLocaleDateString(normalizedLang === 'JP' ? "ja-JP" : "en-US", { month: 'short', day: 'numeric', timeZone: 'Asia/Tokyo' });
+        const dateStr = dateObj.toLocaleDateString(normalizedLang === 'JP' ? "ja-JP" : "en-US", { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'Asia/Tokyo' });
 
-        // Calculate Momentum (Simple derivative of backend logic)
+        // Calculate Momentum
         let momentum = d.momentum.stable;
         if (initialData.history_chart && initialData.history_chart.length >= 5) {
             const recent = initialData.history_chart.slice(0, 5);
@@ -50,7 +51,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         }
 
         title = `${d.titles.gms_score} ${score}: ${momentum} | ${d.titles.insights} ${dateStr}`;
-        desc = `${d.titles.gms_score}: ${score} (${momentum}). ${d.methodology.desc} ${dateStr}. Insight: ${initialData.analysis?.title || 'Market Outlook'}`;
+        desc = `${d.titles.gms_score}: ${score} (${momentum}). ${d.methodology.desc} ${dateStr}. Insight: ${initialData.analysis?.title || 'Market Outlook'}. GMS Terminal provides institutional-grade risk analysis.`;
     }
 
     const metadata = getMultilingualMetadata('/', normalizedLang, title, desc);
@@ -69,7 +70,6 @@ const jsonLd = {
     }
 };
 
-import { Suspense } from 'react';
 // ...
 export default async function Home({ params }: Props) {
     const { lang } = await params;
@@ -82,9 +82,11 @@ export default async function Home({ params }: Props) {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
+            {/* Global JSON-LD Injection via Server Component */}
+            <DynamicStructuredData data={initialData} />
+
             <Suspense fallback={<div className="min-h-screen"></div>}>
                 <MultiAssetSummary initialData={initialData} lang={normalizedLang} />
-
             </Suspense>
         </>
     );

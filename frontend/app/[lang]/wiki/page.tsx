@@ -41,7 +41,10 @@ import { getMultilingualMetadata } from '@/data/seo';
 // Helper for metadata
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { lang } = await params;
-    return getMultilingualMetadata('/wiki', lang, `OmniMetric Wiki Index (${lang.toUpperCase()})`, WIKI_DESCRIPTIONS[lang.toLowerCase()] || WIKI_DESCRIPTIONS['en']);
+    const desc = WIKI_DESCRIPTIONS[lang.toLowerCase()] || WIKI_DESCRIPTIONS['en'];
+    const finalDesc = `${desc} OmniMetric Wiki provides institutional-grade definitions for global macro indicators, technical analysis, and historical market maxims.`.slice(0, 155);
+
+    return getMultilingualMetadata('/wiki', lang, `OmniMetric Wiki Index (${lang.toUpperCase()}) | Macro Knowledge Base`, finalDesc);
 }
 
 export default async function WikiIndexPage({ params }: Props) {

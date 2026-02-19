@@ -6,26 +6,29 @@ import { useSearchParams } from 'next/navigation';
 import { DICTIONARY, LangType } from '@/data/dictionary';
 import { Clock, Shield, AlertTriangle } from 'lucide-react';
 
+import { DynamicStructuredData } from '@/components/DynamicStructuredData';
+
 interface ArchiveClientProps {
     date: string;
     lang: LangType;
     selectorMode?: 'query' | 'path';
+    initialData?: any;
 }
 
-function ArchiveDetailContent({ date, lang, selectorMode }: ArchiveClientProps) {
+function ArchiveDetailContent({ date, lang, selectorMode, initialData }: ArchiveClientProps) {
     const searchParams = useSearchParams();
-    // const params = useParams(); // Passed as prop now
     const t = DICTIONARY[lang];
     const [data, setData] = useState<{
         gms_score: number;
         last_updated: string;
-        analysis?: { reports?: Record<string, string>; content?: string };
+        analysis?: { reports?: Record<string, string>; content?: string; title?: string };
         market_data: Record<string, { price: string | number }>;
-    } | null>(null);
-    const [loading, setLoading] = useState(true);
+    } | null>(initialData || null);
+    const [loading, setLoading] = useState(!initialData);
 
     useEffect(() => {
-        if (!date) return;
+        if (initialData || !date) return;
+        setLoading(true);
         fetch(`/data/archive/${date}.json`)
             .then(res => res.json())
             .then(d => {
@@ -33,11 +36,11 @@ function ArchiveDetailContent({ date, lang, selectorMode }: ArchiveClientProps) 
                 setLoading(false);
             })
             .catch(() => setLoading(false));
-    }, [date]);
+    }, [date, initialData]);
 
     if (!t) return null;
 
-    if (loading) {
+    if (loading && !data) {
         return (
             <TerminalPage pageKey="archive" lang={lang} selectorMode={selectorMode}>
                 <div className="flex flex-col items-center justify-center py-24 space-y-4">
@@ -161,10 +164,11 @@ function ArchiveDetailContent({ date, lang, selectorMode }: ArchiveClientProps) 
     );
 }
 
-export default function ArchiveClient({ date, lang, selectorMode }: ArchiveClientProps) {
+export default function ArchiveClient({ date, lang, selectorMode, initialData }: ArchiveClientProps) {
     return (
         <Suspense fallback={<div className="min-h-screen bg-white dark:bg-[#0A0A0A] flex items-center justify-center text-sky-500 font-mono text-xs animate-pulse">RECONSTRUCTING MARKET STATE...</div>}>
-            <ArchiveDetailContent date={date} lang={lang} selectorMode={selectorMode} />
+            <DynamicStructuredData data={initialData} />
+            <ArchiveDetailContent date={date} lang={lang} selectorMode={selectorMode} initialData={initialData} />
         </Suspense>
     );
 }

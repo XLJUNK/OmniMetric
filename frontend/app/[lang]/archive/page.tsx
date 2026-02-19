@@ -23,7 +23,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { lang } = await params;
     const normalizedLang = lang.toUpperCase() as LangType;
     const t = DICTIONARY[normalizedLang] || DICTIONARY.EN;
-    return getMultilingualMetadata('/archive', normalizedLang, t.subpages.archive.title || "Market Archive", t.subpages.archive.subtitle || "Historical market data analysis.");
+    const desc = `${t.subpages.archive.subtitle || "Historical market data analysis."} Explore OmniMetric's database of daily GMS Scores and global macro signal reports. Professional-grade historical record of market volatility and liquidity regimes.`.slice(0, 155);
+    return getMultilingualMetadata('/archive', normalizedLang, `${t.subpages.archive.title || "Market Archive"} | Historical GMS Dataset`, desc);
 }
 
 async function getDates() {

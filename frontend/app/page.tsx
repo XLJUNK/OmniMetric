@@ -4,20 +4,21 @@ import { getSignalData } from '@/lib/signal';
 import { getMultilingualMetadata } from '@/data/seo';
 import { DICTIONARY } from '@/data/dictionary';
 import { Suspense } from 'react';
+import { DynamicStructuredData } from '@/components/DynamicStructuredData';
 
 export async function generateMetadata(): Promise<Metadata> {
   const lang = 'EN';
   const initialData = await getSignalData();
   const d = DICTIONARY.EN;
 
-  // Default fallback
-  let title = d.subpages.about.title || "Global Macro Signal";
-  let desc = d.subpages.about.subtitle || "Institutional Market Intelligence";
+  // Global-First metadata density
+  let title = "Global Macro Signal (OmniMetric Terminal) | Institutional Market Intelligence";
+  let desc = "Professional AI-driven macro terminal democratizing institutional-grade risk analysis. Real-time GMS Score visibility for global macro regimes.";
 
   if (initialData) {
     const score = initialData.gms_score;
     const dateObj = new Date(initialData.last_updated);
-    const dateStr = dateObj.toLocaleDateString("en-US", { month: 'short', day: 'numeric', timeZone: 'UTC' });
+    const dateStr = dateObj.toLocaleDateString("en-US", { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 
     // Calculate Momentum
     let momentum = d.momentum.stable;
@@ -34,8 +35,8 @@ export async function generateMetadata(): Promise<Metadata> {
       else momentum = d.momentum.stable;
     }
 
-    title = `${d.titles.gms_score} ${score}: ${momentum} | ${d.titles.insights} ${dateStr}`;
-    desc = `${d.titles.gms_score}: ${score} (${momentum}). ${d.methodology.desc} ${dateStr}. Insight: ${initialData.analysis?.title || 'Market Outlook'}`;
+    title = `OmniMetric Terminal: GMS Score ${score} (${momentum}) | Financial Insight ${dateStr}`;
+    desc = `Terminal Status: ${score} - ${momentum}. ${d.methodology.desc} Last Updated: ${dateStr}. Global Macro Signal provides institutional-grade volatility and liquidity risk assessments. AI Insight: ${initialData.analysis?.title || 'Stable Market Outlook'}.`;
   }
 
   // Pass '/' as path to execute special root logic in seo.ts
@@ -64,6 +65,9 @@ export default async function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {/* Global JSON-LD Injection via Server Component */}
+      <DynamicStructuredData data={initialData} />
+
       <Suspense fallback={<div className="min-h-screen"></div>}>
         <MultiAssetSummary initialData={initialData} lang="EN" />
       </Suspense>

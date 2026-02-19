@@ -283,7 +283,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     if (!item) return { title: 'Not Found' };
 
-    const metadata = getMultilingualMetadata(`/wiki/${slug}`, lang, `${item.title} - ${item.type.toUpperCase()} | OmniMetric`, getLocalizedSEODescription(item, lang).slice(0, 120));
+    const baseDesc = getLocalizedSEODescription(item, lang);
+    const finalDesc = `${baseDesc} Learn how ${item.title} impacts global market volatility and institutional liquidity risk in 2026.`.slice(0, 158);
+
+    const metadata = getMultilingualMetadata(`/wiki/${slug}`, lang, `${item.title} - ${item.type.toUpperCase()} Analysis | OmniMetric Knowledge Base`, finalDesc);
 
     return metadata;
 }
@@ -406,6 +409,14 @@ export default async function WikiDetailPage({ params }: Props) {
         <div className="min-h-screen text-foreground font-sans pb-20">
             <DynamicStructuredData data={articleSchema} />
             <DynamicStructuredData data={breadcrumbSchema} />
+            {/* Global Identity Schema */}
+            <DynamicStructuredData data={{
+                "@context": "https://schema.org",
+                "@type": "FinancialService",
+                "name": "OmniMetric Terminal",
+                "areaServed": "World",
+                "url": "https://www.omnimetric.net"
+            }} />
 
             {/* Navigation Bar for Wiki */}
             <div className="bg-slate-50 dark:bg-[#050505] border-b border-border sticky top-0 z-40 px-4 h-14 flex items-center justify-between">
