@@ -36,13 +36,13 @@ export default async function WikiRootPage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": `https://omnimetric.net`
+                "item": `https://www.omnimetric.net`
             },
             {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Wiki",
-                "item": `https://omnimetric.net/wiki`
+                "item": `https://www.omnimetric.net/wiki`
             }
         ]
     };

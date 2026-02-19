@@ -95,8 +95,8 @@ export default async function MaximsPage({ params }: Props) {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "OmniMetric", "item": "https://omnimetric.net" },
-            { "@type": "ListItem", "position": 2, "name": getPageTitle(normalizedLang), "item": "https://omnimetric.net/maxims" }
+            { "@type": "ListItem", "position": 1, "name": "OmniMetric", "item": "https://www.omnimetric.net" },
+            { "@type": "ListItem", "position": 2, "name": getPageTitle(normalizedLang), "item": "https://www.omnimetric.net/maxims" }
         ]
     };
 

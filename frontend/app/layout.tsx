@@ -131,7 +131,7 @@ export default function RootLayout({
               {/* TOP AD BANNER (Desktop Only - Optional) */}
               <div className="hidden md:flex justify-center py-4 bg-black border-b border-[#1E293B]">
                 <div className="w-[728px] h-auto">
-                  <AdComponent format="horizontal" minHeight="90px" />
+                  <AdComponent isSubtle={true} format="horizontal" minHeight="90px" />
                 </div>
               </div>
 

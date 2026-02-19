@@ -11,6 +11,7 @@ declare global {
 
 interface AdComponentProps {
     slot?: string;
+    isSubtle?: boolean;
     format?: 'fluid' | 'auto' | 'rectangle' | 'horizontal' | 'vertical';
     layout?: 'in-article' | 'in-feed';
     className?: string;
@@ -23,10 +24,11 @@ interface AdComponentProps {
  */
 export const AdComponent = ({
     slot = "8020292211",
+    isSubtle = false,
     format = "fluid",
     layout = "in-article",
     className = "",
-    minHeight = "150px"
+    minHeight = isSubtle ? "50px" : "150px"
 }: AdComponentProps) => {
     const pathname = usePathname();
     const containerRef = useRef<HTMLDivElement>(null);
@@ -73,8 +75,8 @@ export const AdComponent = ({
             ref={containerRef}
             className={`ad-container w-full mx-auto my-4 overflow-hidden ${className}`}
         >
-            <div className="flex justify-start mb-1">
-                <span className="text-[10px] font-mono text-slate-400 dark:text-slate-600 uppercase tracking-widest px-1">
+            <div className={`flex justify-start mb-1 ${isSubtle ? 'opacity-40' : ''}`}>
+                <span className={`text-[10px] font-mono text-slate-400 dark:text-slate-600 uppercase tracking-widest px-1 ${isSubtle ? 'text-[9px]' : ''}`}>
                     Sponsored Link
                 </span>
             </div>
@@ -93,9 +95,9 @@ export const AdComponent = ({
 
             <style jsx>{`
         .ad-container {
-          border-top: 1px solid rgba(148, 163, 184, 0.1);
-          border-bottom: 1px solid rgba(148, 163, 184, 0.1);
-          padding: 1rem 0;
+          border-top: ${isSubtle ? 'none' : '1px solid rgba(148, 163, 184, 0.1)'};
+          border-bottom: ${isSubtle ? 'none' : '1px solid rgba(148, 163, 184, 0.1)'};
+          padding: ${isSubtle ? '0.25rem 0' : '1rem 0'};
           background: transparent;
           min-height: var(--min-height);
         }

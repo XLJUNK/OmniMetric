@@ -79,8 +79,8 @@ export default function TechnicalClient({ lang }: TechnicalClientProps) {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "OmniMetric", "item": "https://omnimetric.net" },
-            { "@type": "ListItem", "position": 2, "name": getPageTitle(lang), "item": "https://omnimetric.net/technical" }
+            { "@type": "ListItem", "position": 1, "name": "OmniMetric", "item": "https://www.omnimetric.net" },
+            { "@type": "ListItem", "position": 2, "name": getPageTitle(lang), "item": "https://www.omnimetric.net/technical" }
         ]
     };
 
@@ -91,7 +91,7 @@ export default function TechnicalClient({ lang }: TechnicalClientProps) {
         "inDefinedTermSet": {
             "@type": "DefinedTermSet",
             "name": `OmniMetric ${getPageTitle(lang)}`,
-            "url": "https://omnimetric.net/technical"
+            "url": "https://www.omnimetric.net/technical"
         }
     })));
 

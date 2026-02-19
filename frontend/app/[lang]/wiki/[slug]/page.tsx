@@ -356,7 +356,7 @@ export default async function WikiDetailPage({ params }: Props) {
         "@type": "Article",
         "headline": item.title,
         "author": { "@type": "Organization", "name": "OmniMetric" },
-        "publisher": { "@type": "Organization", "name": "OmniMetric", "logo": { "@type": "ImageObject", "url": "https://omnimetric.net/icon.png" } },
+        "publisher": { "@type": "Organization", "name": "OmniMetric", "logo": { "@type": "ImageObject", "url": "https://www.omnimetric.net/icon.png" } },
         "datePublished": "2026-01-01",
         "description": getContentDescription(item)
     };

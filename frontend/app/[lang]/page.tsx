@@ -61,10 +61,10 @@ const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "OmniMetric Terminal",
-    "url": "https://omnimetric.net",
+    "url": "https://www.omnimetric.net",
     "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://omnimetric.net/?q={search_term_string}",
+        "target": "https://www.omnimetric.net/?q={search_term_string}",
         "query-input": "required name=search_term_string"
     }
 };

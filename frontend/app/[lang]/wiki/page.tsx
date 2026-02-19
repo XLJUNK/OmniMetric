@@ -57,13 +57,13 @@ export default async function WikiIndexPage({ params }: Props) {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": `https://omnimetric.net`
+                "item": `https://www.omnimetric.net`
             },
             {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Wiki",
-                "item": `https://omnimetric.net/${lang}/wiki`
+                "item": `https://www.omnimetric.net/${lang}/wiki`
             }
         ]
     };

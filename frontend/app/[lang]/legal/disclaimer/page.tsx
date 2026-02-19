@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         title: "Disclaimer | OmniMetric",
         description: "Financial Disclaimer regarding OmniMetric analysis.",
         alternates: {
-            canonical: `https://omnimetric.net/${lang}/legal/disclaimer`,
+            canonical: `https://www.omnimetric.net/${lang}/legal/disclaimer`,
         }
     };
 }

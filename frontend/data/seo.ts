@@ -38,19 +38,25 @@ export function getMultilingualMetadata(
                 ? `${BASE_URL}/`
                 : `${BASE_URL}/${langPath}`;
         } else {
-            // Standard Paths (/wiki, /forex, etc) - English always gets /en/ in alternates for clarity
-            alternates[hreflang] = `${BASE_URL}/${langPath}${cleanPath}`;
+            // Standard Paths (/wiki, /forex, etc)
+            // Fix: English (EN) should NOT have /en prefix
+            alternates[hreflang] = code === 'EN'
+                ? `${BASE_URL}${cleanPath}`
+                : `${BASE_URL}/${langPath}${cleanPath}`;
         }
     });
 
-    // Set x-default (English Root or English Path)
-    alternates['x-default'] = cleanPath === '/' ? `${BASE_URL}/` : `${BASE_URL}/en${cleanPath}`;
+    // Set x-default (Always the English version, without /en prefix)
+    alternates['x-default'] = cleanPath === '/' ? `${BASE_URL}/` : `${BASE_URL}${cleanPath}`;
 
     // Canonical (Self-referencing path)
-    let canonical = `${BASE_URL}/${langCode.toLowerCase()}${cleanPath}`;
+    // Fix: English (EN) should NOT have /en prefix in canonical
+    let canonical = langCode === 'EN'
+        ? `${BASE_URL}${cleanPath}`
+        : `${BASE_URL}/${langCode.toLowerCase()}${cleanPath}`;
 
-    // Special Case: English Homepage is Root
-    if (langCode === 'EN' && cleanPath === '/') {
+    // Ensure root trailing slash consistency (Optional but cleaner)
+    if (cleanPath === '/') {
         canonical = `${BASE_URL}/`;
     }
 

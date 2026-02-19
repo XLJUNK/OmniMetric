@@ -110,12 +110,12 @@ export default async function WikiSlugPage({ params }: { params: Promise<{ slug:
             "name": "OmniMetric",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://omnimetric.net/logo.png"
+                "url": "https://www.omnimetric.net/logo.png"
             }
         },
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": `https://omnimetric.net/wiki/${item.slug}`
+            "@id": `https://www.omnimetric.net/wiki/${item.slug}`
         }
     };
 
@@ -123,9 +123,9 @@ export default async function WikiSlugPage({ params }: { params: Promise<{ slug:
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "OmniMetric", "item": "https://omnimetric.net" },
-            { "@type": "ListItem", "position": 2, "name": "Wiki", "item": `https://omnimetric.net/glossary` },
-            { "@type": "ListItem", "position": 3, "name": item.title, "item": `https://omnimetric.net/wiki/${item.slug}` }
+            { "@type": "ListItem", "position": 1, "name": "OmniMetric", "item": "https://www.omnimetric.net" },
+            { "@type": "ListItem", "position": 2, "name": "Wiki", "item": `https://www.omnimetric.net/glossary` },
+            { "@type": "ListItem", "position": 3, "name": item.title, "item": `https://www.omnimetric.net/wiki/${item.slug}` }
         ]
     };
 

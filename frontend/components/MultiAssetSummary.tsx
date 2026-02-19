@@ -220,10 +220,6 @@ export const MultiAssetSummary = ({ initialData, lang: propLang }: MultiAssetSum
                 <div className="w-full h-32 animate-pulse bg-white/5" />
             )}
 
-            {/* Dashboard Ad Slot */}
-            <div className="max-w-[1200px] mx-auto w-full px-2">
-                <AdComponent format="horizontal" minHeight="90px" className="!my-8" />
-            </div>
 
 
 

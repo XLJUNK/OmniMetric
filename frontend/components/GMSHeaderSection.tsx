@@ -183,15 +183,15 @@ export const GMSHeaderSection = ({ data, lang, onOpenSettings }: GMSHeaderProps)
                                 "author": {
                                     "@type": "Organization",
                                     "name": "OmniMetric AI",
-                                    "url": "https://omnimetric.net"
+                                    "url": "https://www.omnimetric.net"
                                 },
                                 "publisher": {
                                     "@type": "Organization",
                                     "name": "OmniMetric Project",
-                                    "url": "https://omnimetric.net",
+                                    "url": "https://www.omnimetric.net",
                                     "logo": {
                                         "@type": "ImageObject",
-                                        "url": "https://omnimetric.net/icon.svg"
+                                        "url": "https://www.omnimetric.net/icon.svg"
                                     }
                                 },
                                 "datePublished": data.last_updated,

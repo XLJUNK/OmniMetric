@@ -80,8 +80,8 @@ export default async function GlossaryPage({ params }: Props) {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "OmniMetric", "item": "https://omnimetric.net" },
-            { "@type": "ListItem", "position": 2, "name": getPageTitle(normalizedLang), "item": `https://omnimetric.net/${normalizedLang.toLowerCase()}/glossary` }
+            { "@type": "ListItem", "position": 1, "name": "OmniMetric", "item": "https://www.omnimetric.net" },
+            { "@type": "ListItem", "position": 2, "name": getPageTitle(normalizedLang), "item": `https://www.omnimetric.net/${normalizedLang.toLowerCase()}/glossary` }
         ]
     };
 
@@ -93,7 +93,7 @@ export default async function GlossaryPage({ params }: Props) {
         "inDefinedTermSet": {
             "@type": "DefinedTermSet",
             "name": `OmniMetric ${getPageTitle(normalizedLang)}`,
-            "url": `https://omnimetric.net/${normalizedLang.toLowerCase()}/glossary`
+            "url": `https://www.omnimetric.net/${normalizedLang.toLowerCase()}/glossary`
         }
     }));
 

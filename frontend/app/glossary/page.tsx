@@ -19,8 +19,8 @@ export default async function GlossaryPage() {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "OmniMetric", "item": "https://omnimetric.net" },
-            { "@type": "ListItem", "position": 2, "name": "Macro Glossary", "item": `https://omnimetric.net/glossary` }
+            { "@type": "ListItem", "position": 1, "name": "OmniMetric", "item": "https://www.omnimetric.net" },
+            { "@type": "ListItem", "position": 2, "name": "Macro Glossary", "item": `https://www.omnimetric.net/glossary` }
         ]
     };
 
@@ -32,7 +32,7 @@ export default async function GlossaryPage() {
         "inDefinedTermSet": {
             "@type": "DefinedTermSet",
             "name": `OmniMetric Macro Glossary`,
-            "url": `https://omnimetric.net/glossary`
+            "url": `https://www.omnimetric.net/glossary`
         }
     }));
 
