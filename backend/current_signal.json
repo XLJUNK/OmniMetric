@@ -1,6 +1,6 @@
 {
-    "last_updated": "2026-02-20T21:39:24.420456+00:00",
-    "last_successful_update": "2026-02-20T21:39:24.420465+00:00",
+    "last_updated": "2026-02-20T22:47:02.955816+00:00",
+    "last_successful_update": "2026-02-20T22:47:02.955824+00:00",
     "gms_score": 52,
     "sector_scores": {
         "STOCKS": 56,
@@ -58,7 +58,6 @@
             "change_percent": 0.0,
             "trend": "NORMAL",
             "sparkline": [
-                0.56,
                 0.52,
                 0.51,
                 0.48,
@@ -86,6 +85,7 @@
                 0.36,
                 0.36,
                 0.36,
+                0.39,
                 0.39,
                 0.39
             ]
@@ -188,11 +188,10 @@
             ]
         },
         "BREAKEVEN_INFLATION": {
-            "price": 2.29,
+            "price": 2.28,
             "change_percent": 0.0,
             "trend": "STABLE",
             "sparkline": [
-                2.28,
                 2.29,
                 2.3,
                 2.29,
@@ -221,7 +220,8 @@
                 2.27,
                 2.26,
                 2.29,
-                2.29
+                2.29,
+                2.28
             ]
         },
         "VIX": {
@@ -256,11 +256,10 @@
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
-            "price": 0.61,
+            "price": 0.6,
             "change_percent": 0.0,
             "trend": "NEUTRAL",
             "sparkline": [
-                0.64,
                 0.65,
                 0.65,
                 0.64,
@@ -289,7 +288,8 @@
                 0.64,
                 0.62,
                 0.62,
-                0.61
+                0.61,
+                0.6
             ]
         },
         "US_10Y_YIELD": {
@@ -584,10 +584,10 @@
             ]
         },
         "BTC": {
-            "price": 67734.05,
+            "price": 67959.91,
             "prev_price": 66957.52,
-            "daily_chg": 1.16,
-            "change_percent": -1.61,
+            "daily_chg": 1.5,
+            "change_percent": -1.28,
             "trend": "UP",
             "sparkline": [
                 84128.66,
@@ -611,14 +611,14 @@
                 67494.22,
                 66425.32,
                 66957.52,
-                67734.05
+                67959.91
             ]
         },
         "ETH": {
-            "price": 1971.87,
+            "price": 1967.75,
             "prev_price": 1948.2,
-            "daily_chg": 1.22,
-            "change_percent": -1.3,
+            "daily_chg": 1.0,
+            "change_percent": -1.51,
             "trend": "UP",
             "sparkline": [
                 2702.38,
@@ -642,14 +642,14 @@
                 1992.19,
                 1953.97,
                 1948.2,
-                1971.87
+                1967.75
             ]
         },
         "SOL": {
-            "price": 84.37,
+            "price": 84.45,
             "prev_price": 82.39,
-            "daily_chg": 2.4,
-            "change_percent": -2.38,
+            "daily_chg": 2.49,
+            "change_percent": -2.29,
             "trend": "UP",
             "sparkline": [
                 117.36,
@@ -673,14 +673,14 @@
                 85.2,
                 81.57,
                 82.39,
-                84.37
+                84.45
             ]
         },
         "DXY": {
-            "price": 97.72,
+            "price": 97.79,
             "prev_price": 97.93,
-            "daily_chg": -0.21,
-            "change_percent": 0.87,
+            "daily_chg": -0.14,
+            "change_percent": 0.94,
             "trend": "DOWN",
             "sparkline": [
                 98.76,
@@ -704,14 +704,14 @@
                 97.16,
                 97.7,
                 97.93,
-                97.72
+                97.79
             ]
         },
         "USDJPY": {
-            "price": 155.01,
+            "price": 154.99,
             "prev_price": 154.69,
-            "daily_chg": 0.2,
-            "change_percent": 1.46,
+            "daily_chg": 0.19,
+            "change_percent": 1.45,
             "trend": "UP",
             "sparkline": [
                 158.46,
@@ -735,15 +735,15 @@
                 153.61,
                 153.15,
                 154.69,
-                155.01
+                154.99
             ]
         },
         "EURUSD": {
             "price": 1.18,
             "prev_price": 1.18,
-            "daily_chg": 0.03,
-            "change_percent": -0.63,
-            "trend": "UP",
+            "daily_chg": -0.03,
+            "change_percent": -0.69,
+            "trend": "DOWN",
             "sparkline": [
                 1.17,
                 1.18,
@@ -832,10 +832,10 @@
             ]
         },
         "GOLD": {
-            "price": 5118.3,
+            "price": 5130.0,
             "prev_price": 4975.9,
-            "daily_chg": 2.86,
-            "change_percent": 1.92,
+            "daily_chg": 3.1,
+            "change_percent": 2.15,
             "trend": "UP",
             "sparkline": [
                 4831.8,
@@ -859,14 +859,14 @@
                 4882.9,
                 4986.5,
                 4975.9,
-                5118.3
+                5130.0
             ]
         },
         "OIL": {
-            "price": 66.37,
+            "price": 66.31,
             "prev_price": 66.43,
-            "daily_chg": -0.09,
-            "change_percent": 5.53,
+            "daily_chg": -0.18,
+            "change_percent": 5.44,
             "trend": "DOWN",
             "sparkline": [
                 60.62,
@@ -890,14 +890,14 @@
                 62.33,
                 65.19,
                 66.43,
-                66.37
+                66.31
             ]
         },
         "COPPER": {
             "price": 5.87,
             "prev_price": 5.73,
-            "daily_chg": 2.42,
-            "change_percent": 1.31,
+            "daily_chg": 2.44,
+            "change_percent": 1.34,
             "trend": "UP",
             "sparkline": [
                 5.73,
@@ -925,10 +925,10 @@
             ]
         },
         "NATGAS": {
-            "price": 2.98,
+            "price": 2.99,
             "prev_price": 3.0,
-            "daily_chg": -0.4,
-            "change_percent": -7.99,
+            "daily_chg": -0.07,
+            "change_percent": -7.68,
             "trend": "DOWN",
             "sparkline": [
                 4.88,
@@ -952,14 +952,14 @@
                 3.03,
                 3.01,
                 3.0,
-                2.98
+                2.99
             ]
         },
         "SILVER": {
-            "price": 84.25,
+            "price": 84.57,
             "prev_price": 77.57,
-            "daily_chg": 8.63,
-            "change_percent": 8.23,
+            "daily_chg": 9.03,
+            "change_percent": 8.63,
             "trend": "UP",
             "sparkline": [
                 92.21,
@@ -983,7 +983,7 @@
                 73.45,
                 77.51,
                 77.57,
-                84.25
+                84.57
             ]
         },
         "DAX": {
@@ -1764,8 +1764,8 @@
         "GBPUSD": {
             "price": 0.74,
             "prev_price": 0.74,
-            "daily_chg": 0.03,
-            "change_percent": 1.16,
+            "daily_chg": 0.11,
+            "change_percent": 1.24,
             "trend": "UP",
             "sparkline": [
                 0.75,
@@ -1795,8 +1795,8 @@
         "AUDUSD": {
             "price": 1.41,
             "prev_price": 1.42,
-            "daily_chg": -0.63,
-            "change_percent": -0.25,
+            "daily_chg": -0.6,
+            "change_percent": -0.22,
             "trend": "DOWN",
             "sparkline": [
                 1.48,
@@ -1826,8 +1826,8 @@
         "USDCAD": {
             "price": 1.37,
             "prev_price": 1.37,
-            "daily_chg": -0.21,
-            "change_percent": 0.37,
+            "daily_chg": -0.13,
+            "change_percent": 0.44,
             "trend": "DOWN",
             "sparkline": [
                 1.38,
@@ -1886,10 +1886,10 @@
             ]
         },
         "USDCHF": {
-            "price": 0.77,
+            "price": 0.78,
             "prev_price": 0.77,
-            "daily_chg": 0.35,
-            "change_percent": 0.87,
+            "daily_chg": 0.42,
+            "change_percent": 0.94,
             "trend": "UP",
             "sparkline": [
                 0.8,
@@ -1913,12 +1913,12 @@
                 0.77,
                 0.77,
                 0.77,
-                0.77
+                0.78
             ]
         },
         "MOVE": {
-            "price": 68.03,
-            "change_percent": 0.0,
+            "price": 64.27,
+            "change_percent": -5.53,
             "trend": "NORMAL",
             "sparkline": [
                 59.56,
@@ -1942,7 +1942,7 @@
                 68.84,
                 64.19,
                 68.03,
-                68.03
+                64.27
             ]
         },
         "BREADTH": {
@@ -2012,40 +2012,40 @@
             ]
         },
         "COPPER_GOLD": {
-            "price": 1.15,
+            "price": 1.14,
             "change_percent": 0,
             "trend": "RISK-OFF",
             "sparkline": [
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15,
-                1.15
+                1.14,
+                1.14,
+                1.14,
+                1.14,
+                1.14,
+                1.14,
+                1.14,
+                1.14,
+                1.14,
+                1.14,
+                1.14,
+                1.14,
+                1.14,
+                1.14,
+                1.14,
+                1.14,
+                1.14,
+                1.14,
+                1.14,
+                1.14,
+                1.14,
+                1.14,
+                1.14,
+                1.14,
+                1.14,
+                1.14,
+                1.14,
+                1.14,
+                1.14,
+                1.14
             ]
         }
     },
@@ -2093,24 +2093,20 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "Neutral stance amid rising protectionist headwinds. The GMS 52 print confirms a transition into a late-cycle neutral regime, where fiscal-monetary nexus stability is challenged by escalating tariff-driven volatility convexity. While equity momentum persists, credit spread expansion and flat copper-gold ratios signal underlying regime degradation. The geopolitical tail-risk of global protectionism mandates a defensive posture against potential liquidity contractions. [MARKET STATUS: DEFENSIVE]",
+        "content": "Neutral stance persists amid mounting tariff risk. The GMS score of 52 dictates a transitionary regime where equity appreciation is increasingly decoupled from negative breadth. While the VIX exhibits compression, the appreciation in precious metals signals an emergent hedging mandate against the fiscal-monetary nexus and tariff-induced inflationary shocks. Despite liquidity stability, degradation in Asian indices suggests a bifurcated global growth trajectory requiring tactical caution. [ACTION: WAIT FOR PULLBACK]",
         "reports": {
-            "JP": "関税リスクが台頭する中、中立的なレジームを維持。GMSスコア52は、財政・金融ネクサスの安定性が保護主義によるボラティリティの凸性に晒されていることを示しています。株式のモメンタムは維持されていますが、ハイイールド債のスプレッド拡大と平坦な銅金比率はレジームの劣化を露呈しています。地政学的なテールリスクが流動性収縮を招く蓋然性が高く、現在は防御的な資産構成を維持すべき局面です。[MARKET STATUS: DEFENSIVE]",
-            "EN": "Neutral stance amid rising protectionist headwinds. The GMS 52 print confirms a transition into a late-cycle neutral regime, where fiscal-monetary nexus stability is challenged by escalating tariff-driven volatility convexity. While equity momentum persists, credit spread expansion and flat copper-gold ratios signal underlying regime degradation. The geopolitical tail-risk of global protectionism mandates a defensive posture against potential liquidity contractions. [MARKET STATUS: DEFENSIVE]",
-            "CN": "中性立场应对贸易保护主义抬头。GMS 52分值确认市场进入周期尾部中性制度，财政货币联动稳定性正受关税诱发的波动率凸性挑战。尽管权益资产动能持续，但信用利差走阔与平坦的铜金比预示着制度性降级。地缘政治尾部风险加剧了流动性收缩的可能性，资产配置必须转向防御性头寸以对冲宏观不确定性。[MARKET STATUS: DEFENSIVE]",
-            "ES": "Postura neutral ante vientos de proteccionismo. El GMS de 52 confirma una transición hacia un régimen neutral de ciclo tardío, donde la estabilidad del nexo fiscal-monetario es desafiada por la convexidad de la volatilidad arancelaria. Aunque el impulso de la renta variable persiste, la expansión de los diferenciales de crédito y el ratio cobre-oro plano señalan una degradación del régimen. El riesgo de cola geopolítico exige una postura defensiva ante la contracción de liquidez. [MARKET STATUS: DEFENSIVE]",
-            "HI": "संरक्षणवादी बाधाओं के बीच तटस्थ दृष्टिकोण। 52 का GMS स्कोर एक लेट-साइकिल तटस्थ शासन में संक्रमण की पुष्टि करता है, जहाँ राजकोषीय-मौद्रिक सांठगांठ की स्थिरता को टैरिफ-जनित अस्थिरता से चुनौती मिल रही है। हालांकि इक्विटी गति बनी हुई है, लेकिन क्रेडिट स्प्रेड का विस्तार और फ्लैट कॉपर-गोल्ड अनुपात शासन के क्षरण का संकेत देते हैं। भू-राजनीतिक जोखिम तरलता संकुचन के विरुद्ध एक रक्षात्मक मुद्रा को अनिवार्य बनाता है। [MARKET STATUS: DEFENSIVE]",
-            "ID": "Sikap netral di tengah hambatan proteksionisme. Skor GMS 52 mengonfirmasi transisi menuju rezim netral siklus akhir, di mana stabilitas nexus fiskal-moneter ditantang oleh konveksitas volatilitas akibat tarif. Meskipun momentum ekuitas bertahan, pelebaran spread kredit dan rasio tembaga-emas yang datar menandakan degradasi rezim yang mendasari. Risiko geopolitik menuntut postur defensif terhadap potensi kontraksi likuiditas global yang signifikan. [MARKET STATUS: DEFENSIVE]",
-            "AR": "موقف محايد وسط رياح الحماية التجارية المتصاعدة. تؤكد قراءة GMS عند 52 الانتقال إلى نظام محايد في أواخر الدورة، حيث تتعرض استقرارية الربط المالي-النقدي لتهديدات ناتجة عن تحدب التقلبات بفعل الرسوم الجمركية. رغم استمرار زخم الأسهم، فإن اتساع هوامش الائتمان وثبات نسبة النحاس إلى الذهب يشيران إلى تدهور النظام الهيكلي. تتطلب المخاطر الجيوسياسية اتخاذ وضعية دفاعية ضد انكماش السيولة المحتمل. [MARKET STATUS: DEFENSIVE]",
-            "DE": "Neutrale Haltung angesichts protektionistischer Risiken. Der GMS-Wert von 52 bestätigt den Übergang in ein neutrales Spätzyklus-Regime, in dem die fiskalisch-monetäre Stabilität durch tarifbedingte Volatilitätskonvexität gefährdet wird. Trotz anhaltendem Aktienmomentum signalisieren die Ausweitung der Credit Spreads und ein stagnierendes Kupfer-Gold-Verhältnis eine Regimedegradation. Geopolitische Tail-Risiken erfordern eine defensive Positionierung gegen Liquiditätsengpässe. [MARKET STATUS: DEFENSIVE]",
-            "FR": "Posture neutre face aux vents protectionnistes. Le score GMS de 52 confirme une transition vers un régime neutre de fin de cycle, où la stabilité du nexus fiscal-monétaire est défiée par une convexité de la volatilité liée aux tarifs douaniers. Bien que le momentum des actions persiste, l'élargissement des spreads de crédit et la stagnation du ratio cuivre-or signalent une dégradation du régime. Les risques géopolitiques imposent une posture défensive face aux contractions de liquidité. [MARKET STATUS: DEFENSIVE]"
+            "JP": "関税リスク増大、中立的姿勢を維持し調整を待つ。GMS 52は市場の乖離を示唆しており、株価上昇とマイナスの騰落銘柄数の乖離が顕著である。VIXの低下に対し、貴金属の騰貴は財政金融ネクサスと関税によるインフレショックへのヘッジ需要を露呈している。ネット流動性は安定しているが、アジア指数の悪化は世界的な成長軌道の二極化を示しており、流動性コンベキシティのリスクを考慮した戦術的な警戒が必要である。[ACTION: WAIT FOR PULLBACK]",
+            "EN": "Neutral stance persists amid mounting tariff risk. The GMS score of 52 dictates a transitionary regime where equity appreciation is increasingly decoupled from negative breadth. While the VIX exhibits compression, the appreciation in precious metals signals an emergent hedging mandate against the fiscal-monetary nexus and tariff-induced inflationary shocks. Despite liquidity stability, degradation in Asian indices suggests a bifurcated global growth trajectory requiring tactical caution. [ACTION: WAIT FOR PULLBACK]",
+            "CN": "关税风险上升，维持中性立场等待回调。GMS 52反映出市场处于转换期，指数上涨与负面广度形成背离。虽然VIX受压，但贵金属大幅升值揭示了针对财政货币纽带及关税引发通胀冲击的避险需求。尽管净流动性保持稳定，但亚洲指数的走弱预示全球增长路径已出现分化，在流动性凸性风险面前必须保持高度的战术审慎。 [ACTION: WAIT FOR PULLBACK]",
+            "ES": "Postura neutral ante el creciente riesgo arancelario. El GMS de 52 dicta un régimen de transición donde la apreciación del capital se desacopla de la amplitud de mercado negativa. Mientras el VIX se comprime, el auge de los metales preciosos señala un mandato de cobertura contra el nexo fiscal-monetario y choques inflacionarios por aranceles. La degradación de los índices asiáticos sugiere una trayectoria de crecimiento bifurcada que exige cautela táctica ante la convexidad de liquidez. [ACTION: WAIT FOR PULLBACK]",
+            "HI": "टैरिफ जोखिम के बीच तटस्थ रुख, गिरावट का इंतज़ार। GMS 52 एक संक्रमणकालीन शासन का संकेत देता है जहां इक्विटी मूल्य वृद्धि नकारात्मक बाजार चौड़ाई से अलग हो रही है। जबकि VIX में संकुचन है, कीमती धातुओं में तेजी राजकोषीय-मौद्रिक नेक्सस और टैरिफ-प्रेरित मुद्रास्फीति के झटकों के खिलाफ एक हेजिंग जनादेश का संकेत देती है। एशियाई सूचकांकों में गिरावट वैश्विक विकास पथ के द्विभाजन को दर्शाती है, जिससे तरलता उत्तलता के बीच सामरिक सावधानी आवश्यक है। [ACTION: WAIT FOR PULLBACK]",
+            "ID": "Sikap netral di tengah meningkatnya risiko tarif. Skor GMS 52 mendikte rezim transisi di mana apresiasi ekuitas semakin terputus dari breadth pasar yang negatif. Sementara VIX terkompresi, lonjakan logam mulia mensinyalkan mandat lindung nilai terhadap neksus fiskal-moneter dan guncangan inflasi akibat tarif. Degradasi indeks Asia menunjukkan lintasan pertumbuhan global yang bercabang, menuntut kewaspadaan taktis terhadap konveksitas likuiditas yang ada. [ACTION: WAIT FOR PULLBACK]",
+            "AR": "موقف محايد وسط تصاعد مخاطر الرسوم الجمركية. تعكس درجة GMS البالغة 52 نظاماً انتقالياً حيث ينفصل ارتفاع الأسهم عن اتساع السوق السلبي. بينما يتقلص مؤشر VIX، يشير ارتفاع المعادن الثمينة إلى ضرورة التحوط ضد الارتباط المالي النقدي وصدمات التضخم الناتجة عن الرسوم. يشير تدهور المؤشرات الآسيوية إلى مسار نمو عالمي متشعب يتطلب حذراً تكتيكياً تجاه تحديات تحدب السيولة الحالية. [ACTION: WAIT FOR PULLBACK]",
+            "DE": "Neutrale Haltung angesichts steigender Zollrisiken. Der GMS-Score von 52 diktiert ein Übergangsregime, in dem sich die Aktienaufwertung zunehmend von der negativen Marktbreite entkoppelt. Während der VIX komprimiert, signalisiert die Aufwertung von Edelmetallen ein Hedging-Mandat gegen den fiskalisch-monetären Nexus und zollbedingte Inflationsschocks. Die Degradierung asiatischer Indizes deutet auf einen gegabelten globalen Wachstumspfad hin, der taktische Vorsicht erfordert. [ACTION: WAIT FOR PULLBACK]",
+            "FR": "Position neutre face aux risques tarifaires croissants. Le score GMS de 52 impose un régime de transition où l'appréciation des actions se déconnecte d'une largeur de marché négative. Alors que le VIX se comprime, l'appréciation des métaux précieux signale un mandat de couverture contre le nexus fiscalo-monétaire et les chocs inflationnistes tarifaires. La dégradation des indices asiatiques suggère une trajectoire de croissance mondiale bifurquée exigeant une prudence tactique immédiate. [ACTION: WAIT FOR PULLBACK]"
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-18T17:20:16Z",
-            "score": 51
-        },
         {
             "date": "2026-02-18T18:29:13Z",
             "score": 51
@@ -2346,6 +2342,10 @@
         {
             "date": "2026-02-20T21:39:24Z",
             "score": 52
+        },
+        {
+            "date": "2026-02-20T22:47:02Z",
+            "score": 52
         }
     ],
     "intelligence": {
@@ -2366,9 +2366,9 @@
                 "isoDate": "2026-02-20T21:18:40+00:00Z"
             },
             {
-                "title": "Fourth-quarter U.S. GDP up just 1.4%, badly missing estimate; inflation firms at 3%",
-                "link": "https://www.cnbc.com/2026/02/20/pce-inflation-december-2025.html",
-                "isoDate": "2026-02-20T16:05:02+00:00Z"
+                "title": "OpenAI resets spending expectations, tells investors compute target is around $600 billion by 2030",
+                "link": "https://www.cnbc.com/2026/02/20/openai-resets-spend-expectations-targets-around-600-billion-by-2030.html",
+                "isoDate": "2026-02-20T22:35:29+00:00Z"
             },
             {
                 "title": "The best trades after geopolitical shocks as possible Iran conflict looms",
@@ -2376,78 +2376,78 @@
                 "isoDate": "2026-02-20T21:24:11+00:00Z"
             },
             {
-                "title": "Trump previewed weak GDP on Truth Social ahead of official data release",
-                "link": "https://www.cnbc.com/2026/02/20/trump-gdp-weak-powell-fed-interest-rates.html",
-                "isoDate": "2026-02-20T19:18:41+00:00Z"
+                "title": "Trump says he's considering limited military strike against Iran",
+                "link": "https://www.cnbc.com/2026/02/20/trump-says-hes-considering-limited-military-strike-against-iran.html",
+                "isoDate": "2026-02-20T19:56:58+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "トランプ氏、最高裁敗訴で激怒し新たな世界関税10%を発表",
-                "最高裁判決、トランプ関税で米国が1750億ドルの還付義務を負う可能性、と試算",
-                "最高裁がトランプ緊急関税を無効化、S&P500上昇、ダウ200ポイント高：ライブ速報",
-                "米第4四半期GDPは1.4%増にとどまり、予測を大幅に下回る、インフレ率は3%に上昇",
-                "イラン紛争の可能性が迫る中、地政学的な衝撃後の最良の取引",
-                "トランプ氏、公式発表前に「トゥルース・ソーシャル」で弱いGDPを予測"
+                "トランプ氏、最高裁敗訴に激怒し新たな世界関税10％を発表",
+                "最高裁のトランプ関税に関する判決、米国が1750億ドルの還付金支払いに追い込まれる可能性、と見積もり",
+                "最高裁がトランプ緊急関税を無効とした後、S&P500種株価指数は上昇、ダウ平均は200ドル高：ライブ速報",
+                "OpenAI、支出予想を下方修正、2030年までのコンピューティング目標は6000億ドル前後と投資家に通知",
+                "イラン紛争の可能性が迫る中、地政学的ショック後の最良の取引",
+                "トランプ氏、イランへの限定的な軍事攻撃を検討中と発言"
             ],
             "CN": [
                 "特朗普在最高法院失利后暴怒，宣布新的10%全球关税",
-                "最高法院裁决特朗普关税可能令美国承担1750亿美元退款，估算称",
-                "最高法院推翻特朗普紧急关税后，标普500指数上涨，道指上涨200点：实时更新",
-                "美国第四季度GDP仅增长1.4%，远低于预期；通胀率为3%",
-                "地缘政治冲击后的最佳交易，因伊朗冲突可能迫近",
-                "特朗普在官方数据发布前于Truth Social上预告GDP疲软"
+                "最高法院特朗普关税裁决可能使美国面临1750亿美元退款，估算显示",
+                "最高法院驳回特朗普紧急关税后，标普500指数上涨，道琼斯指数上涨200点：实时更新",
+                "OpenAI重置支出预期，告知投资者到2030年计算目标约为6000亿美元",
+                "地缘政治冲击下的最佳交易，因伊朗冲突迫在眉睫",
+                "特朗普表示正在考虑对伊朗进行有限军事打击"
             ],
             "ES": [
-                "Trump anuncia nuevo arancel global del 10% tras enfurecerse por la derrota en el Tribunal Supremo",
-                "La sentencia del Tribunal Supremo sobre los aranceles de Trump podría obligar a EE.UU. a pagar 175 mil millones de dólares en reembolsos, según una estimación",
-                "El S&P 500 sube, el Dow gana 200 puntos tras anular el Tribunal Supremo los aranceles de emergencia de Trump: Actualizaciones en vivo",
-                "El PIB de EE.UU. en el cuarto trimestre subió solo un 1.4%, muy por debajo de lo estimado; la inflación se mantiene en el 3%",
-                "Las mejores operaciones tras las conmociones geopolíticas ante el posible conflicto en Irán",
-                "Trump adelantó un PIB débil en Truth Social antes de la publicación de los datos oficiales"
+                "Trump anuncia nuevo arancel global del 10% tras enfurecerse por la pérdida ante la Corte Suprema",
+                "El fallo de la Corte Suprema sobre los aranceles de Trump podría poner a EE.UU. en la obligación de pagar $175 mil millones en reembolsos, según estimación",
+                "El S&P 500 sube, el Dow Jones gana 200 puntos tras la anulación de los aranceles de emergencia de Trump por la Corte Suprema: Actualizaciones en vivo",
+                "OpenAI reinicia las expectativas de gasto y dice a los inversores que el objetivo de cómputo rondará los $600 mil millones para 2030",
+                "Las mejores operaciones tras shocks geopolíticos ante la posible amenaza de conflicto con Irán",
+                "Trump dice que está considerando un ataque militar limitado contra Irán"
             ],
             "HI": [
-                "ट्रम्प ने सुप्रीम कोर्ट में हार पर भड़कने के बाद 10% का नया वैश्विक टैरिफ घोषित किया",
-                "सुप्रीम कोर्ट का ट्रम्प टैरिफ पर फैसला अमेरिका को 175 बिलियन डॉलर की वापसी के लिए उत्तरदायी ठहरा सकता है, एक अनुमान कहता है",
-                "सुप्रीम कोर्ट ने ट्रम्प के आपातकालीन टैरिफ को रद्द किया, एसएंडपी 500 में बढ़त, डाऊ जोंस 200 अंक ऊपर: लाइव अपडेट",
-                "चौथी तिमाही में अमेरिकी जीडीपी केवल 1.4% बढ़ी, अनुमान से काफी कम; मुद्रास्फीति 3% पर",
-                "संभावित ईरान संघर्ष के बीच भू-राजनीतिक झटकों के बाद सबसे अच्छे सौदे",
-                "ट्रम्प ने आधिकारिक डेटा जारी होने से पहले ट्रुथ सोशल पर कमजोर जीडीपी का पूर्वावलोकन किया"
+                "ट्रम्प ने सुप्रीम कोर्ट में हार पर भड़कने के बाद 10% नए वैश्विक टैरिफ की घोषणा की",
+                "सुप्रीम कोर्ट का ट्रम्प टैरिफ पर फैसला, अनुमान के अनुसार, अमेरिका को $175 बिलियन की वापसी का भुगतान करना पड़ सकता है",
+                "सुप्रीम कोर्ट द्वारा ट्रम्प के आपातकालीन टैरिफ को रद्द करने के बाद एसएंडपी 500 में वृद्धि, डाउ जोंस 200 अंक बढ़ा: लाइव अपडेट",
+                "OpenAI ने खर्च की उम्मीदों को रीसेट किया, निवेशकों को बताया कि 2030 तक कंप्यूट लक्ष्य लगभग $600 बिलियन है",
+                "ईरान संघर्ष की आशंका के बीच भू-राजनीतिक झटकों के बाद सर्वश्रेष्ठ ट्रेड",
+                "ट्रम्प ने कहा कि वह ईरान के खिलाफ सीमित सैन्य हमले पर विचार कर रहे हैं"
             ],
             "ID": [
-                "Trump umumkan tarif global baru 10% setelah murka atas kekalahan di Mahkamah Agung",
-                "Putusan Mahkamah Agung Trump mengenai tarif dapat membuat AS bertanggung jawab atas pengembalian dana $175 miliar, kata perkiraan",
+                "Trump mengumumkan tarif global baru 10% setelah mengamuk atas kekalahan di Mahkamah Agung",
+                "Keputusan Mahkamah Agung tentang tarif Trump dapat membuat AS harus membayar ganti rugi sebesar $175 miliar, kata perkiraan",
                 "S&P 500 naik, Dow menguat 200 poin setelah Mahkamah Agung membatalkan tarif darurat Trump: Pembaruan langsung",
-                "PDB AS kuartal keempat naik hanya 1,4%, jauh meleset dari perkiraan; inflasi menguat di 3%",
-                "Perdagangan terbaik setelah guncangan geopolitik seiring kemungkinan konflik Iran membayangi",
-                "Trump memprediksi PDB lemah di Truth Social sebelum rilis data resmi"
+                "OpenAI mengatur ulang ekspektasi belanja, memberi tahu investor target komputasi sekitar $600 miliar pada tahun 2030",
+                "Perdagangan terbaik setelah kejutan geopolitik saat potensi konflik Iran membayangi",
+                "Trump mengatakan sedang mempertimbangkan serangan militer terbatas terhadap Iran"
             ],
             "AR": [
-                "ترامب يعلن عن تعريفة عالمية جديدة بنسبة 10% بعد غضبه من خسارة المحكمة العليا",
-                "قرار المحكمة العليا بشأن تعريفات ترامب قد يضع الولايات المتحدة على المحك مقابل 175 مليار دولار في استرداد الأموال، حسب تقدير",
-                "مؤشر S&P 500 يرتفع، وداو جونز يربح 200 نقطة بعد إلغاء المحكمة العليا لتعريفات ترامب الطارئة: تحديثات مباشرة",
-                "ناتج الناتج المحلي الإجمالي الأمريكي في الربع الرابع يرتفع بنسبة 1.4% فقط، مخيباً التوقعات بشكل كبير؛ التضخم يشتد عند 3%",
-                "أفضل الصفقات بعد الصدمات الجيوسياسية مع اقتراب صراع إيراني محتمل",
-                "ترامب يتوقع ناتجاً محلياً إجمالياً ضعيفاً على \"تروث سوشيال\" قبل الإفراج عن البيانات الرسمية"
+                "ترامب يعلن عن رسوم جمركية عالمية جديدة بنسبة 10٪ بعد غضبه من خسارته أمام المحكمة العليا",
+                "حكم المحكمة العليا بشأن رسوم ترامب الجمركية قد يضع الولايات المتحدة على المحك بمبلغ 175 مليار دولار في استرداد الأموال، حسب تقدير",
+                "مؤشر S&P 500 يرتفع، ومؤشر داو جونز يكتسب 200 نقطة بعد إلغاء المحكمة العليا لرسوم ترامب الطارئة: تحديثات مباشرة",
+                "OpenAI تعيد ضبط توقعات الإنفاق، وتخبر المستثمرين أن هدف الحوسبة يبلغ حوالي 600 مليار دولار بحلول عام 2030",
+                "أفضل الصفقات بعد الصدمات الجيوسياسية مع احتمال نشوب صراع إيراني",
+                "ترامب يقول إنه يدرس ضربة عسكرية محدودة ضد إيران"
             ],
             "DE": [
-                "Trump kündigt neue globale Zoll von 10 % an, nachdem er über Niederlage vor dem Obersten Gericht wütete",
-                "Supreme Court Trump Tarifentscheidung könnte die USA 175 Milliarden Dollar an Rückerstattungen kosten, schätzt eine Schätzung",
-                "S&P 500 steigt, Dow legt 200 Punkte zu, nachdem der Oberste Gerichtshof Trumps Notfalltarife aufgehoben hat: Live-Updates",
-                "US-BIP im vierten Quartal nur 1,4 % höher, verfehlt Schätzungen deutlich; Inflation bei 3 %",
-                "Die besten Trades nach geopolitischen Schocks, da ein möglicher Iran-Konflikt droht",
-                "Trump prognostizierte schwaches BIP auf Truth Social vor Veröffentlichung offizieller Daten"
+                "Trump kündigt nach Wut über Niederlage vor Oberstem Gericht neue globale Zölle von 10 % an",
+                "Oberster Gerichtshof: Trumps Zölle könnten die USA laut Schätzung zu 175 Milliarden US-Dollar an Rückerstattungen verpflichten",
+                "S&P 500 steigt, Dow gewinnt 200 Punkte, nachdem Oberster Gerichtshof Trumps Notfallzölle für ungültig erklärt: Live-Updates",
+                "OpenAI setzt Ausgabenerwartungen zurück und teilt Investoren mit, dass das Computerkziel bis 2030 bei rund 600 Milliarden US-Dollar liegt",
+                "Die besten Trades nach geopolitischen Schocks, während ein möglicher Iran-Konflikt droht",
+                "Trump sagt, er erwäge einen begrenzten Militärschlag gegen den Iran"
             ],
             "FR": [
-                "Trump annonce un nouveau tarif mondial de 10 % après s'être emporté contre sa défaite devant la Cour suprême",
-                "La décision de la Cour suprême sur les tarifs douaniers de Trump pourrait mettre les États-Unis à la merci de 175 milliards de dollars de remboursements, selon une estimation",
-                "Le S&P 500 progresse, le Dow gagne 200 points après que la Cour suprême a annulé les tarifs d'urgence de Trump : Mises à jour en direct",
-                "Le PIB américain au quatrième trimestre n'a augmenté que de 1,4 %, manquant largement les estimations ; l'inflation se raffermit à 3 %",
+                "Trump annonce de nouveaux droits de douane mondiaux de 10 % après s'être emporté contre sa défaite devant la Cour suprême",
+                "La décision de la Cour suprême sur les droits de douane de Trump pourrait obliger les États-Unis à rembourser 175 milliards de dollars, selon une estimation",
+                "Le S&P 500 monte, le Dow Jones gagne 200 points après l'invalidation des droits de douane d'urgence de Trump par la Cour suprême : mises à jour en direct",
+                "OpenAI réinitialise ses prévisions de dépenses, indique aux investisseurs que la cible de calcul sera d'environ 600 milliards de dollars d'ici 2030",
                 "Les meilleures transactions après les chocs géopolitiques alors qu'un possible conflit iranien se profile",
-                "Trump a prédit un PIB faible sur Truth Social avant la publication des données officielles"
+                "Trump déclare qu'il envisage une frappe militaire limitée contre l'Iran"
             ]
         },
-        "last_updated": "2026-02-20T21:39:24.419717+00:00Z"
+        "last_updated": "2026-02-20T22:47:02.955246+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
