@@ -48,7 +48,7 @@ jobs:
           python backend/performance_analyzer.py
           # FRONTEND SYNC (Files updated by daily_tasks: market_data.json, archive/*.json)
           git add backend/archive/*.json frontend/public/data/archive/*.json frontend/public/data/archive/index.json frontend/public/data/market_data.json
-          git commit -m "Daily maintenance (OGV & Archive) [bot]" || echo "No changes to commit"
+          git commit -m "Daily maintenance (OGV & Archive) [bot] [skip ci]" || echo "No changes to commit"
           
           git pull --rebase origin main || echo "Already up to date"
           git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git main

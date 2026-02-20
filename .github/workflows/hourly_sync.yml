@@ -93,7 +93,7 @@ jobs:
           if [ -f backend/beacon_alerts.json ]; then
             git add backend/beacon_alerts.json
           fi
-          git commit -m "Auto-update hourly signal [bot]" || echo "No changes to commit"
+          git commit -m "Auto-update hourly signal [bot] [skip ci]" || echo "No changes to commit"
           
           git pull --rebase origin main || echo "Already up to date"
           git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git main
