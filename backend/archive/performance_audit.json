@@ -1,54 +1,16 @@
 {
     "metrics": {
         "avg_vix_defensive": 17.44,
-        "avg_vix_neutral": 18.93,
+        "avg_vix_neutral": 19.06,
         "avg_vix_accumulate": 14.49,
-        "sample_count": 39,
-        "last_updated": "2026-02-19T02:25:03.372637+00:00"
+        "sample_count": 40,
+        "last_updated": "2026-02-20T02:13:06.488185+00:00"
     },
     "summaries": {
-        "EN": "Over the past 39 entries, market volatility (VIX) was -7.9% higher during GMS Defensive regimes (<40) compared to Neutral, validating the signal's sensitivity to structural stress.",
-        "JP": "過去39回の観測データにおいて、GMSが「ディフェンシブ（40以下）」を示した期間のVIX指数は平均17.44となり、ニュートラル期間より-7.9%高く推移しました。これは、本アルゴリズムが市場の構造的ストレスを正確に捉えていることを客観的に示しています。"
+        "EN": "Over the past 40 entries, market volatility (VIX) was -8.5% higher during GMS Defensive regimes (<40) compared to Neutral, validating the signal's sensitivity to structural stress.",
+        "JP": "過去40回の観測データにおいて、GMSが「ディフェンシブ（40以下）」を示した期間のVIX指数は平均17.44となり、ニュートラル期間より-8.5%高く推移しました。これは、本アルゴリズムが市場の構造的ストレスを正確に捉えていることを客観的に示しています。"
     },
     "history": [
-        {
-            "date": "2026-01-19",
-            "gms_score": 27,
-            "crypto_sentiment_price": 44,
-            "yield_spread_price": 0.57,
-            "hy_spread_price": 2.71,
-            "nfci_price": -0.57,
-            "net_liquidity_price": 5801.3,
-            "vix_price": 18.84,
-            "yield_spread_10y2y_price": 0.65,
-            "us_10y_yield_price": 4.17,
-            "real_interest_rate_price": 1.88,
-            "breakeven_inflation_price": 2.33,
-            "spy_price": 691.66,
-            "tnx_price": 4.23,
-            "qqq_price": 621.26,
-            "iwm_price": 265.76,
-            "rsp_price": 199.05,
-            "hyg_price": 81.09,
-            "nifty_price": 25585.5,
-            "btc_price": 92560.04,
-            "eth_price": 3188.43,
-            "sol_price": 133.56,
-            "dxy_price": 99.39,
-            "usdjpy_price": 158.17,
-            "eurusd_price": 1.16,
-            "usdinr_price": 90.85,
-            "usdsar_price": 3.75,
-            "gold_price": 4671.3,
-            "oil_price": 59.37,
-            "copper_price": 5.9,
-            "natgas_price": 3.58,
-            "move_price": 58.05,
-            "breadth_price": 1.14,
-            "spy_momentum_price": -1.14,
-            "copper_gold_price": 1.26,
-            "net_liquidity": 5801.3
-        },
         {
             "date": "2026-01-20",
             "gms_score": 25,
@@ -1344,6 +1306,26 @@
             "qqq_price": 605.79,
             "iwm_price": 263.99,
             "crypto_sentiment": 8
+        },
+        {
+            "date": "2026-02-20",
+            "gms_score": 52,
+            "net_liquidity": 5700.04,
+            "move_price": 68.03,
+            "real_rate": 1.8,
+            "breakeven_inflation": 2.29,
+            "dxy_price": 97.89,
+            "hy_spread": 2.86,
+            "nfci_price": -0.57,
+            "breadth_spread": 0.7,
+            "gold_price": 5015.8,
+            "btc_price": 67195.91,
+            "copper_gold_ratio": 1.15,
+            "vix_price": 20.23,
+            "spy_price": 684.48,
+            "qqq_price": 603.47,
+            "iwm_price": 264.6,
+            "crypto_sentiment": 7
         }
     ]
 }
