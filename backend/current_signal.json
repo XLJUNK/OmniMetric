@@ -1,12 +1,12 @@
 {
-    "last_updated": "2026-02-20T15:25:09.000586+00:00",
-    "last_successful_update": "2026-02-20T15:25:09.000593+00:00",
-    "gms_score": 51,
+    "last_updated": "2026-02-20T16:08:00.284258+00:00",
+    "last_successful_update": "2026-02-20T16:08:00.284265+00:00",
+    "gms_score": 52,
     "sector_scores": {
         "STOCKS": 56,
         "CRYPTO": 35,
         "FOREX": 41,
-        "COMMODITIES": 44,
+        "COMMODITIES": 53,
         "GLOBAL_INDICES": 50,
         "REAL_ESTATE": 50,
         "CREDIT": 50,
@@ -91,13 +91,12 @@
             ]
         },
         "HY_SPREAD": {
-            "price": 2.86,
-            "prev_price": 2.94,
-            "daily_chg": -2.72,
-            "change_percent": -2.72,
+            "price": 2.88,
+            "prev_price": 2.86,
+            "daily_chg": 0.7,
+            "change_percent": 0.7,
             "trend": "CALM",
             "sparkline": [
-                2.74,
                 2.74,
                 2.75,
                 2.76,
@@ -126,7 +125,8 @@
                 2.95,
                 2.94,
                 2.94,
-                2.86
+                2.86,
+                2.88
             ]
         },
         "NFCI": {
@@ -225,10 +225,10 @@
             ]
         },
         "VIX": {
-            "price": 19.89,
+            "price": 18.99,
             "prev_price": 20.23,
-            "daily_chg": -1.68,
-            "change_percent": -3.45,
+            "daily_chg": -6.13,
+            "change_percent": -7.82,
             "trend": "DOWN",
             "sparkline": [
                 16.9,
@@ -252,7 +252,7 @@
                 20.29,
                 19.62,
                 20.23,
-                19.89
+                18.99
             ]
         },
         "YIELD_SPREAD_10Y2Y": {
@@ -367,10 +367,10 @@
             ]
         },
         "SPY": {
-            "price": 687.41,
+            "price": 688.68,
             "prev_price": 684.48,
-            "daily_chg": 0.43,
-            "change_percent": 0.83,
+            "daily_chg": 0.61,
+            "change_percent": 1.02,
             "trend": "UP",
             "sparkline": [
                 685.4,
@@ -394,14 +394,14 @@
                 682.85,
                 686.29,
                 684.48,
-                687.41
+                688.68
             ]
         },
         "TNX": {
             "price": 4.09,
             "prev_price": 4.07,
-            "daily_chg": 0.37,
-            "change_percent": 0.84,
+            "daily_chg": 0.47,
+            "change_percent": 0.94,
             "trend": "UP",
             "sparkline": [
                 4.25,
@@ -429,10 +429,10 @@
             ]
         },
         "QQQ": {
-            "price": 607.07,
+            "price": 609.8,
             "prev_price": 603.47,
-            "daily_chg": 0.6,
-            "change_percent": 0.86,
+            "daily_chg": 1.05,
+            "change_percent": 1.31,
             "trend": "UP",
             "sparkline": [
                 616.28,
@@ -456,14 +456,14 @@
                 601.3,
                 605.79,
                 603.47,
-                607.07
+                609.8
             ]
         },
         "IWM": {
-            "price": 265.16,
+            "price": 265.07,
             "prev_price": 264.6,
-            "daily_chg": 0.21,
-            "change_percent": 0.84,
+            "daily_chg": 0.18,
+            "change_percent": 0.8,
             "trend": "UP",
             "sparkline": [
                 267.79,
@@ -487,14 +487,14 @@
                 263.04,
                 263.99,
                 264.6,
-                265.16
+                265.07
             ]
         },
         "RSP": {
-            "price": 204.24,
+            "price": 203.64,
             "prev_price": 203.14,
-            "daily_chg": 0.54,
-            "change_percent": 0.68,
+            "daily_chg": 0.25,
+            "change_percent": 0.38,
             "trend": "UP",
             "sparkline": [
                 199.4,
@@ -518,14 +518,14 @@
                 202.52,
                 203.57,
                 203.14,
-                204.24
+                203.64
             ]
         },
         "HYG": {
             "price": 80.96,
             "prev_price": 80.94,
-            "daily_chg": 0.02,
-            "change_percent": 0.13,
+            "daily_chg": 0.03,
+            "change_percent": 0.14,
             "trend": "UP",
             "sparkline": [
                 80.72,
@@ -584,10 +584,10 @@
             ]
         },
         "BTC": {
-            "price": 67175.95,
+            "price": 67711.58,
             "prev_price": 66957.52,
-            "daily_chg": 0.33,
-            "change_percent": -2.42,
+            "daily_chg": 1.13,
+            "change_percent": -1.64,
             "trend": "UP",
             "sparkline": [
                 84128.66,
@@ -611,14 +611,14 @@
                 67494.22,
                 66425.32,
                 66957.52,
-                67175.95
+                67711.58
             ]
         },
         "ETH": {
-            "price": 1950.82,
+            "price": 1965.63,
             "prev_price": 1948.2,
-            "daily_chg": 0.13,
-            "change_percent": -2.36,
+            "daily_chg": 0.89,
+            "change_percent": -1.62,
             "trend": "UP",
             "sparkline": [
                 2702.38,
@@ -642,14 +642,14 @@
                 1992.19,
                 1953.97,
                 1948.2,
-                1950.82
+                1965.63
             ]
         },
         "SOL": {
-            "price": 83.36,
+            "price": 84.54,
             "prev_price": 82.39,
-            "daily_chg": 1.18,
-            "change_percent": -3.55,
+            "daily_chg": 2.61,
+            "change_percent": -2.18,
             "trend": "UP",
             "sparkline": [
                 117.36,
@@ -673,14 +673,14 @@
                 85.2,
                 81.57,
                 82.39,
-                83.36
+                84.54
             ]
         },
         "DXY": {
-            "price": 97.71,
+            "price": 97.72,
             "prev_price": 97.93,
-            "daily_chg": -0.23,
-            "change_percent": 0.85,
+            "daily_chg": -0.21,
+            "change_percent": 0.87,
             "trend": "DOWN",
             "sparkline": [
                 98.76,
@@ -704,14 +704,14 @@
                 97.16,
                 97.7,
                 97.93,
-                97.71
+                97.72
             ]
         },
         "USDJPY": {
-            "price": 155.05,
+            "price": 154.76,
             "prev_price": 154.69,
-            "daily_chg": 0.23,
-            "change_percent": 1.49,
+            "daily_chg": 0.04,
+            "change_percent": 1.3,
             "trend": "UP",
             "sparkline": [
                 158.46,
@@ -735,14 +735,14 @@
                 153.61,
                 153.15,
                 154.69,
-                155.05
+                154.76
             ]
         },
         "EURUSD": {
             "price": 1.18,
             "prev_price": 1.18,
-            "daily_chg": 0.09,
-            "change_percent": -0.57,
+            "daily_chg": 0.07,
+            "change_percent": -0.6,
             "trend": "UP",
             "sparkline": [
                 1.17,
@@ -770,10 +770,10 @@
             ]
         },
         "USDINR": {
-            "price": 90.74,
+            "price": 90.79,
             "prev_price": 90.79,
-            "daily_chg": -0.06,
-            "change_percent": 0.19,
+            "daily_chg": -0.0,
+            "change_percent": 0.24,
             "trend": "DOWN",
             "sparkline": [
                 91.54,
@@ -797,7 +797,7 @@
                 90.78,
                 90.63,
                 90.79,
-                90.74
+                90.79
             ]
         },
         "USDSAR": {
@@ -832,10 +832,10 @@
             ]
         },
         "GOLD": {
-            "price": 5042.5,
+            "price": 5058.2,
             "prev_price": 4975.9,
-            "daily_chg": 1.34,
-            "change_percent": 0.41,
+            "daily_chg": 1.65,
+            "change_percent": 0.72,
             "trend": "UP",
             "sparkline": [
                 4831.8,
@@ -859,14 +859,14 @@
                 4882.9,
                 4986.5,
                 4975.9,
-                5042.5
+                5058.2
             ]
         },
         "OIL": {
-            "price": 66.2,
+            "price": 65.95,
             "prev_price": 66.43,
-            "daily_chg": -0.35,
-            "change_percent": 5.26,
+            "daily_chg": -0.72,
+            "change_percent": 4.87,
             "trend": "DOWN",
             "sparkline": [
                 60.62,
@@ -890,14 +890,14 @@
                 62.33,
                 65.19,
                 66.43,
-                66.2
+                65.95
             ]
         },
         "COPPER": {
-            "price": 5.79,
+            "price": 5.8,
             "prev_price": 5.73,
-            "daily_chg": 1.02,
-            "change_percent": -0.07,
+            "daily_chg": 1.23,
+            "change_percent": 0.14,
             "trend": "UP",
             "sparkline": [
                 5.73,
@@ -921,14 +921,14 @@
                 5.63,
                 5.79,
                 5.73,
-                5.79
+                5.8
             ]
         },
         "NATGAS": {
             "price": 2.97,
             "prev_price": 3.0,
-            "daily_chg": -0.97,
-            "change_percent": -8.51,
+            "daily_chg": -1.0,
+            "change_percent": -8.54,
             "trend": "DOWN",
             "sparkline": [
                 4.88,
@@ -956,10 +956,10 @@
             ]
         },
         "SILVER": {
-            "price": 80.68,
+            "price": 81.71,
             "prev_price": 77.57,
-            "daily_chg": 4.02,
-            "change_percent": 3.64,
+            "daily_chg": 5.35,
+            "change_percent": 4.96,
             "trend": "UP",
             "sparkline": [
                 92.21,
@@ -983,14 +983,14 @@
                 73.45,
                 77.51,
                 77.57,
-                80.68
+                81.71
             ]
         },
         "DAX": {
-            "price": 25217.37,
+            "price": 25244.26,
             "prev_price": 25043.57,
-            "daily_chg": 0.69,
-            "change_percent": 1.68,
+            "daily_chg": 0.8,
+            "change_percent": 1.79,
             "trend": "UP",
             "sparkline": [
                 24856.47,
@@ -1014,14 +1014,14 @@
                 24998.4,
                 25278.21,
                 25043.57,
-                25217.37
+                25244.26
             ]
         },
         "CAC40": {
-            "price": 8516.35,
+            "price": 8500.09,
             "prev_price": 8398.78,
-            "daily_chg": 1.4,
-            "change_percent": 2.4,
+            "daily_chg": 1.21,
+            "change_percent": 2.21,
             "trend": "UP",
             "sparkline": [
                 8148.89,
@@ -1045,14 +1045,14 @@
                 8361.46,
                 8429.03,
                 8398.78,
-                8516.35
+                8500.09
             ]
         },
         "STOXX600": {
-            "price": 630.45,
+            "price": 630.25,
             "prev_price": 625.33,
-            "daily_chg": 0.82,
-            "change_percent": 1.93,
+            "daily_chg": 0.79,
+            "change_percent": 1.9,
             "trend": "UP",
             "sparkline": [
                 608.86,
@@ -1076,14 +1076,14 @@
                 621.29,
                 628.69,
                 625.33,
-                630.45
+                630.25
             ]
         },
         "FTSE": {
-            "price": 10710.85,
+            "price": 10704.27,
             "prev_price": 10627.0,
-            "daily_chg": 0.79,
-            "change_percent": 2.26,
+            "daily_chg": 0.73,
+            "change_percent": 2.2,
             "trend": "UP",
             "sparkline": [
                 10150.1,
@@ -1107,7 +1107,7 @@
                 10556.2,
                 10686.2,
                 10627.0,
-                10710.85
+                10704.27
             ]
         },
         "NIKKEI": {
@@ -1235,10 +1235,10 @@
             ]
         },
         "BOVESPA": {
-            "price": 188203.36,
+            "price": 188492.95,
             "prev_price": 188534.0,
-            "daily_chg": -0.18,
-            "change_percent": 0.23,
+            "daily_chg": -0.02,
+            "change_percent": 0.39,
             "trend": "DOWN",
             "sparkline": [
                 166277.0,
@@ -1262,7 +1262,7 @@
                 186464.0,
                 186016.0,
                 188534.0,
-                188203.36
+                188492.95
             ]
         },
         "ASX200": {
@@ -1299,8 +1299,8 @@
         "G_REIT": {
             "price": 26.98,
             "prev_price": 26.86,
-            "daily_chg": 0.45,
-            "change_percent": 0.0,
+            "daily_chg": 0.43,
+            "change_percent": -0.02,
             "trend": "UP",
             "sparkline": [
                 25.57,
@@ -1328,10 +1328,10 @@
             ]
         },
         "US_HOUSING": {
-            "price": 120.23,
+            "price": 118.92,
             "prev_price": 117.85,
-            "daily_chg": 2.02,
-            "change_percent": -0.93,
+            "daily_chg": 0.91,
+            "change_percent": -2.01,
             "trend": "UP",
             "sparkline": [
                 114.84,
@@ -1355,14 +1355,14 @@
                 120.14,
                 119.59,
                 117.85,
-                120.23
+                118.92
             ]
         },
         "LOGISTICS": {
-            "price": 40.01,
+            "price": 40.3,
             "prev_price": 39.93,
-            "daily_chg": 0.19,
-            "change_percent": -0.1,
+            "daily_chg": 0.93,
+            "change_percent": 0.64,
             "trend": "UP",
             "sparkline": [
                 38.86,
@@ -1386,14 +1386,14 @@
                 40.38,
                 39.87,
                 39.93,
-                40.01
+                40.3
             ]
         },
         "INFRA": {
-            "price": 68.17,
+            "price": 68.25,
             "prev_price": 67.94,
-            "daily_chg": 0.34,
-            "change_percent": -0.26,
+            "daily_chg": 0.46,
+            "change_percent": -0.14,
             "trend": "UP",
             "sparkline": [
                 62.47,
@@ -1417,14 +1417,14 @@
                 68.62,
                 67.98,
                 67.94,
-                68.17
+                68.25
             ]
         },
         "HY_BOND": {
             "price": 80.96,
             "prev_price": 80.94,
-            "daily_chg": 0.02,
-            "change_percent": 0.13,
+            "daily_chg": 0.03,
+            "change_percent": 0.14,
             "trend": "UP",
             "sparkline": [
                 80.72,
@@ -1452,10 +1452,10 @@
             ]
         },
         "IG_BOND": {
-            "price": 111.53,
+            "price": 111.49,
             "prev_price": 111.68,
-            "daily_chg": -0.14,
-            "change_percent": -0.06,
+            "daily_chg": -0.17,
+            "change_percent": -0.09,
             "trend": "DOWN",
             "sparkline": [
                 110.15,
@@ -1479,14 +1479,14 @@
                 111.7,
                 111.59,
                 111.68,
-                111.53
+                111.49
             ]
         },
         "TIPS": {
-            "price": 111.05,
+            "price": 111.12,
             "prev_price": 111.25,
-            "daily_chg": -0.18,
-            "change_percent": -0.3,
+            "daily_chg": -0.11,
+            "change_percent": -0.24,
             "trend": "DOWN",
             "sparkline": [
                 110.12,
@@ -1510,13 +1510,13 @@
                 111.23,
                 111.16,
                 111.25,
-                111.05
+                111.12
             ]
         },
         "SHY": {
             "price": 83.0,
             "prev_price": 82.98,
-            "daily_chg": 0.02,
+            "daily_chg": 0.03,
             "change_percent": -0.07,
             "trend": "UP",
             "sparkline": [
@@ -1545,10 +1545,10 @@
             ]
         },
         "BALTIC": {
-            "price": 11.89,
+            "price": 11.98,
             "prev_price": 11.66,
-            "daily_chg": 1.93,
-            "change_percent": 3.44,
+            "daily_chg": 2.7,
+            "change_percent": 4.22,
             "trend": "UP",
             "sparkline": [
                 10.07,
@@ -1572,14 +1572,14 @@
                 11.68,
                 11.76,
                 11.66,
-                11.89
+                11.98
             ]
         },
         "SHIPPING": {
-            "price": 39.89,
+            "price": 39.98,
             "prev_price": 39.57,
-            "daily_chg": 0.81,
-            "change_percent": 5.5,
+            "daily_chg": 1.04,
+            "change_percent": 5.74,
             "trend": "UP",
             "sparkline": [
                 33.95,
@@ -1603,14 +1603,14 @@
                 38.46,
                 39.06,
                 39.57,
-                39.89
+                39.98
             ]
         },
         "AGRI": {
-            "price": 25.94,
+            "price": 25.98,
             "prev_price": 25.9,
-            "daily_chg": 0.15,
-            "change_percent": 0.58,
+            "daily_chg": 0.31,
+            "change_percent": 0.74,
             "trend": "UP",
             "sparkline": [
                 25.55,
@@ -1634,14 +1634,14 @@
                 25.71,
                 25.84,
                 25.9,
-                25.94
+                25.98
             ]
         },
         "SEMIS": {
-            "price": 358.06,
+            "price": 360.93,
             "prev_price": 355.84,
-            "daily_chg": 0.62,
-            "change_percent": 0.96,
+            "daily_chg": 1.43,
+            "change_percent": 1.77,
             "trend": "UP",
             "sparkline": [
                 348.14,
@@ -1665,7 +1665,7 @@
                 354.1,
                 357.92,
                 355.84,
-                358.06
+                360.93
             ]
         },
         "DEFENSE": {
@@ -1700,10 +1700,10 @@
             ]
         },
         "RARE_EARTH": {
-            "price": 89.17,
+            "price": 89.3,
             "prev_price": 90.09,
-            "daily_chg": -1.03,
-            "change_percent": -0.6,
+            "daily_chg": -0.88,
+            "change_percent": -0.45,
             "trend": "DOWN",
             "sparkline": [
                 92.84,
@@ -1727,14 +1727,14 @@
                 88.99,
                 91.45,
                 90.09,
-                89.17
+                89.3
             ]
         },
         "CYBER": {
-            "price": 66.18,
+            "price": 66.25,
             "prev_price": 65.91,
-            "daily_chg": 0.41,
-            "change_percent": -0.97,
+            "daily_chg": 0.52,
+            "change_percent": -0.87,
             "trend": "UP",
             "sparkline": [
                 70.07,
@@ -1758,14 +1758,14 @@
                 65.54,
                 65.93,
                 65.91,
-                66.18
+                66.25
             ]
         },
         "GBPUSD": {
             "price": 0.74,
             "prev_price": 0.74,
-            "daily_chg": -0.05,
-            "change_percent": 1.08,
+            "daily_chg": -0.07,
+            "change_percent": 1.05,
             "trend": "DOWN",
             "sparkline": [
                 0.75,
@@ -1795,8 +1795,8 @@
         "AUDUSD": {
             "price": 1.41,
             "prev_price": 1.42,
-            "daily_chg": -0.5,
-            "change_percent": -0.12,
+            "daily_chg": -0.61,
+            "change_percent": -0.24,
             "trend": "DOWN",
             "sparkline": [
                 1.48,
@@ -1826,8 +1826,8 @@
         "USDCAD": {
             "price": 1.37,
             "prev_price": 1.37,
-            "daily_chg": -0.13,
-            "change_percent": 0.44,
+            "daily_chg": -0.16,
+            "change_percent": 0.42,
             "trend": "DOWN",
             "sparkline": [
                 1.38,
@@ -1888,8 +1888,8 @@
         "USDCHF": {
             "price": 0.77,
             "prev_price": 0.77,
-            "daily_chg": 0.22,
-            "change_percent": 0.74,
+            "daily_chg": 0.21,
+            "change_percent": 0.73,
             "trend": "UP",
             "sparkline": [
                 0.8,
@@ -1946,7 +1946,7 @@
             ]
         },
         "BREADTH": {
-            "price": -0.15,
+            "price": -0.64,
             "change_percent": 0.0,
             "trend": "HEALTHY",
             "sparkline": [
@@ -1971,11 +1971,11 @@
                 1.94,
                 1.96,
                 2.01,
-                2.14
+                1.66
             ]
         },
         "SPY_MOMENTUM": {
-            "price": 0.15,
+            "price": 0.64,
             "change_percent": 0,
             "trend": "BALANCED",
             "sparkline": [
@@ -2093,24 +2093,20 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "Consolidation persists amid tariff-driven relief. The GMS index at 51 confirms a neutral regime where fiscal-monetary nexus stability hinges on the compression of high-yield credit spreads. While the Supreme Court's intervention against trade tariffs mitigates immediate tail-risk, the flat OGV vector and negative breadth highlight a lack of structural momentum. Liquidity convexity remains stagnant despite marginal gains, necessitating a cautious deployment strategy as regional divergences signal latent volatility within the global macro architecture. [ACTION: WAIT FOR PULLBACK]",
+        "content": "Neutrality persists amid structural tariff relief. The GMS 52 print signifies a precarious equilibrium within the transition phase, where nascent liquidity convexity is tempered by negative market breadth. The judicial negation of tariff protocols alleviates protectionist friction, catalyzing relief in equities despite stagnant OGV vectors. While VIX compression facilitates tactical long exposure, the divergence in high-yield spreads underscores a lingering regime fragility. Maintain defensive positioning. [MARKET STATUS: DEFENSIVE]",
         "reports": {
-            "JP": "関税撤廃による緩和と中立的な均衡。GMS指数51は中立的レジーム内での慎重な推移を示唆している。最高裁による関税無効判決はテールリスクを低減させたが、銅・金価格のフラットなOGVベクトルは構造的な成長の欠如を露呈している。ハイイールド債のクレジット・スプレッドは縮小傾向にあるものの、マイナスの騰落銘柄数が示すように資産価値の上昇には広範な裏付けが欠如している。流動性のコンベキシティが停滞する中、待機が妥当である。[ACTION: WAIT FOR PULLBACK]",
-            "EN": "Consolidation persists amid tariff-driven relief. The GMS index at 51 confirms a neutral regime where fiscal-monetary nexus stability hinges on the compression of high-yield credit spreads. While the Supreme Court's intervention against trade tariffs mitigates immediate tail-risk, the flat OGV vector and negative breadth highlight a lack of structural momentum. Liquidity convexity remains stagnant despite marginal gains, necessitating a cautious deployment strategy as regional divergences signal latent volatility within the global macro architecture. [ACTION: WAIT FOR PULLBACK]",
-            "CN": "关税利好支撑局势，中立回归平衡。GMS指数录得51，确立了宏观架构处于中立观察期。最高法院废除关税显著降低了财政尾部风险，促使高收益债信用利差收窄。然而，OGV向量持平及负向宽度指标揭示了资产价格修复缺乏内生动力。在净流动性扩张停滞与区域市场表现分化的背景下，流动性凸性尚未触发趋势性机会。当前估值扩张主要受情绪驱动，需维持谨慎立场以应对潜在溢出风险。[ACTION: WAIT FOR PULLBACK]",
-            "ES": "Consolidación neutral ante alivio arancelario. El índice GMS de 51 sitúa el mercado en un régimen de cautela donde la compresión de los diferenciales de crédito de alto rendimiento compensa la falta de expansión en la liquidez neta. La anulación de los aranceles reduce los riesgos de cola fiscales, pero el vector OGV plano y la amplitud negativa sugieren una apreciación de activos sin sustento estructural. La divergencia en los índices asiáticos y la volatilidad latente exigen una postura defensiva hasta que la arquitectura macro valide una aceleración. [ACTION: WAIT FOR PULLBACK]",
-            "HI": "टैरिफ राहत के बीच बाजार में तटस्थ स्थिरता। GMS सूचकांक 51 पर होने के कारण बाजार एक तटस्थ शासन में है जहां क्रेडिट स्प्रेड संकुचन राजकोषीय स्थिरता का समर्थन कर रहा है। टैरिफ के खिलाफ सुप्रीम कोर्ट के फैसले ने टेल-रिस्क को कम किया है, लेकिन फ्लैट OGV वेक्टर और नकारात्मक मार्केट ब्रड्थ यह संकेत देते हैं कि मौजूदा संपत्ति मूल्य वृद्धि में संरचनात्मक मजबूती का अभाव है। वैश्विक तरलता की स्थिति स्थिर बनी हुई है और एशियाई बाजारों में क्षेत्रीय विचलन अभी भी जोखिम पैदा कर रहे हैं, जिससे वर्तमान में प्रतीक्षा करना ही विवेकपूर्ण रणनीति है। [ACTION: WAIT FOR PULLBACK]",
-            "ID": "Konsolidasi netral pasca-relaksasi tarif. Skor GMS 51 mengonfirmasi rezim netral di mana kompresi spread kredit high-yield menopang stabilitas makro saat ini. Meskipun pembatalan tarif oleh Mahkamah Agung memitigasi tail-risk fiskal, vektor OGV yang datar dan breadth negatif menunjukkan bahwa apresiasi aset belum didukung oleh fundamental yang kuat. Konveksitas likuiditas bersih tetap stagnan sementara divergensi pada indeks Asia memberikan sinyal volatilitas laten, menuntut strategi penempatan yang defensif hingga momentum struktural kembali terakselerasi. [ACTION: WAIT FOR PULLBACK]",
-            "AR": "استقرار محايد وسط انفراجة في السياسة الجمركية. يؤكد مؤشر GMS عند 51 وجود نظام محايد حيث يدعم ضغط فروق الائتمان عالية العائد استقرار السوق. بينما أدى قرار المحكمة العليا بإلغاء الرسوم الجمركية إلى تقليل مخاطر الذيل المالي، فإن ناقل OGV المسطح واتساع السوق السلبي يشيران إلى افتقار الارتفاع الحالي في أسعار الأصول إلى زخم هيكلي. تظل تحديات السيولة الصافية قائمة مع تباين أداء الأسواق الآسيوية، مما يستوجب الحذر قبل الالتزام الكامل برؤية تراكمية بانتظار تأكيد تحول النظام الكلي الممنهج. [ACTION: WAIT FOR PULLBACK]",
-            "DE": "Neutrale Konsolidierung nach Zoll-Erleichterung. Der GMS-Index von 51 bestätigt ein neutrales Regime, in dem die Kompression der High-Yield-Credit-Spreads die fiskalische Stabilität stützt. Trotz der Aufhebung der Zölle durch den Obersten Gerichtshof, die das Tail-Risk minimiert, verdeutlichen der flache OGV-Vektor und die negative Marktbreite das Fehlen eines strukturellen Momentums. Die Nettoliquidität stagniert, während regionale Divergenzen in asiatischen Indizes latente Volatilität signalisieren. Dies erfordert eine defensive Positionierung bis zur Regime-Beschleunigung. [ACTION: WAIT FOR PULLBACK]",
-            "FR": "Consolidation neutre suite au soulagement tarifaire. L'indice GMS à 51 confirme un régime neutre où la compression des spreads de crédit à haut rendement soutient la stabilité actuelle. Bien que l'annulation des tarifs douaniers par la Cour Suprême atténue les risques de queue budgétaires, le vecteur OGV plat et l'ampleur négative révèlent une absence de momentum structurel dans l'appréciation des actifs. La stagnation de la liquidité nette et les divergences régionales sur les marchés asiatiques imposent une stratégie de prudence jusqu'à ce que la convexité de la liquidité valide une accélération. [ACTION: WAIT FOR PULLBACK]"
+            "JP": "関税無効化が流動性を支えるも、警戒が必要な中立。GMS 52は遷移フェーズにおける危うい均衡を示唆しており、関税政策の司法否定によるフィスカル・モネタリー・ネクサスの摩擦緩和が株式の反発を促しています。しかし、ハイイールド・スプレッドの拡大とネガティブな騰落線は相場の脆弱性を露呈しています。流動性の凸性は確認できるものの、GMSが55の閾値を突破するまでは、テールリスク回避の防御的姿勢を維持すべきです。[MARKET STATUS: DEFENSIVE]",
+            "EN": "Neutrality persists amid structural tariff relief. The GMS 52 print signifies a precarious equilibrium within the transition phase, where nascent liquidity convexity is tempered by negative market breadth. The judicial negation of tariff protocols alleviates protectionist friction, catalyzing relief in equities despite stagnant OGV vectors. While VIX compression facilitates tactical long exposure, the divergence in high-yield spreads underscores a lingering regime fragility. Maintain defensive positioning. [MARKET STATUS: DEFENSIVE]",
+            "CN": "关税撤销缓解财政压力，市场维持中性防御。GMS 52分值表明市场处于过渡期的微妙平衡，司法裁定废除关税缓解了贸易摩擦压力，推动了权益资产的阶段性修复。尽管VIX压缩提供了短线机会，但信贷利差的扩张与广度指标的疲软暗示了政体脆弱性。在GMS未突破55这一门槛前，流动性凸性仍不足以支撑全面看多，需警惕潜在的尾部风险。 [MARKET STATUS: DEFENSIVE]",
+            "ES": "Neutralidad estructural ante el alivio arancelario. El registro GMS 52 indica un equilibrio precario en la fase de transición, donde la convexidad de liquidez es limitada por la debilidad en la amplitud del mercado. La anulación judicial de aranceles reduce la fricción en el nexo fiscal-monetario, impulsando la renta variable. No obstante, la divergencia en los diferenciales de alto rendimiento y el sentimiento cripto exigen cautela táctica hasta que el GMS supere el umbral de 55 puntos. [MARKET STATUS: DEFENSIVE]",
+            "HI": "शुल्क राहत के बीच संरचनात्मक तटस्थता कायम है। GMS 52 स्कोर संक्रमण चरण में एक अनिश्चित संतुलन को दर्शाता है, जहां तरलता की उत्तलता बाजार की कम व्यापकता के कारण सीमित है। टैरिफ पर न्यायिक रोक से राजकोषीय-मौद्रिक घर्षण कम हुआ है, जिससे इक्विटी में राहत मिली है। हालांकि, उच्च-यील्ड स्प्रेड में विचलन शासन की कमजोरी को उजागर करता है। जब तक GMS 55 की दहलीज को पार नहीं करता, तब तक टेल-रिस्क से बचने के लिए रक्षात्मक रुख अनिवार्य है। [MARKET STATUS: DEFENSIVE]",
+            "ID": "Netralitas struktural di tengah pelonggaran tarif. Skor GMS 52 mengindikasikan keseimbangan prekarius dalam fase transisi, di mana konveksitas likuiditas tertahan oleh breadht pasar yang negatif. Pembatalan yudisial atas tarif mereduksi friksi fiskal-moneter, memicu reli ekuitas meskipun vektor OGV stagnan. Namun, divergensi dalam spread high-yield menegaskan kerapuhan rezim. Postur defensif tetap krusial hingga GMS melampaui ambang batas 55 untuk memitigasi risiko ekor. [MARKET STATUS: DEFENSIVE]",
+            "AR": "حياد هيكلي وسط تخفيف الأعباء الجمركية. تعكس القراءة 52 لمؤشر GMS توازناً حرجاً في مرحلة الانتقال، حيث يتم كبح تحدب السيولة بسبب ضعف اتساع السوق. إن الإلغاء القضائي للتعريفات الجمركية يخفف من الاحتكاك المالي النقدي، مما يحفز انتعاش الأسهم رغم ركود ناقلات OGV. ومع ذلك، فإن تباين هوامش العائد المرتفع يشير إلى هشاشة النظام، مما يتطلب الحفاظ على موقف دفاعي حتى يتجاوز المؤشر عتبة 55 لضمان استدامة الزخم. [MARKET STATUS: DEFENSIVE]",
+            "DE": "Strukturelle Neutralität nach Ende der Zollpolitik. Der GMS-Wert von 52 signalisiert ein prekäres Gleichgewicht in der Übergangsphase, in der die Liquiditätskonvexität durch mangelnde Marktbreite eingeschränkt bleibt. Die gerichtliche Aufhebung der Zölle mindert fiskalisch-monetäre Reibungen und stützt Aktien, doch die Ausweitung der HY-Spreads mahnt zur Vorsicht. Solange der GMS-Schwellenwert von 55 nicht überschritten wird, bleibt die regimebedingte Fragilität das dominierende Risiko. [MARKET STATUS: DEFENSIVE]",
+            "FR": "Neutralité structurelle suite à l'allégement douanier. Le score GMS 52 reflète un équilibre précaire en phase de transition, où la convexité de la liquidité est bridée par une largeur de marché négative. L'annulation judiciaire des tarifs réduit la friction du nexus fiscal-monétaire, favorisant les actions malgré des vecteurs OGV stagnants. Cependant, l'élargissement des spreads de rendement et la dégradation du sentiment crypto exigent une vigilance accrue jusqu'au seuil de 55. [MARKET STATUS: DEFENSIVE]"
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-18T09:02:47Z",
-            "score": 48
-        },
         {
             "date": "2026-02-18T10:04:20Z",
             "score": 48
@@ -2346,108 +2342,112 @@
         {
             "date": "2026-02-20T15:25:09Z",
             "score": 51
+        },
+        {
+            "date": "2026-02-20T16:08:00Z",
+            "score": 52
         }
     ],
     "intelligence": {
         "news": [
             {
-                "title": "Supreme Court strikes down Trump tariffs",
+                "title": "Supreme Court strikes down Trump tariffs, rebuking president's signature economic policy",
                 "link": "https://www.cnbc.com/2026/02/20/supreme-court-trump-tariffs-ruling.html",
-                "isoDate": "2026-02-20T15:10:25+00:00Z"
+                "isoDate": "2026-02-20T15:51:36+00:00Z"
+            },
+            {
+                "title": "Supreme Court Trump tariffs ruling could put U.S. on hook for $175 billion in refunds, estimate says",
+                "link": "https://www.cnbc.com/2026/02/20/supreme-court-trump-tariffs-us-refunds.html",
+                "isoDate": "2026-02-20T16:04:06+00:00Z"
+            },
+            {
+                "title": "Trump says he's considering limited military strike against Iran",
+                "link": "https://www.cnbc.com/2026/02/20/trump-says-hes-considering-limited-military-strike-against-iran.html",
+                "isoDate": "2026-02-20T15:42:36+00:00Z"
             },
             {
                 "title": "Fourth-quarter U.S. GDP up just 1.4%, badly missing estimate; inflation firms at 3%",
                 "link": "https://www.cnbc.com/2026/02/20/pce-inflation-december-2025.html",
-                "isoDate": "2026-02-20T14:54:59+00:00Z"
+                "isoDate": "2026-02-20T16:05:02+00:00Z"
             },
             {
                 "title": "Trump previewed weak GDP on Truth Social ahead of official data release",
                 "link": "https://www.cnbc.com/2026/02/20/trump-gdp-weak-powell-fed-interest-rates.html",
-                "isoDate": "2026-02-20T15:08:08+00:00Z"
-            },
-            {
-                "title": "Trump could attack Iran in days — what's at stake for the oil market",
-                "link": "https://www.cnbc.com/2026/02/20/trump-could-attack-iran-in-days-whats-at-stake-for-the-oil-market.html",
-                "isoDate": "2026-02-20T13:33:25+00:00Z"
+                "isoDate": "2026-02-20T15:57:03+00:00Z"
             },
             {
                 "title": "GDP grew way less than expected in Q4. Why many on Wall Street aren't worried",
                 "link": "https://www.cnbc.com/2026/02/20/gdp-grew-way-less-than-expected-in-q4-why-many-on-wall-street-arent-worried.html",
                 "isoDate": "2026-02-20T14:30:31+00:00Z"
-            },
-            {
-                "title": "Meta and Apple face serious questions about child safety and privacy",
-                "link": "https://www.cnbc.com/2026/02/20/meta-apple-child-safety-zuckerberg-cook.html",
-                "isoDate": "2026-02-20T15:00:08+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "トランプ関税を最高裁が覆す",
-                "米第4四半期GDPは1.4%増にとどまり、予想を大幅に下回る、インフレは3%で firm",
-                "トランプ氏、公式発表前に「真実SNS」で弱いGDPを予告",
-                "トランプ氏、数日中にイランを攻撃する可能性、原油市場への影響は？",
-                "第4四半期GDPは予想より大幅に伸び悩む。ウォール街の多くが懸念しない理由",
-                "MetaとApple、児童の安全とプライバシーに関する深刻な質問に直面"
+                "最高裁、トランプ関税を無効に　大統領の経済政策の根幹を覆す",
+                "最高裁のトランプ関税判決、米国に1750億ドルの返金義務が生じる可能性：試算",
+                "トランプ氏、イランへの限定的軍事攻撃を検討中と発言",
+                "第4四半期米GDPは1.4%増にとどまる　予想を大幅に下回る　インフレは3%で堅調",
+                "トランプ氏、公式発表前にTruth Socialで弱いGDPを予測",
+                "第4四半期GDPは予想を大幅に下回る成長　ウォール街の多くが懸念しない理由"
             ],
             "CN": [
-                "最高法院推翻特朗普关税",
-                "美国第四季度GDP仅增长1.4%，远低于预期；通胀在3%左右企稳",
-                "特朗普在官方数据发布前，在Truth Social上预测GDP疲软",
-                "特朗普可能在几天内袭击伊朗——石油市场将面临什么风险",
-                "第四季度GDP增长远低于预期。华尔街许多人为何不担心",
-                "Meta和Apple面临儿童安全和隐私方面的严峻质询"
+                "最高法院推翻特朗普关税裁决，驳斥总统标志性经济政策",
+                "最高法院的特朗普关税裁决可能使美国面临1750亿美元的退款，估算称",
+                "特朗普称正考虑对伊朗进行有限军事打击",
+                "第四季度美国GDP仅增长1.4%，远低于预期；通胀率为3%",
+                "特朗普在官方数据发布前在Truth Social上预测GDP疲软",
+                "第四季度GDP增长远低于预期。为何华尔街许多人并不担心"
             ],
             "ES": [
-                "Tribunal Supremo anula los aranceles de Trump",
-                "El PIB de EE.UU. en el cuarto trimestre sube solo un 1.4%, muy por debajo de lo estimado; la inflación se consolida al 3%",
-                "Trump anticipó un PIB débil en Truth Social antes del lanzamiento de datos oficiales",
-                "Trump podría atacar Irán en días — qué está en juego para el mercado petrolero",
-                "El PIB creció mucho menos de lo esperado en el cuarto trimestre. Por qué muchos en Wall Street no están preocupados",
-                "Meta y Apple enfrentan serias preguntas sobre seguridad y privacidad infantil"
+                "La Corte Suprema anula los aranceles de Trump, reprendiendo la política económica insignia del presidente",
+                "El fallo de la Corte Suprema sobre los aranceles de Trump podría poner a EE. UU. en la obligación de pagar 175 mil millones de dólares en reembolsos, según estimaciones",
+                "Trump dice que está considerando un ataque militar limitado contra Irán",
+                "El PIB de EE. UU. en el cuarto trimestre subió solo un 1.4%, muy por debajo de lo estimado; la inflación se afianza en el 3%",
+                "Trump previó un PIB débil en Truth Social antes del lanzamiento oficial de los datos",
+                "El PIB creció mucho menos de lo esperado en el cuarto trimestre. Por qué a muchos en Wall Street no les preocupa"
             ],
             "HI": [
-                "सुप्रीम कोर्ट ने ट्रम्प के टैरिफ को रद्द किया",
+                "सुप्रीम कोर्ट ने ट्रंप के टैरिफ को पलट दिया, राष्ट्रपति की प्रमुख आर्थिक नीति पर फटकार लगाई",
+                "सुप्रीम कोर्ट के ट्रंप टैरिफ फैसले से अमेरिका पर 175 अरब डॉलर की वापसी का बोझ पड़ सकता है, अनुमान कहता है",
+                "ट्रंप ने कहा कि वह ईरान के खिलाफ सीमित सैन्य हमले पर विचार कर रहे हैं",
                 "चौथी तिमाही में अमेरिकी जीडीपी केवल 1.4% बढ़ी, अनुमान से काफी कम; मुद्रास्फीति 3% पर मजबूत",
-                "ट्रम्प ने आधिकारिक डेटा जारी होने से पहले ट्रुथ सोशल पर कमजोर जीडीपी का पूर्वावलोकन किया",
-                "ट्रम्प कुछ ही दिनों में ईरान पर हमला कर सकते हैं — तेल बाजार के लिए क्या दांव पर है",
-                "चौथी तिमाही में जीडीपी उम्मीद से काफी कम बढ़ी। वॉल स्ट्रीट के कई लोग क्यों चिंतित नहीं हैं",
-                "मेटा और एप्पल को बाल सुरक्षा और गोपनीयता के बारे में गंभीर सवालों का सामना करना पड़ रहा है"
+                "ट्रंप ने आधिकारिक डेटा जारी होने से पहले ट्रुथ सोशल पर कमजोर जीडीपी का पूर्वावलोकन किया",
+                "चौथी तिमाही में जीडीपी उम्मीद से काफी कम बढ़ी। वॉल स्ट्रीट के कई लोग क्यों चिंतित नहीं हैं"
             ],
             "ID": [
-                "Mahkamah Agung membatalkan tarif Trump",
-                "PDB AS kuartal keempat naik hanya 1,4%, jauh di bawah perkiraan; inflasi menguat di 3%",
-                "Trump memperkirakan PDB lemah di Truth Social sebelum rilis data resmi",
-                "Trump bisa menyerang Iran dalam beberapa hari — apa yang dipertaruhkan untuk pasar minyak",
-                "PDB tumbuh jauh lebih sedikit dari yang diperkirakan di Q4. Mengapa banyak di Wall Street tidak khawatir",
-                "Meta dan Apple menghadapi pertanyaan serius tentang keselamatan dan privasi anak"
+                "Mahkamah Agung batalkan tarif Trump, kecam kebijakan ekonomi andalan presiden",
+                "Putusan Mahkamah Agung tentang tarif Trump dapat membuat AS harus mengembalikan $175 miliar dalam pengembalian dana, kata perkiraan",
+                "Trump mengatakan ia mempertimbangkan serangan militer terbatas terhadap Iran",
+                "PDB AS kuartal keempat naik hanya 1,4%, meleset dari perkiraan; inflasi menguat di 3%",
+                "Trump memprediksi PDB lemah di Truth Social sebelum rilis data resmi",
+                "PDB tumbuh jauh lebih sedikit dari yang diharapkan di Q4. Mengapa banyak orang di Wall Street tidak khawatir"
             ],
             "AR": [
-                "المحكمة العليا تبطل رسوم ترامب الجمركية",
-                "الناتج المحلي الإجمالي الأمريكي للربع الرابع يرتفع 1.4% فقط، متجاوزاً التقديرات بكثير؛ التضخم يثبت عند 3%",
-                "ترامب يتوقع ناتجًا محليًا إجماليًا ضعيفًا على تروث سوشيال قبل إصدار البيانات الرسمية",
-                "ترامب قد يهاجم إيران في غضون أيام - ما هو المعروض لسوق النفط",
-                "نما الناتج المحلي الإجمالي أقل بكثير من المتوقع في الربع الرابع. لماذا لا يقلق الكثيرون في وول ستريت",
-                "تواجه ميتا وأبل أسئلة خطيرة حول سلامة الأطفال والخصوصية"
+                "المحكمة العليا تلغي الرسوم الجمركية لترامب، وتوبخ سياسة الرئيس الاقتصادية المميزة",
+                "حكم المحكمة العليا بشأن الرسوم الجمركية لترامب قد يضع الولايات المتحدة على عاتقها 175 مليار دولار كاسترداد، حسب التقديرات",
+                "ترامب يقول إنه يدرس ضربة عسكرية محدودة ضد إيران",
+                "نمو الناتج المحلي الإجمالي الأمريكي للربع الرابع 1.4% فقط، أقل بكثير من التقديرات؛ التضخم يثبت عند 3%",
+                "ترامب استعرض ناتجًا محليًا إجماليًا ضعيفًا على Truth Social قبل الإفراج الرسمي عن البيانات",
+                "نما الناتج المحلي الإجمالي بأقل بكثير من المتوقع في الربع الرابع. لماذا لا يشعر الكثيرون في وول ستريت بالقلق"
             ],
             "DE": [
-                "Oberster Gerichtshof kippt Trump-Zölle",
-                "US-BIP im vierten Quartal steigt nur um 1,4%, weit unter Schätzung; Inflation stabilisiert sich bei 3%",
-                "Trump skizzierte schwaches BIP auf Truth Social vor Veröffentlichung offizieller Daten",
-                "Trump könnte im In-Tagen Iran angreifen – was für den Ölmarkt auf dem Spiel steht",
-                "Das BIP wuchs im 4. Quartal deutlich weniger als erwartet. Warum viele an der Wall Street nicht besorgt sind",
-                "Meta und Apple sehen sich ernsten Fragen zur Kindersicherheit und zum Datenschutz gegenüber"
+                "Oberster Gerichtshof kippt Trump-Zölle und tadelt die wirtschaftspolitische Kernmaßnahme des Präsidenten",
+                "Die Entscheidung des Obersten Gerichtshofs zu den Trump-Zöllen könnte die USA zu Rückerstattungen in Höhe von 175 Milliarden Dollar verpflichten, schätzt eine Schätzung",
+                "Trump erwägt begrenzten Militärschlag gegen Iran",
+                "Das US-BIP im vierten Quartal steigt nur um 1,4%, weit unter den Erwartungen; Inflation verfestigt sich bei 3%",
+                "Trump hat vor der offiziellen Datenveröffentlichung auf Truth Social ein schwaches BIP prognostiziert",
+                "Das BIP wuchs im vierten Quartal deutlich weniger als erwartet. Warum viele an der Wall Street nicht besorgt sind"
             ],
             "FR": [
-                "La Cour suprême invalide les tarifs douaniers de Trump",
-                "Le PIB américain du quatrième trimestre n'augmente que de 1,4 %, manquant largement les estimations ; l'inflation se raffermit à 3 %",
-                "Trump a prévisualisé un PIB faible sur Truth Social avant la publication des données officielles",
-                "Trump pourrait attaquer l'Iran dans quelques jours – ce qui est en jeu pour le marché pétrolier",
-                "Le PIB a connu une croissance bien moindre que prévu au quatrième trimestre. Pourquoi beaucoup à Wall Street ne s'inquiètent pas",
-                "Meta et Apple font face à de sérieuses questions concernant la sécurité et la vie privée des enfants"
+                "La Cour suprême annule les tarifs douaniers de Trump, réprimandant la politique économique phare du président",
+                "La décision de la Cour suprême sur les tarifs douaniers de Trump pourrait obliger les États-Unis à rembourser 175 milliards de dollars, selon une estimation",
+                "Trump déclare qu'il envisage une frappe militaire limitée contre l'Iran",
+                "Le PIB américain au quatrième trimestre n'a augmenté que de 1,4%, manquant largement les estimations ; l'inflation se renforce à 3%",
+                "Trump a prédit un PIB faible sur Truth Social avant la publication officielle des données",
+                "Le PIB a augmenté beaucoup moins que prévu au quatrième trimestre. Pourquoi beaucoup à Wall Street ne s'inquiètent pas"
             ]
         },
-        "last_updated": "2026-02-20T15:25:09.000010+00:00Z"
+        "last_updated": "2026-02-20T16:08:00.283699+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
