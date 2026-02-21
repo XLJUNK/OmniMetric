@@ -12,7 +12,10 @@ export async function generateStaticParams() {
     if (fs.existsSync(archiveDir)) {
         const files = fs.readdirSync(archiveDir);
         dates = files
-            .filter(file => /^\d{4}-\d{2}-\d{2}\.json$/.test(file))
+            .filter(file => file.endsWith('.json') &&
+                (/^\d{4}-\d{2}-\d{2}\.json$/.test(file) ||
+                    file.startsWith('summary_') ||
+                    file === 'monthly_index.json'))
             .map(file => file.replace('.json', ''));
     }
 

@@ -38,6 +38,13 @@ function ArchiveDetailContent({ date, lang, selectorMode, initialData }: Archive
             return;
         }
 
+        // Redirect monthly_index to main archive
+        if (date === 'monthly_index') {
+            const target = lang === 'EN' ? `/archive` : `/${lang.toLowerCase()}/archive`;
+            router.replace(target);
+            return;
+        }
+
         if (initialData) return;
         setLoading(true);
         fetch(`/data/archive/${date}.json`)
