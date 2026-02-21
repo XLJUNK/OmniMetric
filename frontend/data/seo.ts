@@ -72,6 +72,13 @@ export function getMultilingualMetadata(
         finalDesc = `${finalDesc} OmniMetric Terminal provides institutional-grade market intelligence and real-time risk assessments for global investors.`.slice(0, 155);
     }
 
+    const ogLocaleMap: Record<string, string> = {
+        JP: 'ja_JP', CN: 'zh_CN', ES: 'es_ES',
+        HI: 'hi_IN', ID: 'id_ID', AR: 'ar_SA',
+        FR: 'fr_FR', DE: 'de_DE',
+    };
+    const locale = ogLocaleMap[langCode] || 'en_US';
+
     return {
         title: title || "Global Macro Signal (OmniMetric Terminal) | AI-Driven Financial Insight",
         description: finalDesc,
@@ -93,7 +100,7 @@ export function getMultilingualMetadata(
                 }
             ],
             type: 'website',
-            locale: currentLang === 'JP' ? 'ja_JP' : 'en_US',
+            locale,
         },
         twitter: {
             card: 'summary_large_image',

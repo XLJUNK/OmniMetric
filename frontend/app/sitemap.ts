@@ -102,7 +102,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
                 .filter((f: string) => f.endsWith('.json') && f !== 'index.json' && f !== 'performance_audit.json' && f !== 'summary.json' && !f.startsWith('monthly_'))
                 .map((f: string) => f.replace('.json', ''))
                 .sort((a: string, b: string) => b.localeCompare(a)) // Ensure descending for latest
-                .slice(0, 7); // Only latest 7 days for daily snapshots
+                .slice(0, 30); // Latest 30 days for temporal authority signals
 
             dates.forEach(date => {
                 // Archive Page

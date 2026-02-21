@@ -40,7 +40,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.omnimetric.net'),
   title: "Global Macro Signal (OmniMetric Terminal) | AI-Driven Financial Insight",
-  description: "機関投資家品質の市場リスク分析を提供するAI駆動型金融・経済分析プラットフォーム。独自スコアによりグローバルマクロのリスク許容度をリアルタイムで可視化します。",
+  description: "AI-driven macro terminal providing institutional-grade global risk analysis. Real-time GMS Score, multi-asset signals, and AI insights for global macro investors.",
   /* icons: handled by app/icon.png */
   appleWebApp: {
     capable: true,
@@ -84,11 +84,11 @@ export default function RootLayout({
       {
         "@type": "Organization",
         "name": "OmniMetric",
-        "url": "https://omnimetric.ai",
-        "logo": "https://omnimetric.ai/icon.png",
+        "url": "https://www.omnimetric.net",
+        "logo": "https://www.omnimetric.net/icon.png",
         "sameAs": [
-          "https://twitter.com/omnimetric",
-          "https://github.com/omnimetric"
+          "https://x.com/OmniMetric_GMS",
+          "https://github.com/XLJUNK"
         ]
       }
     ]
@@ -103,7 +103,14 @@ export default function RootLayout({
         <link rel="alternate" href="https://www.omnimetric.net/" hrefLang="en" />
         <link rel="alternate" href="https://www.omnimetric.net/" hrefLang="en-US" />
         <link rel="alternate" href="https://www.omnimetric.net/" hrefLang="en-GB" />
-        <link rel="alternate" href="https://www.omnimetric.net/jp" hrefLang="ja-jp" />
+        <link rel="alternate" href="https://www.omnimetric.net/jp" hrefLang="ja-JP" />
+        <link rel="alternate" href="https://www.omnimetric.net/cn" hrefLang="zh-CN" />
+        <link rel="alternate" href="https://www.omnimetric.net/es" hrefLang="es" />
+        <link rel="alternate" href="https://www.omnimetric.net/hi" hrefLang="hi" />
+        <link rel="alternate" href="https://www.omnimetric.net/id" hrefLang="id" />
+        <link rel="alternate" href="https://www.omnimetric.net/ar" hrefLang="ar" />
+        <link rel="alternate" href="https://www.omnimetric.net/fr" hrefLang="fr" />
+        <link rel="alternate" href="https://www.omnimetric.net/de" hrefLang="de" />
       </head>
       <body
         className={`${inter.variable} ${notoJP.variable} ${notoAR.variable} ${notoHI.variable} antialiased selection:bg-cyan-500/30 overflow-x-hidden`}
