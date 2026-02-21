@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-02-21T11:01:33.734611+00:00",
+    "last_updated": "2026-02-21T11:15:33.579666+00:00",
     "market_data": {
         "CRYPTO_SENTIMENT": {
             "price": 8,
@@ -570,10 +570,10 @@
             ]
         },
         "BTC": {
-            "price": 68174.34,
+            "price": 68240.62,
             "prev_price": 68005.42,
-            "daily_chg": 0.25,
-            "change_percent": 1.01,
+            "daily_chg": 0.35,
+            "change_percent": 1.11,
             "trend": "UP",
             "sparkline": [
                 78621.12,
@@ -597,14 +597,14 @@
                 66425.32,
                 66957.52,
                 68005.42,
-                68174.34
+                68240.62
             ]
         },
         "ETH": {
-            "price": 1972.94,
+            "price": 1980.34,
             "prev_price": 1969.02,
-            "daily_chg": 0.2,
-            "change_percent": -0.97,
+            "daily_chg": 0.58,
+            "change_percent": -0.59,
             "trend": "UP",
             "sparkline": [
                 2445.09,
@@ -628,14 +628,14 @@
                 1953.97,
                 1948.2,
                 1969.02,
-                1972.94
+                1980.34
             ]
         },
         "SOL": {
-            "price": 85.1,
+            "price": 85.37,
             "prev_price": 84.64,
-            "daily_chg": 0.55,
-            "change_percent": -0.12,
+            "daily_chg": 0.87,
+            "change_percent": 0.2,
             "trend": "UP",
             "sparkline": [
                 105.44,
@@ -659,7 +659,7 @@
                 81.57,
                 82.39,
                 84.64,
-                85.1
+                85.37
             ]
         },
         "DXY": {
@@ -2354,14 +2354,14 @@
             },
             {
                 "date": "2026-02-21",
-                "x": -24.43,
-                "y": -60.44
+                "x": -24.41,
+                "y": -60.45
             }
         ],
         "current_vector": {
             "date": "2026-02-21",
-            "x": -24.43,
-            "y": -60.44
+            "x": -24.41,
+            "y": -60.45
         },
         "current_satellites": [
             {
@@ -2388,8 +2388,8 @@
             {
                 "id": "BTC",
                 "label": "BTC",
-                "x": -65.57,
-                "y": 40.98,
+                "x": -65.42,
+                "y": 40.89,
                 "z": -1.82
             },
             {
@@ -2557,11 +2557,11 @@
         "history_length": 60,
         "system": "moving_fortress"
     },
-    "last_successful_update": "2026-02-21T11:01:22.938150+00:00",
-    "gms_score": 53,
+    "last_successful_update": "2026-02-21T11:15:23.300132+00:00",
+    "gms_score": 54,
     "sector_scores": {
         "STOCKS": 56,
-        "CRYPTO": 50,
+        "CRYPTO": 56,
         "FOREX": 41,
         "COMMODITIES": 53,
         "GLOBAL_INDICES": 50,
@@ -2615,24 +2615,20 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "Caution prevails as tariff risks stall momentum. The GMS score of 53 signifies a regime of precarious neutrality, where the fiscal-monetary nexus is destabilized by exogenous trade shocks and protectionist rhetoric. Despite idiosyncratic volatility compression and robust net liquidity, negative market breadth and a static OGV vector confirm an exhaustion of the reflationary impulse. Investors must navigate this liquidity convexity by rotating into hard assets as a tail-risk hedge. [ACTION: WAIT FOR PULLBACK]",
+        "content": "Neutrality persists as GMS stalls at the 54 apex. This regime reflects a precarious equilibrium where equity appreciation encounters a flat liquidity vector and stagnant breadth. While credit spread compression and VIX deceleration imply stability, the surge in silver and gold signals structural hedging against a tariff-induced inflationary impulse. The fiscal-monetary nexus remains vulnerable to volatility expansion as global trade friction intensifies, necessitating a disciplined wait for a confirmed GMS 55 break. [MARKET STATUS: CAUTION]",
         "reports": {
-            "JP": "関税リスクが勢いを削ぎ、慎重な姿勢が強まる。GMSスコア53は、保護主義的レトリックが財政・金融政策の連関を揺るがす不安定な中立的レジームを反映している。ボラティリティの収束と潤沢な流動性にもかかわらず、騰落銘柄数の悪化と停滞するOGVベクトルは、リフレ・ナラティブの限界を示唆している。テールリスクへのヘッジとして実物資産への選好を強め、価格調整を待つべき局面である。[ACTION: WAIT FOR PULLBACK]",
-            "EN": "Caution prevails as tariff risks stall momentum. The GMS score of 53 signifies a regime of precarious neutrality, where the fiscal-monetary nexus is destabilized by exogenous trade shocks and protectionist rhetoric. Despite idiosyncratic volatility compression and robust net liquidity, negative market breadth and a static OGV vector confirm an exhaustion of the reflationary impulse. Investors must navigate this liquidity convexity by rotating into hard assets as a tail-risk hedge. [ACTION: WAIT FOR PULLBACK]",
-            "CN": "关税风险抑制增长动能，市场转向谨慎中性。GMS 53分值映射出当前处于脆弱的中性格局，财政与货币政策的耦合正面临贸易保护主义引发的外生冲击。尽管波幅收窄且流动性充沛，但负向的市场宽度与停滞的OGV向量预示再通胀叙事已陷疲态。投资者应警惕流动性凸性风险，通过硬资产对冲尾部风险，在溢价回落前保持观望。[ACTION: WAIT FOR PULLBACK]",
-            "ES": "La cautela prevalece ante el riesgo de aranceles globales. El GMS de 53 sitúa al mercado en una neutralidad precaria, donde el nexo fiscal-monetario enfrenta choques exógenos por retórica proteccionista. Aunque la compresión de volatilidad y la liquidez neta sostienen el precio, la amplitud negativa y un vector OGV plano confirman el agotamiento del impulso reflacionario. Es imperativo rotar hacia activos reales para cubrir riesgos de cola mientras se espera un ajuste. [ACTION: WAIT FOR PULLBACK]",
-            "HI": "टैरिफ जोखिम के बीच सावधानी की स्थिति बनी हुई है। 53 का GMS स्कोर एक अनिश्चित तटस्थता शासन का संकेत देता है, जहां राजकोषीय-मौद्रिक गठजोड़ व्यापार झटकों से अस्थिर है। कम अस्थिरता और शुद्ध तरलता के बावजूद, नकारात्मक बाजार विस्तार और स्थिर OGV वेक्टर रिफ्लेशनरी आवेग की थकावट की पुष्टि करते हैं। निवेशकों को टेल-रिस्क हेज के रूप में हार्ड एसेट्स की ओर झुकना चाहिए और बाजार में सुधार की प्रतीक्षा करनी चाहिए। [ACTION: WAIT FOR PULLBACK]",
-            "ID": "Kewaspadaan mendominasi seiring risiko tarif global. Skor GMS 53 mencerminkan rezim netralitas yang rentan, di mana neksus fiskal-moneter terganggu oleh guncangan proteksionisme. Meskipun terjadi kompresi volatilitas dan likuiditas bersih yang kuat, luas pasar yang negatif dan vektor OGV yang datar menandakan berakhirnya narasi reflasi. Investor harus mengantisipasi konveksitas likuiditas dengan beralih ke aset keras sebagai lindung nilai risiko ekor. [ACTION: WAIT FOR PULLBACK]",
-            "AR": "الحذر يسود مع تلاشي الزخم بسبب مخاطر التعريفات. تعكس درجة 53 في مؤشر GMS نظاماً من الحياد الهش، حيث يتزعزع الارتباط المالي النقدي بسبب الصدمات التجارية الحمائية. رغم انكماش التقلبات والسيولة الوفيرة، فإن عرض السوق السلبي وجمود ناقل OGV يؤكدان استنفاد زخم التضخم الانعكاسي. يجب على المستثمرين التحوط ضد مخاطر التذييل عبر الأصول الصلبة بانتظار تصحيح سعري. [ACTION: WAIT FOR PULLBACK]",
-            "DE": "Zolltarife dämpfen Dynamik und erzwingen neutrale Vorsicht. Der GMS-Wert von 53 spiegelt ein Regime prekärer Neutralität wider, in dem der fiskalisch-monetäre Nexus durch protektionistische Schocks destabilisiert wird. Trotz VIX-Kompression und robuster Liquidität deuten die negative Marktbreite und ein stagnierender OGV-Vektor auf eine Erschöpfung des Reflationsnarrativs hin. Anleger sollten die Liquiditätskonvexität durch Sachwerte absichern und eine Korrektur abwarten. [ACTION: WAIT FOR PULLBACK]",
-            "FR": "La prudence domine face aux tensions tarifaires mondiales. Le score GMS de 53 valide un régime de neutralité précaire où le nexus fiscalo-monétaire est déstabilisé par des chocs protectionnistes. Malgré la compression de la volatilité et une liquidité nette stable, l'ampleur négative du marché et un vecteur OGV plat signalent l'épuisement de l'impulsion de reflation. Une rotation vers les actifs réels s'impose pour couvrir les risques de queue avant tout nouvel engagement. [ACTION: WAIT FOR PULLBACK]"
+            "JP": "54のGMSスコアは、中立領域の頂点における警戒を示唆しています。流動性の停滞とフラットなOGVベクトルは、主要指数が上昇する中で本格的な蓄積フェーズへの移行を阻んでいます。貴金属の急騰は、関税リスクに伴うインフレ圧力への構造的ヘッジを反映しており、クレジットスプレッドの圧縮やVIXの低下が誘う楽観論とは対照的なテールリスクを内包しています。財政・金融ネクサスの脆弱性を鑑み、GMSが55の閾値を突破するまで規律ある待機を維持すべきです。[MARKET STATUS: CAUTION]",
+            "EN": "Neutrality persists as GMS stalls at the 54 apex. This regime reflects a precarious equilibrium where equity appreciation encounters a flat liquidity vector and stagnant breadth. While credit spread compression and VIX deceleration imply stability, the surge in silver and gold signals structural hedging against a tariff-induced inflationary impulse. The fiscal-monetary nexus remains vulnerable to volatility expansion as global trade friction intensifies, necessitating a disciplined wait for a confirmed GMS 55 break. [MARKET STATUS: CAUTION]",
+            "CN": "GMS指数维持在54点，显示市场处于中性均衡的顶部。尽管主要股指录得增值，但流动性向量持平且市场宽度停滞，阻碍了向累积阶段的转型。金银价格的飙升揭示了针对关税诱发通胀风险的结构性对冲。虽然信用利差收缩与VIX回落暗示短期稳定，但财政货币纽带面临贸易摩擦带来的波动压力，在GMS确认突破55基准前应保持审慎。 [MARKET STATUS: CAUTION]",
+            "ES": "La neutralidad impera mientras el GMS se sitúa en el umbral de 54 puntos. Este régimen refleja un equilibrio precario donde la apreciación de la renta variable colisiona con una liquidez estancada y un vector OGV plano. El repunte en metales preciosos señala una cobertura estructural ante el nexo fiscal-monetario y la amenaza de aranceles globales. La compresión de spreads de crédito y la caída del VIX sugieren complacencia; se requiere un cierre técnico por encima de 55 para validar la fase de acumulación. [MARKET STATUS: CAUTION]",
+            "HI": "जीएमएस 54 के स्तर पर होने से बाजार में तटस्थता बनी हुई है। यह व्यवस्था एक नाजुक संतुलन को दर्शाती है जहाँ इक्विटी वृद्धि और स्थिर तरलता का टकराव हो रहा है। सोने और चांदी में तेजी वैश्विक शुल्कों से उत्पन्न मुद्रास्फीति के खिलाफ संरचनात्मक हेजिंग का संकेत देती है। क्रेडिट स्प्रेड संकुचन और वीआईएक्स में गिरावट के बावजूद, राजकोषीय-मौद्रिक नेक्सस व्यापार घर्षण के प्रति संवेदनशील है, इसलिए जीएमएस 55 के पार जाने तक प्रतीक्षा करना अनिवार्य है। [MARKET STATUS: CAUTION]",
+            "ID": "Netralitas bertahan karena skor GMS tertahan di level 54. Rezim ini mencerminkan keseimbangan rentan di mana apresiasi ekuitas berbenturan dengan likuiditas yang stagnan dan vektor OGV datar. Lonjakan harga emas dan perak menandakan lindung nilai struktural terhadap impuls inflasi akibat tarif global dalam neksus fiskal-moneter. Meskipun kompresi spread kredit dan penurunan VIX menyiratkan stabilitas, risiko ekor dari gesekan perdagangan mengharuskan penantian konfirmasi GMS di atas 55. [MARKET STATUS: CAUTION]",
+            "AR": "تظل الحيادية سائدة مع استقرار مؤشر GMS عند 54 نقطة. يعكس هذا النظام توازناً هشاً حيث يصطدم ارتفاع الأسهم بسيولة راكدة ومسار OGV مسطح. يشير ارتفاع الذهب والفضة إلى تحوط هيكلي ضد الضغوط التضخمية الناتجة عن التعريفات الجمركية العالمية. على الرغم من ضيق هوامش الائتمان وانخفاض مؤشر VIX، تظل الرابطة المالية-النقدية عرضة للمخاطر الناجمة عن الاحتكاكات التجارية، مما يستلزم الانتظار حتى تأكيد اختراق مستوى 55. [MARKET STATUS: CAUTION]",
+            "DE": "Die Neutralität verfestigt sich, da der GMS-Score bei 54 stagniert. Dieses Regime spiegelt ein prekäres Gleichgewicht wider, in dem Aktienzuwächse auf stagnierende Liquiditätsvektoren treffen. Der Anstieg bei Gold und Silber signalisiert eine strukturelle Absicherung gegen tarifbedingte Inflationsimpulse im fiskalisch-monetären Nexus. Trotz Kredit-Spread-Kompression und sinkendem VIX bleibt die Unsicherheit durch Handelskonflikte hoch, was ein Verharren unterhalb der 55-Punkte-Akkumulationsschwelle erzwingt. [MARKET STATUS: CAUTION]",
+            "FR": "La neutralité persiste alors que le score GMS plafonne à 54. Ce régime reflète un équilibre précaire où l'appréciation des actions se heurte à une liquidité stagnante et un vecteur OGV plat. L'envolée des métaux précieux signale une couverture structurelle face aux pressions inflationnistes liées aux tarifs douaniers. Bien que la compression des spreads de crédit et la baisse du VIX suggèrent une stabilité, le nexo fiscalo-monétaire reste vulnérable aux tensions commerciales mondiales. [MARKET STATUS: CAUTION]"
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-19T03:15:20Z",
-            "score": 50
-        },
         {
             "date": "2026-02-19T05:13:49Z",
             "score": 50
@@ -2868,6 +2864,10 @@
         {
             "date": "2026-02-21T11:01:22Z",
             "score": 53
+        },
+        {
+            "date": "2026-02-21T11:15:23Z",
+            "score": 54
         }
     ],
     "intelligence": {
@@ -2905,71 +2905,71 @@
         ],
         "translations": {
             "JP": [
-                "トランプ氏、最高裁判決敗訴で激怒、新たな世界関税10%を発表",
-                "トランプ氏、イランへの限定的軍事攻撃を検討中と発言",
-                "テクノロジー大手、インドAIに数十億ドルを拠出、ニューデリーは超大国化を推進",
-                "OpenAI、2030年までのコンピューティング目標を約6000億ドルとし、投資家への支出期待を再設定",
-                "地政学的ショック後の最良の取引、イラン紛争の可能性が迫る",
-                "小売業界、不確実性が残る中、トランプ関税撤回を勝利と表明"
+                "トランプ氏、最高裁判決敗訴で激怒し、新たな世界規模の関税を発表",
+                "トランプ氏、イランへの限定的な軍事攻撃を検討中と発言",
+                "インドが超大国を目指す中、IT大手はAIに数十億ドルを約束",
+                "OpenAI、2030年までにコンピューティング目標を約6000億ドルと投資家に伝え、支出期待を再設定",
+                "イラン紛争の可能性が迫る中、地政学的ショック後の最良の取引",
+                "小売業界、不確実性が残る中、トランプ関税撤廃を勝利と称賛"
             ],
             "CN": [
-                "特朗普愤怒地宣布在最高法院失利后实施新的10%全球关税",
-                "特朗普表示他正在考虑对伊朗进行有限的军事打击",
-                "科技巨头承诺向印度人工智能投资数十亿美元，新德里推动超级大国地位",
-                "OpenAI调整支出预期，告知投资者到2030年计算目标约为6000亿美元",
-                "地缘政治冲击后的最佳交易，可能与伊朗冲突迫在眉睫",
-                "零售业表示特朗普关税逆转是一场胜利，尽管仍存在不确定性"
+                "特朗普在最高法院失利后盛怒宣布新的10%全球关税",
+                "特朗普称正在考虑对伊朗进行有限军事打击",
+                "科技巨头向印度人工智能领域投入数十亿美元，新德里推动超级大国地位",
+                "OpenAI重设支出预期，告知投资者到2030年算力目标约为6000亿美元",
+                "在伊朗冲突可能逼近之际，地缘政治冲击后的最佳交易",
+                "零售业表示特朗普关税逆转是胜利，尽管不确定性依然存在"
             ],
             "ES": [
-                "Trump anuncia nuevos aranceles globales del 10% tras enfurecerse por la derrota en el Tribunal Supremo",
+                "Trump anuncia un nuevo arancel global del 10% tras enfurecerse por la derrota en el Tribunal Supremo",
                 "Trump dice que está considerando un ataque militar limitado contra Irán",
-                "Gigantes tecnológicos comprometen miles de millones en IA india mientras Nueva Delhi impulsa el estatus de superpotencia",
-                "OpenAI restablece las expectativas de gasto, dice a los inversores que el objetivo de cómputo es de alrededor de 600 mil millones de dólares para 2030",
-                "Las mejores operaciones tras shocks geopolíticos ante un posible conflicto iraní",
-                "La industria minorista dice que la reversión de los aranceles de Trump es una victoria, a pesar de que persiste la incertidumbre"
+                "Gigantes tecnológicos comprometen miles de millones en IA para India mientras Nueva Delhi impulsa su estatus de superpotencia",
+                "OpenAI reinicia las expectativas de gasto, dice a los inversores que el objetivo de cómputo rondará los 600 mil millones de dólares para 2030",
+                "Las mejores operaciones tras los shocks geopolíticos ante el posible conflicto en Irán",
+                "La industria minorista dice que la reversión de los aranceles de Trump es una victoria, a pesar de la incertidumbre persistente"
             ],
             "HI": [
-                "ट्रम्प ने सुप्रीम कोर्ट में हार के बाद 10% के नए वैश्विक टैरिफ की घोषणा की",
+                "ट्रम्प ने सुप्रीम कोर्ट में हार के बाद 10% का नया वैश्विक टैरिफ घोषित किया",
                 "ट्रम्प ने कहा कि वे ईरान के खिलाफ सीमित सैन्य हमले पर विचार कर रहे हैं",
-                "टेक दिग्गज भारत में AI के लिए अरबों का निवेश करते हैं, क्योंकि नई दिल्ली महाशक्ति बनने की ओर अग्रसर है",
-                "OpenAI ने खर्च की उम्मीदों को फिर से तय किया, निवेशकों को बताया कि 2030 तक कंप्यूटिंग लक्ष्य लगभग 600 बिलियन डॉलर है",
-                "संभावित ईरान संघर्ष के बीच भू-राजनीतिक झटकों के बाद सबसे अच्छे सौदे",
-                "खुदरा उद्योग का कहना है कि ट्रम्प के टैरिफ में उलटफेर एक जीत है, भले ही अनिश्चितता बनी हुई है"
+                "नई दिल्ली द्वारा महाशक्ति का दर्जा हासिल करने के प्रयास के बीच, टेक दिग्गज भारतीय AI में अरबों का निवेश करने को प्रतिबद्ध",
+                "OpenAI ने खर्च की उम्मीदों को रीसेट किया, निवेशकों को बताया कि 2030 तक कंप्यूटिंग लक्ष्य लगभग 600 अरब डॉलर होगा",
+                "संभावित ईरान संघर्ष के मंडराने पर भू-राजनीतिक झटकों के बाद सर्वोत्तम सौदे",
+                "खुदरा उद्योग ने कहा कि ट्रम्प टैरिफ का उलटफेर एक जीत है, भले ही अनिश्चितता बनी रहे"
             ],
             "ID": [
-                "Trump mengumumkan tarif global 10% baru setelah murka atas kekalahan di Mahkamah Agung",
+                "Trump mengumumkan tarif global 10% baru setelah mengamuk atas kekalahan Mahkamah Agung",
                 "Trump mengatakan dia sedang mempertimbangkan serangan militer terbatas terhadap Iran",
                 "Raksasa teknologi berkomitmen miliaran untuk AI India saat New Delhi mendorong status negara adidaya",
-                "OpenAI menetapkan ulang ekspektasi pengeluaran, memberi tahu investor target komputasi sekitar $600 miliar pada tahun 2030",
-                "Perdagangan terbaik setelah guncangan geopolitik karena potensi konflik Iran",
-                "Industri ritel mengatakan pembalikan tarif Trump adalah kemenangan, bahkan ketika ketidakpastian tetap ada"
+                "OpenAI menetapkan kembali ekspektasi pengeluaran, memberi tahu investor target komputasi sekitar 600 miliar dolar pada tahun 2030",
+                "Perdagangan terbaik setelah guncangan geopolitik seiring potensi konflik Iran membayangi",
+                "Industri ritel mengatakan pembalikan tarif Trump adalah kemenangan, meskipun ketidakpastian tetap ada"
             ],
             "AR": [
                 "ترامب يعلن عن تعريفة عالمية جديدة بنسبة 10% بعد غضبه من خسارة المحكمة العليا",
                 "ترامب يقول إنه يدرس ضربة عسكرية محدودة ضد إيران",
-                "عمالقة التكنولوجيا يلتزمون بمليارات الدولارات في مجال الذكاء الاصطناعي الهندي مع دفع نيودلهي نحو مكانة القوة العظمى",
-                "OpenAI تعيد ضبط توقعات الإنفاق، وتخبر المستثمرين أن هدف الحوسبة يبلغ حوالي 600 مليار دولار بحلول عام 2030",
-                "أفضل الصفقات بعد الصدمات الجيوسياسية مع اقتراب صراع إيراني محتمل",
-                "قطاع التجزئة يقول إن عكس تعريفة ترامب هو انتصار، حتى مع بقاء عدم اليقين"
+                "شركات التكنولوجيا العملاقة تلتزم بمليارات في مجال الذكاء الاصطناعي الهندي مع دفع نيودلهي نحو مكانة القوة العظمى",
+                "OpenAI تعيد ضبط توقعات الإنفاق، وتخبر المستثمرين أن هدف الحوسبة سيكون حوالي 600 مليار دولار بحلول عام 2030",
+                "أفضل الصفقات بعد الصدمات الجيوسياسية مع اقتراب صراع محتمل في إيران",
+                "صناعة التجزئة تقول إن عكس تعريفة ترامب هو انتصار، حتى مع بقاء حالة عدم اليقين"
             ],
             "DE": [
-                "Trump kündigt neue globale Zölle von 10 % an, nachdem er sich über Niederlage vor dem Obersten Gerichtshof geärgert hat",
-                "Trump sagt, er erwäge einen begrenzten Militärschlag gegen den Iran",
-                "Tech-Giganten investieren Milliarden in Indiens KI, während Neu-Delhi auf Supermachtstatus drängt",
-                "OpenAI setzt Ausgabenerwartungen zurück und teilt Investoren mit, dass das Computingsziel bis 2030 rund 600 Milliarden US-Dollar beträgt",
-                "Die besten Trades nach geopolitischen Schocks bei drohendem iranischem Konflikt",
-                "Die Einzelhandelsbranche bezeichnet die Umkehrung der Trump-Zölle als Gewinn, auch wenn Unsicherheit bleibt"
+                "Trump kündigt neue globale Zoll von 10 % an, nachdem er sich über Niederlage vor dem Obersten Gerichtshof geärgert hat",
+                "Trump sagt, er erwägt einen begrenzten Militärschlag gegen den Iran",
+                "Tech-Giganten investieren Milliarden in indische KI, während Neu-Delhi auf Supermachtstatus drängt",
+                "OpenAI setzt Ausgabenerwartungen zurück und teilt Investoren mit, dass das Rechenziel bis 2030 bei rund 600 Milliarden US-Dollar liegen wird",
+                "Die besten Trades nach geopolitischen Schocks bei drohendem möglichen Konflikt im Iran",
+                "Die Einzelhandelsbranche bezeichnet die Umkehrung der Trump-Zölle als Sieg, auch wenn die Unsicherheit bestehen bleibt"
             ],
             "FR": [
-                "Trump annonce de nouveaux tarifs mondiaux de 10 % après s'être déchaîné contre sa défaite à la Cour suprême",
+                "Trump annonce de nouveaux droits de douane mondiaux de 10 % après s'être déchaîné contre sa défaite à la Cour suprême",
                 "Trump dit qu'il envisage une frappe militaire limitée contre l'Iran",
-                "Les géants de la technologie engagent des milliards dans l'IA indienne alors que New Delhi pousse au statut de superpuissance",
-                "OpenAI réinitialise les attentes de dépenses, indique aux investisseurs que l'objectif de calcul est d'environ 600 milliards de dollars d'ici 2030",
-                "Les meilleures transactions après les chocs géopolitiques alors qu'un possible conflit iranien se profile",
-                "L'industrie de la vente au détail déclare que l'inversion des tarifs de Trump est une victoire, même si l'incertitude demeure"
+                "Les géants de la technologie s'engagent à investir des milliards dans l'IA indienne alors que New Delhi vise le statut de superpuissance",
+                "OpenAI réinitialise ses prévisions de dépenses, informe les investisseurs que la cible de calcul sera d'environ 600 milliards de dollars d'ici 2030",
+                "Les meilleures transactions après les chocs géopolitiques alors qu'un conflit iranien potentiel se profile",
+                "L'industrie de la vente au détail déclare que l'inversion des droits de douane de Trump est une victoire, même si l'incertitude demeure"
             ]
         },
-        "last_updated": "2026-02-21T11:01:22.937605+00:00Z"
+        "last_updated": "2026-02-21T11:15:23.299543+00:00Z"
     },
     "system_status": "OPERATIONAL",
     "beacons_history": [
@@ -5705,6 +5705,21 @@
         },
         {
             "timestamp": "2026-02-21T11:01:33.734611+00:00",
+            "recession": {
+                "value": 0.491,
+                "status": "safe"
+            },
+            "panic": {
+                "value": 0.905,
+                "status": "safe"
+            },
+            "credit": {
+                "value": -0.0,
+                "status": "safe"
+            }
+        },
+        {
+            "timestamp": "2026-02-21T11:15:33.579666+00:00",
             "recession": {
                 "value": 0.491,
                 "status": "safe"
