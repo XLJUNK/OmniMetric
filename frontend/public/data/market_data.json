@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-02-21T13:11:32.923961+00:00",
+    "last_updated": "2026-02-21T16:47:44.033059+00:00",
     "market_data": {
         "CRYPTO_SENTIMENT": {
             "price": 8,
@@ -570,10 +570,10 @@
             ]
         },
         "BTC": {
-            "price": 68147.41,
+            "price": 68328.05,
             "prev_price": 68005.42,
-            "daily_chg": 0.21,
-            "change_percent": 0.97,
+            "daily_chg": 0.47,
+            "change_percent": 1.24,
             "trend": "UP",
             "sparkline": [
                 78621.12,
@@ -597,14 +597,14 @@
                 66425.32,
                 66957.52,
                 68005.42,
-                68147.41
+                68328.05
             ]
         },
         "ETH": {
-            "price": 1974.83,
+            "price": 1988.55,
             "prev_price": 1969.02,
-            "daily_chg": 0.3,
-            "change_percent": -0.87,
+            "daily_chg": 0.99,
+            "change_percent": -0.18,
             "trend": "UP",
             "sparkline": [
                 2445.09,
@@ -628,14 +628,14 @@
                 1953.97,
                 1948.2,
                 1969.02,
-                1974.83
+                1988.55
             ]
         },
         "SOL": {
-            "price": 85.33,
+            "price": 86.21,
             "prev_price": 84.64,
-            "daily_chg": 0.83,
-            "change_percent": 0.16,
+            "daily_chg": 1.86,
+            "change_percent": 1.18,
             "trend": "UP",
             "sparkline": [
                 105.44,
@@ -659,7 +659,7 @@
                 81.57,
                 82.39,
                 84.64,
-                85.33
+                86.21
             ]
         },
         "DXY": {
@@ -2354,14 +2354,14 @@
             },
             {
                 "date": "2026-02-21",
-                "x": -24.44,
-                "y": -60.43
+                "x": -24.38,
+                "y": -60.49
             }
         ],
         "current_vector": {
             "date": "2026-02-21",
-            "x": -24.44,
-            "y": -60.43
+            "x": -24.38,
+            "y": -60.49
         },
         "current_satellites": [
             {
@@ -2388,9 +2388,9 @@
             {
                 "id": "BTC",
                 "label": "BTC",
-                "x": -65.65,
-                "y": 41.03,
-                "z": -1.82
+                "x": -65.11,
+                "y": 40.69,
+                "z": -1.81
             },
             {
                 "id": "GOLD",
@@ -2557,7 +2557,7 @@
         "history_length": 60,
         "system": "moving_fortress"
     },
-    "last_successful_update": "2026-02-21T13:11:23.271471+00:00",
+    "last_successful_update": "2026-02-21T16:47:33.768217+00:00",
     "gms_score": 54,
     "sector_scores": {
         "STOCKS": 56,
@@ -2615,24 +2615,20 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "Macro-fragility persists amid tariff-driven friction. The GMS 54 print mandates tactical restraint as the fiscal-monetary nexus absorbs protectionist shocks. Despite robust net liquidity sustaining index levels, widening HY spreads and negative breadth signal regime degradation. Commodity appreciation confirms inflationary convexity, necessitating a pivot from cyclicals toward capital preservation as stagflationary tail-risks intensify via global trade friction. [ACTION: WAIT FOR PULLBACK]",
+        "content": "SUSTAINED VOLATILITY AMID TARIFF-INDUCED FISCAL FRICTION. A GMS score of 54 dictates a transitional regime where asset appreciation is hampered by immediate protectionist trade protocols. The tariff escalation to 15% catalyzes a cost-push inflationary impulse, evidenced by the appreciation in Copper and Gold, necessitating a recalibration of the real interest rate trajectory. Marginal widening of credit spreads signals incipient stress despite stable liquidity, warranting a tactical pause. [ACTION: WAIT FOR PULLBACK]",
         "reports": {
-            "JP": "関税摩擦によるマクロ脆弱性が継続している。GMS 54は保護主義的衝撃の中で戦術的抑制を命じている。ネット流動性が指数を支えているが、HYスプレッドの拡大とマイナスの騰落線はレジームの劣化を示唆する。コモディティの上昇はインフレの凸性を裏付けており、グローバルな貿易摩擦によるスタグフレーションのテールリスクが強まる中、景気循環株から資本保護への転換が不可欠である。[ACTION: WAIT FOR PULLBACK]",
-            "EN": "Macro-fragility persists amid tariff-driven friction. The GMS 54 print mandates tactical restraint as the fiscal-monetary nexus absorbs protectionist shocks. Despite robust net liquidity sustaining index levels, widening HY spreads and negative breadth signal regime degradation. Commodity appreciation confirms inflationary convexity, necessitating a pivot from cyclicals toward capital preservation as stagflationary tail-risks intensify via global trade friction. [ACTION: WAIT FOR PULLBACK]",
-            "CN": "关税驱动的摩擦加剧了宏观脆弱性。GMS 54表明在保护主义冲击下需保持战术克制。尽管净流动性支撑着指数，但高收益债利差走阔与负广度预示着制度性退化。大宗商品升值确认了通胀凸性，随着全球贸易摩擦引发的滞胀尾部风险加剧，必须从周期性资产转向资本保全，以对冲财政与货币政策脱节带来的波动性。[ACTION: WAIT FOR PULLBACK]",
-            "ES": "Persiste la fragilidad macro ante la fricción arancelaria. El GMS 54 exige moderación táctica mientras el nexo fiscal-monetario absorbe choques proteccionistas. Pese a la liquidez neta, el ensanchamiento de diferenciales HY y la amplitud negativa indican degradación del régimen. La apreciación de materias primas confirma una convexidad inflacionaria, obligando a pivotar hacia la preservación de capital ante riesgos de estanflación global por aranceles. [ACTION: WAIT FOR PULLBACK]",
-            "HI": "टैरिफ घर्षण के बीच मैक्रो-कमजोरी बनी हुई है। GMS 54 संरक्षणवादी झटकों के बीच सामरिक संयम का निर्देश देता है। शुद्ध तरलता सूचकांकों को सहारा दे रही है, लेकिन HY स्प्रेड का बढ़ना और नकारात्मक प्रसार शासन के पतन का संकेत देते हैं। वस्तुओं की सराहना मुद्रास्फीति की उत्तलता की पुष्टि करती है, जिससे वैश्विक व्यापार घर्षण के कारण मुद्रास्फीतिजनित मंदी के जोखिमों के बीच पूंजी संरक्षण की ओर मुड़ना आवश्यक हो गया है। [ACTION: WAIT FOR PULLBACK]",
-            "ID": "Fragilitas makro berlanjut di tengah friksi tarif. GMS 54 mewajibkan pengendalian taktis saat neksus fiskal-moneter menyerap guncangan proteksionis. Meskipun likuiditas neto menopang indeks, pelebaran spread HY dan lebar pasar negatif mensinyalkan degradasi rezim. Apresiasi komoditas mengonfirmasi konveksitas inflasi, menuntut rotasi menuju preservasi modal seiring meningkatnya risiko ekor stagflasi akibat gangguan perdagangan global. [ACTION: WAIT FOR PULLBACK]",
-            "AR": "استمرار الهشاشة الماكرو اقتصادية وسط الاحتكاك الجمركي. يتطلب مؤشر GMS 54 ضبطًا تكتيكيًا بينما يمتص الرابط المالي-النقدي الصدمات الحمائية. رغم سيولة الصافي التي تدعم المؤشرات، فإن اتساع هوامش العائد المرتفع واتساع السوق السلبي يشيران إلى تدهور النظام. يؤكد ارتفاع السلع على التحدب التضخمي، مما يستوجب التحول نحو الحفاظ على رأس المال مع تزايد مخاطر الركود التضخمي العالمي الناجم عن الرسوم. [ACTION: WAIT FOR PULLBACK]",
-            "DE": "Makro-Fragilität besteht angesichts von Tarifreibungen fort. Der GMS 54 erzwingt taktische Zurückhaltung, während der fiskal-monetäre Nexus protektionistische Schocks absorbiert. Trotz robuster Nettoliquidität signalisieren weitende HY-Spreads und negative Marktbreite eine Regimedegradation. Die Rohstoffaufwertung bestätigt die inflationäre Konvexität und macht einen Schwenk zur Kapitalerhaltung angesichts globaler Stagflationsrisiken unerlässlich. [ACTION: WAIT FOR PULLBACK]",
-            "FR": "La fragilité macroéconomique persiste face aux frictions tarifaires. Le GMS 54 impose une retenue tactique alors que le lien fiso-monétaire absorbe les chocs protectionnistes. Malgré une liquidité nette soutenant les indices, l'élargissement des spreads HY et l'amplitude négative signalent une dégradation du régime. L'appréciation des matières premières confirme une convexité inflationniste, nécessitant un pivot vers la préservation du capital face au risque de stagflation. [ACTION: WAIT FOR PULLBACK]"
+            "JP": "関税障壁拡大に伴うマクロ的成長の停滞と不確実性。GMSスコア54は、即時の15%関税引き上げによるコストプッシュ型インフレの圧力が資産評価を抑制する過渡期的なレジームを示唆している。銅や金の価格上昇は実質金利の軌道修正を強いるものであり、信用スプレッドの微増は潜在的な信用ストレスを露呈させている。現在の市場の広がりは限定的であり、地縁政治的ボラティリティを吸収するための戦術的な待機が不可欠である。[ACTION: WAIT FOR PULLBACK]",
+            "EN": "SUSTAINED VOLATILITY AMID TARIFF-INDUCED FISCAL FRICTION. A GMS score of 54 dictates a transitional regime where asset appreciation is hampered by immediate protectionist trade protocols. The tariff escalation to 15% catalyzes a cost-push inflationary impulse, evidenced by the appreciation in Copper and Gold, necessitating a recalibration of the real interest rate trajectory. Marginal widening of credit spreads signals incipient stress despite stable liquidity, warranting a tactical pause. [ACTION: WAIT FOR PULLBACK]",
+            "CN": "关税摩擦引发的宏观波动与成本推动型通胀风险。54的GMS评分表明市场正处于保护主义政策冲击下的制度性过渡期。15%的关税上调立即催生了成本推动型通胀脉冲，铜金资产的走强证实了货币政策面临的重新校准压力。尽管净流动性持稳，但信用利差的边际扩张暗示信贷压力正在蓄积，市场宽度受压要求投资者在进一步部署资本前保持战术性观望以吸收地缘政治波动。 [ACTION: WAIT FOR PULLBACK]",
+            "ES": "VOLATILIDAD PERSISTENTE POR FRICCIÓN FISCAL ARANCELARIA. Un GMS de 54 dicta un régimen de transición donde la apreciación de activos se ve obstaculizada por protocolos comerciales proteccionistas. La escalada arancelaria al 15% cataliza un impulso inflacionario de costos, evidenciado por el alza en el cobre y el oro, lo que exige una recalibración de las tasas reales. El ligero ensanchamiento de los spreads de crédito señala un estrés incipiente que obliga a una pausa táctica necesaria. [ACTION: WAIT FOR PULLBACK]",
+            "HI": "टैरिफ-प्रेरित राजकोषीय घर्षण के बीच निरंतर अस्थिरता। 54 का GMS स्कोर एक संक्रमणकालीन शासन का संकेत देता है जहां संरक्षणवादी व्यापार प्रोटोकॉल के कारण परिसंपत्ति मूल्य वृद्धि बाधित है। 15% टैरिफ वृद्धि लागत-प्रेरित मुद्रास्फीति को उत्प्रेरित करती है, जो तांबे और सोने की सराहना से स्पष्ट है। शुद्ध तरलता स्थिरता के बावजूद क्रेडिट स्प्रेड का मामूली विस्तार क्रेडिट तनाव का संकेत देता है। बाजार की चौड़ाई कम होने के कारण पूंजी परिनियोजन से पहले एक सामरिक ठहराव की आवश्यकता है। [ACTION: WAIT FOR PULLBACK]",
+            "ID": "VOLATILITAS BERKELANJUTAN AKIBAT FRIKSI FISKAL TARIF. Skor GMS 54 mendikte rezim transisi di mana apresiasi aset terhambat oleh protokol perdagangan proteksionis yang agresif. Kenaikan tarif menjadi 15% mengkatalisasi impuls inflasi biaya, tercermin dari apresiasi tembaga dan emas, yang menuntut kalibrasi ulang lintasan suku bunga riil. Pelebaran marjinal spread kredit menunjukkan stres awal terlepas dari stabilitas likuiditas, yang mewajibkan jeda taktis dalam alokasi modal. [ACTION: WAIT FOR PULLBACK]",
+            "AR": "تقلبات مستمرة وسط احتكاكات مالية ناتجة عن الرسوم الجمركية. يشير مؤشر GMS البالغ 54 إلى نظام انتقالي حيث تتعرقل زيادة قيمة الأصول بسبب البروتوكولات التجارية الحمائية. يؤدي رفع الرسوم إلى 15% إلى تحفيز تضخم مدفوع بالتكاليف، كما يتضح من ارتفاع النحاس والذهب، مما يستلزم إعادة معايرة مسار أسعار الفائدة الحقيقية. يشير اتساع هوامش الائتمان الهامشي إلى ضغوط ناشئة رغم استقرار السيولة، مما يتطلب وقفة تكتيكية لاستيعاب المخاطر. [ACTION: WAIT FOR PULLBACK]",
+            "DE": "ANHALTENDE VOLATILITÄT DURCH ZOLLBEDINGTE FISKALISCHE REIBUNG. Ein GMS-Score von 54 signalisiert ein Übergangsregime, in dem die Wertsteigerung von Vermögenswerten durch protektionistische Handelsprotokolle gehemmt wird. Die Zollerhöhung auf 15 % löst einen kostenseitigen Inflationsimpuls aus, der sich in der Aufwertung von Kupfer und Gold manifestiert. Die marginale Ausweitung der Kreditspreads deutet trotz stabiler Liquidität auf beginnenden Stress hin, was eine taktische Zurückhaltung zwingend macht. [ACTION: WAIT FOR PULLBACK]",
+            "FR": "VOLATILITÉ ACCRUE SOUS TENSION FISCALE PROTECTIONNISTE. Un score GMS de 54 définit un régime de transition où l'appréciation des actifs est entravée par l'application immédiate de tarifs douaniers à 15 %. Cette escalade catalyse une impulsion inflationniste par les coûts, confirmée par la vigueur du cuivre et de l'or, imposant une recalibrage des taux d'intérêt réels. L'élargissement marginal des spreads de crédit signale un stress naissant, justifiant une pause tactique avant tout nouvel investissement. [ACTION: WAIT FOR PULLBACK]"
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-19T07:29:47Z",
-            "score": 51
-        },
         {
             "date": "2026-02-19T07:37:43Z",
             "score": 51
@@ -2868,14 +2864,18 @@
         {
             "date": "2026-02-21T13:11:23Z",
             "score": 54
+        },
+        {
+            "date": "2026-02-21T16:47:33Z",
+            "score": 54
         }
     ],
     "intelligence": {
         "news": [
             {
-                "title": "Trump announces new 10% global tariff after raging over Supreme Court loss",
-                "link": "https://www.cnbc.com/2026/02/20/trump-global-trade-tariff-supreme-court.html",
-                "isoDate": "2026-02-21T01:31:14+00:00Z"
+                "title": "Trump to hike global tariffs to 15% from 10%, 'effective immediately'",
+                "link": "https://www.cnbc.com/2026/02/21/trump-tariffs.html",
+                "isoDate": "2026-02-21T16:47:18+00:00Z"
             },
             {
                 "title": "Trump says he's considering limited military strike against Iran",
@@ -2883,93 +2883,93 @@
                 "isoDate": "2026-02-21T11:40:01+00:00Z"
             },
             {
-                "title": "Tech giants commit billions to Indian AI as New Delhi pushes for superpower status",
-                "link": "https://www.cnbc.com/2026/02/21/india-ai-summit-tech-giants-billion-dollar-investments.html",
-                "isoDate": "2026-02-21T07:30:35+00:00Z"
+                "title": "Berkshire was a net seller of stocks in Buffett's final quarter as CEO",
+                "link": "https://www.cnbc.com/2026/02/21/berkshire-was-a-net-seller-of-stocks-in-buffetts-final-quarter-as-ceo.html",
+                "isoDate": "2026-02-21T16:35:18+00:00Z"
             },
             {
-                "title": "Under mounting toy pressures, Hasbro has a secret sauce that Mattel hasn't matched",
-                "link": "https://www.cnbc.com/2026/02/21/hasbro-vs-mattel-toy-industry-pressures-make-digital-the-star.html",
-                "isoDate": "2026-02-21T13:00:01+00:00Z"
+                "title": "Chaos, confusion and $200 billion dreams: What I saw at India’s AI summit",
+                "link": "https://www.cnbc.com/2026/02/21/ai-summit-india-tech.html",
+                "isoDate": "2026-02-21T08:50:57+00:00Z"
             },
             {
-                "title": "The best trades after geopolitical shocks as possible Iran conflict looms",
-                "link": "https://www.cnbc.com/2026/02/20/the-best-trades-after-geopolitical-shocks-as-new-iran-conflict-looms.html",
-                "isoDate": "2026-02-20T21:24:11+00:00Z"
+                "title": "Supreme Court Trump tariff decision impact: What to expect as fight for billions in refunds begins",
+                "link": "https://www.cnbc.com/2026/02/20/supreme-court-trump-tariff-decision-illegal-refunds.html",
+                "isoDate": "2026-02-20T22:30:16+00:00Z"
             },
             {
-                "title": "OpenAI resets spending expectations, tells investors compute target is around $600 billion by 2030",
-                "link": "https://www.cnbc.com/2026/02/20/openai-resets-spend-expectations-targets-around-600-billion-by-2030.html",
-                "isoDate": "2026-02-20T22:35:29+00:00Z"
+                "title": "Bank of America names five stocks best positioned for shareholder returns",
+                "link": "https://www.cnbc.com/2026/02/21/five-stocks-for-shareholder-returns-according-to-bank-of-america.html",
+                "isoDate": "2026-02-21T14:46:28+00:00Z"
             }
         ],
         "translations": {
             "JP": [
-                "トランプ氏、最高裁判決敗訴に激怒し新たな世界関税10%を発表",
+                "トランプ氏、世界的関税を10%から15%に引き上げ、「即時発効」",
                 "トランプ氏、イランへの限定的軍事攻撃を検討中と発言",
-                "インドが超大国化を目指す中、テクノロジー大手はAIに数十億ドルを投資",
-                "玩具への圧力増大、ハスブロはマテルにない秘策を持つ",
-                "イラン紛争の可能性が迫る中、地政学的な衝撃後の最良の取引",
-                "OpenAI、AIのコンピューティング需要目標を2030年までに約6000億ドルと投資家に伝え、支出予測を再設定"
+                "バフェット氏CEO最終四半期、バークシャーは株式の純売却者",
+                "混沌、混乱、2000億ドルの夢：インドAIサミットで見たもの",
+                "最高裁トランプ関税決定の影響：数十億ドルの返金争いが始まる中、何を期待すべきか",
+                "バンク・オブ・アメリカ、株主還元に最も有利な5銘柄を選出"
             ],
             "CN": [
-                "特朗普宣布新的10%全球关税，此前他因最高法院失利而暴怒",
+                "特朗普将全球关税从10%提高到15%，“立即生效”",
                 "特朗普表示正在考虑对伊朗进行有限军事打击",
-                "随着新德里推动成为超级大国地位，科技巨头承诺向印度人工智能领域投入数十亿美元",
-                "在玩具压力不断增加的情况下，孩之宝拥有一款美泰未能匹配的秘密武器",
-                "在地缘政治冲击和潜在的伊朗冲突迫近之际，最佳交易策略",
-                "OpenAI重设支出预期，告知投资者到2030年计算目标约为6000亿美元"
+                "伯克希尔在巴菲特担任CEO的最后一个季度净卖出股票",
+                "混乱、困惑和2000亿美元的梦想：我在印度AI峰会上看到了什么",
+                "最高法院特朗普关税裁决的影响：数十亿美元退款之争打响，预期会怎样",
+                "美国银行公布五只最有利于股东回报的股票"
             ],
             "ES": [
-                "Trump anuncia nuevo arancel global del 10% tras enfurecerse por la derrota en la Corte Suprema",
+                "Trump aumentará los aranceles globales al 15% desde el 10%, 'con efecto inmediato'",
                 "Trump dice que está considerando un ataque militar limitado contra Irán",
-                "Gigantes tecnológicos comprometen miles de millones a la IA india mientras Nueva Delhi impulsa su estatus de superpotencia",
-                "Bajo creciente presión por los juguetes, Hasbro tiene una salsa secreta que Mattel no ha igualado",
-                "Las mejores operaciones tras shocks geopolíticos ante la posible amenaza de conflicto en Irán",
-                "OpenAI restablece las expectativas de gasto, dice a los inversores que el objetivo de computación es de alrededor de $600 mil millones para 2030"
+                "Berkshire fue un vendedor neto de acciones en el último trimestre de Buffett como CEO",
+                "Caos, confusión y sueños de 200 mil millones de dólares: Lo que vi en la cumbre de IA de la India",
+                "Impacto de la decisión de la Corte Suprema sobre los aranceles de Trump: Qué esperar mientras comienza la batalla por miles de millones en reembolsos",
+                "Bank of America nombra cinco acciones mejor posicionadas para el retorno de los accionistas"
             ],
             "HI": [
-                "ट्रम्प ने सुप्रीम कोर्ट में हार पर आग-बबूला होने के बाद 10% का नया वैश्विक टैरिफ घोषित किया",
-                "ट्रम्प ने कहा कि वह ईरान के खिलाफ सीमित सैन्य हमले पर विचार कर रहे हैं",
-                "नई दिल्ली के महाशक्ति बनने के प्रयासों के बीच, टेक दिग्गज भारतीय AI में अरबों का निवेश करने को प्रतिबद्ध",
-                "खिलौनों के बढ़ते दबाव में, हैस्ब्रो के पास एक सीक्रेट सॉस है जिसे मैटल मेल नहीं खा सका",
-                "संभावित ईरान संघर्ष के मंडराने पर, भू-राजनीतिक झटकों के बाद सर्वोत्तम सौदे",
-                "OpenAI ने खर्च की उम्मीदें रीसेट कीं, निवेशकों को बताया कि 2030 तक कंप्यूटिंग का लक्ष्य लगभग 600 अरब डॉलर है"
+                "ट्रम्प वैश्विक टैरिफ को 10% से बढ़ाकर 15% करेंगे, 'तत्काल प्रभाव से'",
+                "ट्रम्प का कहना है कि वह ईरान के खिलाफ सीमित सैन्य हमले पर विचार कर रहे हैं",
+                "बर्कशायर बफेट के सीईओ के रूप में अंतिम तिमाही में स्टॉक का शुद्ध विक्रेता था",
+                "अराजकता, भ्रम और 200 अरब डॉलर के सपने: मैंने भारत के एआई शिखर सम्मेलन में क्या देखा",
+                "सर्वोच्च न्यायालय ट्रंप टैरिफ निर्णय का प्रभाव: अरबों डॉलर की वापसी के लिए लड़ाई शुरू होने पर क्या उम्मीद करें",
+                "बैंक ऑफ अमेरिका ने शेयरधारक रिटर्न के लिए सबसे अच्छी स्थिति में पांच स्टॉक नामित किए"
             ],
             "ID": [
-                "Trump umumkan tarif global baru 10% setelah mengamuk atas kekalahan di Mahkamah Agung",
+                "Trump akan menaikkan tarif global menjadi 15% dari 10%, 'berlaku segera'",
                 "Trump mengatakan dia sedang mempertimbangkan serangan militer terbatas terhadap Iran",
-                "Raksasa teknologi berkomitmen miliaran untuk AI India saat New Delhi mendorong status negara adidaya",
-                "Di bawah tekanan mainan yang meningkat, Hasbro memiliki saus rahasia yang belum mampu ditandingi Mattel",
-                "Perdagangan terbaik setelah kejutan geopolitik saat konflik Iran yang mungkin terjadi membayangi",
-                "OpenAI mengatur ulang ekspektasi pengeluaran, memberi tahu investor bahwa target komputasi adalah sekitar $600 miliar pada tahun 2030"
+                "Berkshire adalah penjual bersih saham di kuartal terakhir Buffett sebagai CEO",
+                "Kekacauan, kebingungan, dan impian 200 miliar dolar: Apa yang saya lihat di KTT AI India",
+                "Dampak keputusan tarif Trump di Mahkamah Agung: Apa yang diharapkan saat pertempuran miliaran dolar untuk pengembalian dana dimulai",
+                "Bank of America menunjuk lima saham yang diposisikan terbaik untuk pengembalian pemegang saham"
             ],
             "AR": [
-                "ترامب يعلن عن تعريفة عالمية جديدة بنسبة 10% بعد غضبه من خسارة المحكمة العليا",
+                "ترامب يرفع الرسوم الجمركية العالمية إلى 15% من 10%، 'اعتبارًا من اليوم'",
                 "ترامب يقول إنه يدرس ضربة عسكرية محدودة ضد إيران",
-                "شركات التكنولوجيا العملاقة تلتزم بمليارات من الدولارات للذكاء الاصطناعي الهندي مع سعي نيودلهي للحصول على وضع القوة العظمى",
-                "تحت ضغوط الألعاب المتزايدة، لدى هاسبرو صلصة سرية لم يطابقها ماتيل",
-                "أفضل الصفقات بعد الصدمات الجيوسياسية مع احتمال نشوب صراع إيراني",
-                "OpenAI تعيد ضبط توقعات الإنفاق، وتخبر المستثمرين أن هدف الحوسبة يبلغ حوالي 600 مليار دولار بحلول عام 2030"
+                "بيركشاير باعت الأسهم الصافية في الربع الأخير لبافيت كرئيس تنفيذي",
+                "فوضى، ارتباك، وأحلام بـ 200 مليار دولار: ما رأيته في قمة الذكاء الاصطناعي الهندية",
+                "تأثير قرار المحكمة العليا بشأن رسوم ترامب الجمركية: ما يمكن توقعه مع بدء معركة استرداد المليارات",
+                "بنك أوف أمريكا يسمي خمسة أسهم في أفضل وضع لتحقيق عوائد للمساهمين"
             ],
             "DE": [
-                "Trump kündigt neue globale Zoll von 10% an, nachdem er sich nach einer Niederlage vor dem Obersten Gericht erregt hat",
-                "Trump sagt, er erwäge einen begrenzten Militärschlag gegen den Iran",
-                "Tech-Giganten investieren Milliarden in indische KI, während Neu-Delhi auf Supermachtstatus drängt",
-                "Unter wachsendem Spielzeugdruck hat Hasbro eine Geheimsoße, die Mattel nicht erreicht hat",
-                "Die besten Geschäfte nach geopolitischen Schocks, da ein möglicher Iran-Konflikt droht",
-                "OpenAI setzt Ausgabenerwartungen zurück und teilt Investoren mit, dass das Rechenziel bis 2030 rund 600 Milliarden Dollar beträgt"
+                "Trump erhöht globale Zölle von 10% auf 15%, 'sofort wirksam'",
+                "Trump erwägt begrenzten Militärschlag gegen den Iran",
+                "Berkshire war ein Nettoverkäufer von Aktien im letzten Quartal von Buffett als CEO",
+                "Chaos, Verwirrung und 200-Milliarden-Dollar-Träume: Was ich auf dem KI-Gipfel Indiens gesehen habe",
+                "Auswirkungen der Entscheidung des Obersten Gerichtshofs zu Trumps Zöllen: Was zu erwarten ist, wenn der Kampf um Milliardenrückerstattungen beginnt",
+                "Bank of America nennt fünf Aktien, die am besten für Aktionärsrenditen positioniert sind"
             ],
             "FR": [
-                "Trump annonce un nouveau tarif mondial de 10 % après s'être mis en colère contre sa défaite devant la Cour suprême",
+                "Trump augmente les tarifs mondiaux de 10% à 15%, 'avec effet immédiat'",
                 "Trump déclare qu'il envisage une frappe militaire limitée contre l'Iran",
-                "Les géants de la technologie s'engagent à investir des milliards dans l'IA indienne alors que New Delhi pousse pour un statut de superpuissance",
-                "Sous la pression croissante des jouets, Hasbro a une sauce secrète que Mattel n'a pas égalée",
-                "Les meilleures transactions après les chocs géopolitiques alors qu'un possible conflit iranien se profile",
-                "OpenAI réinitialise ses attentes de dépenses, indiquant aux investisseurs que l'objectif de calcul est d'environ 600 milliards de dollars d'ici 2030"
+                "Berkshire a été un vendeur net d'actions au dernier trimestre de Buffett en tant que PDG",
+                "Chaos, confusion et rêves de 200 milliards de dollars : Ce que j'ai vu au sommet sur l'IA en Inde",
+                "Impact de la décision de la Cour suprême sur les tarifs de Trump : à quoi s'attendre alors que la bataille pour des milliards de remboursements commence",
+                "Bank of America nomme cinq actions les mieux positionnées pour les rendements des actionnaires"
             ]
         },
-        "last_updated": "2026-02-21T13:11:23.270913+00:00Z"
+        "last_updated": "2026-02-21T16:47:33.767652+00:00Z"
     },
     "system_status": "OPERATIONAL",
     "beacons_history": [
@@ -5765,6 +5765,21 @@
         },
         {
             "timestamp": "2026-02-21T13:11:32.923961+00:00",
+            "recession": {
+                "value": 0.491,
+                "status": "safe"
+            },
+            "panic": {
+                "value": 0.905,
+                "status": "safe"
+            },
+            "credit": {
+                "value": -0.0,
+                "status": "safe"
+            }
+        },
+        {
+            "timestamp": "2026-02-21T16:47:44.033059+00:00",
             "recession": {
                 "value": 0.491,
                 "status": "safe"
