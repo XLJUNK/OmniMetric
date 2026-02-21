@@ -55,12 +55,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     const data = await getReportData(date);
 
-    // SEO Tiering Logic: only index the latest 7 days
-    const targetDate = new Date(date);
-    const today = new Date();
-    const diffTime = Math.abs(today.getTime() - targetDate.getTime());
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    const shouldIndex = diffDays <= 7;
+    // Index all available analysis pages (full archive is kept accessible via calendar)
+    const shouldIndex = !!(data && data.analysis);
 
     if (!data || !data.analysis) {
         return {
@@ -108,13 +104,45 @@ export default async function AnalysisPage({ params }: { params: Promise<{ date:
 
     if (!data || !data.analysis) return <div>Report not found</div>;
 
+    const ogPngUrl = fs.existsSync(path.join(process.cwd(), 'public', 'og', `${date}.png`))
+        ? `https://www.omnimetric.net/og/${date}.png`
+        : 'https://www.omnimetric.net/brand-og.png';
+
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "AnalysisNewsArticle",
         "headline": `Market Analysis: ${date} - GMS Score ${data.gms_score}`,
-        "datePublished": date,
-        "author": { "@type": "Organization", "name": "OmniMetric" },
-        "description": typeof data.analysis.content === 'string' ? data.analysis.content : "Institutional Global Macro Signal daily analysis report."
+        "datePublished": `${date}T00:00:00Z`,
+        "dateModified": `${date}T00:00:00Z`,
+        "author": {
+            "@type": "Organization",
+            "name": "OmniMetric",
+            "url": "https://www.omnimetric.net",
+            "description": "Autonomous macroeconomic analysis engine. OmniMetric AI synthesizes 30+ global indicators daily to produce the Global Macro Signal (GMS) Score."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "OmniMetric",
+            "url": "https://www.omnimetric.net",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.omnimetric.net/icon.png"
+            }
+        },
+        "description": typeof data.analysis.content === 'string' ? data.analysis.content.slice(0, 250) : "Institutional Global Macro Signal daily analysis report.",
+        "image": {
+            "@type": "ImageObject",
+            "url": ogPngUrl,
+            "width": 1200,
+            "height": 630,
+            "caption": `GMS Score ${data.gms_score} — ${date} Market Analysis by OmniMetric`
+        },
+        "about": {
+            "@type": "Thing",
+            "name": "Global Macro Signal Score",
+            "description": "Composite 0-100 index quantifying global market risk across liquidity, volatility, credit spreads, and cross-asset momentum."
+        },
+        "keywords": "Global Macro Signal, GMS Score, market risk, institutional analysis, OmniMetric"
     };
 
     return (
