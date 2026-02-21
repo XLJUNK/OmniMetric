@@ -151,7 +151,11 @@ export const HistoryChart = ({ data, lang = 'EN', color = '#0ea5e9' }: { data: H
     });
 
     return (
-        <div className="h-full w-full flex flex-col pt-2">
+        <div
+            role="img"
+            aria-label={`GMS Score history chart. Latest score: ${data[0]?.score ?? 'N/A'}, ${data.length} data points shown.`}
+            className="h-full w-full flex flex-col pt-2"
+        >
             <div className="flex-1 min-h-0">
                 <Plot
                     data={[
@@ -218,7 +222,11 @@ export const MetricChart = ({ data, color }: MetricChartProps) => {
     const chartData = data.map((val, i) => ({ i, val }));
 
     return (
-        <div className="h-full w-full relative flex flex-col">
+        <div
+            role="img"
+            aria-label={`Market indicator mini chart. ${data.length} data points.`}
+            className="h-full w-full relative flex flex-col"
+        >
             <div className="flex-grow">
                 <ResponsiveContainer width="100%" height="100%">
                     <AreaChart data={chartData}>
