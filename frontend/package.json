@@ -3,6 +3,8 @@
   "version": "5.1.0",
   "private": true,
   "scripts": {
+    "generate-og": "node scripts/generate-og-images.mjs",
+    "prebuild": "node scripts/generate-og-images.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -37,6 +39,7 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -44,6 +47,7 @@
     "@types/react-plotly.js": "^2.6.4",
     "eslint": "^9",
     "eslint-config-next": "16.1.1",
+    "satori": "^0.19.2",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

@@ -79,8 +79,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     const baseMetadata = getMultilingualMetadata(`/analysis/${date}`, l, title, description);
 
+    // Use pre-generated per-day OG image if available, fall back to brand-og.png
+    const ogPngPath = path.join(process.cwd(), 'public', 'og', `${date}.png`);
+    const ogImage = fs.existsSync(ogPngPath)
+        ? `https://www.omnimetric.net/og/${date}.png`
+        : 'https://www.omnimetric.net/brand-og.png';
+
     return {
         ...baseMetadata,
+        openGraph: {
+            ...(baseMetadata.openGraph as object),
+            images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
+        },
+        twitter: {
+            ...(baseMetadata.twitter as object),
+            images: [ogImage],
+        },
         robots: {
             index: shouldIndex,
             follow: true,
