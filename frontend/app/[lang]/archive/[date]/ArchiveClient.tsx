@@ -2,7 +2,7 @@
 
 import React, { Suspense, useEffect, useState } from 'react';
 import { TerminalPage } from '@/components/TerminalPage';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import { DICTIONARY, LangType } from '@/data/dictionary';
 import { Clock, Shield, AlertTriangle } from 'lucide-react';
 
@@ -17,6 +17,7 @@ interface ArchiveClientProps {
 
 function ArchiveDetailContent({ date, lang, selectorMode, initialData }: ArchiveClientProps) {
     const searchParams = useSearchParams();
+    const router = useRouter();
     const t = DICTIONARY[lang];
     const [data, setData] = useState<{
         gms_score: number;
@@ -27,7 +28,17 @@ function ArchiveDetailContent({ date, lang, selectorMode, initialData }: Archive
     const [loading, setLoading] = useState(!initialData);
 
     useEffect(() => {
-        if (initialData || !date) return;
+        if (!date) return;
+
+        // Redirect if this is caught as a daily archive but is actually a monthly summary
+        if (date.startsWith('summary_')) {
+            const month = date.replace('summary_', '');
+            const target = lang === 'EN' ? `/archive/month/${month}` : `/${lang.toLowerCase()}/archive/month/${month}`;
+            router.replace(target);
+            return;
+        }
+
+        if (initialData) return;
         setLoading(true);
         fetch(`/data/archive/${date}.json`)
             .then(res => res.json())
@@ -116,13 +127,13 @@ function ArchiveDetailContent({ date, lang, selectorMode, initialData }: Archive
                         <div className="flex-1 h-px bg-slate-200 dark:bg-white/5"></div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {Object.entries(data.market_data as Record<string, { price: string | number }>).map(([key, val]) => {
+                        {data.market_data && Object.entries(data.market_data as Record<string, { price: string | number }>).map(([key, val]) => {
                             const term = (t.terms as Record<string, { def: string; benchmark: string }>)[key] || { def: key, benchmark: "" };
                             return (
                                 <div key={key} className="bg-white dark:bg-[#0e0e0e] border border-slate-200 dark:border-white/5 p-6 rounded-[2px] space-y-4 hover:border-sky-300 dark:hover:border-white/10 transition-all shadow-sm dark:shadow-none">
                                     <div className="flex justify-between items-start">
                                         <span className="text-[10px] font-black tracking-widest text-slate-500 uppercase">{key}</span>
-                                        <span className="text-xl font-bold font-mono tracking-tighter text-slate-900 dark:text-white">{val.price}</span>
+                                        <span className="text-xl font-bold font-mono tracking-tighter text-slate-900 dark:text-white">{val?.price || '??'}</span>
                                     </div>
                                     <div className="space-y-1">
                                         <p className="text-[10px] text-slate-500 dark:text-slate-400 leading-tight uppercase line-clamp-2">{term.def}</p>

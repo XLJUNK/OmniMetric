@@ -12,7 +12,7 @@ export async function generateStaticParams() {
     if (fs.existsSync(archiveDir)) {
         const files = fs.readdirSync(archiveDir);
         dates = files
-            .filter(file => file.endsWith('.json') && file !== 'index.json')
+            .filter(file => /^\d{4}-\d{2}-\d{2}\.json$/.test(file))
             .map(file => file.replace('.json', ''));
     }
 
