@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-02-22T05:23:00.467853+00:00",
+    "last_updated": "2026-02-22T08:50:08.592341+00:00",
     "market_data": {
         "CRYPTO_SENTIMENT": {
             "price": 9,
@@ -570,13 +570,12 @@
             ]
         },
         "BTC": {
-            "price": 67899.26,
-            "prev_price": 68005.42,
-            "daily_chg": -0.16,
-            "change_percent": 0.6,
+            "price": 67954.68,
+            "prev_price": 68003.77,
+            "daily_chg": -0.07,
+            "change_percent": 2.3,
             "trend": "DOWN",
             "sparkline": [
-                78621.12,
                 76974.45,
                 78688.77,
                 75633.55,
@@ -597,17 +596,17 @@
                 66425.32,
                 66957.52,
                 68005.42,
-                67899.26
+                68003.77,
+                67954.68
             ]
         },
         "ETH": {
-            "price": 1972.01,
-            "prev_price": 1969.02,
-            "daily_chg": 0.15,
-            "change_percent": -1.01,
-            "trend": "UP",
+            "price": 1972.27,
+            "prev_price": 1973.74,
+            "daily_chg": -0.07,
+            "change_percent": 0.94,
+            "trend": "DOWN",
             "sparkline": [
-                2445.09,
                 2267.96,
                 2344.36,
                 2227.56,
@@ -628,17 +627,17 @@
                 1953.97,
                 1948.2,
                 1969.02,
-                1972.01
+                1973.74,
+                1972.27
             ]
         },
         "SOL": {
-            "price": 84.94,
-            "prev_price": 84.64,
-            "daily_chg": 0.36,
-            "change_percent": -0.31,
-            "trend": "UP",
+            "price": 84.99,
+            "prev_price": 85.21,
+            "daily_chg": -0.26,
+            "change_percent": 4.19,
+            "trend": "DOWN",
             "sparkline": [
-                105.44,
                 100.85,
                 104.47,
                 97.56,
@@ -659,7 +658,8 @@
                 81.57,
                 82.39,
                 84.64,
-                84.94
+                85.21,
+                84.99
             ]
         },
         "DXY": {
@@ -2050,18 +2050,13 @@
         },
         "credit": {
             "name": "Credit (HYG/IEF Z)",
-            "value": -0.0,
+            "value": -0.01,
             "status": "safe",
             "display": "-0.0σ"
         }
     },
     "ogv": {
         "trails": [
-            {
-                "date": "2025-12-24",
-                "x": 44.24,
-                "y": 1.01
-            },
             {
                 "date": "2025-12-25",
                 "x": 42.95,
@@ -2353,215 +2348,220 @@
                 "y": -61.4
             },
             {
+                "date": "2026-02-21",
+                "x": -24.77,
+                "y": -60.46
+            },
+            {
                 "date": "2026-02-22",
-                "x": -24.8,
-                "y": -60.43
+                "x": -24.84,
+                "y": -59.62
             }
         ],
         "current_vector": {
             "date": "2026-02-22",
-            "x": -24.8,
-            "y": -60.43
+            "x": -24.84,
+            "y": -59.62
         },
         "current_satellites": [
             {
                 "id": "SPY",
                 "label": "SPY",
-                "x": 33.67,
+                "x": 33.11,
                 "y": 0.0,
-                "z": 0.75
+                "z": 0.74
             },
             {
                 "id": "QQQ",
                 "label": "QQQ",
-                "x": -38.57,
+                "x": -38.16,
                 "y": -0.0,
                 "z": -0.71
             },
             {
                 "id": "IWM",
                 "label": "IWM",
-                "x": 54.79,
+                "x": 53.88,
                 "y": 0.0,
-                "z": 1.22
+                "z": 1.2
             },
             {
                 "id": "BTC",
                 "label": "BTC",
-                "x": -66.38,
-                "y": 41.49,
-                "z": -1.84
+                "x": -65.27,
+                "y": 40.79,
+                "z": -1.81
             },
             {
                 "id": "GOLD",
                 "label": "GOLD",
-                "x": -155.74,
+                "x": -152.41,
                 "y": 0.0,
-                "z": 1.73
+                "z": 1.69
             },
             {
                 "id": "COPPER",
                 "label": "COPPER",
-                "x": 87.19,
+                "x": 85.75,
                 "y": 0.0,
-                "z": 0.97
+                "z": 0.95
             },
             {
                 "id": "TIP",
                 "label": "TIP",
                 "x": 0.0,
-                "y": 190.97,
-                "z": 2.12
+                "y": 188.74,
+                "z": 2.1
             },
             {
                 "id": "IEF",
                 "label": "IEF",
                 "x": 0.0,
-                "y": -216.07,
-                "z": 2.4
+                "y": -210.02,
+                "z": 2.33
             },
             {
                 "id": "US10Y",
                 "label": "US10Y",
                 "x": -0.0,
-                "y": -50.88,
-                "z": -0.75
+                "y": -52.35,
+                "z": -0.78
             },
             {
                 "id": "DXY",
                 "label": "DXY",
-                "x": 43.3,
-                "y": -36.09,
-                "z": -0.8
+                "x": 42.69,
+                "y": -35.57,
+                "z": -0.79
             },
             {
                 "id": "BIL",
                 "label": "BIL",
-                "x": -113.07,
-                "y": 60.3,
-                "z": 1.68
+                "x": -111.28,
+                "y": 59.35,
+                "z": 1.65
             },
             {
                 "id": "XLK",
                 "label": "XLK",
-                "x": -53.53,
-                "y": 17.84,
-                "z": -0.99
+                "x": -52.66,
+                "y": 17.55,
+                "z": -0.98
             },
             {
                 "id": "XLE",
                 "label": "XLE",
-                "x": 50.35,
+                "x": 48.93,
                 "y": 0.0,
-                "z": 2.24
+                "z": 2.17
             },
             {
                 "id": "XLF",
                 "label": "XLF",
-                "x": -28.17,
-                "y": -21.13,
+                "x": -28.02,
+                "y": -21.02,
                 "z": -0.78
             },
             {
                 "id": "XLV",
                 "label": "XLV",
-                "x": -19.74,
+                "x": -19.41,
                 "y": 0.0,
-                "z": 0.73
+                "z": 0.72
             },
             {
                 "id": "XLI",
                 "label": "XLI",
-                "x": 80.84,
+                "x": 78.48,
                 "y": 0.0,
-                "z": 2.25
+                "z": 2.18
             },
             {
                 "id": "XLB",
                 "label": "XLB",
                 "x": 0.0,
                 "y": 0.0,
-                "z": 1.86
+                "z": 1.82
             },
             {
                 "id": "XLY",
                 "label": "XLY",
-                "x": -28.55,
+                "x": -28.37,
                 "y": -0.0,
                 "z": -0.63
             },
             {
                 "id": "XLP",
                 "label": "XLP",
-                "x": -68.35,
+                "x": -66.71,
                 "y": 0.0,
-                "z": 1.9
+                "z": 1.85
             },
             {
                 "id": "XLU",
                 "label": "XLU",
-                "x": -86.15,
-                "y": -86.15,
-                "z": 2.39
+                "x": -84.68,
+                "y": -84.68,
+                "z": 2.35
             },
             {
                 "id": "XLRE",
                 "label": "XLRE",
                 "x": 0.0,
-                "y": -93.06,
-                "z": 2.58
+                "y": -90.64,
+                "z": 2.52
             },
             {
                 "id": "EEM",
                 "label": "EEM",
-                "x": 79.27,
+                "x": 77.02,
                 "y": 0.0,
-                "z": 2.2
+                "z": 2.14
             },
             {
                 "id": "FXI",
                 "label": "FXI",
-                "x": -15.78,
+                "x": -15.44,
                 "y": -0.0,
-                "z": -0.58
+                "z": -0.57
             },
             {
                 "id": "USO",
                 "label": "USO",
-                "x": 57.33,
+                "x": 55.44,
                 "y": 0.0,
-                "z": 2.55
+                "z": 2.46
             },
             {
                 "id": "SLV",
                 "label": "SLV",
                 "x": 0.0,
                 "y": 0.0,
-                "z": 0.87
+                "z": 0.86
             },
             {
                 "id": "JNK",
                 "label": "JNK",
                 "x": 0.0,
-                "y": -63.58,
-                "z": 1.41
+                "y": -62.41,
+                "z": 1.39
             },
             {
                 "id": "TLT",
                 "label": "TLT",
-                "x": -31.49,
-                "y": -94.46,
-                "z": 1.4
+                "x": -31.95,
+                "y": -95.86,
+                "z": 1.42
             }
         ],
         "history_length": 60,
         "system": "moving_fortress"
     },
-    "last_successful_update": "2026-02-22T05:22:50.711484+00:00",
-    "gms_score": 53,
+    "last_successful_update": "2026-02-22T08:49:58.052823+00:00",
+    "gms_score": 55,
     "sector_scores": {
         "STOCKS": 56,
-        "CRYPTO": 50,
+        "CRYPTO": 65,
         "FOREX": 41,
         "COMMODITIES": 53,
         "GLOBAL_INDICES": 50,
@@ -2615,24 +2615,20 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "Tariff escalation mandates cautious positioning. The GMS 53 reading signals a transitionary regime where tariff-induced inflationary impulses catalyze aggressive capital rotation into hard assets. Despite robust net liquidity, the precipitous decline in Asian equities and persistent negative breadth indicate a systemic divergence. While credit spreads remain compressed, the surge in silver and gold confirms a move toward liquidity convexity as the global trade architecture degrades. [MARKET STATUS: CAUTION]",
+        "content": "ACCUMULATE AS LIQUIDITY OVERRIDES TARIFF FRICTION. The GMS score of 55 confirms a transition into a Phase 2 expansionary regime, where liquidity convexity and VIX compression offset the fiscal-monetary nexus pressures. While 15% global tariffs introduce supply-chain volatility, the appreciation in copper and precious metals suggests a flight to hard-asset proxies amidst stable breakeven inflation. Credit spread compression and robust net liquidity ensure equity indices maintain upward momentum. [MARKET STATUS: ACCUMULATE]",
         "reports": {
-            "JP": "関税引き上げは慎重なポジション管理を要求する。GMS 53は関税によるインフレ圧力が実物資産への資本ローテーションを加速させる移行期を示唆している。ネットリクイディティは堅調だが、アジア株の下落とマイナスの騰落銘柄数は指数と実態の乖離を露呈している。信用スプレッドは抑制されているが、貴金属の急騰は貿易構造の劣化に伴う流動性コンベキシティへの逃避を裏付けている。[MARKET STATUS: CAUTION]",
-            "EN": "Tariff escalation mandates cautious positioning. The GMS 53 reading signals a transitionary regime where tariff-induced inflationary impulses catalyze aggressive capital rotation into hard assets. Despite robust net liquidity, the precipitous decline in Asian equities and persistent negative breadth indicate a systemic divergence. While credit spreads remain compressed, the surge in silver and gold confirms a move toward liquidity convexity as the global trade architecture degrades. [MARKET STATUS: CAUTION]",
-            "CN": "关税升级要求采取审慎的仓位管理。GMS 53表明处于过渡阶段，关税引发的通胀压力正催化资本向实物资产轮动。尽管净流动性稳健，但亚洲股市的跌势与负向广度凸显了系统性背离。虽然信用利差持续收窄，但贵金属的激增反映了在全球贸易架构退化的背景下，市场正向流动性凸显性迁移。[MARKET STATUS: CAUTION]",
-            "ES": "La escalada arancelaria exige cautela posicional. El GMS 53 confirma un régimen de transición donde las presiones inflacionarias impulsan una rotación de capital hacia activos reales. Pese a la liquidez neta robusta, la contracción en los índices asiáticos y la amplitud negativa revelan una divergencia sistémica. La compresión de spreads persiste, pero el auge de los metales refleja una huida hacia la convexidad de liquidez ante la degradación de la arquitectura comercial global. [MARKET STATUS: CAUTION]",
-            "HI": "टैरिफ वृद्धि सतर्क स्थिति की मांग करती है। GMS 53 एक संक्रमणकालीन शासन का संकेत देता है जहां टैरिफ-प्रेरित मुद्रास्फीति दबाव हार्ड परिसंपत्तियों में पूंजी रोटेशन को उत्प्रेरित करते हैं। मजबूत शुद्ध तरलता के बावजूद, एशियाई इक्विटी में गिरावट और नकारात्मक विस्तार प्रणालीगत विचलन को दर्शाते हैं। क्रेडिट स्प्रेड संकुचन बना हुआ है, फिर भी कीमती धातुओं में उछाल वैश्विक व्यापार संरचना के क्षरण के बीच तरलता उत्तलता की ओर बढ़ने की पुष्टि करता है। [MARKET STATUS: CAUTION]",
-            "ID": "Eskalasi tarif mengharuskan pemosisian yang hati-hati. Skor GMS 53 menandakan rezim transisi di mana tekanan inflasi akibat tarif mengkatalisasi rotasi modal ke aset keras. Meskipun likuiditas bersih tetap kuat, kontraksi pada ekuitas Asia dan keluasan pasar yang negatif menunjukkan divergensi sistemik. Kompresi spread kredit tetap ada, namun lonjakan logam mulia mencerminkan pelarian ke konveksitas likuiditas di tengah degradasi arsitektur perdagangan. [MARKET STATUS: CAUTION]",
-            "AR": "يتطلب تصعيد التعريفات الجمركية تموضعاً حذراً. تشير قراءة GMS 53 إلى نظام انتقالي حيث تحفز الضغوط التضخمية الناتجة عن التعريفات تدوير رأس المال نحو الأصول الصلبة. رغم قوة صافي السيولة، فإن الانكماش في الأسهم الآسيوية واتساع السوق السلبي يكشفان عن تباين نظامي. استمرار انضغاط فروق الائتمان لا يحجب حقيقة أن طفرة المعادن تعكس هروباً نحو تحدب السيولة وسط تدهور بنية التجارة العالمية. [MARKET STATUS: CAUTION]",
-            "DE": "Zoll-Eskalation erzwingt eine vorsichtige Positionierung. Der GMS-Wert von 53 signalisiert ein Übergangsregime, in dem inflationsgetriebene Impulse eine Kapitalrotation in Sachwerte auslösen. Trotz stabiler Nettoliquidität deuten der Rückgang asiatischer Aktien und die negative Marktbreite auf eine systemische Divergenz hin. Während die Credit Spreads eng bleiben, bestätigt die Rallye bei Edelmetallen die Flucht in Liquiditätskonvexität angesichts degradierender Handelsstrukturen. [MARKET STATUS: CAUTION]",
-            "FR": "L'escalade tarifaire impose un positionnement prudent. Le GMS 53 confirme un régime de transition où les pressions inflationnistes catalysent une rotation vers les actifs tangibles. Malgré une liquidité nette robuste, la contraction des indices asiatiques et la largeur de marché négative révèlent une divergence systémique. La compression des spreads de crédit persiste, mais l'envolée des métaux reflète une fuite vers la convexité de liquidité face à la dégradation du commerce. [MARKET STATUS: CAUTION]"
+            "JP": "流動性の優位性が関税摩擦を凌駕し、強気への蓄積を開始する。GMSスコア55は、流動性の凸性とVIX圧縮が地政学的摩擦を相殺する第2フェーズの拡大レジームへの移行を裏付けています。15%の関税引き上げは供給網のボラティリティを誘発しますが、銅や金の上昇は損益分岐インフレ安定下でのハードアセット回帰を示唆しています。ネットリクイディティの堅守とクレジットスプレッドの収縮により、指数は上昇を維持します。[MARKET STATUS: ACCUMULATE]",
+            "EN": "ACCUMULATE AS LIQUIDITY OVERRIDES TARIFF FRICTION. The GMS score of 55 confirms a transition into a Phase 2 expansionary regime, where liquidity convexity and VIX compression offset the fiscal-monetary nexus pressures. While 15% global tariffs introduce supply-chain volatility, the appreciation in copper and precious metals suggests a flight to hard-asset proxies amidst stable breakeven inflation. Credit spread compression and robust net liquidity ensure equity indices maintain upward momentum. [MARKET STATUS: ACCUMULATE]",
+            "CN": "流动性优势抵消关税摩擦，确立资产增值机制。GMS评分55标志着进入第二阶段扩张机制，流动性凸性与VIX压缩有效抵消了财政货币节点的压力。尽管15%的全球关税加剧了供应链波动，但铜与贵金属的同步升值表明，在平衡通胀率稳定的背景下，资金正流向硬资产。信用利差收缩与净流动性支撑，确保权益类指数在亚洲市场波动中维持上升趋势。[MARKET STATUS: ACCUMULATE]",
+            "ES": "ACUMULAR: LA LIQUIDEZ SUPERA LA FRICCIÓN ARANCELARIA. El GMS de 55 confirma la transición hacia un régimen expansivo de Fase 2, donde la convexidad de la liquidez y la compresión del VIX neutralizan las presiones del nexo fiscal-monetario. Aunque los aranceles del 15% inducen volatilidad, la apreciación del cobre y metales preciosos señala un refugio en activos reales. La compresión de los diferenciales de crédito y la liquidez neta robusta sostienen la apreciación de los índices de renta variable. [MARKET STATUS: ACCUMULATE]",
+            "HI": "तरलता टैरिफ घर्षण पर हावी: संचय की रणनीति अपनाएं। 55 का GMS स्कोर चरण 2 के विस्तारवादी शासन में संक्रमण की पुष्टि करता है, जहां तरलता उत्तलता और VIX संकुचन राजकोषीय-मौद्रिक दबावों को संतुलित करते हैं। हालांकि 15% वैश्विक टैरिफ आपूर्ति-श्रृंखला अस्थिरता पैदा करते हैं, लेकिन तांबे और कीमती धातुओं में वृद्धि मुद्रास्फीति स्थिरता के बीच हार्ड-एसेट प्रॉक्सी की ओर झुकाव दर्शाती है। क्रेडिट स्प्रेड संकुचन और मजबूत शुद्ध तरलता इक्विटी सूचकांकों में तेजी की गति को बनाए रखेगी। [MARKET STATUS: ACCUMULATE]",
+            "ID": "AKUMULASI SAAT LIKUIDITAS MENGATASI FRIKSI TARIF. Skor GMS 55 mengonfirmasi transisi ke rezim ekspansi Tahap 2, di mana konveksitas likuiditas dan kompresi VIX mengimbangi tekanan neksus fiskal-moneter. Meskipun tarif global 15% memicu volatilitas rantai pasok, apresiasi pada tembaga dan logam mulia menunjukkan pelarian ke proksi aset keras di tengah stabilitas inflasi impas. Kompresi spread kredit dan likuiditas bersih yang kuat memastikan indeks ekuitas mempertahankan momentum kenaikan. [MARKET STATUS: ACCUMULATE]",
+            "AR": "التراكم يتجاوز ضغوط التعريفات الجمركية بفعل السيولة. تؤكد درجة GMS البالغة 55 الانتقال إلى نظام توسعي من المرحلة الثانية، حيث تعوض تحدب السيولة وضغط VIX ضغوط الترابط المالي النقدي. ورغم أن التعريفات العالمية بنسبة 15% تثير تقلبات سلاسل التوريد، إلا أن ارتفاع النحاس والمعادن الثمينة يشير إلى الهروب نحو الأصول الصلبة وسط استقرار تضخم التعادل. يضمن انكماش هوامش الائتمان وسيولة الصافي القوية استمرار الزخم الصعودي لمؤشرات الأسهم. [MARKET STATUS: ACCUMULATE]",
+            "DE": "AKKUMULIEREN: LIQUIDITÄT ÜBERWIEGT ZOLLREIBUNGEN. Der GMS-Score von 55 bestätigt den Übergang in ein Expansionsregime der Phase 2, in dem Liquiditätskonvexität und VIX-Kompression den fiskalisch-monetären Druck neutralisieren. Während globale Zölle von 15 % die Volatilität der Lieferketten erhöhen, deutet die Aufwertung von Kupfer und Edelmetallen auf eine Flucht in Sachwerte bei stabilen Breakeven-Inflationsraten hin. Die Einengung der Credit Spreads und die robuste Nettoliquidität stützen das Aufwärtsmomentum der Aktienindizes. [MARKET STATUS: ACCUMULATE]",
+            "FR": "ACCUMULER : LA LIQUIDITÉ SURPASSE LA FRICTION TARIFAIRE. Le score GMS de 55 confirme la transition vers un régime expansionniste de phase 2, où la convexité de la liquidité et la compression du VIX compensent les pressions du lien fiscaux-monétaire. Bien que les tarifs mondiaux de 15 % induisent une volatilité des chaînes d'approvisionnement, l'appréciation du cuivre et des métaux précieux signale un refuge vers les actifs tangibles. La compression des spreads de crédit et la liquidité nette robuste maintiennent l'élan haussier. [MARKET STATUS: ACCUMULATE]"
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-19T09:03:22Z",
-            "score": 52
-        },
         {
             "date": "2026-02-19T09:33:37Z",
             "score": 52
@@ -2868,6 +2864,10 @@
         {
             "date": "2026-02-22T05:22:50Z",
             "score": 53
+        },
+        {
+            "date": "2026-02-22T08:49:58Z",
+            "score": 55
         }
     ],
     "intelligence": {
@@ -2905,71 +2905,71 @@
         ],
         "translations": {
             "JP": [
-                "トランプ氏、世界関税を10%から15%に引き上げ、「即時発効」",
-                "冬の嵐襲来、航空各社が数千便を欠航",
-                "J.P.モルガン、1月6日の連邦議会襲撃事件後にトランプ氏の口座を閉鎖したことを認める",
-                "デラウェア州からマサチューセッツ州にかけて大雪警報、嵐が東海岸を脅かす",
-                "混乱、困惑、2000億ドルの夢：インドAIサミットで見たもの",
+                "トランプ氏、世界関税を10%から15%に引き上げへ、「即時発効」",
+                "巨大な冬の嵐を前に航空会社、数千便を欠航",
+                "JPM、議事堂襲撃事件後にトランプ氏の口座を閉鎖したことを認める",
+                "嵐が東海岸を脅かす、デラウェアからマサチューセッツまでブリザード警報発令",
+                "混乱、困惑、そして2000億ドルの夢：インドAIサミットで見たもの",
                 "バンク・オブ・アメリカ、株主還元に最も有利な5銘柄を選定"
             ],
             "CN": [
-                "特朗普拟将全球关税从10%提高至15%，“立即生效”",
-                "航空公司在又一场巨型冬季风暴来临前取消数千个航班",
+                "特朗普将全球关税从10%提高到15%，“立即生效”",
+                "又一场巨型冬季风暴来袭，航空公司取消数千个航班",
                 "摩根大通承认在1月6日国会大厦袭击事件后关闭了特朗普的账户",
-                "从特拉华州到马萨诸塞州发布暴风雪警告，风暴威胁东海岸",
-                "混乱、困惑与2000亿美元的梦想：我在印度人工智能峰会所见",
-                "美国银行选出五只最有利于股东回报的股票"
+                "特拉华州至马萨诸塞州发布暴雪警告，风暴威胁美国东海岸",
+                "混乱、困惑和2000亿美元的梦想：我在印度人工智能峰会上看到的",
+                "美国银行公布了对股东回报最有利的五只股票"
             ],
             "ES": [
-                "Trump aumentará los aranceles globales del 10% al 15%, 'con efecto inmediato'",
-                "Las aerolíneas cancelan miles de vuelos ante otra tormenta invernal 'monstruosa'",
-                "JPMorgan admite que cerró las cuentas de Trump tras el ataque al Capitolio del 6 de enero",
-                "Se emiten advertencias de ventisca desde Delaware hasta Massachusetts mientras la tormenta amenaza la Costa Este",
-                "Caos, confusión y sueños de 200.000 millones de dólares: Lo que vi en la cumbre de IA de la India",
-                "Bank of America nombra cinco acciones mejor posicionadas para el retorno de los accionistas"
+                "Trump aumentará los aranceles globales al 15% desde el 10%, 'efectivo de inmediato'",
+                "Aerolíneas cancelan miles de vuelos ante otra tormenta invernal monstruosa",
+                "JPMorgan concede que cerró las cuentas de Trump tras el ataque del 6 de enero al Capitolio",
+                "Emiten advertencias de ventisca desde Delaware hasta Massachusetts mientras la tormenta amenaza la costa este",
+                "Caos, confusión y sueños de 200 mil millones de dólares: Lo que vi en la cumbre de IA de la India",
+                "Bank of America nombra cinco acciones mejor posicionadas para los rendimientos de los accionistas"
             ],
             "HI": [
-                "ट्रम्प ने वैश्विक टैरिफ को 10% से बढ़ाकर 15% करने की योजना बनाई, 'तुरंत प्रभावी'",
+                "ट्रम्प वैश्विक टैरिफ को 10% से बढ़ाकर 15% करेंगे, 'तत्काल प्रभावी'",
                 "एक और भयानक शीतकालीन तूफान से पहले एयरलाइंस ने हजारों उड़ानें रद्द कीं",
-                "जेपी मॉर्गन ने स्वीकार किया कि उन्होंने 6 जनवरी को कैपिटल पर हमले के बाद ट्रम्प के खाते बंद कर दिए थे",
-                "डेलावेयर से मैसाचुसेट्स तक बर्फीले तूफान की चेतावनी जारी, तूफान पूर्वी तट को खतरे में डाल रहा है",
-                "अराजकता, भ्रम और 200 बिलियन डॉलर के सपने: मैंने भारत के एआई शिखर सम्मेलन में क्या देखा",
-                "बैंक ऑफ अमेरिका ने शेयरधारकों के लिए सबसे अच्छी स्थिति वाली पांच स्टॉक का नाम बताया"
+                "जेपी，6 जनवरी को कैपिटल पर हमले के बाद ट्रम्प के खातों को बंद करने पर सहमत",
+                "डेलावेयर से मैसाचुसेट्स तक हिमपात की चेतावनी जारी, तूफान से पूर्वी तट को खतरा",
+                "अफरा-तफरी, भ्रम और 200 अरब डॉलर के सपने: मैंने भारत के एआई शिखर सम्मेलन में क्या देखा",
+                "बैंक ऑफ अमेरिका ने शेयरधारक रिटर्न के लिए सबसे अच्छी स्थिति में पांच स्टॉक नामित किए"
             ],
             "ID": [
                 "Trump akan menaikkan tarif global menjadi 15% dari 10%, 'berlaku segera'",
                 "Maskapai membatalkan ribuan penerbangan menjelang badai musim dingin monster lainnya",
                 "JPMorgan mengakui menutup rekening Trump setelah serangan Capitol 6 Januari",
                 "Peringatan badai salju dikeluarkan dari Delaware hingga Massachusetts saat badai mengancam Pesisir Timur",
-                "Kekacauan, kebingungan, dan impian 200 miliar dolar: Apa yang saya lihat di KTT AI India",
-                "Bank of America menunjuk lima saham yang paling siap untuk pengembalian pemegang saham"
+                "Kekacauan, kebingungan, dan mimpi $200 miliar: Apa yang saya lihat di KTT AI India",
+                "Bank of America menamai lima saham yang paling siap untuk imbal hasil pemegang saham"
             ],
             "AR": [
-                "ترامب يرفع الرسوم الجمركية العالمية إلى 15% من 10%، \"سارية على الفور\"",
-                "شركات الطيران تلغي آلاف الرحلات الجوية قبل عاصفة شتوية ضخمة أخرى",
-                "جي بي مورغان يعترف بإغلاق حسابات ترامب بعد هجوم 6 يناير على الكابيتول",
-                "تحذيرات من عاصفة ثلجية صدرت من ديلاوير إلى ماساتشوستس بينما تهدد العاصفة الساحل الشرقي",
+                "ترامب يرفع الرسوم الجمركية العالمية إلى 15٪ من 10٪، \"سارية المفعول فوراً\"",
+                "شركات الطيران تلغي آلاف الرحلات قبل عاصفة شتوية أخرى",
+                "جي بي مورجان يعترف بإغلاق حسابات ترامب بعد هجوم 6 يناير على الكابيتول",
+                "تحذيرات من عاصفة ثلجية من ديلاوير إلى ماساتشوستس مع تهديد العاصفة للسواحل الشرقية",
                 "فوضى وارتباك وأحلام بـ 200 مليار دولار: ما رأيته في قمة الذكاء الاصطناعي الهندية",
-                "بنك أوف أمريكا يسمي خمسة أسهم في وضع أفضل لعائدات المساهمين"
+                "بنك أوف أمريكا يسمي خمس أسهم في أفضل وضع لتحقيق عوائد للمساهمين"
             ],
             "DE": [
-                "Trump will globale Zölle von 10% auf 15% erhöhen, 'sofort wirksam'",
+                "Trump erhöht globale Zölle von 10% auf 15%, 'sofort wirksam'",
                 "Fluggesellschaften stornieren Tausende von Flügen vor einem weiteren winterlichen Monstersturm",
                 "JPMorgan gibt zu, Trumps Konten nach dem Angriff auf das Kapitol am 6. Januar geschlossen zu haben",
                 "Schneesturmwarnungen von Delaware bis Massachusetts ausgestellt, da Sturm die Ostküste bedroht",
-                "Chaos, Verwirrung und 200-Milliarden-Dollar-Träume: Was ich auf dem KI-Gipfel Indiens sah",
-                "Bank of America nennt fünf Aktien, die am besten für Aktionärsrenditen positioniert sind"
+                "Chaos, Verwirrung und Träume von 200 Milliarden Dollar: Was ich auf dem KI-Gipfel Indiens gesehen habe",
+                "Bank of America benennt fünf Aktien, die am besten für Aktionärsrenditen positioniert sind"
             ],
             "FR": [
-                "Trump augmentera les droits de douane mondiaux de 10 % à 15 %, « avec effet immédiat »",
+                "Trump augmentera les droits de douane mondiaux de 10% à 15%, \"effective immédiatement\"",
                 "Les compagnies aériennes annulent des milliers de vols avant une autre tempête hivernale monstre",
-                "JPMorgan concède avoir fermé les comptes de Trump après l'attaque du Capitole du 6 janvier",
-                "Des avertissements de blizzard sont émis du Delaware au Massachusetts alors que la tempête menace la côte Est",
-                "Chaos, confusion et rêves de 200 milliards de dollars : ce que j'ai vu au sommet indien sur l'IA",
+                "JPMorgan concède avoir fermé les comptes de Trump après l'attaque du Capitole le 6 janvier",
+                "Alerte blizzard émise du Delaware au Massachusetts alors qu'une tempête menace la côte Est",
+                "Chaos, confusion et rêves de 200 milliards de dollars : Ce que j'ai vu au sommet de l'IA de l'Inde",
                 "Bank of America nomme cinq actions les mieux placées pour les rendements des actionnaires"
             ]
         },
-        "last_updated": "2026-02-22T05:22:50.710965+00:00Z"
+        "last_updated": "2026-02-22T08:49:58.052285+00:00Z"
     },
     "system_status": "OPERATIONAL",
     "beacons_history": [
@@ -5850,6 +5850,21 @@
             },
             "credit": {
                 "value": -0.0,
+                "status": "safe"
+            }
+        },
+        {
+            "timestamp": "2026-02-22T08:50:08.592341+00:00",
+            "recession": {
+                "value": 0.491,
+                "status": "safe"
+            },
+            "panic": {
+                "value": 0.905,
+                "status": "safe"
+            },
+            "credit": {
+                "value": -0.01,
                 "status": "safe"
             }
         }
