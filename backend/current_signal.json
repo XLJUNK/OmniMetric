@@ -1,10 +1,10 @@
 {
-    "last_updated": "2026-02-21T20:39:11.078189+00:00",
-    "last_successful_update": "2026-02-21T20:39:11.078197+00:00",
-    "gms_score": 54,
+    "last_updated": "2026-02-22T03:16:09.642809+00:00",
+    "last_successful_update": "2026-02-22T03:16:09.642816+00:00",
+    "gms_score": 53,
     "sector_scores": {
         "STOCKS": 56,
-        "CRYPTO": 56,
+        "CRYPTO": 50,
         "FOREX": 41,
         "COMMODITIES": 53,
         "GLOBAL_INDICES": 50,
@@ -16,12 +16,11 @@
     },
     "market_data": {
         "CRYPTO_SENTIMENT": {
-            "price": 8,
-            "daily_chg": 14.29,
-            "change_percent": -20.0,
+            "price": 9,
+            "daily_chg": 12.5,
+            "change_percent": 12.5,
             "trend": "FEAR",
             "sparkline": [
-                24,
                 25,
                 25,
                 20,
@@ -50,7 +49,8 @@
                 8,
                 9,
                 7,
-                8
+                8,
+                9
             ]
         },
         "YIELD_SPREAD": {
@@ -584,11 +584,11 @@
             ]
         },
         "BTC": {
-            "price": 68553.76,
+            "price": 68001.19,
             "prev_price": 68005.42,
-            "daily_chg": 0.81,
-            "change_percent": 1.57,
-            "trend": "UP",
+            "daily_chg": -0.01,
+            "change_percent": 0.75,
+            "trend": "DOWN",
             "sparkline": [
                 78621.12,
                 76974.45,
@@ -611,14 +611,14 @@
                 66425.32,
                 66957.52,
                 68005.42,
-                68553.76
+                68001.19
             ]
         },
         "ETH": {
-            "price": 1988.84,
+            "price": 1974.87,
             "prev_price": 1969.02,
-            "daily_chg": 1.01,
-            "change_percent": -0.17,
+            "daily_chg": 0.3,
+            "change_percent": -0.87,
             "trend": "UP",
             "sparkline": [
                 2445.09,
@@ -642,14 +642,14 @@
                 1953.97,
                 1948.2,
                 1969.02,
-                1988.84
+                1974.87
             ]
         },
         "SOL": {
-            "price": 86.08,
+            "price": 85.07,
             "prev_price": 84.64,
-            "daily_chg": 1.7,
-            "change_percent": 1.03,
+            "daily_chg": 0.51,
+            "change_percent": -0.15,
             "trend": "UP",
             "sparkline": [
                 105.44,
@@ -673,7 +673,7 @@
                 81.57,
                 82.39,
                 84.64,
-                86.08
+                85.07
             ]
         },
         "DXY": {
@@ -2053,32 +2053,32 @@
         {
             "code": "retail_sales",
             "name": "USD Retail Sales (MoM)",
-            "date": "2026-02-24",
-            "day": "TUE",
+            "date": "2026-02-25",
+            "day": "WED",
             "time": "08:30 EST",
             "impact": "high"
         },
         {
             "code": "boj",
             "name": "JPY Bank of Japan Policy Meeting",
-            "date": "2026-02-26",
-            "day": "THU",
+            "date": "2026-02-27",
+            "day": "FRI",
             "time": "12:00 JST",
             "impact": "high"
         },
         {
             "code": "powell",
             "name": "USD Fed Chair Powell Testifies",
-            "date": "2026-03-01",
-            "day": "SUN",
+            "date": "2026-03-02",
+            "day": "MON",
             "time": "10:00 EST",
             "impact": "high"
         },
         {
             "code": "ecb",
             "name": "EUR ECB Monetary Policy Press Conference",
-            "date": "2026-03-03",
-            "day": "TUE",
+            "date": "2026-03-04",
+            "day": "WED",
             "time": "14:45 CET",
             "impact": "high"
         },
@@ -2093,24 +2093,20 @@
     ],
     "analysis": {
         "title": "Global Market Outlook",
-        "content": "STABLE EQUILIBRIUM THREATENED BY TARIFF VOLATILITY. The GMS score of 54 dictates a precarious transition at the terminal boundary of the caution regime. While equity appreciation persists, the immediate 15% tariff imposition triggers a protectionist impulse, threatening the fiscal-monetary nexus and accelerating regime degradation. Flat OGV vectors suggest cyclical exhaustion despite liquidity convexity. We anticipate an imminent re-pricing of tail-risk as inflationary pressures intersect with supply chain disruption. [ACTION: WAIT FOR PULLBACK]",
+        "content": "Pro-cyclical momentum stalls amid tariff escalation. The GMS 53 prints a neutral regime, signaling structural exhaustion within the fiscal-monetary nexus as the 15% tariff shock threatens supply-side equilibrium. Despite credit spread compression and VIX decay, liquidity convexity remains tethered by flat OGV vectors, suggesting a plateau in risk-asset appreciation. The tariff-induced inflationary impulse mandates a defensive pivot to mitigate regime degradation and tail-risk. [ACTION: WAIT FOR PULLBACK]",
         "reports": {
-            "JP": "関税ボラティリティが安定した均衡を脅かす。GMS 54は慎重局面の境界における脆弱な推移を示唆する。現在の株式上昇にもかかわらず、15%の即時関税は保護主義的衝撃を誘発し、財政・金融ネクサスを加速的に毀損させる。OGVベクトルの停滞は、流動性の凸性があるものの循環的勢いの欠如を露呈している。インフレ圧力と供給網の混乱が交差する中、テールリスクの再評価とボラティリティの回帰は不可避である。[ACTION: WAIT FOR PULLBACK]",
-            "EN": "STABLE EQUILIBRIUM THREATENED BY TARIFF VOLATILITY. The GMS score of 54 dictates a precarious transition at the terminal boundary of the caution regime. While equity appreciation persists, the immediate 15% tariff imposition triggers a protectionist impulse, threatening the fiscal-monetary nexus and accelerating regime degradation. Flat OGV vectors suggest cyclical exhaustion despite liquidity convexity. We anticipate an imminent re-pricing of tail-risk as inflationary pressures intersect with supply chain disruption. [ACTION: WAIT FOR PULLBACK]",
-            "CN": "关税波动威胁稳定均衡，市场进入审慎阶段。GMS 54 表明当前处于中性区间的临界点。尽管权益资产现行升值，但 15% 的即时关税引发了贸易保护主义冲击，威胁财政与货币政策的关联性并加速政权退化。OGV 向量持平揭示了尽管存在流动性凸性，但周期性动能已枯竭。在通胀压力与供应链中断交织背景下，尾部风险重估与波动率回归已不可避免。[ACTION: WAIT FOR PULLBACK]",
-            "ES": "VOLATILIDAD ARANCELARIA AMENAZA EL EQUILIBRIO ESTABLE. El GMS de 54 dicta una transición precaria en el límite del régimen de cautela. Pese a la apreciación de la renta variable, el arancel del 15% detona un choque proteccionista, degradando el nexo fiscal-monetario. Los vectores OGV planos sugieren agotamiento cíclico ante la convexidad de liquidez. Se anticipa una revalorización del riesgo de cola conforme la presión inflacionaria intersecta con la disrupción de las cadenas de suministro. [ACTION: WAIT FOR PULLBACK]",
-            "HI": "टैरिफ अस्थिरता ने स्थिर संतुलन को खतरे में डाला। GMS 54 सावधानी शासन की सीमा पर एक अनिश्चित संक्रमण का संकेत देता है। इक्विटी प्रशंसा के बावजूद, 15% तत्काल टैरिफ संरक्षणवादी झटका पैदा करता है, जो राजकोषीय-मौद्रिक नेक्सस को खराब करता है और शासन के पतन को तेज करता है। फ्लैट OGV वेक्टर तरलता उत्तलता के बावजूद चक्रीय थकावट का संकेत देते हैं। मुद्रास्फीति के दबाव और आपूर्ति श्रृंखला व्यवधान के बीच टेल-रिस्क का पुनर्मूल्यांकन अब अपरिहार्य है। [ACTION: WAIT FOR PULLBACK]",
-            "ID": "VOLATILITAS TARIF MENGANCAM KESEIMBANGAN STABIL. Skor GMS 54 mendikte transisi genting pada batas terminal rezim kewaspadaan. Meskipun apresiasi ekuitas berlanjut, kenaikan tarif 15% memicu impuls proteksionis yang merusak neksus fiskal-moneter secara sistemik. Vektor OGV datar menunjukkan kelelahan siklis di tengah konveksitas likuiditas. Antisipasi penilaian ulang risiko ekor sangat mendesak seiring tekanan inflasi bersinggungan dengan gangguan rantai pasokan global. [ACTION: WAIT FOR PULLBACK]",
-            "AR": "تقلبات التعريفات الجمركية تهدد التوازن المستقر. يشير مقياس GMS عند 54 إلى مرحلة انتقالية هشة عند حدود نظام الحذر. رغم ارتفاع الأصول، فإن فرض تعريفة بنسبة 15% يطلق صدمة حمائية تضعف الترابط المالي والنقدي وتسرع تدهور النظام. تشير نواقل OGV المسطحة إلى استنفاد الزخم الدوري رغم تقعر السيولة. نتوقع إعادة تسعير وشيكة لمخاطر التذييل مع تداخل الضغوط التضخمية واضطرابات سلاسل الإمداد اللوجستية. [ACTION: WAIT FOR PULLBACK]",
-            "DE": "ZOLLVOLATILITÄT GEFÄHRDET DAS STABILE GLEICHGEWICHT. Der GMS-Score von 54 signalisiert einen prekären Übergang an der Grenze des neutralen Regimes. Trotz aktueller Asset-Appretiation löst der 15%ige Zollschock einen protektionistischen Impuls aus, der den fiskal-monetären Nexus schwächt und die Regimedegradation beschleunigt. Flache OGV-Vektoren deuten auf zyklische Erschöpfung trotz Liquiditätskonvexität hin. Eine Neubewertung der Tail-Risiken ist angesichts der inflationären Disruption unumgänglich. [ACTION: WAIT FOR PULLBACK]",
-            "FR": "LA VOLATILITÉ TARIFAIRE MENACE L'ÉQUILIBRE STABLE. Le score GMS de 54 impose une transition précaire à la limite du régime de prudence. Malgré l'appréciation des actions, l'imposition de tarifs à 15% déclenche un choc protectionniste dégradant le nexus fiscalo-monétaire. Les vecteurs OGV plats révèlent un épuisement cyclique malgré la convexité de la liquidité. Une réévaluation des risques de queue est imminente alors que l'inflation intersecte avec les ruptures majeures des chaînes logistiques. [ACTION: WAIT FOR PULLBACK]"
+            "JP": "関税引き上げが景気循環の勢いを抑制。GMS 53は中立的レジームを示し、15%の関税ショックが供給側の均衡を脅かす中、財政金融ネクサスの構造的疲弊を露呈しています。VIXの減衰にもかかわらず、リクイディティ・コンベクシティは停滞したOGVベクトルに縛られており、リスク資産の価格上昇は停滞期に入りました。関税主導のインフレ圧力は、レジーム劣化とテールリスクを軽減するための慎重な姿勢を要求します。[ACTION: WAIT FOR PULLBACK]",
+            "EN": "Pro-cyclical momentum stalls amid tariff escalation. The GMS 53 prints a neutral regime, signaling structural exhaustion within the fiscal-monetary nexus as the 15% tariff shock threatens supply-side equilibrium. Despite credit spread compression and VIX decay, liquidity convexity remains tethered by flat OGV vectors, suggesting a plateau in risk-asset appreciation. The tariff-induced inflationary impulse mandates a defensive pivot to mitigate regime degradation and tail-risk. [ACTION: WAIT FOR PULLBACK]",
+            "CN": "关税升级导致顺周期动能停滞。GMS 53指示中性体制，15%的关税冲击在威胁供给侧均衡的同时，暴露了财政货币纽带的结构性枯竭。尽管波动率指数衰减，但流动性凸性受制于平坦的OGV向量，暗示风险资产增值进入平台期。关税引发的通胀冲量要求采取谨慎立场，以缓解体制退化和尾部风险波动。[ACTION: WAIT FOR PULLBACK]",
+            "ES": "El impulso procíclico se estanca ante el alza arancelaria. El GMS 53 marca un régimen neutral, señalando el agotamiento estructural en el nexo fiscal-monetario mientras el choque arancelario del 15% amenaza el equilibrio de la oferta. Pese a la compresión de diferenciales de crédito y la caída del VIX, la convexidad de la liquidez permanece limitada por vectores OGV planos, sugiriendo una meseta en la apreciación de activos. La presión inflacionaria exige cautela estratégica. [ACTION: WAIT FOR PULLBACK]",
+            "HI": "टैरिफ वृद्धि के बीच चक्रीय गति रुकी हुई है। GMS 53 एक तटस्थ शासन का संकेत देता है, जो राजकोषीय-मौद्रिक गठजोड़ के भीतर संरचनात्मक थकावट को दर्शाता है क्योंकि 15% टैरिफ झटका आपूर्ति-पक्ष संतुलन को खतरे में डालता है। VIX में गिरावट के बावजूद, लिक्विडिटी कॉन्वेक्सिटी सपाट OGV वेक्टर्स द्वारा सीमित है, जो जोखिम वाली संपत्ति की सराहना में ठहराव का सुझाव देती है। टैरिफ-प्रेरित मुद्रास्फीति दबाव शासन के क्षरण को कम करने के लिए सावधानी की मांग करता है। [ACTION: WAIT FOR PULLBACK]",
+            "ID": "Momentum pro-siklis terhenti di tengah eskalasi tarif. GMS 53 mencetak rezim netral, menandakan kelelahan struktural dalam neksus fiskal-moneter karena guncangan tarif 15% mengancam keseimbangan sisi penawaran. Meskipun terdapat kompresi penyebaran kredit dan penurunan VIX, konveksitas likuiditas tetap tertahan oleh vektor OGV yang datar, menunjukkan dataran tinggi dalam apresiasi aset berisiko. Impuls inflasi akibat tarif menuntut sikap waspada untuk mitigasi risiko ekor. [ACTION: WAIT FOR PULLBACK]",
+            "AR": "الزخم الدوري يتوقف وسط تصعيد التعريفات الجمركية. يشير مؤشر GMS 53 إلى نظام محايد، مما يعكس الإرهاق الهيكلي في الرابط المالي النقدي حيث تهدد صدمة التعريفة بنسبة 15% توازن جانب العرض. على الرغم من ضغط فروق الائتمان وتراجع مؤشر VIX، تظل تحدب السيولة مقيدًا بمتجهات OGV المسطحة، مما يشير إلى استقرار في تقدير الأصول الخطرة. يتطلب الدافع التضخمي الناجم عن التعريفات الجمركية اتخاذ موقف دفاعي حذر لتجنب مخاطر التدهور. [ACTION: WAIT FOR PULLBACK]",
+            "DE": "Prozyklisches Momentum stagniert angesichts der Zoll-Eskalation. Der GMS 53 indiziert ein neutrales Regime und signalisiert strukturelle Erschöpfung im fiskalisch-monetären Nexus, während der 15%-Zollschock das Gleichgewicht der Angebotsseite bedroht. Trotz VIX-Kompression bleibt die Liquiditätskonvexität durch flache OGV-Vektoren gebunden, was auf ein Plateau bei der Asset-Appreciation hindeutet. Der zollinduzierte Inflationsimpuls erfordert eine defensive Neupositionierung zur Risikominderung. [ACTION: WAIT FOR PULLBACK]",
+            "FR": "L'élan procyclique stagne face à l'escalade tarifaire. Le GMS 53 affiche un régime neutre, signalant l'épuisement structurel du nexus fiscalo-monétaire alors que le choc tarifaire de 15% menace l'équilibre de l'offre. Malgré la compression des spreads de crédit et le déclin du VIX, la convexité de la liquidité reste bridée par des vecteurs OGV plats, suggérant un plateau dans l'appréciation des actifs. L'impulsion inflationniste impose une prudence stratégique face au risque de queue. [ACTION: WAIT FOR PULLBACK]"
         }
     },
     "history_chart": [
-        {
-            "date": "2026-02-19T07:55:09Z",
-            "score": 51
-        },
         {
             "date": "2026-02-19T07:57:34Z",
             "score": 51
@@ -2346,6 +2342,10 @@
         {
             "date": "2026-02-21T20:39:11Z",
             "score": 54
+        },
+        {
+            "date": "2026-02-22T03:16:09Z",
+            "score": 53
         }
     ],
     "intelligence": {
@@ -2356,24 +2356,24 @@
                 "isoDate": "2026-02-21T18:49:29+00:00Z"
             },
             {
-                "title": "Airlines waive change fees ahead of another monster winter storm",
+                "title": "Airlines start canceling flights ahead of another monster winter storm on the East Coast",
                 "link": "https://www.cnbc.com/2026/02/21/blizzard-prompts-airlines-waive-flight-change-fees.html",
-                "isoDate": "2026-02-21T17:25:47+00:00Z"
+                "isoDate": "2026-02-21T21:49:31+00:00Z"
+            },
+            {
+                "title": "JPMorgan concedes it closed Trump's accounts after Jan. 6 attack on the Capitol",
+                "link": "https://www.cnbc.com/2026/02/21/jpmorgan-concedes-it-closed-trumps-accounts-after-jan-6-attack.html",
+                "isoDate": "2026-02-21T21:19:40+00:00Z"
+            },
+            {
+                "title": "Blizzard warnings issued from Delaware to Massachusetts as storm threatens East Coast",
+                "link": "https://www.cnbc.com/2026/02/21/blizzard-warnings-issued-for-new-york-city-new-jersey-connecticut.html",
+                "isoDate": "2026-02-21T23:24:42+00:00Z"
             },
             {
                 "title": "Chaos, confusion and $200 billion dreams: What I saw at India’s AI summit",
                 "link": "https://www.cnbc.com/2026/02/21/ai-summit-india-tech.html",
                 "isoDate": "2026-02-21T08:50:57+00:00Z"
-            },
-            {
-                "title": "Trump says he's considering limited military strike against Iran",
-                "link": "https://www.cnbc.com/2026/02/20/trump-says-hes-considering-limited-military-strike-against-iran.html",
-                "isoDate": "2026-02-21T11:40:01+00:00Z"
-            },
-            {
-                "title": "Blizzard warnings issued for New York City, New Jersey, Connecticut as storm threatens East Coast",
-                "link": "https://www.cnbc.com/2026/02/21/blizzard-warnings-issued-for-new-york-city-new-jersey-connecticut.html",
-                "isoDate": "2026-02-21T18:47:15+00:00Z"
             },
             {
                 "title": "Bank of America names five stocks best positioned for shareholder returns",
@@ -2384,70 +2384,70 @@
         "translations": {
             "JP": [
                 "トランプ氏、世界関税を10%から15%に引き上げへ、「即時発効」",
-                "航空各社、大型冬期嵐を前に変更手数料を免除",
-                "混乱、困惑、2000億ドルの夢：インドAIサミットで見たもの",
-                "トランプ氏、イランへの限定的軍事攻撃を検討中と発言",
-                "嵐が東海岸を脅かす中、ニューヨーク市、ニュージャージー州、コネチカット州に吹雪警報発令",
-                "バンク・オブ・アメリカ、株主還元で最も有利な5銘柄を発表"
+                "東海岸を襲う猛烈な冬の嵐を前に、航空会社がフライトキャンセルを開始",
+                "J.P.モルガン、議事堂襲撃事件（1月6日）後にトランプ氏の口座を閉鎖したことを認める",
+                "嵐が東海岸を襲う中、デラウェア州からマサチューセッツ州にかけてブリザード警報が発令",
+                "混乱と2000億ドルの夢：インドAIサミットで見たもの",
+                "バンク・オブ・アメリカ、株主還元に最も有利な5銘柄を発表"
             ],
             "CN": [
-                "特朗普将全球关税从10%提高到15%，‘立即生效’",
-                "航空公司在又一场强冬风暴前取消改签费",
-                "混乱、困惑和2000亿美元的梦想：我在印度人工智能峰会上所见",
-                "特朗普称正考虑对伊朗进行有限军事打击",
-                "随着风暴威胁东海岸，纽约市、新泽西州、康涅狄格州发布暴风雪警告",
-                "美国银行公布最有利于股东回报的五支股票"
+                "特朗普拟将全球关税从10%上调至15%，“立即生效”",
+                "恶劣冬季风暴来袭，航空公司开始取消东海岸航班",
+                "摩根大通承认在1月6日国会大厦袭击事件后关闭了特朗普的账户",
+                "特拉华州至马萨诸塞州发布暴风雪警告，风暴威胁东海岸",
+                "混乱、迷茫与2000亿美元的梦想：我在印度人工智能峰会上看到的一切",
+                "美国银行公布最有利于股东回报的五只股票"
             ],
             "ES": [
-                "Trump aumentará los aranceles globales al 15% desde el 10%, 'efectivo de inmediato'",
-                "Las aerolíneas eximen tasas de cambio ante otra tormenta invernal masiva",
+                "Trump aumentará los aranceles globales al 15% desde el 10%, 'con efecto inmediato'",
+                "Las aerolíneas comienzan a cancelar vuelos ante otra tormenta de invierno 'monstruosa' en la Costa Este",
+                "JPMorgan admite que cerró las cuentas de Trump tras el ataque al Capitolio del 6 de enero",
+                "Advertencias de ventisca emitidas desde Delaware hasta Massachusetts mientras la tormenta amenaza la Costa Este",
                 "Caos, confusión y sueños de 200 mil millones de dólares: Lo que vi en la cumbre de IA de la India",
-                "Trump dice que está considerando un ataque militar limitado contra Irán",
-                "Advertencias de ventisca emitidas para la ciudad de Nueva York, Nueva Jersey, Connecticut ante la amenaza de la tormenta en la Costa Este",
                 "Bank of America nombra cinco acciones mejor posicionadas para el retorno de los accionistas"
             ],
             "HI": [
-                "ट्रम्प वैश्विक शुल्कों को 10% से बढ़ाकर 15% करेंगे, 'तत्काल प्रभावी'",
-                "एक और बड़ी सर्दियों के तूफान से पहले एयरलाइंस ने परिवर्तन शुल्क माफ किया",
-                "अफरा-तफरी, भ्रम और 200 अरब डॉलर के सपने: मैंने भारत के एआई शिखर सम्मेलन में क्या देखा",
-                "ट्रम्प ने कहा कि वे ईरान के खिलाफ सीमित सैन्य हमले पर विचार कर रहे हैं",
-                "तूफान के पूर्वी तट को खतरे में डालने के कारण न्यूयॉर्क शहर, न्यू जर्सी, कनेक्टिकट के लिए बर्फीले तूफान की चेतावनी जारी",
-                "बैंक ऑफ अमेरिका ने शेयरधारकों के रिटर्न के लिए सर्वश्रेष्ठ स्थिति वाली पांच स्टॉक नामित कीं"
+                "ट्रम्प वैश्विक टैरिफ को 10% से बढ़ाकर 15% करेंगे, 'तत्काल प्रभाव से'",
+                "पूर्वी तट पर एक और भयंकर शीतकालीन तूफान से पहले एयरलाइंस ने उड़ानें रद्द करना शुरू कर दिया",
+                "जेपी मॉर्गन स्वीकार करता है कि 6 जनवरी को कैपिटल पर हमले के बाद उसने ट्रम्प के खाते बंद कर दिए थे",
+                "तूफान पूर्वी तट को खतरे में डाल रहा है, डेलावेयर से मैसाचुसेट्स तक हिमपात की चेतावनी जारी",
+                "अराजकता, भ्रम और 200 बिलियन डॉलर के सपने: मैंने भारत के एआई शिखर सम्मेलन में क्या देखा",
+                "बैंक ऑफ अमेरिका ने शेयरधारकों के रिटर्न के लिए सबसे अच्छी स्थिति वाली पांच स्टॉक का नाम दिया"
             ],
             "ID": [
                 "Trump akan menaikkan tarif global menjadi 15% dari 10%, 'berlaku segera'",
-                "Maskapai membebaskan biaya perubahan menjelang badai musim dingin dahsyat lainnya",
-                "Kekacauan, kebingungan, dan impian 200 miliar dolar: Apa yang saya lihat di KTT AI India",
-                "Trump mengatakan sedang mempertimbangkan serangan militer terbatas terhadap Iran",
-                "Peringatan badai salju dikeluarkan untuk Kota New York, New Jersey, Connecticut saat badai mengancam Pantai Timur",
-                "Bank of America menunjuk lima saham yang paling siap untuk imbal hasil pemegang saham"
+                "Maskapai mulai membatalkan penerbangan menjelang badai musim dingin dahsyat lainnya di Pantai Timur",
+                "JPMorgan mengakui menutup rekening Trump setelah serangan Capitol 6 Januari",
+                "Peringatan badai salju dikeluarkan dari Delaware hingga Massachusetts saat badai mengancam Pantai Timur",
+                "Kekacauan, kebingungan, dan mimpi senilai $200 miliar: Apa yang saya lihat di KTT AI India",
+                "Bank of America menunjuk lima saham yang paling siap untuk pengembalian pemegang saham"
             ],
             "AR": [
-                "ترامب يرفع التعريفات الجمركية العالمية إلى 15% من 10%، 'سارية المفعول فوراً'",
-                "شركات الطيران تتنازل عن رسوم التغيير قبل عاصفة شتوية ضخمة أخرى",
-                "فوضى وارتباك وأحلام بـ 200 مليار دولار: ما رأيته في قمة الذكاء الاصطناعي في الهند",
-                "ترامب يقول إنه يدرس توجيه ضربة عسكرية محدودة ضد إيران",
-                "تحذيرات من عاصفة ثلجية صادرة لمدينة نيويورك ونيوجيرسي وكونيتيكت مع تهديد العاصفة للسواحل الشرقية",
-                "بنك أوف أمريكا يسمي خمس أسهم في أفضل وضع لتحقيق عوائد المساهمين"
+                "ترامب يرفع الرسوم الجمركية العالمية إلى 15% من 10%، \"اعتبارًا من فوري\"",
+                "شركات الطيران تبدأ في إلغاء الرحلات تحسباً لعاصفة شتوية ضخمة أخرى على الساحل الشرقي",
+                "جي بي مورغان يعترف بإغلاق حسابات ترامب بعد الهجوم على الكابيتول في 6 يناير",
+                "تحذيرات من عاصفة ثلجية صدرت من ديلاوير إلى ماساتشوستس مع تهديد العاصفة للساحل الشرقي",
+                "فوضى وارتباك وأحلام بـ 200 مليار دولار: ما رأيته في قمة الذكاء الاصطناعي بالهند",
+                "بنك أوف أمريكا يسمي خمس أسهم في وضع أفضل لتحقيق عوائد المساهمين"
             ],
             "DE": [
-                "Trump erhöht globale Zölle von 10% auf 15%, 'sofort wirksam'",
-                "Fluggesellschaften erlassen Änderungsgebühren vor einem weiteren massiven Wintersturm",
-                "Chaos, Verwirrung und 200-Milliarden-Dollar-Träume: Was ich auf Indiens KI-Gipfel gesehen habe",
-                "Trump erwägt begrenzten Militärschlag gegen den Iran",
-                "Schneesturmwarnungen für New York City, New Jersey, Connecticut herausgegeben, da Sturm die Ostküste bedroht",
-                "Bank of America benennt fünf Aktien, die am besten für Aktionärsrenditen positioniert sind"
+                "Trump will globale Zölle von 10% auf 15% erhöhen, 'sofort wirksam'",
+                "Fluggesellschaften beginnen mit der Annullierung von Flügen vor einem weiteren winterlichen Monstersturm an der Ostküste",
+                "JPMorgan räumt ein, Trumps Konten nach dem Angriff auf das Kapitol am 6. Januar geschlossen zu haben",
+                "Schneesturmwarnungen von Delaware bis Massachusetts ausgestellt, während der Sturm die Ostküste bedroht",
+                "Chaos, Verwirrung und 200-Milliarden-Dollar-Träume: Was ich auf dem KI-Gipfel Indiens gesehen habe",
+                "Bank of America nennt fünf Aktien, die am besten für Aktionärsrenditen positioniert sind"
             ],
             "FR": [
-                "Trump augmentera les tarifs mondiaux de 10 % à 15 %, « prend effet immédiatement »",
-                "Les compagnies aériennes renoncent aux frais de modification avant une autre tempête hivernale monstre",
-                "Chaos, confusion et rêves de 200 milliards de dollars : ce que j'ai vu au sommet sur l'IA en Inde",
-                "Trump déclare qu'il envisage une frappe militaire limitée contre l'Iran",
-                "Avertissements de blizzard émis pour New York City, le New Jersey, le Connecticut alors qu'une tempête menace la côte Est",
+                "Trump augmentera les tarifs mondiaux de 10% à 15%, \"avec effet immédiat\"",
+                "Les compagnies aériennes commencent à annuler des vols à l'approche d'une autre tempête d'hiver monstre sur la côte Est",
+                "JPMorgan admet avoir fermé les comptes de Trump après l'attaque du Capitole du 6 janvier",
+                "Avertissements de blizzard émis du Delaware au Massachusetts alors qu'une tempête menace la côte Est",
+                "Chaos, confusion et rêves de 200 milliards de dollars : Ce que j'ai vu au sommet sur l'IA en Inde",
                 "Bank of America nomme cinq actions les mieux positionnées pour les rendements des actionnaires"
             ]
         },
-        "last_updated": "2026-02-21T20:39:11.077639+00:00Z"
+        "last_updated": "2026-02-22T03:16:09.642276+00:00Z"
     },
     "system_status": "OPERATIONAL"
 }
